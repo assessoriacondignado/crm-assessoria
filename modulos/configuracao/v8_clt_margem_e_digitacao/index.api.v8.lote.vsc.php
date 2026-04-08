@@ -131,11 +131,7 @@
 <div class="d-flex justify-content-between align-items-end mb-3 mt-4">
     <h5 class="fw-bold text-dark mb-0"><i class="fas fa-list me-2"></i> Gerenciador de Lotes Exportação V8</h5>
     <div class="d-flex gap-2">
-        <?php 
-        $user_grupo = strtoupper(trim($_SESSION['GRUPO_USUARIOS'] ?? $_SESSION['grupo_usuarios'] ?? $_SESSION['grupo'] ?? ''));
-        $user_perfil = (int)($_SESSION['perfil'] ?? 0);
-        if ($user_grupo === 'MASTER' || $user_perfil === 1): 
-        ?>
+        <?php if (function_exists('verificaPermissao') && verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_CONSULTA_LOTE_EXPORTAR_TUDO', 'FUNCAO')): ?>
         <button class="btn btn-outline-danger btn-sm fw-bold shadow-sm bg-white border-dark" onclick="v8ExportarTudoLotes()"><i class="fas fa-file-export me-1"></i> Exportar Tudo</button>
         <?php endif; ?>
         

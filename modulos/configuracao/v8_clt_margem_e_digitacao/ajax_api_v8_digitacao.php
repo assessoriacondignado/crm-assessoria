@@ -10,13 +10,23 @@ try {
     if (!file_exists($caminho_conexao)) { throw new Exception("Arquivo de conexão não encontrado."); }
     require_once $caminho_conexao;
     
-    if(!isset($pdo) && isset($conn)) { $pdo = $conn; } 
+    if(!isset($pdo) && isset($conn)) { $pdo = $conn; }
     $pdo->exec("SET NAMES utf8mb4");
-    
-    $acao = $_POST['acao'] ?? '';
-    
-    // PEGANDO O CPF DO USUÁRIO LOGADO
+
+    // VERIFICAÇÃO DE SESSÃO E PERMISSÃO
     $usuario_logado_cpf = preg_replace('/\D/', '', $_SESSION['usuario_cpf'] ?? '');
+    if (empty($usuario_logado_cpf)) { throw new Exception("Sessão expirada. Faça login novamente."); }
+
+    include_once $_SERVER['DOCUMENT_ROOT'] . '/modulos/cliente_e_usuario/checar_permissoes.php';
+
+    $acao = $_POST['acao'] ?? '';
+
+    // Ações que geram custo ou enviam dados à V8 exigem permissão explícita
+    if (in_array($acao, ['passo4_simular', 'passo5_enviar_proposta'])) {
+        if (!verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_NOVA_CONSULTA_DIGITAÇÃO', 'FUNCAO')) {
+            throw new Exception("Seu usuário não tem permissão para executar esta ação.");
+        }
+    }
 
     function v8_api_request_with_lock($url, $method, $payload, $headers, $chave_id) {
         $lock_dir = $_SERVER['DOCUMENT_ROOT'] . '/logs_v8';
