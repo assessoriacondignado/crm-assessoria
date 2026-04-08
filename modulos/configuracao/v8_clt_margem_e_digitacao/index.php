@@ -434,7 +434,7 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
             else if(resPolling.status === 'erro') { clearTimeout(windowPollingData[idFila].timer); delete windowPollingData[idFila]; v8CarregarFila(); return alert("❌ Erro Dataprev: " + resPolling.msg); } 
             else if (resPolling.status === 'pendente') { if (windowPollingData[idFila]) { windowPollingData[idFila].timer = setTimeout(tick, 10000); } } 
         }; 
-        windowPollingData[idFila].timer = setTimeout(tick, 5000); 
+        windowPollingData[idFila].timer = setTimeout(tick, 120000);
     }
 
     async function v8BotaoNovaMargem(idFila, forcar_dataprev = false) { v8IniciarPollingMargem(idFila); }
