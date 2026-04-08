@@ -24,9 +24,15 @@ if ($id_sessao_ia > 0) {
 if (empty($grupo_logado)) { $grupo_logado = $_SESSION['GRUPO_USUARIOS'] ?? $_SESSION['grupo_usuarios'] ?? $_SESSION['grupo'] ?? ''; }
 
 if (!empty($grupo_logado)) {
-    $stmtPerm = $pdo->prepare("SELECT COUNT(*) FROM CLIENTE_USUARIO_PERMISSAO WHERE CHAVE = 'SUBMENU_OP_INTEGRACAO_V8_IA' AND UPPER(TRIM(GRUPO_USUARIOS)) = UPPER(TRIM(?))");
-    $stmtPerm->execute([$grupo_logado]);
-    if ($stmtPerm->fetchColumn() > 0) { $acessoLiberado = false; }
+    $stmtPerm = $pdo->prepare("SELECT GRUPO_USUARIOS FROM CLIENTE_USUARIO_PERMISSAO WHERE CHAVE = 'SUBMENU_OP_INTEGRACAO_V8_IA' LIMIT 1");
+    $stmtPerm->execute();
+    $grupos_bloqueados_str = $stmtPerm->fetchColumn();
+    if (!empty($grupos_bloqueados_str)) {
+        $grupos_bloqueados = array_map('trim', explode(',', strtoupper($grupos_bloqueados_str)));
+        if (in_array(strtoupper(trim($grupo_logado)), $grupos_bloqueados)) {
+            $acessoLiberado = false;
+        }
+    }
 }
 
 $perfil_ia = (int)($_SESSION['perfil'] ?? 0);
