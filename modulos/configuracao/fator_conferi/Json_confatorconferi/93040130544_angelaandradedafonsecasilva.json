@@ -1,0 +1,174 @@
+{
+    "CADASTRAIS": {
+        "CPF": "93040130544",
+        "NOME": "ANGELA ANDRADE DA FONSECA SILVA",
+        "NOME_MAE": "LUZINETE ANDRADE DA FONSECA",
+        "NASCTO": "05\/09\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12556371767",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "231105",
+        "PROFISSAO": "PROFESSOR DE NIVEL SUPERIOR NA EDUCACAO INFANTIL (QUATRO A SEIS ANOS)",
+        "SALARIO": " 880,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "7936315426",
+            "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "79999320177",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999238034",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999320175",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV ZACARIAS JUNIOR",
+                "NUMERO": "765",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "49400000",
+                "CIDADE": "LAGARTO",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "TV ANCHIETA",
+                "NUMERO": "4",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CENTRO",
+                "CEP": "49400000",
+                "CIDADE": "LAGARTO",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "POV ALTO DA BOA VISTA",
+                "NUMERO": "63",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "49400000",
+                "CIDADE": "LAGARTO",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": ". A SOUZA LIBORIO",
+                "NUMERO": "153",
+                "COMPLEMENTO": "BAIRRO CENTRO",
+                "BAIRRO": "CENTRO",
+                "CEP": "49400000",
+                "CIDADE": "LAGARTO",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "59205245534",
+                "NOME": "LUZINETE ANDRADE DA FONSECA",
+                "IDADE": "69 anos",
+                "LOCAL": "LAGARTO\/SE",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "814870538",
+                "NOME": "ANDERSON ANDRADE DA FONSECA",
+                "IDADE": "32 anos",
+                "LOCAL": "PINHAIS\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "8867957538",
+                "NOME": "JOAO MARCOS ANDRADE SILVA",
+                "IDADE": "22 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "8867964585",
+                "NOME": "JONAS ANDRADE SILVA",
+                "IDADE": "16 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "9663076585",
+                "NOME": "DAVI ANDRADE SILVA",
+                "IDADE": "8 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ARAUNA SERVICOS ESPECIALIZADOS LTDA",
+                "CNPJ": "04900474000140",
+                "CIDADE": "ROLIM DE MOURA-RO",
+                "PROFISSAO": "414105",
+                "DATA_ADMISSAO": "16\/05\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COLEGIO MUNDIAL LTDA",
+                "CNPJ": "32743890000118",
+                "CIDADE": "LAGARTO-SE",
+                "PROFISSAO": "231105",
+                "DATA_ADMISSAO": "01\/02\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

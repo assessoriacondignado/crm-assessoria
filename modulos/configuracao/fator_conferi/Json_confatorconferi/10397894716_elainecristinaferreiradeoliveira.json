@@ -1,0 +1,174 @@
+{
+    "CADASTRAIS": {
+        "CPF": "10397894716",
+        "NOME": "ELAINE CRISTINA FERREIRA DE OLIVEIRA",
+        "NOME_MAE": "MARIA FERREIRA DE OLIVEIRA",
+        "NASCTO": "23\/07\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Feminino",
+        "RG": "205654478",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "118516930302",
+        "NIT": "1337348154",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "334115",
+        "PROFISSAO": "",
+        "SALARIO": " 1.412,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2124476815",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2124369873",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21973230623",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21975410959",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "LUCILO BAIOCO",
+                "NUMERO": "68",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STA LUZIA",
+                "CEP": "29680000",
+                "CIDADE": "JOAO NEIVA",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "R DEOCLECIANO RAMOS",
+                "NUMERO": "161",
+                "COMPLEMENTO": "AP 101",
+                "BAIRRO": "ANCHIETA",
+                "CEP": "21645180",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R ARATICUM",
+                "NUMERO": "692",
+                "COMPLEMENTO": "AP 301 C 27",
+                "BAIRRO": "ANIL",
+                "CEP": "22753500",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R SLD ORLANDO HENRIQUE",
+                "NUMERO": "0",
+                "COMPLEMENTO": "30",
+                "BAIRRO": "ANIL",
+                "CEP": "22765340",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "TV BELA VISTA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PAULINE",
+                "CEP": "26170205",
+                "CIDADE": "BELFORD ROXO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA SOLDADO ORLANDO HENRIQUE",
+                "NUMERO": "30",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ANIL",
+                "CEP": "22765340",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "3864995",
+            "NOME": "MARIA FERREIRA DE OLIVEIRA",
+            "IDADE": "74 anos",
+            "LOCAL": "MESQUITA\/RJ",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "R2S MANUTENCAO E LOGISTICA LTDA",
+                "CNPJ": "08957583000155",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "334115",
+                "DATA_ADMISSAO": "01\/10\/2022",
+                "DATA_DEMISSAO": "13\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ROMA MOBILI INDUSTRIA LTDA",
+                "CNPJ": "09178665000164",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "414210",
+                "DATA_ADMISSAO": "01\/02\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "DAGEMA COMERCIO DE PRODUTOS ALIMENTICIOS LTDA",
+                "CNPJ": "09015228000120",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "11\/20\/1910",
+                "DATA_DEMISSAO": "17\/12\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

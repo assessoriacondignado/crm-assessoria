@@ -1,0 +1,190 @@
+{
+    "CADASTRAIS": {
+        "CPF": "65678303287",
+        "NOME": "CARLOS DOS SANTOS OLIVEIRA",
+        "NOME_MAE": "MARIA EUNICE DOS SANTOS",
+        "NASCTO": "04\/11\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "3658816",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "PA",
+        "TITULO_ELEITOR": "037984671350",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1122197780",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1125710013",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11965710013",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51983230709",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11953402696",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "12\/04\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11940379098",
+                "OPERADORA": "NEXTEL",
+                "DATA_REFERENCIA": "09\/11\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11947110435",
+                "OPERADORA": "NEXTEL",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "carlosapp34@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DEODORO DE CAMPOS",
+                "NUMERO": "226",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AMERICANOPOLIS",
+                "CEP": "04336010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DUARTE DE LEMOS",
+                "NUMERO": "57",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM SILVIA (ZONA LESTE)",
+                "CEP": "08141240",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "3728625",
+            "NOME": "MARIA EUNICE DOS SANTOS",
+            "IDADE": "87 anos",
+            "LOCAL": "IGARAPE\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "T H L PINTURAS LTDA",
+                "CNPJ": "40127206000100",
+                "CIDADE": "SAO JOSE DOS PINHAIS-PR",
+                "PROFISSAO": "715615",
+                "DATA_ADMISSAO": "04\/10\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TENDA NEGOCIOS IMOBILIARIOS S.A",
+                "CNPJ": "09625762006199",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "10\/02\/2020",
+                "DATA_DEMISSAO": "01\/11\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "TENDA NEGOCIOS IMOBILIARIOS S.A",
+                "CNPJ": "09625762000158",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/11\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "P.P.F PINTURAS S\/C LTDA",
+                "CNPJ": "05139870000160",
+                "CIDADE": "SANTANA DE PARNAIBA-SP",
+                "PROFISSAO": "720135",
+                "DATA_ADMISSAO": "07\/12\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "P.P.F REVESTIMENTOS LTDA",
+                "CNPJ": "10476671000187",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "910105",
+                "DATA_ADMISSAO": "01\/02\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

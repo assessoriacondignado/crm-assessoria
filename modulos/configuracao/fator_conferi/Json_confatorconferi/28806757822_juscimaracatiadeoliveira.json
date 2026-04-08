@@ -1,0 +1,165 @@
+{
+    "CADASTRAIS": {
+        "CPF": "28806757822",
+        "NOME": "JUSCIMARA CATIA DE OLIVEIRA",
+        "NOME_MAE": "TEREZINHA APARECIDA FAIS DE OLIVEIRA",
+        "NASCTO": "21\/06\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Feminino",
+        "RG": "284069188",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "229996910141",
+        "NIT": "1254059942",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "421125",
+        "PROFISSAO": "OPERADOR DE CAIXA",
+        "SALARIO": " 3.083,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1633376570",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "16997945040",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16997063778",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "16997273821",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "wandersonsilvaf@yahoo.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV BRASIL",
+                "NUMERO": "712",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "14801050",
+                "CIDADE": "ARARAQUARA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV ADELAIDE FERRAZ DE CARVALHO",
+                "NUMERO": "759",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD DAS ESTACOES VILA XAVIER",
+                "CEP": "14810360",
+                "CIDADE": "ARARAQUARA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA DOUTOR MILTON FONSECA",
+                "NUMERO": "59",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM DAS ESTA",
+                "CEP": "14810330",
+                "CIDADE": "ARARAQUARA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "21787903800",
+                "NOME": "TEREZINHA APARECIDA FAIS DE OLIVEIRA",
+                "IDADE": "79 anos",
+                "LOCAL": "ARARAQUARA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "25841943847",
+                "NOME": "IARA ALESSANDRA DE OLIVEIRA",
+                "IDADE": "50 anos",
+                "LOCAL": "ARARAQUARA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "33370920808",
+                "NOME": "JOCIANE VANESSA DE OLIVEIRA FARIA",
+                "IDADE": "42 anos",
+                "LOCAL": "ARARAQUARA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "39873915885",
+                "NOME": "HELDER HENRIQUE DE OLIVEIRA MANOEL",
+                "IDADE": "29 anos",
+                "LOCAL": "ARARAQUARA\/SP",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "JOCIANE VANESSA DE OLIVEIRA FARIA",
+                "IDADE": "",
+                "LOCALIDADE": "ARARAQUARA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "33370920808"
+            },
+            {
+                "NOME": "WANDERSON SILVA FARIA",
+                "IDADE": "",
+                "LOCALIDADE": "ARARAQUARA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "13872866842"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "PANIFICADORA DAS ESTACOES ARARAQUARA LTDA",
+            "CNPJ": "69198349000186",
+            "CIDADE": "ARARAQUARA-SP",
+            "PROFISSAO": "421125",
+            "DATA_ADMISSAO": "01\/11\/2008",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

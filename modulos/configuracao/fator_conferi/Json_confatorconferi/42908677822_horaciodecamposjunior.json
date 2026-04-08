@@ -1,0 +1,107 @@
+{
+    "CADASTRAIS": {
+        "CPF": "42908677822",
+        "NOME": "HORACIO DE CAMPOS JUNIOR",
+        "NOME_MAE": "MARIA DE FATIMA ESTEVES DE CAMPOS",
+        "NASCTO": "22\/01\/1995",
+        "IDADE": "31 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "620105",
+        "PROFISSAO": "SUPERVISOR DE EXPLORACAO AGRICOLA",
+        "SALARIO": " 7.504,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "17997393154",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "17991640117",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "horacio.camposjunior@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV JOSE VAZ PEREIRA NETO",
+                "NUMERO": "158",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "15870000",
+                "CIDADE": "CATIGUA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA R  ALTINO MENEZES DE OLIVEIRA 38",
+                "NUMERO": "38",
+                "COMPLEMENTO": "NULL",
+                "BAIRRO": "STA ISABEL",
+                "CEP": "15870000",
+                "CIDADE": "CATIGUA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "28465726825",
+            "NOME": "MARIA DE FATIMA ESTEVES DE CAMPOS",
+            "IDADE": "61 anos",
+            "LOCAL": "CATIGUA\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "USINA ITAJOBI LTDA - ACUCAR E ALCOOL",
+                "CNPJ": "43533819000399",
+                "CIDADE": "MARAPOAMA-SP",
+                "PROFISSAO": "620105",
+                "DATA_ADMISSAO": "28\/04\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COFCO INTERNATIONAL BRASIL S.A.",
+                "CNPJ": "06315338015140",
+                "CIDADE": "CATANDUVA-SP",
+                "PROFISSAO": "622020",
+                "DATA_ADMISSAO": "01\/04\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

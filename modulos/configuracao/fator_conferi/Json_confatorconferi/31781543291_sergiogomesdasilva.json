@@ -1,0 +1,200 @@
+{
+    "CADASTRAIS": {
+        "CPF": "31781543291",
+        "NOME": "SERGIO GOMES DA SILVA",
+        "NOME_MAE": "EDENEIR ALMEIDA",
+        "NASCTO": "28\/06\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1800030776",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "141205",
+        "PROFISSAO": "GERENTE DE PRODUCAO E OPERACOES",
+        "SALARIO": " 68.241,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9233024970",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "02\/09\/2010",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9221265682",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92996022688",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92981593997",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92992000293",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92992029228",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92992250720",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "sergio_gsilva@honda.com.br",
+            "sgsnet2002@yahoo.com",
+            "sergio_gsilva@onda.com.br",
+            "sgsnet2002@yahoo.com.br",
+            "sgsnet@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R OVIDIO GOMES MONTEIRO",
+                "NUMERO": "347",
+                "COMPLEMENTO": "C C",
+                "BAIRRO": "ALVORADA",
+                "CEP": "69042110",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV PEDRO TEIXEIRA",
+                "NUMERO": "45",
+                "COMPLEMENTO": "Q 48",
+                "BAIRRO": "D PEDRO I",
+                "CEP": "69040000",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO DE AGUIAR",
+                "NUMERO": "71",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JD ORIENTAL",
+                "CEP": "04347060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JUSSARI",
+                "NUMERO": "45",
+                "COMPLEMENTO": "R 11",
+                "BAIRRO": "LIRIO DO VALE",
+                "CEP": "69038271",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R AUGUSTA LOPES",
+                "NUMERO": "347",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PLANALTO",
+                "CEP": "69044580",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R OVIDIO GOMES MONTEIRO",
+                "NUMERO": "446",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALVORADA",
+                "CEP": "69042110",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R VINTE E SETE",
+                "NUMERO": "45",
+                "COMPLEMENTO": "Q 48",
+                "BAIRRO": "S JOSE OPERARIO",
+                "CEP": "69086280",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R THOMAS A. GONZAGA",
+                "NUMERO": "5",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DOM PEDRO I",
+                "CEP": "69042560",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "MOTO HONDA DA AMAZONIA LTDA",
+            "CNPJ": "04337168000148",
+            "CIDADE": "MANAUS-AM",
+            "PROFISSAO": "141205",
+            "DATA_ADMISSAO": "06\/01\/1997",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

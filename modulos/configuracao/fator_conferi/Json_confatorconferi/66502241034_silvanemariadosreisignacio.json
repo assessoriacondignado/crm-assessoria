@@ -1,0 +1,193 @@
+{
+    "CADASTRAIS": {
+        "CPF": "66502241034",
+        "NOME": "SILVANE MARIA DOS REIS IGNACIO",
+        "NOME_MAE": "JUREMA OTTO DOS REIS",
+        "NASCTO": "13\/03\/1973",
+        "IDADE": "53 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12418586989",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "514320",
+        "PROFISSAO": "AUXILIAR DE LIMPEZA",
+        "SALARIO": " 849,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1144698570",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51986650442",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51984609807",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51984615874",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51998929676",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "silvanemariaignacio@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R D JOAO VI",
+                "NUMERO": "208",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL VISTA ALEGRE",
+                "CEP": "94945160",
+                "CIDADE": "CACHOEIRINHA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R D JOAO VI",
+                "NUMERO": "64",
+                "COMPLEMENTO": "AP 1",
+                "BAIRRO": "VL VISTA ALEGRE",
+                "CEP": "94945160",
+                "CIDADE": "CACHOEIRINHA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "AVENIDA SAO JOAO",
+                "NUMERO": "46",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA FATIMA",
+                "CEP": "94955370",
+                "CIDADE": "CACHOEIRINHA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "AVENIDA SAO JOAO",
+                "NUMERO": "466",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA FATIMA",
+                "CEP": "94955370",
+                "CIDADE": "CACHOEIRINHA",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "56731299049",
+                "NOME": "JUREMA OTTO DOS REIS",
+                "IDADE": "74 anos",
+                "LOCAL": "PORTO ALEGRE\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "2431286061",
+                "NOME": "INGRID OTTO DOS REIS",
+                "IDADE": "35 anos",
+                "LOCAL": "CACHOEIRINHA\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "90494296020",
+                "NOME": "VERA CRISTIANE DOS REIS DA ROSA",
+                "IDADE": "50 anos",
+                "LOCAL": "CACHOEIRINHA\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "97185787068",
+                "NOME": "FABIANO OTTO DOS REIS",
+                "IDADE": "44 anos",
+                "LOCAL": "CACHOEIRINHA\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "3503418008",
+                "NOME": "PALOMA DOS REIS IGNACIO",
+                "IDADE": "30 anos",
+                "LOCAL": "CACHOEIRINHA\/RS",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "5995594036",
+                "NOME": "RAFAELA DOS REIS IGNACIO",
+                "IDADE": "16 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO DE MORADORES GETULIO VARGAS DA VISTA ALEGRE",
+                "CNPJ": "91744706000113",
+                "CIDADE": "CACHOEIRINHA-RS",
+                "PROFISSAO": "331110",
+                "DATA_ADMISSAO": "01\/06\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "RASTEK SERVICOS TECNICOS EM RASTREADORES LTDA",
+                "CNPJ": "08112169000145",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "514320",
+                "DATA_ADMISSAO": "03\/10\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

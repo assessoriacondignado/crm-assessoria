@@ -1,0 +1,137 @@
+{
+    "CADASTRAIS": {
+        "CPF": "81906480478",
+        "NOME": "GIRLANE PEREIRA DE ARAUJO",
+        "NOME_MAE": "IVONETE DA SILVA ARAUJO",
+        "NASCTO": "06\/07\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "038577830868",
+        "NIT": "1251142474",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "517425",
+        "PROFISSAO": "",
+        "SALARIO": " 2.712,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8121217171",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "81995054168",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81998978249",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "64996755812",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "gbtaraujo@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PORAQUE",
+                "NUMERO": "254",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BRASILIA TEIMOSA",
+                "CEP": "51010090",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R FRANCISCO DA CUNHA",
+                "NUMERO": "1325",
+                "COMPLEMENTO": "AP 201",
+                "BAIRRO": "BOA VIAGEM",
+                "CEP": "51020041",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "AV COMTIPO BERNARDO SAIAO",
+                "NUMERO": "698",
+                "COMPLEMENTO": "",
+                "BAIRRO": "",
+                "CEP": "75650000",
+                "CIDADE": "MORRINHOS",
+                "ESTADO": "GO"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "38844575",
+            "NOME": "IVONETE DA SILVA ARAUJO",
+            "IDADE": "50 anos",
+            "LOCAL": "QUIJINGUE\/BA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738015780",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "517425",
+                "DATA_ADMISSAO": "18\/02\/2006",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738009119",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "517425",
+                "DATA_ADMISSAO": "18\/02\/2006",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

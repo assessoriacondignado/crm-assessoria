@@ -1,0 +1,177 @@
+{
+    "CADASTRAIS": {
+        "CPF": "64329135000",
+        "NOME": "GIOVANI LUIS TEIXEIRA ZANETTI",
+        "NOME_MAE": "MARIA HELENA TEIXEIRA ZANETTI",
+        "NASCTO": "15\/02\/1971",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "051719390485",
+        "NIT": "1133848351",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142105",
+        "PROFISSAO": "GERENTE ADMINISTRATIVO",
+        "SALARIO": " 2.922,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "5332301122",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "53981150065",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "53999652008",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "53999767329",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "giovani.zanetti@icloud.com.br",
+            "giovani.zanetti@icloud.com",
+            "fabianizanetti@gmail.com",
+            "giovani@zanetti.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R SATURNINO DE BRITO",
+                "NUMERO": "591",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL S MIGUEL",
+                "CEP": "96212630",
+                "CIDADE": "RIO GRANDE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R SATURNINO DE BRITO",
+                "NUMERO": "570",
+                "COMPLEMENTO": "A",
+                "BAIRRO": "VL S MIGUEL",
+                "CEP": "96212630",
+                "CIDADE": "RIO GRANDE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R MARCILIO DIAS",
+                "NUMERO": "383",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "96211550",
+                "CIDADE": "RIO GRANDE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R COMENDADOR HENRIQUE PANCADA",
+                "NUMERO": "1067",
+                "COMPLEMENTO": "",
+                "BAIRRO": "LAGOA",
+                "CEP": "96211330",
+                "CIDADE": "RIO GRANDE",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "53541189053",
+                "NOME": "MARIA HELENA TEIXEIRA ZANETTI",
+                "IDADE": "79 anos",
+                "LOCAL": "RIO GRANDE\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "936888067",
+                "NOME": "FRANCISCO LUIZ TEIXEIRA ZANETTI",
+                "IDADE": "40 anos",
+                "LOCAL": "PELOTAS\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "74008838015",
+                "NOME": "ALEXANDRE LUIS TEIXEIRA ZANETTI",
+                "IDADE": "52 anos",
+                "LOCAL": "PORTO ALEGRE\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SOLAR CASA   CONSTRUCAO LTDA",
+                "CNPJ": "53389008000158",
+                "CIDADE": "RIO GRANDE-RS",
+                "PROFISSAO": "142105",
+                "DATA_ADMISSAO": "02\/02\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "KASAOBRA COMERCIO DE MATERIAIS DE CONSTRUCAO LTDA",
+                "CNPJ": "31072672000136",
+                "CIDADE": "RIO GRANDE-RS",
+                "PROFISSAO": "142105",
+                "DATA_ADMISSAO": "01\/06\/2020",
+                "DATA_DEMISSAO": "01\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ZANETTI ALDRIGHI   CIA LTDA",
+                "CNPJ": "90336215000170",
+                "CIDADE": "RIO GRANDE-RS",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/04\/1986",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

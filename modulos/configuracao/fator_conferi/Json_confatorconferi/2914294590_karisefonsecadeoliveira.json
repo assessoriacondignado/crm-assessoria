@@ -1,0 +1,149 @@
+{
+    "CADASTRAIS": {
+        "CPF": "2914294590",
+        "NOME": "KARISE FONSECA DE OLIVEIRA",
+        "NOME_MAE": "VILMA FONSECA DE OLIVEIRA",
+        "NASCTO": "13\/11\/1985",
+        "IDADE": "40 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12939286762",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "354125",
+        "PROFISSAO": "ASSISTENTE DE VENDAS",
+        "SALARIO": " 1.607,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "7921047950",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "79988095810",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79998532823",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79998532824",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999134913",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79996840077",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "03\/05\/2015",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "karisefo13@outlook.com",
+            "kriatividade21@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "R ARIVALDO PITA FALCAO",
+            "NUMERO": "109",
+            "COMPLEMENTO": "",
+            "BAIRRO": "JOSE CONRADO DE ARAUJO",
+            "CEP": "49085040",
+            "CIDADE": "ARACAJU",
+            "ESTADO": "SE"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "3497853682",
+                "NOME": "VILMA FONSECA DE OLIVEIRA",
+                "IDADE": "53 anos",
+                "LOCAL": "CONTAGEM\/MG",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "11251454550",
+                "NOME": "LETICIA FONSECA OLIVEIRA LEITE",
+                "IDADE": "18 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738017723",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "354125",
+                "DATA_ADMISSAO": "11\/20\/2010",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738042914",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "354125",
+                "DATA_ADMISSAO": "01\/11\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

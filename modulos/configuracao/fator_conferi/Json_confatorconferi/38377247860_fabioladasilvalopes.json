@@ -1,0 +1,120 @@
+{
+    "CADASTRAIS": {
+        "CPF": "38377247860",
+        "NOME": "FABIOLA DA SILVA LOPES",
+        "NOME_MAE": "SIRLEI APARECIDA DA SILVA LOPES",
+        "NASCTO": "13\/01\/1988",
+        "IDADE": "38 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "358640180116",
+        "NIT": "20635973086",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "521140",
+        "PROFISSAO": "",
+        "SALARIO": " 1.000,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "16991798309",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16999789692",
+                "OPERADORA": "ALGAR CELULAR S\/A",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "17996547838",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "R ANTONIO BERNANDES DA SILVA",
+            "NUMERO": "8",
+            "COMPLEMENTO": "CASA",
+            "BAIRRO": "COHAB",
+            "CEP": "14610000",
+            "CIDADE": "IPUA",
+            "ESTADO": "SP"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "28529668839",
+                "NOME": "SIRLEI APARECIDA DA SILVA LOPES",
+                "IDADE": "63 anos",
+                "LOCAL": "IPUA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "28161306818",
+                "NOME": "RONIVERTON DA SILVA LOPES",
+                "IDADE": "46 anos",
+                "LOCAL": "IPUA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "37549275823",
+                "NOME": "CAROLINA HENRIQUES LOPES",
+                "IDADE": "36 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LOJAO LTT IPUA LTDA",
+                "CNPJ": "44490794000194",
+                "CIDADE": "IPUA-SP",
+                "PROFISSAO": "141415",
+                "DATA_ADMISSAO": "01\/06\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TAINA SOARES DA SILVA OLIVEIRA",
+                "CNPJ": "24220158000135",
+                "CIDADE": "IPUA-SP",
+                "PROFISSAO": "521140",
+                "DATA_ADMISSAO": "02\/09\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

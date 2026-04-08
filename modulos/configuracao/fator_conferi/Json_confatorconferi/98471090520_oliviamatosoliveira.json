@@ -1,0 +1,315 @@
+{
+    "CADASTRAIS": {
+        "CPF": "98471090520",
+        "NOME": "OLIVIA MATOS OLIVEIRA",
+        "NOME_MAE": "MARA SOUZA OLIVEIRA MATOS",
+        "NASCTO": "20\/03\/1980",
+        "IDADE": "46 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "093384610507",
+        "NIT": "12770168047",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212420",
+        "PROFISSAO": "ANALISTA DE SUPORTE COMPUTACIONAL",
+        "SALARIO": " 5.000,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7133535337",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "7134958174",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7133509703",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7132449244",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7133710044",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51998511697",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51983506332",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51983343095",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71981944963",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "71988174420",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "damasco_ricci@hotmail.com",
+            "livmatos@yahoo.com.br",
+            "livmatos@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PERICLES CARDOSO",
+                "NUMERO": "61",
+                "COMPLEMENTO": "AP 408 TV A",
+                "BAIRRO": "NARANDIBA",
+                "CEP": "41192013",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "TV ELVIRA DOREA",
+                "NUMERO": "48",
+                "COMPLEMENTO": "PRQ JOSE DOREA",
+                "BAIRRO": "CENTRO",
+                "CEP": "48005160",
+                "CIDADE": "ALAGOINHAS",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "COND RK",
+                "NUMERO": "0",
+                "COMPLEMENTO": "CON ANTARES 1",
+                "BAIRRO": "REGIAO DOS LAGOS SOBRADINHO",
+                "CEP": "73252200",
+                "CIDADE": "BRASILIA",
+                "ESTADO": "DF"
+            },
+            {
+                "LOGRADOURO": "ROD DF-440 KM 2",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "REGIAO DOS LAGOS (SOBRADINHO)",
+                "CEP": "73252900",
+                "CIDADE": "BRASILIA",
+                "ESTADO": "DF"
+            },
+            {
+                "LOGRADOURO": "R ARATUBA",
+                "NUMERO": "233",
+                "COMPLEMENTO": "QD L LT 12 AP 605",
+                "BAIRRO": "PARQUE BELA VISTA",
+                "CEP": "40279040",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "RUA PERICLES CARDOSO",
+                "NUMERO": "61",
+                "COMPLEMENTO": "AP 408 TORRE PETRONAS",
+                "BAIRRO": "DORON",
+                "CEP": "41194035",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R PERICLES CARDOSO",
+                "NUMERO": "62",
+                "COMPLEMENTO": "AP 408 PI PETRONA",
+                "BAIRRO": "DORON",
+                "CEP": "41194035",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "RUA PROFESSORA GUIOMAR FLORENCE",
+                "NUMERO": "7",
+                "COMPLEMENTO": "AP 308",
+                "BAIRRO": "PARQUE BELA VISTA",
+                "CEP": "40279750",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "3927087521",
+                "NOME": "DANILO ROBERTO MATOS OLIVEIRA",
+                "IDADE": "38 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "81305893549",
+                "NOME": "MARTINA MATOS OLIVEIRA",
+                "IDADE": "43 anos",
+                "LOCAL": "FEIRA DE SANTANA\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "MARA SOUZA OLIVEIRA",
+            "IDADE": "",
+            "LOCALIDADE": "ALAGOINHAS\/BA",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "18633862549"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COMPANHIA DE PROCESSAMENTO DE DADOS DO MUNICIPIO DE PORTO ALEGRE - PROCEMPA",
+                "CNPJ": "89398473000100",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "13\/02\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "RIO GRANDE DO SUL PODER JUDICIARIO",
+                "CNPJ": "89522064000166",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "313220",
+                "DATA_ADMISSAO": "19\/20\/2005",
+                "DATA_DEMISSAO": "08\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "WIPRO DO BRASIL TECNOLOGIA LTDA",
+                "CNPJ": "04471981000106",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "07\/02\/2022",
+                "DATA_DEMISSAO": "08\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "FACS SERVICOS EDUCACIONAIS LTDA",
+                "CNPJ": "13526884000164",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "234520",
+                "DATA_ADMISSAO": "06\/03\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "CAPGEMINI BRASIL LTDA.",
+                "CNPJ": "65599953000406",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "01\/10\/2015",
+                "DATA_DEMISSAO": "08\/12\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "CAPGEMINI BRASIL LTDA.",
+                "CNPJ": "65599953000830",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "212420",
+                "DATA_ADMISSAO": "01\/01\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "CPM BRAXIS OUTSOURCING S\/A",
+                "CNPJ": "00717511000129",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "212420",
+                "DATA_ADMISSAO": "05\/04\/2004",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,95 @@
+{
+    "CADASTRAIS": {
+        "CPF": "87734621600",
+        "NOME": "ORIMAR LOURENCO DA SILVA",
+        "NOME_MAE": "MARIA DAS DORES RIBEIRO",
+        "NASCTO": "26\/10\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "089441030264",
+        "NIT": "1230693701",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782510",
+        "PROFISSAO": "MOTORISTA DE CAMINHAO (ROTAS REGIONAIS E INTERNACIONAIS)",
+        "SALARIO": " 2.043,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "3836775765",
+            "OPERADORA": "TELEMAR\/MG",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "38999105962",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "PRE PAGO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": {
+        "EMAIL": "orimaru2@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "R TAMOIOS",
+            "NUMERO": "88",
+            "COMPLEMENTO": "",
+            "BAIRRO": "MAMOEIRO",
+            "CEP": "38610000",
+            "CIDADE": "UNAI",
+            "ESTADO": "MG"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1731696",
+            "NOME": "MARIA DAS DORES RIBEIRO",
+            "IDADE": "71 anos",
+            "LOCAL": "CONTAGEM\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "NOROESTE MG BEBIDAS LTDA",
+                "CNPJ": "10260716000181",
+                "CIDADE": "UNAI-MG",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "04\/11\/2008",
+                "DATA_DEMISSAO": "01\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CEDRUS TRANSPORTADORA LTDA",
+                "CNPJ": "40188785000192",
+                "CIDADE": "ITABIRITO-MG",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "01\/01\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

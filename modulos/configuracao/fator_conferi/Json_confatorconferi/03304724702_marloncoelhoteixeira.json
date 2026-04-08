@@ -1,0 +1,172 @@
+{
+    "CADASTRAIS": {
+        "CPF": "3304724702",
+        "NOME": "MARLON COELHO TEIXEIRA",
+        "NOME_MAE": "MARIA ODETE COELHO TEIXEIRA",
+        "NASCTO": "14\/12\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "090746050388",
+        "NIT": "1243519633",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782120",
+        "PROFISSAO": "OPERADOR DE MAQUINA RODOFERROVIARIA",
+        "SALARIO": " 3.841,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2433445130",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "2430260254",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "24988036661",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "24988044634",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "24988124021",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "24999789396",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "marloncoelhoteixeira@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MIL E TRINTA E SETE",
+                "NUMERO": "3",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VOLTA GRANDE",
+                "CEP": "27211770",
+                "CIDADE": "VOLTA REDONDA",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R MIL E QUARENTA E UM",
+                "NUMERO": "11",
+                "COMPLEMENTO": "AP 101",
+                "BAIRRO": "VOLTA GRANDE",
+                "CEP": "27211680",
+                "CIDADE": "VOLTA REDONDA",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R MIL E TRINTA E SETE",
+                "NUMERO": "368",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VOLTA GRANDE",
+                "CEP": "27211770",
+                "CIDADE": "VOLTA REDONDA",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R MIL E QUARENTA E QUATRO",
+                "NUMERO": "11",
+                "COMPLEMENTO": "AP  Apartamento  101",
+                "BAIRRO": "SANTO AGOSTINHO",
+                "CEP": "27210150",
+                "CIDADE": "VOLTA REDONDA",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "12644009774",
+                "NOME": "MARIA ODETE COELHO TEIXEIRA",
+                "IDADE": "74 anos",
+                "LOCAL": "VOLTA REDONDA\/RJ",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "11373207701",
+                "NOME": "RAFAELA TEIXEIRA CARLOS",
+                "IDADE": "43 anos",
+                "LOCAL": "VOLTA REDONDA\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "12939082740",
+                "NOME": "HELISSON LUIZ TEIXEIRA",
+                "IDADE": "38 anos",
+                "LOCAL": "VOLTA REDONDA\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "COMPANHIA SIDERURGICA NACIONAL",
+            "CNPJ": "33042730001771",
+            "CIDADE": "VOLTA REDONDA-RJ",
+            "PROFISSAO": "782120",
+            "DATA_ADMISSAO": "12\/01\/2000",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

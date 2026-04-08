@@ -1,0 +1,308 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25937998898",
+        "NOME": "ZILMA MARIA RAMOS",
+        "NOME_MAE": "MARIA BORGES RAMOS",
+        "NASCTO": "27\/07\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "259330850108",
+        "NIT": "13262953775",
+        "ESCOLARIDADE": "SUPERIOR INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "420135",
+        "PROFISSAO": "SUPERVISOR DE TELEMARKETING E ATENDIMENTO",
+        "SALARIO": " 1.579,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1156626633",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1159798556",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1159221797",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "03\/01\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11914783387",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11947468688",
+                "OPERADORA": "NEXTEL",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11947468688",
+                "OPERADORA": "NEXTEL",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11991015950",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11959221797",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "romero3077@ig.com.br",
+            "zmramos@ig.com.br",
+            "zmramos@gmail.com",
+            "zilma.ramos@eds.com",
+            "joseramos11@br.inter.net"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CLOVIS VAZ DE SOUZA",
+                "NUMERO": "160",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JD REIMBERG",
+                "CEP": "04823130",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AC CANARIO BELGA",
+                "NUMERO": "741",
+                "COMPLEMENTO": "709",
+                "BAIRRO": "BAL S JOSE",
+                "CEP": "04864120",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO PORTO",
+                "NUMERO": "10",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA RUBI",
+                "CEP": "04823140",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CLOVIS VAZ DE SOUZA",
+                "NUMERO": "105",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM REIMBERG",
+                "CEP": "04823130",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "ACESSO CURIO CRISTAL",
+                "NUMERO": "499",
+                "COMPLEMENTO": "SLJ",
+                "BAIRRO": "BALNEARIO SAO JOSE",
+                "CEP": "04864130",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ANTONIO PORTO",
+                "NUMERO": "11",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA RUBI",
+                "CEP": "04823140",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ANTONIO PORTO",
+                "NUMERO": "12",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA RUBI",
+                "CEP": "04823140",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "145113710",
+                "NOME": "MARIA BORGES RAMOS",
+                "IDADE": "105 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "6359047640",
+                "NOME": "ADILSON ELIAS RAMOS",
+                "IDADE": "45 anos",
+                "LOCAL": "FORMIGA\/MG",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "6659189416",
+                "NOME": "WASHINGTON JOSE RAMOS",
+                "IDADE": "39 anos",
+                "LOCAL": "RECIFE\/PE",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "6893861680",
+                "NOME": "EURIZIA MARIA RAMOS DA SILVA",
+                "IDADE": "48 anos",
+                "LOCAL": "FORMIGA\/MG",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "8630752661",
+                "NOME": "ADENISE MARIA RAMOS",
+                "IDADE": "39 anos",
+                "LOCAL": "FORMIGA\/MG",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "9580544603",
+                "NOME": "MARAISA MARIA RAMOS REIS",
+                "IDADE": "42 anos",
+                "LOCAL": "FORMIGA\/MG",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "C.A.S.A.S. - CENTRO DE APOIO A SAUDE E ASSISTENCIA SOCIAL",
+                "CNPJ": "09118844000459",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "231110",
+                "DATA_ADMISSAO": "25\/07\/2022",
+                "DATA_DEMISSAO": "11\/07\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CENTRO DE AMPARO E REABILITACAO CANAA",
+                "CNPJ": "13054502000147",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "231110",
+                "DATA_ADMISSAO": "24\/20\/1908",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CIELO S.A - INSTITUICAO DE PAGAMENTO",
+                "CNPJ": "01027058000191",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "391210",
+                "DATA_ADMISSAO": "04\/11\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "ATENTO BRASIL S\/A",
+                "CNPJ": "02879250003356",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "252105",
+                "DATA_ADMISSAO": "01\/03\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "ATENTO BRASIL S\/A",
+                "CNPJ": "02879250004670",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "420135",
+                "DATA_ADMISSAO": "01\/03\/2012",
+                "DATA_DEMISSAO": "01\/02\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ATENTO BRASIL S\/A",
+                "CNPJ": "02879250006886",
+                "CIDADE": "GUARULHOS-SP",
+                "PROFISSAO": "420135",
+                "DATA_ADMISSAO": "01\/02\/2016",
+                "DATA_DEMISSAO": "01\/12\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ATENTO BRASIL S\/A",
+                "CNPJ": "02879250000179",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "420135",
+                "DATA_ADMISSAO": "01\/04\/2010",
+                "DATA_DEMISSAO": "103",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

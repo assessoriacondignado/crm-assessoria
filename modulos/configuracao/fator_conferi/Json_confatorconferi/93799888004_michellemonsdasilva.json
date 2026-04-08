@@ -1,0 +1,222 @@
+{
+    "CADASTRAIS": {
+        "CPF": "93799888004",
+        "NOME": "MICHEL LEMONS DA SILVA",
+        "NOME_MAE": "MARIA ENI LEMONS DA SILVA",
+        "NASCTO": "27\/02\/1978",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "067501490442",
+        "NIT": "1283527450",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "410105",
+        "PROFISSAO": "SUPERVISOR ADMINISTRATIVO",
+        "SALARIO": " 50.238,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1129251519",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1129251519",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1155769316",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5136715158",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5333031560",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11993319546",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11993319546",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "41999172000",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "47999328786",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "michellemons@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV REPUBLICA ARGENTINA",
+                "NUMERO": "2777",
+                "COMPLEMENTO": "AP 95 B",
+                "BAIRRO": "PORTAO",
+                "CEP": "80610260",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R ELIAS ANTONIO ZOGBI",
+                "NUMERO": "150",
+                "COMPLEMENTO": "AP73EVOL",
+                "BAIRRO": "SANTO AMARO",
+                "CEP": "04746115",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE DE SOUZA",
+                "NUMERO": "455",
+                "COMPLEMENTO": "AP 32 CD SÃO JOSÃ",
+                "BAIRRO": "SAO JOSE",
+                "CEP": "96180000",
+                "CIDADE": "CAMAQUA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R RUI BARBOSA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COSTA E SILVA",
+                "CEP": "89220100",
+                "CIDADE": "JOINVILLE",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "AVENIDA PADRE ANTONIO JOSE DOS SANTOS",
+                "NUMERO": "1415",
+                "COMPLEMENTO": "APTO 102",
+                "BAIRRO": "CIDADE MONCOES",
+                "CEP": "04563013",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "ALAMEDA DOUTOR CARLOS DE CARVALHO",
+                "NUMERO": "1497",
+                "COMPLEMENTO": "AP 18 BL B",
+                "BAIRRO": "BATEL",
+                "CEP": "80730200",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "RUA LUIZ AFONSO",
+                "NUMERO": "158",
+                "COMPLEMENTO": "AP 202",
+                "BAIRRO": "CIDADE BAIXA",
+                "CEP": "90050310",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "747034044",
+            "NOME": "DANIEL LEMONS DA SILVA",
+            "IDADE": "42 anos",
+            "LOCAL": "PORTO ALEGRE\/RS",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "HONDA SERVICOS LTDA",
+            "CNPJ": "02906820000172",
+            "CIDADE": "SAO PAULO-SP",
+            "PROFISSAO": "410105",
+            "DATA_ADMISSAO": "02\/07\/2007",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "EMEDE INFORMATICA LTDA",
+            "CNPJ": "05665025000128",
+            "CIDADE": "PELOTAS-RS",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20030516",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

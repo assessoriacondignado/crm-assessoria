@@ -1,0 +1,167 @@
+{
+    "CADASTRAIS": {
+        "CPF": "90664337449",
+        "NOME": "ROSIVALDO ANTERO VIEIRA",
+        "NOME_MAE": "MARIA DIONISIO VIEIRA",
+        "NASCTO": "27\/01\/1975",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "042727200809",
+        "NIT": "12796902457",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "732110",
+        "PROFISSAO": "EMENDADOR DE CABOS ELETRICOS E TELEFONICOS (AEREOS E SUBTERRANEOS)",
+        "SALARIO": " 724,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "81983358804",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81998149662",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81993620694",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81987151137",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81982093874",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "rosivaldovieira@oi.com.br",
+            "ROSIVALDO.VIEIRA@TELEFONICA.COM",
+            "ro.tonho@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOSE REGINALDO DOS SANTOS",
+                "NUMERO": "75",
+                "COMPLEMENTO": "LT 24",
+                "BAIRRO": "JD PAULISTA",
+                "CEP": "53409090",
+                "CIDADE": "PAULISTA",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R SETE",
+                "NUMERO": "175",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM PAULISTA",
+                "CEP": "53409400",
+                "CIDADE": "PAULISTA",
+                "ESTADO": "PE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "8825134606",
+                "NOME": "DOUGLAS CARDOSO VIEIRA",
+                "IDADE": "41 anos",
+                "LOCAL": "BURITIS\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "40464763894",
+                "NOME": "LEONTINA DIONISIO DA SILVA",
+                "IDADE": "95 anos",
+                "LOCAL": "VALINHOS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "42953812334",
+                "NOME": "JOSE AMORIM VIEIRA",
+                "IDADE": "89 anos",
+                "LOCAL": "CANINDE\/CE",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TELEFONICA BRASIL S.A.",
+                "CNPJ": "02558157063083",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "732130",
+                "DATA_ADMISSAO": "01\/04\/2016",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "GLOBAL VILLAGE TELECOM S.A.",
+                "CNPJ": "03420926009504",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "732130",
+                "DATA_ADMISSAO": "09\/06\/2014",
+                "DATA_DEMISSAO": "01\/04\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "REDE CONECTA SERVICOS DE REDE S.A",
+                "CNPJ": "69699742002105",
+                "CIDADE": "OLINDA-PE",
+                "PROFISSAO": "732110",
+                "DATA_ADMISSAO": "02\/06\/2008",
+                "DATA_DEMISSAO": "19\/05\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,248 @@
+{
+    "CADASTRAIS": {
+        "CPF": "95665544434",
+        "NOME": "GENIVALDO DOS PRAZERES SILVA JUNIOR",
+        "NOME_MAE": "MARLUCE DA SILVA PRAZERES",
+        "NASCTO": "28\/07\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "016251371775",
+        "NIT": "12600183010",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "232155",
+        "PROFISSAO": "PROFESSOR DE MATEMATICA NO ENSINO MEDIO",
+        "SALARIO": " 742,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8233143019",
+                "OPERADORA": "TELEMAR\/AL",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8230352790",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8233381103",
+                "OPERADORA": "TELEMAR\/AL",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "82991888968",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "82993326338",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13988235300",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "OI_PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "82991188788",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "82991262246",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R EMP JORGE MONTENEGRO BARROS",
+                "NUMERO": "3336",
+                "COMPLEMENTO": "C 35",
+                "BAIRRO": "BARRO DURO",
+                "CEP": "57045055",
+                "CIDADE": "MACEIO",
+                "ESTADO": "AL"
+            },
+            {
+                "LOGRADOURO": "AV JORGE BARROS",
+                "NUMERO": "3336",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STA AMELIA",
+                "CEP": "57063000",
+                "CIDADE": "MACEIO",
+                "ESTADO": "AL"
+            },
+            {
+                "LOGRADOURO": "R DRA DAYSE LINS BREDA",
+                "NUMERO": "271",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BARRO DURO",
+                "CEP": "57045390",
+                "CIDADE": "MACEIO",
+                "ESTADO": "AL"
+            },
+            {
+                "LOGRADOURO": "R XXI",
+                "NUMERO": "44",
+                "COMPLEMENTO": "",
+                "BAIRRO": "QUINTINO CUNHA",
+                "CEP": "60351680",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO BARBOSA",
+                "NUMERO": "92",
+                "COMPLEMENTO": "BL D AP 4 5 5",
+                "BAIRRO": "GRUTA DE LOURDES",
+                "CEP": "57052710",
+                "CIDADE": "MACEIO",
+                "ESTADO": "AL"
+            },
+            {
+                "LOGRADOURO": "BARBOSA",
+                "NUMERO": "92",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "57480000",
+                "CIDADE": "DELMIRO GOUVEIA",
+                "ESTADO": "AL"
+            },
+            {
+                "LOGRADOURO": "R S BENTO",
+                "NUMERO": "387",
+                "COMPLEMENTO": "C 8",
+                "BAIRRO": "TABULEIRO DO MARTINS",
+                "CEP": "57060610",
+                "CIDADE": "MACEIO",
+                "ESTADO": "AL"
+            },
+            {
+                "LOGRADOURO": "RUA FRANCISCO LEAO",
+                "NUMERO": "1",
+                "COMPLEMENTO": "BL 1 Q C A 102",
+                "BAIRRO": "GRUTA DE LOURDES",
+                "CEP": "57052855",
+                "CIDADE": "MACEIO",
+                "ESTADO": "AL"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "40870472453",
+                "NOME": "MARLUCE DA SILVA PRAZERES",
+                "IDADE": "79 anos",
+                "LOCAL": "MACEIO\/AL",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "745218458",
+                "NOME": "HERIK DOS PRAZERES SILVA",
+                "IDADE": "49 anos",
+                "LOCAL": "MACEIO\/AL",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "3236918462",
+                "NOME": "HENRIK DOS PRAZERES SILVA",
+                "IDADE": "45 anos",
+                "LOCAL": "MACEIO\/AL",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CASA ESCOLA MONTESSORIANA LTDA",
+                "CNPJ": "12476438000120",
+                "CIDADE": "MACEIO-AL",
+                "PROFISSAO": "232155",
+                "DATA_ADMISSAO": "01\/02\/2017",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SECRETARIA DE ESTADO DA EDUCACAO",
+                "CNPJ": "12200218000179",
+                "CIDADE": "MACEIO-AL",
+                "PROFISSAO": "231205",
+                "DATA_ADMISSAO": "10\/02\/2006",
+                "DATA_DEMISSAO": "{Ã±\/{Ã±\/2023",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "COLEGIO SANTA AMELIA LTDA",
+                "CNPJ": "22229584000104",
+                "CIDADE": "MACEIO-AL",
+                "PROFISSAO": "232155",
+                "DATA_ADMISSAO": "01\/03\/2016",
+                "DATA_DEMISSAO": "19\/05\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

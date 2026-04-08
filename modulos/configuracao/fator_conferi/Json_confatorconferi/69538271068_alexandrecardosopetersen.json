@@ -1,0 +1,250 @@
+{
+    "CADASTRAIS": {
+        "CPF": "69538271068",
+        "NOME": "ALEXANDRE CARDOSO PETERSEN",
+        "NOME_MAE": "SONIA MARIA CARDOSO PETERSEN",
+        "NASCTO": "10\/04\/1971",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "1050061462",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "058053340442",
+        "NIT": "12443134476",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "311105",
+        "PROFISSAO": "TECNICO QUIMICO",
+        "SALARIO": " 4.163,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5134575846",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "5134575876",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "5134729364",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "5134773216",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5136611090",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51999690427",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51999185800",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51996391963",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "rafa.engenharia@terra.com.br",
+            "apetersen1@ig.com.br",
+            "alexandrepetersen1@yahoo.com.br",
+            "acardoso@pecom.com.ar",
+            "alexandrepetersen@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R REPUBLICA",
+                "NUMERO": "2025",
+                "COMPLEMENTO": "C 229",
+                "BAIRRO": "HARMONIA",
+                "CEP": "92310530",
+                "CIDADE": "CANOAS",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "V DE CONTORNO",
+                "NUMERO": "212",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TABAI",
+                "CEP": "95853000",
+                "CIDADE": "POLO PETROQUIMICO DE TRIUNFO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R ARACA",
+                "NUMERO": "360",
+                "COMPLEMENTO": "AP 101",
+                "BAIRRO": "CENTRO",
+                "CEP": "92310114",
+                "CIDADE": "CANOAS",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R SILVA PAES",
+                "NUMERO": "11",
+                "COMPLEMENTO": "AP 104",
+                "BAIRRO": "CENTRO",
+                "CEP": "92310130",
+                "CIDADE": "CANOAS",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA REPUBLICA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "HARMONIA",
+                "CEP": "92310530",
+                "CIDADE": "CANOAS",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R REPUBLICA",
+                "NUMERO": "2050",
+                "COMPLEMENTO": "CS  Casa 29",
+                "BAIRRO": "MATO GRANDE",
+                "CEP": "92320000",
+                "CIDADE": "CANOAS",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA REPUBLICA",
+                "NUMERO": "2050",
+                "COMPLEMENTO": "CASA 29",
+                "BAIRRO": "HARMONIA",
+                "CEP": "92310530",
+                "CIDADE": "CANOAS",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "67257704015",
+                "NOME": "SONIA MARIA CARDOSO PETERSEN",
+                "IDADE": "79 anos",
+                "LOCAL": "CANOAS\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "76787397020",
+                "NOME": "ANDREA CARDOSO PETERSEN",
+                "IDADE": "50 anos",
+                "LOCAL": "TRAMANDAI\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CMPC CELULOSE RIOGRANDENSE LTDA",
+                "CNPJ": "11234954000185",
+                "CIDADE": "GUAIBA-RS",
+                "PROFISSAO": "311105",
+                "DATA_ADMISSAO": "10\/05\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "META CENTRAL DE SERVICOS LTDA",
+                "CNPJ": "39826854000167",
+                "CIDADE": "ARACRUZ-ES",
+                "PROFISSAO": "311105",
+                "DATA_ADMISSAO": "08\/10\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "VIDEOLAR-INNOVA S\/A",
+                "CNPJ": "04229761001142",
+                "CIDADE": "TRIUNFO-RS",
+                "PROFISSAO": "311205",
+                "DATA_ADMISSAO": "01\/10\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "INNOVA S\/A",
+                "CNPJ": "01999166000126",
+                "CIDADE": "TRIUNFO-RS",
+                "PROFISSAO": "311205",
+                "DATA_ADMISSAO": "16\/11\/1999",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

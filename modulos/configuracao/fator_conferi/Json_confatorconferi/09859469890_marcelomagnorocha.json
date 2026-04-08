@@ -1,0 +1,173 @@
+{
+    "CADASTRAIS": {
+        "CPF": "9859469890",
+        "NOME": "MARCELO MAGNO ROCHA",
+        "NOME_MAE": "LACINIA FRANCISCA ROCHA",
+        "NASCTO": "31\/10\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "222273604",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "218380990124",
+        "NIT": "12335929994",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1233027025",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "baixa"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "12997024833",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12981423100",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marcelomagno@yahoo.com.br",
+            "marcelomagnor@yahoo.com",
+            "marcelomagnor@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV BRG FARIA LIMA",
+                "NUMERO": "2170",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PUTIM",
+                "CEP": "12227901",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV BRG FARIA LIMA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ MARTIM CERERE",
+                "CEP": "12227000",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R IPATINGA",
+                "NUMERO": "466",
+                "COMPLEMENTO": "BLOCO:5 APARTAMENTO:211",
+                "BAIRRO": "BOSQUE DOS EUCALIPTOS",
+                "CEP": "12233370",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA GERALDO F TAVARES",
+                "NUMERO": "851",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "BQ EUCALIPTOS",
+                "CEP": "12232110",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA GERALDO FERREIRA TAVARES",
+                "NUMERO": "85",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOSQUE DOS EUCALIPTOS",
+                "CEP": "12232110",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "9859466874",
+                "NOME": "LACINIA FRANCISCA ROCHA",
+                "IDADE": "76 anos",
+                "LOCAL": "SAO JOSE DOS CAMPOS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "24794241895",
+                "NOME": "MAYKEL ALECSSANDER ROCHA",
+                "IDADE": "52 anos",
+                "LOCAL": "JACAREI\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "30009186808",
+                "NOME": "FRANCIS MELE ROCHA",
+                "IDADE": "46 anos",
+                "LOCAL": "ARARAQUARA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "FRANCIS MELE ROCHA",
+            "IDADE": "",
+            "LOCALIDADE": "ARARAQUARA\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "30009186808"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "EMBRAER S.A.",
+                "CNPJ": "07689002000189",
+                "CIDADE": "SAO JOSE DOS CAMPOS-SP",
+                "PROFISSAO": "214425",
+                "DATA_ADMISSAO": "01\/08\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "YABORA INDUSTRIA AERONAUTICA S.A.",
+                "CNPJ": "30657250000160",
+                "CIDADE": "SAO JOSE DOS CAMPOS-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "28\/07\/2003",
+                "DATA_DEMISSAO": "31\/07\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,252 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25507736839",
+        "NOME": "SIMONE CRISTINA LEITE",
+        "NOME_MAE": "MARLY PORTO LEITE",
+        "NASCTO": "19\/04\/1976",
+        "IDADE": "50 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "253963150108",
+        "NIT": "12585044892",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "212410",
+        "PROFISSAO": "ANALISTA DE REDES E DE COMUNICACAO DE DADOS",
+        "SALARIO": " 3.303,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1131563177",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1131538004",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11974694708",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11983071722",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11985500820",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11961013605",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "19\/11\/2013",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11969111198",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "simone.leite.ext@telefonica.com",
+            "symone_3003@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DOS TACAPES",
+                "NUMERO": "35",
+                "COMPLEMENTO": "AP 5",
+                "BAIRRO": "VL DIVINA PASTORA",
+                "CEP": "03265090",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MARTINS FONTES",
+                "NUMERO": "152",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "01050000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "PC STA HELENA",
+                "NUMERO": "35",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ DA VILA PRUDENTE",
+                "CEP": "03138030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R AUGUSTO PIACENTINI",
+                "NUMERO": "205",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM INDEPENDENCIA",
+                "CEP": "03223190",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA COSTA BARROS",
+                "NUMERO": "683",
+                "COMPLEMENTO": "AP 4",
+                "BAIRRO": "VILA ALPINA",
+                "CEP": "03210000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA VALTER NAZARENO GIOVANETTI",
+                "NUMERO": "35",
+                "COMPLEMENTO": "CS 1",
+                "BAIRRO": "VILA PRUDENTE",
+                "CEP": "03220010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA AUGUSTO PIACENTINI",
+                "NUMERO": "20",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM INDEPENDENCIA",
+                "CEP": "03223190",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "3511504554",
+                "NOME": "MARLY PORTO LEITE",
+                "IDADE": "39 anos",
+                "LOCAL": "MANOEL VITORINO\/BA",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "10089358597",
+                "NOME": "RUAN PORTO MEIRA",
+                "IDADE": "16 anos",
+                "LOCAL": "",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "10089419561",
+                "NOME": "RAKELE PORTO MEIRA",
+                "IDADE": "13 anos",
+                "LOCAL": "",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "MARLY DE PORTO LEITE",
+            "IDADE": "",
+            "LOCALIDADE": "SAO PAULO\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "14635647838"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TEL TELECOMUNICACOES LTDA.",
+                "CNPJ": "06084614000266",
+                "CIDADE": "BAURU-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "18\/02\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ATENTO BRASIL S\/A",
+                "CNPJ": "02879250007181",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212410",
+                "DATA_ADMISSAO": "01\/02\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "TOP SERVICE FACILITIES LTDA",
+                "CNPJ": "43709799000100",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "313315",
+                "DATA_ADMISSAO": "02\/04\/2007",
+                "DATA_DEMISSAO": "03\/09\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ATENTO BRASIL S\/A",
+                "CNPJ": "02879250004085",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212410",
+                "DATA_ADMISSAO": "01\/08\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

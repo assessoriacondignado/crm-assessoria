@@ -1,0 +1,172 @@
+{
+    "CADASTRAIS": {
+        "CPF": "92473288615",
+        "NOME": "JOSE AUGUSTO DA FONSECA",
+        "NOME_MAE": "AUGUSTA PEREIRA DA FONSECA",
+        "NASCTO": "11\/04\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "093834600281",
+        "NIT": "12514255041",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "517410",
+        "PROFISSAO": "PORTEIRO DE EDIFICIOS",
+        "SALARIO": " 1.158,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "3438425622",
+            "OPERADORA": "TELEMAR\/MG",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "34997256103",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "34999876309",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R D",
+                "NUMERO": "990",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CATULINA",
+                "CEP": "38500000",
+                "CIDADE": "MONTE CARMELO",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R CRUZEIRO DO SUL",
+                "NUMERO": "691",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TREVO",
+                "CEP": "38500000",
+                "CIDADE": "MONTE CARMELO",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R UNICA LASSI",
+                "NUMERO": "171",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STO AGOSTINHO",
+                "CEP": "38500000",
+                "CIDADE": "MONTE CARMELO",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R E",
+                "NUMERO": "560",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CATULINA MATOS",
+                "CEP": "38500000",
+                "CIDADE": "MONTE CARMELO",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "DOS BURITIS",
+                "NUMERO": "9",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RESIDENCIAL COSTA SUL",
+                "CEP": "38500000",
+                "CIDADE": "MONTE CARMELO",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R D",
+                "NUMERO": "800",
+                "COMPLEMENTO": "",
+                "BAIRRO": "",
+                "CEP": "38500000",
+                "CIDADE": "MONTE CARMELO",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "2926876645",
+            "NOME": "AUGUSTA PEREIRA DA FONSECA",
+            "IDADE": "86 anos",
+            "LOCAL": "PATOS DE MINAS\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SUINCO - COOPERATIVA DE SUINOCULTORES LTDA",
+                "CNPJ": "06067949000357",
+                "CIDADE": "PATOS DE MINAS-MG",
+                "PROFISSAO": "391205",
+                "DATA_ADMISSAO": "14\/11\/2017",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PINHEIRO E MARTINS SERVICOS LTDA.",
+                "CNPJ": "14464882000150",
+                "CIDADE": "UBERLANDIA-MG",
+                "PROFISSAO": "517410",
+                "DATA_ADMISSAO": "29\/09\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "MINAS MIX CONCRETO E PRE-MOLDADOS LTDA",
+                "CNPJ": "11941003000227",
+                "CIDADE": "MONTE CARMELO-MG",
+                "PROFISSAO": "517420",
+                "DATA_ADMISSAO": "13\/05\/2014",
+                "DATA_DEMISSAO": "30\/08\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ELETRO EPCEL LTDA",
+                "CNPJ": "04163744000188",
+                "CIDADE": "MONTE CARMELO-MG",
+                "PROFISSAO": "950105",
+                "DATA_ADMISSAO": "26\/09\/2005",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

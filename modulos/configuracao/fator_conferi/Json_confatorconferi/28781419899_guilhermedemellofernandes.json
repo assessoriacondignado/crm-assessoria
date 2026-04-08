@@ -1,0 +1,332 @@
+{
+    "CADASTRAIS": {
+        "CPF": "28781419899",
+        "NOME": "GUILHERME DE MELLO FERNANDES",
+        "NOME_MAE": "MARIA HELENA DE MELLO FERNANDES",
+        "NASCTO": "26\/12\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "279550410132",
+        "NIT": "20641915068",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142510",
+        "PROFISSAO": "GERENTE DE DESENVOLVIMENTO DE SISTEMAS",
+        "SALARIO": " 16.330,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1127918462",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "05\/03\/2020",
+                "TIPO_TEL": "GPON",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1123619403",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "13\/09\/2011",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1123619403",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "13\/09\/2011",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1120913243",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "05\/02\/2016",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1138954586",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "09\/08\/2008",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11966429304",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11985297861",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11934740278",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "20\/02\/2020",
+                "TIPO_TEL": "MOVEL POS-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11973293010",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11995286826",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "guilherme@triunfoeventos.com.br",
+            "angel.duarte22@bol.com.br",
+            "guilhermenf@gmail.com",
+            "primecolor@terra.com.br",
+            "guilhermemf@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R BETARI",
+                "NUMERO": "1530",
+                "COMPLEMENTO": "CS 2",
+                "BAIRRO": "PENHA DE FRANCA",
+                "CEP": "03634040",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DR RAMOS DE AZEVEDO",
+                "NUMERO": "159",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "07012020",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SARTORIO",
+                "NUMERO": "83",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL PAULISTANIA",
+                "CEP": "03720000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R RIO TEFE",
+                "NUMERO": "422",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "GL DO PESSEGO",
+                "CEP": "08265310",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BALTICO",
+                "NUMERO": "96",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD NOVO CARRAO",
+                "CEP": "03908160",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV CANGAIBA",
+                "NUMERO": "1530",
+                "COMPLEMENTO": "2",
+                "BAIRRO": "CANGAIBA",
+                "CEP": "03712003",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ARAI",
+                "NUMERO": "222",
+                "COMPLEMENTO": "1",
+                "BAIRRO": "PRQ NOVO MUNDO",
+                "CEP": "02190075",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ISABEL",
+                "NUMERO": "90",
+                "COMPLEMENTO": "AP  Apartamento  163",
+                "BAIRRO": "VILA ESPERANCA",
+                "CEP": "03647020",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "2547180782",
+                "NOME": "MARIA HELENA DE MELLO FERNANDES",
+                "IDADE": "94 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "27988078836",
+                "NOME": "JANAINA APARECIDA FERNANDES SAUER",
+                "IDADE": "46 anos",
+                "LOCAL": "BOTUCATU\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "28461515803",
+                "NOME": "HENRIQUE DE MELLO FERNANDES",
+                "IDADE": "46 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "32553962800",
+                "NOME": "THELMA DE MELLO FERNANDES RODRIGUES",
+                "IDADE": "43 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "AVANADE DO BRASIL LTDA",
+                "CNPJ": "04049976000290",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "123105",
+                "DATA_ADMISSAO": "14\/12\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PRICEWATERHOUSECOOPERS TECNOLOGIA DA INFORMACAO LTDA.",
+                "CNPJ": "07969979000311",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/02\/2021",
+                "DATA_DEMISSAO": "10\/12\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "TELEFONICA BRASIL S.A.",
+                "CNPJ": "02558157000162",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142510",
+                "DATA_ADMISSAO": "01\/11\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "TELEFONICA BRASIL S.A.",
+                "CNPJ": "02558157007922",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142510",
+                "DATA_ADMISSAO": "01\/02\/2015",
+                "DATA_DEMISSAO": "31\/10\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "TELEFONICA BRASIL S.A.",
+                "CNPJ": "02558157013574",
+                "CIDADE": "SANTANA DE PARNAIBA-SP",
+                "PROFISSAO": "142510",
+                "DATA_ADMISSAO": "01\/07\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "VIVO S.A.",
+                "CNPJ": "02449992045001",
+                "CIDADE": "SANTANA DE PARNAIBA-SP",
+                "PROFISSAO": "142510",
+                "DATA_ADMISSAO": "04\/07\/2011",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "VIVO S.A.",
+                "CNPJ": "02449992005808",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142510",
+                "DATA_ADMISSAO": "04\/07\/2011",
+                "DATA_DEMISSAO": "30\/09\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "PURUS 2 EMPREENDIMENTOS - SPE LTDA.",
+            "CNPJ": "28115106000150",
+            "CIDADE": "SAO PAULO-SP",
+            "QUALIFICACAO": "SÃ³cio",
+            "DATA_ENTRADA": "20180822",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

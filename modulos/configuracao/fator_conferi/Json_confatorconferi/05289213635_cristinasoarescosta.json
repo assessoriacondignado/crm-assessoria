@@ -1,0 +1,152 @@
+{
+    "CADASTRAIS": {
+        "CPF": "5289213635",
+        "NOME": "CRISTINA SOARES COSTA",
+        "NOME_MAE": "DELMA SOARES COSTA",
+        "NASCTO": "19\/03\/1982",
+        "IDADE": "44 anos",
+        "SEXO": "Feminino",
+        "RG": [],
+        "ORGAO_EMISSOR": [],
+        "UF_EMISSAO": [],
+        "TITULO_ELEITOR": "126955280205",
+        "NIT": "2093545478",
+        "ESCOLARIDADE": [],
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "223505",
+        "PROFISSAO": "ENFERMEIRO",
+        "SALARIO": " 2.197,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": []
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "3733713977",
+            "OPERADORA": "TELEMAR\/MG",
+            "DATA_REFERENCIA": [],
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": [],
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": [],
+            "PRIORIDADE": "alta"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "37991199765",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": [],
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": [],
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": [],
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "37988037947",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": [],
+                "TIPO_TEL": "OI_PRE",
+                "TEM_ZAP": [],
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": [],
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "37999851445",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": [],
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": [],
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": [],
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "viannam@lognet.com.br",
+            "crisphisoarescosta31@hotmail.com",
+            "crisphisoarescosta@hotmail.com",
+            "cristinasoares992@yahoo.com.br",
+            "cristinasoares992@yahoo.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R NOVE",
+                "NUMERO": "15",
+                "COMPLEMENTO": "AP 303",
+                "BAIRRO": "BELA VISTA",
+                "CEP": "37925000",
+                "CIDADE": "PIUMHI",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R ME XAVIER NOVOA",
+                "NUMERO": "220",
+                "COMPLEMENTO": [],
+                "BAIRRO": "BOM PASTOR",
+                "CEP": "35500135",
+                "CIDADE": "DIVINOPOLIS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RUA MODESTO CALDEIRA",
+                "NUMERO": "851",
+                "COMPLEMENTO": [],
+                "BAIRRO": "CENTRO",
+                "CEP": "37925000",
+                "CIDADE": "PIUMHI",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "24400807134",
+                "NOME": "DELMA SOARES COSTA",
+                "IDADE": "61 anos",
+                "LOCAL": "SAO VICENTE\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "7630584679",
+                "NOME": "ALYNE SOARES COSTA",
+                "IDADE": "39 anos",
+                "LOCAL": "PIUMHI\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": [],
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "GMS - MELHOR SAUDE LTDA",
+                "CNPJ": "25533461000150",
+                "CIDADE": "PIUMHI-MG",
+                "PROFISSAO": "223505",
+                "DATA_ADMISSAO": "09\/05\/2022",
+                "DATA_DEMISSAO": "27\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": [],
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SANTA CASA DE MISERICORDIA DE PIUMHI",
+                "CNPJ": "23591126000183",
+                "CIDADE": "PIUMHI-MG",
+                "PROFISSAO": "223505",
+                "DATA_ADMISSAO": "02\/01\/2014",
+                "DATA_DEMISSAO": [],
+                "MOTIVO_DESLIGAMENTO": [],
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": []
+}

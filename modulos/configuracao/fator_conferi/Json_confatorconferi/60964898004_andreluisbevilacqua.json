@@ -1,0 +1,179 @@
+{
+    "CADASTRAIS": {
+        "CPF": "60964898004",
+        "NOME": "ANDRE LUIS BEVILACQUA",
+        "NOME_MAE": "DORENI TONIN BEVILACQUA",
+        "NASCTO": "17\/12\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "060823740477",
+        "NIT": "1300004971",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521105",
+        "PROFISSAO": "VENDEDOR EM COMERCIO ATACADISTA",
+        "SALARIO": " 7.936,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "5435223031",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51988558666",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51999135654",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "51998187514",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "albevilacqua@ig.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV BALTAZAR DE OLIVEIRA GARCIA",
+                "NUMERO": "26",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S SEBASTIAO",
+                "CEP": "91130000",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA MARINA SIRANGELO CASTELLO",
+                "NUMERO": "54",
+                "COMPLEMENTO": "AP 416",
+                "BAIRRO": "JARDIM ITU",
+                "CEP": "91215089",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA CARLOS ESTEVAO",
+                "NUMERO": "103",
+                "COMPLEMENTO": "444",
+                "BAIRRO": "JARDIM LEOPOLDINA",
+                "CEP": "91240001",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "AVENIDA BALTAZAR DE OLIVEIRA GARCIA",
+                "NUMERO": "2620",
+                "COMPLEMENTO": "LJ 2",
+                "BAIRRO": "COSTA E SILVA",
+                "CEP": "91150000",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "48301140020",
+                "NOME": "DORENI TONIN BEVILACQUA",
+                "IDADE": "75 anos",
+                "LOCAL": "PORTO ALEGRE\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "53758633087",
+                "NOME": "MARTA HELENA BEVILACQUA",
+                "IDADE": "57 anos",
+                "LOCAL": "PORTO ALEGRE\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "82205680030",
+                "NOME": "ANA PAULA BEVILACQUA",
+                "IDADE": "43 anos",
+                "LOCAL": "PORTO ALEGRE\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "EULALIA DINA FLORES MACHADO",
+                "IDADE": "",
+                "LOCALIDADE": "FARROUPILHA\/RS",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "80876137087"
+            },
+            {
+                "NOME": "LUCIANO ALBUQUERQUE DO NASCIMENTO",
+                "IDADE": "",
+                "LOCALIDADE": "RECIFE\/PE",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "4216077420"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COOPERATIVA CENTRAL AURORA ALIMENTOS",
+                "CNPJ": "83310441006239",
+                "CIDADE": "NOVA SANTA RITA-RS",
+                "PROFISSAO": "521105",
+                "DATA_ADMISSAO": "01\/11\/2005",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COOPERATIVA CENTRAL AURORA ALIMENTOS",
+                "CNPJ": "83310441004376",
+                "CIDADE": "ERECHIM-RS",
+                "PROFISSAO": "521105",
+                "DATA_ADMISSAO": "01\/11\/2005",
+                "DATA_DEMISSAO": "18\/10\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

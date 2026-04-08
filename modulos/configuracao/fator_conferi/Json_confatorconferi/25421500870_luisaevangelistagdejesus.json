@@ -1,0 +1,226 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25421500870",
+        "NOME": "LUISA EVANGELISTA G DE JESUS",
+        "NOME_MAE": "DAMIANA JOSEFA DA SILVA BARBOSA",
+        "NASCTO": "01\/07\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "284183930183",
+        "NIT": "1251479636",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521110",
+        "PROFISSAO": "VENDEDOR DE COMERCIO VAREJISTA",
+        "SALARIO": " 4.895,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1125166813",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1120170184",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "02\/09\/2001",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1120103455",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11991503799",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11943471586",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "29\/11\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11961170184",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11976609056",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "luluzinha2012@r7.com",
+            "luisagomes53@gmail.com",
+            "luisaverbenna@hotmail.com",
+            "gluisa@ig.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R GUAICURI",
+                "NUMERO": "10",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE JULIA",
+                "CEP": "04425000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R GUACURIS",
+                "NUMERO": "10",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL PARQUE JABAQUARA",
+                "CEP": "04321080",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV SAPOPEMBA",
+                "NUMERO": "1790",
+                "COMPLEMENTO": "BL 21 AP 41 A",
+                "BAIRRO": "VL REG FEIJO",
+                "CEP": "03345000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FLOR DA NOITE",
+                "NUMERO": "51",
+                "COMPLEMENTO": "AP  Apartamento  61 A BL  Blocos  21",
+                "BAIRRO": "JARDIM PEDRA BRANCA",
+                "CEP": "08490740",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA BENJAMIN DE TUDELA",
+                "NUMERO": "7",
+                "COMPLEMENTO": "BL 21 AP A 41",
+                "BAIRRO": "FAZENDA DA JUTA",
+                "CEP": "03977408",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CANDIDO DA SILVA",
+                "NUMERO": "7",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA ALPINA",
+                "CEP": "03204060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "1337072885",
+                "NOME": "DAMIANA JOSEFA DA SILVA BARBOSA",
+                "IDADE": "90 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "4979378838",
+                "NOME": "JOSE DOMINGOS BARBOSA",
+                "IDADE": "66 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "12447173474",
+                "NOME": "DANIEL SILVA BARBOSA",
+                "IDADE": "26 anos",
+                "LOCAL": "JATAUBA\/PE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "13175376452",
+                "NOME": "RAIANE BARBOSA DA SILVA",
+                "IDADE": "24 anos",
+                "LOCAL": "JATAUBA\/PE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "13175384471",
+                "NOME": "DANIELLY BARBOSA SILVA",
+                "IDADE": "18 anos",
+                "LOCAL": "",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "24827484880",
+                "NOME": "MARIA APARECIDA BARBOSA AMORIM",
+                "IDADE": "64 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "VERBENNA FARMACIA DE MANIPULACAO LTDA",
+            "CNPJ": "00787540000167",
+            "CIDADE": "SAO PAULO-SP",
+            "PROFISSAO": "521110",
+            "DATA_ADMISSAO": "03\/09\/2007",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

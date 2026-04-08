@@ -1,0 +1,175 @@
+{
+    "CADASTRAIS": {
+        "CPF": "13293889840",
+        "NOME": "FERNANDO MODESTO YARUSSI",
+        "NOME_MAE": "MARIA THEREZA MODESTO YARUSSI",
+        "NASCTO": "30\/08\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "160225220116",
+        "NIT": "1250146571",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "234505",
+        "PROFISSAO": "PROFESSOR DE ENSINO SUPERIOR NA AREA DE DIDATICA",
+        "SALARIO": " 9.430,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1136753678",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1139085316",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1138624711",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "11981114195",
+            "OPERADORA": "TIM CELULAR S.A.",
+            "DATA_REFERENCIA": "07\/03\/2018",
+            "TIPO_TEL": "MOVEL",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": ""
+        }
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "fmyarussi@faap.br",
+            "fernando.yarussi@siemens.com",
+            "fmyarussi@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DOUTOR PAULO VIEIRA",
+                "NUMERO": "222",
+                "COMPLEMENTO": "AP  Apartamento  202",
+                "BAIRRO": "SUMARE",
+                "CEP": "01257000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA APINAJES",
+                "NUMERO": "1621",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SUMARE",
+                "CEP": "01258001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "15174429821",
+                "NOME": "MARIA THEREZA MODESTO YARUSSI",
+                "IDADE": "85 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "16614252836",
+                "NOME": "DANIELA YARUSSI RAMOS DOS SANTOS",
+                "IDADE": "52 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "31532894848",
+                "NOME": "LUCIANA MODESTO YARUSSI",
+                "IDADE": "50 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "CLEOMAR IVAN HENCKES",
+                "IDADE": "",
+                "LOCALIDADE": "",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "68825862091"
+            },
+            {
+                "NOME": "FERNANDO IAROSSI",
+                "IDADE": "",
+                "LOCALIDADE": "SAO BERNARDO DO CAMPO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "14929889871"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "FUNDACAO ARMANDO ALVARES PENTEADO",
+                "CNPJ": "61451431000240",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "234505",
+                "DATA_ADMISSAO": "06\/02\/1995",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SIEMENS BRASIL LTDA",
+                "CNPJ": "34776007000111",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142320",
+                "DATA_ADMISSAO": "01\/03\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SIEMENS ENERGY BRASIL LTDA.",
+                "CNPJ": "44013159000116",
+                "CIDADE": "JUNDIAI-SP",
+                "PROFISSAO": "252210",
+                "DATA_ADMISSAO": "08\/11\/1993",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

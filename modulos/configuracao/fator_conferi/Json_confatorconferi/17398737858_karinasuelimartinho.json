@@ -1,0 +1,165 @@
+{
+    "CADASTRAIS": {
+        "CPF": "17398737858",
+        "NOME": "KARINA SUELI MARTINHO",
+        "NOME_MAE": "MARIA APARECIDA DO AMARAL",
+        "NASCTO": "27\/07\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "231235170183",
+        "NIT": "12638892140",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "783215",
+        "PROFISSAO": "CARREGADOR (VEICULOS DE TRANSPORTES TERRESTRES)",
+        "SALARIO": " 904,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1438825791",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1438822655",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "14968225791",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "14997085721",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "14997462867",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "14996545921",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "000ac2ac5fbf@acs.com.br",
+            "fertnando_botuc@br.inter.net",
+            "fernando_botuc@br.inter.net",
+            "edianacristina@globo.com",
+            "karinasueli@globo.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOAQUIM PEDRO DE MATTOS",
+                "NUMERO": "355",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALTO",
+                "CEP": "18601065",
+                "CIDADE": "BOTUCATU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOAQUIM PEDRO DE MATTOS",
+                "NUMERO": "222",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA EDEN",
+                "CEP": "18601033",
+                "CIDADE": "BOTUCATU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOAQUIM PEDRO DE MATTOS",
+                "NUMERO": "355",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA EDEN",
+                "CEP": "18601033",
+                "CIDADE": "BOTUCATU",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "44382804",
+            "NOME": "MARIA APARECIDA DO AMARAL",
+            "IDADE": "70 anos",
+            "LOCAL": "RIO CLARO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "EMBRAER S.A.",
+                "CNPJ": "07689002000340",
+                "CIDADE": "BOTUCATU-SP",
+                "PROFISSAO": "723235",
+                "DATA_ADMISSAO": "12\/20\/2003",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "M. C. SOUTO DO AMARAL",
+                "CNPJ": "05279770000139",
+                "CIDADE": "BOTUCATU-SP",
+                "PROFISSAO": "783215",
+                "DATA_ADMISSAO": "02\/05\/2011",
+                "DATA_DEMISSAO": "14\/03\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

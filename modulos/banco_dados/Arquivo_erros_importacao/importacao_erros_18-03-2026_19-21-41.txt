@@ -1,0 +1,8 @@
+========================================
+RELATÓRIO DE AUDITORIA E ERROS
+Lote: GERAL CLT COMPLETO - TRAFEGO PAGO - CRM
+Usuário: ALEX BARBOSA LEAL
+Data: 18/03/2026 19:21:41
+========================================
+
+[FALHA SQL] LINHA 900 | CPF: 26512702883 | ERRO: SQLSTATE[40001]: Serialization failure: 1213 Deadlock found when trying to get lock; try restarting transaction

@@ -1,0 +1,164 @@
+{
+    "CADASTRAIS": {
+        "CPF": "90321421434",
+        "NOME": "DOUGLAS FELIX DA COSTA",
+        "NOME_MAE": "JOSEFA CLEMENTE DA COSTA",
+        "NASCTO": "03\/05\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "3889157960",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "024157741708",
+        "NIT": "1267177262",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521135",
+        "PROFISSAO": "FRENTISTA",
+        "SALARIO": " 1.944,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "2133356066",
+            "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21976535002",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21993085439",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21992225120",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21976495392",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21988268649",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/04\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "EST GEN CANROBERT PEREIRA DA COSTA",
+                "NUMERO": "1416",
+                "COMPLEMENTO": "CS 3",
+                "BAIRRO": "REALENGO",
+                "CEP": "21710400",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R CARINHANHA",
+                "NUMERO": "601",
+                "COMPLEMENTO": "C 3",
+                "BAIRRO": "MAGALHAES BASTOS",
+                "CEP": "21750165",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R MORRO DA GARCA",
+                "NUMERO": "70",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BANGU",
+                "CEP": "21862250",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R CEL FRANCA LEITE",
+                "NUMERO": "830",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CHATUBA",
+                "CEP": "26585021",
+                "CIDADE": "MESQUITA",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "4113191409",
+            "NOME": "JOSEFA CLEMENTE DA COSTA",
+            "IDADE": "63 anos",
+            "LOCAL": "PESQUEIRA\/PE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "POSTO E GARAGE MAIOR DA PRACA LTDA",
+                "CNPJ": "34132951000136",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "521135",
+                "DATA_ADMISSAO": "01\/07\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "AUTO POSTO BITTIG LTDA",
+                "CNPJ": "33346818000110",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "521135",
+                "DATA_ADMISSAO": "01\/01\/2003",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,270 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25715932858",
+        "NOME": "CAROLINE CRISPIN DE OLIVEIRA BRAGA",
+        "NOME_MAE": "SILVIA CRISPIM DE OLIVEIRA",
+        "NASCTO": "07\/10\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "280557030159",
+        "NIT": "1252013721 ",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "252305",
+        "PROFISSAO": "SECRETARIA  EXECUTIVA",
+        "SALARIO": " 3.550,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1131516028",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "10\/11\/2011",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1131516028",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "10\/11\/2011",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1158743623",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1133618321",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1130497105",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11989177980",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11973440790",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11973440790",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11978301660",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1178301660",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "danielgc@uol.com.br",
+            "caroline_crizpin@yahoo.com.br",
+            "dg.carvaho@uol.com.br",
+            "caroline_crispin@yahoo.com",
+            "caroline_crispim@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R FERES BECHARA",
+                "NUMERO": "39",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAPAO REDONDO",
+                "CEP": "05867390",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV GIOVANNI GRONCHI",
+                "NUMERO": "5819",
+                "COMPLEMENTO": "LJ 350",
+                "BAIRRO": "VL ANDRADE",
+                "CEP": "05724900",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "EST DE JACAREPAGUA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ANIL",
+                "CEP": "22753033",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R CAPITAO OTAVIO MACHADO",
+                "NUMERO": "4756",
+                "COMPLEMENTO": "20",
+                "BAIRRO": "CHACARA SANTO ANTONIO (ZONA SUL)",
+                "CEP": "04718000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MAJOR SERTORIO",
+                "NUMERO": "693",
+                "COMPLEMENTO": "AP 182",
+                "BAIRRO": "VILA BUARQUE",
+                "CEP": "01222001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA PAULA NEY",
+                "NUMERO": "475",
+                "COMPLEMENTO": "AP 620",
+                "BAIRRO": "VILA MARIANA",
+                "CEP": "04107021",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA PAULA NEY",
+                "NUMERO": "47",
+                "COMPLEMENTO": "AP 620",
+                "BAIRRO": "VILA MARIANA",
+                "CEP": "04107021",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "DANIEL GRACIANO DE CARVALHO",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "30467221847"
+            },
+            {
+                "NOME": "JOSE ROBERTO CARVALHO",
+                "IDADE": "",
+                "LOCALIDADE": "MAUA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "524247820"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "MORE TECH SISTEMAS LTDA",
+                "CNPJ": "09252226000154",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "354125",
+                "DATA_ADMISSAO": "25\/09\/2023",
+                "DATA_DEMISSAO": "29\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SEARA ALIMENTOS LTDA",
+                "CNPJ": "02914460019170",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "354125",
+                "DATA_ADMISSAO": "01\/07\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COLLECTION AMENITIES INDUSTRIA E COMERCIO LTDA",
+                "CNPJ": "04792973000161",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "252305",
+                "DATA_ADMISSAO": "03\/11\/2022",
+                "DATA_DEMISSAO": "05\/04\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "HUSQVARNA DO BRASIL INDUSTRIA E COMERCIO DE PRODUTOS PARA FLORESTA E JARDIM LTDA.",
+                "CNPJ": "04098470000352",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "253120",
+                "DATA_ADMISSAO": "16\/11\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

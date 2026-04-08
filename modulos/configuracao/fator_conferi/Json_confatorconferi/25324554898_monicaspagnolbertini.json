@@ -1,0 +1,202 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25324554898",
+        "NOME": "MONICA SPAGNOL BERTINI",
+        "NOME_MAE": "MARIA CECILIA SPAGNOL BERTINI",
+        "NASCTO": "23\/03\/1976",
+        "IDADE": "50 anos",
+        "SEXO": "Feminino",
+        "RG": "26342355",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "236715240116",
+        "NIT": "13258363853",
+        "ESCOLARIDADE": "ANALFABETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "252105",
+        "PROFISSAO": "ADMINISTRADOR",
+        "SALARIO": " 11.707,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1934682604",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "18996686063",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "24\/01\/2020",
+                "TIPO_TEL": "MOVEL POS-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "18998206063",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL POS-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19996064989",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "19997734743",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "mobertini@hotmail.com",
+            "mobertini@uol.com.br",
+            "crisbertini@uol.com.br",
+            "monicasb@br.ibm.com",
+            "susana.almeida221@terra.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R S GABRIEL",
+                "NUMERO": "855",
+                "COMPLEMENTO": "AP 13 BC A",
+                "BAIRRO": "S MANOEL",
+                "CEP": "13472000",
+                "CIDADE": "AMERICANA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DAS SIBIPIRUNAS",
+                "NUMERO": "16",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ RESIDENCIAL VILLAGE",
+                "CEP": "16303058",
+                "CIDADE": "PENAPOLIS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SAO GABRIEL",
+                "NUMERO": "1855",
+                "COMPLEMENTO": "AP  Apartamento  13 BL  Blocos  A",
+                "BAIRRO": "VILA BELVEDERE",
+                "CEP": "13473000",
+                "CIDADE": "AMERICANA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA PROENCA",
+                "NUMERO": "971",
+                "COMPLEMENTO": "APTO 114",
+                "BAIRRO": "BOSQUE",
+                "CEP": "13026121",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "9570180889",
+                "NOME": "MARIA CECILIA SPAGNOL BERTINI",
+                "IDADE": "77 anos",
+                "LOCAL": "PENAPOLIS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "25233105896",
+                "NOME": "JOSE JORDANO BERTINI JUNIOR",
+                "IDADE": "48 anos",
+                "LOCAL": "AMERICANA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "BRUNA MARIA RODRIGUES ARAUJO DOS SANTOS",
+                "IDADE": "",
+                "LOCALIDADE": "UBERABA\/MG",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "5412864635"
+            },
+            {
+                "NOME": "CRISTIANE BERTINI SCHNEIDER",
+                "IDADE": "",
+                "LOCALIDADE": "AMERICANA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "27717370867"
+            },
+            {
+                "NOME": "FLORA MARIA PINHEIRO COSTA",
+                "IDADE": "",
+                "LOCALIDADE": "FORTALEZA\/CE",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "4164113391"
+            },
+            {
+                "NOME": "PATRICIA BOHME M R LEONEL",
+                "IDADE": "",
+                "LOCALIDADE": "ITAPETININGA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "25370659800"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "KYNDRYL BRASIL SERVICOS LTDA.",
+                "CNPJ": "40504325000207",
+                "CIDADE": "HORTOLANDIA-SP",
+                "PROFISSAO": "123105",
+                "DATA_ADMISSAO": "01\/09\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "IBM BRASIL-INDUSTRIA MAQUINAS E SERVICOS LIMITADA",
+                "CNPJ": "33372251006278",
+                "CIDADE": "HORTOLANDIA-SP",
+                "PROFISSAO": "252105",
+                "DATA_ADMISSAO": "26\/06\/2006",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,195 @@
+{
+    "CADASTRAIS": {
+        "CPF": "68931190034",
+        "NOME": "GIULIANO GASPARINI",
+        "NOME_MAE": "NILDA FARENZENA GASPARINI",
+        "NASCTO": "22\/11\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "1057116137",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "RS",
+        "TITULO_ELEITOR": "",
+        "NIT": "12812446678",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "214320",
+        "PROFISSAO": "ENGENHEIRO ELETRICISTA DE PROJETOS",
+        "SALARIO": " 6.400,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5132311864",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5135177988",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "54991187343",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51991184625",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "gemmag@ig.com.br",
+            "tiago.td@gmail.com",
+            "ggaspa@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R REINALDO SOSTISSO",
+                "NUMERO": "495",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SAGRADA FAMILIA",
+                "CEP": "95320000",
+                "CIDADE": "NOVA PRATA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "ADOLFHO SCHNEIDER",
+                "NUMERO": "645",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "95320000",
+                "CIDADE": "NOVA PRATA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "AV ERICO VERISSIMO",
+                "NUMERO": "441",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MENINO DEUS",
+                "CEP": "90160181",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA BURUM",
+                "NUMERO": "124",
+                "COMPLEMENTO": "AP 203",
+                "BAIRRO": "VILA ASSUNCAO",
+                "CEP": "91900170",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "15212831091",
+                "NOME": "NILDA FARENZENA GASPARINI",
+                "IDADE": "76 anos",
+                "LOCAL": "NOVA PRATA\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "757770029",
+                "NOME": "MONIQUE GASPARINI",
+                "IDADE": "35 anos",
+                "LOCAL": "PORTO ALEGRE\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "68931220049",
+                "NOME": "GISELLE GASPARINI",
+                "IDADE": "45 anos",
+                "LOCAL": "ARUJA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "LUIZ GASPARINI",
+                "IDADE": "",
+                "LOCALIDADE": "PORTO ALEGRE\/RS",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "13314874049"
+            },
+            {
+                "NOME": "TIAGO DALL AGNOL",
+                "IDADE": "",
+                "LOCALIDADE": "SAO LEOPOLDO\/RS",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "95517162053"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "STONE INSTITUICAO DE PAGAMENTO S.A",
+                "CNPJ": "16501555000238",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "04\/01\/2021",
+                "DATA_DEMISSAO": "30\/09\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BUY4 PROCESSAMENTO DE PAGAMENTOS S.A.",
+                "CNPJ": "16569357000125",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "01\/10\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "RMS INDUSTRIA DE EQUIPAMENTOS ELETRONICOS LIMITADA",
+                "CNPJ": "94414000000181",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "214320",
+                "DATA_ADMISSAO": "03\/09\/2001",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

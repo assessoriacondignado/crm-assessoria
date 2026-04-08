@@ -1,0 +1,272 @@
+{
+    "CADASTRAIS": {
+        "CPF": "29755201823",
+        "NOME": "ROBERTO FEOLA LOPES DA SILVA",
+        "NOME_MAE": "CLAUDETE APARECIDA FEOLA DA SILVA",
+        "NASCTO": "04\/01\/1980",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "282559520132",
+        "NIT": "1289296277",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "214305",
+        "PROFISSAO": "ENGENHEIRO ELETRICISTA",
+        "SALARIO": " 34.119,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1120218000",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "4734226984",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1136852018",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1136852018",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1136852537",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "17\/12\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11998853252",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11998853252",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11999265027",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "82991007562",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "roberto.feola@outlook.com.br",
+            "localizasmc154@hotmail.com",
+            "roberto-feola.silva@caixa.gov.br",
+            "roberto.feola@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV DOS AUTONOMISTAS",
+                "NUMERO": "197",
+                "COMPLEMENTO": "2920",
+                "BAIRRO": "VL YARA",
+                "CEP": "06020000",
+                "CIDADE": "OSASCO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R YOLANDA DA SILVA GAMBA",
+                "NUMERO": "3105",
+                "COMPLEMENTO": "BL 4 AP 73",
+                "BAIRRO": "JD SAMBURA",
+                "CEP": "17047190",
+                "CIDADE": "BAURU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DR PEDRO MONTEIRO",
+                "NUMERO": "16",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "57020380",
+                "CIDADE": "MACEIO",
+                "ESTADO": "AL"
+            },
+            {
+                "LOGRADOURO": "SGAN 601",
+                "NUMERO": "601",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ASA NORTE",
+                "CEP": "70830010",
+                "CIDADE": "BRASILIA",
+                "ESTADO": "DF"
+            },
+            {
+                "LOGRADOURO": "AV BRG FARIA LIMA",
+                "NUMERO": "1355",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD PAULISTANO",
+                "CEP": "01452002",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R OTTO BOEHM",
+                "NUMERO": "648",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AMERICA",
+                "CEP": "89201700",
+                "CIDADE": "JOINVILLE",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R CHAMANTA",
+                "NUMERO": "811",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL PRUDENTE",
+                "CEP": "03127000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV DR MARTIN LUTHER KING",
+                "NUMERO": "762",
+                "COMPLEMENTO": "REROP SP",
+                "BAIRRO": "UMUARAMA",
+                "CEP": "06030900",
+                "CIDADE": "OSASCO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "81256850810",
+                "NOME": "CLAUDETE APARECIDA FEOLA DA SILVA",
+                "IDADE": "73 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "24672641813",
+                "NOME": "JOSE EDUARDO LOPES DA SILVA",
+                "IDADE": "49 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "29568667881",
+                "NOME": "RENATO FEOLA LOPES DA SILVA",
+                "IDADE": "44 anos",
+                "LOCAL": "BERTIOGA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "32458093876",
+                "NOME": "RICARDO FEOLA LOPES DA SILVA",
+                "IDADE": "37 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CAIXA ECONOMICA FEDERAL",
+                "CNPJ": "00360305562960",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "214305",
+                "DATA_ADMISSAO": "27\/05\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CAIXA ECONOMICA FEDERAL",
+                "CNPJ": "00360305267615",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "214305",
+                "DATA_ADMISSAO": "01\/05\/2022",
+                "DATA_DEMISSAO": "27\/05\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CAIXA ECONOMICA FEDERAL",
+                "CNPJ": "00360305267887",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "214305",
+                "DATA_ADMISSAO": "04\/06\/2007",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

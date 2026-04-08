@@ -1,0 +1,205 @@
+{
+    "CADASTRAIS": {
+        "CPF": "27731761894",
+        "NOME": "MARCOS ROBERTO MENDES DE OLIVEIRA",
+        "NOME_MAE": "NAIR MENDES ALMEIDA OLIVEIRA",
+        "NASCTO": "01\/10\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "245668580167",
+        "NIT": "1254720247",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "840105",
+        "PROFISSAO": "SUPERVISOR DE PRODUCAO DA INDUSTRIA ALIMENTICIA",
+        "SALARIO": " 9.906,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1435114201",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "6734418117",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "18981581007",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "18997063607",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "18997281531",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "18996874845",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marcos@ept.jbs.com.br",
+            "marcos@cld.jbs.com.br",
+            "marcos.oliveira@lin.jbs.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R S LUIZ",
+                "NUMERO": "2950",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD REAL",
+                "CEP": "19470000",
+                "CIDADE": "PRESIDENTE EPITACIO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV ARQO LUIS SAIA",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "16400010",
+                "CIDADE": "LINS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SEBASTIAO NOVAIS",
+                "NUMERO": "2",
+                "COMPLEMENTO": "34",
+                "BAIRRO": "VL PRES VARGAS",
+                "CEP": "19470000",
+                "CIDADE": "PRESIDENTE EPITACIO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SEBASTIAO NOVAES",
+                "NUMERO": "2034",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL PRES VARGAS",
+                "CEP": "19470000",
+                "CIDADE": "PRESIDENTE EPITACIO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MILTON MODESTO",
+                "NUMERO": "152",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "79750000",
+                "CIDADE": "NOVA ANDRADINA",
+                "ESTADO": "MS"
+            },
+            {
+                "LOGRADOURO": "R S LUIZ",
+                "NUMERO": "29",
+                "COMPLEMENTO": "50",
+                "BAIRRO": "JD REAL",
+                "CEP": "19470000",
+                "CIDADE": "PRESIDENTE EPITACIO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MACEDONIA",
+                "NUMERO": "234",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL PRES VARGAS",
+                "CEP": "19470000",
+                "CIDADE": "PRESIDENTE EPITACIO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOAO TEODORO",
+                "NUMERO": "59",
+                "COMPLEMENTO": "",
+                "BAIRRO": "GARCIA",
+                "CEP": "16400221",
+                "CIDADE": "LINS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "4012742841",
+                "NOME": "JOSE DE JESUS OLIVEIRA",
+                "IDADE": "63 anos",
+                "LOCAL": "OSASCO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "28395648820",
+                "NOME": "MARCIO MENDES DE OLIVEIRA",
+                "IDADE": "45 anos",
+                "LOCAL": "PRESIDENTE EPITACIO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "JBS S\/A",
+            "CNPJ": "02916265008659",
+            "CIDADE": "LINS-SP",
+            "PROFISSAO": "840105",
+            "DATA_ADMISSAO": "22\/10\/2001",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

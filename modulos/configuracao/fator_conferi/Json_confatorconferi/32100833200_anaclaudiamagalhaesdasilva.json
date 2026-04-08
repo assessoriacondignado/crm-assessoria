@@ -1,0 +1,177 @@
+{
+    "CADASTRAIS": {
+        "CPF": "32100833200",
+        "NOME": "ANA CLAUDIA MAGALHAES DA SILVA",
+        "NOME_MAE": "LAURA MAGALHAES DA SILVA",
+        "NASCTO": "08\/12\/1969",
+        "IDADE": "56 anos",
+        "SEXO": "Feminino",
+        "RG": "9210997",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "AM",
+        "TITULO_ELEITOR": "",
+        "NIT": "2685988233",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142205",
+        "PROFISSAO": "GERENTE DE RECURSOS HUMANOS",
+        "SALARIO": " 47.052,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9236462936",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9233046497",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "05\/05\/2009",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9236462822",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "31\/03\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92993924094",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92991522930",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "22\/01\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "92981630040",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "sidcramos@uol.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CARLOS LECOR",
+                "NUMERO": "1023",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE 10 DE NOVEMBRO",
+                "CEP": "69055430",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "RUA CARLOS LECOR",
+                "NUMERO": "25",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE 10 DE NOVEMBRO",
+                "CEP": "69055430",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "492077762",
+            "NOME": "LAURA MAGALHAES DA SILVA",
+            "IDADE": "93 anos",
+            "LOCAL": "RIO DE JANEIRO\/RJ",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "JOAO VICTOR MAGALHAES DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "MANAUS\/AM",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "3110327295"
+            },
+            {
+                "NOME": "SIDNEY DA COSTA RAMOS",
+                "IDADE": "",
+                "LOCALIDADE": "ITACOATIARA\/AM",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "7726201215"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CHIBATAO NAVEGACAO E COMERCIO LTDA",
+                "CNPJ": "84098383000172",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "142205",
+                "DATA_ADMISSAO": "12\/07\/2016",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FLEXTRONICS DA AMAZONIA LTDA",
+                "CNPJ": "04454120000462",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "01\/01\/2016",
+                "DATA_DEMISSAO": "24\/04\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "FLEXTRONICS DA AMAZONIA LTDA",
+                "CNPJ": "04454120000110",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "90\/19\/1903",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,122 @@
+{
+    "CADASTRAIS": {
+        "CPF": "61040045553",
+        "NOME": "JOSE RAIMUNDO DA SILVA",
+        "NOME_MAE": "MARIA DA PAZ DO ESPIRITO SANTO",
+        "NASCTO": "16\/09\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "015010402160",
+        "NIT": "1242412204",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "414215",
+        "PROFISSAO": "CONFERENTE DE CARGA E DESCARGA",
+        "SALARIO": " 2.550,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7932490292",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7932492925",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "01\/02\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "79988617086",
+            "OPERADORA": "OI MOVEL S.A.",
+            "DATA_REFERENCIA": "12\/05\/2013",
+            "TIPO_TEL": "POS PAGO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": ""
+        }
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AC DEZENOVE",
+                "NUMERO": "248",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "17 DE MARCO",
+                "CEP": "49003292",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R TRINTA E UM",
+                "NUMERO": "248",
+                "COMPLEMENTO": "Q 29",
+                "BAIRRO": "JABOTIANA",
+                "CEP": "49096110",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R URQUIZA LEAL",
+                "NUMERO": "41",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SALGADO FILHO",
+                "CEP": "49020490",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R L",
+                "NUMERO": "4",
+                "COMPLEMENTO": "CJ JRDIM ESPERANCA",
+                "BAIRRO": "ZONA DE EXPANSAO ARUANA",
+                "CEP": "49000483",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "3249761788",
+            "NOME": "MARIA DA PAZ DO ESPIRITO SANTO",
+            "IDADE": "93 anos",
+            "LOCAL": "",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "CENCOSUD BRASIL COMERCIAL LTDA.",
+            "CNPJ": "39346861003349",
+            "CIDADE": "ARACAJU-SE",
+            "PROFISSAO": "414215",
+            "DATA_ADMISSAO": "02\/01\/2002",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

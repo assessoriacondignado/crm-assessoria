@@ -1,0 +1,193 @@
+{
+    "CADASTRAIS": {
+        "CPF": "11657592766",
+        "NOME": "FELIPE ASSUNCAO DA SILVA",
+        "NOME_MAE": "SOLANGE ASSUNCAO REIS DA SILVA",
+        "NASCTO": "04\/05\/1991",
+        "IDADE": "34 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1620909599",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212410",
+        "PROFISSAO": "ANALISTA DE REDES E DE COMUNICACAO DE DADOS",
+        "SALARIO": " 6.773,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "2121373778",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21997151432",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21998339735",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21999206448",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21983058211",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "21999079171",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "felipeassuncao91@icloud.com",
+            "fe_lipe.a@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R GEN MIGUEL FERREIRA",
+                "NUMERO": "305",
+                "COMPLEMENTO": "R A",
+                "BAIRRO": "TAQUARA",
+                "CEP": "22770590",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R ALTO ALEGRE",
+                "NUMERO": "178",
+                "COMPLEMENTO": "CS 305 R A",
+                "BAIRRO": "PECHINCHA",
+                "CEP": "22770010",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R GENERAL MIGUEL FERREIRA",
+                "NUMERO": "178",
+                "COMPLEMENTO": "COMPLEM CASA 305",
+                "BAIRRO": "TAQUARA",
+                "CEP": "22770590",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA DOM CASMURRO",
+                "NUMERO": "94",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ANIL",
+                "CEP": "22753390",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "437987728",
+                "NOME": "SOLANGE ASSUNCAO REIS DA SILVA",
+                "IDADE": "63 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "10745986790",
+                "NOME": "AMANDA ASSUNCAO DA SILVA",
+                "IDADE": "40 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "16521237764",
+                "NOME": "MATEUS ASSUNCAO DA SILVA",
+                "IDADE": "27 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "AMANDA ASSUNCAO DA SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "RIO DE JANEIRO\/RJ",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "10745986790"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ATC SYSTEMS REPRESENTACOES LTDA",
+                "CNPJ": "02502905000195",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "212410",
+                "DATA_ADMISSAO": "01\/12\/2016",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MSR MELLO INFORMATICA EIRELI",
+                "CNPJ": "04629884000107",
+                "CIDADE": "SAQUAREMA-RJ",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "02\/09\/2013",
+                "DATA_DEMISSAO": "30\/11\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

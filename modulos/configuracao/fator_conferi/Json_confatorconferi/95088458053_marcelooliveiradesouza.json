@@ -1,0 +1,230 @@
+{
+    "CADASTRAIS": {
+        "CPF": "95088458053",
+        "NOME": "MARCELO OLIVEIRA DE SOUZA",
+        "NOME_MAE": "SILVIA OLIVEIRA DE SOUZA",
+        "NASCTO": "08\/08\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "3078136623",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "072342960400",
+        "NIT": "12696136671",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212405",
+        "PROFISSAO": "ANALISTA DE DESENVOLVIMENTO DE SISTEMAS",
+        "SALARIO": " 10.929,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5130311017",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "5134751331",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51983225087",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51982346595",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51993997074",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51998545531",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51993745100",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "mosouzars@hotmail.com",
+            "bruno.javarez@usp.br",
+            "mosouzars@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JACKSON DE FIGUEIREDO",
+                "NUMERO": "247",
+                "COMPLEMENTO": "C 2",
+                "BAIRRO": "NOSSA SENHORA DAS GRACAS",
+                "CEP": "92110280",
+                "CIDADE": "CANOAS",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R ENG AFONSO CAVALCANTI",
+                "NUMERO": "100",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BELA VISTA",
+                "CEP": "90440110",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R JACKSON DE FIGUEIREDO",
+                "NUMERO": "248",
+                "COMPLEMENTO": "CS  Casa  2",
+                "BAIRRO": "NOSSA SENHORA DAS GRACAS",
+                "CEP": "92110280",
+                "CIDADE": "CANOAS",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R PRIMEIRO DE MAIO",
+                "NUMERO": "802",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NITEROI",
+                "CEP": "92120220",
+                "CIDADE": "CANOAS",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R BANDEIRANTES",
+                "NUMERO": "148",
+                "COMPLEMENTO": "AP 201",
+                "BAIRRO": "NOSSA SENHORA DAS GRACAS",
+                "CEP": "92025280",
+                "CIDADE": "CANOAS",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA BANDEIRANTES",
+                "NUMERO": "0",
+                "COMPLEMENTO": "AP 201",
+                "BAIRRO": "NOSSA SENHORA DAS GRACAS",
+                "CEP": "92025280",
+                "CIDADE": "CANOAS",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "91188024",
+            "NOME": "SILVIA OLIVEIRA DE SOUZA",
+            "IDADE": "54 anos",
+            "LOCAL": "CAPAO DO LEAO\/RS",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "KYNDRYL BRASIL SERVICOS LTDA.",
+                "CNPJ": "40504325000207",
+                "CIDADE": "HORTOLANDIA-SP",
+                "PROFISSAO": "212410",
+                "DATA_ADMISSAO": "16\/05\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SONDA PROCWORK INFORMATICA LTDA",
+                "CNPJ": "08733698000832",
+                "CIDADE": "SANTANA DE PARNAIBA-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "10\/06\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "SONDA CIDADES INTELIGENTES E MOBILIDADE LTDA",
+                "CNPJ": "74079484000142",
+                "CIDADE": "SANTANA DE PARNAIBA-SP",
+                "PROFISSAO": "313315",
+                "DATA_ADMISSAO": "10\/06\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "SENTINELA SECURITY CONSULTORIA EM TECNOLOGIA DA INFORMACAO E COMUNICACAO LTDA",
+                "CNPJ": "07008054000142",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "142520",
+                "DATA_ADMISSAO": "09\/08\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "GLOBALWEB OUTSOURCING DO BRASIL S.A.",
+                "CNPJ": "12130013000164",
+                "CIDADE": "SANTANA DE PARNAIBA-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "01\/03\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

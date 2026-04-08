@@ -1,0 +1,286 @@
+{
+    "CADASTRAIS": {
+        "CPF": "673349543",
+        "NOME": "ADRIANA CARDOSO BATISTA",
+        "NOME_MAE": "VALMIRA GOIS CARDOSO",
+        "NASCTO": "16\/02\/1982",
+        "IDADE": "44 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "018716862151",
+        "NIT": "20025727839",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "225175",
+        "PROFISSAO": "",
+        "SALARIO": " 2.000,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7930131000",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "18\/04\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7932224149",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "79999834149",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999958707",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79996314487",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999444149",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999464149",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "drikascb@hotmail.com",
+            "drikascb@msn.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV CAP JOAQUIM MARTINS FONTES",
+                "NUMERO": "324",
+                "COMPLEMENTO": "",
+                "BAIRRO": "FAROLANDIA",
+                "CEP": "49032016",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R UM",
+                "NUMERO": "25",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD STA CATARINA",
+                "CEP": "07995115",
+                "CIDADE": "FRANCISCO MORATO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV ONZE DE JUNHO",
+                "NUMERO": "686",
+                "COMPLEMENTO": "AP 13 A",
+                "BAIRRO": "VL CLEMENTINO",
+                "CEP": "04041002",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV FRANCISCO FALCONI",
+                "NUMERO": "1501",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD AVELINO",
+                "CEP": "03227000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "TV FR PAULO",
+                "NUMERO": "74",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S JOSE",
+                "CEP": "49015240",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R PROFESSOR TRANQUILLI",
+                "NUMERO": "212",
+                "COMPLEMENTO": "AP 82",
+                "BAIRRO": "VILA MARIANA",
+                "CEP": "04126010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R TENENTE WENDEL QUARANTA",
+                "NUMERO": "1731",
+                "COMPLEMENTO": "AP 703",
+                "BAIRRO": "SUISSA",
+                "CEP": "49052260",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "RUA TENENTE WENDEL QUARANTA DOS SANTOS",
+                "NUMERO": "1371",
+                "COMPLEMENTO": "AP 703 ED VAN  GOG",
+                "BAIRRO": "SUISSA",
+                "CEP": "49052260",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "2212668520",
+                "NOME": "VALMIRA GOIS CARDOSO",
+                "IDADE": "82 anos",
+                "LOCAL": "ARACAJU\/SE",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "673352501",
+                "NOME": "VIVIANE CARDOSO BATISTA",
+                "IDADE": "42 anos",
+                "LOCAL": "ARACAJU\/SE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "90138147515",
+                "NOME": "JOSE BATISTA DOS SANTOS JUNIOR",
+                "IDADE": "49 anos",
+                "LOCAL": "ARACAJU\/SE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "8126527544",
+                "NOME": "FABRICIO BATISTA DA SILVA",
+                "IDADE": "23 anos",
+                "LOCAL": "SALVADOR\/BA",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "8126530502",
+                "NOME": "FAGNER BATISTA DA SILVA",
+                "IDADE": "18 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "10512203350",
+                "NOME": "KAMYLA CARDOSO DA SILVA QUINTO",
+                "IDADE": "12 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "81240066287",
+                "NOME": "MARIA DAS GRACAS CARDOSO TENORIO",
+                "IDADE": "62 anos",
+                "LOCAL": "OEIRAS DO PARA\/PA",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "85251607253",
+                "NOME": "VALDINEI BATISTA BALIERIO",
+                "IDADE": "50 anos",
+                "LOCAL": "OEIRAS DO PARA\/PA",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "VALMIRA GOIS CARDOSO",
+            "IDADE": "",
+            "LOCALIDADE": "ARACAJU\/SE",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "2212668520"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "EMPRESA BRASILEIRA DE SERVICOS HOSPITALARES - EBSERH",
+                "CNPJ": "15126437000143",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "225250",
+                "DATA_ADMISSAO": "01\/03\/2018",
+                "DATA_DEMISSAO": "08\/12\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO ARACAJUANA DE BENEFICENCIA",
+                "CNPJ": "13025507000141",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "225250",
+                "DATA_ADMISSAO": "23\/12\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "FUNDACAO HOSPITALAR DE SAUDE",
+                "CNPJ": "10436979000107",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "225175",
+                "DATA_ADMISSAO": "08\/01\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

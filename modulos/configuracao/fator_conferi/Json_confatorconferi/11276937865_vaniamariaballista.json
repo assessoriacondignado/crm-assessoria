@@ -1,0 +1,173 @@
+{
+    "CADASTRAIS": {
+        "CPF": "11276937865",
+        "NOME": "VANIA MARIA BALLISTA",
+        "NOME_MAE": "MARIA SCHIAVETTO BALLISTA",
+        "NASCTO": "25\/02\/1970",
+        "IDADE": "56 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "164964880167",
+        "NIT": "1232329971",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "232120",
+        "PROFISSAO": "PROFESSOR DE EDUCACAO FISICA NO ENSINO MEDIO",
+        "SALARIO": " 419,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1633832020",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1633823171",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "16997150337",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "PRE PAGO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R SINHARINHA FROTA",
+                "NUMERO": "216",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "15990060",
+                "CIDADE": "MATAO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE BONIFACIO",
+                "NUMERO": "1440",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL STA CRUZ",
+                "CEP": "15990335",
+                "CIDADE": "MATAO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV SALDANHA DA GAMA",
+                "NUMERO": "216",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "15990120",
+                "CIDADE": "MATAO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ANTONIO BOVO",
+                "NUMERO": "438",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RESIDENCIAL DAS ACACIAS",
+                "CEP": "15990530",
+                "CIDADE": "MATAO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "22047284899",
+                "NOME": "MARIA SCHIAVETTO BALLISTA",
+                "IDADE": "83 anos",
+                "LOCAL": "MATAO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "14546748817",
+                "NOME": "ELIANA BALLISTA ALVARES",
+                "IDADE": "53 anos",
+                "LOCAL": "MATAO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COLEGIO EDUCACIONAL INTEGRADO DE MATAO LTDA",
+                "CNPJ": "00873897000168",
+                "CIDADE": "MATAO-SP",
+                "PROFISSAO": "232120",
+                "DATA_ADMISSAO": "02\/05\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ESCOLA DE EDUCACAO E RECREACAO INFANTIL REINO DA FANTASIA S\/S LTDA.",
+                "CNPJ": "51808947000164",
+                "CIDADE": "MATAO-SP",
+                "PROFISSAO": "232120",
+                "DATA_ADMISSAO": "01\/04\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SAO PAULO SECRETARIA DA EDUCACAO",
+                "CNPJ": "46384111011265",
+                "CIDADE": "ARARAQUARA-SP",
+                "PROFISSAO": "331205",
+                "DATA_ADMISSAO": "23\/09\/2006",
+                "DATA_DEMISSAO": "{Ã±\/{Ã±\/2023",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "ESTADO DE SAO PAULO",
+                "CNPJ": "46379400000150",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "331205",
+                "DATA_ADMISSAO": "23\/09\/2006",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "COOPERATIVA EDUCACIONAL DE MATAO",
+                "CNPJ": "02319421000105",
+                "CIDADE": "MATAO-SP",
+                "PROFISSAO": "231315",
+                "DATA_ADMISSAO": "02\/02\/2004",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

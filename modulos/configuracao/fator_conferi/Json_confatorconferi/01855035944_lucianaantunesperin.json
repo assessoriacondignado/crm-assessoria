@@ -1,0 +1,221 @@
+{
+    "CADASTRAIS": {
+        "CPF": "1855035944",
+        "NOME": "LUCIANA ANTUNES PERIN",
+        "NOME_MAE": "MARIA SALETE ANTUNES",
+        "NASCTO": "23\/12\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Feminino",
+        "RG": "3290297",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1254347289",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "231210",
+        "PROFISSAO": "PROFESSOR DE NIVEL SUPERIOR DO ENSINO FUNDAMENTAL (PRIMEIRA A QUARTA SERIE)",
+        "SALARIO": " 7.067,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "4933289000",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "49988052796",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "49989157841",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "49988024021",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "49991034075",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "49988880500",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "12\/07\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "diitus@diitus.com.br",
+            "lperin@marista.org.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "ROD SC 283",
+                "NUMERO": "283",
+                "COMPLEMENTO": "N LINHA AO ROQUE 283 283 283",
+                "BAIRRO": "ESPLANADA",
+                "CEP": "89812680",
+                "CIDADE": "CHAPECO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R MAL FLORIANO PEIXOTO L",
+                "NUMERO": "550",
+                "COMPLEMENTO": "L",
+                "BAIRRO": "CENTRO",
+                "CEP": "89801500",
+                "CIDADE": "CHAPECO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R JOAO MARCHETTI",
+                "NUMERO": "162",
+                "COMPLEMENTO": "VL C 2",
+                "BAIRRO": "AYROSA",
+                "CEP": "06283080",
+                "CIDADE": "OSASCO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R S GERONIMO",
+                "NUMERO": "311",
+                "COMPLEMENTO": "D",
+                "BAIRRO": "STA MARIA",
+                "CEP": "89812280",
+                "CIDADE": "CHAPECO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R GUARANIS",
+                "NUMERO": "278",
+                "COMPLEMENTO": "CS D",
+                "BAIRRO": "ESPLANADA",
+                "CEP": "89812440",
+                "CIDADE": "CHAPECO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "RUA CURITIBA - D",
+                "NUMERO": "1111",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "89801341",
+                "CIDADE": "CHAPECO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "RUA CURITIBA - D",
+                "NUMERO": "111",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTA MARIA",
+                "CEP": "89812150",
+                "CIDADE": "CHAPECO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "RUA CURITIBA - D",
+                "NUMERO": "1111",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTA MARIA",
+                "CEP": "89812150",
+                "CIDADE": "CHAPECO",
+                "ESTADO": "SC"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "967550084",
+                "NOME": "MARIA SALETE ANTUNES",
+                "IDADE": "44 anos",
+                "LOCAL": "PORTO ALEGRE\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "11249231957",
+                "NOME": "GEORGIA PERIN",
+                "IDADE": "19 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "11249267986",
+                "NOME": "LUISA PERIN",
+                "IDADE": "14 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO BRASILEIRA DE EDUCACAO E CULTURA -ABEC",
+                "CNPJ": "60982352006900",
+                "CIDADE": "CHAPECO-SC",
+                "PROFISSAO": "231210",
+                "DATA_ADMISSAO": "01\/03\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "UNIAO CATARINENSE DE EDUCACAO",
+                "CNPJ": "84433275002233",
+                "CIDADE": "CHAPECO-SC",
+                "PROFISSAO": "231210",
+                "DATA_ADMISSAO": "06\/02\/2006",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,295 @@
+{
+    "CADASTRAIS": {
+        "CPF": "94702233653",
+        "NOME": "PAULO CESAR MARCONI",
+        "NOME_MAE": "CLAUDIA HELENA MARCONI",
+        "NASCTO": "16\/05\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "123371680264",
+        "NIT": "1247152110",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "914405",
+        "PROFISSAO": "MECANICO DE MANUTENCAO DE AUTOMOVEIS, MOTOCICLETAS E VEICULOS SIMILARES",
+        "SALARIO": " 3.285,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "3436625278",
+            "OPERADORA": "TELEMAR\/MG",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "34988379262",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "34991088649",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "saude4@terra.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOSE CARLOS PEDRO GRANDE",
+                "NUMERO": "415",
+                "COMPLEMENTO": "FDS",
+                "BAIRRO": "VL ESTANCIA",
+                "CEP": "38182372",
+                "CIDADE": "ARAXA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R NICANOR DE FREITAS",
+                "NUMERO": "13",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL GUIMARAES",
+                "CEP": "38183130",
+                "CIDADE": "ARAXA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R STO ANTONIO",
+                "NUMERO": "2180",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STO ANTONIO",
+                "CEP": "38182106",
+                "CIDADE": "ARAXA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R CLEIDE CARVALHO BATISTA",
+                "NUMERO": "305",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD NATALIA",
+                "CEP": "38181556",
+                "CIDADE": "ARAXA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R JERONIMO CAMARGO",
+                "NUMERO": "149",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL IRMAOS ARNONI",
+                "CEP": "02375100",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOAO BATISTA DA SILVA",
+                "NUMERO": "92",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL S PEDRO",
+                "CEP": "38183062",
+                "CIDADE": "ARAXA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "AV SEN MONTANDON",
+                "NUMERO": "13",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "38183214",
+                "CIDADE": "ARAXA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RUA MARCIO MAZZEI",
+                "NUMERO": "300",
+                "COMPLEMENTO": "AP 73",
+                "BAIRRO": "VILA NOVA MAZZEI",
+                "CEP": "02316050",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "2729250638",
+                "NOME": "LIZIANE MARIA MARCONI",
+                "IDADE": "50 anos",
+                "LOCAL": "ARAXA\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "4423710633",
+                "NOME": "LILIAN GRAZIELA MARCONI",
+                "IDADE": "45 anos",
+                "LOCAL": "ARAXA\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "5833514681",
+                "NOME": "LIVIA FERNANDA MARCONI",
+                "IDADE": "43 anos",
+                "LOCAL": "ARAXA\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "18204232802",
+                "NOME": "LIZA RUBIA MARCONI",
+                "IDADE": "52 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SIMAK LOCACAO SERVICOS S.A.",
+                "CNPJ": "45754044000145",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "911305",
+                "DATA_ADMISSAO": "24\/20\/1902",
+                "DATA_DEMISSAO": "01\/11\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COMPANHIA BRASILEIRA DE METALURGIA E MINERACAO",
+                "CNPJ": "33131541000108",
+                "CIDADE": "ARAXA-MG",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "04\/11\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "U M MINERACAO E CONSTRUCAO S\/A",
+                "CNPJ": "18540906002612",
+                "CIDADE": "TAPIRA-MG",
+                "PROFISSAO": "914405",
+                "DATA_ADMISSAO": "02\/03\/2021",
+                "DATA_DEMISSAO": "08\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LSI - LOGISTICA S.A.",
+                "CNPJ": "04057495000146",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "12\/02\/2020",
+                "DATA_DEMISSAO": "02\/03\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "VERA CRUZ TRANSPORTE E TURISMO LTDA",
+                "CNPJ": "16936742000163",
+                "CIDADE": "ARAXA-MG",
+                "PROFISSAO": "914425",
+                "DATA_ADMISSAO": "29\/07\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "PNEUS ARAXA LTDA",
+                "CNPJ": "16905622000280",
+                "CIDADE": "ARAXA-MG",
+                "PROFISSAO": "919205",
+                "DATA_ADMISSAO": "25\/02\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "ISMAR DE OLIVEIRA JUNIOR",
+                "CNPJ": "27377485000193",
+                "CIDADE": "ARAXA-MG",
+                "PROFISSAO": "141515",
+                "DATA_ADMISSAO": "20\/04\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "MOSAIC FERTILIZANTES P K LTDA.",
+                "CNPJ": "33931486002001",
+                "CIDADE": "TAPIRA-MG",
+                "PROFISSAO": "953115",
+                "DATA_ADMISSAO": "06\/04\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "TRANSPORTES E CONSTRUCOES LTDA",
+                "CNPJ": "20177671000130",
+                "CIDADE": "ARAXA-MG",
+                "PROFISSAO": "914425",
+                "DATA_ADMISSAO": "22\/04\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "FAGUNDES CONSTRUCAO E MINERACAO S\/A",
+                "CNPJ": "90272337000493",
+                "CIDADE": "TAPIRA-MG",
+                "PROFISSAO": "913120",
+                "DATA_ADMISSAO": "10\/20\/1904",
+                "DATA_DEMISSAO": "18\/04\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "JC PNEUS LTDA",
+                "CNPJ": "10637441000152",
+                "CIDADE": "ITUMBIARA-GO",
+                "PROFISSAO": "911305",
+                "DATA_ADMISSAO": "14\/05\/2012",
+                "DATA_DEMISSAO": "11\/08\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "ELETRODIESEL ARAXA LTDA",
+                "CNPJ": "20029344000130",
+                "CIDADE": "ARAXA-MG",
+                "PROFISSAO": "914405",
+                "DATA_ADMISSAO": "01\/09\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

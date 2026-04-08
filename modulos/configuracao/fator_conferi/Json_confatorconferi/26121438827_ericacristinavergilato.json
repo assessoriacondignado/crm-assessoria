@@ -1,0 +1,243 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26121438827",
+        "NOME": "ERICA CRISTINA VERGILATO",
+        "NOME_MAE": "APARECIDA MARIA FERREIRA VERGILATO",
+        "NASCTO": "10\/05\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "183295950116",
+        "NIT": "1272712289",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "239405",
+        "PROFISSAO": "COORDENADOR PEDAGOGICO",
+        "SALARIO": " 10.468,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1155474535",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1639143362",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1639143362",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11994478726",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11994478726",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16991311632",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "erica.bastos@terra.com.br",
+            "ecvbastos@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DAS GRUMIXAMAS",
+                "NUMERO": "282",
+                "COMPLEMENTO": "BL 1 AP 1",
+                "BAIRRO": "VL PARQUE JABAQUARA",
+                "CEP": "04349000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV CARAMURU",
+                "NUMERO": "2600",
+                "COMPLEMENTO": "BL 1 AP 1",
+                "BAIRRO": "AT DA BOA VISTA",
+                "CEP": "14030904",
+                "CIDADE": "RIBEIRAO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA CARAMURU",
+                "NUMERO": "260",
+                "COMPLEMENTO": "BL 1 AP 1",
+                "BAIRRO": "REPUBLICA",
+                "CEP": "14030000",
+                "CIDADE": "RIBEIRAO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA CARAMURU",
+                "NUMERO": "2600",
+                "COMPLEMENTO": "BLOCO 1 APTO 1",
+                "BAIRRO": "REPUBLICA",
+                "CEP": "14030000",
+                "CIDADE": "RIBEIRAO PRETO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "30641566832",
+                "NOME": "APARECIDA MARIA FERREIRA VERGILATO",
+                "IDADE": "71 anos",
+                "LOCAL": "URUPES\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "25669892810",
+                "NOME": "FLAVIO BATISTA VERGILATO",
+                "IDADE": "50 anos",
+                "LOCAL": "URUPES\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "29801564857",
+                "NOME": "FABRICIO BATISTA VERGILATO",
+                "IDADE": "46 anos",
+                "LOCAL": "TRES LAGOAS\/MS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "49705313822",
+                "NOME": "PIETRA BASTOS",
+                "IDADE": "26 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COLEGIO CAMINHO DO SABER LTDA",
+                "CNPJ": "18281235000164",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "239405",
+                "DATA_ADMISSAO": "10\/03\/2016",
+                "DATA_DEMISSAO": "31\/07\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ESCOLA CAMINHO DO SABER LTDA.",
+                "CNPJ": "01071079000104",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "239405",
+                "DATA_ADMISSAO": "01\/08\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ESCOLA CAMINHO DO SABER LTDA.",
+                "CNPJ": "01071079000295",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "231210",
+                "DATA_ADMISSAO": "10\/03\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ESTADO DE SAO PAULO",
+                "CNPJ": "46379400000150",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "331205",
+                "DATA_ADMISSAO": "10\/03\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "COLEGIO PLANALTO LTDA",
+                "CNPJ": "07745687000133",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "231210",
+                "DATA_ADMISSAO": "04\/02\/2013",
+                "DATA_DEMISSAO": "25\/06\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "INTERNATIONAL SCHOOL CENTRO DE EDUCACAO LTDA.",
+                "CNPJ": "62380365000146",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "331205",
+                "DATA_ADMISSAO": "01\/02\/2008",
+                "DATA_DEMISSAO": "31\/12\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "AEP BASTOS CONSULTORIA E DESENVOLVIMENTO EM INFORMATICA LTDA",
+            "CNPJ": "05420858000129",
+            "CIDADE": "SAO PAULO-SP",
+            "QUALIFICACAO": "SÃ³cio",
+            "DATA_ENTRADA": "20021114",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

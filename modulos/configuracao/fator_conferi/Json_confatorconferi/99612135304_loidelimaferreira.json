@@ -1,0 +1,234 @@
+{
+    "CADASTRAIS": {
+        "CPF": "99612135304",
+        "NOME": "LOIDE LIMA FERREIRA",
+        "NOME_MAE": "LUIZA LIMA FERREIRA",
+        "NASCTO": "06\/06\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "036331081120",
+        "NIT": "1197611770",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "331105",
+        "PROFISSAO": "PROFESSOR DE NIVEL MEDIO NA EDUCACAO INFANTIL",
+        "SALARIO": " 1.583,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9832550597",
+                "OPERADORA": "TELEMAR\/MA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9830827741",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "01\/03\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9832482252",
+                "OPERADORA": "TELEMAR\/MA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "98984675194",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "32999550597",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "98991024019",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "98996160970",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/10\/2008",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "98986015278",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "18\/10\/2018",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "loidecampos1@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R SETE",
+                "NUMERO": "13",
+                "COMPLEMENTO": "Q 39",
+                "BAIRRO": "IPEM SAO CRISTOVAO",
+                "CEP": "65055282",
+                "CIDADE": "SAO LUIS",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "R GEN ARTUR CARVALHO",
+                "NUMERO": "2",
+                "COMPLEMENTO": "Q 3",
+                "BAIRRO": "TURU",
+                "CEP": "65066320",
+                "CIDADE": "SAO LUIS",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "TV S FRANCISCO",
+                "NUMERO": "5",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S BERNARDO",
+                "CEP": "65057540",
+                "CIDADE": "SAO LUIS",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "AV EDSON BRANDAO",
+                "NUMERO": "291",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CUTIM ANIL",
+                "CEP": "65045380",
+                "CIDADE": "SAO LUIS",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "LOT BRASIL",
+                "NUMERO": "10",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TURU",
+                "CEP": "65066470",
+                "CIDADE": "SAO LUIS",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "AV S LUIS REI DE FRANCA",
+                "NUMERO": "32",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TURU",
+                "CEP": "65065470",
+                "CIDADE": "SAO LUIS",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "R SETE B",
+                "NUMERO": "13",
+                "COMPLEMENTO": "QUADRA 39",
+                "BAIRRO": "JARDIM SAO CRISTOVAO II",
+                "CEP": "65055344",
+                "CIDADE": "SAO LUIS",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "R SAO FRANCISCO",
+                "NUMERO": "5",
+                "COMPLEMENTO": "NULL",
+                "BAIRRO": "SAO BERNARDO",
+                "CEP": "65056220",
+                "CIDADE": "SAO LUIS",
+                "ESTADO": "MA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "243199023",
+            "NOME": "LUIZA LIMA FERREIRA",
+            "IDADE": "42 anos",
+            "LOCAL": "CANOAS\/RS",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "INSTITUTO DE EDUCACAO E CRECHE MAURICIO JOSE",
+                "CNPJ": "73687642000184",
+                "CIDADE": "SAO LUIS-MA",
+                "PROFISSAO": "331105",
+                "DATA_ADMISSAO": "01\/02\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ESCOLA SONHO DE CRIANCA LTDA.",
+                "CNPJ": "10709655000197",
+                "CIDADE": "SAO LUIS-MA",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "29\/01\/2018",
+                "DATA_DEMISSAO": "20\/04\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "DIAS, VALENCIA   FURTADO LTDA",
+                "CNPJ": "06208104000172",
+                "CIDADE": "SAO LUIS-MA",
+                "PROFISSAO": "231205",
+                "DATA_ADMISSAO": "01\/10\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

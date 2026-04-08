@@ -1,0 +1,234 @@
+{
+    "CADASTRAIS": {
+        "CPF": "4737686905",
+        "NOME": "MARCELO DE OLIVEIRA",
+        "NOME_MAE": "IDALINA CANDIDA DE OLIVEIRA",
+        "NASCTO": "28\/11\/1984",
+        "IDADE": "41 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "089282580620",
+        "NIT": "12888892504",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "312320",
+        "PROFISSAO": "TOPOGRAFO",
+        "SALARIO": " 1.452,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "4432553255",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "44991533050",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "07\/03\/2020",
+                "TIPO_TEL": "MOVEL PRE-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "44988175730",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "44998443800",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "44998601223",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "44998243336",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "toledogessica97@gmail.com",
+            "toledogessica@hotmail.com",
+            "amorimgessica@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R BECERVILHO DOS SANTOS",
+                "NUMERO": "642",
+                "COMPLEMENTO": "Q 105 LT 12",
+                "BAIRRO": "CJ RESIDENCIAL CIDADE ALTA",
+                "CEP": "87053420",
+                "CIDADE": "MARINGA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R JOSE IZIDORO BIAZETTO",
+                "NUMERO": "158",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CPO COMPRIDO",
+                "CEP": "81200240",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R PION ERCILIO SILVA",
+                "NUMERO": "42",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CJ HABITACIONAL REQUIAO",
+                "CEP": "87047498",
+                "CIDADE": "MARINGA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R MAL FLORIANO PEIXOTO",
+                "NUMERO": "1369",
+                "COMPLEMENTO": "AP 101",
+                "BAIRRO": "ZONA 07",
+                "CEP": "87030030",
+                "CIDADE": "MARINGA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "AV BRASIL",
+                "NUMERO": "201",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CENTRO CIVICO DE MARINGA",
+                "CEP": "87051028",
+                "CIDADE": "MARINGA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "RUA NILO ALVES DOS SANTOS",
+                "NUMERO": "1035",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CONJUNTO RESIDENCIAL CIDADE ALTA",
+                "CEP": "87053422",
+                "CIDADE": "MARINGA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "AVENIDA BRASIL",
+                "NUMERO": "201",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ZONA 03",
+                "CEP": "87050000",
+                "CIDADE": "MARINGA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "AVENIDA BRASIL",
+                "NUMERO": "201",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ZONA 08",
+                "CEP": "87050465",
+                "CIDADE": "MARINGA",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "2830364864",
+            "NOME": "IDALINA CANDIDA DE OLIVEIRA",
+            "IDADE": "111 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "GESSICA TOLEDO DE AMORIM",
+            "IDADE": "",
+            "LOCALIDADE": "MARINGA\/PR",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "7717983931"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "GIOVANE DE CARVALHO SUBTIL",
+                "CNPJ": "40564315000186",
+                "CIDADE": "CUNHATAI-SC",
+                "PROFISSAO": "992115",
+                "DATA_ADMISSAO": "27\/03\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COCAMAR COOPERATIVA AGROINDUSTRIAL",
+                "CNPJ": "79114450000408",
+                "CIDADE": "MARINGA-PR",
+                "PROFISSAO": "841460",
+                "DATA_ADMISSAO": "04\/11\/2019",
+                "DATA_DEMISSAO": "20\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "EXTRACON MINERACAO E OBRAS LTDA",
+                "CNPJ": "02539384000140",
+                "CIDADE": "MARINGA-PR",
+                "PROFISSAO": "312320",
+                "DATA_ADMISSAO": "06\/11\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "BM MEGALASER INDUSTRIA DE ARTEFATOS EM CHAPAS LTDA",
+                "CNPJ": "12262456000109",
+                "CIDADE": "MARINGA-PR",
+                "PROFISSAO": "773325",
+                "DATA_ADMISSAO": "01\/03\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

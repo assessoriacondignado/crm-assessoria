@@ -1,0 +1,168 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26495739885",
+        "NOME": "MARCIA CRIVELARI DE SOUZA",
+        "NOME_MAE": "APARECIDA FALQUI CRIVELARI",
+        "NASCTO": "25\/05\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "202043880167",
+        "NIT": "1258345517",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "422105",
+        "PROFISSAO": "RECEPCIONISTA, EM GERAL",
+        "SALARIO": " 2.790,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1735218181",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1735641283",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1735641344",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "17991258761",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "17997517185",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "leo.cat@terra.com.br",
+            "marcia.criselari@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PAU BRASIL",
+                "NUMERO": "115",
+                "COMPLEMENTO": "CS  Casa  0",
+                "BAIRRO": "PARQUE RESIDENCIAL AGUDO ROMAO II",
+                "CEP": "15802300",
+                "CIDADE": "CATANDUVA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV WILSON VEIGA",
+                "NUMERO": "474",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SAO SEBASTIAO",
+                "CEP": "15870000",
+                "CIDADE": "CATIGUA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "18621696835",
+                "NOME": "APARECIDA FALQUI CRIVELARI",
+                "IDADE": "92 anos",
+                "LOCAL": "CATIGUA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "4514999806",
+                "NOME": "JOSE RUBENS CRIVELARI",
+                "IDADE": "61 anos",
+                "LOCAL": "CATIGUA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "10276290836",
+                "NOME": "DERCI CRIVELARI BROMBIM",
+                "IDADE": "74 anos",
+                "LOCAL": "CATIGUA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "13673186884",
+                "NOME": "EDNA PERPETUA CRIVELARI BASAGLIA",
+                "IDADE": "55 anos",
+                "LOCAL": "CATIGUA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "26102292839",
+                "NOME": "MARIA ELISA CRIVELARI JOVEDI",
+                "IDADE": "68 anos",
+                "LOCAL": "CATIGUA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "44726323814",
+                "NOME": "MIGUEL CRIVELARI DE SOUZA",
+                "IDADE": "14 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "RIO PRETO FARMACIA DE MANIPULACAO LTDA",
+            "CNPJ": "67929430000244",
+            "CIDADE": "CATANDUVA-SP",
+            "PROFISSAO": "422105",
+            "DATA_ADMISSAO": "01\/12\/1999",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

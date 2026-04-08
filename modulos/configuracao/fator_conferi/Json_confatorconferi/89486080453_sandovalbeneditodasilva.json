@@ -1,0 +1,197 @@
+{
+    "CADASTRAIS": {
+        "CPF": "89486080453",
+        "NOME": "SANDOVAL BENEDITO DA SILVA",
+        "NOME_MAE": "MARIA NAZARE DOS SANTOS",
+        "NASCTO": "24\/03\/1977",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "023508901767",
+        "NIT": "12605554548",
+        "ESCOLARIDADE": "DA 5a. A 8a. SERIE INCOMPLETA DO 1o. GRAU(GINASIO INCOMPLETO)",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782405",
+        "PROFISSAO": "MOTORISTA DE ONIBUS RODOVIARIO",
+        "SALARIO": " 1.637,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2127868000",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2131579635",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21993839468",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21992469200",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21969542254",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21990000566",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21968141296",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "RUA DOUTOR CONTINENTINO",
+                "NUMERO": "53",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTA CRUZ",
+                "CEP": "23510190",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA DOUTOR CONTINENTINO",
+                "NUMERO": "107",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTA CRUZ",
+                "CEP": "23510190",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R GOMES Q 5",
+                "NUMERO": "59",
+                "COMPLEMENTO": "",
+                "BAIRRO": "",
+                "CEP": "57910000",
+                "CIDADE": "MATRIZ DE CAMARAGIBE",
+                "ESTADO": "AL"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "10554459",
+            "NOME": "MARIA NAZARE DOS SANTOS",
+            "IDADE": "93 anos",
+            "LOCAL": "SERRA DA RAIZ\/PB",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "AUTO VIACAO CATARINENSE LTDA",
+                "CNPJ": "82647884002006",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "782405",
+                "DATA_ADMISSAO": "24\/20\/2002",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "UTIL - UNIAO TRANSPORTE INTERESTADUAL DE LUXO LTDA",
+                "CNPJ": "33337007000152",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "782405",
+                "DATA_ADMISSAO": "06\/10\/2020",
+                "DATA_DEMISSAO": "08\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "OPCAO JCA - TURISMO E FRETAMENTO LTDA",
+                "CNPJ": "00091382000106",
+                "CIDADE": "NITEROI-RJ",
+                "PROFISSAO": "782405",
+                "DATA_ADMISSAO": "13\/20\/2005",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SOLAZER TRANSPORTE E TURISMO LTDA",
+                "CNPJ": "29108107000130",
+                "CIDADE": "BELFORD ROXO-RJ",
+                "PROFISSAO": "782405",
+                "DATA_ADMISSAO": "09\/02\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "AUTO VIACAO JABOUR LTDA",
+                "CNPJ": "33554114000132",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "02\/03\/2009",
+                "DATA_DEMISSAO": "802",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

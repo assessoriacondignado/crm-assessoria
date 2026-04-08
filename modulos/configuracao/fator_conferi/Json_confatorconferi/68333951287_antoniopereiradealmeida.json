@@ -1,0 +1,198 @@
+{
+    "CADASTRAIS": {
+        "CPF": "68333951287",
+        "NOME": "ANTONIO PEREIRA DE ALMEIDA",
+        "NOME_MAE": "TEREZA PEREIRA DE ALMEIDA",
+        "NASCTO": "20\/11\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "2681211875 ",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "862150",
+        "PROFISSAO": "OPERADOR DE MAQUINAS FIXAS, EM GERAL",
+        "SALARIO": " 1.892,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9232286193",
+            "OPERADORA": "TELEMAR\/AM",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92996067125",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92999083075",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92991183461",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92993741881",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92988470777",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "antonio_743@yahoo.com",
+            "almeida.743@gmail.com",
+            "antonio_743@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R STA TEREZINHA",
+                "NUMERO": "1",
+                "COMPLEMENTO": "B",
+                "BAIRRO": "NOVA ESPERANCA",
+                "CEP": "69037508",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "TV ABDIAS",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COL TERRA NOVA",
+                "CEP": "69093459",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R BOA SORTE",
+                "NUMERO": "49",
+                "COMPLEMENTO": "54",
+                "BAIRRO": "COL TERRA NOVA",
+                "CEP": "69093423",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R GUAMARE",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69090030",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "571633161",
+            "NOME": "TEREZA PEREIRA DE ALMEIDA",
+            "IDADE": "45 anos",
+            "LOCAL": "CIDADE OCIDENTAL\/GO",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ROSANGELA DA SILVA BARBOSA",
+            "IDADE": "",
+            "LOCALIDADE": "MANAUS\/AM",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "54080576234"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "NORTE TECH SERVICOS EM ENERGIA LTDA",
+                "CNPJ": "33822061000193",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "951105",
+                "DATA_ADMISSAO": "03\/07\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "H M CONSULTORIA E RECURSOS HUMANOS LTDA",
+                "CNPJ": "09637508000412",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "862150",
+                "DATA_ADMISSAO": "10\/08\/2022",
+                "DATA_DEMISSAO": "06\/05\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "J. CRUZ INDUSTRIA DE BEBIDAS LTDA.",
+                "CNPJ": "04398251000550",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/03\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "AMAZON INDUSTRIA DE GELO E BEBIDAS LTDA",
+                "CNPJ": "02402867000107",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "840105",
+                "DATA_ADMISSAO": "01\/06\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

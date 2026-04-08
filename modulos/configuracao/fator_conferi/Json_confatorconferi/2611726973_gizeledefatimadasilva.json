@@ -1,0 +1,151 @@
+{
+    "CADASTRAIS": {
+        "CPF": "2611726973",
+        "NOME": "GIZELE DE FATIMA DA SILVA",
+        "NOME_MAE": "DAMIRIA MARIA RENO SILVA",
+        "NASCTO": "04\/09\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Feminino",
+        "RG": "69393055",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "071229280604",
+        "NIT": "1264676517",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "410105",
+        "PROFISSAO": "SUPERVISOR ADMINISTRATIVO",
+        "SALARIO": " 17.150,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "4132651184",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "41991214592",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41991850893",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "gizelesilva1@gmail.com",
+            "gizele.f.silva@renault.com",
+            "zele.f@hotmail.com",
+            "gizeledasilva@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV RENAULT",
+                "NUMERO": "1300",
+                "COMPLEMENTO": "C C",
+                "BAIRRO": "ROSEIRA",
+                "CEP": "83070900",
+                "CIDADE": "SAO JOSE DOS PINHAIS",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R LUIZ BURDA",
+                "NUMERO": "360",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "TATUQUARA",
+                "CEP": "81480050",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R LUIZ BURDA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TATUQUARA",
+                "CEP": "81480050",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "RUA JOAO CUBAS",
+                "NUMERO": "64",
+                "COMPLEMENTO": "AP   APARTAMENTO",
+                "BAIRRO": "NOVO MUNDO",
+                "CEP": "81020110",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "15789530656",
+            "NOME": "JOAO VITOR DA SILVA",
+            "IDADE": "17 anos",
+            "LOCAL": "JUIZ DE FORA\/MG",
+            "PARENTESCO": "FILHO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "FAURECIA AUTOMOTIVE DO BRASIL LTDA",
+                "CNPJ": "01178298000600",
+                "CIDADE": "SAO JOSE DOS PINHAIS-PR",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "04\/05\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LUCY EQUIPAMENTOS ELETRICOS LTDA.",
+                "CNPJ": "28802638000165",
+                "CIDADE": "ARAUCARIA-PR",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "13\/01\/2020",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "RENAULT DO BRASIL LTDA.",
+                "CNPJ": "00913443000173",
+                "CIDADE": "SAO JOSE DOS PINHAIS-PR",
+                "PROFISSAO": "214270",
+                "DATA_ADMISSAO": "11\/06\/2001",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

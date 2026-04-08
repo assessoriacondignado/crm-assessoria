@@ -1,0 +1,259 @@
+{
+    "CADASTRAIS": {
+        "CPF": "95686410097",
+        "NOME": "ANGELITA MARCELINO",
+        "NOME_MAE": "ELVIRA GONCALVES DUARTE",
+        "NASCTO": "04\/12\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "082946630493",
+        "NIT": "12602242685",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "322210",
+        "PROFISSAO": "TECNICO DE ENFERMAGEM DE TERAPIA INTENSIVA",
+        "SALARIO": " 702,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5132495467",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "5132496131",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5132483504",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51984461368",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51985742453",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "06\/01\/2018",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "51991018201",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "51997967255",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "patri.ribeiro@hotmail.com",
+            "angelitamarcelino28@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "EST CRISTIANO KRAEMER",
+                "NUMERO": "590",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL NOVA",
+                "CEP": "91750060",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R AMAPA",
+                "NUMERO": "14",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "VL NOVA",
+                "CEP": "91740460",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R AMAPA",
+                "NUMERO": "146",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL NOVA",
+                "CEP": "91740460",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "AV PAULO PONTES",
+                "NUMERO": "344",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAVALHADA",
+                "CEP": "91740410",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R AGENOR MENDES OURIQUES",
+                "NUMERO": "590",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SERRARIA",
+                "CEP": "91770280",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA AMAPA",
+                "NUMERO": "158",
+                "COMPLEMENTO": "CASA 13",
+                "BAIRRO": "VILA NOVA",
+                "CEP": "91740460",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA PROFESSOR CRISTIANO FISCHER",
+                "NUMERO": "1071",
+                "COMPLEMENTO": "CS 80",
+                "BAIRRO": "PETROPOLIS",
+                "CEP": "91410001",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "28295382004",
+                "NOME": "ELVIRA GONCALVES DUARTE",
+                "IDADE": "78 anos",
+                "LOCAL": "",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "48153800825",
+                "NOME": "WILSON DUARTE",
+                "IDADE": "82 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "63374110053",
+                "NOME": "ELAINE DUARTE SARACOL",
+                "IDADE": "56 anos",
+                "LOCAL": "ALVORADA\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "85713686000",
+                "NOME": "ANGELA MARCELINO",
+                "IDADE": "44 anos",
+                "LOCAL": "PORTO ALEGRE\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "PATRICIA RIBEIRO DA SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "PORTO ALEGRE\/RS",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "79010520072"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO HOSPITALAR VILA NOVA",
+                "CNPJ": "04994418000112",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "25\/04\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SANATORIO SAO JOSE LTDA",
+                "CNPJ": "92695022000131",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "01\/02\/2013",
+                "DATA_DEMISSAO": "22\/01\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "RESIDENCIAL E HOTELARIA MORADA DO CRISTAL LTDA",
+                "CNPJ": "08223965000155",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "322210",
+                "DATA_ADMISSAO": "03\/05\/2011",
+                "DATA_DEMISSAO": "102",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "SOLAR IPANEMA RESIDENCIAL GERIATRICO LTDA",
+                "CNPJ": "13574974000120",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "02\/07\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

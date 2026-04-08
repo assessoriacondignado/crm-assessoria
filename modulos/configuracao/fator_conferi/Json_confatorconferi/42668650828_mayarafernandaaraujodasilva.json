@@ -1,0 +1,186 @@
+{
+    "CADASTRAIS": {
+        "CPF": "42668650828",
+        "NOME": "MAYARA FERNANDA ARAUJO DA SILVA",
+        "NOME_MAE": "ELIANE CRISTINA CORREIA DE ARAUJO SILVA",
+        "NASCTO": "11\/12\/1995",
+        "IDADE": "30 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "20096933717",
+        "ESCOLARIDADE": "PRIMEIRO GRAU (GINASIO)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "322415",
+        "PROFISSAO": "ATENDENTE DE CONSULTORIO DENTARIO",
+        "SALARIO": " 810,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "16991806792",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16997069834",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16997151917",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "16997193464",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "16999640863",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "mayarafernanda_araujo@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV RAIMUNDA RIBEIRO LIMA",
+                "NUMERO": "376",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVA CIDADE",
+                "CEP": "15991508",
+                "CIDADE": "MATAO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MIGUELE MESSA PUERTA",
+                "NUMERO": "355",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RODRIGUES",
+                "CEP": "15970000",
+                "CIDADE": "SANTA ERNESTINA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "16202569832",
+                "NOME": "ELIANE CRISTINA CORREIA DE ARAUJO SILVA",
+                "IDADE": "51 anos",
+                "LOCAL": "SANTA ERNESTINA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "50416245854",
+                "NOME": "RYAN EDUARDO ARAUJO DA SILVA",
+                "IDADE": "24 anos",
+                "LOCAL": "SANTA ERNESTINA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "IRMANDADE DA SANTA CASA DE MISERICORDIA DE MATAO",
+                "CNPJ": "52314861000148",
+                "CIDADE": "MATAO-SP",
+                "PROFISSAO": "322230",
+                "DATA_ADMISSAO": "25\/09\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ESCOLA FLORESTA ENCANTADA LTDA",
+                "CNPJ": "01953163000151",
+                "CIDADE": "ARARAQUARA-SP",
+                "PROFISSAO": "516205",
+                "DATA_ADMISSAO": "12\/09\/2023",
+                "DATA_DEMISSAO": "07\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VM PROVEDORA DE INTERNET LTDA",
+                "CNPJ": "04889001000190",
+                "CIDADE": "TAQUARITINGA-SP",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "05\/02\/2024",
+                "DATA_DEMISSAO": "20\/09\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FONTERI ORGANIZACAO E SERVICOS LTDA",
+                "CNPJ": "01601447000189",
+                "CIDADE": "ARARAQUARA-SP",
+                "PROFISSAO": "354125",
+                "DATA_ADMISSAO": "15\/05\/2023",
+                "DATA_DEMISSAO": "12\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "KARAM ATACADAO COMERCIO DE PRODUTOS DE LIMPEZA E DESCARTAVEIS LTDA",
+                "CNPJ": "30026186000119",
+                "CIDADE": "ARARAQUARA-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "05\/10\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "",
+                "CNPJ": "00500043080307",
+                "CIDADE": "",
+                "PROFISSAO": "322415",
+                "DATA_ADMISSAO": "14\/04\/2014",
+                "DATA_DEMISSAO": "12\/05\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

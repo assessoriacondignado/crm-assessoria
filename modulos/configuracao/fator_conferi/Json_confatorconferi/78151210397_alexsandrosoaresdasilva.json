@@ -1,0 +1,186 @@
+{
+    "CADASTRAIS": {
+        "CPF": "78151210397",
+        "NOME": "ALEX SANDRO SOARES DA SILVA",
+        "NOME_MAE": "ROSINETE SOARES DA SILVA",
+        "NASCTO": "02\/05\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "045895560728",
+        "NIT": "17072994597",
+        "ESCOLARIDADE": "DA 5a. A 8a. SERIE INCOMPLETA DO 1o. GRAU(GINASIO INCOMPLETO)",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521125",
+        "PROFISSAO": "REPOSITOR DE MERCADORIAS",
+        "SALARIO": " 810,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8532602077",
+                "OPERADORA": "TELEMAR\/CE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8532574849",
+                "OPERADORA": "TELEMAR\/CE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "85991542465",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "85988267509",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "85989429048",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "alex66@yahoo.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R LAGO AZUL",
+                "NUMERO": "22",
+                "COMPLEMENTO": "C ALTOS",
+                "BAIRRO": "BARRA DO CEARA",
+                "CEP": "60332080",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R LAGO AZUL",
+                "NUMERO": "13",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "BARRA DO CEARA",
+                "CEP": "60332080",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "TV JUKIRI",
+                "NUMERO": "100",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VICENTE PINZON",
+                "CEP": "60183060",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R LAGO AZUL",
+                "NUMERO": "28",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BARRA DO CEARA",
+                "CEP": "60332080",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R ARCO VERDE",
+                "NUMERO": "124",
+                "COMPLEMENTO": "C ALTOS",
+                "BAIRRO": "BARRA DO CEARA",
+                "CEP": "60332100",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R SAFIRA",
+                "NUMERO": "1210",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL ELLERY",
+                "CEP": "60320285",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "85256765",
+            "NOME": "ROSINETE SOARES DA SILVA",
+            "IDADE": "58 anos",
+            "LOCAL": "CAMPO GRANDE\/MS",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SUPERMERCADO COMETA LTDA",
+                "CNPJ": "06887668001231",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "521125",
+                "DATA_ADMISSAO": "05\/05\/2014",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SUPERMERCADO COMETA LTDA",
+                "CNPJ": "06887668000189",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "521125",
+                "DATA_ADMISSAO": "05\/05\/2014",
+                "DATA_DEMISSAO": "31\/05\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "INSTITUTO DE DESENVOLVIMENTO TECNOLOGICO E APOIO A GESTAO EM SAUDE",
+                "CNPJ": "09359705000174",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "514120",
+                "DATA_ADMISSAO": "01\/07\/2009",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

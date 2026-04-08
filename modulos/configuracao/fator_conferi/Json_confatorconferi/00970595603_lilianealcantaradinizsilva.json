@@ -1,0 +1,155 @@
+{
+    "CADASTRAIS": {
+        "CPF": "970595603",
+        "NOME": "LILIANE ALCANTARA DINIZ SILVA",
+        "NOME_MAE": "RAYMUNDA BERNADETE DINIZ",
+        "NASCTO": "01\/04\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1287212710",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "239415",
+        "PROFISSAO": "PEDAGOGO",
+        "SALARIO": " 5.807,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3133939820",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3133578749",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31989375448",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31973299651",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MANDARIN",
+                "NUMERO": "348",
+                "COMPLEMENTO": "FDS C",
+                "BAIRRO": "JD DO LAGO",
+                "CEP": "32145370",
+                "CIDADE": "CONTAGEM",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R CANDEIAS",
+                "NUMERO": "363",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JD LAGUNA",
+                "CEP": "32140260",
+                "CIDADE": "CONTAGEM",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "20437692",
+                "NOME": "RAYMUNDA BERNADETE DINIZ",
+                "IDADE": "81 anos",
+                "LOCAL": "CAMPO GRANDE\/MS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "3977334611",
+                "NOME": "LILIANA ALCANTARA DINIZ",
+                "IDADE": "53 anos",
+                "LOCAL": "GUARUJA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "4029274609",
+                "NOME": "ADILSON ACANTARA DINIZ",
+                "IDADE": "46 anos",
+                "LOCAL": "CARUARU\/PE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "14029894666",
+                "NOME": "LIDIANE ISABEL DINIZ SILVA",
+                "IDADE": "28 anos",
+                "LOCAL": "CONTAGEM\/MG",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "70592426602",
+                "NOME": "ADRIANE RAFAELA DINIZ SILVA",
+                "IDADE": "20 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "CRECHE COMUNITARIA PARAISO INFANTIL CREPI",
+            "CNPJ": "21038351000161",
+            "CIDADE": "CONTAGEM-MG",
+            "PROFISSAO": "239415",
+            "DATA_ADMISSAO": "03\/10\/2022",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "ESCOLINHA PASSARINHO FELIZ LTDA",
+            "CNPJ": "01964173000192",
+            "CIDADE": "CONTAGEM-MG",
+            "QUALIFICACAO": "SÃ³cio",
+            "DATA_ENTRADA": "19970701",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

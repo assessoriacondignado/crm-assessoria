@@ -1,0 +1,237 @@
+{
+    "CADASTRAIS": {
+        "CPF": "389235725",
+        "NOME": "JOANA ESPINHEIRA DA COSTA MONTENEGRO",
+        "NOME_MAE": "MARIA DAS GRACAS DE CARLI E COSTA",
+        "NASCTO": "01\/10\/1982",
+        "IDADE": "43 anos",
+        "SEXO": "Feminino",
+        "RG": "6119814",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "PE",
+        "TITULO_ELEITOR": "",
+        "NIT": "14412296144",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "142115",
+        "PROFISSAO": "GERENTE FINANCEIRO",
+        "SALARIO": " 7.641,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8134681874",
+                "OPERADORA": "TELEMAR\/PE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8134669577",
+                "OPERADORA": "TELEMAR\/PE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11951473512",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81991721695",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "81992089020",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "81992542884",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "81988444917",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "joanaespinheira@hotmail.com",
+            "joana@espinheira.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV BERNARDO VIEIRA DE MELO",
+                "NUMERO": "1800",
+                "COMPLEMENTO": "903",
+                "BAIRRO": "PIEDADE",
+                "CEP": "54410010",
+                "CIDADE": "JABOATAO DOS GUARARAPES",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R MQ DE LAGES",
+                "NUMERO": "230",
+                "COMPLEMENTO": "OUTROS",
+                "BAIRRO": "VL MORAES",
+                "CEP": "04162000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BR DE SOUZA LEAO",
+                "NUMERO": "1092",
+                "COMPLEMENTO": "LJ 2",
+                "BAIRRO": "BOA VIAGEM",
+                "CEP": "51030300",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R CADETE RENO GUIDO LONGO JUNIOR",
+                "NUMERO": "349",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOQUEIRAO",
+                "CEP": "81650150",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R CORONEL ANIZIO RODRIGUES COELHO",
+                "NUMERO": "464",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOA VIAGEM",
+                "CEP": "51021130",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "AV MOINHO FABRINI",
+                "NUMERO": "1067",
+                "COMPLEMENTO": "",
+                "BAIRRO": "INDEPENDENCIA",
+                "CEP": "09862000",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA BALTAZAR PASSOS",
+                "NUMERO": "53",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOA VIAGEM",
+                "CEP": "51130290",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "AVENIDA BOA VIAGEM",
+                "NUMERO": "3500",
+                "COMPLEMENTO": "102",
+                "BAIRRO": "BOA VIAGEM",
+                "CEP": "51020001",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "15099450407",
+            "NOME": "JOAO FELIPE ESPINHEIRA LUNDGREN MONTENEGRO",
+            "IDADE": "8 anos",
+            "LOCAL": "",
+            "PARENTESCO": "FILHO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LADAKH COMERCIO DE COSMETICOS LTDA",
+                "CNPJ": "07318052000311",
+                "CIDADE": "MACEIO-AL",
+                "PROFISSAO": "142105",
+                "DATA_ADMISSAO": "22\/12\/2023",
+                "DATA_DEMISSAO": "31\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LAMPUR LTDA",
+                "CNPJ": "05277451000194",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "142105",
+                "DATA_ADMISSAO": "01\/11\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LADAKH COMERCIO DE COSMETICOS LTDA",
+                "CNPJ": "07318052000400",
+                "CIDADE": "JABOATAO DOS GUARARAPES-PE",
+                "PROFISSAO": "142115",
+                "DATA_ADMISSAO": "16\/03\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "LAMPUR LTDA",
+                "CNPJ": "05277451000437",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "142305",
+                "DATA_ADMISSAO": "16\/04\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,173 @@
+{
+    "CADASTRAIS": {
+        "CPF": "18075284801",
+        "NOME": "ANDRE LUIS DOS SANTOS",
+        "NOME_MAE": "MARIA APARECIDA DOS SANTOS",
+        "NASCTO": "26\/11\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "188005590159",
+        "NIT": "1247371356",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "784205",
+        "PROFISSAO": "ALIMENTADOR DE LINHA DE PRODUCAO",
+        "SALARIO": " 3.003,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1936521452",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1936537308",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "19994392847",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "CLARO PRE PAGO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R SETE DE SETEMBRO",
+                "NUMERO": "907",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "13860009",
+                "CIDADE": "AGUAI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R VALINS",
+                "NUMERO": "152",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "13860021",
+                "CIDADE": "AGUAI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SETE DE SETEMBRO",
+                "NUMERO": "707",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "13860009",
+                "CIDADE": "AGUAI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R A",
+                "NUMERO": "6",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ DAS LARANJEIRAS II",
+                "CEP": "13866572",
+                "CIDADE": "AGUAI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA SETE DE SETEMBRO",
+                "NUMERO": "907",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "V PARAISO",
+                "CEP": "13860000",
+                "CIDADE": "AGUAI",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1160680",
+            "NOME": "MARIA APARECIDA DOS SANTOS",
+            "IDADE": "74 anos",
+            "LOCAL": "RAPOSOS\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "IBERIA INDUSTRIA DE EMBALAGENS LTDA.",
+                "CNPJ": "57940546000220",
+                "CIDADE": "AGUAI-SP",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "22\/01\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "UNIQUE SERVICOS TERCEIRIZADOS LTDA",
+                "CNPJ": "37353327000157",
+                "CIDADE": "AGUAI-SP",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "03\/05\/2023",
+                "DATA_DEMISSAO": "21\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ADAPT INDUSTRIA DE EMBALAGENS E SERVICOS LTDA",
+                "CNPJ": "27364872000195",
+                "CIDADE": "AGUAI-SP",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "02\/01\/2023",
+                "DATA_DEMISSAO": "14\/05\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "EMBARK BAG DE EMBALAGENS LTDA",
+                "CNPJ": "03158361000159",
+                "CIDADE": "AGUAI-SP",
+                "PROFISSAO": "514320",
+                "DATA_ADMISSAO": "08\/10\/1999",
+                "DATA_DEMISSAO": "09\/01\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "MR INDUSTRIA DE EMBALAGENS E SERVICOS LTDA",
+                "CNPJ": "14499622000110",
+                "CIDADE": "AGUAI-SP",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "01\/03\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

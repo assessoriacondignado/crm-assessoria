@@ -1,0 +1,219 @@
+{
+    "CADASTRAIS": {
+        "CPF": "66651794272",
+        "NOME": "GRACICLEIDE ALVES ASSUNCAO DE OLIVEIRA",
+        "NOME_MAE": "MARIA GRAIEDE ALVES ASSUNCAO",
+        "NASCTO": "23\/08\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1283128102",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "413115",
+        "PROFISSAO": "AUXILIAR DE FATURAMENTO",
+        "SALARIO": " 3.485,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9231829146",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "6832287334",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9233475008",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "26\/09\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92988049798",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "OI_PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92988357907",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92991378757",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92991800685",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92110168806",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "gracicleide.oliveira@microservice.com.br",
+            "gracicleideoliveira@oi.com.br",
+            "gracicleide_assuncao@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R VICENTE DE CARVALHO",
+                "NUMERO": "5",
+                "COMPLEMENTO": "37",
+                "BAIRRO": "COMPENSA",
+                "CEP": "69035365",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R BR DO RIO BRANCO",
+                "NUMERO": "219",
+                "COMPLEMENTO": "",
+                "BAIRRO": "FLORES",
+                "CEP": "69058581",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R LAURINDO LUIZ DOS SANTOS",
+                "NUMERO": "37",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COMPENSA",
+                "CEP": "69035356",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "TV T",
+                "NUMERO": "5",
+                "COMPLEMENTO": "Q M CJ PROMORAR 37",
+                "BAIRRO": "JORGE TEIXEIRA",
+                "CEP": "69088219",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R S MIGUEL",
+                "NUMERO": "109",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STO ANTONIO",
+                "CEP": "69029550",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R VICENTE DE CARVALHO",
+                "NUMERO": "37",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COMPENSA",
+                "CEP": "69035365",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "3870535229",
+                "NOME": "ELLEN GRAZIELA ASSUNCAO DE OLIVEIRA",
+                "IDADE": "26 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "6557894218",
+                "NOME": "EMILLY GABRIELA ASSUNCAO DE OLIVEIRA",
+                "IDADE": "14 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "EVOLUTEX MANUFATURA DE ROUPAS LTDA",
+                "CNPJ": "03419267000106",
+                "CIDADE": "BLUMENAU-SC",
+                "PROFISSAO": "413115",
+                "DATA_ADMISSAO": "15\/05\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MICROSERVICE TECNOLOGIA DIGITAL DA AMAZONIA LTDA",
+                "CNPJ": "34525444000162",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "410225",
+                "DATA_ADMISSAO": "26\/05\/2003",
+                "DATA_DEMISSAO": "11\/01\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

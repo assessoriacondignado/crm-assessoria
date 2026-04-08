@@ -1,0 +1,176 @@
+{
+    "CADASTRAIS": {
+        "CPF": "2606959981",
+        "NOME": "RODRIGO MARTINS ZILLI",
+        "NOME_MAE": "EDNA MARTINS ZILLI",
+        "NASCTO": "23\/07\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "034629920906",
+        "NIT": "1277405172",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "122615",
+        "PROFISSAO": "DIRETOR DE OPERACOES DE SERVICOS DE TELECOMUNICACOES",
+        "SALARIO": " 8.909,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4834429003",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4834314700",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31989503694",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "48991274155",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "rzilli@bol.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MARIA LEOPOLDINA DE JESUS",
+                "NUMERO": "140",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL ZULEIMA",
+                "CEP": "88817210",
+                "CIDADE": "CRICIUMA",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "RUA FERNAO DIAS",
+                "NUMERO": "165",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "88801670",
+                "CIDADE": "CRICIUMA",
+                "ESTADO": "SC"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "33473072915",
+                "NOME": "EDNA MARTINS ZILLI",
+                "IDADE": "73 anos",
+                "LOCAL": "",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "5394746907",
+                "NOME": "LARISSA MARTINS ZILLI",
+                "IDADE": "41 anos",
+                "LOCAL": "FLORIANOPOLIS\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "91227119968",
+                "NOME": "ERICA MARTINS ZILLI SERPA",
+                "IDADE": "52 anos",
+                "LOCAL": "CRICIUMA\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "95126619934",
+                "NOME": "DEIZE MARTINS ZILLI STRADIOTO",
+                "IDADE": "51 anos",
+                "LOCAL": "SAO JOSE DOS CAMPOS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "JOAO MOREIRA DA COSTA LIMA",
+            "IDADE": "",
+            "LOCALIDADE": "RIO DE JANEIRO\/RJ",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "3094278787"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "ENGEPLUS TELECOM LTDA",
+            "CNPJ": "80995822000199",
+            "CIDADE": "CRICIUMA-SC",
+            "PROFISSAO": "122615",
+            "DATA_ADMISSAO": "01\/07\/2000",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": [
+            {
+                "RAZAO_SOCIAL": "PROTECT SOLUTIONS TECNOLOGIA DA INFORMACAO LTDA",
+                "CNPJ": "32729982000143",
+                "CIDADE": "CRICIUMA-SC",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20200527",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "ZILLI   ZILLI INTERMEDIACAO DE NEGOCIO LTDA",
+                "CNPJ": "06976397000138",
+                "CIDADE": "CRICIUMA-SC",
+                "QUALIFICACAO": "SÃ³cio",
+                "DATA_ENTRADA": "20040719",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "REDEPLANET INFORMATICA LTDA",
+                "CNPJ": "05106312000106",
+                "CIDADE": "CRICIUMA-SC",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20020614",
+                "VALOR_PARTICIPACAO": ""
+            }
+        ]
+    }
+}

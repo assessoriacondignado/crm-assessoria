@@ -1,0 +1,225 @@
+{
+    "CADASTRAIS": {
+        "CPF": "90423356534",
+        "NOME": "ISLAN VIEIRA SANTOS",
+        "NOME_MAE": "ISALUTINA VIEIRA SANTOS",
+        "NASCTO": "20\/12\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "071766360671",
+        "NIT": "2063910835",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521110",
+        "PROFISSAO": "VENDEDOR DE COMERCIO VAREJISTA",
+        "SALARIO": " 1.451,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3836767310",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7335255159",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "73991392719",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "73999742842",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "73999477012",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "73988656919",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "73988842171",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "ruan_dom@hotmail.com",
+            "ruan_dom34@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ANTONIO MIRANDA PEREIRA",
+                "NUMERO": "111",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JOAQUIM ROMAO",
+                "CEP": "45200721",
+                "CIDADE": "JEQUIE",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R URBANO DE ALMEIDA NETO",
+                "NUMERO": "11",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JOAQUIM ROMAO",
+                "CEP": "45200733",
+                "CIDADE": "JEQUIE",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "AV ALVES PEREIRA",
+                "NUMERO": "111",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CENTRO",
+                "CEP": "45200005",
+                "CIDADE": "JEQUIE",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "AV PRCA ISABEL",
+                "NUMERO": "236",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAPIM BRANCO II",
+                "CEP": "38616100",
+                "CIDADE": "UNAI",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R DA ITALIA",
+                "NUMERO": "11",
+                "COMPLEMENTO": "111",
+                "BAIRRO": "CENTRO",
+                "CEP": "45200970",
+                "CIDADE": "JEQUIE",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R CEL URBANO GONDIM",
+                "NUMERO": "11",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CENTRO",
+                "CEP": "45200253",
+                "CIDADE": "JEQUIE",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "RUA PRESIDENTE MEDICI",
+                "NUMERO": "5",
+                "COMPLEMENTO": "2",
+                "BAIRRO": "JOAQUIM ROMAO",
+                "CEP": "45201080",
+                "CIDADE": "JEQUIE",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "7089630560",
+                "NOME": "RUAN VIEIRA ARRAIS",
+                "IDADE": "29 anos",
+                "LOCAL": "JEQUIE\/BA",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "7089637573",
+                "NOME": "LAISA VIEIRA ARRAIS",
+                "IDADE": "27 anos",
+                "LOCAL": "JEQUIE\/BA",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ERICA DOS SANTOS ANDRADE",
+            "IDADE": "",
+            "LOCALIDADE": "JEQUIE\/BA",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "4043824521"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TRI-HAIR INDUSTRIA DE COSMETICOS LTDA",
+                "CNPJ": "03967708000104",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "521115",
+                "DATA_ADMISSAO": "21\/02\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BELLA FLOR MAGAZINE LTDA",
+                "CNPJ": "05193050000156",
+                "CIDADE": "JEQUIE-BA",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/06\/2021",
+                "DATA_DEMISSAO": "30\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

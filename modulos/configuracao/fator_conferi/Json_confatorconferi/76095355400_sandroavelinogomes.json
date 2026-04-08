@@ -1,0 +1,297 @@
+{
+    "CADASTRAIS": {
+        "CPF": "76095355400",
+        "NOME": "SANDRO AVELINO GOMES",
+        "NOME_MAE": "MARIA AVELINO GOMES",
+        "NASCTO": "15\/04\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "1372858",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "017676921244",
+        "NIT": "1241270896",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142105",
+        "PROFISSAO": "GERENTE ADMINISTRATIVO",
+        "SALARIO": " 7.295,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8133270298",
+                "OPERADORA": "TELEMAR\/PE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8134360440",
+                "OPERADORA": "TELEMAR\/PE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9834733155",
+                "OPERADORA": "TELEMAR\/MA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8130520054",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "81982340179",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81992026331",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81999871837",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81999871774",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81992820440",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "sandroagomes37@gmail.com",
+            "sandro@donasanta.com.br",
+            "sandro.gomes@zipmail.com.br",
+            "sandro.agomes@uol.com.br",
+            "eu.sandroavelino@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R SEVERINO BEZERRA FERREIRA",
+                "NUMERO": "467",
+                "COMPLEMENTO": "C 2",
+                "BAIRRO": "PAU AMARELO",
+                "CEP": "53435740",
+                "CIDADE": "PAULISTA",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R PROF EDUARDO WANDERLEY FILHO",
+                "NUMERO": "68",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOA VIAGEM",
+                "CEP": "51020170",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R AMARO COUTINHO",
+                "NUMERO": "68",
+                "COMPLEMENTO": "AP 602",
+                "BAIRRO": "ENCRUZILHADA",
+                "CEP": "52041115",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R PRUDENTE DE MORAES",
+                "NUMERO": "68",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CPO GRANDE",
+                "CEP": "52041735",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R PROF EDUARDO WANDERLEY FILHO",
+                "NUMERO": "200",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOA VIAGEM",
+                "CEP": "51020170",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "VL ISAPEL",
+                "NUMERO": "32",
+                "COMPLEMENTO": "C D C D",
+                "BAIRRO": "CENTRO",
+                "CEP": "65620000",
+                "CIDADE": "COELHO NETO",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "VL ISAPEL C D",
+                "NUMERO": "37",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "65620000",
+                "CIDADE": "COELHO NETO",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "R ESPIRITO SANTO",
+                "NUMERO": "868",
+                "COMPLEMENTO": "",
+                "BAIRRO": "LIBERDADE",
+                "CEP": "58414030",
+                "CIDADE": "CAMPINA GRANDE",
+                "ESTADO": "PB"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "4222178403",
+            "NOME": "MARIA AVELINO GOMES",
+            "IDADE": "85 anos",
+            "LOCAL": "CAMPINA GRANDE\/PB",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ELIAS DE OLIVEIRA SANTOS",
+            "IDADE": "",
+            "LOCALIDADE": "ARAPIRACA\/AL",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "3989741446"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CARDIOPAPERS SOLUCOES DIGITAIS LTDA",
+                "CNPJ": "26912906000176",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "142105",
+                "DATA_ADMISSAO": "23\/08\/2021",
+                "DATA_DEMISSAO": "01\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "AFYA PARTICIPACOES S.A.",
+                "CNPJ": "23399329000504",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "21\/10\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "AFYA PARTICIPACOES S.A.",
+                "CNPJ": "23399329000253",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "01\/03\/2024",
+                "DATA_DEMISSAO": "21\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "INTERNE BRASIL LTDA",
+                "CNPJ": "03134949000172",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "131215",
+                "DATA_ADMISSAO": "23\/09\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "DONA SANTA COM REP IMPORTACAO E EXPORTACAO LTDA",
+                "CNPJ": "00536661000136",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "123110",
+                "DATA_ADMISSAO": "01\/08\/2012",
+                "DATA_DEMISSAO": "09\/07\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "PERFORMANCE LTDA",
+                "CNPJ": "08015273000111",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "123110",
+                "DATA_ADMISSAO": "01\/10\/2002",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "SAG CONSULTORIA, GESTAO E APOIO ADMINISTRATIVO EIRELI",
+            "CNPJ": "26938392000128",
+            "CIDADE": "RECIFE-PE",
+            "QUALIFICACAO": "Titular Pessoa FÃ­sica Residente ou Domiciliado no Brasil",
+            "DATA_ENTRADA": "20170124",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

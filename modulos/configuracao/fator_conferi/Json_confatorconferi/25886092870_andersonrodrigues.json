@@ -1,0 +1,259 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25886092870",
+        "NOME": "ANDERSON RODRIGUES",
+        "NOME_MAE": "CILEZIA MARIA RODRIGUES",
+        "NASCTO": "27\/12\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "221406680191",
+        "NIT": "12538861065",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "721105",
+        "PROFISSAO": "FERRAMENTEIRO",
+        "SALARIO": " 3.000,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1145637034",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "25\/04\/2015",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11988218984",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11991033161",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11992264938",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11992311605",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11965933692",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "andyrodri@ig.com.br",
+            "andyrodri@terra.com.br",
+            "andyrodri@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MORUBIXABA",
+                "NUMERO": "712",
+                "COMPLEMENTO": "BL B AP 38",
+                "BAIRRO": "CIDADE LIDER",
+                "CEP": "08280625",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MORUBIXABA",
+                "NUMERO": "51",
+                "COMPLEMENTO": "AP 51",
+                "BAIRRO": "CIDADE LIDER",
+                "CEP": "08280630",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R GANGES",
+                "NUMERO": "557",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL CARRAO",
+                "CEP": "03445030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JUNO",
+                "NUMERO": "62",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL CARRAO",
+                "CEP": "03445000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R GANGES",
+                "NUMERO": "553",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL CARRAO",
+                "CEP": "03445030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R D JOSE BOTELHO",
+                "NUMERO": "51",
+                "COMPLEMENTO": "P 51 A",
+                "BAIRRO": "CJ RESIDENCIAL JOSE BONIFACIO",
+                "CEP": "08253390",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JUNO",
+                "NUMERO": "527",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL CARRAO",
+                "CEP": "03445000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BR DO AMAZONAS",
+                "NUMERO": "595",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "14010120",
+                "CIDADE": "RIBEIRAO PRETO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "31061944808",
+                "NOME": "CILEZIA MARIA RODRIGUES",
+                "IDADE": "69 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "25591986811",
+                "NOME": "ANDRE RODRIGUES",
+                "IDADE": "48 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "31209453827",
+                "NOME": "DANIELA RODRIGUES",
+                "IDADE": "44 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "31313618837",
+                "NOME": "JULIANA RODRIGUES BURAI",
+                "IDADE": "41 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ANGLO INDUSTRIA E COMERCIO DE METAIS LTDA.",
+                "CNPJ": "66678459000157",
+                "CIDADE": "GUARULHOS-SP",
+                "PROFISSAO": "721420",
+                "DATA_ADMISSAO": "07\/07\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MALKA GESTAO DE PESSOAS LTDA",
+                "CNPJ": "13955739000107",
+                "CIDADE": "GUARULHOS-SP",
+                "PROFISSAO": "721205",
+                "DATA_ADMISSAO": "14\/08\/2023",
+                "DATA_DEMISSAO": "21\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "FABRIMA MAQUINAS AUTOMATICAS LTDA EM RECUPERACAO JUDICIAL",
+                "CNPJ": "43222439000171",
+                "CIDADE": "GUARULHOS-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "05\/07\/2021",
+                "DATA_DEMISSAO": "12\/07\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "INDUSTRIA METALURGICA FANANDRI LTDA",
+                "CNPJ": "61197364000106",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "721105",
+                "DATA_ADMISSAO": "07\/01\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "TECNEQUIP TECNOLOGIA EM EQUIPAMENTOS LTDA",
+                "CNPJ": "00867888000164",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "318610",
+                "DATA_ADMISSAO": "13\/03\/2001",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

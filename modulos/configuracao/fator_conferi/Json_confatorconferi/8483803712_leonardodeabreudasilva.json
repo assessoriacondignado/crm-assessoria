@@ -1,0 +1,275 @@
+{
+    "CADASTRAIS": {
+        "CPF": "8483803712",
+        "NOME": "LEONARDO DE ABREU DA SILVA",
+        "NOME_MAE": "HELOISA HELENA DE ABREU DA SILVA",
+        "NASCTO": "28\/11\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "105210970388",
+        "NIT": "1281923256",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "314410",
+        "PROFISSAO": "TECNICO EM MANUTENCAO DE MAQUINAS",
+        "SALARIO": " 10.103,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2121324318",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "2133429173",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2135184102",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "02\/10\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2124451476",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "11\/05\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2131815036",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11914162059",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21990943218",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PREPG",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21991597016",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21976180097",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21975702072",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "fusiopilates@live.com",
+            "pauloeduardogoncalves@gmail.com",
+            "lenardsilva@ig.com.br",
+            "lenardzilva@ig.com.br",
+            "lsouza@mundivox.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PE VENTURA",
+                "NUMERO": "288",
+                "COMPLEMENTO": "AP 403",
+                "BAIRRO": "TAQUARA",
+                "CEP": "22710266",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R MNS MARQUES",
+                "NUMERO": "65",
+                "COMPLEMENTO": "AP 107",
+                "BAIRRO": "PECHINCHA",
+                "CEP": "22740260",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA MONSENHOR MARQUES",
+                "NUMERO": "302",
+                "COMPLEMENTO": "AP 203",
+                "BAIRRO": "PECHINCHA",
+                "CEP": "22740260",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA PADRE VENTURA",
+                "NUMERO": "28",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TAQUARA",
+                "CEP": "22710266",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "ESTRADA MARECHAL MIGUEL SALAZAR MENDES DE MORAIS",
+                "NUMERO": "584",
+                "COMPLEMENTO": "BL01   AP302",
+                "BAIRRO": "CIDADE DE DEUS",
+                "CEP": "22770333",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "ESTRADA MARECHAL MIGUEL SALAZAR MENDES DE MORAIS",
+                "NUMERO": "584",
+                "COMPLEMENTO": "BL 01 AP 302",
+                "BAIRRO": "TAQUARA",
+                "CEP": "22770331",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "2402820780",
+                "NOME": "HELOISA HELENA DE ABREU DA SILVA",
+                "IDADE": "73 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "7560932797",
+                "NOME": "FABIO DE ABREU DA SILVA",
+                "IDADE": "48 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "DANIELLE RIBEIRO PINHEIRO DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "RIO DE JANEIRO\/RJ",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "5157308744"
+            },
+            {
+                "NOME": "DIANA OLIVEIRA DOS SANTOS",
+                "IDADE": "",
+                "LOCALIDADE": "ITAPIRA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "37526230807"
+            },
+            {
+                "NOME": "PAULO EDUARDO GONCALVES DOS SANTOS",
+                "IDADE": "",
+                "LOCALIDADE": "RIO DE JANEIRO\/RJ",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "12432242742"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "MILLS LOCACAO, SERVICOS E LOGISTICA S.A.",
+                "CNPJ": "27093558006156",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "314410",
+                "DATA_ADMISSAO": "01\/05\/2023",
+                "DATA_DEMISSAO": "01\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MILLS LOCACAO, SERVICOS E LOGISTICA S.A.",
+                "CNPJ": "27093558008523",
+                "CIDADE": "DUQUE DE CAXIAS-RJ",
+                "PROFISSAO": "314410",
+                "DATA_ADMISSAO": "01\/01\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MILLS LOCACAO, SERVICOS E LOGISTICA S.A.",
+                "CNPJ": "27093558000972",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "314410",
+                "DATA_ADMISSAO": "02\/01\/2008",
+                "DATA_DEMISSAO": "01\/05\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

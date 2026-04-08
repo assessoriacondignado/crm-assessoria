@@ -1,0 +1,235 @@
+{
+    "CADASTRAIS": {
+        "CPF": "69288526587",
+        "NOME": "JOSE MARTIM SILVA FREITAS",
+        "NOME_MAE": "MARIA DO CARMO SILVA FREITAS",
+        "NASCTO": "26\/04\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "094992500590",
+        "NIT": "1260133006",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782405",
+        "PROFISSAO": "MOTORISTA DE ONIBUS RODOVIARIO",
+        "SALARIO": " 2.869,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7721028203",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "7734227962",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "7734274806",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "77988614027",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "77999578587",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "77988153194",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "20\/01\/2009",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "77988372319",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "27\/12\/2017",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "77988721572",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "02\/20\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "velhomartim40@gmail.com",
+            "marcelpazzoto@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R QUINZE",
+                "NUMERO": "9",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AYRTON SENNA",
+                "CEP": "45057118",
+                "CIDADE": "VITORIA DA CONQUISTA",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "AV BRUMADO",
+                "NUMERO": "65",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ZABELE",
+                "CEP": "45077000",
+                "CIDADE": "VITORIA DA CONQUISTA",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "AV BRUMADO",
+                "NUMERO": "65",
+                "COMPLEMENTO": "",
+                "BAIRRO": "IBIRAPUERA",
+                "CEP": "45075000",
+                "CIDADE": "VITORIA DA CONQUISTA",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R CARAVELAS",
+                "NUMERO": "482",
+                "COMPLEMENTO": "",
+                "BAIRRO": "IBIRAPUERA",
+                "CEP": "45075090",
+                "CIDADE": "VITORIA DA CONQUISTA",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "AV SERRANA",
+                "NUMERO": "9",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ZABELE",
+                "CEP": "45078546",
+                "CIDADE": "VITORIA DA CONQUISTA",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R CARAVELAS",
+                "NUMERO": "482",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PATAGONIA",
+                "CEP": "45065590",
+                "CIDADE": "VITORIA DA CONQUISTA",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "PC PRES TANCREDO NEVES",
+                "NUMERO": "53",
+                "COMPLEMENTO": "S 53 SHCTR C CENT",
+                "BAIRRO": "CENTRO",
+                "CEP": "45000525",
+                "CIDADE": "VITORIA DA CONQUISTA",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R QUINZE",
+                "NUMERO": "9",
+                "COMPLEMENTO": "QD 13",
+                "BAIRRO": "ZABELE",
+                "CEP": "45078064",
+                "CIDADE": "VITORIA DA CONQUISTA",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "13908308",
+            "NOME": "MARIA DO CARMO SILVA FREITAS",
+            "IDADE": "73 anos",
+            "LOCAL": "CONTAGEM\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "MARCEL BORTOLUZZO PAZZOTO",
+            "IDADE": "",
+            "LOCALIDADE": "CAMPINAS\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "35607922820"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ATLANTICO TRANSPORTES LTDA",
+                "CNPJ": "08380889000191",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "782405",
+                "DATA_ADMISSAO": "08\/11\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VIACAO VITORIA LTDA",
+                "CNPJ": "08470336000120",
+                "CIDADE": "VITORIA DA CONQUISTA-BA",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "25\/03\/2007",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

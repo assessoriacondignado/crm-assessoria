@@ -1,0 +1,149 @@
+{
+    "CADASTRAIS": {
+        "CPF": "29881268877",
+        "NOME": "EVERSON DE PAULA REIS",
+        "NOME_MAE": "MARLENE APARECIDA REIS",
+        "NASCTO": "12\/08\/1982",
+        "IDADE": "43 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "217587460116",
+        "NIT": "1291023222",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "391205",
+        "PROFISSAO": "INSPETOR DE QUALIDADE",
+        "SALARIO": " 14.667,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1130111836",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "12997336889",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12988093790",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12996089277",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "everzonloirinho@hotmail.com",
+            "eversonloirinho@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DR ADOLFO BEZERRA DE MENEZES",
+                "NUMERO": "445",
+                "COMPLEMENTO": "1",
+                "BAIRRO": "TERRA NOVA",
+                "CEP": "12081680",
+                "CIDADE": "TAUBATE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R OCTAVIO RODRIGUES DE SOUZA",
+                "NUMERO": "120",
+                "COMPLEMENTO": ":CS 8D",
+                "BAIRRO": "PARQUE PADUAN",
+                "CEP": "12070790",
+                "CIDADE": "TAUBATE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOSE BENEDITO SANTANA",
+                "NUMERO": "17",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "ALTO SAO PEDRO",
+                "CEP": "12082330",
+                "CIDADE": "TAUBATE",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "2978502614",
+            "NOME": "MARLENE APARECIDA REIS",
+            "IDADE": "52 anos",
+            "LOCAL": "BELO HORIZONTE\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "EMBRAER S.A.",
+                "CNPJ": "07689002000189",
+                "CIDADE": "SAO JOSE DOS CAMPOS-SP",
+                "PROFISSAO": "391205",
+                "DATA_ADMISSAO": "01\/01\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "YABORA INDUSTRIA AERONAUTICA S.A.",
+                "CNPJ": "30657250000160",
+                "CIDADE": "SAO JOSE DOS CAMPOS-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "02\/04\/2007",
+                "DATA_DEMISSAO": "31\/12\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "E. DE P. REIS   SILVA LTDA",
+            "CNPJ": "05330895000146",
+            "CIDADE": "TAUBATE-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20021004",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

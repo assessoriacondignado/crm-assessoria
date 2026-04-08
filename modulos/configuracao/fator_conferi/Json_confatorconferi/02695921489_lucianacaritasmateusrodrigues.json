@@ -1,0 +1,231 @@
+{
+    "CADASTRAIS": {
+        "CPF": "2695921489",
+        "NOME": "LUCIANA CARITAS MATEUS RODRIGUES",
+        "NOME_MAE": "GERALDINA DE FATIMA CARITAS MATEUS RODRIGUES",
+        "NASCTO": "23\/06\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "023852561295",
+        "NIT": "12983918027",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "262710",
+        "PROFISSAO": "MUSICO INTERPRETE INSTRUMENTISTA",
+        "SALARIO": " 2.634,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9233042365",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "19\/06\/2010",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9236342451",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92991915891",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92981457900",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "27\/07\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "92992823933",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "92981732028",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "albertobrito@gmail.com",
+            "albertobrito7@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R TUKANO",
+                "NUMERO": "211",
+                "COMPLEMENTO": "NUC 12 23",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69096340",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R TUKANO",
+                "NUMERO": "11",
+                "COMPLEMENTO": "23",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69096340",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R S LOURENCO",
+                "NUMERO": "12",
+                "COMPLEMENTO": "Q 214 25",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69096280",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R EDGAR CAYCE",
+                "NUMERO": "3",
+                "COMPLEMENTO": "Q 210",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69096360",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R PRCA ISABEL",
+                "NUMERO": "14",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "NOSSA SENHORA DA PENHA",
+                "CEP": "29307400",
+                "CIDADE": "CACHOEIRO DE ITAPEMIRIM",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "R EDGAR CAYCE",
+                "NUMERO": "12",
+                "COMPLEMENTO": "Q 210 3",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69096360",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R MONTERIA",
+                "NUMERO": "23",
+                "COMPLEMENTO": "Q 211 AM",
+                "BAIRRO": "NOVA CIDADE",
+                "CEP": "69097407",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R TUKANO",
+                "NUMERO": "23",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69096340",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "2220142450",
+                "NOME": "GERALDINA DE FATIMA CARITAS MATEUS RODRIGUES",
+                "IDADE": "72 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "2221679474",
+                "NOME": "ROSANA MATHEUS RODRIGUES",
+                "IDADE": "53 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "66631122287",
+                "NOME": "ANA PAULA DE FATIMA RODRIGUES",
+                "IDADE": "44 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ALBERTO DE BRITO DA SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "MANAUS\/AM",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "71735097268"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "AGENCIA AMAZONENSE DE DESENVOLVIMENTO CULTURAL - AADC",
+                "CNPJ": "13659617000165",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "262705",
+                "DATA_ADMISSAO": "01\/01\/2013",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO DE AMIGOS DA CULTURA",
+                "CNPJ": "02335634000120",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "262710",
+                "DATA_ADMISSAO": "30\/12\/2004",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

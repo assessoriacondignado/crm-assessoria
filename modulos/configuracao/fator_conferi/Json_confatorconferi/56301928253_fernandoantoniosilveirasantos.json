@@ -1,0 +1,240 @@
+{
+    "CADASTRAIS": {
+        "CPF": "56301928253",
+        "NOME": "FERNANDO ANTONIO SILVEIRA SANTOS",
+        "NOME_MAE": "ISABEL M SILVEIRA SANTOS",
+        "NASCTO": "03\/11\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12601711029",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142705",
+        "PROFISSAO": "GERENTE DE PROJETOS E SERVICOS DE MANUTENCAO",
+        "SALARIO": " 3.186,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9232368122",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9231314886",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "9233085182",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "9236462250",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92991565251",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92992406149",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92994831876",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92984230293",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "91984038120",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "fernando@dividata.com.br",
+            "fernandosilveira_11@hotmail.com",
+            "fernandosilveirasantos@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV SETE DE SETEMBRO",
+                "NUMERO": "1385",
+                "COMPLEMENTO": "AP 7",
+                "BAIRRO": "IRACI",
+                "CEP": "69101068",
+                "CIDADE": "ITACOATIARA",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R CLAUDE DEBUSSY",
+                "NUMERO": "8",
+                "COMPLEMENTO": "P 5",
+                "BAIRRO": "PRQ 10 DE NOVEMBRO",
+                "CEP": "69054736",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R BRG JOAO CAMARAO",
+                "NUMERO": "305",
+                "COMPLEMENTO": "BL5 A AP102 CJ PRQ DOS FRANCE",
+                "BAIRRO": "D PEDRO I",
+                "CEP": "69040080",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "CJ TOCANTINS",
+                "NUMERO": "2229",
+                "COMPLEMENTO": "BL 18 AP 310",
+                "BAIRRO": "CHAPADA",
+                "CEP": "69050110",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV RAMOS FERREIRA",
+                "NUMERO": "7",
+                "COMPLEMENTO": "AND PREDIO DA 596",
+                "BAIRRO": "CENTRO",
+                "CEP": "69010120",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV CONSTANTINO NERY",
+                "NUMERO": "310",
+                "COMPLEMENTO": "AP N CJ TOCANTINS",
+                "BAIRRO": "CENTRO",
+                "CEP": "69010160",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R FLORIANO PEIXOTO",
+                "NUMERO": "301",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COLONIA",
+                "CEP": "69100143",
+                "CIDADE": "ITACOATIARA",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AVENIDA 7 DE SETEMBRO",
+                "NUMERO": "561",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "69100036",
+                "CIDADE": "ITACOATIARA",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "FRIGORIFICO RIOMAR LTDA",
+                "CNPJ": "05866280000139",
+                "CIDADE": "ITACOATIARA-AM",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "01\/08\/2014",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "DIVIDATA PROCESSAMENTO DE DADOS LTDA",
+                "CNPJ": "20914172000692",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "142705",
+                "DATA_ADMISSAO": "10\/05\/2006",
+                "DATA_DEMISSAO": "15\/01\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "DIVIDATA PROCESSAMENTO DE DADOS LTDA",
+                "CNPJ": "20914172000501",
+                "CIDADE": "BELEM-PA",
+                "PROFISSAO": "142705",
+                "DATA_ADMISSAO": "10\/05\/2006",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,199 @@
+{
+    "CADASTRAIS": {
+        "CPF": "5929955697",
+        "NOME": "ALEXANDRE MARQUES DOS SANTOS",
+        "NOME_MAE": "MARIA CUSTODIA MARQUES",
+        "NASCTO": "23\/07\/1982",
+        "IDADE": "43 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "137951350230",
+        "NIT": "12883282104",
+        "ESCOLARIDADE": "PRIMEIRO GRAU (GINASIO)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782410",
+        "PROFISSAO": "MOTORISTA DE ONIBUS URBANO",
+        "SALARIO": " 1.836,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3134853936",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3125115050",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31994852784",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31987899236",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "OI_PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31992953614",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31992007442",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31993755865",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "marks.alex@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R SUL AMERICA",
+                "NUMERO": "317",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "FOGO APAGOU",
+                "CEP": "34525400",
+                "CIDADE": "SABARA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R PASSA QUATRO",
+                "NUMERO": "150",
+                "COMPLEMENTO": "C B",
+                "BAIRRO": "ALTO CAICARAS",
+                "CEP": "30775040",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R PROJETADA",
+                "NUMERO": "129",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DA COCNEICAO",
+                "CEP": "35444000",
+                "CIDADE": "AMPARO DA SERRA",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "38276933734",
+            "NOME": "MARIA CUSTODIA MARQUES",
+            "IDADE": "70 anos",
+            "LOCAL": "RIO DE JANEIRO\/RJ",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "VIACAO NOVO RETIRO LTDA",
+                "CNPJ": "42958017000104",
+                "CIDADE": "ESMERALDAS-MG",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "04\/09\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VIASUL TRANSPORTES COLETIVOS LTDA",
+                "CNPJ": "66252313000811",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "01\/09\/2014",
+                "DATA_DEMISSAO": "29\/02\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "S M TRANSPORTES S.A",
+                "CNPJ": "05440380000522",
+                "CIDADE": "SABARA-MG",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "01\/03\/2016",
+                "DATA_DEMISSAO": "20\/06\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SAGRADA FAMILIA ONIBUS S.A.",
+                "CNPJ": "71061923000100",
+                "CIDADE": "SABARA-MG",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "02\/01\/2012",
+                "DATA_DEMISSAO": "30\/04\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "VIASUL TRANSPORTES COLETIVOS LTDA",
+                "CNPJ": "66252313000145",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "01\/05\/2014",
+                "DATA_DEMISSAO": "31\/08\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,167 @@
+{
+    "CADASTRAIS": {
+        "CPF": "17256662866",
+        "NOME": "CLAUDIA PEREIRA DE SOUZA",
+        "NOME_MAE": "IRENE MARQUES PEREIRA",
+        "NASCTO": "08\/03\/1972",
+        "IDADE": "54 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "192779930116",
+        "NIT": "12402674581",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "231205",
+        "PROFISSAO": "PROFESSOR DA  EDUCACAO DE JOVENS E ADULTOS DO ENSINO FUNDAMENTAL (PRIMEIRA A QUARTA SERIE)",
+        "SALARIO": " 1.055,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1732243832",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1732273010",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "17991818375",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "17996127541",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "claudiapereirarp@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV LUIZ BOTTARO FILHO",
+                "NUMERO": "205",
+                "COMPLEMENTO": "C 342",
+                "BAIRRO": "LOT MORADAS RIO PRETO",
+                "CEP": "15047422",
+                "CIDADE": "SAO JOSE DO RIO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DUARTE PACHECO",
+                "NUMERO": "594",
+                "COMPLEMENTO": "BL J AP 43",
+                "BAIRRO": "HIGIENOPOLIS",
+                "CEP": "15085140",
+                "CIDADE": "SAO JOSE DO RIO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R AFONSO GUIMARAES JUNIOR",
+                "NUMERO": "595",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "PARQUE RESIDENCIAL COMENDADOR MANCOR DAUD",
+                "CEP": "15070620",
+                "CIDADE": "SAO JOSE DO RIO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DUARTE PACHECO",
+                "NUMERO": "688",
+                "COMPLEMENTO": "AP11 BLA",
+                "BAIRRO": "HIGIENOPOLIS",
+                "CEP": "15085140",
+                "CIDADE": "SAO JOSE DO RIO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SANTOS DUMONT",
+                "NUMERO": "829",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "15420000",
+                "CIDADE": "GUARACI",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "523055897",
+            "NOME": "IRENE MARQUES PEREIRA",
+            "IDADE": "69 anos",
+            "LOCAL": "MOGI DAS CRUZES\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "FRUTUOSO ENSINO FUNDAMENTAL E MEDIO LTDA",
+                "CNPJ": "07737289000175",
+                "CIDADE": "SAO JOSE DO RIO PRETO-SP",
+                "PROFISSAO": "331205",
+                "DATA_ADMISSAO": "01\/02\/2016",
+                "DATA_DEMISSAO": "06\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ARRUDA   PARANHOS LTDA",
+                "CNPJ": "68855998000140",
+                "CIDADE": "SAO JOSE DO RIO PRETO-SP",
+                "PROFISSAO": "231205",
+                "DATA_ADMISSAO": "01\/08\/2008",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "PARANHOS   PARANHOS RIO PRETO LTDA",
+                "CNPJ": "04050066000147",
+                "CIDADE": "SAO JOSE DO RIO PRETO-SP",
+                "PROFISSAO": "231205",
+                "DATA_ADMISSAO": "01\/06\/2007",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

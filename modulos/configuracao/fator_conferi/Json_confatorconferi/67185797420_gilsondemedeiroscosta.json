@@ -1,0 +1,148 @@
+{
+    "CADASTRAIS": {
+        "CPF": "67185797420",
+        "NOME": "GILSON DE MEDEIROS COSTA",
+        "NOME_MAE": "JULINDA BEZERRA MEDEIROS COSTA",
+        "NASCTO": "11\/12\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "013398351600",
+        "NIT": "12508963951",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "252305",
+        "PROFISSAO": "SECRETARIA  EXECUTIVA",
+        "SALARIO": " 5.256,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8436637691",
+            "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "84994555081",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "84988020604",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "11\/03\/2016",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "84988552131",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "84994692471",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "gilson.medeiroscosta@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R GUARIBA",
+                "NUMERO": "34",
+                "COMPLEMENTO": "CJ GRAMORE",
+                "BAIRRO": "LGA AZUL",
+                "CEP": "59135780",
+                "CIDADE": "NATAL",
+                "ESTADO": "RN"
+            },
+            {
+                "LOGRADOURO": "RUA TOMAS MATIAS",
+                "NUMERO": "173",
+                "COMPLEMENTO": "BLA    AP202",
+                "BAIRRO": "NOVA PARNAMIRIM",
+                "CEP": "59152640",
+                "CIDADE": "PARNAMIRIM",
+                "ESTADO": "RN"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "48145343453",
+            "NOME": "FRANCISCO COSTA FILHO",
+            "IDADE": "61 anos",
+            "LOCAL": "SAO GONCALO DO AMARANTE\/RN",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SERVICO SOCIAL DA INDUSTRIA",
+                "CNPJ": "03784822000441",
+                "CIDADE": "NATAL-RN",
+                "PROFISSAO": "252305",
+                "DATA_ADMISSAO": "16\/02\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVICO SOCIAL DA INDUSTRIA",
+                "CNPJ": "03784822001090",
+                "CIDADE": "SAO GONCALO DO AMARANTE-RN",
+                "PROFISSAO": "252305",
+                "DATA_ADMISSAO": "02\/01\/2020",
+                "DATA_DEMISSAO": "16\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVICO SOCIAL DA INDUSTRIA",
+                "CNPJ": "03784822000522",
+                "CIDADE": "NATAL-RN",
+                "PROFISSAO": "252305",
+                "DATA_ADMISSAO": "04\/03\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

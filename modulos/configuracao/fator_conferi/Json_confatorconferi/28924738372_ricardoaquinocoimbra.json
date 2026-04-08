@@ -1,0 +1,188 @@
+{
+    "CADASTRAIS": {
+        "CPF": "28924738372",
+        "NOME": "RICARDO AQUINO COIMBRA",
+        "NOME_MAE": "FRANCISCA NELMA AQUINO COIMBRA",
+        "NASCTO": "08\/08\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "127462386",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "032218770701",
+        "NIT": "12885745195",
+        "ESCOLARIDADE": "ANALFABETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "234810",
+        "PROFISSAO": "PROFESSOR DE ADMINISTRACAO",
+        "SALARIO": " 12.363,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8532278596",
+                "OPERADORA": "TELEMAR\/CE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8530876923",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "09\/01\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "85999718271",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "85988079859",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "14\/08\/2002",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "vendas@tecnosit.com.br",
+            "coimbra_ricardo2@hotmail.com",
+            "ricardo.coimbra@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R TRES",
+                "NUMERO": "101",
+                "COMPLEMENTO": "1713",
+                "BAIRRO": "PRQ IRACEMA",
+                "CEP": "60824020",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "AV ALM MAXIMINIANO DA FONSECA",
+                "NUMERO": "1395",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ENG LUCIANO CAVALCANTE",
+                "CEP": "60811020",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R TRES",
+                "NUMERO": "101",
+                "COMPLEMENTO": "AP 1713",
+                "BAIRRO": "CIDADE DOS FUNCIONARIOS",
+                "CEP": "60822595",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "AVENIDA MINISTRO JOSE AMERICO",
+                "NUMERO": "150",
+                "COMPLEMENTO": "AP 1223",
+                "BAIRRO": "PARQUE IRACEMA",
+                "CEP": "60824245",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "20494840382",
+                "NOME": "FRANCISCA NELMA AQUINO COIMBRA",
+                "IDADE": "83 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "28924762320",
+                "NOME": "ROBERTA AQUINO COIMBRA",
+                "IDADE": "55 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "74223259334",
+                "NOME": "ROBERTO AQUINO COIMBRA",
+                "IDADE": "47 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "FUNDACAO EDSON QUEIROZ",
+                "CNPJ": "07373434000186",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "234805",
+                "DATA_ADMISSAO": "01\/02\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SETE DE SETEMBRO ENSINO SUPERIOR LTDA.",
+                "CNPJ": "47343893000131",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "234810",
+                "DATA_ADMISSAO": "01\/11\/2022",
+                "DATA_DEMISSAO": "30\/05\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "YDUQS EDUCACIONAL LTDA.",
+                "CNPJ": "03681572000171",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "234505",
+                "DATA_ADMISSAO": "02\/01\/2006",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "EDUCADORA SETE DE SETEMBRO IMOVEIS E PARTICIPACOES LTDA.",
+                "CNPJ": "07240328000558",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "234810",
+                "DATA_ADMISSAO": "01\/02\/2002",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

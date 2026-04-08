@@ -1,0 +1,143 @@
+{
+    "CADASTRAIS": {
+        "CPF": "15001631807",
+        "NOME": "CELIO GUILHERME DOS SANTOS",
+        "NOME_MAE": "ODECIA CALSAVARA DOS SANTOS",
+        "NASCTO": "12\/08\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "216558140108",
+        "NIT": "1250292250",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "391125",
+        "PROFISSAO": "TECNICO DE PLANEJAMENTO DE PRODUCAO",
+        "SALARIO": " 12.026,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1521029878",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1932689108",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "17\/10\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1937817595",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19993517667",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19982990376",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "19987488086",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "celio.santos@metsopartners.com",
+            "celio_eliana@ig.com.br",
+            "celio.santos@valmet.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "R JERONYMO DE SOUSA FILHO",
+            "NUMERO": "26",
+            "COMPLEMENTO": "",
+            "BAIRRO": "JARDIM FLORENCE",
+            "CEP": "13059035",
+            "CIDADE": "CAMPINAS",
+            "ESTADO": "SP"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "22731078898",
+            "NOME": "ODECIA CALSAVARA DOS SANTOS",
+            "IDADE": "84 anos",
+            "LOCAL": "CAMPINAS\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "VALMET CELULOSE, PAPEL E ENERGIA LTDA",
+                "CNPJ": "43443043001711",
+                "CIDADE": "SOROCABA-SP",
+                "PROFISSAO": "391125",
+                "DATA_ADMISSAO": "29\/10\/2008",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VALMET CELULOSE, PAPEL E ENERGIA LTDA",
+                "CNPJ": "43443043000405",
+                "CIDADE": "SOROCABA-SP",
+                "PROFISSAO": "391125",
+                "DATA_ADMISSAO": "29\/10\/2008",
+                "DATA_DEMISSAO": "01\/09\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

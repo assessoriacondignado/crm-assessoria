@@ -1,0 +1,268 @@
+{
+    "CADASTRAIS": {
+        "CPF": "9774940806",
+        "NOME": "JOSE CARLOS SOARES DE MELO",
+        "NOME_MAE": "VERA LUCIA SOARES DE MELO",
+        "NASCTO": "18\/09\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "235960652",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "202028430175",
+        "NIT": "12335187467",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "514205",
+        "PROFISSAO": "COLETOR DE LIXO",
+        "SALARIO": " 1.164,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1332297501",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1334614831",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1360016701",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "27\/12\/2014",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1334639944",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11999553860",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13997653667",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13996291968",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13997655555",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "13997700744",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "edigleumamelo@hotmail.com",
+            "rcrodrigo01@live.com",
+            "rcrodrigo01@br.inter.net",
+            "edigleuma.melo@terra.com.br",
+            "edigleuma.melo@br.inter.net"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV JOAO MENDES JUNIOR",
+                "NUMERO": "1389",
+                "COMPLEMENTO": "C 8",
+                "BAIRRO": "SIT DO CAMPO",
+                "CEP": "11725060",
+                "CIDADE": "PRAIA GRANDE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MECANIZADA PAULISTA",
+                "NUMERO": "1988",
+                "COMPLEMENTO": "344 LE",
+                "BAIRRO": "CATIAPOA",
+                "CEP": "11390630",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PROF ANTONIO PEDRO DE JESUS",
+                "NUMERO": "344",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ESP DOS BARREIROS",
+                "CEP": "11340230",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MECANIZADA NOVE MIL CENTO E VINTE",
+                "NUMERO": "344",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SAMARITA",
+                "CEP": "11345520",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R TUPI",
+                "NUMERO": "310",
+                "COMPLEMENTO": "C 2",
+                "BAIRRO": "PRQ S VICENTE",
+                "CEP": "11355500",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R RIO PANARO",
+                "NUMERO": "170",
+                "COMPLEMENTO": "C 20",
+                "BAIRRO": "VL MARGARIDA",
+                "CEP": "11330660",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV DAS NACOES UNIDAS",
+                "NUMERO": "1455",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA MARGARIDA",
+                "CEP": "11330300",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA VEREADOR JOAO CAMILO ALVES FERREIRA",
+                "NUMERO": "344",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA MARGARIDA",
+                "CEP": "11330520",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "2441007726",
+            "NOME": "VERA LUCIA SOARES DE MELO",
+            "IDADE": "58 anos",
+            "LOCAL": "",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "MARCELA CAROLINE SPERANCA FORCINITO",
+            "IDADE": "",
+            "LOCALIDADE": "PRAIA GRANDE\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "36403727869"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TERRACOM CONSTRUCOES LTDA",
+                "CNPJ": "47497367000126",
+                "CIDADE": "CUBATAO-SP",
+                "PROFISSAO": "514205",
+                "DATA_ADMISSAO": "13\/08\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SUSTENTARE SANEAMENTO S\/A",
+                "CNPJ": "17851447001220",
+                "CIDADE": "ARARAS-SP",
+                "PROFISSAO": "514205",
+                "DATA_ADMISSAO": "01\/09\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "SUSTENTARE SANEAMENTO S\/A",
+                "CNPJ": "17851447000177",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "514205",
+                "DATA_ADMISSAO": "12\/01\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "CAMPOS MELO - REVENDA DE GLP LTDA",
+                "CNPJ": "14840486000180",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "524105",
+                "DATA_ADMISSAO": "05\/11\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

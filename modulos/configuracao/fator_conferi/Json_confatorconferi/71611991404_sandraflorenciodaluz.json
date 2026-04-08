@@ -1,0 +1,143 @@
+{
+    "CADASTRAIS": {
+        "CPF": "71611991404",
+        "NOME": "SANDRA FLORENCIO DA LUZ",
+        "NOME_MAE": "MARIA JOSE FLORENCIO DA LUZ",
+        "NASCTO": "29\/07\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1244550821",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "231105",
+        "PROFISSAO": "PROFESSOR DE NIVEL SUPERIOR NA EDUCACAO INFANTIL (QUATRO A SEIS ANOS)",
+        "SALARIO": " 2.577,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8135191895",
+            "OPERADORA": "TELEMAR\/PE",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "81999290903",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81992736109",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81983561004",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "pedrasol2@terra.com.br",
+            "sandrinha.florencio@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "RUA JOAO PESSOA",
+            "NUMERO": "53",
+            "COMPLEMENTO": "",
+            "BAIRRO": "CENTRO",
+            "CEP": "54735480",
+            "CIDADE": "SAO LOURENCO DA MATA",
+            "ESTADO": "PE"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "36208973449",
+                "NOME": "MARIA JOSE FLORENCIO DA LUZ",
+                "IDADE": "79 anos",
+                "LOCAL": "SAO LOURENCO DA MATA\/PE",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "2795994470",
+                "NOME": "ANDREA CILENE FLORENCIO DA LUZ",
+                "IDADE": "50 anos",
+                "LOCAL": "SAO LOURENCO DA MATA\/PE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "3933949483",
+                "NOME": "DANIELE FLORENCIO DA LUZ",
+                "IDADE": "46 anos",
+                "LOCAL": "SAO LOURENCO DA MATA\/PE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "5627271400",
+                "NOME": "PATRICIA FLORENCIO DA LUZ",
+                "IDADE": "44 anos",
+                "LOCAL": "SAO LOURENCO DA MATA\/PE",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SOUZA AQUINO   OLIVEIRA EDUCACAO INFANTIL LTDA",
+                "CNPJ": "32888425000175",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "231105",
+                "DATA_ADMISSAO": "02\/03\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ESCOLA ESPACO ALEGRE LTDA",
+                "CNPJ": "01351422000174",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "231105",
+                "DATA_ADMISSAO": "01\/11\/2000",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

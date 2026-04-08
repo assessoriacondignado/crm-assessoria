@@ -1,0 +1,177 @@
+{
+    "CADASTRAIS": {
+        "CPF": "88398897449",
+        "NOME": "ROBERTO DOS SANTOS MARTINS",
+        "NOME_MAE": "VALDECI LAURINDO S MARTINS",
+        "NASCTO": "08\/01\/1977",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "734970889",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "079873010540",
+        "NIT": "1265861845 ",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "222105",
+        "PROFISSAO": "ENGENHEIRO AGRICOLA",
+        "SALARIO": " 9.095,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "7436177022",
+            "OPERADORA": "TELEMAR\/BA",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "74999150608",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "74988078542",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "OI_PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "87991869192",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "87988373749",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/04\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "lts.bd9cadd7@outlook.com.br",
+            "roberto.rsm@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R S FRANCISCO",
+                "NUMERO": "13",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AT DO ALENCAR",
+                "CEP": "48905486",
+                "CIDADE": "JUAZEIRO",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R STO ANTONIO",
+                "NUMERO": "148",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STO ANTONIO",
+                "CEP": "48903170",
+                "CIDADE": "JUAZEIRO",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "VI JUCA VIANA II",
+                "NUMERO": "53",
+                "COMPLEMENTO": "BL D",
+                "BAIRRO": "CENTRO",
+                "CEP": "48924000",
+                "CIDADE": "JUAZEIRO",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "TV RECANTO D AGUA",
+                "NUMERO": "251",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CALABETAO",
+                "CEP": "41227084",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "ROD BR 122",
+                "NUMERO": "0",
+                "COMPLEMENTO": "E E E 500 500 12",
+                "BAIRRO": "LOT RECIFE",
+                "CEP": "56320700",
+                "CIDADE": "PETROLINA",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "TRAVESSA RIBEIRO",
+                "NUMERO": "17",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "48903515",
+                "CIDADE": "JUAZEIRO",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "68014422449",
+            "NOME": "RUBENS DOS SANTOS MARTINS",
+            "IDADE": "53 anos",
+            "LOCAL": "MACEIO\/AL",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "FINOBRASA AGROINDUSTRIAL S\/A",
+                "CNPJ": "10498764000889",
+                "CIDADE": "PETROLINA-PE",
+                "PROFISSAO": "222105",
+                "DATA_ADMISSAO": "01\/10\/2010",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FINOBRASA AGROINDUSTRIAL S\/A",
+                "CNPJ": "10498764000536",
+                "CIDADE": "PETROLINA-PE",
+                "PROFISSAO": "222105",
+                "DATA_ADMISSAO": "01\/10\/2010",
+                "DATA_DEMISSAO": "01\/06\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

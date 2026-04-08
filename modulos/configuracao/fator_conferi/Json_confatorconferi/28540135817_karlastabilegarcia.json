@@ -1,0 +1,256 @@
+{
+    "CADASTRAIS": {
+        "CPF": "28540135817",
+        "NOME": "KARLA STABILE GARCIA",
+        "NOME_MAE": "FELIPPA STABILE GARCIA",
+        "NASCTO": "04\/10\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "198432530141",
+        "NIT": "1286157385",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142405",
+        "PROFISSAO": "GERENTE DE COMPRAS",
+        "SALARIO": " 8.550,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1141414141",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1143903004",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1143307778",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1143308955",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1143416711",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11981816980",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11970659411",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11945219559",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11993269826",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11993269826",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "kaka0410@hotmail.com",
+            "compras@festpan.com.br",
+            "karlagarcia@gmail.com",
+            "www.karlagarcia@gmail.com",
+            "karlagarcia.d@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ELIAS FERES GERAISSATI",
+                "NUMERO": "80",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JORDANOPOLIS",
+                "CEP": "09891180",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R AMERICO ANTONIO RIBEIRO",
+                "NUMERO": "39",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVA PETROPOLIS",
+                "CEP": "09771310",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ELIAS FERES GERAISSATI",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JORDANOPOLIS",
+                "CEP": "09891180",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FORTE DE ITAIPU",
+                "NUMERO": "77",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA MORAES",
+                "CEP": "04167020",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R TUPI",
+                "NUMERO": "79",
+                "COMPLEMENTO": "AP24",
+                "BAIRRO": "VL VALPARAISO",
+                "CEP": "09060140",
+                "CIDADE": "SANTO ANDRE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOMICIANO ROSSI",
+                "NUMERO": "156",
+                "COMPLEMENTO": "APTO 71",
+                "BAIRRO": "CENTRO",
+                "CEP": "09726120",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "29761847802",
+                "NOME": "KATIA STABILE GARCIA",
+                "IDADE": "44 anos",
+                "LOCAL": "SAO BERNARDO DO CAMPO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "46075339809",
+                "NOME": "NATHALIA GARCIA SCANDIUZZI",
+                "IDADE": "28 anos",
+                "LOCAL": "SAO BERNARDO DO CAMPO\/SP",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "JOSEFA HONORIO DA SILVA GOIANA",
+            "IDADE": "",
+            "LOCALIDADE": "MACEIO\/AL",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "72982780453"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "FESTPAN ALIMENTOS IMPORTACAO E EXPORTACAO LTDA.",
+            "CNPJ": "50154061000181",
+            "CIDADE": "MAUA-SP",
+            "PROFISSAO": "142405",
+            "DATA_ADMISSAO": "01\/03\/1999",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": [
+            {
+                "RAZAO_SOCIAL": "BARBEARIA ROULITY LTDA",
+                "CNPJ": "34590811000101",
+                "CIDADE": "SAO BERNARDO DO CAMPO-SP",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20190820",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "QUICK COMUNICACOES.NET LTDA.",
+                "CNPJ": "10605386000119",
+                "CIDADE": "SANTA ISABEL-SP",
+                "QUALIFICACAO": "SÃ³cio",
+                "DATA_ENTRADA": "20120127",
+                "VALOR_PARTICIPACAO": ""
+            }
+        ]
+    }
+}

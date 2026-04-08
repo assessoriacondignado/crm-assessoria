@@ -1,0 +1,253 @@
+{
+    "CADASTRAIS": {
+        "CPF": "19718948856",
+        "NOME": "MARCELO DE ALMEIDA PACHECO",
+        "NOME_MAE": "ROSELI WILMERS DE ALMEIDA PACHECO",
+        "NASCTO": "03\/03\/1975",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "228088400124",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142510",
+        "PROFISSAO": "GERENTE DE DESENVOLVIMENTO DE SISTEMAS",
+        "SALARIO": " 20.986,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1136671111",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1333071149",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "13\/09\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1128976599",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1143674997",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13997273716",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11993225770",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11976446501",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11964733555",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13997739906",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL PRE-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "pachecomap1975@hotmail.com",
+            "pacheco_map@uol.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ZE BILAU",
+                "NUMERO": "7",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AT DE SAO MANOEL",
+                "CEP": "59633030",
+                "CIDADE": "MOSSORO",
+                "ESTADO": "RN"
+            },
+            {
+                "LOGRADOURO": "R FLORIDA",
+                "NUMERO": "175",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE MONCOES",
+                "CEP": "04565000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ALFREDO BECHELLI",
+                "NUMERO": "175",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RUDGE RAMOS",
+                "CEP": "09613020",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CONSELHEIRO BROTERO",
+                "NUMERO": "446",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "BARRA FUNDA",
+                "CEP": "01154000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CONSELHEIRO BROTERO",
+                "NUMERO": "1030",
+                "COMPLEMENTO": "AP 82",
+                "BAIRRO": "SANTA CECILIA",
+                "CEP": "01232010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA DOUTOR MOURA RIBEIRO",
+                "NUMERO": "125",
+                "COMPLEMENTO": "AP 132",
+                "BAIRRO": "MARAPE",
+                "CEP": "11070061",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ALFREDO BECHELLI",
+                "NUMERO": "17",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RUDGE RAMOS",
+                "CEP": "09613020",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ALFREDO BECHELLI",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RUDGE RAMOS",
+                "CEP": "09613020",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "45319235887",
+                "NOME": "ROSELI WILMERS DE ALMEIDA PACHECO",
+                "IDADE": "73 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "15698944857",
+                "NOME": "RENATA DE ALMEIDA PACHECO",
+                "IDADE": "49 anos",
+                "LOCAL": "LAURO DE FREITAS\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "B3 S.A. - BRASIL, BOLSA, BALCAO",
+            "CNPJ": "09346601000125",
+            "CIDADE": "SAO PAULO-SP",
+            "PROFISSAO": "142510",
+            "DATA_ADMISSAO": "01\/09\/2008",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": [
+            {
+                "RAZAO_SOCIAL": "LUPA SISTEMAS DE INFORMACAO LTDA.",
+                "CNPJ": "07703781000120",
+                "CIDADE": "SAO PAULO-SP",
+                "QUALIFICACAO": "SÃ³cio",
+                "DATA_ENTRADA": "20051004",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "LUPA INFORMATICA LTDA.",
+                "CNPJ": "74506700000199",
+                "CIDADE": "POA-SP",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20040114",
+                "VALOR_PARTICIPACAO": ""
+            }
+        ]
+    }
+}

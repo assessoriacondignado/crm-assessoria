@@ -1,0 +1,266 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26033904818",
+        "NOME": "MAURICIO SADI ANDRADE",
+        "NOME_MAE": "VERA LUCIA SADI ANDRADE",
+        "NASCTO": "14\/10\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "276697327",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "251085450175",
+        "NIT": "1305836093",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "141705",
+        "PROFISSAO": "GERENTE DE PRODUTOS BANCARIOS",
+        "SALARIO": " 50.990,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1136726076",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1130628647",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "14\/02\/2020",
+                "TIPO_TEL": "GPON",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1129500756",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11997540518",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11998351193",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11998351193",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11993016800",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11986355599",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "mauriciosady@terra.com.br",
+            "mauriciozadi@hotmail.com",
+            "marinaciozza@gmail.com",
+            "mauriciosadi@sloam.mit.edu",
+            "mauriciosadi@sloan.mit.edu"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MAL HERMES DA FONSECA",
+                "NUMERO": "334",
+                "COMPLEMENTO": "AP 94",
+                "BAIRRO": "SANTANA",
+                "CEP": "02020000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MAL HERMES DA FONSECA",
+                "NUMERO": "334",
+                "COMPLEMENTO": "AP 94 B",
+                "BAIRRO": "SANTANA",
+                "CEP": "02020900",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV EUSEBIO MATOSO",
+                "NUMERO": "1375",
+                "COMPLEMENTO": "12",
+                "BAIRRO": "PINHEIROS",
+                "CEP": "05423180",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ALVES GUIMARAES",
+                "NUMERO": "855",
+                "COMPLEMENTO": "AP  Apartamento  31",
+                "BAIRRO": "PINHEIROS",
+                "CEP": "05410001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "PCA ALFREDO EGYDIO DE SOUZA ARANHA",
+                "NUMERO": "100",
+                "COMPLEMENTO": "TORRE OLAVO SET",
+                "BAIRRO": "PARQUE JABAQUARA",
+                "CEP": "04344902",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CIRO COSTA",
+                "NUMERO": "49",
+                "COMPLEMENTO": "AP 81",
+                "BAIRRO": "PERDIZES",
+                "CEP": "05007060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MARECHAL HERMES DA FONSECA",
+                "NUMERO": "314",
+                "COMPLEMENTO": "APT 94 B",
+                "BAIRRO": "SANTANA",
+                "CEP": "02020000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MARECHAL HERMES DA FONSECA",
+                "NUMERO": "33",
+                "COMPLEMENTO": "APTO 94 B",
+                "BAIRRO": "SANTANA",
+                "CEP": "02020900",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "28291049866",
+                "NOME": "VERA LUCIA SADI ANDRADE",
+                "IDADE": "76 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "28012751828",
+                "NOME": "LUCIANO SADI ANDRADE",
+                "IDADE": "46 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "CRIVALDER GONCALVES DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "URUARA\/PA",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "69903395272"
+            },
+            {
+                "NOME": "JUREMA PAZ DE LIMA",
+                "IDADE": "",
+                "LOCALIDADE": "CANDOI\/PR",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "69903999968"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ITAU UNIBANCO S.A.",
+                "CNPJ": "60701190000104",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "141705",
+                "DATA_ADMISSAO": "01\/07\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "REDECARD INSTITUICAO DE PAGAMENTO S.A.",
+                "CNPJ": "01425787003898",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "123305",
+                "DATA_ADMISSAO": "01\/06\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "REDECARD INSTITUICAO DE PAGAMENTO S.A.",
+                "CNPJ": "01425787000104",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "123305",
+                "DATA_ADMISSAO": "01\/06\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

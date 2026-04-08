@@ -1,0 +1,160 @@
+{
+    "CADASTRAIS": {
+        "CPF": "58093400249",
+        "NOME": "ANDREA DOS SANTOS LUNIERE",
+        "NOME_MAE": "MARIA DOLORIS SANTOS LUNIERE",
+        "NASCTO": "16\/06\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Feminino",
+        "RG": "12391379",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "2683002470",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "391215",
+        "PROFISSAO": "OPERADOR DE INSPECAO DE QUALIDADE",
+        "SALARIO": " 2.232,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9232239048",
+            "OPERADORA": "TELEMAR\/AM",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "baixa"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92993765689",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92991869151",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92996133878",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/04\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "92996271592",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "02\/20\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "andrea.luniere@gmail.com",
+            "andreialunieri@oi.com.br",
+            "andrea.luniere1@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV JOSE NAPOLES HITOTUZI",
+                "NUMERO": "131",
+                "COMPLEMENTO": "BL 4 AP 105 CON CONQUISTA",
+                "BAIRRO": "LG AZUL",
+                "CEP": "69018151",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R COIMBRA",
+                "NUMERO": "16",
+                "COMPLEMENTO": "Q 342 CNJ NOVA CIDADE",
+                "BAIRRO": "NOVO ALEIXO",
+                "CEP": "69098180",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV TORQUATO TAPAJOS",
+                "NUMERO": "2236",
+                "COMPLEMENTO": "",
+                "BAIRRO": "FLORES",
+                "CEP": "69058830",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R COIMBRA",
+                "NUMERO": "14",
+                "COMPLEMENTO": "NUC 16",
+                "BAIRRO": "NOVO ALEIXO",
+                "CEP": "69098180",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "351528261",
+            "NOME": "BRUNA KETLEN LUNIERE DE OLIVEIRA",
+            "IDADE": "30 anos",
+            "LOCAL": "MANAUS\/AM",
+            "PARENTESCO": "FILHO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "J. B. ANDAIMES - LOCADORA DE EQUIPAMENTOS PARA CONSTRUCAO CIVIL LTDA",
+                "CNPJ": "09518795000107",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "391215",
+                "DATA_ADMISSAO": "01\/03\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TPV DO BRASIL INDUSTRIA DE ELETRONICOS LTDA",
+                "CNPJ": "11758367000195",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "731150",
+                "DATA_ADMISSAO": "11\/20\/1903",
+                "DATA_DEMISSAO": "05\/05\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

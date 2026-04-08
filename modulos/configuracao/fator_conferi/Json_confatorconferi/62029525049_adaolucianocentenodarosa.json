@@ -1,0 +1,257 @@
+{
+    "CADASTRAIS": {
+        "CPF": "62029525049",
+        "NOME": "ADAO LUCIANO CENTENO DA ROSA",
+        "NOME_MAE": "ZENI CENTENO DA ROSA",
+        "NASCTO": "28\/10\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "8014100229",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "053712030400",
+        "NIT": "1241895411",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "252210",
+        "PROFISSAO": "CONTADOR",
+        "SALARIO": " 38.663,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1333234835",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "2122427661",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5121128628",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "29\/11\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5132733762",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "5134153853",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13996875895",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13996897379",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13996948276",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13991153918",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13991162728",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "luciano.centeno@oi.com.br",
+            "luciano-centeno@yahoo.com",
+            "luciano_centeno@yahoo.com",
+            "adalucianocenteno@gmail.com",
+            "luciano100teno@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ALVARO ALVIM",
+                "NUMERO": "57",
+                "COMPLEMENTO": "AP 41",
+                "BAIRRO": "EMBARE",
+                "CEP": "11040131",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R THOMAZ ANTONIO GONZAGA",
+                "NUMERO": "776",
+                "COMPLEMENTO": "BL B AP 403",
+                "BAIRRO": "AREAL",
+                "CEP": "96080240",
+                "CIDADE": "PELOTAS",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "AVENIDA FARROUPILHA",
+                "NUMERO": "6900",
+                "COMPLEMENTO": "",
+                "BAIRRO": "IGARA",
+                "CEP": "92410306",
+                "CIDADE": "CANOAS",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "AVENIDA TULIO DE ROSE",
+                "NUMERO": "400",
+                "COMPLEMENTO": "BL C APT 1104",
+                "BAIRRO": "JARDIM EUROPA",
+                "CEP": "91340110",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA VERISSIMO ROSA",
+                "NUMERO": "757",
+                "COMPLEMENTO": "AP 1203",
+                "BAIRRO": "JARDIM BOTANICO",
+                "CEP": "90610280",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA CANDIDO MENDES",
+                "NUMERO": "236",
+                "COMPLEMENTO": "AP 807 BLOO A",
+                "BAIRRO": "GLORIA",
+                "CEP": "20241220",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "76771954072",
+                "NOME": "ZENI CENTENO DA ROSA",
+                "IDADE": "81 anos",
+                "LOCAL": "PELOTAS\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "96782412004",
+                "NOME": "CELIA FRANCISCA CENTENO DA ROSA",
+                "IDADE": "45 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "98991159087",
+                "NOME": "ANA PRISCILA CENTENO DA ROSA",
+                "IDADE": "44 anos",
+                "LOCAL": "RIO GRANDE\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PETROLEO BRASILEIRO S A PETROBRAS",
+                "CNPJ": "33000167024981",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "252210",
+                "DATA_ADMISSAO": "01\/08\/2003",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PETROLEO BRASILEIRO S A PETROBRAS",
+                "CNPJ": "33000167010255",
+                "CIDADE": "CANOAS-RS",
+                "PROFISSAO": "252210",
+                "DATA_ADMISSAO": "01\/08\/2003",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "FACILIT - ASSESSORIA E PLANEJAMENTO LTDA",
+            "CNPJ": "03383763000157",
+            "CIDADE": "PELOTAS-RS",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "19990831",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

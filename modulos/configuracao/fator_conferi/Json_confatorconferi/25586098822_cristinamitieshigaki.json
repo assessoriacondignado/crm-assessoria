@@ -1,0 +1,176 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25586098822",
+        "NOME": "CRISTINA MITIE SHIGAKI",
+        "NOME_MAE": "MITIKO SHIGAKI",
+        "NASCTO": "09\/07\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "370292960116",
+        "NIT": "19046914065",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "413225",
+        "PROFISSAO": "ESCRITURARIO DE BANCO",
+        "SALARIO": " 3.293,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1135038150",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11983143938",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19987110640",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11940136767",
+                "OPERADORA": "NEXTEL",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11953542855",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "18\/02\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "crishoyal@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R SILVIO DE MOURA",
+                "NUMERO": "80",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL D PEDRO II",
+                "CEP": "02241100",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA FRANCISCO DA LIRA",
+                "NUMERO": "130",
+                "COMPLEMENTO": "APT 71 BL B",
+                "BAIRRO": "JARDIM LEONOR MENDES DE BARROS",
+                "CEP": "02346010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "24640857829",
+                "NOME": "MITIKO SHIGAKI",
+                "IDADE": "76 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "14278836880",
+                "NOME": "HELIO HIDEKI SHIGAKI",
+                "IDADE": "53 anos",
+                "LOCAL": "CUIABA\/MT",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "18506495881",
+                "NOME": "EDNEY MITSUO SHIGAKI",
+                "IDADE": "50 anos",
+                "LOCAL": "OSASCO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "28691511877",
+                "NOME": "EDSON YOITI SHIGAKI",
+                "IDADE": "45 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "52133334866",
+                "NOME": "GIULIA NAOMI SHIGAKI BRITEZ",
+                "IDADE": "9 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "MITIKO SHIGAKI",
+            "IDADE": "",
+            "LOCALIDADE": "SAO PAULO\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "24640857829"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CAIXA ECONOMICA FEDERAL",
+                "CNPJ": "00360305000104",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "15\/10\/2012",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CAIXA ECONOMICA FEDERAL",
+                "CNPJ": "00360305137169",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "15\/10\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,168 @@
+{
+    "CADASTRAIS": {
+        "CPF": "61523755334",
+        "NOME": "JEANE MARIA COSTA DE SA",
+        "NOME_MAE": "MARIA NECIDE COSTA DE SA",
+        "NASCTO": "20\/10\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "043184120701",
+        "NIT": "13114715698",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "421125",
+        "PROFISSAO": "OPERADOR DE CAIXA",
+        "SALARIO": " 900,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8532487088",
+            "OPERADORA": "TELEMAR\/CE",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "85985540023",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "85988005596",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "85984138062",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "14\/09\/2018",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "85987667498",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "28\/09\/2018",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "85989029186",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "rargento@medusa.com.br",
+            "apalma1@correionet.com.br",
+            "jeanesa@oi.com.br",
+            "jeanemaria524@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "RUA IEMANJA",
+            "NUMERO": "122",
+            "COMPLEMENTO": "",
+            "BAIRRO": "VICENTE PINZON",
+            "CEP": "60181025",
+            "CIDADE": "FORTALEZA",
+            "ESTADO": "CE"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "90908295391",
+                "NOME": "GILVANIA DE FATIMA COSTA ARAUJO",
+                "IDADE": "45 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "8382712355",
+                "NOME": "JOAO MURILO SILVA COSTA",
+                "IDADE": "12 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "61718125364",
+                "NOME": "MARIA CLARA COSTA DOS PRAZERES",
+                "IDADE": "22 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "MWN COMERCIAL DE ALIMENTOS LTDA",
+                "CNPJ": "04601165001141",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "421125",
+                "DATA_ADMISSAO": "02\/09\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SUPERDELI INDUSTRIA E COMERCIO DE ALIMENTOS LTDA",
+                "CNPJ": "05102531000109",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "421125",
+                "DATA_ADMISSAO": "10\/11\/2016",
+                "DATA_DEMISSAO": "31\/12\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "BOMPRECO SUPERMERCADOS DO NORDESTE LTDA",
+                "CNPJ": "13004510028512",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "421125",
+                "DATA_ADMISSAO": "06\/09\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

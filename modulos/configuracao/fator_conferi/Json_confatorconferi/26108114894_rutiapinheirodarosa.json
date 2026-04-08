@@ -1,0 +1,275 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26108114894",
+        "NOME": "RUTIA PINHEIRO DA ROSA",
+        "NOME_MAE": "JOVITA PINHEIRO DA ROSA",
+        "NASCTO": "27\/07\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "252499550175",
+        "NIT": "12661647890",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "410105",
+        "PROFISSAO": "SUPERVISOR ADMINISTRATIVO",
+        "SALARIO": " 12.300,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1138314051",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1135820304",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "13\/02\/2011",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1135820304",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "13\/02\/2011",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1121210528",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1135789770",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11941613602",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11992759571",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11992759571",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11945860827",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11972440736",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "pedroclash@superig.com.br",
+            "rutia.rosa@redecard.com.br",
+            "rutiapinheirorosa@gmail.com",
+            "rutiarosa@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ALGER",
+                "NUMERO": "275",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL RICA",
+                "CEP": "03911050",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R LUIS LOUZA",
+                "NUMERO": "210",
+                "COMPLEMENTO": "AP 52",
+                "BAIRRO": "OLIMPICO",
+                "CEP": "09540430",
+                "CIDADE": "SAO CAETANO DO SUL",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "TV DANIEL AGRESTE",
+                "NUMERO": "129",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ RESIDENCIAL DA LAPA",
+                "CEP": "05065100",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "TV DANIEL AGRESTE",
+                "NUMERO": "131",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ RESIDENCIAL DA LAPA",
+                "CEP": "05065100",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV PRES JUSCELINO KUBITSCHEK",
+                "NUMERO": "1400",
+                "COMPLEMENTO": "AND 13",
+                "BAIRRO": "VL NOVA CONCEICAO",
+                "CEP": "04543000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R APA",
+                "NUMERO": "176",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CPO ELISEOS",
+                "CEP": "01201030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R AMARAL GURGEL",
+                "NUMERO": "148",
+                "COMPLEMENTO": "AP 171",
+                "BAIRRO": "VL BUARQUE",
+                "CEP": "01221000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV PRES JUSCELINO KUBITSCHEK",
+                "NUMERO": "1830",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL NOVA CONCEICAO",
+                "CEP": "04543900",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "26062915814",
+                "NOME": "JOVITA PINHEIRO DA ROSA",
+                "IDADE": "74 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "24926637871",
+                "NOME": "ROBSON ROGERIO PINHEIRO DA ROSA",
+                "IDADE": "51 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "25204226885",
+                "NOME": "RUBIA PINHEIRO DA ROSA SHIMIZU",
+                "IDADE": "48 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "MERCADO PAGO INSTITUICAO DE PAGAMENTO LTDA",
+                "CNPJ": "10573521000191",
+                "CIDADE": "OSASCO-SP",
+                "PROFISSAO": "141605",
+                "DATA_ADMISSAO": "14\/11\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "REDECARD INSTITUICAO DE PAGAMENTO S.A.",
+                "CNPJ": "01425787003898",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "01\/06\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "REDECARD INSTITUICAO DE PAGAMENTO S.A.",
+                "CNPJ": "01425787000104",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "21\/08\/2000",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,209 @@
+{
+    "CADASTRAIS": {
+        "CPF": "22583667807",
+        "NOME": "RENATO VIEIRA GARCIA",
+        "NOME_MAE": "ZENI VIEIRA DA SILVA GARCIA",
+        "NASCTO": "08\/02\/1982",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "306325150124",
+        "NIT": "1306589181",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "731320",
+        "PROFISSAO": "INSTALADOR-REPARADOR DE LINHAS E APARELHOS DE TELECOMUNICACOES",
+        "SALARIO": " 4.722,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1122854671",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11998641426",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11995131269",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11997533525",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11996156608",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11997891397",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "renatovg82@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R AUGUSTO MENDES PINTO",
+                "NUMERO": "109",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD DAS ROSAS IGUATEMI",
+                "CEP": "08372200",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE ROMEIRO",
+                "NUMERO": "100",
+                "COMPLEMENTO": "AP 32 A",
+                "BAIRRO": "CIDADE TIRADENTES",
+                "CEP": "08475350",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R RENE DE TOLEDO",
+                "NUMERO": "127",
+                "COMPLEMENTO": "AP 31 C",
+                "BAIRRO": "CIDADE TIRADENTES",
+                "CEP": "08471740",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ARNALDO AGUIAR BARBOSA",
+                "NUMERO": "179",
+                "COMPLEMENTO": "A",
+                "BAIRRO": "JD IGUATEMI",
+                "CEP": "08380250",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DONA ELOA DO VALLE QUADROS",
+                "NUMERO": "763",
+                "COMPLEMENTO": "AP  Apartamento  14 B",
+                "BAIRRO": "CONJUNTO HABITACIONAL SANTA ETELVINA II",
+                "CEP": "08485130",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R AUGUSTO MENDES PINTO",
+                "NUMERO": "41",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM DAS ROSAS (IGUATEMI)",
+                "CEP": "08372200",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DONA ELOA DO VALLE QUADROS",
+                "NUMERO": "736",
+                "COMPLEMENTO": "APTO 14B",
+                "BAIRRO": "CONJUNTO HABITA",
+                "CEP": "08485130",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "11444821865",
+                "NOME": "ZENI VIEIRA DA SILVA GARCIA",
+                "IDADE": "70 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "30452661854",
+                "NOME": "ANDREIA VIEIRA GARCIA",
+                "IDADE": "42 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "35532855838",
+                "NOME": "LUIZ FERNANDO VIEIRA GARCIA",
+                "IDADE": "41 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ICOMON TECNOLOGIA LTDA",
+                "CNPJ": "02137309000153",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "731320",
+                "DATA_ADMISSAO": "21\/02\/2014",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ERICSSON GESTAO E SERVICOS DE TELECOMUNICACOES LTDA",
+                "CNPJ": "04262069000144",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "732110",
+                "DATA_ADMISSAO": "11\/20\/1904",
+                "DATA_DEMISSAO": "06\/03\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,129 @@
+{
+    "CADASTRAIS": {
+        "CPF": "4764523922",
+        "NOME": "ANA CAROLINE BENTO FERNANDES",
+        "NOME_MAE": "FABINA BERETA BENTO",
+        "NASCTO": "09\/10\/1998",
+        "IDADE": "27 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "20390050959",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "48999010377",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "48999503323",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "48996498346",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "anacarolinefernandes@outlook.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R GIACOMO TOMAZI",
+                "NUMERO": "329",
+                "COMPLEMENTO": "",
+                "BAIRRO": "OURONEGRO",
+                "CEP": "88850000",
+                "CIDADE": "FORQUILHINHA",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R CLARINDA MILIOLI DE LUCA",
+                "NUMERO": "300",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MINA DO MATO",
+                "CEP": "88810400",
+                "CIDADE": "CRICIUMA",
+                "ESTADO": "SC"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SOCIEDADE LITERARIA E CARITATIVA SANTO AGOSTINHO",
+                "CNPJ": "92736040000890",
+                "CIDADE": "CRICIUMA-SC",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "26\/12\/2022",
+                "DATA_DEMISSAO": "31\/05\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "UNIMED CRICIUMA COOPERATIVA TRABALHO MEDICO REGIAO CARBONIFERA",
+                "CNPJ": "82996703001310",
+                "CIDADE": "CRICIUMA-SC",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "03\/06\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ECOFITUS INDUSTRIA E COMERCIO S.A.",
+                "CNPJ": "07108922000166",
+                "CIDADE": "FORQUILHINHA-SC",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "26\/05\/2020",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "CONFECCOES VANELISE LTDA",
+                "CNPJ": "91879718000236",
+                "CIDADE": "NOVA VENEZA-SC",
+                "PROFISSAO": "414105",
+                "DATA_ADMISSAO": "03\/04\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

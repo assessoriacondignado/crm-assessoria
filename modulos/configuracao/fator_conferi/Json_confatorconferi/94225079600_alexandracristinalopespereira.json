@@ -1,0 +1,168 @@
+{
+    "CADASTRAIS": {
+        "CPF": "94225079600",
+        "NOME": "ALEXANDRA CRISTINA LOPES PEREIRA",
+        "NOME_MAE": "BERNADETE MELO LOPES",
+        "NASCTO": "06\/07\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12475319005",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411005",
+        "PROFISSAO": "AUXILIAR DE ESCRITORIO, EM GERAL",
+        "SALARIO": " 1.159,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3130174463",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3134184309",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31996662166",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31998064340",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31971767640",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DA CONFIRMACAO",
+                "NUMERO": "50",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JD S JOSE",
+                "CEP": "30820120",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R DO BATISMO",
+                "NUMERO": "169",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM SAO JOSE",
+                "CEP": "30820110",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "2932847686",
+                "NOME": "FERNANDA BEATRIZ MELO LOPES",
+                "IDADE": "49 anos",
+                "LOCAL": "CONTAGEM\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "5493152681",
+                "NOME": "RODRIGO CHRISTIANO LOPES",
+                "IDADE": "42 anos",
+                "LOCAL": "BELO HORIZONTE\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "60989696634",
+                "NOME": "ROSEMARY MELO LOPES",
+                "IDADE": "61 anos",
+                "LOCAL": "BELO HORIZONTE\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "13828492657",
+                "NOME": "MONIQUE FRANCIELLE LOPES PEREIRA",
+                "IDADE": "30 anos",
+                "LOCAL": "BELO HORIZONTE\/MG",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "13828506623",
+                "NOME": "VINICIUS LUIS LOPES PEREIRA",
+                "IDADE": "27 anos",
+                "LOCAL": "BELO HORIZONTE\/MG",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "RP EXPRESS E SERVICOS LTDA",
+                "CNPJ": "31883778000110",
+                "CIDADE": "CONTAGEM-MG",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "01\/10\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TRANSPORTADORA MULTI EXPRESS LTDA",
+                "CNPJ": "09567308000198",
+                "CIDADE": "CONTAGEM-MG",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "10\/04\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

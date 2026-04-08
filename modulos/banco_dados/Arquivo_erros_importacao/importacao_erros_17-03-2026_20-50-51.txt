@@ -1,0 +1,17 @@
+========================================
+RELATÓRIO DE AUDITORIA E ERROS
+Lote: 3 - SIAPE FEVEREIRO 2026 SERVIDOR_1Mi - CRM CADASTRO
+Usuário: ALEX BARBOSA LEAL
+Data: 17/03/2026 20:50:51
+========================================
+
+[FALHA SQL] LINHA 25169 | CPF: 06934301684 | ERRO: SQLSTATE[HY000]: General error: 3819 Check constraint 'chk_uf' is violated.
+[FALHA SQL] LINHA 54274 | CPF: 25298233830 | ERRO: SQLSTATE[HY000]: General error: 3819 Check constraint 'chk_uf' is violated.
+[FALHA SQL] LINHA 71925 | CPF: 38546264791 | ERRO: SQLSTATE[HY000]: General error: 3819 Check constraint 'chk_uf' is violated.
+[FALHA SQL] LINHA 78734 | CPF: 43573010687 | ERRO: SQLSTATE[HY000]: General error: 3819 Check constraint 'chk_uf' is violated.
+[FALHA SQL] LINHA 80061 | CPF: 44593481600 | ERRO: SQLSTATE[HY000]: General error: 3819 Check constraint 'chk_uf' is violated.
+[FALHA SQL] LINHA 107126 | CPF: 69139130606 | ERRO: SQLSTATE[HY000]: General error: 3819 Check constraint 'chk_uf' is violated.
+[FALHA SQL] LINHA 109029 | CPF: 70925941620 | ERRO: SQLSTATE[HY000]: General error: 3819 Check constraint 'chk_uf' is violated.
+[FALHA SQL] LINHA 112147 | CPF: 74243314853 | ERRO: SQLSTATE[HY000]: General error: 3819 Check constraint 'chk_uf' is violated.
+[FALHA SQL] LINHA 114863 | CPF: 77456238634 | ERRO: SQLSTATE[HY000]: General error: 3819 Check constraint 'chk_uf' is violated.
+[FALHA SQL] LINHA 119730 | CPF: 82897263687 | ERRO: SQLSTATE[HY000]: General error: 3819 Check constraint 'chk_uf' is violated.

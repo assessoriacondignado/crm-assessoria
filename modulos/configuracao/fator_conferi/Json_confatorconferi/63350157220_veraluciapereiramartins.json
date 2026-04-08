@@ -1,0 +1,146 @@
+{
+    "CADASTRAIS": {
+        "CPF": "63350157220",
+        "NOME": "VERA LUCIA PEREIRA MARTINS",
+        "NOME_MAE": "IZAURA PEREIRA MARTINS",
+        "NASCTO": "19\/11\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "421125",
+        "PROFISSAO": "OPERADOR DE CAIXA",
+        "SALARIO": " 1.980,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9134624207",
+            "OPERADORA": "TELEMAR\/PA",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "91981643001",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "91988515745",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "91993540434",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "91987168666",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/04\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "91988189761",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/04\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "TRAV CORONEL LEANDRO PINHEIRO",
+                "NUMERO": "280",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TANCREDO NEVES",
+                "CEP": "68702135",
+                "CIDADE": "CAPANEMA",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "R VINTE E OITO DE OUTUBRO",
+                "NUMERO": "280",
+                "COMPLEMENTO": "NULL",
+                "BAIRRO": "CENTRO",
+                "CEP": "68700045",
+                "CIDADE": "CAPANEMA",
+                "ESTADO": "PA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "975581767",
+            "NOME": "IZAURA PEREIRA MARTINS",
+            "IDADE": "92 anos",
+            "LOCAL": "JANAUBA\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ACL SANTOS COMERCIO DE GENEROS ALIMENTICIOS LTDA",
+                "CNPJ": "08856321000366",
+                "CIDADE": "CAPANEMA-PA",
+                "PROFISSAO": "421125",
+                "DATA_ADMISSAO": "09\/07\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LINK COMERCIO E DISTRIBUIDORA LTDA",
+                "CNPJ": "08880359000102",
+                "CIDADE": "CAPANEMA-PA",
+                "PROFISSAO": "422105",
+                "DATA_ADMISSAO": "01\/06\/2012",
+                "DATA_DEMISSAO": "09\/04\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

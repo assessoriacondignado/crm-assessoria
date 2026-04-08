@@ -1,0 +1,250 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26127692857",
+        "NOME": "RAPHAEL PEREIRA SOUZA AZEVEDO",
+        "NOME_MAE": "IRACEMA PEREIRA DE AZEVEDO",
+        "NASCTO": "25\/05\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "244055200132",
+        "NIT": "12720505813",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "413210",
+        "PROFISSAO": "CAIXA DE BANCO",
+        "SALARIO": " 2.129,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1332898950",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1333458249",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1333490944",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1134913132",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1330195837",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13988071291",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13997558881",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13978060826",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "13997967038",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "13991015169",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "iracema.azevedo@gmail.com",
+            "raphael-azevedo@uol.com.br",
+            "rpsa@engenheiro.mailbr.com.br",
+            "rpsa.engenheiro@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R TEN MAURO DE MIRANDA",
+                "NUMERO": "96",
+                "COMPLEMENTO": "AP 41 C",
+                "BAIRRO": "JABAQUARA",
+                "CEP": "04345030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV MONTEIRO LOBATO",
+                "NUMERO": "760",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL VALENCA",
+                "CEP": "11380500",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV DR EPITACIO PESSOA",
+                "NUMERO": "39",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOQUEIRAO",
+                "CEP": "11045301",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "MONSENHOR DE PAULA RODRIGUES",
+                "NUMERO": "156",
+                "COMPLEMENTO": "AP 72 A",
+                "BAIRRO": "VL BELMIRO",
+                "CEP": "11075350",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R RIO DE JANEIRO",
+                "NUMERO": "108",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIBARTEL 2",
+                "CEP": "11740000",
+                "CIDADE": "ITANHAEM",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CONSELHEIRO JOAO ALFREDO",
+                "NUMERO": "297",
+                "COMPLEMENTO": "AP 34",
+                "BAIRRO": "MACUCO",
+                "CEP": "11015220",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA MONTEIRO LOBATO",
+                "NUMERO": "76",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA VALENCA",
+                "CEP": "11380500",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1500559946",
+            "NOME": "IRACEMA PEREIRA DE AZEVEDO",
+            "IDADE": "74 anos",
+            "LOCAL": "PARANAVAI\/PR",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000730084",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "12\/03\/2001",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000377104",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "214205",
+                "DATA_ADMISSAO": "16\/02\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000683906",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "413210",
+                "DATA_ADMISSAO": "09\/08\/2010",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

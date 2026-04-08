@@ -1,0 +1,147 @@
+{
+    "CADASTRAIS": {
+        "CPF": "52659607249",
+        "NOME": "AUGUSTO ALVES DA SILVA",
+        "NOME_MAE": "MARIA DAS GRACAS ALVES DA SILVA",
+        "NASCTO": "08\/05\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1304542542",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "784205",
+        "PROFISSAO": "ALIMENTADOR DE LINHA DE PRODUCAO",
+        "SALARIO": " 5.440,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9132116444",
+                "OPERADORA": "TELEMAR\/PA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9132745944",
+                "OPERADORA": "TELEMAR\/PA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "91989657076",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "91999894346",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/04\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "wesleyma@br2001.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DUARTE DA COSTA",
+                "NUMERO": "1572",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S SEBASTIAO",
+                "CEP": "76801680",
+                "CIDADE": "PORTO VELHO",
+                "ESTADO": "RO"
+            },
+            {
+                "LOGRADOURO": "VILA ESPERANCA",
+                "NUMERO": "31",
+                "COMPLEMENTO": "CS A",
+                "BAIRRO": "GUAMA",
+                "CEP": "66065270",
+                "CIDADE": "BELEM",
+                "ESTADO": "PA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "8548404",
+            "NOME": "MARIA DAS GRACAS ALVES DA SILVA",
+            "IDADE": "51 anos",
+            "LOCAL": "CAMPINAS\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "JOSE FELIX DE OLIVEIRA",
+                "IDADE": "",
+                "LOCALIDADE": "CARUARU\/PE",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "23900440425"
+            },
+            {
+                "NOME": "LEONAM MOREIRA DE SOUZA",
+                "IDADE": "",
+                "LOCALIDADE": "FORTALEZA\/CE",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "1012398315"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "NACIONAL GAS BUTANO DISTRIBUIDORA LTDA",
+                "CNPJ": "06980064016852",
+                "CIDADE": "BELEM-PA",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "15\/10\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SUPERGASBRAS ENERGIA LTDA",
+                "CNPJ": "19791896009078",
+                "CIDADE": "BELEM-PA",
+                "PROFISSAO": "784120",
+                "DATA_ADMISSAO": "02\/12\/2008",
+                "DATA_DEMISSAO": "24\/06\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

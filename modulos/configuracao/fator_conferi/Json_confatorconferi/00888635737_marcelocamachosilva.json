@@ -1,0 +1,276 @@
+{
+    "CADASTRAIS": {
+        "CPF": "888635737",
+        "NOME": "MARCELO CAMACHO SILVA",
+        "NOME_MAE": "MARIA APARECIDA CAMACHO SILVA",
+        "NASCTO": "03\/04\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "074110160302",
+        "NIT": "1237120888",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "234505",
+        "PROFISSAO": "PROFESSOR DE ENSINO SUPERIOR NA AREA DE DIDATICA",
+        "SALARIO": " 636,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2137412258",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "10\/09\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2124045101",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21988627698",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21987602815",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "21987479095",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "21996282132",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "21996351834",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marcelocamacho@fiocruz.br",
+            "marcelocamacho1970@gmail.com",
+            "mcamacho@zipmail.com.br",
+            "marcelocacho@ig.com.br",
+            "mcamacho@globosat.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DR TAVARES DE MACEDO",
+                "NUMERO": "20",
+                "COMPLEMENTO": "BL B 1502",
+                "BAIRRO": "ICARAI",
+                "CEP": "24228900",
+                "CIDADE": "NITEROI",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R LOU PACHECO",
+                "NUMERO": "1000",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MARAVISTA",
+                "CEP": "24342077",
+                "CIDADE": "NITEROI",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "AV PREF JOAO BATISTA STOCCO",
+                "NUMERO": "1008",
+                "COMPLEMENTO": "",
+                "BAIRRO": "GUARAITUBA",
+                "CEP": "83407000",
+                "CIDADE": "COLOMBO",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R HERIVELTO MARTINS",
+                "NUMERO": "41",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL ARCO IRIS",
+                "CEP": "04852730",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R TEN FRANCA",
+                "NUMERO": "120",
+                "COMPLEMENTO": "BL I AP 506",
+                "BAIRRO": "CACHAMBI",
+                "CEP": "20771445",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA DOUTOR TAVARES DE MACEDO",
+                "NUMERO": "20",
+                "COMPLEMENTO": "AP 1502",
+                "BAIRRO": "ICARAI",
+                "CEP": "24220215",
+                "CIDADE": "NITEROI",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA DOUTOR TAVARES DE MACEDO",
+                "NUMERO": "20",
+                "COMPLEMENTO": "904 BL A",
+                "BAIRRO": "ICARAI",
+                "CEP": "24220211",
+                "CIDADE": "NITEROI",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA BEETHOVEN",
+                "NUMERO": "124",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SENADOR CAMARA",
+                "CEP": "21833240",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "85956260734",
+                "NOME": "MARIA APARECIDA CAMACHO SILVA",
+                "IDADE": "85 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "1243368764",
+                "NOME": "MAX RONALD CAMACHO SILVA",
+                "IDADE": "53 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "1360780793",
+                "NOME": "ROGERIO CAMACHO SILVA",
+                "IDADE": "55 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "FESO FUNDACAO EDUCACIONAL SERRA DOS ORGAOS",
+                "CNPJ": "32190092000106",
+                "CIDADE": "TERESOPOLIS-RJ",
+                "PROFISSAO": "234505",
+                "DATA_ADMISSAO": "04\/10\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "UNIVERSIDADE FEDERAL DO RIO DE JANEIRO",
+                "CNPJ": "33663683000116",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "234505",
+                "DATA_ADMISSAO": "23\/05\/2022",
+                "DATA_DEMISSAO": "{Ã±\/{Ã±\/2023",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "FUNDACAO OSWALDO CRUZ",
+                "CNPJ": "33781055000135",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "131205",
+                "DATA_ADMISSAO": "17\/09\/2010",
+                "DATA_DEMISSAO": "{Ã±\/{Ã±\/2023",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "SOCIEDADE DE ENSINO SUPERIOR ESTACIO DE SA LTDA",
+                "CNPJ": "34075739008320",
+                "CIDADE": "NOVA IGUACU-RJ",
+                "PROFISSAO": "234105",
+                "DATA_ADMISSAO": "01\/08\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SECRETARIA DE ESTADO DE EDUCACAO",
+                "CNPJ": "42498659000160",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "231210",
+                "DATA_ADMISSAO": "02\/02\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "MINISTERIO DA SAUDE",
+                "CNPJ": "00394544017150",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "212410",
+                "DATA_ADMISSAO": "17\/09\/2010",
+                "DATA_DEMISSAO": "18\/07\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

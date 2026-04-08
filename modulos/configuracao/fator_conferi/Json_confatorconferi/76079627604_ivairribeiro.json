@@ -1,0 +1,183 @@
+{
+    "CADASTRAIS": {
+        "CPF": "76079627604",
+        "NOME": "IVAIR RIBEIRO",
+        "NOME_MAE": "INEZ FERREIRA RIBEIRO",
+        "NASCTO": "11\/08\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "096234570213",
+        "NIT": "12338738111",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "724315",
+        "PROFISSAO": "SOLDADOR",
+        "SALARIO": " 1.250,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "3138373020",
+            "OPERADORA": "TELEMAR\/MG",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31996642567",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31993040733",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "ivairribeiro.jacare@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "RIO DOCE",
+                "NUMERO": "115",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "TEN CARLOS",
+                "CEP": "35960000",
+                "CIDADE": "SANTA BARBARA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R COMPOS ALTOS",
+                "NUMERO": "263",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "TEN CARLOS",
+                "CEP": "35960000",
+                "CIDADE": "SANTA BARBARA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R OURO PRETO",
+                "NUMERO": "205",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOSSA SENHORA DE FATIMA",
+                "CEP": "35660156",
+                "CIDADE": "PARA DE MINAS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R BOA ESPERANCA",
+                "NUMERO": "276",
+                "COMPLEMENTO": "CS B",
+                "BAIRRO": "TENENTE CARLOS",
+                "CEP": "35960000",
+                "CIDADE": "SANTA BARBARA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R S VICENTE DE PAULA",
+                "NUMERO": "1701",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STO ANTONIO",
+                "CEP": "35970000",
+                "CIDADE": "BARAO DE COCAIS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RUA JUIZ DE FORA",
+                "NUMERO": "415",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOSSA SENHORA DE FATIMA",
+                "CEP": "35660161",
+                "CIDADE": "PARA DE MINAS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R M CLOVES SALGADO",
+                "NUMERO": "1239",
+                "COMPLEMENTO": "",
+                "BAIRRO": "",
+                "CEP": "35970000",
+                "CIDADE": "BARAO DE COCAIS",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "5876082937",
+            "NOME": "INEZ FERREIRA RIBEIRO",
+            "IDADE": "70 anos",
+            "LOCAL": "MARILANDIA DO SUL\/PR",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "VALE S.A.",
+                "CNPJ": "33592510044798",
+                "CIDADE": "SAO GONCALO DO RIO ABAIXO-MG",
+                "PROFISSAO": "724315",
+                "DATA_ADMISSAO": "16\/10\/2013",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VALE S.A.",
+                "CNPJ": "33592510017987",
+                "CIDADE": "ITABIRA-MG",
+                "PROFISSAO": "724315",
+                "DATA_ADMISSAO": "16\/10\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "CISAM SIDERURGIA S.A  EM RECUPERACAO JUDICIAL",
+                "CNPJ": "71397509000168",
+                "CIDADE": "PARA DE MINAS-MG",
+                "PROFISSAO": "782130",
+                "DATA_ADMISSAO": "08\/09\/2009",
+                "DATA_DEMISSAO": "15\/07\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "EMEC SERVICOS LTDA",
+                "CNPJ": "01940590000103",
+                "CIDADE": "SANTA BARBARA-MG",
+                "PROFISSAO": "724315",
+                "DATA_ADMISSAO": "01\/12\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

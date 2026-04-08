@@ -1,0 +1,249 @@
+{
+    "CADASTRAIS": {
+        "CPF": "22143003846",
+        "NOME": "ALLAN SOARES LUZ",
+        "NOME_MAE": "MARIA INEZ SOARES RIBEIRO LUZ",
+        "NASCTO": "26\/10\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "286853720183",
+        "NIT": "12722870268",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "313215",
+        "PROFISSAO": "TECNICO ELETRONICO",
+        "SALARIO": " 4.345,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1232098817",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "2126192778",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "03\/04\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1230190846",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "22\/04\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2133220379",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11933426647",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21981755657",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21981761622",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21998477608",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12991494178",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "allan.zluz@uol.com.br",
+            "allansoares@directnet.com.br",
+            "alan.sluz@uol.com.br",
+            "allansoares@petrobras.com.br",
+            "allan.soares@yahoo.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ROUXINOL",
+                "NUMERO": "158",
+                "COMPLEMENTO": "AP 202",
+                "BAIRRO": "ITAIPU",
+                "CEP": "24355110",
+                "CIDADE": "NITEROI",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R NORBERTO NOGUEIRA",
+                "NUMERO": "147",
+                "COMPLEMENTO": "BL 14 AP 31",
+                "BAIRRO": "CJ RESIDENCIAL INTERVALE",
+                "CEP": "12220115",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DOUTOR ARMANDO DE SALES OLIVEIRA",
+                "NUMERO": "19",
+                "COMPLEMENTO": "AP:182 padaria",
+                "BAIRRO": "BOQUEIRAO",
+                "CEP": "11050070",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CON JOSE FRANCISCO MONTEIRO",
+                "NUMERO": "22",
+                "COMPLEMENTO": "AP23",
+                "BAIRRO": "VL BANDEIRANTES",
+                "CEP": "12216180",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA PARAGUASSU",
+                "NUMERO": "53",
+                "COMPLEMENTO": "AP   APARTAMENTO",
+                "BAIRRO": "BOQUEIRAO",
+                "CEP": "11050020",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOS PAVOES",
+                "NUMERO": "109",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ITAIPU",
+                "CEP": "24355120",
+                "CIDADE": "NITEROI",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA ROUXINOL",
+                "NUMERO": "185",
+                "COMPLEMENTO": "AP 202",
+                "BAIRRO": "ITAIPU",
+                "CEP": "24355110",
+                "CIDADE": "NITEROI",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA JOSE DANTAS FREIRE FILHO",
+                "NUMERO": "398",
+                "COMPLEMENTO": "SB",
+                "BAIRRO": "PIRATININGA",
+                "CEP": "24350700",
+                "CIDADE": "NITEROI",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "30654535841",
+                "NOME": "MARIA INEZ SOARES RIBEIRO LUZ",
+                "IDADE": "74 anos",
+                "LOCAL": "SAO JOSE DOS CAMPOS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "30676323898",
+                "NOME": "ANA KARINA SOARES LUZ",
+                "IDADE": "48 anos",
+                "LOCAL": "SAO JOSE DOS CAMPOS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PETROLEO BRASILEIRO S A PETROBRAS",
+                "CNPJ": "33000167024981",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "313215",
+                "DATA_ADMISSAO": "25\/06\/2007",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PETROLEO BRASILEIRO S A PETROBRAS",
+                "CNPJ": "33000167012541",
+                "CIDADE": "ITABORAI-RJ",
+                "PROFISSAO": "313215",
+                "DATA_ADMISSAO": "25\/06\/2007",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

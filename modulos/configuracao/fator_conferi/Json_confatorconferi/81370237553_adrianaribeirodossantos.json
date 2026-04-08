@@ -1,0 +1,187 @@
+{
+    "CADASTRAIS": {
+        "CPF": "81370237553",
+        "NOME": "ADRIANA RIBEIRO DOS SANTOS",
+        "NOME_MAE": "MARILENE LOPES RIBEIRO",
+        "NASCTO": "21\/01\/1980",
+        "IDADE": "46 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "093284560507",
+        "NIT": "13211031455",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "322215",
+        "PROFISSAO": "TECNICO DE ENFERMAGEM DO TRABALHO",
+        "SALARIO": " 1.412,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7136444240",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "03\/07\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7136223085",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "71983089721",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71982209150",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71981850531",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71983253574",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71987433627",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "CAM DOS POETAS",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "GL E",
+                "CEP": "42808115",
+                "CIDADE": "CAMACARI",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R DA ACACIA ROSA",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "GL E",
+                "CEP": "42808127",
+                "CIDADE": "CAMACARI",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R DOZE DO CANAL",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "GL A",
+                "CEP": "42803812",
+                "CIDADE": "CAMACARI",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "195473663",
+            "NOME": "MARILENE LOPES RIBEIRO",
+            "IDADE": "50 anos",
+            "LOCAL": "MONTES CLAROS\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BRIDGESTONE DO BRASIL INDUSTRIA E COMERCIO LTDA.",
+                "CNPJ": "57497539000700",
+                "CIDADE": "CAMACARI-BA",
+                "PROFISSAO": "322215",
+                "DATA_ADMISSAO": "05\/12\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVICO SOCIAL DA INDUSTRIA -SESI",
+                "CNPJ": "03795086002047",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "322215",
+                "DATA_ADMISSAO": "04\/04\/2016",
+                "DATA_DEMISSAO": "19\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "SIAN - SISTEMAS DE ILUMINACAO AUTOMOTIVA DO NORDESTE LTDA -",
+                "CNPJ": "04054381000142",
+                "CIDADE": "CAMACARI-BA",
+                "PROFISSAO": "322215",
+                "DATA_ADMISSAO": "12\/20\/1903",
+                "DATA_DEMISSAO": "05\/02\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVICO SOCIAL DA INDUSTRIA -SESI",
+                "CNPJ": "03795086002209",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "322215",
+                "DATA_ADMISSAO": "04\/04\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

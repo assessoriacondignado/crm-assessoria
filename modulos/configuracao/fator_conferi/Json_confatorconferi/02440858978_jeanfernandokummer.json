@@ -1,0 +1,186 @@
+{
+    "CADASTRAIS": {
+        "CPF": "2440858978",
+        "NOME": "JEAN FERNANDO KUMMER",
+        "NOME_MAE": "ERICA GONCALVES KUMMER",
+        "NASCTO": "08\/04\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "062688350698",
+        "NIT": "1275044852",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "372205",
+        "PROFISSAO": "OPERADOR DE REDE DE TELEPROCESSAMENTO",
+        "SALARIO": " 13.887,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4532422623",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "4532423003",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "4532424040",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "45999336903",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "45984071451",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "45984024667",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "jean.kummer@serpro.gov.br",
+            "jean.kummer@campus.lmu.de",
+            "jean@realplus.com.br",
+            "jeanfkummer@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JASMIM",
+                "NUMERO": "636",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CENTRO",
+                "CEP": "85420000",
+                "CIDADE": "CORBELIA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "AV BRASIL",
+                "NUMERO": "6535",
+                "COMPLEMENTO": "A",
+                "BAIRRO": "CENTRO",
+                "CEP": "85801000",
+                "CIDADE": "CASCAVEL",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "RUA MINAS GERAIS",
+                "NUMERO": "2101",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "85812035",
+                "CIDADE": "CASCAVEL",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "AV. MINAS GERAIS",
+                "NUMERO": "63",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "85420000",
+                "CIDADE": "CORBELIA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "AV STA CATARINA",
+                "NUMERO": "56",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "85420000",
+                "CIDADE": "CORBELIA",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "49305441904",
+                "NOME": "ERICA GONCALVES KUMMER",
+                "IDADE": "71 anos",
+                "LOCAL": "CORBELIA\/PR",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "4169699920",
+                "NOME": "VINICIUS MARCIO KUMMER",
+                "IDADE": "42 anos",
+                "LOCAL": "CORBELIA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "4269684925",
+                "NOME": "ALINE MICHELE KUMMER",
+                "IDADE": "41 anos",
+                "LOCAL": "CASCAVEL\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "SERVICO FEDERAL DE PROCESSAMENTO DE DADOS (SERPRO)",
+            "CNPJ": "33683111001090",
+            "CIDADE": "CURITIBA-PR",
+            "PROFISSAO": "372205",
+            "DATA_ADMISSAO": "02\/02\/2009",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

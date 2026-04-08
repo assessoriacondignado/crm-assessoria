@@ -1,0 +1,158 @@
+{
+    "CADASTRAIS": {
+        "CPF": "65372050500",
+        "NOME": "MARIA NGELICA CERQUEIRA GOMES",
+        "NOME_MAE": "EUNICE CERQUEIRA GOMES",
+        "NASCTO": "15\/05\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "018623912135",
+        "NIT": "1258753876",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "231205",
+        "PROFISSAO": "PROFESSOR DA  EDUCACAO DE JOVENS E ADULTOS DO ENSINO FUNDAMENTAL (PRIMEIRA A QUARTA SERIE)",
+        "SALARIO": " 1.539,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7932471492",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7932542533",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "79999919448",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999779448",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "cristiano2011c@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CENTO E CINQUENTA E OITO",
+                "NUMERO": "158",
+                "COMPLEMENTO": "CJ ALB 158 10",
+                "BAIRRO": "TAICOCA",
+                "CEP": "49160000",
+                "CIDADE": "NOSSA SENHORA DO SOCORRO",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R BELO HORIZONTE",
+                "NUMERO": "93",
+                "COMPLEMENTO": "BL G AP 301",
+                "BAIRRO": "ETN MONAZITICA",
+                "CEP": "29175112",
+                "CIDADE": "SERRA",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "R 07",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TAICOCA DE FORA",
+                "CEP": "49160000",
+                "CIDADE": "NOSSA SENHORA DO SOCORRO",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R 158",
+                "NUMERO": "10",
+                "COMPLEMENTO": "CJ A FRANCO",
+                "BAIRRO": "",
+                "CEP": "49160000",
+                "CIDADE": "NOSSA SENHORA DO SOCORRO",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "36050342504",
+            "NOME": "EUNICE CERQUEIRA GOMES",
+            "IDADE": "90 anos",
+            "LOCAL": "SAO GONCALO DOS CAMPOS\/BA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CENTRO EDUCACIONAL FUTURO FELIZ LTDA",
+                "CNPJ": "32858565000109",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "231205",
+                "DATA_ADMISSAO": "15\/04\/2013",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MUNICIPIO DE NOSSA SENHORA DO SOCORRO",
+                "CNPJ": "13128814001049",
+                "CIDADE": "NOSSA SENHORA DO SOCORRO-SE",
+                "PROFISSAO": "231205",
+                "DATA_ADMISSAO": "12\/06\/2023",
+                "DATA_DEMISSAO": "{Ã±\/{Ã±\/2023",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "MUNICIPIO DE ARACAJU",
+                "CNPJ": "13128780000100",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "111415",
+                "DATA_ADMISSAO": "01\/08\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

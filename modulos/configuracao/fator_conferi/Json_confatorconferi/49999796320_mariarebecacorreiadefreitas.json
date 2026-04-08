@@ -1,0 +1,104 @@
+{
+    "CADASTRAIS": {
+        "CPF": "49999796320",
+        "NOME": "MARIA REBECA CORREIA DE FREITAS",
+        "NOME_MAE": "GONCALA RODRIGUES DE FREITAS",
+        "NASCTO": "12\/05\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1331592519",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "313120",
+        "PROFISSAO": "TECNICO DE MANUTENCAO ELETRICA",
+        "SALARIO": " 2.955,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8538781212",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8532319757",
+                "OPERADORA": "TELEMAR\/CE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "85986695582",
+            "OPERADORA": "OI MOVEL S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "PRE PAGO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PE MAXIMO FEITOSA",
+                "NUMERO": "1067",
+                "COMPLEMENTO": "1",
+                "BAIRRO": "PRES KENNEDY",
+                "CEP": "60355770",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R PE ANTONINO",
+                "NUMERO": "803",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JOAQUIM TAVORA",
+                "CEP": "60110480",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "2854406320",
+            "NOME": "GONCALA RODRIGUES DE FREITAS",
+            "IDADE": "88 anos",
+            "LOCAL": "FORTALEZA\/CE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "IMAC INDUSTRIA DE MASSAS CONGELADAS LTDA",
+            "CNPJ": "03523769000182",
+            "CIDADE": "AQUIRAZ-CE",
+            "PROFISSAO": "313120",
+            "DATA_ADMISSAO": "05\/08\/2013",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

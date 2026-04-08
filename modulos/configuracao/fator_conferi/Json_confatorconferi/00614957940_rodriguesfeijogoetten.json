@@ -1,0 +1,257 @@
+{
+    "CADASTRAIS": {
+        "CPF": "614957940",
+        "NOME": "RODRIGUES FEIJO GOETTEN",
+        "NOME_MAE": "EVA ADELAIDE GOETTEN",
+        "NASCTO": "30\/04\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "039845030965",
+        "NIT": "1287451672",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "252405",
+        "PROFISSAO": "ANALISTA DE RECURSOS HUMANOS",
+        "SALARIO": " 7.000,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4132092557",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "08\/12\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4133126621",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "4132091318",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "41999071316",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "45999071316",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41999131318",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "27\/07\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "41999873484",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "41999469589",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "rgoetten@timbrasil.com.br",
+            "rgoetten@timsul.com.br",
+            "rgotten@timsul.com.br",
+            "goettenrodrigues@gmail.com",
+            "goeten@tensul.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JUSCILIANA NARCISO CAMPOS",
+                "NUMERO": "1303",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BSQ DE IBIRITE",
+                "CEP": "32407110",
+                "CIDADE": "IBIRITE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "SERVIDAO CATARINA SODRE",
+                "NUMERO": "62",
+                "COMPLEMENTO": "C C",
+                "BAIRRO": "ITACORUBI",
+                "CEP": "88034375",
+                "CIDADE": "FLORIANOPOLIS",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "RUA NUNES MACHADO",
+                "NUMERO": "976",
+                "COMPLEMENTO": "APTO 23",
+                "BAIRRO": "CENTRO",
+                "CEP": "80250000",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "RUA ANGELO BERTONCELLO",
+                "NUMERO": "11",
+                "COMPLEMENTO": "CASA CASA 01",
+                "BAIRRO": "CAJURU",
+                "CEP": "82920140",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "RUA ANGELO BERTONCELLO",
+                "NUMERO": "114",
+                "COMPLEMENTO": "CASA CASA 01",
+                "BAIRRO": "CAJURU",
+                "CEP": "82920140",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "RUA ANGELO BERTONCELLO",
+                "NUMERO": "135",
+                "COMPLEMENTO": "SB 20",
+                "BAIRRO": "CAJURU",
+                "CEP": "82920140",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "RUA VISCONDE DE PELOTAS",
+                "NUMERO": "259",
+                "COMPLEMENTO": "AP 412",
+                "BAIRRO": "PASSO DA AREIA",
+                "CEP": "91030530",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "88757978972",
+                "NOME": "EVA ADELAIDE GOETTEN",
+                "IDADE": "67 anos",
+                "LOCAL": "FLORIANOPOLIS\/SC",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "1655683993",
+                "NOME": "KATIA FEIJO GOETTEN DE ASSIS",
+                "IDADE": "48 anos",
+                "LOCAL": "FLORIANOPOLIS\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "6648149990",
+                "NOME": "ROBSON FEIJO GOETTEN",
+                "IDADE": "35 anos",
+                "LOCAL": "FLORIANOPOLIS\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "POSITIVO TECNOLOGIA S.A.",
+                "CNPJ": "81243735000148",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "252405",
+                "DATA_ADMISSAO": "28\/03\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VOTORANTIM S.A.",
+                "CNPJ": "03407049000232",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "13\/09\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "TIM CELULAR S.A.",
+                "CNPJ": "04206050012863",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "252405",
+                "DATA_ADMISSAO": "02\/08\/1999",
+                "DATA_DEMISSAO": "20\/05\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "3778 GESTAO EM SAUDE LTDA",
+                "CNPJ": "00196526000199",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "01\/12\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

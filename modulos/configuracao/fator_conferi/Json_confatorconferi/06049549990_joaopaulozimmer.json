@@ -1,0 +1,215 @@
+{
+    "CADASTRAIS": {
+        "CPF": "6049549990",
+        "NOME": "JOAO PAULO ZIMMER",
+        "NOME_MAE": "RAQUEL MARIA ZIMMER",
+        "NASCTO": "29\/04\/1987",
+        "IDADE": "39 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1298714752",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "414110",
+        "PROFISSAO": "ARMAZENISTA",
+        "SALARIO": " 2.289,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4535768700",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4535275867",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "45999975656",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "45991337412",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "45991375656",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "45999307888",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "45998330404",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PF_POS_PURO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "joelsonmedeiros@oi.com.br",
+            "joaopaulozimmer598@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R S PEDRO",
+                "NUMERO": "16",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE UNIVERSITARIA",
+                "CEP": "57073550",
+                "CIDADE": "MACEIO",
+                "ESTADO": "AL"
+            },
+            {
+                "LOGRADOURO": "R HIPOLITO ALVES DE ARAUJO",
+                "NUMERO": "1200",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL JOSE LACERDA",
+                "CEP": "83750000",
+                "CIDADE": "LAPA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R PRATA",
+                "NUMERO": "401",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE OURO VERDE",
+                "CEP": "85854210",
+                "CIDADE": "FOZ DO IGUACU",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "AV BRASIL",
+                "NUMERO": "794",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "85851000",
+                "CIDADE": "FOZ DO IGUACU",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "30989493920",
+                "NOME": "RAQUEL MARIA ZIMMER",
+                "IDADE": "70 anos",
+                "LOCAL": "FOZ DO IGUACU\/PR",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "3690098947",
+                "NOME": "SILVIO LUIZ ZIMMER JUNIOR",
+                "IDADE": "43 anos",
+                "LOCAL": "PORTO ALEGRE\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "4512622985",
+                "NOME": "LUIZ EDUARDO ZIMMER",
+                "IDADE": "40 anos",
+                "LOCAL": "FOZ DO IGUACU\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "JOELSON DE MEDEIROS",
+            "IDADE": "",
+            "LOCALIDADE": "LAPA\/PR",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "60495499900"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "URBIA CATARATAS S\/A",
+                "CNPJ": "46984425000183",
+                "CIDADE": "FOZ DO IGUACU-PR",
+                "PROFISSAO": "414110",
+                "DATA_ADMISSAO": "11\/11\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738034229",
+                "CIDADE": "FOZ DO IGUACU-PR",
+                "PROFISSAO": "414110",
+                "DATA_ADMISSAO": "08\/02\/2021",
+                "DATA_DEMISSAO": "03\/11\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MAKRO ATACADISTA S.A",
+                "CNPJ": "47427653008280",
+                "CIDADE": "FOZ DO IGUACU-PR",
+                "PROFISSAO": "414215",
+                "DATA_ADMISSAO": "11\/02\/2009",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

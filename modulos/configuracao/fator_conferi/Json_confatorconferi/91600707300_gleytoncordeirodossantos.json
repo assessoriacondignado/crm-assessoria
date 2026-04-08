@@ -1,0 +1,135 @@
+{
+    "CADASTRAIS": {
+        "CPF": "91600707300",
+        "NOME": "GLEYTON CORDEIRO DOS SANTOS",
+        "NOME_MAE": "CAROLINA RODRIGUES CORDEIRO",
+        "NASCTO": "12\/12\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "054712440701",
+        "NIT": "1333614219",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411010",
+        "PROFISSAO": "ASSISTENTE ADMINISTRATIVO",
+        "SALARIO": " 2.498,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8532573182",
+                "OPERADORA": "TELEMAR\/CE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8532354029",
+                "OPERADORA": "TELEMAR\/CE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "85981675411",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "85987058928",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "gleytoncordeiro01@gmail.com",
+            "gleytoncordeiro22@yahoo.com",
+            "gleytonsantos@oi.com.br",
+            "gleytoncordeiro@yahoo.com",
+            "gleyton@isgh.org.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "RUA SALGADO FILHO",
+            "NUMERO": "1094",
+            "COMPLEMENTO": "",
+            "BAIRRO": "ANTONIO BEZERRA",
+            "CEP": "60361020",
+            "CIDADE": "FORTALEZA",
+            "ESTADO": "CE"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "11173046984",
+            "NOME": "CAROLINA RODRIGUES CORDEIRO",
+            "IDADE": "24 anos",
+            "LOCAL": "CASCAVEL\/PR",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SPDM - ASSOCIACAO PAULISTA PARA O DESENVOLVIMENTO DA MEDICINA",
+                "CNPJ": "61699567009300",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "15\/05\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "IVALIS BRASIL SERVICOS DE ESTOQUE LTDA",
+                "CNPJ": "18175677000126",
+                "CIDADE": "SAO CAETANO DO SUL-SP",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "02\/01\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "CRIART SERVICOS DE TERCEIRIZACAO DE MAO DE OBRA LTDA",
+                "CNPJ": "07783832000170",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "03\/09\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

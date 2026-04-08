@@ -1,0 +1,191 @@
+{
+    "CADASTRAIS": {
+        "CPF": "55857167000",
+        "NOME": "MAUREN STEINMEIER",
+        "NOME_MAE": "JUDITH STEINMEIER",
+        "NASCTO": "06\/08\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Feminino",
+        "RG": "9005482998",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "053960270400",
+        "NIT": "1234199814",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142115",
+        "PROFISSAO": "GERENTE FINANCEIRO",
+        "SALARIO": " 6.630,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5135953791",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5132073303",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "28\/05\/2010",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5130657515",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "5130663333",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51981166202",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51998125854",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "51998438147",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "mauren.alemoa@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R GOMES JARDIM",
+                "NUMERO": "94",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "93510370",
+                "CIDADE": "NOVO HAMBURGO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R PRIMEIRO DE MAIO",
+                "NUMERO": "59",
+                "COMPLEMENTO": "111",
+                "BAIRRO": "GUARANI",
+                "CEP": "93520620",
+                "CIDADE": "NOVO HAMBURGO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R JULIO DE CASTILHOS",
+                "NUMERO": "250",
+                "COMPLEMENTO": "AP 102",
+                "BAIRRO": "CENTRO",
+                "CEP": "93510130",
+                "CIDADE": "NOVO HAMBURGO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R SALDANHA MARINHO",
+                "NUMERO": "287",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PATRIA NOVA",
+                "CEP": "93320060",
+                "CIDADE": "NOVO HAMBURGO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA SALDANHA MARINHO",
+                "NUMERO": "28",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PATRIA NOVA",
+                "CEP": "93320060",
+                "CIDADE": "NOVO HAMBURGO",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "21673330053",
+                "NOME": "JUDITH STEINMEIER",
+                "IDADE": "89 anos",
+                "LOCAL": "NOVO HAMBURGO\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "39700674053",
+                "NOME": "ANDREAS STEINMEIER",
+                "IDADE": "63 anos",
+                "LOCAL": "NOVO HAMBURGO\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "48960772020",
+                "NOME": "HENRIETE DE PAULA",
+                "IDADE": "58 anos",
+                "LOCAL": "NOVO HAMBURGO\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "SPR COMUNICACAO LTDA",
+            "CNPJ": "00843962000102",
+            "CIDADE": "NOVO HAMBURGO-RS",
+            "PROFISSAO": "142115",
+            "DATA_ADMISSAO": "09\/20\/1908",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

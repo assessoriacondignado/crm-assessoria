@@ -1,0 +1,198 @@
+{
+    "CADASTRAIS": {
+        "CPF": "21611511852",
+        "NOME": "MARCOS VINICIUS NARDI",
+        "NOME_MAE": "CASSIA APARECIDA NARDI",
+        "NASCTO": "14\/07\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "34639398",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "294294610191",
+        "NIT": "2073813493",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "301105",
+        "PROFISSAO": "TECNICO DE LABORATORIO INDUSTRIAL",
+        "SALARIO": " 5.258,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1934928400",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1934928400",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1934916258",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19988416001",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19988501660",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19991635015",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marcos.n`rdi@terra.com.br",
+            "marcos.ardi@terra.com.br",
+            "marcosthebrows@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R FRANCISCO CROCOMO",
+                "NUMERO": "95",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CJ HABITACIONAL ENGENHO VELHO",
+                "CEP": "13362062",
+                "CIDADE": "CAPIVARI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOAO VAZ",
+                "NUMERO": "891",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "13360029",
+                "CIDADE": "CAPIVARI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R QUINZE DE NOVEMBRO",
+                "NUMERO": "540",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "13360023",
+                "CIDADE": "CAPIVARI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FRANCISCO CROCOMO",
+                "NUMERO": "95",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "ENGENHO VELHO",
+                "CEP": "13360000",
+                "CIDADE": "CAPIVARI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA SINHARINHA FROTA",
+                "NUMERO": "676",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "CENTRO",
+                "CEP": "13360000",
+                "CIDADE": "CAPIVARI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOAO VAZ",
+                "NUMERO": "891",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "13360000",
+                "CIDADE": "CAPIVARI",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "36704191879",
+            "NOME": "MATEUS LUIS NARDI",
+            "IDADE": "41 anos",
+            "LOCAL": "CAPIVARI\/SP",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "MARCO ALFREDO SARDI",
+            "IDADE": "",
+            "LOCALIDADE": "SAO PAULO\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "58763694972"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BRANYL ADMINISTRACAO E SERVICOS EMPRESARIAIS LTDA",
+                "CNPJ": "48237227000181",
+                "CIDADE": "CAPIVARI-SP",
+                "PROFISSAO": "301105",
+                "DATA_ADMISSAO": "01\/07\/2023",
+                "DATA_DEMISSAO": "31\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BRANYL COMERCIO E INDUSTRIA TEXTIL LTDA",
+                "CNPJ": "43631191000100",
+                "CIDADE": "CAPIVARI-SP",
+                "PROFISSAO": "391125",
+                "DATA_ADMISSAO": "01\/04\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

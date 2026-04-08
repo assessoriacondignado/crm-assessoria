@@ -1,0 +1,196 @@
+{
+    "CADASTRAIS": {
+        "CPF": "62948512549",
+        "NOME": "MARIA DE LOURDES NASCIMENTO MENEZES",
+        "NOME_MAE": "MARIA JOANA DO NASCIMENTO",
+        "NASCTO": "11\/02\/1970",
+        "IDADE": "56 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "126648640566",
+        "NIT": "1645495161",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "514320",
+        "PROFISSAO": "AUXILIAR DE LIMPEZA",
+        "SALARIO": " 1.772,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7122027072",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7132880399",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "71999053465",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71999738750",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71985288878",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "28\/01\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "71996045389",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MIRANDA",
+                "NUMERO": "1",
+                "COMPLEMENTO": "173",
+                "BAIRRO": "VIDA NOVA",
+                "CEP": "42717865",
+                "CIDADE": "LAURO DE FREITAS",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R MIRANDA",
+                "NUMERO": "1173",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "VIDA NOVA",
+                "CEP": "42717865",
+                "CIDADE": "LAURO DE FREITAS",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R MIRANDA",
+                "NUMERO": "10101",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VIDA NOVA",
+                "CEP": "42717865",
+                "CIDADE": "LAURO DE FREITAS",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "RUA R MIRANDA",
+                "NUMERO": "1173",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "LAGOA DOS PATOS",
+                "CEP": "42700000",
+                "CIDADE": "LAURO DE FREITAS",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "72301252",
+                "NOME": "MARIA JOANA DO NASCIMENTO",
+                "IDADE": "38 anos",
+                "LOCAL": "QUATRO BOCAS\/PA",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "1960357590",
+                "NOME": "LUCA NASCIMENTO MENEZES",
+                "IDADE": "41 anos",
+                "LOCAL": "SALVADOR\/BA",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "5169185596",
+                "NOME": "JEFFERSON MENEZES DE JESUS",
+                "IDADE": "32 anos",
+                "LOCAL": "LAURO DE FREITAS\/BA",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "5366106575",
+                "NOME": "PAULA NASCIMENTO MENEZES",
+                "IDADE": "33 anos",
+                "LOCAL": "SALVADOR\/BA",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "14039957881",
+                "NOME": "VERONICA DE LOURDES MORGON",
+                "IDADE": "55 anos",
+                "LOCAL": "SANTO ANDRE\/SP",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SARTRE EMPREENDIMENTOS EDUCACIONAIS LTDA",
+                "CNPJ": "15236367001310",
+                "CIDADE": "LAURO DE FREITAS-BA",
+                "PROFISSAO": "514320",
+                "DATA_ADMISSAO": "01\/03\/2010",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SARTRE EMPREENDIMENTOS EDUCACIONAIS LTDA",
+                "CNPJ": "15236367001158",
+                "CIDADE": "LAURO DE FREITAS-BA",
+                "PROFISSAO": "514320",
+                "DATA_ADMISSAO": "01\/07\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,258 @@
+{
+    "CADASTRAIS": {
+        "CPF": "99712954587",
+        "NOME": "ANDRE SOUZA SILVEIRA",
+        "NOME_MAE": "ISABEL SOUZA FILHA NASCIMENTO",
+        "NASCTO": "11\/03\/1978",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "141415",
+        "PROFISSAO": "GERENTE DE LOJA E SUPERMERCADO",
+        "SALARIO": " 4.101,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7930211177",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "7935442757",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7932485911",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "79998753159",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999898744",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79998431636",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79998878744",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999063511",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "andrea.costa@tjse.jus.br",
+            "andreacabanaomundao@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R LAGARTO",
+                "NUMERO": "1486",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S JOSE",
+                "CEP": "49015270",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "PCCLEMENTINO DO MONT",
+                "NUMERO": "169",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO HISTORICO",
+                "CEP": "57200000",
+                "CIDADE": "PENEDO",
+                "ESTADO": "AL"
+            },
+            {
+                "LOGRADOURO": "R ARNALDO ROLEMBERG GARCEZ",
+                "NUMERO": "101",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "49120000",
+                "CIDADE": "ITAPORANGA D AJUDA",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R STA LUZIA",
+                "NUMERO": "886",
+                "COMPLEMENTO": "C C",
+                "BAIRRO": "S JOSE",
+                "CEP": "49015190",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "PC JORN ORLANDO DANTAS",
+                "NUMERO": "37",
+                "COMPLEMENTO": "CJ ORLANDO DANTAS",
+                "BAIRRO": "FAROLANDIA",
+                "CEP": "49030450",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R EXP EGIDIO ALVES DE OLIVEIRA",
+                "NUMERO": "37",
+                "COMPLEMENTO": "PX SUPERME",
+                "BAIRRO": "S CONRADO",
+                "CEP": "49043260",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R B",
+                "NUMERO": "14",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ZONA DE EXPANSAO ARUANA",
+                "CEP": "49000293",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "AV MURILO DANTAS",
+                "NUMERO": "1409",
+                "COMPLEMENTO": "AP 204",
+                "BAIRRO": "FAROLANDIA",
+                "CEP": "49032490",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "OSAF - ORGANIZACAO SOCIAL DE ASSISTENCIA A FAMILIA LTDA",
+                "CNPJ": "00430642002174",
+                "CIDADE": "ESTANCIA-SE",
+                "PROFISSAO": "141415",
+                "DATA_ADMISSAO": "21\/05\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "OSAF - ORGANIZACAO SOCIAL DE ASSISTENCIA A FAMILIA LTDA",
+                "CNPJ": "00430642000716",
+                "CIDADE": "ITAPORANGA D'AJUDA-SE",
+                "PROFISSAO": "141415",
+                "DATA_ADMISSAO": "01\/06\/2021",
+                "DATA_DEMISSAO": "14\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "OSAF - ORGANIZACAO SOCIAL DE ASSISTENCIA A FAMILIA LTDA",
+                "CNPJ": "00430642000120",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "141415",
+                "DATA_ADMISSAO": "21\/05\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "PLANOS DE AUXILIO FUNERAL PREVMAIS LTDA",
+                "CNPJ": "27538582000110",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "141415",
+                "DATA_ADMISSAO": "02\/05\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "PAX RENASCER LTDA",
+                "CNPJ": "13640770000140",
+                "CIDADE": "ITABAIANINHA-SE",
+                "PROFISSAO": "142105",
+                "DATA_ADMISSAO": "02\/06\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "PAX DOMINI SERVICOS POSTUMOS E COMERCIO LTDA",
+            "CNPJ": "03906480000142",
+            "CIDADE": "ARACAJU-SE",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20020218",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

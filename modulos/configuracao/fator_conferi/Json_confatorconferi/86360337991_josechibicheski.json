@@ -1,0 +1,131 @@
+{
+    "CADASTRAIS": {
+        "CPF": "86360337991",
+        "NOME": "JOSE CHIBICHESKI",
+        "NOME_MAE": "ANA TOKARSKI CHIBICHESKI",
+        "NASCTO": "18\/03\/1973",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1231519082",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411010",
+        "PROFISSAO": "ASSISTENTE ADMINISTRATIVO",
+        "SALARIO": " 3.675,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "4132928933",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "18\/04\/2012",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "41988688775",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41991512063",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "josechibicheski@oi.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "RUA EMILIANO PERNETA",
+                "NUMERO": "1611",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "83601220",
+                "CIDADE": "CAMPO LARGO",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "RUA EMILIANO PERNETA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "83601220",
+                "CIDADE": "CAMPO LARGO",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "RUA EMILIANO PERNETA",
+                "NUMERO": "1593",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "83601220",
+                "CIDADE": "CAMPO LARGO",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "86089021920",
+                "NOME": "ANA TOKARSKI CHIBICHESKI",
+                "IDADE": "85 anos",
+                "LOCAL": "CAMPO LARGO\/PR",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "86089048968",
+                "NOME": "ROBERTO CHIBICHESKI",
+                "IDADE": "56 anos",
+                "LOCAL": "CAMPO LARGO\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "96740825904",
+                "NOME": "ROSALIA CHIBICHESKI LOPES",
+                "IDADE": "51 anos",
+                "LOCAL": "CAMPO LARGO\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "GERMER PORCELANAS FINAS S.A.",
+            "CNPJ": "75801936000110",
+            "CIDADE": "CAMPO LARGO-PR",
+            "PROFISSAO": "411010",
+            "DATA_ADMISSAO": "01\/08\/1989",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

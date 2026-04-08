@@ -1,0 +1,156 @@
+{
+    "CADASTRAIS": {
+        "CPF": "77577590649",
+        "NOME": "VILSON FERNADES DE SOUZA",
+        "NOME_MAE": "ANA FERREIRA DA SILVA",
+        "NASCTO": "03\/05\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "5133157",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "099627070281",
+        "NIT": "1245635463",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "724515",
+        "PROFISSAO": "PRENSISTA (OPERADOR DE PRENSA)",
+        "SALARIO": " 1.461,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3832143367",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "3832127311",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3832128282",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "38988377068",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "38998593961",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOSE BRAGA",
+                "NUMERO": "480",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ELDORADO",
+                "CEP": "39401265",
+                "CIDADE": "MONTES CLAROS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R ARTUR PEREIRA LOPES",
+                "NUMERO": "765",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "SANTOS REIS",
+                "CEP": "39401154",
+                "CIDADE": "MONTES CLAROS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R CICERO PEREIRA",
+                "NUMERO": "17",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTOS REIS",
+                "CEP": "39401159",
+                "CIDADE": "MONTES CLAROS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RUA CANDIDO ALVES GONCALVES",
+                "NUMERO": "36",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVA MORADA",
+                "CEP": "39401524",
+                "CIDADE": "MONTES CLAROS",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "14456699",
+            "NOME": "ANA FERREIRA DA SILVA",
+            "IDADE": "103 anos",
+            "LOCAL": "ITAMBE DO MATO DENTRO\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CARIKI RECICLAVEIS LTDA",
+                "CNPJ": "02571816000281",
+                "CIDADE": "MONTES CLAROS-MG",
+                "PROFISSAO": "724515",
+                "DATA_ADMISSAO": "01\/02\/2011",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CARIKI RECICLAVEIS LTDA",
+                "CNPJ": "02571816000109",
+                "CIDADE": "MONTES CLAROS-MG",
+                "PROFISSAO": "724515",
+                "DATA_ADMISSAO": "01\/02\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

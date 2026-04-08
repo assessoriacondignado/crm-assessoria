@@ -1,0 +1,163 @@
+{
+    "CADASTRAIS": {
+        "CPF": "76302830320",
+        "NOME": "LUCIANA RESENDE MENDES",
+        "NOME_MAE": "ESPEDITA RESENDE DE MATOS",
+        "NASCTO": "11\/06\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "021457961546",
+        "NIT": "1267528748 ",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411010",
+        "PROFISSAO": "ASSISTENTE ADMINISTRATIVO",
+        "SALARIO": " 1.354,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8632131889",
+                "OPERADORA": "TELEMAR\/PI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "8632133302",
+                "OPERADORA": "TELEMAR\/PI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8632132566",
+                "OPERADORA": "TELEMAR\/PI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "86988772287",
+            "OPERADORA": "OI MOVEL S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "PRE PAGO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "LOT PARQUE BRASIL TRES",
+                "NUMERO": "1441",
+                "COMPLEMENTO": "I",
+                "BAIRRO": "PRQ BRASIL",
+                "CEP": "64012100",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "Q QUATORZE",
+                "NUMERO": "41",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ BRASIL",
+                "CEP": "64012283",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "R QUATORZE",
+                "NUMERO": "41",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CIDADE INDUSTRIAL",
+                "CEP": "64012120",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "RUA JOAO ISIDORO FRANCA",
+                "NUMERO": "182",
+                "COMPLEMENTO": "",
+                "BAIRRO": "POTI VELHO",
+                "CEP": "64008010",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "4544516366",
+                "NOME": "JULIANA RESENDE MENDES",
+                "IDADE": "32 anos",
+                "LOCAL": "TERESINA\/PI",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "6660397396",
+                "NOME": "MARIA JULIA RESENDE MENDES",
+                "IDADE": "28 anos",
+                "LOCAL": "TERESINA\/PI",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SOCIEDADE BRASILEIRA CAMINHO DE DAMASCO",
+                "CNPJ": "48211585000700",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "422105",
+                "DATA_ADMISSAO": "15\/07\/2024",
+                "DATA_DEMISSAO": "02\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SOCIEDADE BRASILEIRA CAMINHO DE DAMASCO",
+                "CNPJ": "48211585004021",
+                "CIDADE": "TERESINA-PI",
+                "PROFISSAO": "422105",
+                "DATA_ADMISSAO": "02\/08\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "G S BARBOSA ESCOLA",
+                "CNPJ": "02121955000122",
+                "CIDADE": "TERESINA-PI",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "30\/03\/2022",
+                "DATA_DEMISSAO": "27\/06\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

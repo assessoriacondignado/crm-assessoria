@@ -1,0 +1,171 @@
+{
+    "CADASTRAIS": {
+        "CPF": "43070484824",
+        "NOME": "ALISSON SANTOS SILVA",
+        "NOME_MAE": "VILMARIA S ROSA",
+        "NASCTO": "04\/06\/1994",
+        "IDADE": "31 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "23646657053",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411005",
+        "PROFISSAO": "AUXILIAR DE ESCRITORIO, EM GERAL",
+        "SALARIO": " 1.063,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1125210175",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "73981492962",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11965210175",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11986816609",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "alyson_10santos@hotmail.com",
+            "alison.santos42@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PROF HASEGAWA",
+                "NUMERO": "1591",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COL ZONA LESTE",
+                "CEP": "08260090",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BALTAZAR NUNES",
+                "NUMERO": "181",
+                "COMPLEMENTO": "C 3",
+                "BAIRRO": "VL CARMOSINA",
+                "CEP": "08290220",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "JOSE CARLOS RIBEIRO",
+            "IDADE": "",
+            "LOCALIDADE": "SAO PAULO\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "99871190859"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ALMAVIVA EXPERIENCE S.A.",
+                "CNPJ": "08174089001781",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "521115",
+                "DATA_ADMISSAO": "08\/07\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "RG FORMACAO PROFISSIONAL LTDA",
+                "CNPJ": "34637213000140",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "06\/02\/2024",
+                "DATA_DEMISSAO": "06\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MAGAZINE TORRA TORRA LTDA",
+                "CNPJ": "22685030008791",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "521115",
+                "DATA_ADMISSAO": "12\/12\/2023",
+                "DATA_DEMISSAO": "30\/12\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738004826",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/08\/2016",
+                "DATA_DEMISSAO": "23\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "PROSEGUR BRASIL S\/A TRANSPORTADORA DE VALORES E SEGURANCA",
+                "CNPJ": "17428731008543",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "14\/05\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "LET SERVICOS TEMPORARIOS LTDA",
+                "CNPJ": "04309524000110",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "414210",
+                "DATA_ADMISSAO": "14\/04\/2014",
+                "DATA_DEMISSAO": "16\/04\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

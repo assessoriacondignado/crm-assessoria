@@ -1,0 +1,171 @@
+{
+    "CADASTRAIS": {
+        "CPF": "84395044204",
+        "NOME": "ROSANGELA NASCIMENTO DA SILVA",
+        "NOME_MAE": "SUNELI GOMES DO NASCIMENTO",
+        "NASCTO": "20\/11\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "2102545630",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521110",
+        "PROFISSAO": "VENDEDOR DE COMERCIO VAREJISTA",
+        "SALARIO": " 1.880,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9232158612",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9232158610",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92981638533",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92994099621",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "92988120291",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "TV DA CACHOEIRA",
+                "NUMERO": "58",
+                "COMPLEMENTO": "A",
+                "BAIRRO": "S RAIMUNDO",
+                "CEP": "69027271",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "RUA SAO VICENTE",
+                "NUMERO": "21",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SAO RAIMUNDO",
+                "CEP": "69027580",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "43687024253",
+                "NOME": "SUNELI GOMES DO NASCIMENTO",
+                "IDADE": "60 anos",
+                "LOCAL": "COARI\/AM",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "2392165203",
+                "NOME": "THOMAZ NASCIMENTO CONCEICAO",
+                "IDADE": "31 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "4919976208",
+                "NOME": "FRANCIVALDO NASCIMENTO DA SILVA",
+                "IDADE": "38 anos",
+                "LOCAL": "",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "77881737204",
+                "NOME": "ROSIANE NASCIMENTO DA SILVA",
+                "IDADE": "42 anos",
+                "LOCAL": "COARI\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SEV COMERCIO DE TECIDOS LTDA",
+                "CNPJ": "27697869000193",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "07\/12\/2018",
+                "DATA_DEMISSAO": "18\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "P E C COMERCIO DE TECIDOS LTDA",
+                "CNPJ": "30805904000155",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "141405",
+                "DATA_ADMISSAO": "01\/08\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TAPAJOS TECIDOS LTDA",
+                "CNPJ": "63639421000187",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "02\/07\/2007",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

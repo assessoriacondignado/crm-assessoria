@@ -1,0 +1,146 @@
+{
+    "CADASTRAIS": {
+        "CPF": "67969259049",
+        "NOME": "GILBERTO LEONARDELLI",
+        "NOME_MAE": "NADIR CARARO LEONARDELLI",
+        "NASCTO": "21\/05\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "4066863319",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "057279270469",
+        "NIT": "12429229740",
+        "ESCOLARIDADE": "PRIMEIRO GRAU (GINASIO)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "784205",
+        "PROFISSAO": "ALIMENTADOR DE LINHA DE PRODUCAO",
+        "SALARIO": " 3.007,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5432911671",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5432915066",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "05\/08\/2009",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "54991459582",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "54991438272",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R LEDA RECH STEDILLE",
+                "NUMERO": "519",
+                "COMPLEMENTO": "",
+                "BAIRRO": "INDUST",
+                "CEP": "95190000",
+                "CIDADE": "SAO MARCOS",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R LEDA RECH STEDILE",
+                "NUMERO": "231",
+                "COMPLEMENTO": "",
+                "BAIRRO": "",
+                "CEP": "95190000",
+                "CIDADE": "SAO MARCOS",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R LEDA RECH STEDILE",
+                "NUMERO": "219",
+                "COMPLEMENTO": "",
+                "BAIRRO": "",
+                "CEP": "95190000",
+                "CIDADE": "SAO MARCOS",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "72980907049",
+                "NOME": "NADIR CARARO LEONARDELLI",
+                "IDADE": "76 anos",
+                "LOCAL": "SAO MARCOS\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "92359710044",
+                "NOME": "ANDREIA MARIA LEONARDELLI",
+                "IDADE": "49 anos",
+                "LOCAL": "SAO MARCOS\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "METALURGICA GEDEVAL LTDA",
+                "CNPJ": "90997024000150",
+                "CIDADE": "SAO MARCOS-RS",
+                "PROFISSAO": "141205",
+                "DATA_ADMISSAO": "02\/01\/2017",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CCF INDUSTRIA DE COMPONENTES AUTOMOTIVOS LTDA",
+                "CNPJ": "72546229000137",
+                "CIDADE": "SAO MARCOS-RS",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "02\/02\/2009",
+                "DATA_DEMISSAO": "22\/06\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

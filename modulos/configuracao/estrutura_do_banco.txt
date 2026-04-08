@@ -1,0 +1,2599 @@
+====================================================
+   RELATÓRIO DE ESTRUTURA DO BANCO DE DADOS
+   Sistema: MEU CRM | Banco: crm_dados
+   Gerado em: 08/04/2026 09:15:26
+====================================================
+
+TABELA: BANCO_DADOS_CONVENIO
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • CPF | Tipo: char(11) | OBRIGATÓRIO [Chave: MUL]
+  • CONVENIO | Tipo: varchar(50) | OBRIGATÓRIO
+  • MATRICULA | Tipo: varchar(50) | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `BANCO_DADOS_CONVENIO` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `CPF` char(11) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `CONVENIO` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `MATRICULA` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `idx_cpf_convenio` (`CPF`),
+  CONSTRAINT `fk_convenio_cpf` FOREIGN KEY (`CPF`) REFERENCES `dados_cadastrais` (`cpf`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=96620 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+==================================================
+
+TABELA: BANCO_DE_DADOS_CAMPANHA_CAMPANHAS
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • CNPJ_EMPRESA | Tipo: varchar(14) | Pode ser Vazio [Chave: MUL]
+  • NOME_CAMPANHA | Tipo: varchar(150) | OBRIGATÓRIO
+  • DATA_INICIO | Tipo: date | OBRIGATÓRIO
+  • DATA_FIM | Tipo: date | OBRIGATÓRIO
+  • IDS_STATUS_CONTATOS | Tipo: text | Pode ser Vazio
+  • CPF_USUARIO | Tipo: text | Pode ser Vazio
+  • STATUS | Tipo: enum('ATIVO','INATIVO') | Pode ser Vazio
+  • PARAMETRO_INICIO_ALEATORIO | Tipo: enum('SIM','NAO') | Pode ser Vazio
+  • DATA_CRIACAO | Tipo: datetime | Pode ser Vazio
+  • id_empresa | Tipo: int | Pode ser Vazio
+  • id_usuario | Tipo: int | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `BANCO_DE_DADOS_CAMPANHA_CAMPANHAS` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `CNPJ_EMPRESA` varchar(14) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `NOME_CAMPANHA` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `DATA_INICIO` date NOT NULL,
+  `DATA_FIM` date NOT NULL,
+  `IDS_STATUS_CONTATOS` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `CPF_USUARIO` text COLLATE utf8mb4_unicode_ci,
+  `STATUS` enum('ATIVO','INATIVO') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'ATIVO',
+  `PARAMETRO_INICIO_ALEATORIO` enum('SIM','NAO') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'NAO',
+  `DATA_CRIACAO` datetime DEFAULT CURRENT_TIMESTAMP,
+  `id_empresa` int DEFAULT NULL,
+  `id_usuario` int DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `fk_camp_empresa` (`CNPJ_EMPRESA`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: BANCO_DE_DADOS_CAMPANHA_QUALIFICACAO_TELEFONE
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • NOME_QUALIFICACAO | Tipo: varchar(100) | OBRIGATÓRIO
+  • TIPO | Tipo: enum('PRINCIPAL','SECUNDARIO') | OBRIGATÓRIO
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `BANCO_DE_DADOS_CAMPANHA_QUALIFICACAO_TELEFONE` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `NOME_QUALIFICACAO` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `TIPO` enum('PRINCIPAL','SECUNDARIO') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'SECUNDARIO',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: BANCO_DE_DADOS_CAMPANHA_REGISTRO_CONTATO
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • CPF_CLIENTE | Tipo: varchar(11) | OBRIGATÓRIO [Chave: MUL]
+  • CNPJ_EMPRESA | Tipo: varchar(14) | Pode ser Vazio [Chave: MUL]
+  • CPF_USUARIO | Tipo: varchar(11) | Pode ser Vazio [Chave: MUL]
+  • NOME_USUARIO | Tipo: varchar(150) | OBRIGATÓRIO
+  • ID_STATUS_CONTATO | Tipo: int | OBRIGATÓRIO [Chave: MUL]
+  • REGISTRO | Tipo: text | OBRIGATÓRIO
+  • DATA_REGISTRO | Tipo: datetime | Pode ser Vazio
+  • DATA_AGENDAMENTO | Tipo: datetime | Pode ser Vazio
+  • id_empresa | Tipo: int | Pode ser Vazio
+  • id_usuario | Tipo: int | Pode ser Vazio
+  • id_cliente | Tipo: int | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `BANCO_DE_DADOS_CAMPANHA_REGISTRO_CONTATO` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `CPF_CLIENTE` varchar(11) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `CNPJ_EMPRESA` varchar(14) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `CPF_USUARIO` varchar(11) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `NOME_USUARIO` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ID_STATUS_CONTATO` int NOT NULL,
+  `REGISTRO` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `DATA_REGISTRO` datetime DEFAULT CURRENT_TIMESTAMP,
+  `DATA_AGENDAMENTO` datetime DEFAULT NULL,
+  `id_empresa` int DEFAULT NULL,
+  `id_usuario` int DEFAULT NULL,
+  `id_cliente` int DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `fk_reg_cliente` (`CPF_CLIENTE`),
+  KEY `fk_reg_empresa` (`CNPJ_EMPRESA`),
+  KEY `fk_reg_usuario` (`CPF_USUARIO`),
+  KEY `fk_reg_status` (`ID_STATUS_CONTATO`),
+  CONSTRAINT `fk_reg_cliente` FOREIGN KEY (`CPF_CLIENTE`) REFERENCES `dados_cadastrais` (`cpf`) ON DELETE CASCADE,
+  CONSTRAINT `fk_reg_empresa` FOREIGN KEY (`CNPJ_EMPRESA`) REFERENCES `CLIENTE_EMPRESAS` (`CNPJ`) ON DELETE SET NULL,
+  CONSTRAINT `fk_reg_status` FOREIGN KEY (`ID_STATUS_CONTATO`) REFERENCES `BANCO_DE_DADOS_CAMPANHA_STATUS_CONTATO` (`ID`) ON DELETE CASCADE,
+  CONSTRAINT `fk_reg_usuario` FOREIGN KEY (`CPF_USUARIO`) REFERENCES `CLIENTE_USUARIO` (`CPF`) ON DELETE SET NULL
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: BANCO_DE_DADOS_CAMPANHA_STATUS_CONTATO
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • NOME_STATUS | Tipo: varchar(100) | OBRIGATÓRIO
+  • TIPO_CONTATO | Tipo: varchar(50) | Pode ser Vazio
+  • ID_QUALIFICACAO | Tipo: int | Pode ser Vazio [Chave: MUL]
+  • CNPJ_EMPRESA | Tipo: text | Pode ser Vazio
+  • ID_CAMPANHA | Tipo: int | Pode ser Vazio [Chave: MUL]
+  • MARCACAO | Tipo: enum('COM RETORNO','SEM RETORNO','FINALIZAR ATENDIMENTO') | OBRIGATÓRIO
+  • id_empresa | Tipo: int | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `BANCO_DE_DADOS_CAMPANHA_STATUS_CONTATO` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `NOME_STATUS` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `TIPO_CONTATO` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ID_QUALIFICACAO` int DEFAULT NULL,
+  `CNPJ_EMPRESA` text COLLATE utf8mb4_unicode_ci,
+  `ID_CAMPANHA` int DEFAULT NULL,
+  `MARCACAO` enum('COM RETORNO','SEM RETORNO','FINALIZAR ATENDIMENTO') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'SEM RETORNO',
+  `id_empresa` int DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `fk_status_qualificacao` (`ID_QUALIFICACAO`),
+  KEY `fk_status_campanha` (`ID_CAMPANHA`),
+  CONSTRAINT `fk_status_campanha` FOREIGN KEY (`ID_CAMPANHA`) REFERENCES `BANCO_DE_DADOS_CAMPANHA_CAMPANHAS` (`ID`) ON DELETE CASCADE,
+  CONSTRAINT `fk_status_qualificacao` FOREIGN KEY (`ID_QUALIFICACAO`) REFERENCES `BANCO_DE_DADOS_CAMPANHA_QUALIFICACAO_TELEFONE` (`ID`) ON DELETE SET NULL
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • CPF_CLIENTE | Tipo: varchar(11) | OBRIGATÓRIO [Chave: MUL]
+  • ID_CAMPANHA | Tipo: int | OBRIGATÓRIO [Chave: MUL]
+  • PRIORIDADE | Tipo: int | OBRIGATÓRIO
+  • DATA_INCLUSAO | Tipo: datetime | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `CPF_CLIENTE` varchar(11) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `ID_CAMPANHA` int NOT NULL,
+  `PRIORIDADE` int NOT NULL DEFAULT '0',
+  `DATA_INCLUSAO` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `uk_cliente_campanha` (`CPF_CLIENTE`,`ID_CAMPANHA`),
+  KEY `fk_cli_camp_id` (`ID_CAMPANHA`),
+  CONSTRAINT `fk_cli_camp_cpf` FOREIGN KEY (`CPF_CLIENTE`) REFERENCES `dados_cadastrais` (`cpf`) ON DELETE CASCADE,
+  CONSTRAINT `fk_cli_camp_id` FOREIGN KEY (`ID_CAMPANHA`) REFERENCES `BANCO_DE_DADOS_CAMPANHA_CAMPANHAS` (`ID`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=8199 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: BANCO_DE_DADOS_HISTORICO_IMPORTACAO
+--------------------------------------------------
+[COLUNAS]
+  • id | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • cpf | Tipo: char(11) | OBRIGATÓRIO [Chave: MUL]
+  • nome_importacao | Tipo: varchar(150) | OBRIGATÓRIO [Chave: MUL]
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `BANCO_DE_DADOS_HISTORICO_IMPORTACAO` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `cpf` char(11) NOT NULL,
+  `nome_importacao` varchar(150) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `idx_cpf_historico` (`cpf`),
+  KEY `idx_nome_importacao` (`nome_importacao`)
+) ENGINE=InnoDB AUTO_INCREMENT=1749114 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+==================================================
+
+TABELA: BANCO_DE_DADOS_REGISTRO_CONSULTA
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • CPF_USUARIO | Tipo: varchar(11) | OBRIGATÓRIO [Chave: MUL]
+  • NOME_USUARIO | Tipo: varchar(150) | OBRIGATÓRIO
+  • CPF_CLIENTE | Tipo: varchar(11) | Pode ser Vazio
+  • MODULO_CONSULTA | Tipo: varchar(50) | Pode ser Vazio
+  • DATA_HORA | Tipo: datetime | Pode ser Vazio
+  • id_usuario | Tipo: int | Pode ser Vazio
+  • id_cliente | Tipo: int | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `BANCO_DE_DADOS_REGISTRO_CONSULTA` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `CPF_USUARIO` varchar(11) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `NOME_USUARIO` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `CPF_CLIENTE` varchar(11) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `MODULO_CONSULTA` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT 'WEB POR CPF',
+  `DATA_HORA` datetime DEFAULT CURRENT_TIMESTAMP,
+  `id_usuario` int DEFAULT NULL,
+  `id_cliente` int DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `idx_cpf_usuario_log` (`CPF_USUARIO`)
+) ENGINE=InnoDB AUTO_INCREMENT=253 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+==================================================
+
+TABELA: BANCO_DE_PLANILHA_REGISTRO
+--------------------------------------------------
+[COLUNAS]
+  • id | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • nome_planilha | Tipo: varchar(100) | OBRIGATÓRIO
+  • convenio | Tipo: varchar(50) | Pode ser Vazio
+  • data_importacao | Tipo: date | OBRIGATÓRIO
+  • data_atualizacao | Tipo: date | OBRIGATÓRIO
+  • quantidade_cpf | Tipo: int | Pode ser Vazio
+  • descricao_planilha | Tipo: text | Pode ser Vazio
+  • qualidade_telefones | Tipo: varchar(20) | Pode ser Vazio
+  • qualidade_finalidade | Tipo: varchar(20) | Pode ser Vazio
+  • arquivo_caminho | Tipo: varchar(255) | OBRIGATÓRIO
+  • cabecalhos_json | Tipo: text | Pode ser Vazio
+  • status_arquivo | Tipo: varchar(20) | Pode ser Vazio
+  • tipo_lista | Tipo: varchar(50) | Pode ser Vazio
+  • valor_lista | Tipo: decimal(10,2) | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `BANCO_DE_PLANILHA_REGISTRO` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nome_planilha` varchar(100) NOT NULL,
+  `convenio` varchar(50) DEFAULT NULL,
+  `data_importacao` date NOT NULL,
+  `data_atualizacao` date NOT NULL,
+  `quantidade_cpf` int DEFAULT '0',
+  `descricao_planilha` text,
+  `qualidade_telefones` varchar(20) DEFAULT 'REGULAR',
+  `qualidade_finalidade` varchar(20) DEFAULT 'REGULAR',
+  `arquivo_caminho` varchar(255) NOT NULL,
+  `cabecalhos_json` text,
+  `status_arquivo` varchar(20) DEFAULT 'Ativo',
+  `tipo_lista` varchar(50) DEFAULT 'cadastral',
+  `valor_lista` decimal(10,2) DEFAULT '0.00',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+==================================================
+
+TABELA: CATALOGO_ARQUIVOS
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • ITEM_ID | Tipo: int | OBRIGATÓRIO [Chave: MUL]
+  • NOME_ARQUIVO | Tipo: varchar(255) | OBRIGATÓRIO
+  • CAMINHO_ARQUIVO | Tipo: varchar(255) | OBRIGATÓRIO
+  • DATA_UPLOAD | Tipo: timestamp | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `CATALOGO_ARQUIVOS` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `ITEM_ID` int NOT NULL,
+  `NOME_ARQUIVO` varchar(255) NOT NULL,
+  `CAMINHO_ARQUIVO` varchar(255) NOT NULL,
+  `DATA_UPLOAD` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID`),
+  KEY `ITEM_ID` (`ITEM_ID`),
+  CONSTRAINT `CATALOGO_ARQUIVOS_ibfk_1` FOREIGN KEY (`ITEM_ID`) REFERENCES `CATALOGO_ITENS` (`ID`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+==================================================
+
+TABELA: CATALOGO_ITENS
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • TIPO | Tipo: varchar(10) | OBRIGATÓRIO
+  • CODIGO | Tipo: varchar(20) | OBRIGATÓRIO
+  • NOME | Tipo: varchar(150) | OBRIGATÓRIO
+  • DESCRICAO | Tipo: text | Pode ser Vazio
+  • STATUS_ITEM | Tipo: varchar(20) | Pode ser Vazio
+  • HISTORICO_OBS | Tipo: text | Pode ser Vazio
+  • LINK_PASTA | Tipo: varchar(255) | Pode ser Vazio
+  • DATA_CRIACAO | Tipo: timestamp | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `CATALOGO_ITENS` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `TIPO` varchar(10) NOT NULL,
+  `CODIGO` varchar(20) NOT NULL,
+  `NOME` varchar(150) NOT NULL,
+  `DESCRICAO` text,
+  `STATUS_ITEM` varchar(20) DEFAULT 'Ativo',
+  `HISTORICO_OBS` text,
+  `LINK_PASTA` varchar(255) DEFAULT NULL,
+  `DATA_CRIACAO` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+==================================================
+
+TABELA: CATALOGO_VARIACOES
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • ITEM_ID | Tipo: int | OBRIGATÓRIO [Chave: MUL]
+  • NOME_VARIACAO | Tipo: varchar(150) | OBRIGATÓRIO
+  • VALOR_VENDA | Tipo: decimal(10,2) | OBRIGATÓRIO
+  • TIPO_COMISSAO | Tipo: varchar(20) | Pode ser Vazio
+  • VALOR_COMISSAO | Tipo: decimal(10,2) | OBRIGATÓRIO
+  • STATUS_VARIACAO | Tipo: varchar(20) | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `CATALOGO_VARIACOES` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `ITEM_ID` int NOT NULL,
+  `NOME_VARIACAO` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Ex: Anual, Mensal, Padrão',
+  `VALOR_VENDA` decimal(10,2) NOT NULL DEFAULT '0.00',
+  `TIPO_COMISSAO` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT 'PERCENTUAL' COMMENT 'PERCENTUAL ou VALOR_FIXO',
+  `VALOR_COMISSAO` decimal(10,2) NOT NULL DEFAULT '0.00',
+  `STATUS_VARIACAO` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT 'Ativo',
+  PRIMARY KEY (`ID`),
+  KEY `fk_variacao_item` (`ITEM_ID`),
+  CONSTRAINT `fk_variacao_item` FOREIGN KEY (`ITEM_ID`) REFERENCES `CATALOGO_ITENS` (`ID`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: CLIENTE_CADASTRO
+--------------------------------------------------
+[COLUNAS]
+  • CPF | Tipo: varchar(11) | OBRIGATÓRIO [Chave: PRI]
+  • NOME | Tipo: varchar(150) | Pode ser Vazio
+  • NOME_EMPRESA | Tipo: varchar(30) | Pode ser Vazio
+  • CNPJ | Tipo: varchar(30) | Pode ser Vazio
+  • CELULAR | Tipo: varchar(20) | Pode ser Vazio
+  • GRUPO_WHATS | Tipo: varchar(30) | Pode ser Vazio
+  • BANCO_NOME | Tipo: varchar(30) | Pode ser Vazio
+  • CHAVE_PIX | Tipo: varchar(30) | Pode ser Vazio
+  • GRUPO_ASSESSOR | Tipo: varchar(30) | Pode ser Vazio
+  • SITUACAO | Tipo: varchar(10) | Pode ser Vazio
+  • SALDO | Tipo: decimal(10,2) | OBRIGATÓRIO
+  • CUSTO_CONSULTA | Tipo: decimal(10,2) | OBRIGATÓRIO
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: UNI]
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `CLIENTE_CADASTRO` (
+  `CPF` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `NOME` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `NOME_EMPRESA` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `CNPJ` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `CELULAR` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `GRUPO_WHATS` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `BANCO_NOME` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `CHAVE_PIX` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `GRUPO_ASSESSOR` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `SITUACAO` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT 'ATIVO',
+  `SALDO` decimal(10,2) NOT NULL DEFAULT '0.00',
+  `CUSTO_CONSULTA` decimal(10,2) NOT NULL DEFAULT '0.50',
+  `ID` int NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`CPF`),
+  UNIQUE KEY `ID` (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=788 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: CLIENTE_CADASTRO_FINANCEIRO_HISTORICO_CARTEIRA
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • CPF | Tipo: varchar(11) | OBRIGATÓRIO [Chave: MUL]
+  • NOME | Tipo: varchar(150) | Pode ser Vazio
+  • DATA | Tipo: datetime | Pode ser Vazio
+  • TIPO | Tipo: enum('CREDITO','DEBITO') | OBRIGATÓRIO
+  • VALOR | Tipo: decimal(10,2) | OBRIGATÓRIO
+  • MOTIVO | Tipo: varchar(255) | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `CLIENTE_CADASTRO_FINANCEIRO_HISTORICO_CARTEIRA` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `CPF` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `NOME` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `DATA` datetime DEFAULT CURRENT_TIMESTAMP,
+  `TIPO` enum('CREDITO','DEBITO') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `VALOR` decimal(10,2) NOT NULL DEFAULT '0.00',
+  `MOTIVO` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `idx_carteira_cpf` (`CPF`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: CLIENTE_EMPRESAS
+--------------------------------------------------
+[COLUNAS]
+  • CNPJ | Tipo: varchar(14) | OBRIGATÓRIO [Chave: PRI]
+  • CPF_CLIENTE_CADASTRO | Tipo: varchar(11) | Pode ser Vazio [Chave: MUL]
+  • NOME_CADASTRO | Tipo: varchar(30) | Pode ser Vazio
+  • CELULAR | Tipo: varchar(11) | Pode ser Vazio
+  • GRUPO_WHATS | Tipo: varchar(30) | Pode ser Vazio
+  • GRUPO_EMPRESA | Tipo: varchar(30) | Pode ser Vazio
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: UNI]
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `CLIENTE_EMPRESAS` (
+  `CNPJ` varchar(14) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `CPF_CLIENTE_CADASTRO` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `NOME_CADASTRO` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `CELULAR` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `GRUPO_WHATS` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `GRUPO_EMPRESA` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ID` int NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`CNPJ`),
+  UNIQUE KEY `ID` (`ID`),
+  KEY `fk_empresa_cadastro` (`CPF_CLIENTE_CADASTRO`),
+  CONSTRAINT `fk_empresa_cadastro` FOREIGN KEY (`CPF_CLIENTE_CADASTRO`) REFERENCES `CLIENTE_CADASTRO` (`CPF`) ON DELETE SET NULL ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: CLIENTE_USUARIO
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: UNI]
+  • CPF | Tipo: varchar(11) | OBRIGATÓRIO [Chave: PRI]
+  • NOME | Tipo: varchar(150) | Pode ser Vazio
+  • USUARIO | Tipo: varchar(30) | Pode ser Vazio
+  • SENHA | Tipo: varchar(255) | Pode ser Vazio
+  • Tentativas | Tipo: int | Pode ser Vazio
+  • Ultima_Tentativa | Tipo: datetime | Pode ser Vazio
+  • CELULAR | Tipo: varchar(11) | Pode ser Vazio
+  • EMAIL | Tipo: varchar(100) | Pode ser Vazio
+  • GRUPO_WHATS | Tipo: varchar(30) | Pode ser Vazio
+  • GRUPO_USUARIOS | Tipo: varchar(30) | Pode ser Vazio
+  • Situação | Tipo: varchar(20) | Pode ser Vazio
+  • RESET_TOKEN | Tipo: varchar(100) | Pode ser Vazio
+  • RESET_EXPIRA | Tipo: datetime | Pode ser Vazio
+  • DATA_EXPIRAR | Tipo: date | Pode ser Vazio
+  • id_empresa | Tipo: int | Pode ser Vazio
+  • ULTIMO_ACESSO | Tipo: datetime | Pode ser Vazio
+  • FORCAR_LOGOUT | Tipo: int | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `CLIENTE_USUARIO` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `CPF` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `NOME` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `USUARIO` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `SENHA` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `Tentativas` int DEFAULT '0',
+  `Ultima_Tentativa` datetime DEFAULT NULL,
+  `CELULAR` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `EMAIL` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `GRUPO_WHATS` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `GRUPO_USUARIOS` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `Situação` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT 'ativo',
+  `RESET_TOKEN` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `RESET_EXPIRA` datetime DEFAULT NULL,
+  `DATA_EXPIRAR` date DEFAULT NULL,
+  `id_empresa` int DEFAULT NULL,
+  `ULTIMO_ACESSO` datetime DEFAULT NULL,
+  `FORCAR_LOGOUT` int DEFAULT '0',
+  PRIMARY KEY (`CPF`),
+  UNIQUE KEY `ID` (`ID`),
+  CONSTRAINT `fk_usuario_cadastro` FOREIGN KEY (`CPF`) REFERENCES `CLIENTE_CADASTRO` (`CPF`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=789 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: CLIENTE_USUARIO_PERMISSAO
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • NOME_PERMISSAO | Tipo: varchar(100) | OBRIGATÓRIO
+  • CHAVE | Tipo: varchar(100) | OBRIGATÓRIO [Chave: MUL]
+  • TIPO | Tipo: enum('FUNCAO','TELA') | OBRIGATÓRIO
+  • LOCAL_APLICACAO | Tipo: varchar(150) | Pode ser Vazio
+  • DESCRICAO | Tipo: text | Pode ser Vazio
+  • GRUPO_USUARIOS | Tipo: varchar(30) | OBRIGATÓRIO
+  • VALOR_REGRA | Tipo: varchar(20) | Pode ser Vazio
+  • DATA_ATUALIZACAO | Tipo: datetime | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `CLIENTE_USUARIO_PERMISSAO` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `NOME_PERMISSAO` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `CHAVE` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `TIPO` enum('FUNCAO','TELA') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `LOCAL_APLICACAO` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `DESCRICAO` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `GRUPO_USUARIOS` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `VALOR_REGRA` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `DATA_ATUALIZACAO` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `uk_chave_grupo` (`CHAVE`,`GRUPO_USUARIOS`)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: COMERCIAL_COMISSOES
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • PEDIDO_ID | Tipo: int | OBRIGATÓRIO [Chave: MUL]
+  • VENDEDOR_ID | Tipo: int | OBRIGATÓRIO [Chave: MUL]
+  • DATA_BASE | Tipo: date | OBRIGATÓRIO
+  • VALOR_BASE_VENDA | Tipo: decimal(10,2) | OBRIGATÓRIO
+  • VALOR_COMISSAO | Tipo: decimal(10,2) | OBRIGATÓRIO
+  • STATUS_COMISSAO | Tipo: varchar(30) | Pode ser Vazio
+  • DATA_GERACAO | Tipo: datetime | Pode ser Vazio
+  • DATA_CONFERENCIA | Tipo: datetime | Pode ser Vazio
+  • DATA_PAGAMENTO | Tipo: datetime | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `COMERCIAL_COMISSOES` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `PEDIDO_ID` int NOT NULL,
+  `VENDEDOR_ID` int NOT NULL,
+  `DATA_BASE` date NOT NULL COMMENT 'Data de Pagamento do Pedido',
+  `VALOR_BASE_VENDA` decimal(10,2) NOT NULL DEFAULT '0.00',
+  `VALOR_COMISSAO` decimal(10,2) NOT NULL DEFAULT '0.00',
+  `STATUS_COMISSAO` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT 'SEM CONFERENCIA' COMMENT 'SEM CONFERENCIA, CONFERIDO, PAGO, ESTORNADO',
+  `DATA_GERACAO` datetime DEFAULT CURRENT_TIMESTAMP,
+  `DATA_CONFERENCIA` datetime DEFAULT NULL,
+  `DATA_PAGAMENTO` datetime DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `fk_com_pedido` (`PEDIDO_ID`),
+  KEY `fk_com_vendedor` (`VENDEDOR_ID`),
+  CONSTRAINT `fk_com_pedido` FOREIGN KEY (`PEDIDO_ID`) REFERENCES `COMERCIAL_PEDIDOS` (`ID`) ON DELETE CASCADE,
+  CONSTRAINT `fk_com_vendedor` FOREIGN KEY (`VENDEDOR_ID`) REFERENCES `FINANCEIRO_VENDEDORES` (`ID`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: COMERCIAL_ENTREGAS
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • PEDIDO_ID | Tipo: int | Pode ser Vazio
+  • CODIGO | Tipo: varchar(20) | OBRIGATÓRIO
+  • CLIENTE_NOME | Tipo: varchar(150) | Pode ser Vazio
+  • PRODUTO_NOME | Tipo: varchar(150) | Pode ser Vazio
+  • OBSERVACAO | Tipo: text | Pode ser Vazio
+  • DATA_PREVISTA | Tipo: date | Pode ser Vazio
+  • DATA_PREVISTA_RENOVACAO | Tipo: date | Pode ser Vazio
+  • DATA_EFETIVA_RENOVACAO | Tipo: datetime | Pode ser Vazio
+  • STATUS_ENTREGA | Tipo: varchar(50) | Pode ser Vazio
+  • HISTORICO_RESUMO | Tipo: text | Pode ser Vazio
+  • DATA_CRIACAO | Tipo: timestamp | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `COMERCIAL_ENTREGAS` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `PEDIDO_ID` int DEFAULT NULL,
+  `CODIGO` varchar(20) NOT NULL,
+  `CLIENTE_NOME` varchar(150) DEFAULT NULL,
+  `PRODUTO_NOME` varchar(150) DEFAULT NULL,
+  `OBSERVACAO` text,
+  `DATA_PREVISTA` date DEFAULT NULL,
+  `DATA_PREVISTA_RENOVACAO` date DEFAULT NULL,
+  `DATA_EFETIVA_RENOVACAO` datetime DEFAULT NULL,
+  `STATUS_ENTREGA` varchar(50) DEFAULT 'Incluído',
+  `HISTORICO_RESUMO` text,
+  `DATA_CRIACAO` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+==================================================
+
+TABELA: COMERCIAL_HISTORICO
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • MODULO | Tipo: varchar(50) | OBRIGATÓRIO
+  • ITEM_ID | Tipo: int | OBRIGATÓRIO
+  • TIPO_ACAO | Tipo: varchar(50) | Pode ser Vazio
+  • OBSERVACAO | Tipo: text | Pode ser Vazio
+  • USUARIO | Tipo: varchar(100) | Pode ser Vazio
+  • DATA_REGISTRO | Tipo: timestamp | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `COMERCIAL_HISTORICO` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `MODULO` varchar(50) NOT NULL,
+  `ITEM_ID` int NOT NULL,
+  `TIPO_ACAO` varchar(50) DEFAULT NULL,
+  `OBSERVACAO` text,
+  `USUARIO` varchar(100) DEFAULT NULL,
+  `DATA_REGISTRO` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=162 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+==================================================
+
+TABELA: COMERCIAL_PEDIDOS
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • CODIGO | Tipo: varchar(20) | OBRIGATÓRIO
+  • CLIENTE_NOME | Tipo: varchar(150) | Pode ser Vazio
+  • CLIENTE_TELEFONE | Tipo: varchar(20) | Pode ser Vazio
+  • PRODUTO_NOME | Tipo: varchar(150) | Pode ser Vazio
+  • DATA_PEDIDO | Tipo: datetime | Pode ser Vazio
+  • VALOR | Tipo: decimal(10,2) | Pode ser Vazio
+  • VALOR_UNITARIO | Tipo: decimal(10,2) | Pode ser Vazio
+  • QUANTIDADE | Tipo: int | Pode ser Vazio
+  • TOTAL | Tipo: decimal(10,2) | Pode ser Vazio
+  • DESCONTO | Tipo: decimal(10,2) | Pode ser Vazio
+  • ACRESCIMO | Tipo: decimal(10,2) | Pode ser Vazio
+  • VARIACAO | Tipo: decimal(10,2) | Pode ser Vazio
+  • IVA | Tipo: decimal(10,2) | Pode ser Vazio
+  • CUPOM | Tipo: varchar(50) | Pode ser Vazio
+  • VALOR_CUPOM | Tipo: decimal(10,2) | Pode ser Vazio
+  • FIDELIDADE | Tipo: decimal(10,2) | Pode ser Vazio
+  • OBSERVACAO | Tipo: text | Pode ser Vazio
+  • STATUS_PEDIDO | Tipo: varchar(50) | Pode ser Vazio
+  • DATA_PAGAMENTO | Tipo: datetime | Pode ser Vazio
+  • DATA_CANCELAMENTO | Tipo: datetime | Pode ser Vazio
+  • TIPO_RENOVACAO | Tipo: varchar(50) | Pode ser Vazio
+  • DATA_PREVISTA_RENOVACAO | Tipo: date | Pode ser Vazio
+  • STATUS_RENOVACAO | Tipo: varchar(50) | Pode ser Vazio
+  • DATA_EFETIVA_RENOVACAO | Tipo: datetime | Pode ser Vazio
+  • DATA_CANCELAMENTO_RENOVACAO | Tipo: datetime | Pode ser Vazio
+  • HISTORICO_RESUMO | Tipo: text | Pode ser Vazio
+  • DATA_CRIACAO | Tipo: timestamp | Pode ser Vazio
+  • DATA_CONCILIACAO | Tipo: datetime | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `COMERCIAL_PEDIDOS` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `CODIGO` varchar(20) NOT NULL,
+  `CLIENTE_NOME` varchar(150) DEFAULT NULL,
+  `CLIENTE_TELEFONE` varchar(20) DEFAULT NULL,
+  `PRODUTO_NOME` varchar(150) DEFAULT NULL,
+  `DATA_PEDIDO` datetime DEFAULT NULL,
+  `VALOR` decimal(10,2) DEFAULT NULL,
+  `VALOR_UNITARIO` decimal(10,2) DEFAULT '0.00',
+  `QUANTIDADE` int DEFAULT NULL,
+  `TOTAL` decimal(10,2) DEFAULT NULL,
+  `DESCONTO` decimal(10,2) DEFAULT '0.00',
+  `ACRESCIMO` decimal(10,2) DEFAULT '0.00',
+  `VARIACAO` decimal(10,2) DEFAULT '0.00',
+  `IVA` decimal(10,2) DEFAULT '0.00',
+  `CUPOM` varchar(50) DEFAULT NULL,
+  `VALOR_CUPOM` decimal(10,2) DEFAULT '0.00',
+  `FIDELIDADE` decimal(10,2) DEFAULT '0.00',
+  `OBSERVACAO` text,
+  `STATUS_PEDIDO` varchar(50) DEFAULT 'Solicitado',
+  `DATA_PAGAMENTO` datetime DEFAULT NULL,
+  `DATA_CANCELAMENTO` datetime DEFAULT NULL,
+  `TIPO_RENOVACAO` varchar(50) DEFAULT 'A Configurar',
+  `DATA_PREVISTA_RENOVACAO` date DEFAULT NULL,
+  `STATUS_RENOVACAO` varchar(50) DEFAULT 'A Configurar',
+  `DATA_EFETIVA_RENOVACAO` datetime DEFAULT NULL,
+  `DATA_CANCELAMENTO_RENOVACAO` datetime DEFAULT NULL,
+  `HISTORICO_RESUMO` text,
+  `DATA_CRIACAO` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `DATA_CONCILIACAO` datetime DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+==================================================
+
+TABELA: CONFIG_ACESSOS
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • TIPO | Tipo: enum('BANCOS','SISTEMAS') | OBRIGATÓRIO
+  • ORIGEM | Tipo: varchar(100) | OBRIGATÓRIO
+  • USUARIO | Tipo: varchar(100) | Pode ser Vazio
+  • SENHA | Tipo: varchar(100) | Pode ser Vazio
+  • USO | Tipo: text | Pode ser Vazio
+  • OBSERVACAO | Tipo: text | Pode ser Vazio
+  • DATA_ATUALIZACAO | Tipo: datetime | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `CONFIG_ACESSOS` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `TIPO` enum('BANCOS','SISTEMAS') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'SISTEMAS',
+  `ORIGEM` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `USUARIO` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `SENHA` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `USO` text COLLATE utf8mb4_unicode_ci,
+  `OBSERVACAO` text COLLATE utf8mb4_unicode_ci,
+  `DATA_ATUALIZACAO` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: CONFIG_ANOTACOES_GERAIS
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • ASSUNTO | Tipo: varchar(255) | OBRIGATÓRIO
+  • ANOTACAO | Tipo: text | OBRIGATÓRIO
+  • DATA_ATUALIZACAO | Tipo: datetime | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `CONFIG_ANOTACOES_GERAIS` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `ASSUNTO` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ANOTACAO` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `DATA_ATUALIZACAO` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: CONTROLE_IMPORTACAO_ASSINCRONA
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • NOME_IMPORTACAO | Tipo: varchar(255) | OBRIGATÓRIO
+  • ARQUIVO | Tipo: varchar(255) | OBRIGATÓRIO
+  • TABELA_DESTINO | Tipo: varchar(100) | OBRIGATÓRIO
+  • NOME_USUARIO | Tipo: varchar(100) | Pode ser Vazio
+  • STATUS | Tipo: enum('PENDENTE','PROCESSANDO','CONCLUIDA','ERRO_CRITICO') | Pode ser Vazio
+  • QTD_TOTAL | Tipo: int | Pode ser Vazio
+  • QTD_PROCESSADA | Tipo: int | Pode ser Vazio
+  • QTD_NOVOS | Tipo: int | Pode ser Vazio
+  • QTD_ATUALIZADOS | Tipo: int | Pode ser Vazio
+  • QTD_ERROS | Tipo: int | Pode ser Vazio
+  • ARQUIVO_LOG_ERRO | Tipo: varchar(255) | Pode ser Vazio
+  • DATA_INICIO | Tipo: datetime | Pode ser Vazio
+  • DATA_FIM | Tipo: datetime | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `CONTROLE_IMPORTACAO_ASSINCRONA` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `NOME_IMPORTACAO` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ARQUIVO` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `TABELA_DESTINO` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `NOME_USUARIO` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'Sistema',
+  `STATUS` enum('PENDENTE','PROCESSANDO','CONCLUIDA','ERRO_CRITICO') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'PENDENTE',
+  `QTD_TOTAL` int DEFAULT '0',
+  `QTD_PROCESSADA` int DEFAULT '0',
+  `QTD_NOVOS` int DEFAULT '0',
+  `QTD_ATUALIZADOS` int DEFAULT '0',
+  `QTD_ERROS` int DEFAULT '0',
+  `ARQUIVO_LOG_ERRO` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `DATA_INICIO` datetime DEFAULT CURRENT_TIMESTAMP,
+  `DATA_FIM` datetime DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: FINANCEIRO_CONTAS_PAGAS
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • CONTA_ID | Tipo: int | Pode ser Vazio
+  • CATEGORIA_ID | Tipo: int | Pode ser Vazio
+  • TIPO_FAVORECIDO | Tipo: varchar(20) | Pode ser Vazio
+  • FAVORECIDO_ID | Tipo: int | Pode ser Vazio
+  • CODIGO_BANCO | Tipo: varchar(100) | Pode ser Vazio [Chave: UNI]
+  • VALOR_PAGO | Tipo: decimal(10,2) | OBRIGATÓRIO
+  • DATA_VENCIMENTO | Tipo: date | Pode ser Vazio
+  • DATA_PAGAMENTO | Tipo: date | Pode ser Vazio
+  • DATA_CONCILIACAO | Tipo: date | Pode ser Vazio
+  • STATUS_PAGAMENTO | Tipo: enum('PAGO','A PAGAR') | OBRIGATÓRIO
+  • OBSERVACAO | Tipo: text | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `FINANCEIRO_CONTAS_PAGAS` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `CONTA_ID` int DEFAULT NULL,
+  `CATEGORIA_ID` int DEFAULT NULL,
+  `TIPO_FAVORECIDO` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `FAVORECIDO_ID` int DEFAULT NULL,
+  `CODIGO_BANCO` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `VALOR_PAGO` decimal(10,2) NOT NULL DEFAULT '0.00',
+  `DATA_VENCIMENTO` date DEFAULT NULL,
+  `DATA_PAGAMENTO` date DEFAULT NULL,
+  `DATA_CONCILIACAO` date DEFAULT NULL,
+  `STATUS_PAGAMENTO` enum('PAGO','A PAGAR') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'A PAGAR',
+  `OBSERVACAO` text COLLATE utf8mb4_unicode_ci,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `CODIGO_BANCO` (`CODIGO_BANCO`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: FINANCEIRO_CONTAS_RECEBIDAS
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • CONTA_ID | Tipo: int | Pode ser Vazio
+  • PEDIDO_ID | Tipo: int | Pode ser Vazio
+  • CATEGORIA_ID | Tipo: int | Pode ser Vazio
+  • TIPO_ENTIDADE | Tipo: varchar(20) | Pode ser Vazio
+  • ENTIDADE_ID | Tipo: int | Pode ser Vazio
+  • VALOR_RECEBIDO | Tipo: decimal(10,2) | OBRIGATÓRIO
+  • DATA_VENCIMENTO | Tipo: date | Pode ser Vazio
+  • DATA_RECEBIMENTO | Tipo: date | Pode ser Vazio
+  • DATA_CONCILIACAO | Tipo: date | Pode ser Vazio
+  • STATUS_RECEBIMENTO | Tipo: enum('RECEBIDO','A RECEBER') | OBRIGATÓRIO
+  • OBSERVACAO | Tipo: text | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `FINANCEIRO_CONTAS_RECEBIDAS` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `CONTA_ID` int DEFAULT NULL,
+  `PEDIDO_ID` int DEFAULT NULL,
+  `CATEGORIA_ID` int DEFAULT NULL,
+  `TIPO_ENTIDADE` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ENTIDADE_ID` int DEFAULT NULL,
+  `VALOR_RECEBIDO` decimal(10,2) NOT NULL DEFAULT '0.00',
+  `DATA_VENCIMENTO` date DEFAULT NULL,
+  `DATA_RECEBIMENTO` date DEFAULT NULL,
+  `DATA_CONCILIACAO` date DEFAULT NULL,
+  `STATUS_RECEBIMENTO` enum('RECEBIDO','A RECEBER') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'A RECEBER',
+  `OBSERVACAO` text COLLATE utf8mb4_unicode_ci,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: FINANCEIRO_CONTA_MOVIMENTACAO
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • NOME_CONTA | Tipo: varchar(150) | OBRIGATÓRIO
+  • DADOS_BANCARIOS | Tipo: text | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `FINANCEIRO_CONTA_MOVIMENTACAO` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `NOME_CONTA` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `DADOS_BANCARIOS` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+==================================================
+
+TABELA: FINANCEIRO_ENTIDADES
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • DOCUMENTO | Tipo: varchar(14) | OBRIGATÓRIO [Chave: UNI]
+  • NOME | Tipo: varchar(150) | OBRIGATÓRIO
+  • TIPO_VINCULO | Tipo: varchar(50) | Pode ser Vazio
+  • STATUS | Tipo: varchar(20) | Pode ser Vazio
+  • DATA_CADASTRO | Tipo: datetime | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `FINANCEIRO_ENTIDADES` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `DOCUMENTO` varchar(14) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'CPF ou CNPJ',
+  `NOME` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `TIPO_VINCULO` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT 'CLIENTE' COMMENT 'CLIENTE ou EMPRESA',
+  `STATUS` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT 'ATIVO',
+  `DATA_CADASTRO` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `idx_doc_entidade` (`DOCUMENTO`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: FINANCEIRO_ENTIDADE_PRODUTOS
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • ENTIDADE_ID | Tipo: int | OBRIGATÓRIO [Chave: MUL]
+  • PRODUTO_ID | Tipo: int | OBRIGATÓRIO [Chave: MUL]
+  • TIPO_COMISSAO | Tipo: varchar(20) | Pode ser Vazio
+  • VALOR_COMISSAO | Tipo: decimal(10,2) | OBRIGATÓRIO
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `FINANCEIRO_ENTIDADE_PRODUTOS` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `ENTIDADE_ID` int NOT NULL,
+  `PRODUTO_ID` int NOT NULL,
+  `TIPO_COMISSAO` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT 'PERCENTUAL' COMMENT 'PERCENTUAL ou VALOR_FIXO',
+  `VALOR_COMISSAO` decimal(10,2) NOT NULL DEFAULT '0.00',
+  PRIMARY KEY (`ID`),
+  KEY `fk_fin_entidade` (`ENTIDADE_ID`),
+  KEY `fk_fin_produto` (`PRODUTO_ID`),
+  CONSTRAINT `fk_fin_entidade` FOREIGN KEY (`ENTIDADE_ID`) REFERENCES `FINANCEIRO_ENTIDADES` (`ID`) ON DELETE CASCADE,
+  CONSTRAINT `fk_fin_produto` FOREIGN KEY (`PRODUTO_ID`) REFERENCES `CATALOGO_ITENS` (`ID`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: FINANCEIRO_HIERARQUIA_CONTAS
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • TIPO | Tipo: varchar(20) | OBRIGATÓRIO
+  • NOME_CONTA | Tipo: varchar(150) | OBRIGATÓRIO
+  • PARENT_ID | Tipo: int | Pode ser Vazio [Chave: MUL]
+  • CAMINHO_HIERARQUIA | Tipo: varchar(500) | OBRIGATÓRIO
+  • STATUS | Tipo: varchar(20) | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `FINANCEIRO_HIERARQUIA_CONTAS` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `TIPO` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'ENTRADA ou SAIDA',
+  `NOME_CONTA` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `PARENT_ID` int DEFAULT NULL COMMENT 'ID da Conta Pai (se houver)',
+  `CAMINHO_HIERARQUIA` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'O rastro completo da árvore',
+  `STATUS` varchar(20) DEFAULT 'ATIVO',
+  PRIMARY KEY (`ID`),
+  KEY `idx_hierarquia_parent` (`PARENT_ID`),
+  CONSTRAINT `fk_hierarquia_parent` FOREIGN KEY (`PARENT_ID`) REFERENCES `FINANCEIRO_HIERARQUIA_CONTAS` (`ID`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+==================================================
+
+TABELA: FINANCEIRO_LANCAMENTOS
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • TIPO_MOVIMENTO | Tipo: enum('ENTRADA','SAIDA') | OBRIGATÓRIO
+  • CATEGORIA | Tipo: enum('RECEBER','RECEBIDO','PAGAR','PAGO') | OBRIGATÓRIO
+  • DESCRICAO | Tipo: varchar(255) | OBRIGATÓRIO
+  • VALOR | Tipo: decimal(10,2) | OBRIGATÓRIO
+  • DATA_VENCIMENTO | Tipo: date | OBRIGATÓRIO
+  • DATA_PAGAMENTO | Tipo: date | Pode ser Vazio
+  • DATA_CONCILIACAO | Tipo: datetime | Pode ser Vazio
+  • ENTIDADE_ID | Tipo: int | Pode ser Vazio [Chave: MUL]
+  • VENDEDOR_ID | Tipo: int | Pode ser Vazio [Chave: MUL]
+  • PEDIDO_ORIGEM_ID | Tipo: int | Pode ser Vazio
+  • OBSERVACAO | Tipo: text | Pode ser Vazio
+  • DATA_REGISTRO | Tipo: datetime | Pode ser Vazio
+  • CONTA_ID | Tipo: int | Pode ser Vazio [Chave: MUL]
+  • TIPO_FAVORECIDO | Tipo: varchar(20) | Pode ser Vazio
+  • FAVORECIDO_ID | Tipo: int | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `FINANCEIRO_LANCAMENTOS` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `TIPO_MOVIMENTO` enum('ENTRADA','SAIDA') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `CATEGORIA` enum('RECEBER','RECEBIDO','PAGAR','PAGO') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `DESCRICAO` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `VALOR` decimal(10,2) NOT NULL,
+  `DATA_VENCIMENTO` date NOT NULL,
+  `DATA_PAGAMENTO` date DEFAULT NULL,
+  `DATA_CONCILIACAO` datetime DEFAULT NULL,
+  `ENTIDADE_ID` int DEFAULT NULL,
+  `VENDEDOR_ID` int DEFAULT NULL,
+  `PEDIDO_ORIGEM_ID` int DEFAULT NULL COMMENT 'ID do Comercial_Pedidos se for automático',
+  `OBSERVACAO` text COLLATE utf8mb4_unicode_ci,
+  `DATA_REGISTRO` datetime DEFAULT CURRENT_TIMESTAMP,
+  `CONTA_ID` int DEFAULT NULL COMMENT 'ID da Conta Bancária',
+  `TIPO_FAVORECIDO` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'VENDEDOR ou ENTIDADE',
+  `FAVORECIDO_ID` int DEFAULT NULL COMMENT 'ID do Vendedor ou Entidade',
+  PRIMARY KEY (`ID`),
+  KEY `fk_lanc_entidade` (`ENTIDADE_ID`),
+  KEY `fk_lanc_vendedor` (`VENDEDOR_ID`),
+  KEY `fk_lancamento_conta` (`CONTA_ID`),
+  CONSTRAINT `fk_lanc_entidade` FOREIGN KEY (`ENTIDADE_ID`) REFERENCES `FINANCEIRO_ENTIDADES` (`ID`) ON DELETE SET NULL,
+  CONSTRAINT `fk_lanc_vendedor` FOREIGN KEY (`VENDEDOR_ID`) REFERENCES `FINANCEIRO_VENDEDORES` (`ID`) ON DELETE SET NULL,
+  CONSTRAINT `fk_lancamento_conta` FOREIGN KEY (`CONTA_ID`) REFERENCES `FINANCEIRO_CONTA_MOVIMENTACAO` (`ID`) ON DELETE SET NULL
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: FINANCEIRO_VENDEDORES
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • DOCUMENTO_VENDEDOR | Tipo: varchar(14) | OBRIGATÓRIO [Chave: UNI]
+  • NOME | Tipo: varchar(150) | OBRIGATÓRIO
+  • TIPO_VINCULO | Tipo: varchar(50) | Pode ser Vazio
+  • STATUS | Tipo: varchar(20) | Pode ser Vazio
+  • DATA_CADASTRO | Tipo: datetime | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `FINANCEIRO_VENDEDORES` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `DOCUMENTO_VENDEDOR` varchar(14) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `NOME` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `TIPO_VINCULO` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT 'CLIENTE',
+  `STATUS` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT 'ATIVO',
+  `DATA_CADASTRO` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `idx_cpf_vendedor` (`DOCUMENTO_VENDEDOR`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: FINANCEIRO_VENDEDOR_VARIACOES
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • VENDEDOR_ID | Tipo: int | OBRIGATÓRIO [Chave: MUL]
+  • VARIACAO_ID | Tipo: int | OBRIGATÓRIO [Chave: MUL]
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `FINANCEIRO_VENDEDOR_VARIACOES` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `VENDEDOR_ID` int NOT NULL,
+  `VARIACAO_ID` int NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `fk_vend_var_vendedor` (`VENDEDOR_ID`),
+  KEY `fk_vend_var_variacao` (`VARIACAO_ID`),
+  CONSTRAINT `fk_vend_var_variacao` FOREIGN KEY (`VARIACAO_ID`) REFERENCES `CATALOGO_VARIACOES` (`ID`) ON DELETE CASCADE,
+  CONSTRAINT `fk_vend_var_vendedor` FOREIGN KEY (`VENDEDOR_ID`) REFERENCES `FINANCEIRO_VENDEDORES` (`ID`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: INTEGRACAO_V8_CHAVE_ACESSO
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • USUARIO_ID | Tipo: varchar(20) | Pode ser Vazio
+  • CPF_USUARIO | Tipo: varchar(11) | Pode ser Vazio
+  • NOME_USUARIO | Tipo: varchar(150) | Pode ser Vazio
+  • CLIENTE_NOME | Tipo: varchar(150) | OBRIGATÓRIO
+  • USERNAME_API | Tipo: varchar(150) | Pode ser Vazio
+  • PASSWORD_API | Tipo: varchar(150) | Pode ser Vazio
+  • CLIENT_ID | Tipo: text | Pode ser Vazio
+  • AUDIENCE | Tipo: text | Pode ser Vazio
+  • CUSTO_CONSULTA | Tipo: decimal(10,2) | Pode ser Vazio
+  • CUSTO_V8 | Tipo: decimal(10,2) | Pode ser Vazio
+  • SALDO | Tipo: decimal(10,2) | Pode ser Vazio
+  • STATUS | Tipo: varchar(20) | Pode ser Vazio
+  • TABELA_PADRAO | Tipo: varchar(100) | Pode ser Vazio
+  • PRAZO_PADRAO | Tipo: int | Pode ser Vazio
+  • id_usuario | Tipo: int | Pode ser Vazio
+  • id_empresa | Tipo: int | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `INTEGRACAO_V8_CHAVE_ACESSO` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `USUARIO_ID` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `CPF_USUARIO` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `NOME_USUARIO` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `CLIENTE_NOME` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `USERNAME_API` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `PASSWORD_API` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `CLIENT_ID` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `AUDIENCE` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `CUSTO_CONSULTA` decimal(10,2) DEFAULT '0.00',
+  `CUSTO_V8` decimal(10,2) DEFAULT '0.00',
+  `SALDO` decimal(10,2) DEFAULT '0.00',
+  `STATUS` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'ATIVO',
+  `TABELA_PADRAO` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT 'CLT Acelera',
+  `PRAZO_PADRAO` int DEFAULT '24',
+  `id_usuario` int DEFAULT NULL,
+  `id_empresa` int DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: INTEGRACAO_V8_EXTRATO_CLIENTE
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • CHAVE_ID | Tipo: int | OBRIGATÓRIO [Chave: MUL]
+  • REGISTRO_CONSULTA_ID | Tipo: int | Pode ser Vazio
+  • TIPO_MOVIMENTO | Tipo: varchar(20) | Pode ser Vazio
+  • TIPO_CUSTO | Tipo: varchar(50) | OBRIGATÓRIO
+  • VALOR | Tipo: decimal(10,2) | OBRIGATÓRIO
+  • CUSTO_V8 | Tipo: decimal(10,2) | Pode ser Vazio
+  • SALDO_ANTERIOR | Tipo: decimal(10,2) | OBRIGATÓRIO
+  • SALDO_ATUAL | Tipo: decimal(10,2) | OBRIGATÓRIO
+  • DATA_LANCAMENTO | Tipo: datetime | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `INTEGRACAO_V8_EXTRATO_CLIENTE` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `CHAVE_ID` int NOT NULL,
+  `REGISTRO_CONSULTA_ID` int DEFAULT NULL,
+  `TIPO_MOVIMENTO` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'DEBITO',
+  `TIPO_CUSTO` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Consulta Margem ou Digitação',
+  `VALOR` decimal(10,2) NOT NULL DEFAULT '0.00',
+  `CUSTO_V8` decimal(10,2) DEFAULT '0.00',
+  `SALDO_ANTERIOR` decimal(10,2) NOT NULL DEFAULT '0.00',
+  `SALDO_ATUAL` decimal(10,2) NOT NULL DEFAULT '0.00',
+  `DATA_LANCAMENTO` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID`),
+  KEY `fk_v8_extrato_chave` (`CHAVE_ID`),
+  CONSTRAINT `fk_v8_extrato_chave` FOREIGN KEY (`CHAVE_ID`) REFERENCES `INTEGRACAO_V8_CHAVE_ACESSO` (`ID`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=9164 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: INTEGRACAO_V8_IA_CREDENCIAIS
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • CPF_DONO | Tipo: varchar(11) | OBRIGATÓRIO [Chave: MUL]
+  • CHAVE_V8_ID | Tipo: int | OBRIGATÓRIO [Chave: MUL]
+  • NOME_ROBO | Tipo: varchar(100) | OBRIGATÓRIO
+  • TOKEN_IA | Tipo: varchar(100) | OBRIGATÓRIO [Chave: UNI]
+  • STATUS | Tipo: enum('ATIVO','INATIVO') | Pode ser Vazio
+  • DATA_CRIACAO | Tipo: datetime | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `INTEGRACAO_V8_IA_CREDENCIAIS` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `CPF_DONO` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'CPF do cliente dono do saldo',
+  `CHAVE_V8_ID` int NOT NULL COMMENT 'ID da credencial V8 que será usada',
+  `NOME_ROBO` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Ex: Bot Atendimento WhatsApp',
+  `TOKEN_IA` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Token fixo que a IA enviará no Header',
+  `STATUS` enum('ATIVO','INATIVO') COLLATE utf8mb4_unicode_ci DEFAULT 'ATIVO',
+  `DATA_CRIACAO` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `uk_token_ia` (`TOKEN_IA`),
+  KEY `fk_ia_cred_cpf` (`CPF_DONO`),
+  KEY `fk_ia_cred_v8` (`CHAVE_V8_ID`),
+  CONSTRAINT `fk_ia_cred_v8` FOREIGN KEY (`CHAVE_V8_ID`) REFERENCES `INTEGRACAO_V8_CHAVE_ACESSO` (`ID`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: INTEGRACAO_V8_IA_SESSAO
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • TOKEN_IA_USADO | Tipo: varchar(100) | OBRIGATÓRIO
+  • TELEFONE_CLIENTE | Tipo: varchar(20) | OBRIGATÓRIO [Chave: MUL]
+  • CPF_CLIENTE | Tipo: varchar(14) | Pode ser Vazio [Chave: MUL]
+  • CONSULT_ID | Tipo: varchar(150) | Pode ser Vazio
+  • STATUS_SESSAO | Tipo: varchar(50) | Pode ser Vazio
+  • DATA_INICIO | Tipo: datetime | Pode ser Vazio
+  • ULTIMA_ACAO | Tipo: datetime | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `INTEGRACAO_V8_IA_SESSAO` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `TOKEN_IA_USADO` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `TELEFONE_CLIENTE` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Número do cliente atendido pela IA',
+  `CPF_CLIENTE` varchar(14) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `CONSULT_ID` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `STATUS_SESSAO` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT 'INICIADA',
+  `DATA_INICIO` datetime DEFAULT CURRENT_TIMESTAMP,
+  `ULTIMA_ACAO` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID`),
+  KEY `idx_ia_telefone` (`TELEFONE_CLIENTE`),
+  KEY `idx_ia_cpf` (`CPF_CLIENTE`)
+) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: INTEGRACAO_V8_IMPORTACAO_LOTE
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • NOME_IMPORTACAO | Tipo: varchar(150) | OBRIGATÓRIO
+  • USUARIO_ID | Tipo: int | OBRIGATÓRIO
+  • CPF_USUARIO | Tipo: varchar(11) | Pode ser Vazio
+  • CHAVE_ID | Tipo: int | OBRIGATÓRIO
+  • ARQUIVO_CAMINHO | Tipo: varchar(255) | OBRIGATÓRIO
+  • STATUS_FILA | Tipo: varchar(50) | Pode ser Vazio
+  • STATUS_LOTE | Tipo: enum('ATIVO','INATIVO') | Pode ser Vazio
+  • ANOTACOES | Tipo: text | Pode ser Vazio
+  • QTD_TOTAL | Tipo: int | Pode ser Vazio
+  • QTD_PROCESSADA | Tipo: int | Pode ser Vazio
+  • QTD_SUCESSO | Tipo: int | Pode ser Vazio
+  • QTD_ERRO | Tipo: int | Pode ser Vazio
+  • DATA_IMPORTACAO | Tipo: datetime | Pode ser Vazio
+  • DATA_FINALIZACAO | Tipo: datetime | Pode ser Vazio
+  • AGENDAMENTO_TIPO | Tipo: varchar(50) | Pode ser Vazio
+  • DATA_HORA_AGENDADA | Tipo: datetime | Pode ser Vazio
+  • DIA_MES_AGENDADO | Tipo: int | Pode ser Vazio
+  • LIMITE_DIARIO | Tipo: int | Pode ser Vazio
+  • PROCESSADOS_HOJE | Tipo: int | Pode ser Vazio
+  • ULTIMO_PROCESSAMENTO | Tipo: date | Pode ser Vazio
+  • ATUALIZAR_TELEFONE | Tipo: int | Pode ser Vazio
+  • ENVIAR_WHATSAPP | Tipo: int | Pode ser Vazio
+  • SOMENTE_SIMULAR | Tipo: int | Pode ser Vazio
+  • ENVIAR_ARQUIVO_WHATSAPP | Tipo: int | Pode ser Vazio
+  • id_empresa | Tipo: int | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `INTEGRACAO_V8_IMPORTACAO_LOTE` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `NOME_IMPORTACAO` varchar(150) NOT NULL,
+  `USUARIO_ID` int NOT NULL,
+  `CPF_USUARIO` varchar(11) DEFAULT NULL,
+  `CHAVE_ID` int NOT NULL,
+  `ARQUIVO_CAMINHO` varchar(255) NOT NULL,
+  `STATUS_FILA` varchar(50) DEFAULT 'PENDENTE',
+  `STATUS_LOTE` enum('ATIVO','INATIVO') DEFAULT 'ATIVO',
+  `ANOTACOES` text,
+  `QTD_TOTAL` int DEFAULT '0',
+  `QTD_PROCESSADA` int DEFAULT '0',
+  `QTD_SUCESSO` int DEFAULT '0',
+  `QTD_ERRO` int DEFAULT '0',
+  `DATA_IMPORTACAO` datetime DEFAULT CURRENT_TIMESTAMP,
+  `DATA_FINALIZACAO` datetime DEFAULT NULL,
+  `AGENDAMENTO_TIPO` varchar(50) DEFAULT 'IMEDIATO',
+  `DATA_HORA_AGENDADA` datetime DEFAULT NULL,
+  `DIA_MES_AGENDADO` int DEFAULT NULL,
+  `LIMITE_DIARIO` int DEFAULT '0',
+  `PROCESSADOS_HOJE` int DEFAULT '0',
+  `ULTIMO_PROCESSAMENTO` date DEFAULT NULL,
+  `ATUALIZAR_TELEFONE` int DEFAULT '0',
+  `ENVIAR_WHATSAPP` int DEFAULT '0',
+  `SOMENTE_SIMULAR` int DEFAULT '0',
+  `ENVIAR_ARQUIVO_WHATSAPP` int DEFAULT '0',
+  `id_empresa` int DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+==================================================
+
+TABELA: INTEGRACAO_V8_REGISTROCONSULTA
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • CPF_CONSULTADO | Tipo: varchar(14) | OBRIGATÓRIO
+  • CHAVE_ID | Tipo: int | Pode ser Vazio [Chave: MUL]
+  • USUARIO_ID | Tipo: int | Pode ser Vazio
+  • CPF_USUARIO | Tipo: varchar(11) | Pode ser Vazio
+  • DATA_FILA | Tipo: datetime | Pode ser Vazio
+  • STATUS_V8 | Tipo: varchar(50) | Pode ser Vazio
+  • DATA_RETORNO_V8 | Tipo: datetime | Pode ser Vazio
+  • NOME_COMPLETO | Tipo: varchar(255) | Pode ser Vazio
+  • DATA_NASCIMENTO | Tipo: date | Pode ser Vazio
+  • GENERO | Tipo: varchar(20) | Pode ser Vazio
+  • EMAIL | Tipo: varchar(255) | Pode ser Vazio
+  • TELEFONE | Tipo: varchar(20) | Pode ser Vazio
+  • CONSULT_ID | Tipo: varchar(150) | Pode ser Vazio
+  • MENSAGEM_ERRO | Tipo: text | Pode ser Vazio
+  • ULTIMA_ATUALIZACAO | Tipo: datetime | Pode ser Vazio
+  • FONTE_CONSULT_ID | Tipo: varchar(50) | Pode ser Vazio
+  • id_empresa | Tipo: int | Pode ser Vazio
+  • id_cliente | Tipo: int | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `INTEGRACAO_V8_REGISTROCONSULTA` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `CPF_CONSULTADO` varchar(14) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `CHAVE_ID` int DEFAULT NULL,
+  `USUARIO_ID` int DEFAULT NULL,
+  `CPF_USUARIO` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `DATA_FILA` datetime DEFAULT CURRENT_TIMESTAMP,
+  `STATUS_V8` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'SOLICITADO',
+  `DATA_RETORNO_V8` datetime DEFAULT NULL,
+  `NOME_COMPLETO` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `DATA_NASCIMENTO` date DEFAULT NULL,
+  `GENERO` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `EMAIL` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `TELEFONE` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `CONSULT_ID` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `MENSAGEM_ERRO` text COLLATE utf8mb4_unicode_ci,
+  `ULTIMA_ATUALIZACAO` datetime DEFAULT NULL,
+  `FONTE_CONSULT_ID` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `id_empresa` int DEFAULT NULL,
+  `id_cliente` int DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `fk_v8_chave` (`CHAVE_ID`),
+  CONSTRAINT `fk_v8_chave_cons` FOREIGN KEY (`CHAVE_ID`) REFERENCES `INTEGRACAO_V8_CHAVE_ACESSO` (`ID`) ON DELETE SET NULL
+) ENGINE=InnoDB AUTO_INCREMENT=265 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: INTEGRACAO_V8_REGISTROCONSULTA_LOTE
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • LOTE_ID | Tipo: int | OBRIGATÓRIO [Chave: MUL]
+  • CPF | Tipo: varchar(14) | OBRIGATÓRIO
+  • NOME | Tipo: varchar(150) | Pode ser Vazio
+  • NASCIMENTO | Tipo: date | Pode ser Vazio
+  • SEXO | Tipo: varchar(20) | Pode ser Vazio
+  • VALOR_MARGEM | Tipo: decimal(10,2) | Pode ser Vazio
+  • PRAZO | Tipo: int | Pode ser Vazio
+  • VALOR_LIQUIDO | Tipo: decimal(10,2) | Pode ser Vazio
+  • STATUS_V8 | Tipo: varchar(50) | Pode ser Vazio
+  • OBSERVACAO | Tipo: text | Pode ser Vazio
+  • TELEFONES_LOCAL | Tipo: text | Pode ser Vazio
+  • CONSULT_ID | Tipo: varchar(150) | Pode ser Vazio
+  • CONFIG_ID | Tipo: varchar(150) | Pode ser Vazio
+  • SIMULATION_ID | Tipo: varchar(150) | Pode ser Vazio
+  • STATUS_WHATSAPP | Tipo: varchar(50) | Pode ser Vazio
+  • DATA_SIMULACAO | Tipo: datetime | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `INTEGRACAO_V8_REGISTROCONSULTA_LOTE` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `LOTE_ID` int NOT NULL,
+  `CPF` varchar(14) NOT NULL,
+  `NOME` varchar(150) DEFAULT NULL,
+  `NASCIMENTO` date DEFAULT NULL,
+  `SEXO` varchar(20) DEFAULT NULL,
+  `VALOR_MARGEM` decimal(10,2) DEFAULT NULL,
+  `PRAZO` int DEFAULT NULL,
+  `VALOR_LIQUIDO` decimal(10,2) DEFAULT NULL,
+  `STATUS_V8` varchar(50) DEFAULT 'NA FILA',
+  `OBSERVACAO` text,
+  `TELEFONES_LOCAL` text,
+  `CONSULT_ID` varchar(150) DEFAULT NULL,
+  `CONFIG_ID` varchar(150) DEFAULT NULL,
+  `SIMULATION_ID` varchar(150) DEFAULT NULL,
+  `STATUS_WHATSAPP` varchar(50) DEFAULT 'NAO ENVIADO',
+  `DATA_SIMULACAO` datetime DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `fk_lote_v8` (`LOTE_ID`),
+  CONSTRAINT `fk_lote_v8` FOREIGN KEY (`LOTE_ID`) REFERENCES `INTEGRACAO_V8_IMPORTACAO_LOTE` (`ID`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=25506 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+==================================================
+
+TABELA: INTEGRACAO_V8_REGISTRO_PROPOSTA
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • CPF_USUARIO | Tipo: varchar(11) | Pode ser Vazio
+  • CPF_CLIENTE | Tipo: varchar(15) | Pode ser Vazio
+  • NOME_CLIENTE | Tipo: varchar(150) | Pode ser Vazio
+  • CONSIG_ID | Tipo: varchar(100) | Pode ser Vazio
+  • SIMULATION_CONSIG | Tipo: varchar(100) | Pode ser Vazio
+  • NUMERO_PROPOSTA | Tipo: varchar(50) | Pode ser Vazio [Chave: UNI]
+  • PRAZO | Tipo: int | Pode ser Vazio
+  • PARCELA | Tipo: decimal(10,2) | Pode ser Vazio
+  • TAXA | Tipo: decimal(5,2) | Pode ser Vazio
+  • VALOR_LIBERADO | Tipo: decimal(10,2) | Pode ser Vazio
+  • OBSERVACAO_GERAL | Tipo: text | Pode ser Vazio
+  • STATUS_PROPOSTA_V8 | Tipo: varchar(50) | Pode ser Vazio
+  • LINK_PROPOSTA | Tipo: varchar(255) | Pode ser Vazio
+  • DATA_STATUS | Tipo: datetime | Pode ser Vazio
+  • DATA_DIGITACAO | Tipo: datetime | Pode ser Vazio
+  • DATA_APROVACAO | Tipo: datetime | Pode ser Vazio
+  • DATA_PAGAMENTO_CLIENTE | Tipo: datetime | Pode ser Vazio
+  • DATA_CANCELAMENTO | Tipo: datetime | Pode ser Vazio
+  • DATA_PENDENCIA | Tipo: datetime | Pode ser Vazio
+  • OBSERVACAO_PENDENCIA | Tipo: text | Pode ser Vazio
+  • id_usuario | Tipo: int | Pode ser Vazio
+  • id_cliente | Tipo: int | Pode ser Vazio
+  • id_empresa | Tipo: int | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `INTEGRACAO_V8_REGISTRO_PROPOSTA` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `CPF_USUARIO` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `CPF_CLIENTE` varchar(15) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `NOME_CLIENTE` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `CONSIG_ID` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `SIMULATION_CONSIG` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `NUMERO_PROPOSTA` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `PRAZO` int DEFAULT NULL,
+  `PARCELA` decimal(10,2) DEFAULT NULL,
+  `TAXA` decimal(5,2) DEFAULT NULL,
+  `VALOR_LIBERADO` decimal(10,2) DEFAULT NULL,
+  `OBSERVACAO_GERAL` text COLLATE utf8mb4_unicode_ci,
+  `STATUS_PROPOSTA_V8` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `LINK_PROPOSTA` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `DATA_STATUS` datetime DEFAULT NULL,
+  `DATA_DIGITACAO` datetime DEFAULT NULL,
+  `DATA_APROVACAO` datetime DEFAULT NULL,
+  `DATA_PAGAMENTO_CLIENTE` datetime DEFAULT NULL,
+  `DATA_CANCELAMENTO` datetime DEFAULT NULL,
+  `DATA_PENDENCIA` datetime DEFAULT NULL,
+  `OBSERVACAO_PENDENCIA` text COLLATE utf8mb4_unicode_ci,
+  `id_usuario` int DEFAULT NULL,
+  `id_cliente` int DEFAULT NULL,
+  `id_empresa` int DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `NUMERO_PROPOSTA` (`NUMERO_PROPOSTA`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: INTEGRACAO_V8_REGISTRO_PROPOSTA_HISTORICO
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • NUMERO_PROPOSTA | Tipo: varchar(50) | Pode ser Vazio
+  • STATUS | Tipo: varchar(50) | Pode ser Vazio
+  • DATA_STATUS | Tipo: datetime | Pode ser Vazio
+  • OBSERVACAO | Tipo: text | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `INTEGRACAO_V8_REGISTRO_PROPOSTA_HISTORICO` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `NUMERO_PROPOSTA` varchar(50) DEFAULT NULL,
+  `STATUS` varchar(50) DEFAULT NULL,
+  `DATA_STATUS` datetime DEFAULT NULL,
+  `OBSERVACAO` text,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+==================================================
+
+TABELA: INTEGRACAO_V8_REGISTRO_SIMULACAO
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • ID_FILA | Tipo: int | OBRIGATÓRIO
+  • CPF | Tipo: varchar(14) | OBRIGATÓRIO
+  • CONFIG_ID | Tipo: varchar(150) | Pode ser Vazio
+  • DATA_CONFIG_ID | Tipo: datetime | Pode ser Vazio
+  • STATUS_CONFIG_ID | Tipo: varchar(50) | Pode ser Vazio
+  • OBS_CONFIG_ID | Tipo: text | Pode ser Vazio
+  • MARGEM_DISPONIVEL | Tipo: decimal(10,2) | Pode ser Vazio
+  • PRAZOS_DISPONIVEIS | Tipo: text | Pode ser Vazio
+  • TIPO_SIMULACAO | Tipo: varchar(50) | Pode ser Vazio
+  • SIMULATION_ID | Tipo: varchar(150) | Pode ser Vazio
+  • DATA_SIMULATION_ID | Tipo: datetime | Pode ser Vazio
+  • STATUS_SIMULATION_ID | Tipo: varchar(50) | Pode ser Vazio
+  • OBS_SIMULATION_ID | Tipo: text | Pode ser Vazio
+  • VALOR_LIBERADO | Tipo: decimal(10,2) | Pode ser Vazio
+  • VALOR_PARCELA | Tipo: decimal(10,2) | Pode ser Vazio
+  • PRAZO_SIMULACAO | Tipo: int | Pode ser Vazio
+  • ERRO_CONFIG | Tipo: text | Pode ser Vazio
+  • OBS_ERRO_CONFIG | Tipo: text | Pode ser Vazio
+  • DATA_ERRO_CONFIG | Tipo: datetime | Pode ser Vazio
+  • NOME_TABELA | Tipo: varchar(150) | Pode ser Vazio
+  • FONTE_CONSIG_ID | Tipo: varchar(50) | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `INTEGRACAO_V8_REGISTRO_SIMULACAO` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `ID_FILA` int NOT NULL,
+  `CPF` varchar(14) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `CONFIG_ID` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `DATA_CONFIG_ID` datetime DEFAULT NULL,
+  `STATUS_CONFIG_ID` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `OBS_CONFIG_ID` text COLLATE utf8mb4_unicode_ci,
+  `MARGEM_DISPONIVEL` decimal(10,2) DEFAULT NULL,
+  `PRAZOS_DISPONIVEIS` text COLLATE utf8mb4_unicode_ci,
+  `TIPO_SIMULACAO` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `SIMULATION_ID` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `DATA_SIMULATION_ID` datetime DEFAULT NULL,
+  `STATUS_SIMULATION_ID` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `OBS_SIMULATION_ID` text COLLATE utf8mb4_unicode_ci,
+  `VALOR_LIBERADO` decimal(10,2) DEFAULT NULL,
+  `VALOR_PARCELA` decimal(10,2) DEFAULT NULL,
+  `PRAZO_SIMULACAO` int DEFAULT NULL,
+  `ERRO_CONFIG` text COLLATE utf8mb4_unicode_ci,
+  `OBS_ERRO_CONFIG` text COLLATE utf8mb4_unicode_ci,
+  `DATA_ERRO_CONFIG` datetime DEFAULT NULL,
+  `NOME_TABELA` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `FONTE_CONSIG_ID` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=261 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: METAADS_AGENDAMENTOS
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • TEMPLATE_ID | Tipo: int | OBRIGATÓRIO
+  • DIAS_SEMANA | Tipo: varchar(50) | OBRIGATÓRIO
+  • HORARIOS | Tipo: varchar(255) | OBRIGATÓRIO
+  • STATUS_AGENDAMENTO | Tipo: varchar(20) | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `METAADS_AGENDAMENTOS` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `TEMPLATE_ID` int NOT NULL,
+  `DIAS_SEMANA` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `HORARIOS` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `STATUS_AGENDAMENTO` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'ATIVO',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: METAADS_CONFIG
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • META_ACCESS_TOKEN | Tipo: text | Pode ser Vazio
+  • META_AD_ACCOUNT_ID | Tipo: varchar(100) | Pode ser Vazio
+  • HORARIO_AVISO | Tipo: varchar(255) | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `METAADS_CONFIG` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `META_ACCESS_TOKEN` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `META_AD_ACCOUNT_ID` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `HORARIO_AVISO` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT '09:00, 18:00',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: METAADS_MENSAGEM_PADRAO
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • NOME_DA_MENSAGEM | Tipo: varchar(150) | OBRIGATÓRIO
+  • DATA_DA_ATUALIZACAO | Tipo: datetime | Pode ser Vazio
+  • LOCAL_VINCULO | Tipo: varchar(100) | OBRIGATÓRIO
+  • FUNCAO | Tipo: text | Pode ser Vazio
+  • CONTEUDO_DA_MENSAGEM | Tipo: text | OBRIGATÓRIO
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `METAADS_MENSAGEM_PADRAO` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `NOME_DA_MENSAGEM` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `DATA_DA_ATUALIZACAO` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `LOCAL_VINCULO` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `FUNCAO` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `CONTEUDO_DA_MENSAGEM` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: METAADS_REGISTRO_ATIVIDADES
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • VINCULO_ID | Tipo: int | OBRIGATÓRIO
+  • DATA_REGISTRO | Tipo: datetime | Pode ser Vazio
+  • STATUS_DIARIO | Tipo: varchar(50) | OBRIGATÓRIO
+  • OBSERVACAO | Tipo: text | Pode ser Vazio
+  • MENSAGEM_ENVIADA | Tipo: tinyint(1) | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `METAADS_REGISTRO_ATIVIDADES` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `VINCULO_ID` int NOT NULL,
+  `DATA_REGISTRO` datetime DEFAULT CURRENT_TIMESTAMP,
+  `STATUS_DIARIO` varchar(50) NOT NULL,
+  `OBSERVACAO` text,
+  `MENSAGEM_ENVIADA` tinyint(1) DEFAULT '0',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+==================================================
+
+TABELA: METAADS_VINCULOS
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • CPF_CLIENTE | Tipo: varchar(11) | OBRIGATÓRIO [Chave: MUL]
+  • AD_ID | Tipo: varchar(50) | OBRIGATÓRIO
+  • AD_ACCOUNT_ID | Tipo: varchar(50) | Pode ser Vazio
+  • NOME_CONTA_ANUNCIO | Tipo: varchar(100) | Pode ser Vazio
+  • NOME_ANUNCIO | Tipo: varchar(150) | Pode ser Vazio
+  • SALDO_ATUAL | Tipo: decimal(10,2) | Pode ser Vazio
+  • STATUS_VINCULO | Tipo: varchar(20) | Pode ser Vazio
+  • DESCRICAO | Tipo: text | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `METAADS_VINCULOS` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `CPF_CLIENTE` varchar(11) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `AD_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `AD_ACCOUNT_ID` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `NOME_CONTA_ANUNCIO` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `NOME_ANUNCIO` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `SALDO_ATUAL` decimal(10,2) DEFAULT '0.00',
+  `STATUS_VINCULO` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'ATIVO',
+  `DESCRICAO` text COLLATE utf8mb4_unicode_ci,
+  PRIMARY KEY (`ID`),
+  KEY `CPF_CLIENTE` (`CPF_CLIENTE`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: META_REGISTRO_ATIVIDADES
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • VINCULO_ID | Tipo: int | OBRIGATÓRIO
+  • DATA_REGISTRO | Tipo: datetime | Pode ser Vazio
+  • STATUS_DIARIO | Tipo: varchar(50) | OBRIGATÓRIO
+  • OBSERVACAO | Tipo: text | Pode ser Vazio
+  • MENSAGEM_ENVIADA | Tipo: tinyint(1) | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `META_REGISTRO_ATIVIDADES` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `VINCULO_ID` int NOT NULL,
+  `DATA_REGISTRO` datetime DEFAULT CURRENT_TIMESTAMP,
+  `STATUS_DIARIO` varchar(50) NOT NULL,
+  `OBSERVACAO` text,
+  `MENSAGEM_ENVIADA` tinyint(1) DEFAULT '0',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+==================================================
+
+TABELA: OPERACIONAL_TAREFAS
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • ENTREGA_ID | Tipo: int | OBRIGATÓRIO [Chave: MUL]
+  • CLIENTE_NOME | Tipo: varchar(150) | Pode ser Vazio
+  • PRODUTO_NOME | Tipo: varchar(150) | Pode ser Vazio
+  • TITULO_TAREFA | Tipo: varchar(150) | OBRIGATÓRIO
+  • DESCRICAO | Tipo: text | Pode ser Vazio
+  • STATUS_TAREFA | Tipo: varchar(50) | Pode ser Vazio
+  • DATA_CRIACAO | Tipo: datetime | Pode ser Vazio
+  • DATA_VENCIMENTO | Tipo: date | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `OPERACIONAL_TAREFAS` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `ENTREGA_ID` int NOT NULL,
+  `CLIENTE_NOME` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `PRODUTO_NOME` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `TITULO_TAREFA` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `DESCRICAO` text COLLATE utf8mb4_unicode_ci,
+  `STATUS_TAREFA` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT 'Pendente',
+  `DATA_CRIACAO` datetime DEFAULT CURRENT_TIMESTAMP,
+  `DATA_VENCIMENTO` date DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `idx_tarefa_pedido` (`ENTREGA_ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: PROMOSYS_INSS_CLIENTE_FINANCEIRO_EXTRATO
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • CPF_CLIENTE | Tipo: varchar(11) | OBRIGATÓRIO [Chave: MUL]
+  • GRUPO_WHATS | Tipo: varchar(100) | Pode ser Vazio
+  • DATA_HORA | Tipo: datetime | OBRIGATÓRIO
+  • TIPO | Tipo: enum('CREDITO','DEBITO') | OBRIGATÓRIO
+  • MOTIVO | Tipo: varchar(255) | OBRIGATÓRIO
+  • VALOR | Tipo: decimal(10,2) | OBRIGATÓRIO
+  • SALDO_ANTERIOR | Tipo: decimal(10,2) | OBRIGATÓRIO
+  • SALDO_ATUAL | Tipo: decimal(10,2) | OBRIGATÓRIO
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `PROMOSYS_INSS_CLIENTE_FINANCEIRO_EXTRATO` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `CPF_CLIENTE` varchar(11) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `GRUPO_WHATS` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `DATA_HORA` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `TIPO` enum('CREDITO','DEBITO') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `MOTIVO` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `VALOR` decimal(10,2) NOT NULL,
+  `SALDO_ANTERIOR` decimal(10,2) NOT NULL,
+  `SALDO_ATUAL` decimal(10,2) NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `idx_promosys_extrato_cpf` (`CPF_CLIENTE`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: SISTEMA_GRUPOS_USUARIO
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • NOME_GRUPO | Tipo: varchar(50) | OBRIGATÓRIO [Chave: UNI]
+  • STATUS | Tipo: enum('ATIVO','INATIVO') | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `SISTEMA_GRUPOS_USUARIO` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `NOME_GRUPO` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `STATUS` enum('ATIVO','INATIVO') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'ATIVO',
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `uk_nome_grupo` (`NOME_GRUPO`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: WAPI_CONFIG
+--------------------------------------------------
+[COLUNAS]
+  • INSTANCE_ID | Tipo: varchar(100) | OBRIGATÓRIO [Chave: PRI]
+  • ATIVO_GLOBAL | Tipo: tinyint(1) | Pode ser Vazio
+  • SCHEDULE_JSON | Tipo: text | Pode ser Vazio
+  • MENSAGEM_PADRAO | Tipo: text | Pode ser Vazio
+  • GRUPO_AVISO | Tipo: varchar(100) | Pode ser Vazio
+  • CHATBOT_JSON | Tipo: text | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `WAPI_CONFIG` (
+  `INSTANCE_ID` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ATIVO_GLOBAL` tinyint(1) DEFAULT '0',
+  `SCHEDULE_JSON` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `MENSAGEM_PADRAO` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `GRUPO_AVISO` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `CHATBOT_JSON` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  PRIMARY KEY (`INSTANCE_ID`),
+  CONSTRAINT `fk_wapi_config_instancia` FOREIGN KEY (`INSTANCE_ID`) REFERENCES `WAPI_INSTANCIAS` (`INSTANCE_ID`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: WAPI_CONFIG_BOT_FATOR
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • TOKEN_FATOR | Tipo: varchar(255) | Pode ser Vazio
+  • CMD_CONSULTA | Tipo: varchar(50) | Pode ser Vazio
+  • CMD_COMPLETO | Tipo: varchar(50) | Pode ser Vazio
+  • CMD_SALDO | Tipo: varchar(50) | Pode ser Vazio
+  • CMD_EXTRATO | Tipo: varchar(50) | Pode ser Vazio
+  • CMD_MENU | Tipo: varchar(50) | Pode ser Vazio
+  • CMD_LISTA | Tipo: varchar(50) | Pode ser Vazio
+  • CMD_SUPORTE | Tipo: varchar(50) | Pode ser Vazio
+  • WAPI_INSTANCE | Tipo: varchar(100) | Pode ser Vazio
+  • WAPI_TOKEN | Tipo: varchar(255) | Pode ser Vazio
+  • TOKEN_MANUAL | Tipo: varchar(255) | Pode ser Vazio
+  • TOKEN_LOTE | Tipo: varchar(255) | Pode ser Vazio
+  • TOKEN_CSV | Tipo: varchar(255) | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `WAPI_CONFIG_BOT_FATOR` (
+  `ID` int NOT NULL DEFAULT '1',
+  `TOKEN_FATOR` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT 'F8QW-C1YIJCE-5227693-RXT-YC1H',
+  `CMD_CONSULTA` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT '#CPF:',
+  `CMD_COMPLETO` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT '#CPF/COMPLETO:',
+  `CMD_SALDO` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT '#CPF/SALDO',
+  `CMD_EXTRATO` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT '#CPF/EXTRATO',
+  `CMD_MENU` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT '#MENU',
+  `CMD_LISTA` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT '#CPF/CONSULTAS',
+  `CMD_SUPORTE` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT '#SUPORTE',
+  `WAPI_INSTANCE` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT '',
+  `WAPI_TOKEN` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '',
+  `TOKEN_MANUAL` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '7DTF-6P4-49328-IG7-PEND',
+  `TOKEN_LOTE` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT 'F8QW-C1YIJCE-5227693-RXT-YC1H',
+  `TOKEN_CSV` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '7O3M-3IB85AB-7555101-JE6-QSD7',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: WAPI_INSTANCIAS
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • NOME | Tipo: varchar(50) | OBRIGATÓRIO
+  • TELEFONE | Tipo: varchar(20) | Pode ser Vazio
+  • VENCIMENTO | Tipo: varchar(20) | Pode ser Vazio
+  • INSTANCE_ID | Tipo: varchar(100) | OBRIGATÓRIO [Chave: UNI]
+  • TOKEN | Tipo: varchar(255) | OBRIGATÓRIO
+  • STATUS | Tipo: varchar(30) | Pode ser Vazio
+  • TIPO | Tipo: varchar(30) | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `WAPI_INSTANCIAS` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `NOME` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `TELEFONE` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `VENCIMENTO` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `INSTANCE_ID` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `TOKEN` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `STATUS` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'Desconhecido',
+  `TIPO` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `uk_instance_id` (`INSTANCE_ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: WAPI_LOGS
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • DATA_HORA | Tipo: datetime | OBRIGATÓRIO
+  • INSTANCE_ID | Tipo: varchar(100) | Pode ser Vazio
+  • GRUPO_ID | Tipo: varchar(100) | Pode ser Vazio
+  • TELEFONE | Tipo: varchar(30) | Pode ser Vazio
+  • NOME | Tipo: varchar(100) | Pode ser Vazio
+  • MENSAGEM | Tipo: text | Pode ser Vazio
+  • STATUS | Tipo: varchar(50) | Pode ser Vazio
+  • CPF | Tipo: varchar(14) | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `WAPI_LOGS` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `DATA_HORA` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `INSTANCE_ID` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `GRUPO_ID` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'MSG INDIVIDUAL',
+  `TELEFONE` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `NOME` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `MENSAGEM` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `STATUS` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `CPF` varchar(14) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=11722 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: WAPI_TEMPLATES
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • NOME_MODELO | Tipo: varchar(100) | OBRIGATÓRIO
+  • OBJETIVO | Tipo: varchar(100) | Pode ser Vazio
+  • CONTEUDO | Tipo: text | OBRIGATÓRIO
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `WAPI_TEMPLATES` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `NOME_MODELO` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `OBJETIVO` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `CONTEUDO` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: WHATSAPP_OFICIAL_CAMPANHA_LOTE
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • ID_USUARIO | Tipo: int | Pode ser Vazio [Chave: MUL]
+  • CPF_USUARIO | Tipo: varchar(11) | Pode ser Vazio
+  • NOME_USUARIO | Tipo: varchar(150) | Pode ser Vazio
+  • ID_CLIENTE | Tipo: int | Pode ser Vazio
+  • ID_EMPRESA | Tipo: int | Pode ser Vazio [Chave: MUL]
+  • NOME_CAMPANHA | Tipo: varchar(150) | OBRIGATÓRIO [Chave: MUL]
+  • PHONE_NUMBER_ID | Tipo: varchar(100) | OBRIGATÓRIO
+  • TEMPLATE_NAME | Tipo: varchar(150) | OBRIGATÓRIO
+  • STATUS_IMPORTACAO | Tipo: varchar(50) | Pode ser Vazio
+  • DATA_IMPORTACAO | Tipo: datetime | Pode ser Vazio
+  • NUMERO | Tipo: varchar(20) | OBRIGATÓRIO
+  • NOME | Tipo: varchar(150) | Pode ser Vazio
+  • CPF | Tipo: varchar(14) | Pode ser Vazio
+  • MARGEM | Tipo: decimal(10,2) | Pode ser Vazio
+  • PARCELA | Tipo: decimal(10,2) | Pode ser Vazio
+  • PRAZO | Tipo: int | Pode ser Vazio
+  • VALOR_LIQUIDO | Tipo: decimal(10,2) | Pode ser Vazio
+  • DATA_STATUS | Tipo: datetime | Pode ser Vazio
+  • STATUS_DISPARO | Tipo: varchar(50) | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `WHATSAPP_OFICIAL_CAMPANHA_LOTE` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `ID_USUARIO` int DEFAULT NULL,
+  `CPF_USUARIO` varchar(11) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `NOME_USUARIO` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ID_CLIENTE` int DEFAULT NULL,
+  `ID_EMPRESA` int DEFAULT NULL,
+  `NOME_CAMPANHA` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `PHONE_NUMBER_ID` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Remetente Meta',
+  `TEMPLATE_NAME` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Template aprovado',
+  `STATUS_IMPORTACAO` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'CONCLUIDO',
+  `DATA_IMPORTACAO` datetime DEFAULT CURRENT_TIMESTAMP,
+  `NUMERO` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `NOME` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `CPF` varchar(14) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `MARGEM` decimal(10,2) DEFAULT '0.00',
+  `PARCELA` decimal(10,2) DEFAULT '0.00',
+  `PRAZO` int DEFAULT '0',
+  `VALOR_LIQUIDO` decimal(10,2) DEFAULT '0.00',
+  `DATA_STATUS` datetime DEFAULT NULL,
+  `STATUS_DISPARO` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'PENDENTE' COMMENT 'PENDENTE, PROCESSANDO, ENVIADO, FALHA',
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `uk_camp_numero` (`NOME_CAMPANHA`,`NUMERO`),
+  KEY `idx_empresa_camp` (`ID_EMPRESA`),
+  KEY `idx_usuario_camp` (`ID_USUARIO`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: WHATSAPP_OFICIAL_CONFIG
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • PHONE_NUMBER_ID | Tipo: varchar(100) | Pode ser Vazio
+  • WABA_ID | Tipo: varchar(100) | Pode ser Vazio
+  • PERMANENT_TOKEN | Tipo: text | Pode ser Vazio
+  • WEBHOOK_VERIFY_TOKEN | Tipo: varchar(100) | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `WHATSAPP_OFICIAL_CONFIG` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `PHONE_NUMBER_ID` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'ID do Número de Telefone',
+  `WABA_ID` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'ID da Conta do WhatsApp Business',
+  `PERMANENT_TOKEN` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci COMMENT 'Token de Acesso Permanente',
+  `WEBHOOK_VERIFY_TOKEN` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'meu_crm_senha_webhook' COMMENT 'Senha para validar o Webhook',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: WHATSAPP_OFICIAL_CONTAS
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • CPF_USUARIO | Tipo: varchar(11) | OBRIGATÓRIO [Chave: UNI]
+  • WABA_ID | Tipo: varchar(100) | OBRIGATÓRIO
+  • PERMANENT_TOKEN | Tipo: text | OBRIGATÓRIO
+  • WEBHOOK_VERIFY_TOKEN | Tipo: varchar(100) | OBRIGATÓRIO
+  • id_usuario | Tipo: int | Pode ser Vazio
+  • id_empresa | Tipo: int | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `WHATSAPP_OFICIAL_CONTAS` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `CPF_USUARIO` varchar(11) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Usuário dono da credencial',
+  `WABA_ID` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'ID da Conta do WhatsApp Business',
+  `PERMANENT_TOKEN` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Token de Acesso Permanente',
+  `WEBHOOK_VERIFY_TOKEN` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Senha única do webhook para este usuário',
+  `id_usuario` int DEFAULT NULL,
+  `id_empresa` int DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `uk_cpf_usuario` (`CPF_USUARIO`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: WHATSAPP_OFICIAL_HISTORICO
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • MESSAGE_ID | Tipo: varchar(255) | Pode ser Vazio [Chave: MUL]
+  • TELEFONE_CLIENTE | Tipo: varchar(20) | OBRIGATÓRIO [Chave: MUL]
+  • PHONE_NUMBER_ID | Tipo: varchar(100) | Pode ser Vazio
+  • DIRECAO | Tipo: enum('ENVIADA','RECEBIDA') | OBRIGATÓRIO
+  • TIPO_MENSAGEM | Tipo: varchar(50) | Pode ser Vazio
+  • CONTEUDO | Tipo: text | Pode ser Vazio
+  • STATUS_ENVIO | Tipo: varchar(50) | Pode ser Vazio
+  • DATA_HORA | Tipo: datetime | Pode ser Vazio
+  • ERRO_DETALHE | Tipo: text | Pode ser Vazio
+  • id_usuario | Tipo: int | Pode ser Vazio
+  • id_empresa | Tipo: int | Pode ser Vazio
+  • lote_id | Tipo: int | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `WHATSAPP_OFICIAL_HISTORICO` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `MESSAGE_ID` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'ID da mensagem gerado pela Meta (wamid...)',
+  `TELEFONE_CLIENTE` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Número do cliente com DDI e DDD',
+  `PHONE_NUMBER_ID` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `DIRECAO` enum('ENVIADA','RECEBIDA') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `TIPO_MENSAGEM` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'text' COMMENT 'text, template, image, etc',
+  `CONTEUDO` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `STATUS_ENVIO` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'enviada' COMMENT 'sent, delivered, read, failed, received',
+  `DATA_HORA` datetime DEFAULT CURRENT_TIMESTAMP,
+  `ERRO_DETALHE` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `id_usuario` int DEFAULT NULL,
+  `id_empresa` int DEFAULT NULL,
+  `lote_id` int DEFAULT NULL COMMENT 'ID da tabela CAMPANHA_LOTE (se aplicavel)',
+  PRIMARY KEY (`ID`),
+  KEY `idx_telefone_whats` (`TELEFONE_CLIENTE`),
+  KEY `idx_message_id_whats` (`MESSAGE_ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: WHATSAPP_OFICIAL_NUMEROS
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • CONTA_ID | Tipo: int | OBRIGATÓRIO [Chave: MUL]
+  • PHONE_NUMBER_ID | Tipo: varchar(100) | OBRIGATÓRIO [Chave: UNI]
+  • NOME_NUMERO | Tipo: varchar(100) | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `WHATSAPP_OFICIAL_NUMEROS` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `CONTA_ID` int NOT NULL COMMENT 'ID da tabela WHATSAPP_OFICIAL_CONTAS',
+  `PHONE_NUMBER_ID` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'ID numérico do telefone na Meta',
+  `NOME_NUMERO` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'Número Padrão' COMMENT 'Apelido para facilitar no painel',
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `uk_phone_id` (`PHONE_NUMBER_ID`),
+  KEY `fk_whats_conta_numero` (`CONTA_ID`),
+  CONSTRAINT `fk_whats_conta_numero` FOREIGN KEY (`CONTA_ID`) REFERENCES `WHATSAPP_OFICIAL_CONTAS` (`ID`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: BANCO_DE_DADOS_INSS_CONTRATOS
+--------------------------------------------------
+[COLUNAS]
+  • id | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • cpf | Tipo: char(11) | OBRIGATÓRIO [Chave: MUL]
+  • matricula_nb | Tipo: varchar(20) | OBRIGATÓRIO
+  • contrato | Tipo: varchar(50) | OBRIGATÓRIO
+  • banco | Tipo: varchar(100) | Pode ser Vazio
+  • tipo_emprestimo | Tipo: varchar(20) | Pode ser Vazio
+  • valor_emprestimo | Tipo: decimal(10,2) | Pode ser Vazio
+  • valor_parcela | Tipo: decimal(10,2) | Pode ser Vazio
+  • prazo | Tipo: int | Pode ser Vazio
+  • parcelas_pagas | Tipo: int | Pode ser Vazio
+  • inicio_desconto | Tipo: varchar(10) | Pode ser Vazio
+  • data_averbacao | Tipo: date | Pode ser Vazio
+  • situacao | Tipo: varchar(50) | Pode ser Vazio
+  • taxa_juros | Tipo: decimal(10,4) | Pode ser Vazio
+  • taxa_msg | Tipo: varchar(255) | Pode ser Vazio
+  • saldo_quitacao | Tipo: decimal(10,2) | Pode ser Vazio
+  • valor_liberado_refin | Tipo: decimal(10,2) | Pode ser Vazio
+  • data_atualizacao | Tipo: datetime | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `banco_de_Dados_inss_contratos` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `cpf` char(11) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `matricula_nb` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `contrato` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `banco` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `tipo_emprestimo` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `valor_emprestimo` decimal(10,2) DEFAULT '0.00',
+  `valor_parcela` decimal(10,2) DEFAULT '0.00',
+  `prazo` int DEFAULT '0',
+  `parcelas_pagas` int DEFAULT '0',
+  `inicio_desconto` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `data_averbacao` date DEFAULT NULL,
+  `situacao` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `taxa_juros` decimal(10,4) DEFAULT '0.0000',
+  `taxa_msg` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `saldo_quitacao` decimal(10,2) DEFAULT '0.00',
+  `valor_liberado_refin` decimal(10,2) DEFAULT '0.00',
+  `data_atualizacao` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_cpf_mat_contrato` (`cpf`,`matricula_nb`,`contrato`),
+  KEY `idx_cpf_contrato` (`cpf`)
+) ENGINE=InnoDB AUTO_INCREMENT=133 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: BANCO_DE_DADOS_INSS_DADOS_CADASTRAIS
+--------------------------------------------------
+[COLUNAS]
+  • id | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • cpf | Tipo: char(11) | OBRIGATÓRIO [Chave: MUL]
+  • matricula_nb | Tipo: varchar(20) | OBRIGATÓRIO
+  • especie_beneficio | Tipo: varchar(100) | Pode ser Vazio
+  • esp_consignavel | Tipo: varchar(2) | Pode ser Vazio
+  • situacao_beneficio | Tipo: varchar(50) | Pode ser Vazio
+  • bloqueio_emprestimo | Tipo: varchar(10) | Pode ser Vazio
+  • dib | Tipo: varchar(15) | Pode ser Vazio
+  • representante_legal | Tipo: varchar(10) | Pode ser Vazio
+  • pensao_alimenticia | Tipo: varchar(10) | Pode ser Vazio
+  • margem_calculada | Tipo: decimal(10,2) | Pode ser Vazio
+  • margem_cartao | Tipo: decimal(10,2) | Pode ser Vazio
+  • margem_cartao_ben | Tipo: decimal(10,2) | Pode ser Vazio
+  • valor_rcc | Tipo: decimal(10,2) | Pode ser Vazio
+  • valor_rmc | Tipo: decimal(10,2) | Pode ser Vazio
+  • margem_cartao_loas | Tipo: decimal(10,2) | Pode ser Vazio
+  • valor_base_calculo | Tipo: decimal(10,2) | Pode ser Vazio
+  • valor_consignado | Tipo: decimal(10,2) | Pode ser Vazio
+  • valor_liberado_total | Tipo: decimal(10,2) | Pode ser Vazio
+  • contribuicao_nome | Tipo: varchar(150) | Pode ser Vazio
+  • contribuicao_valor | Tipo: decimal(10,2) | Pode ser Vazio
+  • representante_cpf | Tipo: varchar(15) | Pode ser Vazio
+  • representante_nome | Tipo: varchar(150) | Pode ser Vazio
+  • banco_pagamento | Tipo: varchar(100) | Pode ser Vazio
+  • agencia_pagamento | Tipo: varchar(100) | Pode ser Vazio
+  • conta_pagamento | Tipo: varchar(50) | Pode ser Vazio
+  • forma_pagamento | Tipo: varchar(50) | Pode ser Vazio
+  • data_atualizacao | Tipo: datetime | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `banco_de_Dados_inss_dados_cadastrais` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `cpf` char(11) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `matricula_nb` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `especie_beneficio` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `esp_consignavel` varchar(2) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `situacao_beneficio` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `bloqueio_emprestimo` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `dib` varchar(15) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `representante_legal` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `pensao_alimenticia` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `margem_calculada` decimal(10,2) DEFAULT '0.00',
+  `margem_cartao` decimal(10,2) DEFAULT '0.00',
+  `margem_cartao_ben` decimal(10,2) DEFAULT '0.00',
+  `valor_rcc` decimal(10,2) DEFAULT '0.00',
+  `valor_rmc` decimal(10,2) DEFAULT '0.00',
+  `margem_cartao_loas` decimal(10,2) DEFAULT '0.00',
+  `valor_base_calculo` decimal(10,2) DEFAULT '0.00',
+  `valor_consignado` decimal(10,2) DEFAULT '0.00',
+  `valor_liberado_total` decimal(10,2) DEFAULT '0.00',
+  `contribuicao_nome` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contribuicao_valor` decimal(10,2) DEFAULT '0.00',
+  `representante_cpf` varchar(15) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `representante_nome` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `banco_pagamento` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `agencia_pagamento` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `conta_pagamento` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `forma_pagamento` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `data_atualizacao` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_cpf_matricula` (`cpf`,`matricula_nb`),
+  KEY `idx_cpf_inss` (`cpf`)
+) ENGINE=InnoDB AUTO_INCREMENT=110099 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: BANCO_DE_DADOS_RETORNO_CPF_FATORCONFERI
+--------------------------------------------------
+[COLUNAS]
+  • id | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • data_consulta | Tipo: datetime | Pode ser Vazio
+  • cpf | Tipo: char(11) | OBRIGATÓRIO [Chave: UNI]
+  • nome | Tipo: varchar(150) | Pode ser Vazio
+  • idade | Tipo: varchar(3) | Pode ser Vazio
+  • mae | Tipo: varchar(150) | Pode ser Vazio
+  • nascimento | Tipo: date | Pode ser Vazio
+  • tel_1 | Tipo: varchar(20) | Pode ser Vazio
+  • tel_2 | Tipo: varchar(20) | Pode ser Vazio
+  • tel_3 | Tipo: varchar(20) | Pode ser Vazio
+  • tel_4 | Tipo: varchar(20) | Pode ser Vazio
+  • tel_5 | Tipo: varchar(20) | Pode ser Vazio
+  • tel_6 | Tipo: varchar(20) | Pode ser Vazio
+  • tel_7 | Tipo: varchar(20) | Pode ser Vazio
+  • tel_8 | Tipo: varchar(20) | Pode ser Vazio
+  • tel_9 | Tipo: varchar(20) | Pode ser Vazio
+  • tel_10 | Tipo: varchar(20) | Pode ser Vazio
+  • empresa | Tipo: varchar(150) | Pode ser Vazio
+  • cnpj_admissao | Tipo: varchar(20) | Pode ser Vazio
+  • salario | Tipo: varchar(50) | Pode ser Vazio
+  • profissao | Tipo: varchar(150) | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `banco_de_dados_retorno_CPF_fatorconferi` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `data_consulta` datetime DEFAULT CURRENT_TIMESTAMP,
+  `cpf` char(11) NOT NULL,
+  `nome` varchar(150) DEFAULT NULL,
+  `idade` varchar(3) DEFAULT NULL,
+  `mae` varchar(150) DEFAULT NULL,
+  `nascimento` date DEFAULT NULL,
+  `tel_1` varchar(20) DEFAULT NULL,
+  `tel_2` varchar(20) DEFAULT NULL,
+  `tel_3` varchar(20) DEFAULT NULL,
+  `tel_4` varchar(20) DEFAULT NULL,
+  `tel_5` varchar(20) DEFAULT NULL,
+  `tel_6` varchar(20) DEFAULT NULL,
+  `tel_7` varchar(20) DEFAULT NULL,
+  `tel_8` varchar(20) DEFAULT NULL,
+  `tel_9` varchar(20) DEFAULT NULL,
+  `tel_10` varchar(20) DEFAULT NULL,
+  `empresa` varchar(150) DEFAULT NULL,
+  `cnpj_admissao` varchar(20) DEFAULT NULL,
+  `salario` varchar(50) DEFAULT NULL,
+  `profissao` varchar(150) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `idx_cpf_fator` (`cpf`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+==================================================
+
+TABELA: BASE_DE_DADOS_REGISTRO_IMPORTACAO
+--------------------------------------------------
+[COLUNAS]
+  • id | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • nome_usuario | Tipo: varchar(100) | OBRIGATÓRIO
+  • nome_importacao | Tipo: varchar(150) | OBRIGATÓRIO
+  • data_importacao | Tipo: datetime | Pode ser Vazio
+  • qtd_novos | Tipo: int | Pode ser Vazio
+  • qtd_atualizados | Tipo: int | Pode ser Vazio
+  • qtd_erros | Tipo: int | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `base_de_dados_registro_importacao` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nome_usuario` varchar(100) NOT NULL,
+  `nome_importacao` varchar(150) NOT NULL,
+  `data_importacao` datetime DEFAULT CURRENT_TIMESTAMP,
+  `qtd_novos` int DEFAULT '0',
+  `qtd_atualizados` int DEFAULT '0',
+  `qtd_erros` int DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+==================================================
+
+TABELA: CADASTRO_CLIENTE_CONSIGNADO_DADOS_CADASTRAIS
+--------------------------------------------------
+[COLUNAS]
+  • cpf | Tipo: varchar(11) | OBRIGATÓRIO [Chave: PRI]
+  • nome_completo | Tipo: varchar(150) | Pode ser Vazio
+  • nascimento | Tipo: date | Pode ser Vazio
+  • idade | Tipo: int | Pode ser Vazio
+  • nome_mae | Tipo: varchar(150) | Pode ser Vazio
+  • nome_pai | Tipo: varchar(150) | Pode ser Vazio
+  • sexo | Tipo: varchar(20) | Pode ser Vazio
+  • telefone_celular | Tipo: varchar(20) | Pode ser Vazio
+  • email | Tipo: varchar(150) | Pode ser Vazio
+  • id_whatsapp | Tipo: varchar(50) | Pode ser Vazio
+  • rua | Tipo: varchar(150) | Pode ser Vazio
+  • numero | Tipo: varchar(20) | Pode ser Vazio
+  • complemento | Tipo: varchar(100) | Pode ser Vazio
+  • bairro | Tipo: varchar(100) | Pode ser Vazio
+  • cidade | Tipo: varchar(100) | Pode ser Vazio
+  • uf | Tipo: char(2) | Pode ser Vazio
+  • rg | Tipo: varchar(30) | Pode ser Vazio
+  • data_exp_rg | Tipo: date | Pode ser Vazio
+  • tipo_pix | Tipo: varchar(30) | Pode ser Vazio
+  • chave_pix | Tipo: varchar(150) | Pode ser Vazio
+  • data_cadastro | Tipo: datetime | Pode ser Vazio
+  • ultima_atualizacao | Tipo: datetime | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `cadastro_cliente_consignado_dados_cadastrais` (
+  `cpf` varchar(11) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nome_completo` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `nascimento` date DEFAULT NULL,
+  `idade` int DEFAULT NULL,
+  `nome_mae` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `nome_pai` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sexo` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `telefone_celular` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `id_whatsapp` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `rua` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `numero` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `complemento` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `bairro` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `cidade` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `uf` char(2) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `rg` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `data_exp_rg` date DEFAULT NULL,
+  `tipo_pix` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `chave_pix` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `data_cadastro` datetime DEFAULT CURRENT_TIMESTAMP,
+  `ultima_atualizacao` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`cpf`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: DADOS_CADASTRAIS
+--------------------------------------------------
+[COLUNAS]
+  • cpf | Tipo: char(11) | OBRIGATÓRIO [Chave: PRI]
+  • nome | Tipo: varchar(150) | Pode ser Vazio [Chave: MUL]
+  • sexo | Tipo: varchar(20) | Pode ser Vazio
+  • nascimento | Tipo: date | Pode ser Vazio
+  • idade | Tipo: varchar(3) | Pode ser Vazio
+  • nome_mae | Tipo: varchar(150) | Pode ser Vazio
+  • nome_pai | Tipo: varchar(150) | Pode ser Vazio
+  • rg | Tipo: varchar(20) | Pode ser Vazio
+  • cnh | Tipo: varchar(20) | Pode ser Vazio
+  • carteira_profissional | Tipo: varchar(50) | Pode ser Vazio
+  • agrupamento | Tipo: varchar(50) | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `dados_cadastrais` (
+  `cpf` char(11) NOT NULL,
+  `nome` varchar(150) DEFAULT NULL,
+  `sexo` varchar(20) DEFAULT NULL,
+  `nascimento` date DEFAULT NULL,
+  `idade` varchar(3) DEFAULT NULL,
+  `nome_mae` varchar(150) DEFAULT NULL,
+  `nome_pai` varchar(150) DEFAULT NULL,
+  `rg` varchar(20) DEFAULT NULL,
+  `cnh` varchar(20) DEFAULT NULL,
+  `carteira_profissional` varchar(50) DEFAULT NULL,
+  `agrupamento` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`cpf`),
+  KEY `idx_nome` (`nome`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+==================================================
+
+TABELA: DADOS_CADASTRAIS_LOG_RODAPE
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • CPF_CLIENTE | Tipo: varchar(14) | OBRIGATÓRIO
+  • NOME_USUARIO | Tipo: varchar(150) | OBRIGATÓRIO
+  • DATA_REGISTRO | Tipo: datetime | Pode ser Vazio
+  • TEXTO_REGISTRO | Tipo: text | Pode ser Vazio
+  • id_usuario | Tipo: int | Pode ser Vazio
+  • id_empresa | Tipo: int | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `dados_cadastrais_log_rodape` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `CPF_CLIENTE` varchar(14) NOT NULL,
+  `NOME_USUARIO` varchar(150) NOT NULL,
+  `DATA_REGISTRO` datetime DEFAULT CURRENT_TIMESTAMP,
+  `TEXTO_REGISTRO` text,
+  `id_usuario` int DEFAULT NULL,
+  `id_empresa` int DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=87 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+==================================================
+
+TABELA: EMAILS
+--------------------------------------------------
+[COLUNAS]
+  • id | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • cpf | Tipo: char(11) | Pode ser Vazio [Chave: MUL]
+  • email | Tipo: varchar(150) | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `emails` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `cpf` char(11) DEFAULT NULL,
+  `email` varchar(150) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `idx_cpf_email` (`cpf`),
+  CONSTRAINT `fk_email_cpf` FOREIGN KEY (`cpf`) REFERENCES `dados_cadastrais` (`cpf`) ON DELETE CASCADE,
+  CONSTRAINT `chk_email` CHECK ((`email` like _utf8mb4'%@%'))
+) ENGINE=InnoDB AUTO_INCREMENT=667954 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+==================================================
+
+TABELA: ENDERECOS
+--------------------------------------------------
+[COLUNAS]
+  • id | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • cpf | Tipo: char(11) | Pode ser Vazio [Chave: MUL]
+  • logradouro | Tipo: text | Pode ser Vazio
+  • numero | Tipo: varchar(20) | Pode ser Vazio
+  • bairro | Tipo: varchar(100) | Pode ser Vazio
+  • cidade | Tipo: varchar(100) | Pode ser Vazio [Chave: MUL]
+  • uf | Tipo: char(2) | Pode ser Vazio [Chave: MUL]
+  • cep | Tipo: char(8) | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `enderecos` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `cpf` char(11) DEFAULT NULL,
+  `logradouro` text,
+  `numero` varchar(20) DEFAULT NULL,
+  `bairro` varchar(100) DEFAULT NULL,
+  `cidade` varchar(100) DEFAULT NULL,
+  `uf` char(2) DEFAULT NULL,
+  `cep` char(8) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `idx_cpf_endereco` (`cpf`),
+  KEY `idx_cidade` (`cidade`),
+  KEY `idx_uf` (`uf`),
+  CONSTRAINT `fk_end_cpf` FOREIGN KEY (`cpf`) REFERENCES `dados_cadastrais` (`cpf`) ON DELETE CASCADE,
+  CONSTRAINT `chk_uf` CHECK ((`uf` in (_utf8mb4'AC',_utf8mb4'AL',_utf8mb4'AP',_utf8mb4'AM',_utf8mb4'BA',_utf8mb4'CE',_utf8mb4'DF',_utf8mb4'ES',_utf8mb4'GO',_utf8mb4'MA',_utf8mb4'MT',_utf8mb4'MS',_utf8mb4'MG',_utf8mb4'PA',_utf8mb4'PB',_utf8mb4'PR',_utf8mb4'PE',_utf8mb4'PI',_utf8mb4'RJ',_utf8mb4'RN',_utf8mb4'RS',_utf8mb4'RO',_utf8mb4'RR',_utf8mb4'SC',_utf8mb4'SP',_utf8mb4'SE',_utf8mb4'TO')))
+) ENGINE=InnoDB AUTO_INCREMENT=1446949 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+==================================================
+
+TABELA: FATORCONFERI_CLIENTE_FINANCEIRO_EXTRATO
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • CPF_CLIENTE | Tipo: varchar(11) | OBRIGATÓRIO [Chave: MUL]
+  • GRUPO_WHATS | Tipo: varchar(100) | Pode ser Vazio
+  • DATA_HORA | Tipo: datetime | OBRIGATÓRIO
+  • TIPO | Tipo: enum('CREDITO','DEBITO') | OBRIGATÓRIO
+  • MOTIVO | Tipo: varchar(255) | OBRIGATÓRIO
+  • VALOR | Tipo: decimal(10,2) | OBRIGATÓRIO
+  • SALDO_ANTERIOR | Tipo: decimal(10,2) | OBRIGATÓRIO
+  • SALDO_ATUAL | Tipo: decimal(10,2) | OBRIGATÓRIO
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `fatorconferi_CLIENTE_FINANCEIRO_EXTRATO` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `CPF_CLIENTE` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `GRUPO_WHATS` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `DATA_HORA` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `TIPO` enum('CREDITO','DEBITO') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `MOTIVO` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `VALOR` decimal(10,2) NOT NULL,
+  `SALDO_ANTERIOR` decimal(10,2) NOT NULL,
+  `SALDO_ATUAL` decimal(10,2) NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `CPF_CLIENTE` (`CPF_CLIENTE`)
+) ENGINE=InnoDB AUTO_INCREMENT=4592 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: FATORCONFERI_BANCO_DE_DADOS_RETORNO_HISTORICO
+--------------------------------------------------
+[COLUNAS]
+  • id | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • cpf | Tipo: char(11) | OBRIGATÓRIO [Chave: MUL]
+  • nome_cliente | Tipo: varchar(150) | Pode ser Vazio
+  • data_consulta | Tipo: datetime | Pode ser Vazio
+  • origem_consulta | Tipo: varchar(50) | OBRIGATÓRIO
+  • custo_consulta | Tipo: decimal(10,2) | Pode ser Vazio
+  • fonte_consulta | Tipo: varchar(50) | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `fatorconferi_banco_de_dados_retorno_historico` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `cpf` char(11) NOT NULL,
+  `nome_cliente` varchar(150) DEFAULT NULL,
+  `data_consulta` datetime DEFAULT CURRENT_TIMESTAMP,
+  `origem_consulta` varchar(50) NOT NULL COMMENT 'API ou CACHE',
+  `custo_consulta` decimal(10,2) DEFAULT '0.00',
+  `fonte_consulta` varchar(50) DEFAULT 'PAINEL_WEB',
+  PRIMARY KEY (`id`),
+  KEY `idx_cpf_historico_fator` (`cpf`)
+) ENGINE=InnoDB AUTO_INCREMENT=6742 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+==================================================
+
+TABELA: FATORCONFERI_BANCO_DE_DADOS_RETORNO_IMPORTACAO
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • NOME_PROCESSAMENTO | Tipo: varchar(150) | OBRIGATÓRIO
+  • USUARIO_ID | Tipo: int | OBRIGATÓRIO
+  • NOME_USUARIO | Tipo: varchar(150) | Pode ser Vazio
+  • NOME_CLIENTE | Tipo: varchar(150) | Pode ser Vazio
+  • CPF_COBRANCA | Tipo: varchar(20) | Pode ser Vazio
+  • CUSTO_UNITARIO | Tipo: decimal(10,2) | Pode ser Vazio
+  • STATUS_FILA | Tipo: varchar(50) | Pode ser Vazio
+  • QTD_TOTAL | Tipo: int | Pode ser Vazio
+  • QTD_ATUALIZADO | Tipo: int | Pode ser Vazio
+  • QTD_NAO_ATUALIZADO | Tipo: int | Pode ser Vazio
+  • DATA_IMPORTACAO | Tipo: datetime | Pode ser Vazio
+  • id_empresa | Tipo: int | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `fatorconferi_banco_de_dados_retorno_importacao` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `NOME_PROCESSAMENTO` varchar(150) NOT NULL,
+  `USUARIO_ID` int NOT NULL,
+  `NOME_USUARIO` varchar(150) DEFAULT NULL,
+  `NOME_CLIENTE` varchar(150) DEFAULT NULL,
+  `CPF_COBRANCA` varchar(20) DEFAULT NULL,
+  `CUSTO_UNITARIO` decimal(10,2) DEFAULT '0.00',
+  `STATUS_FILA` varchar(50) DEFAULT 'PENDENTE',
+  `QTD_TOTAL` int DEFAULT '0',
+  `QTD_ATUALIZADO` int DEFAULT '0',
+  `QTD_NAO_ATUALIZADO` int DEFAULT '0',
+  `DATA_IMPORTACAO` datetime DEFAULT CURRENT_TIMESTAMP,
+  `id_empresa` int DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+==================================================
+
+TABELA: FATORCONFERI_BANCO_DE_DADOS_RETORNO_IMPORTACAO_ITENS
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • LOTE_ID | Tipo: int | OBRIGATÓRIO [Chave: MUL]
+  • CPF | Tipo: varchar(14) | OBRIGATÓRIO
+  • STATUS_ITEM | Tipo: varchar(50) | Pode ser Vazio
+  • OBSERVACAO | Tipo: text | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `fatorconferi_banco_de_dados_retorno_importacao_itens` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `LOTE_ID` int NOT NULL,
+  `CPF` varchar(14) NOT NULL,
+  `STATUS_ITEM` varchar(50) DEFAULT 'NA FILA',
+  `OBSERVACAO` text,
+  PRIMARY KEY (`ID`),
+  KEY `fk_fator_lote` (`LOTE_ID`),
+  CONSTRAINT `fk_fator_lote` FOREIGN KEY (`LOTE_ID`) REFERENCES `fatorconferi_banco_de_dados_retorno_importacao` (`ID`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=6935 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+==================================================
+
+TABELA: PROMOSYS_CONFIG_API
+--------------------------------------------------
+[COLUNAS]
+  • ID | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • TOKEN_MANUAL | Tipo: varchar(255) | Pode ser Vazio
+  • TOKEN_LOTE | Tipo: varchar(255) | Pode ser Vazio
+  • TOKEN_CSV | Tipo: varchar(255) | Pode ser Vazio
+  • TEMPO_CACHE | Tipo: int | Pode ser Vazio
+  • WAPI_INSTANCE | Tipo: varchar(100) | Pode ser Vazio
+  • WAPI_TOKEN | Tipo: varchar(255) | Pode ser Vazio
+  • TOKEN_ROBO | Tipo: varchar(255) | Pode ser Vazio
+  • CMD_MENU | Tipo: varchar(50) | Pode ser Vazio
+  • CMD_CONSULTA | Tipo: varchar(50) | Pode ser Vazio
+  • CMD_COMPLETO | Tipo: varchar(50) | Pode ser Vazio
+  • CMD_SALDO | Tipo: varchar(50) | Pode ser Vazio
+  • CMD_EXTRATO | Tipo: varchar(50) | Pode ser Vazio
+  • CMD_LISTA | Tipo: varchar(50) | Pode ser Vazio
+  • CMD_SUPORTE | Tipo: varchar(50) | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `promosys_config_api` (
+  `ID` int NOT NULL DEFAULT '1',
+  `TOKEN_MANUAL` varchar(255) DEFAULT '',
+  `TOKEN_LOTE` varchar(255) DEFAULT '',
+  `TOKEN_CSV` varchar(255) DEFAULT '',
+  `TEMPO_CACHE` int DEFAULT '30',
+  `WAPI_INSTANCE` varchar(100) DEFAULT '',
+  `WAPI_TOKEN` varchar(255) DEFAULT '',
+  `TOKEN_ROBO` varchar(255) DEFAULT '',
+  `CMD_MENU` varchar(50) DEFAULT '#MENU_INSS',
+  `CMD_CONSULTA` varchar(50) DEFAULT '#INSS:',
+  `CMD_COMPLETO` varchar(50) DEFAULT '#INSS/COMPLETO:',
+  `CMD_SALDO` varchar(50) DEFAULT '#INSS/SALDO',
+  `CMD_EXTRATO` varchar(50) DEFAULT '#INSS/EXTRATO',
+  `CMD_LISTA` varchar(50) DEFAULT '#INSS/CONSULTAS',
+  `CMD_SUPORTE` varchar(50) DEFAULT '#SUPORTE',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+==================================================
+
+TABELA: PROMOSYS_INSS_HISTORICO_CONSULTAS
+--------------------------------------------------
+[COLUNAS]
+  • id | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • cpf | Tipo: char(11) | OBRIGATÓRIO [Chave: MUL]
+  • nome_cliente | Tipo: varchar(150) | Pode ser Vazio
+  • data_consulta | Tipo: datetime | Pode ser Vazio
+  • origem_consulta | Tipo: varchar(50) | OBRIGATÓRIO
+  • custo_consulta | Tipo: decimal(10,2) | Pode ser Vazio
+  • fonte_consulta | Tipo: varchar(50) | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `promosys_inss_historico_consultas` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `cpf` char(11) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nome_cliente` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `data_consulta` datetime DEFAULT CURRENT_TIMESTAMP,
+  `origem_consulta` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Ex: API_MANUAL, API_LOTE_CSV',
+  `custo_consulta` decimal(10,2) DEFAULT '0.00',
+  `fonte_consulta` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT 'PROMOSYS_INSS',
+  PRIMARY KEY (`id`),
+  KEY `idx_cpf_historico_promosys` (`cpf`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: PROMOSYS_INSS_IMPORTACAO_ITENS
+--------------------------------------------------
+[COLUNAS]
+  • id | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • lote_id | Tipo: int | OBRIGATÓRIO [Chave: MUL]
+  • cpf | Tipo: varchar(14) | OBRIGATÓRIO
+  • status_item | Tipo: varchar(50) | Pode ser Vazio
+  • observacao | Tipo: text | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `promosys_inss_importacao_itens` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `lote_id` int NOT NULL,
+  `cpf` varchar(14) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status_item` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT 'NA FILA',
+  `observacao` text COLLATE utf8mb4_unicode_ci,
+  PRIMARY KEY (`id`),
+  KEY `fk_promosys_lote` (`lote_id`),
+  CONSTRAINT `fk_promosys_lote` FOREIGN KEY (`lote_id`) REFERENCES `promosys_inss_importacao_lote` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: PROMOSYS_INSS_IMPORTACAO_LOTE
+--------------------------------------------------
+[COLUNAS]
+  • id | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • nome_processamento | Tipo: varchar(150) | OBRIGATÓRIO
+  • usuario_id | Tipo: int | OBRIGATÓRIO
+  • nome_usuario | Tipo: varchar(150) | Pode ser Vazio
+  • cpf_cobranca | Tipo: varchar(20) | Pode ser Vazio
+  • custo_unitario | Tipo: decimal(10,2) | Pode ser Vazio
+  • status_fila | Tipo: varchar(50) | Pode ser Vazio
+  • qtd_total | Tipo: int | Pode ser Vazio
+  • qtd_atualizado | Tipo: int | Pode ser Vazio
+  • qtd_nao_atualizado | Tipo: int | Pode ser Vazio
+  • data_importacao | Tipo: datetime | Pode ser Vazio
+  • id_empresa | Tipo: int | Pode ser Vazio
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `promosys_inss_importacao_lote` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nome_processamento` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `usuario_id` int NOT NULL,
+  `nome_usuario` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `cpf_cobranca` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `custo_unitario` decimal(10,2) DEFAULT '0.00',
+  `status_fila` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT 'PENDENTE',
+  `qtd_total` int DEFAULT '0',
+  `qtd_atualizado` int DEFAULT '0',
+  `qtd_nao_atualizado` int DEFAULT '0',
+  `data_importacao` datetime DEFAULT CURRENT_TIMESTAMP,
+  `id_empresa` int DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+==================================================
+
+TABELA: TELEFONES
+--------------------------------------------------
+[COLUNAS]
+  • id | Tipo: int | OBRIGATÓRIO [Chave: PRI]
+  • cpf | Tipo: char(11) | Pode ser Vazio [Chave: MUL]
+  • telefone_cel | Tipo: char(11) | Pode ser Vazio [Chave: UNI]
+  • ID_QUALIFICACAO | Tipo: int | Pode ser Vazio [Chave: MUL]
+
+[CÓDIGO SQL DE CRIAÇÃO]
+CREATE TABLE `telefones` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `cpf` char(11) DEFAULT NULL,
+  `telefone_cel` char(11) DEFAULT NULL,
+  `ID_QUALIFICACAO` int DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `telefone_cel` (`telefone_cel`),
+  KEY `idx_cpf_telefone` (`cpf`),
+  KEY `fk_telefone_qualificacao` (`ID_QUALIFICACAO`),
+  CONSTRAINT `fk_tel_cpf` FOREIGN KEY (`cpf`) REFERENCES `dados_cadastrais` (`cpf`) ON DELETE CASCADE,
+  CONSTRAINT `fk_telefone_qualificacao` FOREIGN KEY (`ID_QUALIFICACAO`) REFERENCES `BANCO_DE_DADOS_CAMPANHA_QUALIFICACAO_TELEFONE` (`ID`) ON DELETE SET NULL
+) ENGINE=InnoDB AUTO_INCREMENT=1892490 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+==================================================
+

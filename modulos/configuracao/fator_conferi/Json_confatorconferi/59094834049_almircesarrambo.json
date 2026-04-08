@@ -1,0 +1,196 @@
+{
+    "CADASTRAIS": {
+        "CPF": "59094834049",
+        "NOME": "ALMIR CESAR RAMBO",
+        "NOME_MAE": "ILMA ROEHRIG RAMBO",
+        "NASCTO": "23\/07\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12499657431",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "333110",
+        "PROFISSAO": "INSTRUTOR DE CURSOS LIVRES",
+        "SALARIO": " 1.555,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "5433323548",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "10\/12\/2014",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "54999427148",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "54997048777",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "54999825138",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "54999746061",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "54999748366",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "rambo@re-gister.com",
+            "rambo@rumbles.com",
+            "arambo@cotrijal.com.br",
+            "rambo@dgnet.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV BRASIL OESTE",
+                "NUMERO": "239",
+                "COMPLEMENTO": "503",
+                "BAIRRO": "CENTRO",
+                "CEP": "99025001",
+                "CIDADE": "PASSO FUNDO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R ITAMARATI",
+                "NUMERO": "166",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "BOA VISTA",
+                "CEP": "99470000",
+                "CIDADE": "NAO-ME-TOQUE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "PIRATINI",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOA VISTA",
+                "CEP": "99470000",
+                "CIDADE": "NAO ME TOQUE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "ALMIR CESAR RAMBO PIRATINI",
+                "NUMERO": "16",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOA VISTA",
+                "CEP": "99470000",
+                "CIDADE": "NAO ME TOQUE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R RUI BARBOSA",
+                "NUMERO": "876",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "99470000",
+                "CIDADE": "NAO ME TOQUE",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "53496710063",
+                "NOME": "ILMA ROEHRIG RAMBO",
+                "IDADE": "74 anos",
+                "LOCAL": "NAO-ME-TOQUE\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "53495454004",
+                "NOME": "ALTEMIR CELSO RAMBO",
+                "IDADE": "54 anos",
+                "LOCAL": "NAO ME TOQUE\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "57829560030",
+                "NOME": "LUCIANE RAMBO",
+                "IDADE": "53 anos",
+                "LOCAL": "NOVA IGUACU\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COTRIJAL COOPERATIVA AGROPECUARIA E INDUSTRIAL",
+                "CNPJ": "91495549000150",
+                "CIDADE": "NAO-ME-TOQUE-RS",
+                "PROFISSAO": "222110",
+                "DATA_ADMISSAO": "09\/08\/1993",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BIRCK ESCOLA DE IDIOMAS LTDA",
+                "CNPJ": "11482233000194",
+                "CIDADE": "NAO-ME-TOQUE-RS",
+                "PROFISSAO": "333110",
+                "DATA_ADMISSAO": "02\/08\/2010",
+                "DATA_DEMISSAO": "910",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

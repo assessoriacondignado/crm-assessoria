@@ -1,0 +1,226 @@
+{
+    "CADASTRAIS": {
+        "CPF": "90089707672",
+        "NOME": "WASHINGTON AVELINO MARTINS",
+        "NOME_MAE": "MARIA GRACAS AVELINO MARTINS",
+        "NASCTO": "14\/11\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "115887610205",
+        "NIT": "1231305304",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "313315",
+        "PROFISSAO": "TECNICO DE TELECOMUNICACOES (TELEFONIA)",
+        "SALARIO": " 5.810,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3134432052",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "3134911597",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3134971932",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31997428942",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31995126913",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31987376624",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "30\/08\/2017",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "31996503103",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "31986470700",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "gabriel.abreu1932@outlook.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV CARLOS MURTA FILHO",
+                "NUMERO": "776",
+                "COMPLEMENTO": "BL 14 AP 101",
+                "BAIRRO": "GAVEA",
+                "CEP": "33202670",
+                "CIDADE": "VESPASIANO",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R IRENE PIAZZI",
+                "NUMERO": "227",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOSSA SENHORA APARECIDA",
+                "CEP": "36202166",
+                "CIDADE": "BARBACENA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "AV STA ROSA",
+                "NUMERO": "745",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S LUIZ",
+                "CEP": "31275260",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R CERQUEIRA LEITE",
+                "NUMERO": "120",
+                "COMPLEMENTO": "",
+                "BAIRRO": "UNIVERSITARIO",
+                "CEP": "31255440",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R DOS AEROVIARIOS",
+                "NUMERO": "355",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PAMPULHA",
+                "CEP": "31270330",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R JOSE DE MELO",
+                "NUMERO": "116",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STA ROSA",
+                "CEP": "31255490",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R DOS EXPEDICIONARIOS",
+                "NUMERO": "675",
+                "COMPLEMENTO": "C 1",
+                "BAIRRO": "STA AMELIA",
+                "CEP": "31555200",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R CERQUEIRA LEITE",
+                "NUMERO": "146",
+                "COMPLEMENTO": "C 4",
+                "BAIRRO": "UNIVERSITARIO",
+                "CEP": "31255440",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ICOMON TECNOLOGIA LTDA",
+                "CNPJ": "02137309001044",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "313315",
+                "DATA_ADMISSAO": "23\/09\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ICOMON TECNOLOGIA LTDA",
+                "CNPJ": "02137309000153",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "313315",
+                "DATA_ADMISSAO": "23\/09\/2019",
+                "DATA_DEMISSAO": "01\/05\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "STTE SERVICOS TECNICOS DE TELECOMUNICACOES E EMPREENDIMENTOS LTDA",
+                "CNPJ": "42813428000101",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "730105",
+                "DATA_ADMISSAO": "22\/07\/1997",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

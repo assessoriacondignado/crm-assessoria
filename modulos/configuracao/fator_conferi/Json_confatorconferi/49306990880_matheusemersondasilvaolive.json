@@ -1,0 +1,134 @@
+{
+    "CADASTRAIS": {
+        "CPF": "49306990880",
+        "NOME": "MATHEUS EMERSON DA SILVA OLIVE",
+        "NOME_MAE": "MARTA APARECIDA DA SILVA",
+        "NASCTO": "04\/12\/2000",
+        "IDADE": "25 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1639055521 ",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "317205",
+        "PROFISSAO": "OPERADOR DE COMPUTADOR (INCLUSIVE MICROCOMPUTADOR)",
+        "SALARIO": " 1.336,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11948195764",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11951194819",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CARLOS FERNANDES",
+                "NUMERO": "231",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ JACARANDA",
+                "CEP": "06774080",
+                "CIDADE": "TABOAO DA SERRA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MARIA ROSA FERNANDES",
+                "NUMERO": "286",
+                "COMPLEMENTO": "C 1",
+                "BAIRRO": "VL CARMELINA GONCALVES",
+                "CEP": "06774090",
+                "CIDADE": "TABOAO DA SERRA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MARIA ROSA FERNANDES",
+                "NUMERO": "20",
+                "COMPLEMENTO": "CS 3",
+                "BAIRRO": "VL CARMELINA GONCALVES",
+                "CEP": "06774090",
+                "CIDADE": "TABOAO DA SERRA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "28768760",
+            "NOME": "MARTA APARECIDA DA SILVA",
+            "IDADE": "58 anos",
+            "LOCAL": "VITORIA\/ES",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SENDAS DISTRIBUIDORA S\/A",
+                "CNPJ": "06057223025085",
+                "CIDADE": "TABOAO DA SERRA-SP",
+                "PROFISSAO": "521125",
+                "DATA_ADMISSAO": "29\/12\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VIACAO PIRAJUCARA LTDA",
+                "CNPJ": "59661199000141",
+                "CIDADE": "EMBU DAS ARTES-SP",
+                "PROFISSAO": "317205",
+                "DATA_ADMISSAO": "25\/01\/2018",
+                "DATA_DEMISSAO": "15\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "FACILITY MAO DE OBRA TEMPORARIA LTDA",
+                "CNPJ": "05903397000145",
+                "CIDADE": "SAO BERNARDO DO CAMPO-SP",
+                "PROFISSAO": "521140",
+                "DATA_ADMISSAO": "21\/11\/2023",
+                "DATA_DEMISSAO": "31\/12\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "VIACAO FERVIMA LTDA",
+                "CNPJ": "72927502000254",
+                "CIDADE": "TABOAO DA SERRA-SP",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "16\/20\/1909",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

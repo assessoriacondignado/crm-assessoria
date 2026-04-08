@@ -1,0 +1,153 @@
+{
+    "CADASTRAIS": {
+        "CPF": "70302030468",
+        "NOME": "LUCIANO DE ALMEIDA LIMA",
+        "NOME_MAE": "MARIA DA CONCEICAO DE ALMEIDA",
+        "NASCTO": "10\/06\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "011100171660",
+        "NIT": "12347916000",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "513405",
+        "PROFISSAO": "GARCOM",
+        "SALARIO": " 937,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8432193016",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8436146836",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "19\/08\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "62982196390",
+            "OPERADORA": "TIM CELULAR S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "MOVEL",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": {
+        "EMAIL": "sbachserials@sbachbooks.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "TV LAURO BEZERRA",
+                "NUMERO": "215",
+                "COMPLEMENTO": "N REPUBLICA",
+                "BAIRRO": "PAJUCARA",
+                "CEP": "59123215",
+                "CIDADE": "NATAL",
+                "ESTADO": "RN"
+            },
+            {
+                "LOGRADOURO": "TRV PE ANDRADE",
+                "NUMERO": "163",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STO ANTONIO",
+                "CEP": "59255000",
+                "CIDADE": "SANTO ANTONIO",
+                "ESTADO": "RN"
+            },
+            {
+                "LOGRADOURO": "R CASTELO BRANCO",
+                "NUMERO": "479",
+                "COMPLEMENTO": "C A",
+                "BAIRRO": "PAJUCARA",
+                "CEP": "59125410",
+                "CIDADE": "NATAL",
+                "ESTADO": "RN"
+            },
+            {
+                "LOGRADOURO": "RUA CASTELO BRANCO",
+                "NUMERO": "87",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PAJUCARA",
+                "CEP": "59125410",
+                "CIDADE": "NATAL",
+                "ESTADO": "RN"
+            },
+            {
+                "LOGRADOURO": "TRAVESSA LAURO BEZERRA",
+                "NUMERO": "205",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PAJUCARA",
+                "CEP": "59123215",
+                "CIDADE": "NATAL",
+                "ESTADO": "RN"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "66740622",
+            "NOME": "MARIA DA CONCEICAO DE ALMEIDA",
+            "IDADE": "91 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "VERA LUCIA OLIVEIRA DE ARAUJO",
+            "IDADE": "",
+            "LOCALIDADE": "RIO DE JANEIRO\/RJ",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "1173380876"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COCO BAMBU GOIANIA COMERCIO DE ALIMENTOS LTDA",
+                "CNPJ": "17285406000160",
+                "CIDADE": "GOIANIA-GO",
+                "PROFISSAO": "510135",
+                "DATA_ADMISSAO": "03\/09\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LIDIANNY CRISTINNY DA SILVA CARVALHO",
+                "CNPJ": "17014821000180",
+                "CIDADE": "NATAL-RN",
+                "PROFISSAO": "513405",
+                "DATA_ADMISSAO": "01\/07\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

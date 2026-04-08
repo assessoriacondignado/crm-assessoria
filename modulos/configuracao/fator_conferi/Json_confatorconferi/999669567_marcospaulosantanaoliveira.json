@@ -1,0 +1,246 @@
+{
+    "CADASTRAIS": {
+        "CPF": "999669567",
+        "NOME": "MARCOS PAULO SANTANA OLIVEIRA",
+        "NOME_MAE": "ELVIRA SANTANA OLIVEIRA",
+        "NASCTO": "21\/10\/1983",
+        "IDADE": "42 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "099501790515",
+        "NIT": "20020035289",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782305",
+        "PROFISSAO": "MOTORISTA DE CARRO DE PASSEIO",
+        "SALARIO": " 834,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "7134173824",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "71981018094",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71993348451",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71981915741",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71982909217",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71999563024",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marcospsoliveira@hotmail.com",
+            "marcospsoliveira@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ALM MOURAO DE SA",
+                "NUMERO": "5",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARIPE",
+                "CEP": "40800600",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R JACIRA DE VASCONCELOS CLAUDINO",
+                "NUMERO": "142",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MANGABEIRA",
+                "CEP": "58058160",
+                "CIDADE": "JOAO PESSOA",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "R DAS EMBUIAS",
+                "NUMERO": "5",
+                "COMPLEMENTO": "CS FR",
+                "BAIRRO": "CABULA VI",
+                "CEP": "41181150",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "PC SEN TEOTONIO VILELA",
+                "NUMERO": "225",
+                "COMPLEMENTO": "SL 308",
+                "BAIRRO": "PONTO NOVO",
+                "CEP": "49047370",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R FREDERICO SIMOES",
+                "NUMERO": "125",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAM DAS ARVORES",
+                "CEP": "41820774",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R SANTOS DUMONT",
+                "NUMERO": "204",
+                "COMPLEMENTO": "ESQ COM A R DA PADAR E",
+                "BAIRRO": "FAZ COUTOS",
+                "CEP": "40730570",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R CAROL",
+                "NUMERO": "10",
+                "COMPLEMENTO": "",
+                "BAIRRO": "FAZ COUTOS",
+                "CEP": "40730410",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R ALMERINDA LOMANTO",
+                "NUMERO": "7",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ITAIGARA",
+                "CEP": "45210390",
+                "CIDADE": "JEQUIE",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "33979464504",
+                "NOME": "ELVIRA SANTANA OLIVEIRA",
+                "IDADE": "60 anos",
+                "LOCAL": "SALVADOR\/BA",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "4300240531",
+                "NOME": "VERONICA SANTANA ARAUJO DE OLIVEIRA",
+                "IDADE": "37 anos",
+                "LOCAL": "SALVADOR\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "5824463506",
+                "NOME": "ALANDERSON OLIVEIRA DA SILVA",
+                "IDADE": "34 anos",
+                "LOCAL": "CAIRU\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "83759905587",
+                "NOME": "JOSE DE SANTANA OLIVEIRA",
+                "IDADE": "82 anos",
+                "LOCAL": "LAGARTO\/SE",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "MARIA ANDREZA DA CONCEICAO FREITA",
+            "IDADE": "",
+            "LOCALIDADE": "SALVADOR\/BA",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "59722240544"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PROSEGUR BRASIL S\/A TRANSPORTADORA DE VALORES E SEGURANCA",
+                "CNPJ": "17428731016996",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "21\/09\/2011",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PROSEGUR BRASIL S\/A TRANSPORTADORA DE VALORES E SEGURANCA",
+                "CNPJ": "17428731004203",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "782305",
+                "DATA_ADMISSAO": "01\/05\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "NORDESTE SEGURANCA E TRANSPORTE DE VALORES BAHIA LTDA",
+                "CNPJ": "05191191000130",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "21\/09\/2011",
+                "DATA_DEMISSAO": "110",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

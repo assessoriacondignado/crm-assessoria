@@ -1,0 +1,173 @@
+{
+    "CADASTRAIS": {
+        "CPF": "52919005049",
+        "NOME": "ALEXANDRE CAVION",
+        "NOME_MAE": "MAFALDA CAVION",
+        "NASCTO": "10\/11\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "057499090485",
+        "NIT": "1237973744",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142105",
+        "PROFISSAO": "GERENTE ADMINISTRATIVO",
+        "SALARIO": " 5.244,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5432275741",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5432388800",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "54996571002",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "54984223520",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "54984223105",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "54999830567",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "gerente@unyterra.com.br",
+            "alexandre.cavion@unyterra.com.br",
+            "alexandre.cavion@vita.agr.br",
+            "alexandre.cavion73@gmail.com",
+            "alexandre.cavion@terra.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R LUIZ BURATTO",
+                "NUMERO": "176",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RIO BRANCO",
+                "CEP": "95099330",
+                "CIDADE": "CAXIAS DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R ANGELO PEZZOLATTO",
+                "NUMERO": "188",
+                "COMPLEMENTO": "mercado",
+                "BAIRRO": "DESVIO RIZZO",
+                "CEP": "95110090",
+                "CIDADE": "CAXIAS DO SUL",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "46294651034",
+                "NOME": "MAFALDA CAVION",
+                "IDADE": "75 anos",
+                "LOCAL": "CAXIAS DO SUL\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "80224849034",
+                "NOME": "ALESSANDRA CAVION HECHER",
+                "IDADE": "45 anos",
+                "LOCAL": "CAXIAS DO SUL\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "MARCOS PAULO CARNEIRO BRAGA",
+            "IDADE": "",
+            "LOCALIDADE": "MANAUS\/AM",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "71801880263"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "IBCE CHICOTES E SISTEMAS ELETRICOS LTDA",
+                "CNPJ": "02451713000105",
+                "CIDADE": "CAXIAS DO SUL-RS",
+                "PROFISSAO": "142105",
+                "DATA_ADMISSAO": "23\/20\/1905",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "UNYTERRA MAQUINAS AGRICOLAS LTDA",
+                "CNPJ": "93565505000184",
+                "CIDADE": "CAXIAS DO SUL-RS",
+                "PROFISSAO": "142320",
+                "DATA_ADMISSAO": "09\/07\/2012",
+                "DATA_DEMISSAO": "27\/05\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,244 @@
+{
+    "CADASTRAIS": {
+        "CPF": "29745328880",
+        "NOME": "EDUARDO SVET",
+        "NOME_MAE": "MARIA LUCIA VAREJANO SVET",
+        "NASCTO": "10\/06\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "281520963",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "265943880141",
+        "NIT": "1279192389",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "414210",
+        "PROFISSAO": "APONTADOR DE PRODUCAO",
+        "SALARIO": " 10.314,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1125910583",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1155611001",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1134815429",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1144192177",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11996769360",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11970611001",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71982806512",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11986585479",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11999923014",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "dudasvete@hotmail.com",
+            "edusvet@hotmail.com",
+            "eduardo.svet@terra.com.br",
+            "dudasvet@hotmail.com",
+            "dudasvet30@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOSUE ALVES DA SILVEIRA",
+                "NUMERO": "40",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TERRA PRETA TERRA PRETA",
+                "CEP": "07661245",
+                "CIDADE": "MAIRIPORA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ROBERTO KOCH",
+                "NUMERO": "67",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL INDEPENDENCIA",
+                "CEP": "04221060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DA CASCATA",
+                "NUMERO": "470",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RIO ACIMA",
+                "CEP": "07631340",
+                "CIDADE": "MAIRIPORA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R LAFAIETE COUTINHO",
+                "NUMERO": "308",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL ZAT",
+                "CEP": "02977160",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOSUE ALVES DA SILVEIRA",
+                "NUMERO": "40",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD AMERICA",
+                "CEP": "07600000",
+                "CIDADE": "MAIRIPORA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ARMANDO RAMOS FILHO",
+                "NUMERO": "113",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MOINHO VELHO",
+                "CEP": "02929100",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "VIELA JOAO TEIXEIRA DE CARVALHO",
+                "NUMERO": "87",
+                "COMPLEMENTO": "CASA 1",
+                "BAIRRO": "VILA SAO JOSE",
+                "CEP": "07600000",
+                "CIDADE": "MAIRIPORA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA PORTO NACIONAL",
+                "NUMERO": "98",
+                "COMPLEMENTO": "CASA 2",
+                "BAIRRO": "VILA SIQUEIRA (ZONA NORTE)",
+                "CEP": "02817080",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "19128374800",
+                "NOME": "MARIA LUCIA VAREJANO SVET",
+                "IDADE": "76 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "17082020805",
+                "NOME": "ELAINE APARECIDA SVET",
+                "IDADE": "53 anos",
+                "LOCAL": "IRACEMAPOLIS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "17082325835",
+                "NOME": "EDGARD SVET",
+                "IDADE": "50 anos",
+                "LOCAL": "OSASCO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "BROVIND DO BRASIL INDUSTRIA E COMERCIO LTDA",
+            "CNPJ": "04041647000112",
+            "CIDADE": "SAO PAULO-SP",
+            "PROFISSAO": "414210",
+            "DATA_ADMISSAO": "01\/09\/2004",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

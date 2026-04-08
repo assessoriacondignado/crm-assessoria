@@ -1,0 +1,357 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25595123869",
+        "NOME": "JACQUELINE DOS SANTOS SILVA SOARES",
+        "NOME_MAE": "MARIA DE LOURDES DOS SANTOS SILVA",
+        "NASCTO": "24\/03\/1978",
+        "IDADE": "48 anos",
+        "SEXO": "Feminino",
+        "RG": "29333144",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "285483790108",
+        "NIT": "12698843898",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "239405",
+        "PROFISSAO": "COORDENADOR PEDAGOGICO",
+        "SALARIO": " 2.866,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1146676659",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "09\/10\/2016",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1134628005",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1146671305",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1146676799",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11992739134",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11946017646",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "25\/04\/2013",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11966570476",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "31\/01\/2009",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11969427468",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "12\/05\/2016",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11998329970",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "mj_soares@terra.com.br",
+            "mjsoares@uol.com.br",
+            "marcioaparecidosoares@bol.com.br",
+            "msoaresrep@yahoo.com.br",
+            "jackiesoares78@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ANDARAI",
+                "NUMERO": "12",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD ITAPECERICA",
+                "CEP": "06853370",
+                "CIDADE": "ITAPECERICA DA SERRA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BOTUCATU",
+                "NUMERO": "180",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD D JOSE",
+                "CEP": "06823360",
+                "CIDADE": "EMBU DAS ARTES",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV JOSE JOAQUIM DOS SANTOS",
+                "NUMERO": "2",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ PARAISO",
+                "CEP": "06850320",
+                "CIDADE": "ITAPECERICA DA SERRA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AL AMAZONAS",
+                "NUMERO": "560",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALPHAVILLE EMPRESARIAL",
+                "CEP": "06454920",
+                "CIDADE": "BARUERI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO BENTO CAMARGO",
+                "NUMERO": "80",
+                "COMPLEMENTO": "C 2",
+                "BAIRRO": "ITAQUACIARA",
+                "CEP": "06874360",
+                "CIDADE": "ITAPECERICA DA SERRA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV JOSE J DOS SANTOS",
+                "NUMERO": "561",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ PARAISO",
+                "CEP": "06850320",
+                "CIDADE": "ITAPECERICA DA SERRA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOMINGTON",
+                "NUMERO": "192",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE DELFIM VERDE",
+                "CEP": "06872106",
+                "CIDADE": "ITAPECERICA DA SERRA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA URANDI",
+                "NUMERO": "113",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM ITAPECERICA",
+                "CEP": "06853380",
+                "CIDADE": "ITAPECERICA DA SERRA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "5811600",
+                "NOME": "MARIA DE LOURDES DOS SANTOS SILVA",
+                "IDADE": "61 anos",
+                "LOCAL": "BELO HORIZONTE\/MG",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "49372676802",
+                "NOME": "STEPHANIE SILVA SOARES",
+                "IDADE": "25 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "49411885861",
+                "NOME": "BEATRIZ SILVA SOARES",
+                "IDADE": "21 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ANTONIO SOARES",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "8843619853"
+            },
+            {
+                "NOME": "EDUARDO SILVIO SOARES",
+                "IDADE": "",
+                "LOCALIDADE": "ITAPECERICA DA SERRA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "5212185866"
+            },
+            {
+                "NOME": "GILSON LOPES DOS SANTOS",
+                "IDADE": "",
+                "LOCALIDADE": "JANUARIA\/MG",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "4167606607"
+            },
+            {
+                "NOME": "MARCIO APARECIDO SOARES",
+                "IDADE": "",
+                "LOCALIDADE": "ITAPECERICA DA SERRA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "936410876"
+            },
+            {
+                "NOME": "MARIA DE LOURDES DOS SANTOS SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "BETIM\/MG",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "84885084849"
+            },
+            {
+                "NOME": "MARIO JOSE SOARES",
+                "IDADE": "",
+                "LOCALIDADE": "JUIZ DE FORA\/MG",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "20895909634"
+            },
+            {
+                "NOME": "WAGNER ANDERSON DO NASCIMENTO",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "18164814830"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COLEGIO CPV LTDA.",
+                "CNPJ": "38184976000134",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "231205",
+                "DATA_ADMISSAO": "23\/01\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO UNIVERSITARIA INTERAMERICANA",
+                "CNPJ": "60552551000602",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "232150",
+                "DATA_ADMISSAO": "22\/01\/2024",
+                "DATA_DEMISSAO": "28\/06\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COLEGIO GUILHERME DUMONT VILLARES",
+                "CNPJ": "04086224000119",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "231210",
+                "DATA_ADMISSAO": "03\/02\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TIP TOE ALPHAVILLE'S MONTESSORI SCHOOL LTDA.",
+                "CNPJ": "01428865000116",
+                "CIDADE": "SANTANA DE PARNAIBA-SP",
+                "PROFISSAO": "231210",
+                "DATA_ADMISSAO": "18\/07\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "BERSEBA CURSOS DE IDIOMAS S\/S LTDA",
+                "CNPJ": "07634406000175",
+                "CIDADE": "COTIA-SP",
+                "PROFISSAO": "333110",
+                "DATA_ADMISSAO": "01\/02\/2016",
+                "DATA_DEMISSAO": "30\/06\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SH MIRANDA CURSO DE INGLES LTDA",
+                "CNPJ": "10971263000100",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "239405",
+                "DATA_ADMISSAO": "02\/02\/2006",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "MAERD ELETRONICA INDUSTRIA E COMERCIO LTDA",
+            "CNPJ": "14133803000129",
+            "CIDADE": "ITAPECERICA DA SERRA-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20110810",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

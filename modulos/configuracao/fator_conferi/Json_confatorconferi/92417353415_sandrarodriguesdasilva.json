@@ -1,0 +1,239 @@
+{
+    "CADASTRAIS": {
+        "CPF": "92417353415",
+        "NOME": "SANDRA RODRIGUES DA SILVA",
+        "NOME_MAE": "CICERA FERREIRA DA SILVA",
+        "NASCTO": "28\/08\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "019456191708",
+        "NIT": "17059422798",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "311505",
+        "PROFISSAO": "TECNICO DE CONTROLE DE MEIO AMBIENTE",
+        "SALARIO": " 5.800,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7931794587",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7932593872",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "82996153272",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79988187595",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "zandra2808@gmail.com",
+            "sandra2808@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R TANCREDO NEVES",
+                "NUMERO": "3790",
+                "COMPLEMENTO": "AP 103",
+                "BAIRRO": "POR D ANTAS",
+                "CEP": "49069138",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R TANCREDO NEVES",
+                "NUMERO": "3515",
+                "COMPLEMENTO": "AP 103 COND EUCABL T",
+                "BAIRRO": "POR D ANTAS",
+                "CEP": "49069138",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R C",
+                "NUMERO": "408",
+                "COMPLEMENTO": "TORRE BRISA DO MAR",
+                "BAIRRO": "ARUANA",
+                "CEP": "49000311",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R C",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JABOTIANA",
+                "CEP": "49095833",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R ACRE",
+                "NUMERO": "1084",
+                "COMPLEMENTO": "ENTREGA CORREIOS",
+                "BAIRRO": "SIQUEIRA CAMPOS",
+                "CEP": "49075975",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "AVENIDA PRESIDENTE TANCREDO NEVES",
+                "NUMERO": "3790",
+                "COMPLEMENTO": "BL T AP 103 XXXXXXXXXX",
+                "BAIRRO": "PONTO NOVO",
+                "CEP": "49097510",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "13280341",
+            "NOME": "CICERA FERREIRA DA SILVA",
+            "IDADE": "47 anos",
+            "LOCAL": "FORTALEZA\/CE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SONDA PROCWORK INFORMATICA LTDA",
+                "CNPJ": "08733698001057",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "214915",
+                "DATA_ADMISSAO": "21\/11\/2023",
+                "DATA_DEMISSAO": "09\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SONDA PROCWORK INFORMATICA LTDA",
+                "CNPJ": "08733698000166",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "214915",
+                "DATA_ADMISSAO": "09\/01\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "RINA BRASIL SERVICOS TECNICOS LTDA.",
+                "CNPJ": "68773597001112",
+                "CIDADE": "MACAE-RJ",
+                "PROFISSAO": "254505",
+                "DATA_ADMISSAO": "13\/02\/2023",
+                "DATA_DEMISSAO": "13\/11\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "APSEG APOIO A SEGURANCA DO TRABALHO LTDA",
+                "CNPJ": "10268543000148",
+                "CIDADE": "ANGRA DOS REIS-RJ",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "17\/03\/2020",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "APICE PROJETOS DE GESTAO LTDA",
+                "CNPJ": "00585544000162",
+                "CIDADE": "VITORIA-ES",
+                "PROFISSAO": "313415",
+                "DATA_ADMISSAO": "05\/08\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "L.A. FALCAO BAUER CENTRO TECNOLOGICO DE CONTROLE DA QUALIDADE LTDA",
+                "CNPJ": "53020152000112",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "311505",
+                "DATA_ADMISSAO": "01\/08\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "RINA BRASIL SERVICOS TECNICOS LTDA.",
+                "CNPJ": "68773597000736",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "214005",
+                "DATA_ADMISSAO": "01\/04\/2014",
+                "DATA_DEMISSAO": "05\/04\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ATR TRANSPORTES E SERVICOS LTDA",
+                "CNPJ": "09486584000121",
+                "CIDADE": "PITANGA-PR",
+                "PROFISSAO": "352205",
+                "DATA_ADMISSAO": "06\/11\/2013",
+                "DATA_DEMISSAO": "24\/03\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "ICF CONSULTORIA DO BRASIL LTDA",
+                "CNPJ": "05402509000184",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "321210",
+                "DATA_ADMISSAO": "13\/04\/2010",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,206 @@
+{
+    "CADASTRAIS": {
+        "CPF": "82742219587",
+        "NOME": "MARIA SHEILA SANTOS",
+        "NOME_MAE": "LIDIA MARIA DOS SANTOS",
+        "NASCTO": "21\/03\/1983",
+        "IDADE": "43 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "019788832151",
+        "NIT": "2000690391",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411010",
+        "PROFISSAO": "ASSISTENTE ADMINISTRATIVO",
+        "SALARIO": " 2.567,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "7931941205",
+            "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "79981529085",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "99988521489",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79988176470",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79996607328",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999078992",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CARLOS SANTOS ALVES",
+                "NUMERO": "97",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STA MARIA",
+                "CEP": "49043568",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "AV FRANCISCO PORTO",
+                "NUMERO": "480",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TREZE DE JULHO",
+                "CEP": "49020120",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R NOVO PARAISO",
+                "NUMERO": "61",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTA MARIA",
+                "CEP": "49043812",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "RUA ANTONIO CARLOS DE PAIVA",
+                "NUMERO": "268",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAMPO GRANDE",
+                "CEP": "23095760",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R CARLOS SANTOS ALVES",
+                "NUMERO": "97",
+                "COMPLEMENTO": "",
+                "BAIRRO": "",
+                "CEP": "49100000",
+                "CIDADE": "SAO CRISTOVAO",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "250253682",
+                "NOME": "LIDIA MARIA DOS SANTOS",
+                "IDADE": "54 anos",
+                "LOCAL": "BELO HORIZONTE\/MG",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "6573490541",
+                "NOME": "PEDRO VINNICIUS SANTOS ALVES",
+                "IDADE": "16 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "89958799120",
+                "NOME": "JOAO BATISTA DE FREITAS JUNIOR",
+                "IDADE": "43 anos",
+                "LOCAL": "SANTA ISABEL\/SP",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "97438782115",
+                "NOME": "ALEXANDRE BATISTA FREITAS",
+                "IDADE": "46 anos",
+                "LOCAL": "GOIANIA\/GO",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CENCOSUD BRASIL COMERCIAL LTDA.",
+                "CNPJ": "39346861000161",
+                "CIDADE": "NOSSA SENHORA DO SOCORRO-SE",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "14\/07\/2008",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CENCOSUD BRASIL COMERCIAL LTDA.",
+                "CNPJ": "39346861003934",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "01\/12\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "CENCOSUD BRASIL COMERCIAL LTDA.",
+                "CNPJ": "39346861011600",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "421125",
+                "DATA_ADMISSAO": "14\/07\/2008",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

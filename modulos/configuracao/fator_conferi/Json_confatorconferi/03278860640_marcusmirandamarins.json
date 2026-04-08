@@ -1,0 +1,302 @@
+{
+    "CADASTRAIS": {
+        "CPF": "3278860640",
+        "NOME": "MARCUS MIRANDA MARINS",
+        "NOME_MAE": "ILDA MIRANDA MARINS",
+        "NASCTO": "22\/05\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "114898640221",
+        "NIT": "12609644134",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212420",
+        "PROFISSAO": "ANALISTA DE SUPORTE COMPUTACIONAL",
+        "SALARIO": " 2.633,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1140871077",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1938784924",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1938784933",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1130474920",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1148056593",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11912361398",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11981045703",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "02\/08\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11987544758",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "02\/08\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11979631983",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "31991429778",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marcus.m.marins@delphiauto.com",
+            "marins.marcus@gmail.com",
+            "cinarafariaamaral@hotmail.com",
+            "marcus.m.marins@delphi.com",
+            "marcusmarins@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV NOVE DE JULHO",
+                "NUMERO": "3315",
+                "COMPLEMENTO": "AP 15",
+                "BAIRRO": "ANHANGABAU",
+                "CEP": "13208056",
+                "CIDADE": "JUNDIAI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV NOVE DE JULHO",
+                "NUMERO": "2989",
+                "COMPLEMENTO": "AP 12 TP SAFIRA",
+                "BAIRRO": "ANHANGABAU",
+                "CEP": "13208056",
+                "CIDADE": "JUNDIAI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SAN GIOVANNI",
+                "NUMERO": "105",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILLAGGIO CAPRICCIO",
+                "CEP": "13291338",
+                "CIDADE": "LOUVEIRA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV ANDRE COSTA",
+                "NUMERO": "1655",
+                "COMPLEMENTO": "CASA I10",
+                "BAIRRO": "CHA MOR MEDITER",
+                "CEP": "13214730",
+                "CIDADE": "JUNDIAI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MESSINA",
+                "NUMERO": "336",
+                "COMPLEMENTO": "AP 163",
+                "BAIRRO": "JARDIM MESSINA",
+                "CEP": "13207480",
+                "CIDADE": "JUNDIAI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ALVARENGA PEIXOTO",
+                "NUMERO": "41",
+                "COMPLEMENTO": "AP 302",
+                "BAIRRO": "LOURDES",
+                "CEP": "30180120",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RUA BELMIRO BRAGA",
+                "NUMERO": "888",
+                "COMPLEMENTO": "APTO 302",
+                "BAIRRO": "CAICARAS",
+                "CEP": "30770550",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RUA ALVARENGA PEIXOTO",
+                "NUMERO": "411",
+                "COMPLEMENTO": "AP 302",
+                "BAIRRO": "LOURDES",
+                "CEP": "30180120",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "18147380291",
+                "NOME": "ILDA MIRANDA MARINS",
+                "IDADE": "78 anos",
+                "LOCAL": "BELO HORIZONTE\/MG",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "3277841642",
+                "NOME": "CLAUDIO MIRANDA MARINS",
+                "IDADE": "53 anos",
+                "LOCAL": "BELO HORIZONTE\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "3277911608",
+                "NOME": "DANIEL MIRANDA MARINS",
+                "IDADE": "50 anos",
+                "LOCAL": "BELO HORIZONTE\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "CINARA FARIA AMARAL MARINS",
+                "IDADE": "",
+                "LOCALIDADE": "JUNDIAI\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "91524547620"
+            },
+            {
+                "NOME": "DEOTINIO AMARAL",
+                "IDADE": "",
+                "LOCALIDADE": "BELO HORIZONTE\/MG",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "5697395604"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COGNIZANT SERVICOS DE TECNOLOGIA E SOFTWARE DO BRASIL LTDA",
+                "CNPJ": "08323041000120",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142520",
+                "DATA_ADMISSAO": "10\/04\/2017",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ENGINEERING DO BRASIL S\/A.",
+                "CNPJ": "09433094000167",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142505",
+                "DATA_ADMISSAO": "14\/10\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "FIRSTEAM CONSULTING S.A.",
+                "CNPJ": "11707745000101",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212420",
+                "DATA_ADMISSAO": "01\/10\/2011",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "LORD CONSULTORIA LTDA",
+            "CNPJ": "12668535000114",
+            "CIDADE": "BELO HORIZONTE-MG",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20101014",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

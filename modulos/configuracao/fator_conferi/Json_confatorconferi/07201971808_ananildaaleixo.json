@@ -1,0 +1,160 @@
+{
+    "CADASTRAIS": {
+        "CPF": "7201971808",
+        "NOME": "ANA NILDA ALEIXO",
+        "NOME_MAE": "HELENA C ALEIXO",
+        "NASCTO": "10\/01\/1970",
+        "IDADE": "56 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "177692360175",
+        "NIT": "12314408014",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "763210",
+        "PROFISSAO": "COSTUREIRO NA CONFECCAO EM SERIE",
+        "SALARIO": " 754,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1432783076",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "14988231552",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "14998857333",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "14997907009",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "14996846406",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "aleixoana112@gmail.com",
+            "aleixo.adriano75@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DEMETRIO AURANI",
+                "NUMERO": "131",
+                "COMPLEMENTO": "FDS",
+                "BAIRRO": "CJ HABITACIONAL PADRE EMILIO IMMOS",
+                "CEP": "18708813",
+                "CIDADE": "AVARE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "PC ROMEU BRETAS",
+                "NUMERO": "108",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL AIRES",
+                "CEP": "18705160",
+                "CIDADE": "AVARE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOAO R KERNBEIR",
+                "NUMERO": "140",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD PARAISO",
+                "CEP": "18702595",
+                "CIDADE": "AVARE",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ADRIANO JOSE ALEIXO DA SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "AVARE\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "41173774858"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "DEGRADE CONFECCOES PORTO FELIZ LTDA",
+                "CNPJ": "00248529000200",
+                "CIDADE": "AVARE-SP",
+                "PROFISSAO": "760125",
+                "DATA_ADMISSAO": "01\/03\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "KALOUY CONFECCOES INDUSTRIAIS EIRELI",
+                "CNPJ": "09408605000190",
+                "CIDADE": "AVARE-SP",
+                "PROFISSAO": "760125",
+                "DATA_ADMISSAO": "23\/10\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "DENIN EXPRESS CONFECCOES LTDA",
+                "CNPJ": "10208167000104",
+                "CIDADE": "AVARE-SP",
+                "PROFISSAO": "763210",
+                "DATA_ADMISSAO": "03\/11\/2008",
+                "DATA_DEMISSAO": "21\/10\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

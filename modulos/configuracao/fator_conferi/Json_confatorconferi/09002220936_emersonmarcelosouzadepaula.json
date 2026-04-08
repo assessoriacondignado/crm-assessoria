@@ -1,0 +1,218 @@
+{
+    "CADASTRAIS": {
+        "CPF": "9002220936",
+        "NOME": "EMERSON MARCELO SOUZA DE PAULA",
+        "NOME_MAE": "JULIANA CRISTINA DE SOUZA",
+        "NASCTO": "12\/11\/1995",
+        "IDADE": "30 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4133339490",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4133051697",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4133339944",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "41995757817",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41910136350",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41998247231",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "emersonmarcelo11@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PAPAGAIO",
+                "NUMERO": "1780",
+                "COMPLEMENTO": "",
+                "BAIRRO": "GRALHA AZUL",
+                "CEP": "83824197",
+                "CIDADE": "FAZENDA RIO GRANDE",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R MARATAIZES",
+                "NUMERO": "69",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "BARCELONA",
+                "CEP": "29166150",
+                "CIDADE": "SERRA",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "R CARLOS CASTRO MACHADO",
+                "NUMERO": "16",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BARREIRO",
+                "CEP": "35701512",
+                "CIDADE": "SETE LAGOAS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RUA PROFESSOR PORTHOS VELOZO",
+                "NUMERO": "370",
+                "COMPLEMENTO": "FUNDOS",
+                "BAIRRO": "PAROLIN",
+                "CEP": "80220390",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "179152106",
+            "NOME": "JULIANA CRISTINA DE SOUZA",
+            "IDADE": "47 anos",
+            "LOCAL": "UBERLANDIA\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BUHLER INDUSTRIA E COMERCIO DE EQUIPAMENTOS INDUSTRIAIS LTDA.",
+                "CNPJ": "60885761000108",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "212415",
+                "DATA_ADMISSAO": "09\/05\/2022",
+                "DATA_DEMISSAO": "31\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BUHLER DO BRASIL LTDA.",
+                "CNPJ": "42599019000146",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "212415",
+                "DATA_ADMISSAO": "01\/09\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ELEVA IN-HAUS MANUTENCAO INDUSTRIAL LTDA",
+                "CNPJ": "02693750000979",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "15\/10\/2020",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "D. P. DA SILVA   BARANOSKI LTDA",
+                "CNPJ": "01258825000173",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/07\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ARTECHE EDC EQUIPAMENTOS E SISTEMAS S\/A",
+                "CNPJ": "02782918000165",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "08\/04\/2013",
+                "DATA_DEMISSAO": "30\/06\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "BRASIL TELECOM CALL CENTER S\/A",
+                "CNPJ": "04014081000563",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "10\/20\/1905",
+                "DATA_DEMISSAO": "18\/05\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "LUVAS YELING LTDA",
+                "CNPJ": "75126979000148",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "10\/12\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

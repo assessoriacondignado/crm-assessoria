@@ -1,0 +1,191 @@
+{
+    "CADASTRAIS": {
+        "CPF": "97150452604",
+        "NOME": "CLAUDIA SILVA SANTANA",
+        "NOME_MAE": "MIRAIDE SILVA SANTANA",
+        "NASCTO": "26\/04\/1972",
+        "IDADE": "54 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1264696413",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "252540",
+        "PROFISSAO": "ANALISTA DE PRODUTOS BANCARIOS",
+        "SALARIO": " 21.612,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3132198468",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3132842655",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "07\/07\/2007",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3134645893",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3131408452",
+                "OPERADORA": "PLENNA TELECOMUNICACOES LTDA",
+                "DATA_REFERENCIA": "23\/03\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31984522995",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31988992666",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "claudiass.2009@gmail.com",
+            "claudiass.2007@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R BOREAL",
+                "NUMERO": "273",
+                "COMPLEMENTO": "BL 2 AP 104",
+                "BAIRRO": "JD MONTANHES",
+                "CEP": "30720550",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R ROGERIO FAJARDO",
+                "NUMERO": "66",
+                "COMPLEMENTO": "AP 202",
+                "BAIRRO": "ANCHIETA",
+                "CEP": "30310450",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R DA BAHIA",
+                "NUMERO": "1600",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "30160907",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R DOM VITAL",
+                "NUMERO": "252",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ANCHIETA",
+                "CEP": "30310520",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R RAMALHETE",
+                "NUMERO": "66",
+                "COMPLEMENTO": "AP 202",
+                "BAIRRO": "ANCHIETA",
+                "CEP": "30310310",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "99769050687",
+                "NOME": "MIRAIDE SILVA SANTANA",
+                "IDADE": "75 anos",
+                "LOCAL": "ARACUAI\/MG",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "158021673",
+                "NOME": "MARTHA SANTANA VIEIRA",
+                "IDADE": "52 anos",
+                "LOCAL": "BELO HORIZONTE\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "3527682660",
+                "NOME": "RICARDO SILVA SANTANA",
+                "IDADE": "48 anos",
+                "LOCAL": "ITACARE\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "4259851640",
+                "NOME": "MILANA SILVA SANTANA",
+                "IDADE": "47 anos",
+                "LOCAL": "BELO HORIZONTE\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "BANCO DE DESENVOLVIMENTO DE MINAS GERAIS S.A. - BDMG",
+            "CNPJ": "38486817000194",
+            "CIDADE": "BELO HORIZONTE-MG",
+            "PROFISSAO": "252540",
+            "DATA_ADMISSAO": "03\/12\/2001",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

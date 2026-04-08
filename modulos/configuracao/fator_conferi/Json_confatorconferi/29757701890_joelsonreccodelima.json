@@ -1,0 +1,380 @@
+{
+    "CADASTRAIS": {
+        "CPF": "29757701890",
+        "NOME": "JOELSON RECCO DE LIMA",
+        "NOME_MAE": "ROSALIA RECCO",
+        "NASCTO": "14\/11\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "216702830167",
+        "NIT": "12681870226",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "517330",
+        "PROFISSAO": "VIGILANTE",
+        "SALARIO": " 1.024,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1933265966",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1938691257",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1932715973",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1933833076",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19995563966",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19994683986",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19987162392",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19988280621",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19988579909",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "joelson.recco@gmail.com",
+            "joelsonreccodelima@gmail.com",
+            "joelsonrecco@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ADEMAR PEREIRA DE BARROS",
+                "NUMERO": "77",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD CENTENARIO",
+                "CEP": "13045120",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ADEMAR PEREIRA DE BARROS",
+                "NUMERO": "100",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD CENTENARIO",
+                "CEP": "13045120",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ADEMAR PEREIRA DE BARROS",
+                "NUMERO": "275",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JD CENTENARIO",
+                "CEP": "13045120",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ALBERTO BERTELLI",
+                "NUMERO": "151",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL CARMINHA",
+                "CEP": "13045415",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DR ISRAEL ALVES DOS SANTOS SOBRINHO",
+                "NUMERO": "65",
+                "COMPLEMENTO": "FDS",
+                "BAIRRO": "PRQ DOS CISNES",
+                "CEP": "13046235",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CARLOS DUARTE DE OLIVEIRA",
+                "NUMERO": "101",
+                "COMPLEMENTO": "CS 1",
+                "BAIRRO": "VL FORMOSA",
+                "CEP": "13045045",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO CAMPAGNONE",
+                "NUMERO": "28",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JD BOM SUCESSO",
+                "CEP": "13045220",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R GERALDO BRETAS",
+                "NUMERO": "94",
+                "COMPLEMENTO": "AP 101 TP 2",
+                "BAIRRO": "JD S GABRIEL",
+                "CEP": "13045315",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SEGURPRO VIGILANCIA PATRIMONIAL S.A.",
+                "CNPJ": "25278459000263",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "27\/06\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SOUZA LIMA SEGURANCA PATRIMONIAL LTDA.",
+                "CNPJ": "64911290000108",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "24\/20\/1912",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "DELPHOS SERVICOS EMPRESARIAIS E COMERCIO DE EQUIPAMENTOS ELETRONICOS LTDA",
+                "CNPJ": "08288889000166",
+                "CIDADE": "JUNDIAI-SP",
+                "PROFISSAO": "517420",
+                "DATA_ADMISSAO": "08\/02\/2024",
+                "DATA_DEMISSAO": "28\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PARTNER SECURITY SERVICOS DE SEGURANCA LTDA",
+                "CNPJ": "12817803000112",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "02\/04\/2024",
+                "DATA_DEMISSAO": "07\/06\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CARRANTOS SEGURANCA E VIGILANCIA PATRIMONIAL LTDA",
+                "CNPJ": "08602699000171",
+                "CIDADE": "ITATIBA-SP",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "29\/12\/2022",
+                "DATA_DEMISSAO": "24\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "HAGANA SERVICOS ESPECIAIS LTDA",
+                "CNPJ": "00994242000148",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "951320",
+                "DATA_ADMISSAO": "17\/02\/2023",
+                "DATA_DEMISSAO": "17\/05\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "SECURITY SEGURANCA LTDA",
+                "CNPJ": "00332087001095",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "01\/08\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "REAK SEGURANCA E VIGILANCIA PATRIMONIAL LTDA",
+                "CNPJ": "10928126000184",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "317210",
+                "DATA_ADMISSAO": "11\/08\/2016",
+                "DATA_DEMISSAO": "17\/08\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SECURITY SEGURANCA LTDA",
+                "CNPJ": "00332087000102",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "02\/08\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "EMBRASE EMPRESA BRASILEIRA DE SEGURANCA E VIGILANCIA LTDA.",
+                "CNPJ": "57574154000295",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "26\/10\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "RVA SERVICOS DE PORTARIA, MONITORAMENTO E COMERCIO DE SISTEMAS DE SEGURANCA LTDA",
+                "CNPJ": "07001849000129",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "517410",
+                "DATA_ADMISSAO": "25\/01\/2014",
+                "DATA_DEMISSAO": "24\/04\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "VERZANI   SANDRINI SEGURANCA PATRIMONIAL LTDA",
+                "CNPJ": "64179724000127",
+                "CIDADE": "SANTO ANDRE-SP",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "22\/05\/2014",
+                "DATA_DEMISSAO": "01\/10\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "GRABER SEGURANCA LTDA",
+                "CNPJ": "87169900000498",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "12\/01\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "BAGGIO TERCEIRIZACAO E SERVICOS LTDA",
+                "CNPJ": "04063479000166",
+                "CIDADE": "VALINHOS-SP",
+                "PROFISSAO": "517410",
+                "DATA_ADMISSAO": "22\/11\/2011",
+                "DATA_DEMISSAO": "501",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "INVEST SERVICE - SERVICOS ESPECIALIZADOS EM MAO DE OBRA TERCEIRIZADA LTDA",
+                "CNPJ": "04667255000163",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "517410",
+                "DATA_ADMISSAO": "21\/12\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "ENGESEG SEGURANCA LTDA",
+                "CNPJ": "64545866000160",
+                "CIDADE": "SAO JOSE DOS CAMPOS-SP",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "08\/10\/2012",
+                "DATA_DEMISSAO": "19\/10\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "IRON SEGURANCA ESPECIALIZADA LTDA",
+                "CNPJ": "67992990000162",
+                "CIDADE": "VALINHOS-SP",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "01\/04\/2011",
+                "DATA_DEMISSAO": "603",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

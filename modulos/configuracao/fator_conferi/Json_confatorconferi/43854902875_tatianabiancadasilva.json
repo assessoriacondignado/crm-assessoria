@@ -1,0 +1,224 @@
+{
+    "CADASTRAIS": {
+        "CPF": "43854902875",
+        "NOME": "TATIANA BIANCA DA SILVA",
+        "NOME_MAE": "ANDREZA DA SILVA",
+        "NASCTO": "14\/02\/1995",
+        "IDADE": "31 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "2107386936",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "410105",
+        "PROFISSAO": "SUPERVISOR ADMINISTRATIVO",
+        "SALARIO": " 3.135,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1147485030",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1147475875",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11973657944",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11946634083",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "29\/09\/2018",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11954420467",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "bb24horas@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PAULO ERNANI BRAGA DO NASCIMENTO",
+                "NUMERO": "387",
+                "COMPLEMENTO": "C 17",
+                "BAIRRO": "JD S JOSE",
+                "CEP": "08695080",
+                "CIDADE": "SUZANO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PE EUSTAQUIO",
+                "NUMERO": "1172",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "VL AMORIM",
+                "CEP": "08610010",
+                "CIDADE": "SUZANO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R TALES",
+                "NUMERO": "111",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL NOVA",
+                "CEP": "03288070",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JECA TATU",
+                "NUMERO": "190",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "VL URUPES",
+                "CEP": "08615020",
+                "CIDADE": "SUZANO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R THIMOTEO UMBRIACO",
+                "NUMERO": "711",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE MARIA HELENA",
+                "CEP": "08683130",
+                "CIDADE": "SUZANO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA TIRADENTES",
+                "NUMERO": "60",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "08674195",
+                "CIDADE": "SUZANO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOUTOR ARMANDO DE RE",
+                "NUMERO": "213",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE MARIA HELENA",
+                "CEP": "08683180",
+                "CIDADE": "SUZANO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "351046941",
+                "NOME": "ANDREZA DA SILVA",
+                "IDADE": "46 anos",
+                "LOCAL": "SAO JOSE\/SC",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "59786756860",
+                "NOME": "MILLENA IZABELLE SOUZA E SILVA",
+                "IDADE": "9 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LSM INDUSTRIA E COMERCIO DE GENEROS ALIMENTICIOS LTDA",
+                "CNPJ": "22687830000171",
+                "CIDADE": "ITAQUAQUECETUBA-SP",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "26\/08\/2022",
+                "DATA_DEMISSAO": "15\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "APPA SERVICOS TEMPORARIOS E EFETIVOS LTDA",
+                "CNPJ": "05969071000110",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "413115",
+                "DATA_ADMISSAO": "03\/07\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MOVIDA LOCACAO DE VEICULOS S.A.",
+                "CNPJ": "07976147004824",
+                "CIDADE": "MOGI DAS CRUZES-SP",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "28\/07\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "FISH CONFECCOES LTDA",
+                "CNPJ": "17798682000122",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/06\/2015",
+                "DATA_DEMISSAO": "29\/05\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "",
+                "CNPJ": "00700120814500",
+                "CIDADE": "",
+                "PROFISSAO": "422110",
+                "DATA_ADMISSAO": "06\/08\/2013",
+                "DATA_DEMISSAO": "20\/10\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

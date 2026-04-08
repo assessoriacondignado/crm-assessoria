@@ -1,0 +1,141 @@
+{
+    "CADASTRAIS": {
+        "CPF": "11037422724",
+        "NOME": "MAURO DE MELLO MARTINS",
+        "NOME_MAE": "KATIA DE MELLO VIEIRA",
+        "NASCTO": "08\/11\/1996",
+        "IDADE": "29 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2132983133",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2138990736",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "21997169377",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "PRE PAGO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "mauromellow@ig.com.br",
+            "mauromellow@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DOIS DE FEVEREIRO",
+                "NUMERO": "1326",
+                "COMPLEMENTO": "APARTAMENTO:302",
+                "BAIRRO": "AGUA SANTA",
+                "CEP": "20745312",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA TANCREDO MARTINS COSTA",
+                "NUMERO": "1326",
+                "COMPLEMENTO": "302",
+                "BAIRRO": "ENGENHO DE DENTRO",
+                "CEP": "20730310",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "84550791772",
+            "NOME": "KATIA DE MELLO VIEIRA",
+            "IDADE": "61 anos",
+            "LOCAL": "RIO DE JANEIRO\/RJ",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PROLEVE ASSESSORIA ADMINISTRATIVA LTDA",
+                "CNPJ": "51637173000156",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "18\/12\/2023",
+                "DATA_DEMISSAO": "24\/04\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SENDAS DISTRIBUIDORA S\/A",
+                "CNPJ": "06057223000171",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "06\/05\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SOLUTIS TECNOLOGIAS LTDA",
+                "CNPJ": "12023465000147",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "02\/12\/2020",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "TRUE MEN INDUSTRIA E COMERCIO DE ROUPAS LTDA",
+                "CNPJ": "05196517000626",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "04\/03\/2015",
+                "DATA_DEMISSAO": "06\/02\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

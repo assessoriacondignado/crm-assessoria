@@ -1,0 +1,202 @@
+{
+    "CADASTRAIS": {
+        "CPF": "10792501748",
+        "NOME": "MARIA LUCIA RIBEIRO FARIAS",
+        "NOME_MAE": "MARIA DO CARMO VENANCIO",
+        "NASCTO": "31\/07\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1262816754",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521110",
+        "PROFISSAO": "VENDEDOR DE COMERCIO VAREJISTA",
+        "SALARIO": " 1.864,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2135567082",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "2125180314",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21983059704",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21985473616",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "21\/02\/2017",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "21997278595",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "21965959399",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "21972785956",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "rsillva77@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R GENERAL BELFORD",
+                "NUMERO": "249",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ROCHA",
+                "CEP": "20961000",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA DA GAMBOA",
+                "NUMERO": "161",
+                "COMPLEMENTO": "AP 202",
+                "BAIRRO": "GAMBOA",
+                "CEP": "20220324",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "510945686",
+                "NOME": "MARIA DO CARMO VENANCIO",
+                "IDADE": "75 anos",
+                "LOCAL": "MANDAGUARI\/PR",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "1036595366",
+                "NOME": "ANA PAULA FARIAS DE PAIVA",
+                "IDADE": "40 anos",
+                "LOCAL": "CRATEUS\/CE",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "3637821338",
+                "NOME": "FRANCISCO RICARDO FARIAS DE PAIVA",
+                "IDADE": "34 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "4508309186",
+                "NOME": "WALLAS RIBEIRO FARIAS",
+                "IDADE": "33 anos",
+                "LOCAL": "ITAPURANGA\/GO",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "7829559759",
+                "NOME": "ANTONIO ALMIR RIBEIRO FARIAS",
+                "IDADE": "49 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "16045045793",
+                "NOME": "LETICIA FARIAS DA SILVA",
+                "IDADE": "32 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "RAFAELA BARBOSA DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "FORTALEZA\/CE",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "2665686376"
+            },
+            {
+                "NOME": "RAFAELA FARIAS DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "RIO DE JANEIRO\/RJ",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "12876304724"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "PALACIO DA FERRAMENTA MAQUINAS LTDA",
+            "CNPJ": "42101436000117",
+            "CIDADE": "RIO DE JANEIRO-RJ",
+            "PROFISSAO": "521110",
+            "DATA_ADMISSAO": "01\/09\/2003",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

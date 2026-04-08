@@ -1,0 +1,179 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26728440895",
+        "NOME": "MARCIO ROGERIO SANTOS",
+        "NOME_MAE": "MARIA DE LOURDES DOS SANTOS",
+        "NASCTO": "20\/04\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "221642350183",
+        "NIT": "1271917224",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "722320",
+        "PROFISSAO": "MOLDADOR, A  MAQUINA",
+        "SALARIO": " 10.366,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1233071688",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "12996304451",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12997307906",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12981142446",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "12988038239",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "12991710393",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marcirogersan@ig.com.br",
+            "marciorogersan@hotmail.com",
+            "marciorogersan@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV ANDROMEDA",
+                "NUMERO": "1820",
+                "COMPLEMENTO": "SL 3",
+                "BAIRRO": "JD SATELITE",
+                "CEP": "12230001",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R POLAR",
+                "NUMERO": "180",
+                "COMPLEMENTO": "AP 191",
+                "BAIRRO": "JD SATELITE",
+                "CEP": "12230240",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ALVARES DE AZEVEDO",
+                "NUMERO": "85",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "VILA ZEZE",
+                "CEP": "12300000",
+                "CIDADE": "JACAREI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R POLAR",
+                "NUMERO": "280",
+                "COMPLEMENTO": "AP191",
+                "BAIRRO": "JARDIM SATELITE",
+                "CEP": "12230240",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ALVARES DE AZEVEDO",
+                "NUMERO": "85",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA ZEZE",
+                "CEP": "12310570",
+                "CIDADE": "JACAREI",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1018930",
+            "NOME": "MARIA DE LOURDES DOS SANTOS",
+            "IDADE": "96 anos",
+            "LOCAL": "MARINGA\/PR",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "EMBRAER S.A.",
+                "CNPJ": "07689002000189",
+                "CIDADE": "SAO JOSE DOS CAMPOS-SP",
+                "PROFISSAO": "722320",
+                "DATA_ADMISSAO": "01\/01\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "YABORA INDUSTRIA AERONAUTICA S.A.",
+                "CNPJ": "30657250000160",
+                "CIDADE": "SAO JOSE DOS CAMPOS-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "21\/03\/2000",
+                "DATA_DEMISSAO": "31\/12\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

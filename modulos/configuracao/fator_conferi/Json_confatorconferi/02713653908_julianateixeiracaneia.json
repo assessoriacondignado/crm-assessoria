@@ -1,0 +1,314 @@
+{
+    "CADASTRAIS": {
+        "CPF": "2713653908",
+        "NOME": "JULIANA TEIXEIRA CANEIA",
+        "NOME_MAE": "ANA TEIXEIRA CANEIA",
+        "NASCTO": "02\/02\/1979",
+        "IDADE": "47 anos",
+        "SEXO": "Feminino",
+        "RG": "64680994",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "071248800639",
+        "NIT": "1272277349",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "223405",
+        "PROFISSAO": "FARMACEUTICO",
+        "SALARIO": " 6.756,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4130789989",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "4132782792",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "4132421697",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4434010339",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "08\/12\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4132429938",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "44998069021",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "44998396266",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41991989938",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "44997278382",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41996263835",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "lorafarma@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R GUILHERME PUGSLEY",
+                "NUMERO": "1383",
+                "COMPLEMENTO": "AP 14",
+                "BAIRRO": "AGUA VERDE",
+                "CEP": "80620000",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R GOIANIA",
+                "NUMERO": "1597",
+                "COMPLEMENTO": "SOB 77",
+                "BAIRRO": "CAJURU",
+                "CEP": "82940150",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "AV REPUBLICA ARGENTINA",
+                "NUMERO": "4701",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "NOVO MUNDO",
+                "CEP": "81050001",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R MURILO DO AMARAL FERREIRA",
+                "NUMERO": "45",
+                "COMPLEMENTO": "AP 303",
+                "BAIRRO": "AGUA VERDE",
+                "CEP": "80620120",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R PAULO SETUBAL",
+                "NUMERO": "1548",
+                "COMPLEMENTO": "1",
+                "BAIRRO": "BOQUEIRAO",
+                "CEP": "81670130",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R OSMAR HILBERT",
+                "NUMERO": "1548",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOQUEIRAO",
+                "CEP": "81670530",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R ARNALDO FRANCISCO SCREMIN",
+                "NUMERO": "100",
+                "COMPLEMENTO": "PD 100 AP 307 AN 3",
+                "BAIRRO": "ATUBA",
+                "CEP": "82600059",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R GOIANIA",
+                "NUMERO": "119",
+                "COMPLEMENTO": "SOB  Sobrado 118",
+                "BAIRRO": "CAJURU",
+                "CEP": "82940150",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "44824521904",
+                "NOME": "ANA TEIXEIRA CANEIA",
+                "IDADE": "73 anos",
+                "LOCAL": "",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "559964935",
+                "NOME": "ROSEANE CANEIA",
+                "IDADE": "55 anos",
+                "LOCAL": "CURITIBA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "991041135",
+                "NOME": "THIAGO FRANCISCO TEIXEIRA CANEIA",
+                "IDADE": "42 anos",
+                "LOCAL": "CUIABA\/MT",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "12596943999",
+                "NOME": "DIOGO FRANCISCO CANEIA LOPES",
+                "IDADE": "24 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "14034342986",
+                "NOME": "ANA JULIA CANEIA LOPES",
+                "IDADE": "19 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COMERCIO DE MEDICAMENTOS BRAIR LTDA",
+                "CNPJ": "88212113081266",
+                "CIDADE": "CIANORTE-PR",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "15\/03\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COMERCIO DE MEDICAMENTOS BRAIR LTDA",
+                "CNPJ": "88212113052754",
+                "CIDADE": "PASSO FUNDO-RS",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "01\/10\/2023",
+                "DATA_DEMISSAO": "15\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COMERCIO DE MEDICAMENTOS BRAIR LTDA",
+                "CNPJ": "88212113082742",
+                "CIDADE": "CIANORTE-PR",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "20\/20\/2002",
+                "DATA_DEMISSAO": "01\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "FARMACIA E DROGARIA NISSEI S.A",
+                "CNPJ": "79430682027918",
+                "CIDADE": "CIANORTE-PR",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "27\/10\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "FARMACIA E DROGARIA NISSEI S.A",
+                "CNPJ": "79430682022363",
+                "CIDADE": "CIANORTE-PR",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "27\/07\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "FARMACIA E DROGARIA NISSEI S.A",
+                "CNPJ": "79430682013968",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "22\/08\/2011",
+                "DATA_DEMISSAO": "27\/07\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,148 @@
+{
+    "CADASTRAIS": {
+        "CPF": "24939179877",
+        "NOME": "BIANCA DE SOUZA MARRA GONCALVES",
+        "NOME_MAE": "MARINILCE PEREIRA DE SOUZA MARRA",
+        "NASCTO": "11\/01\/1976",
+        "IDADE": "50 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "256960320116",
+        "NIT": "1143646169",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "223505",
+        "PROFISSAO": "ENFERMEIRO",
+        "SALARIO": " 9.430,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1332289000",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13991559037",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13974140235",
+                "OPERADORA": "NEXTEL",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "13991162874",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "bianca-marra@domain.com.br",
+            "bianca-marra@hotmail.com.br",
+            "bianca-marra@hotmail.com",
+            "bianca_marra@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CUNHA MOREIRA",
+                "NUMERO": "111",
+                "COMPLEMENTO": "AP 12",
+                "BAIRRO": "ENCRUZILHADA",
+                "CEP": "11050241",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PEDRO AMERICO",
+                "NUMERO": "207",
+                "COMPLEMENTO": "AP 23",
+                "BAIRRO": "CPO GRANDE",
+                "CEP": "11075401",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA DOUTOR EPITACIO PESSOA",
+                "NUMERO": "68",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOQUEIRAO",
+                "CEP": "11045300",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA PEDRO AMERICO",
+                "NUMERO": "207",
+                "COMPLEMENTO": "APTO 23",
+                "BAIRRO": "CAMPO GRANDE",
+                "CEP": "11075400",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "13384962800",
+                "NOME": "MARINILCE PEREIRA DE SOUZA MARRA",
+                "IDADE": "80 anos",
+                "LOCAL": "SANTOS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "24958270809",
+                "NOME": "LUIZ MANOEL PEREIRA DE SOUZA MARRA",
+                "IDADE": "49 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "HOSPITAL ANA COSTA S\/A",
+            "CNPJ": "68253731000182",
+            "CIDADE": "SANTOS-SP",
+            "PROFISSAO": "223505",
+            "DATA_ADMISSAO": "29\/01\/2007",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,174 @@
+{
+    "CADASTRAIS": {
+        "CPF": "52253317349",
+        "NOME": "JONILTON DE BRITO FERNANDES",
+        "NOME_MAE": "ZELIA DE JESUS BRITO FERNANDES",
+        "NASCTO": "30\/03\/1973",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "019982791180",
+        "NIT": "2688294376",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "784205",
+        "PROFISSAO": "ALIMENTADOR DE LINHA DE PRODUCAO",
+        "SALARIO": " 1.422,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9832184843",
+                "OPERADORA": "TELEMAR\/MA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9832571003",
+                "OPERADORA": "TELEMAR\/MA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9832610782",
+                "OPERADORA": "TELEMAR\/MA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "98986068156",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "98987486011",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "02\/12\/2013",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "98986070788",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/04\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "andreiacardoso@ig.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DEZ",
+                "NUMERO": "20",
+                "COMPLEMENTO": "Q 26",
+                "BAIRRO": "S RAIMUNDO",
+                "CEP": "65057744",
+                "CIDADE": "SAO LUIS",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "LOC POV STO ANTONIO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ZONA RURAL",
+                "CEP": "65480000",
+                "CIDADE": "ARARI",
+                "ESTADO": "MA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "47602899334",
+            "NOME": "JANILDE BRITO FERNANDES",
+            "IDADE": "54 anos",
+            "LOCAL": "SAO LUIS\/MA",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "FRANCISCA BRAGA LIMA",
+                "IDADE": "",
+                "LOCALIDADE": "ITAPIPOCA\/CE",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "77462440334"
+            },
+            {
+                "NOME": "JOAO BATISTA CORREIA DE BRITO",
+                "IDADE": "",
+                "LOCALIDADE": "CAMACARI\/BA",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "7385609520"
+            },
+            {
+                "NOME": "LEVI BORGES BARBOSA",
+                "IDADE": "",
+                "LOCALIDADE": "BARRAS\/PI",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "20101686315"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "INDUSTRIA DE PAES E MASSAS MATEUS LTDA",
+                "CNPJ": "08898073000154",
+                "CIDADE": "SAO LUIS-MA",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "30\/09\/2013",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CONSTRUCOES E COMERCIO CAMARGO CORREA S\/A",
+                "CNPJ": "61522512003713",
+                "CIDADE": "SAO LUIS-MA",
+                "PROFISSAO": "717020",
+                "DATA_ADMISSAO": "01\/10\/2010",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,183 @@
+{
+    "CADASTRAIS": {
+        "CPF": "22099897875",
+        "NOME": "RITA DE CASSIA DE M ANDRADE",
+        "NOME_MAE": "ANA DE OLIVEIRA NASCIMENTO",
+        "NASCTO": "08\/05\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "251371560159",
+        "NIT": "1307386893",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "391210",
+        "PROFISSAO": "TECNICO DE GARANTIA DA QUALIDADE",
+        "SALARIO": " 7.530,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1121854579",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1124018512",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1124831234",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11911114417",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11995194407",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11964129653",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11964129653",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "cassia_mouraandrade@yahoo.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R S TEN AVIADOR EVANIR PEREIRA DA COSTA",
+                "NUMERO": "26",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD CUMBICA",
+                "CEP": "07181170",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOAO ARTONI",
+                "NUMERO": "3",
+                "COMPLEMENTO": "A42 B BH",
+                "BAIRRO": "JARDIM TESTAE",
+                "CEP": "07130510",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA SAO JANUARIO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM SAO JUDAS TADEU",
+                "CEP": "12228450",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA SEGUNDO-TENENTE-AVIADOR EVANIR PEREIRA DA COSTA",
+                "NUMERO": "2",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM CUMBICA",
+                "CEP": "07181170",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA SANTO EGIDIO",
+                "NUMERO": "577",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "SANTA TERESINHA",
+                "CEP": "02461011",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "5846058892",
+            "NOME": "ANA DE OLIVEIRA NASCIMENTO",
+            "IDADE": "82 anos",
+            "LOCAL": "CAMPOS NOVOS PAULISTA\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "RANGEL RODRIGO ALVES ANDRADE",
+            "IDADE": "",
+            "LOCALIDADE": "GUARULHOS\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "27347732875"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "PHIBRO SAUDE ANIMAL INTERNACIONAL LTDA.",
+            "CNPJ": "04076904000151",
+            "CIDADE": "GUARULHOS-SP",
+            "PROFISSAO": "391210",
+            "DATA_ADMISSAO": "22\/11\/2006",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

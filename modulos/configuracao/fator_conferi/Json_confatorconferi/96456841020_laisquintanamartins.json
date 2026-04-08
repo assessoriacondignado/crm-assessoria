@@ -1,0 +1,200 @@
+{
+    "CADASTRAIS": {
+        "CPF": "96456841020",
+        "NOME": "LAIS QUINTANA MARTINS",
+        "NOME_MAE": "ROSANGELA QUINTANA MARTINS",
+        "NASCTO": "20\/10\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Feminino",
+        "RG": "5069649282",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "069126150418",
+        "NIT": "20372589620",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "764305",
+        "PROFISSAO": "ACABADOR DE CALCADOS",
+        "SALARIO": " 6,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "5532322763",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "06\/12\/2007",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "55999394935",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51998105734",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "55984372763",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51996100218",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL POS-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DEZOITO DE NOVEMBRO",
+                "NUMERO": "402",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RITTER",
+                "CEP": "95650000",
+                "CIDADE": "IGREJINHA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "AV ERNESTO DORNELLES",
+                "NUMERO": "577",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "95650000",
+                "CIDADE": "IGREJINHA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R EDMUNDO BERCHON",
+                "NUMERO": "483",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "VL MARIA",
+                "CEP": "97300572",
+                "CIDADE": "SAO GABRIEL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA OSCAR KLEIN",
+                "NUMERO": "394",
+                "COMPLEMENTO": "AP 04",
+                "BAIRRO": "RITTER",
+                "CEP": "95650000",
+                "CIDADE": "IGREJINHA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA R CLARESTINO BENTO DA SILVA",
+                "NUMERO": "1589",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PASSO DA LAGOA",
+                "CEP": "97300000",
+                "CIDADE": "SAO GABRIEL",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "76975576068",
+                "NOME": "ROSANGELA QUINTANA MARTINS",
+                "IDADE": "66 anos",
+                "LOCAL": "SAO GABRIEL\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "1428790020",
+                "NOME": "MAURICIO MARTINS DA SILVA",
+                "IDADE": "40 anos",
+                "LOCAL": "SAO GABRIEL\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "1626743096",
+                "NOME": "ERIDIANE MARTINS DA SILVA",
+                "IDADE": "39 anos",
+                "LOCAL": "SAO GABRIEL\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "2764140045",
+                "NOME": "ROSSANO MARTINS DA SILVA",
+                "IDADE": "35 anos",
+                "LOCAL": "SAO GABRIEL\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "3318765074",
+                "NOME": "RAISA MARTINS DA SILVA",
+                "IDADE": "33 anos",
+                "LOCAL": "SAO GABRIEL\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "3757835042",
+                "NOME": "PATRINE MARTINS DA SILVA",
+                "IDADE": "31 anos",
+                "LOCAL": "IGREJINHA\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CALCADOS BEIRA RIO S\/A",
+                "CNPJ": "88379771000263",
+                "CIDADE": "IGREJINHA-RS",
+                "PROFISSAO": "764005",
+                "DATA_ADMISSAO": "08\/09\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "A. GRINGS S.A.",
+                "CNPJ": "97755177000130",
+                "CIDADE": "IGREJINHA-RS",
+                "PROFISSAO": "764305",
+                "DATA_ADMISSAO": "01\/03\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

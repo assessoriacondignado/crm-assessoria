@@ -1,0 +1,186 @@
+{
+    "CADASTRAIS": {
+        "CPF": "17775748893",
+        "NOME": "ADRIANO PERES DA SILVA",
+        "NOME_MAE": "MATILDE PERES DA SILVA",
+        "NASCTO": "22\/06\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "225514187",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "193894760191",
+        "NIT": "1294345723",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "324115",
+        "PROFISSAO": "TECNICO EM RADIOLOGIA E IMAGENOLOGIA",
+        "SALARIO": " 4.325,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1934664451",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1934664442",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "14\/10\/1999",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1934663217",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1934667006",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19991581728",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19994533395",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19997467610",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "19991407928",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "adriano.silva72@terra.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R BENEDITO JOSE PEREIRA",
+                "NUMERO": "163",
+                "COMPLEMENTO": "F",
+                "BAIRRO": "JD DE EDEN",
+                "CEP": "13382026",
+                "CIDADE": "NOVA ODESSA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MANOEL ANTONIO VILELLA",
+                "NUMERO": "13",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JD MATHILDE BERZIN",
+                "CEP": "13380222",
+                "CIDADE": "NOVA ODESSA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "15695748801",
+                "NOME": "MATILDE PERES DA SILVA",
+                "IDADE": "54 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "13931422810",
+                "NOME": "LUCIANO PERES DA SILVA",
+                "IDADE": "56 anos",
+                "LOCAL": "NOVA ODESSA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "15107159087",
+                "NOME": "GENEZIO DA SILVA MACHADO",
+                "IDADE": "85 anos",
+                "LOCAL": "PORTO ALEGRE\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ROSSETTI - DIAGNOSTICO POR IMAGEM LTDA",
+                "CNPJ": "03158710000132",
+                "CIDADE": "AMERICANA-SP",
+                "PROFISSAO": "324115",
+                "DATA_ADMISSAO": "02\/07\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ROSSETTI E XIMENES SERVICOS DE DIAGNOSTICO POR IMAGEM SOCIEDADE SIMPLES",
+                "CNPJ": "07554456000142",
+                "CIDADE": "AMERICANA-SP",
+                "PROFISSAO": "324115",
+                "DATA_ADMISSAO": "01\/04\/2008",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,103 @@
+{
+    "CADASTRAIS": {
+        "CPF": "27002772368",
+        "NOME": "FRANCISCO VIEIRA DA SILVA",
+        "NOME_MAE": "ANTONIA VIEIRA DA SILVA",
+        "NASCTO": "10\/12\/1964",
+        "IDADE": "61 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "012288131163",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9833522237",
+            "OPERADORA": "TELEMAR\/MA",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "98991304724",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "98991953790",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "98992119676",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R 1",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SAO FRANCISCO",
+                "CEP": "65350000",
+                "CIDADE": "VITORIA DO MEARIM",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "R GONCALVES DIAS",
+                "NUMERO": "33",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BAIRRO NOVO",
+                "CEP": "65350000",
+                "CIDADE": "VITORIA DO MEARIM",
+                "ESTADO": "MA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "56757310",
+            "NOME": "ANTONIA VIEIRA DA SILVA",
+            "IDADE": "67 anos",
+            "LOCAL": "GUARULHOS\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": "",
+    "EMPRESAS_SOCIO": ""
+}

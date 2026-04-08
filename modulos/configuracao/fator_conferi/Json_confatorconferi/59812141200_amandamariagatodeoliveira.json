@@ -1,0 +1,225 @@
+{
+    "CADASTRAIS": {
+        "CPF": "59812141200",
+        "NOME": "AMANDA MARIA GATO DE OLIVEIRA",
+        "NOME_MAE": "ROSA MARIA GATO BARROS",
+        "NASCTO": "06\/11\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12675708021",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "351605",
+        "PROFISSAO": "TECNICO EM SEGURANCA NO TRABALHO",
+        "SALARIO": " 6.095,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9232231939",
+            "OPERADORA": "TELEMAR\/AM",
+            "DATA_REFERENCIA": "24\/05\/2011",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92991894120",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92991835140",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92992074373",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92992413211",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92991422133",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "cardec-oliveira@bol.com.br",
+            "amanda061177@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R AMAURI REIS",
+                "NUMERO": "28",
+                "COMPLEMENTO": "CJ ELDORADO",
+                "BAIRRO": "PRQ 10 DE NOVEMBRO",
+                "CEP": "69050310",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R DOS MACUCAUAS",
+                "NUMERO": "413",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE DE DEUS",
+                "CEP": "69099402",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "51333813287",
+                "NOME": "ROSA MARIA GATO BARROS",
+                "IDADE": "75 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "31132359287",
+                "NOME": "JEAN RUDSTEDT GATO BARROS",
+                "IDADE": "57 anos",
+                "LOCAL": "ORIXIMINA\/PA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "49616870220",
+                "NOME": "ALESSANDRO GATO BARROS",
+                "IDADE": "52 anos",
+                "LOCAL": "ORIXIMINA\/PA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "70129216259",
+                "NOME": "GABRIEL GATO DE OLIVEIRA",
+                "IDADE": "20 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "70129220280",
+                "NOME": "GIOVANNI GATO DE OLIVEIRA",
+                "IDADE": "21 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "70129229237",
+                "NOME": "VINICIUS GATO DE OLIVEIRA",
+                "IDADE": "22 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ALAN CARDEC PEREIRA DE OLIVEIRA",
+                "IDADE": "",
+                "LOCALIDADE": "MANAUS\/AM",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "34259007220"
+            },
+            {
+                "NOME": "CARDEC DE OLIVEIRA E SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "RIO DE JANEIRO\/RJ",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "37342762768"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "YAMAHA MOTOR DA AMAZONIA LTDA",
+                "CNPJ": "04817052000106",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "351605",
+                "DATA_ADMISSAO": "01\/11\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "YAMAHA MOTOR COMPONENTES DA AMAZONIA LTDA",
+                "CNPJ": "06225970000171",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "351605",
+                "DATA_ADMISSAO": "01\/02\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "BRASITECH INDUSTRIA E COMERCIO DE APARELHOS PARA BELEZA LTDA",
+                "CNPJ": "07293118000102",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "351605",
+                "DATA_ADMISSAO": "25\/05\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "BIC AMAZONIA S\/A",
+                "CNPJ": "04402277000100",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "351605",
+                "DATA_ADMISSAO": "03\/07\/2006",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

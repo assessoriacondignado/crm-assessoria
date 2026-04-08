@@ -1,0 +1,218 @@
+{
+    "CADASTRAIS": {
+        "CPF": "66279224520",
+        "NOME": "JOAO MARCELO COSTA GOIS",
+        "NOME_MAE": "MARIA SALETE COSTA",
+        "NASCTO": "28\/12\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "1123396",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "013622142151",
+        "NIT": "1273581376",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "214205",
+        "PROFISSAO": "ENGENHEIRO CIVIL",
+        "SALARIO": " 12.002,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7932435330",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7932112205",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "79988251489",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79998091699",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79988030732",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "79999248885",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "79988127038",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marcelocampus@globo.com",
+            "tecnico@construtorajj.com.br",
+            "engjoaomarcelo@outlook.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R RAFAEL DE AGUIAR",
+                "NUMERO": "1176",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PEREIRA LOBO",
+                "CEP": "49050660",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "AV SILVERIO LEITE FONTES",
+                "NUMERO": "1128",
+                "COMPLEMENTO": "BL 5 AP 3",
+                "BAIRRO": "AEROPORTO",
+                "CEP": "49038260",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "AV JOAQUIM PORTO VILLANOVA",
+                "NUMERO": "401",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD DO SALSO",
+                "CEP": "91410400",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "AV MAICA",
+                "NUMERO": "268",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTANA",
+                "CEP": "68010390",
+                "CIDADE": "SANTAREM",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "R MADAGASCAR",
+                "NUMERO": "951",
+                "COMPLEMENTO": "",
+                "BAIRRO": "FATIMA",
+                "CEP": "83405090",
+                "CIDADE": "COLOMBO",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R STO ANTONIO",
+                "NUMERO": "362",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JACINTINHO",
+                "CEP": "57040500",
+                "CIDADE": "MACEIO",
+                "ESTADO": "AL"
+            },
+            {
+                "LOGRADOURO": "R ENG FRANCISCO MANOEL DA COSTA",
+                "NUMERO": "260",
+                "COMPLEMENTO": "AP 103",
+                "BAIRRO": "ATALAIA",
+                "CEP": "49035110",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R PAULINO FERNANDES DE BARROS",
+                "NUMERO": "31",
+                "COMPLEMENTO": "CJ MEDICI I",
+                "BAIRRO": "LUZIA",
+                "CEP": "49048270",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "389256803",
+            "NOME": "MARIA SALETE COSTA",
+            "IDADE": "70 anos",
+            "LOCAL": "FLORIANOPOLIS\/SC",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "",
+                "CNPJ": "00000032813263",
+                "CIDADE": "",
+                "PROFISSAO": "214205",
+                "DATA_ADMISSAO": "09\/02\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CONSTRUTORA JJ LTDA",
+                "CNPJ": "32813263000106",
+                "CIDADE": "SIMAO DIAS-SE",
+                "PROFISSAO": "214205",
+                "DATA_ADMISSAO": "01\/11\/2003",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

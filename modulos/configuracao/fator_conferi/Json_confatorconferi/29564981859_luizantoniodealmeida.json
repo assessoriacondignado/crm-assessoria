@@ -1,0 +1,176 @@
+{
+    "CADASTRAIS": {
+        "CPF": "29564981859",
+        "NOME": "LUIZ ANTONIO DE ALMEIDA",
+        "NOME_MAE": "MARIA APARECIDA DOS SANTOS DE ALMEIDA",
+        "NASCTO": "26\/03\/1981",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "226666670116",
+        "NIT": "1272520717",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "911305",
+        "PROFISSAO": "MECANICO DE MANUTENCAO DE MAQUINAS, EM GERAL",
+        "SALARIO": " 5.560,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1632427666",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1632879000",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "69991649249",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16992988965",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16991649249",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "luizinhoma@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R GUSTAVO DE GODOY",
+                "NUMERO": "667",
+                "COMPLEMENTO": "FDS A",
+                "BAIRRO": "VL AERO CLUBE",
+                "CEP": "15910000",
+                "CIDADE": "MONTE ALTO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PERSIDIO MEIRA",
+                "NUMERO": "21",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD DAS OLIVEIRAS",
+                "CEP": "15910000",
+                "CIDADE": "MONTE ALTO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DAS ORQUIDEAS",
+                "NUMERO": "157",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CALIFORNIA",
+                "CEP": "15910000",
+                "CIDADE": "MONTE ALTO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PASCHOAL BONSEGNO",
+                "NUMERO": "1280",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CENTRO",
+                "CEP": "15910000",
+                "CIDADE": "MONTE ALTO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOS JASMINS",
+                "NUMERO": "841",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "CALIFORNIA",
+                "CEP": "15910000",
+                "CIDADE": "MONTE ALTO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DAS PAPOULAS",
+                "NUMERO": "353",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD CALIFORNIA",
+                "CEP": "15910000",
+                "CIDADE": "MONTE ALTO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "542039290",
+            "NOME": "MARIA APARECIDA DOS SANTOS DE ALMEIDA",
+            "IDADE": "36 anos",
+            "LOCAL": "RECIFE\/PE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "INDUSTRIA DE POLPAS E CONSERVAS VAL LTDA",
+                "CNPJ": "71841902000107",
+                "CIDADE": "VISTA ALEGRE DO ALTO-SP",
+                "PROFISSAO": "911305",
+                "DATA_ADMISSAO": "14\/11\/2012",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FUGINI ALIMENTOS LTDA",
+                "CNPJ": "00588458000103",
+                "CIDADE": "MONTE ALTO-SP",
+                "PROFISSAO": "911305",
+                "DATA_ADMISSAO": "27\/09\/2010",
+                "DATA_DEMISSAO": "20\/11\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

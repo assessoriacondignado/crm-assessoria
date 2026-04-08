@@ -1,0 +1,249 @@
+{
+    "CADASTRAIS": {
+        "CPF": "17087881825",
+        "NOME": "DANIEL SILVA DE OLIVEIRA",
+        "NOME_MAE": "JOSEFA ANA DA SILVA OLIVEIRA",
+        "NASCTO": "12\/11\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "5513219",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "280339590132",
+        "NIT": "1248858615",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142320",
+        "PROFISSAO": "GERENTE DE VENDAS",
+        "SALARIO": " 26.752,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1141032821",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1159286523",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1533598531",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "30\/11\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1540095741",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11961538442",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11983818237",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "16\/04\/2008",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "15981601980",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11981601980",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "05\/09\/2008",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "15997560584",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "daniel.oliveira@zf-lenksysteme.com",
+            "olliver.dan@hotmail.com",
+            "fabricacamafeu@globomail.com",
+            "oliver.dan@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R FRANCISCO XAVIER DE ALMEIDA CAMPOS",
+                "NUMERO": "428",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD MORADA DO SOL",
+                "CEP": "13346490",
+                "CIDADE": "INDAIATUBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "PC CARLOS DE CAMPOS",
+                "NUMERO": "128",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "18035230",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FERNANDO SILVA",
+                "NUMERO": "530",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD ASTRO",
+                "CEP": "18017158",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R RODRIGUES DO PRADO",
+                "NUMERO": "490",
+                "COMPLEMENTO": "AP 23",
+                "BAIRRO": "VL HARO",
+                "CEP": "18015335",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOAO MENEGHEL",
+                "NUMERO": "288",
+                "COMPLEMENTO": "AP  Apartamento  23",
+                "BAIRRO": "RUDGE RAMOS",
+                "CEP": "09623020",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA FLAVIO FONGARO",
+                "NUMERO": "118",
+                "COMPLEMENTO": "APTO11",
+                "BAIRRO": "VL MARLENE",
+                "CEP": "09726430",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA CAMINHO DO MAR",
+                "NUMERO": "1680",
+                "COMPLEMENTO": "B 2 AP 94",
+                "BAIRRO": "RUDGE RAMOS",
+                "CEP": "09610000",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA AUGUSTO CARMONA",
+                "NUMERO": "20",
+                "COMPLEMENTO": "AP 5",
+                "BAIRRO": "JARDIM SAIRA",
+                "CEP": "18085150",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "7991615863",
+            "NOME": "JOSEFA ANA DA SILVA OLIVEIRA",
+            "IDADE": "75 anos",
+            "LOCAL": "CARPINA\/PE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "B GROB DO BRASIL S A IND COM MAQS OPERAT E FERRAMENTAS",
+                "CNPJ": "60586450000130",
+                "CIDADE": "SAO BERNARDO DO CAMPO-SP",
+                "PROFISSAO": "142320",
+                "DATA_ADMISSAO": "21\/03\/2016",
+                "DATA_DEMISSAO": "24\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SECO TOOLS INDUSTRIA E COMERCIO LIMITADA",
+                "CNPJ": "59108308000106",
+                "CIDADE": "SOROCABA-SP",
+                "PROFISSAO": "142320",
+                "DATA_ADMISSAO": "17\/06\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "HELLER MAQUINAS OPERATRIZES INDUSTRIA E COMERCIO LTDA",
+                "CNPJ": "43997253000194",
+                "CIDADE": "SOROCABA-SP",
+                "PROFISSAO": "214205",
+                "DATA_ADMISSAO": "14\/02\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

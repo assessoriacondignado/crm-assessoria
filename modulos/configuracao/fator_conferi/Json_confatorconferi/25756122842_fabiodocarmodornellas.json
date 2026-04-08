@@ -1,0 +1,270 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25756122842",
+        "NOME": "FABIO DO CARMO DORNELLAS",
+        "NOME_MAE": "MARIA DO CARMO DORNELLAS",
+        "NASCTO": "05\/01\/1978",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "275848899",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "280638090141",
+        "NIT": "12536956174",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "519110",
+        "PROFISSAO": "MOTOCICLISTA NO TRANSPORTE DE DOCUMENTOS E PEQUENOS VOLUMES",
+        "SALARIO": " 1.649,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1137810294",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1131686446",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1142448463",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11944602746",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11946100199",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "08\/08\/2016",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11995625046",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "juliana.smatos@hotmail.com",
+            "fabio.dornellas@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R TOME DE SOUZA",
+                "NUMERO": "170",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL JAMIL",
+                "CEP": "08525420",
+                "CIDADE": "FERRAZ DE VASCONCELOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO LOPES DA SILVA",
+                "NUMERO": "174",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JD CARAPICUIBA",
+                "CEP": "06322320",
+                "CIDADE": "CARAPICUIBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JACINTO DE OLIVEIRA",
+                "NUMERO": "38",
+                "COMPLEMENTO": "C 2",
+                "BAIRRO": "JD RAPOSO TAVARES",
+                "CEP": "05551050",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R TABAPUA",
+                "NUMERO": "901",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ITAIM BIBI",
+                "CEP": "04533013",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R IMAC CONCEICAO",
+                "NUMERO": "28",
+                "COMPLEMENTO": "AP 41",
+                "BAIRRO": "VL BUARQUE",
+                "CEP": "01226020",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R COROA BOREAL",
+                "NUMERO": "62",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD DO COLEGIO",
+                "CEP": "06815360",
+                "CIDADE": "EMBU DAS ARTES",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R S JORGE",
+                "NUMERO": "480",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD V VERDE",
+                "CEP": "06815320",
+                "CIDADE": "EMBU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JACINTO DE OLIVEIRA",
+                "NUMERO": "3",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM RAPOSO TAVARES",
+                "CEP": "05551050",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "14799786806",
+                "NOME": "MARIA DO CARMO DORNELLAS",
+                "IDADE": "56 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "4876533946",
+                "NOME": "MARLI DORNELLAS FERREIRA",
+                "IDADE": "62 anos",
+                "LOCAL": "SARANDI\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "13451062895",
+                "NOME": "CRISTIANE DO CARMO DORNELLAS",
+                "IDADE": "54 anos",
+                "LOCAL": "EMBU DAS ARTES\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "FABIO ADRIANO DORNELLAS",
+                "IDADE": "",
+                "LOCALIDADE": "JABOATAO DOS GUARARAPES\/PE",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "9367795866"
+            },
+            {
+                "NOME": "JULIANA SOUZA MATOS",
+                "IDADE": "",
+                "LOCALIDADE": "TABOAO DA SERRA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "28513672858"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TRANSPORTES IMEDIATO S\/A",
+                "CNPJ": "49151483001277",
+                "CIDADE": "EMBU DAS ARTES-SP",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "15\/10\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COLONIAL PAES E DOCES LTDA",
+                "CNPJ": "52977980000180",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "519110",
+                "DATA_ADMISSAO": "25\/04\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "FOCCO EVENTOS LTDA",
+                "CNPJ": "10328345000122",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "783225",
+                "DATA_ADMISSAO": "01\/06\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "CONNER IMPORTADORA E DISTRIBUIDORA LTDA",
+                "CNPJ": "00966825000165",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "782305",
+                "DATA_ADMISSAO": "01\/03\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "CASA DAS BOBINAS LTDA",
+                "CNPJ": "02494222000133",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "782310",
+                "DATA_ADMISSAO": "01\/11\/1999",
+                "DATA_DEMISSAO": "302",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

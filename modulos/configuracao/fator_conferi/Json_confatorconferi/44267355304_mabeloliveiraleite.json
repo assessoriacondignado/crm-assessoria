@@ -1,0 +1,203 @@
+{
+    "CADASTRAIS": {
+        "CPF": "44267355304",
+        "NOME": "MABEL OLIVEIRA LEITE",
+        "NOME_MAE": "BRIGIDA VITORIO LEITE",
+        "NASCTO": "09\/06\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "050325030752",
+        "NIT": "1321096219",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411010",
+        "PROFISSAO": "ASSISTENTE ADMINISTRATIVO",
+        "SALARIO": " 2.298,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8534649223",
+                "OPERADORA": "TELEMAR\/CE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "8532965481",
+                "OPERADORA": "TELEMAR\/CE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "85999672656",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "85988561937",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "85987367735",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "16\/10\/2007",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "85988521452",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "19\/04\/2006",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "85981165597",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "24\/02\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "mabelleite@oi.com.br",
+            "webmaster@clinicasantaamalia.com.br",
+            "mabeloliveiraleite@gmail.com",
+            "mabeloleite@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R SUL",
+                "NUMERO": "435",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAJAZEIRAS",
+                "CEP": "60864255",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "AV RIO BRANCO",
+                "NUMERO": "658",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE ALTA",
+                "CEP": "59025002",
+                "CIDADE": "NATAL",
+                "ESTADO": "RN"
+            },
+            {
+                "LOGRADOURO": "AVENIDA CONTORNO SUL",
+                "NUMERO": "435",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CONJUNTO ESPERANCA",
+                "CEP": "60763430",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "4495589326",
+                "NOME": "EMANUEL JHONATAN DE OLIVEIRA SOBREIRA",
+                "IDADE": "36 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "60924327308",
+                "NOME": "HELTER OLIVEIRA SOBREIRA",
+                "IDADE": "30 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PAULO VICTOR COUTINHO DA SILVA",
+                "CNPJ": "20169399000146",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "13\/10\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FORTALEZA COMERCIO IMPORTACAO E EXPORTACAO DE MOVEIS E ELETRO LTDA",
+                "CNPJ": "40708979001577",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "413110",
+                "DATA_ADMISSAO": "01\/07\/2022",
+                "DATA_DEMISSAO": "04\/07\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "DRICOS MOVEIS E ELETRODOMESTICOS LTDA",
+                "CNPJ": "04980258006002",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "413110",
+                "DATA_ADMISSAO": "03\/03\/2008",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "DRICOS MOVEIS E ELETRODOMESTICOS LTDA",
+                "CNPJ": "04980258002449",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "01\/03\/2010",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

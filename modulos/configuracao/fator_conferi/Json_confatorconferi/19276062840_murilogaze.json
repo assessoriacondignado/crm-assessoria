@@ -1,0 +1,245 @@
+{
+    "CADASTRAIS": {
+        "CPF": "19276062840",
+        "NOME": "MURILO GAZE",
+        "NOME_MAE": "RITA MARIA BUTTURINI GAZE",
+        "NASCTO": "21\/02\/1980",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "209148650191",
+        "NIT": "12909728899",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212310",
+        "PROFISSAO": "ADMINISTRADOR DE REDES",
+        "SALARIO": " 12.941,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1141219039",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "09\/03\/2011",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1143511019",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1141221765",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11932483945",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13988628944",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "OI_PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11982354249",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11982354249",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11983923005",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "m.gaze@uol.com.br",
+            "m.gaze@mangels.com.br",
+            "murilogaze@gmail.com",
+            "murilogons@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R BENEDITO LUIZ RODRIGUES",
+                "NUMERO": "975",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVA PETROPOLIS",
+                "CEP": "09780420",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV ROBERT KENNEDY",
+                "NUMERO": "1635",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PLANALTO",
+                "CEP": "09895005",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV ROBERT KENNEDY",
+                "NUMERO": "1675",
+                "COMPLEMENTO": "CASA 134",
+                "BAIRRO": "PLANALTO",
+                "CEP": "09860000",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV ROBERT KENNEDY",
+                "NUMERO": "1675",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PLANALTO",
+                "CEP": "09895005",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MARIA DE FATIMA",
+                "NUMERO": "362",
+                "COMPLEMENTO": "BL ATLANTIC AP 103",
+                "BAIRRO": "BAETA NEVES",
+                "CEP": "09760480",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "19276063811",
+                "NOME": "RITA MARIA BUTTURINI GAZE",
+                "IDADE": "68 anos",
+                "LOCAL": "SANTO ANDRE\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "19276065865",
+                "NOME": "FABIO GAZE",
+                "IDADE": "47 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "19276068880",
+                "NOME": "VINICIUS GAZE",
+                "IDADE": "49 anos",
+                "LOCAL": "SAO BERNARDO DO CAMPO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "MURILO DE JESUS FROIS",
+            "IDADE": "",
+            "LOCALIDADE": "OSASCO\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "36466527808"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CARREFOUR COMERCIO E INDUSTRIA LTDA",
+                "CNPJ": "45543915000181",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "317110",
+                "DATA_ADMISSAO": "13\/04\/2016",
+                "DATA_DEMISSAO": "05\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RIACHUELO SA",
+                "CNPJ": "33200056000149",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142520",
+                "DATA_ADMISSAO": "08\/02\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COMPANHIA BRASILEIRA DE DISTRIBUICAO",
+                "CNPJ": "47508411000156",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212310",
+                "DATA_ADMISSAO": "01\/08\/2014",
+                "DATA_DEMISSAO": "13\/04\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "MV-DATASYS PROCESSAMENTO ELETRONICO DE DADOS LTDA",
+            "CNPJ": "14447548000199",
+            "CIDADE": "SAO BERNARDO DO CAMPO-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20110722",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

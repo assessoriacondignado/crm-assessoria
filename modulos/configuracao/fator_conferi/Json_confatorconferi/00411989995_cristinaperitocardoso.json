@@ -1,0 +1,173 @@
+{
+    "CADASTRAIS": {
+        "CPF": "411989995",
+        "NOME": "CRISTINA PERITO CARDOSO",
+        "NOME_MAE": "JANE MARIA SECCON CARDOSO",
+        "NASCTO": "25\/09\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "034676920990",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "223305",
+        "PROFISSAO": "MEDICO VETERINARIO",
+        "SALARIO": " 20.094,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1147295397",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1147295397",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4932226566",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "09\/07\/2011",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "49999658657",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "49991664557",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "cristinaperito@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R SALVADOR NATUCCI",
+                "NUMERO": "85",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JD DAS ARAUCARIAS",
+                "CEP": "84174380",
+                "CIDADE": "CASTRO",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "VL RANCHO GRANDE",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "INTERIOR",
+                "CEP": "89380000",
+                "CIDADE": "MONTE CASTELO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "AV PRIMEIRO DE MAIO",
+                "NUMERO": "480",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "CORAL",
+                "CEP": "88509510",
+                "CIDADE": "LAGES",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "RUA L OCTAVIO XAVIER RAUEN",
+                "NUMERO": "294",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "89380000",
+                "CIDADE": "MONTE CASTELO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "RUA JOAO DIAS BRASCHER",
+                "NUMERO": "200",
+                "COMPLEMENTO": "CS 2",
+                "BAIRRO": "UNIVERSITARIO",
+                "CEP": "88511030",
+                "CIDADE": "LAGES",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "RUA JOAO DIAS BRASCHER",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "UNIVERSITARIO",
+                "CEP": "88511030",
+                "CIDADE": "LAGES",
+                "ESTADO": "SC"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "10996925988",
+                "NOME": "JANE MARIA SECCON CARDOSO",
+                "IDADE": "22 anos",
+                "LOCAL": "",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "394665902",
+                "NOME": "RODRIGO PERITO CARDOSO",
+                "IDADE": "47 anos",
+                "LOCAL": "GRAVATAI\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "COMPANHIA INTEGRADA DE DESENVOLVIMENTO AGRICOLA DE SC",
+            "CNPJ": "83807586000128",
+            "CIDADE": "FLORIANOPOLIS-SC",
+            "PROFISSAO": "223305",
+            "DATA_ADMISSAO": "17\/05\/2010",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

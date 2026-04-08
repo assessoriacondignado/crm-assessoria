@@ -1,0 +1,167 @@
+{
+    "CADASTRAIS": {
+        "CPF": "59959398072",
+        "NOME": "JAIME MOACIR BAUMANN",
+        "NOME_MAE": "MARLI DULCI WILLIG",
+        "NASCTO": "04\/07\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12212003139",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "314410",
+        "PROFISSAO": "TECNICO EM MANUTENCAO DE MAQUINAS",
+        "SALARIO": " 5.007,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "5533220388",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "55996506630",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "55996869081",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "55999156174",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "fer.baumann@hotmail.com",
+            "betamb_hz@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "EST LAJEADO GALDINO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "HORIZONTINA",
+                "CEP": "98920000",
+                "CIDADE": "HORIZONTINA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R ARNOLDO SCHNEIDER",
+                "NUMERO": "18",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "98920000",
+                "CIDADE": "HORIZONTINA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R PERNAMBUCO",
+                "NUMERO": "1007",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SAO FRANCISCO",
+                "CEP": "98920000",
+                "CIDADE": "HORIZONTINA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "JAIME MOACIR BAUMANN PERNAMBUCO",
+                "NUMERO": "100",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BELA VISTA ALVORADA",
+                "CEP": "98920000",
+                "CIDADE": "HORIZONTINA",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "30908760000",
+            "NOME": "MARLI DULCI WILLIG",
+            "IDADE": "76 anos",
+            "LOCAL": "HORIZONTINA\/RS",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ROBERTA MAISA BAUMANN",
+            "IDADE": "",
+            "LOCALIDADE": "SAO PAULO\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "2828789047"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "DAVIDSON AUGUSTO HIRT LTDA",
+                "CNPJ": "17995224000183",
+                "CIDADE": "HORIZONTINA-RS",
+                "PROFISSAO": "141205",
+                "DATA_ADMISSAO": "16\/01\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "",
+                "CNPJ": "00000007749348",
+                "CIDADE": "",
+                "PROFISSAO": "414105",
+                "DATA_ADMISSAO": "14\/02\/2022",
+                "DATA_DEMISSAO": "11\/11\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "JOHN DEERE BRASIL LTDA",
+                "CNPJ": "89674782000158",
+                "CIDADE": "HORIZONTINA-RS",
+                "PROFISSAO": "314410",
+                "DATA_ADMISSAO": "04\/04\/1988",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

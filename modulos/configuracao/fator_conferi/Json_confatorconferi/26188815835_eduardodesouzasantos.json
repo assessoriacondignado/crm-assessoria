@@ -1,0 +1,186 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26188815835",
+        "NOME": "EDUARDO DE SOUZA SANTOS",
+        "NOME_MAE": "IRONILDES DE SOUZA SANTOS",
+        "NASCTO": "07\/11\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "265245960167",
+        "NIT": "12678895817",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "413225",
+        "PROFISSAO": "ESCRITURARIO DE BANCO",
+        "SALARIO": " 3.005,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1135535959",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1127910516",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11948625800",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11983073720",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11982707136",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "27\/07\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "narnoneneto@gmail.com",
+            "jessicabertin@gmail.com",
+            "diretoria05@yahoo.com.br",
+            "bruninhomeugatinhu@hotmail.com",
+            "bruninhumeugatinhu@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "R MUTU PORANGA",
+            "NUMERO": "303",
+            "COMPLEMENTO": "",
+            "BAIRRO": "JD PIRATININGA",
+            "CEP": "03716140",
+            "CIDADE": "SAO PAULO",
+            "ESTADO": "SP"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "27321990877",
+                "NOME": "IRONILDES DE SOUZA SANTOS",
+                "IDADE": "77 anos",
+                "LOCAL": "SAO JOAO DE MERITI\/RJ",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "11292938587",
+                "NOME": "JOSE CARLOS SEIBERT DOS SANTOS",
+                "IDADE": "68 anos",
+                "LOCAL": "SANTA LUZIA\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "24553523825",
+                "NOME": "DANIELE DE SOUZA SANTOS",
+                "IDADE": "48 anos",
+                "LOCAL": "TAUBATE\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "30744740843",
+                "NOME": "ELTHON DE SOUZA SANTOS",
+                "IDADE": "43 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "NELSON ARNONE NETO",
+            "IDADE": "",
+            "LOCALIDADE": "SAO PAULO\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "22953739807"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CAIXA ECONOMICA FEDERAL",
+                "CNPJ": "00360305000104",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "03\/02\/2014",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CAIXA ECONOMICA FEDERAL",
+                "CNPJ": "00360305409428",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "13\/11\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "CAIXA ECONOMICA FEDERAL",
+                "CNPJ": "00360305060514",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "03\/02\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO SANTANDER (BRASIL) S.A.",
+                "CNPJ": "90400888000142",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "422310",
+                "DATA_ADMISSAO": "01\/09\/2010",
+                "DATA_DEMISSAO": "24\/01\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

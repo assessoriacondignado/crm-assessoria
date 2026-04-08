@@ -1,0 +1,282 @@
+{
+    "CADASTRAIS": {
+        "CPF": "7215469786",
+        "NOME": "LUIZ ROGERIO BATISTA MACHADO",
+        "NOME_MAE": "ZENILDA BATISTA MACHADO",
+        "NASCTO": "08\/07\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "105036404",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "090990390302",
+        "NIT": "1253367945 ",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782405",
+        "PROFISSAO": "MOTORISTA DE ONIBUS RODOVIARIO",
+        "SALARIO": " 2.011,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2227783527",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2227783926",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "22998663471",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "21\/02\/2020",
+                "TIPO_TEL": "MOVEL PRE-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "22999161858",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "30\/05\/2020",
+                "TIPO_TEL": "MOVEL PRE-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "22988611703",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "27988516517",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "27988611510",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "lrogeriobmachado@gmail.com",
+            "rogeriomachado1@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R LEONCIO CAPIVARI",
+                "NUMERO": "116",
+                "COMPLEMENTO": "LJ 1",
+                "BAIRRO": "CENTRO",
+                "CEP": "28860000",
+                "CIDADE": "CASIMIRO DE ABREU",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R PE FRANCISCO M TALLIS C",
+                "NUMERO": "3",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "28860000",
+                "CIDADE": "CASIMIRO DE ABREU",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R EUNICE DAMES PASSOS C",
+                "NUMERO": "114",
+                "COMPLEMENTO": "",
+                "BAIRRO": "INDUST",
+                "CEP": "28860000",
+                "CIDADE": "CASIMIRO DE ABREU",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R PE ORLANDO TAVARES",
+                "NUMERO": "2",
+                "COMPLEMENTO": "",
+                "BAIRRO": "GOV ROB TAVARES",
+                "CEP": "28300000",
+                "CIDADE": "ITAPERUNA",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R UM LOTEAMENTO BNH",
+                "NUMERO": "305",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "28860000",
+                "CIDADE": "CASIMIRO DE ABREU",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R PE ANCHIETA",
+                "NUMERO": "234",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "28860000",
+                "CIDADE": "CASIMIRO DE ABREU",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R VELHO CAMPOS",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "27910210",
+                "CIDADE": "MACAE",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA R PE FRANCISCO M TALES 83",
+                "NUMERO": "83",
+                "COMPLEMENTO": "NULL",
+                "BAIRRO": "CENTRO",
+                "CEP": "28860000",
+                "CIDADE": "CASIMIRO DE ABREU",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "44834918904",
+                "NOME": "ZENILDA BATISTA MACHADO",
+                "IDADE": "84 anos",
+                "LOCAL": "GRAVATAL\/SC",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "44834950972",
+                "NOME": "ROGERIO BATISTA MACHADO",
+                "IDADE": "63 anos",
+                "LOCAL": "GRAVATAL\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "59487992987",
+                "NOME": "RODSON BATISTA MACHADO",
+                "IDADE": "57 anos",
+                "LOCAL": "GRAVATAL\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "65676017953",
+                "NOME": "RODSON BATISTA MACHADO",
+                "IDADE": "57 anos",
+                "LOCAL": "GRAVATAL\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "82923523768",
+                "NOME": "ANTONIO JOSE BATISTA MACHADO",
+                "IDADE": "61 anos",
+                "LOCAL": "CASIMIRO DE ABREU\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "85307343787",
+                "NOME": "LENILSE BATISTA MACHADO COUTINHO",
+                "IDADE": "63 anos",
+                "LOCAL": "CASIMIRO DE ABREU\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "LUIZ GABRIEL MACHADO",
+            "IDADE": "",
+            "LOCALIDADE": "CASIMIRO DE ABREU\/RJ",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "50063773805"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "J   W TRANSPORTES, LOCACAO E SERVICOS LTDA",
+                "CNPJ": "16631485000151",
+                "CIDADE": "PARACAMBI-RJ",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "18\/11\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ESX TRANSPORTE E TURISMO LTDA",
+                "CNPJ": "01211210000191",
+                "CIDADE": "RIO DAS OSTRAS-RJ",
+                "PROFISSAO": "782405",
+                "DATA_ADMISSAO": "22\/20\/1908",
+                "DATA_DEMISSAO": "01\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "W. O. MAGALHAES LTDA",
+                "CNPJ": "05018233000135",
+                "CIDADE": "CASIMIRO DE ABREU-RJ",
+                "PROFISSAO": "710205",
+                "DATA_ADMISSAO": "01\/05\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "MARMELO SANTOS VIGILANCIA PATRIMONIAL LTDA",
+                "CNPJ": "09562296000109",
+                "CIDADE": "CASIMIRO DE ABREU-RJ",
+                "PROFISSAO": "141205",
+                "DATA_ADMISSAO": "01\/06\/2009",
+                "DATA_DEMISSAO": "18\/11\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

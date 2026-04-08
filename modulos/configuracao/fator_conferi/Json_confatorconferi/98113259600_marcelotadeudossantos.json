@@ -1,0 +1,205 @@
+{
+    "CADASTRAIS": {
+        "CPF": "98113259600",
+        "NOME": "MARCELO TADEU DOS SANTOS",
+        "NOME_MAE": "ZELIA MARIA DOS SANTOS",
+        "NASCTO": "02\/03\/1978",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "125209870281",
+        "NIT": "1247553171",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521105",
+        "PROFISSAO": "VENDEDOR EM COMERCIO ATACADISTA",
+        "SALARIO": " 4.556,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3133332400",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "3133934149",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "3133332957",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3133338248",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31991433045",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31988596912",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31988599701",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "MTSANTOS_10@YAHOO.COM.BR",
+            "marcelo@chaperfil.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV JOSE FARIA DA ROCHA",
+                "NUMERO": "4039",
+                "COMPLEMENTO": "AP 201",
+                "BAIRRO": "ELDORADO",
+                "CEP": "32310210",
+                "CIDADE": "CONTAGEM",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R IBERTIOGA",
+                "NUMERO": "10",
+                "COMPLEMENTO": "AP 301",
+                "BAIRRO": "STA CRUZ",
+                "CEP": "31130790",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R MARCONE",
+                "NUMERO": "65",
+                "COMPLEMENTO": "AP 215",
+                "BAIRRO": "AGUA BRANCA",
+                "CEP": "32371470",
+                "CIDADE": "CONTAGEM",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R MARCONE",
+                "NUMERO": "215",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AGUA BRANCA",
+                "CEP": "32371470",
+                "CIDADE": "CONTAGEM",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "AV GEN DAVID SARNOFF",
+                "NUMERO": "4340",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE INDUSTRIAL",
+                "CEP": "32210110",
+                "CIDADE": "CONTAGEM",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R JOAO BOSCO MARTINS",
+                "NUMERO": "230",
+                "COMPLEMENTO": "",
+                "BAIRRO": "FUNCIONARIOS",
+                "CEP": "32040430",
+                "CIDADE": "CONTAGEM",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R SARA KUBITSCHEK",
+                "NUMERO": "247",
+                "COMPLEMENTO": "AP  Apartamento  504 AN  Andar  5",
+                "BAIRRO": "DARCY VARGAS",
+                "CEP": "32372200",
+                "CIDADE": "CONTAGEM",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R IBERTIOGA",
+                "NUMERO": "10",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DARCY VARGAS",
+                "CEP": "32372190",
+                "CIDADE": "CONTAGEM",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "11439300",
+            "NOME": "ZELIA MARIA DOS SANTOS",
+            "IDADE": "44 anos",
+            "LOCAL": "TERESINA\/PI",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "CHAPERFIL INDUSTRIA E COMERCIO LIMITADA",
+            "CNPJ": "23388804000105",
+            "CIDADE": "CONTAGEM-MG",
+            "PROFISSAO": "521105",
+            "DATA_ADMISSAO": "05\/07\/1999",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

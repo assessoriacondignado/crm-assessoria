@@ -1,0 +1,200 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26602072838",
+        "NOME": "VANILSON DOMINGOS",
+        "NOME_MAE": "MODESTINHA RITA DOMINGOS",
+        "NASCTO": "29\/12\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "283569340141",
+        "NIT": "1255446582",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "515105",
+        "PROFISSAO": "AGENTE COMUNITARIO DE SAUDE",
+        "SALARIO": " 3.388,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1139038227",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1139038227",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1137211240",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11965982777",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21993141839",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11965988227",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11976186813",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11999276721",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "guinhogelado@hotmail.com",
+            "motobras@motobras.com.br",
+            "guinhogelado@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ANTONIO MARIANI",
+                "NUMERO": "365",
+                "COMPLEMENTO": "",
+                "BAIRRO": "INS DE PREVIDENCIA",
+                "CEP": "05530000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CAROLINA GUEDES",
+                "NUMERO": "53",
+                "COMPLEMENTO": "C 2",
+                "BAIRRO": "VL GUEDES",
+                "CEP": "05133160",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CAROLINA GUEDES",
+                "NUMERO": "29",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA GUEDES",
+                "CEP": "05133160",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "25553296846",
+                "NOME": "MODESTINHA RITA DOMINGOS",
+                "IDADE": "89 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "24695802856",
+                "NOME": "VANICE RITA DOMINGOS",
+                "IDADE": "50 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ENI LIMA DA SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "TANGARA DA SERRA\/MT",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "78917379168"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SPDM - ASSOCIACAO PAULISTA PARA O DESENVOLVIMENTO DA MEDICINA",
+                "CNPJ": "61699567005909",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "515105",
+                "DATA_ADMISSAO": "03\/11\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CICNO COMERCIAL LTDA",
+                "CNPJ": "00253990000170",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "22\/08\/2002",
+                "DATA_DEMISSAO": "16\/05\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

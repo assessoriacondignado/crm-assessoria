@@ -1,0 +1,185 @@
+{
+    "CADASTRAIS": {
+        "CPF": "70675970210",
+        "NOME": "PAULO ROBERTO DE CASTRO",
+        "NOME_MAE": "VALCRIZA DE CASTRO FRAZAO",
+        "NASCTO": "17\/04\/1982",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1292366702",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "715615",
+        "PROFISSAO": "ELETRICISTA DE INSTALACOES",
+        "SALARIO": " 2.574,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9232286937",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9236341360",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "24\/12\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92992334970",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92992358633",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92994397448",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "11\/09\/2015",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marcuz104@itelefonica.com.br",
+            "marcus104@vivointernetdiscada.com.br",
+            "robf.am@bol.com.br",
+            "sercop.am@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ONIX",
+                "NUMERO": "258",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TANCREDO NEVES",
+                "CEP": "69087042",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "RUA ONIX",
+                "NUMERO": "249",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TANCREDO NEVES",
+                "CEP": "69087042",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "MARCUS VINICIUS MARTIMIANO",
+            "IDADE": "",
+            "LOCALIDADE": "SAO JOSE DO RIO PRETO\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "31665001895"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "FENIX SERVICOS DE TERCEIRIZACAO LTDA",
+                "CNPJ": "08938273000193",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "715615",
+                "DATA_ADMISSAO": "01\/04\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "JF ENGENHARIA E SERVICOS ESPECIALIZADOS LTDA",
+                "CNPJ": "12891300000197",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "732120",
+                "DATA_ADMISSAO": "20\/05\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "HELP SERVICOS MONTAGEM E SOLUCOES INDUSTRIAIS LTDA",
+                "CNPJ": "08747087000177",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "911105",
+                "DATA_ADMISSAO": "16\/20\/1912",
+                "DATA_DEMISSAO": "26\/12\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ESAC ENGENHARIA LTDA",
+                "CNPJ": "00892637000130",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "715610",
+                "DATA_ADMISSAO": "12\/03\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "HEBTA ENGENHARIA LTDA",
+                "CNPJ": "00659218000152",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "715615",
+                "DATA_ADMISSAO": "01\/03\/2013",
+                "DATA_DEMISSAO": "16\/02\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "SOLUX CONSTRUCOES DE EDIFICIOS LTDA",
+                "CNPJ": "13153160000112",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "715610",
+                "DATA_ADMISSAO": "21\/05\/2012",
+                "DATA_DEMISSAO": "12\/12\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

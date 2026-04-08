@@ -1,0 +1,163 @@
+{
+    "CADASTRAIS": {
+        "CPF": "93189931453",
+        "NOME": "ANA PAULA DE OLIVEIRA CABRAL",
+        "NOME_MAE": "MAURICELIA BARBOZA DE OLIVEIRA",
+        "NASCTO": "28\/02\/1979",
+        "IDADE": "47 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "13007985454",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411010",
+        "PROFISSAO": "ASSISTENTE ADMINISTRATIVO",
+        "SALARIO": " 1.188,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8133793824",
+            "OPERADORA": "TELEMAR\/PE",
+            "DATA_REFERENCIA": "24\/05\/2011",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "81987633920",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81985344139",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81971142482",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PF_CONTROLE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81981592834",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL POS-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81984992935",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/04\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "paula_oliveiracabral@gmail.com",
+            "paulaoliveiracabral@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R AGRIPINO DE FREITAS",
+                "NUMERO": "497",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "54100230",
+                "CIDADE": "JABOATAO DOS GUARARAPES",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "AV DOUTOR CHUCRI ZAIDAN",
+                "NUMERO": "860",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA CORDEIRO",
+                "CEP": "04583110",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ALSCO BRASIL LTDA",
+                "CNPJ": "33325184002677",
+                "CIDADE": "JABOATAO DOS GUARARAPES-PE",
+                "PROFISSAO": "414105",
+                "DATA_ADMISSAO": "10\/01\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VB RECIFE COMERCIO LTDA",
+                "CNPJ": "04009504000123",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "01\/07\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "MAISON GOURMET COMERCIO DE ALIMENTOS LTDA",
+                "CNPJ": "05402939000104",
+                "CIDADE": "PAULISTA-PE",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "17\/02\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "PORTO FELIZ COMERCIO DE ALIMENTOS LTDA",
+                "CNPJ": "12263361000100",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "01\/05\/2011",
+                "DATA_DEMISSAO": "30\/11\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

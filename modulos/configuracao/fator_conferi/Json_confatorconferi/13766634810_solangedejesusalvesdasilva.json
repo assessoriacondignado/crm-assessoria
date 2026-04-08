@@ -1,0 +1,205 @@
+{
+    "CADASTRAIS": {
+        "CPF": "13766634810",
+        "NOME": "SOLANGE DE JESUS ALVES DA SILVA",
+        "NOME_MAE": "ERMELINDA CORDEIRO DE JESUS ALVES",
+        "NASCTO": "21\/08\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "257157520124",
+        "NIT": "12472389258",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "420135",
+        "PROFISSAO": "SUPERVISOR DE TELEMARKETING E ATENDIMENTO",
+        "SALARIO": " 7.823,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1932477900",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19994394781",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19993870854",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19991484434",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "19992194190",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "19997546790",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "alves_cps@outlook.com",
+            "maitamat@uol.com.br",
+            "robert118c@lexxanet.com.br",
+            "solangealvesilva@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JACY TEIXEIRA CAMARGO",
+                "NUMERO": "240",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD DO LAGO",
+                "CEP": "13050008",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R LUCELIA",
+                "NUMERO": "48",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL POMPEIA",
+                "CEP": "13050463",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV PAULO PROVENZA SOBRINHO",
+                "NUMERO": "384",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM CAMPOS ELISEOS",
+                "CEP": "13060864",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA PRESIDENTE JUSCELINO",
+                "NUMERO": "1612",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM CAMPOS ELISEOS",
+                "CEP": "13060858",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "34008067817",
+                "NOME": "VANDERLEI DE JESUS ALVES",
+                "IDADE": "41 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "52755682825",
+                "NOME": "MATEUS ALVES DA SILVA",
+                "IDADE": "24 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "54575514829",
+                "NOME": "LETICIA ALVES DA SILVA",
+                "IDADE": "18 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "IRENO ALVES",
+            "IDADE": "",
+            "LOCALIDADE": "CURITIBA\/PR",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "153837845"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LOCALIZA RENT A CAR SA",
+                "CNPJ": "16670085009454",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "142105",
+                "DATA_ADMISSAO": "01\/06\/1996",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LOCALIZA RENT A CAR SA",
+                "CNPJ": "16670085008725",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "420135",
+                "DATA_ADMISSAO": "01\/07\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "LOCALIZA RENT A CAR SA",
+                "CNPJ": "16670085012161",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "420135",
+                "DATA_ADMISSAO": "01\/09\/2012",
+                "DATA_DEMISSAO": "01\/07\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

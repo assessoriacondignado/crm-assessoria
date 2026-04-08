@@ -1,0 +1,209 @@
+{
+    "CADASTRAIS": {
+        "CPF": "16894199892",
+        "NOME": "MANFREDO DA SILVA",
+        "NOME_MAE": "ISAURA APARECIDA ROGERIO DA SILVA",
+        "NASCTO": "13\/03\/1971",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "203123359",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "191645750132",
+        "NIT": "2097933797",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782410",
+        "PROFISSAO": "MOTORISTA DE ONIBUS URBANO",
+        "SALARIO": " 5.800,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1125140080",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "baixa"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11991474440",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11993685088",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11965776741",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11976237432",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marciasilva0207@terra.com.br",
+            "manfredo1303@gmail.com",
+            "marciasilva0207@terra.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ARVORE DE UMBELA",
+                "NUMERO": "423",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD HELOISA",
+                "CEP": "08161450",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ARVORE DO DRAGAO",
+                "NUMERO": "423",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD DOS IPES",
+                "CEP": "08161430",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R TIBURCIO DE SOUSA",
+                "NUMERO": "2663",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ITAIM PAULISTA",
+                "CEP": "08140000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MANUEL RODRIGUES SANTIAGO",
+                "NUMERO": "2",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD LAURA",
+                "CEP": "08142235",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ARMANDO M JUNIOR",
+                "NUMERO": "75",
+                "COMPLEMENTO": "A",
+                "BAIRRO": "PRQ STA RITA",
+                "CEP": "08150070",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "17350391870",
+                "NOME": "ISAURA APARECIDA ROGERIO DA SILVA",
+                "IDADE": "81 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "28096672843",
+                "NOME": "MARCIA DA SILVA",
+                "IDADE": "53 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "29179140840",
+                "NOME": "ELISANGELA APARECIDA DA SILVA ALVIZIO",
+                "IDADE": "46 anos",
+                "LOCAL": "GUARULHOS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "MARCIA MARIA DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "BEZERROS\/PE",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "6587200400"
+            },
+            {
+                "NOME": "MARCIA QUITERIA DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "27202238837"
+            },
+            {
+                "NOME": "ORTENCIA SOTELO",
+                "IDADE": "",
+                "LOCALIDADE": "ARAUCARIA\/PR",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "46811800925"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "VIACAO METROPOLE PAULISTA S\/A",
+                "CNPJ": "31974104000473",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "10\/05\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VIP TRANSPORTES URBANO LTDA",
+                "CNPJ": "08107792000371",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "04\/09\/2007",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,137 @@
+{
+    "CADASTRAIS": {
+        "CPF": "73557358372",
+        "NOME": "FRANCISCO EVALDO VIEIRA",
+        "NOME_MAE": "MARIA ESTELA VIEIRA",
+        "NASCTO": "14\/06\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "043702480710",
+        "NIT": "1253122506",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521105",
+        "PROFISSAO": "VENDEDOR EM COMERCIO ATACADISTA",
+        "SALARIO": " 2.005,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8532161500",
+            "OPERADORA": "TELEMAR\/CE",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "85996793635",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "85987555931",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "85991173206",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "85991173143",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "izzo@hdbrasil.com.br",
+            "fernaldov@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MANUEL CASTELO BRANCO",
+                "NUMERO": "1150",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MESSEJANA",
+                "CEP": "60840015",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "AV AUDIZIO PINHEIRO",
+                "NUMERO": "1682",
+                "COMPLEMENTO": "",
+                "BAIRRO": "HENRIQUE JORGE",
+                "CEP": "60521102",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1166836860",
+            "NOME": "MARIA ESTELA VIEIRA",
+            "IDADE": "69 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "JOSE LUIZ VIEIRA SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "MORADA NOVA\/CE",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "404881360"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "INTEGRAL AGROINDUSTRIAL LTDA",
+            "CNPJ": "01588099000157",
+            "CIDADE": "FORTALEZA-CE",
+            "PROFISSAO": "521105",
+            "DATA_ADMISSAO": "11\/02\/2019",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,317 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25613093806",
+        "NOME": "DANIEL REDA FENGA",
+        "NOME_MAE": "CLAUDIA REDA FENGA",
+        "NASCTO": "06\/02\/1976",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "241444590141",
+        "NIT": "1254128859",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "223405",
+        "PROFISSAO": "FARMACEUTICO",
+        "SALARIO": " 46.078,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1133318167",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1236325229",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1136750335",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1129252227",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11962021363",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12996699299",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11949921971",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11992522270",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11992522270",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "HIAE\/dan.reda@hotmail.com",
+            "danielfenga@mailcity.com.br",
+            "dan_ro30@yahoo.com.br",
+            "danreda@hotmail.com",
+            "daniel.fenga@sanofi.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PEREIRA LEITE",
+                "NUMERO": "508",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SUMAREZINHO",
+                "CEP": "05442000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PENSILVANIA",
+                "NUMERO": "1298",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE MONCOES",
+                "CEP": "04564004",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOAO COLLINO",
+                "NUMERO": "203",
+                "COMPLEMENTO": "AND 1",
+                "BAIRRO": "CENTRO",
+                "CEP": "06013020",
+                "CIDADE": "OSASCO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV LAURITA ORTEGA MARI",
+                "NUMERO": "1191",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL DAS OLIVEIRAS",
+                "CEP": "06766360",
+                "CIDADE": "TABOAO DA SERRA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PEREIRA LEITE",
+                "NUMERO": "70",
+                "COMPLEMENTO": "AP508",
+                "BAIRRO": "SUMAREZINHO",
+                "CEP": "05442000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MARTINICO PRADO",
+                "NUMERO": "142",
+                "COMPLEMENTO": "AP 83",
+                "BAIRRO": "VILA BUARQUE",
+                "CEP": "01224010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA LUIZ GUIMARAES VIEIRA",
+                "NUMERO": "54",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA DAS JABUTICABEIRAS",
+                "CEP": "12030710",
+                "CIDADE": "TAUBATE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOUTOR HELIO FIDELIS",
+                "NUMERO": "152",
+                "COMPLEMENTO": "NATURALE 73",
+                "BAIRRO": "CIDADE SAO FRANCISCO",
+                "CEP": "05351035",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "26650447811",
+                "NOME": "FERNANDA REDA FENGA VIANA KLAMAS",
+                "IDADE": "48 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "28125559809",
+                "NOME": "ROBERTA REDA FENGA GUIRADO",
+                "IDADE": "47 anos",
+                "LOCAL": "TREMEMBE\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "RODRIGO SANTOS PEREIRA",
+            "IDADE": "",
+            "LOCALIDADE": "SAO GONCALO DO AMARANTE\/RN",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "22572851822"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BIOMARIN BRASIL FARMACEUTICA LTDA",
+                "CNPJ": "08002360000134",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "29\/07\/2019",
+                "DATA_DEMISSAO": "17\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BIOGEN BRASIL PRODUTOS FARMACEUTICOS LTDA",
+                "CNPJ": "07986222000174",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "131210",
+                "DATA_ADMISSAO": "08\/02\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "SANOFI MEDLEY FARMACEUTICA LTDA",
+                "CNPJ": "10588595001254",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "225170",
+                "DATA_ADMISSAO": "01\/01\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "GENZYME DO BRASIL LTDA.",
+                "CNPJ": "68132950000103",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "203305",
+                "DATA_ADMISSAO": "26\/01\/2015",
+                "DATA_DEMISSAO": "01\/10\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SANOFI-AVENTIS FARMACEUTICA LTDA",
+                "CNPJ": "02685377000157",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "131205",
+                "DATA_ADMISSAO": "01\/10\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "IRMANDADE DA SANTA CASA DE MISERICORDIA DE SAO PAULO",
+                "CNPJ": "62779145000190",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "225125",
+                "DATA_ADMISSAO": "01\/02\/2007",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "CASA DE SAUDE SANTA MARCELINA",
+                "CNPJ": "60742616001301",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "225225",
+                "DATA_ADMISSAO": "08\/09\/2008",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "HOSPITAL DO SERVIDOR PUBLICO MUNICIPAL",
+                "CNPJ": "46854998000192",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "225230",
+                "DATA_ADMISSAO": "15\/10\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

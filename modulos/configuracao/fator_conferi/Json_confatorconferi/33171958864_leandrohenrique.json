@@ -1,0 +1,212 @@
+{
+    "CADASTRAIS": {
+        "CPF": "33171958864",
+        "NOME": "LEANDRO HENRIQUE",
+        "NOME_MAE": "MARLENE MONARO HENRIQUE",
+        "NASCTO": "26\/04\/1985",
+        "IDADE": "41 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "326142050132",
+        "NIT": "12922815856",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "391130",
+        "PROFISSAO": "TECNICO DE PLANEJAMENTO E PROGRAMACAO DA MANUTENCAO",
+        "SALARIO": " 2.842,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1139756746",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1143371241",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1147482065",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1147482065",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1141739444",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11949316688",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13991467912",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11975674662",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11979663213",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11997366760",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "leandroenriq@hotmail.com",
+            "leandro.henrique@daimler.com",
+            "leandrohenriq@hotmail.con",
+            "l.henrique@pilz.com.br",
+            "leandrohenrique2604@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CIDADE DE DIADEMA",
+                "NUMERO": "467",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PQ MARIA HELENA",
+                "CEP": "08683120",
+                "CIDADE": "SUZANO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV PRES JOAO CAFE FILHO",
+                "NUMERO": "1691",
+                "COMPLEMENTO": "AP 153B",
+                "BAIRRO": "DOS CASA",
+                "CEP": "09811323",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "5584173886",
+                "NOME": "MARLENE MONARO HENRIQUE",
+                "IDADE": "62 anos",
+                "LOCAL": "SUZANO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "33958285813",
+                "NOME": "DANILO HENRIQUE",
+                "IDADE": "38 anos",
+                "LOCAL": "SUZANO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "41698394802",
+                "NOME": "MAYARA HENRIQUE BARCELOS",
+                "IDADE": "32 anos",
+                "LOCAL": "SUZANO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PILZ DO BRASIL SISTEMAS ELETRONICOS DE SEGURANCA E AUTOMACAO INDUSTRIAL LTDA.",
+                "CNPJ": "02469056000115",
+                "CIDADE": "INDAIATUBA-SP",
+                "PROFISSAO": "202110",
+                "DATA_ADMISSAO": "12\/20\/1911",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "NITERRA DO BRASIL LTDA.",
+                "CNPJ": "52541760000100",
+                "CIDADE": "MOGI DAS CRUZES-SP",
+                "PROFISSAO": "391130",
+                "DATA_ADMISSAO": "14\/10\/2009",
+                "DATA_DEMISSAO": "14\/11\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

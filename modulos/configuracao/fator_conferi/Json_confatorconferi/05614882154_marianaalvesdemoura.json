@@ -1,0 +1,127 @@
+{
+    "CADASTRAIS": {
+        "CPF": "5614882154",
+        "NOME": "MARIANA ALVES DE MOURA",
+        "NOME_MAE": "RITA ALVES DE MOURA",
+        "NASCTO": "24\/06\/1995",
+        "IDADE": "30 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "21062759062",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "421125",
+        "PROFISSAO": "OPERADOR DE CAIXA",
+        "SALARIO": " 880,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "61982086630",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "07\/09\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "61986517547",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "24\/04\/2018",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "mariannamoura93@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "MOD 3",
+                "NUMERO": "0",
+                "COMPLEMENTO": "LT 34B",
+                "BAIRRO": "COND RESIDENCIAL SANTA MARIA SANTA MARIA",
+                "CEP": "72580300",
+                "CIDADE": "BRASILIA",
+                "ESTADO": "DF"
+            },
+            {
+                "LOGRADOURO": "RUA 54",
+                "NUMERO": "6",
+                "COMPLEMENTO": "RUA 54 Q 81 LOTE6B",
+                "BAIRRO": "JARDIM CEU AZUL",
+                "CEP": "72871054",
+                "CIDADE": "VALPARAISO DE GOIAS",
+                "ESTADO": "GO"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1025418417",
+            "NOME": "RITA ALVES DE MOURA",
+            "IDADE": "48 anos",
+            "LOCAL": "JUCURUTU\/RN",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738033419",
+                "CIDADE": "VALPARAISO DE GOIAS-GO",
+                "PROFISSAO": "354125",
+                "DATA_ADMISSAO": "13\/12\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RIACHUELO SA",
+                "CNPJ": "33200056009952",
+                "CIDADE": "VALPARAISO DE GOIAS-GO",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "02\/04\/2018",
+                "DATA_DEMISSAO": "18\/05\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "D. S. L. SUPERMERCADO LTDA",
+                "CNPJ": "09284539000194",
+                "CIDADE": "AGUAS LINDAS DE GOIAS-GO",
+                "PROFISSAO": "421125",
+                "DATA_ADMISSAO": "10\/05\/2016",
+                "DATA_DEMISSAO": "31\/07\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "CEU AZUL SUPERMERCADO LTDA",
+                "CNPJ": "24618255000180",
+                "CIDADE": "VALPARAISO DE GOIAS-GO",
+                "PROFISSAO": "421125",
+                "DATA_ADMISSAO": "01\/08\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

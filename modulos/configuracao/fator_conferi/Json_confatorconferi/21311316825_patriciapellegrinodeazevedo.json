@@ -1,0 +1,260 @@
+{
+    "CADASTRAIS": {
+        "CPF": "21311316825",
+        "NOME": "PATRICIA PELLEGRINO DE AZEVEDO",
+        "NOME_MAE": "MARIA TEREZA PELLEGRINO DE AZEVEDO",
+        "NASCTO": "16\/10\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Feminino",
+        "RG": "246838875",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "217357420132",
+        "NIT": "1252628365",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "234616",
+        "PROFISSAO": "PROFESSOR DE LINGUA INGLESA",
+        "SALARIO": " 11.403,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1333022787",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1332312885",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1732357986",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1332243782",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13996184060",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13996184060",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "17996157459",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "17996182123",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "13997003277",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "aze.pati@gmail.com",
+            "esl.patricia@gmail.com",
+            "patiaz@bol.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R SALDANHA MARINHO",
+                "NUMERO": "2652",
+                "COMPLEMENTO": "AP 83",
+                "BAIRRO": "CENTRO",
+                "CEP": "15010100",
+                "CIDADE": "SAO JOSE DO RIO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV DEP ORLANDO ZANCANER",
+                "NUMERO": "23",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD AMENDOLA",
+                "CEP": "15801120",
+                "CIDADE": "CATANDUVA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R TREZE DE MAIO",
+                "NUMERO": "774",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "15800010",
+                "CIDADE": "CATANDUVA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DOUTOR GUEDES COELHO",
+                "NUMERO": "151",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ENCRUZILHADA",
+                "CEP": "11050231",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CORONEL SPINOLA DE CASTRO",
+                "NUMERO": "3916",
+                "COMPLEMENTO": "AP 62",
+                "BAIRRO": "CENTRO",
+                "CEP": "15015500",
+                "CIDADE": "SAO JOSE DO RIO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA QUINZE DE NOVEMBRO",
+                "NUMERO": "2989",
+                "COMPLEMENTO": "AP 23",
+                "BAIRRO": "CENTRO",
+                "CEP": "15015110",
+                "CIDADE": "SAO JOSE DO RIO PRETO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "35647466842",
+            "NOME": "MARIA TEREZA PELLEGRINO DE AZEVEDO",
+            "IDADE": "77 anos",
+            "LOCAL": "SANTOS\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ESCOLA PRESIDENTE KENNEDY LTDA",
+                "CNPJ": "07155482000106",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "234616",
+                "DATA_ADMISSAO": "01\/02\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "YOU LEARNING CENTER LTDA",
+                "CNPJ": "26137065000258",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/02\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "UNI SOCIEDADE EDUCACIONAL LTDA.",
+                "CNPJ": "51072809000160",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "234616",
+                "DATA_ADMISSAO": "16\/09\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO EDUCACIONAL NOVO TEMPO",
+                "CNPJ": "66498403000110",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "239405",
+                "DATA_ADMISSAO": "15\/20\/1901",
+                "DATA_DEMISSAO": "03\/06\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "MARCONDES   MARCONDES -  ESCOLA DE EDUCACAO INFANTIL ENSINO FUNDAMENTALE ENSINO MEDIO LTDA.",
+                "CNPJ": "10467327000121",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "232150",
+                "DATA_ADMISSAO": "01\/08\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "COMEDI COMERCIO DE MATERIAIS DIDATICOS E ENSINO DE IDIOMAS LTDA",
+                "CNPJ": "07892539000141",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "333110",
+                "DATA_ADMISSAO": "11\/02\/2008",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

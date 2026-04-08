@@ -1,0 +1,182 @@
+{
+    "CADASTRAIS": {
+        "CPF": "70501378200",
+        "NOME": "GILIARD SANTIAGO CANAVARRO",
+        "NOME_MAE": "MARIA DO SOCORRO SANTIAGO CANAVARRO",
+        "NASCTO": "12\/10\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1196878486",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "951105",
+        "PROFISSAO": "ELETRICISTA DE MANUTENCAO ELETROELETRONICA",
+        "SALARIO": " 2.498,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8330417070",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "6135784855",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92992156906",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92994734160",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92984209396",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92991635418",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92996163522",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "roberto.baeninger@rexamcan.com.br",
+            "giliardcanavarro@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MARACAJA",
+                "NUMERO": "29",
+                "COMPLEMENTO": "CS B",
+                "BAIRRO": "ZUMBI DOS PALMARES",
+                "CEP": "69084310",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R OLIMPIO CAMPOS",
+                "NUMERO": "114",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BIRIBIRI",
+                "CEP": "69400128",
+                "CIDADE": "MANACAPURU",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R OLIMPIO CAMPOS",
+                "NUMERO": "132",
+                "COMPLEMENTO": "proximo da quadra",
+                "BAIRRO": "BIRIBIRI",
+                "CEP": "69400128",
+                "CIDADE": "MANACAPURU",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "27512649215",
+            "NOME": "MARIA DO SOCORRO SANTIAGO CANAVARRO",
+            "IDADE": "78 anos",
+            "LOCAL": "MANAUS\/AM",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "NORTE TECH SERVICOS EM ENERGIA LTDA",
+                "CNPJ": "33822061000193",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "951105",
+                "DATA_ADMISSAO": "01\/07\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CONTROL CONSTRUCOES S.A",
+                "CNPJ": "02949016000170",
+                "CIDADE": "JOAO PESSOA-PB",
+                "PROFISSAO": "715615",
+                "DATA_ADMISSAO": "08\/11\/2010",
+                "DATA_DEMISSAO": "31\/03\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "CONTROL CONSTRUCOES S.A",
+                "CNPJ": "02949016000332",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "715615",
+                "DATA_ADMISSAO": "01\/04\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

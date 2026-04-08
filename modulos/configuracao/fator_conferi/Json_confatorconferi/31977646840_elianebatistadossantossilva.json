@@ -1,0 +1,257 @@
+{
+    "CADASTRAIS": {
+        "CPF": "31977646840",
+        "NOME": "ELIANE BATISTA DOS SANTOS SILVA",
+        "NOME_MAE": "TEREZINHA BATISTA DOS SANTOS",
+        "NASCTO": "03\/03\/1982",
+        "IDADE": "44 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "311115910183",
+        "NIT": "1167776962",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "322205",
+        "PROFISSAO": "TECNICO DE ENFERMAGEM",
+        "SALARIO": " 5.136,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1120122699",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1125596200",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1125596200",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11982550581",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11989096537",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL POS-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11948312312",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "27\/02\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11950893303",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "20\/10\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11943019485",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "eliane201033@hotmail.com",
+            "elilisflor@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ALBERTO POPOVICI",
+                "NUMERO": "73",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD SAPOPEMBA",
+                "CEP": "03976030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV SAPOPEMBA",
+                "NUMERO": "1402",
+                "COMPLEMENTO": "BL B",
+                "BAIRRO": "CIDADE SATELITE SANTA BARBARA",
+                "CEP": "08330180",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV SAPOPEMBA",
+                "NUMERO": "9988",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD PLANALTO",
+                "CEP": "03988000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ROBERTO PARK",
+                "NUMERO": "173",
+                "COMPLEMENTO": "C 3",
+                "BAIRRO": "FAZ DA JUTA",
+                "CEP": "03977450",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PLANURA",
+                "NUMERO": "115",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ STA MADALENA",
+                "CEP": "03981130",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PLANALTO",
+                "NUMERO": "977",
+                "COMPLEMENTO": "834",
+                "BAIRRO": "PRQ RESIDENCIAL CAMBE",
+                "CEP": "86191240",
+                "CIDADE": "CAMBE",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R EQUADOR",
+                "NUMERO": "98",
+                "COMPLEMENTO": "FDS",
+                "BAIRRO": "JD VITORIA",
+                "CEP": "86182135",
+                "CIDADE": "CAMBE",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R PLANALTO",
+                "NUMERO": "834",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ RESIDENCIAL CAMBE",
+                "CEP": "86191240",
+                "CIDADE": "CAMBE",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "95602461",
+                "NOME": "TEREZINHA BATISTA DOS SANTOS",
+                "IDADE": "82 anos",
+                "LOCAL": "SOSSEGO\/PB",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "12728679789",
+                "NOME": "ANAIRAN DOS SANTOS SILVA",
+                "IDADE": "32 anos",
+                "LOCAL": "NOVA IGUACU\/RJ",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "13065901404",
+                "NOME": "FERNANDO GABRIEL PINHEIRO DOS SANTOS",
+                "IDADE": "16 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "17442784402",
+                "NOME": "MARIA ISABELLA PINHEIRO DOS SANTOS",
+                "IDADE": "11 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "53664596803",
+                "NOME": "MIGUEL IPOLITO DA SILVA",
+                "IDADE": "19 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CASA DE SAUDE SANTA MARCELINA",
+                "CNPJ": "60742616001301",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "14\/09\/2009",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO DE BENEFICENCIA E FILANTROPIA SAO CRISTOVAO",
+                "CNPJ": "60975174000363",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "07\/12\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

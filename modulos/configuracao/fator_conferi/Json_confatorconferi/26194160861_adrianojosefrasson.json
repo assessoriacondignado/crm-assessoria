@@ -1,0 +1,346 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26194160861",
+        "NOME": "ADRIANO JOSE FRASSON",
+        "NOME_MAE": "MARLENE BOTARO FRASSON",
+        "NASCTO": "12\/10\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "284224830191",
+        "NIT": "12505723488",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212420",
+        "PROFISSAO": "ANALISTA DE SUPORTE COMPUTACIONAL",
+        "SALARIO": " 7.303,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1127553063",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1121418000",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1123718935",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "28\/02\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1142256621",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11970200231",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21964531960",
+                "OPERADORA": "NEXTEL",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11981551705",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "01\/11\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11983453417",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "10\/09\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11947880047",
+                "OPERADORA": "NEXTEL",
+                "DATA_REFERENCIA": "01\/11\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "adriano.frasson@superig.com.br",
+            "ajfrasson@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R VINTE E SETE DE NOVEMBRO",
+                "NUMERO": "155",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD S JOSE ARTUR ALVIM",
+                "CEP": "03563110",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SERAFIM CONSTANTINO",
+                "NUMERO": "100",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "09510220",
+                "CIDADE": "SAO CAETANO DO SUL",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "TV CAVALEIROS DA CONCORDIA",
+                "NUMERO": "22",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL DIVINA PASTORA",
+                "CEP": "03265030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JUSTINIANO",
+                "NUMERO": "909",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL ALPINA",
+                "CEP": "03208010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOAO BRAGANCA",
+                "NUMERO": "85",
+                "COMPLEMENTO": "C 1 709",
+                "BAIRRO": "VL BANCA MUNHOZ",
+                "CEP": "02759060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA INGARANA",
+                "NUMERO": "299",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD PANORAMA",
+                "CEP": "03245020",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JACOFER",
+                "NUMERO": "140",
+                "COMPLEMENTO": "TORRE 1 APARTAMENTO 21",
+                "BAIRRO": "JARDIM PEREIRA LEITE",
+                "CEP": "02712070",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA COSTA BARROS",
+                "NUMERO": "2200",
+                "COMPLEMENTO": "AP107 B3",
+                "BAIRRO": "SITIO PINHEIRINHO",
+                "CEP": "03210001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "30290298830",
+                "NOME": "MARLENE BOTARO FRASSON",
+                "IDADE": "69 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "29815365835",
+                "NOME": "ANDERSON FRASSON",
+                "IDADE": "43 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ADRIANO FRASSON",
+                "IDADE": "",
+                "LOCALIDADE": "NOVA BASSANO\/RS",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "88467961015"
+            },
+            {
+                "NOME": "CECILIA BARBOZA VIEIRA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "FORTALEZA\/CE",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "27287128837"
+            },
+            {
+                "NOME": "CICERO JOSE FRASSON",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "67583750806"
+            },
+            {
+                "NOME": "PRISCILA FABIANE MARQUES FRASSON",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "27240152820"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "GOLDEN TECHNOLOGIA LTDA",
+                "CNPJ": "09558104000190",
+                "CIDADE": "EUSEBIO-CE",
+                "PROFISSAO": "212410",
+                "DATA_ADMISSAO": "05\/09\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO C6 S.A.",
+                "CNPJ": "31872495000172",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "18\/11\/2021",
+                "DATA_DEMISSAO": "24\/11\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "TIVIT TERCEIRIZACAO DE PROCESSOS, SERVICOS E TECNOLOGIA S.A.",
+                "CNPJ": "07073027001982",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "06\/10\/2021",
+                "DATA_DEMISSAO": "15\/10\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "MANDIC S.A.",
+                "CNPJ": "04700392000152",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "05\/03\/2018",
+                "DATA_DEMISSAO": "24\/09\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "UNIVERSO ONLINE S\/A",
+                "CNPJ": "01109184000519",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212420",
+                "DATA_ADMISSAO": "01\/01\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "CLARANET TECHNOLOGY S.A.",
+                "CNPJ": "68400225000179",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "07\/08\/2013",
+                "DATA_DEMISSAO": "21\/03\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "DUALTEC INFORMATICA S.A.",
+                "CNPJ": "58671835000153",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212420",
+                "DATA_ADMISSAO": "01\/04\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "ATENTO BRASIL 1 LTDA",
+                "CNPJ": "08098056000132",
+                "CIDADE": "SAO CAETANO DO SUL-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "11\/10\/2007",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "ADRIANO JOSE FRASSON LTDA",
+            "CNPJ": "44456269000152",
+            "CIDADE": "SAO PAULO-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20211202",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

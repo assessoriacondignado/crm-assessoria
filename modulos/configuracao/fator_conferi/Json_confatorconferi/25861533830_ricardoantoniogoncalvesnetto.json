@@ -1,0 +1,179 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25861533830",
+        "NOME": "RICARDO ANTONIO GONCALVES NETTO",
+        "NOME_MAE": "ANA MARIA MONTANARI NETTO",
+        "NASCTO": "03\/11\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "267125604",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "238313520124",
+        "NIT": "1250611234",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "252210",
+        "PROFISSAO": "CONTADOR",
+        "SALARIO": " 22.204,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1639879108",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1639872686",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1639879000",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1639875257",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "16993314728",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16991347926",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "ricneto@uspedra.com.br",
+            "am.montanari@linkbr.com.br",
+            "ricardo.netto@hotmail.com",
+            "ricardo.gneto@terra.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R S SEBASTIAO",
+                "NUMERO": "460",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "14150000",
+                "CIDADE": "SERRANA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "PC BR DO RIO BRANCO",
+                "NUMERO": "850",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "14010140",
+                "CIDADE": "RIBEIRAO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ECA DE QUEIROZ",
+                "NUMERO": "294",
+                "COMPLEMENTO": "C 2",
+                "BAIRRO": "CAMPANARIO",
+                "CEP": "09931040",
+                "CIDADE": "DIADEMA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FRANCISCO MARTINS FILHO",
+                "NUMERO": "34",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD DO ALTO",
+                "CEP": "14150000",
+                "CIDADE": "SERRANA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BARAO DO RIO BRANCO",
+                "NUMERO": "850",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "CENTRO",
+                "CEP": "14150000",
+                "CIDADE": "SERRANA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "26279477886",
+                "NOME": "ANA MARIA MONTANARI NETTO",
+                "IDADE": "78 anos",
+                "LOCAL": "SERRANA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "20059267879",
+                "NOME": "RODRIGO GONCALVES NETTO",
+                "IDADE": "51 anos",
+                "LOCAL": "SERRANA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "PEDRA AGROINDUSTRIAL S\/A",
+            "CNPJ": "71304687000105",
+            "CIDADE": "SERRANA-SP",
+            "PROFISSAO": "252210",
+            "DATA_ADMISSAO": "11\/09\/2000",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

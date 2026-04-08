@@ -1,0 +1,243 @@
+{
+    "CADASTRAIS": {
+        "CPF": "52265889334",
+        "NOME": "RAIMUNDO NILO AZEVEDO JUNIOR",
+        "NOME_MAE": "MARIA DE FATIMA REIS AZEVEDO",
+        "NASCTO": "06\/09\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "040807291104",
+        "NIT": "12531441060",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "641010",
+        "PROFISSAO": "OPERADOR DE MAQUINAS DE BENEFICIAMENTO DE PRODUTOS AGRICOLAS",
+        "SALARIO": " 1.836,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9233078126",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "29\/03\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9230848122",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92991105968",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92988139807",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92993947021",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "26\/02\/2020",
+                "TIPO_TEL": "MOVEL PRE-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92982584891",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "98989199416",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "azevedojunior-0609@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV DES JOAO MACHADO",
+                "NUMERO": "12",
+                "COMPLEMENTO": "FLORES",
+                "BAIRRO": "PLANALTO",
+                "CEP": "69044000",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV DES JOAO MACHADO",
+                "NUMERO": "12",
+                "COMPLEMENTO": "AP 110",
+                "BAIRRO": "FLORES",
+                "CEP": "69058789",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV EPAMINONDAS",
+                "NUMERO": "192",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "69010090",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R SARTRE",
+                "NUMERO": "24",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COL STO ANTONIO",
+                "CEP": "69093335",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R UNIAO",
+                "NUMERO": "30",
+                "COMPLEMENTO": "Q L",
+                "BAIRRO": "VL ALONSO",
+                "CEP": "65110000",
+                "CIDADE": "SAO JOSE DE RIBAMAR",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "AV EDUARDO RIBEIRO",
+                "NUMERO": "63",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "69005160",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R DA UNIAO",
+                "NUMERO": "30",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL ALONSO COSTA",
+                "CEP": "65068300",
+                "CIDADE": "SAO LUIS",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "AV TORQUATO TAPAJOS",
+                "NUMERO": "6000",
+                "COMPLEMENTO": "AP 106",
+                "BAIRRO": "FLORES",
+                "CEP": "69058830",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "785826360",
+            "NOME": "MARIA DE FATIMA REIS AZEVEDO",
+            "IDADE": "69 anos",
+            "LOCAL": "SAO LUIS\/MA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "STANFLEX MATERIAIS PARA IMPRESSAO LTDA",
+                "CNPJ": "29378574000180",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "780105",
+                "DATA_ADMISSAO": "12\/12\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "RAIA DROGASIL S\/A",
+                "CNPJ": "61585865042318",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "517425",
+                "DATA_ADMISSAO": "20\/09\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "WALFF INDUSTRIAL S.A.",
+                "CNPJ": "20703241000104",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "01\/08\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "NCR BRASIL - INDUSTRIA DE EQUIPAMENTOS PARA AUTOMACAO LTDA",
+                "CNPJ": "10785567000174",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "641010",
+                "DATA_ADMISSAO": "06\/02\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "MERCADINHO BOAS COMPRAS LTDA",
+            "CNPJ": "02309800000114",
+            "CIDADE": "MANAUS-AM",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20170831",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

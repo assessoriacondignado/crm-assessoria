@@ -1,0 +1,164 @@
+{
+    "CADASTRAIS": {
+        "CPF": "52573044220",
+        "NOME": "MARIA ESTHER DE SOUZA ALMEIDA",
+        "NOME_MAE": "RAIMUNDA DE SOUZA ALMEIDA",
+        "NASCTO": "28\/03\/1981",
+        "IDADE": "45 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12915871029",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "731180",
+        "PROFISSAO": "OPERADOR DE LINHA DE MONTAGEM (APARELHOS ELETRONICOS)",
+        "SALARIO": " 916,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9240094000",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9236643576",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "92991615705",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "PRE PAGO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": {
+        "EMAIL": "m.esther.almeida@bol.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "TV WE OITENTA",
+                "NUMERO": "541",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "67140210",
+                "CIDADE": "ANANINDEUA",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "R MINEIRAO",
+                "NUMERO": "95",
+                "COMPLEMENTO": "LT EST MARES C",
+                "BAIRRO": "MUCHILA",
+                "CEP": "44005410",
+                "CIDADE": "FEIRA DE SANTANA",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "BC BRASIL",
+                "NUMERO": "13",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JAPIIM",
+                "CEP": "69078728",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R PORTUGAL",
+                "NUMERO": "13",
+                "COMPLEMENTO": "JAPIIM BC BRASIL",
+                "BAIRRO": "FLORES",
+                "CEP": "69028222",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R MARIA MANSOUR",
+                "NUMERO": "13",
+                "COMPLEMENTO": "BECO:BRASIL",
+                "BAIRRO": "JAPIIM",
+                "CEP": "69078551",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "RUA BRASIL",
+                "NUMERO": "13",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JAPIIM",
+                "CEP": "69078570",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "685275",
+            "NOME": "RAIMUNDA DE SOUZA ALMEIDA",
+            "IDADE": "53 anos",
+            "LOCAL": "MANAUS\/AM",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "INVENTUS POWER ELETRONICA DO BRASIL LTDA",
+                "CNPJ": "00399541000134",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "19\/20\/2005",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BRASCABOS COMPONENTES ELETRICOS E ELETRONICOS DA AMAZONIA LTDA",
+                "CNPJ": "03234553000105",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "12\/08\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "FIH DO BRASIL INDUSTRIA E COMERCIO DE ELETRONICOS LTDA",
+                "CNPJ": "04009604000150",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "731180",
+                "DATA_ADMISSAO": "08\/20\/2010",
+                "DATA_DEMISSAO": "17\/12\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

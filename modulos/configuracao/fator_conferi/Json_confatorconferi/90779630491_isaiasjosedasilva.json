@@ -1,0 +1,144 @@
+{
+    "CADASTRAIS": {
+        "CPF": "90779630491",
+        "NOME": "ISAIAS JOSE DA SILVA",
+        "NOME_MAE": "MARLENE MARTINS DA SILVA",
+        "NASCTO": "29\/12\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "4320558",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "045270410841",
+        "NIT": "12551546437",
+        "ESCOLARIDADE": "DA 5a. A 8a. SERIE INCOMPLETA DO 1o. GRAU(GINASIO INCOMPLETO)",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782510",
+        "PROFISSAO": "MOTORISTA DE CAMINHAO (ROTAS REGIONAIS E INTERNACIONAIS)",
+        "SALARIO": " 1.865,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8135426438",
+            "OPERADORA": "TELEMAR\/PE",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "81992083851",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81985769973",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81988929128",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DO RETIRO",
+                "NUMERO": "269",
+                "COMPLEMENTO": "C 4",
+                "BAIRRO": "PAU AMARELO",
+                "CEP": "53433750",
+                "CIDADE": "PAULISTA",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R DO RETIRO",
+                "NUMERO": "69",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "PAU AMARELO",
+                "CEP": "53433750",
+                "CIDADE": "PAULISTA",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R NOVENTA",
+                "NUMERO": "205",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CAETES I",
+                "CEP": "53530645",
+                "CIDADE": "ABREU E LIMA",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "RUA SETENTA E CINCO",
+                "NUMERO": "205",
+                "COMPLEMENTO": "QD 90",
+                "BAIRRO": "CAETES III",
+                "CEP": "53545190",
+                "CIDADE": "ABREU E LIMA",
+                "ESTADO": "PE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "166646636",
+            "NOME": "MARLENE MARTINS DA SILVA",
+            "IDADE": "60 anos",
+            "LOCAL": "CORONEL FABRICIANO\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "M P 3 TRANSPORTES E LOGISTICA LTDA",
+                "CNPJ": "13577873000103",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "01\/05\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TRACAO TRANSPORTE E LOGISTICA LTDA",
+                "CNPJ": "07175681000178",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "01\/03\/2005",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

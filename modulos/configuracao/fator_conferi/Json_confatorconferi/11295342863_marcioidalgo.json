@@ -1,0 +1,279 @@
+{
+    "CADASTRAIS": {
+        "CPF": "11295342863",
+        "NOME": "MARCIO IDALGO",
+        "NOME_MAE": "MARINA FERNANDES IDALGO",
+        "NASCTO": "07\/03\/1973",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "203780320191",
+        "NIT": "1232504897",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "141205",
+        "PROFISSAO": "GERENTE DE PRODUCAO E OPERACOES",
+        "SALARIO": " 24.934,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1125581641",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1133519910",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "06\/01\/2004",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1134714257",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11943920698",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11982920107",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "07\/11\/2007",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11983577899",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "01\/01\/1980",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11961130905",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "06\/01\/2004",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11969625691",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "IDALGO.MARCIO@TOWERAUTOMOTIVE.COM",
+            "marcio.idalgo@volkswagen.com.br",
+            "abcmidalgo@yahoo.com.br",
+            "abcmidalgo@yahoo.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOSE ROMEIRO",
+                "NUMERO": "165",
+                "COMPLEMENTO": "AP 43 B",
+                "BAIRRO": "CIDADE TIRADENTES",
+                "CEP": "08475350",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOAO ANTUNES MACIEL",
+                "NUMERO": "608",
+                "COMPLEMENTO": "1",
+                "BAIRRO": "PRQ S RAFAEL",
+                "CEP": "08320305",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PAULO NUNES FELIX",
+                "NUMERO": "76",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "PRQ S RAFAEL",
+                "CEP": "08320370",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DAS HORTENCIAS",
+                "NUMERO": "246",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD DO ESTADIO",
+                "CEP": "09175500",
+                "CIDADE": "SANTO ANDRE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "VIA ANCHIETA KM",
+                "NUMERO": "23",
+                "COMPLEMENTO": "CPI 1114",
+                "BAIRRO": "DEMARCHI",
+                "CEP": "09823990",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MANAGUA",
+                "NUMERO": "357",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "09271100",
+                "CIDADE": "SANTO ANDRE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOSE BENEDETTI",
+                "NUMERO": "803",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTO ANTONIO",
+                "CEP": "09531000",
+                "CIDADE": "SAO CAETANO DO SUL",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOAO ANTUNES MACIEL",
+                "NUMERO": "608",
+                "COMPLEMENTO": "1",
+                "BAIRRO": "PARQUE SAO RAFAEL",
+                "CEP": "08320290",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "35415913823",
+                "NOME": "MARINA FERNANDES IDALGO",
+                "IDADE": "89 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "4441360886",
+                "NOME": "VERA LUCIA IDALGO DOS SANTOS",
+                "IDADE": "63 anos",
+                "LOCAL": "MONTES CLAROS\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "15158176876",
+                "NOME": "CLEUZA IDALGO DE SOUZA",
+                "IDADE": "68 anos",
+                "LOCAL": "SANTO ANDRE\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "25754959893",
+                "NOME": "CLEONICE IDALGO BERSANI",
+                "IDADE": "62 anos",
+                "LOCAL": "SAO CAETANO DO SUL\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "27896233843",
+                "NOME": "CLEIDE IDALGO CORSINI",
+                "IDADE": "60 anos",
+                "LOCAL": "SANTO ANDRE\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "JARDIM SISTEMAS AUTOMOTIVOS E INDUSTRIAIS LTDA.",
+                "CNPJ": "03290201000169",
+                "CIDADE": "MAUA-SP",
+                "PROFISSAO": "141205",
+                "DATA_ADMISSAO": "17\/20\/1910",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "KEIPER TECNOLOGIA DE ASSENTOS AUTOMOTIVOS LTDA FALIDO",
+                "CNPJ": "04527572000427",
+                "CIDADE": "MAUA-SP",
+                "PROFISSAO": "141205",
+                "DATA_ADMISSAO": "01\/08\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "KEIPER TECNOLOGIA DE ASSENTOS AUTOMOTIVOS LTDA FALIDO",
+                "CNPJ": "04527572000184",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "820210",
+                "DATA_ADMISSAO": "01\/05\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "KEIPER TECNOLOGIA DE ASSENTOS AUTOMOTIVOS LTDA FALIDO",
+                "CNPJ": "04527572000346",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "821405",
+                "DATA_ADMISSAO": "07\/12\/2010",
+                "DATA_DEMISSAO": "105",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

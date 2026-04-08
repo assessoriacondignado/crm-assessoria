@@ -1,0 +1,174 @@
+{
+    "CADASTRAIS": {
+        "CPF": "73144460320",
+        "NOME": "ANTONIO MESSIAS OTAVIANO LIMA",
+        "NOME_MAE": "MARIA DAS DORES OTAVIANO LIMA",
+        "NASCTO": "22\/06\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "2068448701",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "514320",
+        "PROFISSAO": "AUXILIAR DE LIMPEZA",
+        "SALARIO": " 1.920,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8633212225",
+                "OPERADORA": "TELEMAR\/PI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "8633212595",
+                "OPERADORA": "TELEMAR\/PI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "86981720458",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "86994763024",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOSE MENDES CASTELO BRANCO",
+                "NUMERO": "395",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S VICENTE DE PAULA",
+                "CEP": "64217330",
+                "CIDADE": "PARNAIBA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "R G",
+                "NUMERO": "725",
+                "COMPLEMENTO": "",
+                "BAIRRO": "REIS VELOSO",
+                "CEP": "64204150",
+                "CIDADE": "PARNAIBA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "R JOSE MENDES CASTELO BRANCO",
+                "NUMERO": "396",
+                "COMPLEMENTO": "PROX AO COMERCIAL SANT RI",
+                "BAIRRO": "S VICENTE DE PAULA",
+                "CEP": "64217330",
+                "CIDADE": "PARNAIBA",
+                "ESTADO": "PI"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "55386466372",
+                "NOME": "MARIA DAS DORES OTAVIANO LIMA",
+                "IDADE": "97 anos",
+                "LOCAL": "PARNAIBA\/PI",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "506034348",
+                "NOME": "ANTONIO OTAVIANO LIMA",
+                "IDADE": "58 anos",
+                "LOCAL": "PARNAIBA\/PI",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "20000138304",
+                "NOME": "FRANCISCO JOSE OTAVIANO LIMA",
+                "IDADE": "64 anos",
+                "LOCAL": "OEIRAS\/PI",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "33898529134",
+                "NOME": "ANTONIO MAGNO OTAVIANO LIMA",
+                "IDADE": "66 anos",
+                "LOCAL": "JANDIRA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "35017783334",
+                "NOME": "FRANCISCO APARECIDO OTAVIANO LIMA",
+                "IDADE": "58 anos",
+                "LOCAL": "PARNAIBA\/PI",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "45399336391",
+                "NOME": "REGINA DE FATIMA LIMA DE MENEZES",
+                "IDADE": "63 anos",
+                "LOCAL": "PARNAIBA\/PI",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SESI - SERVICO SOCIAL DA INDUSTRIA",
+                "CNPJ": "03810406001280",
+                "CIDADE": "PARNAIBA-PI",
+                "PROFISSAO": "514320",
+                "DATA_ADMISSAO": "02\/02\/2004",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SESI - SERVICO SOCIAL DA INDUSTRIA",
+                "CNPJ": "03810406000128",
+                "CIDADE": "PARNAIBA-PI",
+                "PROFISSAO": "514120",
+                "DATA_ADMISSAO": "02\/02\/2004",
+                "DATA_DEMISSAO": "01\/11\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

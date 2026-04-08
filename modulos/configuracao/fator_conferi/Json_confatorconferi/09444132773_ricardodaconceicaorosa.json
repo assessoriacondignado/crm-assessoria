@@ -1,0 +1,188 @@
+{
+    "CADASTRAIS": {
+        "CPF": "9444132773",
+        "NOME": "RICARDO DA CONCEICAO ROSA",
+        "NOME_MAE": "ANGELA MARIA DA CONCEICAO",
+        "NASCTO": "16\/09\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "2003356376",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "112121940329",
+        "NIT": "12843940569",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "414110",
+        "PROFISSAO": "ARMAZENISTA",
+        "SALARIO": " 1.091,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2226652121",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "2226732902",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "22997037599",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "22988272289",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "22997736231",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "22999569333",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "22992464041",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "senhoracardoso.sami@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R INTERIMAR",
+                "NUMERO": "10",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CLUBE DOS ENGENHEIROS",
+                "CEP": "28985048",
+                "CIDADE": "ARARUAMA",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R INTERIMAR",
+                "NUMERO": "6",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CLUBE DOS ENGENHEIROS",
+                "CEP": "28985048",
+                "CIDADE": "ARARUAMA",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R JOHN KENNEDY",
+                "NUMERO": "120",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "28979087",
+                "CIDADE": "ARARUAMA",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R INTERIMAR",
+                "NUMERO": "6",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "BURACO DO PAU",
+                "CEP": "28970000",
+                "CIDADE": "ARARUAMA",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "44332700",
+            "NOME": "ANGELA MARIA DA CONCEICAO",
+            "IDADE": "66 anos",
+            "LOCAL": "RIO DE JANEIRO\/RJ",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "NOVA ESPERANCA DE ARARUAMA LTDA",
+                "CNPJ": "05054332000172",
+                "CIDADE": "ARARUAMA-RJ",
+                "PROFISSAO": "521125",
+                "DATA_ADMISSAO": "01\/06\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "R.R. COMERCIO DE PRODUTOS SIDERURGICOS LTDA",
+                "CNPJ": "13166185000150",
+                "CIDADE": "ARARUAMA-RJ",
+                "PROFISSAO": "414110",
+                "DATA_ADMISSAO": "04\/12\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "MUNICIPIO DE ARARUAMA",
+                "CNPJ": "28531762000133",
+                "CIDADE": "ARARUAMA-RJ",
+                "PROFISSAO": "992225",
+                "DATA_ADMISSAO": "01\/01\/2012",
+                "DATA_DEMISSAO": "111",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

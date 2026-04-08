@@ -1,0 +1,162 @@
+{
+    "CADASTRAIS": {
+        "CPF": "13207524893",
+        "NOME": "JOSE MARCIO TARABORELLI",
+        "NOME_MAE": "ESMERALDA MORETTI TARABORELLI",
+        "NASCTO": "16\/04\/1970",
+        "IDADE": "56 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "165833240167",
+        "NIT": "12382042518",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411005",
+        "PROFISSAO": "AUXILIAR DE ESCRITORIO, EM GERAL",
+        "SALARIO": " 1.935,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1532871039",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "15997380075",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "15991237006",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "15996730420",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "lauresio@globo.com",
+            "amanda@imsn.com",
+            "amanda@imsn.com.br",
+            "jmarcio325@vivointernetdiscada.com.br",
+            "jmarcio325@itelefonica.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R AFONSO MATIAS",
+                "NUMERO": "105",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "18510000",
+                "CIDADE": "MARISTELA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R GENEROSO ALVES VIEIRA",
+                "NUMERO": "923",
+                "COMPLEMENTO": "UNID 32",
+                "BAIRRO": "JD VOLOBUEFF",
+                "CEP": "13178195",
+                "CIDADE": "SUMARE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA QUINZE DE NOVEMBRO",
+                "NUMERO": "105",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "DIST MARISTELA",
+                "CEP": "18500000",
+                "CIDADE": "LARANJAL PAULISTA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "32156393869",
+                "NOME": "ESMERALDA MORETTI TARABORELLI",
+                "IDADE": "79 anos",
+                "LOCAL": "MARISTELA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "9287925879",
+                "NOME": "LAURESIO TARABORELLI",
+                "IDADE": "59 anos",
+                "LOCAL": "LARANJAL PAULISTA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ABATEDOURO DE AVES IDEAL LTDA",
+                "CNPJ": "74251919000356",
+                "CIDADE": "PEREIRAS-SP",
+                "PROFISSAO": "410240",
+                "DATA_ADMISSAO": "04\/06\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "EMBRAC-EMPRESA BRASILEIRA DE CARGAS LTDA EM RECUPERACAO JUDICIAL",
+                "CNPJ": "52492006000127",
+                "CIDADE": "SUMARE-SP",
+                "PROFISSAO": "354205",
+                "DATA_ADMISSAO": "17\/07\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "CINCO E TRANSPORTES LTDA",
+                "CNPJ": "07292148000196",
+                "CIDADE": "SUMARE-SP",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "01\/12\/2010",
+                "DATA_DEMISSAO": "03\/12\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,253 @@
+{
+    "CADASTRAIS": {
+        "CPF": "33316366814",
+        "NOME": "ROBSON DE OLIVEIRA",
+        "NOME_MAE": "NEIDE PEDRINA DOS SANTOS",
+        "NASCTO": "12\/10\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "349608702",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "280077290175",
+        "NIT": "2092534062 ",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "513405",
+        "PROFISSAO": "GARCOM",
+        "SALARIO": " 7,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1238961776",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "baixa"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "12978144510",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12988223067",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12991685709",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12991923712",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12992355344",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "bymbo182@hotmail.com",
+            "kontrolecontabil@hotmail.com",
+            "robsoncambaquara@htmail.com",
+            "robsoncambaquara@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R OLIMPIO JOSE DOS SANTOS",
+                "NUMERO": "337",
+                "COMPLEMENTO": "CS 1",
+                "BAIRRO": "ITAQUANDUBA",
+                "CEP": "11630000",
+                "CIDADE": "ILHABELA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "PC ENG JOSE REBOUCAS",
+                "NUMERO": "4728",
+                "COMPLEMENTO": "L NORTE IA",
+                "BAIRRO": "PNT DA PRAIA",
+                "CEP": "11030000",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV BRASIL",
+                "NUMERO": "768",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BARRA VELHA",
+                "CEP": "11630001",
+                "CIDADE": "ILHABELA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FIDENCIO RAMOS",
+                "NUMERO": "223",
+                "COMPLEMENTO": "AND 1",
+                "BAIRRO": "VL OLIMPIA",
+                "CEP": "04551010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R HEGINA DE OLIVEIRA",
+                "NUMERO": "180",
+                "COMPLEMENTO": "C 2",
+                "BAIRRO": "PR DO ITAGUACU",
+                "CEP": "11630000",
+                "CIDADE": "ILHABELA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE OLIMPIO DOS SANTOS",
+                "NUMERO": "60",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ITAGUASSU",
+                "CEP": "11630000",
+                "CIDADE": "ILHABELA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV PERIMETRAL NORTE",
+                "NUMERO": "5440",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AEMACAO",
+                "CEP": "11630000",
+                "CIDADE": "ILHABELA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV DAS ROSAS",
+                "NUMERO": "3",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD MOTORAMA",
+                "CEP": "12224000",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "25202792816",
+                "NOME": "NEIDE PEDRINA DOS SANTOS",
+                "IDADE": "73 anos",
+                "LOCAL": "ILHABELA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "27498632870",
+                "NOME": "EDSON DE OLIVEIRA",
+                "IDADE": "48 anos",
+                "LOCAL": "ILHABELA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "34878630817",
+                "NOME": "ROSENELY DE OLIVEIRA",
+                "IDADE": "43 anos",
+                "LOCAL": "ILHABELA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "VIANA PRAIA - BAR E RESTAURANTE LTDA",
+                "CNPJ": "07606462000104",
+                "CIDADE": "ILHABELA-SP",
+                "PROFISSAO": "513420",
+                "DATA_ADMISSAO": "03\/09\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "HOTEL VELAS DO ENGENHO LTDA",
+                "CNPJ": "33439660000122",
+                "CIDADE": "ILHABELA-SP",
+                "PROFISSAO": "513405",
+                "DATA_ADMISSAO": "17\/11\/2021",
+                "DATA_DEMISSAO": "20\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "PESCADORA COZINHA DO MAR LTDA",
+                "CNPJ": "71892103000151",
+                "CIDADE": "ILHABELA-SP",
+                "PROFISSAO": "513405",
+                "DATA_ADMISSAO": "01\/03\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO DE WINDSURF E KITESURF DA PONTA DAS CANAS",
+                "CNPJ": "01080187000143",
+                "CIDADE": "MAUA-SP",
+                "PROFISSAO": "782705",
+                "DATA_ADMISSAO": "01\/04\/2016",
+                "DATA_DEMISSAO": "27\/07\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ILHA INVESTIMENTOS E PARTICIPACOES LTDA.",
+                "CNPJ": "13068121000117",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "622005",
+                "DATA_ADMISSAO": "02\/01\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

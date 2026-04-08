@@ -1,0 +1,274 @@
+{
+    "CADASTRAIS": {
+        "CPF": "1572386959",
+        "NOME": "JULIO CESAR RICHTER",
+        "NOME_MAE": "SELMA REGINA COSTA",
+        "NASCTO": "06\/07\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "56393390",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12542778452",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "721215",
+        "PROFISSAO": "OPERADOR DE MAQUINAS-FERRAMENTA CONVENCIONAIS",
+        "SALARIO": " 3.190,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4130243902",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "4132405086",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4133168400",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4133636796",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "41992150732",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41992731618",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41999081068",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41992025664",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41992691133",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "julio.c.richter@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV MAL FLORIANO PEIXOTO",
+                "NUMERO": "7037",
+                "COMPLEMENTO": "AP 1",
+                "BAIRRO": "BOQUEIRAO",
+                "CEP": "81650000",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R BENJAMIN CONSTANT",
+                "NUMERO": "252",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "80060020",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R AMAZONAS",
+                "NUMERO": "2674",
+                "COMPLEMENTO": "DE 1 A",
+                "BAIRRO": "AGUA VERDE",
+                "CEP": "80610030",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R AMAZONAS",
+                "NUMERO": "346",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "AGUA VERDE",
+                "CEP": "80610030",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R SANTA CATARINA",
+                "NUMERO": "821",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AGUA VERDE",
+                "CEP": "80610090",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R BENJAMIN CONSTANT",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "80060020",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R AMAZONAS",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AGUA VERDE",
+                "CEP": "80610030",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "RUA BENJAMIN CONSTANT",
+                "NUMERO": "257",
+                "COMPLEMENTO": "AP 41",
+                "BAIRRO": "CENTRO",
+                "CEP": "80060020",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1923081306",
+            "NOME": "SELMA REGINA COSTA",
+            "IDADE": "42 anos",
+            "LOCAL": "SAO LUIS\/MA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TECNOWELDING COMERCIO LTDA",
+                "CNPJ": "04334409000103",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "721410",
+                "DATA_ADMISSAO": "24\/20\/1902",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "USIBLOCK INDUSTRIA MECANICA LTDA",
+                "CNPJ": "81449860000109",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "721215",
+                "DATA_ADMISSAO": "15\/05\/2019",
+                "DATA_DEMISSAO": "25\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PLASTICOS DO PARANA LTDA",
+                "CNPJ": "77965077000120",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "721215",
+                "DATA_ADMISSAO": "21\/03\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "CEJEN ENGENHARIA LTDA",
+                "CNPJ": "79540670000150",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "721215",
+                "DATA_ADMISSAO": "14\/04\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "VEMAQ VIATURAS EQUIPAMENTOS E MAQUINAS LTDA",
+                "CNPJ": "04630383000132",
+                "CIDADE": "ARAUCARIA-PR",
+                "PROFISSAO": "862150",
+                "DATA_ADMISSAO": "13\/01\/2014",
+                "DATA_DEMISSAO": "25\/02\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "TROX DO BRASIL DIFUSAO DE AR ACUST FILTRAGEM VENT LTDA",
+                "CNPJ": "76881093000172",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "721215",
+                "DATA_ADMISSAO": "03\/11\/2011",
+                "DATA_DEMISSAO": "08\/01\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

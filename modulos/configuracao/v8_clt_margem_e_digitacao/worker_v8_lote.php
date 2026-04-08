@@ -1,0 +1,506 @@
+<?php
+ignore_user_abort(true);
+set_time_limit(0);
+ini_set('display_errors', 0);
+error_reporting(0);
+
+require_once '../../../conexao.php';
+if(!isset($pdo) && isset($conn)) { $pdo = $conn; } 
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$pdo->exec("SET NAMES utf8mb4");
+
+// =========================================================================
+// SISTEMA DE LOGS E LIMPEZA (7 DIAS)
+// =========================================================================
+function limparLogsAntigos($diretorio, $dias = 7) {
+    if (!is_dir($diretorio)) { @mkdir($diretorio, 0777, true); return; }
+    $arquivos = glob($diretorio . '/*.txt');
+    $tempo_limite = time() - ($dias * 24 * 60 * 60);
+    foreach ($arquivos as $arquivo) {
+        if (is_file($arquivo) && filemtime($arquivo) < $tempo_limite) {
+            @unlink($arquivo);
+        }
+    }
+}
+
+function gravarLogIntegracao($pasta_destino, $cpf, $fase, $url, $req, $res, $http_code) {
+    $dir = $_SERVER['DOCUMENT_ROOT'] . '/logs_v8/' . $pasta_destino;
+    if (!is_dir($dir)) { @mkdir($dir, 0777, true); }
+    
+    $data_nome_arquivo = date('d-m-Y_H\h'); 
+    $file = $dir . '/log_cpf_' . $cpf . '_' . $data_nome_arquivo . '.txt';
+    
+    $req_print = (is_array($req) || is_object($req)) ? json_encode($req, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE) : $req;
+    $res_print = (is_array($res) || is_object($res)) ? json_encode($res, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE) : $res;
+    
+    $log = "\n[ " . date('d/m/Y H:i:s') . " ] === {$fase} ===\n";
+    $log .= "URL: {$url}\nHTTP STATUS: {$http_code}\n";
+    $log .= ">>> PAYLOAD (ENVIO):\n{$req_print}\n";
+    $log .= "<<< RESPOSTA (RETORNO):\n{$res_print}\n";
+    $log .= str_repeat("-", 60) . "\n";
+    
+    @file_put_contents($file, $log, FILE_APPEND);
+}
+
+limparLogsAntigos($_SERVER['DOCUMENT_ROOT'] . '/logs_v8/logs_consulta_lote', 7);
+limparLogsAntigos($_SERVER['DOCUMENT_ROOT'] . '/logs_v8/logs_automacao', 7);
+// =========================================================================
+
+$user_cpf = preg_replace('/\D/', '', $_GET['user_cpf'] ?? '');
+if (empty($user_cpf)) { exit; }
+
+$lock_file = sys_get_temp_dir() . '/v8_lote_csv_' . $user_cpf . '.lock';
+$fp = @fopen($lock_file, "w+");
+if (!$fp || !flock($fp, LOCK_EX | LOCK_NB)) { exit; }
+
+function acordarWorkerNovamente() {
+    $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
+    $url_worker = $protocol . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    $ch = curl_init(); 
+    curl_setopt($ch, CURLOPT_URL, $url_worker); 
+    curl_setopt($ch, CURLOPT_TIMEOUT, 1); 
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); 
+    curl_exec($ch); 
+    curl_close($ch);
+}
+
+function gerarTokenV8Lote($chave_id, $pdo) {
+    $stmt = $pdo->prepare("SELECT * FROM INTEGRACAO_V8_CHAVE_ACESSO WHERE ID = ?"); 
+    $stmt->execute([$chave_id]); $chave = $stmt->fetch(PDO::FETCH_ASSOC);
+    $payload = http_build_query(['grant_type'=>'password', 'username'=>$chave['USERNAME_API'], 'password'=>$chave['PASSWORD_API'], 'audience'=>$chave['AUDIENCE'], 'client_id'=>$chave['CLIENT_ID'], 'scope'=>'offline_access']);
+    $ch = curl_init("https://auth.v8sistema.com/oauth/token");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); curl_setopt($ch, CURLOPT_POST, true); curl_setopt($ch, CURLOPT_POSTFIELDS, $payload); curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/x-www-form-urlencoded']);
+    $res = curl_exec($ch); curl_close($ch);
+    $json = json_decode($res, true);
+    return $json['access_token'] ?? null;
+}
+
+function extrairValorSeguro($arr, $keys) { 
+    if(!is_array($arr)) return null; 
+    foreach($keys as $k) { if(isset($arr[$k]) && is_numeric($arr[$k])) return (float)$arr[$k]; } 
+    foreach($arr as $v) { if(is_array($v)) { $res = extrairValorSeguro($v, $keys); if($res !== null) return $res; } } 
+    return null; 
+}
+
+$start_time = time();
+$target_runtime = 280; 
+$tokens_cache = [];
+
+while(true) {
+    if(time() - $start_time > $target_runtime) { 
+        flock($fp, LOCK_UN); fclose($fp); acordarWorkerNovamente(); exit;
+    }
+
+    $work_found = false;
+
+    $stmtLote = $pdo->prepare("SELECT * FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE STATUS_FILA IN ('PENDENTE', 'PROCESSANDO') AND CPF_USUARIO = ? ORDER BY ID ASC LIMIT 1");
+    $stmtLote->execute([$user_cpf]);
+    $lote = $stmtLote->fetch(PDO::FETCH_ASSOC);
+
+    if (!$lote) { flock($fp, LOCK_UN); fclose($fp); exit; }
+
+    $id_lote = $lote['ID'];
+    $chave_id = $lote['CHAVE_ID'];
+    $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PROCESSANDO' WHERE ID = ?")->execute([$id_lote]);
+
+    $stmtKeySet = $pdo->prepare("SELECT TABELA_PADRAO, PRAZO_PADRAO FROM INTEGRACAO_V8_CHAVE_ACESSO WHERE ID = ?");
+    $stmtKeySet->execute([$chave_id]);
+    $keySet = $stmtKeySet->fetch(PDO::FETCH_ASSOC);
+    $tabela_padrao = !empty($keySet['TABELA_PADRAO']) ? $keySet['TABELA_PADRAO'] : 'CLT Acelera';
+    $prazo_padrao = !empty($keySet['PRAZO_PADRAO']) ? (int)$keySet['PRAZO_PADRAO'] : 24;
+
+    $token = null;
+    if(isset($tokens_cache[$chave_id]) && (time() - $tokens_cache[$chave_id]['time'] < 3000)) { 
+        $token = $tokens_cache[$chave_id]['token']; 
+    } else { 
+        $token = gerarTokenV8Lote($chave_id, $pdo); 
+        if($token) { $tokens_cache[$chave_id] = ['token'=>$token, 'time'=>time()]; } 
+    }
+
+    if (!$token) { 
+        $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'ERRO CREDENCIAL' WHERE ID = ?")->execute([$id_lote]); 
+        continue; 
+    }
+
+    $headers = ["Authorization: Bearer $token", "Content-Type: application/json"];
+
+    // =========================================================================
+    // FASE 1: CRIAR CONSENTIMENTO (COM COBRANÇA DA V8)
+    // =========================================================================
+    $stmtF1 = $pdo->prepare("SELECT * FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE WHERE LOTE_ID = ? AND STATUS_V8 = 'NA FILA' ORDER BY ID ASC LIMIT 1");
+    $stmtF1->execute([$id_lote]);
+    
+    if ($cpfFase1 = $stmtF1->fetch(PDO::FETCH_ASSOC)) {
+        $work_found = true;
+        $telefone = '11900000000';
+        $stmtT = $pdo->prepare("SELECT telefone_cel FROM telefones WHERE cpf = ? LIMIT 1"); $stmtT->execute([$cpfFase1['CPF']]);
+        if ($t = $stmtT->fetchColumn()) { $telefone = $t; $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET TELEFONES_LOCAL = ? WHERE ID = ?")->execute([$telefone, $cpfFase1['ID']]); }
+        
+        $payload_cons = json_encode([ 'borrowerDocumentNumber' => $cpfFase1['CPF'], 'gender' => $cpfFase1['SEXO'] ?: 'female', 'birthDate' => $cpfFase1['NASCIMENTO'], 'signerName' => $cpfFase1['NOME'], 'signerEmail' => 'cliente@gmail.com', 'signerPhone' => ['countryCode' => '55', 'areaCode' => substr($telefone, 0, 2), 'phoneNumber' => substr($telefone, 2)], 'provider' => 'QI' ]); 
+
+        $ch = curl_init("https://bff.v8sistema.com/private-consignment/consult");
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); curl_setopt($ch, CURLOPT_POST, true); curl_setopt($ch, CURLOPT_POSTFIELDS, $payload_cons); curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        $res = curl_exec($ch); $http = curl_getinfo($ch, CURLINFO_HTTP_CODE); curl_close($ch);
+        $json = json_decode($res, true);
+
+        gravarLogIntegracao('logs_consulta_lote', $cpfFase1['CPF'], 'FASE 1: CRIAR CONSENTIMENTO', 'https://bff.v8sistema.com/private-consignment/consult', json_decode($payload_cons, true), $json, $http);
+
+        $consult_id = $json['id'] ?? null;
+        
+        if ($consult_id || ($http >= 400 && strpos($res, 'consult_already_exists') !== false)) {
+            if (!$consult_id) { 
+                $chL = curl_init("https://bff.v8sistema.com/private-consignment/consult?limit=100&page=1"); 
+                curl_setopt($chL, CURLOPT_RETURNTRANSFER, true); curl_setopt($chL, CURLOPT_HTTPHEADER, $headers);
+                $resL = curl_exec($chL); curl_close($chL); $jsonL = json_decode($resL, true);
+                
+                $lista = $jsonL['data'] ?? $jsonL['items'] ?? [];
+                foreach ($lista as $item) {
+                    $doc_api = preg_replace('/\D/', '', $item['documentNumber'] ?? $item['borrowerDocumentNumber'] ?? $item['cpf'] ?? '');
+                    if ($doc_api === $cpfFase1['CPF']) {
+                        $consult_id = $item['id'] ?? null;
+                        break;
+                    }
+                }
+            }
+            if ($consult_id) {
+                $chA = curl_init("https://bff.v8sistema.com/private-consignment/consult/{$consult_id}/authorize"); curl_setopt($chA, CURLOPT_RETURNTRANSFER, true); curl_setopt($chA, CURLOPT_POST, true); curl_setopt($chA, CURLOPT_POSTFIELDS, json_encode([])); curl_setopt($chA, CURLOPT_HTTPHEADER, $headers);
+                $resA = curl_exec($chA); $httpA = curl_getinfo($chA, CURLINFO_HTTP_CODE); curl_close($chA);
+
+                gravarLogIntegracao('logs_consulta_lote', $cpfFase1['CPF'], 'FASE 1.1: AUTORIZAR', "https://bff.v8sistema.com/private-consignment/consult/{$consult_id}/authorize", [], json_decode($resA, true), $httpA);
+
+                $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'AGUARDANDO MARGEM', CONSULT_ID = ?, OBSERVACAO = 'Consultado! Aguardando processamento da Dataprev' WHERE ID = ?")->execute([$consult_id, $cpfFase1['ID']]);
+
+                // =====================================================================
+                // EFETUA A COBRANÇA DA V8
+                // =====================================================================
+                $stmtCusto = $pdo->prepare("SELECT SALDO, CUSTO_CONSULTA, CUSTO_V8 FROM INTEGRACAO_V8_CHAVE_ACESSO WHERE ID = ?"); 
+                $stmtCusto->execute([$chave_id]);
+                if ($chaveInfo = $stmtCusto->fetch(PDO::FETCH_ASSOC)) {
+                    $custo = (float)$chaveInfo['CUSTO_CONSULTA'];
+                    if ($custo > 0) {
+                        $saldo_anterior = (float)$chaveInfo['SALDO']; 
+                        $saldo_atual = $saldo_anterior - $custo;
+                        
+                        $pdo->prepare("UPDATE INTEGRACAO_V8_CHAVE_ACESSO SET SALDO = ? WHERE ID = ?")->execute([$saldo_atual, $chave_id]);
+                        
+                        $motivo = "LOTE V8 - CPF {$cpfFase1['CPF']}";
+                        $pdo->prepare("INSERT INTO INTEGRACAO_V8_EXTRATO_CLIENTE (CHAVE_ID, TIPO_MOVIMENTO, TIPO_CUSTO, VALOR, CUSTO_V8, SALDO_ANTERIOR, SALDO_ATUAL, DATA_LANCAMENTO) VALUES (?, 'DEBITO', ?, ?, ?, ?, ?, NOW())")->execute([$chave_id, $motivo, $custo, (float)$chaveInfo['CUSTO_V8'], $saldo_anterior, $saldo_atual]);
+                    }
+                }
+                // =====================================================================
+
+                sleep(15); 
+            } else {
+                $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'ERRO CONSULTA', OBSERVACAO = 'Bloqueado. ID não retornado pela V8.' WHERE ID = ?")->execute([$cpfFase1['ID']]);
+                $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_PROCESSADA = QTD_PROCESSADA + 1, QTD_ERRO = QTD_ERRO + 1 WHERE ID = ?")->execute([$id_lote]);
+                sleep(5);
+            }
+        } else {
+            $msgErro = $json['detail'] ?? $json['message'] ?? mb_substr($res, 0, 200);
+            $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'ERRO CONSULTA', OBSERVACAO = ? WHERE ID = ?")->execute([$msgErro, $cpfFase1['ID']]);
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_PROCESSADA = QTD_PROCESSADA + 1, QTD_ERRO = QTD_ERRO + 1 WHERE ID = ?")->execute([$id_lote]);
+            sleep(5);
+        }
+        continue; 
+    }
+
+    // FASE 1.5: RECUPERAR CONSENTIMENTO EXISTENTE NA V8
+    $stmtF15 = $pdo->prepare("SELECT * FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE WHERE LOTE_ID = ? AND STATUS_V8 = 'RECUPERAR V8' ORDER BY ID ASC LIMIT 1");
+    $stmtF15->execute([$id_lote]);
+    if ($cpfFase15 = $stmtF15->fetch(PDO::FETCH_ASSOC)) {
+        $work_found = true;
+        
+        $chL = curl_init("https://bff.v8sistema.com/private-consignment/consult?limit=100&page=1"); 
+        curl_setopt($chL, CURLOPT_RETURNTRANSFER, true); curl_setopt($chL, CURLOPT_HTTPHEADER, $headers);
+        $resL = curl_exec($chL); $httpL = curl_getinfo($chL, CURLINFO_HTTP_CODE); curl_close($chL);
+        $jsonL = json_decode($resL, true);
+        
+        gravarLogIntegracao('logs_consulta_lote', $cpfFase15['CPF'], 'FASE 1.5: RECUPERAR V8 (SOMENTE SIMULAR)', "GET /consult", "Busca de CPF", $jsonL, $httpL);
+        
+        $lista = $jsonL['data'] ?? $jsonL['items'] ?? [];
+        $consult_id = null;
+        
+        if(count($lista) > 0) { 
+            foreach ($lista as $item) {
+                $doc_api = preg_replace('/\D/', '', $item['documentNumber'] ?? $item['borrowerDocumentNumber'] ?? $item['cpf'] ?? '');
+                $status_item = strtoupper($item['status'] ?? '');
+                
+                if ($doc_api === $cpfFase15['CPF'] && !in_array($status_item, ['REJECTED', 'DENIED', 'CANCELED', 'ERROR'])) { 
+                    $consult_id = $item['id'] ?? null; 
+                    break; 
+                }
+            }
+        }
+        
+        if ($consult_id) {
+            $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'AGUARDANDO MARGEM', CONSULT_ID = ?, OBSERVACAO = 'Consentimento recuperado na V8. Lendo margem...' WHERE ID = ?")->execute([$consult_id, $cpfFase15['ID']]);
+        } else {
+            $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'ERRO MARGEM', OBSERVACAO = 'Nenhum consentimento prévio e válido localizado na V8 para este CPF.' WHERE ID = ?")->execute([$cpfFase15['ID']]);
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_PROCESSADA = QTD_PROCESSADA + 1, QTD_ERRO = QTD_ERRO + 1 WHERE ID = ?")->execute([$id_lote]);
+        }
+        sleep(2);
+        continue;
+    }
+
+    // FASE 2: BUSCA DE MARGEM E SELEÇÃO DE TABELA COM PULO (DATAPREV)
+    $stmtF2 = $pdo->prepare("SELECT * FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE WHERE LOTE_ID = ? AND STATUS_V8 = 'AGUARDANDO MARGEM' ORDER BY ID ASC LIMIT 1");
+    $stmtF2->execute([$id_lote]);
+    if ($cpfFase2 = $stmtF2->fetch(PDO::FETCH_ASSOC)) {
+        $work_found = true;
+        $consult_id = $cpfFase2['CONSULT_ID']; 
+        
+        $chC = curl_init("https://bff.v8sistema.com/private-consignment/consult/{$consult_id}"); curl_setopt($chC, CURLOPT_RETURNTRANSFER, true); curl_setopt($chC, CURLOPT_HTTPHEADER, $headers);
+        $resC = curl_exec($chC); $httpC = curl_getinfo($chC, CURLINFO_HTTP_CODE); curl_close($chC);
+        $jsonC = json_decode($resC, true);
+
+        gravarLogIntegracao('logs_consulta_lote', $cpfFase2['CPF'], 'FASE 2: BUSCAR MARGEM DATAPREV', "https://bff.v8sistema.com/private-consignment/consult/{$consult_id}", "GET Request", $jsonC, $httpC);
+        
+        $status_api = strtoupper($jsonC['status'] ?? '');
+        
+        if ($httpC == 200 && ($status_api === 'SUCCESS' || $status_api === 'COMPLETED' || $status_api === 'PRE_APPROVED' || $status_api === 'APPROVED')) {
+            $margem = extrairValorSeguro($jsonC, ['availableMargin', 'margin', 'maxAmount', 'marginBaseValue', 'availableMarginValue']) ?? 0;
+            
+            $chCfg = curl_init("https://bff.v8sistema.com/private-consignment/simulation/configs?consult_id={$consult_id}"); curl_setopt($chCfg, CURLOPT_RETURNTRANSFER, true); curl_setopt($chCfg, CURLOPT_HTTPHEADER, $headers);
+            $resCfg = curl_exec($chCfg); curl_close($chCfg); $jsonCfg = json_decode($resCfg, true);
+            
+            $config_id = null; $lista_configs = $jsonCfg['configs'] ?? [];
+            if (is_array($lista_configs) && count($lista_configs) > 0) { 
+                $tabela_desejada = trim(strtolower($tabela_padrao)); $quer_seguro = (strpos($tabela_desejada, 'seguro') !== false);
+                foreach ($lista_configs as $cfg) { $nomeSlug = trim(strtolower($cfg['slug'] ?? $cfg['name'] ?? '')); if ($nomeSlug === $tabela_desejada) { $config_id = $cfg['id']; break; } } 
+                if (!$config_id) { foreach ($lista_configs as $cfg) { $nomeSlug = trim(strtolower($cfg['slug'] ?? $cfg['name'] ?? '')); if (strpos($nomeSlug, $tabela_desejada) !== false) { $tem_seguro = (strpos($nomeSlug, 'seguro') !== false); if (!$quer_seguro && $tem_seguro) continue; $config_id = $cfg['id']; break; } } }
+                if (!$config_id) { foreach ($lista_configs as $cfg) { $nomeSlug = trim(strtolower($cfg['slug'] ?? $cfg['name'] ?? '')); $tem_seguro = (strpos($nomeSlug, 'seguro') !== false); if (!$quer_seguro && $tem_seguro) continue; $config_id = $cfg['id']; break; } } 
+                if (!$config_id) { $config_id = $lista_configs[0]['id']; }
+            }
+
+            if(!$config_id) $config_id = $consult_id;
+            
+            $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'AGUARDANDO SIMULACAO', VALOR_MARGEM = ?, CONFIG_ID = ?, OBSERVACAO = 'Margem lida com sucesso! Aguardando Simulação...' WHERE ID = ?")->execute([(float)$margem, $config_id, $cpfFase2['ID']]);
+            
+        } elseif (in_array($status_api, ['PROCESSING', 'PENDING', 'WAITING', 'WAITING_CONSULT', 'ANALYZING', 'IN_PROGRESS', 'PENDING_CONSULTATION', 'CONSENT_APPROVED'])) {
+            $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'AGUARDANDO DATAPREV', OBSERVACAO = 'Dataprev demorando. Retido para reprocessamento manual.' WHERE ID = ?")->execute([$cpfFase2['ID']]);
+        } elseif (!in_array($status_api, [''])) {
+            $msgErro = $jsonC['detail'] ?? $jsonC['status_description'] ?? 'Rejeitado pela Dataprev';
+            $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'ERRO MARGEM', OBSERVACAO = ? WHERE ID = ?")->execute([$msgErro, $cpfFase2['ID']]);
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_PROCESSADA = QTD_PROCESSADA + 1, QTD_ERRO = QTD_ERRO + 1 WHERE ID = ?")->execute([$id_lote]);
+        }
+        
+        sleep(2); 
+        continue; 
+    }
+
+    // FASE 3: SIMULAÇÃO PADRÃO E FATOR CONFERI
+    $stmtF3 = $pdo->prepare("SELECT * FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE WHERE LOTE_ID = ? AND STATUS_V8 = 'AGUARDANDO SIMULACAO' ORDER BY ID ASC LIMIT 1");
+    $stmtF3->execute([$id_lote]);
+    if ($cpfFase3 = $stmtF3->fetch(PDO::FETCH_ASSOC)) {
+        $work_found = true;
+        $config_id = $cpfFase3['CONFIG_ID'];
+        $consult_id = $cpfFase3['CONSULT_ID'];
+        $margem = (float)$cpfFase3['VALOR_MARGEM'];
+
+        $payload_sim_array = [ 'consult_id' => $consult_id, 'config_id' => $config_id, 'number_of_installments' => $prazo_padrao, 'installment_face_value' => $margem ];
+        $url_sim = "https://bff.v8sistema.com/private-consignment/simulation";
+        
+        $tentativas = 0; $max_tentativas = 5; $sim_obj = null; $httpS = 0; $observacao_final = 'Simulação e Margem extraídas com sucesso!'; $sucesso_sim = false; $erro_fatal = '';
+
+        while ($tentativas < $max_tentativas) {
+            $payload_sim = json_encode($payload_sim_array);
+            $chS = curl_init($url_sim); curl_setopt($chS, CURLOPT_RETURNTRANSFER, true); curl_setopt($chS, CURLOPT_POST, true); curl_setopt($chS, CURLOPT_POSTFIELDS, $payload_sim); curl_setopt($chS, CURLOPT_HTTPHEADER, $headers);
+            $resS = curl_exec($chS); $httpS = curl_getinfo($chS, CURLINFO_HTTP_CODE); curl_close($chS);
+            $jsonS = json_decode($resS, true);
+            
+            gravarLogIntegracao('logs_consulta_lote', $cpfFase3['CPF'], "FASE 3: SIMULACAO (TENTATIVA " . ($tentativas+1) . ")", $url_sim, json_decode($payload_sim, true), $jsonS, $httpS);
+
+            if ($httpS >= 200 && $httpS < 300 && !empty($jsonS)) { $sim_obj = isset($jsonS[0]) ? $jsonS[0] : $jsonS; $sucesso_sim = true; break; }
+
+            $erroMsg = strtolower($jsonS['detail'] ?? $jsonS['message'] ?? mb_substr($resS, 0, 200));
+            if (strpos($erroMsg, '50000') !== false) {
+                $observacao_final = 'O valor solicitado não pode ser maior que 50000.';
+                unset($payload_sim_array['installment_face_value']); $payload_sim_array['disbursed_amount'] = 50000; $tentativas++; continue;
+            } elseif (strpos($erroMsg, 'desembolso') !== false) {
+                $erro_fatal = 'A simulação não passou nos critérios de elegibilidade por valor mínimo de desembolso.'; break; 
+            } elseif (strpos($erroMsg, 'margem dispon') !== false || strpos($erroMsg, 'maior que a margem') !== false) {
+                $observacao_final = 'O valor da parcela não pode ser maior que a margem disponível do funcionário (parcela enquadrada em lup 10%)';
+                if (isset($payload_sim_array['installment_face_value'])) { $payload_sim_array['installment_face_value'] = round($payload_sim_array['installment_face_value'] * 0.90, 2); }
+                $tentativas++; continue;
+            } else {
+                $erro_fatal = $jsonS['detail'] ?? $jsonS['message'] ?? mb_substr($resS, 0, 200); break;
+            }
+        }
+
+        if ($sucesso_sim) {
+            $valor_liberado = $sim_obj['disbursement_amount'] ?? $sim_obj['disbursed_amount'] ?? 0;
+            $sim_id = $sim_obj['id_simulation'] ?? $sim_obj['id'] ?? null;
+            
+            // =========================================================================
+            // FATOR CONFERI (ATUALIZACAO CADASTRAL + COBRANÇA + SALVAR DADOS + CACHE)
+            // =========================================================================
+            if ($lote['ATUALIZAR_TELEFONE'] == 1) {
+                $cpf_dono_lote = $lote['CPF_USUARIO'];
+                $cpf_busca = ltrim($cpfFase3['CPF'], '0'); 
+                
+                $stmtFc = $pdo->prepare("SELECT SALDO, CUSTO_CONSULTA FROM CLIENTE_CADASTRO WHERE CPF = ?"); 
+                $stmtFc->execute([$cpf_dono_lote]); 
+                $cliFc = $stmtFc->fetch(PDO::FETCH_ASSOC);
+                
+                $custo_fc = (float)($cliFc['CUSTO_CONSULTA'] ?? 0); 
+                $saldo_fc = (float)($cliFc['SALDO'] ?? 0);
+                
+                if ($cliFc && $saldo_fc >= $custo_fc) {
+                    $stmtCfgFC = $pdo->query("SELECT TOKEN_LOTE FROM WAPI_CONFIG_BOT_FATOR WHERE ID = 1"); 
+                    $tkFC = trim($stmtCfgFC->fetchColumn());
+                    
+                    if (!empty($tkFC)) {
+                        
+                        // 1. VERIFICA O CACHE COMPARTILHADO PRIMEIRO!
+                        $dir_fc_json = $_SERVER['DOCUMENT_ROOT'] . '/modulos/configuracao/fator_conferi/Json_confatorconferi/';
+                        $arquivos_cache = glob($dir_fc_json . $cpf_busca . "_*.json");
+                        
+                        $usou_cache_fc = false;
+                        
+                        if (!empty($arquivos_cache)) {
+                            $json_salvo = @file_get_contents($arquivos_cache[0]);
+                            $array_fc = json_decode($json_salvo, true);
+                            
+                            if (isset($array_fc['CADASTRAIS']['NOME']) && !empty($array_fc['CADASTRAIS']['NOME'])) {
+                                $usou_cache_fc = true;
+                                
+                                // Atualiza as tabelas do CRM com os dados do cache
+                                inserirDadosOficiais_V8($cpf_busca, $array_fc, $pdo);
+                                
+                                gravarLogIntegracao('logs_automacao', $cpfFase3['CPF'], 'FATOR CONFERI: ATUALIZACAO CADASTRAL (VIA CACHE)', 'CACHE LOCAL', "Leitura de arquivo JSON", $array_fc, 200);
+                                
+                                // NOTA: Se usou o cache, NÃO COBRA do saldo! Sai de graça.
+                            }
+                        }
+                        
+                        // 2. SE NÃO ACHOU NO CACHE, BATE NA API!
+                        if (!$usou_cache_fc) {
+                            $urlFC = "https://fator.confere.link/api/?acao=CONS_CPF&TK=" . $tkFC . "&DADO=" . $cpf_busca;
+                            
+                            $chFC = curl_init($urlFC); 
+                            curl_setopt($chFC, CURLOPT_RETURNTRANSFER, true); 
+                            curl_setopt($chFC, CURLOPT_SSL_VERIFYPEER, false); 
+                            curl_setopt($chFC, CURLOPT_TIMEOUT, 30);
+                            $resFC = curl_exec($chFC); 
+                            $httpFC = curl_getinfo($chFC, CURLINFO_HTTP_CODE); 
+                            curl_close($chFC);
+                            
+                            gravarLogIntegracao('logs_automacao', $cpfFase3['CPF'], 'FATOR CONFERI: ATUALIZACAO CADASTRAL (VIA API)', $urlFC, "GET Request", $resFC, $httpFC);
+                            
+                            if ($httpFC >= 200 && $httpFC < 300) {
+                                $xmlString = mb_convert_encoding($resFC, 'UTF-8', 'ISO-8859-1'); 
+                                if(strpos($xmlString, '<') !== false) { $xmlString = substr($xmlString, strpos($xmlString, '<')); } 
+                                libxml_use_internal_errors(true);
+                                $xmlObject = simplexml_load_string($xmlString, 'SimpleXMLElement', LIBXML_NOCDATA);
+                                
+                                if ($xmlObject && isset($xmlObject->CADASTRAIS->NOME)) {
+                                    
+                                    $array_fc = xmlToArray_V8($xmlObject);
+                                    
+                                    // A) SALVAR DADOS NO CRM
+                                    inserirDadosOficiais_V8($cpf_busca, $array_fc, $pdo);
+                                    
+                                    // B) CRIAR O ARQUIVO DE CACHE COMPARTILHADO
+                                    $json_final_fc = json_encode($array_fc, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+                                    $cad_fc = $array_fc['CADASTRAIS'] ?? [];
+                                    $nome_cliente_fc = trim((string)($cad_fc['NOME'] ?? ''));
+                                    $nome_limpo_fc = strtolower(preg_replace('/[^A-Za-z0-9]/', '', str_replace(' ', '', $nome_cliente_fc)));
+                                    
+                                    if (!is_dir($dir_fc_json)) { @mkdir($dir_fc_json, 0777, true); }
+                                    $arquivo_cache_fc = $dir_fc_json . "{$cpf_busca}_{$nome_limpo_fc}.json";
+                                    @file_put_contents($arquivo_cache_fc, $json_final_fc);
+                                    
+                                    // C) EFETUAR O DESCONTO (Já que bateu na API externa)
+                                    if ($custo_fc > 0) {
+                                        $novo_saldo_fc = $saldo_fc - $custo_fc;
+                                        $pdo->prepare("UPDATE CLIENTE_CADASTRO SET SALDO = ? WHERE CPF = ?")->execute([$novo_saldo_fc, $cpf_dono_lote]);
+                                        
+                                        $motivo_fc = "LOTE V8 - ENRIQUECIMENTO CPF {$cpfFase3['CPF']} (API)";
+                                        $pdo->prepare("INSERT INTO fatorconferi_CLIENTE_FINANCEIRO_EXTRATO (CPF_CLIENTE, TIPO, MOTIVO, VALOR, SALDO_ANTERIOR, SALDO_ATUAL, DATA_HORA) VALUES (?, 'DEBITO', ?, ?, ?, ?, NOW())")->execute([$cpf_dono_lote, $motivo_fc, $custo_fc, $saldo_fc, $novo_saldo_fc]);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // =========================================================================
+
+            $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'OK', VALOR_LIQUIDO = ?, PRAZO = ?, SIMULATION_ID = ?, OBSERVACAO = ?, DATA_SIMULACAO = NOW() WHERE ID = ?")->execute([(float)$valor_liberado, $prazo_padrao, $sim_id, $observacao_final, $cpfFase3['ID']]);
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_PROCESSADA = QTD_PROCESSADA + 1, QTD_SUCESSO = QTD_SUCESSO + 1 WHERE ID = ?")->execute([$id_lote]);
+
+        } else {
+            $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'ERRO SIMULACAO', OBSERVACAO = ?, DATA_SIMULACAO = NOW() WHERE ID = ?")->execute([$erro_fatal, $cpfFase3['ID']]);
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_PROCESSADA = QTD_PROCESSADA + 1, QTD_ERRO = QTD_ERRO + 1 WHERE ID = ?")->execute([$id_lote]);
+        }
+        sleep(2); continue; 
+    }
+
+    if (!$work_found) { $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'CONCLUIDO', DATA_FINALIZACAO = NOW() WHERE ID = ?")->execute([$id_lote]); }
+}
+
+// ===============================================
+// FUNÇÕES AUXILIARES PARA SALVAR FATOR CONFERI
+// ===============================================
+function xmlToArray_V8($xmlObject) { $out = array(); $arrayObj = (array) $xmlObject; if (empty($arrayObj)) return ''; foreach ( $arrayObj as $index => $node ) { $out[$index] = ( is_object ( $node ) || is_array ( $node ) ) ? xmlToArray_V8 ( $node ) : $node; } return $out; }
+function getXmlString_V8($node) { if (!isset($node) || is_array($node) || is_object($node)) return ''; return trim((string)$node); }
+function formataDataBd_V8($dataStr) { if(empty(trim($dataStr))) return null; $p = explode('/', $dataStr); return (count($p) == 3) ? $p[2].'-'.$p[1].'-'.$p[0] : null; }
+function converterEstadoUF_V8($estado) { if(is_array($estado)) return 'SP'; $estado = strtoupper(trim(preg_replace('/[^a-zA-Z\s]/', '', $estado))); if (strlen($estado) == 2) return $estado; $mapa = ['ACRE'=>'AC','ALAGOAS'=>'AL','AMAPA'=>'AP','AMAZONAS'=>'AM','BAHIA'=>'BA','CEARA'=>'CE','DISTRITO FEDERAL'=>'DF','ESPIRITO SANTO'=>'ES','GOIAS'=>'GO','MARANHAO'=>'MA','MATO GROSSO'=>'MT','MATO GROSSO DO SUL'=>'MS','MINAS GERAIS'=>'MG','PARA'=>'PA','PARAIBA'=>'PB','PARANA'=>'PR','PERNAMBUCO'=>'PE','PIAUI'=>'PI','RIO DE JANEIRO'=>'RJ','RIO GRANDE DO NORTE'=>'RN','RIO GRANDE DO SUL'=>'RS','RONDONIA'=>'RO','RORAIMA'=>'RR','SANTA CATARINA'=>'SC','SAO PAULO'=>'SP','SERGIPE'=>'SE','TOCANTINS'=>'TO']; return $mapa[$estado] ?? 'SP'; }
+
+function inserirDadosOficiais_V8($cpf, $array_completo, $pdo) {
+    $cad = (isset($array_completo['CADASTRAIS']) && is_array($array_completo['CADASTRAIS'])) ? $array_completo['CADASTRAIS'] : [];
+    $nome = getXmlString_V8($cad['NOME'] ?? ''); 
+    $nascimento = formataDataBd_V8(getXmlString_V8($cad['NASCTO'] ?? '')); 
+    $mae = substr(getXmlString_V8($cad['NOME_MAE'] ?? ''), 0, 150); 
+    $sexo = substr(getXmlString_V8($cad['SEXO'] ?? ''), 0, 20); 
+    $rg = substr(getXmlString_V8($cad['RG'] ?? ''), 0, 20); 
+    $profissao = substr(getXmlString_V8($cad['PROFISSAO'] ?? ''), 0, 50);
+    
+    $pdo->beginTransaction();
+    $pdo->prepare("INSERT INTO dados_cadastrais (cpf, nome, sexo, nascimento, nome_mae, rg, carteira_profissional) VALUES (?, ?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE nome=VALUES(nome), sexo=VALUES(sexo), nascimento=VALUES(nascimento), nome_mae=VALUES(nome_mae), rg=VALUES(rg), carteira_profissional=VALUES(carteira_profissional)")->execute([str_pad($cpf, 11, '0', STR_PAD_LEFT), $nome, $sexo, $nascimento, $mae, $rg, $profissao]); 
+    
+    $pdo->prepare("DELETE FROM enderecos WHERE cpf = ?")->execute([str_pad($cpf, 11, '0', STR_PAD_LEFT)]); 
+    if(isset($array_completo['ENDERECOS']['ENDERECO'])) { 
+        $enderecos = $array_completo['ENDERECOS']['ENDERECO']; 
+        if(isset($enderecos['LOGRADOURO']) || isset($enderecos['CIDADE'])) { $enderecos = [$enderecos]; } 
+        $stmtEnd = $pdo->prepare("INSERT INTO enderecos (cpf, logradouro, numero, bairro, cidade, uf, cep) VALUES (?, ?, ?, ?, ?, ?, ?)"); 
+        foreach($enderecos as $end) { 
+            if(is_array($end)) { 
+                $stmtEnd->execute([str_pad($cpf, 11, '0', STR_PAD_LEFT), substr(getXmlString_V8($end['LOGRADOURO'] ?? ''), 0, 65000), substr(getXmlString_V8($end['NUMERO'] ?? ''), 0, 20), substr(getXmlString_V8($end['BAIRRO'] ?? ''), 0, 100), substr(getXmlString_V8($end['CIDADE'] ?? ''), 0, 100), converterEstadoUF_V8(getXmlString_V8($end['ESTADO'] ?? '')), substr(preg_replace('/\D/', '', getXmlString_V8($end['CEP'] ?? '')), 0, 8)]); 
+            } 
+        } 
+    }
+    
+    $stmtTel = $pdo->prepare("INSERT IGNORE INTO telefones (cpf, telefone_cel) VALUES (?, ?)"); 
+    if(isset($array_completo['TELEFONES_MOVEL']['TELEFONE'])) { 
+        $telefones = $array_completo['TELEFONES_MOVEL']['TELEFONE']; 
+        if(isset($telefones['NUMERO'])) { $telefones = [$telefones]; } 
+        foreach($telefones as $tel) { 
+            if(is_array($tel)) { 
+                $numLimpo = preg_replace('/\D/', '', getXmlString_V8($tel['NUMERO'] ?? '')); 
+                if(strlen($numLimpo) == 13 && strpos($numLimpo, '55') === 0) { $numLimpo = substr($numLimpo, 2); } 
+                if(strlen($numLimpo) == 11) { $stmtTel->execute([str_pad($cpf, 11, '0', STR_PAD_LEFT), $numLimpo]); } 
+            } 
+        } 
+    }
+
+    if(isset($array_completo['EMAILS']['EMAIL'])) {
+        $lista_emails = $array_completo['EMAILS']['EMAIL'];
+        if(is_string($lista_emails)) { $lista_emails = [$lista_emails]; }
+        $stmtVerificaEmail = $pdo->prepare("SELECT id FROM emails WHERE cpf = ? AND email = ?");
+        $stmtInsereEmail = $pdo->prepare("INSERT INTO emails (cpf, email) VALUES (?, ?)");
+        foreach($lista_emails as $em) {
+            $email_str = is_array($em) ? getXmlString_V8($em['EMAIL'] ?? '') : getXmlString_V8($em);
+            $email_str = strtolower(trim($email_str));
+            if(!empty($email_str) && strpos($email_str, '@') !== false) {
+                $stmtVerificaEmail->execute([str_pad($cpf, 11, '0', STR_PAD_LEFT), $email_str]);
+                if($stmtVerificaEmail->rowCount() == 0) {
+                    $stmtInsereEmail->execute([str_pad($cpf, 11, '0', STR_PAD_LEFT), substr($email_str, 0, 150)]);
+                }
+            }
+        }
+    }
+    $pdo->commit();
+}
+?>

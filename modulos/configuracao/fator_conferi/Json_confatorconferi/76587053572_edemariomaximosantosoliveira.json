@@ -1,0 +1,163 @@
+{
+    "CADASTRAIS": {
+        "CPF": "76587053572",
+        "NOME": "EDEMARIO MAXIMO SANTOS OLIVEIRA",
+        "NOME_MAE": "JOSELITA SANTOS OLIVEIRA",
+        "NASCTO": "26\/03\/1974",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "077382670566",
+        "NIT": "1248932700",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "511215",
+        "PROFISSAO": "COBRADOR DE TRANSPORTES COLETIVOS (EXCETO TREM)",
+        "SALARIO": " 2.414,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "71991476303",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71988279644",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71996319692",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "71987092550",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "71987580203",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "CAM TRES A",
+                "NUMERO": "16",
+                "COMPLEMENTO": "CJ I V 1",
+                "BAIRRO": "PIRAJA",
+                "CEP": "41291065",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "CJ PIRAJA",
+                "NUMERO": "1",
+                "COMPLEMENTO": "V LOCAL 1 CAM 3 A",
+                "BAIRRO": "PIRAJA",
+                "CEP": "41290540",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "ALAMEDA SALVADOR",
+                "NUMERO": "207",
+                "COMPLEMENTO": "ED   EDIFYCIO  SAO",
+                "BAIRRO": "CABULA",
+                "CEP": "41150575",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "CONJUNTO PIRAJA",
+                "NUMERO": "16",
+                "COMPLEMENTO": "CAM 3 A",
+                "BAIRRO": "PIRAJA",
+                "CEP": "41290540",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "304010545",
+            "NOME": "JOSELITA SANTOS OLIVEIRA",
+            "IDADE": "54 anos",
+            "LOCAL": "JAGUAQUARA\/BA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PLATAFORMA TRANSPORTES SPE S\/A",
+                "CNPJ": "21120716000100",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "511215",
+                "DATA_ADMISSAO": "25\/07\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PLATAFORMA TRANSPORTES SPE S\/A",
+                "CNPJ": "21120716000364",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "511215",
+                "DATA_ADMISSAO": "01\/05\/2015",
+                "DATA_DEMISSAO": "25\/07\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "AXE TRANSPORTES URBANOS LTDA",
+                "CNPJ": "00154710000176",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "511215",
+                "DATA_ADMISSAO": "02\/01\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

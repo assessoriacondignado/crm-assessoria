@@ -1,0 +1,276 @@
+{
+    "CADASTRAIS": {
+        "CPF": "32230758870",
+        "NOME": "HEBER EDMILSON SANTOS DA SILVA",
+        "NOME_MAE": "MARIA JOSE SANTOS DA SILVA",
+        "NASCTO": "06\/08\/1984",
+        "IDADE": "41 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "026141311406",
+        "NIT": "13038298297",
+        "ESCOLARIDADE": "SUPERIOR INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "391205",
+        "PROFISSAO": "INSPETOR DE QUALIDADE",
+        "SALARIO": " 2.184,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2721413425",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2733981300",
+                "OPERADORA": "TELEMAR\/ES",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2732284592",
+                "OPERADORA": "TELEMAR\/ES",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11976022856",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11988553604",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "27999156454",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "27992547962",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "27992580552",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "heber.edmilson@yahoo.com",
+            "aline.20@yahoo.com.br",
+            "heber.edmilson@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "ROD NORTE SUL",
+                "NUMERO": "30",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ RESIDENCIAL LARANJEIRAS",
+                "CEP": "29165010",
+                "CIDADE": "SERRA",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "R JOSE TIMOTHEO DA SILVA",
+                "NUMERO": "120",
+                "COMPLEMENTO": "BL 1 AP 88",
+                "BAIRRO": "S PEDRO",
+                "CEP": "06172220",
+                "CIDADE": "OSASCO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MANOEL BANDEIRA",
+                "NUMERO": "961",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S DIOGO I",
+                "CEP": "29163278",
+                "CIDADE": "SERRA",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "R CAMPO VERDE",
+                "NUMERO": "745",
+                "COMPLEMENTO": "BL 4 AP 301",
+                "BAIRRO": "FEU ROSA",
+                "CEP": "29172066",
+                "CIDADE": "SERRA",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "AV JOAO CARLOS DA SILVA BORGES",
+                "NUMERO": "505",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL CRUZEIRO",
+                "CEP": "04726001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R COELHO NETO",
+                "NUMERO": "11",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SAO DIOGO I",
+                "CEP": "29163241",
+                "CIDADE": "SERRA",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "RUA DA ALDEIA",
+                "NUMERO": "30",
+                "COMPLEMENTO": "ED   EDIFYCIO  GLA",
+                "BAIRRO": "PARQUE RESIDENCIAL LARANJEIRAS",
+                "CEP": "29165150",
+                "CIDADE": "SERRA",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "R COELHO NETO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "CS 11",
+                "BAIRRO": "SAO DIOGO I",
+                "CEP": "29163241",
+                "CIDADE": "SERRA",
+                "ESTADO": "ES"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "36389528",
+            "NOME": "MARIA JOSE SANTOS DA SILVA",
+            "IDADE": "57 anos",
+            "LOCAL": "RIO DE JANEIRO\/RJ",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "MARIA JOSE SANTOS DA SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "SERRA\/ES",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "6651680803"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "DOF SUBSEA BRASIL SERVICOS LTDA",
+                "CNPJ": "07925451000189",
+                "CIDADE": "MACAE-RJ",
+                "PROFISSAO": "781305",
+                "DATA_ADMISSAO": "08\/02\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "RID METALMECANICA LTDA",
+                "CNPJ": "13452903000155",
+                "CIDADE": "SERRA-ES",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "02\/12\/2020",
+                "DATA_DEMISSAO": "15\/01\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "TECNOBOR INDUSTRIAL METAL LTDA",
+                "CNPJ": "07790434000181",
+                "CIDADE": "SERRA-ES",
+                "PROFISSAO": "721215",
+                "DATA_ADMISSAO": "01\/09\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "TECALMEC METAL MECANICA LTDA",
+                "CNPJ": "15568814000102",
+                "CIDADE": "VITORIA-ES",
+                "PROFISSAO": "391205",
+                "DATA_ADMISSAO": "03\/08\/2015",
+                "DATA_DEMISSAO": "24\/07\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ALVATEC INDUSTRIA E COMERCIO LTDA",
+                "CNPJ": "00993021000155",
+                "CIDADE": "SERRA-ES",
+                "PROFISSAO": "391215",
+                "DATA_ADMISSAO": "28\/11\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "HKM INDUSTRIA E COMERCIO S\/A",
+                "CNPJ": "09493879000125",
+                "CIDADE": "SERRA-ES",
+                "PROFISSAO": "391205",
+                "DATA_ADMISSAO": "07\/11\/2011",
+                "DATA_DEMISSAO": "23\/06\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

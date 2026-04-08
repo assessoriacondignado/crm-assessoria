@@ -1,0 +1,196 @@
+{
+    "CADASTRAIS": {
+        "CPF": "2993314904",
+        "NOME": "RODRIGO PIEKARSKI",
+        "NOME_MAE": "MARIA FATIMA CARRIEL PIEKARSKI",
+        "NASCTO": "28\/10\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "76070903",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "073441020639",
+        "NIT": "1706939624",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "313305",
+        "PROFISSAO": "TECNICO DE COMUNICACAO DE DADOS",
+        "SALARIO": " 11.103,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4132066603",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4130292866",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4130535386",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "23\/07\/2010",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4132535386",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "41984231346",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41998497961",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41984163763",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "m_fatimac@oi.com.br",
+            "peso47@gmail.com",
+            "pesao47@gmail.com",
+            "m_fatimac@ig.com.br",
+            "mstr_pesao47@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R EDENIR CORREIA",
+                "NUMERO": "8",
+                "COMPLEMENTO": "LE D",
+                "BAIRRO": "STA CANDIDA",
+                "CEP": "82720245",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R EUCLIDES DA CUNHA",
+                "NUMERO": "999",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BIGORRILHO",
+                "CEP": "80730360",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R DAVID GERONASSO",
+                "NUMERO": "437",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOA VISTA",
+                "CEP": "82540150",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "20151195900",
+                "NOME": "MARIA FATIMA CARRIEL PIEKARSKI",
+                "IDADE": "69 anos",
+                "LOCAL": "CURITIBA\/PR",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "4160245994",
+                "NOME": "FABIO PIEKARSKI",
+                "IDADE": "39 anos",
+                "LOCAL": "CURITIBA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "8368319935",
+                "NOME": "AMANDA PIEKARSKI",
+                "IDADE": "35 anos",
+                "LOCAL": "CURITIBA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "MARIA DULCE DE ANDRADE TEIXEIRA",
+                "IDADE": "",
+                "LOCALIDADE": "BANANEIRAS\/PB",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "71355529468"
+            },
+            {
+                "NOME": "ZILDA TREVIZAN DE AZEVEDO",
+                "IDADE": "",
+                "LOCALIDADE": "SAO JOSE DOS PINHAIS\/PR",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "83518991949"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "COMPANHIA DE TECNOLOGIA DA INFORMACAO E COMUNICACAO DO PARANA - CELEPAR",
+            "CNPJ": "76545011000119",
+            "CIDADE": "CURITIBA-PR",
+            "PROFISSAO": "313305",
+            "DATA_ADMISSAO": "02\/06\/2008",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

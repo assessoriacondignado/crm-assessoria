@@ -1,0 +1,158 @@
+{
+    "CADASTRAIS": {
+        "CPF": "60979100534",
+        "NOME": "EDIVALDO LIMA DE SANTANA",
+        "NOME_MAE": "ALVILETE SILVA LIMA",
+        "NASCTO": "18\/04\/1973",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "012874072186",
+        "NIT": "1243023351",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411010",
+        "PROFISSAO": "ASSISTENTE ADMINISTRATIVO",
+        "SALARIO": " 3.551,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "7932488975",
+            "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "79998925665",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999072202",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999558579",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79988348736",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "03\/06\/2012",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "79988327995",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "valdolima53edi13@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DEZ",
+                "NUMERO": "41",
+                "COMPLEMENTO": "",
+                "BAIRRO": "FERNANDO COLLOR",
+                "CEP": "49155102",
+                "CIDADE": "NOSSA SENHORA DO SOCORRO",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "TV ANTONIO TAVARES DA COSTA",
+                "NUMERO": "1472",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MAMEDE PAES MENDONCA",
+                "CEP": "49509161",
+                "CIDADE": "ITABAIANA",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "ONZE RUA RUA",
+                "NUMERO": "10",
+                "COMPLEMENTO": "CS 41",
+                "BAIRRO": "CAICOCA",
+                "CEP": "49160000",
+                "CIDADE": "NOSSA SENHORA DO SOCORRO",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "TV 10",
+                "NUMERO": "41",
+                "COMPLEMENTO": "",
+                "BAIRRO": "FERNANDO COLLOR DE MELO",
+                "CEP": "49160000",
+                "CIDADE": "NOSSA SENHORA DO SOCORRO",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - SENAC",
+                "CNPJ": "03654618000678",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "07\/02\/2022",
+                "DATA_DEMISSAO": "01\/12\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - SENAC",
+                "CNPJ": "03654618000163",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "01\/12\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

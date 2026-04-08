@@ -1,0 +1,193 @@
+{
+    "CADASTRAIS": {
+        "CPF": "16655251850",
+        "NOME": "CARLOS ALBERTO DOS SANTOS",
+        "NOME_MAE": "IRENE COPE DOS SANTOS",
+        "NASCTO": "29\/11\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "265158290108",
+        "NIT": "12457730904",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782220",
+        "PROFISSAO": "OPERADOR DE EMPILHADEIRA",
+        "SALARIO": " 2.698,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1125451508",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "23\/02\/2000",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11998844331",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11997595313",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11965451508",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "carlosalberto.s2008@terra.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "TRAV RAMAGEM",
+                "NUMERO": "20",
+                "COMPLEMENTO": ":20",
+                "BAIRRO": "PARQUE BOTURUSSU",
+                "CEP": "03804220",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MIGUEL DE SIQUEIRA",
+                "NUMERO": "91",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM MATARAZZO",
+                "CEP": "03814010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MIGUEL DE SIQUEIRA",
+                "NUMERO": "110",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM MATARAZZO",
+                "CEP": "03814010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MIGUEL DE SERQUEIRA",
+                "NUMERO": "110",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM SANTA TEREZINHA (ZONA LESTE)",
+                "CEP": "08430160",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "35830822814",
+                "NOME": "IRENE COPE DOS SANTOS",
+                "IDADE": "78 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "14672718883",
+                "NOME": "REGINA COPE DOS SANTOS",
+                "IDADE": "51 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "29053852867",
+                "NOME": "WILSON COPE DOS SANTOS",
+                "IDADE": "46 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "32856114806",
+                "NOME": "LUCIANA COPE DOS SANTOS",
+                "IDADE": "41 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ALESSANDRA CORONADO DOS SANTOS",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "25224705827"
+            },
+            {
+                "NOME": "CARLOS ESPIRITO SANTO FILHO",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "2131251882"
+            },
+            {
+                "NOME": "DEBORA ALVES DE LIMA",
+                "IDADE": "",
+                "LOCALIDADE": "SANTA CRUZ DO SUL\/RS",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "28931762836"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SMRC FABRICACAO E COMERCIO DE PRODUTOS AUTOMOTIVOS DO BRASIL LTDA",
+                "CNPJ": "21881060000130",
+                "CIDADE": "GUARULHOS-SP",
+                "PROFISSAO": "782220",
+                "DATA_ADMISSAO": "01\/01\/2016",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VISTEON SISTEMAS AUTOMOTIVOS LTDA.",
+                "CNPJ": "03509521000167",
+                "CIDADE": "GUARULHOS-SP",
+                "PROFISSAO": "782220",
+                "DATA_ADMISSAO": "11\/03\/1996",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,186 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25945899852",
+        "NOME": "CASSIA CAIRES DE SANTANA",
+        "NOME_MAE": "MARIA APARECIDA CAIRES DIAS DE SANTANA",
+        "NASCTO": "11\/10\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "284784200167",
+        "NIT": "12636789857",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142330",
+        "PROFISSAO": "",
+        "SALARIO": " 9.136,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1155137623",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11992169660",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11963446856",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "06\/02\/2013",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11981131122",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "27\/07\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11998113112",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "ccsantana@timbrasil.com.br.com.br",
+            "cassia_santana@hotmail.com",
+            "cassia.caires@lesenssoap.com.br",
+            "kassys@ig.com.br",
+            "ccsantana@timbrasil.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MANUEL AFONSO",
+                "NUMERO": "66",
+                "COMPLEMENTO": "CS 1",
+                "BAIRRO": "JARDIM LIDIA",
+                "CEP": "05862220",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO FORTUNATO",
+                "NUMERO": "175",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "BURGO PAULISTA",
+                "CEP": "03681000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MANUEL AFONSO",
+                "NUMERO": "6",
+                "COMPLEMENTO": "CASA 01",
+                "BAIRRO": "JARDIM LIDIA",
+                "CEP": "05862220",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "22083400860",
+                "NOME": "KLEBER CAIRES DE SANTANA",
+                "IDADE": "43 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "26502230814",
+                "NOME": "CRISTINA CAIRES DE SANTANA",
+                "IDADE": "48 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "56198915859",
+                "NOME": "LUIZA CAIRES AUGUSTO",
+                "IDADE": "7 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ADILA CASSIA ALVES DE SANTANA",
+                "IDADE": "",
+                "LOCALIDADE": "RIO DE JANEIRO\/RJ",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "14505394751"
+            },
+            {
+                "NOME": "JOSE ADERALDO DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "DELTA\/MG",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "2799213499"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "EDITORA E DISTRIBUIDORA EDUCACIONAL S\/A",
+                "CNPJ": "38733648005290",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142315",
+                "DATA_ADMISSAO": "01\/07\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TIM CELULAR S.A.",
+                "CNPJ": "04206050000180",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142330",
+                "DATA_ADMISSAO": "07\/10\/2002",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

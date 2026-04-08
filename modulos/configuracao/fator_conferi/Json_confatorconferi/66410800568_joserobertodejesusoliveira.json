@@ -1,0 +1,169 @@
+{
+    "CADASTRAIS": {
+        "CPF": "66410800568",
+        "NOME": "JOSE ROBERTO DE JESUS OLIVEIRA",
+        "NOME_MAE": "SILVANILDE DE JESUS",
+        "NASCTO": "30\/09\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1242440462",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521135",
+        "PROFISSAO": "FRENTISTA",
+        "SALARIO": " 1.908,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "7932117618",
+            "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "79998536114",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999229158",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "79999278932",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "robertorob3824@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R STA BARBARA",
+                "NUMERO": "2",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ZONA RURAL",
+                "CEP": "49740000",
+                "CIDADE": "CARMOPOLIS",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "AV BR DE MARUIM",
+                "NUMERO": "78",
+                "COMPLEMENTO": "AP 1 TO",
+                "BAIRRO": "CENTRO",
+                "CEP": "49010340",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R MARIA ARTULINA CONCEICAO",
+                "NUMERO": "56",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "SATA BARBARA 2",
+                "CEP": "49740000",
+                "CIDADE": "CARMOPOLIS",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "AV HUMBERTO GOMES",
+                "NUMERO": "682",
+                "COMPLEMENTO": "",
+                "BAIRRO": "",
+                "CEP": "49760000",
+                "CIDADE": "ROSARIO DO CATETE",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "7765567381",
+                "NOME": "RAIMUNDO NONATO DE JESUS SOUSA",
+                "IDADE": "24 anos",
+                "LOCAL": "ITAPECURU MIRIM\/MA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "51701480549",
+                "NOME": "PAULO CESAR DE JESUS OLIVEIRA",
+                "IDADE": "57 anos",
+                "LOCAL": "ROSARIO DO CATETE\/SE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "57430098568",
+                "NOME": "JOSE SERGIO OLIVEIRA FILHO",
+                "IDADE": "54 anos",
+                "LOCAL": "CARMOPOLIS\/SE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "62110701366",
+                "NOME": "ERICA DE JESUS",
+                "IDADE": "29 anos",
+                "LOCAL": "ITAPECURU MIRIM\/MA",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LEIVAL SERVICOS COMERCIO LTDA",
+                "CNPJ": "16198632000141",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "521135",
+                "DATA_ADMISSAO": "11\/20\/2012",
+                "DATA_DEMISSAO": "31\/05\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SOLAR COMERCIO DE COMBUSTIVEIS LTDA",
+                "CNPJ": "31106307000103",
+                "CIDADE": "CARMOPOLIS-SE",
+                "PROFISSAO": "521135",
+                "DATA_ADMISSAO": "01\/06\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

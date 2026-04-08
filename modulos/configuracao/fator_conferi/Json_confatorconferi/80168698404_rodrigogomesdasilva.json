@@ -1,0 +1,277 @@
+{
+    "CADASTRAIS": {
+        "CPF": "80168698404",
+        "NOME": "RODRIGO GOMES DA SILVA",
+        "NOME_MAE": "GILDETE GOMES DA SILVA",
+        "NASCTO": "13\/08\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "050814160884",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7532682888",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "07\/07\/2007",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9433581944",
+                "OPERADORA": "TELEMAR\/PA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9433924348",
+                "OPERADORA": "TELEMAR\/PA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "94991320939",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "94991496826",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "75999983171",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "75998920476",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PF_CONTROLE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "94991844793",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "21\/02\/2019",
+                "TIPO_TEL": "MOVEL POS-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "jolulu2618@hotmail.com",
+            "srodrigo872@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOSE MENEGUEL",
+                "NUMERO": "341",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MARENCECENTRO",
+                "CEP": "68537000",
+                "CIDADE": "CANAA DOS CARAJAS",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "R VINTE E NOVE",
+                "NUMERO": "98",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ZUMBI DO PACHECO",
+                "CEP": "54230012",
+                "CIDADE": "JABOATAO DOS GUARARAPES",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R DEZOITO",
+                "NUMERO": "16",
+                "COMPLEMENTO": "LT 32 C 71",
+                "BAIRRO": "S CENTRAL",
+                "CEP": "76510000",
+                "CIDADE": "CRIXAS",
+                "ESTADO": "GO"
+            },
+            {
+                "LOGRADOURO": "R TEOTONIO VILELA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "68537000",
+                "CIDADE": "CANAA DOS CARAJAS",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "RUA R FEIRA SANTANA",
+                "NUMERO": "521",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NCL HAB CVRD",
+                "CEP": "48770000",
+                "CIDADE": "TEOFILANDIA",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "BRASIL",
+                "NUMERO": "105",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RODOVIARIA",
+                "CEP": "48700000",
+                "CIDADE": "SERRINHA",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R MONTE CASTELO",
+                "NUMERO": "171",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MONTE CASTELO",
+                "CEP": "68537000",
+                "CIDADE": "CANAA DOS CARAJAS",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "AV WEYNE CAVALCANTE",
+                "NUMERO": "5",
+                "COMPLEMENTO": "CX 48",
+                "BAIRRO": "CENTRO",
+                "CEP": "68537000",
+                "CIDADE": "CANAA DOS CARAJAS",
+                "ESTADO": "PA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "280093390",
+            "NOME": "GILDETE GOMES DA SILVA",
+            "IDADE": "65 anos",
+            "LOCAL": "RIACHAO\/MA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TALISMA LOCACOES   SERVICOS LTDA",
+                "CNPJ": "21651403000170",
+                "CIDADE": "CANAA DOS CARAJAS-PA",
+                "PROFISSAO": "351605",
+                "DATA_ADMISSAO": "30\/12\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "AVB MINERACAO LTDA.",
+                "CNPJ": "07605563000748",
+                "CIDADE": "AGUA AZUL DO NORTE-PA",
+                "PROFISSAO": "351605",
+                "DATA_ADMISSAO": "12\/12\/2022",
+                "DATA_DEMISSAO": "24\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TONIOLO, BUSNELLO S\/A - TUNEIS, TERRAPLENAGENS E PAVIMENTACOES - EM RECUPERACAO JUDICIAL",
+                "CNPJ": "89723977000140",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "351605",
+                "DATA_ADMISSAO": "21\/20\/1910",
+                "DATA_DEMISSAO": "14\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "IBQ - INDUSTRIAS QUIMICAS S\/A",
+                "CNPJ": "78391612003599",
+                "CIDADE": "CANAA DOS CARAJAS-PA",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "20\/20\/2001",
+                "DATA_DEMISSAO": "06\/10\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "CONDOMINIO DO SHOPPING CENTER SERRINHA",
+                "CNPJ": "22686721000130",
+                "CIDADE": "SERRINHA-BA",
+                "PROFISSAO": "517410",
+                "DATA_ADMISSAO": "11\/08\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "CENCOSUD BRASIL COMERCIAL LTDA.",
+                "CNPJ": "39346861044614",
+                "CIDADE": "SERRINHA-BA",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "16\/12\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "INFRALINK SERVICOS DE INFRA-ESTRUTURA EMPRESARIAL LTDA",
+                "CNPJ": "01704331000175",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "410205",
+                "DATA_ADMISSAO": "12\/20\/1903",
+                "DATA_DEMISSAO": "22\/10\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

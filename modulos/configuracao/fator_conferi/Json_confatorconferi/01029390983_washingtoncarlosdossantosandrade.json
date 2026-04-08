@@ -1,0 +1,152 @@
+{
+    "CADASTRAIS": {
+        "CPF": "1029390983",
+        "NOME": "WASHINGTON CARLOS DOS SANTOS ANDRADE",
+        "NOME_MAE": "ISABEL XAVIER DOS SANTOS ANDRADE",
+        "NASCTO": "31\/08\/1987",
+        "IDADE": "38 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12899240503",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411010",
+        "PROFISSAO": "ASSISTENTE ADMINISTRATIVO",
+        "SALARIO": " 1.231,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "4130531801",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "41999932256",
+            "OPERADORA": "TIM CELULAR S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "MOVEL",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "neiahp@bol.com.br",
+            "washingtoncarlos3108@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ANTONIO BERTOLDI",
+                "NUMERO": "925",
+                "COMPLEMENTO": "Q 99 LT 6",
+                "BAIRRO": "CPO DE SANTANA",
+                "CEP": "81490426",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "RUA JEOVA TEIXEIRA DE LARA",
+                "NUMERO": "150",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "TATUQUARA",
+                "CEP": "81470295",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "7330412996",
+            "NOME": "ANDRIELLI FERNANDA DOS SANTOS ANDRADE",
+            "IDADE": "35 anos",
+            "LOCAL": "CURITIBA\/PR",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "JOAO MARIA PACHECO",
+                "IDADE": "",
+                "LOCALIDADE": "CURITIBA\/PR",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "51867664968"
+            },
+            {
+                "NOME": "NILCINEIA HEMKEMAIER PACHECO",
+                "IDADE": "",
+                "LOCALIDADE": "JUNDIAI\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "1467900907"
+            },
+            {
+                "NOME": "NILCINEIA PACHECO",
+                "IDADE": "",
+                "LOCALIDADE": "ELDORADO DO SUL\/RS",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "2934840905"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "RENAULT DO BRASIL LTDA.",
+                "CNPJ": "00913443000173",
+                "CIDADE": "SAO JOSE DOS PINHAIS-PR",
+                "PROFISSAO": "314410",
+                "DATA_ADMISSAO": "01\/04\/2014",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VIVANTE S.A.",
+                "CNPJ": "02386450003377",
+                "CIDADE": "SAO JOSE DOS PINHAIS-PR",
+                "PROFISSAO": "715615",
+                "DATA_ADMISSAO": "04\/03\/2013",
+                "DATA_DEMISSAO": "01\/04\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "CUSHMAN   WAKEFIELD CONSULTORIA IMOBILIARIA LTDA",
+                "CNPJ": "02730611000110",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "15\/10\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "AWG METALURGICA E COMERCIO LTDA",
+            "CNPJ": "08611313000198",
+            "CIDADE": "MANDIRITUBA-PR",
+            "QUALIFICACAO": "SÃ³cio",
+            "DATA_ENTRADA": "20061026",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

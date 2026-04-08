@@ -1,0 +1,169 @@
+{
+    "CADASTRAIS": {
+        "CPF": "2916581995",
+        "NOME": "SIDNEI DA SILVA SANTOS",
+        "NOME_MAE": "AMALIA DE LOURDES DOS SANTOS",
+        "NASCTO": "14\/04\/1980",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "069052490620",
+        "NIT": "12647205703",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "4635361973",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "46991116531",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "46991365006",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "46988090958",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "SIT FAZENDA MAZURANA",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "INTERIOR",
+                "CEP": "85660000",
+                "CIDADE": "DOIS VIZINHOS",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "FAZ LOC LINHA MAZURANA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "ZONA RURAL",
+                "BAIRRO": "",
+                "CEP": "85660000",
+                "CIDADE": "DOIS VIZINHOS",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "4033292993",
+                "NOME": "AMALIA DE LOURDES DOS SANTOS",
+                "IDADE": "65 anos",
+                "LOCAL": "DOIS VIZINHOS\/PR",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "3935115962",
+                "NOME": "CLAUDINEI DA SILVA SANTOS",
+                "IDADE": "43 anos",
+                "LOCAL": "DOIS VIZINHOS\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "7231017959",
+                "NOME": "FERNANDA DA SILVA SANTOS",
+                "IDADE": "37 anos",
+                "LOCAL": "DOIS VIZINHOS\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "10554349922",
+                "NOME": "LETICIA DA SILVA SANTOS",
+                "IDADE": "23 anos",
+                "LOCAL": "",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PLUMA AGRO AVICOLA LTDA",
+                "CNPJ": "04656883000143",
+                "CIDADE": "DOIS VIZINHOS-PR",
+                "PROFISSAO": "715210",
+                "DATA_ADMISSAO": "22\/20\/2008",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "P J COMPENSADOS LTDA",
+                "CNPJ": "03326739000186",
+                "CIDADE": "CRUZEIRO DO IGUACU-PR",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "17\/06\/2021",
+                "DATA_DEMISSAO": "12\/07\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "",
+                "CNPJ": "05619338900144",
+                "CIDADE": "",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/09\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "BRF S.A.",
+                "CNPJ": "01838723037047",
+                "CIDADE": "DOIS VIZINHOS-PR",
+                "PROFISSAO": "848520",
+                "DATA_ADMISSAO": "04\/05\/2015",
+                "DATA_DEMISSAO": "01\/11\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

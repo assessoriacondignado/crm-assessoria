@@ -1,0 +1,130 @@
+{
+    "CADASTRAIS": {
+        "CPF": "18214170893",
+        "NOME": "JEFFERSON CLAUDIO DE ANDRADE VESSONI",
+        "NOME_MAE": "MARIA APARECIDA DE ANDRADE",
+        "NASCTO": "27\/08\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "257486020108",
+        "NIT": "1239261927",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782220",
+        "PROFISSAO": "OPERADOR DE EMPILHADEIRA",
+        "SALARIO": " 3.877,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1132264285",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1932314561",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "19991082323",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "MOVEL",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "baixa"
+        }
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "godoi@lexxa.com.br",
+            "dinhovessoni@terra.com.br",
+            "lucassfernandessdassilva@gmail.com",
+            "dinhovessoni@yahoo.com.br",
+            "andradedinho@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "R JOAO TOSELLO",
+            "NUMERO": "180",
+            "COMPLEMENTO": "",
+            "BAIRRO": "RECANTO DO SOL II",
+            "CEP": "13056636",
+            "CIDADE": "CAMPINAS",
+            "ESTADO": "SP"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "25471716",
+            "NOME": "MARIA APARECIDA DE ANDRADE",
+            "IDADE": "60 anos",
+            "LOCAL": "LINHARES\/ES",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "EDILENE PEREIRA DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "4421089230"
+            },
+            {
+                "NOME": "LUCAS FERNANDES DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "FORTALEZA\/CE",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "61061568326"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PIRELLI PNEUS LTDA.",
+                "CNPJ": "59179838000218",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "782220",
+                "DATA_ADMISSAO": "16\/03\/2017",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ROBERT BOSCH LIMITADA",
+                "CNPJ": "45990181000189",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "721215",
+                "DATA_ADMISSAO": "08\/09\/2009",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

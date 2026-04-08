@@ -1,0 +1,225 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25818657841",
+        "NOME": "RENATA FERREIRA DE LIMA",
+        "NOME_MAE": "NAIR FERREIRA DE LIMA",
+        "NASCTO": "23\/11\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "195939370191",
+        "NIT": "1254097788",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "354125",
+        "PROFISSAO": "ASSISTENTE DE VENDAS",
+        "SALARIO": " 4.452,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1432433975",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1432231796",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1432273975",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "14996420329",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "14998701432",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "14999990101",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "14996070329",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "14981649073",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "cintialima@adv.oabsp.gov.br",
+            "renata_ferreiradelima@hotmail.com",
+            "relima@linkbr.com.br",
+            "reartesanato@terra.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ADOLFO LUTZ",
+                "NUMERO": "1035",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "17015390",
+                "CIDADE": "BAURU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ADOLFO LUTZ",
+                "NUMERO": "35",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CENTRO",
+                "CEP": "17015390",
+                "CIDADE": "BAURU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ADOLFO LUTZ",
+                "NUMERO": "1",
+                "COMPLEMENTO": "35 714",
+                "BAIRRO": "CENTRO",
+                "CEP": "17015390",
+                "CIDADE": "BAURU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R AMADEU SANGIOVANI",
+                "NUMERO": "6",
+                "COMPLEMENTO": "7",
+                "BAIRRO": "VL MARIANA",
+                "CEP": "17017140",
+                "CIDADE": "BAURU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ADOLFO LUTZ",
+                "NUMERO": "135",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "17015390",
+                "CIDADE": "BAURU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA RODRIGUES ALVES",
+                "NUMERO": "7040",
+                "COMPLEMENTO": "SLA 1105",
+                "BAIRRO": "CENTRO",
+                "CEP": "17015001",
+                "CIDADE": "BAURU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ADOLFO LUTZ",
+                "NUMERO": "0",
+                "COMPLEMENTO": "QD 1 35",
+                "BAIRRO": "CENTRO",
+                "CEP": "17015390",
+                "CIDADE": "BAURU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA RODRIGUES ALVES",
+                "NUMERO": "40",
+                "COMPLEMENTO": "Q7 SL 1105",
+                "BAIRRO": "CENTRO",
+                "CEP": "17015001",
+                "CIDADE": "BAURU",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "49119974",
+            "NOME": "NAIR FERREIRA DE LIMA",
+            "IDADE": "64 anos",
+            "LOCAL": "RIO NEGRINHO\/SC",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "LUIZ CARLOS DE LIMA",
+            "IDADE": "",
+            "LOCALIDADE": "SAO PAULO\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "63447762853"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+            "CNPJ": "92754738013493",
+            "CIDADE": "BAURU-SP",
+            "PROFISSAO": "354125",
+            "DATA_ADMISSAO": "02\/06\/2011",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

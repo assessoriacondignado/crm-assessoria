@@ -1,0 +1,189 @@
+{
+    "CADASTRAIS": {
+        "CPF": "5220918494",
+        "NOME": "LUANA SANTANA DA SILVA",
+        "NOME_MAE": "YANA BEZERRA DA SILVA",
+        "NASCTO": "05\/03\/1985",
+        "IDADE": "41 anos",
+        "SEXO": "Feminino",
+        "RG": "6980819",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "064897620817",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8134496536",
+            "OPERADORA": "TELEMAR\/PE",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "81988115535",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81994263138",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81985277085",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81985439715",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81987646734",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "srci@tutopia.com.br",
+            "luanasilva05@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOAO UZEDA LUNA",
+                "NUMERO": "177",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AGUA FRIA",
+                "CEP": "52111310",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "RUA JARDIM MARIA ELIZABETH",
+                "NUMERO": "111",
+                "COMPLEMENTO": "CS A",
+                "BAIRRO": "CAIXA D'AGUA",
+                "CEP": "53210040",
+                "CIDADE": "OLINDA",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "RUA DOUTOR ANTONIO VALENCA",
+                "NUMERO": "225",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAIXA D'AGUA",
+                "CEP": "53210290",
+                "CIDADE": "OLINDA",
+                "ESTADO": "PE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "37484575453",
+                "NOME": "YANA BEZERRA DA SILVA",
+                "IDADE": "66 anos",
+                "LOCAL": "OLINDA\/PE",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "4426494443",
+                "NOME": "PETER BEZERRA DA SILVA",
+                "IDADE": "45 anos",
+                "LOCAL": "LORENA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LOJAS RIACHUELO SA",
+                "CNPJ": "33200056035600",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "354125",
+                "DATA_ADMISSAO": "16\/01\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738015780",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/02\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738009119",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "354125",
+                "DATA_ADMISSAO": "01\/02\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVIBRAS SERVICOS TEMPORARIOS LTDA",
+                "CNPJ": "65717290000134",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "17\/11\/2012",
+                "DATA_DEMISSAO": "24\/12\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

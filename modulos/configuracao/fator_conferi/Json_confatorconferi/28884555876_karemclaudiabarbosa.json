@@ -1,0 +1,287 @@
+{
+    "CADASTRAIS": {
+        "CPF": "28884555876",
+        "NOME": "KAREM CLAUDIA BARBOSA",
+        "NOME_MAE": "NILZA CRISTINA BARBOSA",
+        "NASCTO": "26\/03\/1981",
+        "IDADE": "45 anos",
+        "SEXO": "Feminino",
+        "RG": "27447955",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "236102630108",
+        "NIT": "12707507182",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "413110",
+        "PROFISSAO": "AUXILIAR DE CONTABILIDADE",
+        "SALARIO": " 3.352,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1733042641",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1738741839",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1155180955",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1732139700",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1732174625",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "17998114111",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "17981353045",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "17981141111",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "kbarbosa@rodobens.com.br",
+            "ststreinamentovendas@itelefonica.com.br",
+            "ststreinamentovendas@vivointernetdiscada.com.br",
+            "karen@setpar.com.br",
+            "karen@setear.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV DOMINGOS FALAVINA",
+                "NUMERO": "2654",
+                "COMPLEMENTO": "C 28 PA 3",
+                "BAIRRO": "JD MUGNAINI",
+                "CEP": "15045395",
+                "CIDADE": "SAO JOSE DO RIO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R NELSON DA MATTA",
+                "NUMERO": "767",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RES ALTO DAS ANDORINHAS",
+                "CEP": "15046233",
+                "CIDADE": "SAO JOSE DO RIO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "TV LAURENO FRANCISCO",
+                "NUMERO": "628",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CAICARA",
+                "CEP": "68743590",
+                "CIDADE": "CASTANHAL",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "R GUALTER DE CARVALHO",
+                "NUMERO": "435",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD STA LUCIA",
+                "CEP": "15040180",
+                "CIDADE": "SAO JOSE DO RIO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CARMO BUISSA",
+                "NUMERO": "663",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "15270000",
+                "CIDADE": "MACAUBAL",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV CDOR VICENTE FILIZOLA",
+                "NUMERO": "5020",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "VL REDENTORA",
+                "CEP": "15015450",
+                "CIDADE": "SAO JOSE DO RIO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R VICENTE DECARA NETO",
+                "NUMERO": "77",
+                "COMPLEMENTO": "AP B 4",
+                "BAIRRO": "JD STO ANTONIO",
+                "CEP": "05819000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CAMPOS SALES",
+                "NUMERO": "371",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CENTRO",
+                "CEP": "15270000",
+                "CIDADE": "MACAUBAL",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "8385178627",
+                "NOME": "NILZA CRISTINA BARBOSA",
+                "IDADE": "40 anos",
+                "LOCAL": "PATROCINIO\/MG",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "54464212808",
+                "NOME": "GUILHERME BARBOSA SILVA",
+                "IDADE": "8 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ISIS CRISTIANE BARBOSA ROSSI",
+            "IDADE": "",
+            "LOCALIDADE": "SAO JOSE DO RIO PRETO\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "27724936870"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TRANSPORTADORA VERONESE LTDA",
+                "CNPJ": "52397767002143",
+                "CIDADE": "SAO JOSE DO RIO PRETO-SP",
+                "PROFISSAO": "252210",
+                "DATA_ADMISSAO": "04\/01\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MACHI SERVICOS CONTABEIS  LTDA",
+                "CNPJ": "35587240000119",
+                "CIDADE": "SAO JOSE DO RIO PRETO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "17\/08\/2020",
+                "DATA_DEMISSAO": "20\/06\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "ACI INCORPORACOES LTDA",
+                "CNPJ": "10896865000131",
+                "CIDADE": "SAO JOSE DO RIO PRETO-SP",
+                "PROFISSAO": "351110",
+                "DATA_ADMISSAO": "04\/07\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "EMAIS URBANISMO INCORPORACOES LTDA",
+                "CNPJ": "16492710000116",
+                "CIDADE": "SAO JOSE DO RIO PRETO-SP",
+                "PROFISSAO": "413110",
+                "DATA_ADMISSAO": "03\/11\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SETPAR S\/A",
+                "CNPJ": "02522907000227",
+                "CIDADE": "SAO JOSE DO RIO PRETO-SP",
+                "PROFISSAO": "413110",
+                "DATA_ADMISSAO": "02\/01\/2013",
+                "DATA_DEMISSAO": "08\/11\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "SETPAR TERRAPLENAGEM LTDA",
+                "CNPJ": "07203139000181",
+                "CIDADE": "SAO JOSE DO RIO PRETO-SP",
+                "PROFISSAO": "413110",
+                "DATA_ADMISSAO": "02\/08\/2011",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

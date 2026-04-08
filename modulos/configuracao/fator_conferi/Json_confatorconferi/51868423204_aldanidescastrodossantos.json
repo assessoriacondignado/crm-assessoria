@@ -1,0 +1,153 @@
+{
+    "CADASTRAIS": {
+        "CPF": "51868423204",
+        "NOME": "ALDANIDES CASTRO DOS SANTOS",
+        "NOME_MAE": "ALDANIRA CASTRO DOS SANTOS",
+        "NASCTO": "28\/05\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1268803402",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "391125",
+        "PROFISSAO": "TECNICO DE PLANEJAMENTO DE PRODUCAO",
+        "SALARIO": " 7.140,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9233461725",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9236649463",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92993550444",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92982026762",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "92992153025",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "aldanides@hotmail.com",
+            "registro@redehost.com.br",
+            "aldanidessantos@oi.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CHARLES GOUNOD",
+                "NUMERO": "22",
+                "COMPLEMENTO": "N 8 Q 394",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69096660",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R VITORIO EMANUELE",
+                "NUMERO": "702",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JAPIIM",
+                "CEP": "69077340",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R CHARLES GOUNOD",
+                "NUMERO": "8",
+                "COMPLEMENTO": "COMPLEM CASA QD 394",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69096660",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "5564235266",
+            "NOME": "MARIA GABRIELA DOS SANTOS SILVA",
+            "IDADE": "21 anos",
+            "LOCAL": "",
+            "PARENTESCO": "FILHO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "YAMAHA MOTOR DA AMAZONIA LTDA",
+                "CNPJ": "04817052000106",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "391125",
+                "DATA_ADMISSAO": "22\/07\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "S C SECKLER COMERCIAL",
+                "CNPJ": "10340963000198",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "421310",
+                "DATA_ADMISSAO": "25\/04\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,211 @@
+{
+    "CADASTRAIS": {
+        "CPF": "13369926890",
+        "NOME": "SIMONE KLUMB LIMA",
+        "NOME_MAE": "ALMERITA FARIAS KLUMB",
+        "NASCTO": "20\/03\/1971",
+        "IDADE": "55 anos",
+        "SEXO": "Feminino",
+        "RG": "203235447",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "172958060175",
+        "NIT": "1238735053",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411045",
+        "PROFISSAO": "AUXILIAR DE SERVICOS DE IMPORTACAO E EXPORTACAO",
+        "SALARIO": " 7.800,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1333246604",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1333494096",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "27\/12\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1332221329",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1332297000",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13981189820",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11997248995",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "13996237410",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "klumb_klumb@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV DR BERNARDINO DE CAMPOS",
+                "NUMERO": "405",
+                "COMPLEMENTO": "AP 21",
+                "BAIRRO": "CPO GRANDE",
+                "CEP": "11065003",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV DR BERNARDINO DE CAMPOS",
+                "NUMERO": "47",
+                "COMPLEMENTO": "AP 21",
+                "BAIRRO": "VL BELMIRO",
+                "CEP": "11065910",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PARA",
+                "NUMERO": "2",
+                "COMPLEMENTO": "BL LORDELLO AP",
+                "BAIRRO": "CPO GRANDE",
+                "CEP": "11075410",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PEDRO AMERICO",
+                "NUMERO": "141",
+                "COMPLEMENTO": "AP 14",
+                "BAIRRO": "CPO GRANDE",
+                "CEP": "11075400",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R TEN DURVAL DO AMARAL",
+                "NUMERO": "173",
+                "COMPLEMENTO": "AP 2",
+                "BAIRRO": "CATIAPOA",
+                "CEP": "11390300",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "PC ANTONIO TELLES",
+                "NUMERO": "15",
+                "COMPLEMENTO": "AP 41",
+                "BAIRRO": "CENTRO",
+                "CEP": "11013924",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JULIO CONCEICAO",
+                "NUMERO": "101",
+                "COMPLEMENTO": "AP 19",
+                "BAIRRO": "VILA MATHIAS",
+                "CEP": "11015540",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV DOUTOR BERNARDINO DE CAMPOS",
+                "NUMERO": "405",
+                "COMPLEMENTO": "AP 21",
+                "BAIRRO": "VILA BELMIRO",
+                "CEP": "11065910",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "80223737887",
+                "NOME": "ALMERITA FARIAS KLUMB",
+                "IDADE": "79 anos",
+                "LOCAL": "SANTOS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "39008689804",
+                "NOME": "KAIO KLUMB LIMA",
+                "IDADE": "35 anos",
+                "LOCAL": "SANTOS\/SP",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "VANGUARD LOGISTICS SERVICES DO BRASIL LTDA",
+            "CNPJ": "03273941000278",
+            "CIDADE": "SANTOS-SP",
+            "PROFISSAO": "411045",
+            "DATA_ADMISSAO": "24\/09\/1999",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

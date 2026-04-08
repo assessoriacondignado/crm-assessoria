@@ -1,0 +1,214 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26207104803",
+        "NOME": "MANOEL SILVA NETO",
+        "NOME_MAE": "LIZETE SANTOS SILVA",
+        "NASCTO": "31\/10\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "29078292",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "274174750183",
+        "NIT": "1254670468",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "313215",
+        "PROFISSAO": "TECNICO ELETRONICO",
+        "SALARIO": " 9.472,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1139444025",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1156834444",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1121270800",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1142076893",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11939293997",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11991343038",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11993483178",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11993483179",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "29\/01\/2016",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11946797160",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "06\/04\/2018",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "cleiton.monteiro30@terra.com.br",
+            "mariazezona@globo.com",
+            "wil.per@globo.com",
+            "lidianeserqueira@hotmail.com",
+            "msilvant2@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R FRIEDRICH VON VOITH",
+                "NUMERO": "825",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD S JOAO JARAGUA",
+                "CEP": "02995000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FREDERIC MISTRAL",
+                "NUMERO": "825",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ STA CECILIA",
+                "CEP": "04832180",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SILVESTRE L DA SILVA",
+                "NUMERO": "28",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL YOLANDA",
+                "CEP": "06124090",
+                "CIDADE": "OSASCO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CARUARI",
+                "NUMERO": "7",
+                "COMPLEMENTO": "CS 3",
+                "BAIRRO": "CHACARA DAS FLORES",
+                "CEP": "06385330",
+                "CIDADE": "CARAPICUIBA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "86377507",
+            "NOME": "LIZETE SANTOS SILVA",
+            "IDADE": "51 anos",
+            "LOCAL": "JUTI\/MS",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TONGSIS AUTOMACAO E SISTEMAS LTDA",
+                "CNPJ": "10796406000186",
+                "CIDADE": "JUNDIAI-SP",
+                "PROFISSAO": "313215",
+                "DATA_ADMISSAO": "15\/07\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VOITH HYDRO LTDA",
+                "CNPJ": "03400080000160",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "715615",
+                "DATA_ADMISSAO": "01\/12\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "LEADEC SERVICOS INDUSTRIAIS DO BRASIL LTDA",
+                "CNPJ": "06202038000395",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "313215",
+                "DATA_ADMISSAO": "22\/08\/2005",
+                "DATA_DEMISSAO": "01\/12\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

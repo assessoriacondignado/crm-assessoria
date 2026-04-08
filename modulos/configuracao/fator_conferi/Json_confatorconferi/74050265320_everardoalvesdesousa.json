@@ -1,0 +1,121 @@
+{
+    "CADASTRAIS": {
+        "CPF": "74050265320",
+        "NOME": "EVERARDO ALVES DE SOUSA",
+        "NOME_MAE": "MARIA JOSE ALVES DE SOUSA",
+        "NASCTO": "16\/05\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "041722810779",
+        "NIT": "1248702470",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "314110",
+        "PROFISSAO": "TECNICO MECANICO",
+        "SALARIO": " 5.141,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8532458661",
+            "OPERADORA": "TELEMAR\/CE",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "85989303912",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "85986260922",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "hopping@wilsoft.com.br",
+            "everardoalves7@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DR FERNANDO AUGUSTO",
+                "NUMERO": "1435",
+                "COMPLEMENTO": "",
+                "BAIRRO": "GJA LISBOA",
+                "CEP": "61661050",
+                "CIDADE": "CAUCAIA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "RUA DOUTOR FERNANDO AUGUSTO",
+                "NUMERO": "1435",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOM JARDIM",
+                "CEP": "60543372",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "4614313",
+            "NOME": "MARIA JOSE ALVES DE SOUSA",
+            "IDADE": "54 anos",
+            "LOCAL": "SAO LUIS\/MA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "YPLASTIC EMBALAGENS PLASTICAS S.A",
+                "CNPJ": "15293108000197",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "314110",
+                "DATA_ADMISSAO": "05\/02\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "WESTROCK DO NORDESTE INDUSTRIA DE EMBALAGENS LTDA",
+                "CNPJ": "00310707000102",
+                "CIDADE": "PACAJUS-CE",
+                "PROFISSAO": "313120",
+                "DATA_ADMISSAO": "17\/08\/2000",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

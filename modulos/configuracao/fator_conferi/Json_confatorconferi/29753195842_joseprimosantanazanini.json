@@ -1,0 +1,229 @@
+{
+    "CADASTRAIS": {
+        "CPF": "29753195842",
+        "NOME": "JOSE PRIMO SANTANA ZANINI",
+        "NOME_MAE": "SEVERINA MARIA SANTANA ZANINI",
+        "NASCTO": "26\/02\/1981",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "274976160116",
+        "NIT": "12933727775",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521110",
+        "PROFISSAO": "VENDEDOR DE COMERCIO VAREJISTA",
+        "SALARIO": " 1.297,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1139815700",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1120426448",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1127412690",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1127412690",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1134951924",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11920465738",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11951196978",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11969784112",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11974829903",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "js.zanini@terra.com.br",
+            "primozanini1981@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MILETO",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL SANTOS",
+                "CEP": "02636200",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV PRCA ISABEL",
+                "NUMERO": "31",
+                "COMPLEMENTO": "AP 2",
+                "BAIRRO": "JD BELA VISTA",
+                "CEP": "06656060",
+                "CIDADE": "ITAPEVI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MARIM DOS CAETES",
+                "NUMERO": "65",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD S CARLOS ZONA LESTE",
+                "CEP": "08062660",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R STA CRUZ DO MONTE CASTELO",
+                "NUMERO": "110",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD PARANA",
+                "CEP": "02876000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SEMENTE DE TUDO",
+                "NUMERO": "1",
+                "COMPLEMENTO": "C 1",
+                "BAIRRO": "JD S CARLOS ZONA LESTE",
+                "CEP": "08062580",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SEMENTE DE TUDO",
+                "NUMERO": "16",
+                "COMPLEMENTO": "C 2",
+                "BAIRRO": "JD S CARLOS ZONA LESTE",
+                "CEP": "08062580",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ITAMBE DO MATO DENTRO",
+                "NUMERO": "808",
+                "COMPLEMENTO": "C 8",
+                "BAIRRO": "JD GUARANI",
+                "CEP": "02851000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "TR SANTA CRUZ DO MONTE CASTELO",
+                "NUMERO": "64",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM PARANA",
+                "CEP": "02876000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO RESIDENCIAL JARDIM ITATINGA",
+                "CNPJ": "03203047000140",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "06\/05\/2014",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "NOVA CASA BAHIA S\/A",
+                "CNPJ": "10757237034746",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/12\/2010",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

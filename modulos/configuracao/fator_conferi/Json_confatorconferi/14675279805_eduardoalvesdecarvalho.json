@@ -1,0 +1,170 @@
+{
+    "CADASTRAIS": {
+        "CPF": "14675279805",
+        "NOME": "EDUARDO ALVES DE CARVALHO",
+        "NOME_MAE": "MARIA JACI DE CARVALHO",
+        "NASCTO": "20\/05\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "205280490183",
+        "NIT": "12213389642",
+        "ESCOLARIDADE": "PRIMEIRO GRAU (GINASIO)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "724515",
+        "PROFISSAO": "PRENSISTA (OPERADOR DE PRENSA)",
+        "SALARIO": " 957,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1125451392",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1125856575",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11913329017",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11965397015",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11965451392",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "ingridpc0403@gmail.com",
+            "0403ingridpereira@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R EDUARDO MENDES FRANCO",
+                "NUMERO": "2",
+                "COMPLEMENTO": "74",
+                "BAIRRO": "VL NOVA TERESA",
+                "CEP": "03823110",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R EDUARDO MENDES FRANCO",
+                "NUMERO": "7",
+                "COMPLEMENTO": "S PAULO",
+                "BAIRRO": "VL NOVA TERESA",
+                "CEP": "03823110",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R EDUARDO MENDES FRANCO",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL NOVA TERESA",
+                "CEP": "03823110",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV MAL TITO",
+                "NUMERO": "2300",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S MIGUEL PAULISTA",
+                "CEP": "08022000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R EDUARDO MENDES FRANCO",
+                "NUMERO": "274",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA NOVA TERESA",
+                "CEP": "03823110",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "8999182800",
+            "NOME": "MARIA JACI DE CARVALHO",
+            "IDADE": "80 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "INDUSTRIA DE PRODUTOS ALIMENTICIOS CONGELADOS MANA LTDA",
+                "CNPJ": "04670505000114",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "01\/10\/2013",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BRASIMPAR INDUSTRIA METALURGICA LTDA EM RECUPERACAO JUDICIAL",
+                "CNPJ": "54183819000160",
+                "CIDADE": "GUARULHOS-SP",
+                "PROFISSAO": "724515",
+                "DATA_ADMISSAO": "01\/11\/2011",
+                "DATA_DEMISSAO": "20\/07\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,143 @@
+{
+    "CADASTRAIS": {
+        "CPF": "21566020344",
+        "NOME": "JOSE FRANCISCO NUNES REGO",
+        "NOME_MAE": "MARIA DO SOCORRO NUNES REGO",
+        "NASCTO": "17\/09\/1960",
+        "IDADE": "65 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "010056811155",
+        "NIT": "12097330470",
+        "ESCOLARIDADE": "ATE A 4a. SERIE INCOMPLETA DO 1o. GRAU(PRIMARIO INCOMPLETO)",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "784205",
+        "PROFISSAO": "ALIMENTADOR DE LINHA DE PRODUCAO",
+        "SALARIO": " 808,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9833521042",
+                "OPERADORA": "TELEMAR\/MA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3421099000",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "98999067674",
+            "OPERADORA": "OI MOVEL S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "PRE PAGO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": {
+        "EMAIL": "casino2216@bhnet.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOAO ALVES DA SILVA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "65350000",
+                "CIDADE": "VITORIA DO MEARIM",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "R JOAO ALVES DA SILVA",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "65350000",
+                "CIDADE": "VITORIA DO MEARIM",
+                "ESTADO": "MA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "52252981334",
+                "NOME": "MARIA DO SOCORRO NUNES REGO",
+                "IDADE": "88 anos",
+                "LOCAL": "VITORIA DO MEARIM\/MA",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "1867486393",
+                "NOME": "DAVID REGO CUNHA",
+                "IDADE": "38 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "41851897372",
+                "NOME": "JOSE RAIMUNDO NUNES REGO",
+                "IDADE": "55 anos",
+                "LOCAL": "CARAPICUIBA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "47663650387",
+                "NOME": "MARIA DO PERPETUO SOCORRO REGO MAGALHAES",
+                "IDADE": "67 anos",
+                "LOCAL": "VITORIA DO MEARIM\/MA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "57638055268",
+                "NOME": "ELIENE DE JESUS NUNES REGO",
+                "IDADE": "50 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "85237876315",
+                "NOME": "JOSEFA DA CONCEICAO REGO PAOZINHO",
+                "IDADE": "61 anos",
+                "LOCAL": "VITORIA DO MEARIM\/MA",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "",
+            "CNPJ": "00500750437480",
+            "CIDADE": "",
+            "PROFISSAO": "784205",
+            "DATA_ADMISSAO": "12\/20\/2004",
+            "DATA_DEMISSAO": "905",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2012"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

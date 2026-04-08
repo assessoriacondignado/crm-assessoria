@@ -1,0 +1,198 @@
+{
+    "CADASTRAIS": {
+        "CPF": "53526015015",
+        "NOME": "PAULO ROBERTO SCHMIDT",
+        "NOME_MAE": "MARIA DE FATIMA LOPES",
+        "NASCTO": "30\/01\/1970",
+        "IDADE": "56 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12286611493",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "371310",
+        "PROFISSAO": "TECNICO GRAFICO",
+        "SALARIO": " 4.926,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "5137159271",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "06\/07\/2013",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51981599694",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "25\/08\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "51981168129",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "51981552913",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "51999217577",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "51999652527",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "paulo.schimidt@terra.com.br",
+            "paulogauchoscs@ibest.com.br",
+            "paulo.schmidt@senairs.org.br",
+            "senai.professorprs@gmail.com",
+            "paulo.schimidt1@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CRUZ ALTA C",
+                "NUMERO": "288",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL NOVA",
+                "CEP": "98476000",
+                "CIDADE": "SANTA CRUZ",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "AV CRUZ ALTA",
+                "NUMERO": "288",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NONOAI",
+                "CEP": "90830020",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R DEMETRIO RIBEIRO",
+                "NUMERO": "160",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BONFIM",
+                "CEP": "96830180",
+                "CIDADE": "SANTA CRUZ DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R DEMETRIO RIBEIRO",
+                "NUMERO": "160",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CENTRO",
+                "CEP": "95915000",
+                "CIDADE": "SANTA CLARA DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R BOM JESUS",
+                "NUMERO": "674",
+                "COMPLEMENTO": "C 3",
+                "BAIRRO": "CENTRO",
+                "CEP": "25515190",
+                "CIDADE": "SAO JOAO DE MERITI",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA CRUZ ALTA",
+                "NUMERO": "288",
+                "COMPLEMENTO": "CA 01",
+                "BAIRRO": "CASTELO BRANCO",
+                "CEP": "96835350",
+                "CIDADE": "SANTA CRUZ DO SUL",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "49393952",
+            "NOME": "MARIA DE FATIMA LOPES",
+            "IDADE": "54 anos",
+            "LOCAL": "MARINGA\/PR",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "PAULO ROBERTO SCHMIDT",
+            "IDADE": "",
+            "LOCALIDADE": "PORTO ALEGRE\/RS",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "1410949079"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SERVICO NACIONAL DE APRENDIZAGEM INDUSTRIAL-SENAI",
+                "CNPJ": "03775069003281",
+                "CIDADE": "SANTA CRUZ DO SUL-RS",
+                "PROFISSAO": "333110",
+                "DATA_ADMISSAO": "14\/20\/1908",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PHILIP MORRIS BRASIL INDUSTRIA E COMERCIO LTDA.",
+                "CNPJ": "04041933001311",
+                "CIDADE": "SANTA CRUZ DO SUL-RS",
+                "PROFISSAO": "371310",
+                "DATA_ADMISSAO": "12\/09\/1990",
+                "DATA_DEMISSAO": "07\/09\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

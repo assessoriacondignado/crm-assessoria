@@ -1,0 +1,289 @@
+{
+    "CADASTRAIS": {
+        "CPF": "9759442825",
+        "NOME": "SILVANA CRISTINA SILVA ARAUJO",
+        "NOME_MAE": "MARIA APARECIDA FREITAS DA SILVA",
+        "NASCTO": "15\/11\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Feminino",
+        "RG": "230225844",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1236399724",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411005",
+        "PROFISSAO": "AUXILIAR DE ESCRITORIO, EM GERAL",
+        "SALARIO": " 2.707,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1839073604",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "26\/04\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1832235535",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1832235535",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "18997826868",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "18997286868",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "18997416767",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "18997232760",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "18997538545",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "silvanacsilvaaraujo@gmail.com",
+            "SILVANACSARAUJO@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MTO FORTUNATO NETO",
+                "NUMERO": "376",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ ALVORADA",
+                "CEP": "19042080",
+                "CIDADE": "PRESIDENTE PRUDENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MARIA DA GLORIA",
+                "NUMERO": "381",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL STA HELENA",
+                "CEP": "19015650",
+                "CIDADE": "PRESIDENTE PRUDENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DR JOAO MUNHOZ",
+                "NUMERO": "345",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "19560000",
+                "CIDADE": "INDIANA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R GUADALAJARA",
+                "NUMERO": "1447",
+                "COMPLEMENTO": "C E",
+                "BAIRRO": "VL STA TEREZA",
+                "CEP": "19023330",
+                "CIDADE": "PRESIDENTE PRUDENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MARIA DAS DORES FRANCISCO",
+                "NUMERO": "91",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ RESIDENCIAL SAO LUCAS",
+                "CEP": "19025070",
+                "CIDADE": "PRESIDENTE PRUDENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MARIA DAS DORES FRANCISCO",
+                "NUMERO": "55",
+                "COMPLEMENTO": "740",
+                "BAIRRO": "PRQ RESIDENCIAL SAO LUCAS",
+                "CEP": "19025070",
+                "CIDADE": "PRESIDENTE PRUDENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MARIA DAS DORES FRANCISCO",
+                "NUMERO": "49",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ RESIDENCIAL SAO LUCAS",
+                "CEP": "19025070",
+                "CIDADE": "PRESIDENTE PRUDENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R LUZIA BRUNHOLI MEIDAS",
+                "NUMERO": "49",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD S SEBASTIAO",
+                "CEP": "19025833",
+                "CIDADE": "PRESIDENTE PRUDENTE",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "396066356",
+                "NOME": "MARIA APARECIDA FREITAS DA SILVA",
+                "IDADE": "57 anos",
+                "LOCAL": "PETROLINA\/PE",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "5117347196",
+                "NOME": "REGYANA NAYARA ARAUJO BARBOSA",
+                "IDADE": "29 anos",
+                "LOCAL": "BRASILIA\/DF",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "5117349130",
+                "NOME": "REGIS ALYSON ARAUJO BARBOSA",
+                "IDADE": "31 anos",
+                "LOCAL": "BRASILIA\/DF",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "45286624855",
+                "NOME": "THAMIRES SILVA DE ARAUJO",
+                "IDADE": "29 anos",
+                "LOCAL": "PRESIDENTE PRUDENTE\/SP",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BRUNO DIAS GONCALVES LTDA",
+                "CNPJ": "25043975000128",
+                "CIDADE": "PRESIDENTE PRUDENTE-SP",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "09\/02\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "POUPACRED PROCESSAMENTO DE DADOS LTDA",
+                "CNPJ": "07899160000325",
+                "CIDADE": "PRESIDENTE PRUDENTE-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "26\/10\/2020",
+                "DATA_DEMISSAO": "29\/05\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "MUTH ASSISTENCIA FAMILIAR LTDA",
+                "CNPJ": "11033524000103",
+                "CIDADE": "PRESIDENTE PRUDENTE-SP",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "24\/11\/2014",
+                "DATA_DEMISSAO": "01\/05\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "YPIRANGA PAPELARIA LTDA",
+                "CNPJ": "10686028000188",
+                "CIDADE": "PRESIDENTE PRUDENTE-SP",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "01\/11\/2011",
+                "DATA_DEMISSAO": "15\/04\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "E. B. LINHARES TELEMARKETING",
+                "CNPJ": "14605159000144",
+                "CIDADE": "PRESIDENTE PRUDENTE-SP",
+                "PROFISSAO": "354120",
+                "DATA_ADMISSAO": "01\/07\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "R.C. DE ARAUJO   CIA LTDA",
+            "CNPJ": "08727980000130",
+            "CIDADE": "INDIANA-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20070321",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

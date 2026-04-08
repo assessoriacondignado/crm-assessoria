@@ -1,0 +1,213 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25385859885",
+        "NOME": "CARLOS EDUARDO RIBEIRO DA SILVA",
+        "NOME_MAE": "SIDNEI FERNANDES DA SILVA",
+        "NASCTO": "17\/03\/1976",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "266357805",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "238998720108",
+        "NIT": "12543807502",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "253215",
+        "PROFISSAO": "GERENTE DE CONTAS - PESSOA FISICA E JURIDICA",
+        "SALARIO": " 4.008,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1332335163",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1333262647",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "23\/05\/2008",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1333262647",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "23\/05\/2008",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1332229178",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13991227926",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "13991227926",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "13992017756",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "edu.ribeiro1976@gmail.com.br",
+            "leourenco1978@gmail.com",
+            "edu.ribeiro1976@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R SENADOR LACERDA FRANCO",
+                "NUMERO": "141",
+                "COMPLEMENTO": "AP 21",
+                "BAIRRO": "APARECIDA",
+                "CEP": "11025180",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DR GUEDES COELHO",
+                "NUMERO": "143",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ENCRUZILHADA",
+                "CEP": "11050231",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "629479151",
+                "NOME": "SIDNEI FERNANDES DA SILVA",
+                "IDADE": "42 anos",
+                "LOCAL": "TANGARA DA SERRA\/MT",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "7017385888",
+                "NOME": "ROSIMAR RIBEIRO DA SILVA",
+                "IDADE": "61 anos",
+                "LOCAL": "SANTOS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COOPERATIVA DE CREDITO, POUPANCA E INVESTIMENTO GRANDES LAGOS DO PARANA E LITORAL PAULISTA - SICREDI GRANDES LAGOS PR\/SP",
+                "CNPJ": "81115149001866",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "253215",
+                "DATA_ADMISSAO": "09\/09\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "KIRTON BANK S.A. - BANCO MULTIPLO",
+                "CNPJ": "01701201110600",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "142305",
+                "DATA_ADMISSAO": "22\/04\/2013",
+                "DATA_DEMISSAO": "02\/01\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "KIRTON BANK S.A. - BANCO MULTIPLO",
+                "CNPJ": "01701201117108",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "253215",
+                "DATA_ADMISSAO": "03\/01\/2016",
+                "DATA_DEMISSAO": "30\/09\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO BRADESCO S.A.",
+                "CNPJ": "60746948845767",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "253215",
+                "DATA_ADMISSAO": "01\/10\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "KIRTON BANK S.A. - BANCO MULTIPLO",
+                "CNPJ": "01701201115750",
+                "CIDADE": "GUARUJA-SP",
+                "PROFISSAO": "142305",
+                "DATA_ADMISSAO": "22\/04\/2013",
+                "DATA_DEMISSAO": "02\/05\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "NEEDISH SERVICOS DIGITAIS LTDA",
+                "CNPJ": "12069667000120",
+                "CIDADE": "FLORIANOPOLIS-SC",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "13\/02\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

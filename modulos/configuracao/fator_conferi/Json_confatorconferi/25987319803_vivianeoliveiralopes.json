@@ -1,0 +1,319 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25987319803",
+        "NOME": "VIVIANE OLIVEIRA LOPES",
+        "NOME_MAE": "JARED OLIVEIRA LOPES",
+        "NASCTO": "23\/01\/1977",
+        "IDADE": "49 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "270219260191",
+        "NIT": "12555381157",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "131120",
+        "PROFISSAO": "GERENTE DE SERVICOS SOCIAIS",
+        "SALARIO": " 4.792,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1156317018",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1120983635",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1123648746",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1131410177",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11966310957",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11966310957",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11971938908",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11971938908",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11995178746",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "vivislopes@ig.com.br",
+            "vivislopes23@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R EPIRO",
+                "NUMERO": "21",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL ALEXANDRIA",
+                "CEP": "04635030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R HEITOR PEIXOTO",
+                "NUMERO": "856",
+                "COMPLEMENTO": "AP 32",
+                "BAIRRO": "CAMBUCI",
+                "CEP": "01543001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ONZE DE JUNHO",
+                "NUMERO": "261",
+                "COMPLEMENTO": "AP 32",
+                "BAIRRO": "ITARARE",
+                "CEP": "11320160",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DOS ANDRADE",
+                "NUMERO": "202",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PEDREIRA",
+                "CEP": "04459200",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOUTOR CESARIO MOTA JUNIOR",
+                "NUMERO": "301",
+                "COMPLEMENTO": "APTO 82",
+                "BAIRRO": "VILA BUARQUE",
+                "CEP": "01221020",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MAJOR SERTORIO",
+                "NUMERO": "727",
+                "COMPLEMENTO": "APTO 802",
+                "BAIRRO": "VILA BUARQUE",
+                "CEP": "01222001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA EPIRO",
+                "NUMERO": "3",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA ALEXANDRIA",
+                "CEP": "04635030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA EPIRO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA ALEXANDRIA",
+                "CEP": "04635030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "27867079866",
+                "NOME": "JARED OLIVEIRA LOPES",
+                "IDADE": "68 anos",
+                "LOCAL": "SANTOS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "33738730885",
+                "NOME": "VANESSA OLIVEIRA LOPES",
+                "IDADE": "45 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "7190496106",
+                "NOME": "LAIRA OLIVEIRA BARROS",
+                "IDADE": "22 anos",
+                "LOCAL": "BRASILIA\/DF",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "7190497170",
+                "NOME": "LAYARA OLIVEIRA BARROS",
+                "IDADE": "21 anos",
+                "LOCAL": "BRASILIA\/DF",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "11226294197",
+                "NOME": "RYAN LOPES BARBOZA",
+                "IDADE": "17 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "11226305148",
+                "NOME": "ANA BEATRIZ LOPES BARBOZA",
+                "IDADE": "19 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "15101977616",
+                "NOME": "DAVI HENRIQUE LOPES BONIFACIO",
+                "IDADE": "10 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "RODRIGO ROSAS FERNANDES",
+            "IDADE": "",
+            "LOCALIDADE": "SAO PAULO\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "6076830824"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "IMC SASTE-CONSTRUCOES, SERVICOS E COMERCIO LTDA.",
+                "CNPJ": "67706853000114",
+                "CIDADE": "CAIEIRAS-SP",
+                "PROFISSAO": "142325",
+                "DATA_ADMISSAO": "20\/20\/1911",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "IN PRESS ASSESSORIA DE IMPRENSA E COMUNICACAO ESTRATEGICA LTDA.",
+                "CNPJ": "01097636000166",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212410",
+                "DATA_ADMISSAO": "08\/06\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SPRINTER RECURSOS HUMANOS LTDA",
+                "CNPJ": "65919896000152",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "252105",
+                "DATA_ADMISSAO": "17\/11\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "VILA SAUDE CORRETORA DE SEGUROS LTDA",
+                "CNPJ": "09505515000118",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "131120",
+                "DATA_ADMISSAO": "06\/11\/2012",
+                "DATA_DEMISSAO": "05\/07\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "INSTITUTO AKATU",
+                "CNPJ": "04366057000160",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "131120",
+                "DATA_ADMISSAO": "11\/05\/2010",
+                "DATA_DEMISSAO": "23\/03\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

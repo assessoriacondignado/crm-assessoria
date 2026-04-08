@@ -1,0 +1,183 @@
+{
+    "CADASTRAIS": {
+        "CPF": "11744084807",
+        "NOME": "ADRIANA CARLA CANUTO BERGAMASCHI",
+        "NOME_MAE": "MARIA DE FATIMA CANUTO",
+        "NASCTO": "09\/03\/1972",
+        "IDADE": "54 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "192713190116",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "233215",
+        "PROFISSAO": "PROFESSOR DE APRENDIZAGEM E TREINAMENTO COMERCIAL",
+        "SALARIO": " 6.710,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1833059919",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "24\/10\/2011",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1836222230",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "18981892033",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "18988055900",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "18962222300",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "18998809996",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "18997421293",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "azucon@sp.senac.br",
+            "conudo.adriana57@hotmail.com",
+            "adrianachi@terra.com.br",
+            "adrianachi722@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R BASTOS CORDEIRO",
+                "NUMERO": "400",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTANA",
+                "CEP": "16050460",
+                "CIDADE": "ARACATUBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PEREIRA PASSOS",
+                "NUMERO": "77",
+                "COMPLEMENTO": "COML",
+                "BAIRRO": "S JOAQUIM",
+                "CEP": "16050320",
+                "CIDADE": "ARACATUBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BASTOS CORDEIRO",
+                "NUMERO": "340",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTANA",
+                "CEP": "16050460",
+                "CIDADE": "ARACATUBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BASTOS CORDEIRO",
+                "NUMERO": "350",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "SANTANA",
+                "CEP": "16050460",
+                "CIDADE": "ARACATUBA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "2282759893",
+            "NOME": "MARIA DE FATIMA CANUTO",
+            "IDADE": "76 anos",
+            "LOCAL": "ARAGUARI\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL SENAC",
+                "CNPJ": "03709814006129",
+                "CIDADE": "ARACATUBA-SP",
+                "PROFISSAO": "233215",
+                "DATA_ADMISSAO": "13\/11\/1995",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SEB SISTEMA EDUCACIONAL BRASILEIRO S.A.",
+                "CNPJ": "56012628001800",
+                "CIDADE": "ARACATUBA-SP",
+                "PROFISSAO": "234520",
+                "DATA_ADMISSAO": "03\/01\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

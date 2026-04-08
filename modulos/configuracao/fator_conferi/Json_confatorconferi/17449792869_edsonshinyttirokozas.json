@@ -1,0 +1,249 @@
+{
+    "CADASTRAIS": {
+        "CPF": "17449792869",
+        "NOME": "EDSON SHINYTTI ROKOZAS",
+        "NOME_MAE": "NEUZA TOMOYO ROKOZAS",
+        "NASCTO": "08\/09\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "276148186",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "265347580116",
+        "NIT": "1242659869",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "351740",
+        "PROFISSAO": "TECNICO DE SEGUROS",
+        "SALARIO": " 3.738,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1142162190",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1126236628",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1128620750",
+                "OPERADORA": "AGENCIA NACIONAL DE TELECOMUNI",
+                "DATA_REFERENCIA": "27\/10\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1129438401",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "03\/04\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1129438401",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "03\/04\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11959305160",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11988970501",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11966237340",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11969438401",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "rokozas@isbt.com.br",
+            "edson.rkz@terra.com.br",
+            "rokozas@globo.com",
+            "edson.shinytti@itelefonica.com.br",
+            "edson.rkz@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PEIXOTO",
+                "NUMERO": "152",
+                "COMPLEMENTO": "AP 2",
+                "BAIRRO": "VL BUENOS AIRES",
+                "CEP": "03627010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV S MIGUEL",
+                "NUMERO": "255",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL MARIETA",
+                "CEP": "03619000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R HUMBERTO DANTAS",
+                "NUMERO": "54",
+                "COMPLEMENTO": "C 2",
+                "BAIRRO": "VL CONSTANCA",
+                "CEP": "03755060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DENDEZEIRO",
+                "NUMERO": "559",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD MATARAZZO",
+                "CEP": "03813130",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DR ROMULO PASQUALINI",
+                "NUMERO": "765",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD S PEDRO",
+                "CEP": "08820310",
+                "CIDADE": "MOGI DAS CRUZES",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA FERNANDO MONACO",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL B AIRES",
+                "CEP": "03627140",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV S MIGUEL",
+                "NUMERO": "2555",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL MARIETA",
+                "CEP": "03619100",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA FRANCISCO DO AMARAL",
+                "NUMERO": "2555",
+                "COMPLEMENTO": "CS 3",
+                "BAIRRO": "VILA LAIS",
+                "CEP": "03611000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "11894929896",
+                "NOME": "NEUZA TOMOYO ROKOZAS",
+                "IDADE": "76 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "28411607852",
+                "NOME": "YARA ROKOZAS",
+                "IDADE": "46 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PORTO SEGURO COMPANHIA DE SEGUROS GERAIS",
+                "CNPJ": "61198164000160",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "351740",
+                "DATA_ADMISSAO": "01\/05\/2016",
+                "DATA_DEMISSAO": "01\/02\/2029",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PORTO SEGURO ATENDIMENTO LTDA",
+                "CNPJ": "10734806000167",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "233215",
+                "DATA_ADMISSAO": "01\/03\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,282 @@
+{
+    "CADASTRAIS": {
+        "CPF": "31029724890",
+        "NOME": "LIVIA GRACIOLI DE MELLO",
+        "NOME_MAE": "CELIA MARIA GRACIOLI DE MELLO",
+        "NASCTO": "06\/07\/1984",
+        "IDADE": "41 anos",
+        "SEXO": "Feminino",
+        "RG": "43850440",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "309225250167",
+        "NIT": "2042640483",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "375105",
+        "PROFISSAO": "DESIGNER DE INTERIORES",
+        "SALARIO": " 8.839,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1935243876",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1933260307",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "11\/04\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1935243878",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1935243878",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19991348960",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19991348960",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19996816293",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "14\/06\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "livia_florzinha@zipmail.com.br",
+            "liviagracioli@zipmail.com.br",
+            "liviagracioli@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV VINTE E NOVE",
+                "NUMERO": "401",
+                "COMPLEMENTO": "AP 32",
+                "BAIRRO": "CIDADE JARDIM",
+                "CEP": "13501104",
+                "CIDADE": "RIO CLARO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV VINTE E NOVE",
+                "NUMERO": "411",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE JARDIM",
+                "CEP": "13501104",
+                "CIDADE": "RIO CLARO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV CEL SILVA TELES",
+                "NUMERO": "995",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAMBUI",
+                "CEP": "13024001",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV N SRA DE FATIMA",
+                "NUMERO": "805",
+                "COMPLEMENTO": "AP 21 BL GUADALA",
+                "BAIRRO": "TAQUARAL",
+                "CEP": "13076903",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BARRETO LEME",
+                "NUMERO": "1818",
+                "COMPLEMENTO": "AP 62",
+                "BAIRRO": "CAMBUI",
+                "CEP": "13025085",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SEIS",
+                "NUMERO": "1044",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD DONANGELA",
+                "CEP": "13500050",
+                "CIDADE": "RIO CLARO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV OROZIMBO MAIA",
+                "NUMERO": "2090",
+                "COMPLEMENTO": "AP 14",
+                "BAIRRO": "CAMBUI",
+                "CEP": "13024045",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R VINTE E DOIS BE",
+                "NUMERO": "669",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ESTADIO",
+                "CEP": "13501388",
+                "CIDADE": "RIO CLARO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "1731350805",
+                "NOME": "CELIA MARIA GRACIOLI DE MELLO",
+                "IDADE": "67 anos",
+                "LOCAL": "RIO CLARO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "31029790841",
+                "NOME": "GUSTAVO GRACIOLI DE MELLO",
+                "IDADE": "39 anos",
+                "LOCAL": "RIO CLARO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "DOCOL INDUSTRIA E COMERCIO LTDA",
+                "CNPJ": "75339051000141",
+                "CIDADE": "JOINVILLE-SC",
+                "PROFISSAO": "375105",
+                "DATA_ADMISSAO": "16\/08\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PBTECH COMERCIO E SERVICOS DE REVESTIMENTOS CERAMICOS LTDA.",
+                "CNPJ": "05876012001412",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "521105",
+                "DATA_ADMISSAO": "01\/10\/2014",
+                "DATA_DEMISSAO": "06\/04\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "CAROLINA ALVES CAMOLEZI",
+                "CNPJ": "12039461000157",
+                "CIDADE": "VALINHOS-SP",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "13\/20\/2007",
+                "DATA_DEMISSAO": "10\/01\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "PBTECH COMERCIO E SERVICOS DE REVESTIMENTOS CERAMICOS LTDA.",
+                "CNPJ": "05876012001250",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/10\/2014",
+                "DATA_DEMISSAO": "01\/11\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": [
+            {
+                "RAZAO_SOCIAL": "LGM SERVICOS DE DESING LTDA",
+                "CNPJ": "41982550000130",
+                "CIDADE": "CAMPINAS-SP",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20210518",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO DAS PANIFICADORAS DE RIO CLARO E REGIAO - SP",
+                "CNPJ": "11193758000100",
+                "CIDADE": "RIO CLARO-SP",
+                "QUALIFICACAO": "Diretor",
+                "DATA_ENTRADA": "20090819",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "GRACIOLI   CIA. LTDA",
+                "CNPJ": "56372584000261",
+                "CIDADE": "RIO CLARO-SP",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20011025",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "GRACIOLI   CIA. LTDA",
+                "CNPJ": "56372584000180",
+                "CIDADE": "RIO CLARO-SP",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20011025",
+                "VALOR_PARTICIPACAO": ""
+            }
+        ]
+    }
+}

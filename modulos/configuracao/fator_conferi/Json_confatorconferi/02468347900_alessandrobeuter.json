@@ -1,0 +1,213 @@
+{
+    "CADASTRAIS": {
+        "CPF": "2468347900",
+        "NOME": "ALESSANDRO BEUTER",
+        "NOME_MAE": "MARLI MARIA BEUTER",
+        "NASCTO": "10\/06\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "90504304",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1278861552",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212310",
+        "PROFISSAO": "ADMINISTRADOR DE REDES",
+        "SALARIO": " 9.545,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4121064195",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4130193054",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "41991218839",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41991621554",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41991623054",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41991061343",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "24\/10\/2011",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "41991542944",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "abeuter@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CLARA VENDRAMIN",
+                "NUMERO": "38",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MOSSUNGUE",
+                "CEP": "81200170",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R PROF JOAO SOARES BARCELOS",
+                "NUMERO": "1910",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOQUEIRAO",
+                "CEP": "81670080",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R CANADA",
+                "NUMERO": "2108",
+                "COMPLEMENTO": "BL 12 AP 22",
+                "BAIRRO": "BACACHERI",
+                "CEP": "82510290",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "ROD BR-116",
+                "NUMERO": "2785",
+                "COMPLEMENTO": "TORRE:CD CHAMPI APARTAMENTO:505 2785",
+                "BAIRRO": "ATUBA",
+                "CEP": "82590100",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "AVENIDA PERO VAZ DE CAMINHA",
+                "NUMERO": "700",
+                "COMPLEMENTO": "AP 22 BL 8",
+                "BAIRRO": "TATUQUARA",
+                "CEP": "81470096",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R ENGENHEIRO LUIZ CARLOS DE OLIVEIRA BORGES",
+                "NUMERO": "1115",
+                "COMPLEMENTO": "AP 3 BL 1",
+                "BAIRRO": "SANTA QUITERIA",
+                "CEP": "80310660",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "82501548191",
+                "NOME": "MARLI MARIA BEUTER",
+                "IDADE": "73 anos",
+                "LOCAL": "CURITIBA\/PR",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "2471980996",
+                "NOME": "MARCELO BEUTER",
+                "IDADE": "47 anos",
+                "LOCAL": "CAMPO ALEGRE\/AL",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "CELIO LUIS CORREA",
+            "IDADE": "",
+            "LOCALIDADE": "NOVO HAMBURGO\/RS",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "72282967020"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "UNINTER EDUCACIONAL S\/A",
+                "CNPJ": "02261854000157",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "212310",
+                "DATA_ADMISSAO": "01\/11\/2015",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CBED CENTRO BRASILEIRO DE EDUCACAO A DISTANCIA LTDA",
+                "CNPJ": "03634880000146",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "212310",
+                "DATA_ADMISSAO": "01\/08\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

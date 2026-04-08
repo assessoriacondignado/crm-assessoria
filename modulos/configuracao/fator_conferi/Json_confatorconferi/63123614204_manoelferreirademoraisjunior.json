@@ -1,0 +1,244 @@
+{
+    "CADASTRAIS": {
+        "CPF": "63123614204",
+        "NOME": "MANOEL FERREIRA DE MORAIS JUNIOR",
+        "NOME_MAE": "MARIA LINA CARVALHO DE MORAIS",
+        "NASCTO": "30\/06\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12504214873",
+        "ESCOLARIDADE": "SUPERIOR INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "314110",
+        "PROFISSAO": "TECNICO MECANICO",
+        "SALARIO": " 4.544,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1130388000",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1130388000",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9236510266",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92984269724",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92994459521",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92994586950",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "francymoraissara@gmail.com",
+            "manueljunho@oi.com.br",
+            "manoeljrdavi@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R SAGRADO CORACAO DE JESUS",
+                "NUMERO": "159",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STA ETELVINA",
+                "CEP": "69059050",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R MARIAE",
+                "NUMERO": "6",
+                "COMPLEMENTO": "STA",
+                "BAIRRO": "STA ETELVINA",
+                "CEP": "69059050",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R CORACAO DE JESUS",
+                "NUMERO": "6",
+                "COMPLEMENTO": "STA ETELVINA 6905",
+                "BAIRRO": "CIDADE DE DEUS",
+                "CEP": "69099574",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R TARAGUA",
+                "NUMERO": "185",
+                "COMPLEMENTO": "PX PANIFICADORA JOSEANE",
+                "BAIRRO": "REDENCAO",
+                "CEP": "69047741",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV LINEU DE PAULA MACHADO",
+                "NUMERO": "900",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD EVEREST",
+                "CEP": "05601001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV DJALMA BATISTA",
+                "NUMERO": "1015",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CHAPADA",
+                "CEP": "69050010",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "BECO GERANIO",
+                "NUMERO": "25",
+                "COMPLEMENTO": "",
+                "BAIRRO": "REDENCAO",
+                "CEP": "69047790",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "27360199204",
+                "NOME": "MARIA LINA CARVALHO DE MORAIS",
+                "IDADE": "67 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "61431672220",
+                "NOME": "PEDRA REGINA CARVALHO",
+                "IDADE": "50 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "63123401200",
+                "NOME": "MAKSON CARVALHO DE MORAIS",
+                "IDADE": "46 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "66069165268",
+                "NOME": "CLAUDIA CARVALHO DE MORAIS",
+                "IDADE": "45 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "82694052215",
+                "NOME": "EBERSON CARVALHO DE MORAIS",
+                "IDADE": "43 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "82694060234",
+                "NOME": "MARIA LUIZA CARVALHO DE MORAIS",
+                "IDADE": "41 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ERICA INES DOS SANTOS LAMEIRAS",
+            "IDADE": "",
+            "LOCALIDADE": "MANAUS\/AM",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "1878545213"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "HITACHI ASTEMO MANAUS BRAKE SYSTEMS LTDA.",
+                "CNPJ": "01771241000105",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "911305",
+                "DATA_ADMISSAO": "05\/11\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "YAMAHA MOTOR DA AMAZONIA LTDA",
+                "CNPJ": "04817052000106",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "314110",
+                "DATA_ADMISSAO": "13\/07\/2009",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

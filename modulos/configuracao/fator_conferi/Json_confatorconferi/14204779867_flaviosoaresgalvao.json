@@ -1,0 +1,197 @@
+{
+    "CADASTRAIS": {
+        "CPF": "14204779867",
+        "NOME": "FLAVIO SOARES GALVAO",
+        "NOME_MAE": "AIRAN GOMES GALVAO",
+        "NASCTO": "17\/01\/1974",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "230929606",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "211865530124",
+        "NIT": "12438601991",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212310",
+        "PROFISSAO": "ADMINISTRADOR DE REDES",
+        "SALARIO": " 2.013,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1130447054",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "10\/01\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1136264128",
+                "OPERADORA": "INTELIG TELECOM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1149970540",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1149970540",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11993453501",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11993735928",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "flavo_sg@hotmail.com",
+            "flavio_sg@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JUPI",
+                "NUMERO": "215",
+                "COMPLEMENTO": "AP 101 B 2",
+                "BAIRRO": "STO AMARO",
+                "CEP": "04755050",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BALTAZAR GOMES AZEVEDO",
+                "NUMERO": "125",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ DO OTERO",
+                "CEP": "05823060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA NELSON GAMA DE OLIVEIRA",
+                "NUMERO": "1113",
+                "COMPLEMENTO": "BL B AP 122",
+                "BAIRRO": "VILA ANDRADE",
+                "CEP": "05734150",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DAS FIANDEIRAS",
+                "NUMERO": "148",
+                "COMPLEMENTO": "AP 14",
+                "BAIRRO": "VILA OLIMPIA",
+                "CEP": "04545000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "16887784890",
+                "NOME": "AIRAN GOMES GALVAO",
+                "IDADE": "79 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "21762753812",
+                "NOME": "FABIO SOARES GALVAO",
+                "IDADE": "45 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "25383864890",
+                "NOME": "ANGELA SOARES GALVAO",
+                "IDADE": "48 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TIVIT TERCEIRIZACAO DE PROCESSOS, SERVICOS E TECNOLOGIA S.A.",
+                "CNPJ": "07073027001982",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "17\/07\/2013",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "OLR SERVICOS DE INFORMATICA LTDA",
+                "CNPJ": "07816552000111",
+                "CIDADE": "SANTANA DE PARNAIBA-SP",
+                "PROFISSAO": "212310",
+                "DATA_ADMISSAO": "17\/11\/2011",
+                "DATA_DEMISSAO": "30\/11\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "OLR SERVICOS DE TECNOLOGIA LTDA",
+                "CNPJ": "16910071000161",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212310",
+                "DATA_ADMISSAO": "01\/12\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,277 @@
+{
+    "CADASTRAIS": {
+        "CPF": "5530790690",
+        "NOME": "SOCRATES ALFREDO PIMENTEL",
+        "NOME_MAE": "SILVANA GERALDA E PIMENTEL",
+        "NASCTO": "24\/07\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "124742150272",
+        "NIT": "12650897106",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3137735455",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "3131773393",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "3137749788",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3137739673",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31994132363",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31991723956",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31971214851",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31992541764",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31986448947",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "socratespimentel@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R STO ANTONIO",
+                "NUMERO": "3",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JD STA MONICA",
+                "CEP": "83302270",
+                "CIDADE": "PIRAQUARA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "AV BR DE CASTELO BRANCO",
+                "NUMERO": "940",
+                "COMPLEMENTO": "BL B AP 404",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "64016410",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "R RIO PARA",
+                "NUMERO": "212",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "PROGRESSO",
+                "CEP": "35701124",
+                "CIDADE": "SETE LAGOAS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R ARACATUBA",
+                "NUMERO": "30",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VAPABUCU",
+                "CEP": "35701152",
+                "CIDADE": "SETE LAGOAS",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "6605563670",
+                "NOME": "SILMARA APARECIDA PIMENTEL",
+                "IDADE": "41 anos",
+                "LOCAL": "SETE LAGOAS\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "96856718691",
+                "NOME": "SOSTHENES EVANGELISTA PIMENTEL",
+                "IDADE": "48 anos",
+                "LOCAL": "SETE LAGOAS\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "RIO NEGRO TRANSPORTES LTDA",
+                "CNPJ": "08642410000148",
+                "CIDADE": "CONTAGEM-MG",
+                "PROFISSAO": "782405",
+                "DATA_ADMISSAO": "18\/11\/2024",
+                "DATA_DEMISSAO": "30\/12\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VIENA SIDERURGICA S\/A",
+                "CNPJ": "07609993000304",
+                "CIDADE": "SETE LAGOAS-MG",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "05\/07\/2022",
+                "DATA_DEMISSAO": "10\/04\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "JM GAS LTDA",
+                "CNPJ": "26745368000172",
+                "CIDADE": "SETE LAGOAS-MG",
+                "PROFISSAO": "782310",
+                "DATA_ADMISSAO": "01\/08\/2024",
+                "DATA_DEMISSAO": "01\/12\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SAO JORGE COMERCIO ATACADISTA DE MATERIAIS LTDA - EM RECUPERACAO JUDICIAL EM RECUPERACAO JUDICIAL",
+                "CNPJ": "41593841000137",
+                "CIDADE": "DUQUE DE CAXIAS-RJ",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "26\/03\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "SIDERURGICA SETEGUSA LTDA",
+                "CNPJ": "30554734000183",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "26\/03\/2021",
+                "DATA_DEMISSAO": "01\/05\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "MARIA HELENA LANZA DOS SANTOS MACHADO",
+                "CNPJ": "29403608000149",
+                "CIDADE": "SETE LAGOAS-MG",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "04\/11\/2020",
+                "DATA_DEMISSAO": "24\/03\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "JSL S.A.",
+                "CNPJ": "52548435024604",
+                "CIDADE": "SETE LAGOAS-MG",
+                "PROFISSAO": "514325",
+                "DATA_ADMISSAO": "21\/08\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "PALHARES . TOP LTDA",
+                "CNPJ": "02555721000193",
+                "CIDADE": "SETE LAGOAS-MG",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "03\/11\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "BAU SETE PECAS E SERVICOS LTDA",
+                "CNPJ": "01812043000134",
+                "CIDADE": "SETE LAGOAS-MG",
+                "PROFISSAO": "991305",
+                "DATA_ADMISSAO": "14\/05\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

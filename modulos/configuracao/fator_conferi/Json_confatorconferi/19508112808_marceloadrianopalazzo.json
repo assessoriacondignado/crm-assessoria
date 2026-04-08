@@ -1,0 +1,163 @@
+{
+    "CADASTRAIS": {
+        "CPF": "19508112808",
+        "NOME": "MARCELO ADRIANO PALAZZO",
+        "NOME_MAE": "ELISA CAROLINA T PALAZZO",
+        "NASCTO": "21\/08\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "234086460175",
+        "NIT": "1237200778",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "252305",
+        "PROFISSAO": "SECRETARIA  EXECUTIVA",
+        "SALARIO": " 8.709,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1632020420",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "08\/09\/2015",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "16997213472",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16997854584",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16997968797",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16997872646",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "marcelopalazzo@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV MAL DEODORO",
+                "NUMERO": "777",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CENTRO",
+                "CEP": "14870180",
+                "CIDADE": "JABOTICABAL",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SETSUO MURAKAMI",
+                "NUMERO": "240",
+                "COMPLEMENTO": "AD",
+                "BAIRRO": "COLINA VERDE",
+                "CEP": "14887378",
+                "CIDADE": "JABOTICABAL",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ROQUE MALERBO",
+                "NUMERO": "300",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CJ HABITACIONAL MARGARIDA R BERCHIERI",
+                "CEP": "14890362",
+                "CIDADE": "JABOTICABAL",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANGELO ZEVIANI",
+                "NUMERO": "10",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RES ROYAL PARK",
+                "CEP": "14890094",
+                "CIDADE": "JABOTICABAL",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MARREY JUNIOR",
+                "NUMERO": "330",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVA JABOTICABAL",
+                "CEP": "14887034",
+                "CIDADE": "JABOTICABAL",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MARREY JUNIOR",
+                "NUMERO": "330",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVA JABOTICABAL",
+                "CEP": "14887110",
+                "CIDADE": "JABOTICABAL",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "INDUSTRIA E COMERCIO DE BEBIDAS PALAZZO LTDA",
+            "CNPJ": "50381003000190",
+            "CIDADE": "JABOTICABAL-SP",
+            "PROFISSAO": "252305",
+            "DATA_ADMISSAO": "01\/09\/2011",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "JB EMPACOTADORA, IMPORTADORA, EXPORTADORA E COMERCIO DE ALIMENTOS - EIRELI",
+            "CNPJ": "15552721000181",
+            "CIDADE": "JABOTICABAL-SP",
+            "QUALIFICACAO": "Titular Pessoa FÃ­sica Residente ou Domiciliado no Brasil",
+            "DATA_ENTRADA": "20120417",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

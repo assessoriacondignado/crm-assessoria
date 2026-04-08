@@ -1,0 +1,177 @@
+{
+    "CADASTRAIS": {
+        "CPF": "95950036387",
+        "NOME": "ANA DE LURDES LIMA DOS SANTOS",
+        "NOME_MAE": "CORINA DE SOUSA LIMA",
+        "NASCTO": "16\/07\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "035849701139",
+        "NIT": "16104235760",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "322210",
+        "PROFISSAO": "TECNICO DE ENFERMAGEM DE TERAPIA INTENSIVA",
+        "SALARIO": " 882,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9935284111",
+            "OPERADORA": "TELEMAR\/MA",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "99981469321",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "99984824903",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "99988058123",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "99991507192",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "99988319765",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "20\/05\/2009",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "analurdes73@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CASTELO BRANCO",
+                "NUMERO": "950",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BACURI",
+                "CEP": "65916090",
+                "CIDADE": "IMPERATRIZ",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "R CASTELO BRANCO",
+                "NUMERO": "50",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BACURI",
+                "CEP": "65916090",
+                "CIDADE": "IMPERATRIZ",
+                "ESTADO": "MA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "1334852340",
+                "NOME": "CORINA DE SOUSA LIMA",
+                "IDADE": "84 anos",
+                "LOCAL": "RIO LARGO\/AL",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "60914644343",
+                "NOME": "JOAO VITOR LIMA DOS SANTOS",
+                "IDADE": "26 anos",
+                "LOCAL": "IMPERATRIZ\/MA",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "INSTITUTO DE APOIO AO DESENVOLVIMENTO DA VIDA HUMANA",
+                "CNPJ": "21843341000107",
+                "CIDADE": "SAO LUIS-MA",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "06\/05\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVICOS DE TRATAMENTO INTENSIVO DE IMPERATRIZ LTDA",
+                "CNPJ": "06314283000122",
+                "CIDADE": "IMPERATRIZ-MA",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "23\/03\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "COBRA - CENTRO ONCOLOGICO BRASILEIRO LTDA",
+                "CNPJ": "02756031000445",
+                "CIDADE": "IMPERATRIZ-MA",
+                "PROFISSAO": "322210",
+                "DATA_ADMISSAO": "01\/02\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "MUNICIPIO DE IMPERATRIZ",
+                "CNPJ": "06158455000116",
+                "CIDADE": "IMPERATRIZ-MA",
+                "PROFISSAO": "131210",
+                "DATA_ADMISSAO": "04\/04\/2012",
+                "DATA_DEMISSAO": "30\/11\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

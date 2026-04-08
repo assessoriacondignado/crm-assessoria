@@ -1,0 +1,256 @@
+{
+    "CADASTRAIS": {
+        "CPF": "2381638067",
+        "NOME": "MATEUS FORTES PEREIRA",
+        "NOME_MAE": "LURDES DA SILVA FORTES PEREIRA",
+        "NASCTO": "09\/12\/1990",
+        "IDADE": "35 anos",
+        "SEXO": "Masculino",
+        "RG": "2097395434",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "100996670418",
+        "NIT": "20102569589",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "511215",
+        "PROFISSAO": "COBRADOR DE TRANSPORTES COLETIVOS (EXCETO TREM)",
+        "SALARIO": " 1.270,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "5135420200",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51999239963",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51997453834",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51999679207",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "22\/05\/2020",
+                "TIPO_TEL": "MOVEL PRE-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51996594703",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51981826464",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "27\/07\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "mateus.fortes.09@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DAS VIOLETAS",
+                "NUMERO": "125",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRIMAVERA",
+                "CEP": "93890000",
+                "CIDADE": "NOVA HARTZ",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R DO ALCATRAZ",
+                "NUMERO": "251",
+                "COMPLEMENTO": "C 4",
+                "BAIRRO": "PRIMAVERA",
+                "CEP": "93890000",
+                "CIDADE": "NOVA HARTZ",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R IGUATEMI",
+                "NUMERO": "774",
+                "COMPLEMENTO": "AP 4",
+                "BAIRRO": "PRIMAVERA",
+                "CEP": "93890000",
+                "CIDADE": "NOVA HARTZ",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R DO ALCATRAZ CA",
+                "NUMERO": "4",
+                "COMPLEMENTO": "251 MERCADO ELI",
+                "BAIRRO": "PRIMAVERA",
+                "CEP": "93890000",
+                "CIDADE": "NOVA HARTZ",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "AV SEBASTIAO AMORETTI",
+                "NUMERO": "1480",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STA TEREZINHA",
+                "CEP": "95603168",
+                "CIDADE": "TAQUARA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R DAS VIOLETAS",
+                "NUMERO": "127",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "93890000",
+                "CIDADE": "NOVA HARTZ",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R VINTE",
+                "NUMERO": "115",
+                "COMPLEMENTO": "Q B",
+                "BAIRRO": "SETE DE SETEMBRO",
+                "CEP": "93819080",
+                "CIDADE": "SAPIRANGA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R ATENAS",
+                "NUMERO": "302",
+                "COMPLEMENTO": "",
+                "BAIRRO": "OESTE",
+                "CEP": "93804032",
+                "CIDADE": "SAPIRANGA",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "45203555087",
+                "NOME": "LURDES DA SILVA FORTES PEREIRA",
+                "IDADE": "65 anos",
+                "LOCAL": "SAPIRANGA\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "1929157037",
+                "NOME": "DOUGLAS FORTES PEREIRA",
+                "IDADE": "38 anos",
+                "LOCAL": "PAROBE\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "3756177017",
+                "NOME": "LEONARDO FORTES PEREIRA",
+                "IDADE": "24 anos",
+                "LOCAL": "SAPIRANGA\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "JESSICA VAZ DE VARGAS",
+            "IDADE": "",
+            "LOCALIDADE": "NOVA HARTZ\/RS",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "2171521040"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "RGE SUL DISTRIBUIDORA DE ENERGIA S.A.",
+                "CNPJ": "02016440002610",
+                "CIDADE": "SAPIRANGA-RS",
+                "PROFISSAO": "732105",
+                "DATA_ADMISSAO": "07\/03\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CALCADOS RAMARIM LTDA",
+                "CNPJ": "88104328001413",
+                "CIDADE": "NOVA HARTZ-RS",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "03\/05\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "CITRAL TRANSPORTE E TURISMO SA",
+                "CNPJ": "97755607000113",
+                "CIDADE": "TAQUARA-RS",
+                "PROFISSAO": "511215",
+                "DATA_ADMISSAO": "14\/20\/1902",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "CITRAL TRANSPORTE E TURISMO SA",
+                "CNPJ": "97755607000466",
+                "CIDADE": "SAPIRANGA-RS",
+                "PROFISSAO": "511215",
+                "DATA_ADMISSAO": "14\/20\/1902",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "TIAGO VALEJOS VELASQUES",
+                "CNPJ": "08970288000139",
+                "CIDADE": "NOVA HARTZ-RS",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "02\/04\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

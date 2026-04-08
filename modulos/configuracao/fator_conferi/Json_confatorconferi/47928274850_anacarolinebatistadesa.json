@@ -1,0 +1,144 @@
+{
+    "CADASTRAIS": {
+        "CPF": "47928274850",
+        "NOME": "ANA CAROLINE BATISTA DE SA",
+        "NOME_MAE": "ZULENE BATISTA PAULO DE SA",
+        "NASCTO": "22\/09\/2000",
+        "IDADE": "25 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "252105",
+        "PROFISSAO": "ADMINISTRADOR",
+        "SALARIO": " 3.140,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1134204737",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11988699215",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11974918504",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11999667083",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "caroline.desa22@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DOS MIOSOTIS",
+                "NUMERO": "2",
+                "COMPLEMENTO": "18",
+                "BAIRRO": "JD PRIMAVERA",
+                "CEP": "09361290",
+                "CIDADE": "MAUA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DOS MIOSOTIS",
+                "NUMERO": "218",
+                "COMPLEMENTO": "CS  Casa  2",
+                "BAIRRO": "JARDIM PRIMAVERA",
+                "CEP": "09361290",
+                "CIDADE": "MAUA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "10132558874",
+                "NOME": "ZULENE BATISTA PAULO DE SA",
+                "IDADE": "64 anos",
+                "LOCAL": "MAUA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "37389226870",
+                "NOME": "DAYSE BATISTA DE SA DE LIMA",
+                "IDADE": "36 anos",
+                "LOCAL": "MAUA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "43813111830",
+                "NOME": "SARA BATISTA PAULO DE SA",
+                "IDADE": "28 anos",
+                "LOCAL": "MAUA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "FRIOVIX COMERCIO DE REFRIGERACAO LTDA",
+                "CNPJ": "09316105000390",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "252105",
+                "DATA_ADMISSAO": "07\/01\/2019",
+                "DATA_DEMISSAO": "28\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "HORTUS COMERCIO DE ALIMENTOS S.A.",
+                "CNPJ": "09000493000215",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "354205",
+                "DATA_ADMISSAO": "01\/04\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

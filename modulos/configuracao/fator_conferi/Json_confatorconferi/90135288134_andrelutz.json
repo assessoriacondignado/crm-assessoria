@@ -1,0 +1,242 @@
+{
+    "CADASTRAIS": {
+        "CPF": "90135288134",
+        "NOME": "ANDRE LUTZ",
+        "NOME_MAE": "MARLI LUTZ",
+        "NASCTO": "01\/03\/1976",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "034682941058",
+        "NIT": "13259916317",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "321110",
+        "PROFISSAO": "TECNICO AGROPECUARIO",
+        "SALARIO": " 3.500,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "6436134809",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "6436120699",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9935419202",
+                "OPERADORA": "TELEMAR\/MA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "64999422641",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "64996447464",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "64999763466",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "64981210271",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "21\/05\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "99991561149",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R T 65",
+                "NUMERO": "1077",
+                "COMPLEMENTO": "Q 153 LT 13 586 AP 1000",
+                "BAIRRO": "ST BUENO",
+                "CEP": "74230903",
+                "CIDADE": "GOIANIA",
+                "ESTADO": "GO"
+            },
+            {
+                "LOGRADOURO": "AV UM",
+                "NUMERO": "620",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "PRQ DOS BURITIS",
+                "CEP": "75907453",
+                "CIDADE": "RIO VERDE",
+                "ESTADO": "GO"
+            },
+            {
+                "LOGRADOURO": "R DEZOITO",
+                "NUMERO": "15",
+                "COMPLEMENTO": "Q 242 LT 6",
+                "BAIRRO": "COHAB NOVA",
+                "CEP": "65800000",
+                "CIDADE": "BALSAS",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "R JERONIMO MARTINS MARQUEZ",
+                "NUMERO": "111",
+                "COMPLEMENTO": "Q 11 L",
+                "BAIRRO": "CENTRO",
+                "CEP": "75960000",
+                "CIDADE": "ACREUNA",
+                "ESTADO": "GO"
+            },
+            {
+                "LOGRADOURO": "R VITALINO ARANTES",
+                "NUMERO": "0",
+                "COMPLEMENTO": "Q 3 LT 6",
+                "BAIRRO": "RES ENGRACIA VAZ",
+                "CEP": "75901660",
+                "CIDADE": "RIO VERDE",
+                "ESTADO": "GO"
+            },
+            {
+                "LOGRADOURO": "R DEZOITO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S JOSE",
+                "CEP": "65800000",
+                "CIDADE": "BALSAS",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "GBA RETIRO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "GL RETIRO",
+                "CEP": "65820000",
+                "CIDADE": "TASSO FRAGOSO",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "R IRON NASCIMENTO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "QUADRA:42 LOTE:04 ACADEMIA",
+                "BAIRRO": "RESIDENCIAL CANAA",
+                "CEP": "75909660",
+                "CIDADE": "RIO VERDE",
+                "ESTADO": "GO"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "37825348087",
+            "NOME": "MARLI LUTZ",
+            "IDADE": "65 anos",
+            "LOCAL": "TAQUARI\/RS",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "VAMOS COMERCIO DE MAQUINAS AGRICOLAS LTDA",
+                "CNPJ": "38364749000190",
+                "CIDADE": "RIO VERDE-GO",
+                "PROFISSAO": "354135",
+                "DATA_ADMISSAO": "01\/05\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VAMOS MAQUINAS E EQUIPAMENTOS S.A.",
+                "CNPJ": "57213191002130",
+                "CIDADE": "RIO VERDE-GO",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "01\/02\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "BORGATO COMERCIO DE MAQUINAS S\/A",
+                "CNPJ": "09365484000570",
+                "CIDADE": "RIO VERDE-GO",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "03\/10\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "SK - REPRESENTACOES   SERVICOS AGRICOLAS LTDA",
+                "CNPJ": "00465016000170",
+                "CIDADE": "RIO VERDE-GO",
+                "PROFISSAO": "321110",
+                "DATA_ADMISSAO": "02\/01\/2012",
+                "DATA_DEMISSAO": "30\/09\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

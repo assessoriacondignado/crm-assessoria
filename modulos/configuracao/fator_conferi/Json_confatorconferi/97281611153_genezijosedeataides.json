@@ -1,0 +1,154 @@
+{
+    "CADASTRAIS": {
+        "CPF": "97281611153",
+        "NOME": "GENEZI JOSE DE ATAIDES",
+        "NOME_MAE": "MESSIAS FONSECA DE MELO",
+        "NASCTO": "09\/05\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12944295278",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "513425",
+        "PROFISSAO": "COPEIRO",
+        "SALARIO": " 803,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "6136421627",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "61996360098",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "61996575452",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "61998435202",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "61996696560",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "infokuest@zipmail.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV FORMOSA",
+                "NUMERO": "293",
+                "COMPLEMENTO": "",
+                "BAIRRO": "FORMOSINHA",
+                "CEP": "73813250",
+                "CIDADE": "FORMOSA",
+                "ESTADO": "GO"
+            },
+            {
+                "LOGRADOURO": "AVENIDA FORMOSA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "FORMOSINHA",
+                "CEP": "73813250",
+                "CIDADE": "FORMOSA",
+                "ESTADO": "GO"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "87474158191",
+                "NOME": "MESSIAS FONSECA DE MELO",
+                "IDADE": "79 anos",
+                "LOCAL": "FORMOSA\/GO",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "967516145",
+                "NOME": "AVELINO JOSE DE ATAIDES",
+                "IDADE": "40 anos",
+                "LOCAL": "FORMOSA\/GO",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "2525130103",
+                "NOME": "CELIO JOSE DE ATAIDES",
+                "IDADE": "37 anos",
+                "LOCAL": "FORMOSA\/GO",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "GFG SERVICOS E ASSESSORIA LTDA",
+                "CNPJ": "33162893000120",
+                "CIDADE": "FORMOSA-GO",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "01\/07\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VISUAL LANCHES LTDA",
+                "CNPJ": "05461913000129",
+                "CIDADE": "FORMOSA-GO",
+                "PROFISSAO": "513425",
+                "DATA_ADMISSAO": "01\/12\/2004",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

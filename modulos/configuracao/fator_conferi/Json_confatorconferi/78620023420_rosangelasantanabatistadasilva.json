@@ -1,0 +1,143 @@
+{
+    "CADASTRAIS": {
+        "CPF": "78620023420",
+        "NOME": "ROSANGELA SANTANA BATISTA DA SILVA",
+        "NOME_MAE": "MARIA SANTANA DA SILVA",
+        "NASCTO": "15\/10\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "18078724506",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521110",
+        "PROFISSAO": "VENDEDOR DE COMERCIO VAREJISTA",
+        "SALARIO": " 1.257,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1533315600",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1532274849",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11974967969",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15981778094",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "bati1328@itelefonica.com.br",
+            "bati1328@vivointernetdiscada.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "TV DR IVALDO MARINHO",
+                "NUMERO": "26",
+                "COMPLEMENTO": "AF",
+                "BAIRRO": "JACINTINHO",
+                "CEP": "57042085",
+                "CIDADE": "MACEIO",
+                "ESTADO": "AL"
+            },
+            {
+                "LOGRADOURO": "RUA HORTENCIO PIAYA MARTINEZ",
+                "NUMERO": "186",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM PRESTES DE BARROS",
+                "CEP": "18021250",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "883158",
+            "NOME": "MARIA SANTANA DA SILVA",
+            "IDADE": "89 anos",
+            "LOCAL": "RONDONOPOLIS\/MT",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "RLW DISTRIBUIDORA DE COSMETICOS LTDA",
+                "CNPJ": "49667575000151",
+                "CIDADE": "COTIA-SP",
+                "PROFISSAO": "521120",
+                "DATA_ADMISSAO": "01\/04\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "GR DISTRIBUIDORA DE COSMETICOS LTDA",
+                "CNPJ": "15650950000139",
+                "CIDADE": "COTIA-SP",
+                "PROFISSAO": "521120",
+                "DATA_ADMISSAO": "18\/01\/2023",
+                "DATA_DEMISSAO": "31\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "TOSHIMAR COMERCIO DE COSMETICOS E BIJOUTERIAS LTDA",
+                "CNPJ": "47821848000498",
+                "CIDADE": "SOROCABA-SP",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/03\/2006",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

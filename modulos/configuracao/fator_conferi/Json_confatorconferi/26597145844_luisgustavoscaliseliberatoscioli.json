@@ -1,0 +1,307 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26597145844",
+        "NOME": "LUIS GUSTAVO SCALISE LIBERATOSCIOLI",
+        "NOME_MAE": "IVANILDA S LIBERATOSCIOLI",
+        "NASCTO": "31\/07\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "231636489",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "241204330108",
+        "NIT": "12637519225",
+        "ESCOLARIDADE": "ANALFABETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212405",
+        "PROFISSAO": "ANALISTA DE DESENVOLVIMENTO DE SISTEMAS",
+        "SALARIO": " 19.212,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1533888659",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1531000455",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1121211155",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1532284522",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1121211240",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "15998460949",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15997770807",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15988120040",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "OI_PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15988422017",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "18\/02\/2017",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "15981112949",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "14\/11\/2007",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "lgustavo@csi.com.br",
+            "gustavo.sorocaba@uol.com.br",
+            "luisgustavo.scalise@gmail.com",
+            "luis.scioli@userede.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DOMINGOS TERUZ",
+                "NUMERO": "101",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD ZULMIRA",
+                "CEP": "18061060",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PERNAMBUCO",
+                "NUMERO": "251",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "18035460",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R RUSSIA",
+                "NUMERO": "171",
+                "COMPLEMENTO": "BL 33 A 3",
+                "BAIRRO": "JD EUROPA",
+                "CEP": "18045080",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE RAGUZZO",
+                "NUMERO": "157",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD PAGLIATO",
+                "CEP": "18046144",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV JORGE JAMIL ZAMUR",
+                "NUMERO": "1861",
+                "COMPLEMENTO": "CD  CondomÃ­nio  IBITI DO PACO",
+                "BAIRRO": "JARDIM IBITI DO PACO",
+                "CEP": "18086050",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV ARICANDUVA",
+                "NUMERO": "2425",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL ARICANDUVA",
+                "CEP": "03527000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO JOSE MATTOS CORREA",
+                "NUMERO": "333",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM IBITI DO",
+                "CEP": "18086330",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ARIZONA",
+                "NUMERO": "1366",
+                "COMPLEMENTO": "CJ 31",
+                "BAIRRO": "CIDADE MONCOES",
+                "CEP": "04567003",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "EVELIN REGINA O LIBERATOSCIOLI",
+                "IDADE": "",
+                "LOCALIDADE": "SOROCABA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "29381822875"
+            },
+            {
+                "NOME": "MOYSES LIBERATOSCIOLI",
+                "IDADE": "",
+                "LOCALIDADE": "SOROCABA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "19546939820"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "DESTAXA TECNOLOGIA PARA VAREJO LTDA",
+                "CNPJ": "40865549000163",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142520",
+                "DATA_ADMISSAO": "15\/07\/2022",
+                "DATA_DEMISSAO": "19\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "NAVA SERVICOS E OUTSOURCING S.A.",
+                "CNPJ": "14626101000187",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "12\/11\/2020",
+                "DATA_DEMISSAO": "04\/02\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "LINX SISTEMAS E CONSULTORIA LTDA",
+                "CNPJ": "54517628000198",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "09\/02\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "S@NET SOLUCOES E SERVICOS DE TECNOLOGIA LTDA.",
+                "CNPJ": "10382073000149",
+                "CIDADE": "SOROCABA-SP",
+                "PROFISSAO": "142510",
+                "DATA_ADMISSAO": "16\/05\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "REDECARD INSTITUICAO DE PAGAMENTO S.A.",
+                "CNPJ": "01425787000104",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "02\/03\/2009",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": [
+            {
+                "RAZAO_SOCIAL": "E R LIBERATOSCIOLI TECNOLOGIA DA INFORMACAO LTDA",
+                "CNPJ": "49846915000101",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20230824",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "C.D.T - SISTEMAS DE INFORMATICA LTDA",
+                "CNPJ": "03742522000157",
+                "CIDADE": "SOROCABA-SP",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20000410",
+                "VALOR_PARTICIPACAO": ""
+            }
+        ]
+    }
+}

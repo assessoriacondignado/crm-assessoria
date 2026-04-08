@@ -1,0 +1,227 @@
+{
+    "CADASTRAIS": {
+        "CPF": "7134867919",
+        "NOME": "DANIELA ALVES",
+        "NOME_MAE": "ROSELENE KUSTER ALVES",
+        "NASCTO": "18\/01\/1990",
+        "IDADE": "36 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4932415906",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4932452493",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "49988183461",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "49999282515",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "49991951050",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "30\/04\/2020",
+                "TIPO_TEL": "MOVEL PRE-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "49991960687",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "49999410687",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "alvesdaniela1@gmail.com",
+            "da903063@gmail.com",
+            "daniela-vidaboa@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R COSTA E SILVA",
+                "NUMERO": "20",
+                "COMPLEMENTO": "",
+                "BAIRRO": "APARECIDA N",
+                "CEP": "89520000",
+                "CIDADE": "CURITIBANOS",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R LAGES",
+                "NUMERO": "274",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "89520000",
+                "CIDADE": "CURITIBANOS",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R AVELINO RODRIGUES FRA",
+                "NUMERO": "301",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "BOSQUE",
+                "CEP": "89520000",
+                "CIDADE": "CURITIBANOS",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R LAGES",
+                "NUMERO": "284",
+                "COMPLEMENTO": "C C",
+                "BAIRRO": "CENTRO",
+                "CEP": "89520000",
+                "CIDADE": "CURITIBANOS",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R LAGES",
+                "NUMERO": "248",
+                "COMPLEMENTO": "VIDA BOA",
+                "BAIRRO": "CENTRO",
+                "CEP": "89520000",
+                "CIDADE": "CURITIBANOS",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "LAGES",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "89520000",
+                "CIDADE": "CURITIBANOS",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R AVELINO RODRIGUES FRANCA",
+                "NUMERO": "458",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DO BOSQUE",
+                "CEP": "89520000",
+                "CIDADE": "CURITIBANOS",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "FERMIANO RODRIGUES ALMEIDA",
+                "NUMERO": "234",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "89520000",
+                "CIDADE": "CURITIBANOS",
+                "ESTADO": "SC"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "5961631931",
+            "NOME": "DANILO ALVES",
+            "IDADE": "37 anos",
+            "LOCAL": "CURITIBANOS\/SC",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LEONARDO ALMEIDA SCHVEITZER LTDA",
+                "CNPJ": "14011000000100",
+                "CIDADE": "CURITIBANOS-SC",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/01\/2021",
+                "DATA_DEMISSAO": "26\/03\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "L S FAUTH E CIA LTDA",
+                "CNPJ": "83699363000194",
+                "CIDADE": "CURITIBANOS-SC",
+                "PROFISSAO": "422105",
+                "DATA_ADMISSAO": "01\/05\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "DANIELA ALVES INTERMEDIACOES DE NEGOCIOS LTDA",
+            "CNPJ": "53571132000130",
+            "CIDADE": "CURITIBANOS-SC",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20240119",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

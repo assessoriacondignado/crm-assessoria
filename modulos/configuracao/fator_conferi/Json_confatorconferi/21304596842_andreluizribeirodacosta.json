@@ -1,0 +1,280 @@
+{
+    "CADASTRAIS": {
+        "CPF": "21304596842",
+        "NOME": "ANDRE LUIZ RIBEIRO DA COSTA",
+        "NOME_MAE": "GRACINA IVA DA COSTA",
+        "NASCTO": "08\/08\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "222457410141",
+        "NIT": "12527541471",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1128967640",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "18\/10\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1128967640",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "18\/10\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1133031307",
+                "OPERADORA": "INTELIG TELECOM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11987539640",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11987539640",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11989298725",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "29\/11\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11986551920",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "18\/04\/2013",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11986551920",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "18\/04\/2013",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "andreeng@yahoo.com.br",
+            "andrequalidade@scorpiosdaamazonia.com.br",
+            "andre23dma@ig.com.br",
+            "andre25eng@yahoo.com",
+            "andre25eng@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV SEN VERGUEIRO",
+                "NUMERO": "2332",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ANCHIETA",
+                "CEP": "09600004",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA SANTO DIAS",
+                "NUMERO": "44",
+                "COMPLEMENTO": "",
+                "BAIRRO": "V CONCEICAO",
+                "CEP": "09912250",
+                "CIDADE": "DIADEMA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ACARA",
+                "NUMERO": "105",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM ESTADIO",
+                "CEP": "09175090",
+                "CIDADE": "SANTO ANDRE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ACARA",
+                "NUMERO": "111",
+                "COMPLEMENTO": "CS4",
+                "BAIRRO": "VL LINDA",
+                "CEP": "09175090",
+                "CIDADE": "SANTO ANDRE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA SIQUEIRA CAMPOS",
+                "NUMERO": "472",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "09020240",
+                "CIDADE": "SANTO ANDRE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA BASTOS",
+                "NUMERO": "230",
+                "COMPLEMENTO": "CS 1",
+                "BAIRRO": "JARDIM CRISTIANE",
+                "CEP": "09181110",
+                "CIDADE": "SANTO ANDRE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA BASTOS",
+                "NUMERO": "23",
+                "COMPLEMENTO": "CASA 01",
+                "BAIRRO": "JARDIM CRISTIANE",
+                "CEP": "09181110",
+                "CIDADE": "SANTO ANDRE",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "24720650864",
+                "NOME": "GRACINA IVA DA COSTA",
+                "IDADE": "73 anos",
+                "LOCAL": "DIADEMA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "14046246863",
+                "NOME": "CARLOS JOSE DA COSTA",
+                "IDADE": "53 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "14381692802",
+                "NOME": "ANA PAULA DA COSTA SILVA",
+                "IDADE": "50 anos",
+                "LOCAL": "DIADEMA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "22648620842",
+                "NOME": "FABIANA IVA COSTA DINIZ",
+                "IDADE": "42 anos",
+                "LOCAL": "DIADEMA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "38479647809",
+                "NOME": "ALEXANDRE RIBEIRO DA COSTA",
+                "IDADE": "36 anos",
+                "LOCAL": "DIADEMA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BRC - BERCO REVEST CAR INDUSTRIA E COMERCIO DE INTERIORES DE CAMINHOES LTDA.",
+                "CNPJ": "19543767000195",
+                "CIDADE": "SAO BERNARDO DO CAMPO-SP",
+                "PROFISSAO": "300105",
+                "DATA_ADMISSAO": "22\/08\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "GESTAMP SOROCABA INDUSTRIA DE AUTOPECAS LTDA.",
+                "CNPJ": "29726259000104",
+                "CIDADE": "SOROCABA-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/12\/2020",
+                "DATA_DEMISSAO": "01\/07\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "COSMA DO BRASIL PRODUTOS E SERVICOS AUTOMOTIVOS LTDA.",
+                "CNPJ": "02591818000585",
+                "CIDADE": "SANTO ANTONIO DA PATRULHA-RS",
+                "PROFISSAO": "391205",
+                "DATA_ADMISSAO": "05\/11\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "OMNISYS ENGENHARIA LTDA",
+                "CNPJ": "01773463000159",
+                "CIDADE": "SAO BERNARDO DO CAMPO-SP",
+                "PROFISSAO": "391210",
+                "DATA_ADMISSAO": "12\/01\/2009",
+                "DATA_DEMISSAO": "01\/06\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "A. L. RIBEIRO DA COSTA CONSULTORIA EM QUALIDADE EIRELI",
+            "CNPJ": "28344719000169",
+            "CIDADE": "SANTO ANDRE-SP",
+            "QUALIFICACAO": "Titular Pessoa FÃ­sica Residente ou Domiciliado no Brasil",
+            "DATA_ENTRADA": "20170804",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

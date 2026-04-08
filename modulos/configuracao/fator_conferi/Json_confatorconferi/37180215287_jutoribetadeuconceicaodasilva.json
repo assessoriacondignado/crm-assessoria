@@ -1,0 +1,170 @@
+{
+    "CADASTRAIS": {
+        "CPF": "37180215287",
+        "NOME": "JUTORIBE TADEU CONCEICAO DA SILVA",
+        "NOME_MAE": "MARIA LUIZA CONCEICAO DA SILVA",
+        "NASCTO": "01\/07\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9132469729",
+            "OPERADORA": "TELEMAR\/PA",
+            "DATA_REFERENCIA": "24\/05\/2013",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "91981419211",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "91985009349",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "91987244731",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "91999932012",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "91988314032",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "10\/10\/2011",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "atendimento@granviaviagens.com.br",
+            "jutoribesilva@oi.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "TRAVESSA TIMBO",
+            "NUMERO": "3929",
+            "COMPLEMENTO": "CA C FU",
+            "BAIRRO": "MARCO",
+            "CEP": "66087533",
+            "CIDADE": "BELEM",
+            "ESTADO": "PA"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "437907392",
+            "NOME": "MARIA LUIZA CONCEICAO DA SILVA",
+            "IDADE": "78 anos",
+            "LOCAL": "ALTO ALEGRE DO PINDARE\/MA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TRANS RIBEIRO TRANSPORTE E TURISMO LTDA",
+                "CNPJ": "09452461000170",
+                "CIDADE": "PARAGOMINAS-PA",
+                "PROFISSAO": "782405",
+                "DATA_ADMISSAO": "23\/20\/2004",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "REFLORESTADORA MARBORGES LTDA",
+                "CNPJ": "63853394000140",
+                "CIDADE": "MOJU-PA",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "14\/09\/2021",
+                "DATA_DEMISSAO": "22\/09\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "KAJIYA TRANSPORTES DE CARGAS E LOGISTICA LTDA",
+                "CNPJ": "33746148000129",
+                "CIDADE": "IMPERATRIZ-MA",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/12\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "COMERCIO E TRANSPORTES BOA ESPERANCA LTDA",
+                "CNPJ": "04787941000178",
+                "CIDADE": "BELEM-PA",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "03\/06\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "COMPAR COMPANHIA PARAENSE DE REFRIGERANTES",
+                "CNPJ": "04928297000100",
+                "CIDADE": "BELEM-PA",
+                "PROFISSAO": "782310",
+                "DATA_ADMISSAO": "04\/07\/2000",
+                "DATA_DEMISSAO": "310",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

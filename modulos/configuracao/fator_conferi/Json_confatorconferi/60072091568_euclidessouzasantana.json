@@ -1,0 +1,196 @@
+{
+    "CADASTRAIS": {
+        "CPF": "60072091568",
+        "NOME": "EUCLIDES SOUZA SANTANA",
+        "NOME_MAE": "INES SOUZA SANTANA",
+        "NASCTO": "10\/03\/1970",
+        "IDADE": "56 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1245599641",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782220",
+        "PROFISSAO": "OPERADOR DE EMPILHADEIRA",
+        "SALARIO": " 4.239,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7332916778",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7330112400",
+                "OPERADORA": "Engevox",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "73982062691",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "73999060407",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "73999083356",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DA PITUBA",
+                "NUMERO": "617",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "BELA VISTA",
+                "CEP": "45990292",
+                "CIDADE": "TEIXEIRA DE FREITAS",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R TOME DE SOUZA",
+                "NUMERO": "83",
+                "COMPLEMENTO": "A",
+                "BAIRRO": "CENTRO",
+                "CEP": "45985216",
+                "CIDADE": "TEIXEIRA DE FREITAS",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R GRITO DO IPIRANGA",
+                "NUMERO": "219",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA CARAIPE",
+                "CEP": "45990464",
+                "CIDADE": "TEIXEIRA DE FREITAS",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R ITAPICURU",
+                "NUMERO": "376",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CENTRO SEDE",
+                "CEP": "45940000",
+                "CIDADE": "IBIRAPUA",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "24970921504",
+            "NOME": "INES SOUZA SANTANA",
+            "IDADE": "75 anos",
+            "LOCAL": "CAETITE\/BA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "",
+                "CNPJ": "00000016167009",
+                "CIDADE": "",
+                "PROFISSAO": "782220",
+                "DATA_ADMISSAO": "13\/07\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TUBONEWS CONSTRUCAO E MONTAGEM LTDA",
+                "CNPJ": "00611119000109",
+                "CIDADE": "SIMOES FILHO-BA",
+                "PROFISSAO": "715125",
+                "DATA_ADMISSAO": "29\/01\/2020",
+                "DATA_DEMISSAO": "28\/07\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "AMBIENTE ENGENHARIA LTDA",
+                "CNPJ": "04244590000159",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "715115",
+                "DATA_ADMISSAO": "17\/09\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "ALVES DA CUNHA SANEAMENTO, TERCEIRIZACAO E CONSTRUCAO LTDA",
+                "CNPJ": "00839554000187",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "715115",
+                "DATA_ADMISSAO": "12\/05\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "GET EMPREENDIMENTOS LTDA",
+                "CNPJ": "04540655000103",
+                "CIDADE": "RIBEIRA DO POMBAL-BA",
+                "PROFISSAO": "782310",
+                "DATA_ADMISSAO": "03\/05\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "PIANCA TRANSPORTES E TURISMO LTDA",
+                "CNPJ": "04690671000263",
+                "CIDADE": "NOVA VICOSA-BA",
+                "PROFISSAO": "782310",
+                "DATA_ADMISSAO": "28\/03\/2012",
+                "DATA_DEMISSAO": "304",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

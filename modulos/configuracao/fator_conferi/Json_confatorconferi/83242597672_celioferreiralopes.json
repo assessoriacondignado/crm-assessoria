@@ -1,0 +1,128 @@
+{
+    "CADASTRAIS": {
+        "CPF": "83242597672",
+        "NOME": "CELIO FERREIRA LOPES",
+        "NOME_MAE": "OLIMPIA FERREIRA LOPES",
+        "NASCTO": "20\/07\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "085906190213",
+        "NIT": "1236078701",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "911305",
+        "PROFISSAO": "MECANICO DE MANUTENCAO DE MAQUINAS, EM GERAL",
+        "SALARIO": " 5.653,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "6436081390",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "3134855792",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31997777482",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31985499339",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R OUTRA BANDA",
+                "NUMERO": "53",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "35969000",
+                "CIDADE": "CATAS ALTAS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R S MIGUEL",
+                "NUMERO": "299",
+                "COMPLEMENTO": "",
+                "BAIRRO": "",
+                "CEP": "35960000",
+                "CIDADE": "SANTA BARBARA",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "44768273653",
+            "NOME": "OLIMPIA FERREIRA LOPES",
+            "IDADE": "96 anos",
+            "LOCAL": "SANTA BARBARA\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "VALE S.A.",
+                "CNPJ": "33592510041268",
+                "CIDADE": "MARIANA-MG",
+                "PROFISSAO": "911305",
+                "DATA_ADMISSAO": "23\/12\/1996",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VALE S.A.",
+                "CNPJ": "33592510017987",
+                "CIDADE": "ITABIRA-MG",
+                "PROFISSAO": "911305",
+                "DATA_ADMISSAO": "23\/12\/1996",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,139 @@
+{
+    "CADASTRAIS": {
+        "CPF": "62403346268",
+        "NOME": "PEDRO LIMA DE MELO JUNIOR",
+        "NOME_MAE": "MARIA INEZ DA ROSA MELO",
+        "NASCTO": "27\/04\/1978",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1259954802",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "354205",
+        "PROFISSAO": "COMPRADOR",
+        "SALARIO": " 22.067,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9232364283",
+            "OPERADORA": "TELEMAR\/AM",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92991150253",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92910067766",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92994113085",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "92996041964",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/04\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "pedromelo@hondabr.com.br",
+            "pedrolimajunior2016@gmail.com",
+            "juniorpedro-2003@ig.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "BC ANEMONA",
+                "NUMERO": "1311",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALEIXO",
+                "CEP": "69060621",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R SAFIRA BRAGA",
+                "NUMERO": "742",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE 10 DE NOVEMBRO",
+                "CEP": "69055405",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R BELO HORIZONTE",
+                "NUMERO": "1311",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ADRIANOPOLIS",
+                "CEP": "69057060",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "65263405200",
+            "NOME": "MARCIO ROBERTO DA ROSA MELO",
+            "IDADE": "46 anos",
+            "LOCAL": "CONTAGEM\/MG",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "MOTO HONDA DA AMAZONIA LTDA",
+            "CNPJ": "04337168000148",
+            "CIDADE": "MANAUS-AM",
+            "PROFISSAO": "354205",
+            "DATA_ADMISSAO": "01\/08\/2013",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

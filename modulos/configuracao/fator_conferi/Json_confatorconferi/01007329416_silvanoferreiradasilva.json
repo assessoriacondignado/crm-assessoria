@@ -1,0 +1,219 @@
+{
+    "CADASTRAIS": {
+        "CPF": "1007329416",
+        "NOME": "SILVANO FERREIRA DA SILVA",
+        "NOME_MAE": "DAMIANA FERREIRA DA SILVA",
+        "NASCTO": "20\/09\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "1833832",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "018622231627",
+        "NIT": "1271377864",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411050",
+        "PROFISSAO": "",
+        "SALARIO": " 2.746,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8440086035",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8436646780",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "84999132883",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "84991328834",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "84994173890",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "84987516646",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "s.ferreira@vicunha.com.br",
+            "silvanoferreiraadm@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DOLORES DURAN",
+                "NUMERO": "43",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PAJUCARA",
+                "CEP": "59132740",
+                "CIDADE": "NATAL",
+                "ESTADO": "RN"
+            },
+            {
+                "LOGRADOURO": "R TRINDADE",
+                "NUMERO": "415",
+                "COMPLEMENTO": "C C",
+                "BAIRRO": "PAJUCARA",
+                "CEP": "59125280",
+                "CIDADE": "NATAL",
+                "ESTADO": "RN"
+            },
+            {
+                "LOGRADOURO": "R DOS IMIGRANTES",
+                "NUMERO": "716",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PAJUCARA",
+                "CEP": "59132690",
+                "CIDADE": "NATAL",
+                "ESTADO": "RN"
+            },
+            {
+                "LOGRADOURO": "R OSCAR BRANDAO",
+                "NUMERO": "726",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CJ NOVOS TEMPOS",
+                "CEP": "59570000",
+                "CIDADE": "CEARA MIRIM",
+                "ESTADO": "RN"
+            },
+            {
+                "LOGRADOURO": "ROD RN 160",
+                "NUMERO": "0",
+                "COMPLEMENTO": "KM 3",
+                "BAIRRO": "DT INDUSTRIAL",
+                "CEP": "59575000",
+                "CIDADE": "EXTREMOZ",
+                "ESTADO": "RN"
+            },
+            {
+                "LOGRADOURO": "RUA TRINDADE",
+                "NUMERO": "393",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PAJUCARA",
+                "CEP": "59125280",
+                "CIDADE": "NATAL",
+                "ESTADO": "RN"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "255933150",
+            "NOME": "DAMIANA FERREIRA DA SILVA",
+            "IDADE": "107 anos",
+            "LOCAL": "ROSARIO OESTE\/MT",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SANTANDER  CORRETORA DE SEGUROS, INVESTIMENTOS E SERVICOS S.A.",
+                "CNPJ": "04270778000171",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "411050",
+                "DATA_ADMISSAO": "13\/12\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "INSTITUTO NORDESTE CIDADANIA",
+                "CNPJ": "01437408023562",
+                "CIDADE": "NATAL-RN",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "18\/05\/2020",
+                "DATA_DEMISSAO": "01\/01\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "INSTITUTO NORDESTE CIDADANIA",
+                "CNPJ": "01437408029170",
+                "CIDADE": "SAO GONCALO DO AMARANTE-RN",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/01\/2021",
+                "DATA_DEMISSAO": "07\/12\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "INSTITUTO NORDESTE CIDADANIA",
+                "CNPJ": "01437408000198",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "411050",
+                "DATA_ADMISSAO": "04\/02\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "VICUNHA TEXTIL S\/A.",
+                "CNPJ": "07332190000789",
+                "CIDADE": "NATAL-RN",
+                "PROFISSAO": "391130",
+                "DATA_ADMISSAO": "24\/03\/2003",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

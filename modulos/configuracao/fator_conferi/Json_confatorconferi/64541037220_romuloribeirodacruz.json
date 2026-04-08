@@ -1,0 +1,259 @@
+{
+    "CADASTRAIS": {
+        "CPF": "64541037220",
+        "NOME": "ROMULO RIBEIRO DA CRUZ",
+        "NOME_MAE": "EUZINHA RIBEIRO DE ALENCAR",
+        "NASCTO": "28\/10\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1264551942",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "910210",
+        "PROFISSAO": "SUPERVISOR DA MANUTENCAO E REPARACAO DE VEICULOS PESADOS",
+        "SALARIO": " 9.477,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "6233833136",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "02\/02\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "6233833995",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "94991945701",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "94999086382",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "62999228988",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "62981918772",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "62996744919",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "cruz.romulo@bol.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CEARA",
+                "NUMERO": "6",
+                "COMPLEMENTO": "PERTO DA OBRA K",
+                "BAIRRO": "RIO VERDE",
+                "CEP": "68515000",
+                "CIDADE": "PARAUAPEBAS",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "R CEARA",
+                "NUMERO": "710",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RIO VERDE",
+                "CEP": "68515000",
+                "CIDADE": "PARAUAPEBAS",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "R SETECENTOS E TRES",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ST SUL II",
+                "CEP": "76400000",
+                "CIDADE": "URUACU",
+                "ESTADO": "GO"
+            },
+            {
+                "LOGRADOURO": "R SETECENTOS E TRES QDU",
+                "NUMERO": "15",
+                "COMPLEMENTO": "L 8 A",
+                "BAIRRO": "ST SUL II",
+                "CEP": "76400000",
+                "CIDADE": "URUACU",
+                "ESTADO": "GO"
+            },
+            {
+                "LOGRADOURO": "R CURTA",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD ATLANTICO",
+                "CEP": "76420000",
+                "CIDADE": "NIQUELANDIA",
+                "ESTADO": "GO"
+            },
+            {
+                "LOGRADOURO": "R 703",
+                "NUMERO": "0",
+                "COMPLEMENTO": "QD U 15 LT 8 A",
+                "BAIRRO": "SETOR SUL II",
+                "CEP": "76400000",
+                "CIDADE": "URUACU",
+                "ESTADO": "GO"
+            },
+            {
+                "LOGRADOURO": "R ITALIA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "QD 2 LT6",
+                "BAIRRO": "PARQUE DAS NA OES",
+                "CEP": "76410000",
+                "CIDADE": "CAMPINORTE",
+                "ESTADO": "GO"
+            },
+            {
+                "LOGRADOURO": "R 4 Q 16",
+                "NUMERO": "0",
+                "COMPLEMENTO": "LT 18",
+                "BAIRRO": "",
+                "CEP": "76560000",
+                "CIDADE": "ALTO HORIZONTE",
+                "ESTADO": "GO"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "18601677215",
+                "NOME": "EUZINHA RIBEIRO DE ALENCAR",
+                "IDADE": "68 anos",
+                "LOCAL": "PARAUAPEBAS\/PA",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "66786002234",
+                "NOME": "ROMEA RIBEIRO DA CRUZ",
+                "IDADE": "44 anos",
+                "LOCAL": "PARAUAPEBAS\/PA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "70683492268",
+                "NOME": "ROBEJANIA RIBEIRO DA CRUZ",
+                "IDADE": "43 anos",
+                "LOCAL": "PARAUAPEBAS\/PA",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SOTREQ S\/A",
+                "CNPJ": "34151100001706",
+                "CIDADE": "CONTAGEM-MG",
+                "PROFISSAO": "910210",
+                "DATA_ADMISSAO": "01\/07\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SOTREQ S\/A",
+                "CNPJ": "34151100000645",
+                "CIDADE": "PARAUAPEBAS-PA",
+                "PROFISSAO": "910210",
+                "DATA_ADMISSAO": "01\/05\/2021",
+                "DATA_DEMISSAO": "01\/07\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "U M MINERACAO E CONSTRUCAO S\/A",
+                "CNPJ": "18540906001721",
+                "CIDADE": "ALTO HORIZONTE-GO",
+                "PROFISSAO": "313115",
+                "DATA_ADMISSAO": "23\/01\/2006",
+                "DATA_DEMISSAO": "23\/05\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SOTREQ S\/A",
+                "CNPJ": "34151100001102",
+                "CIDADE": "ALTO HORIZONTE-GO",
+                "PROFISSAO": "914420",
+                "DATA_ADMISSAO": "08\/11\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "MRKJ TRANSPORTES LTDA",
+            "CNPJ": "04659895000121",
+            "CIDADE": "NIQUELANDIA-GO",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20010809",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

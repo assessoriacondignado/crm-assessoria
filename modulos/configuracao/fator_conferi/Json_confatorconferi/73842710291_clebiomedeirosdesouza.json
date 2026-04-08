@@ -1,0 +1,155 @@
+{
+    "CADASTRAIS": {
+        "CPF": "73842710291",
+        "NOME": "CLEBIO MEDEIROS DE SOUZA",
+        "NOME_MAE": "MARIA DE JESUS MEDEIROS DE SOUZA",
+        "NASCTO": "30\/10\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12745306024",
+        "ESCOLARIDADE": "DA 5a. A 8a. SERIE INCOMPLETA DO 1o. GRAU(GINASIO INCOMPLETO)",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "622010",
+        "PROFISSAO": "JARDINEIRO",
+        "SALARIO": " 1.126,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9232231012",
+            "OPERADORA": "TELEMAR\/AM",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92991941260",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92994799055",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92993835546",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92993585539",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "92993505128",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "10\/10\/2015",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R TRES",
+                "NUMERO": "20",
+                "COMPLEMENTO": "",
+                "BAIRRO": "LIRIO DO VALE",
+                "CEP": "69038002",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R MARECHAL DEODORO",
+                "NUMERO": "300",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "69005000",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R ESTRELA NOVA",
+                "NUMERO": "8",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVO ISRAEL",
+                "CEP": "69039470",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "4772664602",
+            "NOME": "MARIA DE JESUS MEDEIROS DE SOUZA",
+            "IDADE": "65 anos",
+            "LOCAL": "VARZEA DA PALMA\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PRO SERVICE CONSERVACAO E CONSTRUCAO LTDA",
+                "CNPJ": "17783933000103",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "992225",
+                "DATA_ADMISSAO": "02\/05\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CONSERGE CONSTRUCAO E SERVICOS GERAIS LTDA",
+                "CNPJ": "84513290000167",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "622010",
+                "DATA_ADMISSAO": "01\/02\/2011",
+                "DATA_DEMISSAO": "24\/05\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,417 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26020557863",
+        "NOME": "JULIANA TAMBASCIO",
+        "NOME_MAE": "ROSA MARIA MENDES TAMBASCIO",
+        "NASCTO": "17\/07\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Feminino",
+        "RG": "27017130",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "219484300191",
+        "NIT": "1141582755",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142535",
+        "PROFISSAO": "",
+        "SALARIO": " 9.000,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1932387154",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "4121122003",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1932412807",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1932894551",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1921322197",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19992391920",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41997683912",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19993667282",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19995777061",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19991872714",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "jtambascio@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DOS EXPEDICIONARIOS",
+                "NUMERO": "572",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SOUSAS",
+                "CEP": "13106028",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE DE ALENCAR",
+                "NUMERO": "145",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CRISTO REI",
+                "CEP": "80050240",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "AV DR DOMINGOS DE MACEDO CUSTODIO",
+                "NUMERO": "786",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD STA INES I",
+                "CEP": "12248330",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV ESTADOS UNIDOS",
+                "NUMERO": "743",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD NOVA EUROPA",
+                "CEP": "13040099",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "TV NHAMUNDA",
+                "NUMERO": "85",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "69025190",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R CEL MANUEL MORAIS",
+                "NUMERO": "187",
+                "COMPLEMENTO": "FDS",
+                "BAIRRO": "JD BRASIL",
+                "CEP": "13073022",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DR RUBERLEI BOARETO DA SIL",
+                "NUMERO": "1204",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "C UNIVERSITARIA",
+                "CEP": "13084012",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MARIA ADAME PATTARO",
+                "NUMERO": "146",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA MODESTO FERNANDES",
+                "CEP": "13084280",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "28468882801",
+                "NOME": "ROSA MARIA MENDES TAMBASCIO",
+                "IDADE": "70 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "22071870808",
+                "NOME": "JOANA TAMBASCIO",
+                "IDADE": "43 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "31035401835",
+                "NOME": "JAQUELINE TAMBASCIO",
+                "IDADE": "42 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "44601819830",
+                "NOME": "MATHEUS TAMBASCIO SANTOS",
+                "IDADE": "21 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "54039548809",
+                "NOME": "MARIA ANTONIA TAMBASCIO COELHO GALVAO",
+                "IDADE": "15 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ANTONIO HENRIQUE COELHO GALVAO",
+                "IDADE": "",
+                "LOCALIDADE": "FLORIANOPOLIS\/SC",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "71699341915"
+            },
+            {
+                "NOME": "JULIANA DA COSTA CARVALHO",
+                "IDADE": "",
+                "LOCALIDADE": "CAMPINAS\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "21762917866"
+            },
+            {
+                "NOME": "NICOLAU TAMBASCIO NETO",
+                "IDADE": "",
+                "LOCALIDADE": "CAMPINAS\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "86657062834"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PEARSON EDUCATION DO BRASIL LTDA",
+                "CNPJ": "01404158001838",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "142520",
+                "DATA_ADMISSAO": "13\/09\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "STONE INSTITUICAO DE PAGAMENTO S.A",
+                "CNPJ": "16501555000238",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "142535",
+                "DATA_ADMISSAO": "05\/08\/2024",
+                "DATA_DEMISSAO": "30\/09\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BUY4 PROCESSAMENTO DE PAGAMENTOS S.A.",
+                "CNPJ": "16569357000125",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142535",
+                "DATA_ADMISSAO": "01\/10\/2024",
+                "DATA_DEMISSAO": "19\/12\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "DECISION DESENVOLVIMENTO DE SISTEMAS LTDA",
+                "CNPJ": "22998836000160",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "10\/07\/2023",
+                "DATA_DEMISSAO": "09\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "DECISION TECNOLOGIA DA INFORMACAO LTDA",
+                "CNPJ": "20830038000107",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "29\/09\/2020",
+                "DATA_DEMISSAO": "12\/06\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "CAPGEMINI BRASIL LTDA.",
+                "CNPJ": "65599953000163",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "27\/08\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "UBS (BRASIL) CORRETORA DE VALORES S.A.",
+                "CNPJ": "61809182000130",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "14\/05\/2021",
+                "DATA_DEMISSAO": "12\/07\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "CONQUESTONE IT SERVICES BR LTDA.",
+                "CNPJ": "01802155000104",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142520",
+                "DATA_ADMISSAO": "17\/06\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "RUNTALENT TECNOLOGIA LTDA",
+                "CNPJ": "04813607000141",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "11\/06\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "DOMENEGHETTI   PARTNERS BUSINESS SOLUTIONS SOCIEDADE SIMPLES LTDA",
+                "CNPJ": "00738766000178",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "241040",
+                "DATA_ADMISSAO": "02\/05\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ANHANGUERA EDUCACIONAL LTDA",
+                "CNPJ": "05808792000149",
+                "CIDADE": "VALINHOS-SP",
+                "PROFISSAO": "252105",
+                "DATA_ADMISSAO": "14\/20\/1905",
+                "DATA_DEMISSAO": "03\/11\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "EMS S\/A",
+                "CNPJ": "57507378000365",
+                "CIDADE": "HORTOLANDIA-SP",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "11\/20\/1909",
+                "DATA_DEMISSAO": "15\/05\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "SCOPUS DESENVOLVIMENTO DE SISTEMAS LTDA.",
+                "CNPJ": "06071753000174",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "06\/08\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "JUTAMBASCIO TECNOLOGIA LTDA",
+            "CNPJ": "40586259000180",
+            "CIDADE": "SAO PAULO-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20210127",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

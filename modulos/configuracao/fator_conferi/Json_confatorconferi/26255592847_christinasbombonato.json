@@ -1,0 +1,173 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26255592847",
+        "NOME": "CHRISTINA S BOMBONATO",
+        "NOME_MAE": "FLORIANA DIAS BOMBONATO",
+        "NASCTO": "27\/06\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "214286540116",
+        "NIT": "12618245816",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "203505",
+        "PROFISSAO": "PESQUISADOR EM CIENCIAS SOCIAIS E HUMANAS",
+        "SALARIO": " 5.469,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1136670644",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1138314734",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1138314734",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11996571322",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11975084082",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "x-ris@hotmail.com",
+            "x_ris@hotmail.com",
+            "wislanechociai@hotmail.com",
+            "chrica1977@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MARGARIDA",
+                "NUMERO": "79",
+                "COMPLEMENTO": "AP  Apartamento  23 BL  Blocos  A",
+                "BAIRRO": "BARRA FUNDA",
+                "CEP": "01154030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CERRO CORA",
+                "NUMERO": "2271",
+                "COMPLEMENTO": "AP 10",
+                "BAIRRO": "VILA ROMANA",
+                "CEP": "05061450",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "2214340890",
+            "NOME": "FLORIANA DIAS BOMBONATO",
+            "IDADE": "75 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "WISLANE LUZIA CHOCIAI",
+            "IDADE": "",
+            "LOCALIDADE": "IRATI\/PR",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "70427810906"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SERVICO SOCIAL DO COMERCIO - SESC - ADMINISTRACAO REGIONAL NO ESTADO DE SAO PAULO",
+                "CNPJ": "03667884001445",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "203505",
+                "DATA_ADMISSAO": "05\/20\/2009",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVICO SOCIAL DO COMERCIO - SESC - ADMINISTRACAO REGIONAL NO ESTADO DE SAO PAULO",
+                "CNPJ": "03667884004703",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/07\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVICO SOCIAL DO COMERCIO - SESC - ADMINISTRACAO REGIONAL NO ESTADO DE SAO PAULO",
+                "CNPJ": "03667884000716",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "203505",
+                "DATA_ADMISSAO": "05\/20\/2009",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVICO SOCIAL DO COMERCIO - SESC - ADMINISTRACAO REGIONAL NO ESTADO DE SAO PAULO",
+                "CNPJ": "03667884003146",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "203505",
+                "DATA_ADMISSAO": "05\/20\/2009",
+                "DATA_DEMISSAO": "608",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

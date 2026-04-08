@@ -1,0 +1,235 @@
+{
+    "CADASTRAIS": {
+        "CPF": "29746905805",
+        "NOME": "RAFAEL PAPP PEREIRA DA SILVA",
+        "NOME_MAE": "ELSA PAPP PEREIRA DA SILVA",
+        "NASCTO": "21\/06\/1983",
+        "IDADE": "42 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "291914070116",
+        "NIT": "2683401994",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "354130",
+        "PROFISSAO": "PROMOTOR DE VENDAS ESPECIALIZADO",
+        "SALARIO": " 12.813,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1137191188",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "07\/03\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5136900277",
+                "OPERADORA": "BR GROUP TELECOMUNICACOES LTDA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1137689227",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11960649693",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11994927242",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "16\/03\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11977212890",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "rpapp20@hotmail.com",
+            "rafapap@gmail.com",
+            "rafapapp@linkbr.com.br",
+            "refapapp@gmail.com",
+            "rafapapp@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "PRQ RAPOSO TAVARES",
+                "NUMERO": "7389",
+                "COMPLEMENTO": "AP 111 ED PEROB",
+                "BAIRRO": "VL ALBANO",
+                "CEP": "05551065",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R D IDILIO JOSE SOARES",
+                "NUMERO": "100",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD IVANA",
+                "CEP": "05364060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "ROD RAPOSO TAVARES",
+                "NUMERO": "0",
+                "COMPLEMENTO": "KM 17 5 AP 111 TOR PERO",
+                "BAIRRO": "JD ARPOADOR",
+                "CEP": "05577902",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ARTHUR SOTER LOPES DA SILVA",
+                "NUMERO": "88",
+                "COMPLEMENTO": "AP141BL6",
+                "BAIRRO": "JD ESMERALDA",
+                "CEP": "05367140",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RODOVIA RAPOSO TAVARES",
+                "NUMERO": "7389",
+                "COMPLEMENTO": "PEROBAS 111",
+                "BAIRRO": "JARDIM ADHEMAR DE BARROS",
+                "CEP": "05577000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RODOVIA RAPOSO TAVARES",
+                "NUMERO": "17000",
+                "COMPLEMENTO": "APT 103 BRO JD PINHEIROS",
+                "BAIRRO": "JARDIM BOA VISTA (ZONA OESTE)",
+                "CEP": "05576200",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "ROD RAPOSO TAVARES KM",
+                "NUMERO": "17000",
+                "COMPLEMENTO": "AP 111 TOR PERO",
+                "BAIRRO": "JARDIM ARPOADOR",
+                "CEP": "05577902",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA RAPOSO TAVARES",
+                "NUMERO": "17000",
+                "COMPLEMENTO": "TOR PEROBA APTO 111",
+                "BAIRRO": "JARDIM DAS ACACIAS",
+                "CEP": "04704110",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "11273296850",
+                "NOME": "ELSA PAPP PEREIRA DA SILVA",
+                "IDADE": "67 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "28216149859",
+                "NOME": "THIAGO PAPP PEREIRA DA SILVA",
+                "IDADE": "45 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "32966047828",
+                "NOME": "THAIS PAPP PEREIRA DA SILVA",
+                "IDADE": "40 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "STERNGOLD DO BRASIL LTDA",
+                "CNPJ": "01861501000125",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "354130",
+                "DATA_ADMISSAO": "10\/06\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LABIZZ REPRESENTACOES LTDA",
+                "CNPJ": "03981064000109",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "354125",
+                "DATA_ADMISSAO": "11\/03\/2002",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "PAPP REPRESENTACOES COMERCIAIS LTDA",
+            "CNPJ": "12363464000141",
+            "CIDADE": "SAO PAULO-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20100728",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

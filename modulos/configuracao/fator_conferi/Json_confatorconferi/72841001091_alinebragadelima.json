@@ -1,0 +1,264 @@
+{
+    "CADASTRAIS": {
+        "CPF": "72841001091",
+        "NOME": "ALINE BRAGA DE LIMA",
+        "NOME_MAE": "VERA MARIA BRAGA DE LIMA",
+        "NASCTO": "10\/07\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Feminino",
+        "RG": "6020937105",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "RS",
+        "TITULO_ELEITOR": "064589610477",
+        "NIT": "12894300702",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "234624",
+        "PROFISSAO": "PROFESSOR DE LINGUA PORTUGUESA",
+        "SALARIO": " 13.250,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5133283640",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "5133285035",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "5133953977",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5132861927",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51991967887",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51984622547",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51998066487",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51985087546",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "18\/08\/2014",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "51997358013",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "misscrepe@hotmail.com",
+            "lima.braga@bol.com.br",
+            "limabraga1@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R LUIZ AFONSO",
+                "NUMERO": "106",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE BAIXA",
+                "CEP": "90050310",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R PARAIBA",
+                "NUMERO": "249",
+                "COMPLEMENTO": "",
+                "BAIRRO": "FLORESTA",
+                "CEP": "90220100",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA PARAIBA",
+                "NUMERO": "24",
+                "COMPLEMENTO": "",
+                "BAIRRO": "FLORESTA",
+                "CEP": "90220100",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA RAMIRO BARCELOS",
+                "NUMERO": "1740",
+                "COMPLEMENTO": "AP 401",
+                "BAIRRO": "RIO BRANCO",
+                "CEP": "90035002",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "41007778091",
+                "NOME": "VERA MARIA BRAGA DE LIMA",
+                "IDADE": "76 anos",
+                "LOCAL": "CIDREIRA\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "118207059",
+                "NOME": "TIAGO BRAGA DE LIMA",
+                "IDADE": "44 anos",
+                "LOCAL": "PORTO ALEGRE\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "67453937000",
+                "NOME": "MARCELO BRAGA DE LIMA",
+                "IDADE": "53 anos",
+                "LOCAL": "CANOAS\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "5321893020",
+                "NOME": "LUCAS LIMA LEITE DE CASTRO",
+                "IDADE": "20 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "17015598620",
+                "NOME": "EMANUELY LIMA MORAIS",
+                "IDADE": "13 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "17015606666",
+                "NOME": "ELIZA LIMA MORAIS",
+                "IDADE": "13 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "17015621622",
+                "NOME": "NYCOLLAS LIMA MORAIS",
+                "IDADE": "17 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "RONALDO PRATO LEITE DE CASTRO",
+            "IDADE": "",
+            "LOCALIDADE": "PORTO ALEGRE\/RS",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "67175163053"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "FUNDACAO EDUCACIONAL JOAO XXIII",
+                "CNPJ": "92934934000119",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "234624",
+                "DATA_ADMISSAO": "14\/02\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COMUNIDADE EVANGELICA DE PORTO ALEGRE",
+                "CNPJ": "92843945000355",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "234624",
+                "DATA_ADMISSAO": "01\/10\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "COLEGIO MONTEIRO LOBATO SOCIEDADE SIMPLES LTDA.",
+                "CNPJ": "87045910000179",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "231205",
+                "DATA_ADMISSAO": "26\/02\/2003",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,174 @@
+{
+    "CADASTRAIS": {
+        "CPF": "55985572234",
+        "NOME": "ROSANGELA VIANA DA CRUZ",
+        "NOME_MAE": "FRANCISCA DAS CHAGAS ARAUJO VIANA",
+        "NASCTO": "07\/08\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1249368100",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "731120",
+        "PROFISSAO": "MONTADOR DE EQUIPAMENTOS ELETRICOS (APARELHOS ELETRODOMESTICOS)",
+        "SALARIO": " 2.024,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9236442951",
+            "OPERADORA": "TELEMAR\/AM",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92992748780",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92992576349",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "92992631391",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "92992669784",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R RIO MEXEDE",
+                "NUMERO": "67",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVO ALEIXO",
+                "CEP": "69098288",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "BC S PEDRO",
+                "NUMERO": "9",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COROADO",
+                "CEP": "69080660",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R RIO ARAGUAIA",
+                "NUMERO": "67",
+                "COMPLEMENTO": "NOVO ALEIXO COMPO DO RO",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69097175",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R SETE QUEDAS",
+                "NUMERO": "9",
+                "COMPLEMENTO": "1",
+                "BAIRRO": "COROADO",
+                "CEP": "69080500",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "866706380",
+            "NOME": "FRANCISCA DAS CHAGAS ARAUJO VIANA",
+            "IDADE": "73 anos",
+            "LOCAL": "PIO XII\/MA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CLINILAVES LAVANDERIA INDUSTRIAL LTDA",
+                "CNPJ": "03140518000119",
+                "CIDADE": "ARAQUARI-SC",
+                "PROFISSAO": "516345",
+                "DATA_ADMISSAO": "12\/02\/2024",
+                "DATA_DEMISSAO": "01\/04\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PRONTA RECURSOS HUMANOS LTDA",
+                "CNPJ": "37412074000145",
+                "CIDADE": "JOINVILLE-SC",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "08\/05\/2024",
+                "DATA_DEMISSAO": "01\/09\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BRITANIA ELETRODOMESTICOS SA",
+                "CNPJ": "76492701001129",
+                "CIDADE": "JOINVILLE-SC",
+                "PROFISSAO": "731120",
+                "DATA_ADMISSAO": "02\/09\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "DIGIBOARD ELETRONICA DA AMAZONIA LTDA",
+                "CNPJ": "07448261000118",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "414105",
+                "DATA_ADMISSAO": "02\/01\/2006",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

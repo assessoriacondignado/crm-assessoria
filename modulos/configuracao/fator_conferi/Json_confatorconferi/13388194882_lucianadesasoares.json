@@ -1,0 +1,166 @@
+{
+    "CADASTRAIS": {
+        "CPF": "13388194882",
+        "NOME": "LUCIANA DE SA SOARES",
+        "NOME_MAE": "VERA MARIA SOUZA DE SA SOARES",
+        "NASCTO": "11\/03\/1972",
+        "IDADE": "54 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "204001220167",
+        "NIT": "1243127394",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "252105",
+        "PROFISSAO": "ADMINISTRADOR",
+        "SALARIO": " 5.514,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1332289029",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13991218965",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13991273025",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13997835511",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "13997835511",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "luciana_soares72@hotmail.com",
+            "lucianasoares72@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DR ARNALDO DE CARVALHO",
+                "NUMERO": "119",
+                "COMPLEMENTO": "AP 32",
+                "BAIRRO": "CPO GRANDE",
+                "CEP": "11075430",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ESPIRITO SANTO",
+                "NUMERO": "116",
+                "COMPLEMENTO": "APTO 33",
+                "BAIRRO": "CAMPO GRANDE",
+                "CEP": "11075390",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOUTOR ARNALDO DE CARVALHO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "APTO 32",
+                "BAIRRO": "CAMPO GRANDE",
+                "CEP": "11075430",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "1787941809",
+                "NOME": "VERA MARIA SOUZA DE SA SOARES",
+                "IDADE": "85 anos",
+                "LOCAL": "SANTOS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "16234696864",
+                "NOME": "FLAVIO DE SA SOARES",
+                "IDADE": "52 anos",
+                "LOCAL": "SANTOS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "9512035251",
+                "NOME": "LUANA JHENNIFER SOARES DOS SANTOS",
+                "IDADE": "17 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PLANO DE SAUDE ANA COSTA LTDA.",
+                "CNPJ": "02864364000145",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "252105",
+                "DATA_ADMISSAO": "02\/09\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "HOSPITAL ANA COSTA S\/A",
+                "CNPJ": "68253731001073",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "252105",
+                "DATA_ADMISSAO": "01\/07\/2009",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

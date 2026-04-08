@@ -1,0 +1,159 @@
+{
+    "CADASTRAIS": {
+        "CPF": "3430581974",
+        "NOME": "ELIAS ADAM",
+        "NOME_MAE": "LONI ADAM",
+        "NASCTO": "21\/02\/1982",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "041240370957",
+        "NIT": "12765798720",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782115",
+        "PROFISSAO": "OPERADOR DE GUINDASTE MOVEL",
+        "SALARIO": " 2.150,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "4733338412",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "47991972888",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "PRE PAGO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "elias.adam@mx.ey.com",
+            "elias_adam@brturbo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ARAPONGUINHAS",
+                "NUMERO": "633",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ARAPONGUINHAS",
+                "CEP": "89120000",
+                "CIDADE": "TIMBO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R QUIRINO LONGO",
+                "NUMERO": "150",
+                "COMPLEMENTO": "CS CORREIOS",
+                "BAIRRO": "CENTRO",
+                "CEP": "89124000",
+                "CIDADE": "BENEDITO NOVO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R RIBEIRAO PROCHNOW",
+                "NUMERO": "0",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "CENTRO",
+                "CEP": "89124000",
+                "CIDADE": "BENEDITO NOVO",
+                "ESTADO": "SC"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "62661990925",
+                "NOME": "LONI ADAM",
+                "IDADE": "81 anos",
+                "LOCAL": "SAO JOSE\/SC",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "973657936",
+                "NOME": "EDINORA ADAM",
+                "IDADE": "46 anos",
+                "LOCAL": "BENEDITO NOVO\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "90467256934",
+                "NOME": "ELISA ADAM HINSCHING",
+                "IDADE": "49 anos",
+                "LOCAL": "JOINVILLE\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "90468180982",
+                "NOME": "EDLA ADAM",
+                "IDADE": "53 anos",
+                "LOCAL": "BENEDITO NOVO\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "MARINA MACHADO",
+            "IDADE": "",
+            "LOCALIDADE": "CHARQUEADAS\/RS",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "43570127087"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "JP GUINDASTES LTDA",
+                "CNPJ": "41632542000164",
+                "CIDADE": "POMERODE-SC",
+                "PROFISSAO": "782515",
+                "DATA_ADMISSAO": "01\/12\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "GUINCHOS SCHUMANN LTDA",
+                "CNPJ": "81304313000135",
+                "CIDADE": "TIMBO-SC",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "03\/02\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "JATO DE AREIA E GUINDASTES MARTIN LTDA",
+                "CNPJ": "97484679000173",
+                "CIDADE": "INDAIAL-SC",
+                "PROFISSAO": "782115",
+                "DATA_ADMISSAO": "14\/20\/1903",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,177 @@
+{
+    "CADASTRAIS": {
+        "CPF": "46705406291",
+        "NOME": "KATIA MARGALHO LIMA",
+        "NOME_MAE": "THELMA MARGALHO LIMA",
+        "NASCTO": "12\/01\/1973",
+        "IDADE": "53 anos",
+        "SEXO": "Feminino",
+        "RG": "2588606",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "2684146379",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "421125",
+        "PROFISSAO": "OPERADOR DE CAIXA",
+        "SALARIO": " 2.146,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9121213687",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "26\/03\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9121213688",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "26\/03\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9132251280",
+                "OPERADORA": "TELEMAR\/PA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "91996092522",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "91996421075",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/04\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "91991155671",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "aitak0515@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "TV QUATORZE DE MARCO",
+                "NUMERO": "38",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TELEGRAFO SEM FIO",
+                "CEP": "66113300",
+                "CIDADE": "BELEM",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "AV GENTIL BITTENCOURT",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BATISTA CAMPOS",
+                "CEP": "66035340",
+                "CIDADE": "BELEM",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "TRAVESSA QUATORZE DE MARCO",
+                "NUMERO": "2509",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NAZARE",
+                "CEP": "66040360",
+                "CIDADE": "BELEM",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "TRAVESSA QUATORZE DE MARCO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NAZARE",
+                "CEP": "66040360",
+                "CIDADE": "BELEM",
+                "ESTADO": "PA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "81226381200",
+                "NOME": "THELMA MARGALHO LIMA",
+                "IDADE": "80 anos",
+                "LOCAL": "BELEM\/PA",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "77970063268",
+                "NOME": "ACASSIA CRISTINA MARGALHO LIMA",
+                "IDADE": "49 anos",
+                "LOCAL": "BELEM\/PA",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ATACADAO S.A.",
+                "CNPJ": "75315333021530",
+                "CIDADE": "BELEM-PA",
+                "PROFISSAO": "421125",
+                "DATA_ADMISSAO": "02\/03\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SANTA GLORIA ALIMENTOS LTDA",
+                "CNPJ": "06021843000150",
+                "CIDADE": "BELEM-PA",
+                "PROFISSAO": "422315",
+                "DATA_ADMISSAO": "04\/06\/2014",
+                "DATA_DEMISSAO": "14\/05\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

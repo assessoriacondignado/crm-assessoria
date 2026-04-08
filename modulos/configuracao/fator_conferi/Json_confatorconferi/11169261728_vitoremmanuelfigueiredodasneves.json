@@ -1,0 +1,211 @@
+{
+    "CADASTRAIS": {
+        "CPF": "11169261728",
+        "NOME": "VITOR EMMANUEL FIGUEIREDO DAS NEVES",
+        "NOME_MAE": "GEORGETE FATIMA F FIGUEIREDO",
+        "NASCTO": "18\/10\/1993",
+        "IDADE": "32 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "16558765269",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521110",
+        "PROFISSAO": "VENDEDOR DE COMERCIO VAREJISTA",
+        "SALARIO": " 976,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "2134264230",
+            "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+            "DATA_REFERENCIA": "31\/10\/2012",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21991498966",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21989131353",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21997215594",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21986967360",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21985767545",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "rafaelaesm@gmail.com",
+            "sistem_detroid@yahoo.com.br",
+            "vitorefn@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ROBERT REID KALLEY",
+                "NUMERO": "34201",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTISSIMO",
+                "CEP": "23012220",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA ROBERT REID KALLEY",
+                "NUMERO": "34",
+                "COMPLEMENTO": "AP 201",
+                "BAIRRO": "SANTISSIMO",
+                "CEP": "23012220",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "CICERA MARIA DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "RIO DE JANEIRO\/RJ",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "71971475491"
+            },
+            {
+                "NOME": "RAFAELA EDUARDA DA SILVA MEDEIROS",
+                "IDADE": "",
+                "LOCALIDADE": "RIO DE JANEIRO\/RJ",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "13739294728"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SOCIEDADE MICHELIN DE PARTICIPACOES INDUST E COMERCIO LTDA",
+                "CNPJ": "50567288000744",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "07\/06\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "AUTO POSTO DO TRABALHO SANTISSIMO LTDA",
+                "CNPJ": "24247497000105",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "21\/10\/2020",
+                "DATA_DEMISSAO": "31\/05\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "CLOVIO DE AZEREDO - MODAS",
+                "CNPJ": "11182611000114",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/06\/2015",
+                "DATA_DEMISSAO": "16\/01\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "CATITA AUTO SERVICOS LTDA",
+                "CNPJ": "42306886000146",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "521135",
+                "DATA_ADMISSAO": "01\/04\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "AUTO POSTO DO TRABALHO S\/A",
+                "CNPJ": "03139910000148",
+                "CIDADE": "DUQUE DE CAXIAS-RJ",
+                "PROFISSAO": "521135",
+                "DATA_ADMISSAO": "06\/03\/2013",
+                "DATA_DEMISSAO": "27\/01\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "PIZZARIA TALLEGIO LTDA",
+                "CNPJ": "10225262000108",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "513505",
+                "DATA_ADMISSAO": "01\/08\/2014",
+                "DATA_DEMISSAO": "29\/10\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "AUTO POSTO ALVORADA RIO LTDA",
+                "CNPJ": "31384910000149",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "521135",
+                "DATA_ADMISSAO": "23\/05\/2012",
+                "DATA_DEMISSAO": "20\/09\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

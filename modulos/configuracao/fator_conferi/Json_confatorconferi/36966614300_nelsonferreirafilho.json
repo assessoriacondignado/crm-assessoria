@@ -1,0 +1,158 @@
+{
+    "CADASTRAIS": {
+        "CPF": "36966614300",
+        "NOME": "NELSON FERREIRA FILHO",
+        "NOME_MAE": "CICERA FERREIRA DA SILVA",
+        "NASCTO": "11\/07\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "13279435195",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782510",
+        "PROFISSAO": "MOTORISTA DE CAMINHAO (ROTAS REGIONAIS E INTERNACIONAIS)",
+        "SALARIO": " 1.764,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8835118296",
+            "OPERADORA": "TELEMAR\/CE",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "88996432303",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "88988357990",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "webmaster@urm.com.br",
+            "mouralencar@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R STA ROSA",
+                "NUMERO": "533",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SOCORRO",
+                "CEP": "63010302",
+                "CIDADE": "JUAZEIRO DO NORTE",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R PE JOSE ALVES",
+                "NUMERO": "1",
+                "COMPLEMENTO": "6",
+                "BAIRRO": "SOCORRO",
+                "CEP": "63010285",
+                "CIDADE": "JUAZEIRO DO NORTE",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R PE JOSE ALVES",
+                "NUMERO": "16",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "SOCORRO",
+                "CEP": "63010285",
+                "CIDADE": "JUAZEIRO DO NORTE",
+                "ESTADO": "CE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "13280341",
+            "NOME": "CICERA FERREIRA DA SILVA",
+            "IDADE": "47 anos",
+            "LOCAL": "FORTALEZA\/CE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ELIANE MOURA ALENCAR FERREIRA",
+            "IDADE": "",
+            "LOCALIDADE": "JUAZEIRO DO NORTE\/CE",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "80793258391"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "JOSEMAR TAVARES DE OLIVEIRA",
+                "CNPJ": "10848122000196",
+                "CIDADE": "CRATO-CE",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "01\/11\/2015",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SITIO BARREIRAS FRUTICULTURA LTDA",
+                "CNPJ": "07408612000167",
+                "CIDADE": "MISSAO VELHA-CE",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "02\/01\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "JODIBE - DISTRIBUIDORA DE BEBIDAS DO CARIRI LTDA.",
+                "CNPJ": "08606343000106",
+                "CIDADE": "CRATO-CE",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "01\/09\/2012",
+                "DATA_DEMISSAO": "612",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "R. PAES MARTINS",
+                "CNPJ": "03575436000105",
+                "CIDADE": "TUBARAO-SC",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "01\/03\/2012",
+                "DATA_DEMISSAO": "27\/05\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

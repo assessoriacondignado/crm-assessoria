@@ -1,0 +1,246 @@
+{
+    "CADASTRAIS": {
+        "CPF": "27814780837",
+        "NOME": "LUCAS SCOTINI MASSA",
+        "NOME_MAE": "CLARA ISABEL SCOTINI MASSA",
+        "NASCTO": "27\/06\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "231935980167",
+        "NIT": "12940021602",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "214905",
+        "PROFISSAO": "ENGENHEIRO DE PRODUCAO",
+        "SALARIO": " 9.501,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1156119223",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "2433541520",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "07\/07\/2007",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1136377712",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "07\/11\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2433587023",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11985101031",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11985101039",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11985101039",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "24992243464",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "lucas.massa@mpsa.com",
+            "lucaz.mazza@click21.com.br",
+            "lucas.massa@click21.com.br",
+            "lucas.massa@volkswagen.com.br",
+            "lsmassa@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ANTONIO FERREIRA",
+                "NUMERO": "55",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "JD S CARLOS",
+                "CEP": "13092483",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R RAPHAEL ANTONIO DE ANDREA",
+                "NUMERO": "99",
+                "COMPLEMENTO": "AP 401",
+                "BAIRRO": "CENTRO",
+                "CEP": "27511330",
+                "CIDADE": "RESENDE",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "AV MIGUEL YUNES",
+                "NUMERO": "500",
+                "COMPLEMENTO": "BL  Blocos  59 AP  Apartamento  3",
+                "BAIRRO": "USINA PIRATININGA",
+                "CEP": "04444000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV INTERLAGOS",
+                "NUMERO": "4455",
+                "COMPLEMENTO": "TH 59 03",
+                "BAIRRO": "JD UMUARAMA",
+                "CEP": "04661300",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO FERREIRA",
+                "NUMERO": "55",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "NOVA CAMPINAS",
+                "CEP": "13092530",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DEMOSTENES",
+                "NUMERO": "471",
+                "COMPLEMENTO": "AP 24",
+                "BAIRRO": "CAMPO BELO",
+                "CEP": "04614012",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DEMOSTENES",
+                "NUMERO": "471",
+                "COMPLEMENTO": "AP 24",
+                "BAIRRO": "CAMPO BELO",
+                "CEP": "04614901",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CORONEL ROCHA SANTOS",
+                "NUMERO": "447",
+                "COMPLEMENTO": "AP 101",
+                "BAIRRO": "JARDIM BRASILIA",
+                "CEP": "27515000",
+                "CIDADE": "RESENDE",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "28347231842",
+                "NOME": "CLARA ISABEL SCOTINI MASSA",
+                "IDADE": "70 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "22161772880",
+                "NOME": "RONALDO SCOTINI MASSA",
+                "IDADE": "44 anos",
+                "LOCAL": "NOVA LIMA\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "37049866822",
+                "NOME": "MARILIA SCOTINI MASSA",
+                "IDADE": "36 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LOJAS RIACHUELO SA",
+                "CNPJ": "33200056000149",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142330",
+                "DATA_ADMISSAO": "06\/10\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PEUGEOT-CITROEN DO BRASIL AUTOMOVEIS LTDA",
+                "CNPJ": "67405936001226",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "214905",
+                "DATA_ADMISSAO": "01\/11\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,385 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25482399850",
+        "NOME": "NI JEN CHUNG",
+        "NOME_MAE": "CHEN HAU TSE NI",
+        "NASCTO": "07\/06\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "229179550108",
+        "NIT": "12649521777",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142105",
+        "PROFISSAO": "GERENTE ADMINISTRATIVO",
+        "SALARIO": " 22.646,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1132843348",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1150836762",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1150835947",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "10\/05\/2019",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1121399959",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1125030828",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "06\/09\/2009",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11911789892",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11939386807",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11999324980",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11999324980",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11968585915",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "njc91@ig.com.br",
+            "nijenchung@yahoo.com",
+            "nijenchung@yahoo.com.br",
+            "nscn34765809@gmail.com",
+            "nikafragas@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R HEITOR PENTEADO",
+                "NUMERO": "1951",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SUMAREZINHO",
+                "CEP": "05437002",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV LINS DE VASCONCELOS",
+                "NUMERO": "3111",
+                "COMPLEMENTO": "AP  Apartamento  64a",
+                "BAIRRO": "VILA MARIANA",
+                "CEP": "04112012",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "ABRAHAO MIGUEL DO CARMO",
+                "NUMERO": "101",
+                "COMPLEMENTO": "AP 83",
+                "BAIRRO": "VL MTE ALEGRE",
+                "CEP": "04306090",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA FRANCISCO MATARAZZO",
+                "NUMERO": "1752",
+                "COMPLEMENTO": "CJ 1113",
+                "BAIRRO": "AGUA BRANCA",
+                "CEP": "05001200",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MAJOR SERTORIO",
+                "NUMERO": "693",
+                "COMPLEMENTO": "AP 86",
+                "BAIRRO": "VILA BUARQUE",
+                "CEP": "01222001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DO PARAISO",
+                "NUMERO": "776",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARAISO",
+                "CEP": "04103001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MAJOR SERTORIO",
+                "NUMERO": "69",
+                "COMPLEMENTO": "APT 86",
+                "BAIRRO": "VILA BUARQUE",
+                "CEP": "01222001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "75475448868",
+                "NOME": "CHEN HAU TSE NI",
+                "IDADE": "83 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "15147129898",
+                "NOME": "NI JEN KUAN",
+                "IDADE": "53 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "15147252827",
+                "NOME": "NI JEN MING",
+                "IDADE": "52 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "NINA YUMI SUZUKI DANTAS",
+                "IDADE": "",
+                "LOCALIDADE": "SAO BERNARDO DO CAMPO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "43403165809"
+            },
+            {
+                "NOME": "SIMONE TIEMI WATANABE NI",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "28689223843"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ENVISION INDUSTRIA DE PRODUTOS ELETRONICOS LTDA",
+                "CNPJ": "04176689000241",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "123115",
+                "DATA_ADMISSAO": "10\/12\/2012",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ENVISION INDUSTRIA DE PRODUTOS ELETRONICOS LTDA",
+                "CNPJ": "04176689000322",
+                "CIDADE": "JUNDIAI-SP",
+                "PROFISSAO": "252210",
+                "DATA_ADMISSAO": "10\/12\/2012",
+                "DATA_DEMISSAO": "31\/03\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "LG ELECTRONICS DA AMAZONIA LTDA",
+                "CNPJ": "00801450000264",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142105",
+                "DATA_ADMISSAO": "06\/05\/2009",
+                "DATA_DEMISSAO": "203",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "LG ELECTRONICS DO BRASIL LTDA",
+                "CNPJ": "01166372000236",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142105",
+                "DATA_ADMISSAO": "03\/03\/2012",
+                "DATA_DEMISSAO": "503",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": [
+            {
+                "RAZAO_SOCIAL": "ENVISION INDUSTRIA DE PRODUTOS ELETRONICOS LTDA",
+                "CNPJ": "04176689000403",
+                "CIDADE": "MANAUS-AM",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20220609",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "ENVISION INDUSTRIA DE PRODUTOS ELETRONICOS LTDA",
+                "CNPJ": "04176689000594",
+                "CIDADE": "MANAUS-AM",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20220609",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "ENVISION INDUSTRIA DE PRODUTOS ELETRONICOS LTDA",
+                "CNPJ": "04176689000756",
+                "CIDADE": "CAJAMAR-SP",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20220609",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "ENVISION INDUSTRIA DE PRODUTOS ELETRONICOS LTDA",
+                "CNPJ": "04176689000322",
+                "CIDADE": "JUNDIAI-SP",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20220609",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "ENVISION INDUSTRIA DE PRODUTOS ELETRONICOS LTDA",
+                "CNPJ": "04176689000160",
+                "CIDADE": "MANAUS-AM",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20220609",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "ENVISION INDUSTRIA DE PRODUTOS ELETRONICOS LTDA",
+                "CNPJ": "04176689000241",
+                "CIDADE": "SAO PAULO-SP",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20220609",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "ENVISION INDUSTRIA DE PRODUTOS ELETRONICOS LTDA",
+                "CNPJ": "04176689000675",
+                "CIDADE": "SAO PAULO-SP",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20220609",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "NSCN SERVICOS ADMINISTRATIVOS LTDA",
+                "CNPJ": "34765809000126",
+                "CIDADE": "SAO PAULO-SP",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20190815",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "DIVERS AUDITORIA E ASSESSORIA CONTABIL LTDA",
+                "CNPJ": "20002294000106",
+                "CIDADE": "SAO PAULO-SP",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20140324",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "MERCOSOLAR BRASIL COMERCIO, IMPORTACAO E EXPORTACAO DE PRODUTOS DE ENERGIA SOLAR LTDA",
+                "CNPJ": "15700288000184",
+                "CIDADE": "SAO PAULO-SP",
+                "QUALIFICACAO": "SÃ³cio",
+                "DATA_ENTRADA": "20120516",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "FHNI APOIO ADMINISTRATIVO LTDA",
+                "CNPJ": "15420570000108",
+                "CIDADE": "SAO PAULO-SP",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20120326",
+                "VALOR_PARTICIPACAO": ""
+            }
+        ]
+    }
+}

@@ -1,0 +1,215 @@
+{
+    "CADASTRAIS": {
+        "CPF": "91259517500",
+        "NOME": "MARCIO DA SILVA SANTOS",
+        "NOME_MAE": "MARIA LIDIA DA SILVA SANTOS",
+        "NASCTO": "15\/06\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "018274252100",
+        "NIT": "18221120397",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "519110",
+        "PROFISSAO": "MOTOCICLISTA NO TRANSPORTE DE DOCUMENTOS E PEQUENOS VOLUMES",
+        "SALARIO": " 950,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7932771403",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7932315245",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "79988245465",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79996367545",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79998590722",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "03\/05\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "79988488993",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/04\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "79998247410",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "fe.alves1182@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV ADELIA FRANCO",
+                "NUMERO": "3662",
+                "COMPLEMENTO": "ED UDINE 501",
+                "BAIRRO": "LUZIA",
+                "CEP": "49048010",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "AV ADELIA FRANCO",
+                "NUMERO": "1",
+                "COMPLEMENTO": "UDINE",
+                "BAIRRO": "GRAGERU",
+                "CEP": "49027010",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R JOSE EMIDIO DA COSTA",
+                "NUMERO": "339",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVO PARAISO",
+                "CEP": "49082275",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "TRAVESSA OLIVEIRA",
+                "NUMERO": "31",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SIQUEIRA CAMPOS",
+                "CEP": "49075410",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "AVENIDA ADELIA FRANCO",
+                "NUMERO": "3662",
+                "COMPLEMENTO": "COND MORADA DO AGUIA",
+                "BAIRRO": "INACIO BARBOSA",
+                "CEP": "49040020",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1584783478",
+            "NOME": "MARIA LIDIA DA SILVA SANTOS",
+            "IDADE": "70 anos",
+            "LOCAL": "IGREJA NOVA\/AL",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "FERNANDA ALVES DOS SANTOS",
+            "IDADE": "",
+            "LOCALIDADE": "RIO DE JANEIRO\/RJ",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "9125951750"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TRES LEOES MATERIAL HOSPITALAR LTDA",
+                "CNPJ": "00175233000125",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "782310",
+                "DATA_ADMISSAO": "01\/12\/2017",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MUNICIPIO DE CARMOPOLIS",
+                "CNPJ": "13108535000122",
+                "CIDADE": "CARMOPOLIS-SE",
+                "PROFISSAO": "517215",
+                "DATA_ADMISSAO": "03\/05\/2007",
+                "DATA_DEMISSAO": "{Ã±\/{Ã±\/2023",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "RGR AUTOMOVEIS LTDA",
+                "CNPJ": "15383561000194",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "519110",
+                "DATA_ADMISSAO": "02\/01\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "BARREIRO VEICULOS LTDA",
+                "CNPJ": "06077562000110",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "519110",
+                "DATA_ADMISSAO": "01\/06\/2010",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

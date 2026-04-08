@@ -1,0 +1,257 @@
+{
+    "CADASTRAIS": {
+        "CPF": "63349140068",
+        "NOME": "LUIS MANOEL ALVES",
+        "NOME_MAE": "TELMA MARIA MAIA ALVES",
+        "NASCTO": "16\/03\/1971",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "438030300",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "056687900477",
+        "NIT": "1800031033",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "410105",
+        "PROFISSAO": "SUPERVISOR ADMINISTRATIVO",
+        "SALARIO": " 10.573,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5135301836",
+                "OPERADORA": "FALKLAND TECNOLOGIA EM TELECOM",
+                "DATA_REFERENCIA": "17\/02\/2020",
+                "TIPO_TEL": "GPON",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "5137234000",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5137236922",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5137231950",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "16\/10\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51997177449",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51999751900",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51998050958",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "51999150021",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "51997229733",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "llmanoell@gmail.com",
+            "luismanoel.alves@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOAO SALDANHA",
+                "NUMERO": "51",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ S JOSE",
+                "CEP": "97578418",
+                "CIDADE": "SANT ANA DO LIVRAMENTO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "PC JOSE DE SALDANHA",
+                "NUMERO": "51",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTA HELENA",
+                "CEP": "96503810",
+                "CIDADE": "CACHOEIRA DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA NOGUEIRA DA GAMA",
+                "NUMERO": "8",
+                "COMPLEMENTO": "PREDIO",
+                "BAIRRO": "NOSSA SENHORA DE FATIMA",
+                "CEP": "96506040",
+                "CIDADE": "CACHOEIRA DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "PRACA JOSE DE SALDANHA",
+                "NUMERO": "5",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTA HELENA",
+                "CEP": "96503810",
+                "CIDADE": "CACHOEIRA DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA DAVID BARCELOS",
+                "NUMERO": "628",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "96501360",
+                "CIDADE": "CACHOEIRA DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA MARTINHO LUTERO",
+                "NUMERO": "301",
+                "COMPLEMENTO": "ULBRA",
+                "BAIRRO": "UNIVERSITARIO",
+                "CEP": "96501595",
+                "CIDADE": "CACHOEIRA DO SUL",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "88876977015",
+            "NOME": "LUCIANE APARECIDA ALVES",
+            "IDADE": "50 anos",
+            "LOCAL": "CACHOEIRA DO SUL\/RS",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "FRANCINE KLATTER BRAGA ALVES",
+                "IDADE": "",
+                "LOCALIDADE": "CACHOEIRA DO SUL\/RS",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "1220912050"
+            },
+            {
+                "NOME": "KAROLINE CRISTINA CHRESTANI",
+                "IDADE": "",
+                "LOCALIDADE": "",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "2543578064"
+            },
+            {
+                "NOME": "LAISA ALVES GARCIA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO GONCALO\/RJ",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "3213696021"
+            },
+            {
+                "NOME": "LUIZ CARLOS MARTINS ALVES",
+                "IDADE": "",
+                "LOCALIDADE": "CANOAS\/RS",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "37390465034"
+            },
+            {
+                "NOME": "LUIZ MANOEL OLIVEIRA ALVES",
+                "IDADE": "",
+                "LOCALIDADE": "CANOAS\/RS",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "2789595046"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "AGROFEL AGRO COMERCIAL S.A.",
+                "CNPJ": "03415222000163",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "01\/12\/2008",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "AGROFEL AGRO COMERCIAL S.A.",
+                "CNPJ": "03415222004312",
+                "CIDADE": "CACHOEIRA DO SUL-RS",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "01\/12\/2008",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

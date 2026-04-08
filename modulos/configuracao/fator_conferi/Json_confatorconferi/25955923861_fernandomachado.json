@@ -1,0 +1,235 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25955923861",
+        "NOME": "FERNANDO MACHADO",
+        "NOME_MAE": "ARARI MARIA MACHADO",
+        "NASCTO": "13\/12\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "228044860132",
+        "NIT": "1254961609",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142305",
+        "PROFISSAO": "GERENTE COMERCIAL",
+        "SALARIO": " 22.348,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8130196106",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1150111900",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1135828645",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "05\/09\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11989304082",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11991704216",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81982269848",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11999968904",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11950347367",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "fernando.machado@airliquide.com",
+            "machado.fernando@ig.com.br",
+            "fernando.machado@live.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV DAS NACOES UNIDAS",
+                "NUMERO": "11541",
+                "COMPLEMENTO": "AND 19",
+                "BAIRRO": "BROOKLIN PAULISTA",
+                "CEP": "04578000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CARLOS PEREIRA FALCAO",
+                "NUMERO": "82",
+                "COMPLEMENTO": "AP 802",
+                "BAIRRO": "BOA VIAGEM",
+                "CEP": "51021350",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R GUARATUBA",
+                "NUMERO": "225",
+                "COMPLEMENTO": "FR FR",
+                "BAIRRO": "VL GUARANI Z SUL",
+                "CEP": "04310050",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DOS BURITIS",
+                "NUMERO": "890",
+                "COMPLEMENTO": "AP  Apartamento  131 AN  Andar  13",
+                "BAIRRO": "JARDIM ORIENTAL",
+                "CEP": "04321002",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA GRUMIXAMAS",
+                "NUMERO": "432",
+                "COMPLEMENTO": "AP63",
+                "BAIRRO": "VL PQ JABAQUARA",
+                "CEP": "04349000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOS BURITIS",
+                "NUMERO": "890",
+                "COMPLEMENTO": "APT 131",
+                "BAIRRO": "VILA PARQUE JABAQUARA",
+                "CEP": "04321000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DAS GRUMIXAMAS",
+                "NUMERO": "43",
+                "COMPLEMENTO": "AP  63",
+                "BAIRRO": "VILA PARQUE JABAQUARA",
+                "CEP": "04349000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "33402316803",
+                "NOME": "ARARI MARIA MACHADO",
+                "IDADE": "83 anos",
+                "LOCAL": "PRAIA GRANDE\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "7304643854",
+                "NOME": "WAGNER MACHADO",
+                "IDADE": "60 anos",
+                "LOCAL": "SAO BERNARDO DO CAMPO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "27368100827",
+                "NOME": "ANDREA MACHADO",
+                "IDADE": "51 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "AIR LIQUIDE BRASIL LTDA",
+                "CNPJ": "00331788002405",
+                "CIDADE": "CABO DE SANTO AGOSTINHO-PE",
+                "PROFISSAO": "142305",
+                "DATA_ADMISSAO": "02\/05\/2000",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "AIR LIQUIDE BRASIL LTDA",
+                "CNPJ": "00331788000119",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "214505",
+                "DATA_ADMISSAO": "01\/12\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

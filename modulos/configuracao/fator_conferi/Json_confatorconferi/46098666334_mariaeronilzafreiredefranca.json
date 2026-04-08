@@ -1,0 +1,156 @@
+{
+    "CADASTRAIS": {
+        "CPF": "46098666334",
+        "NOME": "MARIA ERONILZA FREIRE DE FRANCA",
+        "NOME_MAE": "MARIA RODRIGUES FREIRE DE FRANCA",
+        "NASCTO": "24\/05\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "032343630795",
+        "NIT": "1244543832",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "763210",
+        "PROFISSAO": "COSTUREIRO NA CONFECCAO EM SERIE",
+        "SALARIO": " 1.891,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8532914022",
+            "OPERADORA": "TELEMAR\/CE",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "85987993893",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "85988966921",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "eronilza.freire@gmail.com",
+            "cintia.chaiane@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ANTONIO BARBOSA",
+                "NUMERO": "1491",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "PLANALTO AYRTON SENNA",
+                "CEP": "60760415",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R BR DO RIO BRANCO",
+                "NUMERO": "1054",
+                "COMPLEMENTO": "LJ IBYTE",
+                "BAIRRO": "CENTRO",
+                "CEP": "60025060",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "AV STA MARIA",
+                "NUMERO": "80",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL JULIA",
+                "CEP": "11440110",
+                "CIDADE": "GUARUJA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "VL MONTALVANIA",
+                "NUMERO": "67",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MONDUBIM",
+                "CEP": "60761510",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "649227310",
+                "NOME": "RAFAEL RODRIGUES FREIRE DE FRANCA",
+                "IDADE": "42 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "3599619328",
+                "NOME": "CRISTIANO FREIRE DE FRANCA",
+                "IDADE": "38 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "CINTIA CHAIANE FREIRE GALVAO",
+            "IDADE": "",
+            "LOCALIDADE": "NOVO GAMA\/GO",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "4432621362"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "FINNA INDUSTRIA DE CONFECCOES LTDA",
+                "CNPJ": "10455047000101",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "763210",
+                "DATA_ADMISSAO": "01\/11\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BELLA INDUSTRIA DE CONFECCOES EIRELI",
+                "CNPJ": "11206669000150",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "763210",
+                "DATA_ADMISSAO": "22\/02\/1999",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

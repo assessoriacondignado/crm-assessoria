@@ -1,0 +1,143 @@
+{
+    "CADASTRAIS": {
+        "CPF": "27219160330",
+        "NOME": "LOURENCO SILVA ALMEIDA",
+        "NOME_MAE": "CAROLINA SILVA ALMEIDA",
+        "NASCTO": "16\/01\/1960",
+        "IDADE": "66 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "010153511198",
+        "NIT": "12551678171",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "517330",
+        "PROFISSAO": "VIGILANTE",
+        "SALARIO": " 1.211,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "94991511059",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "98991297347",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R SOL POENTE",
+                "NUMERO": "72",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL PLANALTO",
+                "CEP": "68537000",
+                "CIDADE": "CANAA DOS CARAJAS",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "R GODOFREDO VIANA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "65015160",
+                "CIDADE": "SAO LUIS",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "R CALIXTA MACIEL",
+                "NUMERO": "14",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "65350000",
+                "CIDADE": "VITORIA DO MEARIM",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "POSTA RESTANTE",
+                "NUMERO": "0",
+                "COMPLEMENTO": "ZONA RURAL",
+                "BAIRRO": "",
+                "CEP": "68515000",
+                "CIDADE": "PARAUAPEBAS",
+                "ESTADO": "PA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1491986557",
+            "NOME": "CAROLINA SILVA ALMEIDA",
+            "IDADE": "40 anos",
+            "LOCAL": "ARACAJU\/SE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SEGURPRO VIGILANCIA PATRIMONIAL S.A.",
+                "CNPJ": "25278459002045",
+                "CIDADE": "PARAUAPEBAS-PA",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "01\/01\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PROSEGUR BRASIL S\/A TRANSPORTADORA DE VALORES E SEGURANCA",
+                "CNPJ": "17428731012818",
+                "CIDADE": "MARABA-PA",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "16\/05\/2015",
+                "DATA_DEMISSAO": "31\/05\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "PROSEGUR BRASIL S\/A TRANSPORTADORA DE VALORES E SEGURANCA",
+                "CNPJ": "17428731013202",
+                "CIDADE": "PARAUAPEBAS-PA",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "01\/06\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ATLANTICA SEGURANCA TECNICA LTDA",
+                "CNPJ": "06420079000277",
+                "CIDADE": "MARABA-PA",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "01\/02\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

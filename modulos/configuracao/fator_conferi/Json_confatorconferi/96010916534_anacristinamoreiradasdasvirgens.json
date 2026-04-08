@@ -1,0 +1,149 @@
+{
+    "CADASTRAIS": {
+        "CPF": "96010916534",
+        "NOME": "ANA CRISTINA MOREIRA DA S DAS VIRGENS",
+        "NOME_MAE": "JANDIRA MOREIRA DA SILVA",
+        "NASCTO": "15\/01\/1978",
+        "IDADE": "48 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "13221789776",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411005",
+        "PROFISSAO": "AUXILIAR DE ESCRITORIO, EM GERAL",
+        "SALARIO": " 739,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7132035017",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7134088845",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "71981488101",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "MOVEL",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "anadasvirgens@oi.com.br",
+            "anadasvirgens@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DAS FLORES",
+                "NUMERO": "1",
+                "COMPLEMENTO": "14",
+                "BAIRRO": "PARIPE",
+                "CEP": "40810530",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R DAS FLORES",
+                "NUMERO": "5",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "PARIPE",
+                "CEP": "40810530",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "DO CARMO",
+                "NUMERO": "15",
+                "COMPLEMENTO": "E",
+                "BAIRRO": "PRQ CONTINENTAL",
+                "CEP": "43700000",
+                "CIDADE": "SIMOES FILHO",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "RUA DAS FLORES",
+                "NUMERO": "114",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARIPE",
+                "CEP": "40810530",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "21821062",
+            "NOME": "JANDIRA MOREIRA DA SILVA",
+            "IDADE": "48 anos",
+            "LOCAL": "CAXIAS DO SUL\/RS",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "REAL SOCIEDADE PORTUGUESA DE BENEF 16 DE SETEMBRO",
+                "CNPJ": "15166416000151",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "01\/02\/2013",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "NOTRE DAME INTERMEDICA SAUDE S.A.",
+                "CNPJ": "44649812012225",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "13\/12\/2010",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "CARDIO PULMONAR DA BAHIA S.A",
+                "CNPJ": "13952064000134",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "03\/12\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

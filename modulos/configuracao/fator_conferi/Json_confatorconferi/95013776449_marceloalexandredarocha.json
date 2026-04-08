@@ -1,0 +1,162 @@
+{
+    "CADASTRAIS": {
+        "CPF": "95013776449",
+        "NOME": "MARCELO ALEXANDRE DA ROCHA",
+        "NOME_MAE": "MARIA AUXILIADORA DE AZEVEDO",
+        "NASCTO": "13\/03\/1976",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "045109480868",
+        "NIT": "12612513894",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "716610",
+        "PROFISSAO": "PINTOR DE OBRAS",
+        "SALARIO": " 1.465,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1141678204",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1146676501",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11975222326",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11996751579",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marcelo16967@gmail.com",
+            "marcelo16967@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "RUA VILLA LOBOS",
+            "NUMERO": "34",
+            "COMPLEMENTO": "",
+            "BAIRRO": "VILA OLIVINA",
+            "CEP": "06365800",
+            "CIDADE": "CARAPICUIBA",
+            "ESTADO": "SP"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1189657864",
+            "NOME": "MARIA AUXILIADORA DE AZEVEDO",
+            "IDADE": "81 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "FADEL TRANSPORTES E LOGISTICA LTDA",
+                "CNPJ": "02913489002242",
+                "CIDADE": "CARAPICUIBA-SP",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "18\/09\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MENDES E BARRETO COMERCIO DE FRIOS LTDA",
+                "CNPJ": "04726833000195",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "18\/03\/2024",
+                "DATA_DEMISSAO": "19\/07\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SEARA ALIMENTOS LTDA",
+                "CNPJ": "02914460044603",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "782220",
+                "DATA_ADMISSAO": "01\/12\/2020",
+                "DATA_DEMISSAO": "10\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "J.A. ISOLAMENTOS LTDA",
+                "CNPJ": "19433782000180",
+                "CIDADE": "BARRINHA-SP",
+                "PROFISSAO": "715210",
+                "DATA_ADMISSAO": "10\/06\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "CRIATIVA SERVICOS DE APOIO AS EMPRESAS SOCIEDADE SIMPLES LTDA.",
+                "CNPJ": "05575460000161",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "716610",
+                "DATA_ADMISSAO": "03\/05\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "GRILD-PLASTIC INDUSTRIA, COMERCIO E IMPORTACAO LTDA",
+                "CNPJ": "12349931000189",
+                "CIDADE": "ITAPECERICA DA SERRA-SP",
+                "PROFISSAO": "517410",
+                "DATA_ADMISSAO": "06\/05\/2011",
+                "DATA_DEMISSAO": "25\/02\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

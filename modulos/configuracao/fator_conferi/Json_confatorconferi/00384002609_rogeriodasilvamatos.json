@@ -1,0 +1,187 @@
+{
+    "CADASTRAIS": {
+        "CPF": "384002609",
+        "NOME": "ROGERIO DA SILVA MATOS",
+        "NOME_MAE": "TELMA DA SILVA DE MATOS",
+        "NASCTO": "08\/12\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "115260110213",
+        "NIT": "1165182786",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "334110",
+        "PROFISSAO": "INSPETOR DE ALUNOS DE ESCOLA PUBLICA",
+        "SALARIO": " 5.357,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3131667068",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "3133194269",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31988788813",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "35999278958",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31987317960",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "31988551150",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "35984360431",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "rogerioictio@gmail.com",
+            "rogerioictio@pop.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MESSIAS COUTINHO",
+                "NUMERO": "365",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CEU AZUL",
+                "CEP": "31580400",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R RAD JORGE GOMES",
+                "NUMERO": "61",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CEU AZUL",
+                "CEP": "31580520",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R COMERCIO",
+                "NUMERO": "195",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "57250000",
+                "CIDADE": "CAMPO ALEGRE",
+                "ESTADO": "AL"
+            },
+            {
+                "LOGRADOURO": "R NOVA ESPERANCA",
+                "NUMERO": "11",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CEU AZUL",
+                "CEP": "31585100",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RUA JOAO SAMAHA",
+                "NUMERO": "1354",
+                "COMPLEMENTO": "AP   APARTAMENTO",
+                "BAIRRO": "SAO JOAO BATISTA (VENDA NOVA)",
+                "CEP": "31520100",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RUA MARAJO",
+                "NUMERO": "826",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AMAZONAS",
+                "CEP": "32223560",
+                "CIDADE": "CONTAGEM",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "59961015649",
+            "NOME": "TELMA DA SILVA DE MATOS",
+            "IDADE": "74 anos",
+            "LOCAL": "",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "SOCIEDADE MINEIRA DE CULTURA",
+            "CNPJ": "17178195000167",
+            "CIDADE": "BELO HORIZONTE-MG",
+            "PROFISSAO": "334110",
+            "DATA_ADMISSAO": "06\/04\/2000",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

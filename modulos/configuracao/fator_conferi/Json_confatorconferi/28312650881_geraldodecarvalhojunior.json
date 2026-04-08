@@ -1,0 +1,183 @@
+{
+    "CADASTRAIS": {
+        "CPF": "28312650881",
+        "NOME": "GERALDO DE CARVALHO JUNIOR",
+        "NOME_MAE": "NEIDE TORRACA DE CARVALHO",
+        "NASCTO": "29\/08\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "321618567",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "222124000183",
+        "NIT": "12638478239",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "951105",
+        "PROFISSAO": "ELETRICISTA DE MANUTENCAO ELETROELETRONICA",
+        "SALARIO": " 1.623,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1134683844",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1934787443",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19999075964",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19974480004",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19998619875",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19998928727",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19995821207",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "geraldojunior79@terra.com.br",
+            "g.cjunior@globo.com",
+            "g.cjunior@yahoo.com",
+            "geraldocarvalho2010@globo.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PEDRO FURLAN",
+                "NUMERO": "254",
+                "COMPLEMENTO": "COMPLEM CASA",
+                "BAIRRO": "VILA BERTINI",
+                "CEP": "13473540",
+                "CIDADE": "AMERICANA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JORGE F. GUSTAVO BERGGREN",
+                "NUMERO": "322",
+                "COMPLEMENTO": "NULL",
+                "BAIRRO": "VILA MARIANA",
+                "CEP": "13473410",
+                "CIDADE": "AMERICANA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "7868990856",
+                "NOME": "NEIDE TORRACA DE CARVALHO",
+                "IDADE": "80 anos",
+                "LOCAL": "AMERICANA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "17556510824",
+                "NOME": "ALEXSANDRA DE CARVALHO",
+                "IDADE": "52 anos",
+                "LOCAL": "AMERICANA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "UMICORE BRASIL LTDA.",
+                "CNPJ": "96206313000765",
+                "CIDADE": "AMERICANA-SP",
+                "PROFISSAO": "951105",
+                "DATA_ADMISSAO": "11\/01\/2012",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MANSERV MONTAGEM E MANUTENCAO S\/A",
+                "CNPJ": "54183587000221",
+                "CIDADE": "SAO CAETANO DO SUL-SP",
+                "PROFISSAO": "951105",
+                "DATA_ADMISSAO": "04\/10\/2007",
+                "DATA_DEMISSAO": "10\/01\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "ELETROMEC AUTOMACAO E MONTAGENS LTDA - FALIDA",
+            "CNPJ": "02744339000128",
+            "CIDADE": "AMERICANA-SP",
+            "QUALIFICACAO": "SÃ³cio",
+            "DATA_ENTRADA": "20000822",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

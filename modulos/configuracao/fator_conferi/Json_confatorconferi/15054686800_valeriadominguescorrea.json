@@ -1,0 +1,143 @@
+{
+    "CADASTRAIS": {
+        "CPF": "15054686800",
+        "NOME": "VALERIA DOMINGUES CORREA",
+        "NOME_MAE": "MADALENA DOMINGUES CORREA",
+        "NASCTO": "02\/02\/1971",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "256784127",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "201434980191",
+        "NIT": "1227611650",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "325110",
+        "PROFISSAO": "TECNICO EM LABORATORIO DE FARMACIA",
+        "SALARIO": " 2.600,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1532172208",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "15997670314",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15998002966",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "15997632808",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "316.15054686800@lasa.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV GEN CARNEIRO",
+                "NUMERO": "631",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL LUCY",
+                "CEP": "18043002",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE MARCHI",
+                "NUMERO": "90",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD DOS ESTADOS",
+                "CEP": "18046070",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE MARCHI",
+                "NUMERO": "338",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM DOS ESTADOS",
+                "CEP": "18046070",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOSE MARCHI",
+                "NUMERO": "346",
+                "COMPLEMENTO": "CS B",
+                "BAIRRO": "JARDIM DOS ESTADOS",
+                "CEP": "18046070",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "12274438897",
+                "NOME": "MADALENA DOMINGUES CORREA",
+                "IDADE": "78 anos",
+                "LOCAL": "SOROCABA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "32776658877",
+                "NOME": "MARCIO VINICIUS DOMINGUES CORREA",
+                "IDADE": "42 anos",
+                "LOCAL": "SOROCABA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "FARMACIA TERAPEUTICA J M LTDA",
+            "CNPJ": "03307217000137",
+            "CIDADE": "SOROCABA-SP",
+            "PROFISSAO": "325110",
+            "DATA_ADMISSAO": "01\/11\/2002",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

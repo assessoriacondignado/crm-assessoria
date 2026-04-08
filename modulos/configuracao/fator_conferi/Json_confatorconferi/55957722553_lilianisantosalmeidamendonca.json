@@ -1,0 +1,283 @@
+{
+    "CADASTRAIS": {
+        "CPF": "55957722553",
+        "NOME": "LILIANI SANTOS ALMEIDA MENDONCA",
+        "NOME_MAE": "MARINALVA QUERINO DOS SANTOS",
+        "NASCTO": "04\/06\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Feminino",
+        "RG": "200420560",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "061191500574",
+        "NIT": "13204231622",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "231335",
+        "PROFISSAO": "PROFESSOR DE LINGUA PORTUGUESA DO ENSINO FUNDAMENTAL",
+        "SALARIO": " 678,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2124588779",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "2124279906",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "21\/06\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2124412847",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2132489965",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "26\/01\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2133473161",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "26\/02\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21969381909",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19969381909",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21986515354",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "21987537074",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/04\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "21995591575",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "sarinha7718@gmail.com",
+            "liliani.mendonca@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R N",
+                "NUMERO": "28",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE DE DEUS",
+                "CEP": "22763592",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R N",
+                "NUMERO": "26",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE DE DEUS",
+                "CEP": "22763592",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R DONA EMILIA",
+                "NUMERO": "72",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S JORGE",
+                "CEP": "93534630",
+                "CIDADE": "NOVO HAMBURGO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R OTAVIO COIMBRA",
+                "NUMERO": "26",
+                "COMPLEMENTO": "JD AMANHA",
+                "BAIRRO": "CIDADE DE DEUS",
+                "CEP": "22775740",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R JORN PAULO PINHEIRO",
+                "NUMERO": "768",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MALHADO",
+                "CEP": "45651660",
+                "CIDADE": "ILHEUS",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R ARTUR DE SA EARP",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE DE DEUS",
+                "CEP": "22770270",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA CAMPINAS DO SUL",
+                "NUMERO": "737",
+                "COMPLEMENTO": "CS 1",
+                "BAIRRO": "CURICICA",
+                "CEP": "22710280",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA CAMPINAS DO SUL",
+                "NUMERO": "777",
+                "COMPLEMENTO": "CS 1",
+                "BAIRRO": "CURICICA",
+                "CEP": "22710280",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "484018116",
+                "NOME": "MARINALVA QUERINO DOS SANTOS",
+                "IDADE": "44 anos",
+                "LOCAL": "JUINA\/MT",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "16773366763",
+                "NOME": "SARA SANTOS MENDONCA",
+                "IDADE": "27 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "16773391792",
+                "NOME": "STER SANTOS MENDONCA",
+                "IDADE": "22 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LAR DOS MENINOS",
+                "CNPJ": "33850421001302",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "231210",
+                "DATA_ADMISSAO": "09\/10\/2012",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LAR DOS MENINOS",
+                "CNPJ": "33850421002295",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "231210",
+                "DATA_ADMISSAO": "06\/03\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COLEGIO SENHORA DA PENA LTDA",
+                "CNPJ": "29748423000176",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "232145",
+                "DATA_ADMISSAO": "02\/07\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "JARDIM ESCOLA PINGOS DO SABER LTDA",
+                "CNPJ": "00411893000249",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "231335",
+                "DATA_ADMISSAO": "01\/02\/2010",
+                "DATA_DEMISSAO": "703",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

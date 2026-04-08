@@ -1,0 +1,168 @@
+{
+    "CADASTRAIS": {
+        "CPF": "4742055500",
+        "NOME": "TATIANE DEONATO NASCIMENTO",
+        "NOME_MAE": "ELENITA DEONATO NASCIMENTO",
+        "NASCTO": "28\/06\/1990",
+        "IDADE": "35 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1653230651",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "848510",
+        "PROFISSAO": "ACOUGUEIRO",
+        "SALARIO": " 1.465,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "2126785182",
+            "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "baixa"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "73981959607",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "73988752985",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21974515130",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "73988472161",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "22992729230",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "tatianedeonato@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "R GEN GOMES CARNEIRO",
+            "NUMERO": "227",
+            "COMPLEMENTO": "",
+            "BAIRRO": "SARACURUNA",
+            "CEP": "25211050",
+            "CIDADE": "DUQUE DE CAXIAS",
+            "ESTADO": "RJ"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "71908501553",
+                "NOME": "ELENITA DEONATO NASCIMENTO",
+                "IDADE": "59 anos",
+                "LOCAL": "",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "1536701505",
+                "NOME": "TADEU DEONATO NASCIMENTO",
+                "IDADE": "41 anos",
+                "LOCAL": "JEQUIE\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "3785127570",
+                "NOME": "ADENILSON DEONATO NASCIMENTO",
+                "IDADE": "38 anos",
+                "LOCAL": "FRANCA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "6727419540",
+                "NOME": "UELSON DEONATO NASCIMENTO",
+                "IDADE": "31 anos",
+                "LOCAL": "JEQUIE\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "LEANDRO DOS SANTOS GUIMARAES",
+            "IDADE": "",
+            "LOCALIDADE": "CAMPO GRANDE\/MS",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "9650590730"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SENDAS DISTRIBUIDORA S\/A",
+                "CNPJ": "06057223031301",
+                "CIDADE": "JEQUIE-BA",
+                "PROFISSAO": "848510",
+                "DATA_ADMISSAO": "26\/12\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "RIO BAHIA DESENVOLVIMENTO E APOIO LTDA",
+                "CNPJ": "13013074000104",
+                "CIDADE": "CABO FRIO-RJ",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "21\/01\/2020",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

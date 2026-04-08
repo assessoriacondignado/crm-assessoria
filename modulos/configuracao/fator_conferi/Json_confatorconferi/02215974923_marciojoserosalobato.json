@@ -1,0 +1,169 @@
+{
+    "CADASTRAIS": {
+        "CPF": "2215974923",
+        "NOME": "MARCIO JOSE ROSA LOBATO",
+        "NOME_MAE": "IRENE FERREIRA LOBATO",
+        "NASCTO": "22\/04\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "060103970639",
+        "NIT": "12725393509",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782510",
+        "PROFISSAO": "MOTORISTA DE CAMINHAO (ROTAS REGIONAIS E INTERNACIONAIS)",
+        "SALARIO": " 6,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4434451685",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "25\/04\/2005",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4434638300",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "44998862980",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "44988289333",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV S CRISTOVAO",
+                "NUMERO": "1",
+                "COMPLEMENTO": "CH TOCA DO",
+                "BAIRRO": "ZONA RURAL",
+                "CEP": "87740000",
+                "CIDADE": "SAO JOAO DO CAIUA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "EST INGLESA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "KM 8",
+                "BAIRRO": "PARANACITY",
+                "CEP": "87660000",
+                "CIDADE": "PARANACITY",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "EST S JOAO A ST DO CAIUA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ZONA RURAL",
+                "CEP": "87740000",
+                "CIDADE": "SAO JOAO DO CAIUA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R RUI BARBOSA",
+                "NUMERO": "462",
+                "COMPLEMENTO": "",
+                "BAIRRO": "",
+                "CEP": "87740000",
+                "CIDADE": "SAO JOAO DO CAIUA",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "81892802953",
+                "NOME": "IRENE FERREIRA LOBATO",
+                "IDADE": "79 anos",
+                "LOCAL": "SAO JOAO DO CAIUA\/PR",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "53567749234",
+                "NOME": "MARIA BEATRIZ FERREIRA LOBATO",
+                "IDADE": "41 anos",
+                "LOCAL": "MACAPA\/AP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "58136002991",
+                "NOME": "ANTONIO CARLOS LOBATO",
+                "IDADE": "58 anos",
+                "LOCAL": "SAO JOAO DO CAIUA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "92908055953",
+                "NOME": "ELENILDA ROSA LOBATO",
+                "IDADE": "61 anos",
+                "LOCAL": "MARINGA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "E M DE MORAES LTDA",
+                "CNPJ": "17226743000187",
+                "CIDADE": "PARANAVAI-PR",
+                "PROFISSAO": "521105",
+                "DATA_ADMISSAO": "19\/20\/2003",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "USINA DE ACUCAR SANTA TEREZINHA LTDA",
+                "CNPJ": "75717355000286",
+                "CIDADE": "PARANACITY-PR",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "04\/09\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,294 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25533358811",
+        "NOME": "JONAS JAMES MACIEL DA SILVA",
+        "NOME_MAE": "MARTA MACIEL DA SILVA",
+        "NASCTO": "24\/11\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "29177371",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "224734570116",
+        "NIT": "12515006142",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "410105",
+        "PROFISSAO": "SUPERVISOR ADMINISTRATIVO",
+        "SALARIO": " 10.334,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1147770698",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "02\/06\/2020",
+                "TIPO_TEL": "GPON",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1146143373",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "6732225572",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "10\/04\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1533843881",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1533848400",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11991414614",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1179211604",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11984749591",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15997044009",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11941612913",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "jonasjms@yahoo.com",
+            "jonasjms@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R BENEDITO ROSA DA SILVA",
+                "NUMERO": "541",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RES ALIANCA",
+                "CEP": "18528094",
+                "CIDADE": "CERQUILHO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BENEDITO ROSA DA SILVA",
+                "NUMERO": "541",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CIDADE JARDIM",
+                "CEP": "18528002",
+                "CIDADE": "CERQUILHO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BEBERIBE",
+                "NUMERO": "9",
+                "COMPLEMENTO": "AP 44",
+                "BAIRRO": "JD RIO DAS PEDRAS",
+                "CEP": "06703788",
+                "CIDADE": "COTIA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SABOIA",
+                "NUMERO": "360",
+                "COMPLEMENTO": "",
+                "BAIRRO": "REPRESA",
+                "CEP": "09416080",
+                "CIDADE": "RIBEIRAO PIRES",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV INOCENCIO PIRES DE OLIVEIRA",
+                "NUMERO": "621",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CENTRO CAUCAIA DO ALTO",
+                "CEP": "06725105",
+                "CIDADE": "COTIA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ARI LEAO",
+                "NUMERO": "6",
+                "COMPLEMENTO": "SB 2",
+                "BAIRRO": "RAMOS",
+                "CEP": "21040005",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "AV INOCENCIO PIRES OLIVEIRA",
+                "NUMERO": "621",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "18195000",
+                "CIDADE": "CAPELA DO ALTO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV PRIMEIRO DE MAIO",
+                "NUMERO": "1341",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL ESTIVA",
+                "CEP": "18528342",
+                "CIDADE": "CERQUILHO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "2775463460",
+            "NOME": "MARTA MACIEL DA SILVA",
+            "IDADE": "52 anos",
+            "LOCAL": "IATI\/PE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "KEIKO BABA MACIEL DA SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "CERQUILHO\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "18474657814"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "MOROCO PARTICIPACOES E COMERCIO S.A.",
+                "CNPJ": "66635780000154",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142115",
+                "DATA_ADMISSAO": "16\/05\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MAGNAMED TECNOLOGIA MEDICA S\/A",
+                "CNPJ": "01298443000173",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142115",
+                "DATA_ADMISSAO": "01\/10\/2015",
+                "DATA_DEMISSAO": "31\/07\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "MAGNAMED TECNOLOGIA MEDICA S\/A",
+                "CNPJ": "01298443000254",
+                "CIDADE": "COTIA-SP",
+                "PROFISSAO": "142115",
+                "DATA_ADMISSAO": "01\/08\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "VETORIAL SIDERURGIA S\/A",
+                "CNPJ": "03543379000760",
+                "CIDADE": "CAMPO GRANDE-MS",
+                "PROFISSAO": "142105",
+                "DATA_ADMISSAO": "09\/12\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "FIBERTEX NAOTECIDOS LTDA.",
+                "CNPJ": "04210314000170",
+                "CIDADE": "CERQUILHO-SP",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "01\/09\/2007",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "SIGNAJURIS CONSULTORIA LTDA",
+            "CNPJ": "49687931000107",
+            "CIDADE": "COTIA-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20230119",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

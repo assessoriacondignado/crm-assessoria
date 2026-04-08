@@ -1,0 +1,154 @@
+{
+    "CADASTRAIS": {
+        "CPF": "15973406857",
+        "NOME": "MARCO ANTONIO BERZUINO",
+        "NOME_MAE": "APARECIDA SILVEIRA ALVES BERZUINO",
+        "NASCTO": "21\/03\/1972",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "180352210116",
+        "NIT": "12278594593",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "913115",
+        "PROFISSAO": "MECANICO DE MANUTENCAO DE MAQUINAS AGRICOLAS",
+        "SALARIO": " 13,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1639879000",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "16992140195",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "16992672151",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marco.berzu@gmail.com",
+            "higor.berzu@terra.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "ROD ABRAO ACED",
+                "NUMERO": "33",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ZONA RURAL",
+                "CEP": "14150000",
+                "CIDADE": "SERRANA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA SANTA CRUZ",
+                "NUMERO": "1403",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "CENTRO",
+                "CEP": "14150000",
+                "CIDADE": "SERRANA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SANTA CRUZ",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD BELA VISTA",
+                "CEP": "14150000",
+                "CIDADE": "SERRANA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "24702777874",
+                "NOME": "APARECIDA SILVEIRA ALVES BERZUINO",
+                "IDADE": "75 anos",
+                "LOCAL": "SERRANA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "22061733875",
+                "NOME": "MARIA RITA BERZUINO TEIXEIRA",
+                "IDADE": "44 anos",
+                "LOCAL": "SERRANA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "26901386893",
+                "NOME": "JOAO CARLOS BERZUINO",
+                "IDADE": "49 anos",
+                "LOCAL": "SERRANA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "HIGOR AMARO BERZUINO",
+            "IDADE": "",
+            "LOCALIDADE": "SERRANA\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "43874701867"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "USIFRESA INDUSTRIA E COMERCIO DE MAQUINAS E EQUIPAMENTOS LTDA",
+                "CNPJ": "05543904000187",
+                "CIDADE": "SERRANA-SP",
+                "PROFISSAO": "724205",
+                "DATA_ADMISSAO": "19\/20\/1911",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PEDRA AGROINDUSTRIAL S\/A",
+                "CNPJ": "71304687000105",
+                "CIDADE": "SERRANA-SP",
+                "PROFISSAO": "913115",
+                "DATA_ADMISSAO": "15\/05\/2000",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,233 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25604357804",
+        "NOME": "PAUL GALLI",
+        "NOME_MAE": "CELIA MARIA DINIZ GALLI",
+        "NASCTO": "26\/03\/1976",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "254767217",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "258491970132",
+        "NIT": "12463207495",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "520110",
+        "PROFISSAO": "SUPERVISOR DE VENDAS COMERCIAL",
+        "SALARIO": " 1.892,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "6232590025",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1146542808",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "09\/04\/2002",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11999332458",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11999332458",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11944693928",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11962075431",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11974585671",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "paul_displays@yahoo.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DOS PINHEIROS",
+                "NUMERO": "355",
+                "COMPLEMENTO": "CDARUJASIN",
+                "BAIRRO": "CAPUTERA",
+                "CEP": "07434445",
+                "CIDADE": "ARUJA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DOS PINHEIROS",
+                "NUMERO": "355",
+                "COMPLEMENTO": "CND I",
+                "BAIRRO": "PRQ DOS JACARANDAS",
+                "CEP": "07437025",
+                "CIDADE": "ARUJA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DOS PINHEIROS",
+                "NUMERO": "35",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ARUJAZINHO IV",
+                "CEP": "07434445",
+                "CIDADE": "ARUJA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PEDRO ALVARES CABRAL",
+                "NUMERO": "201",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD VILA GALVAO",
+                "CEP": "07055061",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV ODAIR SANTANELLI",
+                "NUMERO": "0",
+                "COMPLEMENTO": "BL A AP B COND",
+                "BAIRRO": "PRQ CECAP",
+                "CEP": "07190050",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV MONTEIRO LOBATO",
+                "NUMERO": "3130",
+                "COMPLEMENTO": "D: APARTAMENTO:173 TORRI",
+                "BAIRRO": "VILA MIRIAM",
+                "CEP": "07190000",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA LUIZ BANTO DAMIANI",
+                "NUMERO": "122",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PTE GRANDE",
+                "CEP": "07033030",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DOS PINHEIROS",
+                "NUMERO": "355",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAPUTERA",
+                "CEP": "07400000",
+                "CIDADE": "ARUJA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "29045515814",
+                "NOME": "CELIA MARIA DINIZ GALLI",
+                "IDADE": "74 anos",
+                "LOCAL": "GUARULHOS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "15293066803",
+                "NOME": "MARK GALLI",
+                "IDADE": "52 anos",
+                "LOCAL": "MONGAGUA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ARCOLIMP SERVICOS GERAIS LTDA",
+                "CNPJ": "05576482000146",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "422105",
+                "DATA_ADMISSAO": "16\/10\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BK CONSULTORIA E SERVICOS LTDA",
+                "CNPJ": "03022122000177",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "422105",
+                "DATA_ADMISSAO": "02\/07\/2016",
+                "DATA_DEMISSAO": "16\/11\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "A.R.N. INDUSTRIA E COMERCIO DE ARTIGOS DE SERRALHERIA EM GERAL LTDA",
+                "CNPJ": "61731154000148",
+                "CIDADE": "GUARULHOS-SP",
+                "PROFISSAO": "520110",
+                "DATA_ADMISSAO": "01\/06\/2007",
+                "DATA_DEMISSAO": "13\/12\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

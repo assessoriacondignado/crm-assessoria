@@ -1,0 +1,137 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26104485898",
+        "NOME": "NEWTON TADEU FERREIRA JUNIOR",
+        "NOME_MAE": "SONIA APARECIDA DE OLIVEIRA FERREIRA",
+        "NASCTO": "26\/12\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "279116880183",
+        "NIT": "12587546933",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "862150",
+        "PROFISSAO": "OPERADOR DE MAQUINAS FIXAS, EM GERAL",
+        "SALARIO": " 4.720,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1146786821",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11995118154",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11999511815",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "newtontadeu26@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R EMILIO RIBAS",
+                "NUMERO": "7",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SIT PAREDAO",
+                "CEP": "08501180",
+                "CIDADE": "FERRAZ DE VASCONCELOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R LUCIMAR FERNANDES DANTAS",
+                "NUMERO": "200",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD STA ROSA",
+                "CEP": "08536420",
+                "CIDADE": "FERRAZ DE VASCONCELOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R EMILIO RIBAS",
+                "NUMERO": "75",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S PAREDAO",
+                "CEP": "08501180",
+                "CIDADE": "FERRAZ DE VASCONCELLOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "314788670",
+            "NOME": "SONIA APARECIDA DE OLIVEIRA FERREIRA",
+            "IDADE": "50 anos",
+            "LOCAL": "IBIRITE\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ORTOPEDIA JAGUARIBE INDUSTRIA E COMERCIO LIMITADA",
+                "CNPJ": "43375799000103",
+                "CIDADE": "FERRAZ DE VASCONCELOS-SP",
+                "PROFISSAO": "141205",
+                "DATA_ADMISSAO": "02\/04\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "IM LASER COMERCIAL LTDA",
+                "CNPJ": "01169124000168",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "391125",
+                "DATA_ADMISSAO": "01\/06\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "VITOR LASER INDUSTRIA E COMERCIO LTDA",
+                "CNPJ": "02501608000125",
+                "CIDADE": "ARUJA-SP",
+                "PROFISSAO": "862150",
+                "DATA_ADMISSAO": "03\/08\/2009",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

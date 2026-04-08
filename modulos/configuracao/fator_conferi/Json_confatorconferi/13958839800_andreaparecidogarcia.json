@@ -1,0 +1,208 @@
+{
+    "CADASTRAIS": {
+        "CPF": "13958839800",
+        "NOME": "ANDRE APARECIDO GARCIA",
+        "NOME_MAE": "MARIA GARCIA",
+        "NASCTO": "08\/10\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "218512240",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "211624230132",
+        "NIT": "1249310789 ",
+        "ESCOLARIDADE": "ANALFABETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "131310",
+        "PROFISSAO": "DIRETOR DE INSTITUICAO EDUCACIONAL PUBLICA",
+        "SALARIO": " 15.683,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1938124255",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1934510103",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19996239925",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19974215373",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19987367668",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19988509354",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "garciapaula@ig.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV JOINVILE",
+                "NUMERO": "390",
+                "COMPLEMENTO": "COND IPE",
+                "BAIRRO": "JD LARANJEIRAS",
+                "CEP": "13484144",
+                "CIDADE": "LIMEIRA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R TATUIBI",
+                "NUMERO": "500",
+                "COMPLEMENTO": "BL 4 B AP 22 B PRQ SABIAS C",
+                "BAIRRO": "VL PAULISTA",
+                "CEP": "13484050",
+                "CIDADE": "LIMEIRA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "74009850",
+            "NOME": "MARIA GARCIA",
+            "IDADE": "132 anos",
+            "LOCAL": "SERRA\/ES",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "MARIA GARCIA",
+            "IDADE": "",
+            "LOCALIDADE": "LIMEIRA\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "1609315847"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ARTE EMPREENDIMENTOS EDUCACIONAIS LTDA",
+                "CNPJ": "02671413000123",
+                "CIDADE": "COSMOPOLIS-SP",
+                "PROFISSAO": "232155",
+                "DATA_ADMISSAO": "18\/02\/2000",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MUNICIPIO DE PAULINIA",
+                "CNPJ": "45751435000106",
+                "CIDADE": "PAULINIA-SP",
+                "PROFISSAO": "131310",
+                "DATA_ADMISSAO": "26\/06\/2017",
+                "DATA_DEMISSAO": "{Ã±\/{Ã±\/2023",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "NUCLEO EDUCACIONAL SAO FRANCISCO LTDA",
+                "CNPJ": "01576866000108",
+                "CIDADE": "LIMEIRA-SP",
+                "PROFISSAO": "234624",
+                "DATA_ADMISSAO": "03\/02\/2003",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "CAMPANHA NACIONAL DE ESCOLAS DA COMUNIDADE",
+                "CNPJ": "33621384058702",
+                "CIDADE": "CAPIVARI-SP",
+                "PROFISSAO": "231105",
+                "DATA_ADMISSAO": "01\/03\/2016",
+                "DATA_DEMISSAO": "19\/04\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "REAL PARCERIA MAO DE OBRA TEMPORARIA LTDA",
+                "CNPJ": "01719271000164",
+                "CIDADE": "SAO BERNARDO DO CAMPO-SP",
+                "PROFISSAO": "233210",
+                "DATA_ADMISSAO": "21\/07\/2014",
+                "DATA_DEMISSAO": "05\/09\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "COLEGIO SAO FRANCISCO LTDA.",
+                "CNPJ": "04857461000136",
+                "CIDADE": "LIMEIRA-SP",
+                "PROFISSAO": "232145",
+                "DATA_ADMISSAO": "03\/02\/2003",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "ESTADO DE SAO PAULO",
+                "CNPJ": "46379400000150",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "331205",
+                "DATA_ADMISSAO": "01\/02\/2012",
+                "DATA_DEMISSAO": "15\/02\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

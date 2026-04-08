@@ -1,0 +1,185 @@
+{
+    "CADASTRAIS": {
+        "CPF": "15475625875",
+        "NOME": "ADRIANA CRISTINA SILVA RUA NARDO",
+        "NOME_MAE": "MARIA ROSA SILVA DA RUA",
+        "NASCTO": "11\/10\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "242585200159",
+        "NIT": "1241006581",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411010",
+        "PROFISSAO": "ASSISTENTE ADMINISTRATIVO",
+        "SALARIO": " 2.925,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1934651719",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "14\/01\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1934651719",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "14\/01\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "19991948704",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "PRE PAGO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "paulorua@linkbr.com.br",
+            "paulodarua@uol.com.br",
+            "ps.rua@uol.com.br",
+            "silvapaulo.rua@br.inter.net",
+            "paulosergio.rua@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV AFFONSO PANSAN",
+                "NUMERO": "4005",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL BERTINI",
+                "CEP": "13473620",
+                "CIDADE": "AMERICANA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BENEDITO APARECIDO BERTOSSI",
+                "NUMERO": "0",
+                "COMPLEMENTO": "EMPRESA",
+                "BAIRRO": "JD BRASIL",
+                "CEP": "13474110",
+                "CIDADE": "AMERICANA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SAO GONCALO",
+                "NUMERO": "40",
+                "COMPLEMENTO": "D: 40 BLOCO:A APARTAMENTO:27",
+                "BAIRRO": "JARDIM NOSSA SENHORA DO CARMO",
+                "CEP": "13472290",
+                "CIDADE": "AMERICANA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA BENEDITO A  BERTOSSI",
+                "NUMERO": "546",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "JD BRASIL",
+                "CEP": "13474110",
+                "CIDADE": "AMERICANA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "12379233870",
+                "NOME": "MARIA ROSA SILVA DA RUA",
+                "IDADE": "74 anos",
+                "LOCAL": "AMERICANA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "5879231801",
+                "NOME": "ANGELINO SILVA DA RUA",
+                "IDADE": "57 anos",
+                "LOCAL": "AMERICANA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "12379457808",
+                "NOME": "SUELI SILVA RUA BRAGA",
+                "IDADE": "55 anos",
+                "LOCAL": "COSMOPOLIS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "27083057869",
+                "NOME": "PAULO SERGIO SILVA DA RUA",
+                "IDADE": "45 anos",
+                "LOCAL": "AMERICANA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LICEU CORACAO DE JESUS",
+                "CNPJ": "60463072001250",
+                "CIDADE": "AMERICANA-SP",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "04\/11\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "V.B. RAMOS SERVICOS ADMINISTRATIVOS LTDA",
+                "CNPJ": "30589468000124",
+                "CIDADE": "AMERICANA-SP",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "01\/03\/2023",
+                "DATA_DEMISSAO": "29\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SUPER SHOPPING DA UTILIDADE DE AMERICANA LTDA.",
+                "CNPJ": "30589594000189",
+                "CIDADE": "AMERICANA-SP",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "21\/20\/2005",
+                "DATA_DEMISSAO": "28\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "NEXANS BRASIL S\/A",
+                "CNPJ": "31860364001228",
+                "CIDADE": "AMERICANA-SP",
+                "PROFISSAO": "391115",
+                "DATA_ADMISSAO": "17\/04\/2006",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

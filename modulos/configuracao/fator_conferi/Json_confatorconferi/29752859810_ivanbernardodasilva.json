@@ -1,0 +1,290 @@
+{
+    "CADASTRAIS": {
+        "CPF": "29752859810",
+        "NOME": "IVAN BERNARDO DA SILVA",
+        "NOME_MAE": "MARIA JOSE BERNARDO DA SILVA",
+        "NASCTO": "18\/03\/1983",
+        "IDADE": "43 anos",
+        "SEXO": "Masculino",
+        "RG": "297574218",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "290704650116",
+        "NIT": "12948680893",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521110",
+        "PROFISSAO": "VENDEDOR DE COMERCIO VAREJISTA",
+        "SALARIO": " 5.720,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1127070397",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1127070889",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1138861874",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "05\/07\/2001",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11990231857",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11980914579",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11982241793",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "29\/08\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11949229144",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "13\/09\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11949231121",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "29\/08\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "ivan.bernardo@terra.com.br",
+            "ivan.silva@vb.com.br",
+            "ivan.bernardo1@terra.com.br",
+            "ivan.silva@bb.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JULIO FERNANDES",
+                "NUMERO": "80",
+                "COMPLEMENTO": "BL A AND 19 AP 191",
+                "BAIRRO": "JD IMPERADOR",
+                "CEP": "07072103",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANANIAS NOGUEIRA PINHEIRO",
+                "NUMERO": "2531",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD MIMAR",
+                "CEP": "03986250",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV ARQO VILANOVA ARTIGAS",
+                "NUMERO": "100",
+                "COMPLEMENTO": "C 78",
+                "BAIRRO": "CJ HABITACIONAL TEOTONIO VILELA",
+                "CEP": "03928240",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SALVADOR CORREA DE SA",
+                "NUMERO": "612",
+                "COMPLEMENTO": "AP 2",
+                "BAIRRO": "VL NOGUEIRA",
+                "CEP": "09951060",
+                "CIDADE": "DIADEMA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO GABRIEL FRANZON",
+                "NUMERO": "274",
+                "COMPLEMENTO": "C 2",
+                "BAIRRO": "JD ELBA",
+                "CEP": "03979080",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV DO ORATORIO",
+                "NUMERO": "5800",
+                "COMPLEMENTO": "AP E ELISABETH",
+                "BAIRRO": "VL PRUDENTE",
+                "CEP": "03220901",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANANIAS NOGUEIRA PINHEIRO",
+                "NUMERO": "231",
+                "COMPLEMENTO": "CS  Casa  1",
+                "BAIRRO": "JARDIM MIMAR",
+                "CEP": "03986250",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "180880403",
+            "NOME": "MARIA JOSE BERNARDO DA SILVA",
+            "IDADE": "52 anos",
+            "LOCAL": "NATAL\/RN",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "AILTON LUIZ MARTINS",
+                "IDADE": "",
+                "LOCALIDADE": "NITEROI\/RJ",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "71316540782"
+            },
+            {
+                "NOME": "DANIELA NUNES NOGUEIRA",
+                "IDADE": "",
+                "LOCALIDADE": "TERESINA\/PI",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "65882660300"
+            },
+            {
+                "NOME": "LILIAN GOMES BATISTA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "3663018610"
+            },
+            {
+                "NOME": "MARIA JOSE BERNARDO DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "56584962849"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "RB SERVICOS EMPRESARIAIS LTDA",
+                "CNPJ": "04124182000163",
+                "CIDADE": "GUARULHOS-SP",
+                "PROFISSAO": "141205",
+                "DATA_ADMISSAO": "11\/11\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "RB REDE DE BENEFICIOS E GESTAO EMPRESARIAL LTDA",
+                "CNPJ": "00342669000161",
+                "CIDADE": "GUARULHOS-SP",
+                "PROFISSAO": "141205",
+                "DATA_ADMISSAO": "01\/12\/2022",
+                "DATA_DEMISSAO": "23\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "VB-SERVICOS COMERCIO E ADMINISTRACAO LTDA",
+                "CNPJ": "00288916001080",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/11\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "GESTREK - SERVICO DE GESTAO, CALL CENTER E LOGISTICA EMPRESARIAL LTDA.",
+                "CNPJ": "18307680000156",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/03\/2004",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "SP CAMP LOGISTICA - SERVICOS, COMERCIO E ADMINISTRACAO LTDA",
+                "CNPJ": "04910449000148",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "354110",
+                "DATA_ADMISSAO": "01\/03\/2004",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "IVAN BERNARDO DA SILVA LTDA",
+            "CNPJ": "48940942000186",
+            "CIDADE": "GUARULHOS-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20221220",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

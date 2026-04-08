@@ -1,0 +1,176 @@
+{
+    "CADASTRAIS": {
+        "CPF": "92931189553",
+        "NOME": "TELMA SOUZA CORREIA",
+        "NOME_MAE": "MARIA DA CONCEICAO CORREA",
+        "NASCTO": "08\/06\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "011870362127",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "7932771724",
+            "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "79999310809",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999539227",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79996510091",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79998160815",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "15\/07\/2013",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "79999479367",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "telmawiltenas@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV ALVARO TELES DO BONFIM",
+                "NUMERO": "57",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "49740000",
+                "CIDADE": "CARMOPOLIS",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "AV ALVARO TELES DO BOMFIM",
+                "NUMERO": "53",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "49740000",
+                "CIDADE": "CARMOPOLIS",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R AV OTAVIO ACIOLLI SOBRAL",
+                "NUMERO": "131",
+                "COMPLEMENTO": "AO LD DA AUTOCOL A RJ",
+                "BAIRRO": "CENTRO",
+                "CEP": "49740000",
+                "CIDADE": "CARMOPOLIS",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "87296624",
+                "NOME": "MARIA DA CONCEICAO CORREA",
+                "IDADE": "67 anos",
+                "LOCAL": "DELFINOPOLIS\/MG",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "6320920505",
+                "NOME": "HISLANA HINGRID SOUZA DOS SANTOS",
+                "IDADE": "30 anos",
+                "LOCAL": "SANTO ANTONIO DO DESCOBERTO\/GO",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CONSULTORIO ODONTOLOGICO ORAL SANTA HELENA LTDA",
+                "CNPJ": "07710917000129",
+                "CIDADE": "CARMOPOLIS-SE",
+                "PROFISSAO": "322415",
+                "DATA_ADMISSAO": "01\/07\/2017",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CENTRO ORTODONTICO ORTO VITTA LTDA",
+                "CNPJ": "16857359000381",
+                "CIDADE": "CARMOPOLIS-SE",
+                "PROFISSAO": "322415",
+                "DATA_ADMISSAO": "01\/06\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CENTRO ORTODONTICO ORTO VITTA LTDA",
+                "CNPJ": "16857359000110",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/07\/2017",
+                "DATA_DEMISSAO": "01\/11\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

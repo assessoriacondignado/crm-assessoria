@@ -1,0 +1,184 @@
+{
+    "CADASTRAIS": {
+        "CPF": "64733696191",
+        "NOME": "CARLOS AUGUSTO MEDEIROS DE SOUSA",
+        "NOME_MAE": "MARIA SALOME MEDEIROS DE SOUSA",
+        "NASCTO": "31\/07\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "010973902070",
+        "NIT": "1240687303 ",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "717020",
+        "PROFISSAO": "SERVENTE DE OBRAS",
+        "SALARIO": " 1.280,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "6138770769",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "61994093741",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "AUTOC",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "61986160769",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "61999390063",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "carlinams2010@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "QSB 9",
+                "NUMERO": "0",
+                "COMPLEMENTO": "37 C",
+                "BAIRRO": "TAGUATINGA SUL TAGUATINGA",
+                "CEP": "72015590",
+                "CIDADE": "BRASILIA",
+                "ESTADO": "DF"
+            },
+            {
+                "LOGRADOURO": "RUA 5",
+                "NUMERO": "0",
+                "COMPLEMENTO": "N R 5 CH 232 LT 26 28 AP 1 S",
+                "BAIRRO": "ST HABITACIONAL VICENTE PIRES",
+                "CEP": "72006005",
+                "CIDADE": "BRASILIA",
+                "ESTADO": "DF"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "70086788191",
+                "NOME": "PAULO CESAR MEDEIROS DE SOUSA",
+                "IDADE": "45 anos",
+                "LOCAL": "",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "87848511120",
+                "NOME": "PAULO CESAR MEDEIROS DE SOUSA",
+                "IDADE": "45 anos",
+                "LOCAL": "BRASILIA\/DF",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "91726042120",
+                "NOME": "DIOGO DAVI MEDEIROS DE SOUSA",
+                "IDADE": "47 anos",
+                "LOCAL": "BRASILIA\/DF",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "VOG SERVICOS ADMINISTRATIVOS LTDA",
+                "CNPJ": "54689051000100",
+                "CIDADE": "AGUAS LINDAS DE GOIAS-GO",
+                "PROFISSAO": "521125",
+                "DATA_ADMISSAO": "12\/04\/2024",
+                "DATA_DEMISSAO": "12\/07\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VOGADO SERVICOS ADM LTDA",
+                "CNPJ": "49867251000167",
+                "CIDADE": "AGUAS LINDAS DE GOIAS-GO",
+                "PROFISSAO": "521125",
+                "DATA_ADMISSAO": "09\/10\/2023",
+                "DATA_DEMISSAO": "11\/04\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FCDS COMERCIO DE ALIMENTOS E SERVICOS ADMINISTRATIVOS LTDA",
+                "CNPJ": "29910476000141",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "521125",
+                "DATA_ADMISSAO": "02\/08\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TOP CHURRASQUEIRA LTDA",
+                "CNPJ": "31287346000146",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "717020",
+                "DATA_ADMISSAO": "18\/01\/2022",
+                "DATA_DEMISSAO": "04\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "PAULO   MAIA SUPERMERCADOS EM LTDA",
+                "CNPJ": "00370197000746",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "521125",
+                "DATA_ADMISSAO": "10\/12\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "LUIZ CARLOS MILKEN ABDALA",
+                "CNPJ": "07454902000147",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "717020",
+                "DATA_ADMISSAO": "21\/03\/2011",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

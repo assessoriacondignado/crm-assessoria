@@ -1,0 +1,183 @@
+{
+    "CADASTRAIS": {
+        "CPF": "43924565287",
+        "NOME": "ELIANA OLIVEIRA DE SOUZA",
+        "NOME_MAE": "DAVINA TAROLA DE OLIVEIRA",
+        "NASCTO": "05\/01\/1970",
+        "IDADE": "56 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12187642714",
+        "ESCOLARIDADE": "PRIMEIRO GRAU (GINASIO)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "514225",
+        "PROFISSAO": "TRABALHADOR DE SERVICOS DE MANUTENCAO DE EDIFICIOS E LOGRADOUROS",
+        "SALARIO": " 1.175,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9232219550",
+            "OPERADORA": "TELEMAR\/AM",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92988383614",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92993418114",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R QUATRO",
+                "NUMERO": "90",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVA ESPERANCA",
+                "CEP": "69037584",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R QUATRO C",
+                "NUMERO": "90",
+                "COMPLEMENTO": "LT VITORIA",
+                "BAIRRO": "MAUAZINHO",
+                "CEP": "69075766",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R COIMBRA",
+                "NUMERO": "16",
+                "COMPLEMENTO": "35",
+                "BAIRRO": "NOVO ALEIXO",
+                "CEP": "69098180",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R COIMBRA",
+                "NUMERO": "35",
+                "COMPLEMENTO": "Q 350 NUC 16",
+                "BAIRRO": "NOVO ALEIXO",
+                "CEP": "69098180",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R RICARDO DA SILVA MENDONCA",
+                "NUMERO": "90",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVO ALEIXO",
+                "CEP": "69098345",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "7746342272",
+                "NOME": "EMILIA OLIVEIRA DA SILVA",
+                "IDADE": "66 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "27320561204",
+                "NOME": "MOISES TAROLA DE OLIVEIRA",
+                "IDADE": "61 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "27474194287",
+                "NOME": "MARIA IRENE TAROLA DE OLIVEIRA",
+                "IDADE": "59 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "32017952249",
+                "NOME": "CECILIA TAROLA DE OLIVEIRA",
+                "IDADE": "54 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "32085320244",
+                "NOME": "ANA CLAUDIA TAROLA DE OLIVEIRA",
+                "IDADE": "52 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COMERCIO DE MIUDEZAS BANDEIRA LTDA",
+                "CNPJ": "84450212000160",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "992225",
+                "DATA_ADMISSAO": "18\/12\/2013",
+                "DATA_DEMISSAO": "31\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TROPICAL MULTISERVICOS LTDA",
+                "CNPJ": "18099221000124",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "992225",
+                "DATA_ADMISSAO": "01\/09\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SECRETARIA DE ESTADO DE CULTURA - SEC",
+                "CNPJ": "01801623000126",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "514225",
+                "DATA_ADMISSAO": "21\/09\/2009",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

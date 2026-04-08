@@ -1,0 +1,176 @@
+{
+    "CADASTRAIS": {
+        "CPF": "81376618320",
+        "NOME": "ERINE DANTAS BEZERRA",
+        "NOME_MAE": "FRANCISCA DANTAS BEZERRA",
+        "NASCTO": "18\/08\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "050113830760",
+        "NIT": "2032414381",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "234415",
+        "PROFISSAO": "PROFESSOR DE ENFERMAGEM DO ENSINO SUPERIOR",
+        "SALARIO": " 6.009,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8835413988",
+                "OPERADORA": "TELEMAR\/CE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8532460183",
+                "OPERADORA": "TELEMAR\/CE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "85996279629",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "88996279566",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "88981071157",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "erinebezerra@oi.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV JOSE ALVES DE FIGUEIREDO",
+                "NUMERO": "160",
+                "COMPLEMENTO": "A",
+                "BAIRRO": "CENTRO",
+                "CEP": "63100052",
+                "CIDADE": "CRATO",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R CARLOS VASCONCELOS",
+                "NUMERO": "2787",
+                "COMPLEMENTO": "AP 701",
+                "BAIRRO": "JOAQUIM TAVORA",
+                "CEP": "60115044",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R EDUARDO BEZERRA",
+                "NUMERO": "1414",
+                "COMPLEMENTO": "AP 301",
+                "BAIRRO": "S JOAO DO TAUAPE",
+                "CEP": "60130271",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "RUA CARLOS VASCONCELOS",
+                "NUMERO": "2787",
+                "COMPLEMENTO": "AP 701",
+                "BAIRRO": "ALDEOTA",
+                "CEP": "60115171",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "2768069485",
+                "NOME": "FRANCISCA DANTAS BEZERRA",
+                "IDADE": "86 anos",
+                "LOCAL": "JOAO PESSOA\/PB",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "7452041399",
+                "NOME": "NICOLAS DANTAS DE OLIVEIRA",
+                "IDADE": "15 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "INSTITUTO LEAO SAMPAIO DE ENSINO UNIVERSITARIO LTDA",
+                "CNPJ": "02391959000201",
+                "CIDADE": "JUAZEIRO DO NORTE-CE",
+                "PROFISSAO": "234415",
+                "DATA_ADMISSAO": "01\/07\/2008",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "INSTITUTO LEAO SAMPAIO DE ENSINO UNIVERSITARIO LTDA",
+                "CNPJ": "02391959000120",
+                "CIDADE": "JUAZEIRO DO NORTE-CE",
+                "PROFISSAO": "239405",
+                "DATA_ADMISSAO": "01\/07\/2008",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "MATOS BEZERRA REPRESENTACOES LTDA",
+            "CNPJ": "04147962000129",
+            "CIDADE": "TRES RANCHOS-GO",
+            "QUALIFICACAO": "SÃ³cio",
+            "DATA_ENTRADA": "20001116",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

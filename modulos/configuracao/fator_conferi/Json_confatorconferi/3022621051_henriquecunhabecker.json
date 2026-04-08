@@ -1,0 +1,155 @@
+{
+    "CADASTRAIS": {
+        "CPF": "3022621051",
+        "NOME": "HENRIQUE CUNHA BECKER",
+        "NOME_MAE": "ROSE MARI DA CUNHA BECKER",
+        "NASCTO": "28\/09\/1992",
+        "IDADE": "33 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1602628828",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "517425",
+        "PROFISSAO": "",
+        "SALARIO": " 4.974,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5136691346",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "6634071901",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "51997166720",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "PRE PAGO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "TV ARI PINHEIRO",
+                "NUMERO": "35",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "96780042",
+                "CIDADE": "CAMAQUA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R PERNAMBUCO",
+                "NUMERO": "2145",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVA TRAMANDAI",
+                "CEP": "95590000",
+                "CIDADE": "TRAMANDAI",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "55961185087",
+                "NOME": "ROSE MARI DA CUNHA BECKER",
+                "IDADE": "55 anos",
+                "LOCAL": "SAPUCAIA DO SUL\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "4047067032",
+                "NOME": "ERICA DA CUNHA BECKER",
+                "IDADE": "29 anos",
+                "LOCAL": "TRAMANDAI\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738002025",
+                "CIDADE": "SANTA MARIA-RS",
+                "PROFISSAO": "517425",
+                "DATA_ADMISSAO": "08\/09\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738034733",
+                "CIDADE": "CAPAO DA CANOA-RS",
+                "PROFISSAO": "517425",
+                "DATA_ADMISSAO": "01\/10\/2022",
+                "DATA_DEMISSAO": "01\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738040970",
+                "CIDADE": "TRAMANDAI-RS",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "08\/09\/2020",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "HESIL SISTEMAS ELETRONICOS PARA SEGURANCA LTDA.",
+                "CNPJ": "90035411000105",
+                "CIDADE": "TRAMANDAI-RS",
+                "PROFISSAO": "517420",
+                "DATA_ADMISSAO": "01\/03\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "MULLER E COLOMBO LTDA",
+                "CNPJ": "08308805000109",
+                "CIDADE": "TRAMANDAI-RS",
+                "PROFISSAO": "521125",
+                "DATA_ADMISSAO": "01\/12\/2009",
+                "DATA_DEMISSAO": "21\/08\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

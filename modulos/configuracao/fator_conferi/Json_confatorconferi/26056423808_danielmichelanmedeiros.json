@@ -1,0 +1,264 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26056423808",
+        "NOME": "DANIEL MICHELAN MEDEIROS",
+        "NOME_MAE": "MARIA REGINA MICHELAN",
+        "NASCTO": "04\/06\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "251872220108",
+        "NIT": "1901719787",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "241005",
+        "PROFISSAO": "ADVOGADO",
+        "SALARIO": " 48.499,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1155711012",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1123870127",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "11\/03\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1123875340",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1131035513",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1138467671",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11999907821",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11959538159",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11982824219",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11982828952",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11982828952",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "daniel.medeiros@caixa.gov.br",
+            "dmichelan@uol.com.br",
+            "d1adv@uol.com.br",
+            "danieldemichelan@uol.com.br",
+            "gumichelan@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DES AGUIAR VALIM",
+                "NUMERO": "6",
+                "COMPLEMENTO": "AP 141 ED IVANI",
+                "BAIRRO": "VL NOVA CONCEICAO",
+                "CEP": "04535100",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ALAGOA NOVA",
+                "NUMERO": "99",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "PERUS",
+                "CEP": "05202260",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CARLOS STEINEN",
+                "NUMERO": "35",
+                "COMPLEMENTO": "AP 71",
+                "BAIRRO": "PARAISO",
+                "CEP": "04004010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ALARICO FRANCO CAIUBI",
+                "NUMERO": "117",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JAGUARE",
+                "CEP": "05330010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV PAULISTA",
+                "NUMERO": "1842",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BELA VISTA",
+                "CEP": "01310200",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DO CEUTA",
+                "NUMERO": "148",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD LUZITANIA",
+                "CEP": "04031010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CLODOMIRO AMAZONAS",
+                "NUMERO": "1220",
+                "COMPLEMENTO": "AP22",
+                "BAIRRO": "VILA NOVA CONCE",
+                "CEP": "04537002",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CLODOMIRO AMAZONAS",
+                "NUMERO": "1220",
+                "COMPLEMENTO": "APT 22",
+                "BAIRRO": "VILA NOVA CONCEICAO",
+                "CEP": "04537902",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "18671072878",
+                "NOME": "MARIA REGINA MICHELAN",
+                "IDADE": "69 anos",
+                "LOCAL": "SANTA RITA DO PASSA QUATRO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "27868724803",
+                "NOME": "LUCIANA MICHELAN MEDEIROS",
+                "IDADE": "46 anos",
+                "LOCAL": "GUARUJA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "DIVINO DONISETE FERREIRA VILASBOA",
+                "IDADE": "",
+                "LOCALIDADE": "GOIANIA\/GO",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "29546419168"
+            },
+            {
+                "NOME": "VALDILENE SALES DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "BOM NOME\/PE",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "4153415405"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "CAIXA ECONOMICA FEDERAL",
+            "CNPJ": "00360305430206",
+            "CIDADE": "SAO PAULO-SP",
+            "PROFISSAO": "241005",
+            "DATA_ADMISSAO": "09\/12\/2003",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

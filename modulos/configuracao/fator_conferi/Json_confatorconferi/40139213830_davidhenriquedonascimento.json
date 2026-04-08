@@ -1,0 +1,231 @@
+{
+    "CADASTRAIS": {
+        "CPF": "40139213830",
+        "NOME": "DAVID HENRIQUE DO NASCIMENTO",
+        "NOME_MAE": "MARIA JOSE DO NASCIMENTO",
+        "NASCTO": "02\/05\/1990",
+        "IDADE": "35 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "20656113582",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "784205",
+        "PROFISSAO": "ALIMENTADOR DE LINHA DE PRODUCAO",
+        "SALARIO": " 1.513,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1936261153",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1934685437",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1936267455",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19981351768",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19994289497",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19992231901",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "david.h.nascimento2016@gmail.com",
+            "david_h.nascimento@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R POLONIA",
+                "NUMERO": "2472",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JD CANDIDO BERTINI",
+                "CEP": "13455192",
+                "CIDADE": "SANTA BARBARA D OESTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ESPANHA",
+                "NUMERO": "298",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD EUROPA I",
+                "CEP": "13455420",
+                "CIDADE": "SANTA BARBARA D OESTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R TCHECOSLOVAQUIA",
+                "NUMERO": "315",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD EUROPA I",
+                "CEP": "13455470",
+                "CIDADE": "SANTA BARBARA D OESTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA POLONIA",
+                "NUMERO": "2450",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM CANDIDO BERTINI",
+                "CEP": "13455192",
+                "CIDADE": "SANTA BARBARA D'OESTE",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "2239302",
+            "NOME": "MARIA JOSE DO NASCIMENTO",
+            "IDADE": "57 anos",
+            "LOCAL": "RIO VERDE\/GO",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "DENSO DO BRASIL LTDA",
+                "CNPJ": "43375930000566",
+                "CIDADE": "SANTA BARBARA D'OESTE-SP",
+                "PROFISSAO": "414105",
+                "DATA_ADMISSAO": "15\/10\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "AUTO PECAS EUROPA SANTA BARBARA D'OESTE LTDA",
+                "CNPJ": "02452657000115",
+                "CIDADE": "SANTA BARBARA D'OESTE-SP",
+                "PROFISSAO": "414125",
+                "DATA_ADMISSAO": "14\/05\/2024",
+                "DATA_DEMISSAO": "14\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VESPER TRANSPORTES LTDA",
+                "CNPJ": "00873594001389",
+                "CIDADE": "AMERICANA-SP",
+                "PROFISSAO": "782305",
+                "DATA_ADMISSAO": "01\/10\/2024",
+                "DATA_DEMISSAO": "11\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "KSPG AUTOMOTIVE BRAZIL LTDA.",
+                "CNPJ": "57576274000140",
+                "CIDADE": "NOVA ODESSA-SP",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "22\/20\/1904",
+                "DATA_DEMISSAO": "11\/11\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "GOODYEAR DO BRASIL PRODUTOS DE BORRACHA LTDA",
+                "CNPJ": "60500246001630",
+                "CIDADE": "AMERICANA-SP",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "16\/09\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "TECELAGEM JOLITEX LTDA",
+                "CNPJ": "43237254000564",
+                "CIDADE": "NOVA ODESSA-SP",
+                "PROFISSAO": "761815",
+                "DATA_ADMISSAO": "18\/07\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "RAIMA TEXTIL AMERICANA LTDA.",
+                "CNPJ": "04981256000188",
+                "CIDADE": "AMERICANA-SP",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "01\/02\/2014",
+                "DATA_DEMISSAO": "06\/02\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "CRN ADMINISTRACAO DE SERVICOS LTDA",
+                "CNPJ": "02986880000142",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "354130",
+                "DATA_ADMISSAO": "13\/02\/2012",
+                "DATA_DEMISSAO": "29\/02\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

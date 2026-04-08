@@ -1,0 +1,127 @@
+{
+    "CADASTRAIS": {
+        "CPF": "2824433396",
+        "NOME": "CLEICE DOS SANTOS BORGES",
+        "NOME_MAE": "EVA MARIA DOS SANTOS",
+        "NASCTO": "30\/04\/1990",
+        "IDADE": "36 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1149632885 ",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521140",
+        "PROFISSAO": "",
+        "SALARIO": " 1.928,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1141918632",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11913530966",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11957468533",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11992499440",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "cleiceborges72@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "R OTACILIO ALVES MARTINS",
+            "NUMERO": "59",
+            "COMPLEMENTO": "A LE A",
+            "BAIRRO": "PRQ IMPERIAL",
+            "CEP": "06462085",
+            "CIDADE": "BARUERI",
+            "ESTADO": "SP"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "19733399",
+            "NOME": "EVA MARIA DOS SANTOS",
+            "IDADE": "77 anos",
+            "LOCAL": "PILAO ARCADO\/BA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SENDAS DISTRIBUIDORA S\/A",
+                "CNPJ": "06057223034580",
+                "CIDADE": "CARAPICUIBA-SP",
+                "PROFISSAO": "421125",
+                "DATA_ADMISSAO": "26\/12\/2023",
+                "DATA_DEMISSAO": "10\/06\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "NEW MAGIC CONFECCOES LTDA",
+                "CNPJ": "08798968000389",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "17\/06\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MUNDO DAS DELICIAS COMERCIO DE ALIMENTOS LTDA",
+                "CNPJ": "43581730000136",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "521140",
+                "DATA_ADMISSAO": "21\/10\/2021",
+                "DATA_DEMISSAO": "05\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

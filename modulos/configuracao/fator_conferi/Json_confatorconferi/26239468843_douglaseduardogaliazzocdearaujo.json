@@ -1,0 +1,308 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26239468843",
+        "NOME": "DOUGLAS EDUARDO GALIAZZO C DE ARAUJO",
+        "NOME_MAE": "SONIA GALLIAZZO CARDOSO DE ARAUJO",
+        "NASCTO": "19\/08\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "227155740124",
+        "NIT": "1303644077",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "234510",
+        "PROFISSAO": "PROFESSOR DE ENSINO SUPERIOR NA AREA DE ORIENTACAO EDUCACIONAL",
+        "SALARIO": " 13.473,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1530171809",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "16\/04\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1533181346",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "17\/04\/2011",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1532329541",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11945761648",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1577365512",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11934881908",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "29\/12\/2019",
+                "TIPO_TEL": "MOVEL POS-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11982015299",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "24\/08\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11982015299",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "24\/08\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "douglas.araujo@br.abnamro.com",
+            "adv.douglas@yahoo.com",
+            "adv.douglas@yahoo.com.br",
+            "douglasgaliazzo@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R BOGOTA",
+                "NUMERO": "23",
+                "COMPLEMENTO": "VISTA VERDE SJCAMPOS",
+                "BAIRRO": "CIDADE VISTA VERDE",
+                "CEP": "12223710",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOAO PASSALAQUA",
+                "NUMERO": "170",
+                "COMPLEMENTO": "AP 707",
+                "BAIRRO": "BELA VISTA",
+                "CEP": "01326020",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ISAURA ABAD GIACOMELLI",
+                "NUMERO": "135",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL FIRMIANO PINTO",
+                "CEP": "04125000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DONA ANTONIA DE QUEIROS",
+                "NUMERO": "88",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CONSOLACAO",
+                "CEP": "01307011",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA BELA CINTRA",
+                "NUMERO": "164",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CONSOLACAO",
+                "CEP": "01415000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MAJ FREIRE",
+                "NUMERO": "578",
+                "COMPLEMENTO": "AP084",
+                "BAIRRO": "VL MTE ALEGRE",
+                "CEP": "04304110",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AL MIN ROCHA AZEVEDO",
+                "NUMERO": "38",
+                "COMPLEMENTO": "AP705",
+                "BAIRRO": "CERQ CESAR",
+                "CEP": "01410000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "PRACA DOUTOR FERREIRA BRAGA",
+                "NUMERO": "38",
+                "COMPLEMENTO": "AP 81",
+                "BAIRRO": "CENTRO",
+                "CEP": "18010250",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "CHANTAL ARAUJO CUOCO",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "19849402873"
+            },
+            {
+                "NOME": "JORIAN FRANCISCO FRAZAO SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "ARAXA\/MG",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "71743065191"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "IREP SOCIEDADE DE ENSINO SUPERIOR, MEDIO E FUNDAMENTAL LTDA.",
+                "CNPJ": "02608755004609",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "234510",
+                "DATA_ADMISSAO": "13\/02\/2015",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO EDUCATIVA CAMPOS SALLES",
+                "CNPJ": "62622857000109",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "234505",
+                "DATA_ADMISSAO": "09\/03\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ANHANGUERA EDUCACIONAL PARTICIPACOES S\/A",
+                "CNPJ": "04310392000731",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "234520",
+                "DATA_ADMISSAO": "01\/01\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "IREP SOCIEDADE DE ENSINO SUPERIOR, MEDIO E FUNDAMENTAL LTDA.",
+                "CNPJ": "02608755000360",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "234105",
+                "DATA_ADMISSAO": "13\/02\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ANHANGUERA EDUCACIONAL LTDA",
+                "CNPJ": "05808792010888",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "234520",
+                "DATA_ADMISSAO": "01\/08\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ORDEM DOS ADVOGADOS DO BRASIL - SECCAO DE SAO PAULO",
+                "CNPJ": "43419613000170",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "252305",
+                "DATA_ADMISSAO": "01\/04\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SOCIEDADE EDUCACIONAL IESP - SAO PAULO LTDA.",
+                "CNPJ": "63083869000167",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "234515",
+                "DATA_ADMISSAO": "01\/08\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "ANHANGUERA EDUCACIONAL LTDA",
+                "CNPJ": "05808792007585",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "234520",
+                "DATA_ADMISSAO": "01\/04\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "CRUZEIRO DO SUL EDUCACIONAL S.A.",
+                "CNPJ": "62984091000102",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "234505",
+                "DATA_ADMISSAO": "10\/08\/2011",
+                "DATA_DEMISSAO": "12\/09\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

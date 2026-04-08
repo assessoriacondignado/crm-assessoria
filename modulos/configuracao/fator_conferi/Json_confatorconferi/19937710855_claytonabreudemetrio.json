@@ -1,0 +1,242 @@
+{
+    "CADASTRAIS": {
+        "CPF": "19937710855",
+        "NOME": "CLAYTON ABREU DEMETRIO",
+        "NOME_MAE": "MARLENE DE ABREU DEMETRIO",
+        "NASCTO": "29\/03\/1973",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "165924630124",
+        "NIT": "1251537065",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782705",
+        "PROFISSAO": "MARINHEIRO DE CONVES (MARITIMO E FLUVIARIO)",
+        "SALARIO": " 12.074,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1332694045",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1332694045",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1333544001",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1338770967",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1333542995",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13997085201",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13996125116",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13988507755",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "OI_PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13991026313",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13981443212",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "mithios@ig.com.br",
+            "sonia1905065@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ANTONIO DA SILVA MELO",
+                "NUMERO": "35",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "STA CRUZ DOS NAVEGANTES",
+                "CEP": "11425180",
+                "CIDADE": "GUARUJA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ISAUDO MARTINS",
+                "NUMERO": "110",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STA CRUZ DOS NAVEGANTES",
+                "CEP": "11425100",
+                "CIDADE": "GUARUJA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ISAUDO MARTINS",
+                "NUMERO": "129",
+                "COMPLEMENTO": "STA CRUZ NAVEGANTES",
+                "BAIRRO": "STA CRUZ DOS NAVEGANTES",
+                "CEP": "11425100",
+                "CIDADE": "GUARUJA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BENEDITO GARCIA DE MOURA",
+                "NUMERO": "63",
+                "COMPLEMENTO": "OUTROS C",
+                "BAIRRO": "STA CRUZ DOS NAVEGANTES",
+                "CEP": "11425220",
+                "CIDADE": "GUARUJA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DELPHIN MOREIRA",
+                "NUMERO": "125",
+                "COMPLEMENTO": "AP 41",
+                "BAIRRO": "EMBARE",
+                "CEP": "11040101",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CARMOZINA DE FREITAS ABREU",
+                "NUMERO": "188",
+                "COMPLEMENTO": "C 3",
+                "BAIRRO": "STA CRUZ DOS NAVEGANTES",
+                "CEP": "11425120",
+                "CIDADE": "GUARUJA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CARAMURU",
+                "NUMERO": "50",
+                "COMPLEMENTO": "AP 41",
+                "BAIRRO": "ESTUARIO",
+                "CEP": "11025280",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "12121293850",
+                "NOME": "MARLENE DE ABREU DEMETRIO",
+                "IDADE": "78 anos",
+                "LOCAL": "SANTOS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "7020265812",
+                "NOME": "HALDREY LEE DEMETRIO DE PALMA",
+                "IDADE": "54 anos",
+                "LOCAL": "SANTOS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "28461268873",
+                "NOME": "GISLAYNE DE ABREU DEMETRIO",
+                "IDADE": "47 anos",
+                "LOCAL": "GUARUJA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "SAO PAULO APOIO MARITIMO E PORTUARIO SOCIEDADE SIMPLES LTDA",
+            "CNPJ": "01331652000171",
+            "CIDADE": "SANTOS-SP",
+            "PROFISSAO": "782705",
+            "DATA_ADMISSAO": "02\/09\/1996",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

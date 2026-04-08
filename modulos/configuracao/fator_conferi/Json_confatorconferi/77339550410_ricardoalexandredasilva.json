@@ -1,0 +1,201 @@
+{
+    "CADASTRAIS": {
+        "CPF": "77339550410",
+        "NOME": "RICARDO ALEXANDRE DA SILVA",
+        "NOME_MAE": "LIDIA MARICIO DA SILVA",
+        "NASCTO": "30\/09\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1296583345",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782510",
+        "PROFISSAO": "MOTORISTA DE CAMINHAO (ROTAS REGIONAIS E INTERNACIONAIS)",
+        "SALARIO": " 2.511,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8134696412",
+                "OPERADORA": "TELEMAR\/PE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8133615569",
+                "OPERADORA": "TELEMAR\/PE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "81982186925",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81987971875",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81987971812",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81988715429",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "satiro.caldeira@uol.com.br",
+            "ricardoalexandre685@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DOZE DE OUTUBRO",
+                "NUMERO": "360",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PIEDADE",
+                "CEP": "54410560",
+                "CIDADE": "JABOATAO DOS GUARARAPES",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R PEDRO MACHADO DE OLIVEIRA",
+                "NUMERO": "1006",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL ELSA",
+                "CEP": "94420320",
+                "CIDADE": "VIAMAO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R ANDRE LUIZ",
+                "NUMERO": "90",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PIEDADE",
+                "CEP": "54410505",
+                "CIDADE": "JABOATAO DOS GUARARAPES",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R ANDRE LUIS",
+                "NUMERO": "90",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAJUEIRO SECO",
+                "CEP": "54330019",
+                "CIDADE": "JABOATAO DOS GUARARAPES",
+                "ESTADO": "PE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "SATIRO CALDEIRA",
+            "IDADE": "",
+            "LOCALIDADE": "CUIABA\/MT",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "73503002987"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COTRIN CONSTRUTORA TRINDADE LTDA",
+                "CNPJ": "23347255001283",
+                "CIDADE": "ITAPECERICA DA SERRA-SP",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "25\/09\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "INTERLANDIA LIMITADA",
+                "CNPJ": "10782639000120",
+                "CIDADE": "JABOATAO DOS GUARARAPES-PE",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "23\/05\/2024",
+                "DATA_DEMISSAO": "06\/07\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TALENTOS LOCADORA DE VEICULOS LTDA",
+                "CNPJ": "23782319000111",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "13\/01\/2023",
+                "DATA_DEMISSAO": "02\/06\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "EXPRESSO VERA CRUZ LTDA",
+                "CNPJ": "10984821000163",
+                "CIDADE": "JABOATAO DOS GUARARAPES-PE",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "14\/10\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "MANUEL RAIMUNDO DA SILVA FILHO",
+                "CNPJ": "15489502000103",
+                "CIDADE": "JABOATAO DOS GUARARAPES-PE",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "17\/12\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

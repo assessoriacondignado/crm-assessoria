@@ -1,0 +1,245 @@
+{
+    "CADASTRAIS": {
+        "CPF": "57117713291",
+        "NOME": "PLACIDO SILVA DE OLIVEIRA",
+        "NOME_MAE": "MARIA JESUS SILVA DE OLIVEIRA",
+        "NASCTO": "16\/02\/1977",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "11477466",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "AM",
+        "TITULO_ELEITOR": "",
+        "NIT": "1262046102 ",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "314110",
+        "PROFISSAO": "TECNICO MECANICO",
+        "SALARIO": " 13.083,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9233043511",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "26\/12\/2011",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9236250045",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9236718699",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92991340113",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92981820170",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92994758262",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "62984239314",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "62985287869",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "placido_oliveira@yahoo.com",
+            "angela.apc.costa@gmail.com",
+            "placido_oliveira@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CDOR J G ARAUJO",
+                "NUMERO": "745",
+                "COMPLEMENTO": "C 3",
+                "BAIRRO": "STO ANTONIO",
+                "CEP": "69029130",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R PE FRANCISCO",
+                "NUMERO": "995",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STO ANTONIO",
+                "CEP": "69029320",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV ARQO JOSE HENRIQUES B RODRIGUES",
+                "NUMERO": "4387",
+                "COMPLEMENTO": "C 4",
+                "BAIRRO": "MTE DAS OLIVEIRAS",
+                "CEP": "69093149",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV ARQO JOSE HENRIQUES B RODRIGUES",
+                "NUMERO": "4371",
+                "COMPLEMENTO": "C 8",
+                "BAIRRO": "MTE DAS OLIVEIRAS",
+                "CEP": "69093149",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "RUA COMENDADOR J. G. ARAUJO",
+                "NUMERO": "995",
+                "COMPLEMENTO": "S ALTOS",
+                "BAIRRO": "SANTO ANTONIO",
+                "CEP": "69029130",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "RUA RIO QUIXITO",
+                "NUMERO": "1",
+                "COMPLEMENTO": "REFINARIA DE MA",
+                "BAIRRO": "VILA BURITI",
+                "CEP": "69072070",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "RUA PADRE FRANCISCO",
+                "NUMERO": "130",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTO ANTONIO",
+                "CEP": "69029320",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "RUA PADRE FRANCISCO",
+                "NUMERO": "297",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTO ANTONIO",
+                "CEP": "69029320",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "3848640589",
+            "NOME": "MARIA JESUS SILVA DE OLIVEIRA",
+            "IDADE": "62 anos",
+            "LOCAL": "MUCURI\/BA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ANGELA ADELAIDE PINTO DA COSTA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "83892052204"
+            },
+            {
+                "NOME": "FABIOLA VIEIRA DE SOUZA",
+                "IDADE": "",
+                "LOCALIDADE": "MANAUS\/AM",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "1331054230"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PETROLEO BRASILEIRO S A PETROBRAS",
+                "CNPJ": "33000167113143",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "314110",
+                "DATA_ADMISSAO": "09\/06\/2008",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PETROLEO BRASILEIRO S A PETROBRAS",
+                "CNPJ": "33000167079379",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "314110",
+                "DATA_ADMISSAO": "09\/06\/2008",
+                "DATA_DEMISSAO": "01\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

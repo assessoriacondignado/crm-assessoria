@@ -1,0 +1,174 @@
+{
+    "CADASTRAIS": {
+        "CPF": "9886319704",
+        "NOME": "RAPHAEL MARTINS VIEIRA",
+        "NOME_MAE": "CLEONICE MARTINS GONCALVES VIEIRA",
+        "NASCTO": "30\/01\/1981",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "122300882",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "115480670361",
+        "NIT": "1310908381",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "391210",
+        "PROFISSAO": "TECNICO DE GARANTIA DA QUALIDADE",
+        "SALARIO": " 7.500,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2137138443",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2137137603",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2137138847",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21988095556",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21992905231",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "tec.raphaelmartins@bol.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV CARLOS LACERDA",
+                "NUMERO": "1433",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "AREAL",
+                "CEP": "24800770",
+                "CIDADE": "ITABORAI",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R JOAQUIM NABUCO",
+                "NUMERO": "15",
+                "COMPLEMENTO": "Q 152 CA 2 L",
+                "BAIRRO": "GUAXINDIBA",
+                "CEP": "24722100",
+                "CIDADE": "SAO GONCALO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R VIEIRA FERREIRA",
+                "NUMERO": "128",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BONSUCESSO",
+                "CEP": "21040290",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA JOAQUIM NABUCO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "Q 152 LT 2",
+                "BAIRRO": "GUAXINDIBA",
+                "CEP": "24722100",
+                "CIDADE": "SAO GONCALO",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "9175566745",
+                "NOME": "CLEONICE MARTINS GONCALVES VIEIRA",
+                "IDADE": "70 anos",
+                "LOCAL": "SAO GONCALO\/RJ",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "11669431789",
+                "NOME": "WILLIAM MARTINS VIEIRA",
+                "IDADE": "41 anos",
+                "LOCAL": "SAO GONCALO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "13363996780",
+                "NOME": "JOYCE MARTINS VIEIRA",
+                "IDADE": "39 anos",
+                "LOCAL": "SAO GONCALO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LIFT LOCACAO, MANUTENCAO E TRANSPORTE LTDA",
+                "CNPJ": "21733898000187",
+                "CIDADE": "ITABORAI-RJ",
+                "PROFISSAO": "391210",
+                "DATA_ADMISSAO": "01\/04\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LOG SHORE ARMAZENS GERAIS LTDA",
+                "CNPJ": "09301043000181",
+                "CIDADE": "SAO GONCALO-RJ",
+                "PROFISSAO": "352205",
+                "DATA_ADMISSAO": "01\/07\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

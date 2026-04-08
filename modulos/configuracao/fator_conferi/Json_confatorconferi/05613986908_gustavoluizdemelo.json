@@ -1,0 +1,195 @@
+{
+    "CADASTRAIS": {
+        "CPF": "5613986908",
+        "NOME": "GUSTAVO LUIZ DE MELO",
+        "NOME_MAE": "MARILUCIA DA SILVA LUIZ",
+        "NASCTO": "08\/09\/1998",
+        "IDADE": "27 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "16296481609",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)INCOMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "513435",
+        "PROFISSAO": "ATENDENTE DE LANCHONETE",
+        "SALARIO": " 1.291,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "4833341870",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "48991157909",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "48999996775",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "48985069989",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "14\/09\/2017",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "48999238997",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "11\/04\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "gugamelo98@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ZABOVARI SCHNEIDER",
+                "NUMERO": "1957",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JD CIDADE DE FLORIANOPOLIS",
+                "CEP": "88111230",
+                "CIDADE": "SAO JOSE",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R TRAJANO",
+                "NUMERO": "187",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "88010010",
+                "CIDADE": "FLORIANOPOLIS",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "SERVIDAO UNIDOS",
+                "NUMERO": "220",
+                "COMPLEMENTO": "CA",
+                "BAIRRO": "TAPERA DA BASE",
+                "CEP": "88049335",
+                "CIDADE": "FLORIANOPOLIS",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "RUA PROFESSOR ANACLETO DAMIANI",
+                "NUMERO": "314",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "88020570",
+                "CIDADE": "FLORIANOPOLIS",
+                "ESTADO": "SC"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "76284590997",
+                "NOME": "MARILUCIA DA SILVA LUIZ",
+                "IDADE": "52 anos",
+                "LOCAL": "FLORIANOPOLIS\/SC",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "14748892986",
+                "NOME": "RAFAEL LUIZ DE MELO",
+                "IDADE": "20 anos",
+                "LOCAL": "",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "INDUSTRIA DE SALGADOS GAROPABA LTDA",
+                "CNPJ": "11163212000106",
+                "CIDADE": "GAROPABA-SC",
+                "PROFISSAO": "354125",
+                "DATA_ADMISSAO": "08\/03\/2024",
+                "DATA_DEMISSAO": "10\/05\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ATACADO LITORAL LTDA",
+                "CNPJ": "09006278000221",
+                "CIDADE": "SAO JOSE-SC",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "15\/02\/2021",
+                "DATA_DEMISSAO": "02\/05\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "COMERCIO DE CONFECCOES F G K LTDA",
+                "CNPJ": "01398170000139",
+                "CIDADE": "FLORIANOPOLIS-SC",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "10\/12\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "ATACADO LITORAL LTDA",
+                "CNPJ": "09006278000140",
+                "CIDADE": "FLORIANOPOLIS-SC",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "02\/05\/2021",
+                "DATA_DEMISSAO": "21\/07\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "FC REPRESENTACAO COMERCIAL LTDA",
+                "CNPJ": "31063236000109",
+                "CIDADE": "GAROPABA-SC",
+                "PROFISSAO": "513435",
+                "DATA_ADMISSAO": "14\/11\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

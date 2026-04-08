@@ -1,0 +1,173 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25960836807",
+        "NOME": "JOAO BATISTA VIANA BRITO",
+        "NOME_MAE": "LUIZA VIANA BRITO",
+        "NASCTO": "22\/06\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "269953250167",
+        "NIT": "1255269683",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782510",
+        "PROFISSAO": "MOTORISTA DE CAMINHAO (ROTAS REGIONAIS E INTERNACIONAIS)",
+        "SALARIO": " 8.603,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1127196799",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11985993816",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "22\/08\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11987279093",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11971007778",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11961096799",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "batistajoaobatista533@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MAL DEODORO DA FONSECA",
+                "NUMERO": "302",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "13201002",
+                "CIDADE": "JUNDIAI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ADAUTO F DE ANDRADE",
+                "NUMERO": "36",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ BANCARIOS",
+                "CEP": "03923070",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ADAUTO FERNANDES DE ANDRADE",
+                "NUMERO": "101",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE DOS BANCARIOS",
+                "CEP": "03923070",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "18411070506",
+                "NOME": "EDITO VIANA BRITO",
+                "IDADE": "67 anos",
+                "LOCAL": "SANTO AMARO\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "32644000572",
+                "NOME": "EVANITA BRITO DOS SANTOS",
+                "IDADE": "69 anos",
+                "LOCAL": "SANTO AMARO\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "61490369520",
+                "NOME": "LUIZ SERGIO VIANA BRITO",
+                "IDADE": "55 anos",
+                "LOCAL": "ITUPEVA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "IC TRANSPORTES LTDA.",
+                "CNPJ": "49871213000188",
+                "CIDADE": "SUMARE-SP",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "11\/07\/2016",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COMERCIAL GAS LEAL LTDA",
+                "CNPJ": "02862671000197",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "782310",
+                "DATA_ADMISSAO": "01\/06\/2016",
+                "DATA_DEMISSAO": "08\/07\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "COMPANHIA ULTRAGAZ S A",
+                "CNPJ": "61602199028041",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/07\/2004",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

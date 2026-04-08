@@ -1,0 +1,154 @@
+{
+    "CADASTRAIS": {
+        "CPF": "77579054353",
+        "NOME": "PEDRO ANTONIO PEREIRA DE ALENCAR",
+        "NOME_MAE": "ANISIA MARIA CONCEICAO ALENCAR",
+        "NASCTO": "29\/06\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "021837551147",
+        "NIT": "12433469521",
+        "ESCOLARIDADE": "PRIMEIRO GRAU (GINASIO)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782305",
+        "PROFISSAO": "MOTORISTA DE CARRO DE PASSEIO",
+        "SALARIO": " 880,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4733513060",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "8633173186",
+                "OPERADORA": "TELEMAR\/PI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "86988590620",
+            "OPERADORA": "OI MOVEL S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "PRE PAGO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "Q SETE",
+                "NUMERO": "34",
+                "COMPLEMENTO": "CJ JOAQUIM PEDREIRA",
+                "BAIRRO": "CIDADE INDUSTRIAL",
+                "CEP": "64012276",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "R PROF JOAQUIM BEZERRA",
+                "NUMERO": "7",
+                "COMPLEMENTO": "34",
+                "BAIRRO": "BELA VISTA",
+                "CEP": "64030430",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "CONJUNTO JOAQUIM PEDREIRA I",
+                "NUMERO": "34",
+                "COMPLEMENTO": "Q 7",
+                "BAIRRO": "SAO FRANCISCO II",
+                "CEP": "65636820",
+                "CIDADE": "TIMON",
+                "ESTADO": "MA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "1288193327",
+                "NOME": "LUIS PEREIRA DE ALENCAR FILHO",
+                "IDADE": "57 anos",
+                "LOCAL": "",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "76241882368",
+                "NOME": "ANTONIO LUIS PEREIRA DE ALENCAR",
+                "IDADE": "51 anos",
+                "LOCAL": "TERESINA\/PI",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "VIACAO SANTANA LTDA",
+                "CNPJ": "34963066000107",
+                "CIDADE": "TERESINA-PI",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "08\/06\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MUNICIPIO DE TIMON - SECRETARIA MUNICIPAL DE SAUDE",
+                "CNPJ": "01803082000175",
+                "CIDADE": "TIMON-MA",
+                "PROFISSAO": "782305",
+                "DATA_ADMISSAO": "30\/06\/2016",
+                "DATA_DEMISSAO": "31\/12\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "TECHMASTER ENGENHARIA LTDA",
+                "CNPJ": "05918869000133",
+                "CIDADE": "SAO JOSE DE RIBAMAR-MA",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "14\/07\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "GEOMETRAL CONSTRUCOES LTDA",
+                "CNPJ": "73830614000174",
+                "CIDADE": "BRUSQUE-SC",
+                "PROFISSAO": "312320",
+                "DATA_ADMISSAO": "08\/02\/2012",
+                "DATA_DEMISSAO": "611",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

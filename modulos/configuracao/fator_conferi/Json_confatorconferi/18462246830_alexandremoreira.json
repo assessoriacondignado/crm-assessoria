@@ -1,0 +1,190 @@
+{
+    "CADASTRAIS": {
+        "CPF": "18462246830",
+        "NOME": "ALEXANDRE MOREIRA",
+        "NOME_MAE": "ROMANA DE CARLOS MOREIRA",
+        "NASCTO": "29\/06\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "266398070132",
+        "NIT": "12472625164",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "731180",
+        "PROFISSAO": "OPERADOR DE LINHA DE MONTAGEM (APARELHOS ELETRONICOS)",
+        "SALARIO": " 1.710,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1532251088",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1532253088",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1533427602",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "23\/04\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "15997307689",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15997345734",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15997952733",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "alephenom@gmail.com",
+            "alethlon@hotmail.com",
+            "aleathlon@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PEDRO MONARI",
+                "NUMERO": "278",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAJURU DO SUL",
+                "CEP": "18105135",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PEDRO MONARI",
+                "NUMERO": "174",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAJURU DO SUL",
+                "CEP": "18105135",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA EUGENIO GONCALVES DE SOUZA",
+                "NUMERO": "240",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL DOS DALMATAS",
+                "CEP": "18105245",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "PRACA JOAO PAIS MALIO",
+                "NUMERO": "2",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE REGINA",
+                "CEP": "05773080",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "6298210890",
+                "NOME": "ROMANA DE CARLOS MOREIRA",
+                "IDADE": "87 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "10490847803",
+                "NOME": "ADRIANO DE JESUS MOREIRA",
+                "IDADE": "57 anos",
+                "LOCAL": "SOROCABA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ELEKTROFUSE INDUSTRIA E COMERCIO LTDA",
+                "CNPJ": "18824869000116",
+                "CIDADE": "SOROCABA-SP",
+                "PROFISSAO": "821405",
+                "DATA_ADMISSAO": "01\/11\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FLEXTRONICS INTERNATIONAL TECNOLOGIA LTDA",
+                "CNPJ": "74404229000128",
+                "CIDADE": "SOROCABA-SP",
+                "PROFISSAO": "731180",
+                "DATA_ADMISSAO": "14\/04\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "ART IRONIC A2 COMERCIO E INDUSTRIA LTDA",
+            "CNPJ": "03840815000177",
+            "CIDADE": "SAO PAULO-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20000525",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

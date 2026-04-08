@@ -1,0 +1,197 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25495266862",
+        "NOME": "ANDRE DE ALMEIDA JORGE",
+        "NOME_MAE": "SUELI DE ALMEIDA JORGE",
+        "NASCTO": "08\/04\/1978",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "246026950124",
+        "NIT": "12618050772",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "413225",
+        "PROFISSAO": "ESCRITURARIO DE BANCO",
+        "SALARIO": " 2.193,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1141330110",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11975511534",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11946223703",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11950200840",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11981999626",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11978464796",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "rockque_mancha@yahoo.com",
+            "andre.ajorge@terra.com.br",
+            "rockque.mancha@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AL FRANCA",
+                "NUMERO": "60",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COND NOVA SAO PAULO",
+                "CEP": "06690010",
+                "CIDADE": "ITAPEVI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AL MAMORE",
+                "NUMERO": "989",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALPHAVILLE INDUSTRIAL",
+                "CEP": "06454901",
+                "CIDADE": "BARUERI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AL LORENA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "BOX 4",
+                "BAIRRO": "COND NOVA SAO PAULO",
+                "CEP": "06690120",
+                "CIDADE": "ITAPEVI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "ALAMEDA BARAO DE CAPANEMA",
+                "NUMERO": "144",
+                "COMPLEMENTO": "TERREA",
+                "BAIRRO": "NOVA S PAULO",
+                "CEP": "06690030",
+                "CIDADE": "ITAPEVI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AL FRANCA",
+                "NUMERO": "845",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CD NV SP",
+                "CEP": "06690010",
+                "CIDADE": "ITAPEVI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ARNALDO SERGIO CORDEIRO DAS NEVES",
+                "NUMERO": "60",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVA ITAPEVI",
+                "CEP": "06694090",
+                "CIDADE": "ITAPEVI",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "19385412868",
+                "NOME": "SUELI DE ALMEIDA JORGE",
+                "IDADE": "77 anos",
+                "LOCAL": "ITAPEVI\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "25456097818",
+                "NOME": "DANIEL DE ALMEIDA JORGE",
+                "IDADE": "51 anos",
+                "LOCAL": "BARUERI\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000732532",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "27\/03\/2000",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000683574",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "22\/04\/2010",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

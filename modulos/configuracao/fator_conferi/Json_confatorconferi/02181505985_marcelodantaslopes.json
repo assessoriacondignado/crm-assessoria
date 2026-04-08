@@ -1,0 +1,202 @@
+{
+    "CADASTRAIS": {
+        "CPF": "2181505985",
+        "NOME": "MARCELO DANTAS LOPES",
+        "NOME_MAE": "NEUSA DANTAS LOPES",
+        "NASCTO": "28\/12\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "061557210680",
+        "NIT": "12991993512",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "234810",
+        "PROFISSAO": "PROFESSOR DE ADMINISTRACAO",
+        "SALARIO": " 3.628,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "4132711843",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "44999502618",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "44991267293",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "44999229396",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "44999229618",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "44991092418",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "marcelodantaslopes@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R NEO ALVES MARTINS",
+                "NUMERO": "2762",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ZONA 01",
+                "CEP": "87013060",
+                "CIDADE": "MARINGA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R ADOLFO ALVES FERREIRA",
+                "NUMERO": "356",
+                "COMPLEMENTO": "AP 202",
+                "BAIRRO": "VILA MARUMBY",
+                "CEP": "87005250",
+                "CIDADE": "MARINGA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "AVENIDA DOUTOR LUIZ TEIXEIRA MENDES",
+                "NUMERO": "952",
+                "COMPLEMENTO": "AP 404",
+                "BAIRRO": "ZONA 04",
+                "CEP": "87015000",
+                "CIDADE": "MARINGA",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "445243902",
+                "NOME": "NEUSA DANTAS LOPES",
+                "IDADE": "80 anos",
+                "LOCAL": "MARINGA\/PR",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "2602157910",
+                "NOME": "RICARDO DANTAS LOPES",
+                "IDADE": "49 anos",
+                "LOCAL": "MARINGA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "89405137972",
+                "NOME": "JOSE HENRIQUE DANTAS LOPES",
+                "IDADE": "53 anos",
+                "LOCAL": "MARINGA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CENTRO DE ENSINO SUPERIOR DO PARANA - CESPAR",
+                "CNPJ": "01201203000109",
+                "CIDADE": "MARINGA-PR",
+                "PROFISSAO": "234505",
+                "DATA_ADMISSAO": "26\/07\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "UNIAO MARINGAENSE DE ENSINO LTDA",
+                "CNPJ": "05885457000144",
+                "CIDADE": "MARINGA-PR",
+                "PROFISSAO": "234515",
+                "DATA_ADMISSAO": "24\/07\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CEITEP - CENTRO DE EDUCACAO E INOVACAO TECNICO PROFISSIONAL LTDA EM RECUPERACAO JUDICIAL",
+                "CNPJ": "11430130000180",
+                "CIDADE": "MARINGA-PR",
+                "PROFISSAO": "234505",
+                "DATA_ADMISSAO": "14\/03\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO PARANAENSE DE CULTURA - APC",
+                "CNPJ": "76659820001476",
+                "CIDADE": "MARINGA-PR",
+                "PROFISSAO": "234810",
+                "DATA_ADMISSAO": "04\/10\/2007",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "LOPES, SANTOS   GIROTO ADVOGADOS ASSOCIADOS",
+            "CNPJ": "03188939000110",
+            "CIDADE": "MARINGA-PR",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "19990521",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

@@ -1,0 +1,128 @@
+{
+    "CADASTRAIS": {
+        "CPF": "91370159404",
+        "NOME": "BEVENUTO GONSALVES VIEIRA NETO",
+        "NOME_MAE": "MARIA DE LOURDES LIMA VIEIRA",
+        "NASCTO": "26\/01\/1971",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "013288721651",
+        "NIT": "1256304564",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411010",
+        "PROFISSAO": "ASSISTENTE ADMINISTRATIVO",
+        "SALARIO": " 2.676,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8433170324",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8434221550",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "84988401003",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "84987839540",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "84988683948",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "bevenutoneto@oi.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CEL GURGEL",
+                "NUMERO": "1120",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "59600200",
+                "CIDADE": "MOSSORO",
+                "ESTADO": "RN"
+            },
+            {
+                "LOGRADOURO": "R CEL GURGEL",
+                "NUMERO": "1120",
+                "COMPLEMENTO": "TER C",
+                "BAIRRO": "AT DA CONCEICAO",
+                "CEP": "59600322",
+                "CIDADE": "MOSSORO",
+                "ESTADO": "RN"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1405937300",
+            "NOME": "MARIA DE LOURDES LIMA VIEIRA",
+            "IDADE": "40 anos",
+            "LOCAL": "SAO LUIS\/MA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "F. SOUTO INDUSTRIA E COMERCIO DE SAL S.A.",
+            "CNPJ": "08248940000106",
+            "CIDADE": "MOSSORO-RN",
+            "PROFISSAO": "411010",
+            "DATA_ADMISSAO": "18\/10\/1995",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

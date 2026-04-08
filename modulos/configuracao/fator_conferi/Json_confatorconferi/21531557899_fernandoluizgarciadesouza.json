@@ -1,0 +1,170 @@
+{
+    "CADASTRAIS": {
+        "CPF": "21531557899",
+        "NOME": "FERNANDO LUIZ GARCIA DE SOUZA",
+        "NOME_MAE": "MARIA APARECIDA APOLINARIO DE SOUZA",
+        "NASCTO": "30\/05\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "253808650116",
+        "NIT": "12773589817",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521130",
+        "PROFISSAO": "ATENDENTE DE FARMACIA - BALCONISTA",
+        "SALARIO": " 1.794,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11969181383",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11949558488",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "06\/04\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11963889013",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11999914346",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "kakugarcia@hotmail.com.br",
+            "kakula.surf@ig.com.br",
+            "mariaasouza@terra.com.br",
+            "felugarso@gmail.com",
+            "kakugarcia@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV DO ORATORIO",
+                "NUMERO": "5198",
+                "COMPLEMENTO": "BL E AP 11",
+                "BAIRRO": "JD ANGELA ZONA LESTE",
+                "CEP": "03220300",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOSE VANDERLEI MARCONI",
+                "NUMERO": "128",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE RESIDENCIAL ORATORIO",
+                "CEP": "03266030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "5900829812",
+            "NOME": "MARIA APARECIDA APOLINARIO DE SOUZA",
+            "IDADE": "80 anos",
+            "LOCAL": "RIBEIRAO PRETO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "LUCIANA GARCIA DE SOUZA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO JOSE DOS CAMPOS\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "26329924864"
+            },
+            {
+                "NOME": "RENATA MARIA RODRIGUES PINHEIRO",
+                "IDADE": "",
+                "LOCALIDADE": "MARANGUAPE\/CE",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "5860374380"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "REDE D'OR \/ SAO LUIZ SERVICOS MEDICOS LTDA.",
+                "CNPJ": "14017359000348",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "324115",
+                "DATA_ADMISSAO": "11\/20\/1909",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "4ID MEDICOS ASSOCIADOS LTDA",
+                "CNPJ": "20476731000115",
+                "CIDADE": "RIO BONITO-RJ",
+                "PROFISSAO": "324115",
+                "DATA_ADMISSAO": "01\/10\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "REAL E BENEMERITA ASSOCIACAO PORTUGUESA DE BENEFICENCIA",
+                "CNPJ": "61599908000158",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "521130",
+                "DATA_ADMISSAO": "18\/05\/2016",
+                "DATA_DEMISSAO": "15\/08\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "REDE D'OR SAO LUIZ S.A.",
+                "CNPJ": "06047087000139",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "324115",
+                "DATA_ADMISSAO": "11\/20\/1909",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

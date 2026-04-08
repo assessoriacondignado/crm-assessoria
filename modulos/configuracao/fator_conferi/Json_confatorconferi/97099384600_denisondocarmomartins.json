@@ -1,0 +1,213 @@
+{
+    "CADASTRAIS": {
+        "CPF": "97099384600",
+        "NOME": "DENISON DO CARMO MARTINS",
+        "NOME_MAE": "EVA DE MENDONCA MARTINS",
+        "NASCTO": "21\/07\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1244652358",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "415205",
+        "PROFISSAO": "CARTEIRO",
+        "SALARIO": " 6.628,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3135114055",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "3135950198",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "10\/01\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3139111814",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "07\/07\/2007",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3130222192",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31982936727",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31982937215",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31998221814",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31998351262",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31984523684",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "denisondocarmo@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DEZENOVE",
+                "NUMERO": "60",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CRUZEIRO DO SUL",
+                "CEP": "32672760",
+                "CIDADE": "BETIM",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R ICOBE",
+                "NUMERO": "414",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVO ELDORADO",
+                "CEP": "32341140",
+                "CIDADE": "CONTAGEM",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "98919113653",
+                "NOME": "EVA DE MENDONCA MARTINS",
+                "IDADE": "81 anos",
+                "LOCAL": "CONTAGEM\/MG",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "1404650652",
+                "NOME": "FERNANDO DAS GRACAS MARTINS",
+                "IDADE": "45 anos",
+                "LOCAL": "CONTAGEM\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "69508690615",
+                "NOME": "APARECIDA ASSUNCAO MARTINS",
+                "IDADE": "59 anos",
+                "LOCAL": "CONTAGEM\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ALCIDES GOMES MONTEIRO",
+                "IDADE": "",
+                "LOCALIDADE": "SAO CAETANO DE ODIVELAS\/PA",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "72792035234"
+            },
+            {
+                "NOME": "DENISON DO CARMO",
+                "IDADE": "",
+                "LOCALIDADE": "SANTOS\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "41690065850"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "EMPRESA BRASILEIRA DE CORREIOS E TELEGRAFOS",
+                "CNPJ": "34028316002319",
+                "CIDADE": "BETIM-MG",
+                "PROFISSAO": "415205",
+                "DATA_ADMISSAO": "16\/05\/1996",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "EMPRESA BRASILEIRA DE CORREIOS E TELEGRAFOS",
+                "CNPJ": "34028316819404",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "415205",
+                "DATA_ADMISSAO": "04\/12\/2007",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

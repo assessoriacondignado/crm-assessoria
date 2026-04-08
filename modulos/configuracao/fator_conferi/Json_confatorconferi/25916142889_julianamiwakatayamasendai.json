@@ -1,0 +1,284 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25916142889",
+        "NOME": "JULIANA MIWA KATAYAMA SENDAI",
+        "NOME_MAE": "IRACEMA AKIKO KATAYAMA",
+        "NASCTO": "15\/08\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "249671370191",
+        "NIT": "13202510893",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "410105",
+        "PROFISSAO": "SUPERVISOR ADMINISTRATIVO",
+        "SALARIO": " 8.868,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1155480165",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "13\/04\/2020",
+                "TIPO_TEL": "GPON",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1147451779",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1155635356",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "21\/12\/2011",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1155891048",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11950421772",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11957104820",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11985173437",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11960582473",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "28\/05\/2020",
+                "TIPO_TEL": "MOVEL POS-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11992597375",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "mk.katayama@uol.com.br",
+            "juliananmk@terra.com.br",
+            "julianamk@globo.com",
+            "juliana.katayama@sadia.com.br",
+            "julianakatayama@ig.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AL DOS TUPINIQUINS",
+                "NUMERO": "1211",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PLANALTO PAULISTA",
+                "CEP": "04077905",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MOURATO COELHO",
+                "NUMERO": "837",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PINHEIROS",
+                "CEP": "05417011",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV DOUTOR MARIO VILAS BOAS RODRIGUES",
+                "NUMERO": "175",
+                "COMPLEMENTO": "AP  Apartamento  22 BL  Blocos  MANCHESTER",
+                "BAIRRO": "JARDIM DOM BOSCO",
+                "CEP": "04757020",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV MASCOTE",
+                "NUMERO": "385",
+                "COMPLEMENTO": "AP 53",
+                "BAIRRO": "VILA MASCOTE",
+                "CEP": "04363000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOUTOR CARLOS AUGUSTO DE CAMPOS",
+                "NUMERO": "117",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTO AMARO",
+                "CEP": "04750060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOUTOR CARLOS AUGUSTO DE CAMPOS",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTO AMARO",
+                "CEP": "04750060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOUTOR CARLOS AUGUSTO DE CAMPOS",
+                "NUMERO": "11",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTO AMARO",
+                "CEP": "04750060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "5518530854",
+                "NOME": "IRACEMA AKIKO KATAYAMA",
+                "IDADE": "80 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "17086945870",
+                "NOME": "MARCIA MIDORI KATAYAMA",
+                "IDADE": "53 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "28144874854",
+                "NOME": "MAURICIO KAZUAKI KATAYAMA",
+                "IDADE": "46 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ARNALDO KATAYAMA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "24103683872"
+            },
+            {
+                "NOME": "LEONARDO PONTES CASTRO",
+                "IDADE": "",
+                "LOCALIDADE": "VICOSA\/MG",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "4092674651"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SPRAYING SYSTEMS DO BRASIL LTDA",
+                "CNPJ": "52462215000128",
+                "CIDADE": "SAO BERNARDO DO CAMPO-SP",
+                "PROFISSAO": "142605",
+                "DATA_ADMISSAO": "01\/02\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SEARA ALIMENTOS LTDA",
+                "CNPJ": "02914460011276",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "214905",
+                "DATA_ADMISSAO": "22\/04\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SANOFI-AVENTIS FARMACEUTICA LTDA",
+                "CNPJ": "02685377000823",
+                "CIDADE": "SUZANO-SP",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "08\/08\/2011",
+                "DATA_DEMISSAO": "05\/05\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "CRISTALIA PRODUTOS QUIMICOS FARMACEUTICOS LTDA",
+                "CNPJ": "44734671002103",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "395105",
+                "DATA_ADMISSAO": "05\/05\/2014",
+                "DATA_DEMISSAO": "05\/09\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

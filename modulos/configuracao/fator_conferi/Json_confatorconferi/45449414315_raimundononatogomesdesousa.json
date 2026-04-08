@@ -1,0 +1,196 @@
+{
+    "CADASTRAIS": {
+        "CPF": "45449414315",
+        "NOME": "RAIMUNDO NONATO GOMES DE SOUSA",
+        "NOME_MAE": "MARIA DASDORES GOMES DE SOUSA",
+        "NASCTO": "23\/03\/1973",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "034286800728",
+        "NIT": "12437031296",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8532368011",
+            "OPERADORA": "TELEMAR\/CE",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "85986600651",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "85989134123",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "85991252419",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "85981425378",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "85986299902",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "tecnicoraimundo@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "Q B",
+                "NUMERO": "48",
+                "COMPLEMENTO": "Q B",
+                "BAIRRO": "PRES KENNEDY",
+                "CEP": "60357210",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R SDO",
+                "NUMERO": "48",
+                "COMPLEMENTO": "Q B CJ CASTELO BRA",
+                "BAIRRO": "PRQ IRACEMA",
+                "CEP": "60824050",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R DO PLANALTO",
+                "NUMERO": "80",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRES KENNEDY",
+                "CEP": "60355360",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "RUA DO PLANALTO",
+                "NUMERO": "76",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRESIDENTE KENNEDY",
+                "CEP": "60355360",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "76238202300",
+            "NOME": "ALDEIRES GOMES DE SOUSA NOLETO",
+            "IDADE": "50 anos",
+            "LOCAL": "PARAIBANO\/MA",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "DILLY NORDESTE INDUSTRIA DE CALCADOS LTDA",
+                "CNPJ": "15836348000433",
+                "CIDADE": "BREJO SANTO-CE",
+                "PROFISSAO": "721105",
+                "DATA_ADMISSAO": "05\/09\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SENAI DEPARTAMENTO REGIONAL DO CEARA",
+                "CNPJ": "03768202000257",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "11\/01\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "ARCELORMITTAL PECEM S.A.",
+                "CNPJ": "09509535000167",
+                "CIDADE": "SAO GONCALO DO AMARANTE-CE",
+                "PROFISSAO": "314110",
+                "DATA_ADMISSAO": "23\/09\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SENAI DEPARTAMENTO REGIONAL DO CEARA",
+                "CNPJ": "03768202000176",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "233210",
+                "DATA_ADMISSAO": "21\/10\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "SANTELISA INDUSTRIA DE EMBALAGENS S\/A",
+                "CNPJ": "06604714000276",
+                "CIDADE": "AQUIRAZ-CE",
+                "PROFISSAO": "314110",
+                "DATA_ADMISSAO": "13\/09\/2011",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

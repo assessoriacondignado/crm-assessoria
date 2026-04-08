@@ -1,0 +1,251 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26163669835",
+        "NOME": "ROBERTO BISCA JUNIOR",
+        "NOME_MAE": "LEILA CHAMA BISCA",
+        "NASCTO": "12\/01\/1976",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "228738950141",
+        "NIT": "12546084056",
+        "ESCOLARIDADE": "ANALFABETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142320",
+        "PROFISSAO": "GERENTE DE VENDAS",
+        "SALARIO": " 30.152,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1132374217",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1134599519",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "28\/09\/2011",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1138858764",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1121322454",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1121323122",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11945463276",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11945556179",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11945694691",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11968425928",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11982454929",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "17\/03\/2009",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "rbisca@br.ibn.com",
+            "rbisca@br.ibm.com",
+            "betobisca@globo.com",
+            "betobiscajr@hotmail.com",
+            "rcamargo@rgis.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ABILIO SOARES",
+                "NUMERO": "779",
+                "COMPLEMENTO": "AP 104",
+                "BAIRRO": "PARAISO",
+                "CEP": "04005906",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA RENATO VIANA",
+                "NUMERO": "86",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD MARAJOARA",
+                "CEP": "04663130",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA RENATO VIANA",
+                "NUMERO": "88",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM MARAJOARA",
+                "CEP": "04663130",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOEL JORGE DE MELO",
+                "NUMERO": "600",
+                "COMPLEMENTO": "AP 83",
+                "BAIRRO": "VILA MARIANA",
+                "CEP": "04128081",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ABILIO SOARES",
+                "NUMERO": "779",
+                "COMPLEMENTO": "AP104",
+                "BAIRRO": "PARAISO",
+                "CEP": "04005003",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA AFONSO CELSO",
+                "NUMERO": "1425",
+                "COMPLEMENTO": "AP 111",
+                "BAIRRO": "VILA MARIANA",
+                "CEP": "04119062",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MANUEL DA NOBREGA",
+                "NUMERO": "757",
+                "COMPLEMENTO": "AP 81",
+                "BAIRRO": "PARAISO",
+                "CEP": "04001084",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "26329633894",
+            "NOME": "LEILA CHAMA BISCA",
+            "IDADE": "79 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PEGASYSTEMS SERVICOS DE SOFTWARE DO BRASIL LTDA.",
+                "CNPJ": "36041842000139",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142320",
+                "DATA_ADMISSAO": "03\/08\/2020",
+                "DATA_DEMISSAO": "15\/06\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "GARTNER DO BRASIL SERVICOS DE PESQUISAS LTDA.",
+                "CNPJ": "02593165000140",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142320",
+                "DATA_ADMISSAO": "15\/04\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "IBM BRASIL-INDUSTRIA MAQUINAS E SERVICOS LIMITADA",
+                "CNPJ": "33372251012677",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142320",
+                "DATA_ADMISSAO": "07\/03\/2001",
+                "DATA_DEMISSAO": "16\/05\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

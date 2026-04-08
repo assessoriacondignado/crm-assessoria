@@ -1,0 +1,227 @@
+{
+    "CADASTRAIS": {
+        "CPF": "39480340879",
+        "NOME": "JULIFER DE OLIVEIRA PESTANA",
+        "NOME_MAE": "JOAQUINA DE OLIVEIRA DA CRUZ",
+        "NASCTO": "26\/09\/1990",
+        "IDADE": "35 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "363556730175",
+        "NIT": "20307627556",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "517415",
+        "PROFISSAO": "PORTEIRO DE LOCAIS DE DIVERSAO",
+        "SALARIO": " 1.180,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1239221879",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1239471061",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "12981544443",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12982192641",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12996079385",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "juliferoliveira@bol.com.br",
+            "julifer_oliveira@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CULIACAN",
+                "NUMERO": "181",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JD DAS PAINEIRAS II",
+                "CEP": "12226114",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOM GABRIEL PAULINO BUENO DO COUTO",
+                "NUMERO": "213",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE SANTA RITA",
+                "CEP": "12227260",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "3274600750",
+                "NOME": "JOAQUINA DE OLIVEIRA DA CRUZ",
+                "IDADE": "54 anos",
+                "LOCAL": "SAO JOSE DOS CAMPOS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "41714776115",
+                "NOME": "MARIA HELENA DA CRUZ",
+                "IDADE": "67 anos",
+                "LOCAL": "GOIANIA\/GO",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "78263042968",
+                "NOME": "JAIR DA CRUZ",
+                "IDADE": "55 anos",
+                "LOCAL": "MOGI GUACU\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "JULIANA FERREIRA S OLIVEIRA",
+            "IDADE": "",
+            "LOCALIDADE": "HORTOLANDIA\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "31435624807"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SENDAS DISTRIBUIDORA S\/A",
+                "CNPJ": "06057223029820",
+                "CIDADE": "SAO JOSE DOS CAMPOS-SP",
+                "PROFISSAO": "521125",
+                "DATA_ADMISSAO": "27\/12\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "RANDSTAD BRASIL RECURSOS HUMANOS LTDA.",
+                "CNPJ": "03573863000146",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "784105",
+                "DATA_ADMISSAO": "06\/12\/2022",
+                "DATA_DEMISSAO": "02\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "SILVA   ARAUJO PRESTACAO DE SERVICOS DE TRANSPORTES LTDA",
+                "CNPJ": "10905330000180",
+                "CIDADE": "SAO JOSE DOS CAMPOS-SP",
+                "PROFISSAO": "783225",
+                "DATA_ADMISSAO": "02\/05\/2023",
+                "DATA_DEMISSAO": "30\/07\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "JMD MOVELARIA LTDA",
+                "CNPJ": "09216891000192",
+                "CIDADE": "SAO JOSE DOS CAMPOS-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "17\/08\/2021",
+                "DATA_DEMISSAO": "29\/12\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "CONDOMINIO EDIFICIO ACAI",
+                "CNPJ": "45389830000190",
+                "CIDADE": "SAO JOSE DOS CAMPOS-SP",
+                "PROFISSAO": "517410",
+                "DATA_ADMISSAO": "19\/12\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "CONDOMINIO EDIFICIO TURIM",
+                "CNPJ": "69112324000118",
+                "CIDADE": "SAO JOSE DOS CAMPOS-SP",
+                "PROFISSAO": "514320",
+                "DATA_ADMISSAO": "25\/01\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "CENTRO DE DESENVOLVIMENTO E APERFEICOAMENTO DO DESPORTO",
+                "CNPJ": "14380152000171",
+                "CIDADE": "SAO JOSE DOS CAMPOS-SP",
+                "PROFISSAO": "517415",
+                "DATA_ADMISSAO": "01\/09\/2013",
+                "DATA_DEMISSAO": "11\/10\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "FUNDACAO VALEPARAIBANA DE ENSINO",
+                "CNPJ": "60191244000120",
+                "CIDADE": "SAO JOSE DOS CAMPOS-SP",
+                "PROFISSAO": "517410",
+                "DATA_ADMISSAO": "10\/10\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

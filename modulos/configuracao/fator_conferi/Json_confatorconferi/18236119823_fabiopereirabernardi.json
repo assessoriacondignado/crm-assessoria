@@ -1,0 +1,147 @@
+{
+    "CADASTRAIS": {
+        "CPF": "18236119823",
+        "NOME": "FABIO PEREIRA BERNARDI",
+        "NOME_MAE": "ENEIDA PEREIRA BERNARDI",
+        "NASCTO": "15\/10\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "268085040183",
+        "NIT": "1246791707",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "313215",
+        "PROFISSAO": "TECNICO ELETRONICO",
+        "SALARIO": " 4.445,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1532278778",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "15981063804",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15997013997",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "15997942152",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "fabiomary@vivointernetdiscada.com.br",
+            "fabiomary@aol.com",
+            "fabioluizmary@hotmail.com",
+            "fabiomary@aol.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "ALMEIDA FALCAO",
+                "NUMERO": "56",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA HARO",
+                "CEP": "18015295",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOAO MONTEIRO CEPELLOS",
+                "NUMERO": "315",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM NOVO HORIZONTE",
+                "CEP": "18071810",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "10601616804",
+                "NOME": "ENEIDA PEREIRA BERNARDI",
+                "IDADE": "85 anos",
+                "LOCAL": "SOROCABA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "7614740807",
+                "NOME": "LEDA PEREIRA BERNARDI",
+                "IDADE": "59 anos",
+                "LOCAL": "SOROCABA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "MARY ELOISA BENTO BERNARDI",
+            "IDADE": "",
+            "LOCALIDADE": "VOTORANTIM\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "8176065803"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "SPLICE INDUSTRIA COMERCIO E SERVICOS LTDA.",
+            "CNPJ": "06965293000128",
+            "CIDADE": "VOTORANTIM-SP",
+            "PROFISSAO": "313215",
+            "DATA_ADMISSAO": "01\/02\/2005",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "BERNARDI CONSULTORIA EMPRESARIAL LTDA",
+            "CNPJ": "05543783000173",
+            "CIDADE": "SOROCABA-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20040107",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

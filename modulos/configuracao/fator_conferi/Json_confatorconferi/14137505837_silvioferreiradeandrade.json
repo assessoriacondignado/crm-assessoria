@@ -1,0 +1,216 @@
+{
+    "CADASTRAIS": {
+        "CPF": "14137505837",
+        "NOME": "SILVIO FERREIRA DE ANDRADE",
+        "NOME_MAE": "MARIA APARECIDA ANGELIS ANDRAD",
+        "NASCTO": "16\/04\/1972",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "24396185",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "199857870132",
+        "NIT": "1239684766",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "725605",
+        "PROFISSAO": "MONTADOR DE ESTRUTURAS DE AERONAVES",
+        "SALARIO": " 12.800,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1438809394",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1438824918",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1438112000",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1438155117",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1438155117",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "14968215117",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "14997285482",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "14997762013",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "14996085482",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "simonethiago@ig.com.br",
+            "silviofandrade@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DR GUIMARAES",
+                "NUMERO": "167",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL CASA BRANCA",
+                "CEP": "18608336",
+                "CIDADE": "BOTUCATU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DR GUIMARAES",
+                "NUMERO": "171",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL CASA BRANCA",
+                "CEP": "18608336",
+                "CIDADE": "BOTUCATU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PEDRO DELMANTO",
+                "NUMERO": "697",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "JD PARAISO",
+                "CEP": "18610303",
+                "CIDADE": "BOTUCATU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MIGUEL CATHARINO",
+                "NUMERO": "212",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD PANORAMA",
+                "CEP": "18608210",
+                "CIDADE": "BOTUCATU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ATILIO LOSI",
+                "NUMERO": "439",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM PARAISO",
+                "CEP": "18610260",
+                "CIDADE": "BOTUCATU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PEDRO DELMANTO",
+                "NUMERO": "697",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "JD PARAISO",
+                "CEP": "18610490",
+                "CIDADE": "BOTUCATU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOAO DE OLIVEIRA",
+                "NUMERO": "1100",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALTOS DO PARAISO",
+                "CEP": "18610010",
+                "CIDADE": "BOTUCATU",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "SILVIO FERREIRA DE ANDRADE",
+            "IDADE": "",
+            "LOCALIDADE": "LUPIONOPOLIS\/PR",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "3850651916"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "EMBRAER S.A.",
+            "CNPJ": "07689002000340",
+            "CIDADE": "BOTUCATU-SP",
+            "PROFISSAO": "725605",
+            "DATA_ADMISSAO": "01\/07\/2006",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

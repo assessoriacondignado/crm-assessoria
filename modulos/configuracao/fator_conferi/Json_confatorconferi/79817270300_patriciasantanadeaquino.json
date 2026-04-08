@@ -1,0 +1,271 @@
+{
+    "CADASTRAIS": {
+        "CPF": "79817270300",
+        "NOME": "PATRICIA SANTANA DE AQUINO",
+        "NOME_MAE": "MARIA CELESTE SANTANA DE AQUINO",
+        "NASCTO": "16\/10\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "035386371112",
+        "NIT": "1304840337",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "421125",
+        "PROFISSAO": "OPERADOR DE CAIXA",
+        "SALARIO": " 2.635,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9434241172",
+                "OPERADORA": "TELEMAR\/PA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9935410573",
+                "OPERADORA": "TELEMAR\/MA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9935414876",
+                "OPERADORA": "TELEMAR\/MA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "99991618723",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "94991295623",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "94991376452",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "94992797205",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "99996469863",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "12\/08\/2017",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "pattya322@gmail.com",
+            "patriciacoelho04@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R QUATORZE",
+                "NUMERO": "96",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD AMERICA",
+                "CEP": "68551530",
+                "CIDADE": "REDENCAO",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "R PE FRANCO",
+                "NUMERO": "613",
+                "COMPLEMENTO": "NARA MODAS",
+                "BAIRRO": "CENTRO",
+                "CEP": "65800000",
+                "CIDADE": "BALSAS",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "RCAZUZA RIBEIRO",
+                "NUMERO": "265",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "65800000",
+                "CIDADE": "BALSAS",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "R CLARA NUNES",
+                "NUMERO": "344",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PLANALTO",
+                "CEP": "68554340",
+                "CIDADE": "REDENCAO",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "RUA TRAVESSA TRAJANO COELHO",
+                "NUMERO": "381",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "CENTRO",
+                "CEP": "65800000",
+                "CIDADE": "BALSAS",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "RUA R  CAZUZA RIBEIRO 269",
+                "NUMERO": "269",
+                "COMPLEMENTO": "NULL",
+                "BAIRRO": "CENTRO",
+                "CEP": "65800000",
+                "CIDADE": "BALSAS",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "TV TRAJANO COELHO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "65800000",
+                "CIDADE": "BALSAS",
+                "ESTADO": "MA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "43586481349",
+                "NOME": "MARIA CELESTE SANTANA DE AQUINO",
+                "IDADE": "66 anos",
+                "LOCAL": "BALSAS\/MA",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "1117715361",
+                "NOME": "REGINA SANTANA DE AQUINO",
+                "IDADE": "42 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "4793651305",
+                "NOME": "MAYSA SANTANA DE AQUINO",
+                "IDADE": "35 anos",
+                "LOCAL": "BALSAS\/MA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "79841902320",
+                "NOME": "REGINALDO SANTANA DE AQUINO",
+                "IDADE": "45 anos",
+                "LOCAL": "BALSAS\/MA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "99014386320",
+                "NOME": "MARCELO SANTANA DE AQUINO",
+                "IDADE": "43 anos",
+                "LOCAL": "BALSAS\/MA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "9217319570",
+                "NOME": "GABRIEL SANTANA DE AQUINO",
+                "IDADE": "17 anos",
+                "LOCAL": "SALVADOR\/BA",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "17585968728",
+                "NOME": "YAGO SANTANA VERISSIMO",
+                "IDADE": "29 anos",
+                "LOCAL": "QUEIMADOS\/RJ",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "18802163707",
+                "NOME": "MARIANNE SANTANA VERISSIMO",
+                "IDADE": "11 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "21450450741",
+                "NOME": "WILIAN DE AQUINO NASCIMENTO",
+                "IDADE": "18 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "61918281360",
+                "NOME": "THAIS DE AQUINO COELHO",
+                "IDADE": "26 anos",
+                "LOCAL": "BALSAS\/MA",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "GENRO COMERCIO DE CONFECCOES LTDA.",
+            "CNPJ": "09097651000116",
+            "CIDADE": "REDENCAO-PA",
+            "PROFISSAO": "421125",
+            "DATA_ADMISSAO": "01\/07\/2015",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

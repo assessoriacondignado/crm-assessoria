@@ -1,0 +1,237 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25040869894",
+        "NOME": "SERGIO ALVES PEREIRA",
+        "NOME_MAE": "LOURDES CAVALCANTI PEREIRA",
+        "NASCTO": "18\/05\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "22042156",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "191799740124",
+        "NIT": "12302719621",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521110",
+        "PROFISSAO": "VENDEDOR DE COMERCIO VAREJISTA",
+        "SALARIO": " 1.304,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1123512056",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1123512056",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1142380949",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11994876700",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11969472006",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/04\/1979",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11993516901",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "01\/04\/1979",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11972040544",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "proteville@bol.com.br",
+            "sergio.vendas@madeireirasaocaetano.com.br",
+            "alvespereirasergio@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ENG SILVA BRAGA",
+                "NUMERO": "7",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL BRASILINA",
+                "CEP": "04163210",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE MARIA PAZ",
+                "NUMERO": "112",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL BRASILINA",
+                "CEP": "04163110",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV MARIA LUISA DO VAL PENTEADO",
+                "NUMERO": "710",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE SAO MATEUS",
+                "CEP": "03962040",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DAS MINAS",
+                "NUMERO": "10",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SIT DOS VIANAS",
+                "CEP": "09171730",
+                "CIDADE": "SANTO ANDRE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BOA VISTA",
+                "NUMERO": "312",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOA VISTA",
+                "CEP": "09572300",
+                "CIDADE": "SAO CAETANO DO SUL",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DAS VIOLETAS",
+                "NUMERO": "420",
+                "COMPLEMENTO": "BL 21 AP",
+                "BAIRRO": "VL MIMOSA",
+                "CEP": "13050063",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ALTO LONGA",
+                "NUMERO": "104",
+                "COMPLEMENTO": "BL 1 B 11 ITAIM PAULIST 1",
+                "BAIRRO": "JD DAS OLIVEIRAS",
+                "CEP": "08122150",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV GEN PENHA BRASIL",
+                "NUMERO": "1436",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL NOVA CACHOEIRINHA",
+                "CEP": "02673000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "15737711803",
+            "NOME": "CELSO ALVES PEREIRA",
+            "IDADE": "56 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "GIACOMO COMERCIO E SERVICOS OPERACIONAIS LTDA",
+                "CNPJ": "11367418000158",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "20\/20\/1908",
+                "DATA_DEMISSAO": "01\/04\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CASA GIACOMO TERCEIRIZACAO E SERVICOS LTDA",
+                "CNPJ": "52139261000190",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/04\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MPC COMERCIO DE MATERIAIS PARA CONSTRUCAO LTDA",
+                "CNPJ": "05850510000171",
+                "CIDADE": "SAO CAETANO DO SUL-SP",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "02\/04\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "LORRAINE MADEIRAS E COMPENSADOS LTDA",
+            "CNPJ": "03187848000160",
+            "CIDADE": "SAO PAULO-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "19990531",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

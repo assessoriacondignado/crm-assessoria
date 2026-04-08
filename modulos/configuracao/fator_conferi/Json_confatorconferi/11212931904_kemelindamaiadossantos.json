@@ -1,0 +1,183 @@
+{
+    "CADASTRAIS": {
+        "CPF": "11212931904",
+        "NOME": "KEMELIN DA MAIA DOS SANTOS",
+        "NOME_MAE": "ELISANGELA PISKE DA MAIA",
+        "NASCTO": "25\/12\/1999",
+        "IDADE": "26 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "21051917877",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "422105",
+        "PROFISSAO": "RECEPCIONISTA, EM GERAL",
+        "SALARIO": " 8,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "47991090701",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "47992004121",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "47991706588",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "dossantoskemelin@gmail.com",
+            "emanuelle.damaiamedeiros@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "ALBINO BULINKOWSKI",
+                "NUMERO": "471",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CPO LENCOL",
+                "CEP": "89295000",
+                "CIDADE": "RIO NEGRINHO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R AMANDUS OLSEN",
+                "NUMERO": "1085",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CPO LENCOL",
+                "CEP": "89295000",
+                "CIDADE": "RIO NEGRINHO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R DO SEMINARIO",
+                "NUMERO": "157",
+                "COMPLEMENTO": "CONIL ASSESSORIA CONTABIL",
+                "BAIRRO": "CENTRO",
+                "CEP": "89295121",
+                "CIDADE": "RIO NEGRINHO",
+                "ESTADO": "SC"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "90682297968",
+                "NOME": "ELISANGELA PISKE DA MAIA",
+                "IDADE": "48 anos",
+                "LOCAL": "FORMOSA\/GO",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "10170963926",
+                "NOME": "SABRINA MILENA DA MAIA",
+                "IDADE": "30 anos",
+                "LOCAL": "RIO NEGRINHO\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "12622779909",
+                "NOME": "EMANUELLE DA MAIA MEDEIROS",
+                "IDADE": "24 anos",
+                "LOCAL": "RIO NEGRINHO\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "EMANUELLE DA MAIA MEDEIROS",
+            "IDADE": "",
+            "LOCALIDADE": "RIO NEGRINHO\/SC",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "12622779909"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CASA LIMPA TRANSPORTES LTDA",
+                "CNPJ": "04234476000148",
+                "CIDADE": "RIO NEGRINHO-SC",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "08\/04\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ZIPPERER CONTABILIDADE LTDA.",
+                "CNPJ": "10707039000105",
+                "CIDADE": "RIO NEGRINHO-SC",
+                "PROFISSAO": "413110",
+                "DATA_ADMISSAO": "08\/03\/2023",
+                "DATA_DEMISSAO": "28\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "NILSON MUNCH - CONIL ASSESSORIA CONTABIL LTDA",
+                "CNPJ": "73722001000113",
+                "CIDADE": "RIO NEGRINHO-SC",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "01\/09\/2021",
+                "DATA_DEMISSAO": "03\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "BACIC INDUSTRIAL DE PLASTICOS LTDA",
+                "CNPJ": "07365641000199",
+                "CIDADE": "RIO NEGRINHO-SC",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "23\/08\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "WIND INDUSTRIAL LTDA",
+                "CNPJ": "03351783000146",
+                "CIDADE": "RIO NEGRINHO-SC",
+                "PROFISSAO": "422105",
+                "DATA_ADMISSAO": "03\/11\/2014",
+                "DATA_DEMISSAO": "02\/03\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

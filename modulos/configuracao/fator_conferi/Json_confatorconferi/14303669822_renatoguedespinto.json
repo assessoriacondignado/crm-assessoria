@@ -1,0 +1,221 @@
+{
+    "CADASTRAIS": {
+        "CPF": "14303669822",
+        "NOME": "RENATO GUEDES PINTO",
+        "NOME_MAE": "ANA CELIA ROLAND G PINTO",
+        "NASCTO": "02\/01\/1970",
+        "IDADE": "56 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12605068562",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "234505",
+        "PROFISSAO": "PROFESSOR DE ENSINO SUPERIOR NA AREA DE DIDATICA",
+        "SALARIO": " 23,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8335068784",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8332481035",
+                "OPERADORA": "TELEMAR\/PB",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "83991426856",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "83988071970",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "83988993396",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "28\/03\/2012",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "83991468781",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "83993424260",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "renatoguedespinto@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV GOV ANTONIO DA SILVA MARIZ",
+                "NUMERO": "601",
+                "COMPLEMENTO": "CS 13",
+                "BAIRRO": "PORTAL DO SOL",
+                "CEP": "58046518",
+                "CIDADE": "JOAO PESSOA",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "R OSCAR FREIRE",
+                "NUMERO": "1707",
+                "COMPLEMENTO": "AP 11",
+                "BAIRRO": "PINHEIROS",
+                "CEP": "05409011",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA VALDEMAR CHIANCA",
+                "NUMERO": "352",
+                "COMPLEMENTO": "ED MARANATA BL B APT 801",
+                "BAIRRO": "JARDIM OCEANIA",
+                "CEP": "58037255",
+                "CIDADE": "JOAO PESSOA",
+                "ESTADO": "PB"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "IPE EDUCACIONAL LTDA",
+                "CNPJ": "08679557000102",
+                "CIDADE": "JOAO PESSOA-PB",
+                "PROFISSAO": "818105",
+                "DATA_ADMISSAO": "22\/01\/2015",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "UNINEVES S\/A",
+                "CNPJ": "40435715000191",
+                "CIDADE": "JOAO PESSOA-PB",
+                "PROFISSAO": "234515",
+                "DATA_ADMISSAO": "01\/02\/2021",
+                "DATA_DEMISSAO": "20\/09\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CENTRO  SUPERIOR DE CIENCIAS DA SAUDE LTDA",
+                "CNPJ": "38428487000180",
+                "CIDADE": "JOAO PESSOA-PB",
+                "PROFISSAO": "234505",
+                "DATA_ADMISSAO": "01\/11\/2020",
+                "DATA_DEMISSAO": "02\/04\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "UNIESP S.A. EM RECUPERACAO JUDICIAL",
+                "CNPJ": "19347410000131",
+                "CIDADE": "OLIMPIA-SP",
+                "PROFISSAO": "234520",
+                "DATA_ADMISSAO": "01\/01\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "INSTITUTO DE CIENCIA E EDUCACAO DE SAO PAULO",
+                "CNPJ": "58252636000100",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "234520",
+                "DATA_ADMISSAO": "01\/01\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "CENTRO NORDESTINO DE ENSINO SUPERIOR S\/S LTDA",
+                "CNPJ": "04438680000180",
+                "CIDADE": "CABEDELO-PB",
+                "PROFISSAO": "234405",
+                "DATA_ADMISSAO": "01\/08\/2007",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SOCIEDADE EDUCACIONAL DE JOAO PESSOA LTDA",
+                "CNPJ": "03995211000108",
+                "CIDADE": "JOAO PESSOA-PB",
+                "PROFISSAO": "234520",
+                "DATA_ADMISSAO": "01\/04\/2005",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SOCIEDADE DE ENSINO SUPERIOR DA PARAIBA SOCIEDADE SIMPLES LTDA",
+                "CNPJ": "70118716000254",
+                "CIDADE": "CABEDELO-PB",
+                "PROFISSAO": "234505",
+                "DATA_ADMISSAO": "01\/03\/2007",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

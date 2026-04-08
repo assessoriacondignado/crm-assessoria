@@ -1,0 +1,179 @@
+{
+    "CADASTRAIS": {
+        "CPF": "836365364",
+        "NOME": "MARIA CILENNE DE ALMEIDA",
+        "NOME_MAE": "LUIZA VIANA GOMES",
+        "NASCTO": "12\/06\/1984",
+        "IDADE": "41 anos",
+        "SEXO": "Feminino",
+        "RG": "2454439",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "031460041562",
+        "NIT": "16488484452",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "513205",
+        "PROFISSAO": "COZINHEIRO GERAL",
+        "SALARIO": " 910,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "86995313845",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "86994771714",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "86994516392",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "86988812709",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "25\/11\/2015",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "86988130896",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "cinesix.mca@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "RES O SONHO NAO ACABOU",
+                "NUMERO": "3",
+                "COMPLEMENTO": "CASAQDK",
+                "BAIRRO": "URUGUAI",
+                "CEP": "64073470",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "R PAULA RODRIGUES",
+                "NUMERO": "209",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PIRATININGA",
+                "CEP": "06233030",
+                "CIDADE": "OSASCO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MATIAS OLIMPIO",
+                "NUMERO": "380",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "64380000",
+                "CIDADE": "BENEDITINOS",
+                "ESTADO": "PI"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "7885059391",
+                "NOME": "LUIZA VIANA GOMES",
+                "IDADE": "100 anos",
+                "LOCAL": "",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "8553242366",
+                "NOME": "MARCOS LUANN ALMEIDA PIMENTEL",
+                "IDADE": "15 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "8553249379",
+                "NOME": "FERNANDA SOLENE ALMEIDA PEREIRA",
+                "IDADE": "20 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "8767055303",
+                "NOME": "FRANCISCO HALLEY ALMEIDA PIMENTEL",
+                "IDADE": "9 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BIOANALISE LTDA",
+                "CNPJ": "01038328002707",
+                "CIDADE": "TERESINA-PI",
+                "PROFISSAO": "514320",
+                "DATA_ADMISSAO": "02\/09\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VELOSO EMPREENDIMENTOS ALIMENTICIOS LTDA",
+                "CNPJ": "20195149000180",
+                "CIDADE": "TERESINA-PI",
+                "PROFISSAO": "513205",
+                "DATA_ADMISSAO": "01\/07\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "POUSADA GIRASSOL LTDA",
+                "CNPJ": "14360330000100",
+                "CIDADE": "TERESINA-PI",
+                "PROFISSAO": "513315",
+                "DATA_ADMISSAO": "01\/11\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

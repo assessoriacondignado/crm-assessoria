@@ -1,0 +1,175 @@
+{
+    "CADASTRAIS": {
+        "CPF": "6144237321",
+        "NOME": "NADJA POLIANA ALVES MELO",
+        "NOME_MAE": "MARIA DE FATIMA MELO SILVA",
+        "NASCTO": "13\/03\/1996",
+        "IDADE": "30 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "86994540998",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "86998503768",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "86981471759",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "86999437922",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "86988773537",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "nadjapoliana13@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R TIRADENTES",
+                "NUMERO": "6420",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "64000380",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "Q 343",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ITARARE",
+                "CEP": "64078476",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "R TIRADENTES",
+                "NUMERO": "642",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "64000380",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "16402405",
+                "NOME": "MARIA DE FATIMA MELO SILVA",
+                "IDADE": "53 anos",
+                "LOCAL": "SERRA\/ES",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "10359557333",
+                "NOME": "SOPHIA ALVES MELO",
+                "IDADE": "7 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738020600",
+                "CIDADE": "TERESINA-PI",
+                "PROFISSAO": "520110",
+                "DATA_ADMISSAO": "01\/09\/2015",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738036353",
+                "CIDADE": "TERESINA-PI",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/09\/2015",
+                "DATA_DEMISSAO": "01\/09\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738029659",
+                "CIDADE": "TERESINA-PI",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/09\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "VIKSTAR SERVICES TECHNOLOGY S.A.",
+                "CNPJ": "08075274000402",
+                "CIDADE": "TERESINA-PI",
+                "PROFISSAO": "422310",
+                "DATA_ADMISSAO": "16\/12\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,175 @@
+{
+    "CADASTRAIS": {
+        "CPF": "75606020106",
+        "NOME": "VINICIUS ANTONIO DIAS",
+        "NOME_MAE": "REJANE FRANCISCA DA ROSA DIAS",
+        "NASCTO": "23\/08\/1995",
+        "IDADE": "30 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "20461955924",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "513435",
+        "PROFISSAO": "ATENDENTE DE LANCHONETE",
+        "SALARIO": " 966,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "6733466987",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "6730414200",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "67991322098",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "67984821179",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "14\/07\/2018",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "viniboydias111@hotmail.com",
+            "viniciusantonio95@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "DEZ R RUA NOVA JERUSALEM",
+                "NUMERO": "615",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "79290000",
+                "CIDADE": "BONITO",
+                "ESTADO": "MS"
+            },
+            {
+                "LOGRADOURO": "R RANULFO CORREA",
+                "NUMERO": "233",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD NHANHA",
+                "CEP": "79081390",
+                "CIDADE": "CAMPO GRANDE",
+                "ESTADO": "MS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TONY LEONARDO SANCHES BANDEIRA LTDA",
+                "CNPJ": "27850495000102",
+                "CIDADE": "CAMPO GRANDE-MS",
+                "PROFISSAO": "514320",
+                "DATA_ADMISSAO": "18\/07\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "RP ATIVIDADES AUXILIARES AO TRANSPORTE AEREO S\/A",
+                "CNPJ": "03769607000129",
+                "CIDADE": "MARINGA-PR",
+                "PROFISSAO": "783205",
+                "DATA_ADMISSAO": "11\/12\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "DIVERTIDOOS LTDA",
+                "CNPJ": "31277663000181",
+                "CIDADE": "CAMPO GRANDE-MS",
+                "PROFISSAO": "513405",
+                "DATA_ADMISSAO": "01\/02\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CHURRASCARIA ESPETO DE OURO LTDA",
+                "CNPJ": "33053939000173",
+                "CIDADE": "CAMPO GRANDE-MS",
+                "PROFISSAO": "519110",
+                "DATA_ADMISSAO": "02\/12\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "S. PIRES COMERCIO DE ALIMENTOS LTDA",
+                "CNPJ": "12075667000132",
+                "CIDADE": "CAMPO GRANDE-MS",
+                "PROFISSAO": "521125",
+                "DATA_ADMISSAO": "16\/20\/1902",
+                "DATA_DEMISSAO": "21\/10\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "POINT DO ESPETO CONVENIENCIA LTDA",
+                "CNPJ": "07514087000164",
+                "CIDADE": "CAMPO GRANDE-MS",
+                "PROFISSAO": "513435",
+                "DATA_ADMISSAO": "06\/10\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "COMERCIO DE ALIMENTOS ANHANDUI LTDA",
+                "CNPJ": "10602507000179",
+                "CIDADE": "CAMPO GRANDE-MS",
+                "PROFISSAO": "521140",
+                "DATA_ADMISSAO": "11\/06\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

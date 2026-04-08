@@ -1,0 +1,182 @@
+{
+    "CADASTRAIS": {
+        "CPF": "74519956315",
+        "NOME": "BENEDITO DE PAULO DUTRA",
+        "NOME_MAE": "MARIA DAS GRACAS DE MORAIS DUTRA",
+        "NASCTO": "13\/11\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1267173548",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782410",
+        "PROFISSAO": "MOTORISTA DE ONIBUS URBANO",
+        "SALARIO": " 2.267,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8621066455",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9832434825",
+                "OPERADORA": "TELEMAR\/MA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "86995017973",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "86994073953",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "86994557469",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "86994821454",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "86988289059",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "Q PARQUE PIAUI",
+                "NUMERO": "5",
+                "COMPLEMENTO": "Q 87",
+                "BAIRRO": "PRQ PIAUI",
+                "CEP": "64025020",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "AV DORGIVAL PINHEIRO DE SOUSA",
+                "NUMERO": "755",
+                "COMPLEMENTO": "A",
+                "BAIRRO": "CENTRO",
+                "CEP": "65903270",
+                "CIDADE": "IMPERATRIZ",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "R ARIMATEIA CISNE",
+                "NUMERO": "3",
+                "COMPLEMENTO": "",
+                "BAIRRO": "APEADOURO",
+                "CEP": "65035800",
+                "CIDADE": "SAO LUIS",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "R SIMEAO COSTA",
+                "NUMERO": "29",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JOAO PAULO",
+                "CEP": "65041590",
+                "CIDADE": "SAO LUIS",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "PRACA EDGARD NOGUEIRA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "CEF AG TRE",
+                "BAIRRO": "CABRAL",
+                "CEP": "64000830",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "7891555320",
+                "NOME": "MARIA DAS GRACAS DE MORAIS DUTRA",
+                "IDADE": "78 anos",
+                "LOCAL": "TERESINA\/PI",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "77481283320",
+                "NOME": "MARIA DO SOCORRO DE MORAIS DUTRA RODRIGUES",
+                "IDADE": "50 anos",
+                "LOCAL": "TERESINA\/PI",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "TRANSCOL TRANSPORTES COLETIVOS LTDA",
+            "CNPJ": "07098999000100",
+            "CIDADE": "TERESINA-PI",
+            "PROFISSAO": "782410",
+            "DATA_ADMISSAO": "08\/04\/2010",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,225 @@
+{
+    "CADASTRAIS": {
+        "CPF": "43008860249",
+        "NOME": "ROBSON HERCULES NOGUEIRA CORDEIRO",
+        "NOME_MAE": "VILMA NOGUEIRA CORDEIRO",
+        "NASCTO": "25\/03\/1973",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1705378711",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212405",
+        "PROFISSAO": "ANALISTA DE DESENVOLVIMENTO DE SISTEMAS",
+        "SALARIO": " 58.038,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "6135435323",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "28\/11\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9132296456",
+                "OPERADORA": "TELEMAR\/PA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9132296775",
+                "OPERADORA": "TELEMAR\/PA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "6120219577",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "91988161297",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "91988162503",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "61993255100",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21980032787",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "21980048732",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "robson-hercules.cordeiro@serpro.gov.br",
+            "rhnc@uol.com.br",
+            "edinog196@gmail.com",
+            "robson_cordeiro@hotmail.com",
+            "rlnc@uol.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "VL NOVE DE JANEIRO",
+                "NUMERO": "1190",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S BRAS",
+                "CEP": "66063250",
+                "CIDADE": "BELEM",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "PSG STA FE",
+                "NUMERO": "234",
+                "COMPLEMENTO": "C B",
+                "BAIRRO": "GUAMA",
+                "CEP": "66075580",
+                "CIDADE": "BELEM",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "R BURITI",
+                "NUMERO": "0",
+                "COMPLEMENTO": "LT 6",
+                "BAIRRO": "SUL (AGUAS CLARAS)",
+                "CEP": "71940000",
+                "CIDADE": "BRASILIA",
+                "ESTADO": "DF"
+            },
+            {
+                "LOGRADOURO": "TRAVESSA NOVE DE JANEIRO",
+                "NUMERO": "1190",
+                "COMPLEMENTO": "",
+                "BAIRRO": "UMARIZAL",
+                "CEP": "66060370",
+                "CIDADE": "BELEM",
+                "ESTADO": "PA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "58779361234",
+                "NOME": "VILMA NOGUEIRA CORDEIRO",
+                "IDADE": "87 anos",
+                "LOCAL": "BELEM\/PA",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "56273991200",
+                "NOME": "RONY HELDER NOGUEIRA CORDEIRO",
+                "IDADE": "50 anos",
+                "LOCAL": "BELEM\/PA",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "EDISON CARVALHO NOGUEIRA",
+                "IDADE": "",
+                "LOCALIDADE": "BELEM\/PA",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "3314065272"
+            },
+            {
+                "NOME": "LUIZA RODRIGUES RICARTE",
+                "IDADE": "",
+                "LOCALIDADE": "",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "39973565304"
+            },
+            {
+                "NOME": "ROBSON HERCULES DO NASCIMENTO",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "29266101818"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "SERVICO FEDERAL DE PROCESSAMENTO DE DADOS (SERPRO)",
+            "CNPJ": "33683111000280",
+            "CIDADE": "BRASILIA-DF",
+            "PROFISSAO": "212405",
+            "DATA_ADMISSAO": "05\/07\/2004",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

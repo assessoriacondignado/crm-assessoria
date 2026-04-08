@@ -1,0 +1,175 @@
+{
+    "CADASTRAIS": {
+        "CPF": "60267658087",
+        "NOME": "MAURICIO CUNHA PARUSSINI",
+        "NOME_MAE": "JUSSARA CUNHA PARUSSINI",
+        "NASCTO": "01\/05\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12613099692",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212405",
+        "PROFISSAO": "ANALISTA DE DESENVOLVIMENTO DE SISTEMAS",
+        "SALARIO": " 7.896,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "5132410673",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "41999566087",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41998019111",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "41999131333",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "mauricio@retebras.com.br",
+            "sapos@via-rs.net",
+            "mauricio.parussini@gmail.com",
+            "fdjgyn@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "NTO GONCALVES",
+                "NUMERO": "471",
+                "COMPLEMENTO": "1",
+                "BAIRRO": "MARISUL",
+                "CEP": "95625000",
+                "CIDADE": "IMBE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R VIEIRA DA CUNHA",
+                "NUMERO": "999",
+                "COMPLEMENTO": "BL B A PTO 1",
+                "BAIRRO": "SARANDI",
+                "CEP": "91120610",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA GASTAO CAMARA",
+                "NUMERO": "694",
+                "COMPLEMENTO": "AP 101",
+                "BAIRRO": "BIGORRILHO",
+                "CEP": "80730300",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "RUA XAVIER DA CUNHA",
+                "NUMERO": "999",
+                "COMPLEMENTO": "307",
+                "BAIRRO": "NONOAI",
+                "CEP": "90830430",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "77836812049",
+                "NOME": "JUSSARA CUNHA PARUSSINI",
+                "IDADE": "81 anos",
+                "LOCAL": "PORTO ALEGRE\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "60267640030",
+                "NOME": "MARCIO CUNHA PARUSSINI",
+                "IDADE": "55 anos",
+                "LOCAL": "PORTO ALEGRE\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "82159939072",
+                "NOME": "MARIANA CUNHA PARUSSINI",
+                "IDADE": "47 anos",
+                "LOCAL": "PORTO ALEGRE\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "DARLENE MARY MESQUITA PARUSSINI",
+            "IDADE": "",
+            "LOCALIDADE": "PORTO ALEGRE\/RS",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "60297093053"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TIM S A",
+                "CNPJ": "02421421020732",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "01\/11\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TIM CELULAR S.A.",
+                "CNPJ": "04206050012863",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "10\/11\/2003",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

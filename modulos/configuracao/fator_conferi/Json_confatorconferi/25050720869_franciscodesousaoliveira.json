@@ -1,0 +1,233 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25050720869",
+        "NOME": "FRANCISCO DE SOUSA OLIVEIRA",
+        "NOME_MAE": "ZULEIDE ELVINA DE SOUSA",
+        "NASCTO": "11\/02\/1978",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "275733567",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "280267000124",
+        "NIT": "1254708443",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "520110",
+        "PROFISSAO": "SUPERVISOR DE VENDAS COMERCIAL",
+        "SALARIO": " 23.437,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1134935333",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1159318349",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1159297032",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1121681166",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11966210395",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11976299800",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11976626122",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "62995555192",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11998676832",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "24\/10\/2005",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "frank1oliveira@aol.com",
+            "francisco.oliveira@electrolux.com.br",
+            "grace@verarosasregistro.com.br",
+            "francisco.oliveira@eletrolux.com.br",
+            "frs.oliveira@electrolux.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DR NUNO GUERNER DE ALMEIDA",
+                "NUMERO": "25",
+                "COMPLEMENTO": "100",
+                "BAIRRO": "PRQ COCAIA",
+                "CEP": "04850230",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ELIAS A ZOGBI",
+                "NUMERO": "150",
+                "COMPLEMENTO": "AP122 BL",
+                "BAIRRO": "STO AMARO",
+                "CEP": "04746115",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R WALDEMAR GOMES LINGOANOTI",
+                "NUMERO": "210",
+                "COMPLEMENTO": "AP15",
+                "BAIRRO": "JARDIM MARABA",
+                "CEP": "04775170",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA GIULIA RANIERI",
+                "NUMERO": "254",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD LUCELIA",
+                "CEP": "04852610",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA GIUSEPPE TARTINI",
+                "NUMERO": "15",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM SAO BERNARDO",
+                "CEP": "04844300",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOUTOR NUNO GUERNER DE ALMEIDA",
+                "NUMERO": "2",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE COCAIA",
+                "CEP": "04850230",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "GRACE DA SILVA OLIVEIRA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "29956367800"
+            },
+            {
+                "NOME": "SHEYLA CHIRNEV PIRES",
+                "IDADE": "",
+                "LOCALIDADE": "SAO BERNARDO DO CAMPO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "25933581810"
+            },
+            {
+                "NOME": "VERA LUCIA ROSAS",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "77237455834"
+            },
+            {
+                "NOME": "VERALUCIA EUFRASIO ROSAS",
+                "IDADE": "",
+                "LOCALIDADE": "CONDE\/PB",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "820399418"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "ELECTROLUX DO BRASIL S\/A",
+            "CNPJ": "76487032002764",
+            "CIDADE": "SAO PAULO-SP",
+            "PROFISSAO": "520110",
+            "DATA_ADMISSAO": "01\/12\/2006",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

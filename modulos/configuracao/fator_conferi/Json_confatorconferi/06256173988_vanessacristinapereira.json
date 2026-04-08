@@ -1,0 +1,181 @@
+{
+    "CADASTRAIS": {
+        "CPF": "6256173988",
+        "NOME": "VANESSA CRISTINA PEREIRA",
+        "NOME_MAE": "ANA LEMES DE ASSIS PEREIRA",
+        "NASCTO": "27\/04\/1988",
+        "IDADE": "38 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "2063942512",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "252305",
+        "PROFISSAO": "SECRETARIA  EXECUTIVA",
+        "SALARIO": " 6.941,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4530557100",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4533796256",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "45999816492",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "45999981649",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "vanessa.pereira@sicoobmeridional.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CORBELIA",
+                "NUMERO": "784",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD STA MARIA",
+                "CEP": "85903050",
+                "CIDADE": "TOLEDO",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R JOAQUIM PIAZZA",
+                "NUMERO": "240",
+                "COMPLEMENTO": "AP 31",
+                "BAIRRO": "JD ANAPOLIS",
+                "CEP": "85905470",
+                "CIDADE": "TOLEDO",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R BALDUINO THILKE",
+                "NUMERO": "708",
+                "COMPLEMENTO": "AP 21",
+                "BAIRRO": "CENTRO",
+                "CEP": "85900122",
+                "CIDADE": "TOLEDO",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R MATELANDIA",
+                "NUMERO": "1286",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JD STA MARIA",
+                "CEP": "85903070",
+                "CIDADE": "TOLEDO",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R CORBELIA",
+                "NUMERO": "34002",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD STA MARIA",
+                "CEP": "85903050",
+                "CIDADE": "TOLEDO",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R CORBELIA",
+                "NUMERO": "34001",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD STA MARIA",
+                "CEP": "85903050",
+                "CIDADE": "TOLEDO",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R SETE DE SETEMBRO",
+                "NUMERO": "995",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "85900220",
+                "CIDADE": "TOLEDO",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "AV SEN ATTILIO FONTANA",
+                "NUMERO": "999",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD PANORAMA",
+                "CEP": "85912140",
+                "CIDADE": "TOLEDO",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "95571043920",
+                "NOME": "ANA LEMES DE ASSIS PEREIRA",
+                "IDADE": "69 anos",
+                "LOCAL": "TOLEDO\/PR",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "3754815911",
+                "NOME": "LEDA CRISTHIANE PEREIRA",
+                "IDADE": "42 anos",
+                "LOCAL": "TOLEDO\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "Cooperativa de Credito da Regiao Meridional do Brasil - Sicoob Unicoob Meridional",
+            "CNPJ": "05392810000154",
+            "CIDADE": "TOLEDO-PR",
+            "PROFISSAO": "252305",
+            "DATA_ADMISSAO": "01\/11\/2012",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,135 @@
+{
+    "CADASTRAIS": {
+        "CPF": "2748417976",
+        "NOME": "ALFREDO WENDLER JUNIOR",
+        "NOME_MAE": "IOLANDA GALAN WENDLER",
+        "NASCTO": "02\/03\/1980",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "70445506",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "064641160639",
+        "NIT": "1275496352 ",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "252205",
+        "PROFISSAO": "AUDITOR (CONTADORES E AFINS)",
+        "SALARIO": " 25.944,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4236258695",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4236238459",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "42999168737",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "42988071476",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "42988092859",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "awendler@ig.com.br",
+            "awjwendler@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "RUA BENJAMIN CONSTANT",
+                "NUMERO": "1401",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "CENTRO",
+                "CEP": "85010190",
+                "CIDADE": "GUARAPUAVA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "RUA MISSAL",
+                "NUMERO": "4676",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA CARLI",
+                "CEP": "85040470",
+                "CIDADE": "GUARAPUAVA",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COOPERATIVA AGRARIA AGROINDUSTRIAL",
+                "CNPJ": "77890846003194",
+                "CIDADE": "GUARAPUAVA-PR",
+                "PROFISSAO": "252205",
+                "DATA_ADMISSAO": "01\/04\/2002",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COOPERATIVA AGRARIA AGROINDUSTRIAL",
+                "CNPJ": "77890846000179",
+                "CIDADE": "GUARAPUAVA-PR",
+                "PROFISSAO": "252205",
+                "DATA_ADMISSAO": "01\/04\/2002",
+                "DATA_DEMISSAO": "01\/07\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

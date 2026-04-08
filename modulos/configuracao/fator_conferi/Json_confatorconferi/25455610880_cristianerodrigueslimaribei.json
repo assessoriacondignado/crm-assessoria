@@ -1,0 +1,256 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25455610880",
+        "NOME": "CRISTIANE RODRIGUES LIMA RIBEI",
+        "NOME_MAE": "CELINA RODRIGUES LIMA",
+        "NASCTO": "16\/06\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "266372870124",
+        "NIT": "13284332854",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212315",
+        "PROFISSAO": "ADMINISTRADOR DE SISTEMAS OPERACIONAIS",
+        "SALARIO": " 5.459,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1123678984",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "21\/04\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1158193220",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "26\/03\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1155135677",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11984001645",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11986743220",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11986752569",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11986582910",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "02\/10\/2009",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11994794049",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "crodrigues.ribeiro@gmail.com",
+            "crodrigues_lima@hotmail.com",
+            "cris_rodrigueslima@ig.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CAMASATI",
+                "NUMERO": "149",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL FRANCA",
+                "CEP": "05776340",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CLODOMIRO AMAZONAS",
+                "NUMERO": "55",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL NOVA CONCEICAO",
+                "CEP": "04537010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R COSME DE AZEVEDO",
+                "NUMERO": "55",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TUCURUVI",
+                "CEP": "02307010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "TV WE CINQUENTA E SETE A",
+                "NUMERO": "1312",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COQUEIRO",
+                "CEP": "67143330",
+                "CIDADE": "ANANINDEUA",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "R CONSTANTINO DE AZEVEDO",
+                "NUMERO": "55",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE IPE",
+                "CEP": "05762030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CONSTANTINO DE OLIVEIRA LEDO",
+                "NUMERO": "629",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE REGINA",
+                "CEP": "05774280",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CLODOMIRO AMAZONAS",
+                "NUMERO": "55",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA NOVA CONCEICAO",
+                "CEP": "04537011",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "6376878253",
+            "NOME": "CELINA RODRIGUES LIMA",
+            "IDADE": "95 anos",
+            "LOCAL": "",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "CELINA RODRIGUES LIMA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "24830583886"
+            },
+            {
+                "NOME": "CRISTIANE RODRIGUES LIMA",
+                "IDADE": "",
+                "LOCALIDADE": "ITARIRI\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "28235417804"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "EDITORA GLOBO S\/A",
+                "CNPJ": "04067191000674",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "252105",
+                "DATA_ADMISSAO": "12\/11\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VALOR ECONOMICO S.A.",
+                "CNPJ": "03687592000150",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212315",
+                "DATA_ADMISSAO": "04\/11\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "CMA - CONSULTORIA, METODOS, ASSESSORIA E MERCANTIL S.A.",
+                "CNPJ": "43819978000192",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212420",
+                "DATA_ADMISSAO": "08\/08\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "ENFOQUE INFORMACOES FINANCEIRAS LTDA.",
+                "CNPJ": "59582114000130",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "01\/02\/2011",
+                "DATA_DEMISSAO": "204",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

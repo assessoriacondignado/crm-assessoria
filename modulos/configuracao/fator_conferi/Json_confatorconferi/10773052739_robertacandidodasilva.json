@@ -1,0 +1,164 @@
+{
+    "CADASTRAIS": {
+        "CPF": "10773052739",
+        "NOME": "ROBERTA CANDIDO DA SILVA",
+        "NOME_MAE": "MARIA LUCIA MELLO DA SILVA",
+        "NASCTO": "19\/09\/1983",
+        "IDADE": "42 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "119455510302",
+        "NIT": "1306964962",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "421125",
+        "PROFISSAO": "OPERADOR DE CAIXA",
+        "SALARIO": " 1.728,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2126674218",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2128817611",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21991199864",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21993101001",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21993793774",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21994976584",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "21998817798",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DA ROSEIRA",
+                "NUMERO": "290",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "MIGUEL COUTO",
+                "CEP": "26061045",
+                "CIDADE": "NOVA IGUACU",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "AV MAL FLORIANO PEIXOTO",
+                "NUMERO": "1552",
+                "COMPLEMENTO": "LJ",
+                "BAIRRO": "CENTRO",
+                "CEP": "26220060",
+                "CIDADE": "NOVA IGUACU",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R OSWALDO",
+                "NUMERO": "167",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STA ISABEL",
+                "CEP": "26022261",
+                "CIDADE": "NOVA IGUACU",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA LUCI",
+                "NUMERO": "195",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOSSA SENHORA DE FATIMA",
+                "CEP": "26022251",
+                "CIDADE": "NOVA IGUACU",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "7055261783",
+            "NOME": "MARIA LUCIA MELLO DA SILVA",
+            "IDADE": "60 anos",
+            "LOCAL": "RIO DE JANEIRO\/RJ",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "CASAS GUANABARA COMESTIVEIS LTDA",
+            "CNPJ": "33130543004501",
+            "CIDADE": "NOVA IGUACU-RJ",
+            "PROFISSAO": "421125",
+            "DATA_ADMISSAO": "03\/07\/2009",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

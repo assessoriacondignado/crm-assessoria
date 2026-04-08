@@ -1,0 +1,231 @@
+{
+    "CADASTRAIS": {
+        "CPF": "96210893368",
+        "NOME": "ELIZA AUGUSTA OLIVEIRA",
+        "NOME_MAE": "MARIA ALCINA OLIVEIRA",
+        "NASCTO": "19\/07\/1982",
+        "IDADE": "43 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "044774451112",
+        "NIT": "12879875376",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411050",
+        "PROFISSAO": "",
+        "SALARIO": " 1.036,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9833138900",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9936617210",
+                "OPERADORA": "TELEMAR\/MA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "99981185061",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "99991020944",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "99936614069",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "99999536581",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "99991296866",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MARCOS ROCHA",
+                "NUMERO": "1615",
+                "COMPLEMENTO": "C TRIZIDELA",
+                "BAIRRO": "CENTRO",
+                "CEP": "65405000",
+                "CIDADE": "CODOZINHO",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "RUA RUA MARCOS ROCHA",
+                "NUMERO": "615",
+                "COMPLEMENTO": "FUNDOS",
+                "BAIRRO": "SAO JOSE",
+                "CEP": "65400000",
+                "CIDADE": "CODO",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "R MARCOS ROCHA",
+                "NUMERO": "1615",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S JOSE",
+                "CEP": "65400000",
+                "CIDADE": "CODO",
+                "ESTADO": "MA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "3101577810",
+                "NOME": "MARIA ALCINA OLIVEIRA",
+                "IDADE": "98 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "912160284",
+                "NOME": "MAICI DO CARMO OLIVEIRA",
+                "IDADE": "36 anos",
+                "LOCAL": "BELEM\/PA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "1357552394",
+                "NOME": "SOCORRO DE MARIA OLIVEIRA",
+                "IDADE": "46 anos",
+                "LOCAL": "CODO\/MA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "3612654845",
+                "NOME": "MARCIA BAPTISTA OLIVEIRA ARUTA",
+                "IDADE": "67 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "3910788874",
+                "NOME": "MARCOS BAPTISTA OLIVEIRA",
+                "IDADE": "66 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "29110033300",
+                "NOME": "MARIA PAULINA DE OLIVEIRA NASCIMENTO",
+                "IDADE": "71 anos",
+                "LOCAL": "SAO RAIMUNDO DO DOCA BEZERRA\/MA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "61447171373",
+                "NOME": "LISANDRA EVELYN OLIVEIRA SOUSA",
+                "IDADE": "25 anos",
+                "LOCAL": "CODO\/MA",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CAMED MICROCREDITO E SERVICOS LTDA",
+                "CNPJ": "46408857026536",
+                "CIDADE": "CODO-MA",
+                "PROFISSAO": "411050",
+                "DATA_ADMISSAO": "16\/11\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "INSTITUTO NORDESTE CIDADANIA",
+                "CNPJ": "01437408017678",
+                "CIDADE": "CODO-MA",
+                "PROFISSAO": "411050",
+                "DATA_ADMISSAO": "03\/06\/2013",
+                "DATA_DEMISSAO": "10\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "INSTITUTO NORDESTE CIDADANIA",
+                "CNPJ": "01437408000198",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "411050",
+                "DATA_ADMISSAO": "03\/06\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "F R CAVALCANTE E CIA LTDA",
+                "CNPJ": "09230164000180",
+                "CIDADE": "CODO-MA",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "12\/20\/2008",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

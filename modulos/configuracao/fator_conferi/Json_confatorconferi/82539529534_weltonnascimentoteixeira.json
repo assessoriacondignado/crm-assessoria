@@ -1,0 +1,292 @@
+{
+    "CADASTRAIS": {
+        "CPF": "82539529534",
+        "NOME": "WELTON NASCIMENTO TEIXEIRA",
+        "NOME_MAE": "IVANY DA SILVA NASCIMENTO",
+        "NASCTO": "15\/12\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "1116603861",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "095915800507",
+        "NIT": "20903633609",
+        "ESCOLARIDADE": "PRIMEIRO GRAU (GINASIO)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782305",
+        "PROFISSAO": "MOTORISTA DE CARRO DE PASSEIO",
+        "SALARIO": " 1.241,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1332736659",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1333077190",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1932954861",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13991105513",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13981669995",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13981787975",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13996277796",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19996277796",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "marinajteixeira@outlook.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ALM TAMANDARE",
+                "NUMERO": "76",
+                "COMPLEMENTO": "AP 15",
+                "BAIRRO": "MACUCO",
+                "CEP": "11015250",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ALM TAMANDARE",
+                "NUMERO": "159",
+                "COMPLEMENTO": "FDS",
+                "BAIRRO": "MACUCO",
+                "CEP": "11015250",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DQ DE CAXIAS",
+                "NUMERO": "140",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL MARTINA",
+                "CEP": "13271140",
+                "CIDADE": "VALINHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE DO PATROCINIO",
+                "NUMERO": "133",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MACUCO",
+                "CEP": "11015260",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JACOB EMERICK",
+                "NUMERO": "458",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "11310070",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ALTO DO CRUZEIRO",
+                "NUMERO": "94",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "PERNAMBUES",
+                "CEP": "41120160",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R CNSO JOAO ALFREDO",
+                "NUMERO": "229",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MACUCO",
+                "CEP": "11015220",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DONA ANALIA FRANCO",
+                "NUMERO": "2",
+                "COMPLEMENTO": "AP 111",
+                "BAIRRO": "APARECIDA",
+                "CEP": "11040070",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "33492204368",
+            "NOME": "IVANY DA SILVA NASCIMENTO",
+            "IDADE": "57 anos",
+            "LOCAL": "PAULO RAMOS\/MA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "MARINA DE SOUZA RODRIGUES",
+            "IDADE": "",
+            "LOCALIDADE": "VALINHOS\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "28503183889"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "VENACAR COMERCIO DE AUTO PECAS E EQUIPAMENTOS DE SOLDAS LTDA",
+                "CNPJ": "05831583000116",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "782310",
+                "DATA_ADMISSAO": "30\/10\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "J D COCENZO E CIA LTDA",
+                "CNPJ": "49025695000740",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "11\/09\/2023",
+                "DATA_DEMISSAO": "16\/07\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "DSF-SERVICOS E FORNECEDORA DE NAVIOS LTDA",
+                "CNPJ": "56126964000135",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "01\/07\/2024",
+                "DATA_DEMISSAO": "03\/07\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TRANSPORTES IMEDIATO S\/A",
+                "CNPJ": "49151483001609",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "15\/02\/2019",
+                "DATA_DEMISSAO": "29\/09\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "TUCUNARE COMERCIAL LTDA",
+                "CNPJ": "44956670000151",
+                "CIDADE": "GUARUJA-SP",
+                "PROFISSAO": "782310",
+                "DATA_ADMISSAO": "02\/01\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "NASP LOGISTICA E TRANSPORTES LTDA",
+                "CNPJ": "06864026000164",
+                "CIDADE": "OSASCO-SP",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "16\/11\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SPLOG EXPRESS EFICIENCIA EM TRANSPORTES LTDA",
+                "CNPJ": "04917434000101",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "782305",
+                "DATA_ADMISSAO": "26\/08\/2011",
+                "DATA_DEMISSAO": "810",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "ELEMENTAL GASES COMERCIO DE PRODUTOS MEDICINAIS E INDUSTRIAIS LTDA",
+                "CNPJ": "02973574000171",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "17\/10\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

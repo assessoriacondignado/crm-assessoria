@@ -1,0 +1,166 @@
+{
+    "CADASTRAIS": {
+        "CPF": "74801082068",
+        "NOME": "IARA APARECIDA DA SILVA",
+        "NOME_MAE": "MARIA IZABEL MACHADO DA SILVA",
+        "NASCTO": "24\/06\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "065492990442",
+        "NIT": "12868016695",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "784205",
+        "PROFISSAO": "ALIMENTADOR DE LINHA DE PRODUCAO",
+        "SALARIO": " 1.254,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "5132631024",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "03\/06\/2009",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51992631024",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51984735689",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51993835911",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51991849151",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51996729108",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "iaraaparecidaborba@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AC NORINO FAGUNDES DA SILVA",
+                "NUMERO": "4201",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RESTINGA",
+                "CEP": "91790450",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R CLARA NUNES",
+                "NUMERO": "5047",
+                "COMPLEMENTO": "1",
+                "BAIRRO": "RESTINGA",
+                "CEP": "91790270",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R CLARA NUNES",
+                "NUMERO": "4566",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RESTINGA",
+                "CEP": "91790270",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA CLARA NUNES",
+                "NUMERO": "456",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RESTINGA",
+                "CEP": "91790270",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1049884442",
+            "NOME": "MARIA IZABEL MACHADO DA SILVA",
+            "IDADE": "46 anos",
+            "LOCAL": "ARARIPINA\/PE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "IRMANDADE DA SANTA CASA DE MISERICORDIA DE PORTO ALEGRE",
+                "CNPJ": "92815000000168",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "12\/09\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "J MS COMERCIO DE ALIMENTOS LTDA",
+                "CNPJ": "88605613000101",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "02\/05\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

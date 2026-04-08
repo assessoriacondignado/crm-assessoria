@@ -1,0 +1,224 @@
+{
+    "CADASTRAIS": {
+        "CPF": "96545224549",
+        "NOME": "FABIO ALVES DA CRUZ",
+        "NOME_MAE": "AMELIA SANTANA DE OLIVEIRA",
+        "NASCTO": "08\/04\/1980",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "37304675",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "018689732160",
+        "NIT": "12623467767",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "783210",
+        "PROFISSAO": "CARREGADOR (ARMAZEM)",
+        "SALARIO": " 1.757,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1334646666",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1333712521",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3234676363",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13991720940",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13991271240",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13997623919",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13999797128",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13997971289",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "facfac01@yahoo.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV SEN SALGADO FILHO",
+                "NUMERO": "1050",
+                "COMPLEMENTO": "AP 44",
+                "BAIRRO": "PRQ S VICENTE",
+                "CEP": "11360200",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MQ DE SAO VICENTE",
+                "NUMERO": "71",
+                "COMPLEMENTO": "V 1 C 3",
+                "BAIRRO": "CENTRO",
+                "CEP": "11310180",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JULIO PAIXAO FILHO",
+                "NUMERO": "98",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RADIO CLUBE",
+                "CEP": "11088520",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R L",
+                "NUMERO": "13",
+                "COMPLEMENTO": "CJ JD III",
+                "BAIRRO": "JARDINS",
+                "CEP": "49026206",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R L",
+                "NUMERO": "13",
+                "COMPLEMENTO": "CJ JD III",
+                "BAIRRO": "ZONA DE EXPANSAO ARUANA",
+                "CEP": "49000483",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R STA REGINA",
+                "NUMERO": "761",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "MRO S BENTO",
+                "CEP": "11082450",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FR GASPAR",
+                "NUMERO": "3005",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ S VICENTE",
+                "CEP": "11340000",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV BERNARDO GEISEL FILHO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD DAS INDUSTRIAS",
+                "CEP": "11555010",
+                "CIDADE": "CUBATAO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "3181493627",
+            "NOME": "AMELIA SANTANA DE OLIVEIRA",
+            "IDADE": "91 anos",
+            "LOCAL": "PIRAPORA\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "NOVA SAFRA TRANSPORTES LTDA",
+                "CNPJ": "03787516000540",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "510105",
+                "DATA_ADMISSAO": "01\/06\/2011",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "NOVA SAFRA TRANSPORTES LTDA",
+                "CNPJ": "03787516000973",
+                "CIDADE": "CUBATAO-SP",
+                "PROFISSAO": "783210",
+                "DATA_ADMISSAO": "01\/06\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

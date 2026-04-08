@@ -1,0 +1,290 @@
+{
+    "CADASTRAIS": {
+        "CPF": "85234877604",
+        "NOME": "RODRIGO SANTANA TOLEDO",
+        "NOME_MAE": "MARGARIDA MARIA SANTANA TOLEDO",
+        "NASCTO": "02\/09\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "108269340256",
+        "NIT": "1322247889",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142605",
+        "PROFISSAO": "GERENTE DE PESQUISA E DESENVOLVIMENTO (P&D)",
+        "SALARIO": " 2.500,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5434641292",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4933222099",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "15\/11\/2011",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4933161482",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "4933213602",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "49999296668",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "49991198048",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "49999113457",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "24\/08\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "49999224846",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "51981238914",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "rodrigo.toledo@pfizer.com",
+            "rodrigo.toledo@vitagri.com.br",
+            "rstoledo@bol.com.br",
+            "rstoledo.rst@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "TV JOSE CARLOS DA CRUZ",
+                "NUMERO": "54",
+                "COMPLEMENTO": "BL C 301",
+                "BAIRRO": "CENTRO",
+                "CEP": "36570011",
+                "CIDADE": "VICOSA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R EGITO",
+                "NUMERO": "31",
+                "COMPLEMENTO": "E",
+                "BAIRRO": "MARIA GORETTI",
+                "CEP": "89801420",
+                "CIDADE": "CHAPECO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R JOAO MISSIAGGIA",
+                "NUMERO": "14",
+                "COMPLEMENTO": "204",
+                "BAIRRO": "CHAMPANHE",
+                "CEP": "95720000",
+                "CIDADE": "GARIBALDI",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R MAL JOSE B BORMANN D",
+                "NUMERO": "566",
+                "COMPLEMENTO": "AP 102 LETRA D",
+                "BAIRRO": "CENTRO",
+                "CEP": "89801050",
+                "CIDADE": "CHAPECO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R MAL JOSE B BORMANN E",
+                "NUMERO": "556",
+                "COMPLEMENTO": "AP 102",
+                "BAIRRO": "JD ITALIA",
+                "CEP": "89802121",
+                "CIDADE": "CHAPECO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R RIO DO SUL",
+                "NUMERO": "523",
+                "COMPLEMENTO": "AP 101",
+                "BAIRRO": "ELDORADO",
+                "CEP": "89810260",
+                "CIDADE": "CHAPECO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R MARECHAL JOSE B. BORMANN - D",
+                "NUMERO": "556",
+                "COMPLEMENTO": "AP 102",
+                "BAIRRO": "CENTRO",
+                "CEP": "89801050",
+                "CIDADE": "CHAPECO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "RUA DESEMBARGADOR CLOTARIO PORTUGAL",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "86800020",
+                "CIDADE": "APUCARANA",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "38159058691",
+                "NOME": "MARGARIDA MARIA SANTANA TOLEDO",
+                "IDADE": "75 anos",
+                "LOCAL": "VICOSA\/MG",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "1453843655",
+                "NOME": "OTAVIO JOSE SANTANA TOLEDO",
+                "IDADE": "34 anos",
+                "LOCAL": "VICOSA\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "1453847642",
+                "NOME": "BERNARDO SANTANA TOLEDO",
+                "IDADE": "39 anos",
+                "LOCAL": "CANOAS\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "FABIANA FIGUEIREDO ROSSI",
+            "IDADE": "",
+            "LOCALIDADE": "VICOSA\/MG",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "71478647"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ALFAB NUTRICAO E SERVICOS DE SAUDE ANIMAL LTDA",
+                "CNPJ": "33158075000154",
+                "CIDADE": "ANTONIO PRADO-RS",
+                "PROFISSAO": "142605",
+                "DATA_ADMISSAO": "16\/12\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COOPERATIVA CENTRAL AURORA ALIMENTOS",
+                "CNPJ": "83310441000621",
+                "CIDADE": "CHAPECO-SC",
+                "PROFISSAO": "141205",
+                "DATA_ADMISSAO": "16\/03\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": [
+            {
+                "RAZAO_SOCIAL": "SC FEED PARTICIPACOES S.A.",
+                "CNPJ": "33655322000128",
+                "CIDADE": "CHAPECO-SC",
+                "QUALIFICACAO": "Conselheiro de AdministraÃ§Ã£o",
+                "DATA_ENTRADA": "20190517",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "TABEBUIA CONSULTORIA LTDA.",
+                "CNPJ": "30347563000111",
+                "CIDADE": "CHAPECO-SC",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20180502",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "TABEBUIA PARTICIPACOES LTDA",
+                "CNPJ": "24012383000186",
+                "CIDADE": "CHAPECO-SC",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20160120",
+                "VALOR_PARTICIPACAO": ""
+            }
+        ]
+    }
+}

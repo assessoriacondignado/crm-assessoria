@@ -1,0 +1,131 @@
+{
+    "CADASTRAIS": {
+        "CPF": "8983693711",
+        "NOME": "VALNEI DE SOUZA XAVIER",
+        "NOME_MAE": "SEBASTIANA DE SOUZA LIMA XAVIER",
+        "NASCTO": "16\/02\/1981",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "113321300396",
+        "NIT": "2684731429",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "415205",
+        "PROFISSAO": "CARTEIRO",
+        "SALARIO": " 6.721,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "2127765999",
+            "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "21971413956",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "POS PAGO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R REGO BARROS",
+                "NUMERO": "10",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PR MAR",
+                "CEP": "28897346",
+                "CIDADE": "RIO DAS OSTRAS",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R DEZOITO",
+                "NUMERO": "305",
+                "COMPLEMENTO": "",
+                "BAIRRO": "LOT EXTENSAO DO SERRAMAR",
+                "CEP": "28890828",
+                "CIDADE": "RIO DAS OSTRAS",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "AV BR DE JAPURA",
+                "NUMERO": "426",
+                "COMPLEMENTO": "C 2 AL B",
+                "BAIRRO": "CH RIO PETROPOLIS",
+                "CEP": "25213130",
+                "CIDADE": "DUQUE DE CAXIAS",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "AVENIDA BARAO DE JAPURA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "CS 2",
+                "BAIRRO": "CHACARAS RIO-PETROPOLIS",
+                "CEP": "25213130",
+                "CIDADE": "DUQUE DE CAXIAS",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "850803730",
+                "NOME": "SEBASTIANA DE SOUZA LIMA XAVIER",
+                "IDADE": "65 anos",
+                "LOCAL": "RIO DAS OSTRAS\/RJ",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "10247496731",
+                "NOME": "NATAN DE SOUZA XAVIER",
+                "IDADE": "42 anos",
+                "LOCAL": "MAGE\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "EMPRESA BRASILEIRA DE CORREIOS E TELEGRAFOS",
+                "CNPJ": "34028316859465",
+                "CIDADE": "RIO DAS OSTRAS-RJ",
+                "PROFISSAO": "415205",
+                "DATA_ADMISSAO": "03\/10\/2001",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "EMPRESA BRASILEIRA DE CORREIOS E TELEGRAFOS",
+                "CNPJ": "34028316347219",
+                "CIDADE": "DUQUE DE CAXIAS-RJ",
+                "PROFISSAO": "415205",
+                "DATA_ADMISSAO": "03\/10\/2001",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

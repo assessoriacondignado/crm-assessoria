@@ -1,0 +1,215 @@
+{
+    "CADASTRAIS": {
+        "CPF": "77616774504",
+        "NOME": "ALAN CARVALHO SILVA",
+        "NOME_MAE": "MARIA JOSEFA DE CARVALHO SILVA",
+        "NASCTO": "07\/06\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "086044490540",
+        "NIT": "1702791029",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "314410",
+        "PROFISSAO": "TECNICO EM MANUTENCAO DE MAQUINAS",
+        "SALARIO": " 10.698,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7930232286",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "7933441731",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7932313462",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "79998962009",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79991910102",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999001725",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "75988378215",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "75988380804",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "alancarvalho2004@hotmail.com",
+            "alan.carvalho1978@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOANA ANGELICA",
+                "NUMERO": "225",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PERPETUO SOCORRO",
+                "CEP": "48603000",
+                "CIDADE": "PAULO AFONSO",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R JOANA ANGELICA",
+                "NUMERO": "227",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AT MARON",
+                "CEP": "45005238",
+                "CIDADE": "VITORIA DA CONQUISTA",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R FAXEIRO",
+                "NUMERO": "779",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PEDRO RAIMUNDO",
+                "CEP": "48913368",
+                "CIDADE": "JUAZEIRO",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "AV HERMES FONTES",
+                "NUMERO": "1665",
+                "COMPLEMENTO": "",
+                "BAIRRO": "GRAGERU",
+                "CEP": "49026020",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "AV FRANKLIN DE CAMPOS SOBRAL",
+                "NUMERO": "1630",
+                "COMPLEMENTO": "",
+                "BAIRRO": "GRAGERU",
+                "CEP": "49027000",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "AV FRANKLIN DE CAMPOS SOBRAL",
+                "NUMERO": "1631",
+                "COMPLEMENTO": "",
+                "BAIRRO": "GRAGERU",
+                "CEP": "49027000",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "AV FRANKLIN DE CAMPOS SOBRAL",
+                "NUMERO": "101",
+                "COMPLEMENTO": "AP 101 AP 101",
+                "BAIRRO": "GRAGERU",
+                "CEP": "49027000",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "AVENIDA FRANKLIN DE CAMPOS SOBRAL",
+                "NUMERO": "0",
+                "COMPLEMENTO": "AP 101",
+                "BAIRRO": "GRAGERU",
+                "CEP": "49027000",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "44859767500",
+            "NOME": "MARIA JOSEFA DE CARVALHO SILVA",
+            "IDADE": "73 anos",
+            "LOCAL": "SANTA BRIGIDA\/BA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "VOTORANTIM CIMENTOS N\/NE S\/A",
+            "CNPJ": "10656452002395",
+            "CIDADE": "LARANJEIRAS-SE",
+            "PROFISSAO": "314410",
+            "DATA_ADMISSAO": "06\/06\/2011",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

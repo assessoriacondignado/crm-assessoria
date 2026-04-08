@@ -1,0 +1,173 @@
+{
+    "CADASTRAIS": {
+        "CPF": "3247701460",
+        "NOME": "FRANCISCO DE ASSIS DA SILVA JUNIOR",
+        "NOME_MAE": "MARIA DE FATIMA DE MEDEIROS SILVA",
+        "NASCTO": "29\/06\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "018692691694",
+        "NIT": "1283453164",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782510",
+        "PROFISSAO": "MOTORISTA DE CAMINHAO (ROTAS REGIONAIS E INTERNACIONAIS)",
+        "SALARIO": " 2.486,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8334451111",
+            "OPERADORA": "TELEMAR\/PB",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "83998052222",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "77998687585",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "83998342332",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "23\/06\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "91993611760",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "21\/03\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "84996943451",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CEL JOSE AVELINO",
+                "NUMERO": "449",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "58860000",
+                "CIDADE": "PAULISTA",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "CJ CEHAP",
+                "NUMERO": "6",
+                "COMPLEMENTO": "Q D",
+                "BAIRRO": "SUDETE",
+                "CEP": "58865000",
+                "CIDADE": "SAO BENTO",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "R LUIS DANTAS NETP",
+                "NUMERO": "4",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVA CAICO",
+                "CEP": "59300000",
+                "CIDADE": "CAICO",
+                "ESTADO": "RN"
+            },
+            {
+                "LOGRADOURO": "R ANDREAZA OLIVEIRA SILVA",
+                "NUMERO": "486",
+                "COMPLEMENTO": "",
+                "BAIRRO": "HERCULANO",
+                "CEP": "58865000",
+                "CIDADE": "SAO BENTO",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "R REMIGIO DA NOBREGA FILHO",
+                "NUMERO": "5",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CANUTO E FILHOS",
+                "CEP": "59300000",
+                "CIDADE": "CAICO",
+                "ESTADO": "RN"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "3198004403",
+            "NOME": "MARIA DE FATIMA DE MEDEIROS SILVA",
+            "IDADE": "70 anos",
+            "LOCAL": "PARNAMIRIM\/RN",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "J E DOS SANTOS DANTAS",
+                "CNPJ": "31509670000161",
+                "CIDADE": "CAICO-RN",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "09\/09\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VANGUARDA OFICCE LTDA",
+                "CNPJ": "01358108000113",
+                "CIDADE": "PAULISTA-PB",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "01\/04\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

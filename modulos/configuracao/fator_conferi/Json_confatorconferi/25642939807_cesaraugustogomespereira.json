@@ -1,0 +1,197 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25642939807",
+        "NOME": "CESAR AUGUSTO GOMES PEREIRA",
+        "NOME_MAE": "REGINA CELIA GOMES PEREIRA",
+        "NASCTO": "09\/03\/1976",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "253601520159",
+        "NIT": "1291779089",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142105",
+        "PROFISSAO": "GERENTE ADMINISTRATIVO",
+        "SALARIO": " 57.696,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1135827860",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "04\/02\/2007",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1122031890",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1131756208",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11981745862",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "14\/11\/2007",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11981745862",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "14\/11\/2007",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11995011560",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11989518190",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "cesar.pereira@ccee.org.br",
+            "cesaragpereira@hotmail.com.br",
+            "cesaragpereira@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AL SANTOS",
+                "NUMERO": "745",
+                "COMPLEMENTO": "AND 12",
+                "BAIRRO": "CERQUEIRA CESAR",
+                "CEP": "01419001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R GENERAL GOIS MONTEIRO",
+                "NUMERO": "18",
+                "COMPLEMENTO": "AP73",
+                "BAIRRO": "VL A BRASILEIRA",
+                "CEP": "05029000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AL MICHELANGELO",
+                "NUMERO": "597",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALPHAVILLE",
+                "CEP": "06539390",
+                "CIDADE": "SANTANA DO PARNAIBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA NAGEL",
+                "NUMERO": "12",
+                "COMPLEMENTO": "AP   APARTAMENTO",
+                "BAIRRO": "VILA LEOPOLDINA",
+                "CEP": "05315030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MAESTRO PEDRO JATOBA",
+                "NUMERO": "315",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA ALBERTINA",
+                "CEP": "02373060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA GENERAL GOIS MONTEIRO",
+                "NUMERO": "1",
+                "COMPLEMENTO": "APT 73",
+                "BAIRRO": "VILA ANGLO BRASILEIRA",
+                "CEP": "05029000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MAESTRO PEDRO JATOBA",
+                "NUMERO": "31",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA ALBERTINA",
+                "CEP": "02373060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "219636494",
+            "NOME": "REGINA CELIA GOMES PEREIRA",
+            "IDADE": "56 anos",
+            "LOCAL": "JABOATAO DOS GUARARAPES\/PE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "CAMARA DE COMERCIALIZACAO DE ENERGIA ELETRICA - CCEE",
+            "CNPJ": "03034433000156",
+            "CIDADE": "SAO PAULO-SP",
+            "PROFISSAO": "142105",
+            "DATA_ADMISSAO": "03\/20\/2008",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

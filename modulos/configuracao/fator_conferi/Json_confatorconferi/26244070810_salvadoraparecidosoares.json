@@ -1,0 +1,232 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26244070810",
+        "NOME": "SALVADOR APARECIDO SOARES",
+        "NOME_MAE": "MANOELA SOARES COUTINHO",
+        "NASCTO": "20\/08\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "26130025",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "251017990116",
+        "NIT": "1243177624",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "725105",
+        "PROFISSAO": "MONTADOR DE MAQUINAS, MOTORES E ACESSORIOS (MONTAGEM EM SERIE)",
+        "SALARIO": " 3.655,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1121561652",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "26\/08\/2004",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1121455739",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11912487428",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11962805316",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11961713415",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11965711463",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "elisneri@ig.com.br",
+            "alifk@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MACEIO",
+                "NUMERO": "58",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD ALAGOAS",
+                "CEP": "06528325",
+                "CIDADE": "SANTANA DE PARNAIBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOAO CHAGAS",
+                "NUMERO": "41",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JD BRASILIA ZONA LESTE",
+                "CEP": "03585130",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R TOBIAS BARRETO",
+                "NUMERO": "615",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MOOCA",
+                "CEP": "03168902",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA SARGACO",
+                "NUMERO": "450",
+                "COMPLEMENTO": "B CASA 2",
+                "BAIRRO": "JARDIM MELIUNAS",
+                "CEP": "08111370",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "52398137520",
+            "NOME": "MANOELA SOARES COUTINHO",
+            "IDADE": "79 anos",
+            "LOCAL": "JACARACI\/BA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "CRISTIANE VIEIRA SANTANA DANTAS",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "32832994806"
+            },
+            {
+                "NOME": "CUSTODIO SOARES DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "57898332504"
+            },
+            {
+                "NOME": "ELISANGELA NERI",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "26113400808"
+            },
+            {
+                "NOME": "MARIA DAS DORES NERI",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "15240151806"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "M.H.M. INDUSTRIA E COMERCIO DE BLOCO DE REFRIGERACAO LTDA",
+                "CNPJ": "59643239000122",
+                "CIDADE": "MOGI DAS CRUZES-SP",
+                "PROFISSAO": "725105",
+                "DATA_ADMISSAO": "01\/08\/2017",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TOP CAU INDUSTRIA E COMERCIO DE CHOCOLATES LTDA",
+                "CNPJ": "00132010000180",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "24\/10\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "MODINE DO BRASIL SISTEMAS TERMICOS LTDA.",
+                "CNPJ": "03310685000241",
+                "CIDADE": "GUARULHOS-SP",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "03\/06\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "VRS RECURSOS HUMANOS LTDA.",
+                "CNPJ": "04516210000198",
+                "CIDADE": "GUARULHOS-SP",
+                "PROFISSAO": "721215",
+                "DATA_ADMISSAO": "27\/09\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "SOFAPE FABRICANTE DE FILTROS S.A.",
+                "CNPJ": "04155026000321",
+                "CIDADE": "GUARULHOS-SP",
+                "PROFISSAO": "391115",
+                "DATA_ADMISSAO": "01\/05\/2011",
+                "DATA_DEMISSAO": "607",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

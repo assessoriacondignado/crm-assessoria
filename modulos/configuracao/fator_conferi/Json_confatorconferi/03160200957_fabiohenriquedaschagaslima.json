@@ -1,0 +1,314 @@
+{
+    "CADASTRAIS": {
+        "CPF": "3160200957",
+        "NOME": "FABIO HENRIQUE DAS CHAGAS LIMA",
+        "NOME_MAE": "LINDAMIR TEIXEIRA CHAGAS LIMA",
+        "NASCTO": "31\/07\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "62916508",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "073355280639",
+        "NIT": "12545038735",
+        "ESCOLARIDADE": "SUPERIOR INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212420",
+        "PROFISSAO": "ANALISTA DE SUPORTE COMPUTACIONAL",
+        "SALARIO": " 3.515,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4133127800",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "4130234801",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "4133423727",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4133595587",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4132853567",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "41984809407",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41997027448",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41997032265",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41992522264",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "31\/03\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "41997032264",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "lcsaboia@gmail.com",
+            "fabiohen@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV VER TOALDO TULIO",
+                "NUMERO": "3599",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S BRAZ",
+                "CEP": "82300333",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R MANOEL DAS CHAGAS LIMA",
+                "NUMERO": "52",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S BRAZ",
+                "CEP": "82300350",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R WILSON DE SOUZA PINHEIRO",
+                "NUMERO": "79",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DOS CASA",
+                "CEP": "09840730",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R TEIXEIRA COELHO",
+                "NUMERO": "333",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BATEL",
+                "CEP": "80420150",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "AV RIO BRANCO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "Q B LT 8 BL 16 AP 602",
+                "BAIRRO": "ST URIAS MAGALHAES",
+                "CEP": "74565070",
+                "CIDADE": "GOIANIA",
+                "ESTADO": "GO"
+            },
+            {
+                "LOGRADOURO": "R BOM PASTOR",
+                "NUMERO": "381",
+                "COMPLEMENTO": "AP 4 BL 11",
+                "BAIRRO": "ALTO BOQUEIRAO",
+                "CEP": "81720310",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R IZALTINO DIAS FERRAZ",
+                "NUMERO": "631",
+                "COMPLEMENTO": "CS 2",
+                "BAIRRO": "CIDADE INDUSTRIAL",
+                "CEP": "81270210",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO ESCORSIN",
+                "NUMERO": "1200",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTA FELICIDADE",
+                "CEP": "82015000",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "87431076991",
+                "NOME": "LINDAMIR TEIXEIRA CHAGAS LIMA",
+                "IDADE": "69 anos",
+                "LOCAL": "CURITIBA\/PR",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "3160256901",
+                "NOME": "FERNANDA DAS CHAGAS LIMA YAMASAKI",
+                "IDADE": "47 anos",
+                "LOCAL": "CURITIBA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "4252451957",
+                "NOME": "LUIZ CARLOS DAS CHAGAS LIMA JUNIOR",
+                "IDADE": "43 anos",
+                "LOCAL": "CURITIBA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "JOELSON ALVES DE ARAUJO JUNIOR",
+                "IDADE": "",
+                "LOCALIDADE": "CURITIBA\/PR",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "4088225970"
+            },
+            {
+                "NOME": "LEANDRO CARAZZAI SABOIA",
+                "IDADE": "",
+                "LOCALIDADE": "CURITIBA\/PR",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "892509902"
+            },
+            {
+                "NOME": "LUIZ CARLOS DAS CHAGAS LIMA",
+                "IDADE": "",
+                "LOCALIDADE": "CURITIBA\/PR",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "18443605987"
+            },
+            {
+                "NOME": "MAURICIO GAMA SORGENFREI",
+                "IDADE": "",
+                "LOCALIDADE": "CURITIBA\/PR",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "53377125949"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LIGGA TELECOMUNICACOES S.A.",
+                "CNPJ": "04368865000166",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "142530",
+                "DATA_ADMISSAO": "01\/10\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "HORIZONS TELECOMUNICACOES E TECNOLOGIA S.A.",
+                "CNPJ": "11960585000108",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/03\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "MINAURO INFORMATICA LTDA",
+                "CNPJ": "82471608000169",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "212420",
+                "DATA_ADMISSAO": "01\/09\/2012",
+                "DATA_DEMISSAO": "18\/05\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SISTEPLAN SOFTWARES E EQUIPAMENTOS LTDA",
+                "CNPJ": "82339839000113",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "212420",
+                "DATA_ADMISSAO": "01\/03\/2001",
+                "DATA_DEMISSAO": "109",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

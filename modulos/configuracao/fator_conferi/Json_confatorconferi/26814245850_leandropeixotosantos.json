@@ -1,0 +1,173 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26814245850",
+        "NOME": "LEANDRO PEIXOTO SANTOS",
+        "NOME_MAE": "ELIETH PEIXOTO SANTOS",
+        "NASCTO": "04\/01\/1979",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "250861161",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "224971040124",
+        "NIT": "1265994925",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "914405",
+        "PROFISSAO": "MECANICO DE MANUTENCAO DE AUTOMOVEIS, MOTOCICLETAS E VEICULOS SIMILARES",
+        "SALARIO": " 9.382,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1521028043",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1535221563",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1533262815",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "15988032962",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15988002280",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15997647260",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "mackbacker99608@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R QUATRO",
+                "NUMERO": "81",
+                "COMPLEMENTO": "",
+                "BAIRRO": "LOT DALLAS",
+                "CEP": "18160000",
+                "CIDADE": "SALTO DE PIRAPORA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CDOR VICENTE AMARAL",
+                "NUMERO": "940",
+                "COMPLEMENTO": "BL 5 B AP 34",
+                "BAIRRO": "JD GUARUJA",
+                "CEP": "18050600",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOAO S CAMPOS",
+                "NUMERO": "254",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD TULIPAS",
+                "CEP": "18050650",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RAMZIA EL HADI",
+                "NUMERO": "615",
+                "COMPLEMENTO": "",
+                "BAIRRO": "WANEL VILLE",
+                "CEP": "18055051",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "15058458829",
+                "NOME": "ELIETH PEIXOTO SANTOS",
+                "IDADE": "76 anos",
+                "LOCAL": "SOROCABA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "17726405813",
+                "NOME": "DEBORA PEIXOTO SANTOS",
+                "IDADE": "50 anos",
+                "LOCAL": "SOROCABA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "LEANDRO PEIXOTO SANTOS",
+            "IDADE": "",
+            "LOCALIDADE": "SALVADOR\/BA",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "2238076565"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "AUTOMEC COMERCIAL DE VEICULOS LTDA",
+            "CNPJ": "71444475000115",
+            "CIDADE": "SOROCABA-SP",
+            "PROFISSAO": "914405",
+            "DATA_ADMISSAO": "03\/11\/2003",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

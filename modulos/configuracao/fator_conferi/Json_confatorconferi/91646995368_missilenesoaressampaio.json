@@ -1,0 +1,187 @@
+{
+    "CADASTRAIS": {
+        "CPF": "91646995368",
+        "NOME": "MISSILENE SOARES SAMPAIO",
+        "NOME_MAE": "DOMINGAS SOARES",
+        "NASCTO": "04\/12\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Feminino",
+        "RG": "32512412",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "031229211120",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9832436316",
+                "OPERADORA": "TELEMAR\/MA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9832258670",
+                "OPERADORA": "TELEMAR\/MA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "98988892298",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "98991486453",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "28\/01\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "missilene.soares2012@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "EST DE RIBAMAR",
+                "NUMERO": "68",
+                "COMPLEMENTO": "C VIT B 13",
+                "BAIRRO": "FORQUILHA",
+                "CEP": "65054005",
+                "CIDADE": "SAO LUIS",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "R CASIMIRO DE ABREU",
+                "NUMERO": "34",
+                "COMPLEMENTO": "",
+                "BAIRRO": "REC SANTOS DUMONT",
+                "CEP": "65062845",
+                "CIDADE": "SAO LUIS",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "R CASEMIRO DE ABREU",
+                "NUMERO": "34",
+                "COMPLEMENTO": "REC SAN",
+                "BAIRRO": "VL PASSOS",
+                "CEP": "65025220",
+                "CIDADE": "SAO LUIS",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "AV S LUIS REI DE FRANCA",
+                "NUMERO": "100",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TURU",
+                "CEP": "65065470",
+                "CIDADE": "SAO LUIS",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "R GEN ARTUR CARVALHO",
+                "NUMERO": "100",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TURU",
+                "CEP": "65066320",
+                "CIDADE": "SAO LUIS",
+                "ESTADO": "MA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "420447318",
+            "NOME": "DOMINGAS SOARES",
+            "IDADE": "76 anos",
+            "LOCAL": "PALMEIRANDIA\/MA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "GENTIL NEGOCIOS COMERCIO E FRANCHISING LTDA",
+                "CNPJ": "04227467006756",
+                "CIDADE": "SAO LUIS-MA",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/10\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SAGE COSMETICOS MA LTDA",
+                "CNPJ": "08234733001840",
+                "CIDADE": "SAO LUIS-MA",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/07\/2020",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "SAGE COSMETICOS MA LTDA",
+                "CNPJ": "08234733000526",
+                "CIDADE": "SAO LUIS-MA",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/11\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SAGE COSMETICOS MA LTDA",
+                "CNPJ": "08234733000364",
+                "CIDADE": "SAO LUIS-MA",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "12\/20\/1907",
+                "DATA_DEMISSAO": "31\/10\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "F.L.ARAUJO FILHO",
+                "CNPJ": "12556932000102",
+                "CIDADE": "SAO LUIS-MA",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/12\/2005",
+                "DATA_DEMISSAO": "16\/07\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,179 @@
+{
+    "CADASTRAIS": {
+        "CPF": "21545559856",
+        "NOME": "FLAVIO DOS SANTOS FONTES",
+        "NOME_MAE": "OLGA DOS SANTOS FONTES",
+        "NASCTO": "15\/06\/1983",
+        "IDADE": "42 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "309989340159",
+        "NIT": "12757020775",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "414105",
+        "PROFISSAO": "ALMOXARIFE",
+        "SALARIO": " 2.816,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1334266635",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13996255224",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13996823047",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13997557558",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R SEBASTIAO F AZAVEDO",
+                "NUMERO": "76",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD OASIS",
+                "CEP": "11740000",
+                "CIDADE": "ITANHAEM",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PROJETDADA",
+                "NUMERO": "2",
+                "COMPLEMENTO": "370",
+                "BAIRRO": "CENTRO",
+                "CEP": "11740000",
+                "CIDADE": "ITANHAEM",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "SAO LEOPOLDO MANDIC",
+                "NUMERO": "2662",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TROPICAL",
+                "CEP": "11740000",
+                "CIDADE": "ITANHAEM",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SEBASTIAO FERREIRA AZEVEDO",
+                "NUMERO": "1100",
+                "COMPLEMENTO": "CSA",
+                "BAIRRO": "JD OASIS",
+                "CEP": "11740000",
+                "CIDADE": "ITANHAEM",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PROJETDADA 2",
+                "NUMERO": "370",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD OASIS",
+                "CEP": "11740000",
+                "CIDADE": "ITANHAEM",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "4653198829",
+                "NOME": "OLGA DOS SANTOS FONTES",
+                "IDADE": "66 anos",
+                "LOCAL": "ITANHAEM\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "31763396827",
+                "NOME": "FABIO DOS SANTOS FONTES",
+                "IDADE": "40 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "41835098827",
+                "NOME": "FABIOLA DOS SANTOS FONTES",
+                "IDADE": "32 anos",
+                "LOCAL": "ITANHAEM\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SUPERMERCADOS SAITO LTDA",
+                "CNPJ": "49640105000102",
+                "CIDADE": "ITANHAEM-SP",
+                "PROFISSAO": "414120",
+                "DATA_ADMISSAO": "01\/12\/2023",
+                "DATA_DEMISSAO": "01\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SUPERMERCADOS SAITO LTDA",
+                "CNPJ": "49640105000870",
+                "CIDADE": "ITANHAEM-SP",
+                "PROFISSAO": "414120",
+                "DATA_ADMISSAO": "01\/02\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SUPERMERCADOS SAITO LTDA",
+                "CNPJ": "49640105002067",
+                "CIDADE": "ITANHAEM-SP",
+                "PROFISSAO": "414105",
+                "DATA_ADMISSAO": "01\/09\/2009",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

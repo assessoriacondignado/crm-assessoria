@@ -1,0 +1,294 @@
+{
+    "CADASTRAIS": {
+        "CPF": "367785676",
+        "NOME": "JOSMARA RITA SIMOES",
+        "NOME_MAE": "EVA CORDEIRO",
+        "NASCTO": "29\/03\/1977",
+        "IDADE": "49 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "105775700230",
+        "NIT": "12524066136",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142405",
+        "PROFISSAO": "GERENTE DE COMPRAS",
+        "SALARIO": " 6.500,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1155818038",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1129197136",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1130609073",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "27\/12\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1132551382",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1132551382",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11999776598",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11998040063",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11933739876",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL POS-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11992902282",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11971879975",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "jo.simoes@buffetfasano.com.br",
+            "geraldfavarin@hotmail.com",
+            "cbueno5@ford.com",
+            "josmarasimoes@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AL SANTOS",
+                "NUMERO": "2387",
+                "COMPLEMENTO": "AP 102",
+                "BAIRRO": "CERQUEIRA CESAR",
+                "CEP": "01419101",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R OTAVIO SANTOS CALHEIROS",
+                "NUMERO": "50",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD STA ADELIA",
+                "CEP": "03974110",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R LAURA SOARES GUIMARAES",
+                "NUMERO": "18",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD GUANABARA",
+                "CEP": "31742279",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R HENRIQUE SCHAUMANN",
+                "NUMERO": "1106",
+                "COMPLEMENTO": "AND 1",
+                "BAIRRO": "PINHEIROS",
+                "CEP": "05413011",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PROF ATILIO INNOCENTI",
+                "NUMERO": "62",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL NOVA CONCEICAO",
+                "CEP": "04538000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R NELSON GAMA DE OLIVEIRA",
+                "NUMERO": "1113",
+                "COMPLEMENTO": "BL  Blocos  B AP  Apartamento  83",
+                "BAIRRO": "VILA ANDRADE",
+                "CEP": "05734150",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AL SANTOS",
+                "NUMERO": "2387",
+                "COMPLEMENTO": "AP102",
+                "BAIRRO": "CERQUEIRA CESAR",
+                "CEP": "01419002",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ITAPIRU",
+                "NUMERO": "572",
+                "COMPLEMENTO": "AP 23",
+                "BAIRRO": "SAUDE",
+                "CEP": "04143010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "857604988",
+            "NOME": "EVA CORDEIRO",
+            "IDADE": "55 anos",
+            "LOCAL": "FAZENDA RIO GRANDE\/PR",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "CLAUDIANE DE CASSIA RIBEIRO BUENO",
+                "IDADE": "",
+                "LOCALIDADE": "SANTO ANDRE\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "29352993888"
+            },
+            {
+                "NOME": "CLODOALDO RIBEIRO BUENO",
+                "IDADE": "",
+                "LOCALIDADE": "SANTO ANDRE\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "16682669895"
+            },
+            {
+                "NOME": "EUCLIDES CARVALHO JUNIOR",
+                "IDADE": "",
+                "LOCALIDADE": "SANTO ANDRE\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "28833717844"
+            },
+            {
+                "NOME": "JOSE DO PRADO BUENO",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "83939342815"
+            },
+            {
+                "NOME": "JOSE GERALDO FAVARIN",
+                "IDADE": "",
+                "LOCALIDADE": "LEME\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "25672272886"
+            },
+            {
+                "NOME": "MARIA INES RIBEIRO BUENO",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "16682763808"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BANCO SANTANDER (BRASIL) S.A.",
+                "CNPJ": "90400888158366",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "253215",
+                "DATA_ADMISSAO": "24\/01\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CASA FASANO EVENTOS LTDA.",
+                "CNPJ": "05808788000180",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142405",
+                "DATA_ADMISSAO": "01\/08\/2007",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,245 @@
+{
+    "CADASTRAIS": {
+        "CPF": "88366332500",
+        "NOME": "ANGELA CRISTINA SILVA DA CRUZ TEIXEIRA",
+        "NOME_MAE": "FILOMENA FERRAZ DA SILVA",
+        "NASCTO": "15\/08\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "078134600590",
+        "NIT": "12846275078",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "252305",
+        "PROFISSAO": "SECRETARIA  EXECUTIVA",
+        "SALARIO": " 752,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7734516581",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "7734519280",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7734512870",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "77981108062",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "77981104460",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "77981153327",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "77981086782",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "77999996514",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "jc@gbi.com.br",
+            "tina.ecruz@hotmail.com",
+            "cris.silva.teixeira@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MARIA QUITERIA",
+                "NUMERO": "259",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "46430000",
+                "CIDADE": "GUANAMBI",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R STA CATARINA",
+                "NUMERO": "132",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "46430000",
+                "CIDADE": "GUANAMBI",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R ALVARO GUIMARAES",
+                "NUMERO": "62",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "AER VELHO",
+                "CEP": "64300000",
+                "CIDADE": "VALENCA DO PIAUI",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "RUA ALVARO GUIMARAES",
+                "NUMERO": "62",
+                "COMPLEMENTO": "BAIRRO",
+                "BAIRRO": "AEROPORTO VELHO",
+                "CEP": "46430000",
+                "CIDADE": "GUANAMBI",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R BR DE MACAUBAS",
+                "NUMERO": "449",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "B VOMITAMEL",
+                "CEP": "46430000",
+                "CIDADE": "GUANAMBI",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "13731530",
+                "NOME": "FILOMENA FERRAZ DA SILVA CRUZ",
+                "IDADE": "82 anos",
+                "LOCAL": "BURITIZEIRO\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "27384411572",
+                "NOME": "VERA LUCIA SILVA DA CRUZ PIRES",
+                "IDADE": "66 anos",
+                "LOCAL": "GUANAMBI\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "33856362568",
+                "NOME": "GERSON GONCALVES DA CRUZ FILHO",
+                "IDADE": "61 anos",
+                "LOCAL": "GUANAMBI\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "43825150500",
+                "NOME": "LUIS MARCOS SILVA DA CRUZ",
+                "IDADE": "58 anos",
+                "LOCAL": "GUANAMBI\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "53535138515",
+                "NOME": "VINICIUS MARCOS SILVA DA CRUZ",
+                "IDADE": "54 anos",
+                "LOCAL": "GUANAMBI\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "8840483578",
+                "NOME": "PEDRO ANTONIO CRUZ TEIXEIRA",
+                "IDADE": "20 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "86322459538",
+                "NOME": "JOAO MATHEUS CRUZ TEIXEIRA",
+                "IDADE": "29 anos",
+                "LOCAL": "PIRACICABA\/SP",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COLEGIO MARTINS LTDA",
+                "CNPJ": "42709824000185",
+                "CIDADE": "GUANAMBI-BA",
+                "PROFISSAO": "331205",
+                "DATA_ADMISSAO": "01\/02\/2016",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "JOAO CLESIO ALVES TEIXEIRA",
+                "CNPJ": "34039511000139",
+                "CIDADE": "GUANAMBI-BA",
+                "PROFISSAO": "252305",
+                "DATA_ADMISSAO": "01\/07\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

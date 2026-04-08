@@ -1,0 +1,182 @@
+{
+    "CADASTRAIS": {
+        "CPF": "8802532826",
+        "NOME": "JACQUES WILLIAN SILVA",
+        "NOME_MAE": "DIRCE ALVES SILVA",
+        "NASCTO": "01\/06\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "195248594",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "165304790116",
+        "NIT": "1217121642",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411005",
+        "PROFISSAO": "AUXILIAR DE ESCRITORIO, EM GERAL",
+        "SALARIO": " 5.958,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1832291292",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1832735316",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1832291178",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1832291000",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1832291000",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "18997022073",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "PRE PAGO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "heloisa@unoeste.br",
+            "jacques@unoeste.br",
+            "jacws01@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV JOSE DE ALENCAR",
+                "NUMERO": "901",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD PANORAMA",
+                "CEP": "19160000",
+                "CIDADE": "ALVARES MACHADO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE BONGIOVANI",
+                "NUMERO": "700",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL LIBERDADE",
+                "CEP": "19050680",
+                "CIDADE": "PRESIDENTE PRUDENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MARIO DE ANDRADE",
+                "NUMERO": "62",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD PANORAMA",
+                "CEP": "19160000",
+                "CIDADE": "ALVARES MACHADO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FUADA MALULY",
+                "NUMERO": "69",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "19160000",
+                "CIDADE": "ALVARES MACHADO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "3170562630",
+            "NOME": "DIRCE ALVES SILVA",
+            "IDADE": "68 anos",
+            "LOCAL": "CORUMBATAI DO SUL\/PR",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "HELOISA HELENA BAN PEREIRA",
+                "IDADE": "",
+                "LOCALIDADE": "PRESIDENTE PRUDENTE\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "12102583821"
+            },
+            {
+                "NOME": "JOSE ARTEIRO PIMENTA",
+                "IDADE": "",
+                "LOCALIDADE": "SANTA QUITERIA\/CE",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "69581894349"
+            },
+            {
+                "NOME": "LUCILENE FRANCOSO FERNANDES",
+                "IDADE": "",
+                "LOCALIDADE": "PRESIDENTE PRUDENTE\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "14414352800"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "ASSOCIACAO PRUDENTINA DE EDUCACAO E CULTURA APEC",
+            "CNPJ": "44860740000173",
+            "CIDADE": "PRESIDENTE PRUDENTE-SP",
+            "PROFISSAO": "411005",
+            "DATA_ADMISSAO": "13\/11\/1995",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

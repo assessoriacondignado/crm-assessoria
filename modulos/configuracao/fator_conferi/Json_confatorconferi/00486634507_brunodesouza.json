@@ -1,0 +1,205 @@
+{
+    "CADASTRAIS": {
+        "CPF": "486634507",
+        "NOME": "BRUNO DE SOUZA",
+        "NOME_MAE": "EVA MARIA DE SOUZA",
+        "NASCTO": "19\/02\/1982",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "018632822135",
+        "NIT": "12823387767",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "354820",
+        "PROFISSAO": "ORGANIZADOR DE EVENTO",
+        "SALARIO": " 2.500,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "7532213857",
+            "OPERADORA": "TELEMAR\/BA",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "79998352884",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999557285",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "79999601739",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "79999162858",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "mazieromartins@terra.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R NOVECENTOS E OITENTA",
+                "NUMERO": "260",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CENTRO",
+                "CEP": "88330579",
+                "CIDADE": "BALNEARIO CAMBORIU",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "RDV SE",
+                "NUMERO": "304",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "49980000",
+                "CIDADE": "NEOPOLIS",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R THOMAZ GONZAGA",
+                "NUMERO": "5",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PERNAMBUES",
+                "CEP": "41100000",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R ADENIL FALCAO",
+                "NUMERO": "1205",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "BRASILIA",
+                "CEP": "44088648",
+                "CIDADE": "FEIRA DE SANTANA",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R BENEDITO SANTANA",
+                "NUMERO": "412",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ROTARY CLUB DE ITABAIANA",
+                "CEP": "49506192",
+                "CIDADE": "ITABAIANA",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "RUA EXPEDICIONARIO BENEDITO SCALON",
+                "NUMERO": "109",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM HEITOR RIGON",
+                "CEP": "14062078",
+                "CIDADE": "RIBEIRAO PRETO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "34565604",
+            "NOME": "EVA MARIA DE SOUZA",
+            "IDADE": "57 anos",
+            "LOCAL": "GALILEIA\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ANGELA MARIA PEREIRA",
+                "IDADE": "",
+                "LOCALIDADE": "RIBEIRAO PRETO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "8162290826"
+            },
+            {
+                "NOME": "FABIO OLIVEIRA DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "MANAUS\/AM",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "76993710200"
+            },
+            {
+                "NOME": "FERNANDO HENRIQUE MAZIERO MARTINS",
+                "IDADE": "",
+                "LOCALIDADE": "JARDINOPOLIS\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "22355694800"
+            },
+            {
+                "NOME": "JOSE CLAUDIO FELIPE DE SOUZA",
+                "IDADE": "",
+                "LOCALIDADE": "RIBEIRAO PRETO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "10517636816"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SODAGRO SOCIEDADE DISTRIBUIDORA AGROPECUARIA LTDA",
+                "CNPJ": "13184452000112",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "354130",
+                "DATA_ADMISSAO": "02\/07\/2012",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "RURAL PRODUTOS AGROPECUARIOS LTDA",
+                "CNPJ": "13664148000172",
+                "CIDADE": "FEIRA DE SANTANA-BA",
+                "PROFISSAO": "354820",
+                "DATA_ADMISSAO": "01\/09\/2011",
+                "DATA_DEMISSAO": "407",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

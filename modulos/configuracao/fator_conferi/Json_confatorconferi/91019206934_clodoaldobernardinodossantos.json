@@ -1,0 +1,166 @@
+{
+    "CADASTRAIS": {
+        "CPF": "91019206934",
+        "NOME": "CLODOALDO BERNARDINO DOS SANTOS",
+        "NOME_MAE": "NOEMI BERNARDINO DOS SANTOS",
+        "NASCTO": "16\/10\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12411978598",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782310",
+        "PROFISSAO": "MOTORISTA DE FURGAO OU VEICULO SIMILAR",
+        "SALARIO": " 1.202,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "4834781311",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "48999340742",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "48999649876",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "santosclodo@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOSE NAZARENO",
+                "NUMERO": "50",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "QUARTA LINHA",
+                "CEP": "88812475",
+                "CIDADE": "CRICIUMA",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R JOSE NAZARENO",
+                "NUMERO": "50",
+                "COMPLEMENTO": "LT ANGELA MARIA",
+                "BAIRRO": "CRISTO REDENTOR",
+                "CEP": "88816220",
+                "CIDADE": "CRICIUMA",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "ROD LUIZ ROSSO",
+                "NUMERO": "50",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S LUIZ",
+                "CEP": "88803470",
+                "CIDADE": "CRICIUMA",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "ROD LUIZ ROSSO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "KM 7 DE LUCCA",
+                "BAIRRO": "S LUIZ",
+                "CEP": "88803470",
+                "CIDADE": "CRICIUMA",
+                "ESTADO": "SC"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "91023220997",
+                "NOME": "NOEMI BERNARDINO DOS SANTOS",
+                "IDADE": "78 anos",
+                "LOCAL": "CRICIUMA\/SC",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "4238824903",
+                "NOME": "VALDINEI BERNARDINO DOS SANTOS",
+                "IDADE": "43 anos",
+                "LOCAL": "CRICIUMA\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "5201891918",
+                "NOME": "IVANIA BERNARDINO DOS SANTOS",
+                "IDADE": "45 anos",
+                "LOCAL": "CRICIUMA\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "76488888900",
+                "NOME": "MARIA IVONE DOS SANTOS BORGES",
+                "IDADE": "56 anos",
+                "LOCAL": "CRICIUMA\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "81384963987",
+                "NOME": "CLOVIS BERNARDINO DOS SANTOS",
+                "IDADE": "54 anos",
+                "LOCAL": "CRICIUMA\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ABIMAR SUPERMERCADOS LTDA",
+                "CNPJ": "00508070000317",
+                "CIDADE": "BALNEARIO RINCAO-SC",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "05\/10\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TARTARI E HELEODORO TRANSPORTES LTDA",
+                "CNPJ": "12966474000171",
+                "CIDADE": "CRICIUMA-SC",
+                "PROFISSAO": "782310",
+                "DATA_ADMISSAO": "10\/20\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

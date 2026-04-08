@@ -1,0 +1,290 @@
+{
+    "CADASTRAIS": {
+        "CPF": "9841457709",
+        "NOME": "DENISE GOMES DA SILVA",
+        "NOME_MAE": "ELDINEIA LORENCO GOMES",
+        "NASCTO": "06\/11\/1983",
+        "IDADE": "42 anos",
+        "SEXO": "Feminino",
+        "RG": "201889763",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12999073625",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "422315",
+        "PROFISSAO": "OPERADOR DE TELEMARKETING RECEPTIVO",
+        "SALARIO": " 779,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2131031264",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2134997103",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "17\/04\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2131034281",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2132735578",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21984980671",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21986967237",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21993198949",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21976974477",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "minofael@hotmail.com",
+            "nisesilva16@hotmail.com",
+            "nisegms@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DOS TAMOIOS",
+                "NUMERO": "741",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JURUNAS",
+                "CEP": "66025125",
+                "CIDADE": "BELEM",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "R BELA VISTA",
+                "NUMERO": "158",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD NOVA ERA",
+                "CEP": "26266190",
+                "CIDADE": "NOVA IGUACU",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "EST JOSE RUCAS",
+                "NUMERO": "1162",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PENHA",
+                "CEP": "21070370",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO SANTIAGO",
+                "NUMERO": "395",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL MARGARIDA",
+                "CEP": "23821060",
+                "CIDADE": "ITAGUAI",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R PAULINE SENDER",
+                "NUMERO": "34",
+                "COMPLEMENTO": "C 1",
+                "BAIRRO": "JD NOVA ERA",
+                "CEP": "26266140",
+                "CIDADE": "NOVA IGUACU",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA DAVID SAAD",
+                "NUMERO": "47",
+                "COMPLEMENTO": "",
+                "BAIRRO": "QUINTINO BOCAIUVA",
+                "CEP": "21380350",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA CARLOS GOMES",
+                "NUMERO": "158",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SAO GERALDO",
+                "CEP": "26276410",
+                "CIDADE": "NOVA IGUACU",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA BELA VISTA",
+                "NUMERO": "161",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM NOVA ERA",
+                "CEP": "26266190",
+                "CIDADE": "NOVA IGUACU",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "REDE D'OR SAO LUIZ S.A.",
+                "CNPJ": "06047087014350",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "01\/11\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CASA DE SAUDE LARANJEIRAS LTDA",
+                "CNPJ": "33419482000259",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "07\/08\/2023",
+                "DATA_DEMISSAO": "01\/11\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "ESHO EMPRESA DE SERVICOS HOSPITALARES S.A.",
+                "CNPJ": "29435005003497",
+                "CIDADE": "DUQUE DE CAXIAS-RJ",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "01\/09\/2020",
+                "DATA_DEMISSAO": "19\/09\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "REDE D'OR SAO LUIZ S.A.",
+                "CNPJ": "06047087001372",
+                "CIDADE": "DUQUE DE CAXIAS-RJ",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "15\/07\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "CEMED CARE - EMPRESA DE ATENDIMENTO CLINICO GERAL LTDA",
+                "CNPJ": "07794623004624",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "05\/10\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "HOSPITAL NORTE D 'OR DE CASCADURA S.A",
+                "CNPJ": "09578217000158",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "17\/10\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "MAPA DA MINA NI LTDA",
+                "CNPJ": "14700723000108",
+                "CIDADE": "NOVA IGUACU-RJ",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "03\/02\/2014",
+                "DATA_DEMISSAO": "25\/07\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "ATENTO BRASIL S\/A",
+                "CNPJ": "02879250002465",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "422310",
+                "DATA_ADMISSAO": "28\/10\/2011",
+                "DATA_DEMISSAO": "20\/07\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "LABORATORIOS MEDICOS DR SERGIO FRANCO LTDA",
+                "CNPJ": "34155945000102",
+                "CIDADE": "DUQUE DE CAXIAS-RJ",
+                "PROFISSAO": "422315",
+                "DATA_ADMISSAO": "16\/07\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

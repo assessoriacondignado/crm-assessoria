@@ -1,0 +1,210 @@
+{
+    "CADASTRAIS": {
+        "CPF": "8122899862",
+        "NOME": "ANDERSON RODOLFO DOS SANTOS",
+        "NOME_MAE": "MARIA APARECIDA M DOS SANTOS",
+        "NASCTO": "20\/07\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12402805600",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1132948948",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "13\/03\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1137969624",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "12\/03\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1150134666",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "12991130857",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11994191192",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11944620377",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "12981648702",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11971326282",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "daniel.cinzento@yahoo.com.br",
+            "andersonrodolfosantos@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "PC JOAQUIM FIGUEIRA DE ANDRADE",
+                "NUMERO": "139",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "JD COPACABANA",
+                "CEP": "12221220",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "JOAQUIM FIGUEIRA DE ANDRADE",
+                "NUMERO": "139",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "JD COPACABANA",
+                "CEP": "12221221",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MARACA",
+                "NUMERO": "281",
+                "COMPLEMENTO": "BL 1 APT 97",
+                "BAIRRO": "VILA GUARANI (Z SUL)",
+                "CEP": "04313210",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "720862620",
+            "NOME": "MARIA APARECIDA M DOS SANTOS",
+            "IDADE": "59 anos",
+            "LOCAL": "ITABIRITO\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "DANIEL LUIS DOS SANTOS",
+            "IDADE": "",
+            "LOCALIDADE": "SAO JOSE DOS CAMPOS\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "31965596886"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "KWE DO BRASIL SERVICOS LOGISTICOS LTDA.",
+                "CNPJ": "16826633000193",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "354305",
+                "DATA_ADMISSAO": "03\/06\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ALFA CARGO TRANSPORTES INTERNACIONAIS LTDA.",
+                "CNPJ": "15617746000116",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "317110",
+                "DATA_ADMISSAO": "02\/08\/2021",
+                "DATA_DEMISSAO": "31\/05\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ORIGINAL LOGISTICA E COMERCIO EXTERIOR LTDA",
+                "CNPJ": "06242971000124",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "10\/03\/2021",
+                "DATA_DEMISSAO": "23\/07\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "EISHIN COMISSARIA DE DESPACHOS LTDA.",
+                "CNPJ": "96239348000105",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "354305",
+                "DATA_ADMISSAO": "01\/11\/2004",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

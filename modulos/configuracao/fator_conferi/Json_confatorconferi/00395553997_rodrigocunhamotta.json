@@ -1,0 +1,270 @@
+{
+    "CADASTRAIS": {
+        "CPF": "395553997",
+        "NOME": "RODRIGO CUNHA MOTTA",
+        "NOME_MAE": "MARIA DO HORTO CUNHA MOTTA",
+        "NASCTO": "20\/12\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "062573230639",
+        "NIT": "19004612583",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "413225",
+        "PROFISSAO": "ESCRITURARIO DE BANCO",
+        "SALARIO": " 4.134,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4132821186",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "4133628386",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "41988699304",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41991346064",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41996869154",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "02\/08\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "41999373456",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "02\/08\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "41999963456",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "rc_motta@bol.com.br",
+            "rcmotta@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV PRES AFFONSO CAMARGO",
+                "NUMERO": "2305",
+                "COMPLEMENTO": "AP 106",
+                "BAIRRO": "CRISTO REI",
+                "CEP": "80050900",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R EDUARDO SPRADA",
+                "NUMERO": "4390",
+                "COMPLEMENTO": "BL 1 AP 508",
+                "BAIRRO": "CIDADE INDUSTRIAL",
+                "CEP": "81270010",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "TV OLIVEIRA BELLO",
+                "NUMERO": "55",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "80020030",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R JOAO MARIA MARTINS CORDEIRO",
+                "NUMERO": "696",
+                "COMPLEMENTO": "CS 01",
+                "BAIRRO": "BONECA DO IGUACU",
+                "CEP": "83040020",
+                "CIDADE": "SAO JOSE DOS PINHAIS",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R GOVERNADOR AGAMENON MAGALHAES",
+                "NUMERO": "2305",
+                "COMPLEMENTO": "AP 403",
+                "BAIRRO": "TARUMA",
+                "CEP": "82800100",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "AV PRESIDENTE AFFONSO CAMARGO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CRISTO REI",
+                "CEP": "80050900",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "RUA JOAO MARIA MARTINS CORDEIRO",
+                "NUMERO": "969",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BONECA DO IGUACU",
+                "CEP": "83040020",
+                "CIDADE": "SAO JOSE DOS PINHAIS",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "RUA AGUDOS DO SUL",
+                "NUMERO": "182",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AFONSO PENA",
+                "CEP": "83045040",
+                "CIDADE": "SAO JOSE DOS PINHAIS",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "76365646968",
+                "NOME": "MARIA DO HORTO CUNHA MOTTA",
+                "IDADE": "74 anos",
+                "LOCAL": "GUAIRACA\/PR",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "395550971",
+                "NOME": "ROBERTO MOTTA NETO",
+                "IDADE": "49 anos",
+                "LOCAL": "CURITIBA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "438152000",
+                "NOME": "MARIANA CUNHA MOTTA",
+                "IDADE": "42 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "3069228941",
+                "NOME": "FABRICIO CUNHA MOTTA",
+                "IDADE": "45 anos",
+                "LOCAL": "CURITIBA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CAIXA ECONOMICA FEDERAL",
+                "CNPJ": "00360305559900",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "24\/20\/1904",
+                "DATA_DEMISSAO": "12\/06\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CAIXA ECONOMICA FEDERAL",
+                "CNPJ": "00360305000104",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "12\/06\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CAIXA ECONOMICA FEDERAL",
+                "CNPJ": "00360305560673",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "01\/06\/2022",
+                "DATA_DEMISSAO": "19\/04\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CAIXA ECONOMICA FEDERAL",
+                "CNPJ": "00360305538236",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "04\/12\/2000",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "CAIXA ECONOMICA FEDERAL",
+                "CNPJ": "00360305269316",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "04\/12\/2000",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

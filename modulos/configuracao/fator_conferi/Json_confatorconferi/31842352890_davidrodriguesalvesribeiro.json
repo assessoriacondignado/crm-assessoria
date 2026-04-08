@@ -1,0 +1,178 @@
+{
+    "CADASTRAIS": {
+        "CPF": "31842352890",
+        "NOME": "DAVID RODRIGUES ALVES RIBEIRO",
+        "NOME_MAE": "ADELICE RODRIGUES ALVES RIBEIRO",
+        "NASCTO": "24\/01\/1983",
+        "IDADE": "43 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "306472710167",
+        "NIT": "1315851585",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "313215",
+        "PROFISSAO": "TECNICO ELETRONICO",
+        "SALARIO": " 5.005,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1155648178",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1155648178",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11951522045",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11978155153",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11999485103",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "david_rodrigues496@yahoo.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MANUEL PEDRO DE ALMEIDA",
+                "NUMERO": "496",
+                "COMPLEMENTO": "C 2 C",
+                "BAIRRO": "JD PARIS",
+                "CEP": "05794340",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MANUEL PEDRO DE ALMEIDA",
+                "NUMERO": "560",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD PARIS",
+                "CEP": "05794340",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MANUEL PEDRO DE ALMEIDA",
+                "NUMERO": "49",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM PARIS",
+                "CEP": "05794340",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "8828416882",
+                "NOME": "ADELICE RODRIGUES ALVES RIBEIRO",
+                "IDADE": "62 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "36797225833",
+                "NOME": "DANILO RODRIGUES ALVES RIBEIRO",
+                "IDADE": "36 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "AUTO VIACAO TRANSCAP LTDA",
+                "CNPJ": "20649744000149",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "313215",
+                "DATA_ADMISSAO": "04\/05\/2015",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "AUTO VIACAO TRANSCAP LTDA",
+                "CNPJ": "20649744000220",
+                "CIDADE": "TABOAO DA SERRA-SP",
+                "PROFISSAO": "951105",
+                "DATA_ADMISSAO": "04\/05\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "UNICOOPERS - COOPERATIVA UNIFICADA DE TRANSPORTE COLETIVO URBANO DE PASSAGEIROS DE SAO PAULO",
+                "CNPJ": "05487069000105",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "951105",
+                "DATA_ADMISSAO": "14\/04\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "NOXXON SAT TELECOMUNICACOES LTDA.",
+                "CNPJ": "08163526000102",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "313120",
+                "DATA_ADMISSAO": "01\/04\/2011",
+                "DATA_DEMISSAO": "07\/04\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

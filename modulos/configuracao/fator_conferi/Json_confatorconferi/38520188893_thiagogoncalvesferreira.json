@@ -1,0 +1,195 @@
+{
+    "CADASTRAIS": {
+        "CPF": "38520188893",
+        "NOME": "THIAGO GONCALVES FERREIRA",
+        "NOME_MAE": "ADRIANA GONCALVES FERREIRA",
+        "NASCTO": "06\/02\/1984",
+        "IDADE": "42 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "332425220132",
+        "NIT": "12968750242",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "391115",
+        "PROFISSAO": "CONTROLADOR DE ENTRADA E SAIDA",
+        "SALARIO": " 1.224,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1230251066",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "12991614644",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12992225737",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12981043041",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "thami_tuca@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DOS PURIS",
+                "NUMERO": "365",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ S DOMINGOS",
+                "CEP": "12410380",
+                "CIDADE": "PINDAMONHANGABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R AMAZONAS",
+                "NUMERO": "68",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "VL S GERALDO",
+                "CEP": "12062070",
+                "CIDADE": "TAUBATE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA AMAZONAS",
+                "NUMERO": "62",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "VILA SAO GERALDO",
+                "CEP": "12062070",
+                "CIDADE": "TAUBATE",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "2416107",
+            "NOME": "ADRIANA GONCALVES FERREIRA",
+            "IDADE": "42 anos",
+            "LOCAL": "CANOAS\/RS",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "THAMIRES CLARA DA SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "PINDAMONHANGABA\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "35904907800"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "NORA REFEICOES COLETIVAS LTDA",
+                "CNPJ": "60205986000168",
+                "CIDADE": "PINDAMONHANGABA-SP",
+                "PROFISSAO": "414140",
+                "DATA_ADMISSAO": "23\/10\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "YOG SORVETES INDUSTRIA E COMERCIO LTDA",
+                "CNPJ": "39367121000101",
+                "CIDADE": "PINDAMONHANGABA-SP",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "10\/08\/2021",
+                "DATA_DEMISSAO": "10\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "KORUPLAST INDUSTRIA PLASTICA LTDA",
+                "CNPJ": "40007661000163",
+                "CIDADE": "PINDAMONHANGABA-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "12\/03\/2021",
+                "DATA_DEMISSAO": "29\/07\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "B. VIEIRA DE OLIVEIRA   CIA LTDA",
+                "CNPJ": "20209033000153",
+                "CIDADE": "PINDAMONHANGABA-SP",
+                "PROFISSAO": "391115",
+                "DATA_ADMISSAO": "16\/20\/2007",
+                "DATA_DEMISSAO": "18\/08\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SLO- SISTEMAS DE SEGURANCA - LTDA",
+                "CNPJ": "18203765000194",
+                "CIDADE": "PINDAMONHANGABA-SP",
+                "PROFISSAO": "391115",
+                "DATA_ADMISSAO": "16\/20\/1908",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "FBI ZELADORIA PATRIMONIAL LTDA",
+                "CNPJ": "15411001000104",
+                "CIDADE": "TAUBATE-SP",
+                "PROFISSAO": "517410",
+                "DATA_ADMISSAO": "01\/04\/2016",
+                "DATA_DEMISSAO": "11\/05\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "RACING AUTOMOTIVE LTDA   EM RECUPERACAO JUDICIAL",
+                "CNPJ": "03446922000115",
+                "CIDADE": "CAMPO MAGRO-PR",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "23\/01\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

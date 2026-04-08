@@ -1,0 +1,156 @@
+{
+    "CADASTRAIS": {
+        "CPF": "13363920881",
+        "NOME": "JOSE LUCIANO CAVALCANTE PINHEIRO",
+        "NOME_MAE": "FRANCISCA CAVALCANTE DE OLIVEIRA",
+        "NASCTO": "18\/10\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "201125010132",
+        "NIT": "1239302913",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "354815",
+        "PROFISSAO": "AGENTE DE VIAGEM",
+        "SALARIO": " 9.266,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1121324919",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1121324900",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1125763930",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "11\/06\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11995506574",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11961510207",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11962758470",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "11\/11\/2015",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "josephpinheiro@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R FULVIO MENOCCHI",
+                "NUMERO": "5",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL PARQUE JABAQUARA",
+                "CEP": "04349120",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA TILIA",
+                "NUMERO": "20",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM DAS FLORES",
+                "CEP": "06120080",
+                "CIDADE": "OSASCO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA CESAR ABRAAO",
+                "NUMERO": "21",
+                "COMPLEMENTO": "FDS 2",
+                "BAIRRO": "VILA OSASCO",
+                "CEP": "06086170",
+                "CIDADE": "OSASCO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA FULVIO MENOCCHI",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA PARQUE JABAQUARA",
+                "CEP": "04349120",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "61125288",
+            "NOME": "FRANCISCA CAVALCANTE DE OLIVEIRA",
+            "IDADE": "39 anos",
+            "LOCAL": "BAILIQUE\/AP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "FLYTOUR BUSINESS TRAVEL VIAGENS E TURISMO LTDA.",
+            "CNPJ": "02167320000166",
+            "CIDADE": "SAO PAULO-SP",
+            "PROFISSAO": "354815",
+            "DATA_ADMISSAO": "11\/12\/2006",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

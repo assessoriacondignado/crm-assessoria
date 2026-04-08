@@ -1,0 +1,287 @@
+{
+    "CADASTRAIS": {
+        "CPF": "3593353652",
+        "NOME": "RICARDO DE SOUZA SERRA",
+        "NOME_MAE": "LUCI DE SOUZA ALVES",
+        "NASCTO": "01\/01\/1980",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "120110370272",
+        "NIT": "1900510211",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "233215",
+        "PROFISSAO": "PROFESSOR DE APRENDIZAGEM E TREINAMENTO COMERCIAL",
+        "SALARIO": " 267,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "6132252496",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "6133818959",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "10\/12\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "61996897268",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "61996386872",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "61996897265",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "61982187234",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "61996066872",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "ricardozerraa@yahoo.com.br",
+            "ricardoserraa@yahoo.com.br",
+            "ricardoserraa@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "SHCES QD 913",
+                "NUMERO": "0",
+                "COMPLEMENTO": "BL D 913 BL D 913",
+                "BAIRRO": "CRUZEIRO NOVO",
+                "CEP": "70655010",
+                "CIDADE": "BRASILIA",
+                "ESTADO": "DF"
+            },
+            {
+                "LOGRADOURO": "SHCES QD 913 BLOCO D",
+                "NUMERO": "0",
+                "COMPLEMENTO": "913 AP 303",
+                "BAIRRO": "CRUZEIRO NOVO",
+                "CEP": "70655014",
+                "CIDADE": "BRASILIA",
+                "ESTADO": "DF"
+            },
+            {
+                "LOGRADOURO": "RUA 8 CHACARA 197",
+                "NUMERO": "0",
+                "COMPLEMENTO": "LT5 LJ1",
+                "BAIRRO": "ST HABITACIONAL VICENTE PIRES",
+                "CEP": "72006820",
+                "CIDADE": "BRASILIA",
+                "ESTADO": "DF"
+            },
+            {
+                "LOGRADOURO": "R E",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ST MILITAR URBANO",
+                "CEP": "70631025",
+                "CIDADE": "BRASILIA",
+                "ESTADO": "DF"
+            },
+            {
+                "LOGRADOURO": "QD CLSW 103 BLOCO A",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SETOR SUDOESTE",
+                "CEP": "70670521",
+                "CIDADE": "BRASILIA",
+                "ESTADO": "DF"
+            },
+            {
+                "LOGRADOURO": "QD QUADRA 107 RUA E",
+                "NUMERO": "0",
+                "COMPLEMENTO": "BL C",
+                "BAIRRO": "NORTE (AGUAS CLARAS)",
+                "CEP": "71920180",
+                "CIDADE": "BRASILIA",
+                "ESTADO": "DF"
+            },
+            {
+                "LOGRADOURO": "CHACARA CHACARA 44",
+                "NUMERO": "0",
+                "COMPLEMENTO": "LT   LOTE  8 CS",
+                "BAIRRO": "SETOR HABITACIONAL SAMAMBAIA (VICENTE PIRES)",
+                "CEP": "72001455",
+                "CIDADE": "BRASILIA",
+                "ESTADO": "DF"
+            },
+            {
+                "LOGRADOURO": "QUADRA QNO 18 CONJUNTO 72",
+                "NUMERO": "0",
+                "COMPLEMENTO": "LT 6",
+                "BAIRRO": "CEILANDIA NORTE (CEILANDIA)",
+                "CEP": "72260872",
+                "CIDADE": "BRASILIA",
+                "ESTADO": "DF"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "278048790",
+            "NOME": "LUCI DE SOUZA ALVES",
+            "IDADE": "79 anos",
+            "LOCAL": "RIO DE JANEIRO\/RJ",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SENAC - SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - ADMINIS",
+                "CNPJ": "03296968000529",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "333110",
+                "DATA_ADMISSAO": "29\/07\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - SENAC",
+                "CNPJ": "03608475002105",
+                "CIDADE": "ALEXANIA-GO",
+                "PROFISSAO": "233215",
+                "DATA_ADMISSAO": "18\/01\/2024",
+                "DATA_DEMISSAO": "19\/07\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - SENAC",
+                "CNPJ": "03608475000668",
+                "CIDADE": "LUZIANIA-GO",
+                "PROFISSAO": "233215",
+                "DATA_ADMISSAO": "02\/06\/2022",
+                "DATA_DEMISSAO": "18\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SENAC - SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - ADMINIS",
+                "CNPJ": "03296968000448",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "233215",
+                "DATA_ADMISSAO": "29\/07\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVICO NACIONAL DE APRENDIZAGEM INDUSTRIAL - DEPARTAMENTO REGIONAL DO DISTRITO FEDERAL",
+                "CNPJ": "03806360000173",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "333110",
+                "DATA_ADMISSAO": "05\/11\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "CESB - CENTRO DE EDUCACAO SUPERIOR DE BRASILIA LTDA",
+                "CNPJ": "00422333000370",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "233225",
+                "DATA_ADMISSAO": "02\/06\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "INSTITUICAO ADVENT CENTRAL BRAS DE EDUC E ASS SOCIAL",
+                "CNPJ": "60833910005499",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "331105",
+                "DATA_ADMISSAO": "01\/08\/2013",
+                "DATA_DEMISSAO": "07\/07\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "DIGITRO TECNOLOGIA S.A.",
+                "CNPJ": "83472803000842",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "01\/10\/2012",
+                "DATA_DEMISSAO": "27\/12\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "SPAZIO MODELLE NUTRICAO E ESTETICA LTDA",
+            "CNPJ": "32150405000100",
+            "CIDADE": "BRASILIA-DF",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20181130",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

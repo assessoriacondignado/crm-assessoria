@@ -1,0 +1,220 @@
+{
+    "CADASTRAIS": {
+        "CPF": "91562503472",
+        "NOME": "RONALDO SOARES DE LIMA",
+        "NOME_MAE": "IVANILDE PEIXOTO SOARES LIMA",
+        "NASCTO": "08\/08\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "015980451660",
+        "NIT": "12667146648",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "410105",
+        "PROFISSAO": "SUPERVISOR ADMINISTRATIVO",
+        "SALARIO": " 18.504,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9221265679",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9230846251",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "30\/12\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9236732332",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "15\/10\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8432080419",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92984165058",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92981158141",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92981120574",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "27\/07\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "92991368000",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "ronaldoslima2001@yahoo.com",
+            "ronaldoslima2001@yahoo.com.br",
+            "ronaldoslima2004@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R RAIMUNDA MARINHO",
+                "NUMERO": "194",
+                "COMPLEMENTO": "C 27",
+                "BAIRRO": "NOVO ALEIXO",
+                "CEP": "69058278",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R URANIO",
+                "NUMERO": "278",
+                "COMPLEMENTO": "",
+                "BAIRRO": "IGAPO",
+                "CEP": "59106240",
+                "CIDADE": "NATAL",
+                "ESTADO": "RN"
+            },
+            {
+                "LOGRADOURO": "R MARIA CALLAS",
+                "NUMERO": "8",
+                "COMPLEMENTO": "Q 27",
+                "BAIRRO": "PRQ 10 DE NOVEMBRO",
+                "CEP": "69054333",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R SOUTO SOARES",
+                "NUMERO": "27",
+                "COMPLEMENTO": "Q",
+                "BAIRRO": "LIRIO DO VALE",
+                "CEP": "69038291",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "RER STA LUZIA",
+                "NUMERO": "8",
+                "COMPLEMENTO": "COND VL VERDE I R",
+                "BAIRRO": "STO AGOSTINHO",
+                "CEP": "69036520",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R FABIO RINO",
+                "NUMERO": "1030",
+                "COMPLEMENTO": "AP 301",
+                "BAIRRO": "ALECRIM",
+                "CEP": "59031180",
+                "CIDADE": "NATAL",
+                "ESTADO": "RN"
+            },
+            {
+                "LOGRADOURO": "COND VILA VERDE",
+                "NUMERO": "26",
+                "COMPLEMENTO": "10 R SETE",
+                "BAIRRO": "STO AGOSTINHO",
+                "CEP": "69036800",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "RER STA LUZIA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "VL VERDE I",
+                "BAIRRO": "STO AGOSTINHO",
+                "CEP": "69036520",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "MOTO HONDA DA AMAZONIA LTDA",
+                "CNPJ": "04337168000148",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "141205",
+                "DATA_ADMISSAO": "01\/04\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "HONDA COMPONENTES DA AMAZONIA LIMITADA",
+                "CNPJ": "05541925000163",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "11\/06\/2001",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

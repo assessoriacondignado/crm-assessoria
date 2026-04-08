@@ -1,0 +1,174 @@
+{
+    "CADASTRAIS": {
+        "CPF": "45580898215",
+        "NOME": "COSMO DE SOUZA DA SILVA",
+        "NOME_MAE": "ELIDIA DE SOUSA DA SILVA",
+        "NASCTO": "22\/02\/1973",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1235461063",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "517410",
+        "PROFISSAO": "PORTEIRO DE EDIFICIOS",
+        "SALARIO": " 1.815,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9236111825",
+            "OPERADORA": "TELEMAR\/AM",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92991364714",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92991899647",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "cosmodasilva44@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R VIOLETA AREOSA",
+                "NUMERO": "461",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALVORADA",
+                "CEP": "69043690",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R ICA",
+                "NUMERO": "145",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DT INDUST I",
+                "CEP": "69075090",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R VIOLETA AREOSA",
+                "NUMERO": "460",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALVORADA",
+                "CEP": "69043690",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "BC CHICO MENDES",
+                "NUMERO": "98",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COL TERRA NOVA",
+                "CEP": "69093448",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "BC NOVO PARAISO",
+                "NUMERO": "23",
+                "COMPLEMENTO": "B",
+                "BAIRRO": "ALVORADA",
+                "CEP": "69042297",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R ARUMA",
+                "NUMERO": "289",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COLONIA TERRA NOVA",
+                "CEP": "69093447",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "13713395896",
+            "NOME": "ROBERTO JOVIS DA SILVA",
+            "IDADE": "52 anos",
+            "LOCAL": "TARUMA\/SP",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "D. D. FREGAPANI ENSINO INFANTIL LTDA",
+                "CNPJ": "13821198000469",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "517410",
+                "DATA_ADMISSAO": "01\/05\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "D. D. FREGAPANI ENSINO INFANTIL LTDA",
+                "CNPJ": "13821198000116",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "517410",
+                "DATA_ADMISSAO": "01\/05\/2021",
+                "DATA_DEMISSAO": "01\/11\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "J. LIMA FREGAPANI LTDA.",
+                "CNPJ": "09379574000197",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "517410",
+                "DATA_ADMISSAO": "11\/03\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "VISAM VIGILANCIA E SEGURANCA DA AMAZONIA LTDA",
+                "CNPJ": "63724470000118",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "07\/08\/2008",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

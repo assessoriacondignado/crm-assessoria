@@ -1,0 +1,225 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25907962852",
+        "NOME": "EVANDRO DA SILVA",
+        "NOME_MAE": "MARIA CECILIA SEBASTIAO DA SILVA",
+        "NASCTO": "04\/12\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "218401770191",
+        "NIT": "12612638255",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "517330",
+        "PROFISSAO": "VIGILANTE",
+        "SALARIO": " 1.351,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1532596342",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1937381500",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "15996171534",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15981371899",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15981729912",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15988155991",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "24\/07\/2017",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "15996066324",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "evandro.d-s@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R SETE DE SETEMBRO",
+                "NUMERO": "790",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL DR LAURINDO",
+                "CEP": "18271590",
+                "CIDADE": "TATUI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R AMELIA O BERGAMI",
+                "NUMERO": "46",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CJ HAB O D FIOL",
+                "CEP": "18274788",
+                "CIDADE": "TATUI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA EULALIO ARRUDA MELO",
+                "NUMERO": "338",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "JD LUCILA",
+                "CEP": "18277100",
+                "CIDADE": "TATUI",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "25290466894",
+                "NOME": "MARIA CECILIA SEBASTIAO DA SILVA",
+                "IDADE": "68 anos",
+                "LOCAL": "TATUI\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "19728041896",
+                "NOME": "PAULO HENRIQUE DA SILVA",
+                "IDADE": "51 anos",
+                "LOCAL": "TATUI\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "29002337809",
+                "NOME": "SIMONE APARECIDA DA SILVA",
+                "IDADE": "44 anos",
+                "LOCAL": "MORTUGABA\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "GRABER SEGURANCA LTDA",
+                "CNPJ": "87169900000145",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "01\/11\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ATENTO SAO PAULO SERVICOS DE SEGURANCA PATRIMONIAL LTDA",
+                "CNPJ": "06069276000102",
+                "CIDADE": "FRANCA-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "17\/20\/2011",
+                "DATA_DEMISSAO": "17\/06\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "QUALITY SERVICOS DE SEGURANCA E VIGILANCIA PATRIMONIAL LTDA.",
+                "CNPJ": "02249938000175",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "30\/01\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "GPS - PREDIAL SISTEMAS DE SEGURANCA LTDA",
+                "CNPJ": "02938798000142",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "782305",
+                "DATA_ADMISSAO": "05\/10\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "PROSEGUR BRASIL S\/A TRANSPORTADORA DE VALORES E SEGURANCA",
+                "CNPJ": "17428731009000",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "01\/08\/2012",
+                "DATA_DEMISSAO": "13\/10\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "TRANSBANK SEGURANCA E TRANSPORTE DE VALORES LTDA",
+                "CNPJ": "66624792000345",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "21\/06\/2010",
+                "DATA_DEMISSAO": "108",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

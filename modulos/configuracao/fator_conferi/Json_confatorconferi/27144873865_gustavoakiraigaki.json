@@ -1,0 +1,289 @@
+{
+    "CADASTRAIS": {
+        "CPF": "27144873865",
+        "NOME": "GUSTAVO AKIRA IGAKI",
+        "NOME_MAE": "TOSHICO ITO IGAKI",
+        "NASCTO": "03\/11\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "254696230167",
+        "NIT": "1298430254 ",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142105",
+        "PROFISSAO": "GERENTE ADMINISTRATIVO",
+        "SALARIO": " 4.614,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1147032374",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1150626100",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1933510623",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1935441514",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1122192391",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11972768283",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11984148283",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11996133388",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "27999469196",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL POS-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11986526101",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "05\/09\/2013",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "gustavoigaki@terra.com.br",
+            "gustavo.igaki@churchdwight.com.br",
+            "gustavoigaki@uol.com.br",
+            "gustavoigaki@celtabrasil.com.br",
+            "gustavoigaki@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R NELSON RAINERI",
+                "NUMERO": "2000",
+                "COMPLEMENTO": "",
+                "BAIRRO": "REC VISTA ALEGRE",
+                "CEP": "06702155",
+                "CIDADE": "COTIA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DA PASSAGEM",
+                "NUMERO": "15",
+                "COMPLEMENTO": "AP 702",
+                "BAIRRO": "BOTAFOGO",
+                "CEP": "22290030",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R SANTOS DUMONT",
+                "NUMERO": "1789",
+                "COMPLEMENTO": "AP 1101",
+                "BAIRRO": "LIDICE",
+                "CEP": "38400062",
+                "CIDADE": "UBERLANDIA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "AV SANTOS DUMONT",
+                "NUMERO": "1789",
+                "COMPLEMENTO": "AP 1101",
+                "BAIRRO": "STA MARIA",
+                "CEP": "38050400",
+                "CIDADE": "UBERABA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R S BENEDITO",
+                "NUMERO": "54",
+                "COMPLEMENTO": "GAL PEDRO PAULOLJ 1 E 2",
+                "BAIRRO": "S BENEDITO",
+                "CEP": "38022100",
+                "CIDADE": "UBERABA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RUA HOWARD A ACHESON JUNIOR",
+                "NUMERO": "250",
+                "COMPLEMENTO": "CS 03",
+                "BAIRRO": "JD DA GLORIA",
+                "CEP": "06711280",
+                "CIDADE": "COTIA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA BAMBORE",
+                "NUMERO": "295",
+                "COMPLEMENTO": "APTO92",
+                "BAIRRO": "IPIRANGA",
+                "CEP": "04278060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA RIBEIRO DO AMARAL",
+                "NUMERO": "585",
+                "COMPLEMENTO": "APT 95",
+                "BAIRRO": "IPIRANGA",
+                "CEP": "04268000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "5727855853",
+                "NOME": "TOSHICO ITO IGAKI",
+                "IDADE": "82 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "25300197890",
+                "NOME": "SAMUELSON YOITI IGAKI",
+                "IDADE": "50 anos",
+                "LOCAL": "BELEM\/PA",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "VOGLER INGREDIENTS LTDA.",
+                "CNPJ": "62185905000130",
+                "CIDADE": "SAO BERNARDO DO CAMPO-SP",
+                "PROFISSAO": "142320",
+                "DATA_ADMISSAO": "15\/07\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CELTA BRASIL COMERCIO SERVICOS E INDUSTRIA LTDA",
+                "CNPJ": "02901092000106",
+                "CIDADE": "COTIA-SP",
+                "PROFISSAO": "142105",
+                "DATA_ADMISSAO": "15\/04\/2013",
+                "DATA_DEMISSAO": "01\/12\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "CELTA BRASIL COMERCIO SERVICOS E INDUSTRIA LTDA",
+                "CNPJ": "02901092000378",
+                "CIDADE": "CRICIUMA-SC",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/03\/2020",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "MAIZ INDUSTRIA E COMERCIO DE PRODUTOS AGROPECUARIOS LTDA",
+                "CNPJ": "03691627000124",
+                "CIDADE": "ARARAS-SP",
+                "PROFISSAO": "142305",
+                "DATA_ADMISSAO": "16\/01\/2012",
+                "DATA_DEMISSAO": "10\/10\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "QUIMICA GERAL DO NORDESTE LTDA",
+                "CNPJ": "14727457001693",
+                "CIDADE": "JAPERI-RJ",
+                "PROFISSAO": "810110",
+                "DATA_ADMISSAO": "01\/04\/2011",
+                "DATA_DEMISSAO": "501",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

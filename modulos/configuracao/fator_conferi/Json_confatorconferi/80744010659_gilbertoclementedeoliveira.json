@@ -1,0 +1,132 @@
+{
+    "CADASTRAIS": {
+        "CPF": "80744010659",
+        "NOME": "GILBERTO CLEMENTE DE OLIVEIRA",
+        "NOME_MAE": "BENEDITA DOS SANTOS OLIVEIRA",
+        "NASCTO": "04\/05\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "5434312",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "085308890272",
+        "NIT": "1250523851",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "848520",
+        "PROFISSAO": "MAGAREFE",
+        "SALARIO": " 4.290,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "3432419114",
+            "OPERADORA": "TELEMAR\/MG",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "34988643372",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "34988619172",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "34988295115",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DR HUGO AGUIAR",
+                "NUMERO": "1065",
+                "COMPLEMENTO": "",
+                "BAIRRO": "INDEPENDENCIA",
+                "CEP": "38443102",
+                "CIDADE": "ARAGUARI",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "AV TEODORETO VELOSO DE CARVALHO",
+                "NUMERO": "2053",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SIBIPIRUNA",
+                "CEP": "38445198",
+                "CIDADE": "ARAGUARI",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R GOIAS",
+                "NUMERO": "1065",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MILENIUM",
+                "CEP": "38446225",
+                "CIDADE": "ARAGUARI",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "ALAMEDA GOIAS",
+                "NUMERO": "1065",
+                "COMPLEMENTO": "",
+                "BAIRRO": "INDEPENDENCIA",
+                "CEP": "38443101",
+                "CIDADE": "ARAGUARI",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "322984203",
+            "NOME": "BENEDITA DOS SANTOS OLIVEIRA",
+            "IDADE": "98 anos",
+            "LOCAL": "GRAMADO\/RS",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "PRIMA FOODS S.A.",
+            "CNPJ": "16820052000144",
+            "CIDADE": "ARAGUARI-MG",
+            "PROFISSAO": "848520",
+            "DATA_ADMISSAO": "07\/03\/2007",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

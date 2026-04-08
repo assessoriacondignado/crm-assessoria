@@ -1,0 +1,239 @@
+{
+    "CADASTRAIS": {
+        "CPF": "72266163515",
+        "NOME": "LUIZ FRANCISCO DA SILVA",
+        "NOME_MAE": "MARIA AMELIA SOUZA SILVA",
+        "NASCTO": "13\/04\/1976",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "012442892151",
+        "NIT": "12430188122",
+        "ESCOLARIDADE": "DA 5a. A 8a. SERIE INCOMPLETA DO 1o. GRAU(GINASIO INCOMPLETO)",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782510",
+        "PROFISSAO": "MOTORISTA DE CAMINHAO (ROTAS REGIONAIS E INTERNACIONAIS)",
+        "SALARIO": " 1.702,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "7932491956",
+            "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "79999626050",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79988399150",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79996117540",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79981642838",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79988364196",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "pssm2@terra.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "PC QUINZE DE NOVEMBRO",
+                "NUMERO": "165",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "49600000",
+                "CIDADE": "NOSSA SENHORA DAS DORES",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R FRANCOIS HOALD",
+                "NUMERO": "700",
+                "COMPLEMENTO": "AP 204 PR L MAR GRANDE",
+                "BAIRRO": "ATALAIA",
+                "CEP": "49037000",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R SOARES NOGUEIRA",
+                "NUMERO": "171",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAMARGOS",
+                "CEP": "30520330",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO DE FRANCA E SILVA",
+                "NUMERO": "1155",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD ADUTORA",
+                "CEP": "03978540",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA  ARAGUAIA",
+                "NUMERO": "77",
+                "COMPLEMENTO": "AP 182",
+                "BAIRRO": "VL CURUCA",
+                "CEP": "09291230",
+                "CIDADE": "SANTO ANDRE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R TRINTA E SETE",
+                "NUMERO": "170",
+                "COMPLEMENTO": "LT PARAISO DO SUL",
+                "BAIRRO": "SANTA MARIA",
+                "CEP": "49044346",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R GONCALVES DE SOUZA",
+                "NUMERO": "179",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAMARGOS",
+                "CEP": "30520390",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RUA TRINTA E SETE",
+                "NUMERO": "164",
+                "COMPLEMENTO": "LOT PARAISO DO SUL DESO 170",
+                "BAIRRO": "SANTA MARIA",
+                "CEP": "49044346",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "10846541564",
+            "NOME": "MARIA AMELIA SOUZA SILVA",
+            "IDADE": "16 anos",
+            "LOCAL": "",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ANA CELIA CELESTINO SANTANA COSTA",
+                "IDADE": "",
+                "LOCALIDADE": "SIMAO DIAS\/SE",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "72267445549"
+            },
+            {
+                "NOME": "PAULO SERGIO FIGUEIRA SANTO MAURO",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "89512880806"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "",
+                "CNPJ": "00000086808243",
+                "CIDADE": "",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "03\/10\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "AMT PROJETOS E SERVICOS LTDA",
+                "CNPJ": "86808243000176",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "782305",
+                "DATA_ADMISSAO": "03\/10\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "SANTOS   PEDROZO LTDA",
+                "CNPJ": "08401884000106",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "782305",
+                "DATA_ADMISSAO": "01\/02\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "MWG INDUSTRIA COMERCIO E PRESTACAO DE SERVICOS LTDA",
+                "CNPJ": "15595242000142",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "08\/10\/2007",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

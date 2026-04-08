@@ -1,0 +1,179 @@
+{
+    "CADASTRAIS": {
+        "CPF": "5988069541",
+        "NOME": "NAIARA DE MORAES VANDERLEI",
+        "NOME_MAE": "JOSEFA FRANCISCA DE MORAES",
+        "NASCTO": "10\/07\/1992",
+        "IDADE": "33 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "16373161553",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "421125",
+        "PROFISSAO": "OPERADOR DE CAIXA",
+        "SALARIO": " 916,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "7937128642",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "79998702991",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999630691",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79991127481",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "79998606152",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "sc815020@gmail.com",
+            "moraes.nay1214@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DIVINOPOLIS",
+                "NUMERO": "37",
+                "COMPLEMENTO": "",
+                "BAIRRO": "POR D ANTAS",
+                "CEP": "49069054",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "AV S JOAO BATISTA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PONTO NOVO",
+                "CEP": "49097000",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "61629910406",
+            "NOME": "JOSEFA FRANCISCA DE MORAES",
+            "IDADE": "68 anos",
+            "LOCAL": "ARACAJU\/SE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ESTEFANI CRISTINA DOS SANTOS",
+            "IDADE": "",
+            "LOCALIDADE": "ARACAJU\/SE",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "7558004519"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738011288",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "03\/11\/2016",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738042914",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/08\/2019",
+                "DATA_DEMISSAO": "01\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "MANPOWER STAFFING LTDA.",
+                "CNPJ": "01894253002324",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "15\/09\/2016",
+                "DATA_DEMISSAO": "12\/10\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738017723",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "354125",
+                "DATA_ADMISSAO": "03\/11\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ATACADAO S.A.",
+                "CNPJ": "75315333006816",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "421125",
+                "DATA_ADMISSAO": "18\/10\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

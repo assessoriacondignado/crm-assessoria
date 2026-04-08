@@ -1,0 +1,173 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25928692803",
+        "NOME": "PAULO VAGNER ALVES ARANHA",
+        "NOME_MAE": "EUNICE AUGUSTA ALVES",
+        "NASCTO": "07\/11\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "262241920175",
+        "NIT": "1265611681",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521110",
+        "PROFISSAO": "VENDEDOR DE COMERCIO VAREJISTA",
+        "SALARIO": " 4.011,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1146122932",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "16\/02\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1137320836",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1145588082",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "25\/01\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11984951614",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11973044714",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11996096483",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "RUA JOSE CAPRIOTTI",
+                "NUMERO": "62",
+                "COMPLEMENTO": "A",
+                "BAIRRO": "VL CAPRIOTTI",
+                "CEP": "06382030",
+                "CIDADE": "CARAPICUIBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R NAPOLIS",
+                "NUMERO": "415",
+                "COMPLEMENTO": "AP 22 BL D",
+                "BAIRRO": "JARDIM COLIBRI",
+                "CEP": "06712380",
+                "CIDADE": "COTIA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JUAN VICENTE",
+                "NUMERO": "377",
+                "COMPLEMENTO": "482 BL 20 APT 93",
+                "BAIRRO": "BANDEIRAS",
+                "CEP": "06160180",
+                "CIDADE": "OSASCO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "11366804899",
+                "NOME": "EUNICE AUGUSTA ALVES",
+                "IDADE": "77 anos",
+                "LOCAL": "CARAPICUIBA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "10045855862",
+                "NOME": "MEIRE AUGUSTA ALVES PIVATTO",
+                "IDADE": "58 anos",
+                "LOCAL": "BARUERI\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "32800393807",
+                "NOME": "EDER VAGNER ALVES ARANHA",
+                "IDADE": "40 anos",
+                "LOCAL": "JANDIRA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LEROY MERLIN COMPANHIA BRASILEIRA DE BRICOLAGEM",
+                "CNPJ": "01438784000601",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "09\/09\/2013",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SBF COMERCIO DE PRODUTOS ESPORTIVOS S.A.",
+                "CNPJ": "06347409018455",
+                "CIDADE": "COTIA-SP",
+                "PROFISSAO": "141415",
+                "DATA_ADMISSAO": "01\/12\/2010",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

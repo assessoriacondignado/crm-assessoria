@@ -1,0 +1,148 @@
+{
+    "CADASTRAIS": {
+        "CPF": "37840818862",
+        "NOME": "MARCO AURELIO BALLOTIN",
+        "NOME_MAE": "MARIA AUGUSTA DE SOUZA BALLOTIN",
+        "NASCTO": "13\/09\/1988",
+        "IDADE": "37 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "353753270116",
+        "NIT": "2107122601",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "252105",
+        "PROFISSAO": "ADMINISTRADOR",
+        "SALARIO": " 4.724,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1122746949",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1143314480",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "11955491834",
+            "OPERADORA": "",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": {
+        "EMAIL": "marco_ab13@yahoo.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DOIS DE JULHO",
+                "NUMERO": "234",
+                "COMPLEMENTO": "",
+                "BAIRRO": "IPIRANGA",
+                "CEP": "04215000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "TRAVESSA DOUTOR CLAUDIO DAMASCENO",
+                "NUMERO": "54",
+                "COMPLEMENTO": "",
+                "BAIRRO": "IPIRANGA",
+                "CEP": "04216040",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "5920019891",
+            "NOME": "MARIA AUGUSTA DE SOUZA BALLOTIN",
+            "IDADE": "77 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CAMPODORO ALIMENTOS LTDA",
+                "CNPJ": "04908058000199",
+                "CIDADE": "ARAUCARIA-PR",
+                "PROFISSAO": "252105",
+                "DATA_ADMISSAO": "22\/03\/2021",
+                "DATA_DEMISSAO": "18\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SODEXO DO BRASIL COMERCIAL S.A.",
+                "CNPJ": "49930514000135",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "252105",
+                "DATA_ADMISSAO": "14\/10\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SAPORE S.A.",
+                "CNPJ": "67945071000138",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "17\/05\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "AGENCIA ESTADO S.A",
+                "CNPJ": "62652961000138",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "252105",
+                "DATA_ADMISSAO": "01\/05\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "S\/A O ESTADO DE S.PAULO",
+                "CNPJ": "61533949000141",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "06\/01\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

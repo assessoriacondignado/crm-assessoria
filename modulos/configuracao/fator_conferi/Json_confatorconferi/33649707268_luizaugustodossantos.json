@@ -1,0 +1,185 @@
+{
+    "CADASTRAIS": {
+        "CPF": "33649707268",
+        "NOME": "LUIZ AUGUSTO DOS SANTOS",
+        "NOME_MAE": "JOANA BATISTA DOS SANTOS",
+        "NASCTO": "23\/09\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1234626549",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "515330",
+        "PROFISSAO": "",
+        "SALARIO": " 2.345,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9236821388",
+            "OPERADORA": "TELEMAR\/AM",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92984421568",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92993355316",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92988088093",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "92994571908",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "luizaugusto924@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PAU FERRO",
+                "NUMERO": "415",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JORGE TEIXEIRA",
+                "CEP": "69088319",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R MARIA ANDRADE",
+                "NUMERO": "5",
+                "COMPLEMENTO": "A",
+                "BAIRRO": "S LAZARO",
+                "CEP": "69073010",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R CLAUDIANO MOREIRA",
+                "NUMERO": "5",
+                "COMPLEMENTO": "B 5 B",
+                "BAIRRO": "S LAZARO",
+                "CEP": "69073130",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV MAX TEIXEIRA",
+                "NUMERO": "2319",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COL STO ANTONIO",
+                "CEP": "69093770",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R PAU-FERRO",
+                "NUMERO": "383",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JORGE TEIXEIRA",
+                "CEP": "69088319",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "43469809",
+            "NOME": "JOANA BATISTA DOS SANTOS",
+            "IDADE": "77 anos",
+            "LOCAL": "BELEM\/PA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "REVIVER ADMINISTRACAO ESPECIALIZADA LTDA",
+                "CNPJ": "05146393000160",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "515330",
+                "DATA_ADMISSAO": "10\/07\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BECHA PROJETOS E SERVICOS SA.",
+                "CNPJ": "14261892000199",
+                "CIDADE": "SANTANA DE PARNAIBA-SP",
+                "PROFISSAO": "517315",
+                "DATA_ADMISSAO": "06\/01\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "R B PLASTICOS DA AMAZONIA LTDA EM RECUPERACAO JUDICIAL",
+                "CNPJ": "84522747000108",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "811770",
+                "DATA_ADMISSAO": "13\/10\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "VANTIVA TECHNOLOGIES BRASIL LTDA",
+                "CNPJ": "02773531000142",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "731175",
+                "DATA_ADMISSAO": "24\/07\/2002",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

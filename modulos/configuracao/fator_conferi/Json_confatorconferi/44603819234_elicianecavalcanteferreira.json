@@ -1,0 +1,260 @@
+{
+    "CADASTRAIS": {
+        "CPF": "44603819234",
+        "NOME": "ELICIANE CAVALCANTE FERREIRA",
+        "NOME_MAE": "WALDETE CAVALCANTE FERREIRA",
+        "NASCTO": "16\/01\/1974",
+        "IDADE": "52 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9233089337",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "14\/07\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9232212575",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92981042143",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "27\/07\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "92999337063",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "92999988984",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "92999889844",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/03\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "92996260701",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "elicianefrota@natura.net",
+            "elici_ane@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "COND VILLA CIDADES",
+                "NUMERO": "105",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69096105",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R CANINDE",
+                "NUMERO": "105",
+                "COMPLEMENTO": "Q G C 105 NUC 8",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69096100",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R CANINDE",
+                "NUMERO": "275",
+                "COMPLEMENTO": "COND RES VILL",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69096100",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R SEGIO DIAS PIRES",
+                "NUMERO": "871",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVO ALEIXO",
+                "CEP": "69099160",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R PROFA ROZINEIDE GUADALUPE",
+                "NUMERO": "55",
+                "COMPLEMENTO": "CJ MUNDO NOVO",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69095237",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R ARAPARIS",
+                "NUMERO": "55",
+                "COMPLEMENTO": "CJ M",
+                "BAIRRO": "COROADO",
+                "CEP": "69082656",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R SRG ADMILSON",
+                "NUMERO": "55",
+                "COMPLEMENTO": "CON MUNDO NOVO II",
+                "BAIRRO": "FLORES",
+                "CEP": "69028415",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "RUA CAJARANA",
+                "NUMERO": "37",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69095230",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "40723984204",
+                "NOME": "MIGUEL ANGELO CAVALCANTE FERREIRA",
+                "IDADE": "53 anos",
+                "LOCAL": "BLUMENAU\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "52061507204",
+                "NOME": "ANELICE CAVALCANTE FERREIRA MARAMBAIA",
+                "IDADE": "45 anos",
+                "LOCAL": "SALVADOR\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "4226225244",
+                "NOME": "ANA BEATRIZ CAVALCANTE FERREIRA",
+                "IDADE": "16 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "98162420282",
+                "NOME": "MARCIO ANGELIM DA FROTA JUNIOR",
+                "IDADE": "29 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "RAIA DROGASIL S\/A",
+                "CNPJ": "61585865115722",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "142335",
+                "DATA_ADMISSAO": "22\/20\/2012",
+                "DATA_DEMISSAO": "15\/09\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TAPAJOS COMERCIO DE MEDICAMENTOS LTDA",
+                "CNPJ": "84521053000148",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "17\/11\/2020",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "NATURA COSMETICOS S\/A",
+                "CNPJ": "71673990000177",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "520110",
+                "DATA_ADMISSAO": "18\/08\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "EMS S\/A",
+                "CNPJ": "57507378000365",
+                "CIDADE": "HORTOLANDIA-SP",
+                "PROFISSAO": "354150",
+                "DATA_ADMISSAO": "01\/05\/2009",
+                "DATA_DEMISSAO": "25\/05\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

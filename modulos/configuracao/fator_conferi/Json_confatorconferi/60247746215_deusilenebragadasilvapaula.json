@@ -1,0 +1,228 @@
+{
+    "CADASTRAIS": {
+        "CPF": "60247746215",
+        "NOME": "DEUSILENE BRAGA DA SILVA PAULA",
+        "NOME_MAE": "ELIZA BRAGA DA SILVA",
+        "NASCTO": "22\/04\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12731843103",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411005",
+        "PROFISSAO": "AUXILIAR DE ESCRITORIO, EM GERAL",
+        "SALARIO": " 2.600,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3133906760",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "3132739028",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3133894631",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31983346276",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31996371154",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31997939028",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "31983868134",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "31992360576",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "financeirofutura@terra.com.br",
+            "branca_adormecida@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MARGARIDA ASSIS FONSECA",
+                "NUMERO": "400",
+                "COMPLEMENTO": "B",
+                "BAIRRO": "CALIFORNIA",
+                "CEP": "30855070",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R ESPUMOSO",
+                "NUMERO": "86",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL GOMES CARDIM",
+                "CEP": "03321050",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FR GASPAR",
+                "NUMERO": "447",
+                "COMPLEMENTO": "C 2 ACSA 2 709",
+                "BAIRRO": "VL MAGNESITA",
+                "CEP": "30512100",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "BC COPACABANA",
+                "NUMERO": "200",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CABANA DO PAI TOMAS",
+                "CEP": "30512140",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R JOSE ALVES MENDES",
+                "NUMERO": "103",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRAIA",
+                "CEP": "32044402",
+                "CIDADE": "CONTAGEM",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RUA CAPIM BRANCO",
+                "NUMERO": "25",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VISTA ALEGRE",
+                "CEP": "30518020",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RUA CONDE DE PALMA",
+                "NUMERO": "200",
+                "COMPLEMENTO": "AP 302",
+                "BAIRRO": "MADRE GERTRUDES",
+                "CEP": "30512710",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "10793954150",
+            "NOME": "ELIZA BRAGA DA SILVA",
+            "IDADE": "5 anos",
+            "LOCAL": "",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TECIDOS E ARMARINHOS MIGUEL BARTOLOMEU S\/A",
+                "CNPJ": "17359233000188",
+                "CIDADE": "CONTAGEM-MG",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "10\/11\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "F.F.A. INDUSTRIA E COMERCIO DE PRODUTOS SIDERURGICOS LTDA",
+                "CNPJ": "23889525000125",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/10\/2020",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "FUTURA FERRO E ACO LTDA",
+                "CNPJ": "03654189000124",
+                "CIDADE": "VESPASIANO-MG",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "11\/04\/2007",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,233 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25434567838",
+        "NOME": "JANETE COSTA DOS SANTOS",
+        "NOME_MAE": "ALICE COSTA DOS SANTOS",
+        "NASCTO": "01\/04\/1976",
+        "IDADE": "50 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "258794030183",
+        "NIT": "12552483498",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "414105",
+        "PROFISSAO": "ALMOXARIFE",
+        "SALARIO": " 1.210,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1134265451",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "11\/02\/2011",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11971705155",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11953097272",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11942833918",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11944037492",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "27\/06\/2017",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11956379476",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "23\/02\/2019",
+                "TIPO_TEL": "MOVEL PRE-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "fabiana_moreli@hotmail.com",
+            "gui.almeida.320@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JACAREZINHO",
+                "NUMERO": "20",
+                "COMPLEMENTO": "B",
+                "BAIRRO": "CIDADE SOBERANA",
+                "CEP": "07161430",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV MINAS GERAIS",
+                "NUMERO": "12",
+                "COMPLEMENTO": "C 1",
+                "BAIRRO": "CIDADE SOBERANA",
+                "CEP": "07162420",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ALTO DOS RODRIGUES",
+                "NUMERO": "320",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM SANTA TEREZINHA",
+                "CEP": "07160350",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ALTO DOS RODRIGUES",
+                "NUMERO": "443",
+                "COMPLEMENTO": "NULL",
+                "BAIRRO": "JARDIM SANTA TEREZINHA",
+                "CEP": "07160350",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JACAREZINHO",
+                "NUMERO": "32",
+                "COMPLEMENTO": "CS CASA",
+                "BAIRRO": "CIDADE SOBERANA",
+                "CEP": "07161430",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ALTO DOS RODRIGUES",
+                "NUMERO": "205",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM SANTA TEREZINHA",
+                "CEP": "07160350",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ALTO DOS RODRIGUES",
+                "NUMERO": "207",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM SANTA TEREZINHA",
+                "CEP": "07160350",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA PENHA DE FRANCA",
+                "NUMERO": "519",
+                "COMPLEMENTO": "AP 32",
+                "BAIRRO": "PENHA DE FRANCA",
+                "CEP": "03606010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "983218200",
+            "NOME": "ALICE COSTA DOS SANTOS",
+            "IDADE": "35 anos",
+            "LOCAL": "ANANINDEUA\/PA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "GUILHERME DE ALMEIDA SANTOS",
+            "IDADE": "",
+            "LOCALIDADE": "GUARULHOS\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "55647165826"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "DUFRY LOJAS FRANCAS LTDA.",
+                "CNPJ": "17625216001621",
+                "CIDADE": "GUARULHOS-SP",
+                "PROFISSAO": "421125",
+                "DATA_ADMISSAO": "07\/08\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TRADE E TALENTOS SOLUCOES EM TRADE E PESSOAS S\/A",
+                "CNPJ": "03528670000173",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "01\/10\/2022",
+                "DATA_DEMISSAO": "06\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LUANDRE TEMPORARIOS LTDA",
+                "CNPJ": "04144144000172",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "414105",
+                "DATA_ADMISSAO": "08\/11\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "GUARULHOS TRANSPORTES S.A.",
+                "CNPJ": "02599353000185",
+                "CIDADE": "GUARULHOS-SP",
+                "PROFISSAO": "514320",
+                "DATA_ADMISSAO": "03\/09\/2012",
+                "DATA_DEMISSAO": "611",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

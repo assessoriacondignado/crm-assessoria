@@ -1,0 +1,155 @@
+{
+    "CADASTRAIS": {
+        "CPF": "64316963449",
+        "NOME": "LINDINA SABINO CORREIA",
+        "NOME_MAE": "MARIA JOSE DA SILVA CORREIA",
+        "NASCTO": "07\/07\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Feminino",
+        "RG": "3485797",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "037714560825",
+        "NIT": "12476728251",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "763210",
+        "PROFISSAO": "COSTUREIRO NA CONFECCAO EM SERIE",
+        "SALARIO": " 1.012,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8134380173",
+            "OPERADORA": "TELEMAR\/PE",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "81991769268",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11957449517",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81985522947",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81991769205",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81984139036",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "19\/03\/2012",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CENTO E DEZESSEIS",
+                "NUMERO": "125",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD PAULISTA",
+                "CEP": "53407010",
+                "CIDADE": "PAULISTA",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R NOVENTA E NOVE",
+                "NUMERO": "120",
+                "COMPLEMENTO": "C A JAR DIM PAULISTA PE",
+                "BAIRRO": "JD PAULISTA",
+                "CEP": "53407140",
+                "CIDADE": "PAULISTA",
+                "ESTADO": "PE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "1202990894",
+                "NOME": "MARIA JOSE DA SILVA CORREIA",
+                "IDADE": "73 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "13894035480",
+                "NOME": "IGOR LUCAS SABINO DO NASCIMENTO",
+                "IDADE": "22 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "INSTITUTO VERUS",
+                "CNPJ": "13256974000263",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "331110",
+                "DATA_ADMISSAO": "01\/08\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CONFECCOES MOTA PINHO LTDA",
+                "CNPJ": "10651891000108",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "763210",
+                "DATA_ADMISSAO": "01\/11\/2002",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,196 @@
+{
+    "CADASTRAIS": {
+        "CPF": "1214672604",
+        "NOME": "PAULO SERGIO COLOZIO",
+        "NOME_MAE": "MARIA ELENA FERNANDES COLOZIO",
+        "NASCTO": "05\/09\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "123624110281",
+        "NIT": "1258856411",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "821110",
+        "PROFISSAO": "OPERADOR DE MAQUINA DE SINTERIZAR",
+        "SALARIO": " 6.540,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3137321702",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3137312068",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31985210050",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31987682068",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "28\/02\/2012",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "31910390492",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "21\/05\/2018",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "31997564206",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "31987873950",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "colozio@oi.com.br",
+            "paulocolozio@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ULISSES DE OLIVEIRA",
+                "NUMERO": "129",
+                "COMPLEMENTO": "",
+                "BAIRRO": "IDEAL",
+                "CEP": "36410170",
+                "CIDADE": "CONGONHAS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R JOAO PACHECO",
+                "NUMERO": "55",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVO ROSARIO",
+                "CEP": "36416020",
+                "CIDADE": "CONGONHAS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R HEMATITA",
+                "NUMERO": "212",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRAIA",
+                "CEP": "36416134",
+                "CIDADE": "CONGONHAS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "BENEDITO QUITINO",
+                "NUMERO": "120",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "36415000",
+                "CIDADE": "CONGONHAS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R JOAO PACHECO",
+                "NUMERO": "55",
+                "COMPLEMENTO": "",
+                "BAIRRO": "",
+                "CEP": "36415000",
+                "CIDADE": "CONGONHAS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "ULISSES OLIVEIRA",
+                "NUMERO": "129",
+                "COMPLEMENTO": "CA",
+                "BAIRRO": "IDEAL",
+                "CEP": "36415000",
+                "CIDADE": "CONGONHAS",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "95778632649",
+                "NOME": "MARIA ELENA FERNANDES COLOZIO",
+                "IDADE": "70 anos",
+                "LOCAL": "CONGONHAS\/MG",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "7100326680",
+                "NOME": "POLIANA CRISTINA FERNANDES COLOZIO",
+                "IDADE": "41 anos",
+                "LOCAL": "CONGONHAS\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "GERDAU ACOMINAS S\/A",
+            "CNPJ": "17227422000105",
+            "CIDADE": "OURO BRANCO-MG",
+            "PROFISSAO": "821110",
+            "DATA_ADMISSAO": "10\/09\/2001",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

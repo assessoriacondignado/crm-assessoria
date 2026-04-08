@@ -1,0 +1,175 @@
+{
+    "CADASTRAIS": {
+        "CPF": "98724762687",
+        "NOME": "ADERSON TORRICELLI ANTONIO DE OLIVEIRA",
+        "NOME_MAE": "GENY DIAS DE OLIVEIRA",
+        "NASCTO": "27\/05\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1246449657",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "811010",
+        "PROFISSAO": "OPERADOR DE SALA DE CONTROLE DE INSTALACOES QUIMICAS, PETROQUIMICAS E AFINS",
+        "SALARIO": " 5.557,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3232515941",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3232153953",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "32988139435",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "32988939990",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "32999039835",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "32988720391",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "32988052877",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "aderlli@yahoo.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOSE LUIZ DOS REIS",
+                "NUMERO": "20",
+                "COMPLEMENTO": "A",
+                "BAIRRO": "FLORES",
+                "CEP": "36240202",
+                "CIDADE": "SANTOS DUMONT",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R BR S JOAO NEPOMUCENO",
+                "NUMERO": "226",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "37458000",
+                "CIDADE": "ALAGOA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R ORLANDO NERIO ROSSI",
+                "NUMERO": "115",
+                "COMPLEMENTO": "C FS",
+                "BAIRRO": "CABANGU",
+                "CEP": "36242364",
+                "CIDADE": "SANTOS DUMONT",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RUA BARAO DE SAO JOAO NEPOMUCENO",
+                "NUMERO": "226",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "36010081",
+                "CIDADE": "JUIZ DE FORA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R JOSE LUIZ DOS REIS",
+                "NUMERO": "20",
+                "COMPLEMENTO": "",
+                "BAIRRO": "FLORES",
+                "CEP": "36240000",
+                "CIDADE": "SANTOS DUMONT",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "173159648",
+            "NOME": "GENY DIAS DE OLIVEIRA",
+            "IDADE": "95 anos",
+            "LOCAL": "TEOFILO OTONI\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "PALMYRA DO BRASIL INDUSTRIA E COMERCIO DE SILICIO METALICO E RECURSOS NATURAIS LTDA.",
+            "CNPJ": "04872297001612",
+            "CIDADE": "SANTOS DUMONT-MG",
+            "PROFISSAO": "811010",
+            "DATA_ADMISSAO": "01\/12\/2011",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

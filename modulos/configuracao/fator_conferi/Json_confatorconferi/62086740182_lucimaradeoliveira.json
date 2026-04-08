@@ -1,0 +1,180 @@
+{
+    "CADASTRAIS": {
+        "CPF": "62086740182",
+        "NOME": "LUCI MARA DE OLIVEIRA",
+        "NOME_MAE": "MERCEDES MOURA",
+        "NASCTO": "23\/04\/1976",
+        "IDADE": "50 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "018860391872",
+        "NIT": "1266493929",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "413105",
+        "PROFISSAO": "ANALISTA DE FOLHA DE PAGAMENTO",
+        "SALARIO": " 3.000,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4832630303",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2732617241",
+                "OPERADORA": "TELEMAR\/ES",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "48999615522",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "48991657782",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "09\/05\/2020",
+                "TIPO_TEL": "MOVEL PRE-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "48998653380",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "14\/02\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "27999989038",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "27995257287",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "lucimarabruna@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CARIACICA",
+                "NUMERO": "8",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "IPIRANGA",
+                "CEP": "29201160",
+                "CIDADE": "GUARAPARI",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "R CARIACICA",
+                "NUMERO": "16",
+                "COMPLEMENTO": "NULL",
+                "BAIRRO": "IPIRANGA",
+                "CEP": "29201160",
+                "CIDADE": "GUARAPARI",
+                "ESTADO": "ES"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "625742729",
+            "NOME": "MERCEDES MOURA",
+            "IDADE": "109 anos",
+            "LOCAL": "AREAL\/RJ",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CONTASS - CONTABILIDADE E ASSESSORIA LTDA",
+                "CNPJ": "27740026000122",
+                "CIDADE": "GUARAPARI-ES",
+                "PROFISSAO": "413105",
+                "DATA_ADMISSAO": "12\/02\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SMART ASSESSORIA CONTABIL LTDA",
+                "CNPJ": "06030595000104",
+                "CIDADE": "SAO JOAO BATISTA-SC",
+                "PROFISSAO": "413105",
+                "DATA_ADMISSAO": "18\/03\/2020",
+                "DATA_DEMISSAO": "04\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "PREMIER ASSESSORIA EMPRESARIAL LTDA",
+                "CNPJ": "05256000000170",
+                "CIDADE": "SAO JOAO BATISTA-SC",
+                "PROFISSAO": "413110",
+                "DATA_ADMISSAO": "13\/06\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "C.A GUEDES MARCIAL",
+                "CNPJ": "12268112000107",
+                "CIDADE": "GUARAPARI-ES",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "02\/01\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

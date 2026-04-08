@@ -1,0 +1,172 @@
+{
+    "CADASTRAIS": {
+        "CPF": "10526517808",
+        "NOME": "ADRIANO EMERSON V LOPES",
+        "NOME_MAE": "CREUSA VIEIRA LOPES",
+        "NASCTO": "12\/12\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "212356537",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "181224230124",
+        "NIT": "12275185013",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "233110",
+        "PROFISSAO": "PROFESSOR DE DESENHO TECNICO",
+        "SALARIO": " 2.156,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1735227727",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1135227727",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "17981255867",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11996802330",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "17991183134",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "adriano@catanduva.sesc.org.br",
+            "adriano@catanduva.sescsp.org.br",
+            "adriano@catanduva.feftft.og.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R SERGIPE",
+                "NUMERO": "478",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "15800100",
+                "CIDADE": "CATANDUVA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R QUINZE DE NOVEMBRO",
+                "NUMERO": "754",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S FRANCISCO",
+                "CEP": "15806060",
+                "CIDADE": "CATANDUVA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FORMOSA",
+                "NUMERO": "117",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ RES FLAMING",
+                "CEP": "15803220",
+                "CIDADE": "CATANDUVA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "2939383855",
+                "NOME": "CREUSA VIEIRA LOPES",
+                "IDADE": "77 anos",
+                "LOCAL": "SAO JOSE DO RIO PRETO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "31207632848",
+                "NOME": "MAIRA CRISTINA VIEIRA LOPES",
+                "IDADE": "43 anos",
+                "LOCAL": "SAO JOSE DO RIO PRETO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SERVICO SOCIAL DO COMERCIO - SESC - ADMINISTRACAO REGIONAL NO ESTADO DE SAO PAULO",
+                "CNPJ": "03667884000201",
+                "CIDADE": "CATANDUVA-SP",
+                "PROFISSAO": "224120",
+                "DATA_ADMISSAO": "05\/09\/2000",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CENTRO ESTADUAL DE EDUCACAO TECNOLOGICA PAULA SOUZA",
+                "CNPJ": "62823257005402",
+                "CIDADE": "CATANDUVA-SP",
+                "PROFISSAO": "232115",
+                "DATA_ADMISSAO": "12\/06\/2006",
+                "DATA_DEMISSAO": "{Ã±\/{Ã±\/2023",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "CENTRO ESTADUAL DE EDUCACAO TECNOLOGICA PAULA SOUZA",
+                "CNPJ": "62823257000109",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "233110",
+                "DATA_ADMISSAO": "12\/06\/2006",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

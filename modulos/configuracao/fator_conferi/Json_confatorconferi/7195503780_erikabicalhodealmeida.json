@@ -1,0 +1,291 @@
+{
+    "CADASTRAIS": {
+        "CPF": "7195503780",
+        "NOME": "ERIKA BICALHO DE ALMEIDA",
+        "NOME_MAE": "MARIA GRACAS BICALHO ALMEIDA",
+        "NASCTO": "21\/10\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Feminino",
+        "RG": "7228626",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "089634670353",
+        "NIT": "12970874344",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "223505",
+        "PROFISSAO": "ENFERMEIRO",
+        "SALARIO": " 1.664,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3232221671",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "3240095119",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "3232411876",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "08\/01\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3232371252",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3240095118",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11945335837",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "32991164199",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "32988040476",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "32988040475",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "32991406836",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "plinioweber@yahoo.com.br",
+            "erikaba75@gmail.com",
+            "ebicalhoenf@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV DR CARLOS SOARES",
+                "NUMERO": "817",
+                "COMPLEMENTO": "AP 202",
+                "BAIRRO": "NS LOURDES",
+                "CEP": "36520000",
+                "CIDADE": "VISCONDE DO RIO BRANCO",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "AV ERNANI DO AMARAL PEIXOTO",
+                "NUMERO": "195",
+                "COMPLEMENTO": "AP 504",
+                "BAIRRO": "CENTRO",
+                "CEP": "24020071",
+                "CIDADE": "NITEROI",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R OLEGARIO MACIEL",
+                "NUMERO": "403",
+                "COMPLEMENTO": "BL C",
+                "BAIRRO": "STA HELENA",
+                "CEP": "36015350",
+                "CIDADE": "JUIZ DE FORA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R ENERGINA ERNESTO GUILHERME",
+                "NUMERO": "118",
+                "COMPLEMENTO": "",
+                "BAIRRO": "LOURDES",
+                "CEP": "36070540",
+                "CIDADE": "JUIZ DE FORA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R MAL DEODORO",
+                "NUMERO": "331",
+                "COMPLEMENTO": "AP 202",
+                "BAIRRO": "JD VINTE E CINCO DE AGOSTO",
+                "CEP": "25071190",
+                "CIDADE": "DUQUE DE CAXIAS",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R ARTHUR LUCAS DA SILVA",
+                "NUMERO": "120",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STO ANTONIO",
+                "CEP": "36071300",
+                "CIDADE": "JUIZ DE FORA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "AVELINO CARDOSO",
+                "NUMERO": "270",
+                "COMPLEMENTO": "AP 402",
+                "BAIRRO": "COND GLADSTON",
+                "CEP": "36520000",
+                "CIDADE": "VISCONDE DO RIO BRANCO",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RUA JOSE LOURENCO",
+                "NUMERO": "489",
+                "COMPLEMENTO": "CS 8",
+                "BAIRRO": "SAO PEDRO",
+                "CEP": "36036230",
+                "CIDADE": "JUIZ DE FORA",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "8070677767",
+                "NOME": "FERNANDA BICALHO DE ALMEIDA PAPA",
+                "IDADE": "47 anos",
+                "LOCAL": "UBA\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "8165392603",
+                "NOME": "MARIA EDUARDA DE ALMEIDA PIRES",
+                "IDADE": "26 anos",
+                "LOCAL": "JUIZ DE FORA\/MG",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "10974850640",
+                "NOME": "ANA BEATRIZ DE ALMEIDA PIRES",
+                "IDADE": "20 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "CLEUZA DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "JUIZ DE FORA\/MG",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "3277861678"
+            },
+            {
+                "NOME": "PLINIO WEBER SOARES",
+                "IDADE": "",
+                "LOCALIDADE": "JUIZ DE FORA\/MG",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "5050035627"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SUPREMA-SOCIEDADE UNIVERSITARIA PARA O ENSINO MEDICO ASSISTENCIAL LTDA",
+                "CNPJ": "05079440000108",
+                "CIDADE": "JUIZ DE FORA-MG",
+                "PROFISSAO": "234435",
+                "DATA_ADMISSAO": "06\/02\/2006",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "UNIVERSIDADE FEDERAL DE JUIZ DE FORA UFJF",
+                "CNPJ": "21195755000240",
+                "CIDADE": "JUIZ DE FORA-MG",
+                "PROFISSAO": "223505",
+                "DATA_ADMISSAO": "03\/11\/2003",
+                "DATA_DEMISSAO": "{Ã±\/{Ã±\/2023",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "FUNDACAO HOSPITALAR DO ESTADO DE MINAS GERAIS",
+                "CNPJ": "19843929000100",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "223505",
+                "DATA_ADMISSAO": "13\/10\/2004",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

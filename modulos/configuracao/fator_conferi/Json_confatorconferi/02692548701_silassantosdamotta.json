@@ -1,0 +1,253 @@
+{
+    "CADASTRAIS": {
+        "CPF": "2692548701",
+        "NOME": "SILAS SANTOS DA MOTTA",
+        "NOME_MAE": "SENIRA DUARTE DA MOTTA",
+        "NASCTO": "06\/09\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "9796513131",
+        "ORGAO_EMISSOR": "IFP",
+        "UF_EMISSAO": "RJ",
+        "TITULO_ELEITOR": "084562300370",
+        "NIT": "1263112560",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "314110",
+        "PROFISSAO": "TECNICO MECANICO",
+        "SALARIO": " 8.422,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2227651338",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "2227721413",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "21\/11\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "22999101315",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "22999117979",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "22999880765",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "22999249568",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "22998153368",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "18\/05\/2020",
+                "TIPO_TEL": "MOVEL PRE-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "zilazmotta@yahoo.com.br",
+            "silasmotta@yahoo.com",
+            "silvabuge@hotmail.com",
+            "mstr_silassmotta@gmail.com",
+            "silassmotta@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOAO BATISTA DE LIMA",
+                "NUMERO": "123",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RIVIERA FLUMINENSE",
+                "CEP": "27935190",
+                "CIDADE": "MACAE",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R ALOISIO RANDOLFO PAIVA",
+                "NUMERO": "30",
+                "COMPLEMENTO": "CS 30",
+                "BAIRRO": "JARDIM SANTO ANTONIO",
+                "CEP": "27945720",
+                "CIDADE": "MACAE",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R VISCONDE DE QUISSAMA",
+                "NUMERO": "168",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CENTRO",
+                "CEP": "27910020",
+                "CIDADE": "MACAE",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA SECRETARIO RUBENS FALCAO",
+                "NUMERO": "80",
+                "COMPLEMENTO": "CS 7",
+                "BAIRRO": "VISCONDE DE ARAUJO",
+                "CEP": "27940310",
+                "CIDADE": "MACAE",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA SECRETARIO RUBENS FALCAO",
+                "NUMERO": "10",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VISCONDE DE ARAUJO",
+                "CEP": "27940310",
+                "CIDADE": "MACAE",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA FREI BALTAZAR",
+                "NUMERO": "90",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "JARDIM SANTO ANTONIO",
+                "CEP": "27945030",
+                "CIDADE": "MACAE",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA MARIO SIQUEIRA",
+                "NUMERO": "576",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOTAFOGO",
+                "CEP": "13020210",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOUTOR TELIO BARRETO",
+                "NUMERO": "1003",
+                "COMPLEMENTO": "A",
+                "BAIRRO": "CENTRO",
+                "CEP": "27910060",
+                "CIDADE": "MACAE",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "76036472749",
+                "NOME": "SENIRA DUARTE DA MOTTA",
+                "IDADE": "89 anos",
+                "LOCAL": "MACAE\/RJ",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "3072719780",
+                "NOME": "DELGA SANTOS DA MOTTA",
+                "IDADE": "54 anos",
+                "LOCAL": "CAMPOS DOS GOYTACAZES\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "3937802797",
+                "NOME": "EDINEA SANTOS DA MOTTA DOS SANTOS",
+                "IDADE": "57 anos",
+                "LOCAL": "MACAE\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "9148918717",
+                "NOME": "PEDRO MARLON SANTOS DA MOTTA",
+                "IDADE": "46 anos",
+                "LOCAL": "CAMPOS DOS GOYTACAZES\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "57102236700",
+                "NOME": "CINEIA DA MOTTA DOS SANTOS",
+                "IDADE": "71 anos",
+                "LOCAL": "MACAE\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "88284077787",
+                "NOME": "DEBORA MOTTA DA COSTA",
+                "IDADE": "60 anos",
+                "LOCAL": "MACAE\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "MARISTELA ALVES DA SILVA BUGE",
+            "IDADE": "",
+            "LOCALIDADE": "DOMINGOS MARTINS\/ES",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "37708635772"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "SCHLUMBERGER SERVICOS DE PETROLEO LTDA",
+            "CNPJ": "32319931002863",
+            "CIDADE": "MACAE-RJ",
+            "PROFISSAO": "314110",
+            "DATA_ADMISSAO": "01\/12\/2020",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

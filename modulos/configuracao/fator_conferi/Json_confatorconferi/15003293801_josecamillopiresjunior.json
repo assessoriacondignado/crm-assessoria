@@ -1,0 +1,169 @@
+{
+    "CADASTRAIS": {
+        "CPF": "15003293801",
+        "NOME": "JOSE CAMILLO PIRES JUNIOR",
+        "NOME_MAE": "ALICE MARCHI CAMILLO JUNIOR",
+        "NASCTO": "06\/05\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "204135350141",
+        "NIT": "1241003383",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "415210",
+        "PROFISSAO": "OPERADOR DE TRIAGEM E TRANSBORDO",
+        "SALARIO": " 5.383,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1932293345",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1132293345",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19971467111",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19996343396",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19998284895",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "edilenedarisao@uol.com.br",
+            "edilene@correios.com.br",
+            "jcamillojunior@uol.com.br",
+            "edilenebarisao@uol.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PEDRO BRAGA",
+                "NUMERO": "151",
+                "COMPLEMENTO": "51 A",
+                "BAIRRO": "PRQ ITALIA",
+                "CEP": "13036135",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO TEIXEIRA DE CAMARGO",
+                "NUMERO": "47",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SOUSAS",
+                "CEP": "13106032",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R TEIXEIRA VASCONCELOS",
+                "NUMERO": "47",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM GARCIA",
+                "CEP": "13061077",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV TRANSAMAZONICA",
+                "NUMERO": "489",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM GARCIA",
+                "CEP": "13061100",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV PRES VARGAS",
+                "NUMERO": "637",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "JD J OMETTO II",
+                "CEP": "13606360",
+                "CIDADE": "ARARAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FREI MANOEL DA RESSURREICAO",
+                "NUMERO": "381",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM GUANABARA",
+                "CEP": "13073221",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ARLINDO FLORENCIO VAZ",
+            "IDADE": "",
+            "LOCALIDADE": "PAULINIA\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "67762980849"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "EMPRESA BRASILEIRA DE CORREIOS E TELEGRAFOS",
+            "CNPJ": "34028316216890",
+            "CIDADE": "INDAIATUBA-SP",
+            "PROFISSAO": "415210",
+            "DATA_ADMISSAO": "18\/04\/1994",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

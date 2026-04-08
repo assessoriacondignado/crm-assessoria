@@ -1,0 +1,236 @@
+{
+    "CADASTRAIS": {
+        "CPF": "77705858215",
+        "NOME": "NORBERTO PEREIRA DIAS",
+        "NOME_MAE": "FRANCISCA DIAS DO CARMO",
+        "NASCTO": "29\/07\/1982",
+        "IDADE": "43 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12803063028",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "203210",
+        "PROFISSAO": "PESQUISADOR DE ENGENHARIA E TECNOLOGIA (OUTRAS AREAS DA ENGENHARIA)",
+        "SALARIO": " 3.919,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9233048095",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "10\/02\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9232480538",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92984053346",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92984034374",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92984197795",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92993712551",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92992654756",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "norberto.dias1@gmail.com",
+            "betto_dias@hotmail.com",
+            "pollymonteiroj@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PROF CALDAS LINS",
+                "NUMERO": "9999",
+                "COMPLEMENTO": "ELIZA MIRANDA",
+                "BAIRRO": "JAPIIM",
+                "CEP": "69077745",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R PROF CALDAS LINS",
+                "NUMERO": "301",
+                "COMPLEMENTO": "BL D MIRANDA E",
+                "BAIRRO": "JAPIIM",
+                "CEP": "69077745",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R PARAIBA DO SUL",
+                "NUMERO": "22",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JORGE TEIXEIRA",
+                "CEP": "69088033",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "TV LIMAO",
+                "NUMERO": "37",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COROADO",
+                "CEP": "69082180",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV RODRIGO OTAVIO",
+                "NUMERO": "1866",
+                "COMPLEMENTO": "MOD 28",
+                "BAIRRO": "JAPIIM",
+                "CEP": "69077000",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R CRISTAIS PAULISTA",
+                "NUMERO": "188",
+                "COMPLEMENTO": "SAO JOSE 1",
+                "BAIRRO": "TANCREDO NEVES",
+                "CEP": "69087661",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R DR EDSON STANISLAU AFONSO",
+                "NUMERO": "500",
+                "COMPLEMENTO": "A",
+                "BAIRRO": "S JORGE",
+                "CEP": "69033040",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R PAULO EDUARDO DE LIMA",
+                "NUMERO": "12",
+                "COMPLEMENTO": "CJT",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69095670",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "7827865291",
+            "NOME": "FRANCISCA DIAS DO CARMO",
+            "IDADE": "67 anos",
+            "LOCAL": "MANAUS\/AM",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "POLLYANNA VIANA MONTEIRO",
+            "IDADE": "",
+            "LOCALIDADE": "MANAUS\/AM",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "66284449291"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LG ELECTRONICS DO BRASIL LTDA",
+                "CNPJ": "01166372000821",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "252545",
+                "DATA_ADMISSAO": "16\/07\/2010",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "AELBRA EDUCACAO SUPERIOR - GRADUACAO E POS-GRADUACAO S.A. EM RECUPERACAO JUDICIAL",
+                "CNPJ": "88332580002451",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "234505",
+                "DATA_ADMISSAO": "04\/04\/2022",
+                "DATA_DEMISSAO": "01\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "LG ELECTRONICS DA AMAZONIA LTDA",
+                "CNPJ": "00801450000183",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "203210",
+                "DATA_ADMISSAO": "16\/07\/2010",
+                "DATA_DEMISSAO": "29\/02\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

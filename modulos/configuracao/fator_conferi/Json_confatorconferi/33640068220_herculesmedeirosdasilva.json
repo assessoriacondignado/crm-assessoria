@@ -1,0 +1,237 @@
+{
+    "CADASTRAIS": {
+        "CPF": "33640068220",
+        "NOME": "HERCULES MEDEIROS DA SILVA",
+        "NOME_MAE": "MARIA DO CARMO MEDEIROS DA SILVA",
+        "NASCTO": "12\/06\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9236347251",
+            "OPERADORA": "TELEMAR\/AM",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "baixa"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92992306275",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92984180187",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92991725405",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92992593922",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92991683616",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "hmsclimatizacao.manaus@gmail.com",
+            "hercules.medeiros2010@hotmail.com",
+            "hercules.medeiros@uol.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV CUPIUBA",
+                "NUMERO": "10",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DT INDUST I",
+                "CEP": "69075060",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "TV ROUXINOL",
+                "NUMERO": "3",
+                "COMPLEMENTO": "CJ ASTECA III",
+                "BAIRRO": "COROADO",
+                "CEP": "69080160",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R JURUA",
+                "NUMERO": "3",
+                "COMPLEMENTO": "COND O NEGRO",
+                "BAIRRO": "COROADO",
+                "CEP": "69082680",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "TV ROUXINOL",
+                "NUMERO": "19",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COROADO",
+                "CEP": "69080160",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV AUTAZ MIRIM",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SAO JOSE OPERARIO",
+                "CEP": "69085000",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R FAUSTO VENTURA CONCEICAO",
+                "NUMERO": "3",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COROADO",
+                "CEP": "69082816",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AVENIDA CUPIUBA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "10",
+                "BAIRRO": "DISTRITO INDUSTRIAL I",
+                "CEP": "69075060",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "943164303",
+            "NOME": "MARIA DO CARMO MEDEIROS DA SILVA",
+            "IDADE": "52 anos",
+            "LOCAL": "HUMBERTO DE CAMPOS\/MA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TECPLAM INDUSTRIA ELETRONICA LTDA",
+                "CNPJ": "01775542000107",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "730105",
+                "DATA_ADMISSAO": "18\/09\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FLEXTRONICS INTERNATIONAL TECNOLOGIA LTDA",
+                "CNPJ": "74404229000802",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "09\/09\/2022",
+                "DATA_DEMISSAO": "16\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "ELCOA INDUSTRIA E COMERCIO LTDA.",
+                "CNPJ": "02782499000242",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "25\/11\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "I-SHENG BRASIL INDUSTRIA E COMERCIO DE COMPONENTES ELETRONICOS LTDA",
+                "CNPJ": "04547098000152",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "391105",
+                "DATA_ADMISSAO": "02\/09\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "GK B INDUSTRIA DE COMPONENTES DA AMAZONIA LTDA",
+                "CNPJ": "63674543000104",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "391105",
+                "DATA_ADMISSAO": "17\/10\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "TERMOTECNICA DA AMAZONIA LTDA",
+                "CNPJ": "04326294000105",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "391205",
+                "DATA_ADMISSAO": "10\/10\/2006",
+                "DATA_DEMISSAO": "406",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

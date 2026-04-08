@@ -1,0 +1,115 @@
+{
+    "CADASTRAIS": {
+        "CPF": "1698216920",
+        "NOME": "RITA DE CASSIA MORALES ARIGUCI",
+        "NOME_MAE": "CLEUZA MARIA ROMANI MORALEI",
+        "NASCTO": "30\/03\/1976",
+        "IDADE": "50 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "056224190620",
+        "NIT": "1247771871",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "413225",
+        "PROFISSAO": "ESCRITURARIO DE BANCO",
+        "SALARIO": " 12.455,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4432342120",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4432346608",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "44999256990",
+            "OPERADORA": "TIM CELULAR S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "MOVEL",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": {
+        "EMAIL": "ritinhamoralez@yahoo.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R S LUIZ",
+                "NUMERO": "287",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ASTORGA",
+                "CEP": "86730000",
+                "CIDADE": "ASTORGA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R M ADY ARAUJO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "Q D LT 5",
+                "BAIRRO": "JD CENTRAL",
+                "CEP": "86730000",
+                "CIDADE": "ASTORGA",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "7551287965",
+                "NOME": "MURILO MORALES ARIGUCI",
+                "IDADE": "19 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "11174343974",
+                "NOME": "MATEUS MORALES ARIGUCI",
+                "IDADE": "14 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+            "CNPJ": "00000000047660",
+            "CIDADE": "ASTORGA-PR",
+            "PROFISSAO": "413225",
+            "DATA_ADMISSAO": "21\/08\/2000",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

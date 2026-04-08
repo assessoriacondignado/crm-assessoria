@@ -1,0 +1,244 @@
+{
+    "CADASTRAIS": {
+        "CPF": "22056325829",
+        "NOME": "MARCELO GAZIOLA",
+        "NOME_MAE": "MARIA HELENA GANDOLPHO GAZIOLA",
+        "NASCTO": "08\/03\/1980",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "256203800167",
+        "NIT": "12995834850",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212405",
+        "PROFISSAO": "ANALISTA DE DESENVOLVIMENTO DE SISTEMAS",
+        "SALARIO": " 9.666,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1123765423",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1142256427",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1142259200",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1123111275",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "16\/09\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1142276619",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11974060450",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11980677189",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11974694399",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "17\/06\/2009",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marcelo.gaziola@yahoo.com.br",
+            "marcelo.gasiola@terra.com.br",
+            "gaziola@bol.com.br",
+            "gaziola@uol.com.br",
+            "marcelo-gaziola@br.mahle.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R HUMBERTO FERNANDES FORTES",
+                "NUMERO": "60",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S JOSE",
+                "CEP": "09570600",
+                "CIDADE": "SAO CAETANO DO SUL",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R VOTORANTIM",
+                "NUMERO": "60",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BARCELONA",
+                "CEP": "09550300",
+                "CIDADE": "SAO CAETANO DO SUL",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R HUMBERTO F FORTES",
+                "NUMERO": "391",
+                "COMPLEMENTO": "AP02BL69",
+                "BAIRRO": "S JOSE",
+                "CEP": "09570600",
+                "CIDADE": "SAO CAETANO DO SUL",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA VOTORANTIM",
+                "NUMERO": "6",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BARCELONA",
+                "CEP": "09550300",
+                "CIDADE": "SAO CAETANO DO SUL",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "30563381825",
+                "NOME": "MARIA HELENA GANDOLPHO GAZIOLA",
+                "IDADE": "75 anos",
+                "LOCAL": "SAO CAETANO DO SUL\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "30785293809",
+                "NOME": "MICHELE GAZIOLA",
+                "IDADE": "42 anos",
+                "LOCAL": "SAO CAETANO DO SUL\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "JANDIRA ROMUALDA DA SILVA PEREIRA",
+                "IDADE": "",
+                "LOCALIDADE": "PATOS DE MINAS\/MG",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "4133566637"
+            },
+            {
+                "NOME": "JOSE MARIA DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO BERNARDO DO CAMPO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "30951284878"
+            },
+            {
+                "NOME": "MARCELO COIMBRA GAZIOLA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO BERNARDO DO CAMPO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "26262458875"
+            },
+            {
+                "NOME": "WILSON GAZIOLA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "64968308868"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CASAS BAHIA TECNOLOGIA LTDA.",
+                "CNPJ": "42516173000107",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "01\/08\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "GRUPO CASAS BAHIA S.A.",
+                "CNPJ": "33041260120143",
+                "CIDADE": "SAO CAETANO DO SUL-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "01\/01\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "NOVA CASA BAHIA S\/A",
+                "CNPJ": "10757237000922",
+                "CIDADE": "SAO CAETANO DO SUL-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "01\/11\/2005",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

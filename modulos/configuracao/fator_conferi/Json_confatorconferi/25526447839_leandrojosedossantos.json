@@ -1,0 +1,384 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25526447839",
+        "NOME": "LEANDRO JOSE DOS SANTOS",
+        "NOME_MAE": "MARIA APARECIDA DOS SANTOS",
+        "NASCTO": "15\/12\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "247722169",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "235592830183",
+        "NIT": "12414634067",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782410",
+        "PROFISSAO": "MOTORISTA DE ONIBUS URBANO",
+        "SALARIO": " 1.593,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1936667022",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1936565999",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1936654803",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1936656149",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "08\/10\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "1936561551",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "15997532204",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19988548889",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19991435632",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19991093277",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19981273828",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "lj100santos@bol.com.br",
+            "leandroj-sant@bol.com.br",
+            "leandro@usinaipiranga.com.br",
+            "leandro@ipirangaagro.com.br",
+            "tutifrutihortela@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV PAULISTA",
+                "NUMERO": "287",
+                "COMPLEMENTO": "AND 3",
+                "BAIRRO": "BELA VISTA",
+                "CEP": "01311000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PERNAMBUCO",
+                "NUMERO": "212",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL STA ROSA",
+                "CEP": "13731250",
+                "CIDADE": "MOCOCA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PARA",
+                "NUMERO": "314",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL STA ROSA",
+                "CEP": "13731220",
+                "CIDADE": "MOCOCA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV CHRISTOVAM LIMA GUEDES",
+                "NUMERO": "1340",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL LAMBARI",
+                "CEP": "13731000",
+                "CIDADE": "MOCOCA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R REINALDO CALIL",
+                "NUMERO": "617",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JD BOTANICO SOUSAS",
+                "CEP": "13106220",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PARAGUAI",
+                "NUMERO": "69",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM LAVINIA",
+                "CEP": "13736278",
+                "CIDADE": "MOCOCA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "VENEZUELA",
+                "NUMERO": "197",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "JARDIM LAVINIA",
+                "CEP": "13736220",
+                "CIDADE": "MOCOCA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CARMO TALIBERTI",
+                "NUMERO": "452",
+                "COMPLEMENTO": "BRO CENTRO",
+                "BAIRRO": "CENTRO",
+                "CEP": "13730010",
+                "CIDADE": "MOCOCA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1160680",
+            "NOME": "MARIA APARECIDA DOS SANTOS",
+            "IDADE": "74 anos",
+            "LOCAL": "RAPOSOS\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "CLAUDIA MARA DOS SANTOS",
+                "IDADE": "",
+                "LOCALIDADE": "MOCOCA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "24618945826"
+            },
+            {
+                "NOME": "LEANDRO JOSE DOS SANTOS",
+                "IDADE": "",
+                "LOCALIDADE": "POUSO ALEGRE\/MG",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "7379657623"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "IPIRANGA AGROINDUSTRIAL S.A.",
+                "CNPJ": "07280328001715",
+                "CIDADE": "MOCOCA-SP",
+                "PROFISSAO": "123405",
+                "DATA_ADMISSAO": "01\/06\/2015",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "USINA IPIRANGA DE ACUCAR E ALCOOL S.A.",
+                "CNPJ": "47544176000259",
+                "CIDADE": "MOCOCA-SP",
+                "PROFISSAO": "142105",
+                "DATA_ADMISSAO": "01\/04\/2008",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "EXPRESSO MANGARATIBA LTDA",
+                "CNPJ": "31916059000310",
+                "CIDADE": "ITAGUAI-RJ",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "04\/02\/2011",
+                "DATA_DEMISSAO": "806",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": [
+            {
+                "RAZAO_SOCIAL": "IPIRANGA BIOENERGIA IACANGA II S.A",
+                "CNPJ": "57990904000129",
+                "CIDADE": "IACANGA-SP",
+                "QUALIFICACAO": "Diretor",
+                "DATA_ENTRADA": "20241106",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "IPIRANGA BIOENERGIA MOCOCA II S\/A",
+                "CNPJ": "44102764000163",
+                "CIDADE": "MOCOCA-SP",
+                "QUALIFICACAO": "Diretor",
+                "DATA_ENTRADA": "20240822",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "IPIRANGA AGRICOLA LTDA",
+                "CNPJ": "39337370000154",
+                "CIDADE": "MOCOCA-SP",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20240822",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "IPIRANGA AGRICOLA LTDA",
+                "CNPJ": "39337370000588",
+                "CIDADE": "SANTA ROSA DE VITERBO-SP",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20240822",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "IPIRANGA AGRICOLA LTDA",
+                "CNPJ": "39337370000405",
+                "CIDADE": "TAMBAU-SP",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20240822",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "IPIRANGA AGRICOLA LTDA",
+                "CNPJ": "39337370000740",
+                "CIDADE": "PASSOS-MG",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20240822",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "IPIRANGA BIOENERGIA MOCOCA S.A.",
+                "CNPJ": "31109398000122",
+                "CIDADE": "MOCOCA-SP",
+                "QUALIFICACAO": "Diretor",
+                "DATA_ENTRADA": "20240822",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "IPIRANGA AGRICOLA LTDA",
+                "CNPJ": "39337370000820",
+                "CIDADE": "IACANGA-SP",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20240822",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "IPIRANGA AGRICOLA LTDA",
+                "CNPJ": "39337370000235",
+                "CIDADE": "DESCALVADO-SP",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20240822",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "IPIRANGA AGRICOLA LTDA",
+                "CNPJ": "39337370000669",
+                "CIDADE": "REGINOPOLIS-SP",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20240822",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "IPIRANGA AGRICOLA LTDA",
+                "CNPJ": "39337370000316",
+                "CIDADE": "BALBINOS-SP",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20240822",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "IPIRANGA BIOENERGIA IACANGA S\/A",
+                "CNPJ": "25206734000152",
+                "CIDADE": "IACANGA-SP",
+                "QUALIFICACAO": "Diretor",
+                "DATA_ENTRADA": "20240820",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "VERDE LIMAO BOUTIQUE LTDA",
+                "CNPJ": "55095046000123",
+                "CIDADE": "MOCOCA-SP",
+                "QUALIFICACAO": "SÃ³cio",
+                "DATA_ENTRADA": "20211118",
+                "VALOR_PARTICIPACAO": ""
+            }
+        ]
+    }
+}

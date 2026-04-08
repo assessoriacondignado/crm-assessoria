@@ -1,0 +1,158 @@
+{
+    "CADASTRAIS": {
+        "CPF": "654883009",
+        "NOME": "THOMAZ SESSEGOLO M ALMEIDA",
+        "NOME_MAE": "SUZANA LIED SESSEGOLO MARQUES DE ALMEIDA",
+        "NASCTO": "16\/11\/1984",
+        "IDADE": "41 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "085841600493",
+        "NIT": "12750424692",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "413225",
+        "PROFISSAO": "ESCRITURARIO DE BANCO",
+        "SALARIO": " 2.807,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8335781774",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5135436600",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5130391346",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51992741194",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51992385033",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "thomazparobe@bb.com.br",
+            "thomazsma@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "R IPE",
+            "NUMERO": "43",
+            "COMPLEMENTO": "",
+            "BAIRRO": "CENTRO",
+            "CEP": "93800214",
+            "CIDADE": "SAPIRANGA",
+            "ESTADO": "RS"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "38582139004",
+                "NOME": "SUZANA LIED SESSEGOLO MARQUES DE ALMEIDA",
+                "IDADE": "67 anos",
+                "LOCAL": "SAPIRANGA\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "951208071",
+                "NOME": "THIAGO SESSEGOLO MARQUES DE ALMEIDA",
+                "IDADE": "41 anos",
+                "LOCAL": "SAPIRANGA\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "96676663015",
+                "NOME": "ANA LUISA SESSEGOLO MARQUES DE ALMEIDA",
+                "IDADE": "44 anos",
+                "LOCAL": "NOVO HAMBURGO\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000721921",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "08\/12\/2008",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000187160",
+                "CIDADE": "TEUTONIA-RS",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "24\/03\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000332275",
+                "CIDADE": "PAROBE-RS",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "08\/12\/2008",
+                "DATA_DEMISSAO": "23\/03\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

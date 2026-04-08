@@ -1,0 +1,96 @@
+{
+    "CADASTRAIS": {
+        "CPF": "7004545199",
+        "NOME": "YORRANA ELIAS MELQUIDES",
+        "NOME_MAE": "CLECIONEIDE ELIAS DE ARAUJO",
+        "NASCTO": "25\/10\/1999",
+        "IDADE": "26 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "21059475628",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "421125",
+        "PROFISSAO": "OPERADOR DE CAIXA",
+        "SALARIO": " 807,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "61992523857",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "61992758856",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "yorranamelquides@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "QNN 7",
+            "NUMERO": "0",
+            "COMPLEMENTO": "CS CO E 33",
+            "BAIRRO": "CEILANDIA NORTE CEILANDIA",
+            "CEP": "72225070",
+            "CIDADE": "BRASILIA",
+            "ESTADO": "DF"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "652241590",
+            "NOME": "CLECIONEIDE ELIAS DE ARAUJO",
+            "IDADE": "47 anos",
+            "LOCAL": "MANSIDAO\/BA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SENDAS DISTRIBUIDORA S\/A",
+                "CNPJ": "06057223053372",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "421125",
+                "DATA_ADMISSAO": "27\/12\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COMPANHIA BRASILEIRA DE DISTRIBUICAO",
+                "CNPJ": "47508411083000",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "421125",
+                "DATA_ADMISSAO": "02\/12\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

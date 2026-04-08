@@ -1,0 +1,238 @@
+{
+    "CADASTRAIS": {
+        "CPF": "18387540838",
+        "NOME": "ALEXANDRO DONIZETI DE SOUZA",
+        "NOME_MAE": "ORMINDA DONIZETI DE SOUZA",
+        "NASCTO": "24\/08\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "281630082",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "227168230124",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1239583211",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1239392852",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "26\/11\/2011",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1239317680",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "12981730105",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12991231487",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12960003692",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12981348757",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "alex_moche@zipmail.com.br",
+            "alex_moche@ig.com.br",
+            "alex_doni_souza@terra.com.br",
+            "alex-souza@live.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV DO CRISTAL",
+                "NUMERO": "355",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ CALIFORNIA",
+                "CEP": "12311210",
+                "CIDADE": "JACAREI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE COBRA",
+                "NUMERO": "561",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD VENEZA",
+                "CEP": "12237061",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOAO JOSE DA SILVA",
+                "NUMERO": "138",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD NOVA ESPERANCA",
+                "CEP": "12324680",
+                "CIDADE": "JACAREI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV ARNALDO DOS SANTOS CERDEIRA",
+                "NUMERO": "2000",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD ORIENTE",
+                "CEP": "12236380",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV ARNALDO DOS SANTOS CERDEIRA",
+                "NUMERO": "180",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD ORIENTE",
+                "CEP": "12236380",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "TV NOEMIA RETZ DA SILVA",
+                "NUMERO": "114",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL ALTO DE SANTO ANDRE",
+                "CEP": "09240510",
+                "CIDADE": "SANTO ANDRE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV CIDADE JARDIM",
+                "NUMERO": "2680",
+                "COMPLEMENTO": "BL B AP 24",
+                "BAIRRO": "BSQ DOS EUCALIPTOS",
+                "CEP": "12233002",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOSE JOVINO DA SILVA",
+                "NUMERO": "138",
+                "COMPLEMENTO": "BRO CRISTAL PARK",
+                "BAIRRO": "JARDIM CRYSTAL PARK",
+                "CEP": "12311253",
+                "CIDADE": "JACAREI",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "18387548812",
+                "NOME": "ORMINDA DONIZETI DE SOUZA",
+                "IDADE": "68 anos",
+                "LOCAL": "SAO JOSE DOS CAMPOS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "28882516806",
+                "NOME": "ERICA FERNANDA DE SOUZA",
+                "IDADE": "45 anos",
+                "LOCAL": "SAO JOSE DOS CAMPOS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "EMBRAER S.A.",
+                "CNPJ": "07689002000693",
+                "CIDADE": "SAO JOSE DOS CAMPOS-SP",
+                "PROFISSAO": "142520",
+                "DATA_ADMISSAO": "01\/01\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "YABORA INDUSTRIA AERONAUTICA S.A.",
+                "CNPJ": "30657250000674",
+                "CIDADE": "SAO JOSE DOS CAMPOS-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "08\/03\/2006",
+                "DATA_DEMISSAO": "31\/12\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "EMBRAER S.A.",
+                "CNPJ": "07689002000189",
+                "CIDADE": "SAO JOSE DOS CAMPOS-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "01\/04\/2006",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

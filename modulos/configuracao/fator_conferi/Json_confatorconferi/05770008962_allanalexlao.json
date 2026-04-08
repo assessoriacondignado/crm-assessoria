@@ -1,0 +1,266 @@
+{
+    "CADASTRAIS": {
+        "CPF": "5770008962",
+        "NOME": "ALLAN ALEX LAO",
+        "NOME_MAE": "MARIA DE LOURDES CAMARGO LAO",
+        "NASCTO": "28\/07\/1990",
+        "IDADE": "35 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "093259360604",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4336238135",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "4336238000",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4333623140",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "43999265988",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "43999644803",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "43999506821",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "18996762152",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "13\/06\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "allanlao@gmail.com",
+            "suzamaraeallan@hotmail.com",
+            "allan.lao@sealedair.com",
+            "allan_roma_50@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R RIO GRANDE DO SUL",
+                "NUMERO": "665",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "86160000",
+                "CIDADE": "PORECATU",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R GERALDO LOPES SILVA",
+                "NUMERO": "2990",
+                "COMPLEMENTO": "POMBAL 3",
+                "BAIRRO": "CAFEZAL",
+                "CEP": "86160000",
+                "CIDADE": "PORECATU",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "PRQ IND",
+                "NUMERO": "100",
+                "COMPLEMENTO": "PEDIO",
+                "BAIRRO": "CPONTORNO",
+                "CEP": "86160000",
+                "CIDADE": "PORECATU",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R VINTE E UM DE SETEMBRO",
+                "NUMERO": "759",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "86160000",
+                "CIDADE": "PORECATU",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R AUGUSTO FLAVIANO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "86160000",
+                "CIDADE": "PORECATU",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "RUA VL TORTA",
+                "NUMERO": "19",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "PQ INDUSTRIAL",
+                "CEP": "86160000",
+                "CIDADE": "PORECATU",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R M B PEREIRA LIMONGE",
+                "NUMERO": "102",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARANAPANEMA",
+                "CEP": "86160000",
+                "CIDADE": "PORECATU",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "8163687835",
+                "NOME": "MARIA DE LOURDES CAMARGO LAO",
+                "IDADE": "58 anos",
+                "LOCAL": "LONDRINA\/PR",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "4655054905",
+                "NOME": "ADRIANO CAMARGO LAO",
+                "IDADE": "41 anos",
+                "LOCAL": "PARANACITY\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "6857153965",
+                "NOME": "ANDRESSA CRISTINA LAO",
+                "IDADE": "29 anos",
+                "LOCAL": "PORECATU\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "MICROWEB DATACENTER LTDA",
+                "CNPJ": "11679746000190",
+                "CIDADE": "ASTORGA-PR",
+                "PROFISSAO": "732130",
+                "DATA_ADMISSAO": "16\/03\/2021",
+                "DATA_DEMISSAO": "31\/05\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ONN MULTIMIDIA LTDA",
+                "CNPJ": "28433716000100",
+                "CIDADE": "MARINGA-PR",
+                "PROFISSAO": "732130",
+                "DATA_ADMISSAO": "01\/06\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VOXX TELECOM LTDA",
+                "CNPJ": "09009857000147",
+                "CIDADE": "PORECATU-PR",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "16\/08\/2017",
+                "DATA_DEMISSAO": "01\/03\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "REGINALDO ROSA DOS SANTOS - SERVICOS",
+                "CNPJ": "13336095000160",
+                "CIDADE": "LONDRINA-PR",
+                "PROFISSAO": "862305",
+                "DATA_ADMISSAO": "25\/05\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "USINA CENTRAL DE PARANA SA AGRIC IND E COM",
+                "CNPJ": "80539943000126",
+                "CIDADE": "PORECATU-PR",
+                "PROFISSAO": "811410",
+                "DATA_ADMISSAO": "09\/20\/1905",
+                "DATA_DEMISSAO": "03\/03\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "COOPERATIVA AGRICOLA DE ASTORGA EM LIQUIDACAO",
+                "CNPJ": "75570572000296",
+                "CIDADE": "ASTORGA-PR",
+                "PROFISSAO": "811425",
+                "DATA_ADMISSAO": "05\/03\/2014",
+                "DATA_DEMISSAO": "27\/10\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

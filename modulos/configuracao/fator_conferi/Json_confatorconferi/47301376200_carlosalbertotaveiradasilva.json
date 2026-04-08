@@ -1,0 +1,228 @@
+{
+    "CADASTRAIS": {
+        "CPF": "47301376200",
+        "NOME": "CARLOS ALBERTO TAVEIRA DA SILVA",
+        "NOME_MAE": "MARIA DE LOURDES TAVEIRA DA SILVA",
+        "NASCTO": "04\/11\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12486696689",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "252105",
+        "PROFISSAO": "ADMINISTRADOR",
+        "SALARIO": " 2.196,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9232165769",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9532242414",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92991943801",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92994844776",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "93991473607",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "95991133672",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "92991156151",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "carlos.taveira@am.senac.br",
+            "carlostaveira@hotmail.com",
+            "carlostaveira2009@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "TV CLEMENTINO DE ASSIS",
+                "NUMERO": "98",
+                "COMPLEMENTO": "",
+                "BAIRRO": "APARECIDA",
+                "CEP": "68040571",
+                "CIDADE": "SANTAREM",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "AV ENG FERNANDO GUILHON",
+                "NUMERO": "112",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTARENZINHO",
+                "CEP": "68035000",
+                "CIDADE": "SANTAREM",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "R MANAUS",
+                "NUMERO": "200",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CJ HABITACIONAL DOUTOR JOSE SECCHI",
+                "CEP": "13973430",
+                "CIDADE": "ITAPIRA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R LINDOLFO BERNARDO COUTINHO",
+                "NUMERO": "9786",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TANCREDO NEVES",
+                "CEP": "69313527",
+                "CIDADE": "BOA VISTA",
+                "ESTADO": "RR"
+            },
+            {
+                "LOGRADOURO": "R COSTA AZEVEDO",
+                "NUMERO": "9",
+                "COMPLEMENTO": "AND 10",
+                "BAIRRO": "CENTRO",
+                "CEP": "69010230",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R PACARAIMA",
+                "NUMERO": "340",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S VICENTE",
+                "CEP": "69303360",
+                "CIDADE": "BOA VISTA",
+                "ESTADO": "RR"
+            },
+            {
+                "LOGRADOURO": "AV BISPO PEDRO MASSA",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69095160",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R LINDOLFO BERNARDO COUTINHO",
+                "NUMERO": "250",
+                "COMPLEMENTO": "NULL",
+                "BAIRRO": "ASA BRANCA",
+                "CEP": "69312282",
+                "CIDADE": "BOA VISTA",
+                "ESTADO": "RR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1277397856",
+            "NOME": "MARIA DE LOURDES TAVEIRA DA SILVA",
+            "IDADE": "82 anos",
+            "LOCAL": "RIO DE JANEIRO\/RJ",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "AGENCIA AMAZONENSE DE DESENVOLVIMENTO ECONOMICO, SOCIAL E AMBIENTAL - AADESAM",
+                "CNPJ": "13272780000170",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "252105",
+                "DATA_ADMISSAO": "23\/20\/2006",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COMPANHIA DE SANEAMENTO DO AMAZONAS",
+                "CNPJ": "04406195000125",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "19\/08\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL",
+                "CNPJ": "03965450000107",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "252105",
+                "DATA_ADMISSAO": "01\/02\/2007",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

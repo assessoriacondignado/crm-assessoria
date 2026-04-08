@@ -1,0 +1,168 @@
+{
+    "CADASTRAIS": {
+        "CPF": "2273657552",
+        "NOME": "GERSINES KELLY SANTOS",
+        "NOME_MAE": "MARIA INES SANTOS",
+        "NASCTO": "24\/04\/1987",
+        "IDADE": "39 anos",
+        "SEXO": "Feminino",
+        "RG": "30961092",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "2002764854",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "354125",
+        "PROFISSAO": "ASSISTENTE DE VENDAS",
+        "SALARIO": " 1.644,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "7932416246",
+            "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "79981127277",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79996767636",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79988121798",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999300202",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "gersineskelly@gmail.com",
+            "gersines_kelly@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ARISTIDES BARBOSA",
+                "NUMERO": "104",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD S LUIS ZONA LESTE",
+                "CEP": "08121006",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DR JOSE PEROBA",
+                "NUMERO": "325",
+                "COMPLEMENTO": "SL 1407",
+                "BAIRRO": "STIEP",
+                "CEP": "41770235",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "RUA JOSE CAMPOS DE SOUZA",
+                "NUMERO": "94",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "JOSE CONRADO DE ARAUJO",
+                "CEP": "49085160",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "30231507",
+            "NOME": "MARIA INES SANTOS",
+            "IDADE": "44 anos",
+            "LOCAL": "NITEROI\/RJ",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "GERSON SANTOS",
+            "IDADE": "",
+            "LOCALIDADE": "ARACAJU\/SE",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "17014816500"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "OUTBACK STEAKHOUSE RESTAURANTES BRASIL S.A.",
+                "CNPJ": "17261661019273",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "513405",
+                "DATA_ADMISSAO": "17\/01\/2024",
+                "DATA_DEMISSAO": "06\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PAULO ESCARIZ LTDA",
+                "CNPJ": "16470999000172",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "354125",
+                "DATA_ADMISSAO": "10\/09\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "DISTRIBUIDORA DE MALHAS E TECIDOS SERGIPE LTDA",
+                "CNPJ": "07716492000165",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "23\/20\/1906",
+                "DATA_DEMISSAO": "16\/09\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

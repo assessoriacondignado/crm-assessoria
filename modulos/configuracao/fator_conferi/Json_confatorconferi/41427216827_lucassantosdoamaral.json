@@ -1,0 +1,136 @@
+{
+    "CADASTRAIS": {
+        "CPF": "41427216827",
+        "NOME": "LUCAS SANTOS DO AMARAL",
+        "NOME_MAE": "DALVA DOS SANTOS BARCELOS",
+        "NASCTO": "17\/12\/1991",
+        "IDADE": "34 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "2063618403",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "232120",
+        "PROFISSAO": "PROFESSOR DE EDUCACAO FISICA NO ENSINO MEDIO",
+        "SALARIO": " 2.129,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1832632549",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "18981453311",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "18996089308",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "lucassm_g34@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "PC DR LUIZ RAMOS E SILVA",
+                "NUMERO": "73",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "19360000",
+                "CIDADE": "SANTO ANASTACIO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANSELMO LOPES PINHEIRO",
+                "NUMERO": "45",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD STA HELENA",
+                "CEP": "19360000",
+                "CIDADE": "SANTO ANASTACIO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA OSVALDO PAIXAO",
+                "NUMERO": "223",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA CALBENTE",
+                "CEP": "19360000",
+                "CIDADE": "SANTO ANASTACIO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "94139733853",
+                "NOME": "DALVA DOS SANTOS BARCELOS",
+                "IDADE": "70 anos",
+                "LOCAL": "SANTO ANASTACIO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "25696760805",
+                "NOME": "CARLA ANDREA DE BARCELOS",
+                "IDADE": "49 anos",
+                "LOCAL": "SANTO ANASTACIO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO DE PAIS E AMIGOS DOS EXCEPCIONAIS DE S ANAST",
+                "CNPJ": "49847213000142",
+                "CIDADE": "SANTO ANASTACIO-SP",
+                "PROFISSAO": "232120",
+                "DATA_ADMISSAO": "01\/06\/2017",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SAO PAULO SECRETARIA DA EDUCACAO",
+                "CNPJ": "46384111014280",
+                "CIDADE": "SANTO ANASTACIO-SP",
+                "PROFISSAO": "331205",
+                "DATA_ADMISSAO": "26\/01\/2022",
+                "DATA_DEMISSAO": "{Ã±\/{Ã±\/2023",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

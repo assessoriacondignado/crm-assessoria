@@ -1,0 +1,146 @@
+{
+    "CADASTRAIS": {
+        "CPF": "63341719415",
+        "NOME": "EDJANE JOSEFA DOS SANTOS",
+        "NOME_MAE": "MARIA DAS GRACAS DOS SANTOS",
+        "NASCTO": "08\/05\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1285626445",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "514320",
+        "PROFISSAO": "AUXILIAR DE LIMPEZA",
+        "SALARIO": " 1.431,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8135414962",
+            "OPERADORA": "TELEMAR\/PE",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "81986427302",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81984162948",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81985154496",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81985651635",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "karinacarneirodossantos@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R EUXENITA",
+                "NUMERO": "488",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVA DESCOBERTA",
+                "CEP": "52091320",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "RUA CENTO E QUARENTA E OITO",
+                "NUMERO": "255",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAETES I",
+                "CEP": "53530380",
+                "CIDADE": "ABREU E LIMA",
+                "ESTADO": "PE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "8025657",
+            "NOME": "MARIA DAS GRACAS DOS SANTOS",
+            "IDADE": "79 anos",
+            "LOCAL": "JURUMIRIM\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "MAURICEA FERNANDES DA SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "RECIFE\/PE",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "71270361449"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CONGREGACAO DE SANTA DOROTEIA DO BRASIL",
+                "CNPJ": "10847747001539",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "514320",
+                "DATA_ADMISSAO": "01\/10\/2002",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CONGREGACAO DE SANTA DOROTEIA DO BRASIL",
+                "CNPJ": "10847747000133",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "514225",
+                "DATA_ADMISSAO": "01\/10\/2002",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

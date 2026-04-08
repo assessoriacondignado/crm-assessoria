@@ -1,0 +1,167 @@
+{
+    "CADASTRAIS": {
+        "CPF": "88407748668",
+        "NOME": "REGINALDO DE ARAUJO",
+        "NOME_MAE": "MARIA SANTA DE ARAUJO",
+        "NASCTO": "19\/04\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "106648620248",
+        "NIT": "12523980209",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "511215",
+        "PROFISSAO": "COBRADOR DE TRANSPORTES COLETIVOS (EXCETO TREM)",
+        "SALARIO": " 741,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3135331714",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "3135211337",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31997115058",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31995222833",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31985725053",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/04\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R RAFIA",
+                "NUMERO": "240",
+                "COMPLEMENTO": "CX POSTAL 1",
+                "BAIRRO": "PALMEIRAS PARQUE DURVAL DE BARROS",
+                "CEP": "32421200",
+                "CIDADE": "IBIRITE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R VINTE E DOIS",
+                "NUMERO": "147",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PALMEIRAS PARQUE DURVAL DE BARROS",
+                "CEP": "32421205",
+                "CIDADE": "IBIRITE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RUA 21",
+                "NUMERO": "240",
+                "COMPLEMENTO": "COMPLEM CASA",
+                "BAIRRO": "CANAA",
+                "CEP": "32400000",
+                "CIDADE": "IBIRITE",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "91050340",
+            "NOME": "MARIA SANTA DE ARAUJO",
+            "IDADE": "53 anos",
+            "LOCAL": "VICOSA DO CEARA\/CE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "MART MINAS DISTRIBUICAO LTDA",
+                "CNPJ": "04737552000219",
+                "CIDADE": "CONTAGEM-MG",
+                "PROFISSAO": "414125",
+                "DATA_ADMISSAO": "23\/09\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "RGIS BRASIL SERVICOS DE ESTOQUES LTDA.",
+                "CNPJ": "02472608000225",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "414105",
+                "DATA_ADMISSAO": "01\/11\/2013",
+                "DATA_DEMISSAO": "17\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "RGIS BRASIL SERVICOS DE ESTOQUES LTDA.",
+                "CNPJ": "02472608000144",
+                "CIDADE": "SAO CAETANO DO SUL-SP",
+                "PROFISSAO": "414105",
+                "DATA_ADMISSAO": "01\/11\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "VIACAO SIDON S.A.",
+                "CNPJ": "17168634000150",
+                "CIDADE": "IBIRITE-MG",
+                "PROFISSAO": "511215",
+                "DATA_ADMISSAO": "01\/03\/2008",
+                "DATA_DEMISSAO": "27\/06\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

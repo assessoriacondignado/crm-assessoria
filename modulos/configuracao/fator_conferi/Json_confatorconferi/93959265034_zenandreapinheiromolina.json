@@ -1,0 +1,166 @@
+{
+    "CADASTRAIS": {
+        "CPF": "93959265034",
+        "NOME": "ZENANDREA PINHEIRO MOLINA",
+        "NOME_MAE": "ZENAIDE PINHEIRO MOLINA",
+        "NASCTO": "19\/06\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "063006190477",
+        "NIT": "1240630532",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "141415",
+        "PROFISSAO": "GERENTE DE LOJA E SUPERMERCADO",
+        "SALARIO": " 7.239,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "5432511665",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "55984216121",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "55996767937",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "55984216122",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "55996526297",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "55999629018",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MAL DEODORO",
+                "NUMERO": "380",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "97700455",
+                "CIDADE": "SANTIAGO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R ADAIL VALIM",
+                "NUMERO": "13",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "95480000",
+                "CIDADE": "CAMBARA DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA MARECHAL TEODORO",
+                "NUMERO": "380",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "97700000",
+                "CIDADE": "SANTIAGO",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "109775031",
+                "NOME": "VIVIANE PINHEIRO MOLINA",
+                "IDADE": "47 anos",
+                "LOCAL": "BALNEARIO CAMBORIU\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "538998067",
+                "NOME": "RODRIGO PINHEIRO MOLINA",
+                "IDADE": "41 anos",
+                "LOCAL": "FLORIANOPOLIS\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "89504968015",
+                "NOME": "VALDIRENE MOLINA CARPES",
+                "IDADE": "50 anos",
+                "LOCAL": "SAO MARCOS\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "2501012038",
+                "NOME": "IAGO MOLINA CAMARGO",
+                "IDADE": "25 anos",
+                "LOCAL": "SANTIAGO\/RS",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "GRAZZIOTIN S A",
+            "CNPJ": "92012467019946",
+            "CIDADE": "SANTIAGO-RS",
+            "PROFISSAO": "141415",
+            "DATA_ADMISSAO": "03\/11\/1992",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

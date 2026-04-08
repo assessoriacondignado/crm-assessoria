@@ -1,0 +1,199 @@
+{
+    "CADASTRAIS": {
+        "CPF": "8930965989",
+        "NOME": "SANSAO LOCKS BATISTA",
+        "NOME_MAE": "SANDRA LOCKS BATISTA",
+        "NASCTO": "18\/05\/1996",
+        "IDADE": "29 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "4735319400",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "47996546841",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "47984046984",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ODORICO TOMAZ FERREIRA",
+                "NUMERO": "219",
+                "COMPLEMENTO": "LD 122",
+                "BAIRRO": "CANOAS",
+                "CEP": "89164024",
+                "CIDADE": "RIO DO SUL",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R ODORICO TOMAZ FERREIRA",
+                "NUMERO": "2019",
+                "COMPLEMENTO": "LD 122",
+                "BAIRRO": "CANOAS",
+                "CEP": "89164024",
+                "CIDADE": "RIO DO SUL",
+                "ESTADO": "SC"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "78923840904",
+                "NOME": "SANDRA LOCKS BATISTA",
+                "IDADE": "60 anos",
+                "LOCAL": "RIO DO SUL\/SC",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "4748457961",
+                "NOME": "WASHINGTON LOCKS BATISTA",
+                "IDADE": "42 anos",
+                "LOCAL": "RIO DO SUL\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "7925293918",
+                "NOME": "WILLIAN LOCKS BATISTA",
+                "IDADE": "36 anos",
+                "LOCAL": "RIO DO SUL\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "9170916985",
+                "NOME": "KEOMA LOCKS BATISTA",
+                "IDADE": "33 anos",
+                "LOCAL": "RIO DO SUL\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "METALURGICA TONON LTDA",
+                "CNPJ": "01953526000159",
+                "CIDADE": "RIO DO SUL-SC",
+                "PROFISSAO": "725205",
+                "DATA_ADMISSAO": "26\/12\/2023",
+                "DATA_DEMISSAO": "14\/11\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ROHDEN TERMO ENGENHARIA LTDA",
+                "CNPJ": "00488119000155",
+                "CIDADE": "RIO DO SUL-SC",
+                "PROFISSAO": "724315",
+                "DATA_ADMISSAO": "25\/11\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "AGROMASTER PECAS E SERVICOS LTDA",
+                "CNPJ": "27720223000180",
+                "CIDADE": "RIO DO SUL-SC",
+                "PROFISSAO": "414105",
+                "DATA_ADMISSAO": "23\/01\/2023",
+                "DATA_DEMISSAO": "15\/09\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "DUARTE MOTOR HOME LTDA",
+                "CNPJ": "10489073000142",
+                "CIDADE": "RIO DO SUL-SC",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/04\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "BLOCO F LTDA",
+                "CNPJ": "01367658000107",
+                "CIDADE": "RIO DO SUL-SC",
+                "PROFISSAO": "513405",
+                "DATA_ADMISSAO": "01\/11\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "AGILPACK INDUSTRIA E COMERCIO ATACADISTA DE EMBALAGENS LTDA",
+                "CNPJ": "14858197000109",
+                "CIDADE": "RIO DO SUL-SC",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "01\/07\/2014",
+                "DATA_DEMISSAO": "12\/09\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "CONTABILIDADE DJAZIL LTDA.",
+                "CNPJ": "75492397000185",
+                "CIDADE": "RIO DO SUL-SC",
+                "PROFISSAO": "412205",
+                "DATA_ADMISSAO": "29\/10\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "RECOPY COMUNICACAO VISUAL LTDA",
+                "CNPJ": "07589769000136",
+                "CIDADE": "RIO DO SUL-SC",
+                "PROFISSAO": "766315",
+                "DATA_ADMISSAO": "15\/06\/2012",
+                "DATA_DEMISSAO": "12\/09\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

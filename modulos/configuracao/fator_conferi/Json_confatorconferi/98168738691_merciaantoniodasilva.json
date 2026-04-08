@@ -1,0 +1,174 @@
+{
+    "CADASTRAIS": {
+        "CPF": "98168738691",
+        "NOME": "MERCIA ANTONIO DA SILVA",
+        "NOME_MAE": "TERESINHA TAVARES DA SILVA",
+        "NASCTO": "03\/04\/1975",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "096056200272",
+        "NIT": "12536011331",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "421125",
+        "PROFISSAO": "OPERADOR DE CAIXA",
+        "SALARIO": " 928,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "3836713557",
+            "OPERADORA": "TELEMAR\/MG",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "baixa"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "38998207217",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "38998593064",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "38998699985",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "38999396211",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "TV MQ DE POMBAL",
+                "NUMERO": "135",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JUSCELINO KUBITSCHEK",
+                "CEP": "38607158",
+                "CIDADE": "PARACATU",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R AMALIA SOUZA CAMARGOS",
+                "NUMERO": "124",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JUSCELINO KUBITSCHEK",
+                "CEP": "38607096",
+                "CIDADE": "PARACATU",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "BC C",
+                "NUMERO": "57",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "38600282",
+                "CIDADE": "PARACATU",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RUA RUA AMALIA SOUZA CAMARGO",
+                "NUMERO": "124",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "JK",
+                "CEP": "38600000",
+                "CIDADE": "PARACATU",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1297186702",
+            "NOME": "TERESINHA TAVARES DA SILVA",
+            "IDADE": "87 anos",
+            "LOCAL": "SAO GONCALO\/RJ",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "NUTRIBEM REFEICOES LTDA",
+                "CNPJ": "10560908001266",
+                "CIDADE": "PARACATU-MG",
+                "PROFISSAO": "513205",
+                "DATA_ADMISSAO": "26\/04\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "JC REFEICOES COLETIVAS LTDA",
+                "CNPJ": "05604676000108",
+                "CIDADE": "PARACATU-MG",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "03\/11\/2020",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "PANIFICADORA RODRIGUES   CIA LTDA",
+                "CNPJ": "07713242000171",
+                "CIDADE": "PARACATU-MG",
+                "PROFISSAO": "848305",
+                "DATA_ADMISSAO": "01\/03\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "DINAMICO SUPERMERCADO LTDA",
+                "CNPJ": "07551117000102",
+                "CIDADE": "PARACATU-MG",
+                "PROFISSAO": "421125",
+                "DATA_ADMISSAO": "14\/20\/2002",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

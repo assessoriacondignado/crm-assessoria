@@ -1,0 +1,156 @@
+{
+    "CADASTRAIS": {
+        "CPF": "41901033813",
+        "NOME": "ALICE COUTINHO MARTINS S DO NASCIMENTO",
+        "NOME_MAE": "FRANCISCA MARTINS SILVA DO NASCIMENTO",
+        "NASCTO": "14\/12\/1990",
+        "IDADE": "35 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "20785268787",
+        "ESCOLARIDADE": "SUPERIOR INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "513435",
+        "PROFISSAO": "ATENDENTE DE LANCHONETE",
+        "SALARIO": " 742,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1934111244",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1934336451",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "19995061160",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "MOVEL",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JACOB MUSTCHELLI",
+                "NUMERO": "152",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MORUMBI",
+                "CEP": "13420420",
+                "CIDADE": "PIRACICABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO N SETTEN",
+                "NUMERO": "30",
+                "COMPLEMENTO": "",
+                "BAIRRO": "IMOS CAMOLESI",
+                "CEP": "13426739",
+                "CIDADE": "PIRACICABA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "3093711479",
+                "NOME": "FRANCISCA MARTINS SILVA DO NASCIMENTO",
+                "IDADE": "59 anos",
+                "LOCAL": "PIRACICABA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "29465387886",
+                "NOME": "GIVANILDO COUTINHO MARTINS SILVA DO NASCIMENTO",
+                "IDADE": "45 anos",
+                "LOCAL": "PIRACAIA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "31118789881",
+                "NOME": "GILSON COUTINHO MARTINS SILVA NASCIMENTO",
+                "IDADE": "43 anos",
+                "LOCAL": "PIRACICABA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "32519221810",
+                "NOME": "AMARO COUTINHO MENDES NETO",
+                "IDADE": "41 anos",
+                "LOCAL": "PIRACICABA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "35920179856",
+                "NOME": "GENILSON COUTINHO MARTINS SILVA DO NASCIMENTO",
+                "IDADE": "38 anos",
+                "LOCAL": "PIRACICABA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COLEGIO CIDADE ALTA LTDA",
+                "CNPJ": "04666460000104",
+                "CIDADE": "PIRACICABA-SP",
+                "PROFISSAO": "514320",
+                "DATA_ADMISSAO": "23\/01\/2014",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FTH ORGANIZACAO E TREINAMENTOS LTDA",
+                "CNPJ": "08686351000290",
+                "CIDADE": "PIRACICABA-SP",
+                "PROFISSAO": "514205",
+                "DATA_ADMISSAO": "12\/11\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "SOLANGE APARECIDA VIEIRA DE CARVALHO",
+                "CNPJ": "13374841000100",
+                "CIDADE": "PIRACICABA-SP",
+                "PROFISSAO": "513435",
+                "DATA_ADMISSAO": "02\/05\/2011",
+                "DATA_DEMISSAO": "17\/02\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

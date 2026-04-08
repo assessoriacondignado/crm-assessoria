@@ -1,0 +1,276 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26268009886",
+        "NOME": "THIAGO DE ALMEIDA CARVALHO DOS SANTOS",
+        "NOME_MAE": "VALERIA APARECIDA DE ALMEIDA SANTOS",
+        "NASCTO": "27\/01\/1979",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "283500530116",
+        "NIT": "1251509207",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "354205",
+        "PROFISSAO": "COMPRADOR",
+        "SALARIO": " 9.329,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1137791442",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1133756021",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1150616319",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "15\/07\/2004",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1121576021",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1128926031",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11984220506",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "01\/12\/2007",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11974479573",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11982836021",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11968632147",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "thiago.santos@br.nestle.com",
+            "thiago.carvalho@atento.com.br",
+            "thiago.acsantos@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DAS FLECHAS",
+                "NUMERO": "108",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL STA CATARINA",
+                "CEP": "04364030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DR GENTIL LEITE MARTINS",
+                "NUMERO": "221",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL NOVA CALEDONIA",
+                "CEP": "04648000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ARTUR THIRE",
+                "NUMERO": "45",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL SAUDE",
+                "CEP": "04146000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R QUISISANA",
+                "NUMERO": "140",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM DA SAUDE",
+                "CEP": "04149000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA PEDRALIA",
+                "NUMERO": "175",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL GUMERCINDO",
+                "CEP": "04130080",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOAO BATISTA BONAMINI",
+                "NUMERO": "34",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA BRASILIO MACHADO",
+                "CEP": "04289070",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA IBIRAREMA",
+                "NUMERO": "235",
+                "COMPLEMENTO": "FD",
+                "BAIRRO": "BOSQUE DA SAUDE",
+                "CEP": "04136000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "27946586892",
+                "NOME": "VALERIA APARECIDA DE ALMEIDA SANTOS",
+                "IDADE": "69 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "28069675896",
+                "NOME": "SABRINA DE ALMEIDA CARVALHO DOS SANTOS",
+                "IDADE": "48 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "30881445886",
+                "NOME": "SILVANA DE ALMEIDA SANTOS",
+                "IDADE": "43 anos",
+                "LOCAL": "GUARULHOS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "33356504843",
+                "NOME": "RERIA DE ALMEIDA SANTOS MIRANDA",
+                "IDADE": "40 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "33507176831",
+                "NOME": "DOUGLAS WELLINGTON DE ALMEIDA SANTOS",
+                "IDADE": "38 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "41209434881",
+                "NOME": "KARINE APARECIDA DE ALMEIDA SANTOS",
+                "IDADE": "31 anos",
+                "LOCAL": "MARILIA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ATENTO BRASIL S\/A",
+                "CNPJ": "02879250004832",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "354205",
+                "DATA_ADMISSAO": "01\/07\/2011",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ATENTO BRASIL S\/A",
+                "CNPJ": "02879250005642",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "01\/07\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "ATENTO BRASIL S\/A",
+                "CNPJ": "02879250004751",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "01\/07\/2011",
+                "DATA_DEMISSAO": "01\/07\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

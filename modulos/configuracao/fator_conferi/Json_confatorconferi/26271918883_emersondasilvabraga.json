@@ -1,0 +1,147 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26271918883",
+        "NOME": "EMERSON DA SILVA BRAGA",
+        "NOME_MAE": "MARLENE CELESTE DA SILVA BRAGA",
+        "NASCTO": "09\/04\/1979",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "283207760116",
+        "NIT": "1305155077",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521125",
+        "PROFISSAO": "REPOSITOR DE MERCADORIAS",
+        "SALARIO": " 3.072,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1150885219",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11967414155",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11998653271",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "emersonbraga2014@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R VINTE E OITO DE MARCO",
+                "NUMERO": "27",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CIDADE NOVA HELIOPOLIS",
+                "CEP": "04236160",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CELIO",
+                "NUMERO": "86",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL MORAES",
+                "CEP": "04168030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CELIO",
+                "NUMERO": "80",
+                "COMPLEMENTO": "CS  Casa  1",
+                "BAIRRO": "VILA MORAES",
+                "CEP": "04168030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "383087899",
+                "NOME": "MARLENE CELESTE DA SILVA BRAGA",
+                "IDADE": "70 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "6232871618",
+                "NOME": "ANDERSON DA SILVA BRAGA",
+                "IDADE": "44 anos",
+                "LOCAL": "SANTO ANTONIO DO MONTE\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "15264988803",
+                "NOME": "EDNA BRAGA",
+                "IDADE": "54 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "31345303840",
+                "NOME": "DEBORA DA SILVA BRAGA",
+                "IDADE": "42 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "COLGATE-PALMOLIVE COMERCIAL LTDA.",
+            "CNPJ": "00382468000198",
+            "CIDADE": "SAO PAULO-SP",
+            "PROFISSAO": "521125",
+            "DATA_ADMISSAO": "17\/09\/2001",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "DIBRAGA COMERCIO DE ALIMENTOS LTDA",
+            "CNPJ": "13058026000132",
+            "CIDADE": "SAO PAULO-SP",
+            "QUALIFICACAO": "SÃ³cio",
+            "DATA_ENTRADA": "20220107",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

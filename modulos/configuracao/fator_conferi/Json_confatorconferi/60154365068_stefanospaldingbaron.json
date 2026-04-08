@@ -1,0 +1,180 @@
+{
+    "CADASTRAIS": {
+        "CPF": "60154365068",
+        "NOME": "STEFANO SPALDING BARON",
+        "NOME_MAE": "SHEILA MARIA SPALDING BARON",
+        "NASCTO": "16\/09\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "058262400477",
+        "NIT": "12379676285",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "317110",
+        "PROFISSAO": "PROGRAMADOR DE SISTEMAS DE INFORMACAO",
+        "SALARIO": " 9.447,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5133934242",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5132114036",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51999017070",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51999061151",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "stefanobaron@gmail.com",
+            "stef.barn@gmail.com",
+            "sbaron@terra.com.br",
+            "stefanobaron@terra.com.br",
+            "stefano.baron@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV INDEPENDENCIA",
+                "NUMERO": "1020",
+                "COMPLEMENTO": "",
+                "BAIRRO": "INDEPENDENCIA",
+                "CEP": "90035072",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA BEZERRA DE MENEZES",
+                "NUMERO": "623",
+                "COMPLEMENTO": "AP 1009",
+                "BAIRRO": "PASSO DA AREIA",
+                "CEP": "91350130",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA ANDRE PUENTE",
+                "NUMERO": "100",
+                "COMPLEMENTO": "AP 01",
+                "BAIRRO": "INDEPENDENCIA",
+                "CEP": "90035150",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "36429201015",
+                "NOME": "SHEILA MARIA SPALDING BARON",
+                "IDADE": "83 anos",
+                "LOCAL": "PORTO ALEGRE\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "70455627053",
+                "NOME": "FABRIZIO SPALDING BARON",
+                "IDADE": "53 anos",
+                "LOCAL": "PORTO ALEGRE\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "MARIA ARIDNE GIRAO CARIOCA",
+                "IDADE": "",
+                "LOCALIDADE": "BELO HORIZONTE\/MG",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "3676080300"
+            },
+            {
+                "NOME": "VALDEMAR FELINTO DOS SANTOS",
+                "IDADE": "",
+                "LOCALIDADE": "SANTO ANTONIO\/RN",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "70302111468"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "REALIZE CREDITO, FINANCIAMENTO E INVESTIMENTO S.A.",
+                "CNPJ": "27351731000138",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "142505",
+                "DATA_ADMISSAO": "01\/08\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738000162",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "317110",
+                "DATA_ADMISSAO": "13\/07\/2009",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "SRS SOLUCOES EM INFORMATICA LTDA",
+            "CNPJ": "05308331000107",
+            "CIDADE": "PORTO ALEGRE-RS",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20020909",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

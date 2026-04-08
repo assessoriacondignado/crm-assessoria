@@ -1,0 +1,174 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25705155824",
+        "NOME": "MAISA MARTINS DE FREITAS",
+        "NOME_MAE": "MARIA MARTINS DE FREITAS",
+        "NASCTO": "04\/04\/1978",
+        "IDADE": "48 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "260158100116",
+        "NIT": "12665606854",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521105",
+        "PROFISSAO": "VENDEDOR EM COMERCIO ATACADISTA",
+        "SALARIO": " 3.798,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1129857492",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1141092567",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "11981323344",
+            "OPERADORA": "TIM CELULAR S.A.",
+            "DATA_REFERENCIA": "04\/09\/2018",
+            "TIPO_TEL": "MOVEL",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": ""
+        }
+    },
+    "EMAILS": {
+        "EMAIL": "maisa_freitas4@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV DIVINO SALVADOR",
+                "NUMERO": "301",
+                "COMPLEMENTO": "112",
+                "BAIRRO": "PLANALTO PAULISTA",
+                "CEP": "04078908",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA DIVINO SALVADOR",
+                "NUMERO": "301",
+                "COMPLEMENTO": "AP112",
+                "BAIRRO": "PLANALTO PAULIS",
+                "CEP": "04078011",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA OURO PRETO",
+                "NUMERO": "54",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ASSUNCAO",
+                "CEP": "09850230",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA OURO PRETO",
+                "NUMERO": "5",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ASSUNCAO",
+                "CEP": "09850230",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "141619317",
+                "NOME": "MARIA MARTINS DE FREITAS",
+                "IDADE": "65 anos",
+                "LOCAL": "AROAZES\/PI",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "53186248809",
+                "NOME": "LORENZO DE FREITAS LOTTO",
+                "IDADE": "11 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BRADESCO CAPITALIZACAO S\/A",
+                "CNPJ": "33010851000174",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "212420",
+                "DATA_ADMISSAO": "07\/02\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ALLIANZ SEGUROS S\/A",
+                "CNPJ": "61573796000166",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "25\/06\/2018",
+                "DATA_DEMISSAO": "08\/06\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "JJGC INDUSTRIA E COMERCIO DE MATERIAIS DENTARIOS S.A",
+                "CNPJ": "00489050001822",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "521105",
+                "DATA_ADMISSAO": "25\/04\/2016",
+                "DATA_DEMISSAO": "22\/07\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ITAU UNIBANCO S.A.",
+                "CNPJ": "60701190000104",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "253125",
+                "DATA_ADMISSAO": "03\/09\/2001",
+                "DATA_DEMISSAO": "510",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "M. M. FREITAS INFORMATICA LTDA.",
+            "CNPJ": "23456315000143",
+            "CIDADE": "SAO BERNARDO DO CAMPO-SP",
+            "QUALIFICACAO": "SÃ³cio",
+            "DATA_ENTRADA": "20171025",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

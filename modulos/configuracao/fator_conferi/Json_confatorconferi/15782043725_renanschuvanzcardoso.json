@@ -1,0 +1,131 @@
+{
+    "CADASTRAIS": {
+        "CPF": "15782043725",
+        "NOME": "RENAN SCHUVANZ CARDOSO",
+        "NOME_MAE": "IDALINA SCHUVANZ",
+        "NASCTO": "16\/03\/1998",
+        "IDADE": "28 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1657191498",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "914405",
+        "PROFISSAO": "MECANICO DE MANUTENCAO DE AUTOMOVEIS, MOTOCICLETAS E VEICULOS SIMILARES",
+        "SALARIO": " 2.009,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "27998412259",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "27995746431",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "27\/08\/2018",
+                "TIPO_TEL": "MOVEL PRE-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "27997955365",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ALBERTO KARL EMIL MARQUARDT",
+                "NUMERO": "30",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL NOVA",
+                "CEP": "29645000",
+                "CIDADE": "SANTA MARIA DE JETIBA",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "R DOS IMIGRANTES",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "29645000",
+                "CIDADE": "SANTA MARIA DE JETIBA",
+                "ESTADO": "ES"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "9019101714",
+                "NOME": "IDALINA SCHUVANZ",
+                "IDADE": "52 anos",
+                "LOCAL": "SANTA MARIA DE JETIBA\/ES",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "16970562700",
+                "NOME": "BRUNO SCHUVANZ CARDOSO",
+                "IDADE": "30 anos",
+                "LOCAL": "SANTA MARIA DE JETIBA\/ES",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "18802744777",
+                "NOME": "GRASIELY SCHUVANZ CARDOSO",
+                "IDADE": "24 anos",
+                "LOCAL": "SANTA MARIA DE JETIBA\/ES",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "OFICINA E AUTO PECAS IRMAOS KIEFER LTDA",
+                "CNPJ": "07114664000120",
+                "CIDADE": "SANTA MARIA DE JETIBA-ES",
+                "PROFISSAO": "914405",
+                "DATA_ADMISSAO": "01\/08\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MARCELO SERVICOS EM IMPLEMENTOS RODOVIARIOS LTDA",
+                "CNPJ": "22739745000100",
+                "CIDADE": "SANTA MARIA DE JETIBA-ES",
+                "PROFISSAO": "724315",
+                "DATA_ADMISSAO": "18\/09\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

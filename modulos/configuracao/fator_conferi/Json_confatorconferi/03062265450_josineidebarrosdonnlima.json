@@ -1,0 +1,266 @@
+{
+    "CADASTRAIS": {
+        "CPF": "3062265450",
+        "NOME": "JOSINEIDE BARROS DO N N LIMA",
+        "NOME_MAE": "ENEIDE BARROS DO NASCIMENTO",
+        "NASCTO": "03\/03\/1979",
+        "IDADE": "47 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "054153760809",
+        "NIT": "12711874453",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411010",
+        "PROFISSAO": "ASSISTENTE ADMINISTRATIVO",
+        "SALARIO": " 1.531,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8130729471",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "8130352000",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "8139743900",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8130845555",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "81985604858",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81984225076",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81988129612",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81988602054",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81986050561",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "joaobnlima@hotmail.com",
+            "josi.barroslima@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DO MACHADO",
+                "NUMERO": "930",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AGUA FRIA",
+                "CEP": "52120295",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R FRANKLIN TAVORA",
+                "NUMERO": "481",
+                "COMPLEMENTO": "BL D AP 401",
+                "BAIRRO": "CPO GRANDE",
+                "CEP": "52040050",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R DO ACRE",
+                "NUMERO": "625",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SRA DAS GRACAS",
+                "CEP": "32604640",
+                "CIDADE": "BETIM",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "AV ROBERTO MOURA",
+                "NUMERO": "819",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PACIENCIA",
+                "CEP": "23065540",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R CAETE",
+                "NUMERO": "3",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COL TERRA NOVA",
+                "CEP": "69093075",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "3863501403",
+                "NOME": "JOSE PEREIRA DO NASCIMENTO JUNIOR",
+                "IDADE": "45 anos",
+                "LOCAL": "RECIFE\/PE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "92302688449",
+                "NOME": "JOSIAS BARROS DO NASCIMENTO",
+                "IDADE": "48 anos",
+                "LOCAL": "RECIFE\/PE",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "JOAO GUILHERME BARROS NOGUEIRA LIMA",
+                "IDADE": "",
+                "LOCALIDADE": "RECIFE\/PE",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "14292827460"
+            },
+            {
+                "NOME": "MARIA LUIZA MOTA DANTAS PEREIRA",
+                "IDADE": "",
+                "LOCALIDADE": "RECIFE\/PE",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "11327587424"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BANCO VOTORANTIM S.A.",
+                "CNPJ": "59588111000103",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "01\/08\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO VOTORANTIM S.A.",
+                "CNPJ": "59588111011067",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "21\/20\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO VOTORANTIM S.A.",
+                "CNPJ": "59588111008783",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "07\/20\/1910",
+                "DATA_DEMISSAO": "20\/10\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "BV FINANCEIRA SA CREDITO FINANCIAMENTO E INVESTIMENTO",
+                "CNPJ": "01149953011628",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "01\/10\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "BV FINANCEIRA SA CREDITO FINANCIAMENTO E INVESTIMENTO",
+                "CNPJ": "01149953004176",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "07\/20\/1910",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

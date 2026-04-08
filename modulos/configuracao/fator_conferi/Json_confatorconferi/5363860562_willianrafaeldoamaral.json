@@ -1,0 +1,203 @@
+{
+    "CADASTRAIS": {
+        "CPF": "5363860562",
+        "NOME": "WILLIAN RAFAEL DO AMARAL",
+        "NOME_MAE": "LISETE JACOBUS",
+        "NASCTO": "04\/05\/1991",
+        "IDADE": "34 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51996812795",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51991953365",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "51997039923",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "15\/05\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "79991910029",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "bruna.lauck@hotmail.com",
+            "willian.amaral@aniger.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ADOLAR BLOS",
+                "NUMERO": "221",
+                "COMPLEMENTO": "",
+                "BAIRRO": "METZLER",
+                "CEP": "93700000",
+                "CIDADE": "CAMPO BOM",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "TV JOSE VASCONCELOS",
+                "NUMERO": "43",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AMERICA",
+                "CEP": "49080340",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "SE GOIS VASCONCELOS",
+                "NUMERO": "43",
+                "COMPLEMENTO": "1",
+                "BAIRRO": "CENTRO",
+                "CEP": "49530000",
+                "CIDADE": "RIBEIROPOLIS",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "GENERAL ERNESTO DORNELI",
+                "NUMERO": "78",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "93700000",
+                "CIDADE": "CAMPO BOM",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "BARAO DO RIO BRANCO",
+                "NUMERO": "193",
+                "COMPLEMENTO": "SALAO",
+                "BAIRRO": "CENTRO",
+                "CEP": "49530000",
+                "CIDADE": "RIBEIROPOLIS",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "22432523091",
+                "NOME": "LISETE JACOBUS",
+                "IDADE": "73 anos",
+                "LOCAL": "PORTO ALEGRE\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "6072350550",
+                "NOME": "DIEGO RAMON DO AMARAL",
+                "IDADE": "31 anos",
+                "LOCAL": "GOVERNADOR CELSO RAMOS\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "BRUNA LAUCK",
+                "IDADE": "",
+                "LOCALIDADE": "CAMPO BOM\/RS",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "2748708008"
+            },
+            {
+                "NOME": "REGINALDO DOS SANTOS SOUZA",
+                "IDADE": "",
+                "LOCALIDADE": "BELO HORIZONTE\/MG",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "8751979659"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ANIGER - CALCADOS, SUPRIMENTOS E EMPREENDIMENTOS LTDA.",
+                "CNPJ": "94316999000126",
+                "CIDADE": "CAMPO BOM-RS",
+                "PROFISSAO": "354125",
+                "DATA_ADMISSAO": "22\/02\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CALCADOS BEIRA RIO S\/A",
+                "CNPJ": "88379771004170",
+                "CIDADE": "SAPIRANGA-RS",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "03\/11\/2020",
+                "DATA_DEMISSAO": "17\/02\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "MASSA FALIDA DE CALCADOS VIADEI LTDA",
+                "CNPJ": "91793646000129",
+                "CIDADE": "CAMPO BOM-RS",
+                "PROFISSAO": "764305",
+                "DATA_ADMISSAO": "17\/03\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "LISEANA CALCADOS LTDA",
+                "CNPJ": "15112409000177",
+                "CIDADE": "CAMPO BOM-RS",
+                "PROFISSAO": "764005",
+                "DATA_ADMISSAO": "01\/10\/2013",
+                "DATA_DEMISSAO": "14\/03\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

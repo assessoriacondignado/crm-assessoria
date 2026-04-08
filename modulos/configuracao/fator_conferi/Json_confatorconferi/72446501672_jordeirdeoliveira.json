@@ -1,0 +1,295 @@
+{
+    "CADASTRAIS": {
+        "CPF": "72446501672",
+        "NOME": "JORDEIR DE OLIVEIRA",
+        "NOME_MAE": "ARMEZINA ANGELICA DE JESUS",
+        "NASCTO": "05\/02\/1970",
+        "IDADE": "56 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12380040607",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "517410",
+        "PROFISSAO": "PORTEIRO DE EDIFICIOS",
+        "SALARIO": " 872,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3135307750",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "07\/07\/2007",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3135912989",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3135942188",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31991135352",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31997541494",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31984715188",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31975220858",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31985375456",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "jordeiroliveira@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MONTE BELO",
+                "NUMERO": "666",
+                "COMPLEMENTO": "",
+                "BAIRRO": "INDUST SAO LUIZ",
+                "CEP": "32073180",
+                "CIDADE": "CONTAGEM",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R PALMAS",
+                "NUMERO": "7",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CJ HABITACIONAL JALILA CONCEICAO PEDROSA",
+                "CEP": "32672405",
+                "CIDADE": "BETIM",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R MONTE BELO",
+                "NUMERO": "267",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "INDUST SAO LUIZ",
+                "CEP": "32073180",
+                "CIDADE": "CONTAGEM",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R MONTE BELO",
+                "NUMERO": "666",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S LUIZ",
+                "CEP": "32675636",
+                "CIDADE": "BETIM",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R ARTHUR LANGER",
+                "NUMERO": "21",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CJ HAB VARZEA FLORES",
+                "CEP": "37458000",
+                "CIDADE": "ALAGOA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R GUIRICEMA",
+                "NUMERO": "75",
+                "COMPLEMENTO": "A",
+                "BAIRRO": "INDUST SAO LUIZ",
+                "CEP": "32073360",
+                "CIDADE": "CONTAGEM",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R EUFRASIA AUGUSTA DE JESUS",
+                "NUMERO": "98",
+                "COMPLEMENTO": "A",
+                "BAIRRO": "SANTA HELENA",
+                "CEP": "32015220",
+                "CIDADE": "CONTAGEM",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RUA PALMAS",
+                "NUMERO": "21",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CONJUNTO HABITACIONAL JALILA CONCEICAO PEDROSA",
+                "CEP": "32672405",
+                "CIDADE": "BETIM",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "4952724506",
+                "NOME": "CARLA ANGELICA DE OLIVEIRA",
+                "IDADE": "37 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "22333900830",
+                "NOME": "ALESSANDRO VIANA DE OLIVEIRA",
+                "IDADE": "47 anos",
+                "LOCAL": "SAO JOSE DOS CAMPOS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "34060932809",
+                "NOME": "MILENE ANGELICA DE OLIVEIRA",
+                "IDADE": "41 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "74208411600",
+                "NOME": "DALVA ANGELICA TORRES",
+                "IDADE": "79 anos",
+                "LOCAL": "BETIM\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "MARLEDE FERREIRA DOS SANTOS",
+            "IDADE": "",
+            "LOCALIDADE": "CONTAGEM\/MG",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "39912884604"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PPS PLASTICOS E PAPEIS RECICLAVEIS LTDA",
+                "CNPJ": "12472091000147",
+                "CIDADE": "CONTAGEM-MG",
+                "PROFISSAO": "517420",
+                "DATA_ADMISSAO": "22\/01\/2016",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COLETUR COLETIVOS URBANOS SOCIEDADE LIMITADA",
+                "CNPJ": "20127759000147",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "511215",
+                "DATA_ADMISSAO": "15\/10\/2013",
+                "DATA_DEMISSAO": "31\/07\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "PREMIUM PRESTACAO DE SERVICOS LTDA",
+                "CNPJ": "10435480000177",
+                "CIDADE": "CONTAGEM-MG",
+                "PROFISSAO": "517410",
+                "DATA_ADMISSAO": "11\/08\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "WCA RH BELO HORIZONTE LTDA",
+                "CNPJ": "05489385000116",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "517410",
+                "DATA_ADMISSAO": "28\/12\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "SCL SALVADOR CONSERVACAO E LIMPEZA LTDA",
+                "CNPJ": "09498321000132",
+                "CIDADE": "BETIM-MG",
+                "PROFISSAO": "517420",
+                "DATA_ADMISSAO": "23\/03\/2012",
+                "DATA_DEMISSAO": "12\/09\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "FORTEBANCO ADMINISTRACAO DE SERVICOS LTDA",
+                "CNPJ": "05560160000109",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "517410",
+                "DATA_ADMISSAO": "01\/11\/2010",
+                "DATA_DEMISSAO": "27\/03\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

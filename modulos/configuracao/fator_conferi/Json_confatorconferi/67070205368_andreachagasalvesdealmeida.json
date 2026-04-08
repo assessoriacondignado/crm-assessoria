@@ -1,0 +1,240 @@
+{
+    "CADASTRAIS": {
+        "CPF": "67070205368",
+        "NOME": "ANDREA CHAGAS ALVES DE ALMEIDA",
+        "NOME_MAE": "MARIA SILVA CHAGAS DE FARIAS",
+        "NASCTO": "31\/05\/1985",
+        "IDADE": "40 anos",
+        "SEXO": "Feminino",
+        "RG": "2002009149799",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "056009500701",
+        "NIT": "1330856919",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142605",
+        "PROFISSAO": "GERENTE DE PESQUISA E DESENVOLVIMENTO (P&D)",
+        "SALARIO": " 20.707,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8530451959",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "8532845337",
+                "OPERADORA": "TELEMAR\/CE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8534731104",
+                "OPERADORA": "TELEMAR\/CE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8532953523",
+                "OPERADORA": "TELEMAR\/CE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "85986344494",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "85989930617",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "28999498855",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "85982117007",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "85988388452",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "andrea-chagas@hotmail.com",
+            "rezen@cebrace.com.br",
+            "andreachagasalmeida@gmail.com",
+            "andrea_caa@terra.com.br",
+            "andrea-chagas31@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JARDIM SILVEIRA",
+                "NUMERO": "602",
+                "COMPLEMENTO": "B",
+                "BAIRRO": "NOVO MONDUBIM",
+                "CEP": "60764060",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO DE CASTRO",
+                "NUMERO": "66",
+                "COMPLEMENTO": "AP 101",
+                "BAIRRO": "CIDADE DOS FUNCIONARIOS",
+                "CEP": "60822510",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "AV DES GONZAGA",
+                "NUMERO": "333",
+                "COMPLEMENTO": "BLAAP 104",
+                "BAIRRO": "CIDADE DOS FUNCIONARIOS",
+                "CEP": "60823005",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R FRANCA",
+                "NUMERO": "17",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PERNAMBUES",
+                "CEP": "41100640",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R DES AVELAR",
+                "NUMERO": "1576",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ MANIBURA",
+                "CEP": "60821735",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R ZACARIAS GONDIM",
+                "NUMERO": "55",
+                "COMPLEMENTO": "AP A",
+                "BAIRRO": "MONTESE",
+                "CEP": "60425555",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R MONSENHOR JOAO LUIS SANTIAGO",
+                "NUMERO": "913",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM DAS OLIVEIRAS",
+                "CEP": "60821430",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "AV DEPUTADO PAULINO ROCHA",
+                "NUMERO": "46",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAJAZEIRAS",
+                "CEP": "60864311",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "6628957381",
+            "NOME": "ARTHUR DE ALMEIDA LIMA",
+            "IDADE": "14 anos",
+            "LOCAL": "",
+            "PARENTESCO": "FILHO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "FUNDACAO EDSON QUEIROZ",
+                "CNPJ": "07373434000186",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "142605",
+                "DATA_ADMISSAO": "01\/12\/2008",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SOCIEDADE EVOLUCAO DE EDUCACAO SUPERIOR E TECNOLOGIA LTDA - EVOLUCAO",
+                "CNPJ": "10520245000101",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "234520",
+                "DATA_ADMISSAO": "01\/08\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

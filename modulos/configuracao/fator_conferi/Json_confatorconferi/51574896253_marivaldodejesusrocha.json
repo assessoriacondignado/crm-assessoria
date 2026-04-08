@@ -1,0 +1,163 @@
+{
+    "CADASTRAIS": {
+        "CPF": "51574896253",
+        "NOME": "MARIVALDO DE JESUS ROCHA",
+        "NOME_MAE": "MARIA DE JESUS PEREIRA DE JESUS",
+        "NASCTO": "23\/03\/1973",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1645631250",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "913110",
+        "PROFISSAO": "MECANICO DE MANUTENCAO DE EQUIPAMENTO DE MINERACAO",
+        "SALARIO": " 4.576,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9335497653",
+            "OPERADORA": "TELEMAR\/PA",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "93992027391",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "93991518465",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11991336274",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "93991336274",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "93981142231",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "marivaldo@ptnet.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ALOJAMENTO PLATOON",
+                "NUMERO": "20",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "68275000",
+                "CIDADE": "PORTO TROMBETAS",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "R IGARAPE DO QUARENTA",
+                "NUMERO": "176",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DT INDUST I",
+                "CEP": "69075012",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R RIO AMAZONAS",
+                "NUMERO": "13",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CJ RESIDENCIAL",
+                "CEP": "68270000",
+                "CIDADE": "ORIXIMINA",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "RUA DA FEIRINHA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "POSTA RESTANTE",
+                "BAIRRO": "CENTRO",
+                "CEP": "68275970",
+                "CIDADE": "PORTO TROMBETAS",
+                "ESTADO": "PA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "72639130200",
+            "NOME": "MARIA DE JESUS PEREIRA DE JESUS",
+            "IDADE": "81 anos",
+            "LOCAL": "ORIXIMINA\/PA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "MINERACAO RIO DO NORTE SA",
+            "CNPJ": "04932216000146",
+            "CIDADE": "ORIXIMINA-PA",
+            "PROFISSAO": "913110",
+            "DATA_ADMISSAO": "02\/09\/2010",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "ASS DA COMUNIDADE REMANESCENTE DE QUILOMBO BOA VISTA",
+            "CNPJ": "00458306000196",
+            "CIDADE": "ORIXIMINA-PA",
+            "QUALIFICACAO": "Presidente",
+            "DATA_ENTRADA": "20231219",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

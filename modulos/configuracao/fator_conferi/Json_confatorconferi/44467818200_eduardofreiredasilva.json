@@ -1,0 +1,270 @@
+{
+    "CADASTRAIS": {
+        "CPF": "44467818200",
+        "NOME": "EDUARDO FREIRE DA SILVA",
+        "NOME_MAE": "DELCY FREIRE DA SILVA",
+        "NASCTO": "17\/12\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12517389405",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "950110",
+        "PROFISSAO": "SUPERVISOR DE MANUTENCAO ELETROMECANICA INDUSTRIAL, COMERCIAL E PREDIAL",
+        "SALARIO": " 3.000,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9233083822",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9233489687",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9232231055",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92984040706",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92984231936",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92999829589",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92981099952",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "92991539687",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "09\/05\/2015",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "eduardo.silva@siemens.com",
+            "eduardo.silva@siemens.com.br",
+            "edudardofreire@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV CEL TEIXEIRA",
+                "NUMERO": "2301",
+                "COMPLEMENTO": "BL P2 AP 23",
+                "BAIRRO": "COMPENSA",
+                "CEP": "69030480",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV NOEL NUTELS",
+                "NUMERO": "511",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69090000",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "PRQ AYAPUA",
+                "NUMERO": "23",
+                "COMPLEMENTO": "AV BRASIL",
+                "BAIRRO": "COMPENSA",
+                "CEP": "69035510",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "PRQ AYAPUA",
+                "NUMERO": "4750",
+                "COMPLEMENTO": "BL P2 AP 23",
+                "BAIRRO": "COMPENSA",
+                "CEP": "69035510",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R TRINTA",
+                "NUMERO": "511",
+                "COMPLEMENTO": "MANOA II",
+                "BAIRRO": "MAUAZINHO",
+                "CEP": "69075755",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV BRASIL",
+                "NUMERO": "233",
+                "COMPLEMENTO": "BL P 2 AP 23 AYAPUA",
+                "BAIRRO": "COMPENSA",
+                "CEP": "69036110",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "15166813200",
+                "NOME": "DELCY FREIRE DA SILVA",
+                "IDADE": "73 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "31398006220",
+                "NOME": "CLICIO FREIRE DA SILVA",
+                "IDADE": "56 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "34748040220",
+                "NOME": "CLEMILSON FREIRE DA SILVA",
+                "IDADE": "54 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "58321160204",
+                "NOME": "JOAO NUNES DA SILVA JUNIOR",
+                "IDADE": "49 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "77394038220",
+                "NOME": "KLINGER FREIRE DA SILVA",
+                "IDADE": "44 anos",
+                "LOCAL": "BOA VISTA\/RR",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ARAUJO ABREU ENGENHARIA NORTE LTDA",
+                "CNPJ": "03543374000141",
+                "CIDADE": "BELEM-PA",
+                "PROFISSAO": "142705",
+                "DATA_ADMISSAO": "24\/20\/2005",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "GIGA INDUSTRIA E COMERCIO DE PRODUTOS DE SEGURANCA ELETRONICA S\/A",
+                "CNPJ": "17122802000177",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "214905",
+                "DATA_ADMISSAO": "08\/03\/2021",
+                "DATA_DEMISSAO": "07\/12\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "HOTELSERV SERVICOS EMPRESARIAIS LTDA",
+                "CNPJ": "33693358000287",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "950110",
+                "DATA_ADMISSAO": "02\/12\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "PANASONIC DO BRASIL LIMITADA",
+                "CNPJ": "04403408000165",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "313215",
+                "DATA_ADMISSAO": "16\/20\/1909",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "VISTEON AMAZONAS LTDA",
+                "CNPJ": "02651366000156",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "214910",
+                "DATA_ADMISSAO": "09\/09\/2010",
+                "DATA_DEMISSAO": "09\/10\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,166 @@
+{
+    "CADASTRAIS": {
+        "CPF": "5650754624",
+        "NOME": "BRUNO HENRIQUE DE MELO",
+        "NOME_MAE": "JOANA MARIA SIMAO DE MELO",
+        "NASCTO": "09\/02\/1983",
+        "IDADE": "43 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "135884540230",
+        "NIT": "1282602313",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "342110",
+        "PROFISSAO": "OPERADOR DE TRANSPORTE MULTIMODAL",
+        "SALARIO": " 4.815,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3733511331",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3733513181",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "37984023012",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "37999382912",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "bpelezinho@yahoo.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "BR",
+                "NUMERO": "354",
+                "COMPLEMENTO": "1",
+                "BAIRRO": "AREA RURAL",
+                "CEP": "35588000",
+                "CIDADE": "ARCOS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "ROD BR 354",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "KM 476",
+                "CEP": "35588000",
+                "CIDADE": "ARCOS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "TRAVESSA ALVARES DA SILVA",
+                "NUMERO": "316",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "35588000",
+                "CIDADE": "ARCOS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R JOAO VIEIRA DE FARIA",
+                "NUMERO": "395",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PLANALTO",
+                "CEP": "35588000",
+                "CIDADE": "ARCOS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R ALVARES DA SILVA",
+                "NUMERO": "239",
+                "COMPLEMENTO": "CS 3",
+                "BAIRRO": "CENTRO",
+                "CEP": "35588000",
+                "CIDADE": "ARCOS",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "3953725696",
+            "NOME": "JOANA MARIA SIMAO DE MELO",
+            "IDADE": "62 anos",
+            "LOCAL": "ARCOS\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "MINERACAO BELOCAL LTDA",
+                "CNPJ": "06730693000235",
+                "CIDADE": "ARCOS-MG",
+                "PROFISSAO": "342110",
+                "DATA_ADMISSAO": "17\/12\/2009",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MINERACAO BELOCAL LTDA",
+                "CNPJ": "06730693000316",
+                "CIDADE": "ARCOS-MG",
+                "PROFISSAO": "342110",
+                "DATA_ADMISSAO": "17\/12\/2009",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "SIMAO   MELO- CONSTRUCOES SERVICOS GERAIS LTDA",
+            "CNPJ": "04232821000104",
+            "CIDADE": "ARCOS-MG",
+            "QUALIFICACAO": "SÃ³cio",
+            "DATA_ENTRADA": "20010108",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

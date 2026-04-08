@@ -1,0 +1,196 @@
+{
+    "CADASTRAIS": {
+        "CPF": "9770834890",
+        "NOME": "GILMAR DA SILVA",
+        "NOME_MAE": "DENILCI JANUARIA DA ROCHA",
+        "NASCTO": "05\/04\/1972",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "237999572",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12456868678",
+        "ESCOLARIDADE": "DA 5a. A 8a. SERIE INCOMPLETA DO 1o. GRAU(GINASIO INCOMPLETO)",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "724205",
+        "PROFISSAO": "MONTADOR DE ESTRUTURAS METALICAS",
+        "SALARIO": " 2.391,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1832692078",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1832692944",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11997422162",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "18996783566",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "18997036784",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "08\/09\/2015",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "15997871609",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "catiagiovani76@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "ROD ASSIS CHATEUBRIAND",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RODOVIA",
+                "CEP": "19200000",
+                "CIDADE": "PIRAPOZINHO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R STO ANTONIO",
+                "NUMERO": "15",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOCAINA",
+                "CEP": "09425010",
+                "CIDADE": "RIBEIRAO PIRES",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R VICENTE SEVERO SAPIA",
+                "NUMERO": "321",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STA ROSA",
+                "CEP": "17730000",
+                "CIDADE": "PARAPUA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE VOLPATO",
+                "NUMERO": "455",
+                "COMPLEMENTO": "FDS",
+                "BAIRRO": "VL STA ROSA",
+                "CEP": "19200000",
+                "CIDADE": "PIRAPOZINHO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "ROD ASSIS CHATEAUBRIAND",
+                "NUMERO": "476",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL CASTILHO",
+                "CEP": "19200000",
+                "CIDADE": "PIRAPOZINHO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV SILVIO DOMINGOS RONCADOR",
+                "NUMERO": "555",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DT INDUSTRIAL",
+                "CEP": "19043000",
+                "CIDADE": "PRESIDENTE PRUDENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "ROD ASSIS CHATEUBRIAND",
+                "NUMERO": "0",
+                "COMPLEMENTO": "KM 453 EMPRESA",
+                "BAIRRO": "ZONA RURAL",
+                "CEP": "19200000",
+                "CIDADE": "PIRAPOZINHO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R VICENTE SEVERO SAPIA",
+                "NUMERO": "321",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTA ROSA",
+                "CEP": "19200000",
+                "CIDADE": "PIRAPOZINHO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "NATURAFRIG ALIMENTOS LTDA",
+                "CNPJ": "18626084000481",
+                "CIDADE": "PIRAPOZINHO-SP",
+                "PROFISSAO": "313115",
+                "DATA_ADMISSAO": "01\/06\/2017",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "NAVI CARNES - INDUSTRIA E COMERCIO LTDA",
+                "CNPJ": "02982267000408",
+                "CIDADE": "PIRAPOZINHO-SP",
+                "PROFISSAO": "724205",
+                "DATA_ADMISSAO": "01\/09\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

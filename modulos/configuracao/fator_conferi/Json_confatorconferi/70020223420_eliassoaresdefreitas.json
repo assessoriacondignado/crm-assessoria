@@ -1,0 +1,153 @@
+{
+    "CADASTRAIS": {
+        "CPF": "70020223420",
+        "NOME": "ELIAS SOARES DE FREITAS",
+        "NOME_MAE": "ELIZABETE VIANA DA SILVA",
+        "NASCTO": "19\/04\/1989",
+        "IDADE": "37 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1609565816",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "954120",
+        "PROFISSAO": "MECANICO DE MANUTENCAO DE INSTALACOES MECANICAS DE EDIFICIOS",
+        "SALARIO": " 1.580,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8134991581",
+            "OPERADORA": "TELEMAR\/PE",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "81992738770",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81985607604",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81983103643",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81984341256",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81988170372",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "bruna1987@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R RENASCER",
+                "NUMERO": "4",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "PRAZERES",
+                "CEP": "54340052",
+                "CIDADE": "JABOATAO DOS GUARARAPES",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R DA TREGUA",
+                "NUMERO": "86",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AT SOL NASCENTE",
+                "CEP": "53200340",
+                "CIDADE": "OLINDA",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R XAVIER DE BRITO",
+                "NUMERO": "640",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AGUA FRIA",
+                "CEP": "52120270",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "200696262",
+            "NOME": "ELIZABETE VIANA DA SILVA",
+            "IDADE": "46 anos",
+            "LOCAL": "BELEM\/PA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "BRUNA RAPHAELE VIANA DA SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "OLINDA\/PE",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "6752463425"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "EXTRA PRESTACAO DE SERVICOS LTDA",
+            "CNPJ": "68174069000175",
+            "CIDADE": "RECIFE-PE",
+            "PROFISSAO": "954120",
+            "DATA_ADMISSAO": "13\/01\/2021",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

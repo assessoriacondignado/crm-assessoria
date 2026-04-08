@@ -1,0 +1,181 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26110700835",
+        "NOME": "VANIA EMILIANO FERREIRA",
+        "NOME_MAE": "MARIA APARECIDA FERREIRA",
+        "NASCTO": "11\/07\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "284402730175",
+        "NIT": "1285615877",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "141510",
+        "PROFISSAO": "GERENTE DE RESTAURANTE",
+        "SALARIO": " 5.421,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1125693842",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1125722278",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11972665952",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL POS-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11973375814",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11998996879",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11971852664",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "sp.vandia@bol.com.br",
+            "sp.vania@bol.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JARINU",
+                "NUMERO": "395",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE MAE DO CEU",
+                "CEP": "03306000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MANDIORE",
+                "NUMERO": "281",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL FORMOSA",
+                "CEP": "03360015",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R LAGO MANDIORE",
+                "NUMERO": "281",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM CAMARGO NOVO",
+                "CEP": "08121490",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ERNESTO CERRETI",
+                "NUMERO": "451",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE TIRADENTES",
+                "CEP": "08470220",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1727826",
+            "NOME": "MARIA APARECIDA FERREIRA",
+            "IDADE": "88 anos",
+            "LOCAL": "URUACU\/GO",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "MMJ COMERCIO DE ALIMENTOS LTDA.",
+                "CNPJ": "34027323000190",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "141510",
+                "DATA_ADMISSAO": "01\/12\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MMB COMERCIO DE ALIMENTOS LTDA.",
+                "CNPJ": "03449275000103",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "141510",
+                "DATA_ADMISSAO": "01\/02\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MMI COMERCIO DE ALIMENTOS LTDA.",
+                "CNPJ": "14280244000180",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "141510",
+                "DATA_ADMISSAO": "11\/03\/1999",
+                "DATA_DEMISSAO": "01\/10\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

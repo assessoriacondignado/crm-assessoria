@@ -1,0 +1,222 @@
+{
+    "CADASTRAIS": {
+        "CPF": "17239853845",
+        "NOME": "RICARDO BIANCHINI",
+        "NOME_MAE": "TEREZA BIANCHINI",
+        "NASCTO": "14\/07\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "26758112",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "244695350116",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1140755700",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1148254153",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "01\/12\/2005",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1148254153",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "01\/12\/2005",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1148285964",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "41995514345",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11972145306",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11972454581",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "28\/03\/2012",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11964976595",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11971033226",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "ricardo.bianchini.1976@gmail.com",
+            "cado.bianchini@uol.com.br",
+            "bianchiniricardo@ig.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R UNIVERSO",
+                "NUMERO": "19",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STA LUZIA",
+                "CEP": "09431460",
+                "CIDADE": "RIBEIRAO PIRES",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ESCOCIA",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COLONIA",
+                "CEP": "09402180",
+                "CIDADE": "RIBEIRAO PIRES",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ESCOCIA",
+                "NUMERO": "152",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD DOIS MELROS",
+                "CEP": "09402180",
+                "CIDADE": "RIBEIRAO PIRES",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ANTONIO LUIZ TAVOGLIERI",
+                "NUMERO": "64",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "09402120",
+                "CIDADE": "RIBEIRAO PIRES",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "2777419809",
+            "NOME": "TEREZA BIANCHINI",
+            "IDADE": "83 anos",
+            "LOCAL": "SALVADOR\/BA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CENTRO DE INTEGRACAO EMPRESA-ESCOLA DO PARANA",
+                "CNPJ": "76610591002558",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "333110",
+                "DATA_ADMISSAO": "21\/02\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TECHSOLUTION SOLUCOES EM TECNOLOGIA LTDA",
+                "CNPJ": "13235942000109",
+                "CIDADE": "SAO JOSE DOS PINHAIS-PR",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "05\/07\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVICO NACIONAL DE APRENDIZAGEM INDUSTRIAL - SENAI",
+                "CNPJ": "03776284004511",
+                "CIDADE": "ARAUCARIA-PR",
+                "PROFISSAO": "233210",
+                "DATA_ADMISSAO": "01\/09\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVICO NACIONAL DE APRENDIZAGEM INDUSTRIAL - SENAI",
+                "CNPJ": "03776284002900",
+                "CIDADE": "ARAUCARIA-PR",
+                "PROFISSAO": "233210",
+                "DATA_ADMISSAO": "09\/12\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

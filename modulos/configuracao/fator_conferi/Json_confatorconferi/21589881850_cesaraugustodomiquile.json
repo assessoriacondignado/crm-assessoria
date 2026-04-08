@@ -1,0 +1,178 @@
+{
+    "CADASTRAIS": {
+        "CPF": "21589881850",
+        "NOME": "CESAR AUGUSTO DOMIQUILE",
+        "NOME_MAE": "ISOLINA MENESES PEDROSO DOMIQUILE",
+        "NASCTO": "26\/10\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "272898460159",
+        "NIT": "1272853922",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "721105",
+        "PROFISSAO": "FERRAMENTEIRO",
+        "SALARIO": " 6.845,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1145954320",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11998152224",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13996464666",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11998355908",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11998355915",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11974304381",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "cesar_domiquile@hotmail.com",
+            "cesar_domiquile@globo.com",
+            "cesar_domiquile1@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ANTONIO LOURENCO LOPES",
+                "NUMERO": "65",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "VL SOUZA",
+                "CEP": "13224195",
+                "CIDADE": "VARZEA PAULISTA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO LOURENCO LOPES",
+                "NUMERO": "35",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "JD DIANA",
+                "CEP": "13224180",
+                "CIDADE": "VARZEA PAULISTA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ANTONIO LOURENCO LOPES",
+                "NUMERO": "35",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA SOUZA",
+                "CEP": "13224195",
+                "CIDADE": "VARZEA PAULISTA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "A",
+                "NUMERO": "90",
+                "COMPLEMENTO": "",
+                "BAIRRO": "URBIS",
+                "CEP": "48500000",
+                "CIDADE": "EUCLIDES DA CUNHA",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "25720936858",
+            "NOME": "ISOLINA MENESES PEDROSO DOMIQUILE",
+            "IDADE": "70 anos",
+            "LOCAL": "VARZEA PAULISTA\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ISOLINA MENESES PEDROSO DOMIQUILE",
+            "IDADE": "",
+            "LOCALIDADE": "VARZEA PAULISTA\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "25720936858"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ALPINO INDUSTRIA METALURGICA LTDA",
+                "CNPJ": "61451027000195",
+                "CIDADE": "JUNDIAI-SP",
+                "PROFISSAO": "721105",
+                "DATA_ADMISSAO": "23\/11\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CONTINENTAL AUTOMOTIVE DO BRASIL LTDA.",
+                "CNPJ": "11111752000146",
+                "CIDADE": "VARZEA PAULISTA-SP",
+                "PROFISSAO": "720215",
+                "DATA_ADMISSAO": "01\/01\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

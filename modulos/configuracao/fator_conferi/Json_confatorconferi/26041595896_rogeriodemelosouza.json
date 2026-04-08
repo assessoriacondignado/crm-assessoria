@@ -1,0 +1,183 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26041595896",
+        "NOME": "ROGERIO DE MELO SOUZA",
+        "NOME_MAE": "SONIA MARIA DE MELO SOUZA",
+        "NASCTO": "02\/04\/1975",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "267728630183",
+        "NIT": "1138721548",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "314410",
+        "PROFISSAO": "TECNICO EM MANUTENCAO DE MAQUINAS",
+        "SALARIO": " 3.573,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1333862487",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13997307733",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16997476923",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "13997720864",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "rogeriomelloguaruja@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV PARIS",
+                "NUMERO": "707",
+                "COMPLEMENTO": "BL A AP 30",
+                "BAIRRO": "INDEPENDENCIA",
+                "CEP": "14076900",
+                "CIDADE": "RIBEIRAO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CAMPOS MELLO",
+                "NUMERO": "222",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL MATHIAS",
+                "CEP": "11015010",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOAQUIM RODRIGUES OLIVEIRA",
+                "NUMERO": "365",
+                "COMPLEMENTO": "CASA:2 365",
+                "BAIRRO": "VILA LIGYA",
+                "CEP": "11430350",
+                "CIDADE": "GUARUJA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV ANTONIO M DOS SANTOS",
+                "NUMERO": "236",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL STA ROSA",
+                "CEP": "11431050",
+                "CIDADE": "GUARUJA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA GENERAL MARIO HERMES DA FONSECA",
+                "NUMERO": "153",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ESPLANADA DOS BARREIROS",
+                "CEP": "11340180",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "420884610",
+            "NOME": "SONIA MARIA DE MELO SOUZA",
+            "IDADE": "52 anos",
+            "LOCAL": "SANTANA DE PATOS\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "CHRISTIANE DE MELO SOUZA",
+            "IDADE": "",
+            "LOCALIDADE": "SAO VICENTE\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "16229408813"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ATENAS ELEVADORES LTDA",
+                "CNPJ": "10658360000139",
+                "CIDADE": "BARRETOS-SP",
+                "PROFISSAO": "314410",
+                "DATA_ADMISSAO": "01\/08\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ELEVADORES ATLAS SCHINDLER LTDA.",
+                "CNPJ": "00028986005843",
+                "CIDADE": "RIBEIRAO PRETO-SP",
+                "PROFISSAO": "414105",
+                "DATA_ADMISSAO": "18\/10\/2006",
+                "DATA_DEMISSAO": "03\/11\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "ELEVADORES ATLAS SCHINDLER LTDA.",
+                "CNPJ": "00028986004014",
+                "CIDADE": "GUARUJA-SP",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "01\/12\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ELEVADORES ATLAS SCHINDLER LTDA.",
+                "CNPJ": "00028986003638",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "18\/10\/2006",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,217 @@
+{
+    "CADASTRAIS": {
+        "CPF": "61830224204",
+        "NOME": "OSEAS SANTOS DO NASCIMENTO",
+        "NOME_MAE": "ELIZETE SANTOS DO NASCIMENTO",
+        "NASCTO": "04\/05\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1267400502",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212405",
+        "PROFISSAO": "ANALISTA DE DESENVOLVIMENTO DE SISTEMAS",
+        "SALARIO": " 12.076,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9236244676",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "20\/08\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9236290752",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92981297243",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92981743285",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92984823562",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PREPG",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92981386270",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92988160752",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "oseas.nascimento@diebold.com",
+            "oseassantosn@yahoo.com.br",
+            "oseassantosn@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV CEL SAVIO BELOTA",
+                "NUMERO": "7",
+                "COMPLEMENTO": "B",
+                "BAIRRO": "NOVO ALEIXO",
+                "CEP": "69098270",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "TV HELIODORO BALBI",
+                "NUMERO": "36",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TANCREDO NEVES",
+                "CEP": "69087306",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV ITAUBA",
+                "NUMERO": "3025",
+                "COMPLEMENTO": "SAMSUNG ELETRONIC DA AAMZONIA",
+                "BAIRRO": "JORGE TEIXEIRA",
+                "CEP": "69088240",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R JOSE DE ALENCAR",
+                "NUMERO": "332",
+                "COMPLEMENTO": "TO",
+                "BAIRRO": "JAPIIM",
+                "CEP": "69077795",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "RUA SANTA ROSA",
+                "NUMERO": "36",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MORRO DA LIBERDADE",
+                "CEP": "69074840",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "RUA ADALBERTO VALE",
+                "NUMERO": "6",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BETANIA",
+                "CEP": "69073040",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "2366660375",
+            "NOME": "ELIZETE SANTOS DO NASCIMENTO",
+            "IDADE": "49 anos",
+            "LOCAL": "PARNAIBA\/PI",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "EVA MERICE DE OLIVEIRA CABRAL LIRA",
+                "IDADE": "",
+                "LOCALIDADE": "MANAUS\/AM",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "38419688215"
+            },
+            {
+                "NOME": "JAIR ROBERTO GONCALVES PASSOS",
+                "IDADE": "",
+                "LOCALIDADE": "MANAUS\/AM",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "47489944287"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "FUNDACAO AMAZONICA DE AMPARO A PESQUISA E DESENVOLVIMENTO TECNOLOGICO DESEMBARGADOR PAULO DOS ANJOS FEITOZA",
+                "CNPJ": "02844344000102",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "14\/08\/2017",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FUCAPI FUND CENTRO DE ANALISE PESQ E INOV TECNOLOGICA",
+                "CNPJ": "04153540000166",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "02\/05\/2008",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

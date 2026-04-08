@@ -1,0 +1,175 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25534761830",
+        "NOME": "MARCOS VINICIUS DE MORAIS",
+        "NOME_MAE": "NEUSA APARECIDA DE OLIVEIRA",
+        "NASCTO": "08\/07\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "17032210994",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411005",
+        "PROFISSAO": "AUXILIAR DE ESCRITORIO, EM GERAL",
+        "SALARIO": " 1.085,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19989341936",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19996564818",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "21\/09\/2017",
+                "TIPO_TEL": "MOVEL PRE-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "19996287222",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "19998529035",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "19996663959",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "mvmtransporteexpress@gmail.com",
+            "mvmtransporteexpress@outlook.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R IRIDIO",
+                "NUMERO": "131",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL RICA",
+                "CEP": "13050522",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DO CALCETEIRO",
+                "NUMERO": "76",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PTE PRETA",
+                "CEP": "13041410",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DQ DE CAXIAS",
+                "NUMERO": "465",
+                "COMPLEMENTO": "AP 111",
+                "BAIRRO": "CENTRO",
+                "CEP": "13015310",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA MIRANDOPOLIS",
+                "NUMERO": "319",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA POMPEIA",
+                "CEP": "13050470",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ESCRIVA BEATO MONSENHOR",
+                "NUMERO": "90",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DIC V (CONJUNTO HABITACIONAL CHICO MENDES)",
+                "CEP": "13054563",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "42015154",
+            "NOME": "NEUSA APARECIDA DE OLIVEIRA",
+            "IDADE": "75 anos",
+            "LOCAL": "PORTO VELHO\/RO",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "WANDER TADEU DE MEDEIROS",
+            "IDADE": "",
+            "LOCALIDADE": "MURIAE\/MG",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "14551273880"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "EMPRESA MUNICIPAL DE DESENVOLVIMENTO DE CAMPINAS S\/A",
+                "CNPJ": "44602720000100",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "252305",
+                "DATA_ADMISSAO": "03\/05\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "RAFAEL STAIANOV CAUM",
+                "CNPJ": "12778209000160",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "01\/01\/2011",
+                "DATA_DEMISSAO": "10\/05\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

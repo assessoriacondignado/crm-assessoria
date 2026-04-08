@@ -1,0 +1,175 @@
+{
+    "CADASTRAIS": {
+        "CPF": "64327833215",
+        "NOME": "JOAO CARLOS SOUZA DO NASCIMENTO",
+        "NOME_MAE": "MARIA DARCY FERREIRA DE SOUZA",
+        "NASCTO": "09\/10\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1282385142",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "233210",
+        "PROFISSAO": "INSTRUTOR DE APRENDIZAGEM E TREINAMENTO INDUSTRIAL",
+        "SALARIO": " 6.758,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9335221541",
+                "OPERADORA": "TELEMAR\/PA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9335227396",
+                "OPERADORA": "TELEMAR\/PA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "93991502636",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "93991470669",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "11\/12\/2008",
+                "TIPO_TEL": "MOVEL PRE-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "93991242313",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "sidmon@terra.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV BORGES LEAL",
+                "NUMERO": "207",
+                "COMPLEMENTO": "OFICINA DE MOTOS",
+                "BAIRRO": "PRAINHA",
+                "CEP": "68005130",
+                "CIDADE": "SANTAREM",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "TRAV SILVA JARDIM",
+                "NUMERO": "1429",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALDEIA",
+                "CEP": "68040540",
+                "CIDADE": "SANTAREM",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "AVENIDA BORGES LEAL",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRAINHA",
+                "CEP": "68005130",
+                "CIDADE": "SANTAREM",
+                "ESTADO": "PA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "52200965591",
+                "NOME": "MARIA DARCY FERREIRA DE SOUZA",
+                "IDADE": "73 anos",
+                "LOCAL": "FEIRA DE SANTANA\/BA",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "543887596",
+                "NOME": "TICIANE FERREIRA SOUZA CAMPOS",
+                "IDADE": "42 anos",
+                "LOCAL": "FEIRA DE SANTANA\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "9272827639",
+                "NOME": "JADISON DE SOUZA RIOS",
+                "IDADE": "37 anos",
+                "LOCAL": "SETE LAGOAS\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "87899019591",
+                "NOME": "FABRICIO FERREIRA DE SOUZA",
+                "IDADE": "50 anos",
+                "LOCAL": "SALVADOR\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "95660054587",
+                "NOME": "FABIO FERREIRA DE SOUZA",
+                "IDADE": "47 anos",
+                "LOCAL": "FEIRA DE SANTANA\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "JOAO ALVES DE SOUZA",
+            "IDADE": "",
+            "LOCALIDADE": "LAVRAS DA MANGABEIRA\/CE",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "3922197353"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "SERVICO NACIONAL DE APRENDIZAGEM INDUSTRIAL",
+            "CNPJ": "03785762000481",
+            "CIDADE": "SANTAREM-PA",
+            "PROFISSAO": "233210",
+            "DATA_ADMISSAO": "01\/11\/2011",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

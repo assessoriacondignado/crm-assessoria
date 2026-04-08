@@ -1,0 +1,169 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26089972878",
+        "NOME": "DENIS ALVES DE LIMA",
+        "NOME_MAE": "MARIA JOSE ALVES DE LIMA",
+        "NASCTO": "15\/07\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "216704090108",
+        "NIT": "1254970219",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "861205",
+        "PROFISSAO": "OPERADOR DE SUBESTACAO",
+        "SALARIO": " 12.173,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1147384979",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1123789005",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "10\/08\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1177825797",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11974837126",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11930424807",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11950395923",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11974932474",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "dlima@cteep.com.br",
+            "dlima@isacteep.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R BENEDICTO DE SOUZA BRANCO",
+                "NUMERO": "620",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JUNDIAPEBA",
+                "CEP": "08752000",
+                "CIDADE": "MOGI DAS CRUZES",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CINCO",
+                "NUMERO": "963",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM CAMBUCI",
+                "CEP": "08745590",
+                "CIDADE": "MOGI DAS CRUZES",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CECILIA DA ROCHA",
+                "NUMERO": "963",
+                "COMPLEMENTO": "FDS",
+                "BAIRRO": "JUNDIAPEBA",
+                "CEP": "08750590",
+                "CIDADE": "MOGI DAS CRUZES",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOUTOR WALTER BELDA",
+                "NUMERO": "390",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA JUNDIAI",
+                "CEP": "08745320",
+                "CIDADE": "MOGI DAS CRUZES",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "28415760",
+            "NOME": "MARIA JOSE ALVES DE LIMA",
+            "IDADE": "67 anos",
+            "LOCAL": "MATIAS BARBOSA\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "ISA ENERGIA BRASIL S.A.",
+            "CNPJ": "02998611000104",
+            "CIDADE": "SAO PAULO-SP",
+            "PROFISSAO": "861205",
+            "DATA_ADMISSAO": "10\/11\/2001",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

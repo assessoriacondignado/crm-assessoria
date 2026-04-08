@@ -1,0 +1,174 @@
+{
+    "CADASTRAIS": {
+        "CPF": "79965202591",
+        "NOME": "ANA CLAUDIA DE JESUS SILVA",
+        "NOME_MAE": "MARIA SILVEIRA DE JESUS SILVA",
+        "NASCTO": "19\/08\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "015489032151",
+        "NIT": "12419613130",
+        "ESCOLARIDADE": "PRIMEIRO GRAU (GINASIO)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411005",
+        "PROFISSAO": "AUXILIAR DE ESCRITORIO, EM GERAL",
+        "SALARIO": " 1.973,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7931146013",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7336135603",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "79996534100",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79988451489",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R C",
+                "NUMERO": "108",
+                "COMPLEMENTO": "L JD BAHIA",
+                "BAIRRO": "ZONA DE EXPANSAO ARUANA",
+                "CEP": "49000299",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R SAO FRANCISCO",
+                "NUMERO": "340",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTO ANTONIO",
+                "CEP": "49060600",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "TRAVESSA SAO LUIZ",
+                "NUMERO": "240",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JOAO SOARES",
+                "CEP": "45604645",
+                "CIDADE": "ITABUNA",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "35580941153",
+                "NOME": "MARIA SILVEIRA DE JESUS SILVA",
+                "IDADE": "70 anos",
+                "LOCAL": "GOIANIA\/GO",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "1073423166",
+                "NOME": "EDCLEY DE JESUS SILVA",
+                "IDADE": "48 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "5254966530",
+                "NOME": "JOAO CEZAR DOS SANTOS SILVA JUNIOR",
+                "IDADE": "34 anos",
+                "LOCAL": "FEIRA DE SANTANA\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "48628530568",
+                "NOME": "MONICA REGINA DE JESUS SILVA GUIMARAES",
+                "IDADE": "56 anos",
+                "LOCAL": "ARACAJU\/SE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "69384983500",
+                "NOME": "ANTONIO SERGIO DE JESUS SILVA",
+                "IDADE": "47 anos",
+                "LOCAL": "SUZANO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "78478464115",
+                "NOME": "SHEILA DE JESUS SILVA",
+                "IDADE": "51 anos",
+                "LOCAL": "GOIANIA\/GO",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PETROX DISTRIBUIDORA LTDA",
+                "CNPJ": "05482271001469",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "14\/04\/2008",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PETROX DISTRIBUIDORA LTDA",
+                "CNPJ": "05482271000144",
+                "CIDADE": "NOSSA SENHORA DO SOCORRO-SE",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "14\/04\/2008",
+                "DATA_DEMISSAO": "01\/11\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

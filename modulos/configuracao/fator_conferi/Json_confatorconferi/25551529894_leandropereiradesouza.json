@@ -1,0 +1,144 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25551529894",
+        "NOME": "LEANDRO PEREIRA DE SOUZA",
+        "NOME_MAE": "VALDECI PEREIRA DE SOUZA",
+        "NASCTO": "04\/02\/1977",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "321553962",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "277251860191",
+        "NIT": "12525283203",
+        "ESCOLARIDADE": "DA 5a. A 8a. SERIE INCOMPLETA DO 1o. GRAU(GINASIO INCOMPLETO)",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782410",
+        "PROFISSAO": "MOTORISTA DE ONIBUS URBANO",
+        "SALARIO": " 879,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11980107082",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11980107081",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11998010708",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11998010708",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11960161028",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ITAPIRANGA",
+                "NUMERO": "4",
+                "COMPLEMENTO": "A",
+                "BAIRRO": "JD NOSSA SENHORA DE FATIMA",
+                "CEP": "06624170",
+                "CIDADE": "JANDIRA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ITAPIRANGA",
+                "NUMERO": "4",
+                "COMPLEMENTO": "A",
+                "BAIRRO": "JARDIM TONATO",
+                "CEP": "06365000",
+                "CIDADE": "CARAPICUIBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA RIBEIRAO BRANCO",
+                "NUMERO": "25",
+                "COMPLEMENTO": "TERREA",
+                "BAIRRO": "VILA ANUNCIATA",
+                "CEP": "06361000",
+                "CIDADE": "CARAPICUIBA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "30232147",
+            "NOME": "VALDECI PEREIRA DE SOUZA",
+            "IDADE": "56 anos",
+            "LOCAL": "CORUMBA DE GOIAS\/GO",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TRANSMARONI TRANSPORTES BRASIL RODOVIARIOS LTDA",
+                "CNPJ": "03831403000170",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "05\/06\/2014",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "EMPRESA DE TRANSPORTES TURISMO CARAPICUIBA LTDA",
+                "CNPJ": "73056459000180",
+                "CIDADE": "CARAPICUIBA-SP",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "11\/05\/2010",
+                "DATA_DEMISSAO": "12\/02\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

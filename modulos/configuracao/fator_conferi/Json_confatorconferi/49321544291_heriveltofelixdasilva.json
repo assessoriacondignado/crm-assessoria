@@ -1,0 +1,202 @@
+{
+    "CADASTRAIS": {
+        "CPF": "49321544291",
+        "NOME": "HERIVELTO FELIX DA SILVA",
+        "NOME_MAE": "MARIA LAURINDA FELIX DA SILVA",
+        "NASCTO": "23\/11\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12530377903",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "517410",
+        "PROFISSAO": "PORTEIRO DE EDIFICIOS",
+        "SALARIO": " 1.073,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9236315385",
+            "OPERADORA": "TELEMAR\/AM",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92993219292",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "07\/03\/2020",
+                "TIPO_TEL": "MOVEL POS-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92993219291",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "herivelton.fsilva@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "TV PAU ROSA",
+                "NUMERO": "26",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JORGE TEIXEIRA",
+                "CEP": "69088737",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "TV PITOMBA",
+                "NUMERO": "160",
+                "COMPLEMENTO": "C 1",
+                "BAIRRO": "COL TERRA NOVA",
+                "CEP": "69015508",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R PANDORA",
+                "NUMERO": "389",
+                "COMPLEMENTO": "C PANDORA 389 C",
+                "BAIRRO": "ALVORADA",
+                "CEP": "69043590",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "TV PITOMBA",
+                "NUMERO": "26",
+                "COMPLEMENTO": "PX P DELIRIOS",
+                "BAIRRO": "COL TERRA NOVA",
+                "CEP": "69015508",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R ANGICO-BRANCO",
+                "NUMERO": "26",
+                "COMPLEMENTO": "CAMPO DE FUTEBOL",
+                "BAIRRO": "MONTE DAS OLIVEIRAS",
+                "CEP": "69093117",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "72227095253",
+                "NOME": "MARIA LAURINDA FELIX DA SILVA",
+                "IDADE": "80 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "33643440278",
+                "NOME": "EVERTON JOSE FELIX DA SILVA",
+                "IDADE": "57 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "41327721287",
+                "NOME": "EVELYN FELIX DA SILVA",
+                "IDADE": "54 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "41327772272",
+                "NOME": "EVERALDO FELIX DA SILVA",
+                "IDADE": "55 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "61336580291",
+                "NOME": "ERIKA CRISTIANE FELIX DA SILVA",
+                "IDADE": "48 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "94745510225",
+                "NOME": "ELANE FELIX DA SILVA",
+                "IDADE": "38 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CAROLINA NOBRE AGUIAR SERVICOS",
+                "CNPJ": "31566654000100",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "517410",
+                "DATA_ADMISSAO": "29\/12\/2021",
+                "DATA_DEMISSAO": "20\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "E.M. SOLUCOES EM SERVICOS DE MANUTENCAO PREDIAL LTDA",
+                "CNPJ": "50448187000169",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "517410",
+                "DATA_ADMISSAO": "12\/11\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "E. DE S. PORTELA SERVICOS DE LIMPEZA E ENGENHARIA LTDA",
+                "CNPJ": "23872451000114",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "517410",
+                "DATA_ADMISSAO": "01\/02\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "E. M. SERVICOS DE CONSERVACAO LTDA",
+                "CNPJ": "08579392000105",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "517410",
+                "DATA_ADMISSAO": "13\/09\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

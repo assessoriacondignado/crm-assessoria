@@ -1,0 +1,296 @@
+{
+    "CADASTRAIS": {
+        "CPF": "67322352572",
+        "NOME": "HEYDER AUGUSTO RIBEIRO MACEDO",
+        "NOME_MAE": "DALIA VALDA RIBEIRO MACEDO",
+        "NASCTO": "11\/09\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "075648390531",
+        "NIT": "1249665341 ",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142320",
+        "PROFISSAO": "GERENTE DE VENDAS",
+        "SALARIO": " 16.867,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2121226000",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "8130727043",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2121226100",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7132321319",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "71999724002",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81992534782",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71988964216",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71991298710",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "71988964214",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "heyder.macedo@oi.com.br",
+            "heydermacedo@oi.com.br",
+            "heyder.macedo@herbarium.net",
+            "hmacedo@fqm.com.br",
+            "heyderamacedo@ig.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV WASHINGTON SOARES",
+                "NUMERO": "3000",
+                "COMPLEMENTO": "LJ 43 E 44",
+                "BAIRRO": "ENG LUCIANO CAVALCANTE",
+                "CEP": "60810350",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R DR JOSE PLUTARCO",
+                "NUMERO": "14",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE DOS FUNCIONARIOS",
+                "CEP": "60822075",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R PIO NOVE",
+                "NUMERO": "435",
+                "COMPLEMENTO": "AP 2305",
+                "BAIRRO": "MADALENA",
+                "CEP": "50710265",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R EDGARD SANTOS",
+                "NUMERO": "501",
+                "COMPLEMENTO": "AP 206 COND BSQ D",
+                "BAIRRO": "COUTOS",
+                "CEP": "40750430",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R NEUDELIA MONTE",
+                "NUMERO": "1014",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JOSE DE ALENCAR",
+                "CEP": "60830135",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R CRISTIANO BUYS",
+                "NUMERO": "515",
+                "COMPLEMENTO": "AP 34 C BL",
+                "BAIRRO": "CABULA",
+                "CEP": "41150120",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "AV LUIS CARLOS PRESTES",
+                "NUMERO": "410",
+                "COMPLEMENTO": "QR 208",
+                "BAIRRO": "BARRA DA TIJUCA",
+                "CEP": "22775055",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R VVA CLAUDIO",
+                "NUMERO": "300",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JACARE",
+                "CEP": "20970902",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "78366542572",
+                "NOME": "HUGO LEONARDO RIBEIRO MACEDO",
+                "IDADE": "46 anos",
+                "LOCAL": "SALVADOR\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "80609805568",
+                "NOME": "TIZZIANNE RIBEIRO MACEDO",
+                "IDADE": "44 anos",
+                "LOCAL": "SALVADOR\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TORRENT DO BRASIL LTDA",
+                "CNPJ": "33078528000485",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142320",
+                "DATA_ADMISSAO": "17\/06\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CLINICA DE INTERNACAO SANTO ANTONIO LTDA",
+                "CNPJ": "22790978000137",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "131205",
+                "DATA_ADMISSAO": "05\/02\/2024",
+                "DATA_DEMISSAO": "26\/04\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SOLIS DISTRIBUIDORA DE PRODUTOS PARA A SAUDE, SERVICOS COMERCIAIS E LOGISTICA LTDA",
+                "CNPJ": "06317222000119",
+                "CIDADE": "COLOMBO-PR",
+                "PROFISSAO": "142320",
+                "DATA_ADMISSAO": "01\/10\/2020",
+                "DATA_DEMISSAO": "16\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "FARMOQUIMICA S A",
+                "CNPJ": "33349473000310",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "142320",
+                "DATA_ADMISSAO": "17\/04\/2000",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": [
+            {
+                "RAZAO_SOCIAL": "H S CONSULTORIA E REPRESENTACOES LTDA",
+                "CNPJ": "53570827000105",
+                "CIDADE": "SALVADOR-BA",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20240119",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "MANY MARIE CENTRO DE BELEZA E ESTETICA LTDA",
+                "CNPJ": "14237232000172",
+                "CIDADE": "FORTALEZA-CE",
+                "QUALIFICACAO": "SÃ³cio",
+                "DATA_ENTRADA": "20110902",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "BAR E RESTAURANTE O ARRUMADINHO LTDA",
+                "CNPJ": "01410128000196",
+                "CIDADE": "SALVADOR-BA",
+                "QUALIFICACAO": "SÃ³cio",
+                "DATA_ENTRADA": "19960904",
+                "VALOR_PARTICIPACAO": ""
+            }
+        ]
+    }
+}

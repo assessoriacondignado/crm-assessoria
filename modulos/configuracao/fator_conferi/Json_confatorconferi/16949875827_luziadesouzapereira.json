@@ -1,0 +1,338 @@
+{
+    "CADASTRAIS": {
+        "CPF": "16949875827",
+        "NOME": "LUZIA DE SOUZA PEREIRA",
+        "NOME_MAE": "IVONE FERREIRA SOUZA",
+        "NASCTO": "16\/03\/1975",
+        "IDADE": "51 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "196418060124",
+        "NIT": "12432779942",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "252205",
+        "PROFISSAO": "AUDITOR (CONTADORES E AFINS)",
+        "SALARIO": " 4.000,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1333724716",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1143596000",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1143596262",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1333723084",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1143596061",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13997260365",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13978181199",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13991546104",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "luzia.souza@ecovias.com.br",
+            "luzia_souza@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MARIA DAS DORES SANTANA",
+                "NUMERO": "267",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VLE VERDE",
+                "CEP": "11542020",
+                "CIDADE": "CUBATAO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MARIA DAS DORES SANTANA",
+                "NUMERO": "269",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "VLE VERDE",
+                "CEP": "11542020",
+                "CIDADE": "CUBATAO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SILVERIO DE CASTRO SOUSA",
+                "NUMERO": "217",
+                "COMPLEMENTO": "C 2",
+                "BAIRRO": "JD SYDNEY",
+                "CEP": "02982000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R VICENTE FERREIRA LEITE",
+                "NUMERO": "701",
+                "COMPLEMENTO": "FDS",
+                "BAIRRO": "VL SIQUEIRA ZONA NORTE",
+                "CEP": "02723000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R IRINEU DE ALMEIDA MASCARENHAS",
+                "NUMERO": "21",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL COUTO",
+                "CEP": "11510180",
+                "CIDADE": "CUBATAO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RODOVIA DOS IMIGRANTES",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALVARENGA",
+                "CEP": "09845000",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA VINTE E CINCO DE DEZEMBRO",
+                "NUMERO": "242",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA NATAL",
+                "CEP": "11538000",
+                "CIDADE": "CUBATAO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA VINTE E CINCO DE DEZEMBRO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA NATAL",
+                "CEP": "11538000",
+                "CIDADE": "CUBATAO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "8188440191",
+                "NOME": "IVONE FERREIRA SOUZA",
+                "IDADE": "74 anos",
+                "LOCAL": "",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "7786625780",
+                "NOME": "JANAINA SOUZA FAGUNDES",
+                "IDADE": "49 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "8419718700",
+                "NOME": "ANDERSON LUIZ SOUZA FAGUNDES",
+                "IDADE": "48 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "47475048934",
+                "NOME": "IRENICE DE FATIMA SOUZA",
+                "IDADE": "70 anos",
+                "LOCAL": "RIBEIRAO PRETO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "60515481734",
+                "NOME": "IVANA SOUZA TELLES DE MOURA CASTRO",
+                "IDADE": "66 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "93520786753",
+                "NOME": "VALMIRA FERREIRA SOUZA",
+                "IDADE": "63 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "FABIO DOS SANTOS PEREIRA",
+                "IDADE": "",
+                "LOCALIDADE": "CUBATAO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "16957796817"
+            },
+            {
+                "NOME": "IVONE FERREIRA DE SOUZA",
+                "IDADE": "",
+                "LOCALIDADE": "CUBATAO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "4584577870"
+            },
+            {
+                "NOME": "LUZIA OLIVEIRA DE SOUZA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO JOSE DO RIO PRETO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "37793292200"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PETROCOQUE S A INDUSTRIA E COMERCIO",
+                "CNPJ": "43218296000124",
+                "CIDADE": "CUBATAO-SP",
+                "PROFISSAO": "252210",
+                "DATA_ADMISSAO": "01\/12\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ROBERT HALF TRABALHO TEMPORARIO LTDA.",
+                "CNPJ": "10279522000713",
+                "CIDADE": "SAO BERNARDO DO CAMPO-SP",
+                "PROFISSAO": "252205",
+                "DATA_ADMISSAO": "04\/11\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "ROBERT HALF TRABALHO TEMPORARIO LTDA.",
+                "CNPJ": "10279522000128",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "252205",
+                "DATA_ADMISSAO": "04\/01\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "ECORODOVIAS CONCESSOES E SERVICOS S\/A",
+                "CNPJ": "08873873000110",
+                "CIDADE": "SAO BERNARDO DO CAMPO-SP",
+                "PROFISSAO": "251215",
+                "DATA_ADMISSAO": "01\/04\/2014",
+                "DATA_DEMISSAO": "15\/10\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "MULTILOG BRASIL S.A.",
+                "CNPJ": "60526977018973",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "410235",
+                "DATA_ADMISSAO": "27\/03\/2013",
+                "DATA_DEMISSAO": "02\/01\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "MULTILOG BRASIL S.A.",
+                "CNPJ": "60526977000179",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "410235",
+                "DATA_ADMISSAO": "02\/01\/2014",
+                "DATA_DEMISSAO": "17\/04\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "MULTILOG BRASIL S.A.",
+                "CNPJ": "60526977000411",
+                "CIDADE": "GUARULHOS-SP",
+                "PROFISSAO": "410235",
+                "DATA_ADMISSAO": "01\/10\/2011",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,146 @@
+{
+    "CADASTRAIS": {
+        "CPF": "75934213504",
+        "NOME": "OSMAR SOUSA DA SILVA",
+        "NOME_MAE": "MARIA ALCANTARA SOUSA DA SILVA",
+        "NASCTO": "25\/03\/1974",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "515120090",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "128615160582",
+        "NIT": "2030141641",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782410",
+        "PROFISSAO": "MOTORISTA DE ONIBUS URBANO",
+        "SALARIO": " 4.451,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "7133971863",
+            "OPERADORA": "TELEMAR\/BA",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "71987216459",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "OI_POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51996838058",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71986596375",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "30\/05\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "71986043272",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "4 TRAVESSA GETULIO VARGAS",
+                "NUMERO": "43",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S MARCOS",
+                "CEP": "41250146",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R OLIVAES",
+                "NUMERO": "42",
+                "COMPLEMENTO": "42 E",
+                "BAIRRO": "PARIPE",
+                "CEP": "40810180",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "BC VIVALDO MULLER",
+                "NUMERO": "0",
+                "COMPLEMENTO": "COMPLEM VINHOS   33",
+                "BAIRRO": "INTERIOR",
+                "CEP": "95600000",
+                "CIDADE": "TAQUARA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA OLIVAES",
+                "NUMERO": "28",
+                "COMPLEMENTO": "ZZ E",
+                "BAIRRO": "PARIPE",
+                "CEP": "40810180",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "OTIMA TRANSPORTES DE SALVADOR SPE S\/A",
+                "CNPJ": "21188004000115",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "22\/04\/2015",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MODELO TRANSPORTE URBANO LTDA.",
+                "CNPJ": "05127206000281",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "782405",
+                "DATA_ADMISSAO": "01\/01\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,258 @@
+{
+    "CADASTRAIS": {
+        "CPF": "27218545858",
+        "NOME": "GABRIEL AMARAL",
+        "NOME_MAE": "SONIA MARIA PEREZ AMARAL",
+        "NASCTO": "11\/02\/1979",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "192997210116",
+        "NIT": "1261290722",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "214905",
+        "PROFISSAO": "ENGENHEIRO DE PRODUCAO",
+        "SALARIO": " 26.199,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2135574392",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1140184926",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13988181121",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1178184926",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11996057075",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21982779167",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21981318275",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "gamaral@intermoor.com",
+            "gabriel.amaral@sud-chemie.com",
+            "amaralusf@bol.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R GERALDO FERREIRA TAVARES",
+                "NUMERO": "1079",
+                "COMPLEMENTO": "BOSQ EUCALIPTOS",
+                "BAIRRO": "BSQ DOS EUCALIPTOS",
+                "CEP": "12232110",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BRAGA",
+                "NUMERO": "110",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL FACHINI",
+                "CEP": "04326140",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FRANCISCO NUNES",
+                "NUMERO": "526",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JD DA SERRA JACARE",
+                "CEP": "13318142",
+                "CIDADE": "CABREUVA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "EST DOS BANDEIRANTES",
+                "NUMERO": "7700",
+                "COMPLEMENTO": "BL  Blocos  2 AP  Apartamento  109",
+                "BAIRRO": "JACAREPAGUA",
+                "CEP": "22780084",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RODOVIA NILO MAXIMO",
+                "NUMERO": "1300",
+                "COMPLEMENTO": "CS 69",
+                "BAIRRO": "CIDADE SALVADOR",
+                "CEP": "12312010",
+                "CIDADE": "JACAREI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA DAS AMERICAS",
+                "NUMERO": "14600",
+                "COMPLEMENTO": "APTO 605 BL 3",
+                "BAIRRO": "RECREIO DOS BANDEIRANTES",
+                "CEP": "22790702",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R MAESTRO BRAGA",
+                "NUMERO": "11",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "12995000",
+                "CIDADE": "PINHALZINHO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MAESTRO BRAGA",
+                "NUMERO": "110",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "12995000",
+                "CIDADE": "PINHALZINHO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "25517075878",
+                "NOME": "SONIA MARIA PEREZ AMARAL",
+                "IDADE": "71 anos",
+                "LOCAL": "PINHALZINHO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "25325412884",
+                "NOME": "OSCAR AMARAL NETO",
+                "IDADE": "50 anos",
+                "LOCAL": "PINHALZINHO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "25513578883",
+                "NOME": "LETICIA AMARAL",
+                "IDADE": "49 anos",
+                "LOCAL": "SAO JOSE DOS CAMPOS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "AMANDA ROBERTA DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO JOSE DOS CAMPOS\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "37249239880"
+            },
+            {
+                "NOME": "GABRIEL AMARAL",
+                "IDADE": "",
+                "LOCALIDADE": "PANAMBI\/RS",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "6072500030"
+            },
+            {
+                "NOME": "IZABEL CRISTINA GONCALVES DE S AMARAL",
+                "IDADE": "",
+                "LOCALIDADE": "JACAREI\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "32865609871"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "INTERMOOR DO BRASIL SERVICOS ONSHORE E OFFSHORE LTDA",
+                "CNPJ": "00156880000190",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "214905",
+                "DATA_ADMISSAO": "03\/08\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "INTERMOOR DO BRASIL SERVICOS OFFSHORE DE INSTALACAO LTDA",
+                "CNPJ": "08208002000182",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "214205",
+                "DATA_ADMISSAO": "04\/08\/2008",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

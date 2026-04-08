@@ -1,0 +1,249 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26159157892",
+        "NOME": "LEON KULIKOWSKI",
+        "NOME_MAE": "LESLIE DOMENICI KULIKOWSKI",
+        "NASCTO": "28\/12\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "207147140",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "255586920124",
+        "NIT": "12690041814",
+        "ESCOLARIDADE": "SUPERIOR INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "141305",
+        "PROFISSAO": "GERENTE DE PRODUCAO E OPERACOES DA CONSTRUCAO CIVIL E OBRAS PUBLICAS",
+        "SALARIO": " 13.323,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1132667791",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1135398542",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1149970271",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1139389986",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "73988626863",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11994246267",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "04\/03\/2009",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11994915958",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11966342582",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11991119509",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "lkbr@internetsp.com.br",
+            "lkbr@terra.com.br",
+            "suporte@crossgames.com.br",
+            "leon.kuli@uol.com.br",
+            "leon@leonkulik.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R LEAO",
+                "NUMERO": "533",
+                "COMPLEMENTO": "4",
+                "BAIRRO": "CIDADE SATELITE SANTA BARBARA",
+                "CEP": "08330420",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV UTINGA",
+                "NUMERO": "1389",
+                "COMPLEMENTO": "",
+                "BAIRRO": "UTINGA",
+                "CEP": "09220611",
+                "CIDADE": "SANTO ANDRE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R VERIANO PEREIRA",
+                "NUMERO": "7",
+                "COMPLEMENTO": "SL 16",
+                "BAIRRO": "VL DA SAUDE",
+                "CEP": "04144030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV LEONCIO DE MAGALHAES",
+                "NUMERO": "950",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD S PAULO ZONA NORTE",
+                "CEP": "02042001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CEL DIOGO",
+                "NUMERO": "1112",
+                "COMPLEMENTO": "LJ",
+                "BAIRRO": "JD GLORIA",
+                "CEP": "01545001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV PAULISTA",
+                "NUMERO": "1745",
+                "COMPLEMENTO": "AP 403",
+                "BAIRRO": "BELA VISTA",
+                "CEP": "01311929",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV D PEDRO I",
+                "NUMERO": "219",
+                "COMPLEMENTO": "AP 1102",
+                "BAIRRO": "VL MONUMENTO",
+                "CEP": "01552001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV BRG LUIS ANTONIO",
+                "NUMERO": "2050",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BELA VISTA",
+                "CEP": "01318912",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "18689836845",
+            "NOME": "LESLIE DOMENICI KULIKOWSKI",
+            "IDADE": "66 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ORACLE DO BRASIL SISTEMAS LTDA",
+                "CNPJ": "59456277000176",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142320",
+                "DATA_ADMISSAO": "10\/07\/2017",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ADOBE SYSTEMS BRASIL LTDA.",
+                "CNPJ": "02999520000185",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "141305",
+                "DATA_ADMISSAO": "13\/03\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "SNL TECNOLOGIA   EDUCACAO INOVA SIMPLES (I.S.)",
+            "CNPJ": "48893419000146",
+            "CIDADE": "SANTO ANDRE-SP",
+            "QUALIFICACAO": "Titular Pessoa FÃ­sica Residente ou Domiciliado no Brasil",
+            "DATA_ENTRADA": "20221214",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

@@ -1,0 +1,190 @@
+{
+    "CADASTRAIS": {
+        "CPF": "4202427912",
+        "NOME": "ELISANGELA MARIA MENDES",
+        "NOME_MAE": "FRANCELINA MARIA DO PRADO MENDES",
+        "NASCTO": "28\/12\/1984",
+        "IDADE": "41 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "042719400922",
+        "NIT": "13146927720",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "421125",
+        "PROFISSAO": "OPERADOR DE CAIXA",
+        "SALARIO": " 1.149,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "4734325321",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "47992639392",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "47992895758",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "47992757143",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "47988892350",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "47999642745",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "03\/09\/2015",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "jair.melo@netcabo.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "RUA ALCANTARA",
+            "NUMERO": "1154",
+            "COMPLEMENTO": "CS",
+            "BAIRRO": "BOA VISTA",
+            "CEP": "89206300",
+            "CIDADE": "JOINVILLE",
+            "ESTADO": "SC"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "2707131903",
+                "NOME": "ANDERSON SILVERIO MENDES",
+                "IDADE": "47 anos",
+                "LOCAL": "JOINVILLE\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "79196306904",
+                "NOME": "ANGELA MARIA MENDES",
+                "IDADE": "52 anos",
+                "LOCAL": "",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "98901877953",
+                "NOME": "ANGELA MARIA MENDES",
+                "IDADE": "52 anos",
+                "LOCAL": "JOINVILLE\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "JOAO JAIR MELO DO NASCIMENTO",
+                "IDADE": "",
+                "LOCALIDADE": "BENTO GONCALVES\/RS",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "55093345091"
+            },
+            {
+                "NOME": "JOSE FAGNER BERNARDO DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "JUAZEIRO\/BA",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "5509334509"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "AB PLAST MANUFATURADOS PLASTICOS LTDA",
+                "CNPJ": "76343748000159",
+                "CIDADE": "JOINVILLE-SC",
+                "PROFISSAO": "391205",
+                "DATA_ADMISSAO": "08\/09\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TERMOTECNICA LTDA",
+                "CNPJ": "83636019000156",
+                "CIDADE": "JOINVILLE-SC",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "01\/04\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "A. ANGELONI   CIA. LTDA",
+                "CNPJ": "83646984008275",
+                "CIDADE": "JOINVILLE-SC",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "02\/12\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "A. ANGELONI   CIA. LTDA",
+                "CNPJ": "83646984007201",
+                "CIDADE": "JOINVILLE-SC",
+                "PROFISSAO": "421125",
+                "DATA_ADMISSAO": "01\/12\/2008",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,201 @@
+{
+    "CADASTRAIS": {
+        "CPF": "92482643600",
+        "NOME": "HELBA RODRIGUES SILVA DIOLINDO",
+        "NOME_MAE": "VALNEDE ANA DA SILVA",
+        "NASCTO": "04\/02\/1970",
+        "IDADE": "56 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "083988050205",
+        "NIT": "1146082820",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "514225",
+        "PROFISSAO": "TRABALHADOR DE SERVICOS DE MANUTENCAO DE EDIFICIOS E LOGRADOUROS",
+        "SALARIO": " 1.541,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3138214618",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3138270588",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3138276121",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "15\/06\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31998107990",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31989822370",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31988604518",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "OI_POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31989233372",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "OI_POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31984131648",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "OI_POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R TAPERA",
+                "NUMERO": "143",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOM JARDIM",
+                "CEP": "35162298",
+                "CIDADE": "IPATINGA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R DAMA DA NOITE",
+                "NUMERO": "50",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "BOM JARDIM",
+                "CEP": "35162660",
+                "CIDADE": "IPATINGA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R DAMA DA NOITE",
+                "NUMERO": "89",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOM JARDIM",
+                "CEP": "35162660",
+                "CIDADE": "IPATINGA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R GALIO",
+                "NUMERO": "99",
+                "COMPLEMENTO": "",
+                "BAIRRO": "IMBAUBAS",
+                "CEP": "35160261",
+                "CIDADE": "IPATINGA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R NOVO JARDIM",
+                "NUMERO": "329",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "BOM JARDIM",
+                "CEP": "35162286",
+                "CIDADE": "IPATINGA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RUA JARDINEIRA",
+                "NUMERO": "143",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOM JARDIM",
+                "CEP": "35162632",
+                "CIDADE": "IPATINGA",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "10071344616",
+                "NOME": "HENRIQUE RODRIGUES DIOLINDO",
+                "IDADE": "20 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "13000626654",
+                "NOME": "LUCAS RODRIGUES DIOLINDO",
+                "IDADE": "32 anos",
+                "LOCAL": "IPATINGA\/MG",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "CONSERVADORA CANARIO LTDA",
+            "CNPJ": "18375824000101",
+            "CIDADE": "IPATINGA-MG",
+            "PROFISSAO": "514225",
+            "DATA_ADMISSAO": "12\/03\/2014",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

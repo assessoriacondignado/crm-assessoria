@@ -1,0 +1,289 @@
+{
+    "CADASTRAIS": {
+        "CPF": "2418068951",
+        "NOME": "ALEX MATIAS",
+        "NOME_MAE": "CUSTODIA DA ROSA MATIAS",
+        "NASCTO": "07\/04\/1975",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "032019890906",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4832326435",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4834427588",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "13\/03\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4834437939",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "61983452602",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "48934423694",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92991407430",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "97991712563",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "48991036834",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "04\/02\/2020",
+                "TIPO_TEL": "MOVEL POS-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "alexmatias070475@gmail.com",
+            "alex92991407430@gmail.com",
+            "alexmatias39@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R THEREZINHA NOEMIA DA SILVA",
+                "NUMERO": "172",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL FRANCESA",
+                "CEP": "88817372",
+                "CIDADE": "CRICIUMA",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R VER CYRO BACHA",
+                "NUMERO": "8",
+                "COMPLEMENTO": "172",
+                "BAIRRO": "COMERCIARIO",
+                "CEP": "88803145",
+                "CIDADE": "CRICIUMA",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "RUA ENFERMEIRO ROMEU MANOEL DE SOUZA",
+                "NUMERO": "172",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA FRANCESA",
+                "CEP": "88817387",
+                "CIDADE": "CRICIUMA",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "NOSSA SENHORA FATIMA",
+                "NUMERO": "1088",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MARILI",
+                "CEP": "88820000",
+                "CIDADE": "ICARA",
+                "ESTADO": "SC"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "39846652968",
+            "NOME": "CUSTODIA DA ROSA MATIAS",
+            "IDADE": "84 anos",
+            "LOCAL": "CRICIUMA\/SC",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "CUSTODIA DA ROSA MATIAS",
+            "IDADE": "",
+            "LOCALIDADE": "CRICIUMA\/SC",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "39846652968"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "INDUSTRIA E COMERCIO DE CONFECCOES LA MODA LTDA",
+                "CNPJ": "79653119000113",
+                "CIDADE": "CRICIUMA-SC",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "13\/11\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CRISTALCOPO S\/A",
+                "CNPJ": "05316470000344",
+                "CIDADE": "CRICIUMA-SC",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "14\/02\/2022",
+                "DATA_DEMISSAO": "25\/09\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "JD ALIMENTOS LTDA",
+                "CNPJ": "03124860000125",
+                "CIDADE": "CRICIUMA-SC",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "25\/10\/2021",
+                "DATA_DEMISSAO": "05\/11\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "UFO WAY DENIM BRASIL INDUSTRIA E COMERCIO DE CONFECCOES LTDA",
+                "CNPJ": "03675453000106",
+                "CIDADE": "CRICIUMA-SC",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "11\/08\/2021",
+                "DATA_DEMISSAO": "18\/10\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "MDJ SERVICOS LTDA",
+                "CNPJ": "18409270000116",
+                "CIDADE": "ICARA-SC",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "10\/12\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "AAFF CONSULTORIA EM GESTAO EMPRESARIAL LTDA",
+                "CNPJ": "19164041000141",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "04\/01\/2021",
+                "DATA_DEMISSAO": "14\/01\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "CECRISA REVESTIMENTOS CERAMICOS S.A",
+                "CNPJ": "79655916000644",
+                "CIDADE": "CRICIUMA-SC",
+                "PROFISSAO": "763010",
+                "DATA_ADMISSAO": "15\/01\/2016",
+                "DATA_DEMISSAO": "04\/02\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "FERNANDES RONSONI   FERNANDES RONSONI LTDA",
+                "CNPJ": "10418537000120",
+                "CIDADE": "CRICIUMA-SC",
+                "PROFISSAO": "422120",
+                "DATA_ADMISSAO": "05\/08\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "JBS AVES LTDA.",
+                "CNPJ": "08199996005772",
+                "CIDADE": "NOVA VENEZA-SC",
+                "PROFISSAO": "848505",
+                "DATA_ADMISSAO": "01\/05\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "AGROVENETO S.A. - INDUSTRIA DE ALIMENTOS",
+                "CNPJ": "01153928000179",
+                "CIDADE": "NOVA VENEZA-SC",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "16\/12\/2008",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "UNIVERSO DO CALCADO LTDA",
+            "CNPJ": "01280487000176",
+            "CIDADE": "BLUMENAU-SC",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20000119",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

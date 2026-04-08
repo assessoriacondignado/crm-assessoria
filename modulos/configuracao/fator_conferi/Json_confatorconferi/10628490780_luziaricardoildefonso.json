@@ -1,0 +1,154 @@
+{
+    "CADASTRAIS": {
+        "CPF": "10628490780",
+        "NOME": "LUZIA RICARDO ILDEFONSO",
+        "NOME_MAE": "MARIZA EMILIA RICARDI",
+        "NASCTO": "19\/04\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "13013513291",
+        "ESCOLARIDADE": "PRIMEIRO GRAU (GINASIO)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "413115",
+        "PROFISSAO": "AUXILIAR DE FATURAMENTO",
+        "SALARIO": " 880,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2733376210",
+                "OPERADORA": "TELEMAR\/ES",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2732380207",
+                "OPERADORA": "TELEMAR\/ES",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "27997718203",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "PRE PAGO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R RIO TOCANTINS",
+                "NUMERO": "30",
+                "COMPLEMENTO": "",
+                "BAIRRO": "HELIO FERRAZ",
+                "CEP": "29160521",
+                "CIDADE": "SERRA",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "R B CINCO",
+                "NUMERO": "161",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CJ CARAPINA I",
+                "CEP": "29160307",
+                "CIDADE": "SERRA",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "R RIO GUARANI",
+                "NUMERO": "37",
+                "COMPLEMENTO": "",
+                "BAIRRO": "HELIO FERRAZ",
+                "CEP": "29160518",
+                "CIDADE": "SERRA",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "R CARLOS LARICA",
+                "NUMERO": "5",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JOSE DE ANCHIETA II",
+                "CEP": "29162506",
+                "CIDADE": "SERRA",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "AV JOSE MOREIRA MARTINS RATO",
+                "NUMERO": "820",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DE FATIMA",
+                "CEP": "29160790",
+                "CIDADE": "SERRA",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "RUA RIO PURUS",
+                "NUMERO": "26",
+                "COMPLEMENTO": "CJ HELIO FERRAZ",
+                "BAIRRO": "HELIO FERRAZ",
+                "CEP": "29160516",
+                "CIDADE": "SERRA",
+                "ESTADO": "ES"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LACO FORTE COMERCIAL E DISTRIBUICAO LTDA",
+                "CNPJ": "31713415000136",
+                "CIDADE": "SERRA-ES",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "01\/04\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LE VET COMERCIO DE PRODUTOS VETERINARIOS EIRELI",
+                "CNPJ": "31551656000126",
+                "CIDADE": "SERRA-ES",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "03\/06\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "SUPMERCON SUPERMERCADO DOS MATERIAIS DE CONSTRUCAO LTDA",
+                "CNPJ": "39810171000111",
+                "CIDADE": "SERRA-ES",
+                "PROFISSAO": "413115",
+                "DATA_ADMISSAO": "11\/11\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,148 @@
+{
+    "CADASTRAIS": {
+        "CPF": "1790726921",
+        "NOME": "IDILENO RIBEIRO DA SILVA",
+        "NOME_MAE": "MARIA CELIA DOS SANTOS",
+        "NASCTO": "12\/04\/1978",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12553294877",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782705",
+        "PROFISSAO": "MARINHEIRO DE CONVES (MARITIMO E FLUVIARIO)",
+        "SALARIO": " 1.067,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4436426224",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "4436422168",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4436426808",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "44991800291",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "PRE PAGO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": {
+        "EMAIL": "idleno210@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "RUA BARBARA",
+                "NUMERO": "69",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA ALTA",
+                "CEP": "85980000",
+                "CIDADE": "GUAIRA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R S CAETANO",
+                "NUMERO": "84",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL RICA",
+                "CEP": "85980000",
+                "CIDADE": "GUAIRA",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "5993440",
+            "NOME": "MARIA CELIA DOS SANTOS",
+            "IDADE": "55 anos",
+            "LOCAL": "JOAO PESSOA\/PB",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "MINERACAO FLORESTA DE GUAIRA LTDA",
+                "CNPJ": "77106383000101",
+                "CIDADE": "TERRA ROXA-PR",
+                "PROFISSAO": "341230",
+                "DATA_ADMISSAO": "17\/03\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MINERACAO D'AGOSTINI LTDA",
+                "CNPJ": "03939967000121",
+                "CIDADE": "GUAIRA-PR",
+                "PROFISSAO": "341230",
+                "DATA_ADMISSAO": "01\/06\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "COMERCIO DE AREIA E PEDRA MUNDO NOVO LTDA",
+                "CNPJ": "03865656000165",
+                "CIDADE": "MUNDO NOVO-MS",
+                "PROFISSAO": "782705",
+                "DATA_ADMISSAO": "01\/03\/2013",
+                "DATA_DEMISSAO": "04\/07\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "MINERADORA CAVALLIERE E CIA LTDA",
+                "CNPJ": "02974933000105",
+                "CIDADE": "TERRA ROXA-PR",
+                "PROFISSAO": "782705",
+                "DATA_ADMISSAO": "01\/04\/2009",
+                "DATA_DEMISSAO": "407",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,256 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26194030810",
+        "NOME": "ADRIANA LIMA LOPES",
+        "NOME_MAE": "MARIA GERALDA DE LIMA LOPES",
+        "NASCTO": "28\/04\/1978",
+        "IDADE": "48 anos",
+        "SEXO": "Feminino",
+        "RG": "295788872",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "284679320116",
+        "NIT": "12605731814",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "420125",
+        "PROFISSAO": "SUPERVISOR DE RECEPCIONISTAS",
+        "SALARIO": " 6.108,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1156613429",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "22\/05\/2020",
+                "TIPO_TEL": "GPON",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1159735886",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "28\/03\/2000",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11967590087",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11967590087",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11999412626",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11997789394",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "adrianalima@avenidapaulista.sescsp.org.br",
+            "dry22@ig.com.br",
+            "dricalimalopes@gmail.com",
+            "mstr_dry22@ig.com.br",
+            "adri.lima_sp@terra.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DINAELSA SOARES SANTANA COQUEIRO",
+                "NUMERO": "51",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD GUANHEMBU",
+                "CEP": "04814680",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV PRES JOAO GOULART",
+                "NUMERO": "51",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD MALIA I",
+                "CEP": "04823000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV SRG LOURIVAL ALVES DE SOUZA",
+                "NUMERO": "290",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD TAQUARAL",
+                "CEP": "04675020",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV PRES JOAO GOULART",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD MALIA II",
+                "CEP": "04821000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DANIEL RIBEIRO CALADO",
+                "NUMERO": "375",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM GUANHEMBU",
+                "CEP": "04814670",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DINAELSA SOARES SANTANA COQUEIRO",
+                "NUMERO": "5",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM GUANHEMBU",
+                "CEP": "04814680",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "94309590420",
+                "NOME": "MARIA GERALDA DE LIMA LOPES",
+                "IDADE": "73 anos",
+                "LOCAL": "PAU DOS FERROS\/RN",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "1121011438",
+                "NOME": "ALDENIZA LOPES DE LIMA",
+                "IDADE": "44 anos",
+                "LOCAL": "PAU DOS FERROS\/RN",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "2709099403",
+                "NOME": "ALDENIRA LOPES DE LIMA",
+                "IDADE": "49 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "5795286427",
+                "NOME": "ALVANIZA LOPES DE LIMA",
+                "IDADE": "41 anos",
+                "LOCAL": "PAU DOS FERROS\/RN",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "7727320439",
+                "NOME": "MARCOS MACIEL LOPES LIMA",
+                "IDADE": "38 anos",
+                "LOCAL": "PAU DOS FERROS\/RN",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "30056700822",
+                "NOME": "JOSE HUMBERTO LOPES JUNIOR",
+                "IDADE": "44 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "JOSE HUMBERTO LOPES",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "5424186300"
+            },
+            {
+                "NOME": "MARIA GERALDA DE LIMA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "7695028819"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SERVICO SOCIAL DO COMERCIO - SESC - ADMINISTRACAO REGIONAL NO ESTADO DE SAO PAULO",
+                "CNPJ": "03667884000120",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142325",
+                "DATA_ADMISSAO": "03\/01\/2000",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVICO SOCIAL DO COMERCIO - SESC - ADMINISTRACAO REGIONAL NO ESTADO DE SAO PAULO",
+                "CNPJ": "03667884001100",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "420125",
+                "DATA_ADMISSAO": "03\/01\/2000",
+                "DATA_DEMISSAO": "15\/06\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVICO SOCIAL DO COMERCIO - SESC - ADMINISTRACAO REGIONAL NO ESTADO DE SAO PAULO",
+                "CNPJ": "03667884000988",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "420125",
+                "DATA_ADMISSAO": "12\/09\/1998",
+                "DATA_DEMISSAO": "01\/08\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

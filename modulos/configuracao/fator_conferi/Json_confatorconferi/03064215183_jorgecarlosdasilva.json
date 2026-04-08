@@ -1,0 +1,282 @@
+{
+    "CADASTRAIS": {
+        "CPF": "3064215183",
+        "NOME": "JORGE CARLOS DA SILVA",
+        "NOME_MAE": "MARIA VANDA MARQUES DA SILVA",
+        "NASCTO": "21\/05\/1989",
+        "IDADE": "36 anos",
+        "SEXO": "Masculino",
+        "RG": "1429954",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "022105541996",
+        "NIT": "16209682570",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782510",
+        "PROFISSAO": "MOTORISTA DE CAMINHAO (ROTAS REGIONAIS E INTERNACIONAIS)",
+        "SALARIO": " 1.679,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "6721058307",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "6735220334",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "6721058319",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "67992016261",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "67999570713",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "67996652608",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "67991380917",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "67992277731",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "jorge89.carlos@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ANICETO ANTONIO ARAO",
+                "NUMERO": "409",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD PARANAPUNGA",
+                "CEP": "79645230",
+                "CIDADE": "TRES LAGOAS",
+                "ESTADO": "MS"
+            },
+            {
+                "LOGRADOURO": "R ROMENIA",
+                "NUMERO": "2577",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVA EUROPA",
+                "CEP": "79642186",
+                "CIDADE": "TRES LAGOAS",
+                "ESTADO": "MS"
+            },
+            {
+                "LOGRADOURO": "R ROMENIA",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVA EUROPA",
+                "CEP": "79642186",
+                "CIDADE": "TRES LAGOAS",
+                "ESTADO": "MS"
+            },
+            {
+                "LOGRADOURO": "R QUATRO",
+                "NUMERO": "409",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JD DAS PAINEIRAS",
+                "CEP": "79641200",
+                "CIDADE": "TRES LAGOAS",
+                "ESTADO": "MS"
+            },
+            {
+                "LOGRADOURO": "R ELMANO SOARES",
+                "NUMERO": "2731",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD CANGALHA",
+                "CEP": "79645095",
+                "CIDADE": "TRES LAGOAS",
+                "ESTADO": "MS"
+            },
+            {
+                "LOGRADOURO": "R QUATRO",
+                "NUMERO": "409",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "VL PILOTO",
+                "CEP": "79612480",
+                "CIDADE": "TRES LAGOAS",
+                "ESTADO": "MS"
+            },
+            {
+                "LOGRADOURO": "AV ANTONIO TRAJANO DOS SANTOS",
+                "NUMERO": "100",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "79601970",
+                "CIDADE": "TRES LAGOAS",
+                "ESTADO": "MS"
+            },
+            {
+                "LOGRADOURO": "R CEL JOAO G DE OLIVEIRA",
+                "NUMERO": "2928",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD ALVORADA",
+                "CEP": "79610010",
+                "CIDADE": "TRES LAGOAS",
+                "ESTADO": "MS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1064123104",
+            "NOME": "MARIA VANDA MARQUES DA SILVA",
+            "IDADE": "62 anos",
+            "LOCAL": "TRES LAGOAS\/MS",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "CAROLINE APARECIDA DA SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "TRES LAGOAS\/MS",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "3521798135"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TRANSPORTES PESADOS MINAS S.A.",
+                "CNPJ": "17215039003225",
+                "CIDADE": "SANTA MARIA DA SERRA-SP",
+                "PROFISSAO": "342115",
+                "DATA_ADMISSAO": "05\/09\/2022",
+                "DATA_DEMISSAO": "01\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TRANSPORTES PESADOS MINAS S.A.",
+                "CNPJ": "17215039000129",
+                "CIDADE": "BETIM-MG",
+                "PROFISSAO": "342115",
+                "DATA_ADMISSAO": "01\/10\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LOTS LATIN AMERICA LOGISTICA E TRANSPORTES LTDA",
+                "CNPJ": "29094173000360",
+                "CIDADE": "TRES LAGOAS-MS",
+                "PROFISSAO": "391115",
+                "DATA_ADMISSAO": "23\/20\/1907",
+                "DATA_DEMISSAO": "08\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "MARA CRISTINA MATOS DE PAULA",
+                "CNPJ": "17005285000156",
+                "CIDADE": "TRES LAGOAS-MS",
+                "PROFISSAO": "782310",
+                "DATA_ADMISSAO": "21\/10\/2015",
+                "DATA_DEMISSAO": "29\/06\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "JSL S.A.",
+                "CNPJ": "52548435012509",
+                "CIDADE": "TRES LAGOAS-MS",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "08\/07\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "R.A. DE ASSIS LOCADORA",
+                "CNPJ": "17474091000108",
+                "CIDADE": "BRASILANDIA-MS",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "01\/01\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "ADAR INDUSTRIA , COMERCIO IMPORTACAO E EXPORTACAO LTDA",
+                "CNPJ": "03442526000110",
+                "CIDADE": "TRES LAGOAS-MS",
+                "PROFISSAO": "784105",
+                "DATA_ADMISSAO": "05\/11\/2007",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

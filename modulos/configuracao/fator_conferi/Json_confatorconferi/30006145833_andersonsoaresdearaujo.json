@@ -1,0 +1,233 @@
+{
+    "CADASTRAIS": {
+        "CPF": "30006145833",
+        "NOME": "ANDERSON SOARES DE ARAUJO",
+        "NOME_MAE": "IVANA DOS SANTOS SOARES DE ARAUJO",
+        "NASCTO": "09\/09\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "33504568",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "287983310159",
+        "NIT": "19016851685",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "415205",
+        "PROFISSAO": "CARTEIRO",
+        "SALARIO": " 1.724,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1139243433",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1139218508",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1134478840",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "01\/08\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1148993148",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11990072050",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11992637842",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "anderson_soares1981@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PAULINO BRAGA",
+                "NUMERO": "68",
+                "COMPLEMENTO": "C 3",
+                "BAIRRO": "NOSSA SENHORA DO O",
+                "CEP": "02926080",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO BARBOSA DE OLIVEIRA",
+                "NUMERO": "76",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL JOAO BATISTA",
+                "CEP": "02837080",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R TUCANO",
+                "NUMERO": "363",
+                "COMPLEMENTO": "C 3",
+                "BAIRRO": "LARANJEIRAS",
+                "CEP": "07745085",
+                "CIDADE": "CAIEIRAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R NICANOR DE VASCONCELOS",
+                "NUMERO": "134",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD BRASILIA ZONA NORTE",
+                "CEP": "02859060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BERNARDO RINCON",
+                "NUMERO": "26",
+                "COMPLEMENTO": "C 3",
+                "BAIRRO": "JD GUARANI",
+                "CEP": "02849170",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DOMINGOS VEGA",
+                "NUMERO": "715",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL JOAO BATISTA",
+                "CEP": "02837000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE CONSENTINO",
+                "NUMERO": "404",
+                "COMPLEMENTO": "CS 1",
+                "BAIRRO": "JD STA ISABEL",
+                "CEP": "16506000",
+                "CIDADE": "CAFELANDIA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R TEOFILO OTONI",
+                "NUMERO": "61",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BSQ DOS EUCALIPTOS",
+                "CEP": "12233540",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "24951377845",
+                "NOME": "IVANA DOS SANTOS SOARES DE ARAUJO",
+                "IDADE": "63 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "43486575805",
+                "NOME": "JEFERSON SOARES DE ARAUJO",
+                "IDADE": "30 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "EMPRESA BRASILEIRA DE CORREIOS E TELEGRAFOS",
+                "CNPJ": "34028316703961",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "415205",
+                "DATA_ADMISSAO": "16\/10\/2003",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "EMPRESA BRASILEIRA DE CORREIOS E TELEGRAFOS",
+                "CNPJ": "34028316673876",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "16\/10\/2003",
+                "DATA_DEMISSAO": "07\/04\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "EMPRESA BRASILEIRA DE CORREIOS E TELEGRAFOS",
+                "CNPJ": "34028316734921",
+                "CIDADE": "FRANCO DA ROCHA-SP",
+                "PROFISSAO": "415205",
+                "DATA_ADMISSAO": "02\/05\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "EMPRESA BRASILEIRA DE CORREIOS E TELEGRAFOS",
+                "CNPJ": "34028316003129",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "415205",
+                "DATA_ADMISSAO": "01\/10\/2008",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

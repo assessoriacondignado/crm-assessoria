@@ -1,0 +1,206 @@
+{
+    "CADASTRAIS": {
+        "CPF": "8765466705",
+        "NOME": "MARCELO VIANA LUNA DE FREITAS",
+        "NOME_MAE": "MARIA MADALENA LUNA FREITAS",
+        "NASCTO": "25\/03\/1978",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "020953601473",
+        "NIT": "1269543213",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "784205",
+        "PROFISSAO": "ALIMENTADOR DE LINHA DE PRODUCAO",
+        "SALARIO": " 2.276,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "2733284550",
+            "OPERADORA": "TELEMAR\/ES",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "27992752088",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "27997304305",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "27995211298",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marceloluna27@yahoo.com.br",
+            "marceloredline@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV MINAS GERAIS",
+                "NUMERO": "658",
+                "COMPLEMENTO": "1",
+                "BAIRRO": "DAS LARANJEIRAS",
+                "CEP": "29175608",
+                "CIDADE": "SERRA",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "R MINAS GERAIS",
+                "NUMERO": "658",
+                "COMPLEMENTO": "BL 11 AP 201",
+                "BAIRRO": "BICANGA",
+                "CEP": "29164801",
+                "CIDADE": "SERRA",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "BC M",
+                "NUMERO": "1",
+                "COMPLEMENTO": "BL 11 AP 201 685",
+                "BAIRRO": "TAQUARA I",
+                "CEP": "29167762",
+                "CIDADE": "SERRA",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "R MINAS GERAIS",
+                "NUMERO": "684",
+                "COMPLEMENTO": "BL II AP",
+                "BAIRRO": "BICANGA",
+                "CEP": "29164801",
+                "CIDADE": "SERRA",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "R FELIPE DOS SANTOS",
+                "NUMERO": "154",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE RESIDENCIAL LARANJEIRAS",
+                "CEP": "29165660",
+                "CIDADE": "SERRA",
+                "ESTADO": "ES"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "89090705791",
+                "NOME": "MARIA MADALENA LUNA FREITAS",
+                "IDADE": "78 anos",
+                "LOCAL": "ITAMBACURI\/MG",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "529115786",
+                "NOME": "SANDRA REGINA DE FREITAS",
+                "IDADE": "57 anos",
+                "LOCAL": "ITAMBACURI\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "AST - CONSULTORIA E DESENVOLVIMENTO EMPRESARIAL LTDA",
+                "CNPJ": "04678756000145",
+                "CIDADE": "ESPIRITO SANTO DO PINHAL-SP",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "24\/20\/1902",
+                "DATA_DEMISSAO": "08\/05\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "NOVAPOL PLASTICOS LTDA",
+                "CNPJ": "07600033000111",
+                "CIDADE": "SERRA-ES",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "09\/05\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MOTOMAX LTDA",
+                "CNPJ": "01388888000497",
+                "CIDADE": "CARIACICA-ES",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "10\/10\/2016",
+                "DATA_DEMISSAO": "23\/11\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "REAL MULTIMIDIAS COMPUTACAO GRAFICA LTDA",
+                "CNPJ": "09200760000117",
+                "CIDADE": "VITORIA-ES",
+                "PROFISSAO": "262410",
+                "DATA_ADMISSAO": "05\/03\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": [
+            {
+                "RAZAO_SOCIAL": "IMAGEM   COR LTDA",
+                "CNPJ": "04199257000175",
+                "CIDADE": "SERRA-ES",
+                "QUALIFICACAO": "SÃ³cio",
+                "DATA_ENTRADA": "20030321",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "OFF 57 LTDA",
+                "CNPJ": "05261511000180",
+                "CIDADE": "SERRA-ES",
+                "QUALIFICACAO": "SÃ³cio",
+                "DATA_ENTRADA": "20020822",
+                "VALOR_PARTICIPACAO": ""
+            }
+        ]
+    }
+}

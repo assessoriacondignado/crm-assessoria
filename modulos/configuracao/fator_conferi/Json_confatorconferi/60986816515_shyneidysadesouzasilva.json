@@ -1,0 +1,177 @@
+{
+    "CADASTRAIS": {
+        "CPF": "60986816515",
+        "NOME": "SHYNEIDY SA DE SOUZA SILVA",
+        "NOME_MAE": "CREUZA SA DE SOUZA",
+        "NASCTO": "08\/11\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "018302632178",
+        "NIT": "12548987894",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "422105",
+        "PROFISSAO": "RECEPCIONISTA, EM GERAL",
+        "SALARIO": " 566,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "7932157829",
+            "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "55991438547",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79991187879",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79988690449",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999465975",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79998279711",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "shyneidy@bol.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R EVERTON COELHO",
+                "NUMERO": "395",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTOS DUMONT",
+                "CEP": "49087220",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R ADOZINDO DA COSTA PINTO",
+                "NUMERO": "99",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "INDUSTRIAL",
+                "CEP": "49065010",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "7691988567",
+                "NOME": "HELLEN GRASIELE DE SOUZA SILVA",
+                "IDADE": "26 anos",
+                "LOCAL": "ARACAJU\/SE",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "7692001502",
+                "NOME": "EMILLY GABRIELE DE SOUZA SILVA",
+                "IDADE": "20 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CENTRO EDUCACIONAL ATLANTICO LTDA",
+                "CNPJ": "32882664000118",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "239405",
+                "DATA_ADMISSAO": "16\/10\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CENTRO EDUCACIONAL FUTURO FELIZ LTDA",
+                "CNPJ": "32858565000109",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "231205",
+                "DATA_ADMISSAO": "10\/01\/2024",
+                "DATA_DEMISSAO": "07\/07\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COLEGIO OMEGA LTDA",
+                "CNPJ": "01534273000189",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "232140",
+                "DATA_ADMISSAO": "01\/11\/2013",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ADMINAS ADMINISTRACAO E TERCEIRIZACAO DE MAO DE OBRA LTDA",
+                "CNPJ": "07544068000180",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "422105",
+                "DATA_ADMISSAO": "01\/09\/2011",
+                "DATA_DEMISSAO": "701",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

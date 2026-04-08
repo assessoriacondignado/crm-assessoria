@@ -1,0 +1,135 @@
+{
+    "CADASTRAIS": {
+        "CPF": "29762920864",
+        "NOME": "PATRICIA FERREIRA DA ROCHA",
+        "NOME_MAE": "MARIA MADALENA DA SILVA",
+        "NASCTO": "24\/06\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "259641790116",
+        "NIT": "1268134593",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "252305",
+        "PROFISSAO": "SECRETARIA  EXECUTIVA",
+        "SALARIO": " 4.036,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1159715438",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "05\/08\/2004",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1128552655",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1159735575",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "11969620873",
+            "OPERADORA": "OI MOVEL S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "POS PAGO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MANUEL GUILHERME DOS REIS",
+                "NUMERO": "8",
+                "COMPLEMENTO": "C 8 A",
+                "BAIRRO": "PRQ GRAJAU",
+                "CEP": "04842280",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ALVARES CORREIA",
+                "NUMERO": "836",
+                "COMPLEMENTO": "CASA 2",
+                "BAIRRO": "JD PRESIDENTE",
+                "CEP": "04830110",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ALVARES CORREIA",
+                "NUMERO": "83",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM PRESIDENTE",
+                "CEP": "04830110",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "3383628",
+            "NOME": "MARIA MADALENA DA SILVA",
+            "IDADE": "60 anos",
+            "LOCAL": "GUARANI DAS MISSOES\/RS",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "APEOESP SINDICATO DOS PROFESSORES DO ENSINO OFICIAL DO ESTADO DE SAO PAULO",
+                "CNPJ": "43037597000151",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "252305",
+                "DATA_ADMISSAO": "07\/04\/2014",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ATHENA COMERCIO DE PRODUTOS NATURAIS LTDA",
+                "CNPJ": "65862294000106",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/03\/2010",
+                "DATA_DEMISSAO": "30\/03\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

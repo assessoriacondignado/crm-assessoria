@@ -1,0 +1,268 @@
+{
+    "CADASTRAIS": {
+        "CPF": "33292248",
+        "NOME": "CHRISTIANE FARO BRITO",
+        "NOME_MAE": "MARIA JOSE FARO BRITO",
+        "NASCTO": "06\/06\/1989",
+        "IDADE": "36 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "13698068426",
+        "ESCOLARIDADE": "ANALFABETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "717020",
+        "PROFISSAO": "SERVENTE DE OBRAS",
+        "SALARIO": " 744,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9832381770",
+                "OPERADORA": "TELEMAR\/MA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1332247482",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9132977905",
+                "OPERADORA": "TELEMAR\/PA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2122547477",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "2122649317",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "99997295250",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "91980962317",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "91982689412",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "91988131228",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "16\/09\/2016",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "91991524280",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "cicafaro@uol.com.br",
+            "christianne_brito@yahoo.com.br",
+            "christianefaro@hotmail.com",
+            "mar-iaa2010@hotmail.com",
+            "liviadeassis@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DOIS DE DEZEMBRO",
+                "NUMERO": "610",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARACURI ICOARACI",
+                "CEP": "66814215",
+                "CIDADE": "BELEM",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "R DOIS DE DEZEMBRO",
+                "NUMERO": "610",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CRUZEIRO ICOARACI",
+                "CEP": "66810040",
+                "CIDADE": "BELEM",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "R QUINZE DE AGOSTO",
+                "NUMERO": "1358",
+                "COMPLEMENTO": "PROX AO COLEGIO DO",
+                "BAIRRO": "PNT GROSSA ICOARACI",
+                "CEP": "66812480",
+                "CIDADE": "BELEM",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "R TRIANGULO MINEIRO",
+                "NUMERO": "765",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD CENTRO OESTE",
+                "CEP": "79073080",
+                "CIDADE": "CAMPO GRANDE",
+                "ESTADO": "MS"
+            },
+            {
+                "LOGRADOURO": "R QUINZE DE AGOSTO",
+                "NUMERO": "1318",
+                "COMPLEMENTO": "A",
+                "BAIRRO": "PNT GROSSA ICOARACI",
+                "CEP": "66812480",
+                "CIDADE": "BELEM",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "R PROJETADA",
+                "NUMERO": "3",
+                "COMPLEMENTO": "AND 2 Q 7",
+                "BAIRRO": "OLHO D AGUA",
+                "CEP": "65067740",
+                "CIDADE": "SAO LUIS",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "ALAMEDA NERCIA PINHEIRO",
+                "NUMERO": "7",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PONTA GROSSA (ICOARACI)",
+                "CEP": "66812270",
+                "CIDADE": "BELEM",
+                "ESTADO": "PA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "94705143272",
+            "NOME": "CHRISLAYNE FARO BRITO",
+            "IDADE": "38 anos",
+            "LOCAL": "BELEM\/PA",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "CIBELE FARO DE PAULA",
+                "IDADE": "",
+                "LOCALIDADE": "SANTOS\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "31339782847"
+            },
+            {
+                "NOME": "MARIA JOSE FARO",
+                "IDADE": "",
+                "LOCALIDADE": "BELO HORIZONTE\/MG",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "7015357844"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "FELIX   FELIX COMERCIO DE CONFECCOES LTDA",
+                "CNPJ": "11760991000127",
+                "CIDADE": "BELEM-PA",
+                "PROFISSAO": "521125",
+                "DATA_ADMISSAO": "29\/02\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738015275",
+                "CIDADE": "BELEM-PA",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "05\/02\/2020",
+                "DATA_DEMISSAO": "26\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "RJ SOLUCOES EM TRADE E PESSOAS LTDA",
+                "CNPJ": "11000980000149",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "717020",
+                "DATA_ADMISSAO": "12\/20\/1911",
+                "DATA_DEMISSAO": "24\/12\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,143 @@
+{
+    "CADASTRAIS": {
+        "CPF": "99300176404",
+        "NOME": "RICARDO BATISTA DO CARMO",
+        "NOME_MAE": "MARIA GRACAS BATISTA DO CARMO",
+        "NASCTO": "19\/04\/1975",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "1810745",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "PB",
+        "TITULO_ELEITOR": "",
+        "NIT": "1263925844",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782305",
+        "PROFISSAO": "MOTORISTA DE CARRO DE PASSEIO",
+        "SALARIO": " 1.577,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8332293754",
+                "OPERADORA": "TELEMAR\/PB",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8332329857",
+                "OPERADORA": "TELEMAR\/PB",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11933441949",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "83988375565",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "83987707918",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "12\/05\/2017",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "rb_carmo@ig.com.br",
+            "rb_carmo2016@outlook.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "PC CASTELO BRANCO",
+                "NUMERO": "135",
+                "COMPLEMENTO": "",
+                "BAIRRO": "POPULAR",
+                "CEP": "58301375",
+                "CIDADE": "SANTA RITA",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "RUA ALMIRANTE TAMANDARE",
+                "NUMERO": "1054",
+                "COMPLEMENTO": "",
+                "BAIRRO": "IMACULADA",
+                "CEP": "58309140",
+                "CIDADE": "BAYEUX",
+                "ESTADO": "PB"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1907285580",
+            "NOME": "PALOMA BATISTA DE FREITAS",
+            "IDADE": "41 anos",
+            "LOCAL": "SALVADOR\/BA",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "NORFIL S\/A INDUSTRIA TEXTIL",
+                "CNPJ": "02341494000101",
+                "CIDADE": "JOAO PESSOA-PB",
+                "PROFISSAO": "782305",
+                "DATA_ADMISSAO": "03\/05\/2017",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "REFRESCOS GUARARAPES LTDA",
+                "CNPJ": "08715757000769",
+                "CIDADE": "JOAO PESSOA-PB",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "08\/04\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

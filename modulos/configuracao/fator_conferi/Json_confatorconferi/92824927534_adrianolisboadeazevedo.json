@@ -1,0 +1,393 @@
+{
+    "CADASTRAIS": {
+        "CPF": "92824927534",
+        "NOME": "ADRIANO LISBOA DE AZEVEDO",
+        "NOME_MAE": "VANIA REDIG LISBOA DE AZEVEDO",
+        "NASCTO": "19\/10\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "076074930558",
+        "NIT": "1275285707",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "131305",
+        "PROFISSAO": "DIRETOR DE INSTITUICAO EDUCACIONAL DA AREA PRIVADA",
+        "SALARIO": " 59.612,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7132457999",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "8134126280",
+                "OPERADORA": "TELEMAR\/PE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "8133024564",
+                "OPERADORA": "TELEMAR\/PE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "81999611068",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92984069230",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "73998688785",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71981328334",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "71982274172",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "adriano@fabac.com.br",
+            "adriano.azevedo@sereducacional.com",
+            "adriano.azevedo1@sereducacional.com",
+            "adrianolisboa62@gmail.com",
+            "adriano.azevedo@mauriciodenassau.edu.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV BEIRA RIO",
+                "NUMERO": "825",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MADALENA",
+                "CEP": "50610100",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R TREZE DE MAIO",
+                "NUMERO": "254",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STO AMARO",
+                "CEP": "50100160",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "AV PRCA LEOPOLDINA",
+                "NUMERO": "559",
+                "COMPLEMENTO": "AP 1202",
+                "BAIRRO": "BARRA",
+                "CEP": "40140005",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "AL LEOPOLDINA",
+                "NUMERO": "2",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PIRAJA",
+                "CEP": "41295670",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R DO FUTURO",
+                "NUMERO": "450",
+                "COMPLEMENTO": "",
+                "BAIRRO": "GRACAS",
+                "CEP": "52050005",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "AL LEOPOLDINA",
+                "NUMERO": "559",
+                "COMPLEMENTO": "ED SOL NASCENTE AP",
+                "BAIRRO": "PIRAJA",
+                "CEP": "41295670",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "AV PRCA LEOPOLDINA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "559",
+                "BAIRRO": "GRACA",
+                "CEP": "40150080",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "AV DA SAUDADE",
+                "NUMERO": "254",
+                "COMPLEMENTO": "NULL",
+                "BAIRRO": "SANTO AMARO",
+                "CEP": "50100200",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "37203118568",
+            "NOME": "VANIA REDIG LISBOA DE AZEVEDO",
+            "IDADE": "78 anos",
+            "LOCAL": "SALVADOR\/BA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SER EDUCACIONAL S.A.",
+                "CNPJ": "04986320000113",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "131305",
+                "DATA_ADMISSAO": "01\/09\/2009",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ABES - SOCIEDADE BAIANA DE ENSINO SUPERIOR LTDA",
+                "CNPJ": "32697294000149",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "234505",
+                "DATA_ADMISSAO": "01\/02\/2002",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": [
+            {
+                "RAZAO_SOCIAL": "SERMED - MEDICINA HUMANA   VETERINARIA LTDA",
+                "CNPJ": "08866479003413",
+                "CIDADE": "PETROLINA-PE",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20231018",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "SERMED - MEDICINA HUMANA   VETERINARIA LTDA",
+                "CNPJ": "08866479000317",
+                "CIDADE": "JOAO PESSOA-PB",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20231018",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "SERMED - MEDICINA HUMANA   VETERINARIA LTDA",
+                "CNPJ": "08866479004061",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20231018",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "SERMED - MEDICINA HUMANA   VETERINARIA LTDA",
+                "CNPJ": "08866479002603",
+                "CIDADE": "JOAO PESSOA-PB",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20231018",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "SERMED - MEDICINA HUMANA   VETERINARIA LTDA",
+                "CNPJ": "08866479004819",
+                "CIDADE": "ITAQUAQUECETUBA-SP",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20231018",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "SERMED - MEDICINA HUMANA   VETERINARIA LTDA",
+                "CNPJ": "08866479002875",
+                "CIDADE": "MANAUS-AM",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20231018",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "SERMED - MEDICINA HUMANA   VETERINARIA LTDA",
+                "CNPJ": "08866479005629",
+                "CIDADE": "MARACANAU-CE",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20231018",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "SERMED - MEDICINA HUMANA   VETERINARIA LTDA",
+                "CNPJ": "08866479006005",
+                "CIDADE": "BRASILIA-DF",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20231018",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "SERMED - MEDICINA HUMANA   VETERINARIA LTDA",
+                "CNPJ": "08866479001631",
+                "CIDADE": "GUARULHOS-SP",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20231018",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "SERMED - MEDICINA HUMANA   VETERINARIA LTDA",
+                "CNPJ": "08866479000589",
+                "CIDADE": "NATAL-RN",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20231018",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "SERMED - MEDICINA HUMANA   VETERINARIA LTDA",
+                "CNPJ": "08866479005890",
+                "CIDADE": "MARABA-PA",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20231018",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "SERMED - MEDICINA HUMANA   VETERINARIA LTDA",
+                "CNPJ": "08866479001984",
+                "CIDADE": "BELEM-PA",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20231018",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "SERMED - MEDICINA HUMANA   VETERINARIA LTDA",
+                "CNPJ": "08866479003928",
+                "CIDADE": "CACOAL-RO",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20231018",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "SERMED - MEDICINA HUMANA   VETERINARIA LTDA",
+                "CNPJ": "08866479001046",
+                "CIDADE": "PARNAIBA-PI",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20231018",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "SERMED - MEDICINA HUMANA   VETERINARIA LTDA",
+                "CNPJ": "08866479001399",
+                "CIDADE": "VITORIA DA CONQUISTA-BA",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20231018",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "SERMED - MEDICINA HUMANA   VETERINARIA LTDA",
+                "CNPJ": "08866479001470",
+                "CIDADE": "SALVADOR-BA",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20231018",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "SERMED - MEDICINA HUMANA   VETERINARIA LTDA",
+                "CNPJ": "08866479001712",
+                "CIDADE": "CARUARU-PE",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20231018",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "SERMED - MEDICINA HUMANA   VETERINARIA LTDA",
+                "CNPJ": "08866479003090",
+                "CIDADE": "GUARULHOS-SP",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20231018",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "SERMED - MEDICINA HUMANA   VETERINARIA LTDA",
+                "CNPJ": "08866479002360",
+                "CIDADE": "PAULISTA-PE",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20231018",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "SERMED - MEDICINA HUMANA   VETERINARIA LTDA",
+                "CNPJ": "08866479005114",
+                "CIDADE": "SANTAREM-PA",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20231018",
+                "VALOR_PARTICIPACAO": ""
+            }
+        ]
+    }
+}

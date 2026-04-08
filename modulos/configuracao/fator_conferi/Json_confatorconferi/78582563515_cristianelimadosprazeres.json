@@ -1,0 +1,190 @@
+{
+    "CADASTRAIS": {
+        "CPF": "78582563515",
+        "NOME": "CRISTIANE LIMA DOS PRAZERES",
+        "NOME_MAE": "CLOTILDE LIMA",
+        "NASCTO": "18\/11\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "093529270590",
+        "NIT": "1268684006 ",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "324205",
+        "PROFISSAO": "TECNICO EM PATOLOGIA CLINICA",
+        "SALARIO": " 1.835,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "7132871421",
+            "OPERADORA": "TELEMAR\/BA",
+            "DATA_REFERENCIA": "17\/06\/2013",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "71981981448",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71986333833",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71982248506",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "cris.prazeres18@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MARIA AMORIM SILVA",
+                "NUMERO": "136",
+                "COMPLEMENTO": "BL 11 AP 101",
+                "BAIRRO": "CAJI",
+                "CEP": "42721160",
+                "CIDADE": "LAURO DE FREITAS",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R PERO VAZ VELHO",
+                "NUMERO": "219",
+                "COMPLEMENTO": "SUB SOLO C",
+                "BAIRRO": "PERO VAZ",
+                "CEP": "40335600",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "RUA PERO VAZ VELHO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "219 E",
+                "BAIRRO": "PERO VAZ",
+                "CEP": "40335600",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "23146095734",
+                "NOME": "CLOTILDE LIMA",
+                "IDADE": "116 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "8721542546",
+                "NOME": "GUILHERME LIMA RABELO BATISTA",
+                "IDADE": "10 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "10223767565",
+                "NOME": "GUSTAVO LIMA RABELO BATISTA",
+                "IDADE": "17 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "51903879841",
+                "NOME": "JUAN MIGUEL DOS PRAZERES FERREIRA",
+                "IDADE": "19 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SAO CRISTOVAO EDUCACIONAL LTDA",
+                "CNPJ": "29619389000130",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "31\/08\/2023",
+                "DATA_DEMISSAO": "10\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "EDITORA E DISTRIBUIDORA EDUCACIONAL S\/A",
+                "CNPJ": "38733648011184",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "233125",
+                "DATA_ADMISSAO": "01\/08\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "IUNI EDUCACIONAL UNIME SALVADOR S.A.",
+                "CNPJ": "03395289000183",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "324205",
+                "DATA_ADMISSAO": "18\/20\/1903",
+                "DATA_DEMISSAO": "31\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "INSTITUTO MANTENEDOR DE ENSINO SUPERIOR DA BAHIA S.A EM RECUPERACAO JUDICIAL",
+                "CNPJ": "04670333000693",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "311105",
+                "DATA_ADMISSAO": "04\/08\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "UNIME - UNIAO METROPOLITANA PARA O DESENVOLVIMENTO DA EDUCACAO E CULTURA LTDA.",
+                "CNPJ": "02959800000160",
+                "CIDADE": "LAURO DE FREITAS-BA",
+                "PROFISSAO": "371410",
+                "DATA_ADMISSAO": "02\/20\/2002",
+                "DATA_DEMISSAO": "606",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

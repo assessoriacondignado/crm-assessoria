@@ -1,0 +1,98 @@
+{
+    "CADASTRAIS": {
+        "CPF": "54073480391",
+        "NOME": "ARGEU SILVA CAMPELO",
+        "NOME_MAE": "MARIA SILVA CAMPELO",
+        "NASCTO": "26\/05\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "034961930736",
+        "NIT": "13477819194",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521125",
+        "PROFISSAO": "REPOSITOR DE MERCADORIAS",
+        "SALARIO": " 982,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8532900671",
+            "OPERADORA": "TELEMAR\/CE",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "85986205613",
+            "OPERADORA": "OI MOVEL S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "PRE PAGO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "argeucamp@gmail.com",
+            "argeucampelo@oi.com.br"
+        ]
+    },
+    "ENDERECOS": "",
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1944816380",
+            "NOME": "MARIA SILVA CAMPELO",
+            "IDADE": "85 anos",
+            "LOCAL": "JUIZ DE FORA\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SENDAS DISTRIBUIDORA S\/A",
+                "CNPJ": "06057223053100",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "521125",
+                "DATA_ADMISSAO": "23\/09\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CENTERBOX SUPERMERCADOS LTDA",
+                "CNPJ": "11497712000508",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "521125",
+                "DATA_ADMISSAO": "13\/03\/2024",
+                "DATA_DEMISSAO": "10\/06\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COMPANHIA BRASILEIRA DE DISTRIBUICAO",
+                "CNPJ": "47508411140594",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "521125",
+                "DATA_ADMISSAO": "01\/06\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

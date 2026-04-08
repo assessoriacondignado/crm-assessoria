@@ -1,0 +1,241 @@
+{
+    "CADASTRAIS": {
+        "CPF": "71239642253",
+        "NOME": "MARCOS AILTON ROCHA DOS SANTOS",
+        "NOME_MAE": "MARIA DA CONCEICAO ROCHA DOS SANTOS",
+        "NASCTO": "20\/06\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1271423502",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "811005",
+        "PROFISSAO": "OPERADOR DE PROCESSOS QUIMICOS E PETROQUIMICOS",
+        "SALARIO": " 33.767,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9233073228",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9236164500",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9235820464",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "24\/05\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92984487653",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92996070681",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92981284304",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92994212421",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11995061800",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "27\/02\/2020",
+                "TIPO_TEL": "MOVEL PRE-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "rodrigo@bartzmoveis.com.br",
+            "marcosailton@petrobras.com.br",
+            "markail@ibest.com.br",
+            "markailton2013@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV RODRIGO OTAVIO",
+                "NUMERO": "2136",
+                "COMPLEMENTO": "GP 1 QUIOSQUE 6",
+                "BAIRRO": "JAPIIM",
+                "CEP": "69077000",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R SALAMANDRA",
+                "NUMERO": "328",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE DE DEUS",
+                "CEP": "69099276",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R JOSE ROMAO",
+                "NUMERO": "3",
+                "COMPLEMENTO": "BL 5 AP 10 3 RES PRQ VERDE",
+                "BAIRRO": "S JOSE OPERARIO",
+                "CEP": "69085288",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "TV JACANA",
+                "NUMERO": "328",
+                "COMPLEMENTO": "C 1",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69094040",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R MOACYR DOMINGUES",
+                "NUMERO": "192",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "S JOSE",
+                "CEP": "92425200",
+                "CIDADE": "CANOAS",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R ORLANDO B DE ALMEIDA",
+                "NUMERO": "415",
+                "COMPLEMENTO": "740",
+                "BAIRRO": "VL NOVA",
+                "CEP": "37470000",
+                "CIDADE": "SAO LOURENCO",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R TIANGUA",
+                "NUMERO": "355",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE PEDRO MENDES CARNEIRO",
+                "CEP": "62030678",
+                "CIDADE": "SOBRAL",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R RIO QUIXITO",
+                "NUMERO": "549",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DT INDUST I",
+                "CEP": "69075831",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "358870364",
+            "NOME": "MARIA DA CONCEICAO ROCHA DOS SANTOS",
+            "IDADE": "64 anos",
+            "LOCAL": "JAGUARIBE\/CE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "CLEITON RODRIGO SANTOS BARTZ",
+                "IDADE": "",
+                "LOCALIDADE": "CAMAQUA\/RS",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "574943048"
+            },
+            {
+                "NOME": "GECYLDA SANTOS BARTZ",
+                "IDADE": "",
+                "LOCALIDADE": "CAMAQUA\/RS",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "91602998000"
+            },
+            {
+                "NOME": "LEOMAR BARTZ",
+                "IDADE": "",
+                "LOCALIDADE": "CAMAQUA\/RS",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "28480341068"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "PETROBRAS TRANSPORTE S.A - TRANSPETRO",
+            "CNPJ": "02709449006270",
+            "CIDADE": "MANAUS-AM",
+            "PROFISSAO": "811005",
+            "DATA_ADMISSAO": "04\/08\/2003",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

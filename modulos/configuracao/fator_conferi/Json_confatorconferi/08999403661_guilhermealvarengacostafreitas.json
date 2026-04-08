@@ -1,0 +1,166 @@
+{
+    "CADASTRAIS": {
+        "CPF": "8999403661",
+        "NOME": "GUILHERME ALVARENGA COSTA FREITAS",
+        "NOME_MAE": "TEREZINHA DE OLIVEIRA COSTA FREITAS",
+        "NASCTO": "07\/08\/1986",
+        "IDADE": "39 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "13081367114",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "724205",
+        "PROFISSAO": "MONTADOR DE ESTRUTURAS METALICAS",
+        "SALARIO": " 504,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31985530881",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31971202111",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "guigafreitas@yahoo.com.br",
+            "guilherme.costa.f@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R TIRADENTES",
+                "NUMERO": "383",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "35900013",
+                "CIDADE": "ITABIRA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "AV PREFEITO LI GUERRA",
+                "NUMERO": "413",
+                "COMPLEMENTO": "AP 306",
+                "BAIRRO": "PRAIA",
+                "CEP": "35900279",
+                "CIDADE": "ITABIRA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RUA JOAO CAMILO DE OLIVEIRA TORRES",
+                "NUMERO": "2102",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRAIA",
+                "CEP": "35900271",
+                "CIDADE": "ITABIRA",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "6553671605",
+                "NOME": "TEREZINHA DE OLIVEIRA COSTA FREITAS",
+                "IDADE": "59 anos",
+                "LOCAL": "ITABIRA\/MG",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "11197788670",
+                "NOME": "PRISCILA ALVARENGA COSTA FREITAS",
+                "IDADE": "34 anos",
+                "LOCAL": "ITABIRA\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "MURILO MOREIRA GOMES",
+            "IDADE": "",
+            "LOCALIDADE": "GUARUJA\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "37948638873"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "RAIA DROGASIL S\/A",
+                "CNPJ": "61585865046496",
+                "CIDADE": "ITABIRA-MG",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "13\/04\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "RAIA DROGASIL S\/A",
+                "CNPJ": "61585865091521",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "17\/04\/2023",
+                "DATA_DEMISSAO": "17\/05\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "SUPERMERCADO NOVA EUROPA LTDA",
+                "CNPJ": "23805419000116",
+                "CIDADE": "ITABIRA-MG",
+                "PROFISSAO": "784105",
+                "DATA_ADMISSAO": "12\/12\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "U T C ENGENHARIA S\/A - EM RECUPERACAO JUDICIAL",
+                "CNPJ": "44023661004367",
+                "CIDADE": "ITABIRA-MG",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "23\/06\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "ENESA ENGENHARIA S.A.",
+                "CNPJ": "48785828007131",
+                "CIDADE": "ITABIRA-MG",
+                "PROFISSAO": "724205",
+                "DATA_ADMISSAO": "13\/06\/2011",
+                "DATA_DEMISSAO": "05\/06\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

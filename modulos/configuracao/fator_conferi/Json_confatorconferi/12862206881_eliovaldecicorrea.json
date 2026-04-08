@@ -1,0 +1,174 @@
+{
+    "CADASTRAIS": {
+        "CPF": "12862206881",
+        "NOME": "ELIO VALDECI CORREA",
+        "NOME_MAE": "MARIA JOSE CORREA",
+        "NASCTO": "22\/05\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "163076820116",
+        "NIT": "1214571652",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "914405",
+        "PROFISSAO": "MECANICO DE MANUTENCAO DE AUTOMOVEIS, MOTOCICLETAS E VEICULOS SIMILARES",
+        "SALARIO": " 6.489,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1532632629",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1532631777",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "15996035669",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15997145452",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15997913204",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15998053692",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "valquiriasilvacorrea@gmail.com",
+            "eli.valdeci@terra.com.br",
+            "elivaldeci@terra.com.br",
+            "eliovaldeci@terra.com.br",
+            "elio.valdeci@terra.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CAMILO CRISTO",
+                "NUMERO": "170",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ NOSSA SENHORA DAS GRACAS",
+                "CEP": "18550630",
+                "CIDADE": "BOITUVA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JONAS PAZZOTO",
+                "NUMERO": "7",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD AMERICA",
+                "CEP": "18556002",
+                "CIDADE": "BOITUVA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CAMILO CRISTO",
+                "NUMERO": "170",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "CENTRO",
+                "CEP": "18550000",
+                "CIDADE": "BOITUVA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "FAZ PINHAL",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BAIRRO PINHAL",
+                "CEP": "18550000",
+                "CIDADE": "BOITUVA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "88793621",
+            "NOME": "MARIA JOSE CORREA",
+            "IDADE": "61 anos",
+            "LOCAL": "TEOFILO OTONI\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "JB - BOITUVA SERVICOS E LOCACOES DE VEICULOS LTDA",
+                "CNPJ": "05581156000127",
+                "CIDADE": "BOITUVA-SP",
+                "PROFISSAO": "914405",
+                "DATA_ADMISSAO": "14\/03\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SANITUR TRANSPORTES URBANOS E RODOVIARIOS LTDA",
+                "CNPJ": "50335397000140",
+                "CIDADE": "BOITUVA-SP",
+                "PROFISSAO": "914425",
+                "DATA_ADMISSAO": "26\/10\/1998",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

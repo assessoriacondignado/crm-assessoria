@@ -1,0 +1,246 @@
+{
+    "CADASTRAIS": {
+        "CPF": "3192748613",
+        "NOME": "ANDERSON DA SILVA LIMA",
+        "NOME_MAE": "MARIA MARRA DA SILVA",
+        "NASCTO": "26\/06\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12553677083",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "911305",
+        "PROFISSAO": "MECANICO DE MANUTENCAO DE MAQUINAS, EM GERAL",
+        "SALARIO": " 690,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3134810151",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3138255485",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3133641000",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "18\/03\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31980226799",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "32997338481",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31999714316",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31997338481",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "hudsongeovane1969@hotmail.com",
+            "lucasmoto22@yahoo.com.br",
+            "vaniafritz@ig.com.br",
+            "andersoninstacoes@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PORTO ALEGRE",
+                "NUMERO": "4",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD TERESOPOLIS",
+                "CEP": "32681516",
+                "CIDADE": "BETIM",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "AV AMAZONAS",
+                "NUMERO": "686",
+                "COMPLEMENTO": "LJ C 2",
+                "BAIRRO": "CENTRO",
+                "CEP": "32600056",
+                "CIDADE": "BETIM",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "AV PORTO ALEGRE",
+                "NUMERO": "795",
+                "COMPLEMENTO": "RES 4",
+                "BAIRRO": "ESPIRITO SANTO",
+                "CEP": "32671605",
+                "CIDADE": "BETIM",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R CLEMENTE DE FARIA",
+                "NUMERO": "761",
+                "COMPLEMENTO": "",
+                "BAIRRO": "INDUSTRIAL",
+                "CEP": "32235310",
+                "CIDADE": "CONTAGEM",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "AV CEL ABILIO RODRIGUES PEREIRA",
+                "NUMERO": "692",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOM RETIRO",
+                "CEP": "32606544",
+                "CIDADE": "BETIM",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R JOAO DORNELAS",
+                "NUMERO": "649",
+                "COMPLEMENTO": "AP 201",
+                "BAIRRO": "DORNELAS",
+                "CEP": "36884179",
+                "CIDADE": "MURIAE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "PC CLEMENTE DE FARIA",
+                "NUMERO": "761",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRADO",
+                "CEP": "30411048",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R S JOAO",
+                "NUMERO": "649",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S PEDRO",
+                "CEP": "36889168",
+                "CIDADE": "MURIAE",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "3791289691",
+            "NOME": "MARIA MARRA DA SILVA",
+            "IDADE": "103 anos",
+            "LOCAL": "PATOS DE MINAS\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "HUDSON GEOVANE FERREIRA",
+                "IDADE": "",
+                "LOCALIDADE": "BELO HORIZONTE\/MG",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "53336330610"
+            },
+            {
+                "NOME": "WALISON DE SANTANA ANACLETO",
+                "IDADE": "",
+                "LOCALIDADE": "BELO HORIZONTE\/MG",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "9365525659"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COPA ENERGIA S.A.",
+                "CNPJ": "03237583005711",
+                "CIDADE": "IBIRITE-MG",
+                "PROFISSAO": "911305",
+                "DATA_ADMISSAO": "12\/20\/1911",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CIPP - CENTRO DE INSPECAO DE PRODUTOS PERIGOSOS SOCIEDADE SIMPLES LTDA",
+                "CNPJ": "07829277000170",
+                "CIDADE": "BETIM-MG",
+                "PROFISSAO": "352310",
+                "DATA_ADMISSAO": "01\/12\/2011",
+                "DATA_DEMISSAO": "31\/01\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "HUDSON GEOVANE FERREIRA MANUTENCAO PREVENTIVA",
+                "CNPJ": "07199152000104",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "911305",
+                "DATA_ADMISSAO": "01\/03\/2012",
+                "DATA_DEMISSAO": "29\/05\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

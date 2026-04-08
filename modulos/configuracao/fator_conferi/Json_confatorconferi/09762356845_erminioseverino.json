@@ -1,0 +1,180 @@
+{
+    "CADASTRAIS": {
+        "CPF": "9762356845",
+        "NOME": "ERMINIO SEVERINO",
+        "NOME_MAE": "ANISIA FRANCISCA SEVERINO",
+        "NASCTO": "04\/12\/1969",
+        "IDADE": "56 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1233203487",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "811110",
+        "PROFISSAO": "OPERADOR DE MAQUINA MISTURADEIRA (TRATAMENTOS QUIMICOS E AFINS)",
+        "SALARIO": " 14.889,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1938387234",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1932013964",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "14\/12\/2007",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1932123964",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19983074367",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "12\/09\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "19996368001",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "19996977034",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "eseverinoiza@yahoo.com.br",
+            "eseverinoiza@yahoo.com",
+            "eseverinoisa@yahoo.com.br",
+            "eseverinobrasil@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R RODOLPHO VITALI",
+                "NUMERO": "54",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD SHANGAI",
+                "CEP": "13056652",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOAO SILVEIRA BELO",
+                "NUMERO": "273",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "CH CNEO",
+                "CEP": "13033165",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "25795863858",
+                "NOME": "ANISIA FRANCISCA SEVERINO",
+                "IDADE": "82 anos",
+                "LOCAL": "IRAPURU\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "12828995895",
+                "NOME": "JAIR SEVERINO",
+                "IDADE": "58 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "13665886813",
+                "NOME": "ANTONIO SEVERINO",
+                "IDADE": "54 anos",
+                "LOCAL": "SAO JOSE DOS PINHAIS\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "16456642876",
+                "NOME": "NILTON SEVERINO",
+                "IDADE": "51 anos",
+                "LOCAL": "IRAPURU\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "29801381850",
+                "NOME": "ELIANA SEVERINO",
+                "IDADE": "48 anos",
+                "LOCAL": "IRAPURU\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "31879293897",
+                "NOME": "CRISTIANE SEVERINO CAVALCANTE",
+                "IDADE": "44 anos",
+                "LOCAL": "JUNQUEIROPOLIS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "3M DO BRASIL LTDA",
+            "CNPJ": "45985371000108",
+            "CIDADE": "SUMARE-SP",
+            "PROFISSAO": "811110",
+            "DATA_ADMISSAO": "02\/02\/1994",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

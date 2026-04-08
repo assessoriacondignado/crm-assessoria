@@ -1,0 +1,291 @@
+{
+    "CADASTRAIS": {
+        "CPF": "16604726878",
+        "NOME": "EVALDO RODRIGUES CORREA",
+        "NOME_MAE": "NEUMA RODRIGUES DA SILVA CORREA",
+        "NASCTO": "19\/03\/1977",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "286564090124",
+        "NIT": "1246797004",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "233225",
+        "PROFISSAO": "PROFESSOR INSTRUTOR DE ENSINO E APRENDIZAGEM EM SERVICOS",
+        "SALARIO": " 28.079,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1141910626",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1146184022",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "09\/02\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1146184022",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "09\/02\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1143219002",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11981439383",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11993503540",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11981247703",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "19\/11\/2007",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11973503540",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11976997677",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "s-bueno-souza@uol.com.br",
+            "evaldo@erc.com.br",
+            "HIAE\/evaldo@erc.com.br",
+            "evaldo@frontspeedy.com.br",
+            "evaldo@erc-computing.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R S FERNANDO",
+                "NUMERO": "751",
+                "COMPLEMENTO": "LJ 27",
+                "BAIRRO": "JD JULIO",
+                "CEP": "06447280",
+                "CIDADE": "BARUERI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SERTANIA",
+                "NUMERO": "9",
+                "COMPLEMENTO": "A",
+                "BAIRRO": "JD MUTINGA",
+                "CEP": "06463030",
+                "CIDADE": "BARUERI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ESPANHA",
+                "NUMERO": "115",
+                "COMPLEMENTO": "C 2",
+                "BAIRRO": "JD S LUIS",
+                "CEP": "06502225",
+                "CIDADE": "SANTANA DE PARNAIBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ADAIL TEOTONIO",
+                "NUMERO": "103",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE NOVA JAN",
+                "CEP": "06636160",
+                "CIDADE": "JANDIRA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "ESTRADA ESTADUAL BARUERI-ITAPEVI",
+                "NUMERO": "400",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE NOVA JANDIRA",
+                "CEP": "06620340",
+                "CIDADE": "JANDIRA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA SERTANIA",
+                "NUMERO": "139",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM MUTINGA",
+                "CEP": "06463030",
+                "CIDADE": "BARUERI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ADAIL TEOTONIO",
+                "NUMERO": "180",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE NOVA JANDIRA",
+                "CEP": "06636160",
+                "CIDADE": "JANDIRA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA SERTANIA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM MUTINGA",
+                "CEP": "06463030",
+                "CIDADE": "BARUERI",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "33204392864",
+                "NOME": "NEUMA RODRIGUES DA SILVA CORREA",
+                "IDADE": "82 anos",
+                "LOCAL": "BARUERI\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "6822259830",
+                "NOME": "LUCIANA RODRIGUES CORREA LEITE",
+                "IDADE": "56 anos",
+                "LOCAL": "BARUERI\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "11371857830",
+                "NOME": "EDSON RODRIGUES CORREA",
+                "IDADE": "53 anos",
+                "LOCAL": "BARUERI\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "21307478840",
+                "NOME": "ELSON RODRIGUES CORREA",
+                "IDADE": "46 anos",
+                "LOCAL": "BARUERI\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ANA ALICE DA SILVA CORREA",
+                "IDADE": "",
+                "LOCALIDADE": "JANDIRA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "12950617832"
+            },
+            {
+                "NOME": "EDSON RODRIGUES CORREA",
+                "IDADE": "",
+                "LOCALIDADE": "BARUERI\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "11371857830"
+            },
+            {
+                "NOME": "JOSE DA SILVA CORREA",
+                "IDADE": "",
+                "LOCALIDADE": "SANTANA DE PARNAIBA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "41257308815"
+            },
+            {
+                "NOME": "MAURICIO PABLO VILHENA FAIAL",
+                "IDADE": "",
+                "LOCALIDADE": "CAMETA\/PA",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "69506388253"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "SALESFORCE TECNOLOGIA LTDA",
+            "CNPJ": "01080512000178",
+            "CIDADE": "SAO PAULO-SP",
+            "PROFISSAO": "233225",
+            "DATA_ADMISSAO": "24\/08\/2011",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "ERC COMPUTING LTDA",
+            "CNPJ": "04703782000186",
+            "CIDADE": "BARUERI-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20010910",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

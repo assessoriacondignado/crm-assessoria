@@ -1,0 +1,165 @@
+{
+    "CADASTRAIS": {
+        "CPF": "46635547843",
+        "NOME": "BRUNO RODRIGO DA COSTA DOS SANTOS",
+        "NOME_MAE": "SUELI VITALINA DA COSTA",
+        "NASCTO": "28\/08\/1995",
+        "IDADE": "30 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1612675560",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "414140",
+        "PROFISSAO": "",
+        "SALARIO": " 2.974,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19992117641",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19994497960",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19992146639",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R NIZIO TORRES",
+                "NUMERO": "5",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "OURO PRETO",
+                "CEP": "31320330",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "AV CLEBER SATURNINO FERREIRA",
+                "NUMERO": "1918",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "L PQ CENTENARIO",
+                "CEP": "13051478",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "22659309892",
+                "NOME": "SUELI VITALINA DA COSTA",
+                "IDADE": "53 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "37805560811",
+                "NOME": "FERNANDA CRISTINA VITALINA DE SOUZA",
+                "IDADE": "37 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "44198200807",
+                "NOME": "FABIANE CAROLINE DA COSTA",
+                "IDADE": "34 anos",
+                "LOCAL": "VALINHOS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "47516880817",
+                "NOME": "SIDNEIA PRISCILA COSTA DE SOUZA",
+                "IDADE": "28 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "50850838819",
+                "NOME": "WESLLEY DA COSTA DE SOUZA",
+                "IDADE": "24 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "FUTURE CARGO TRANSPORTE LTDA",
+                "CNPJ": "13719780000176",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "414140",
+                "DATA_ADMISSAO": "15\/01\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PHENIX - COMERCIO, LOCACOES, LOGISTICA, SERVICOS   TRANSPORTES LTDA",
+                "CNPJ": "06039758000110",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "414215",
+                "DATA_ADMISSAO": "10\/04\/2017",
+                "DATA_DEMISSAO": "20\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "TOC TERMINAIS DE OPERACAO DE CARGAS LTDA",
+                "CNPJ": "67546671000204",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "783225",
+                "DATA_ADMISSAO": "28\/07\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "BRP BRASIL APOIO ADMINISTRATIVO EIRELI",
+                "CNPJ": "10905557000206",
+                "CIDADE": "VALINHOS-SP",
+                "PROFISSAO": "919105",
+                "DATA_ADMISSAO": "06\/10\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

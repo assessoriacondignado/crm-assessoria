@@ -1,0 +1,198 @@
+{
+    "CADASTRAIS": {
+        "CPF": "29747096803",
+        "NOME": "RONALDO GOMES DE ANDRADE",
+        "NOME_MAE": "MARIA LUCIA ALONSO DE ANDRADE",
+        "NASCTO": "10\/05\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "219176270124",
+        "NIT": "12678692894",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "300305",
+        "PROFISSAO": "TECNICO EM ELETROMECANICA",
+        "SALARIO": " 17,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1120205364",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11944443098",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11972350067",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11972516154",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11975379171",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11995911130",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "rnld.gomesandrade@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R UM CRUZ",
+                "NUMERO": "2",
+                "COMPLEMENTO": "67",
+                "BAIRRO": "PRQ INDEPENDENCIA",
+                "CEP": "03236060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SOLAR DOS PINHEIROS",
+                "NUMERO": "154",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL S NICOLAU",
+                "CEP": "03254190",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CUBATAO",
+                "NUMERO": "368",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL MARIANA",
+                "CEP": "04013001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R EGNES RIMAZZA GIANONI",
+                "NUMERO": "201",
+                "COMPLEMENTO": "CS 1",
+                "BAIRRO": "JARDIM ZAIRA",
+                "CEP": "09321110",
+                "CIDADE": "MAUA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PRIMEIRA CRUZ",
+                "NUMERO": "267",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE INDEPENDENCIA",
+                "CEP": "03236060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "25218416843",
+                "NOME": "MARIA LUCIA ALONSO DE ANDRADE",
+                "IDADE": "73 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "25000582802",
+                "NOME": "ALEXANDRE GOMES DE ANDRADE",
+                "IDADE": "51 anos",
+                "LOCAL": "SAO JOSE DO RIO PRETO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "26483456808",
+                "NOME": "RICARDO GOMES DE ANDRADE",
+                "IDADE": "48 anos",
+                "LOCAL": "SAO CAETANO DO SUL\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "32660856800",
+                "NOME": "AMANDA GOMES DE ANDRADE",
+                "IDADE": "40 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ELEVADORES ATLAS SCHINDLER LTDA.",
+                "CNPJ": "00028986004600",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "300305",
+                "DATA_ADMISSAO": "04\/08\/2003",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ELEVADORES ATLAS SCHINDLER LTDA.",
+                "CNPJ": "00028986004790",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "300305",
+                "DATA_ADMISSAO": "04\/08\/2003",
+                "DATA_DEMISSAO": "31\/05\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

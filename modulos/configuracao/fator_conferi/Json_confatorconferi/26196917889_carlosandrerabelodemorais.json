@@ -1,0 +1,316 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26196917889",
+        "NOME": "CARLOS ANDRE RABELO DE MORAIS",
+        "NOME_MAE": "SELMA MARCOS TRESSINO RABELO",
+        "NASCTO": "01\/01\/1978",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "284728500",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "269604240132",
+        "NIT": "1253177179",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "123310",
+        "PROFISSAO": "DIRETOR DE MARKETING",
+        "SALARIO": " 53.838,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1125890823",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "14\/08\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1131758175",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1131758175",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1131759070",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11945122051",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11984587618",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11998979075",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11961730860",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11985051058",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "candrerabelo@hotmail.com",
+            "carlos.rabelo@bvfinanceira.com.br",
+            "dani.tressino@gmail.com",
+            "carlos.rabelo@bvservicos.com.br",
+            "andre_tressino@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R RIO GRANDE",
+                "NUMERO": "60",
+                "COMPLEMENTO": "AP 111",
+                "BAIRRO": "VL MARIANA",
+                "CEP": "04018000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DR FABRICIO VAMPRE",
+                "NUMERO": "231",
+                "COMPLEMENTO": "AP 111",
+                "BAIRRO": "VL MARIANA",
+                "CEP": "04014020",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DR FABRICIO VAMPRE",
+                "NUMERO": "2311",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL MARIANA",
+                "CEP": "04014020",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV PAULISTA",
+                "NUMERO": "2150",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BELA VISTA",
+                "CEP": "01310300",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R STO ANTONIO DE LISBOA",
+                "NUMERO": "53",
+                "COMPLEMENTO": "AP 2",
+                "BAIRRO": "VL EDE",
+                "CEP": "02202120",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ALVARITO MULLER",
+                "NUMERO": "24",
+                "COMPLEMENTO": "N EUROPA F JD",
+                "BAIRRO": "JD NOVA EUROPA",
+                "CEP": "13040092",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R VERCINIO PEREIRA DE SOUZA",
+                "NUMERO": "582",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD TIETE",
+                "CEP": "03945000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R AGAPITO JOSE DA SILVA",
+                "NUMERO": "119",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL FACHINI",
+                "CEP": "04334010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "80816487804",
+                "NOME": "SELMA MARCOS TRESSINO RABELO",
+                "IDADE": "71 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "29839280805",
+                "NOME": "RODRIGO RABELO DE MORAIS",
+                "IDADE": "44 anos",
+                "LOCAL": "VITORIA\/ES",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "DANIELLE TRESSINO DE CAMARGO",
+            "IDADE": "",
+            "LOCALIDADE": "VARGEM GRANDE PAULISTA\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "29880909801"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COX AUTOMOTIVE DO BRASIL LTDA",
+                "CNPJ": "68153238000190",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "123310",
+                "DATA_ADMISSAO": "25\/04\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO J. SAFRA S.A",
+                "CNPJ": "03017677000120",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "141705",
+                "DATA_ADMISSAO": "01\/06\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": [
+            {
+                "RAZAO_SOCIAL": "COX AUTOMOTIVE DO BRASIL LTDA",
+                "CNPJ": "68153238000433",
+                "CIDADE": "SAO PAULO-SP",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20221213",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "COX AUTOMOTIVE DO BRASIL LTDA",
+                "CNPJ": "68153238000603",
+                "CIDADE": "SAO JOSE DOS CAMPOS-SP",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20221213",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "COX AUTOMOTIVE DO BRASIL LTDA",
+                "CNPJ": "68153238000514",
+                "CIDADE": "SANTO ANDRE-SP",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20221213",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "COX AUTOMOTIVE DO BRASIL LTDA",
+                "CNPJ": "68153238000352",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20221213",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "COX AUTOMOTIVE DO BRASIL LTDA",
+                "CNPJ": "68153238000271",
+                "CIDADE": "SAO PAULO-SP",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20221213",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "COX AUTOMOTIVE DO BRASIL LTDA",
+                "CNPJ": "68153238000786",
+                "CIDADE": "SAO PAULO-SP",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20221213",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "COX AUTOMOTIVE DO BRASIL LTDA",
+                "CNPJ": "68153238000190",
+                "CIDADE": "SAO PAULO-SP",
+                "QUALIFICACAO": "Administrador",
+                "DATA_ENTRADA": "20221213",
+                "VALOR_PARTICIPACAO": ""
+            }
+        ]
+    }
+}

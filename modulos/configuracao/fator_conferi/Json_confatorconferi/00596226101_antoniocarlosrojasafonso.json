@@ -1,0 +1,170 @@
+{
+    "CADASTRAIS": {
+        "CPF": "596226101",
+        "NOME": "ANTONIO CARLOS ROJAS AFONSO",
+        "NOME_MAE": "NATAVIDADE ROJAS AFONSO",
+        "NASCTO": "13\/06\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1304432240",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "321105",
+        "PROFISSAO": "TECNICO AGRICOLA",
+        "SALARIO": " 5.332,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "6230010100",
+                "OPERADORA": "INTELIG TELECOM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1835211038",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "6734312213",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "18991430240",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "18991654953",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "18997415695",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "acra.agricultura@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "FAZ SAM ANTONIO BR",
+                "NUMERO": "364",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ENTRONC ROD MT 170",
+                "CEP": "78360000",
+                "CIDADE": "CAMPO NOVO DO PARECIS",
+                "ESTADO": "MT"
+            },
+            {
+                "LOGRADOURO": "EST MUNIC",
+                "NUMERO": "0",
+                "COMPLEMENTO": "KM 7",
+                "BAIRRO": "CENTRO",
+                "CEP": "38380000",
+                "CIDADE": "CANAPOLIS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R VIA CIRCULACAO",
+                "NUMERO": "30",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RESIDENCIAL ECO VILLE",
+                "CEP": "16880000",
+                "CIDADE": "VALPARAISO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "EST 6",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOA VISTA",
+                "CEP": "17800000",
+                "CIDADE": "ADAMANTINA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TS - TECNOLOGIA EM ANALISE DE SOLO E SERVICOS AGRICOLA LTDA",
+                "CNPJ": "13008972000174",
+                "CIDADE": "LENCOIS PAULISTA-SP",
+                "PROFISSAO": "321105",
+                "DATA_ADMISSAO": "22\/07\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "RAIZEN ENERGIA S.A",
+                "CNPJ": "08070508006702",
+                "CIDADE": "VALPARAISO-SP",
+                "PROFISSAO": "620105",
+                "DATA_ADMISSAO": "01\/04\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "BARTIRA AGROPECUARIA S\/A",
+                "CNPJ": "20090981000112",
+                "CIDADE": "GOIANIA-GO",
+                "PROFISSAO": "321105",
+                "DATA_ADMISSAO": "01\/10\/2011",
+                "DATA_DEMISSAO": "606",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,228 @@
+{
+    "CADASTRAIS": {
+        "CPF": "86912488900",
+        "NOME": "GISELLA CARLA GARUTTI",
+        "NOME_MAE": "FLORINDA REGINATO GARUTTI",
+        "NASCTO": "14\/10\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4733727900",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "4130844590",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "4334224186",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4134047231",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "13\/03\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4197415038",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41997415038",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "gbarros@grsa.com.br",
+            "gisellac.garutti@gmail.com",
+            "gisella_barros@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV MAL RONDON",
+                "NUMERO": "321",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "78700075",
+                "CIDADE": "RONDONOPOLIS",
+                "ESTADO": "MT"
+            },
+            {
+                "LOGRADOURO": "R OTAVIO PITALUGA",
+                "NUMERO": "505",
+                "COMPLEMENTO": "AP 10",
+                "BAIRRO": "JD MATO GROSSO",
+                "CEP": "78740375",
+                "CIDADE": "RONDONOPOLIS",
+                "ESTADO": "MT"
+            },
+            {
+                "LOGRADOURO": "R JOAO ANTONIO BRAGA CORTES",
+                "NUMERO": "110",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD S PEDRO",
+                "CEP": "86809050",
+                "CIDADE": "APUCARANA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R PADRE JULIO PAREDA",
+                "NUMERO": "251",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COSTEIRA",
+                "CEP": "83015726",
+                "CIDADE": "SAO JOSE DOS PINHAIS",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "RUA EMILIANO PERNETA",
+                "NUMERO": "680",
+                "COMPLEMENTO": "AND 10",
+                "BAIRRO": "CENTRO",
+                "CEP": "80420080",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "1534825916",
+                "NOME": "FLORINDA REGINATO GARUTTI",
+                "IDADE": "72 anos",
+                "LOCAL": "APUCARANA\/PR",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "1882879902",
+                "NOME": "JULIANA GARUTTI",
+                "IDADE": "48 anos",
+                "LOCAL": "APUCARANA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "JOSE VALTER DE FIGUEREDO",
+            "IDADE": "",
+            "LOCALIDADE": "SAO BERNARDO DO CAMPO\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "869124889"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SODEXO DO BRASIL COMERCIAL S.A.",
+                "CNPJ": "49930514090703",
+                "CIDADE": "BLUMENAU-SC",
+                "PROFISSAO": "253220",
+                "DATA_ADMISSAO": "26\/02\/2024",
+                "DATA_DEMISSAO": "01\/11\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SODEXO DO BRASIL COMERCIAL S.A.",
+                "CNPJ": "49930514000135",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "253220",
+                "DATA_ADMISSAO": "17\/10\/2022",
+                "DATA_DEMISSAO": "26\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "GR SERVICOS E ALIMENTACAO LTDA.",
+                "CNPJ": "02905110004204",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/10\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "GR SERVICOS E ALIMENTACAO LTDA.",
+                "CNPJ": "02905110028561",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142105",
+                "DATA_ADMISSAO": "01\/03\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "GR SERVICOS E ALIMENTACAO LTDA.",
+                "CNPJ": "02905110010433",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "142105",
+                "DATA_ADMISSAO": "09\/06\/2011",
+                "DATA_DEMISSAO": "01\/03\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

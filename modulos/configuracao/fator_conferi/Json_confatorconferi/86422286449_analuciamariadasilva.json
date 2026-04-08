@@ -1,0 +1,146 @@
+{
+    "CADASTRAIS": {
+        "CPF": "86422286449",
+        "NOME": "ANA LUCIA MARIA DA SILVA",
+        "NOME_MAE": "MARIA DO CARMO DA SILVA",
+        "NASCTO": "05\/07\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "039401500825",
+        "NIT": "2003375956",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "514320",
+        "PROFISSAO": "AUXILIAR DE LIMPEZA",
+        "SALARIO": " 1.596,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8132221506",
+                "OPERADORA": "TELEMAR\/PE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8132663006",
+                "OPERADORA": "TELEMAR\/PE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "81985579376",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81983013705",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R STA TEREZA",
+                "NUMERO": "1050",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PASSARINHO",
+                "CEP": "52390480",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R STA TEREZA",
+                "NUMERO": "1048",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PASSARINHO",
+                "CEP": "52390480",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R BR DE CAMAQUA",
+                "NUMERO": "133",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVA DESCOBERTA",
+                "CEP": "52090100",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "RUA ALTO CHAGAS FERREIRA",
+                "NUMERO": "28",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DOIS UNIDOS",
+                "CEP": "52150070",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1494546",
+            "NOME": "MARIA DO CARMO DA SILVA",
+            "IDADE": "69 anos",
+            "LOCAL": "PAULO AFONSO\/BA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SOCIEDADE DE ORIENTACAO PSICO-PEDAGOGICA LTDA",
+                "CNPJ": "09962523000193",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "514320",
+                "DATA_ADMISSAO": "24\/03\/2017",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "WD CENTRO EDUCACIONAL LTDA",
+                "CNPJ": "08260713000104",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "514225",
+                "DATA_ADMISSAO": "02\/05\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,170 @@
+{
+    "CADASTRAIS": {
+        "CPF": "16388765840",
+        "NOME": "IZABEL MARIA EMILIA ALVES PERES",
+        "NOME_MAE": "SANTINA ROSA",
+        "NASCTO": "25\/09\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Feminino",
+        "RG": "279831833",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "224545660132",
+        "NIT": "2679756745",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "223405",
+        "PROFISSAO": "FARMACEUTICO",
+        "SALARIO": " 6.237,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1129092382",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1633825504",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "16993200343",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16991838846",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16992168280",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "izabelemilia@vivointernetdiscada.com.br",
+            "izabelemilia@itelefonica.com.br",
+            "emiliaperes@bol.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV ANGELO RAGASSI",
+                "NUMERO": "177",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD S JOSE",
+                "CEP": "15996038",
+                "CIDADE": "MATAO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV PROF CHLORITA P MARTINS",
+                "NUMERO": "880",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL PEREIRA",
+                "CEP": "15990810",
+                "CIDADE": "MATAO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "5540325974",
+                "NOME": "SANTINA ROSA",
+                "IDADE": "44 anos",
+                "LOCAL": "PORTO MENDES\/MT",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "45411951860",
+                "NOME": "MARIA GIULIA ALVES PERES",
+                "IDADE": "19 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "50872707865",
+                "NOME": "MARIA EDUARDA ALVES PERES",
+                "IDADE": "13 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "FARMAVEN COMERCIO DE PRODUTOS FARMACEUTICOS LTDA",
+                "CNPJ": "07653206000160",
+                "CIDADE": "MATAO-SP",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "04\/04\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "DROGARIA SAO CARLOS UNIDAS LTDA",
+                "CNPJ": "04784418000350",
+                "CIDADE": "MATAO-SP",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "01\/08\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "DROGARIA SAO CARLOS UNIDAS LTDA",
+                "CNPJ": "04784418001160",
+                "CIDADE": "MATAO-SP",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "01\/08\/2009",
+                "DATA_DEMISSAO": "01\/08\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

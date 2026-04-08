@@ -1,0 +1,285 @@
+{
+    "CADASTRAIS": {
+        "CPF": "30556253825",
+        "NOME": "PATRICIA DE CASTRO FERREIRA DE SOUZA",
+        "NOME_MAE": "ODETE DE CASTRO MOREIRA E SOUZA",
+        "NASCTO": "23\/04\/1982",
+        "IDADE": "44 anos",
+        "SEXO": "Feminino",
+        "RG": "43947974",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "197903020191",
+        "NIT": "19026345650",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "413225",
+        "PROFISSAO": "ESCRITURARIO DE BANCO",
+        "SALARIO": " 3.859,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1333260571",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1333260571",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1330231450",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1139037831",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13996692576",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13997435481",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "17\/05\/2020",
+                "TIPO_TEL": "MOVEL PRE-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13997552081",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "04\/05\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "13997552081",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "04\/05\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "13981118805",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "16\/09\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "pcfsouza@hotmail.com",
+            "pcsousa@gmail.com",
+            "pattycfsouza@uol.com.br",
+            "patty_c_f_souza@bol.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV DR BERNARDINO DE CAMPOS",
+                "NUMERO": "580",
+                "COMPLEMENTO": "AP 43",
+                "BAIRRO": "POMPEIA",
+                "CEP": "11065000",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "PC BR DO RIO BRANCO",
+                "NUMERO": "71",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "11310000",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CARLOS GOMES",
+                "NUMERO": "10",
+                "COMPLEMENTO": "NULL",
+                "BAIRRO": "CAMPO GRANDE",
+                "CEP": "11075670",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOUTOR ARMANDO DE SALES OLIVEIRA",
+                "NUMERO": "110",
+                "COMPLEMENTO": "APTO 209",
+                "BAIRRO": "BOQUEIRAO",
+                "CEP": "11050070",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOUTOR ARMANDO DE SALES OLIVEIRA",
+                "NUMERO": "11",
+                "COMPLEMENTO": "APT 209",
+                "BAIRRO": "BOQUEIRAO",
+                "CEP": "11050071",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOUTOR ARMANDO DE SALES OLIVEIRA",
+                "NUMERO": "110",
+                "COMPLEMENTO": "APT 209",
+                "BAIRRO": "BOQUEIRAO",
+                "CEP": "11050071",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CARLOS GOMES",
+                "NUMERO": "8",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAMPO GRANDE",
+                "CEP": "11075670",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "28536590890",
+                "NOME": "SANDRA MARA FERREIRA DE SOUZA",
+                "IDADE": "46 anos",
+                "LOCAL": "SANTOS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "47453100801",
+                "NOME": "MANUELA SOUZA DIAS",
+                "IDADE": "13 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "CLAUDIA CRISTINA FERREIRA DIAS",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "13372273826"
+            },
+            {
+                "NOME": "FLAVIO ROBERTO FERREIRA DIAS",
+                "IDADE": "",
+                "LOCALIDADE": "SANTOS\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "28222443836"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CAIXA ECONOMICA FEDERAL",
+                "CNPJ": "00360305034513",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "07\/08\/2006",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CAIXA ECONOMICA FEDERAL",
+                "CNPJ": "00360305304839",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "07\/01\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "CAIXA ECONOMICA FEDERAL",
+                "CNPJ": "00360305036648",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "07\/08\/2006",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "CAIXA ECONOMICA FEDERAL",
+                "CNPJ": "00360305334665",
+                "CIDADE": "SAO VICENTE-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "07\/08\/2006",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "LOGOGRAPHOS SERVICOS DE COBRANCAS LTDA",
+            "CNPJ": "06916508000110",
+            "CIDADE": "SANTOS-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20040712",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

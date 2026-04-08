@@ -1,0 +1,279 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25876316881",
+        "NOME": "MIGUEL ARCHANJO NETO",
+        "NOME_MAE": "ANA EMILIA FAJARDO ARCHANJO",
+        "NASCTO": "27\/07\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "227918790175",
+        "NIT": "12928485726",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "253215",
+        "PROFISSAO": "GERENTE DE CONTAS - PESSOA FISICA E JURIDICA",
+        "SALARIO": " 5.375,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1238657284",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1150194793",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1238656944",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "07\/04\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1136663694",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13997111737",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11986241761",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11996105804",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11996105804",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11961969876",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "botta2707@gmail.com",
+            "archanjo7@hotmail.com",
+            "miguel_archanjo@uol.com.br",
+            "archanjo76@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ROSA E SILVA",
+                "NUMERO": "190",
+                "COMPLEMENTO": "AP 2",
+                "BAIRRO": "STA CECILIA",
+                "CEP": "01230020",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AL BARROS",
+                "NUMERO": "399",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STA CECILIA",
+                "CEP": "01232001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DOUTOR ALBUQUERQUE LINS",
+                "NUMERO": "567",
+                "COMPLEMENTO": "ED CRISTAL 867",
+                "BAIRRO": "SANTA CECILIA",
+                "CEP": "01230001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DR ALBUQUERQUE LINS",
+                "NUMERO": "867",
+                "COMPLEMENTO": "AP 303",
+                "BAIRRO": "S CECILIA",
+                "CEP": "01230001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MARIA MOREIRA DO ESPIRITO SANTO",
+                "NUMERO": "265",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PAUBA",
+                "CEP": "11617124",
+                "CIDADE": "SAO SEBASTIAO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AL BARROS",
+                "NUMERO": "399",
+                "COMPLEMENTO": "AP 42",
+                "BAIRRO": "SANTA CECILIA",
+                "CEP": "01232904",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "12867825890",
+            "NOME": "MARIA DE FATIMA ARCHANJO SAMPAIO",
+            "IDADE": "54 anos",
+            "LOCAL": "NOVA FRIBURGO\/RJ",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ANSELMO ARCHANJO",
+            "IDADE": "",
+            "LOCALIDADE": "SAO PAULO\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "28920626839"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000754269",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "31\/03\/2014",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000001830",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "08\/03\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000519855",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "09\/01\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000312240",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "03\/08\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000664197",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "31\/03\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "ITAU UNIBANCO S.A.",
+                "CNPJ": "60701190205334",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "253215",
+                "DATA_ADMISSAO": "10\/02\/2012",
+                "DATA_DEMISSAO": "21\/02\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "ITAU UNIBANCO S.A.",
+                "CNPJ": "60701190209089",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "253215",
+                "DATA_ADMISSAO": "10\/02\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

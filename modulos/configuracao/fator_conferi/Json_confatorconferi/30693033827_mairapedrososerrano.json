@@ -1,0 +1,255 @@
+{
+    "CADASTRAIS": {
+        "CPF": "30693033827",
+        "NOME": "MAIRA PEDROSO SERRANO",
+        "NOME_MAE": "DORA LUCIA PEDROSO SERRANO",
+        "NASCTO": "26\/08\/1982",
+        "IDADE": "43 anos",
+        "SEXO": "Feminino",
+        "RG": "442931098",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "305227350116",
+        "NIT": "1390519285",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "241010",
+        "PROFISSAO": "ADVOGADO DE EMPRESA",
+        "SALARIO": " 16.386,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1150815003",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1150815003",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1132322500",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1132322200",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11992676762",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11998553958",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11985539583",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11995982996",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "map_serrano@hotmail.com",
+            "maira.serrano@semptoshiba.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PASQUALE GALLUPI",
+                "NUMERO": "427",
+                "COMPLEMENTO": "BL 6 AP 504",
+                "BAIRRO": "PARAISOPOLIS",
+                "CEP": "05660000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R HENRIQUE SCHAUMANN",
+                "NUMERO": "517",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PINHEIROS",
+                "CEP": "05413020",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R VERGUEIRO",
+                "NUMERO": "1921",
+                "COMPLEMENTO": "AP 12",
+                "BAIRRO": "VL MARIANA",
+                "CEP": "04101000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PASQUALE GALLUPI",
+                "NUMERO": "42",
+                "COMPLEMENTO": "BL 6 AP 504",
+                "BAIRRO": "PARAISOPOLIS",
+                "CEP": "05660000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CNSO MOREIRA DE BARROS",
+                "NUMERO": "566",
+                "COMPLEMENTO": "AP 42",
+                "BAIRRO": "SANTANA",
+                "CEP": "02018011",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R APENINOS",
+                "NUMERO": "930",
+                "COMPLEMENTO": "AP 1 AND 19",
+                "BAIRRO": "PARAISO",
+                "CEP": "04104903",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MANAUS",
+                "NUMERO": "80",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S LAGOS",
+                "CEP": "07782195",
+                "CIDADE": "CAJAMAR",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOS FRANCESES",
+                "NUMERO": "498",
+                "COMPLEMENTO": "AP252D",
+                "BAIRRO": "MORRO DOS INGLESES",
+                "CEP": "01329010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "4256910808",
+                "NOME": "DORA LUCIA PEDROSO SERRANO",
+                "IDADE": "74 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "35904256876",
+                "NOME": "MARCELO PEDROSO SERRANO",
+                "IDADE": "38 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TCL SEMP INDUSTRIA E COMERCIO DE ELETROELETRONICOS S.A",
+                "CNPJ": "24227491000257",
+                "CIDADE": "CAJAMAR-SP",
+                "PROFISSAO": "241010",
+                "DATA_ADMISSAO": "01\/08\/2016",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SEMP AMAZONAS S.A.",
+                "CNPJ": "04400552000814",
+                "CIDADE": "CAJAMAR-SP",
+                "PROFISSAO": "241005",
+                "DATA_ADMISSAO": "10\/10\/2012",
+                "DATA_DEMISSAO": "31\/07\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": [
+            {
+                "RAZAO_SOCIAL": "PETRA COTIA INCORPORACOES LTDA",
+                "CNPJ": "20364468000172",
+                "CIDADE": "SAO PAULO-SP",
+                "QUALIFICACAO": "SÃ³cio",
+                "DATA_ENTRADA": "20140602",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "ARAMANTA DESENVOLVIMENTO IMOBILIARIO S\/C LTDA",
+                "CNPJ": "04362131000170",
+                "CIDADE": "SAO PAULO-SP",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20010313",
+                "VALOR_PARTICIPACAO": ""
+            }
+        ]
+    }
+}

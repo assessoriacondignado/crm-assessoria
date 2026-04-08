@@ -1,0 +1,265 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26097602804",
+        "NOME": "JULIANA BORGES",
+        "NOME_MAE": "APARECIDA DE LOURDES AMADEU BORGES",
+        "NASCTO": "18\/01\/1979",
+        "IDADE": "47 anos",
+        "SEXO": "Feminino",
+        "RG": "303923076",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "269345470175",
+        "NIT": "1271086985",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "123105",
+        "PROFISSAO": "DIRETOR ADMINISTRATIVO",
+        "SALARIO": " 44.455,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1123622184",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1129181893",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11981872184",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11982596251",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "02\/06\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "19981872184",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11981089400",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11995766317",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "juliana.borges@galderma.com",
+            "ju.jb@terra.com.br",
+            "r.malavazi@yahoo.com.br",
+            "ju_jb@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R EUCLIDES PACHECO",
+                "NUMERO": "803",
+                "COMPLEMENTO": "AP 211",
+                "BAIRRO": "VL GOMES CARDIM",
+                "CEP": "03321900",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R S JOSE DE ARIMATEIA",
+                "NUMERO": "249",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD VILA FORMOSA",
+                "CEP": "03461080",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CDOR CARLO MARIO GARDANO",
+                "NUMERO": "450",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "09720470",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA EUCLIDES PACHECO",
+                "NUMERO": "803",
+                "COMPLEMENTO": "A AP211",
+                "BAIRRO": "VILA GOMES CARDIM",
+                "CEP": "03321000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA EVANGELINA",
+                "NUMERO": "1132",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA CARRAO",
+                "CEP": "03421000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DO RENO",
+                "NUMERO": "136",
+                "COMPLEMENTO": "APTO 175",
+                "BAIRRO": "VILA MOINHO VELHO",
+                "CEP": "04284070",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA VISCONDE DE JERUMIM",
+                "NUMERO": "139",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM VILA FORMOSA",
+                "CEP": "03461060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA SAO JOSE DE ARIMATEIA",
+                "NUMERO": "69",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM VILA FORMOSA",
+                "CEP": "03461080",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "77220145853",
+                "NOME": "APARECIDA DE LOURDES AMADEU BORGES",
+                "IDADE": "76 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "30994682824",
+                "NOME": "MARIO CESAR BORGES",
+                "IDADE": "41 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ANTONIO CARLOS AMADEU",
+                "IDADE": "",
+                "LOCALIDADE": "MONGAGUA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "48201812891"
+            },
+            {
+                "NOME": "RENATO MALAVAZI",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "28849816839"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "GALDERMA DISTRIBUIDORA DO BRASIL LTDA.",
+                "CNPJ": "07489498000147",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "123105",
+                "DATA_ADMISSAO": "01\/12\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ABBVIE FARMACEUTICA LTDA.",
+                "CNPJ": "15800545000230",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "123305",
+                "DATA_ADMISSAO": "13\/03\/2023",
+                "DATA_DEMISSAO": "08\/11\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "GALDERMA DISTRIBUIDORA DO BRASIL LTDA.",
+                "CNPJ": "07489498000570",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142320",
+                "DATA_ADMISSAO": "01\/03\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "GALDERMA BRASIL LTDA",
+                "CNPJ": "00317372000146",
+                "CIDADE": "HORTOLANDIA-SP",
+                "PROFISSAO": "142320",
+                "DATA_ADMISSAO": "01\/08\/2007",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

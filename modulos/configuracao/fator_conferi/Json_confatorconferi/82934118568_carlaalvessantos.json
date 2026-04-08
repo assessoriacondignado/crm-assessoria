@@ -1,0 +1,265 @@
+{
+    "CADASTRAIS": {
+        "CPF": "82934118568",
+        "NOME": "CARLA ALVES SANTOS",
+        "NOME_MAE": "VALDEMIRA ALVES SANTOS",
+        "NASCTO": "10\/11\/1983",
+        "IDADE": "42 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "103237850523",
+        "NIT": "20009631423",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "841715",
+        "PROFISSAO": "FERMENTADOR",
+        "SALARIO": " 1.130,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7132030041",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7133995351",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7132135979",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "71983787101",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71986974828",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71986181203",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71986888766",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71988628585",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/12\/2008",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "jurte@oi.com.br",
+            "ca922823@gmail.com",
+            "carlaalves1983@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "TV DINORA",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ENGENHO VELHO DA FEDERACAO",
+                "CEP": "40220430",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R S JORGE DA VILA NOVA PITUACU",
+                "NUMERO": "23",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S RAFAEL",
+                "CEP": "41254120",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "AV S RAFAEL",
+                "NUMERO": "2693",
+                "COMPLEMENTO": "BL 23 AP 101",
+                "BAIRRO": "S MARCOS",
+                "CEP": "41253190",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R S JORGE DA VILA NOVA PITUACU",
+                "NUMERO": "0",
+                "COMPLEMENTO": "AP 101 23",
+                "BAIRRO": "S RAFAEL",
+                "CEP": "41254120",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "AV VASCO DA GAMA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "FEDERACAO",
+                "CEP": "40230731",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "RUA SAO JORGE DA VILA NOVA PITUACU",
+                "NUMERO": "0",
+                "COMPLEMENTO": "BL 23 AP 101",
+                "BAIRRO": "SAO MARCOS",
+                "CEP": "41253223",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "RUA SAO JORGE DA VILA NOVA PITUACU",
+                "NUMERO": "23",
+                "COMPLEMENTO": "AP 101",
+                "BAIRRO": "SAO MARCOS",
+                "CEP": "41253223",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "TRAVESSA DINORA",
+                "NUMERO": "123",
+                "COMPLEMENTO": "CA",
+                "BAIRRO": "ENGENHO VELHO DA FEDERACAO",
+                "CEP": "40220430",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "19837470500",
+                "NOME": "VALDEMIRA ALVES SANTOS",
+                "IDADE": "76 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "2162166640",
+                "NOME": "PABLO FELIPE ALVES SILVA",
+                "IDADE": "28 anos",
+                "LOCAL": "MONTES CLAROS\/MG",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "8835369517",
+                "NOME": "CLARA LIS ALVES SILVA",
+                "IDADE": "15 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "8835374510",
+                "NOME": "HENRY LEONARDO ALVES SILVA",
+                "IDADE": "12 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "9441097560",
+                "NOME": "ISABELA ALVES SANTOS",
+                "IDADE": "11 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "10701351519",
+                "NOME": "ELIAS ALVES JORNAY",
+                "IDADE": "18 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PERINI COMERCIAL DE ALIMENTOS LTDA",
+                "CNPJ": "11965515000908",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "02\/06\/2010",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PERINI COMERCIAL DE ALIMENTOS LTDA",
+                "CNPJ": "11965515000304",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "841715",
+                "DATA_ADMISSAO": "02\/05\/2007",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

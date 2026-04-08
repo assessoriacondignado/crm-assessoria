@@ -1,0 +1,181 @@
+{
+    "CADASTRAIS": {
+        "CPF": "2511644975",
+        "NOME": "CLEBER STRUGALA",
+        "NOME_MAE": "EMILIA MUCHAKI STRUGALA",
+        "NASCTO": "25\/07\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "68724562",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "071186080655",
+        "NIT": "1269651650",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "214405",
+        "PROFISSAO": "ENGENHEIRO MECANICO",
+        "SALARIO": " 18.298,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4133472897",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "4132278480",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4130145430",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "41987933487",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41985077281",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41991922135",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41999247839",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "41999146365",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "cleberst@ibest.com.br",
+            "cleber007@gmail.com",
+            "cleber.strugala@hotmail.com",
+            "cleber.strugala@akersolutions.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R FRANCISCO SOBANIA",
+                "NUMERO": "1300",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE INDUSTRIAL",
+                "CEP": "81460130",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R OURO VERDE",
+                "NUMERO": "460",
+                "COMPLEMENTO": "CS 1",
+                "BAIRRO": "CAPAO RASO",
+                "CEP": "81130130",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R FATIMA BARK",
+                "NUMERO": "937",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAPAO RASO",
+                "CEP": "81130270",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "3607050902",
+                "NOME": "EMILIA MUCHAKI STRUGALA",
+                "IDADE": "78 anos",
+                "LOCAL": "CURITIBA\/PR",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "81487576900",
+                "NOME": "ELIANE STRUGALA WOCHE",
+                "IDADE": "55 anos",
+                "LOCAL": "CURITIBA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "ONESUBSEA DO BRASIL LTDA.",
+            "CNPJ": "05876349000105",
+            "CIDADE": "SAO JOSE DOS PINHAIS-PR",
+            "PROFISSAO": "214405",
+            "DATA_ADMISSAO": "16\/09\/2020",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

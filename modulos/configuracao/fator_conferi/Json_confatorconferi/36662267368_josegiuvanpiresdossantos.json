@@ -1,0 +1,145 @@
+{
+    "CADASTRAIS": {
+        "CPF": "36662267368",
+        "NOME": "JOSE GIUVAN PIRES DOS SANTOS",
+        "NOME_MAE": "FRANCISCA PIRES DOS SANTOS",
+        "NASCTO": "14\/11\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "034710600744",
+        "NIT": "1247750963",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "513505",
+        "PROFISSAO": "AJUDANTE DE CHURRASQUEIRO",
+        "SALARIO": " 1.560,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "2127348381",
+            "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+            "DATA_REFERENCIA": "07\/08\/2012",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21983740980",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21996579400",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21979649746",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21972768960",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "29\/10\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "21998369521",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "giuvanpvasco@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ARILDO P DE ABREU",
+                "NUMERO": "15",
+                "COMPLEMENTO": "C 4",
+                "BAIRRO": "SERRA DO SAMBE",
+                "CEP": "28800000",
+                "CIDADE": "RIO BONITO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R ARILDO PEREIRA DE ABREU",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "",
+                "CEP": "28800000",
+                "CIDADE": "RIO BONITO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R JOSE MIRANDA DA MOTA",
+                "NUMERO": "721",
+                "COMPLEMENTO": "",
+                "BAIRRO": "",
+                "CEP": "28800000",
+                "CIDADE": "RIO BONITO",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "493595333",
+            "NOME": "FRANCISCA PIRES DOS SANTOS",
+            "IDADE": "60 anos",
+            "LOCAL": "SANTA TEREZINHA DO PROGRESSO\/SC",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "CAFE GAUCHO LTDA",
+            "CNPJ": "33033846000187",
+            "CIDADE": "RIO DE JANEIRO-RJ",
+            "PROFISSAO": "513505",
+            "DATA_ADMISSAO": "06\/01\/2023",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,289 @@
+{
+    "CADASTRAIS": {
+        "CPF": "29227951873",
+        "NOME": "ANA PAULA BORGES DA SILVA",
+        "NOME_MAE": "EDITH MARIA SILVA BRUCE",
+        "NASCTO": "07\/07\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Feminino",
+        "RG": "292857184",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "238832330132",
+        "NIT": "12875565895",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "413225",
+        "PROFISSAO": "ESCRITURARIO DE BANCO",
+        "SALARIO": " 3.067,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1332251102",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "23\/05\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1332213155",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1332213155",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1156633685",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1330244078",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13996670707",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13997103123",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13997377872",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13997377872",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11962983809",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "anninhap007@hotmail.com",
+            "annapbrgs@ig.com.br",
+            "annaborges@gmail.com",
+            "annita007@hotmail.com",
+            "contato.annaborges@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MANOEL DA NOBREGA",
+                "NUMERO": "395",
+                "COMPLEMENTO": "AP 13",
+                "BAIRRO": "PARAISO",
+                "CEP": "04001082",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV SEN PINHEIRO MACHADO",
+                "NUMERO": "1013",
+                "COMPLEMENTO": "BL COSTA VERDE AP 83",
+                "BAIRRO": "POMPEIA",
+                "CEP": "11065415",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PROF PICAROLO",
+                "NUMERO": "163",
+                "COMPLEMENTO": "AP 123",
+                "BAIRRO": "BELA VISTA",
+                "CEP": "01332020",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AL DILSON JATAHY FONSECA",
+                "NUMERO": "1036",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STELLA MARIS",
+                "CEP": "41600100",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "AV CNSO NEBIAS",
+                "NUMERO": "651",
+                "COMPLEMENTO": "AP 710",
+                "BAIRRO": "BOQUEIRAO",
+                "CEP": "11045003",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R RODRIGUES ALVES",
+                "NUMERO": "353",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MACUCO",
+                "CEP": "11015203",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV SENADOR PINHEIRO MACHADO",
+                "NUMERO": "1013",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAMPO GRANDE",
+                "CEP": "11075003",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA CONSELHEIRO RODRIGUES ALVES",
+                "NUMERO": "35",
+                "COMPLEMENTO": "AP 21 BL F",
+                "BAIRRO": "MACUCO",
+                "CEP": "11015203",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ANNA MARIA BORGES RODRIGUES",
+            "IDADE": "",
+            "LOCALIDADE": "RIO DE JANEIRO\/RJ",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "99240599720"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000754269",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "15\/04\/2002",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000695157",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "08\/03\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000703940",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "22\/10\/2013",
+                "DATA_DEMISSAO": "19\/04\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000586617",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "16\/20\/2004",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000475386",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "22\/12\/2008",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "ABS - SERVICOS DE INFORMATICA LTDA",
+            "CNPJ": "06971244000106",
+            "CIDADE": "SANTOS-SP",
+            "QUALIFICACAO": "SÃ³cio",
+            "DATA_ENTRADA": "20040803",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

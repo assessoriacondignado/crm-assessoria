@@ -1,0 +1,174 @@
+{
+    "CADASTRAIS": {
+        "CPF": "9000746981",
+        "NOME": "ALESSANDRO MACHADO FALSARELLI",
+        "NOME_MAE": "ROSILENE MACHADO",
+        "NASCTO": "26\/01\/1991",
+        "IDADE": "35 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "2105474734",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "724315",
+        "PROFISSAO": "SOLDADOR",
+        "SALARIO": " 3.784,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "4836283512",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "48999533145",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "48996980892",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "48996010130",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "alessandromf32@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PAULO ORLANDI",
+                "NUMERO": "271",
+                "COMPLEMENTO": "",
+                "BAIRRO": "FABIO SILVA",
+                "CEP": "88702820",
+                "CIDADE": "TUBARAO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R MANOEL MIGUEL BITTENCOURT",
+                "NUMERO": "901",
+                "COMPLEMENTO": "AP 103",
+                "BAIRRO": "HUMAITA DE CIMA",
+                "CEP": "88708050",
+                "CIDADE": "TUBARAO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R PIO DOZE",
+                "NUMERO": "788",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DEHON",
+                "CEP": "88704330",
+                "CIDADE": "TUBARAO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R PEDRO ESMERALDINO MENEZES",
+                "NUMERO": "187",
+                "COMPLEMENTO": "",
+                "BAIRRO": "FABIO SILVA",
+                "CEP": "88702780",
+                "CIDADE": "TUBARAO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R JOAO ORLANDI CORREA",
+                "NUMERO": "219",
+                "COMPLEMENTO": "",
+                "BAIRRO": "HUMAITA DE CIMA",
+                "CEP": "88708060",
+                "CIDADE": "TUBARAO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R VIG JOSE POGGEL",
+                "NUMERO": "987",
+                "COMPLEMENTO": "METALURGICA 987",
+                "BAIRRO": "HUMAITA DE CIMA",
+                "CEP": "88708095",
+                "CIDADE": "TUBARAO",
+                "ESTADO": "SC"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "523678274",
+            "NOME": "ROSILENE MACHADO",
+            "IDADE": "37 anos",
+            "LOCAL": "TUCURUI\/PA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "METALURGICA E SERRALHERIA MACHADO LTDA",
+                "CNPJ": "48106463000169",
+                "CIDADE": "TUBARAO-SC",
+                "PROFISSAO": "724315",
+                "DATA_ADMISSAO": "01\/02\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COAN INDUSTRIA GRAFICA LTDA",
+                "CNPJ": "86444791000164",
+                "CIDADE": "TUBARAO-SC",
+                "PROFISSAO": "731170",
+                "DATA_ADMISSAO": "12\/11\/2018",
+                "DATA_DEMISSAO": "08\/12\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "METALURGICA MACHADO LTDA",
+                "CNPJ": "09000119000139",
+                "CIDADE": "TUBARAO-SC",
+                "PROFISSAO": "724440",
+                "DATA_ADMISSAO": "02\/01\/2014",
+                "DATA_DEMISSAO": "21\/04\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

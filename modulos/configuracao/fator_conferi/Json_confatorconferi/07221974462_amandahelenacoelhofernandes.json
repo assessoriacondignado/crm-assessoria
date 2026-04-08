@@ -1,0 +1,207 @@
+{
+    "CADASTRAIS": {
+        "CPF": "7221974462",
+        "NOME": "AMANDA HELENA COELHO FERNANDES",
+        "NOME_MAE": "LIGIA MARIA COELHO SILVA",
+        "NASCTO": "06\/02\/1989",
+        "IDADE": "37 anos",
+        "SEXO": "Feminino",
+        "RG": "7795727",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "079217820868",
+        "NIT": "16111955145",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "520110",
+        "PROFISSAO": "SUPERVISOR DE VENDAS COMERCIAL",
+        "SALARIO": " 3.715,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8135414515",
+            "OPERADORA": "TELEMAR\/PE",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "baixa"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "81999797628",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81982044238",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81999701096",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81983734740",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81988026325",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "helena.amanda@gmail.com",
+            "braziamanda_8906@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV J",
+                "NUMERO": "5",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAETES I",
+                "CEP": "53530525",
+                "CIDADE": "ABREU E LIMA",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "AV J",
+                "NUMERO": "10",
+                "COMPLEMENTO": "CAETES I CAETES I",
+                "BAIRRO": "CAETES I",
+                "CEP": "53530525",
+                "CIDADE": "ABREU E LIMA",
+                "ESTADO": "PE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "39473643420",
+                "NOME": "LIGIA MARIA COELHO SILVA",
+                "IDADE": "65 anos",
+                "LOCAL": "ABREU E LIMA\/PE",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "10506096467",
+                "NOME": "ADELIA EUGENIA COELHO FERNANDES",
+                "IDADE": "32 anos",
+                "LOCAL": "ABREU E LIMA\/PE",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "HELENA AMANDA ARGILAR",
+                "IDADE": "",
+                "LOCALIDADE": "PATY DO ALFERES\/RJ",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "1724743023"
+            },
+            {
+                "NOME": "JOSIMAR JANUARIO DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "JARU\/RO",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "94660085287"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "GOMES   SILVA PRODUTOS FARMACEUTICOS LTDA",
+                "CNPJ": "02639558000147",
+                "CIDADE": "ITAMBE-PE",
+                "PROFISSAO": "142335",
+                "DATA_ADMISSAO": "01\/12\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "A B PRODUTOS FARMACEUTICOS LTDA",
+                "CNPJ": "12651074000177",
+                "CIDADE": "SANTA CRUZ DO CAPIBARIBE-PE",
+                "PROFISSAO": "142335",
+                "DATA_ADMISSAO": "22\/05\/2023",
+                "DATA_DEMISSAO": "30\/12\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738015780",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "520110",
+                "DATA_ADMISSAO": "16\/04\/2008",
+                "DATA_DEMISSAO": "25\/04\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738021321",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "520110",
+                "DATA_ADMISSAO": "01\/05\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738009976",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "16\/04\/2008",
+                "DATA_DEMISSAO": "102",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,190 @@
+{
+    "CADASTRAIS": {
+        "CPF": "7588030950",
+        "NOME": "ALEXANDRE SCHALINSKY",
+        "NOME_MAE": "LUCIANA COSTA",
+        "NASCTO": "06\/08\/1991",
+        "IDADE": "34 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "20425223617",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "784205",
+        "PROFISSAO": "ALIMENTADOR DE LINHA DE PRODUCAO",
+        "SALARIO": " 1.068,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4732745700",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "4733740871",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4734293333",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "47992915461",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "47999024912",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "47991034224",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "47910159384",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "alexandre.schali0608@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV PREF WALDEMAR GRUBBA",
+                "NUMERO": "1896",
+                "COMPLEMENTO": "AND",
+                "BAIRRO": "VL LALAU",
+                "CEP": "89256501",
+                "CIDADE": "JARAGUA DO SUL",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R AGUAS CLARAS",
+                "NUMERO": "324",
+                "COMPLEMENTO": "FDS",
+                "BAIRRO": "ILHA DA FIGUEIRA",
+                "CEP": "89258466",
+                "CIDADE": "JARAGUA DO SUL",
+                "ESTADO": "SC"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "26017610",
+            "NOME": "LUCIANA COSTA",
+            "IDADE": "52 anos",
+            "LOCAL": "CARMO DO RIO CLARO\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "WEG EQUIPAMENTOS ELETRICOS S\/A",
+                "CNPJ": "07175725001050",
+                "CIDADE": "JARAGUA DO SUL-SC",
+                "PROFISSAO": "723330",
+                "DATA_ADMISSAO": "06\/10\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "GRADUAL BENEFICIAMENTOS TEXTEIS LTDA",
+                "CNPJ": "72544984000182",
+                "CIDADE": "JARAGUA DO SUL-SC",
+                "PROFISSAO": "516305",
+                "DATA_ADMISSAO": "01\/09\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ESTOFADOS TIRONI LTDA",
+                "CNPJ": "76313618000173",
+                "CIDADE": "GUARAMIRIM-SC",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "05\/05\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "BRASPRESS TRANSPORTES URGENTES LTDA",
+                "CNPJ": "48740351012090",
+                "CIDADE": "GUARAMIRIM-SC",
+                "PROFISSAO": "414215",
+                "DATA_ADMISSAO": "07\/05\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "MR EMBALAGENS LTDA",
+                "CNPJ": "10486229000131",
+                "CIDADE": "GUARAMIRIM-SC",
+                "PROFISSAO": "773125",
+                "DATA_ADMISSAO": "02\/05\/2011",
+                "DATA_DEMISSAO": "24\/04\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

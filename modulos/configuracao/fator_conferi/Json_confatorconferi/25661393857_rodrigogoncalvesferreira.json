@@ -1,0 +1,229 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25661393857",
+        "NOME": "RODRIGO GONCALVES FERREIRA",
+        "NOME_MAE": "INES GONCALVES FERREIRA",
+        "NASCTO": "11\/10\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "257564520175",
+        "NIT": "12581169224",
+        "ESCOLARIDADE": "SUPERIOR INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142520",
+        "PROFISSAO": "GERENTE DE PROJETOS DE TECNOLOGIA DA INFORMACAO",
+        "SALARIO": " 12.359,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1933680246",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1138491121",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1138491121",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11972490860",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19991349608",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11991468028",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11991468028",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11993086896",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "inesd3e@uol.com.br",
+            "inesd3e@terra.com.br",
+            "rgoncalves@uolinc.com",
+            "webdigao@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R BRG GALVAO",
+                "NUMERO": "127",
+                "COMPLEMENTO": "AP 5",
+                "BAIRRO": "BARRA FUNDA",
+                "CEP": "01151000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CEL ARTUR DE PAULA FERREIRA",
+                "NUMERO": "59",
+                "COMPLEMENTO": "CJ 81",
+                "BAIRRO": "VL NOVA CONCEICAO",
+                "CEP": "04511060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MARCOS LOPES",
+                "NUMERO": "98",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL NOVA CONCEICAO",
+                "CEP": "04513080",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R RUBENS ROBERTO CIOLFI",
+                "NUMERO": "720",
+                "COMPLEMENTO": "BL D AP 3 E",
+                "BAIRRO": "PRQ RESIDENCIAL VILA UNIAO",
+                "CEP": "13060744",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CASTRO ALVES",
+                "NUMERO": "654",
+                "COMPLEMENTO": "AP 102 ED JASPE",
+                "BAIRRO": "ACLIMACAO",
+                "CEP": "01532901",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DR CARLOS DE A PIMENTEL",
+                "NUMERO": "292",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "JD LEONOR",
+                "CEP": "13041050",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R GOMES DE CARVALHO",
+                "NUMERO": "940",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA OLIMPIA",
+                "CEP": "04547003",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA OSCAR FREIRE",
+                "NUMERO": "1758",
+                "COMPLEMENTO": "AP 72 A",
+                "BAIRRO": "PINHEIROS",
+                "CEP": "05409011",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "2906628859",
+            "NOME": "INES GONCALVES FERREIRA",
+            "IDADE": "67 anos",
+            "LOCAL": "GUARULHOS\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "UNIVERSO ONLINE S\/A",
+                "CNPJ": "01109184000519",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142520",
+                "DATA_ADMISSAO": "01\/12\/1999",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "UNIVERSO ONLINE S\/A",
+                "CNPJ": "01109184000438",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142520",
+                "DATA_ADMISSAO": "01\/12\/1999",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

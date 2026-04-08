@@ -1,0 +1,305 @@
+{
+    "CADASTRAIS": {
+        "CPF": "20155452800",
+        "NOME": "GABRIEL MODESTO BOMFIM",
+        "NOME_MAE": "MARIA ODETE FERNANDES BOMFIM",
+        "NASCTO": "22\/04\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "240764250116",
+        "NIT": "12427257852",
+        "ESCOLARIDADE": "ANALFABETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "234515",
+        "PROFISSAO": "PROFESSOR DE ENSINO SUPERIOR NA AREA DE PESQUISA EDUCACIONAL",
+        "SALARIO": " 3.324,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1632114640",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1639477370",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1639472811",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1155615533",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1155615533",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "16993602113",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16991511818",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16993271118",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16991818352",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "16991459074",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "gabrielbomfim@yahoo.com.br",
+            "gabriel.modesto@terra.com.br",
+            "gabriel.bomfim@previdencia.gov.br",
+            "gabriel.bomfim@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV JOSE FERREIRA DOS REIS",
+                "NUMERO": "103",
+                "COMPLEMENTO": "6 179",
+                "BAIRRO": "SHANGRI LA",
+                "CEP": "14161105",
+                "CIDADE": "SERTAOZINHO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R TEREZA DE JESUS PAULO RODOVALHO",
+                "NUMERO": "298",
+                "COMPLEMENTO": "AR C",
+                "BAIRRO": "JD ITAPUA",
+                "CEP": "14161181",
+                "CIDADE": "SERTAOZINHO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV EGISTO SICCHIERI",
+                "NUMERO": "177",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD CAJUBA",
+                "CEP": "14177100",
+                "CIDADE": "SERTAOZINHO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FREDERICO OZANAN",
+                "NUMERO": "228",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "14160200",
+                "CIDADE": "SERTAOZINHO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ENG ADELMAR DE MELLO FRANCO",
+                "NUMERO": "90",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BROOKLIN PAULISTA",
+                "CEP": "04623100",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV JOSE FERREIRA DOS REIS",
+                "NUMERO": "179",
+                "COMPLEMENTO": "AP  Apartamento  41",
+                "BAIRRO": "SHANGRI-LA",
+                "CEP": "14161105",
+                "CIDADE": "SERTAOZINHO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA JOSE FERREIRA DOS REIS",
+                "NUMERO": "179",
+                "COMPLEMENTO": "AP41",
+                "BAIRRO": "CENTRO",
+                "CEP": "14160070",
+                "CIDADE": "SERTAOZINHO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ATILIO ZANINI",
+                "NUMERO": "496",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALVORADA",
+                "CEP": "14166125",
+                "CIDADE": "SERTAOZINHO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "10900342889",
+                "NOME": "MARIA ODETE FERNANDES BOMFIM",
+                "IDADE": "74 anos",
+                "LOCAL": "SERTAOZINHO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "28331969898",
+                "NOME": "GUILHERME ELIAS BOMFIM",
+                "IDADE": "46 anos",
+                "LOCAL": "RIBEIRAO PRETO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "33355544850",
+                "NOME": "LIGIA APARECIDA BOMFIM",
+                "IDADE": "43 anos",
+                "LOCAL": "SERTAOZINHO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ANHANGUERA EDUCACIONAL PARTICIPACOES S\/A",
+                "CNPJ": "04310392008473",
+                "CIDADE": "SERTAOZINHO-SP",
+                "PROFISSAO": "234520",
+                "DATA_ADMISSAO": "14\/02\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "INSTITUTO NACIONAL DO SEGURO SOCIAL",
+                "CNPJ": "29979036116017",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "251605",
+                "DATA_ADMISSAO": "05\/20\/2004",
+                "DATA_DEMISSAO": "{Ã±\/{Ã±\/2023",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "IDFEDERAL CERTIFICADOS DIGITAIS LTDA",
+                "CNPJ": "33216689000145",
+                "CIDADE": "RIBEIRAO PRETO-SP",
+                "PROFISSAO": "354120",
+                "DATA_ADMISSAO": "18\/08\/2022",
+                "DATA_DEMISSAO": "13\/11\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "INSTITUTO NACIONAL DO SEGURO SOCIAL",
+                "CNPJ": "29979036035874",
+                "CIDADE": "RIBEIRAO PRETO-SP",
+                "PROFISSAO": "212410",
+                "DATA_ADMISSAO": "05\/20\/2004",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ANHANGUERA EDUCACIONAL LTDA",
+                "CNPJ": "05808792004721",
+                "CIDADE": "SERTAOZINHO-SP",
+                "PROFISSAO": "234515",
+                "DATA_ADMISSAO": "01\/08\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "REDE GONZAGA DE ENSINO SUPERIOR - REGES",
+                "CNPJ": "08667147000494",
+                "CIDADE": "RIBEIRAO PRETO-SP",
+                "PROFISSAO": "234815",
+                "DATA_ADMISSAO": "01\/08\/2011",
+                "DATA_DEMISSAO": "20\/02\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

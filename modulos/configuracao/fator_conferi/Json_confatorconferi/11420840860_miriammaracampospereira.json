@@ -1,0 +1,283 @@
+{
+    "CADASTRAIS": {
+        "CPF": "11420840860",
+        "NOME": "MIRIAM MARA CAMPOS PEREIRA",
+        "NOME_MAE": "APARECIDA MATHIAS DE CAMPOS",
+        "NASCTO": "19\/08\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Feminino",
+        "RG": "213747777",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "208941900183",
+        "NIT": "1239343190",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "410235",
+        "PROFISSAO": "SUPERVISOR DE TESOURARIA",
+        "SALARIO": " 4.998,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1935551101",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1730213882",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "05\/01\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1730227374",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1731212900",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "17996128104",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11967886060",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "17997282930",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "17988227213",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "17988316707",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "camposmiriam@vivointernetdiscada.com.br",
+            "agilsonper@gmail.com",
+            "camposmiriam@itelefonica.com.br",
+            "miriammara@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DR MOACYR CABRAL",
+                "NUMERO": "1035",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD ASTURIAS",
+                "CEP": "15041650",
+                "CIDADE": "SAO JOSE DO RIO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MILTON BARUFI",
+                "NUMERO": "860",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RES MACEDO TELES I",
+                "CEP": "15040550",
+                "CIDADE": "SAO JOSE DO RIO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BASSITT FERES BASSITT",
+                "NUMERO": "1159",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD JOAO PAULO II",
+                "CEP": "15051140",
+                "CIDADE": "SAO JOSE DO RIO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV JOAO BATISTA VETORASSO",
+                "NUMERO": "1839",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DT INDUSTRIAL",
+                "CEP": "15035470",
+                "CIDADE": "SAO JOSE DO RIO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R STA CRUZ",
+                "NUMERO": "268",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL S JOAO",
+                "CEP": "13614084",
+                "CIDADE": "LEME",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R VITORIO DE MARCHI",
+                "NUMERO": "370",
+                "COMPLEMENTO": "C C",
+                "BAIRRO": "VL JOEST",
+                "CEP": "13614150",
+                "CIDADE": "LEME",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO CARLOS MARIOTTI",
+                "NUMERO": "30",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD RESIDENCIAL VETORASSO",
+                "CEP": "15040285",
+                "CIDADE": "SAO JOSE DO RIO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV ALFREDO FOLCHINI",
+                "NUMERO": "860",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL TONINHO",
+                "CEP": "15081500",
+                "CIDADE": "SAO JOSE DO RIO PRETO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "6240339881",
+                "NOME": "APARECIDA MATHIAS DE CAMPOS",
+                "IDADE": "84 anos",
+                "LOCAL": "SAO JOSE DO RIO PRETO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "6295144888",
+                "NOME": "VALCIRA DE FATIMA DE CAMPOS",
+                "IDADE": "60 anos",
+                "LOCAL": "BARRETOS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "54569028691",
+                "NOME": "VALDIR BENEDITO DE CAMPOS",
+                "IDADE": "60 anos",
+                "LOCAL": "BARRETOS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "43119291889",
+                "NOME": "GABRIEL CAMPOS PEREIRA",
+                "IDADE": "25 anos",
+                "LOCAL": "SAO JOSE DO RIO PRETO\/SP",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "44564615866",
+                "NOME": "GUSTAVO CAMPOS PEREIRA",
+                "IDADE": "20 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ANTONIO GILSON ALVES PEREIRA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO JOSE DO RIO PRETO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "54569133649"
+            },
+            {
+                "NOME": "GABRIEL CAMPOS PEREIRA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO JOSE DO RIO PRETO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "43119291889"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "LUMAVI RIO PRETO INDUSTRIA E COMERCIO DE LUMINARIAS LTDA",
+            "CNPJ": "68994284000112",
+            "CIDADE": "SAO JOSE DO RIO PRETO-SP",
+            "PROFISSAO": "410235",
+            "DATA_ADMISSAO": "01\/09\/2008",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "FIBRATEC RIO PRETO INFRAESTRUTURA DE REDES - EIRELI",
+            "CNPJ": "27216890000120",
+            "CIDADE": "SAO JOSE DO RIO PRETO-SP",
+            "QUALIFICACAO": "Titular Pessoa FÃ­sica Residente ou Domiciliado no Brasil",
+            "DATA_ENTRADA": "20170303",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

@@ -1,0 +1,185 @@
+{
+    "CADASTRAIS": {
+        "CPF": "72369493291",
+        "NOME": "ALLEN CESAR SALAZAR DE ALCANTARA",
+        "NOME_MAE": "ELIZABETH GLAYB S ALCANTARA",
+        "NASCTO": "15\/10\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1276183002",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "730105",
+        "PROFISSAO": "SUPERVISOR DE MONTAGEM E INSTALACAO ELETROELETRONICA",
+        "SALARIO": " 4.487,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1125016361",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9236290634",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9233040634",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "15\/04\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92991512278",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92991551661",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "92991141731",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "92991340212",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "92991944088",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "souzamps@ibest.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DES FILISMINO SOARES",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COL OLIVEIRA MACHADO",
+                "CEP": "69070620",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R PE JORGE",
+                "NUMERO": "11",
+                "COMPLEMENTO": "S JORGE R TV",
+                "BAIRRO": "REDENCAO",
+                "CEP": "69047170",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R 14 DE JULHO",
+                "NUMERO": "38",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTA LUZIA",
+                "CEP": "69074440",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "RUA SAO JORGE",
+                "NUMERO": "11",
+                "COMPLEMENTO": "",
+                "BAIRRO": "REDENCAO",
+                "CEP": "69047171",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AVENIDA PRESIDENTE KENNEDY",
+                "NUMERO": "221",
+                "COMPLEMENTO": "",
+                "BAIRRO": "EDUCANDOS",
+                "CEP": "69074000",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "MARCOS PEREIRA DE SOUZA",
+            "IDADE": "",
+            "LOCALIDADE": "SAO JOSE DOS PINHAIS\/PR",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "13011904898"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "PROCOMP AMAZONIA INDUSTRIA ELETRONICA LTDA",
+            "CNPJ": "84107697000194",
+            "CIDADE": "MANAUS-AM",
+            "PROFISSAO": "730105",
+            "DATA_ADMISSAO": "13\/01\/2004",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

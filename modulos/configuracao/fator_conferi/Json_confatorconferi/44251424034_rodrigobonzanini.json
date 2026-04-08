@@ -1,0 +1,220 @@
+{
+    "CADASTRAIS": {
+        "CPF": "44251424034",
+        "NOME": "RODRIGO BONZANINI",
+        "NOME_MAE": "HELOISA MARIA B BANZANINI",
+        "NASCTO": "10\/01\/1970",
+        "IDADE": "56 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "052319230477",
+        "NIT": "1248234516 ",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "141205",
+        "PROFISSAO": "GERENTE DE PRODUCAO E OPERACOES",
+        "SALARIO": " 108.090,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5130973647",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "5130973861",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "5133562143",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5133477141",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5134707300",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13997366899",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51980182931",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51993212020",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51998055140",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51991199820",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "rodrigo.bonzanini@souzacruz.com.br",
+            "rodrigo.bonzanini@hotmail.com",
+            "rodrigo.bonzanini@yahoo.com.br",
+            "digo.bonzanini@bol.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R RODOLFO SIMCH",
+                "NUMERO": "345",
+                "COMPLEMENTO": "502",
+                "BAIRRO": "JD LINDOIA",
+                "CEP": "91050350",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R SAO FRANCISCO DE PAULA",
+                "NUMERO": "200",
+                "COMPLEMENTO": "AP  Apartamento  902",
+                "BAIRRO": "BOA VISTA",
+                "CEP": "93410330",
+                "CIDADE": "NOVO HAMBURGO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R DONA ADDA MASCARENHAS DE MORAES",
+                "NUMERO": "1599",
+                "COMPLEMENTO": "AP 402",
+                "BAIRRO": "JARDIM ITU SABARA",
+                "CEP": "91220140",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA DONA ADDA MASCARENHAS DE MORAES",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM ITU",
+                "CEP": "91220140",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA CARLOS BRENNER SOBRINHO",
+                "NUMERO": "120",
+                "COMPLEMENTO": "APT 25 1",
+                "BAIRRO": "RIO BRANCO",
+                "CEP": "93310120",
+                "CIDADE": "NOVO HAMBURGO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA JOAO ANTONIO DA SILVEIRA",
+                "NUMERO": "431",
+                "COMPLEMENTO": "APTO 301",
+                "BAIRRO": "CENTRO",
+                "CEP": "93510300",
+                "CIDADE": "NOVO HAMBURGO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA DONA ADDA MASCARENHAS DE MORAES",
+                "NUMERO": "1360",
+                "COMPLEMENTO": "201",
+                "BAIRRO": "JARDIM ITU",
+                "CEP": "91220140",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "SOUZA CRUZ LTDA",
+            "CNPJ": "33009911035277",
+            "CIDADE": "CACHOEIRINHA-RS",
+            "PROFISSAO": "141205",
+            "DATA_ADMISSAO": "13\/04\/1998",
+            "DATA_DEMISSAO": "29\/06\/2026",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2023"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

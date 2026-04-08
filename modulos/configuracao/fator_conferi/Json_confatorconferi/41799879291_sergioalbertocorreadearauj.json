@@ -1,0 +1,149 @@
+{
+    "CADASTRAIS": {
+        "CPF": "41799879291",
+        "NOME": "SERGIO ALBERTO CORREA DE ARAUJ",
+        "NOME_MAE": "ZENEIDE CORREA DE ARAUJO",
+        "NASCTO": "31\/08\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "3749",
+        "ORGAO_EMISSOR": "OAB",
+        "UF_EMISSAO": "AM",
+        "TITULO_ELEITOR": "",
+        "NIT": "1242396604",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "252210",
+        "PROFISSAO": "CONTADOR",
+        "SALARIO": " 3.936,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9236322654",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9232367719",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92984458923",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92999878672",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "16\/12\/2008",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "92999987867",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "jean.cleuter@jsm.adv.br",
+            "sergioaraujo@internext.com.br",
+            "sergio_araujo_@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R LEOVEGILDO COELHO",
+                "NUMERO": "273",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "69005090",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AVENIDA JOSE DE ARIMATEIA",
+                "NUMERO": "1100",
+                "COMPLEMENTO": "AP 1202",
+                "BAIRRO": "ALEIXO",
+                "CEP": "69060081",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "19309805234",
+                "NOME": "ZENEIDE CORREA DE ARAUJO",
+                "IDADE": "77 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "51084325268",
+                "NOME": "JULIANA CORREA DE ARAUJO MONTEIRO",
+                "IDADE": "46 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "JEAN CLEUTER S MENDONCA",
+            "IDADE": "",
+            "LOCALIDADE": "MANAUS\/AM",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "33594830225"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "ESCOLINHA SONHO INFANTIL LTDA",
+            "CNPJ": "05510979000161",
+            "CIDADE": "MANAUS-AM",
+            "PROFISSAO": "252210",
+            "DATA_ADMISSAO": "01\/03\/2005",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

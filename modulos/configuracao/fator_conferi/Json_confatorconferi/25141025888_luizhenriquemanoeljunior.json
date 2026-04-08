@@ -1,0 +1,224 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25141025888",
+        "NOME": "LUIZ HENRIQUE MANOEL JUNIOR",
+        "NOME_MAE": "SUELY LAZZARINI MANOEL",
+        "NASCTO": "10\/07\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "252933930116",
+        "NIT": "12580239857",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "313215",
+        "PROFISSAO": "TECNICO ELETRONICO",
+        "SALARIO": " 5.048,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1122404902",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "29\/03\/2010",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1122404902",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "29\/03\/2010",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11979896282",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11980207689",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11944269408",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11997193382",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11997193382",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "luizmj@itautec.com",
+            "luizjr_jr@yahoo.com.br",
+            "luizjr.jr@ig.com.br",
+            "luizhmjr@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV PAULO LINCOLN DO VALLE PONTIN",
+                "NUMERO": "383",
+                "COMPLEMENTO": "BL AP 24",
+                "BAIRRO": "JACANA",
+                "CEP": "02273011",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ARUAQUE",
+                "NUMERO": "55",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "02082020",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "15689342890",
+                "NOME": "SUELY LAZZARINI MANOEL",
+                "IDADE": "73 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "21599224801",
+                "NOME": "IVIANE CRISTINA MANOEL PEREIRA",
+                "IDADE": "43 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "NCR BRASIL LTDA",
+                "CNPJ": "33033440007964",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "313220",
+                "DATA_ADMISSAO": "01\/04\/2022",
+                "DATA_DEMISSAO": "01\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "NCR BRASIL LTDA",
+                "CNPJ": "33033440001176",
+                "CIDADE": "DIADEMA-SP",
+                "PROFISSAO": "313220",
+                "DATA_ADMISSAO": "01\/01\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "NCR BRASIL TECNOLOGIA E SERVICOS EM AUTOMACAO LTDA.",
+                "CNPJ": "32766379000131",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "23\/06\/1997",
+                "DATA_DEMISSAO": "30\/11\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "NCR BRASIL LTDA",
+                "CNPJ": "33033440000102",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "23\/06\/1997",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "OKI BRASIL INDUSTRIA E COMERCIO DE PRODUTOS E TECNOLOGIA EM AUTOMACAO LTDA",
+                "CNPJ": "16564682001681",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "313215",
+                "DATA_ADMISSAO": "01\/09\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ITAUTEC S.A.",
+                "CNPJ": "54526082008973",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "313215",
+                "DATA_ADMISSAO": "01\/06\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "ITAUTEC S.A.",
+                "CNPJ": "54526082007730",
+                "CIDADE": "SAO BERNARDO DO CAMPO-SP",
+                "PROFISSAO": "313215",
+                "DATA_ADMISSAO": "01\/02\/2009",
+                "DATA_DEMISSAO": "106",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

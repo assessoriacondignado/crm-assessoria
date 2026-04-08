@@ -1,0 +1,168 @@
+{
+    "CADASTRAIS": {
+        "CPF": "41626885249",
+        "NOME": "OZENILSON HENRIQUE DOS SANTOS",
+        "NOME_MAE": "JOSINA RODRIGUES DOS SANTOS",
+        "NASCTO": "06\/10\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12346147356",
+        "ESCOLARIDADE": "COM A 4a. SERIE COMPLETA DO 1o. GRAU(PRIMARIO COMPLETO)",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "715230",
+        "PROFISSAO": "PEDREIRO DE EDIFICACOES",
+        "SALARIO": " 997,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9236429330",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9236482583",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92984008693",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92992907980",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "92996130435",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/04\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "ozesilva13@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ISAURA ESPERANCA",
+                "NUMERO": "51",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ZUMBI DOS PALMARES",
+                "CEP": "69084474",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R HERACLITO",
+                "NUMERO": "8",
+                "COMPLEMENTO": "CS A",
+                "BAIRRO": "S JOSE OPERARIO",
+                "CEP": "69085630",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R CONDOR",
+                "NUMERO": "35",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CIDADE DE DEUS",
+                "CEP": "69099308",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R ISAURA ESPERANCA",
+                "NUMERO": "263",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ZUMBI DOS PALMARES",
+                "CEP": "69084474",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "425554694",
+            "NOME": "JOSINA RODRIGUES DOS SANTOS",
+            "IDADE": "106 anos",
+            "LOCAL": "CAMPO GRANDE\/MS",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COLMEIA RESIDENCIAL DO BOSQUE EMPREENDIMENTOS IMOBILIARIOS LTDA-SPE",
+                "CNPJ": "11958250000155",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "715210",
+                "DATA_ADMISSAO": "01\/07\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COLMEIA LARANJEIRAS EMPREENDIMENTOS IMOBILIARIOS LTDA-SPE",
+                "CNPJ": "11958193000104",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "715230",
+                "DATA_ADMISSAO": "01\/12\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "CONSTRUTORA COLMEIA S\/A",
+                "CNPJ": "06048417000291",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "715230",
+                "DATA_ADMISSAO": "03\/07\/1995",
+                "DATA_DEMISSAO": "106",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

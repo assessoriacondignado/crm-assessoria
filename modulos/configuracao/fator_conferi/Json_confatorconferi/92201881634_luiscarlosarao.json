@@ -1,0 +1,210 @@
+{
+    "CADASTRAIS": {
+        "CPF": "92201881634",
+        "NOME": "LUIS CARLOS ARAO",
+        "NOME_MAE": "ANA IZABEL LARA ARAO",
+        "NASCTO": "01\/05\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "103665620256",
+        "NIT": "12712856092",
+        "ESCOLARIDADE": "ANALFABETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "234420",
+        "PROFISSAO": "PROFESSOR DE FARMACIA E BIOQUIMICA",
+        "SALARIO": " 880,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3136540082",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "3131161414",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31985103458",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL POS-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31993022941",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "luiscarlosaraao@yahoo.com.br",
+            "arao.luisc@gmail.com",
+            "luiscarlosarao@yahoo.com.br",
+            "professorluisc@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R LUNARDI",
+                "NUMERO": "260",
+                "COMPLEMENTO": "AP 503",
+                "BAIRRO": "PEDRO II",
+                "CEP": "30770030",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R BOAVENTURA",
+                "NUMERO": "50",
+                "COMPLEMENTO": "",
+                "BAIRRO": "INDAIA",
+                "CEP": "31270020",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R HENRIQUE GORCEIX",
+                "NUMERO": "1285",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PE EUSTAQUIO",
+                "CEP": "30720360",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RAO LIMA",
+                "NUMERO": "100",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "35494000",
+                "CIDADE": "DESTERRO DE ENTRE RIOS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R ARTICA",
+                "NUMERO": "458",
+                "COMPLEMENTO": "APARTAMENTO:402",
+                "BAIRRO": "CAICARA-ADELAIDE",
+                "CEP": "30770360",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "10639969615",
+                "NOME": "ANA IZABEL LARA ARAO",
+                "IDADE": "82 anos",
+                "LOCAL": "DESTERRO DE ENTRE RIOS\/MG",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "4187225609",
+                "NOME": "POLLYANA ARAO LARA ANDRADE",
+                "IDADE": "45 anos",
+                "LOCAL": "SANTO ANDRE\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LAEL VARELLA EDUCACAO E CULTURA LTDA",
+                "CNPJ": "03466623000223",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "234520",
+                "DATA_ADMISSAO": "01\/08\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BRASIL EDUCACAO S\/A",
+                "CNPJ": "05648257005641",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "234505",
+                "DATA_ADMISSAO": "01\/02\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FUNDACAO DE ENSINO E TECNOLOGIA DE ALFENAS",
+                "CNPJ": "17878554001918",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "234420",
+                "DATA_ADMISSAO": "06\/02\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "IEDUC - INSTITUTO DE EDUCACAO E CULTURA S\/A",
+                "CNPJ": "08446503000105",
+                "CIDADE": "JOINVILLE-SC",
+                "PROFISSAO": "234510",
+                "DATA_ADMISSAO": "03\/02\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL - SENAC MINAS",
+                "CNPJ": "03447242000540",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "233215",
+                "DATA_ADMISSAO": "16\/04\/2008",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "CENTRO DE ESPECIALIDADES SAO PAULO DA CRUZ LTDA",
+            "CNPJ": "03708558000114",
+            "CIDADE": "BELO HORIZONTE-MG",
+            "QUALIFICACAO": "SÃ³cio",
+            "DATA_ENTRADA": "20040816",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

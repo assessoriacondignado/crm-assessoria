@@ -1,0 +1,162 @@
+{
+    "CADASTRAIS": {
+        "CPF": "53503090053",
+        "NOME": "ADELIO FURTADO",
+        "NOME_MAE": "MARLENE MACHADO FURTADO",
+        "NASCTO": "18\/09\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "054714410493",
+        "NIT": "12299722574",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "951105",
+        "PROFISSAO": "ELETRICISTA DE MANUTENCAO ELETROELETRONICA",
+        "SALARIO": " 550,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "55999217315",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "55999958807",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "55996143871",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "hz.intec@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV GETULIO VARGAS",
+                "NUMERO": "365",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "98690000",
+                "CIDADE": "SAO MARTINHO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R H",
+                "NUMERO": "22",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "98920000",
+                "CIDADE": "HORIZONTINA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R ALFREDO WERLANG",
+                "NUMERO": "165",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "",
+                "CEP": "98690000",
+                "CIDADE": "SAO MARTINHO",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "64890406034",
+                "NOME": "MARLENE MACHADO FURTADO",
+                "IDADE": "78 anos",
+                "LOCAL": "CACHOEIRINHA\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "89927265034",
+                "NOME": "MARLEI FURTADO",
+                "IDADE": "49 anos",
+                "LOCAL": "PORTO ALEGRE\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ELAINE SCHWINGEL FURTADO",
+            "IDADE": "",
+            "LOCALIDADE": "HORIZONTINA\/RS",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "50048260053"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "MOTRIX TRANSPORTE E SERVICOS LTDA",
+                "CNPJ": "73717415000154",
+                "CIDADE": "TRIUNFO-RS",
+                "PROFISSAO": "782405",
+                "DATA_ADMISSAO": "09\/11\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MUSICAL CORPO   ALMA LTDA",
+                "CNPJ": "03355893000186",
+                "CIDADE": "HORIZONTINA-RS",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "22\/20\/2007",
+                "DATA_DEMISSAO": "04\/11\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "VFL INSTALADORA LTDA",
+                "CNPJ": "11264612000108",
+                "CIDADE": "PANAMBI-RS",
+                "PROFISSAO": "951105",
+                "DATA_ADMISSAO": "16\/09\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "ASSOCIACAO DE MORADORES DO BAIRRO PARAISO",
+            "CNPJ": "23793648000168",
+            "CIDADE": "HORIZONTINA-RS",
+            "QUALIFICACAO": "Presidente",
+            "DATA_ENTRADA": "20220708",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

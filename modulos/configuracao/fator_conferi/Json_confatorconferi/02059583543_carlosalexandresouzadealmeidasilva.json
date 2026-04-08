@@ -1,0 +1,207 @@
+{
+    "CADASTRAIS": {
+        "CPF": "2059583543",
+        "NOME": "CARLOS ALEXANDRE SOUZA DE ALMEIDA SILVA",
+        "NOME_MAE": "RAIMUNDA DE SOUZA DE ALMEIDA",
+        "NASCTO": "14\/05\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12780780764",
+        "ESCOLARIDADE": "COM A 4a. SERIE COMPLETA DO 1o. GRAU(PRIMARIO COMPLETO)",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "514325",
+        "PROFISSAO": "AUXILIAR DE CONSERVACAO DE BARRAGENS",
+        "SALARIO": " 915,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "4134235078",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "79999683100",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79996021309",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79981023560",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79996718896",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999424403",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "carlossalexandre8091@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "PV LEITE NETO",
+                "NUMERO": "5",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ARIA RURAL",
+                "CEP": "49750000",
+                "CIDADE": "GENERAL MAYNARD",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R CURUBA",
+                "NUMERO": "216",
+                "COMPLEMENTO": "CASA UNICA",
+                "BAIRRO": "CENTRO",
+                "CEP": "49740000",
+                "CIDADE": "CARMOPOLIS",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "2544943742",
+                "NOME": "TEREZINHA ALMEIDA SOUSA",
+                "IDADE": "91 anos",
+                "LOCAL": "SAO BERNARDO DO CAMPO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "3527323260",
+                "NOME": "WEVERTON DE ALMEIDA BEZERRA",
+                "IDADE": "16 anos",
+                "LOCAL": "",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ALDELIA GERENCIAMENTO DE PROJETOS INTEGRADOS LTDA",
+                "CNPJ": "10977747000158",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "717020",
+                "DATA_ADMISSAO": "12\/07\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TELSAN ENGENHARIA E SERVICOS S.A.",
+                "CNPJ": "00740230000510",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "514320",
+                "DATA_ADMISSAO": "07\/03\/2022",
+                "DATA_DEMISSAO": "03\/07\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FAZENDA DE CANA DE ACUCAR TAQUARI LTDA",
+                "CNPJ": "12537260000180",
+                "CIDADE": "CAPELA-SE",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "21\/20\/2009",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "LC ADMINISTRACAO DE RESTAURANTES LTDA",
+                "CNPJ": "60691250000147",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "514320",
+                "DATA_ADMISSAO": "23\/08\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "MEIODIA REFEICOES INDUSTRIAIS LTDA",
+                "CNPJ": "10328834001237",
+                "CIDADE": "LARANJEIRAS-SE",
+                "PROFISSAO": "514325",
+                "DATA_ADMISSAO": "01\/11\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "M C COMERCIO DE PLANTAS LTDA",
+                "CNPJ": "01697923000107",
+                "CIDADE": "CATU-BA",
+                "PROFISSAO": "612005",
+                "DATA_ADMISSAO": "14\/20\/1908",
+                "DATA_DEMISSAO": "17\/10\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "PREST SERV SERVICOS INTEGRADOS LIMITADA",
+                "CNPJ": "02586312000154",
+                "CIDADE": "PARANAGUA-PR",
+                "PROFISSAO": "514225",
+                "DATA_ADMISSAO": "02\/01\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

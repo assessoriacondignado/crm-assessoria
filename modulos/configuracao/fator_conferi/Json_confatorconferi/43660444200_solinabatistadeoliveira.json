@@ -1,0 +1,157 @@
+{
+    "CADASTRAIS": {
+        "CPF": "43660444200",
+        "NOME": "SOLINA BATISTA DE OLIVEIRA",
+        "NOME_MAE": "IRACIONILDES DA SILVA BATISTA",
+        "NASCTO": "09\/01\/1973",
+        "IDADE": "53 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1277985202",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "731175",
+        "PROFISSAO": "OPERADOR DE LINHA DE MONTAGEM (APARELHOS ELETRICOS)",
+        "SALARIO": " 2.416,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9221238150",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92988050714",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92991554899",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "92993219656",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "92981658974",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "barbarabatistarocha@yahoo.com.br",
+            "gdminfo@hotmail.com",
+            "solinaoliveira73@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "TV BANDEIRANTES",
+                "NUMERO": "21",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69090833",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AVENIDA SAMAUMA",
+                "NUMERO": "493",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MONTE DAS OLIVEIRAS",
+                "CEP": "69093132",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "RUA ARAMARI",
+                "NUMERO": "21",
+                "COMPLEMENTO": "CJ MANOA",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69090766",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AVENIDA SAMAUMA",
+                "NUMERO": "473",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MONTE DAS OLIVEIRAS",
+                "CEP": "69093132",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "32162294249",
+                "NOME": "IRACIONILDES DA SILVA BATISTA",
+                "IDADE": "71 anos",
+                "LOCAL": "",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "82695261268",
+                "NOME": "ABDONEI BATISTA PEREIRA",
+                "IDADE": "41 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "MITSUBA DO BRASIL LTDA",
+            "CNPJ": "05299463000110",
+            "CIDADE": "MANAUS-AM",
+            "PROFISSAO": "731175",
+            "DATA_ADMISSAO": "06\/02\/2012",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

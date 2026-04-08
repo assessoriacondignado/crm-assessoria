@@ -1,0 +1,275 @@
+{
+    "CADASTRAIS": {
+        "CPF": "10089892828",
+        "NOME": "EDNALDO SOARES GAMA",
+        "NOME_MAE": "MARIA RITA SOARES GAMA",
+        "NASCTO": "27\/04\/1974",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "220188129",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "181652370141",
+        "NIT": "1243263791",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142105",
+        "PROFISSAO": "GERENTE ADMINISTRATIVO",
+        "SALARIO": " 7.029,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1151813155",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1432392477",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1432392477",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1432455948",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "26\/09\/2011",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1432375948",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "21\/01\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "14991820735",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "14998911313",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11983729298",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "14997542001",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11971570042",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "ednaldo.gama@spmodal.com.br",
+            "jeferson.franco12@terra.com.br",
+            "ednaldo.sp@terra.com.br",
+            "ednaldosoaresgama@gmail.com",
+            "ednaldo.soares@itelefonica.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CEL IVON CESAR PIMENTEL",
+                "NUMERO": "9",
+                "COMPLEMENTO": "CJ C 65",
+                "BAIRRO": "PRQ PAULISTA",
+                "CEP": "17031350",
+                "CIDADE": "BAURU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CEL IVON CESAR PIMENTEL",
+                "NUMERO": "965",
+                "COMPLEMENTO": "CJ C",
+                "BAIRRO": "PRQ PAULISTA",
+                "CEP": "17031350",
+                "CIDADE": "BAURU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SHIGEO MATSUMOTO",
+                "NUMERO": "3",
+                "COMPLEMENTO": "Q C 26",
+                "BAIRRO": "NUC HABITACIONAL NOBUJI NAGASAWA",
+                "CEP": "17026843",
+                "CIDADE": "BAURU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ERNESTO TURINI",
+                "NUMERO": "5",
+                "COMPLEMENTO": "24",
+                "BAIRRO": "JD FLORIDA",
+                "CEP": "17024680",
+                "CIDADE": "BAURU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AL DAS MAGNOLIAS",
+                "NUMERO": "2",
+                "COMPLEMENTO": "88",
+                "BAIRRO": "PRQ VISTA ALEGRE",
+                "CEP": "17020010",
+                "CIDADE": "BAURU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BAURU",
+                "NUMERO": "7058",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL CONCEICAO",
+                "CEP": "17025280",
+                "CIDADE": "BAURU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PAZ",
+                "NUMERO": "2116",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CH GAIVOTAS",
+                "CEP": "04849332",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SHIGEO MATSUMOTO",
+                "NUMERO": "26",
+                "COMPLEMENTO": "Q3",
+                "BAIRRO": "NOBUJI NAGASAWA",
+                "CEP": "17026843",
+                "CIDADE": "BAURU",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "21642742880",
+                "NOME": "MARIA RITA SOARES GAMA",
+                "IDADE": "73 anos",
+                "LOCAL": "FLORA RICA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "640127274",
+                "NOME": "HORACIO SOARES GAMA",
+                "IDADE": "39 anos",
+                "LOCAL": "ITACOATIARA\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "1729939201",
+                "NOME": "ELENISE SOARES GAMA",
+                "IDADE": "35 anos",
+                "LOCAL": "MANGARATIBA\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "27594817869",
+                "NOME": "LEONICE SOARES GAMA DA SILVA",
+                "IDADE": "49 anos",
+                "LOCAL": "SANTO EXPEDITO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "28737910809",
+                "NOME": "EDI CARLOS SOARES GAMA",
+                "IDADE": "47 anos",
+                "LOCAL": "BAURU\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "37646520802",
+                "NOME": "LUCIMARA SOARES GAMA ALVES",
+                "IDADE": "44 anos",
+                "LOCAL": "FLORA RICA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "F   F DISTRIBUICAO E TRANSPORTES LTDA",
+            "CNPJ": "03577610000140",
+            "CIDADE": "BAURU-SP",
+            "PROFISSAO": "142105",
+            "DATA_ADMISSAO": "01\/10\/2000",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

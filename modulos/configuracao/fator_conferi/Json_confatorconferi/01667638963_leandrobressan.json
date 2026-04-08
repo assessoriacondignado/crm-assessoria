@@ -1,0 +1,306 @@
+{
+    "CADASTRAIS": {
+        "CPF": "1667638963",
+        "NOME": "LEANDRO BRESSAN",
+        "NOME_MAE": "ELEONORA ABATTI BRESSAN",
+        "NASCTO": "22\/10\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "031973540906",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4935417950",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "4935515200",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4935224564",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "49999954748",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "44988192829",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "44991042851",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "49988734166",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "65992037218",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "leandro2210@yahoo.com.br",
+            "leandro.bressan@brf-br.com",
+            "abceng.bressan@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV ANGELO ANSOLIN",
+                "NUMERO": "850",
+                "COMPLEMENTO": "BL 16 AP 502",
+                "BAIRRO": "ANZOLIN",
+                "CEP": "89600000",
+                "CIDADE": "JOACABA",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R C C",
+                "NUMERO": "2",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOA VISTA",
+                "CEP": "89620000",
+                "CIDADE": "CAMPOS NOVOS",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R NS APARECIDA",
+                "NUMERO": "135",
+                "COMPLEMENTO": "AP 9 B L A RES ABEL BARROSI",
+                "BAIRRO": "CH DOS PINHEIROS",
+                "CEP": "78080060",
+                "CIDADE": "CUIABA",
+                "ESTADO": "MT"
+            },
+            {
+                "LOGRADOURO": "R FLORIANOPOLIS",
+                "NUMERO": "113",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "VEREDAS",
+                "CEP": "39440085",
+                "CIDADE": "JANAUBA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R JUREMA POMPEO MIGUEL",
+                "NUMERO": "200",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JD LAURA",
+                "CEP": "87300126",
+                "CIDADE": "CAMPO MOURAO",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R MARIA DAS DORES DIAS",
+                "NUMERO": "850",
+                "COMPLEMENTO": "BL 16 AP 502",
+                "BAIRRO": "STA MONICA",
+                "CEP": "38408206",
+                "CIDADE": "UBERLANDIA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R VITORINO VOLPATO",
+                "NUMERO": "91",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL ESPERANCA",
+                "CEP": "88708305",
+                "CIDADE": "TUBARAO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "BR",
+                "NUMERO": "470",
+                "COMPLEMENTO": "",
+                "BAIRRO": "KM",
+                "CEP": "89620000",
+                "CIDADE": "CAMPOS NOVOS",
+                "ESTADO": "SC"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "466593902",
+                "NOME": "ELEONORA ABATTI BRESSAN",
+                "IDADE": "71 anos",
+                "LOCAL": "DIADEMA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "439909910",
+                "NOME": "FABIO BRESSAN",
+                "IDADE": "47 anos",
+                "LOCAL": "TUBARAO\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PLUSVAL AGROAVICOLA LTDA",
+                "CNPJ": "35030372000226",
+                "CIDADE": "UMUARAMA-PR",
+                "PROFISSAO": "950305",
+                "DATA_ADMISSAO": "27\/01\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "INSTITUICAO ADVENTISTA SUL BRASILEIRA DE EDUCACAO",
+                "CNPJ": "76726884003305",
+                "CIDADE": "UMUARAMA-PR",
+                "PROFISSAO": "231340",
+                "DATA_ADMISSAO": "04\/11\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SEARA ALIMENTOS LTDA",
+                "CNPJ": "02914460028322",
+                "CIDADE": "CAMPO MOURAO-PR",
+                "PROFISSAO": "620110",
+                "DATA_ADMISSAO": "13\/06\/2022",
+                "DATA_DEMISSAO": "01\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "BRF S.A.",
+                "CNPJ": "01838723049487",
+                "CIDADE": "NOVA MUTUM-MT",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "08\/04\/2020",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "BRF S.A.",
+                "CNPJ": "01838723039414",
+                "CIDADE": "LUCAS DO RIO VERDE-MT",
+                "PROFISSAO": "950305",
+                "DATA_ADMISSAO": "02\/04\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVICO NACIONAL DE APRENDIZAGEM INDUSTRIAL",
+                "CNPJ": "03774688001046",
+                "CIDADE": "LUZERNA-SC",
+                "PROFISSAO": "233210",
+                "DATA_ADMISSAO": "02\/12\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "BRF S.A.",
+                "CNPJ": "01838723030972",
+                "CIDADE": "CAMPOS NOVOS-SC",
+                "PROFISSAO": "314105",
+                "DATA_ADMISSAO": "02\/04\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "IGUACU CELULOSE PAPEL S\/A",
+                "CNPJ": "81304727000750",
+                "CIDADE": "CAMPOS NOVOS-SC",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "09\/01\/2012",
+                "DATA_DEMISSAO": "203",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "OX REPESENTACOES COMERCIAIS LTDA",
+            "CNPJ": "03362337000137",
+            "CIDADE": "JOACABA-SC",
+            "QUALIFICACAO": "SÃ³cio",
+            "DATA_ENTRADA": "19990827",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

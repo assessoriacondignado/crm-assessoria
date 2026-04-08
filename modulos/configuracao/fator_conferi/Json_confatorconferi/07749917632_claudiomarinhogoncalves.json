@@ -1,0 +1,155 @@
+{
+    "CADASTRAIS": {
+        "CPF": "7749917632",
+        "NOME": "CLAUDIO MARINHO GONCALVES",
+        "NOME_MAE": "MARINA DE LOURDES PINHEIRO GONCALVES",
+        "NASCTO": "09\/08\/1985",
+        "IDADE": "40 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1642224371",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521110",
+        "PROFISSAO": "VENDEDOR DE COMERCIO VAREJISTA",
+        "SALARIO": " 1.515,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31982080823",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31998184068",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31984471816",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "31986515915",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "djdinon@hotmail.com",
+            "claudiomarinho87@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R VILA RICA",
+                "NUMERO": "115",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CENTRO",
+                "CEP": "35420111",
+                "CIDADE": "MARIANA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R SEN BAWDEN",
+                "NUMERO": "93",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTANA",
+                "CEP": "35424015",
+                "CIDADE": "MARIANA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R JOSE BRUNO RAMOS",
+                "NUMERO": "288",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "MONSENHOR HORTA",
+                "CEP": "35420000",
+                "CIDADE": "MARIANA",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "4441734638",
+                "NOME": "MARINA DE LOURDES PINHEIRO GONCALVES",
+                "IDADE": "67 anos",
+                "LOCAL": "MARIANA\/MG",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "9592761655",
+                "NOME": "ANDREA CRISTINA GONCALVES",
+                "IDADE": "39 anos",
+                "LOCAL": "ITABIRITO\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "11831246600",
+                "NOME": "PATRICIA APARECIDA GONCALVES",
+                "IDADE": "33 anos",
+                "LOCAL": "ITABIRITO\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CONSTRUREY MATERIAIS DE CONSTRUCAO EM GERAL LTDA",
+                "CNPJ": "32810515000143",
+                "CIDADE": "MARIANA-MG",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/07\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "DOLPHIN CONSTRUCAO E ACABAMENTO LTDA",
+                "CNPJ": "08753091000148",
+                "CIDADE": "MARIANA-MG",
+                "PROFISSAO": "521130",
+                "DATA_ADMISSAO": "01\/06\/2007",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

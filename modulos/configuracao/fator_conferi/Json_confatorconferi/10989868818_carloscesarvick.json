@@ -1,0 +1,161 @@
+{
+    "CADASTRAIS": {
+        "CPF": "10989868818",
+        "NOME": "CARLOS CESAR VICK",
+        "NOME_MAE": "CELIA REGINA MONTANHEIRO VICK",
+        "NASCTO": "08\/06\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "245811420175",
+        "NIT": "1233509092",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "911305",
+        "PROFISSAO": "MECANICO DE MANUTENCAO DE MAQUINAS, EM GERAL",
+        "SALARIO": " 4.876,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1936732150",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13997323560",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19992838200",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19996429057",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "vick.cesar@yahoo.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R BELMIRO RIBEIRO",
+                "NUMERO": "122",
+                "COMPLEMENTO": "",
+                "BAIRRO": "LOT JD STA CAROLINA",
+                "CEP": "13710000",
+                "CIDADE": "TAMBAU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "BALDUINO BIASOLI",
+                "NUMERO": "141",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "13710000",
+                "CIDADE": "TAMBAU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CEL JOSE VILELA",
+                "NUMERO": "482",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "13710000",
+                "CIDADE": "TAMBAU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CEL JOSE VILELA",
+                "NUMERO": "464",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "13710000",
+                "CIDADE": "TAMBAU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE CUSTODIO DIAS",
+                "NUMERO": "195",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "13710000",
+                "CIDADE": "TAMBAU",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "26968121875",
+                "NOME": "MARCOS ALEXANDRE VICK",
+                "IDADE": "49 anos",
+                "LOCAL": "TAMBAU\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "30099673819",
+                "NOME": "ERICO ANDRE VICK",
+                "IDADE": "43 anos",
+                "LOCAL": "INDAIATUBA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "ERICO ROMANO  TORELLI LTDA.",
+            "CNPJ": "03883338000127",
+            "CIDADE": "TAMBAU-SP",
+            "PROFISSAO": "911305",
+            "DATA_ADMISSAO": "01\/02\/2011",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "VICK REPRESENTACOES COMERCIAIS S\/C LTDA",
+            "CNPJ": "04018619000184",
+            "CIDADE": "TAMBAU-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20000929",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

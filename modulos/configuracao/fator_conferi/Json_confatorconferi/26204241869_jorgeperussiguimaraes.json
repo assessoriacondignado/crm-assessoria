@@ -1,0 +1,290 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26204241869",
+        "NOME": "JORGE PERUSSI GUIMARAES",
+        "NOME_MAE": "MARIA APARECIDA PERUSSI GUIMARAES",
+        "NASCTO": "28\/04\/1978",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "194912220116",
+        "NIT": "12510122748",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142520",
+        "PROFISSAO": "GERENTE DE PROJETOS DE TECNOLOGIA DA INFORMACAO",
+        "SALARIO": " 9.881,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1120937141",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "15\/05\/2020",
+                "TIPO_TEL": "GPON",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1120974355",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1120974355",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1120938202",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11999526999",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11992691449",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11966818873",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11961814876",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11961818873",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "contato@emporiomarinhagrande.com.br",
+            "jorge.guimaraes@sas.com",
+            "jperussi@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PANTOJO",
+                "NUMERO": "883",
+                "COMPLEMENTO": "AP 43",
+                "BAIRRO": "VL REG FEIJO",
+                "CEP": "03343000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R NUNES BALBOA",
+                "NUMERO": "462",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL CARRAO",
+                "CEP": "03446010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MANILHA",
+                "NUMERO": "134",
+                "COMPLEMENTO": "1",
+                "BAIRRO": "VL CARRAO",
+                "CEP": "03445050",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV GUILHERME GIORGI",
+                "NUMERO": "260",
+                "COMPLEMENTO": "COMPL  Complemento  LOJA",
+                "BAIRRO": "VILA CARRAO",
+                "CEP": "03422000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ROGERIO GIORGI",
+                "NUMERO": "1487",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA CARRAO",
+                "CEP": "03431000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ODETE GOMES BARRETO",
+                "NUMERO": "188",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA CARRAO",
+                "CEP": "03441010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA EVANGELINA",
+                "NUMERO": "257",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA CARRAO",
+                "CEP": "03421000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA CONSELHEIRO CARRAO",
+                "NUMERO": "2493",
+                "COMPLEMENTO": "APT 7",
+                "BAIRRO": "VILA CARRAO",
+                "CEP": "03403002",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "13681479844",
+                "NOME": "MARIA APARECIDA PERUSSI GUIMARAES",
+                "IDADE": "77 anos",
+                "LOCAL": "MORRO AGUDO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "18176203807",
+                "NOME": "ELEN PERUSSI GUIMARAES MARTINIANO",
+                "IDADE": "51 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "25805897830",
+                "NOME": "ERICA PERUSSI GUIMARAES",
+                "IDADE": "54 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "31284897850",
+                "NOME": "ELIS PERUSSI GUIMARAES",
+                "IDADE": "42 anos",
+                "LOCAL": "MORRO AGUDO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "NAVA SERVICOS E OUTSOURCING S.A.",
+                "CNPJ": "14626101000187",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "142305",
+                "DATA_ADMISSAO": "01\/02\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SAS INSTITUTE BRASIL LTDA",
+                "CNPJ": "01127357000106",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142520",
+                "DATA_ADMISSAO": "01\/07\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "CAPGEMINI BRASIL LTDA.",
+                "CNPJ": "65599953000163",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "27\/09\/2010",
+                "DATA_DEMISSAO": "01\/07\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": [
+            {
+                "RAZAO_SOCIAL": "EMPORIO MARINHA GRANDE LTDA",
+                "CNPJ": "36347612000100",
+                "CIDADE": "SAO PAULO-SP",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20200212",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "PERUSSI   GUIMARAES SERVICOS DE ENTREGAS LTDA",
+                "CNPJ": "06865910000113",
+                "CIDADE": "SAO PAULO-SP",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20040609",
+                "VALOR_PARTICIPACAO": ""
+            }
+        ]
+    }
+}

@@ -1,0 +1,205 @@
+{
+    "CADASTRAIS": {
+        "CPF": "3267100780",
+        "NOME": "EDUARDO CORDEIRO SANTOS",
+        "NOME_MAE": "MARIA DAS GRACAS CORDEIRO SANTOS",
+        "NASCTO": "12\/12\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "94592276",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "079935250370",
+        "NIT": "1808787324",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "410105",
+        "PROFISSAO": "SUPERVISOR ADMINISTRATIVO",
+        "SALARIO": " 4.109,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2135256100",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2124829516",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21995347440",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21967650257",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21964710135",
+                "OPERADORA": "NEXTEL",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "eduardo.cs12@uol.com.br",
+            "eduardo.cs12@globo.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R SRG BENTO WILSON DA COSTA",
+                "NUMERO": "19",
+                "COMPLEMENTO": "Q 8",
+                "BAIRRO": "S VICENTE",
+                "CEP": "26178559",
+                "CIDADE": "BELFORD ROXO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R SRG JOAO LUIS COIMBRA",
+                "NUMERO": "26",
+                "COMPLEMENTO": "PRQ SAO",
+                "BAIRRO": "PRQ S VICENTE",
+                "CEP": "26178360",
+                "CIDADE": "BELFORD ROXO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "AV TEN ARMINDO LEAL GONCALVES",
+                "NUMERO": "123",
+                "COMPLEMENTO": "AP 303",
+                "BAIRRO": "PRQ S VICENTE",
+                "CEP": "26178400",
+                "CIDADE": "BELFORD ROXO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R CASTELO BRANCO",
+                "NUMERO": "300",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PENHA",
+                "CEP": "21072480",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R PROF CARLOS DE GUSMAO",
+                "NUMERO": "40",
+                "COMPLEMENTO": "",
+                "BAIRRO": "IRAJA",
+                "CEP": "21235590",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R JARACATIA",
+                "NUMERO": "54",
+                "COMPLEMENTO": "301",
+                "BAIRRO": "IRAJA",
+                "CEP": "21235570",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R SARGENTO BENTO WILSON DA COSTA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "CS 19 QD 08",
+                "BAIRRO": "SAO VICENTE",
+                "CEP": "26178559",
+                "CIDADE": "BELFORD ROXO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA CAPITAO BATISTA MOTINHA",
+                "NUMERO": "41",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SAO VICENTE",
+                "CEP": "26178310",
+                "CIDADE": "BELFORD ROXO",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "5524622684",
+            "NOME": "MARIA DAS GRACAS CORDEIRO SANTOS",
+            "IDADE": "63 anos",
+            "LOCAL": "ARICANDUVA\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "MARIA DAS GRACAS CORDEIRO SANTOS",
+            "IDADE": "",
+            "LOCALIDADE": "BELFORD ROXO\/RJ",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "71904000797"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CONNECT PRESTACAO DE SERVICOS LTDA.",
+                "CNPJ": "33205738000144",
+                "CIDADE": "NOVA IGUACU-RJ",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "02\/07\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TRANS-EXPERT VIGILANCIA E TRANSPORTE DE VALORES S\/A - FALIDO",
+                "CNPJ": "04086371000199",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "422220",
+                "DATA_ADMISSAO": "17\/02\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

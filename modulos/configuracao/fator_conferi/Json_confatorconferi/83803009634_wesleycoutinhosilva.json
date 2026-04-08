@@ -1,0 +1,253 @@
+{
+    "CADASTRAIS": {
+        "CPF": "83803009634",
+        "NOME": "WESLEY COUTINHO SILVA",
+        "NOME_MAE": "MARIA IZABEL COUTINHO",
+        "NASCTO": "29\/07\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1246423778 ",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521110",
+        "PROFISSAO": "VENDEDOR DE COMERCIO VAREJISTA",
+        "SALARIO": " 2.980,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3538643828",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "3432233979",
+                "OPERADORA": "CTBCTELECOM",
+                "DATA_REFERENCIA": "25\/03\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3734312762",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "37991309797",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "34997692196",
+                "OPERADORA": "ALGAR CELULAR S\/A",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31999522196",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "34999552196",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "37991049292",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "wesleycoutinhosilva@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV GETULIO VARGAS",
+                "NUMERO": "4734",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD DAS PALMEIRAS",
+                "CEP": "38412316",
+                "CIDADE": "UBERLANDIA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R JOAQUIM MURTINHO",
+                "NUMERO": "1269",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VARGEM CIMA",
+                "CEP": "37260000",
+                "CIDADE": "PERDOES",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "AV NS CARMO",
+                "NUMERO": "321",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ST CENTRAL",
+                "CEP": "76340000",
+                "CIDADE": "CARMO DO RIO VERDE",
+                "ESTADO": "GO"
+            },
+            {
+                "LOGRADOURO": "RRA CORREGO DO MEIO ZONA RUR",
+                "NUMERO": "4",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ZONA RURAL",
+                "CEP": "76340000",
+                "CIDADE": "CARMO DO RIO VERDE",
+                "ESTADO": "GO"
+            },
+            {
+                "LOGRADOURO": "R SEBASTIAO DE OLIVEIRA",
+                "NUMERO": "213",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SAGRADO CORACAO DE JESUS",
+                "CEP": "38900000",
+                "CIDADE": "BAMBUI",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "BAMBUI CAJANGA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ZONA RURAL",
+                "CEP": "38900000",
+                "CIDADE": "BAMBUI",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "AV PROFESSORA JUVENILIA DOS SANTOS",
+                "NUMERO": "1057",
+                "COMPLEMENTO": "APARTAMENTO:201",
+                "BAIRRO": "SANTA MONICA",
+                "CEP": "38408216",
+                "CIDADE": "UBERLANDIA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R FRANCISCO SANTOS",
+                "NUMERO": "495",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ROLA MOCA",
+                "CEP": "38900000",
+                "CIDADE": "BAMBUI",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1220276200",
+            "NOME": "MARIA IZABEL COUTINHO",
+            "IDADE": "93 anos",
+            "LOCAL": "AMERICANA\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TOURINHO ALIMENTOS LTDA",
+                "CNPJ": "01687709000170",
+                "CIDADE": "UBERLANDIA-MG",
+                "PROFISSAO": "354210",
+                "DATA_ADMISSAO": "24\/05\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COOPERATIVA AGRICOLA MISTA DE ADAMANTINA",
+                "CNPJ": "43001981006488",
+                "CIDADE": "UBERLANDIA-MG",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "05\/04\/2022",
+                "DATA_DEMISSAO": "13\/05\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "",
+                "CNPJ": "00512344843282",
+                "CIDADE": "",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/12\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "VETBR SAUDE ANIMAL LTDA.",
+                "CNPJ": "10680755000138",
+                "CIDADE": "PERDOES-MG",
+                "PROFISSAO": "521105",
+                "DATA_ADMISSAO": "01\/07\/2014",
+                "DATA_DEMISSAO": "01\/09\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "W C S COUTINHO LTDA.",
+            "CNPJ": "12059472000107",
+            "CIDADE": "CARMO DO RIO VERDE-GO",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20100602",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

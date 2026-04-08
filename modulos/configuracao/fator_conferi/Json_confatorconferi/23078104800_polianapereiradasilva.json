@@ -1,0 +1,205 @@
+{
+    "CADASTRAIS": {
+        "CPF": "23078104800",
+        "NOME": "POLIANA PEREIRA DA SILVA",
+        "NOME_MAE": "ADELINA PEREIRA DE LIMA SILVA",
+        "NASCTO": "28\/05\/1996",
+        "IDADE": "29 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "16606861692",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411010",
+        "PROFISSAO": "ASSISTENTE ADMINISTRATIVO",
+        "SALARIO": " 724,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1932892294",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19974011788",
+                "OPERADORA": "NEXTEL",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19974221959",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19987684442",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19983618815",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "poliana.psilva@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ALBANO FERREIRA DE SOUZA",
+                "NUMERO": "250",
+                "COMPLEMENTO": "C A",
+                "BAIRRO": "JOAO ARANHA",
+                "CEP": "13145739",
+                "CIDADE": "PAULINIA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ANTONIO MARCOS PENSAMENTO DA SILVA",
+                "NUMERO": "57",
+                "COMPLEMENTO": "BARAO GERALDO",
+                "BAIRRO": "REAL PARQUE",
+                "CEP": "13082790",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "59548398591",
+                "NOME": "ADELINA PEREIRA DE LIMA SILVA",
+                "IDADE": "69 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "103069518",
+                "NOME": "CARLINDO PEREIRA DA SILVA",
+                "IDADE": "43 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "26004486833",
+                "NOME": "EDINEA PEREIRA COUTO",
+                "IDADE": "49 anos",
+                "LOCAL": "PAULINIA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "34708341806",
+                "NOME": "ENIPAULA SILVA LINO",
+                "IDADE": "40 anos",
+                "LOCAL": "PAULINIA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "41421861836",
+                "NOME": "IVANI PEREIRA DA SILVA",
+                "IDADE": "50 anos",
+                "LOCAL": "PAULINIA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "97514110500",
+                "NOME": "PAULO PEREIRA DA SILVA",
+                "IDADE": "46 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "MAIORH CONSULTING LTDA",
+                "CNPJ": "04040353000257",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "351305",
+                "DATA_ADMISSAO": "27\/06\/2023",
+                "DATA_DEMISSAO": "22\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SODEXO DO BRASIL COMERCIAL S.A.",
+                "CNPJ": "49930514000135",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "15\/10\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "NEXXT TREINAMENTOS SUMARE LTDA",
+                "CNPJ": "19782575000131",
+                "CIDADE": "SUMARE-SP",
+                "PROFISSAO": "239405",
+                "DATA_ADMISSAO": "19\/20\/2009",
+                "DATA_DEMISSAO": "02\/07\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "HD SIQUEIRA LTDA",
+                "CNPJ": "20278372000191",
+                "CIDADE": "PAULINIA-SP",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "01\/08\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO PELA INFANCIA E JUVENTUDE DE PAULINIA",
+                "CNPJ": "71752067000120",
+                "CIDADE": "PAULINIA-SP",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "23\/01\/2013",
+                "DATA_DEMISSAO": "03\/11\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

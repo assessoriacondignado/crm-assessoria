@@ -1,0 +1,235 @@
+{
+    "CADASTRAIS": {
+        "CPF": "10462303870",
+        "NOME": "ELIANE DORES DUARTE VUONO",
+        "NOME_MAE": "JOAQUINA DOS SANTOS DUARTE",
+        "NASCTO": "25\/02\/1971",
+        "IDADE": "55 anos",
+        "SEXO": "Feminino",
+        "RG": "198044781",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "187756290159",
+        "NIT": "1227978807",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142120",
+        "PROFISSAO": "",
+        "SALARIO": " 10.302,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1128627702",
+                "OPERADORA": "AGENCIA NACIONAL DE TELECOMUNI",
+                "DATA_REFERENCIA": "24\/03\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1138513722",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1123644081",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11971584972",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11998221172",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11999822117",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11998353613",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11971950726",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "eliane.dd@uol.com.br",
+            "nangelicocorrealasa@gmail.com",
+            "nane_guil@hotmail.com",
+            "wduarteass@uol.com.br",
+            "eliane.dddd4@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PROF RUI BLOEM",
+                "NUMERO": "305",
+                "COMPLEMENTO": "AP 23",
+                "BAIRRO": "VL PRIMAVERA",
+                "CEP": "02802010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R COLUMBIA",
+                "NUMERO": "170",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BRASILANDIA",
+                "CEP": "02844040",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CLELIA",
+                "NUMERO": "93",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AGUA BRANCA",
+                "CEP": "05042000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R TUCUNDUVA",
+                "NUMERO": "433",
+                "COMPLEMENTO": "AP 22 BL",
+                "BAIRRO": "VL S VICENTE",
+                "CEP": "02733100",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R S LEONARDO",
+                "NUMERO": "33",
+                "COMPLEMENTO": "AP 6",
+                "BAIRRO": "ITABERABA",
+                "CEP": "02803000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CHICO DE PAULA",
+                "NUMERO": "347",
+                "COMPLEMENTO": "AP  Apartamento  54",
+                "BAIRRO": "NOSSA SENHORA DO O",
+                "CEP": "02926000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R TIRO AO POMBO",
+                "NUMERO": "402",
+                "COMPLEMENTO": "AP 81",
+                "BAIRRO": "BRASILANDIA",
+                "CEP": "02844060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOAO LUIZ CALHEIROS",
+                "NUMERO": "53",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE SAO LUIS",
+                "CEP": "02842270",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "9266660884",
+            "NOME": "JOAQUINA DOS SANTOS DUARTE",
+            "IDADE": "80 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "FABRICIO VENCESLAU DE LIRA",
+                "IDADE": "",
+                "LOCALIDADE": "CAMPINAS\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "31845352823"
+            },
+            {
+                "NOME": "NADINE ANGELICO CORREA",
+                "IDADE": "",
+                "LOCALIDADE": "PORTO ALEGRE\/RS",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "81325274020"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "SERVICO SOCIAL DO COMERCIO - SESC - ADMINISTRACAO REGIONAL NO ESTADO DE SAO PAULO",
+            "CNPJ": "03667884001526",
+            "CIDADE": "SAO PAULO-SP",
+            "PROFISSAO": "142120",
+            "DATA_ADMISSAO": "04\/10\/2011",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

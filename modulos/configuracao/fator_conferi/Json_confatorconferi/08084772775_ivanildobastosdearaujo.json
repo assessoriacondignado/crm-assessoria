@@ -1,0 +1,175 @@
+{
+    "CADASTRAIS": {
+        "CPF": "8084772775",
+        "NOME": "IVANILDO BASTOS DE ARAUJO",
+        "NOME_MAE": "MARIA DA CONCEICAO RAMOS DOS SANTOS",
+        "NASCTO": "25\/01\/1978",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "104804740329",
+        "NIT": "1267845962",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "710205",
+        "PROFISSAO": "MESTRE (CONSTRUCAO CIVIL)",
+        "SALARIO": " 4.860,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2124371468",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2138479072",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21976772817",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "21996797402",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "ivanildobastospt@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R SILVA XAVIER",
+                "NUMERO": "176",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ABOLICAO",
+                "CEP": "20751010",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "AV D HELDER CAMARA",
+                "NUMERO": "9211",
+                "COMPLEMENTO": "",
+                "BAIRRO": "QUINTINO BOCAIUVA",
+                "CEP": "21380245",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R JOSE MARIANO",
+                "NUMERO": "19",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "PIEDADE",
+                "CEP": "20756190",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "AV DAS AMERICAS",
+                "NUMERO": "16691",
+                "COMPLEMENTO": "SL 206",
+                "BAIRRO": "RCR DOS BANDEIRANTES",
+                "CEP": "22790703",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R ALBANO",
+                "NUMERO": "282",
+                "COMPLEMENTO": "C 16",
+                "BAIRRO": "PC SECA",
+                "CEP": "22733010",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "ESTRADA MARECHAL ALENCASTRO",
+                "NUMERO": "3103",
+                "COMPLEMENTO": "LJ",
+                "BAIRRO": "ANCHIETA",
+                "CEP": "21625001",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "40162540",
+            "NOME": "MARIA DA CONCEICAO RAMOS DOS SANTOS",
+            "IDADE": "59 anos",
+            "LOCAL": "CAMPO ALEGRE DE LOURDES\/BA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "OBRA PRIMA CONSTRUCAO E MANUTENCAO LTDA",
+                "CNPJ": "04856692000125",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "710205",
+                "DATA_ADMISSAO": "01\/08\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MASSIMO OBRAS E SERVICOS LTDA",
+                "CNPJ": "28148778000161",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "09\/03\/2020",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "JULO ESQUADRIAS DE ALUMINIO E FERRO LTDA",
+            "CNPJ": "05529188000183",
+            "CIDADE": "RIO DE JANEIRO-RJ",
+            "QUALIFICACAO": "SÃ³cio",
+            "DATA_ENTRADA": "20021129",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

@@ -1,0 +1,136 @@
+{
+    "CADASTRAIS": {
+        "CPF": "58207520078",
+        "NOME": "PAULO DOS SANTOS QUADRI",
+        "NOME_MAE": "LENI DOS SANTOS QUADRI",
+        "NASCTO": "12\/10\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "056805490477",
+        "NIT": "1238570574",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142105",
+        "PROFISSAO": "GERENTE ADMINISTRATIVO",
+        "SALARIO": " 12.598,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "5436221980",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "20\/01\/2014",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "54992296655",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "54999278738",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "54991145395",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "dts201@bol.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MOEMA",
+                "NUMERO": "147",
+                "COMPLEMENTO": "147 C",
+                "BAIRRO": "S JOSE",
+                "CEP": "99052350",
+                "CIDADE": "PASSO FUNDO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA PAISSANDU",
+                "NUMERO": "1980",
+                "COMPLEMENTO": "APT 201",
+                "BAIRRO": "CENTRO",
+                "CEP": "99010102",
+                "CIDADE": "PASSO FUNDO",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "49386220091",
+            "NOME": "LENI DOS SANTOS QUADRI",
+            "IDADE": "74 anos",
+            "LOCAL": "PASSO FUNDO\/RS",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "DANIELA TERESINHA SECCO",
+            "IDADE": "",
+            "LOCALIDADE": "PASSO FUNDO\/RS",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "99067005053"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "DISFONTE DISTRIBUIDORA DE BEBIDAS LTDA",
+                "CNPJ": "92170307000159",
+                "CIDADE": "PASSO FUNDO-RS",
+                "PROFISSAO": "142105",
+                "DATA_ADMISSAO": "04\/08\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CASTOLDI E ZANDONA COMERCIO DE BEBIDAS LTDA",
+                "CNPJ": "10917525000140",
+                "CIDADE": "PASSO FUNDO-RS",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "04\/12\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

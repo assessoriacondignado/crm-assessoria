@@ -1,0 +1,200 @@
+{
+    "CADASTRAIS": {
+        "CPF": "82652597515",
+        "NOME": "DEBORA SOARES NASCIMENTO",
+        "NOME_MAE": "INALVA BASTOS SOARES",
+        "NASCTO": "06\/07\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "101034110531",
+        "NIT": "2003222479",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "331110",
+        "PROFISSAO": "AUXILIAR DE DESENVOLVIMENTO INFANTIL",
+        "SALARIO": " 1.705,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "7132199138",
+            "OPERADORA": "TELEMAR\/BA",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "71999747893",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71986216866",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71997304411",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "71999358295",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "81988901360",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "06\/07\/2017",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "elane.d@hotmail.com",
+            "debyadoradora@outlook.com",
+            "debydasilva66@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ARMANDO SA",
+                "NUMERO": "97",
+                "COMPLEMENTO": "C 7 ST C",
+                "BAIRRO": "BOCA DA MATA",
+                "CEP": "41343100",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "VIA LOCAL G",
+                "NUMERO": "62",
+                "COMPLEMENTO": "AP 4 CJ F GRANDE III ST C CJ F",
+                "BAIRRO": "CAJAZEIRAS",
+                "CEP": "41342235",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "VIA LOCAL G",
+                "NUMERO": "100",
+                "COMPLEMENTO": "CJ NDE3 ST CJ 62",
+                "BAIRRO": "CAJAZEIRAS",
+                "CEP": "41342235",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "LOT FAZENDA COUTOS TRES",
+                "NUMERO": "62",
+                "COMPLEMENTO": "AP 203",
+                "BAIRRO": "COUTOS",
+                "CEP": "40750120",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "1605951501",
+                "NOME": "SERGIO SOARES NASCIMENTO",
+                "IDADE": "43 anos",
+                "LOCAL": "SALVADOR\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "8656688502",
+                "NOME": "YASMIN NASCIMENTO SANTOS",
+                "IDADE": "25 anos",
+                "LOCAL": "SALVADOR\/BA",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "11485775566",
+                "NOME": "NEIDSON CESAR NASCIMENTO LIMA DA SILVA",
+                "IDADE": "19 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "13025816783",
+                "NOME": "ADRIANA LEITE NASCIMENTO",
+                "IDADE": "48 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "14342581736",
+                "NOME": "LUCIANA LEITE NASCIMENTO",
+                "IDADE": "43 anos",
+                "LOCAL": "NOVA IGUACU\/RJ",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "INSTITUTO TIA CELIA",
+                "CNPJ": "32331257000112",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "331110",
+                "DATA_ADMISSAO": "18\/01\/2023",
+                "DATA_DEMISSAO": "22\/12\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "3 CEREJAS CONSULTORIA EM GESTAO EMPRESARIAL LTDA",
+                "CNPJ": "14652106000184",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "768205",
+                "DATA_ADMISSAO": "09\/02\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

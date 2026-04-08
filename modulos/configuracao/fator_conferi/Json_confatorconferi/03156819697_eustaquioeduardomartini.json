@@ -1,0 +1,147 @@
+{
+    "CADASTRAIS": {
+        "CPF": "3156819697",
+        "NOME": "EUSTAQUIO EDUARDO MARTINI",
+        "NOME_MAE": "TEREZINHA ROSA MARTINI",
+        "NASCTO": "13\/12\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "119912070248",
+        "NIT": "12548077367",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "414105",
+        "PROFISSAO": "ALMOXARIFE",
+        "SALARIO": " 2.031,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3134611425",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3134867102",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "31998110621",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "PRE PAGO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "emartini1312@gmail.com",
+            "martini-martini@ig.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PITT",
+                "NUMERO": "330",
+                "COMPLEMENTO": "AP 201",
+                "BAIRRO": "UNIAO",
+                "CEP": "31170610",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R CALDEIRA BRANT",
+                "NUMERO": "213",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SAGRADA FAMILIA",
+                "CEP": "31030180",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "76824675687",
+                "NOME": "TEREZINHA ROSA MARTINI",
+                "IDADE": "76 anos",
+                "LOCAL": "BELO HORIZONTE\/MG",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "536785678",
+                "NOME": "SIMONE APARECIDA MARTINI SOUZA CRUZ",
+                "IDADE": "53 anos",
+                "LOCAL": "BELO HORIZONTE\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "2537469658",
+                "NOME": "DENISE FATIMA MARTINI TEIXEIRA",
+                "IDADE": "51 anos",
+                "LOCAL": "BELO HORIZONTE\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TOTAL PRIME TERCEIRIZACAO E SERVICOS LTDA",
+                "CNPJ": "07051882000163",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "414105",
+                "DATA_ADMISSAO": "01\/11\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ATUAL SERVICE LTDA",
+                "CNPJ": "09564708000140",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "414105",
+                "DATA_ADMISSAO": "21\/06\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "JOAO BATISTA QUEIROZ JUNIOR",
+                "CNPJ": "05813586000127",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "16\/07\/2007",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

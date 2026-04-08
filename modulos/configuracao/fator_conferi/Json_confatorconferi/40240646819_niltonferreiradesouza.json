@@ -1,0 +1,101 @@
+{
+    "CADASTRAIS": {
+        "CPF": "40240646819",
+        "NOME": "NILTON FERREIRA DE SOUZA",
+        "NOME_MAE": "CLETA FERREIRA DE SOUZA",
+        "NASCTO": "26\/01\/1991",
+        "IDADE": "35 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "383225270124",
+        "NIT": "1301565124",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "414205",
+        "PROFISSAO": "APONTADOR DE MAO-DE-OBRA",
+        "SALARIO": " 4.328,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1142041144",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "11973055549",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "PRE PAGO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOAO PAULO I",
+                "NUMERO": "80",
+                "COMPLEMENTO": "AP 2",
+                "BAIRRO": "JD MOSTEIRO",
+                "CEP": "18135490",
+                "CIDADE": "SAO ROQUE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV BRASIL",
+                "NUMERO": "64",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "18130485",
+                "CIDADE": "SAO ROQUE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV LUIS DURVAL OLIVEIRA",
+                "NUMERO": "780",
+                "COMPLEMENTO": "AP APT 11",
+                "BAIRRO": "TERRAS DE SAO JOSE",
+                "CEP": "18120000",
+                "CIDADE": "MAIRINQUE",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "36575782850",
+            "NOME": "CLECIA FERREIRA DE SOUZA",
+            "IDADE": "38 anos",
+            "LOCAL": "ARACARIGUAMA\/SP",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "CARBOTEX QUIMICA INDUSTRIA, COMERCIO E PARTICIPACOES LT",
+            "CNPJ": "01751891000261",
+            "CIDADE": "ARACARIGUAMA-SP",
+            "PROFISSAO": "414205",
+            "DATA_ADMISSAO": "13\/09\/2011",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

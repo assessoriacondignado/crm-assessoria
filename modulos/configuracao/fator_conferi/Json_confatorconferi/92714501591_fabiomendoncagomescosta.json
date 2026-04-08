@@ -1,0 +1,250 @@
+{
+    "CADASTRAIS": {
+        "CPF": "92714501591",
+        "NOME": "FABIO MENDONCA GOMES COSTA",
+        "NOME_MAE": "LILIAN MENDONCA GOMES COSTA",
+        "NASCTO": "13\/04\/1976",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "1150949",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "011468612100",
+        "NIT": "12870686775",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "413225",
+        "PROFISSAO": "ESCRITURARIO DE BANCO",
+        "SALARIO": " 2.978,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7935221679",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7935221493",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "79999214811",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79988120287",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "OI_PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79996716363",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79996761958",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999695344",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marryjoias@bol.com.br",
+            "fabiomendonca.costa@bol.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R RIACHUELO",
+                "NUMERO": "460",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "49200000",
+                "CIDADE": "ESTANCIA",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "01",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DISTRITO INDUSTRIAL",
+                "CEP": "49200000",
+                "CIDADE": "ESTANCIA",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "ENG PAULO BARRETO DE MENEZES",
+                "NUMERO": "6",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOA HORA",
+                "CEP": "49760000",
+                "CIDADE": "ROSARIO DO CATETE",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R F CJ PEDRO B SIQUEIRA",
+                "NUMERO": "9",
+                "COMPLEMENTO": "",
+                "BAIRRO": "",
+                "CEP": "49200000",
+                "CIDADE": "ESTANCIA",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "RUA GENERAL PEDRA",
+                "NUMERO": "437",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "CENTRO",
+                "CEP": "49200000",
+                "CIDADE": "ESTANCIA",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "E",
+                "NUMERO": "42",
+                "COMPLEMENTO": "LOT SAO PAULO",
+                "BAIRRO": "SAO JORGE",
+                "CEP": "49200000",
+                "CIDADE": "ESTANCIA",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "EXP JOAO FERREIRA SILVA",
+                "NUMERO": "53",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "49200000",
+                "CIDADE": "ESTANCIA",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R ENG PAULO BARRETO",
+                "NUMERO": "6",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOA HORA",
+                "CEP": "49770000",
+                "CIDADE": "MARUIM",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "69618828549",
+                "NOME": "LILIAN MENDONCA GOMES COSTA",
+                "IDADE": "70 anos",
+                "LOCAL": "MARUIM\/SE",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "93085788549",
+                "NOME": "GILBERTO GOMES COSTA JUNIOR",
+                "IDADE": "48 anos",
+                "LOCAL": "MARUIM\/SE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "96828951549",
+                "NOME": "FABYOLA MENDONCA COSTA TAVARES",
+                "IDADE": "46 anos",
+                "LOCAL": "MARUIM\/SE",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ROSE MARRY NASCIMENTO COSTA",
+            "IDADE": "",
+            "LOCALIDADE": "ARACAJU\/SE",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "144099500"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000269050",
+                "CIDADE": "NOSSA SENHORA DO SOCORRO-SE",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "08\/03\/2004",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000014907",
+                "CIDADE": "ESTANCIA-SE",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "10\/01\/2006",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "GF LOCADORA LTDA",
+            "CNPJ": "03540368000130",
+            "CIDADE": "MARUIM-SE",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20211125",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

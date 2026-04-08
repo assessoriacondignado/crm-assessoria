@@ -1,0 +1,164 @@
+{
+    "CADASTRAIS": {
+        "CPF": "84942029600",
+        "NOME": "ALMIRO RODRIGUES DA CRUZ",
+        "NOME_MAE": "ZULMIRA DIAS DE SOUZA",
+        "NASCTO": "16\/07\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "096695100221",
+        "NIT": "12466848564",
+        "ESCOLARIDADE": "COM A 4a. SERIE COMPLETA DO 1o. GRAU(PRIMARIO COMPLETO)",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "725505",
+        "PROFISSAO": "MONTADOR DE VEICULOS (LINHA DE MONTAGEM)",
+        "SALARIO": " 10,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "3136297682",
+            "OPERADORA": "TELEMAR\/MG",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31988560528",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31985813039",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31987007854",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31985532793",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "21\/01\/2014",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "31986130939",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DOS BICUDOS",
+                "NUMERO": "554",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVO HORIZONTE",
+                "CEP": "33205180",
+                "CIDADE": "VESPASIANO",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R AMARANTINA",
+                "NUMERO": "554",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVO HORIZONTE",
+                "CEP": "33205198",
+                "CIDADE": "VESPASIANO",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R DEZESSETE A",
+                "NUMERO": "198",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SOLIMOES",
+                "CEP": "31742762",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R BICUDOS",
+                "NUMERO": "554",
+                "COMPLEMENTO": "CS FRT",
+                "BAIRRO": "",
+                "CEP": "33200000",
+                "CIDADE": "VESPASIANO",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1109568932",
+            "NOME": "ZULMIRA DIAS DE SOUZA",
+            "IDADE": "88 anos",
+            "LOCAL": "",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SARITUR SANTA RITA TRANSPORTE URBANO E RODOVIARIO LTDA",
+                "CNPJ": "20848420006502",
+                "CIDADE": "RIBEIRAO DAS NEVES-MG",
+                "PROFISSAO": "914425",
+                "DATA_ADMISSAO": "18\/12\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "STELLANTIS AUTOMOVEIS BRASIL LTDA.",
+                "CNPJ": "16701716000156",
+                "CIDADE": "BETIM-MG",
+                "PROFISSAO": "725505",
+                "DATA_ADMISSAO": "11\/06\/2007",
+                "DATA_DEMISSAO": "31\/08\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

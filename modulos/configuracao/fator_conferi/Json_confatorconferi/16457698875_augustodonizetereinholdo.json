@@ -1,0 +1,177 @@
+{
+    "CADASTRAIS": {
+        "CPF": "16457698875",
+        "NOME": "AUGUSTO DONIZETE REINHOLDO",
+        "NOME_MAE": "PLACIDIA MARQUES REINHOLDO",
+        "NASCTO": "10\/04\/1972",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "242789900",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "177401680116",
+        "NIT": "1250235503",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "141605",
+        "PROFISSAO": "GERENTE DE OPERACOES DE TRANSPORTES",
+        "SALARIO": " 6.542,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1833248987",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "12\/01\/2012",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "18981565568",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "18996133822",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "18996991180",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15997854464",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "18996317114",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "cts.assis@tvcassis.com.br",
+            "reinholdolg@gmail.com",
+            "augustodonrei@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R NATAL TRAVAGLIA",
+                "NUMERO": "530",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD ELDORADO",
+                "CEP": "19803100",
+                "CIDADE": "ASSIS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R NATAL TRAVAGLIA",
+                "NUMERO": "1530",
+                "COMPLEMENTO": "ESQUINA MARCO ANTONIO RIBEIRO",
+                "BAIRRO": "JARDIM ELDORADO",
+                "CEP": "19803100",
+                "CIDADE": "ASSIS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA MARECHAL DEODORO",
+                "NUMERO": "93",
+                "COMPLEMENTO": "BL 108",
+                "BAIRRO": "CENTRO",
+                "CEP": "19806140",
+                "CIDADE": "ASSIS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "92438504820",
+                "NOME": "PLACIDIA MARQUES REINHOLDO",
+                "IDADE": "89 anos",
+                "LOCAL": "ASSIS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "18861194818",
+                "NOME": "CECILIA BERNADETE REINHOLDO DE MENEZES",
+                "IDADE": "67 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "35118374804",
+                "NOME": "MARIA DA GRACA REINHOLDO RAMOS",
+                "IDADE": "68 anos",
+                "LOCAL": "SANTO ANDRE\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CTS - COOPERATIVA DE TRANSPORTES DE SOROCABA E REGIAO",
+                "CNPJ": "03615415001482",
+                "CIDADE": "VOTORANTIM-SP",
+                "PROFISSAO": "141605",
+                "DATA_ADMISSAO": "01\/12\/2001",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CTS - COOPERATIVA DE TRANSPORTES DE SOROCABA E REGIAO",
+                "CNPJ": "03615415000168",
+                "CIDADE": "SOROCABA-SP",
+                "PROFISSAO": "141605",
+                "DATA_ADMISSAO": "01\/12\/2001",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

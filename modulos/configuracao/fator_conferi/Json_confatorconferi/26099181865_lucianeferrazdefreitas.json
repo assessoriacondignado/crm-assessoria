@@ -1,0 +1,283 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26099181865",
+        "NOME": "LUCIANE FERRAZ DE FREITAS",
+        "NOME_MAE": "CORALI DIAS FERRAZ",
+        "NASCTO": "09\/12\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "265285840141",
+        "NIT": "1264325981",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "420135",
+        "PROFISSAO": "SUPERVISOR DE TELEMARKETING E ATENDIMENTO",
+        "SALARIO": " 2.870,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1125947565",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1120428318",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11982540729",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11988337268",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11995682570",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11981675932",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11997302099",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "tazmanya@ig.com.br",
+            "luciane.freitas@cs-sitel.com.br",
+            "luciane.f.freitas@terra.com.br",
+            "lucianefdefreitas@itelefonica.com.br",
+            "lucianefffreitas@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV WALDEMAR TIETZ",
+                "NUMERO": "1583",
+                "COMPLEMENTO": "BL A AP 12",
+                "BAIRRO": "CJ HABITACIONAL PADRE JOSE DE ANCHIETA",
+                "CEP": "03589001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MAJORIE",
+                "NUMERO": "205",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ DAS PAINEIRAS",
+                "CEP": "03694110",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV ROBERT KENNEDY",
+                "NUMERO": "3599",
+                "COMPLEMENTO": "AP 82",
+                "BAIRRO": "ASSUNCAO",
+                "CEP": "09860215",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PE GUALBERTO DE LIMA",
+                "NUMERO": "151",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ MONTEIRO SOARES",
+                "CEP": "02736060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MANOEL BANDEIRA",
+                "NUMERO": "30",
+                "COMPLEMENTO": "CASA 01",
+                "BAIRRO": "DOS CASA",
+                "CEP": "09846130",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "24855143804",
+            "NOME": "CORALI DIAS FERRAZ",
+            "IDADE": "75 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SOCCER HOSPITALITY HOLDING LTDA",
+                "CNPJ": "41789453000126",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "420135",
+                "DATA_ADMISSAO": "24\/20\/1903",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TELEPERFORMANCE CRM S.A.",
+                "CNPJ": "06975199000150",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "420135",
+                "DATA_ADMISSAO": "18\/12\/2023",
+                "DATA_DEMISSAO": "14\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "RML EVENTOS ESPORTIVOS LTDA",
+                "CNPJ": "30863670000100",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "420135",
+                "DATA_ADMISSAO": "18\/03\/2024",
+                "DATA_DEMISSAO": "18\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO DOS FUNCIONARIOS PUBLICOS ESTADO SAO PAULO",
+                "CNPJ": "62149000000105",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "420135",
+                "DATA_ADMISSAO": "12\/09\/2022",
+                "DATA_DEMISSAO": "31\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "CONTAX S.A. - EM RECUPERACAO JUDICIAL EM RECUPERACAO JUDICIAL",
+                "CNPJ": "67313221005311",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "25\/03\/2021",
+                "DATA_DEMISSAO": "01\/06\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "MM MIRASSOL INDUSTRIA COMERCIO E SERVICOS LTDA",
+                "CNPJ": "29173673000125",
+                "CIDADE": "MIRASSOL-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "15\/02\/2021",
+                "DATA_DEMISSAO": "15\/03\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "ESCALEMAX SALES CENTER LTDA",
+                "CNPJ": "09489617000278",
+                "CIDADE": "SAO JOSE DO RIO PRETO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/06\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "FOUNDEVER DO BRASIL SERVICOS E TECNOLOGIA LTDA",
+                "CNPJ": "02806798000784",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "420135",
+                "DATA_ADMISSAO": "12\/04\/2011",
+                "DATA_DEMISSAO": "16\/04\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ATENTO BRASIL S\/A",
+                "CNPJ": "02879250001906",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "420135",
+                "DATA_ADMISSAO": "09\/12\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "PLURIS MIDIA LTDA",
+                "CNPJ": "05061316000107",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "01\/06\/2016",
+                "DATA_DEMISSAO": "19\/08\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "FOUNDEVER DO BRASIL SERVICOS E TECNOLOGIA LTDA",
+                "CNPJ": "02806798000199",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "420135",
+                "DATA_ADMISSAO": "12\/04\/2011",
+                "DATA_DEMISSAO": "30\/06\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

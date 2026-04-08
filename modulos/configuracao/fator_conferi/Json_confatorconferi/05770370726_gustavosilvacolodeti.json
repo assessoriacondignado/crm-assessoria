@@ -1,0 +1,124 @@
+{
+    "CADASTRAIS": {
+        "CPF": "5770370726",
+        "NOME": "GUSTAVO SILVA COLODETI",
+        "NOME_MAE": "ANGELA SILVA COLODETI",
+        "NASCTO": "03\/04\/1984",
+        "IDADE": "42 anos",
+        "SEXO": "Masculino",
+        "RG": "1940433",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "ES",
+        "TITULO_ELEITOR": "025588671422",
+        "NIT": "2012291510",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "414125",
+        "PROFISSAO": "",
+        "SALARIO": " 6.710,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2721237200",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "2732297658",
+                "OPERADORA": "TELEMAR\/ES",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "27999288788",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "PRE PAGO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": {
+        "EMAIL": "gugacolodeti@yahoo.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV HENRIQUE MOSCOSO",
+                "NUMERO": "711",
+                "COMPLEMENTO": "AP 402",
+                "BAIRRO": "PR DA COSTA",
+                "CEP": "29101345",
+                "CIDADE": "VILA VELHA",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "AV HENRIQUE MOSCOSO",
+                "NUMERO": "711",
+                "COMPLEMENTO": "AP 402",
+                "BAIRRO": "CENTRO DE VILA VELHA",
+                "CEP": "29100020",
+                "CIDADE": "VILA VELHA",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "AVENIDA HENRIQUE MOSCOSO",
+                "NUMERO": "711",
+                "COMPLEMENTO": "APT  402",
+                "BAIRRO": "CENTRO DE VILA VELHA",
+                "CEP": "29100021",
+                "CIDADE": "VILA VELHA",
+                "ESTADO": "ES"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "8771115706",
+            "NOME": "TIAGO SILVA COLODETI",
+            "IDADE": "46 anos",
+            "LOCAL": "VILA VELHA\/ES",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "RDG ACOS DO BRASIL S\/A",
+            "CNPJ": "27487693000145",
+            "CIDADE": "SERRA-ES",
+            "PROFISSAO": "414125",
+            "DATA_ADMISSAO": "08\/03\/2010",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "V.C. PRESTACAO DE SERVICOS LTDA",
+            "CNPJ": "03444822000150",
+            "CIDADE": "CASTELO-ES",
+            "QUALIFICACAO": "SÃ³cio",
+            "DATA_ENTRADA": "20020520",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

@@ -1,0 +1,276 @@
+{
+    "CADASTRAIS": {
+        "CPF": "28934823844",
+        "NOME": "JULIO CONCILIO",
+        "NOME_MAE": "MARIA APARECIDA CONCILIO",
+        "NASCTO": "26\/12\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "214859720108",
+        "NIT": "13429862859",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212405",
+        "PROFISSAO": "ANALISTA DE DESENVOLVIMENTO DE SISTEMAS",
+        "SALARIO": " 11.636,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1130925208",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1131888447",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1126591204",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "09\/09\/2011",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1126591204",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "09\/09\/2011",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11998121947",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11981219471",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11981219471",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11984660791",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11977126200",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "julio.concilio@uol.com.br",
+            "jconcilio@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ORFANATO",
+                "NUMERO": "54090",
+                "COMPLEMENTO": "AP 223",
+                "BAIRRO": "VL PRUDENTE",
+                "CEP": "03131010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SERGIO DE AZEVEDO VALENTE",
+                "NUMERO": "230",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "VL BRASILINA",
+                "CEP": "04158030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PE LEONEL FRANCA",
+                "NUMERO": "72",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL LIBANESA",
+                "CEP": "03193070",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV BRG FARIA LIMA",
+                "NUMERO": "1461",
+                "COMPLEMENTO": "1 I SS TORRE SUL",
+                "BAIRRO": "JD PAULISTANO",
+                "CEP": "01452921",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DO ORFANATO",
+                "NUMERO": "411",
+                "COMPLEMENTO": "AP223BLA",
+                "BAIRRO": "VL PRUDENTE",
+                "CEP": "03131010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA UMUARAMA",
+                "NUMERO": "37",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA PRUDENTE",
+                "CEP": "03129010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA UMUARAMA",
+                "NUMERO": "3",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA PRUDENTE",
+                "CEP": "03129010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOAO DE ALMEIDA",
+                "NUMERO": "149",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TATUAPE",
+                "CEP": "03312030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "28936115839",
+                "NOME": "MARIA APARECIDA CONCILIO",
+                "IDADE": "68 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "27709771807",
+                "NOME": "VICENTE CONCILIO",
+                "IDADE": "46 anos",
+                "LOCAL": "FLORIANOPOLIS\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BRASKEM S.A",
+                "CNPJ": "42150391003510",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142510",
+                "DATA_ADMISSAO": "08\/11\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FUNDACAO ANTONIO PRUDENTE",
+                "CNPJ": "60961968000106",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212320",
+                "DATA_ADMISSAO": "22\/04\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "ELETROPAULO METROPOLITANA ELETRICIDADE DE SAO PAULO S.A.",
+                "CNPJ": "61695227000193",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "03\/01\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "RAIZEN CENTRO-SUL S.A",
+                "CNPJ": "15527906000136",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "25\/04\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "CREDIFIBRA S.A. - CREDITO, FINANCIAMENTO E INVESTIMENTO",
+                "CNPJ": "11434526000104",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212310",
+                "DATA_ADMISSAO": "16\/11\/2011",
+                "DATA_DEMISSAO": "29\/02\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

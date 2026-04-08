@@ -1,0 +1,133 @@
+{
+    "CADASTRAIS": {
+        "CPF": "87699281500",
+        "NOME": "JOAQUIM DOS SANTOS NETO",
+        "NOME_MAE": "IVONE DOS SANTOS SOARES",
+        "NASCTO": "23\/09\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "1148567",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12417417180",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782510",
+        "PROFISSAO": "MOTORISTA DE CAMINHAO (ROTAS REGIONAIS E INTERNACIONAIS)",
+        "SALARIO": " 1.295,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "79998513374",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999790058",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "79999286700",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "TV NONSENHO VITURINO",
+                "NUMERO": "177",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALAGOAS",
+                "CEP": "49200000",
+                "CIDADE": "ESTANCIA",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R JANDIRA DE BARROS ME",
+                "NUMERO": "19",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "BOTEQUIM",
+                "CEP": "49200000",
+                "CIDADE": "ESTANCIA",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R MANOEL MESSIAS ROCHA",
+                "NUMERO": "51",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALOGOAS",
+                "CEP": "49200000",
+                "CIDADE": "ESTANCIA",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R Q",
+                "NUMERO": "122",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALAGOAS",
+                "CEP": "49200000",
+                "CIDADE": "ESTANCIA",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1863234411",
+            "NOME": "IVONE DOS SANTOS SOARES",
+            "IDADE": "72 anos",
+            "LOCAL": "MARI\/PB",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "HIPER CARNE M   E LTDA",
+                "CNPJ": "33851289000101",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "01\/05\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FRIGO HIPER CARNE LTDA",
+                "CNPJ": "13189714000131",
+                "CIDADE": "ITABAIANA-SE",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "03\/09\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

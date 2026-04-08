@@ -1,0 +1,161 @@
+{
+    "CADASTRAIS": {
+        "CPF": "28899691851",
+        "NOME": "MARCIA LUZIA DA SILVA",
+        "NOME_MAE": "LUZIA MARIA DA SILVA",
+        "NASCTO": "21\/10\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "271656830124",
+        "NIT": "13590554818",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "517330",
+        "PROFISSAO": "VIGILANTE",
+        "SALARIO": " 1.351,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1159213169",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11999442631",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11930973511",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11986758328",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11959213169",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marcia_288k@lexxanet.com.br",
+            "marcia_rocksp@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MARCIO BALASSI",
+                "NUMERO": "5",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA ROSCHEL",
+                "CEP": "04891100",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MARCIO BALASSI",
+                "NUMERO": "42",
+                "COMPLEMENTO": "CASA 01",
+                "BAIRRO": "VILA ROSCHEL",
+                "CEP": "04891100",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "11429410",
+            "NOME": "LUZIA MARIA DA SILVA",
+            "IDADE": "106 anos",
+            "LOCAL": "ARARUNA\/PB",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BELFORT SEGURANCA DE BENS E VALORES LTDA",
+                "CNPJ": "62447032000197",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "01\/04\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COMPANY SEGURANCA E VIGILANCIA S\/S LTDA",
+                "CNPJ": "05380751000102",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "06\/05\/2014",
+                "DATA_DEMISSAO": "14\/06\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "M K COMERCIO DE PRODUTOS ALIMENTICIOS LTDA",
+                "CNPJ": "14043758000545",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "05\/07\/2013",
+                "DATA_DEMISSAO": "01\/03\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "PROTEGE  PROTECAO E TRANSPORTE DE VALORES LTDA",
+                "CNPJ": "43035146004415",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "413220",
+                "DATA_ADMISSAO": "08\/08\/2007",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

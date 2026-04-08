@@ -1,0 +1,185 @@
+{
+    "CADASTRAIS": {
+        "CPF": "44195907349",
+        "NOME": "FRANCISCA DAS CHAGAS R DE VASCONCELOS",
+        "NOME_MAE": "FRANCISCA RODRIGUES OLIVEIRA",
+        "NASCTO": "09\/07\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Feminino",
+        "RG": "8910002033532",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "041638070779",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "322205",
+        "PROFISSAO": "TECNICO DE ENFERMAGEM",
+        "SALARIO": " 2.489,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8532950403",
+                "OPERADORA": "TELEMAR\/CE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8532926751",
+                "OPERADORA": "TELEMAR\/CE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "85987121097",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "85988437001",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "85988664972",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "85988972798",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "richardcraz@yahoo.com.br",
+            "agnelly@terra.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MIRTES ROCHA",
+                "NUMERO": "256",
+                "COMPLEMENTO": "AP 202",
+                "BAIRRO": "PARANGABA",
+                "CEP": "60721140",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R SANTABAIA",
+                "NUMERO": "100",
+                "COMPLEMENTO": "AP 309",
+                "BAIRRO": "PARANGABA",
+                "CEP": "60720630",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R COSTA FREIRE",
+                "NUMERO": "34",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARANGABA",
+                "CEP": "60721045",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R NEREU RAMOS",
+                "NUMERO": "1511",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL PERI",
+                "CEP": "60730017",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "AV GEN OSORIO DE PAIVA",
+                "NUMERO": "1431",
+                "COMPLEMENTO": "AP 201",
+                "BAIRRO": "PARANGABA",
+                "CEP": "60720901",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "AV AUGUSTO DOS ANJOS",
+                "NUMERO": "489",
+                "COMPLEMENTO": "AP 108",
+                "BAIRRO": "PARANGABA",
+                "CEP": "60720971",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "127386548",
+            "NOME": "FRANCISCA RODRIGUES OLIVEIRA",
+            "IDADE": "78 anos",
+            "LOCAL": "MARICA\/RJ",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "CARLOS RICHARD VASCONCELOS HOLANDA",
+            "IDADE": "",
+            "LOCALIDADE": "FORTALEZA\/CE",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "8068924396"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "UNIMED FORTALEZA SOCIEDADE COOPERATIVA MEDICA LTDA",
+            "CNPJ": "05868278001766",
+            "CIDADE": "FORTALEZA-CE",
+            "PROFISSAO": "322205",
+            "DATA_ADMISSAO": "05\/11\/2009",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

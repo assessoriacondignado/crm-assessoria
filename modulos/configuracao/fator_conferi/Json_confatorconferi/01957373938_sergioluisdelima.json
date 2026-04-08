@@ -1,0 +1,228 @@
+{
+    "CADASTRAIS": {
+        "CPF": "1957373938",
+        "NOME": "SERGIO LUIS DE LIMA",
+        "NOME_MAE": "LIDIR DO ROCIO FARIA DE LIMA",
+        "NASCTO": "04\/04\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "063098880612",
+        "NIT": "12542636747",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "252210",
+        "PROFISSAO": "CONTADOR",
+        "SALARIO": " 8.114,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4133839703",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1135629409",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "45991898786",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41991899786",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41984746341",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41991898786",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "27\/07\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "41996861460",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "e_sergiol@yahoo.com.br",
+            "sergiol@herbarium.net",
+            "e_sergiol@yahoo.com",
+            "sergio.lima@icloud.com",
+            "e_sergiol@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R TEN CORONEL VILAGRAN CABRITA",
+                "NUMERO": "153",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOQUEIRAO",
+                "CEP": "81750270",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "AV NS DA LUZ",
+                "NUMERO": "1330",
+                "COMPLEMENTO": "",
+                "BAIRRO": "HUGO LANGE",
+                "CEP": "80040265",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R NEBRASKA",
+                "NUMERO": "60",
+                "COMPLEMENTO": "AP 32",
+                "BAIRRO": "BROOKLIN NOVO",
+                "CEP": "04560010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "TV FERDINANDO ARISTIDES MOLETA",
+                "NUMERO": "117",
+                "COMPLEMENTO": "FDS C",
+                "BAIRRO": "AFONSO PENA",
+                "CEP": "83045090",
+                "CIDADE": "SAO JOSE DOS PINHAIS",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "AVENIDA CASTRO ALVES",
+                "NUMERO": "472",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "BONECA DO IGUACU",
+                "CEP": "83040520",
+                "CIDADE": "SAO JOSE DOS PINHAIS",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "RUA TIBAGI",
+                "NUMERO": "723",
+                "COMPLEMENTO": "AP 93",
+                "BAIRRO": "CENTRO",
+                "CEP": "80060110",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "1749474964",
+                "NOME": "LIDIR DO ROCIO FARIA DE LIMA",
+                "IDADE": "71 anos",
+                "LOCAL": "SAO JOSE DOS PINHAIS\/PR",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "3103839944",
+                "NOME": "CLAUDEMIR DE LIMA",
+                "IDADE": "46 anos",
+                "LOCAL": "CURITIBA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "3103884907",
+                "NOME": "CLAUDIA REGINA DE LIMA",
+                "IDADE": "45 anos",
+                "LOCAL": "SAO JOSE DOS PINHAIS\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CORBION PRODUTOS RENOVAVEIS LTDA",
+                "CNPJ": "13190609000546",
+                "CIDADE": "ARAUCARIA-PR",
+                "PROFISSAO": "252210",
+                "DATA_ADMISSAO": "12\/04\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "HERBARIUM LABORATORIO BOTANICO LTDA.",
+                "CNPJ": "78950011000120",
+                "CIDADE": "COLOMBO-PR",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "04\/12\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "BRITANIA ELETRODOMESTICOS SA",
+                "CNPJ": "76492701000157",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "252210",
+                "DATA_ADMISSAO": "22\/11\/2010",
+                "DATA_DEMISSAO": "03\/12\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

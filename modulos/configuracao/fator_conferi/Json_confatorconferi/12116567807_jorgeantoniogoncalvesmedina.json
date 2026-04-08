@@ -1,0 +1,255 @@
+{
+    "CADASTRAIS": {
+        "CPF": "12116567807",
+        "NOME": "JORGE ANTONIO GONCALVES MEDINA",
+        "NOME_MAE": "MARIA HELENA GONCALVES MEDINA",
+        "NASCTO": "08\/04\/1975",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "237719435",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "181744380141",
+        "NIT": "12422788167",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1125113363",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1125321486",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11965813193",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11988598387",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11997989102",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11984755580",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11995951991",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "jg.medina@bol.com.br",
+            "medina_sp@hotmail.com",
+            "medidrones@gmail.com",
+            "jg.medina@terra.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DA LAGOA FEIA",
+                "NUMERO": "86",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL CARMOSINA",
+                "CEP": "08290410",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R TUIUTI",
+                "NUMERO": "606",
+                "COMPLEMENTO": "BL 3 AP 204",
+                "BAIRRO": "TATUAPE",
+                "CEP": "03081015",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AL DR ARMANDO SALLES DE OLIVEIRA",
+                "NUMERO": "1440",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL INDUST",
+                "CEP": "17800000",
+                "CIDADE": "ADAMANTINA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO JANUARIO FERRAZ",
+                "NUMERO": "50",
+                "COMPLEMENTO": "C 2",
+                "BAIRRO": "JD ETELVINA",
+                "CEP": "08431740",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R STO ANTONIO",
+                "NUMERO": "1046",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BELA VISTA",
+                "CEP": "01314001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DA QUITANDA",
+                "NUMERO": "96",
+                "COMPLEMENTO": "ZELADOR",
+                "BAIRRO": "CENTRO",
+                "CEP": "01012907",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOSE DE OLIVEIRA JR",
+                "NUMERO": "27",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM DAS ALAMANDAS",
+                "CEP": "17800000",
+                "CIDADE": "ADAMANTINA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "ANTONIETA DAL PONTE TOFFOLI",
+                "NUMERO": "145",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RESIDENCIAL ELDORADO II",
+                "CEP": "17800000",
+                "CIDADE": "ADAMANTINA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "30972586806",
+                "NOME": "MARIA HELENA GONCALVES MEDINA",
+                "IDADE": "71 anos",
+                "LOCAL": "ADAMANTINA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "22951764847",
+                "NOME": "LUCIANA GONCALVES MEDINA",
+                "IDADE": "39 anos",
+                "LOCAL": "ADAMANTINA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ALIPIO AJALA MEDINA",
+            "IDADE": "",
+            "LOCALIDADE": "SAO PAULO\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "16480848187"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SOFTPLAN PLANEJAMENTO E SISTEMAS S\/A",
+                "CNPJ": "82845322000104",
+                "CIDADE": "FLORIANOPOLIS-SC",
+                "PROFISSAO": "317110",
+                "DATA_ADMISSAO": "01\/11\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CICERO CARLOS SANTOS DA CUNHA",
+                "CNPJ": "21583621000115",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "04\/01\/2021",
+                "DATA_DEMISSAO": "03\/04\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "DENTMED - MATERIAIS MEDICOS E ODONTOLOGICOS LTDA",
+                "CNPJ": "03526176000170",
+                "CIDADE": "ADAMANTINA-SP",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "01\/12\/2008",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "MEDICODE DESENVOLVIMENTO DE SOFTWARE LTDA",
+            "CNPJ": "41321533000152",
+            "CIDADE": "SAO PAULO-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20210323",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

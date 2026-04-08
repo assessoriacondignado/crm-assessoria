@@ -1,0 +1,276 @@
+{
+    "CADASTRAIS": {
+        "CPF": "62272250610",
+        "NOME": "LUCIANO RODRIGUES SABIAO",
+        "NOME_MAE": "LIGIA MARIA RODRIGUES SABIAO",
+        "NASCTO": "29\/03\/1970",
+        "IDADE": "56 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212410",
+        "PROFISSAO": "ANALISTA DE REDES E DE COMUNICACAO DE DADOS",
+        "SALARIO": " 9.459,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2122868624",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2124464105",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2136275832",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "15\/10\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3534221508",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2137157656",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "35999811508",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "01\/04\/2020",
+                "TIPO_TEL": "MOVEL POS-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31982135249",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "35910119995",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21988632903",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "lucianorod@yahoo.com.br",
+            "lucianorod@yahoo.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "TV PROFA EXPEDITA BARBOSA",
+                "NUMERO": "76",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "37550045",
+                "CIDADE": "POUSO ALEGRE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R WENCESLAU PEREIRA VALIM",
+                "NUMERO": "245",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MARICE VALIM",
+                "CEP": "37553032",
+                "CIDADE": "POUSO ALEGRE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R PREF OSWALDO MENDONCA",
+                "NUMERO": "84",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S GERALDO",
+                "CEP": "37558039",
+                "CIDADE": "POUSO ALEGRE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R RUBEM BERTA",
+                "NUMERO": "87",
+                "COMPLEMENTO": "JACAREPAGUA",
+                "BAIRRO": "TAQUARA",
+                "CEP": "22723450",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "PC SENADOR JOSE BENTO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "37550035",
+                "CIDADE": "POUSO ALEGRE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RUA MARQUES DE OLINDA",
+                "NUMERO": "6",
+                "COMPLEMENTO": "APT 901",
+                "BAIRRO": "BOTAFOGO",
+                "CEP": "22251040",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA MARQUES DE OLINDA",
+                "NUMERO": "61",
+                "COMPLEMENTO": "BL 1 APT 901",
+                "BAIRRO": "BOTAFOGO",
+                "CEP": "22251040",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "34209263672",
+                "NOME": "LIGIA MARIA RODRIGUES SABIAO",
+                "IDADE": "83 anos",
+                "LOCAL": "POUSO ALEGRE\/MG",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "96212764620",
+                "NOME": "LEONARDO RODRIGUES SABIAO",
+                "IDADE": "49 anos",
+                "LOCAL": "POUSO ALEGRE\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CLIENT CO SERVICOS DE REDE NORTE S.A.",
+                "CNPJ": "53420538000111",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "212410",
+                "DATA_ADMISSAO": "01\/12\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "OI S.A. - EM RECUPERACAO JUDICIAL",
+                "CNPJ": "76535764002863",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "212410",
+                "DATA_ADMISSAO": "01\/11\/2020",
+                "DATA_DEMISSAO": "30\/11\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "OI S.A. - EM RECUPERACAO JUDICIAL",
+                "CNPJ": "76535764003835",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "212410",
+                "DATA_ADMISSAO": "01\/06\/2022",
+                "DATA_DEMISSAO": "01\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "OI S.A. - EM RECUPERACAO JUDICIAL",
+                "CNPJ": "76535764000143",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "12\/02\/2004",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "TELEMAR NORTE LESTE S\/A. - EM RECUPERACAO JUDICIAL",
+                "CNPJ": "33000118031210",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "212410",
+                "DATA_ADMISSAO": "01\/05\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "L.R.SABIAO - DISTRIBUIDORA DE EQUIPAMENTOS DE TECNOLOGIA LTDA",
+            "CNPJ": "35364857000175",
+            "CIDADE": "POUSO ALEGRE-MG",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20191031",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

@@ -1,0 +1,222 @@
+{
+    "CADASTRAIS": {
+        "CPF": "13340988838",
+        "NOME": "LUCIMAR JARDIM FRABIO",
+        "NOME_MAE": "EVA FERREIRA JARDIM",
+        "NASCTO": "19\/07\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "204996530183",
+        "NIT": "1240274681",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411010",
+        "PROFISSAO": "ASSISTENTE ADMINISTRATIVO",
+        "SALARIO": " 2.367,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1732253021",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "17996340254",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "17988028072",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "17981791069",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "01\/07\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "17981108344",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11996025584",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "jardim.lu@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CHILE",
+                "NUMERO": "216",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD AMERICA",
+                "CEP": "15055370",
+                "CIDADE": "SAO JOSE DO RIO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PARTICULAR",
+                "NUMERO": "500",
+                "COMPLEMENTO": "BL 6 AP 631",
+                "BAIRRO": "JD REGINA MAURA",
+                "CEP": "15055165",
+                "CIDADE": "SAO JOSE DO RIO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV DR ANILOEL NAZARETH",
+                "NUMERO": "5510",
+                "COMPLEMENTO": "AP 32",
+                "BAIRRO": "PRQ RESIDENCIAL COMENDADOR MANCOR DAUD",
+                "CEP": "15070565",
+                "CIDADE": "SAO JOSE DO RIO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PARTICULAR",
+                "NUMERO": "500",
+                "COMPLEMENTO": "BL 6 AP 631",
+                "BAIRRO": "VL SINIBALDI",
+                "CEP": "15084147",
+                "CIDADE": "SAO JOSE DO RIO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV S JUDAS TADEU",
+                "NUMERO": "790",
+                "COMPLEMENTO": "BL A AP 33",
+                "BAIRRO": "VL S JUDAS TADEU",
+                "CEP": "15075290",
+                "CIDADE": "SAO JOSE DO RIO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PROJETAD B",
+                "NUMERO": "500",
+                "COMPLEMENTO": "BL 6 AP 31",
+                "BAIRRO": "JD JANDIRA",
+                "CEP": "15057524",
+                "CIDADE": "SAO JOSE DO RIO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV VINTE E CINCO DE JANEIRO",
+                "NUMERO": "1325",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL ANCHIETA",
+                "CEP": "15050130",
+                "CIDADE": "SAO JOSE DO RIO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DORCELINO NARCISO",
+                "NUMERO": "500",
+                "COMPLEMENTO": "BL6 A631",
+                "BAIRRO": "JD JANDIRA",
+                "CEP": "15057522",
+                "CIDADE": "SAO JOSE DO RIO PRETO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1981128824",
+            "NOME": "EVA FERREIRA JARDIM",
+            "IDADE": "74 anos",
+            "LOCAL": "",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "OLIVEIRA   CAMPOS RIO PRETO LTDA",
+                "CNPJ": "03672001000170",
+                "CIDADE": "SAO JOSE DO RIO PRETO-SP",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "01\/02\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CLASSIC COMERCIO DE ATACADO DE EMBALAGENS RIO PRETO LTDA",
+                "CNPJ": "35651935000112",
+                "CIDADE": "SAO JOSE DO RIO PRETO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "02\/01\/2020",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "MOND'ORO INDUSTRIA E COMERCIO DE JOIAS LTDA",
+                "CNPJ": "04835834000178",
+                "CIDADE": "SAO JOSE DO RIO PRETO-SP",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "02\/01\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "MARIAM LTDA",
+                "CNPJ": "01849948000189",
+                "CIDADE": "SAO JOSE DO RIO PRETO-SP",
+                "PROFISSAO": "422105",
+                "DATA_ADMISSAO": "01\/07\/1998",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

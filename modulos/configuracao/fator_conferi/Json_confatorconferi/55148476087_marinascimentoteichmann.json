@@ -1,0 +1,206 @@
+{
+    "CADASTRAIS": {
+        "CPF": "55148476087",
+        "NOME": "MARI NASCIMENTO TEICHMANN",
+        "NOME_MAE": "CLEUSA MARIA BRUM DO NASCIMENTO",
+        "NASCTO": "16\/04\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Feminino",
+        "RG": "2047854498",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "RS",
+        "TITULO_ELEITOR": "",
+        "NIT": "1232584773 ",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "223405",
+        "PROFISSAO": "FARMACEUTICO",
+        "SALARIO": " 7.439,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5533811300",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "5533811280",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "55999421553",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "55984320099",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "55996380858",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marifarmaciamultifarma@gmail.com",
+            "marifar@bol.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "STO ANGELO",
+                "NUMERO": "1784",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "98865000",
+                "CIDADE": "SAO MIGUEL DAS MISSOES",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "AV IPIRANGA",
+                "NUMERO": "207",
+                "COMPLEMENTO": "",
+                "BAIRRO": "KURTZ",
+                "CEP": "98804000",
+                "CIDADE": "SANTO ANGELO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R STO ANGELO",
+                "NUMERO": "1366",
+                "COMPLEMENTO": "1046",
+                "BAIRRO": "CENTRO",
+                "CEP": "98865000",
+                "CIDADE": "SAO MIGUEL DAS MISSOES",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R STO ANGELO",
+                "NUMERO": "1271",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "98865000",
+                "CIDADE": "SAO MIGUEL DAS MISSOES",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R STO ANGELO",
+                "NUMERO": "1874",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CENTRO",
+                "CEP": "98865000",
+                "CIDADE": "SAO MIGUEL DAS MISSOES",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R FREDERICO COLETO",
+                "NUMERO": "545",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COHAB",
+                "CEP": "98802260",
+                "CIDADE": "SANTO ANGELO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "AVENIDA BROGES DO CANTO",
+                "NUMERO": "1241",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "CENTRO",
+                "CEP": "98865000",
+                "CIDADE": "SAO MIGUEL DAS MISSOES",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "3011111030",
+            "NOME": "FERNANDA NASCIMENTO TEICHMANN",
+            "IDADE": "30 anos",
+            "LOCAL": "SANTO ANGELO\/RS",
+            "PARENTESCO": "FILHO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "CINTHIA BRANDAO FRIZO",
+            "IDADE": "",
+            "LOCALIDADE": "SAO MIGUEL\/RS",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "91875390049"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO HOSPITALAR DE CARIDADE BENEFICENTE SAO MIGUEL",
+                "CNPJ": "89931760000126",
+                "CIDADE": "SAO MIGUEL DAS MISSOES-RS",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "15\/04\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MUNICIPIO DE SAO MIGUEL DAS MISSOES",
+                "CNPJ": "89971758000180",
+                "CIDADE": "SAO MIGUEL DAS MISSOES-RS",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "03\/05\/2007",
+                "DATA_DEMISSAO": "{Ã±\/{Ã±\/2023",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "MUNARETO COMERCIO DE MEDICAMENTOS LTDA",
+                "CNPJ": "10563318000134",
+                "CIDADE": "SAO MIGUEL DAS MISSOES-RS",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "27\/04\/2009",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

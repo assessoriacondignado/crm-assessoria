@@ -1,0 +1,260 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25903407889",
+        "NOME": "DANIELA CRISTINA OLIVEIRA DA SILVA",
+        "NOME_MAE": "HELENA DE OLIVEIRA ALVES SILVA",
+        "NASCTO": "20\/07\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "222148370132",
+        "NIT": "12713795771",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411010",
+        "PROFISSAO": "ASSISTENTE ADMINISTRATIVO",
+        "SALARIO": " 5.788,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1126916255",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "01\/02\/1990",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1134725515",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "04\/02\/2010",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1159280379",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1159291529",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11937467781",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11991518904",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11999151890",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11959291529",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "danipam@ig.com.br",
+            "danialvesjr@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV ATLANTICA",
+                "NUMERO": "2401",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD TRES MARIAS",
+                "CEP": "04772003",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV CAETES",
+                "NUMERO": "377",
+                "COMPLEMENTO": "AP 209 BRO VL",
+                "BAIRRO": "TUPI",
+                "CEP": "11703270",
+                "CIDADE": "PRAIA GRANDE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "TV UM",
+                "NUMERO": "48",
+                "COMPLEMENTO": "R PALMARES",
+                "BAIRRO": "MRO DO INDIO",
+                "CEP": "05873271",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DR RENATO PAES DE BARROS",
+                "NUMERO": "714",
+                "COMPLEMENTO": "SL 113",
+                "BAIRRO": "ITAIM BIBI",
+                "CEP": "04530001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R GIUSEPPE TARTINI",
+                "NUMERO": "15",
+                "COMPLEMENTO": "AP23BLA1",
+                "BAIRRO": "JD S BERNARDO",
+                "CEP": "04844300",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA GIUSEPPE TARTINI",
+                "NUMERO": "0",
+                "COMPLEMENTO": "BL A3 AP 13",
+                "BAIRRO": "JARDIM SAO BERNARDO",
+                "CEP": "04844300",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "80930387368",
+                "NOME": "HELENA DE OLIVEIRA ALVES SILVA",
+                "IDADE": "62 anos",
+                "LOCAL": "ARARIPE\/CE",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "3959891326",
+                "NOME": "ANA PAULA INACIO DE OLIVEIRA",
+                "IDADE": "35 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "27977694816",
+                "NOME": "DANIEL JESUS OLIVEIRA ALVES SILVA",
+                "IDADE": "45 anos",
+                "LOCAL": "ITANHAEM\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "97680494304",
+                "NOME": "MARCIA INACIO DE OLIVEIRA SIEBRA",
+                "IDADE": "43 anos",
+                "LOCAL": "ARARIPE\/CE",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "HELENA DE OLIVEIRA ALVES",
+            "IDADE": "",
+            "LOCALIDADE": "SAO PAULO\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "38766353815"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "EXPER COMERCIO E IMPORTACAO LTDA",
+                "CNPJ": "01178504000169",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142115",
+                "DATA_ADMISSAO": "01\/04\/2016",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "DBI COMERCIO E IMPORTACAO LTDA",
+                "CNPJ": "07295190000160",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "410215",
+                "DATA_ADMISSAO": "02\/01\/2013",
+                "DATA_DEMISSAO": "01\/04\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ITALSPEED AUTOMOTIVE LTDA - EM RECUPERACAO JUDICIAL EM RECUPERACAO JUDICIAL",
+                "CNPJ": "01941678000131",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "23\/07\/2012",
+                "DATA_DEMISSAO": "312",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "MDC ON LINE - COMUNICACAO ESTRATEGICA LTDA",
+                "CNPJ": "06893403000193",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "08\/07\/2008",
+                "DATA_DEMISSAO": "20\/02\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

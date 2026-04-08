@@ -1,0 +1,25 @@
+# Arquivo de conexão com banco de dados (NUNCA versionar - contém senhas)
+conexao.php
+
+# Logs gerados pelo sistema
+logs_consulta/
+logs_v8/
+logs_v8_propostas/
+
+# Arquivos de upload e temporários
+*.tmp
+*.log
+uploads/
+
+# CSVs de importação (dados de clientes, não são código)
+modulos/banco_dados/Aquivo_importacao/
+txt/
+
+# Configurações do servidor
+.env
+.env.*
+index.nginx-debian.html
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db

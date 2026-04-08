@@ -1,0 +1,178 @@
+{
+    "CADASTRAIS": {
+        "CPF": "913704938",
+        "NOME": "NELIO RODRIGO FRANCELINO",
+        "NOME_MAE": "JURACI NUNES FRANCELINO",
+        "NASCTO": "05\/12\/1984",
+        "IDADE": "41 anos",
+        "SEXO": "Masculino",
+        "RG": "85817850",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "089542190639",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "720215",
+        "PROFISSAO": "MESTRE (INDUSTRIA DE MAQUINAS E OUTROS EQUIPAMENTOS MECANICOS)",
+        "SALARIO": " 10.999,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1159287923",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "4136422004",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4132278400",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "41999361172",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41997507985",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOSE WISOCKI",
+                "NUMERO": "271",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TINDIQUERA",
+                "CEP": "83708230",
+                "CIDADE": "ARAUCARIA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R FRANCISCO SOBANIA",
+                "NUMERO": "1300",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE INDUSTRIAL",
+                "CEP": "81460130",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R UM",
+                "NUMERO": "325",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S GONCALO",
+                "CEP": "31814356",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R MARIA SOBANIA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TINDIQUERA",
+                "CEP": "83708290",
+                "CIDADE": "ARAUCARIA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "RUA JOAO WOLSKI",
+                "NUMERO": "271",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "TINDIQUERA",
+                "CEP": "83708200",
+                "CIDADE": "ARAUCARIA",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "2599594995",
+                "NOME": "JURACI NUNES FRANCELINO",
+                "IDADE": "70 anos",
+                "LOCAL": "SANTA BARBARA D OESTE\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "6600494905",
+                "NOME": "SUELLEN FERNANDA FRANCELINO",
+                "IDADE": "37 anos",
+                "LOCAL": "ARAUCARIA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "8162121986",
+                "NOME": "WELLINTON HUGO FRANCELINO",
+                "IDADE": "35 anos",
+                "LOCAL": "ARAUCARIA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "ONESUBSEA DO BRASIL LTDA.",
+            "CNPJ": "05876349000105",
+            "CIDADE": "SAO JOSE DOS PINHAIS-PR",
+            "PROFISSAO": "720215",
+            "DATA_ADMISSAO": "01\/04\/2008",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "TECH SOLDA MANUTENCAO INDUSTRIAL LTDA",
+            "CNPJ": "04082671000108",
+            "CIDADE": "ARAUCARIA-PR",
+            "QUALIFICACAO": "SÃ³cio",
+            "DATA_ENTRADA": "20001006",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

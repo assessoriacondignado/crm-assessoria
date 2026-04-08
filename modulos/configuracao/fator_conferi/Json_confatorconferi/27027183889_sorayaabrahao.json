@@ -1,0 +1,175 @@
+{
+    "CADASTRAIS": {
+        "CPF": "27027183889",
+        "NOME": "SORAYA ABRAHAO",
+        "NOME_MAE": "ELIZABETE MAZETTO",
+        "NASCTO": "23\/03\/1978",
+        "IDADE": "48 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "221541000141",
+        "NIT": "1259398925",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "413115",
+        "PROFISSAO": "AUXILIAR DE FATURAMENTO",
+        "SALARIO": " 5.013,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1935219372",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1932573099",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1932570308",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1132570308",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19997733204",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19997410862",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "ban12@uol.com.br",
+            "soso@g.unicamp.br",
+            "soso@unicamp.br",
+            "sorayaabrahao@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R SINESIO DE MELO OLIVEIRA",
+                "NUMERO": "643",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD PARAISO",
+                "CEP": "13100017",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ANGELINA GAGLIARDI BORIM",
+                "NUMERO": "95",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "PQ XANGRILA",
+                "CEP": "13098102",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANGELINA GAGLIARDI BORIN",
+                "NUMERO": "95",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE XANGRILA",
+                "CEP": "13098602",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "309650801",
+                "NOME": "ELIZABETE MAZETTO",
+                "IDADE": "70 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "27285173800",
+                "NOME": "SAMYR ELIAS ABRAHAO",
+                "IDADE": "47 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "31625536879",
+                "NOME": "JULIANO MAZETTO DE FARIA",
+                "IDADE": "42 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "56339362800",
+                "NOME": "MELISSA ABRAHAO DE OLIVEIRA",
+                "IDADE": "12 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "FUNDACAO DE DESENVOLVIMENTO DA UNICAMP FUNCAMP",
+            "CNPJ": "49607336000106",
+            "CIDADE": "CAMPINAS-SP",
+            "PROFISSAO": "413115",
+            "DATA_ADMISSAO": "23\/02\/2010",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

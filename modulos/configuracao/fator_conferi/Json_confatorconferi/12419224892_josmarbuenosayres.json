@@ -1,0 +1,184 @@
+{
+    "CADASTRAIS": {
+        "CPF": "12419224892",
+        "NOME": "JOSMAR BUENOS AYRES",
+        "NOME_MAE": "JOSMIRA MARIA DA FRAGA AYRES",
+        "NASCTO": "17\/03\/1970",
+        "IDADE": "56 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "169880260159",
+        "NIT": "1219871559 ",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "314110",
+        "PROFISSAO": "TECNICO MECANICO",
+        "SALARIO": " 7.467,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1128213112",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11994189827",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11973119625",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "09\/12\/2014",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "jozmarbuenozayrez@hotmail.com",
+            "racheldeoliveira@yahoo.com.br",
+            "felipeoliveiraayres93@gmail.com",
+            "josmarbuenosayres@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ANTARES",
+                "NUMERO": "34",
+                "COMPLEMENTO": "BL C AP 202",
+                "BAIRRO": "CIDADE SATELITE SANTA BARBARA",
+                "CEP": "08340092",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MOCAMBIQUE",
+                "NUMERO": "315",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PQ ORATORIO",
+                "CEP": "09251110",
+                "CIDADE": "SANTO ANDRE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA URUGUAI",
+                "NUMERO": "609",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PQ DAS NACOES",
+                "CEP": "09280710",
+                "CIDADE": "SANTO ANDRE",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "7993513855",
+                "NOME": "JONAIR BUENOS AYRES",
+                "IDADE": "59 anos",
+                "LOCAL": "CABREUVA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "17856656859",
+                "NOME": "JUSSARA BUENOS AYRES",
+                "IDADE": "54 anos",
+                "LOCAL": "SANTO ANDRE\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "25580176830",
+                "NOME": "JONIAS BUENOS AYRES JUNIOR",
+                "IDADE": "48 anos",
+                "LOCAL": "SANTO ANDRE\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "FELIPE OLIVEIRA AYRES",
+                "IDADE": "",
+                "LOCALIDADE": "SANTO ANDRE\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "40289277817"
+            },
+            {
+                "NOME": "RACHEL DE OLIVEIRA AYRES",
+                "IDADE": "",
+                "LOCALIDADE": "SANTO ANDRE\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "15528082897"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BORRACHAS VIPAL S.A.",
+                "CNPJ": "87870952000144",
+                "CIDADE": "NOVA PRATA-RS",
+                "PROFISSAO": "314110",
+                "DATA_ADMISSAO": "10\/10\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BORRACHAS VIPAL S.A.",
+                "CNPJ": "87870952001469",
+                "CIDADE": "NOVA PRATA-RS",
+                "PROFISSAO": "314110",
+                "DATA_ADMISSAO": "10\/10\/2022",
+                "DATA_DEMISSAO": "01\/09\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "CONTITECH DO BRASIL PRODUTOS AUTOMOTIVOS E INDUSTRIAIS LTDA.",
+                "CNPJ": "08832031000110",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "911305",
+                "DATA_ADMISSAO": "01\/06\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "CAFE CARAMELLO ABC PAULISTA COMERCIO DE BEBIDAS LTDA",
+            "CNPJ": "25079512000116",
+            "CIDADE": "SANTO ANDRE-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20160623",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

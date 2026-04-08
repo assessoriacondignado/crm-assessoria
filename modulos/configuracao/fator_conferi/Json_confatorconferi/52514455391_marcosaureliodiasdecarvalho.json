@@ -1,0 +1,251 @@
+{
+    "CADASTRAIS": {
+        "CPF": "52514455391",
+        "NOME": "MARCOS AURELIO DIAS DE CARVALHO",
+        "NOME_MAE": "MARIA JOSE DIAS DE CARVALHO",
+        "NASCTO": "23\/08\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1250435658",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142705",
+        "PROFISSAO": "GERENTE DE PROJETOS E SERVICOS DE MANUTENCAO",
+        "SALARIO": " 33.767,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8532666200",
+                "OPERADORA": "TELEMAR\/CE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8534593368",
+                "OPERADORA": "TELEMAR\/CE",
+                "DATA_REFERENCIA": "26\/11\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8534763160",
+                "OPERADORA": "TELEMAR\/CE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "85989270628",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "85989509363",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "02\/12\/2012",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "85981470849",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "85999591100",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "85988891197",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marcosadiascarvalho@gmail.com",
+            "marcosdiascarvalho@bol.com.br",
+            "paulacavalcante.04@hotmail.com",
+            "mcarvalho@moinhocearense.com.br",
+            "carvalhomarcos120@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PATRICIO FLORENCIO",
+                "NUMERO": "48",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAMBEBA",
+                "CEP": "60822355",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R INACIO VASCONCELOS",
+                "NUMERO": "399",
+                "COMPLEMENTO": "AP 204",
+                "BAIRRO": "MESSEJANA",
+                "CEP": "60841535",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R INHAPI",
+                "NUMERO": "10",
+                "COMPLEMENTO": "343 A",
+                "BAIRRO": "ALVORADA",
+                "CEP": "69046120",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R INACIO VASCONCELOS",
+                "NUMERO": "329",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MESSEJANA",
+                "CEP": "60841535",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "TV LUIZ GALVAO",
+                "NUMERO": "47",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BAIRRO NOVO",
+                "CEP": "58200000",
+                "CIDADE": "GUARABIRA",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "AL DAS MARGARIDAS",
+                "NUMERO": "172",
+                "COMPLEMENTO": "Q 21",
+                "BAIRRO": "CIDADE 2000",
+                "CEP": "60190510",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R VLDOMIRO MADEIRO",
+                "NUMERO": "134",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "57420000",
+                "CIDADE": "BATALHA",
+                "ESTADO": "AL"
+            },
+            {
+                "LOGRADOURO": "R C",
+                "NUMERO": "10",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ST BOSQUE II",
+                "CEP": "73802210",
+                "CIDADE": "FORMOSA",
+                "ESTADO": "GO"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "853872740",
+            "NOME": "MARIA JOSE DIAS DE CARVALHO",
+            "IDADE": "73 anos",
+            "LOCAL": "RIO DE JANEIRO\/RJ",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ANA PAULA VIEIRA CAVALCANTE",
+                "IDADE": "",
+                "LOCALIDADE": "FORTALEZA\/CE",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "74377655353"
+            },
+            {
+                "NOME": "GABRIELA SILVEIRA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO JOSE\/SC",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "3948907951"
+            },
+            {
+                "NOME": "OLGA VIEIRA DE ASSIS",
+                "IDADE": "",
+                "LOCALIDADE": "EUSEBIO\/CE",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "5964598315"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "GRANDE MOINHO CEARENSE SA",
+            "CNPJ": "07199805000155",
+            "CIDADE": "FORTALEZA-CE",
+            "PROFISSAO": "142705",
+            "DATA_ADMISSAO": "06\/12\/1994",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "MAKES COSMETICOS E ESTETICA LTDA",
+            "CNPJ": "14455589000127",
+            "CIDADE": "FORTALEZA-CE",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20111013",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

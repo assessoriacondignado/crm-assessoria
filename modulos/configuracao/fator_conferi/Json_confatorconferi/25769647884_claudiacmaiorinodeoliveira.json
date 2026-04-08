@@ -1,0 +1,313 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25769647884",
+        "NOME": "CLAUDIA C MAIORINO DE OLIVEIRA",
+        "NOME_MAE": "SUELY MENDONCA MAIORINO",
+        "NASCTO": "19\/11\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "228423200116",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1126043682",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1126069073",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1126069073",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1126069267",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11974694506",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11997943738",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11997945098",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11972975734",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "drogariaheras@terra.com.br",
+            "claudiamaiorino@uol.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DOS PATIS",
+                "NUMERO": "63",
+                "COMPLEMENTO": "1",
+                "BAIRRO": "VL NOVA CACHOEIRINHA",
+                "CEP": "02613000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOAO PAULINO DE CARVALHO",
+                "NUMERO": "67",
+                "COMPLEMENTO": "",
+                "BAIRRO": "GRAVATA CENTRO",
+                "CEP": "55641170",
+                "CIDADE": "GRAVATA",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R CAP JOAO ROSA DA CRUZ",
+                "NUMERO": "81",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AGUA RASA",
+                "CEP": "03179080",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R EVARISTO DA VEIGA",
+                "NUMERO": "108",
+                "COMPLEMENTO": "BL B AP 7",
+                "BAIRRO": "CATUMBI",
+                "CEP": "03021090",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R TAPATI",
+                "NUMERO": "63",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AGUA RASA",
+                "CEP": "03179030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA BARAO DE PENEDO",
+                "NUMERO": "167",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AGUA RASA",
+                "CEP": "03179070",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA SAPUCAIA",
+                "NUMERO": "1010",
+                "COMPLEMENTO": "AP 132",
+                "BAIRRO": "ALTO DA MOOCA",
+                "CEP": "03170050",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA BARAO DE PENEDO",
+                "NUMERO": "164",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AGUA RASA",
+                "CEP": "03179070",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "15718375828",
+                "NOME": "SUELY MENDONCA MAIORINO",
+                "IDADE": "73 anos",
+                "LOCAL": "VARZEA PAULISTA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "22185257803",
+                "NOME": "CATIA CRISTIANE MAIORINO PANZOLDO",
+                "IDADE": "44 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "26629513894",
+                "NOME": "CARLA CRISTIANE MAIORINO",
+                "IDADE": "47 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ACALANTO CLINICA MULTIDISCIPLINAR LTDA.",
+                "CNPJ": "10592719000112",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "25\/07\/2024",
+                "DATA_DEMISSAO": "01\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PREVENT SENIOR PRIVATE OPERADORA DE SAUDE LTDA",
+                "CNPJ": "00461479003189",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "11\/08\/2015",
+                "DATA_DEMISSAO": "14\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SPDM - ASSOCIACAO PAULISTA PARA O DESENVOLVIMENTO DA MEDICINA",
+                "CNPJ": "61699567005151",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "09\/12\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "NOTRE DAME INTERMEDICA SAUDE S.A.",
+                "CNPJ": "44649812023502",
+                "CIDADE": "GUARULHOS-SP",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "01\/08\/2024",
+                "DATA_DEMISSAO": "12\/11\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PREVENT SENIOR PRIVATE OPERADORA DE SAUDE LTDA",
+                "CNPJ": "00461479009462",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "11\/11\/2020",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "PREVENT SENIOR PRIVATE OPERADORA DE SAUDE LTDA",
+                "CNPJ": "00461479004150",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "11\/08\/2015",
+                "DATA_DEMISSAO": "01\/04\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "PREVENT SENIOR PRIVATE OPERADORA DE SAUDE LTDA",
+                "CNPJ": "00461479003006",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "01\/04\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "FARMA FAMILIA COSTA BARROS LTDA",
+                "CNPJ": "20093252000110",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "08\/05\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "DROGARIA MEDICVIP LTDA",
+                "CNPJ": "52535002000189",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "10\/04\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

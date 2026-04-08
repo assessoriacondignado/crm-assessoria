@@ -1,0 +1,174 @@
+{
+    "CADASTRAIS": {
+        "CPF": "46666168291",
+        "NOME": "RAIMUNDO NONATO SILVA DE SOUZA",
+        "NOME_MAE": "BENEDITA SILVA DE SOUZA",
+        "NASCTO": "05\/04\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "64701",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1258277303",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "410105",
+        "PROFISSAO": "SUPERVISOR ADMINISTRATIVO",
+        "SALARIO": " 4.097,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9631981500",
+                "OPERADORA": "TELEMAR\/AP",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9632251394",
+                "OPERADORA": "TELEMAR\/AP",
+                "DATA_REFERENCIA": "23\/08\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9632257394",
+                "OPERADORA": "TELEMAR\/AP",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "96991471805",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "96988076674",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/04\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "96991227846",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "raimundo.n.s@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "TV UM DA RODOVIA DO PACOVAL",
+                "NUMERO": "126",
+                "COMPLEMENTO": "SEGUNDA TV",
+                "BAIRRO": "PACOVAL",
+                "CEP": "68908277",
+                "CIDADE": "MACAPA",
+                "ESTADO": "AP"
+            },
+            {
+                "LOGRADOURO": "AV ADOLFO LOUREIRO FRANCA",
+                "NUMERO": "300",
+                "COMPLEMENTO": "1002",
+                "BAIRRO": "CB BRANCO",
+                "CEP": "58045080",
+                "CIDADE": "JOAO PESSOA",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "TV DOIS",
+                "NUMERO": "126",
+                "COMPLEMENTO": "PACOVAL",
+                "BAIRRO": "PERPETUO SOCORRO",
+                "CEP": "68905516",
+                "CIDADE": "MACAPA",
+                "ESTADO": "AP"
+            },
+            {
+                "LOGRADOURO": "ROD DO PACOVAL",
+                "NUMERO": "126",
+                "COMPLEMENTO": "SEG TV",
+                "BAIRRO": "PACOVAL",
+                "CEP": "68950000",
+                "CIDADE": "AMAPA",
+                "ESTADO": "AP"
+            },
+            {
+                "LOGRADOURO": "TRAV SEGUNDA DA RODOVIA DO PACOVAL",
+                "NUMERO": "126",
+                "COMPLEMENTO": "PROXIMO ACADEMIA POINT  FITNE",
+                "BAIRRO": "PACOVAL",
+                "CEP": "68908278",
+                "CIDADE": "MACAPA",
+                "ESTADO": "AP"
+            },
+            {
+                "LOGRADOURO": "2 TRAV DO PACOVAL",
+                "NUMERO": "126",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PACOVAL",
+                "CEP": "68908245",
+                "CIDADE": "MACAPA",
+                "ESTADO": "AP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1097398501",
+            "NOME": "BENEDITA SILVA DE SOUZA",
+            "IDADE": "46 anos",
+            "LOCAL": "JUAZEIRO\/BA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "DOMESTILAR LTDA",
+            "CNPJ": "00310506000105",
+            "CIDADE": "MACAPA-AP",
+            "PROFISSAO": "410105",
+            "DATA_ADMISSAO": "02\/10\/2006",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,157 @@
+{
+    "CADASTRAIS": {
+        "CPF": "19821273840",
+        "NOME": "ANDREIA GABRIEL FERREIRA",
+        "NOME_MAE": "MARIA INES FERREIRA",
+        "NASCTO": "25\/08\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "241264360175",
+        "NIT": "1240224149",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "354125",
+        "PROFISSAO": "ASSISTENTE DE VENDAS",
+        "SALARIO": " 7.335,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1532592589",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1532058800",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1532058800",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "15981483104",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15991761659",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15991342659",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "andreia@cpb.com.br",
+            "andreialembrancas@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOSE AGUIAR ROST",
+                "NUMERO": "105",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD WANDERLEY",
+                "CEP": "18277570",
+                "CIDADE": "TATUI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PAULO ORSI PRIMO",
+                "NUMERO": "115",
+                "COMPLEMENTO": "575",
+                "BAIRRO": "JD TOKIO",
+                "CEP": "18279590",
+                "CIDADE": "TATUI",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "70287767",
+                "NOME": "MARIA INES FERREIRA",
+                "IDADE": "85 anos",
+                "LOCAL": "COLATINA\/ES",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "50911581898",
+                "NOME": "EVELYN VITORIA GABRIEL RAMOS PINTO",
+                "IDADE": "19 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "50911656812",
+                "NOME": "KELVYN GABRIEL RAMOS PINTO",
+                "IDADE": "17 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "CASA PUBLICADORA BRASILEIRA",
+            "CNPJ": "44194660000126",
+            "CIDADE": "TATUI-SP",
+            "PROFISSAO": "354125",
+            "DATA_ADMISSAO": "11\/10\/1994",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

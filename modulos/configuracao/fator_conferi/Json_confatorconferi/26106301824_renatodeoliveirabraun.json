@@ -1,0 +1,249 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26106301824",
+        "NOME": "RENATO DE OLIVEIRA BRAUN",
+        "NOME_MAE": "RACHEL DE OLIVEIRA BRAUN",
+        "NASCTO": "16\/07\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "268482330116",
+        "NIT": "12933322813",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142305",
+        "PROFISSAO": "GERENTE COMERCIAL",
+        "SALARIO": " 23.367,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1155037448",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1135016665",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1138925323",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "22\/09\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1138925323",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "22\/09\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1136274206",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11991586077",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11911369897",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11986857538",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11993667740",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11981337900",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "rd.braun@bol.com.br",
+            "rbraun@gmail.com",
+            "renato.braun@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DR AMANDO FRANCO SOARES CAIUBY",
+                "NUMERO": "250",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ BAIRRO MORUMBI",
+                "CEP": "05640020",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R NELSON GAMA DE OLIVEIRA",
+                "NUMERO": "739",
+                "COMPLEMENTO": "AP  Apartamento  153 BL  Blocos  B",
+                "BAIRRO": "VILA ANDRADE",
+                "CEP": "05734150",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AL ITU",
+                "NUMERO": "78",
+                "COMPLEMENTO": "AP 1305",
+                "BAIRRO": "JARDIM PAULISTA",
+                "CEP": "01421000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOUTOR PLINIO BARRETO",
+                "NUMERO": "159",
+                "COMPLEMENTO": "AP16",
+                "BAIRRO": "BELA VISTA",
+                "CEP": "01313020",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CHARLES SPENCER CHAPLIN",
+                "NUMERO": "204",
+                "COMPLEMENTO": "APTO 131",
+                "BAIRRO": "VILA ANDRADE",
+                "CEP": "05642011",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "4152376880",
+                "NOME": "RACHEL DE OLIVEIRA BRAUN",
+                "IDADE": "72 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "29107182805",
+                "NOME": "ERIKA BRAUN DE MOLLA",
+                "IDADE": "46 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "FLEURY S.A.",
+                "CNPJ": "60840055000131",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "122705",
+                "DATA_ADMISSAO": "08\/11\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ELFA MEDICAMENTOS S.A",
+                "CNPJ": "09053134000730",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "10\/08\/2020",
+                "DATA_DEMISSAO": "18\/10\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "HYPERA S.A.",
+                "CNPJ": "02932074000604",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142305",
+                "DATA_ADMISSAO": "04\/10\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "NORDWAND ASSESSORIA EMPRESARIAL LTDA.",
+            "CNPJ": "05980596000157",
+            "CIDADE": "SANTANA DE PARNAIBA-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20040909",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

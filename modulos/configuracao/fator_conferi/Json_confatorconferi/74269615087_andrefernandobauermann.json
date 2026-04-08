@@ -1,0 +1,187 @@
+{
+    "CADASTRAIS": {
+        "CPF": "74269615087",
+        "NOME": "ANDRE FERNANDO BAUERMANN",
+        "NOME_MAE": "NOEMIA BAUERMANN",
+        "NASCTO": "30\/06\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "060235570485",
+        "NIT": "12548265864",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "214905",
+        "PROFISSAO": "ENGENHEIRO DE PRODUCAO",
+        "SALARIO": " 15.899,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "5135860317",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "15\/10\/2014",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51993538890",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51991312001",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51992537579",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51991010292",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51991732828",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "fabio.cezar@br.elster.com",
+            "andre.bauermann@elonet.com.br",
+            "andre.f.bauermann@gmail.com",
+            "andre_bauermann@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R BLUMENAU",
+                "NUMERO": "68",
+                "COMPLEMENTO": "AP 407",
+                "BAIRRO": "OURO BRANCO",
+                "CEP": "93415150",
+                "CIDADE": "NOVO HAMBURGO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R ARY VICTOR DA SILVA",
+                "NUMERO": "20",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RONDONIA",
+                "CEP": "93415405",
+                "CIDADE": "NOVO HAMBURGO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA NOVA PETROPOLIS",
+                "NUMERO": "10",
+                "COMPLEMENTO": "",
+                "BAIRRO": "IDEAL",
+                "CEP": "93334390",
+                "CIDADE": "NOVO HAMBURGO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA NOVA PETROPOLIS",
+                "NUMERO": "100",
+                "COMPLEMENTO": "",
+                "BAIRRO": "IDEAL",
+                "CEP": "93334390",
+                "CIDADE": "NOVO HAMBURGO",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "68072686020",
+                "NOME": "NOEMIA BAUERMANN",
+                "IDADE": "75 anos",
+                "LOCAL": "NOVA PETROPOLIS\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "80379893053",
+                "NOME": "ISABEL CRISTINA BAUERMANN SCHMIDT",
+                "IDADE": "49 anos",
+                "LOCAL": "NOVA PETROPOLIS\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "80912893087",
+                "NOME": "BARBARA REGINA BAUERMANN NERY",
+                "IDADE": "47 anos",
+                "LOCAL": "NOVA PETROPOLIS\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TK ELEVADORES BRASIL LTDA",
+                "CNPJ": "90347840000118",
+                "CIDADE": "GUAIBA-RS",
+                "PROFISSAO": "203215",
+                "DATA_ADMISSAO": "02\/09\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ELSTER MEDICAO DE ENERGIA LTDA.",
+                "CNPJ": "05120418000156",
+                "CIDADE": "ITAJUBA-MG",
+                "PROFISSAO": "214905",
+                "DATA_ADMISSAO": "01\/20\/2004",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

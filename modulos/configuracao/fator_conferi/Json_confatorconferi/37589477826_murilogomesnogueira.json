@@ -1,0 +1,145 @@
+{
+    "CADASTRAIS": {
+        "CPF": "37589477826",
+        "NOME": "MURILO GOMES NOGUEIRA",
+        "NOME_MAE": "IARA GOMES NOGUEIRA",
+        "NASCTO": "21\/07\/1989",
+        "IDADE": "36 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "369173800159",
+        "NIT": "2106912549",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142335",
+        "PROFISSAO": "",
+        "SALARIO": " 6.651,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1156672779",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1150315088",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11982766288",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11983622972",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "murilognog@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "R POMERANIA",
+            "NUMERO": "27",
+            "COMPLEMENTO": "",
+            "BAIRRO": "INTERLAGOS",
+            "CEP": "04783120",
+            "CIDADE": "SAO PAULO",
+            "ESTADO": "SP"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "5079131837",
+                "NOME": "IARA GOMES NOGUEIRA",
+                "IDADE": "70 anos",
+                "LOCAL": "",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "27791559811",
+                "NOME": "ITALO GOMES NOGUEIRA",
+                "IDADE": "46 anos",
+                "LOCAL": "DIADEMA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "34818506893",
+                "NOME": "DANILO GOMES NOGUEIRA",
+                "IDADE": "39 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SODEXO DO BRASIL COMERCIAL S.A.",
+                "CNPJ": "49930514000135",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "252105",
+                "DATA_ADMISSAO": "07\/10\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "GOCIL SERVICOS DE VIGILANCIA E SEGURANCA LTDA - EM RECUPERACAO JUDICIAL",
+                "CNPJ": "50844182000155",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142335",
+                "DATA_ADMISSAO": "03\/06\/2013",
+                "DATA_DEMISSAO": "01\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO BRADESCO S.A.",
+                "CNPJ": "60746948611936",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "413210",
+                "DATA_ADMISSAO": "08\/02\/2010",
+                "DATA_DEMISSAO": "110",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

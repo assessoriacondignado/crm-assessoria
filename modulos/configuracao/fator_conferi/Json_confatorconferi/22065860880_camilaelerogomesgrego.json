@@ -1,0 +1,280 @@
+{
+    "CADASTRAIS": {
+        "CPF": "22065860880",
+        "NOME": "CAMILA ELERO GOMES GREGO",
+        "NOME_MAE": "MARIA DE FATIMA ELERO GOMES",
+        "NASCTO": "24\/11\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "175979240132",
+        "NIT": "12817361239",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "391125",
+        "PROFISSAO": "TECNICO DE PLANEJAMENTO DE PRODUCAO",
+        "SALARIO": " 7.221,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1939359696",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1938946609",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1938948628",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1938347846",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1938347846",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19992688008",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19997055237",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "19981426701",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "19981426701",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "19981481995",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "camilaegomes@gmail.com",
+            "camilaegomes@ig.com.br",
+            "logica@escritoriologica.com.br",
+            "camila.grego@relthy.com.br",
+            "camilagome@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R TIRADENTES",
+                "NUMERO": "3",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL AURORA",
+                "CEP": "13339080",
+                "CIDADE": "INDAIATUBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CARLOS ROSSETTI",
+                "NUMERO": "89",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIPAVA",
+                "CEP": "06080170",
+                "CIDADE": "OSASCO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "V FIRENZE",
+                "NUMERO": "88",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "JD V  PARADISO",
+                "CEP": "13331563",
+                "CIDADE": "INDAIATUBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA VERGUEIRO",
+                "NUMERO": "2409",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA MARIANA",
+                "CEP": "04101200",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CELIA MARIA CALONGA",
+                "NUMERO": "425",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "JARDIM ESPLANADA",
+                "CEP": "13331500",
+                "CIDADE": "INDAIATUBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOM JOSE",
+                "NUMERO": "701",
+                "COMPLEMENTO": "AP 74 BL LONDON PLACE",
+                "BAIRRO": "JARDIM PAU PRETO",
+                "CEP": "13330380",
+                "CIDADE": "INDAIATUBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CARLOS ROSSETTI",
+                "NUMERO": "8",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIPAVA",
+                "CEP": "06080170",
+                "CIDADE": "OSASCO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "14599338850",
+                "NOME": "MARIA DE FATIMA ELERO GOMES",
+                "IDADE": "72 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "16102385837",
+                "NOME": "EDUARDO ELERO GOMES",
+                "IDADE": "52 anos",
+                "LOCAL": "INDAIATUBA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "54633874861",
+                "NOME": "JOAO PEDRO GOMES GREGO",
+                "IDADE": "16 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "CATALENT BRASIL LTDA.",
+            "CNPJ": "45569555000782",
+            "CIDADE": "INDAIATUBA-SP",
+            "PROFISSAO": "391125",
+            "DATA_ADMISSAO": "01\/05\/2014",
+            "DATA_DEMISSAO": "",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2014"
+        }
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": [
+            {
+                "RAZAO_SOCIAL": "AVCG COMERCIO E DISTRIBUICAO LTDA",
+                "CNPJ": "22667757000176",
+                "CIDADE": "INDAIATUBA-SP",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20150617",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "ACJG SERVICOS DE APOIO ADMINISTRATIVO LTDA",
+                "CNPJ": "18978052000100",
+                "CIDADE": "INDAIATUBA-SP",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20130930",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "EDUARDO ELERO GOMES E OUTRA",
+                "CNPJ": "10143169000154",
+                "CIDADE": "ELIAS FAUSTO-SP",
+                "QUALIFICACAO": "Produtor Rural",
+                "DATA_ENTRADA": "20080710",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "ARCA - SERVICOS DE APOIO ADMINISTRATIVO LTDA",
+                "CNPJ": "09151015000125",
+                "CIDADE": "INDAIATUBA-SP",
+                "QUALIFICACAO": "SÃ³cio",
+                "DATA_ENTRADA": "20070913",
+                "VALOR_PARTICIPACAO": ""
+            }
+        ]
+    }
+}

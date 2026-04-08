@@ -1,0 +1,268 @@
+{
+    "CADASTRAIS": {
+        "CPF": "18773588865",
+        "NOME": "DANIEL DE AZEVEDO MARQUES",
+        "NOME_MAE": "ROSELI LEME DE AZEVEDO MARQUES",
+        "NASCTO": "11\/08\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "231835880141",
+        "NIT": "1247028944",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "253215",
+        "PROFISSAO": "GERENTE DE CONTAS - PESSOA FISICA E JURIDICA",
+        "SALARIO": " 19.121,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1935152712",
+                "OPERADORA": "CTBCTELECOM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1932551707",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1930141677",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "04\/02\/2011",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1921039046",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1932256469",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "14988253557",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19987688101",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19994318278",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19991650505",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19991763723",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "danielazevedomarquez@gmail.com",
+            "danieldeazevedomarques@gmail.com",
+            "azevedod2001@yahoo.com.br",
+            "danielazevedomarques@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PRES WENCESLAU",
+                "NUMERO": "375",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD PRES WENCESLAU",
+                "CEP": "13090509",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R RIBEIRAO BONITO",
+                "NUMERO": "536",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD DO TREVO",
+                "CEP": "13030120",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV GOV PEDRO DE TOLEDO",
+                "NUMERO": "451",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BONFIM",
+                "CEP": "13070752",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DR QUIRINO",
+                "NUMERO": "1658",
+                "COMPLEMENTO": "AP 34",
+                "BAIRRO": "CENTRO",
+                "CEP": "13015082",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ALCIDES GUERNELLI",
+                "NUMERO": "41",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD MIRANDA",
+                "CEP": "13034600",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA PARATIBE",
+                "NUMERO": "10",
+                "COMPLEMENTO": "",
+                "BAIRRO": "J NORDESTE",
+                "CEP": "03637000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R IRMA MARIA INES",
+                "NUMERO": "84",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM CHAPADAO",
+                "CEP": "13070030",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BARTOLOMEU BUENO DA SILVA",
+                "NUMERO": "117",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TAQUARAL",
+                "CEP": "13076230",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "55493599872",
+                "NOME": "ROSELI LEME DE AZEVEDO MARQUES",
+                "IDADE": "79 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "25001681820",
+                "NOME": "DANIELA LEME DE A MARQUES",
+                "IDADE": "50 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "EQUINIX DO BRASIL SOLUCOES DE TECNOLOGIA EM INFORMATICA LTDA.",
+                "CNPJ": "03672254000497",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "253215",
+                "DATA_ADMISSAO": "05\/06\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CIRION TECHNOLOGIES DO BRASIL LTDA",
+                "CNPJ": "72843212001385",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "142320",
+                "DATA_ADMISSAO": "16\/05\/2019",
+                "DATA_DEMISSAO": "01\/06\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "ALGAR TELECOM S\/A",
+                "CNPJ": "71208516016097",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142330",
+                "DATA_ADMISSAO": "18\/08\/2008",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

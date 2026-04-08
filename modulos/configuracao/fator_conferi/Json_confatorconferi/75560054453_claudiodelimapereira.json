@@ -1,0 +1,153 @@
+{
+    "CADASTRAIS": {
+        "CPF": "75560054453",
+        "NOME": "CLAUDIO DE LIMA PEREIRA",
+        "NOME_MAE": "CARMELITA DE L PEREIRA",
+        "NASCTO": "12\/01\/1970",
+        "IDADE": "56 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8134846071",
+            "OPERADORA": "TELEMAR\/PE",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "baixa"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "81983456014",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81987002425",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81987898402",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "81992011639",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "claudiodelimapereira@yahoo.com.br",
+            "claudiodelimapereira@yahoo.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "6 TRAVESSA PIO DOZE",
+                "NUMERO": "34",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BAIRRO NOVO DO CARMELO",
+                "CEP": "54762623",
+                "CIDADE": "CAMARAGIBE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R S ROBERTO",
+                "NUMERO": "113",
+                "COMPLEMENTO": "PX AO CABELEIR EIRO",
+                "BAIRRO": "AREEIRO",
+                "CEP": "54762605",
+                "CIDADE": "CAMARAGIBE",
+                "ESTADO": "PE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SOLUCOES SERVICOS TERCEIRIZADOS LTDA.",
+                "CNPJ": "09445502000109",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "715615",
+                "DATA_ADMISSAO": "01\/04\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVICO SOCIAL DA INDUSTRIA",
+                "CNPJ": "03910210000105",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "15\/06\/2020",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "LTL MONTAGENS INDUSTRIAIS LTDA",
+                "CNPJ": "21848490000150",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "715615",
+                "DATA_ADMISSAO": "17\/10\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ELETRO INDUSTRIAL E MONTAGENS LTDA",
+                "CNPJ": "70191069000125",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "715615",
+                "DATA_ADMISSAO": "01\/11\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

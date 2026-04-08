@@ -1,0 +1,271 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25592253877",
+        "NOME": "ANTONIO MARCIO GOMES",
+        "NOME_MAE": "MARIELENA AMABILE GOMES",
+        "NASCTO": "09\/07\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "251145390159",
+        "NIT": "12617037896",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "410105",
+        "PROFISSAO": "SUPERVISOR ADMINISTRATIVO",
+        "SALARIO": " 7.106,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1155044966",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1137593732",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1122082666",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "03\/12\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1122319700",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "05\/08\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11998322969",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11964711900",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11975311409",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16988762129",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "07\/01\/2018",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11999910161",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "jguedessimoes@gmail.com",
+            "marcio.gomes@agenciaclick.com.br",
+            "amarciogomes@linkbr.com.br",
+            "a.marciogomes@bol.com.br",
+            "a.marcio.gomes@terra.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "PC ADEMAR NORONHA NOGUEIRA",
+                "NUMERO": "148",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD PARAISO",
+                "CEP": "02417190",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R VALENTIM MAGALHAES",
+                "NUMERO": "34",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALTO DA MOOCA",
+                "CEP": "03184090",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA GARCAO TINOCO",
+                "NUMERO": "62",
+                "COMPLEMENTO": "AP23 B3",
+                "BAIRRO": "SANTANA",
+                "CEP": "02402901",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV DR FRANCISCO RANIERI",
+                "NUMERO": "269",
+                "COMPLEMENTO": "AP104 BL",
+                "BAIRRO": "LAUZANE PAULIST",
+                "CEP": "02435060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA DOUTOR FRANCISCO RANIERI",
+                "NUMERO": "564",
+                "COMPLEMENTO": "APT 94",
+                "BAIRRO": "LAUZANE PAULISTA",
+                "CEP": "02435061",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CAZUARINA",
+                "NUMERO": "199",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "VILA ESPERIA OU GIGLIO",
+                "CEP": "12947490",
+                "CIDADE": "ATIBAIA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA GARCAO TINOCO",
+                "NUMERO": "62",
+                "COMPLEMENTO": "AP 23 B4",
+                "BAIRRO": "SANTANA",
+                "CEP": "02402020",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "JULIANA GUEDES SIMOES GOMES",
+            "IDADE": "",
+            "LOCALIDADE": "SAO PAULO\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "26709338827"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "AMPFY COMUNICACAO LTDA.",
+                "CNPJ": "11248573000155",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "252105",
+                "DATA_ADMISSAO": "23\/06\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MCGARRYBOWEN BRASIL COMUNICACOES LTDA",
+                "CNPJ": "03570945000137",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142105",
+                "DATA_ADMISSAO": "18\/03\/2013",
+                "DATA_DEMISSAO": "01\/01\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "AGENCIACLICK MIDIA INTERATIVA LTDA",
+                "CNPJ": "03069949000640",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142105",
+                "DATA_ADMISSAO": "01\/01\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "DREXELL DO BRASIL INVESTIMENTOS EM TECNOLOGIA S.A.",
+                "CNPJ": "08605224000139",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "16\/05\/2012",
+                "DATA_DEMISSAO": "31\/08\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "TCI BPO - TECNOLOGIA, CONHECIMENTO E INFORMACAO LTDA - EM RECUPERACAO JUDICIAL EM RECUPERACAO JUDICIAL EM RECUPERACAO JUDICIAL",
+                "CNPJ": "03311116000725",
+                "CIDADE": "RIO CLARO-SP",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "01\/11\/2011",
+                "DATA_DEMISSAO": "603",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "B2BR BUSINESS TO BUSINESS INFORMATICA DO BRASIL S.A.",
+                "CNPJ": "01162636000100",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "01\/09\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

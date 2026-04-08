@@ -1,0 +1,230 @@
+{
+    "CADASTRAIS": {
+        "CPF": "93145730010",
+        "NOME": "EURICO HENRIQUES DA SILVA JUNIOR",
+        "NOME_MAE": "CIDENE COSTA DA SILVA",
+        "NASCTO": "02\/10\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "2063631366",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "RS",
+        "TITULO_ELEITOR": "067436560400",
+        "NIT": "1259921469",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "354130",
+        "PROFISSAO": "PROMOTOR DE VENDAS ESPECIALIZADO",
+        "SALARIO": " 8.759,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5136531003",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "5136531377",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "5136496400",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "49991230871",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "49991331705",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "49991320078",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51980090653",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51997195979",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "eurico_hzjunior@yahoo.com.br",
+            "eurico.silva@satipel.com.br",
+            "euricojunior77@hotmail.com",
+            "eurico_hsjunior@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R QUINTINO BOCAIUVA",
+                "NUMERO": "140",
+                "COMPLEMENTO": "AP 202",
+                "BAIRRO": "CENTRO",
+                "CEP": "89500022",
+                "CIDADE": "CACADOR",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "CX POSTAL",
+                "NUMERO": "13",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "95860000",
+                "CIDADE": "TAQUARI",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R BORGES DE MEDEIROS",
+                "NUMERO": "1711",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRADO",
+                "CEP": "95860000",
+                "CIDADE": "TAQUARI",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA BORGES DE MEDEIROS",
+                "NUMERO": "1695",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRADO",
+                "CEP": "95860000",
+                "CIDADE": "TAQUARI",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "AV BORGES DE MEDEIROS 0171",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COQUEIROS",
+                "CEP": "95860000",
+                "CIDADE": "TAQUARI",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA SENADOR PENA",
+                "NUMERO": "415",
+                "COMPLEMENTO": "AP 904",
+                "BAIRRO": "CENTRO",
+                "CEP": "38010400",
+                "CIDADE": "UBERABA",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "88747492015",
+                "NOME": "CIDENE COSTA DA SILVA",
+                "IDADE": "76 anos",
+                "LOCAL": "TAQUARI\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "88747506091",
+                "NOME": "LUCIANE DA SILVA DULLIUS",
+                "IDADE": "50 anos",
+                "LOCAL": "TAQUARI\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BONARDI INDUSTRIA QUIMICA LTDA",
+                "CNPJ": "08775142000132",
+                "CIDADE": "COLOMBO-PR",
+                "PROFISSAO": "354130",
+                "DATA_ADMISSAO": "16\/11\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "GUARARAPES PAINEIS S\/A",
+                "CNPJ": "08810422000134",
+                "CIDADE": "CACADOR-SC",
+                "PROFISSAO": "391205",
+                "DATA_ADMISSAO": "04\/01\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ARAUCO INDUSTRIA DE PAINEIS S.A.",
+                "CNPJ": "00606549002682",
+                "CIDADE": "MONTENEGRO-RS",
+                "PROFISSAO": "830105",
+                "DATA_ADMISSAO": "23\/06\/2008",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

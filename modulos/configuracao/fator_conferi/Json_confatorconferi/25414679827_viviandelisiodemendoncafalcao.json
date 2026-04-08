@@ -1,0 +1,295 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25414679827",
+        "NOME": "VIVIAN DELISIO DE MENDONCA FALCAO",
+        "NOME_MAE": "NEIDE DELISIO",
+        "NASCTO": "23\/01\/1976",
+        "IDADE": "50 anos",
+        "SEXO": "Feminino",
+        "RG": "232705260",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "254525750108",
+        "NIT": "1252511755 ",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "141705",
+        "PROFISSAO": "GERENTE DE PRODUTOS BANCARIOS",
+        "SALARIO": " 22.262,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1123760526",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1138340549",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1155814149",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1143754959",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "17\/04\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1155037000",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11911041799",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11970276930",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11991276203",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11997242962",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11972429624",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "vivian.falcao@rabobank.com",
+            "vivian.falcao@rabobank.com.br",
+            "vdelisio@santander.com.br",
+            "viviandelisio@terra.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV DAS NACOES UNIDAS",
+                "NUMERO": "12995",
+                "COMPLEMENTO": "AND 7",
+                "BAIRRO": "BROOKLIN PAULISTA",
+                "CEP": "04578911",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV MIGUEL ESTEFNO",
+                "NUMERO": "380",
+                "COMPLEMENTO": "AP 13",
+                "BAIRRO": "SAUDE",
+                "CEP": "04301000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DOS COROADOS",
+                "NUMERO": "162",
+                "COMPLEMENTO": "AP  Apartamento  63 BL  Blocos  Quattrino",
+                "BAIRRO": "VILA ANASTACIO",
+                "CEP": "05092020",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R WERNER GOLDBERG",
+                "NUMERO": "179",
+                "COMPLEMENTO": "AP 112 TOR 4 COND 88",
+                "BAIRRO": "JARDIM TUPANCI",
+                "CEP": "06414025",
+                "CIDADE": "BARUERI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA FORTUNATO FERRAZ",
+                "NUMERO": "600",
+                "COMPLEMENTO": "AP 63 BL QUATY",
+                "BAIRRO": "VILA ANASTACIO",
+                "CEP": "05093000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA FORTUNATO FERRAZ",
+                "NUMERO": "320",
+                "COMPLEMENTO": "AP 23 BL A SOL",
+                "BAIRRO": "VILA ANASTACIO",
+                "CEP": "05093000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ANTONIO CARNEIRO DA COSTA",
+                "NUMERO": "57",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COSTOO",
+                "CEP": "11750000",
+                "CIDADE": "PERUIBE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA BORBA GATO",
+                "NUMERO": "331",
+                "COMPLEMENTO": "APTO204",
+                "BAIRRO": "SANTO AMARO",
+                "CEP": "04747030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "17683000892",
+                "NOME": "NEIDE DELISIO",
+                "IDADE": "77 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "26525726875",
+                "NOME": "LUIZ DELISIO JUNIOR",
+                "IDADE": "48 anos",
+                "LOCAL": "BARUERI\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "29819061865",
+                "NOME": "DAVI DELISIO",
+                "IDADE": "44 anos",
+                "LOCAL": "LENCOIS PAULISTA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ITAU UNIBANCO S.A.",
+                "CNPJ": "60701190496983",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "252540",
+                "DATA_ADMISSAO": "13\/01\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ITAU UNIBANCO S.A.",
+                "CNPJ": "60701190481609",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "141705",
+                "DATA_ADMISSAO": "01\/01\/2022",
+                "DATA_DEMISSAO": "01\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "ITAU UNIBANCO S.A.",
+                "CNPJ": "60701190481790",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "13\/01\/2020",
+                "DATA_DEMISSAO": "01\/02\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "ITAU UNIBANCO S.A.",
+                "CNPJ": "60701190484977",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/02\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO RABOBANK INTERNATIONAL BRASIL S\/A",
+                "CNPJ": "01023570000160",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142605",
+                "DATA_ADMISSAO": "08\/09\/2008",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

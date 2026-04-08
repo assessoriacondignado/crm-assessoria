@@ -1,0 +1,264 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25642131893",
+        "NOME": "SERGIO DA SILVA MAGALHAES",
+        "NOME_MAE": "YEDA ANTONIO DA SILVA MAGALHAES",
+        "NASCTO": "04\/04\/1977",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "254103530175",
+        "NIT": "13020680815",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "413225",
+        "PROFISSAO": "ESCRITURARIO DE BANCO",
+        "SALARIO": " 3.105,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1143298633",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "10\/12\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1145454554",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1333958445",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "08\/04\/2011",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1133682309",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11981418445",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11989482297",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11998125287",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11998125287",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "13988490708",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "sergiofmac@globo.com",
+            "sergiosmag@globo.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R LIBERO BADARO",
+                "NUMERO": "509",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "01009000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R APENINOS",
+                "NUMERO": "302",
+                "COMPLEMENTO": "AP 8",
+                "BAIRRO": "ACLIMACAO",
+                "CEP": "01533000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R AUGUSTA",
+                "NUMERO": "551",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CONSOLACAO",
+                "CEP": "01305000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R IRINEU DE BARROS SIQUEIRA",
+                "NUMERO": "131",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STA TEREZINHA",
+                "CEP": "09210345",
+                "CIDADE": "SANTO ANDRE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CEL JOSE DA MOTA BICUDO",
+                "NUMERO": "87",
+                "COMPLEMENTO": "CH CALIFO",
+                "BAIRRO": "CH CALIFORNIA",
+                "CEP": "03402020",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SECUNDINO VEIGA",
+                "NUMERO": "221",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "13201068",
+                "CIDADE": "JUNDIAI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV SATURNINO JOAO DA SILVA",
+                "NUMERO": "989",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD ZAIRA",
+                "CEP": "09321090",
+                "CIDADE": "MAUA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CASTRO ALVES",
+                "NUMERO": "31",
+                "COMPLEMENTO": "BL C AP 104",
+                "BAIRRO": "ACLIMACAO",
+                "CEP": "01532001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "16593160814",
+                "NOME": "CRISTIANE DA SILVA MAGALHAES",
+                "IDADE": "53 anos",
+                "LOCAL": "FLORIANOPOLIS\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "25644627829",
+                "NOME": "MARCIO DA SILVA MAGALHAES",
+                "IDADE": "50 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ALTAMIRA DANTAS DOS SANTOS",
+            "IDADE": "",
+            "LOCALIDADE": "ITUMBIARA\/GO",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "88545989172"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CAIXA ECONOMICA FEDERAL",
+                "CNPJ": "00360305123109",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "07\/05\/2001",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CAIXA ECONOMICA FEDERAL",
+                "CNPJ": "00360305305304",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "07\/05\/2001",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "CAIXA ECONOMICA FEDERAL",
+                "CNPJ": "00360305323205",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "07\/05\/2001",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,174 @@
+{
+    "CADASTRAIS": {
+        "CPF": "87429853900",
+        "NOME": "ANTONIO MARCOS GRACIANO",
+        "NOME_MAE": "LEONY MARIA GRACIANO",
+        "NASCTO": "03\/09\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "087100540612",
+        "NIT": "12309250211",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "421125",
+        "PROFISSAO": "OPERADOR DE CAIXA",
+        "SALARIO": " 1.196,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4130262056",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4132457298",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "41998384711",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41992075665",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "antoniograciano@oi.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ANTONINA BAGANHA LIMA",
+                "NUMERO": "85",
+                "COMPLEMENTO": "AP 33 BL",
+                "BAIRRO": "CIDADE INDUSTRIAL",
+                "CEP": "81240470",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R JOAO DEMBINSKI",
+                "NUMERO": "2970",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE INDUSTRIAL",
+                "CEP": "81240270",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "RUA CRISTIANO AIROZO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE INDUSTRIAL",
+                "CEP": "81240050",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "RUA CRISTIANO AIROZO",
+                "NUMERO": "85",
+                "COMPLEMENTO": "BL 3 AP 33",
+                "BAIRRO": "CIDADE INDUSTRIAL",
+                "CEP": "81240050",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "74924095915",
+                "NOME": "LEONY MARIA GRACIANO",
+                "IDADE": "72 anos",
+                "LOCAL": "CURITIBA\/PR",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "4932696906",
+                "NOME": "ALESSANDRA DO ROCIO GRACIANO",
+                "IDADE": "45 anos",
+                "LOCAL": "CURITIBA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "91309573972",
+                "NOME": "BERENICE APARECIDA GRACIANO",
+                "IDADE": "49 anos",
+                "LOCAL": "CURITIBA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PARQUE RESIDENCIAL FAZENDINHA",
+                "CNPJ": "79177846000151",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "517420",
+                "DATA_ADMISSAO": "01\/02\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "DAVITORIA COMERCIO DE PRODUTOS ALIMENTICIOS LTDA",
+                "CNPJ": "22262221000170",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "421125",
+                "DATA_ADMISSAO": "01\/03\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "FHARIDA MARTINS COMERCIO DE ALIMENTOS LTDA",
+                "CNPJ": "10935223000102",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/03\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

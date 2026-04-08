@@ -1,0 +1,167 @@
+{
+    "CADASTRAIS": {
+        "CPF": "62906550515",
+        "NOME": "JORGE LUIS DA SILVA CARDOSO",
+        "NOME_MAE": "NOELIA DA SILVA CARDOSO",
+        "NASCTO": "25\/07\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "135485450523",
+        "NIT": "1253380136",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "342310",
+        "PROFISSAO": "INSPETOR DE SERVICOS DE TRANSPORTES RODOVIARIOS (PASSAGEIROS E CARGAS)",
+        "SALARIO": " 4.796,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7132127110",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7132128194",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "71981500210",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71982583904",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71988125168",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71986111612",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "21\/09\/2010",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "71988452459",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/04\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JAGUARIPE",
+                "NUMERO": "23",
+                "COMPLEMENTO": "CM 17",
+                "BAIRRO": "NOVA BRASILIA",
+                "CEP": "41351490",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R JAGUARIBE",
+                "NUMERO": "23",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COUTOS",
+                "CEP": "40750304",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "TV THOMAZ GONZAGA",
+                "NUMERO": "43",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PERNAMBUES",
+                "CEP": "41130740",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "9523852876",
+            "NOME": "NOELIA DA SILVA CARDOSO",
+            "IDADE": "57 anos",
+            "LOCAL": "ITAQUAQUECETUBA\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "OTIMA TRANSPORTES DE SALVADOR SPE S\/A",
+                "CNPJ": "21188004000115",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "342310",
+                "DATA_ADMISSAO": "22\/04\/2015",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VIOLETA TRANSPORTES LTDA",
+                "CNPJ": "00115886000119",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "28\/06\/2008",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

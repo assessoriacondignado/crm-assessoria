@@ -1,0 +1,255 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25911311801",
+        "NOME": "GUY ADOLFO ISHIKAWA",
+        "NOME_MAE": "DIRCE AKEMI OGASSAWARA ISHIKAWA",
+        "NASCTO": "28\/08\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "20131073",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "229044560159",
+        "NIT": "12854010851",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "123115",
+        "PROFISSAO": "DIRETOR FINANCEIRO",
+        "SALARIO": " 48.000,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1135043877",
+                "OPERADORA": "CTBCTELECOM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1143713862",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "05\/12\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11992580127",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "88988047947",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "88988239430",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "88988540546",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11961742566",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "guyadolfo@hotmail.com",
+            "ishikawa-guy@hotmail.com",
+            "ishikawa_guy@yahoo.com",
+            "guy.ishikawa@gmail.com",
+            "guy.ishikawa@yahoo.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AL SANTOS",
+                "NUMERO": "2300",
+                "COMPLEMENTO": "CJ 61 AND 6",
+                "BAIRRO": "CERQUEIRA CESAR",
+                "CEP": "01418200",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DOMINGOS DE MORAIS",
+                "NUMERO": "300",
+                "COMPLEMENTO": "AP 82",
+                "BAIRRO": "VL MARIANA",
+                "CEP": "04010901",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ECA DE QUEIROZ",
+                "NUMERO": "234",
+                "COMPLEMENTO": "BL B AP 92",
+                "BAIRRO": "VL MARIANA",
+                "CEP": "04011031",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOAQUIM TAVORA",
+                "NUMERO": "1020",
+                "COMPLEMENTO": "AP142BLB",
+                "BAIRRO": "VL MARIANA",
+                "CEP": "04015012",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DOMINGOS DE MORAIS",
+                "NUMERO": "300",
+                "COMPLEMENTO": "AP82",
+                "BAIRRO": "VILA MARIANA",
+                "CEP": "04010100",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOAQUIM TAVORA",
+                "NUMERO": "1020",
+                "COMPLEMENTO": "AP 142",
+                "BAIRRO": "VILA MARIANA",
+                "CEP": "04015000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOMINGOS DE MORAIS",
+                "NUMERO": "300",
+                "COMPLEMENTO": "APTO 82",
+                "BAIRRO": "VILA MARIANA",
+                "CEP": "04010000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "16374325850",
+                "NOME": "DIRCE AKEMI OGASSAWARA ISHIKAWA",
+                "IDADE": "79 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "16374289870",
+                "NOME": "FABIO AUGUSTO ISHIKAWA",
+                "IDADE": "55 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "26219532805",
+                "NOME": "DALTON ALEXANDRE ISHIKAWA",
+                "IDADE": "52 anos",
+                "LOCAL": "CARAPICUIBA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "JOSE ADOLFO FERREIRA FILHO",
+            "IDADE": "",
+            "LOCALIDADE": "SALVADOR\/BA",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "12470562520"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SOLTEC BRASIL INDUSTRIA, COMERCIO E SERVICOS DE ENERGIAS RENOVAVEIS LTDA",
+                "CNPJ": "23294509000190",
+                "CIDADE": "LAURO DE FREITAS-BA",
+                "PROFISSAO": "121010",
+                "DATA_ADMISSAO": "01\/10\/2022",
+                "DATA_DEMISSAO": "31\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "CUBICO BRASIL S.A",
+                "CNPJ": "20664779000157",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "123115",
+                "DATA_ADMISSAO": "18\/02\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "DUO INFRA PARTICIPACOES E CONCESSOES S\/A",
+                "CNPJ": "02538782000142",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "123110",
+                "DATA_ADMISSAO": "17\/10\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "VERIFONE DO BRASIL LTDA",
+                "CNPJ": "01394860000110",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142115",
+                "DATA_ADMISSAO": "16\/01\/2012",
+                "DATA_DEMISSAO": "01\/08\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

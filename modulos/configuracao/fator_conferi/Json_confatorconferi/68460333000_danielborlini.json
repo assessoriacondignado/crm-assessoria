@@ -1,0 +1,276 @@
+{
+    "CADASTRAIS": {
+        "CPF": "68460333000",
+        "NOME": "DANIEL BORLINI",
+        "NOME_MAE": "THERESINA JOANNA PERICO BORLINI",
+        "NASCTO": "01\/01\/1970",
+        "IDADE": "56 anos",
+        "SEXO": "Masculino",
+        "RG": "6042196656",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "051325660477",
+        "NIT": "1249951212 ",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "234210",
+        "PROFISSAO": "PROFESSOR DE QUIMICA (ENSINO SUPERIOR)",
+        "SALARIO": " 1.674,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5432831365",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "5435361869",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5432022521",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "20\/11\/2006",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5432251868",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "54991768995",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "54991581873",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "54992399569",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "54981465221",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "54991134224",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "paulekadesouza@hotmail.com",
+            "bigbiu@yahoo.com",
+            "mestrebiu@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R LIDIA GUIMARAES",
+                "NUMERO": "126",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SAN MARTIN",
+                "CEP": "50760750",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R TRONCA",
+                "NUMERO": "2436",
+                "COMPLEMENTO": "AP 204",
+                "BAIRRO": "RIO BRANCO",
+                "CEP": "95010100",
+                "CIDADE": "CAXIAS DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "LRG VSC DO CAIRU",
+                "NUMERO": "17",
+                "COMPLEMENTO": "AND 8",
+                "BAIRRO": "CENTRO HISTORICO",
+                "CEP": "90030110",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "TV LAGOA VERMELHA",
+                "NUMERO": "120",
+                "COMPLEMENTO": "LJ",
+                "BAIRRO": "KAYSER",
+                "CEP": "95098590",
+                "CIDADE": "CAXIAS DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R ALFREDO CHAVES",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "95020460",
+                "CIDADE": "CAXIAS DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "ROD RS DUZENTOS E TRINTA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "KM 2",
+                "BAIRRO": "ANA RECH",
+                "CEP": "95060650",
+                "CIDADE": "CAXIAS DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R MACHADO DE ASSIS",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MEDIANEIRA",
+                "CEP": "95010660",
+                "CIDADE": "CAXIAS DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R MIGUEL MURATORE",
+                "NUMERO": "593",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MEDIANEIRA",
+                "CEP": "95010220",
+                "CIDADE": "CAXIAS DO SUL",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "48794473072",
+            "NOME": "THERESINA JOANNA PERICO BORLINI",
+            "IDADE": "89 anos",
+            "LOCAL": "CAXIAS DO SUL\/RS",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "THERESINA JOANNA PERICO BORLINI",
+            "IDADE": "",
+            "LOCALIDADE": "CAXIAS DO SUL\/RS",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "48794473072"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BENTO PRE VESTIBULAR LTDA",
+                "CNPJ": "20200772000184",
+                "CIDADE": "BENTO GONCALVES-RS",
+                "PROFISSAO": "333115",
+                "DATA_ADMISSAO": "26\/02\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SISTEMA PRE-VESTIBULAR MENDEL LTDA",
+                "CNPJ": "15013962000152",
+                "CIDADE": "PASSO FUNDO-RS",
+                "PROFISSAO": "232165",
+                "DATA_ADMISSAO": "22\/04\/2013",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CENTRO EDUCACIONAL EQUILATTERO LTDA",
+                "CNPJ": "11159036000139",
+                "CIDADE": "CAXIAS DO SUL-RS",
+                "PROFISSAO": "333115",
+                "DATA_ADMISSAO": "17\/03\/2015",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FLEMING SERVICOS EDUCACIONAIS LTDA",
+                "CNPJ": "26418201000954",
+                "CIDADE": "CAXIAS DO SUL-RS",
+                "PROFISSAO": "234210",
+                "DATA_ADMISSAO": "01\/01\/2021",
+                "DATA_DEMISSAO": "02\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "INSTITUTO CULTURAL E DESPORTIVO MUTIRAO LTDA",
+                "CNPJ": "87357018000204",
+                "CIDADE": "CAXIAS DO SUL-RS",
+                "PROFISSAO": "231210",
+                "DATA_ADMISSAO": "01\/02\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

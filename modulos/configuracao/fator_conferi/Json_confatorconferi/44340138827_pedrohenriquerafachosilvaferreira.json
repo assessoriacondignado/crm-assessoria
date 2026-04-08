@@ -1,0 +1,88 @@
+{
+    "CADASTRAIS": {
+        "CPF": "44340138827",
+        "NOME": "PEDRO HENRIQUE RAFACHO SILVA FERREIRA",
+        "NOME_MAE": "CRISTIANE APARECIDA RAFACHO SILVA FERREIRA",
+        "NASCTO": "22\/12\/2001",
+        "IDADE": "24 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "2078489554 ",
+        "ESCOLARIDADE": "SUPERIOR INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521140",
+        "PROFISSAO": "",
+        "SALARIO": " 2.561,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "11958780788",
+            "OPERADORA": "TIM CELULAR S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "MOVEL",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "pezzofclans@gmail.com",
+            "pedrorafacho123@hotmail.com",
+            "pedrorafacho123@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "R JOAO DA COSTA SILVA",
+            "NUMERO": "55",
+            "COMPLEMENTO": "",
+            "BAIRRO": "BORTOLANDIA",
+            "CEP": "02352020",
+            "CIDADE": "SAO PAULO",
+            "ESTADO": "SP"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "40901886874",
+            "NOME": "LUCAS RAFACHO SILVA FERREIRA",
+            "IDADE": "30 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SENDAS DISTRIBUIDORA S\/A",
+                "CNPJ": "06057223036605",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "421125",
+                "DATA_ADMISSAO": "29\/12\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FACILITY MAO DE OBRA TEMPORARIA LTDA",
+                "CNPJ": "05903397000145",
+                "CIDADE": "SAO BERNARDO DO CAMPO-SP",
+                "PROFISSAO": "521140",
+                "DATA_ADMISSAO": "22\/09\/2023",
+                "DATA_DEMISSAO": "29\/12\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,175 @@
+{
+    "CADASTRAIS": {
+        "CPF": "17204215877",
+        "NOME": "MARLON MARQUEZIN",
+        "NOME_MAE": "LIDIA B MARQUEZIN",
+        "NASCTO": "30\/04\/1976",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "25629728",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "257718310116",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1938882908",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1921197075",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1921327000",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1921324093",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19991289850",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19991289850",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19988128348",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "28\/12\/2014",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marqzin@yahoo.com.br",
+            "marqzin@hotmail.com",
+            "marlonz@bol.com.br",
+            "marqzin@yahoo.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "ROD JORNALISTA FRANCISCO AGUIRRE PROENCA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "KM 8",
+                "BAIRRO": "CH ASSAY",
+                "CEP": "13186901",
+                "CIDADE": "HORTOLANDIA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R IZAURA A GONCALVES",
+                "NUMERO": "204",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BETEL",
+                "CEP": "13148204",
+                "CIDADE": "PAULINIA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ULISSES DA ROCHA VENTURA",
+                "NUMERO": "193",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "JARDIM GARCIA",
+                "CEP": "13061211",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ULISSES DA ROCHA VENTURA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM GARCIA",
+                "CEP": "13061211",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "IBM BRASIL-INDUSTRIA MAQUINAS E SERVICOS LIMITADA",
+                "CNPJ": "33372251006278",
+                "CIDADE": "HORTOLANDIA-SP",
+                "PROFISSAO": "212210",
+                "DATA_ADMISSAO": "01\/01\/2022",
+                "DATA_DEMISSAO": "26\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "IBM GLOBAL FINANCING BRASIL ADMINISTRACAO E SERVICOS LTDA.",
+                "CNPJ": "24870113000297",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "03\/20\/1905",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,198 @@
+{
+    "CADASTRAIS": {
+        "CPF": "68258445553",
+        "NOME": "HELENILDES SANTIAGO DE FREITAS",
+        "NOME_MAE": "MATILDES SANTIAGO DE FREITAS",
+        "NASCTO": "10\/09\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "066143040574",
+        "NIT": "1249830668",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "312205",
+        "PROFISSAO": "TECNICO DE ESTRADAS",
+        "SALARIO": " 11.173,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7132763581",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "10\/06\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7132464844",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "71982297701",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71981832502",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71999961873",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "71996909680",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "71999794597",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "helenildezfreitaz@oi.com.br",
+            "helenperrone@ig.com.br",
+            "helenildesperrone@gmail.com",
+            "helenildesfreitas@oi.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R FERNANDO MENEZES DE GOES",
+                "NUMERO": "397",
+                "COMPLEMENTO": "SL 202",
+                "BAIRRO": "PITUBA",
+                "CEP": "41810700",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "RUA DOM JERONIMO THOME DA SILVA",
+                "NUMERO": "186",
+                "COMPLEMENTO": "AP 503",
+                "BAIRRO": "DANIEL LISBOA",
+                "CEP": "40283150",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "43817998520",
+                "NOME": "MATILDES SANTIAGO DE FREITAS",
+                "IDADE": "79 anos",
+                "LOCAL": "SALVADOR\/BA",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "17421511830",
+                "NOME": "ERIVALDO SANTIAGO DE FREITAS",
+                "IDADE": "52 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "78689848568",
+                "NOME": "EDNALVA SANTIAGO DE FREITAS",
+                "IDADE": "46 anos",
+                "LOCAL": "SALVADOR\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "81600100520",
+                "NOME": "ROQUELINA SANTIAGO DE FREITAS",
+                "IDADE": "45 anos",
+                "LOCAL": "SALVADOR\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "91581745591",
+                "NOME": "EDNO SANTIAGO DE FREITAS",
+                "IDADE": "48 anos",
+                "LOCAL": "SALVADOR\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "93407947534",
+                "NOME": "ANA NERY SANTIAGO DE FREITAS",
+                "IDADE": "50 anos",
+                "LOCAL": "SALVADOR\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "JOSE FRANCISCO DA SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "SANTA LUZIA\/PB",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "30258170468"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "TECNOSONDA S A",
+            "CNPJ": "33841727000231",
+            "CIDADE": "SALVADOR-BA",
+            "PROFISSAO": "312205",
+            "DATA_ADMISSAO": "15\/05\/2008",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

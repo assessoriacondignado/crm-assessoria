@@ -1,0 +1,116 @@
+{
+    "CADASTRAIS": {
+        "CPF": "99338254615",
+        "NOME": "RODRIGO SOARES DE OLIVEIRA",
+        "NOME_MAE": "ANTONIA DE FATIMA SOARES",
+        "NASCTO": "11\/12\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "103184230264",
+        "NIT": "20131796504",
+        "ESCOLARIDADE": "SUPERIOR INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "711205",
+        "PROFISSAO": "OPERADOR DE CAMINHAO (MINAS E PEDREIRAS)",
+        "SALARIO": " 2.533,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "3138335474",
+            "OPERADORA": "TELEMAR\/MG",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31996863261",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31999638186",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "RUA RAIMUNDO OSCAR",
+                "NUMERO": "81",
+                "COMPLEMENTO": "",
+                "BAIRRO": "GUANABARA",
+                "CEP": "35935000",
+                "CIDADE": "SAO GONCALO DO RIO ABAIXO",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R RAIMUNDO OSCAR",
+                "NUMERO": "110",
+                "COMPLEMENTO": "",
+                "BAIRRO": "",
+                "CEP": "35935000",
+                "CIDADE": "SAO GONCALO DO RIO ABAIXO",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1535475374",
+            "NOME": "ANTONIA DE FATIMA SOARES",
+            "IDADE": "55 anos",
+            "LOCAL": "SAO JOAO DA SERRA\/PI",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "VALE S.A.",
+                "CNPJ": "33592510044798",
+                "CIDADE": "SAO GONCALO DO RIO ABAIXO-MG",
+                "PROFISSAO": "715125",
+                "DATA_ADMISSAO": "15\/04\/2008",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VALE S.A.",
+                "CNPJ": "33592510017987",
+                "CIDADE": "ITABIRA-MG",
+                "PROFISSAO": "711205",
+                "DATA_ADMISSAO": "15\/04\/2008",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

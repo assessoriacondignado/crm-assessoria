@@ -1,0 +1,131 @@
+{
+    "CADASTRAIS": {
+        "CPF": "48700563803",
+        "NOME": "LARISSA MARQUES DA SILVA",
+        "NOME_MAE": "VILMA MARQUES DE JESUS",
+        "NASCTO": "11\/02\/1997",
+        "IDADE": "29 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "16473550462",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "11965015953",
+            "OPERADORA": "OI MOVEL S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "MOVEL",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": {
+        "EMAIL": "larymarques.silva@outlook.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MARACUJA NATAL",
+                "NUMERO": "166",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL NATAL",
+                "CEP": "04863010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ARNALDO ESTRELLA",
+                "NUMERO": "380",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD CAMPINAS",
+                "CEP": "04858110",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "26666826841",
+                "NOME": "VILMA MARQUES DE JESUS",
+                "IDADE": "53 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "5628624713",
+                "NOME": "VAGNER OLIVEIRA MARQUES DE JESUS",
+                "IDADE": "43 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "48700590886",
+                "NOME": "MATHEUS MARQUES DA SILVA",
+                "IDADE": "27 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SEGURPRO TECNOLOGIA EM SISTEMAS DE SEGURANCA ELETRONICA E INCENDIOS LTDA.",
+                "CNPJ": "07616290000141",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "422105",
+                "DATA_ADMISSAO": "01\/09\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SEGURPRO SISTEMAS DE SEGURANCA LTDA.",
+                "CNPJ": "74224163000437",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/07\/2020",
+                "DATA_DEMISSAO": "01\/09\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "VIVA SERVICOS LTDA",
+                "CNPJ": "64112428000109",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "422105",
+                "DATA_ADMISSAO": "01\/08\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "PLURISERV SERVICOS TECNICOS LTDA",
+                "CNPJ": "50384296000160",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "422105",
+                "DATA_ADMISSAO": "04\/12\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

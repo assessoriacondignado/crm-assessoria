@@ -1,0 +1,180 @@
+{
+    "CADASTRAIS": {
+        "CPF": "95836462615",
+        "NOME": "TULIO MARCUS DOS REIS",
+        "NOME_MAE": "ELZA DORNELLAS DOS REIS",
+        "NASCTO": "06\/12\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "072233140418",
+        "NIT": "1245406050",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "141205",
+        "PROFISSAO": "GERENTE DE PRODUCAO E OPERACOES",
+        "SALARIO": " 12.853,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "5133736000",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "32984113443",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51982083307",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PARANA",
+                "NUMERO": "26",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "ORIENTAL",
+                "CEP": "99500000",
+                "CIDADE": "CARAZINHO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R CHAVES BARCELOS",
+                "NUMERO": "36",
+                "COMPLEMENTO": "705",
+                "BAIRRO": "CENTRO HISTORICO",
+                "CEP": "90030120",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R VER JOSE AUGUSTO PINTO",
+                "NUMERO": "630",
+                "COMPLEMENTO": "",
+                "BAIRRO": "HELIOPOLIS",
+                "CEP": "55297575",
+                "CIDADE": "GARANHUNS",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "AV ASSIS BRASIL",
+                "NUMERO": "3259",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CRISTO REDENTOR",
+                "CEP": "91010007",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R ALEXANDRE DA MOTTA",
+                "NUMERO": "943",
+                "COMPLEMENTO": "BL A AP 301",
+                "BAIRRO": "APTO 306",
+                "CEP": "99500000",
+                "CIDADE": "CARAZINHO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "AV SERTORIO",
+                "NUMERO": "6767",
+                "COMPLEMENTO": "PARMALAT",
+                "BAIRRO": "SARANDI",
+                "CEP": "91110581",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA CONSELHEIRO D'AVILA",
+                "NUMERO": "270",
+                "COMPLEMENTO": "302",
+                "BAIRRO": "JARDIM FLORESTA",
+                "CEP": "91040450",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "18150365672",
+                "NOME": "ELZA DORNELLAS DOS REIS",
+                "IDADE": "89 anos",
+                "LOCAL": "JUIZ DE FORA\/MG",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "60178981672",
+                "NOME": "GIOVANI DOS REIS",
+                "IDADE": "55 anos",
+                "LOCAL": "JUIZ DE FORA\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COOPERATIVA SANTA CLARA LTDA",
+                "CNPJ": "88587357006523",
+                "CIDADE": "CASCA-RS",
+                "PROFISSAO": "141205",
+                "DATA_ADMISSAO": "15\/10\/2012",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COOPERATIVA SANTA CLARA LTDA",
+                "CNPJ": "88587357000240",
+                "CIDADE": "CARLOS BARBOSA-RS",
+                "PROFISSAO": "840105",
+                "DATA_ADMISSAO": "15\/10\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "NESTLE SUL - ALIMENTOS E BEBIDAS LTDA",
+                "CNPJ": "11051859000146",
+                "CIDADE": "CARAZINHO-RS",
+                "PROFISSAO": "391125",
+                "DATA_ADMISSAO": "01\/04\/2010",
+                "DATA_DEMISSAO": "10\/01\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,128 @@
+{
+    "CADASTRAIS": {
+        "CPF": "9487812628",
+        "NOME": "NAIRAM VALENTIM CUNHA MENEZES",
+        "NOME_MAE": "MIRIAN VALENTIM CUNHA MENEZES",
+        "NASCTO": "08\/07\/1994",
+        "IDADE": "31 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "13989014039",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "410105",
+        "PROFISSAO": "SUPERVISOR ADMINISTRATIVO",
+        "SALARIO": " 6.099,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "3332761442",
+            "OPERADORA": "TELEMAR\/MG",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "33991302624",
+            "OPERADORA": "TIM CELULAR S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "MOVEL",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "nanamenezes_@hotmail.com",
+            "nairamvalentim@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R TURIM",
+                "NUMERO": "100",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "GRA DUQUESA",
+                "CEP": "35057680",
+                "CIDADE": "GOVERNADOR VALADARES",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R PORTO SEGURO",
+                "NUMERO": "120",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MORADA DO VALE",
+                "CEP": "35057770",
+                "CIDADE": "GOVERNADOR VALADARES",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R VICTOR SANCHES DUMONT",
+                "NUMERO": "448",
+                "COMPLEMENTO": "C 5",
+                "BAIRRO": "CEU AZUL",
+                "CEP": "31580170",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "9487811656",
+            "NOME": "THAYS VALENTIM CUNHA MENEZES",
+            "IDADE": "29 anos",
+            "LOCAL": "GOVERNADOR VALADARES\/MG",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738015860",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "141415",
+                "DATA_ADMISSAO": "05\/08\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738037406",
+                "CIDADE": "GOVERNADOR VALADARES-MG",
+                "PROFISSAO": "141415",
+                "DATA_ADMISSAO": "01\/07\/2020",
+                "DATA_DEMISSAO": "01\/07\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738000162",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "05\/08\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

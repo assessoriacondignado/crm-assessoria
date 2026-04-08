@@ -1,0 +1,274 @@
+{
+    "CADASTRAIS": {
+        "CPF": "56430507572",
+        "NOME": "CRISTINA MARCIA DE LIMA CONCEICAO",
+        "NOME_MAE": "CECILIA MARIA DE JESUS",
+        "NASCTO": "22\/06\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Feminino",
+        "RG": "547698178",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "2002413492 ",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "322205",
+        "PROFISSAO": "TECNICO DE ENFERMAGEM",
+        "SALARIO": " 2.507,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7133041563",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7132381887",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "71981549486",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71993002471",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71989510030",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "OI_PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71987976376",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71988670362",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "pinna.lima@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "1 TRAVESSA MARIA QUITERIA DE AGUAS CLARAS",
+                "NUMERO": "9",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AGUAS CLARAS",
+                "CEP": "41310466",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R JOSE SALES",
+                "NUMERO": "20",
+                "COMPLEMENTO": "FU",
+                "BAIRRO": "S CAETANO",
+                "CEP": "40391240",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "1 TRAVESSA MARIA QUITERIA DE AGUAS CLARAS",
+                "NUMERO": "7",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "AGUAS CLARAS",
+                "CEP": "41310466",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R ALVARO RAMOS BATISTA",
+                "NUMERO": "4",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AGUAS CLARAS",
+                "CEP": "41310750",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R JOSE SALES",
+                "NUMERO": "80",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S CAETANO",
+                "CEP": "40391240",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "AV VALE DOS BARRIS",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BARRIS",
+                "CEP": "40070055",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "AVENIDA PRESIDENTE MEDICI",
+                "NUMERO": "5",
+                "COMPLEMENTO": "ZZ E",
+                "BAIRRO": "AGUAS CLARAS",
+                "CEP": "41310492",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "RUA JOSE SALES",
+                "NUMERO": "30",
+                "COMPLEMENTO": "ZZ E",
+                "BAIRRO": "SAO CAETANO",
+                "CEP": "40391240",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "21017506",
+            "NOME": "CECILIA MARIA DE JESUS",
+            "IDADE": "114 anos",
+            "LOCAL": "ITORORO\/BA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "MED MAIS SOLUCOES EM SERVICOS ESPECIAIS LTDA",
+                "CNPJ": "09557452000143",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "517105",
+                "DATA_ADMISSAO": "10\/10\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CONCESSIONARIA DO AEROPORTO DE SALVADOR S.A.",
+                "CNPJ": "27950582000123",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "517105",
+                "DATA_ADMISSAO": "02\/10\/2023",
+                "DATA_DEMISSAO": "10\/11\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MUNICIPIO DE SALVADOR",
+                "CNPJ": "13927801000572",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "13\/04\/2020",
+                "DATA_DEMISSAO": "{Ã±\/{Ã±\/2023",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "MUNICIPIO DE CANDEIAS",
+                "CNPJ": "13830336000123",
+                "CIDADE": "CANDEIAS-BA",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "01\/07\/2017",
+                "DATA_DEMISSAO": "{Ã±\/{Ã±\/2023",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "INSTITUTO NACIONAL DE TECNOLOGIA E SAUDE",
+                "CNPJ": "11344038001684",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/05\/2021",
+                "DATA_DEMISSAO": "03\/05\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "MONTE TABOR CENTRO ITALO BRASILEIRO DE PROM SANITARIA",
+                "CNPJ": "13926639000144",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "01\/11\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "PROMEDICA PATRIMONIAL S A PROPAT",
+                "CNPJ": "13808803000119",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "01\/02\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "MONTE TABOR CENTRO ITALO BRASILEIRO DE PROM SANITARIA",
+                "CNPJ": "13926639000306",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "09\/07\/2012",
+                "DATA_DEMISSAO": "30\/11\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

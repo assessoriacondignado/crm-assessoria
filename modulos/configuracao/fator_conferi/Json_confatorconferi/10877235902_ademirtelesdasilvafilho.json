@@ -1,0 +1,175 @@
+{
+    "CADASTRAIS": {
+        "CPF": "10877235902",
+        "NOME": "ADEMIR TELES DA SILVA FILHO",
+        "NOME_MAE": "ERCILIA CORREIA TELES",
+        "NASCTO": "31\/12\/1998",
+        "IDADE": "27 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "45991515538",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "45999687600",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "45991444539",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "telesdasilvafilhoademir@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R GARIBALDI",
+                "NUMERO": "999",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVO MUNDO",
+                "CEP": "85877000",
+                "CIDADE": "SAO MIGUEL DO IGUACU",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R MAL CANIDIDO RONDON",
+                "NUMERO": "1314",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "NOVO MUNDO",
+                "CEP": "85877000",
+                "CIDADE": "SAO MIGUEL DO IGUACU",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "RUA RUA CASTRO ALVES",
+                "NUMERO": "255",
+                "COMPLEMENTO": "INSTALACOES",
+                "BAIRRO": "CENTRO",
+                "CEP": "85877000",
+                "CIDADE": "SAO MIGUEL DO IGUACU",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "18426813895",
+                "NOME": "ERCILIA CORREIA TELES",
+                "IDADE": "54 anos",
+                "LOCAL": "SAO MIGUEL DO IGUACU\/PR",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "11236222997",
+                "NOME": "ELIZANDRA CORREIA TELES",
+                "IDADE": "28 anos",
+                "LOCAL": "SAO MIGUEL DO IGUACU\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TRANS ESPINDOLA LTDA",
+                "CNPJ": "08192491000121",
+                "CIDADE": "SAO MIGUEL DO IGUACU-PR",
+                "PROFISSAO": "783225",
+                "DATA_ADMISSAO": "28\/10\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ROSA VANELDA MARTINELLO ROSSET",
+                "CNPJ": "40074087000166",
+                "CIDADE": "SAO MIGUEL DO IGUACU-PR",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "01\/04\/2022",
+                "DATA_DEMISSAO": "23\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FRIGORIFICO FRIELLA LTDA",
+                "CNPJ": "40727874000160",
+                "CIDADE": "SAO MIGUEL DO IGUACU-PR",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "30\/11\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "COMPACE E DALEX INDUSTRIA E COMERCIO DE MOVEIS LTDA",
+                "CNPJ": "05823163000198",
+                "CIDADE": "SAO MIGUEL DO IGUACU-PR",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "08\/02\/2021",
+                "DATA_DEMISSAO": "10\/02\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "RACOES E CONCENTRADOS IGUACU LTDA",
+                "CNPJ": "01723567000159",
+                "CIDADE": "SAO MIGUEL DO IGUACU-PR",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/04\/2021",
+                "DATA_DEMISSAO": "17\/11\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "S. M. I. COMERCIO DE ALIMENTOS LTDA",
+                "CNPJ": "03561876000103",
+                "CIDADE": "SAO MIGUEL DO IGUACU-PR",
+                "PROFISSAO": "784105",
+                "DATA_ADMISSAO": "06\/11\/2015",
+                "DATA_DEMISSAO": "03\/02\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

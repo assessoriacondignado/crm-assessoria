@@ -1,0 +1,140 @@
+{
+    "CADASTRAIS": {
+        "CPF": "79853129515",
+        "NOME": "GLAUBER DIAS DE JESUS",
+        "NOME_MAE": "MARIA IVETE DE JESUS SANTOS",
+        "NASCTO": "27\/08\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "018691102127",
+        "NIT": "12683959763",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521125",
+        "PROFISSAO": "REPOSITOR DE MERCADORIAS",
+        "SALARIO": " 750,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7932419326",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "15\/10\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7932411862",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13988410725",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999743539",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "glauberjesus@oi.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOSE PEREIRA DE OLIVEIRA",
+                "NUMERO": "172",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AMERICA",
+                "CEP": "49080330",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R BAHIA",
+                "NUMERO": "992",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SIQUEIRA CAMPOS",
+                "CEP": "49075000",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "683171232",
+            "NOME": "MARIA IVETE DE JESUS SANTOS",
+            "IDADE": "39 anos",
+            "LOCAL": "PORTO VELHO\/RO",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SENDAS DISTRIBUIDORA S\/A",
+                "CNPJ": "06057223029900",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "521125",
+                "DATA_ADMISSAO": "02\/09\/2016",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SORVEPAN COM E REPRESENTACOES LTDA",
+                "CNPJ": "00904538000120",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "521125",
+                "DATA_ADMISSAO": "22\/09\/2014",
+                "DATA_DEMISSAO": "14\/07\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "HUTEBA MERCANTIL LTDA",
+                "CNPJ": "13004999000199",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "521125",
+                "DATA_ADMISSAO": "02\/11\/2013",
+                "DATA_DEMISSAO": "18\/03\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,237 @@
+{
+    "CADASTRAIS": {
+        "CPF": "60331950278",
+        "NOME": "ANIZIO BARROS FINKLER",
+        "NOME_MAE": "LINDALVA DE SOUZA BARROS",
+        "NASCTO": "14\/06\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1258072602",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "317110",
+        "PROFISSAO": "PROGRAMADOR DE SISTEMAS DE INFORMACAO",
+        "SALARIO": " 6.189,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9236563093",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9236320449",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9236577646",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92994524835",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "24\/08\/2018",
+                "TIPO_TEL": "MOVEL PRE-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92991965749",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92993923850",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92991166408",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "92991277383",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "finkler@oi.com.br",
+            "aniziofinkler@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R E",
+                "NUMERO": "14",
+                "COMPLEMENTO": "N 54 CJ PROMORAR D BOS 54",
+                "BAIRRO": "JORGE TEIXEIRA",
+                "CEP": "69088706",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R ADALTO UCHOA",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ 10 DE NOVEMBRO",
+                "CEP": "69054718",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R AVOEIRAS",
+                "NUMERO": "14",
+                "COMPLEMENTO": "N 54 CJ PROMORAR ALVORAD 54",
+                "BAIRRO": "ALVORADA",
+                "CEP": "69042140",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "CJ PROMORAR DOM BOSCO",
+                "NUMERO": "54",
+                "COMPLEMENTO": "CJ PROMORAR D BOSCO",
+                "BAIRRO": "ALVORADA",
+                "CEP": "69042820",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R EVANDRO CAVALCANTI",
+                "NUMERO": "85",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALVORADA",
+                "CEP": "69043328",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R ACAJA",
+                "NUMERO": "14",
+                "COMPLEMENTO": "CJ PROMORAR N 54",
+                "BAIRRO": "FLORES",
+                "CEP": "69028214",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R ALEXANDRE MAGNO",
+                "NUMERO": "288",
+                "COMPLEMENTO": "CJ CHANGRILA 4",
+                "BAIRRO": "PARQUE 10 DE NOVEMBRO",
+                "CEP": "69054723",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R JOSE PINTO CORREA",
+                "NUMERO": "653",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE 10 DE NOVEMBRO",
+                "CEP": "69054734",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "3549312377",
+            "NOME": "LINDALVA DE SOUZA BARROS",
+            "IDADE": "68 anos",
+            "LOCAL": "TERESINA\/PI",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SIDIA INSTITUTO DE CIENCIA E TECNOLOGIA",
+                "CNPJ": "05994459000171",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "317110",
+                "DATA_ADMISSAO": "25\/06\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SIDIA INSTITUTO DE CIENCIA E TECNOLOGIA",
+                "CNPJ": "05994459000503",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "212215",
+                "DATA_ADMISSAO": "01\/07\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "SONY BRASIL LTDA.",
+                "CNPJ": "43447044000177",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "300105",
+                "DATA_ADMISSAO": "01\/10\/2002",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

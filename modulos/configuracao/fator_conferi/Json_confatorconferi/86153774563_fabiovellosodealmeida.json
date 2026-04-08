@@ -1,0 +1,126 @@
+{
+    "CADASTRAIS": {
+        "CPF": "86153774563",
+        "NOME": "FABIO VELLOSO DE ALMEIDA",
+        "NOME_MAE": "ANA CRISTINA VELLOSO DE ALMEIDA",
+        "NASCTO": "21\/04\/1997",
+        "IDADE": "29 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1328183700 ",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "141415",
+        "PROFISSAO": "GERENTE DE LOJA E SUPERMERCADO",
+        "SALARIO": " 9.637,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "79999668454",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79996526661",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "79998193600",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "fabiovelloso1@outlook.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "R JORN JOAO BATISTA DE SANT ANNA",
+            "NUMERO": "2506",
+            "COMPLEMENTO": "CS 2",
+            "BAIRRO": "COROA DO MEIO",
+            "CEP": "49035430",
+            "CIDADE": "ARACAJU",
+            "ESTADO": "SE"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "66124409704",
+            "NOME": "ANA CRISTINA VELLOSO DE ALMEIDA",
+            "IDADE": "65 anos",
+            "LOCAL": "ARACAJU\/SE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738039379",
+                "CIDADE": "SAO LUIS-MA",
+                "PROFISSAO": "141415",
+                "DATA_ADMISSAO": "18\/10\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738036868",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "141415",
+                "DATA_ADMISSAO": "01\/08\/2022",
+                "DATA_DEMISSAO": "01\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738000162",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "18\/10\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "EMPRESA MUNICIPAL DE SERVICOS URBANOS",
+                "CNPJ": "32805400000160",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "111415",
+                "DATA_ADMISSAO": "01\/04\/2016",
+                "DATA_DEMISSAO": "13\/06\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

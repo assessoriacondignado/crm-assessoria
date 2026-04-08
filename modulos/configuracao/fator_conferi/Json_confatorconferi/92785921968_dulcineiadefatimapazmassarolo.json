@@ -1,0 +1,161 @@
+{
+    "CADASTRAIS": {
+        "CPF": "92785921968",
+        "NOME": "DULCINEIA DE FATIMA PAZ MASSAROLO",
+        "NOME_MAE": "JOANA CHORNOBAI PAZ",
+        "NASCTO": "08\/06\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1267438672",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411010",
+        "PROFISSAO": "ASSISTENTE ADMINISTRATIVO",
+        "SALARIO": " 4.743,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4933463000",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4635231076",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "49991158246",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "49991913837",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11987072499",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "dulcineia-paz@auroraalimentos.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "ROD SC 41",
+                "NUMERO": "0",
+                "COMPLEMENTO": "KM",
+                "BAIRRO": "RODOVIA",
+                "CEP": "89850000",
+                "CIDADE": "QUILOMBO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "AVENIDA CORONEL BERTASO",
+                "NUMERO": "899",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "89850000",
+                "CIDADE": "QUILOMBO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R JOAO GOULART",
+                "NUMERO": "100",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "89850000",
+                "CIDADE": "QUILOMBO",
+                "ESTADO": "SC"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "4657652974",
+                "NOME": "JOANA CHORNOBAI PAZ",
+                "IDADE": "76 anos",
+                "LOCAL": "QUILOMBO\/SC",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "6911615933",
+                "NOME": "BRUNA CECILIA PAZ",
+                "IDADE": "36 anos",
+                "LOCAL": "FLORIANOPOLIS\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "9023966929",
+                "NOME": "EDUARDA PAZ MASSAROLO",
+                "IDADE": "22 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "DULCINEIA PAZ",
+            "IDADE": "",
+            "LOCALIDADE": "SANTAREM\/PA",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "78270057215"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "COOPERATIVA CENTRAL AURORA ALIMENTOS",
+            "CNPJ": "83310441002594",
+            "CIDADE": "QUILOMBO-SC",
+            "PROFISSAO": "411010",
+            "DATA_ADMISSAO": "09\/12\/1996",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

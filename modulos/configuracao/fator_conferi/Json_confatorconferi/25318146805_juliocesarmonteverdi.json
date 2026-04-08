@@ -1,0 +1,167 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25318146805",
+        "NOME": "JULIO CESAR MONTEVERDI",
+        "NOME_MAE": "MARIA ROSA DAL POGIETO MONTEVERDI",
+        "NASCTO": "01\/07\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "210409360132",
+        "NIT": "2041734932",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "771105",
+        "PROFISSAO": "MARCENEIRO",
+        "SALARIO": " 3.296,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1636644045",
+            "OPERADORA": "CTBCTELECOM",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "16994122800",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16991689810",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16992454447",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "vania3jota@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ADELERMO LORENCINI",
+                "NUMERO": "380",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD IMAC",
+                "CEP": "14340000",
+                "CIDADE": "BRODOWSKI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R A ALVES FERREIRA",
+                "NUMERO": "160",
+                "COMPLEMENTO": "VL CRISTAL",
+                "BAIRRO": "CENTRO",
+                "CEP": "14340000",
+                "CIDADE": "BRODOWSKI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ANTONIO ALVES FERREIRA",
+                "NUMERO": "162",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "VILA CRISTAL",
+                "CEP": "14340000",
+                "CIDADE": "BRODOSQUI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOSE PEREIRA RIBEIRO",
+                "NUMERO": "400",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "",
+                "CEP": "14340000",
+                "CIDADE": "BRODOWSKI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO ALVES FERREIRA",
+                "NUMERO": "16",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA CRISTAL",
+                "CEP": "14340000",
+                "CIDADE": "BRODOWSKI",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "21621348881",
+                "NOME": "MARIA ROSA DAL POGIETO MONTEVERDI",
+                "IDADE": "74 anos",
+                "LOCAL": "BRODOWSKI\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "14449586824",
+                "NOME": "ROSIMAR MONTEVERDI DE OLIVEIRA",
+                "IDADE": "52 anos",
+                "LOCAL": "JARDINOPOLIS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "15344600801",
+                "NOME": "MARIA HELENA MONTEVERDI DOS SANTOS",
+                "IDADE": "54 anos",
+                "LOCAL": "BRODOWSKI\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "VANIA CRISTINA MALAGUTTI",
+            "IDADE": "",
+            "LOCALIDADE": "BRODOWSKI\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "29912886801"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "MONTEVERDI   FERNANDES LTDA",
+            "CNPJ": "72801160000140",
+            "CIDADE": "BRODOWSKI-SP",
+            "PROFISSAO": "771105",
+            "DATA_ADMISSAO": "01\/10\/2012",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

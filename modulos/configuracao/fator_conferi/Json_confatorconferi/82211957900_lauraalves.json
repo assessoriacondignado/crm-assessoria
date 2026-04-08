@@ -1,0 +1,159 @@
+{
+    "CADASTRAIS": {
+        "CPF": "82211957900",
+        "NOME": "LAURA ALVES",
+        "NOME_MAE": "CONCEICAO BALTAZAR ALVES",
+        "NASCTO": "01\/06\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Feminino",
+        "RG": "41334150",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "049099930604",
+        "NIT": "12423569264",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142320",
+        "PROFISSAO": "GERENTE DE VENDAS",
+        "SALARIO": " 1.560,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "4135620160",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "41991991365",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "13\/01\/2016",
+            "TIPO_TEL": "MOVEL",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": ""
+        }
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "TV PERU",
+                "NUMERO": "97",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RIO VERDE",
+                "CEP": "83405380",
+                "CIDADE": "COLOMBO",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R DR SATILAS DO AMARAL CAMARGO",
+                "NUMERO": "303",
+                "COMPLEMENTO": "AP 44",
+                "BAIRRO": "TINGUI",
+                "CEP": "82620265",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "RUA DOUTOR SATILAS DO AMARAL CAMARGO",
+                "NUMERO": "186",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TINGUI",
+                "CEP": "82620265",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "41394208987",
+                "NOME": "CONCEICAO BALTAZAR ALVES",
+                "IDADE": "88 anos",
+                "LOCAL": "MARINGA\/PR",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "2943803960",
+                "NOME": "MARCIO ALVES",
+                "IDADE": "48 anos",
+                "LOCAL": "CAMPO GRANDE\/MS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "3455933912",
+                "NOME": "MARIA APARECIDA ALVES CAVALCANTE",
+                "IDADE": "66 anos",
+                "LOCAL": "MANDAGUACU\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "5012142918",
+                "NOME": "JOSE ALVES FILHO",
+                "IDADE": "53 anos",
+                "LOCAL": "MARINGA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "14928323831",
+                "NOME": "CLARICE ALVES",
+                "IDADE": "68 anos",
+                "LOCAL": "SANTO ANDRE\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "43560539668",
+                "NOME": "JOAO ALVES CAVALCANTE",
+                "IDADE": "64 anos",
+                "LOCAL": "SANTO ANTONIO DO MONTE\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "DISTRILOBO REPRESENTACOES DE PRODUTOS ALIMENTICIOS LTDA",
+                "CNPJ": "01554188000182",
+                "CIDADE": "SAO JOSE DOS PINHAIS-PR",
+                "PROFISSAO": "521105",
+                "DATA_ADMISSAO": "24\/01\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LARA   HALUCH COMERCIO DE REVISTAS LTDA",
+                "CNPJ": "86864188000131",
+                "CIDADE": "COLOMBO-PR",
+                "PROFISSAO": "142320",
+                "DATA_ADMISSAO": "02\/09\/2013",
+                "DATA_DEMISSAO": "09\/12\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "BANCA DE REVISTAS VENUS LTDA",
+            "CNPJ": "76066042000197",
+            "CIDADE": "CURITIBA-PR",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "19921106",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

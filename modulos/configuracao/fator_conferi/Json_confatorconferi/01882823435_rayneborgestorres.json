@@ -1,0 +1,281 @@
+{
+    "CADASTRAIS": {
+        "CPF": "1882823435",
+        "NOME": "RAYNE BORGES TORRES",
+        "NOME_MAE": "IVONE DE ARAUJO BORGES TORRES",
+        "NASCTO": "27\/12\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12833431254",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "234435",
+        "PROFISSAO": "PROFESSOR DE MEDICINA",
+        "SALARIO": " 10.953,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1932369431",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1932966293",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8334214340",
+                "OPERADORA": "TELEMAR\/PB",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8334212980",
+                "OPERADORA": "TELEMAR\/PB",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "83987348555",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "83999988899",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "83993546936",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19993546936",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19988027977",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "clasette@hotmail.com",
+            "raynebt@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV BENJAMIN CONSTANT",
+                "NUMERO": "99",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BRASILIA",
+                "CEP": "58700360",
+                "CIDADE": "PATOS",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "R NEVINHA GONDIM DE OLIVEIRA",
+                "NUMERO": "101",
+                "COMPLEMENTO": "AP 1101",
+                "BAIRRO": "BRISAMAR",
+                "CEP": "58033070",
+                "CIDADE": "JOAO PESSOA",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "AV GUARABIRA",
+                "NUMERO": "1305",
+                "COMPLEMENTO": "AP 605",
+                "BAIRRO": "MANAIRA",
+                "CEP": "58038142",
+                "CIDADE": "JOAO PESSOA",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "R CULTO A CIENCIA",
+                "NUMERO": "527",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOTAFOGO",
+                "CEP": "13020061",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV JACINTO DANTAS",
+                "NUMERO": "94",
+                "COMPLEMENTO": "AP 102 94 AP 102",
+                "BAIRRO": "MANAIRA",
+                "CEP": "58038270",
+                "CIDADE": "JOAO PESSOA",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "R PROF JOSE ARAUJO",
+                "NUMERO": "1411",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "MATERNIDADE",
+                "CEP": "58701340",
+                "CIDADE": "PATOS",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "R MAJ LUCIANO TEIXEIRA",
+                "NUMERO": "31",
+                "COMPLEMENTO": "AP 82 BL",
+                "BAIRRO": "BONFIM",
+                "CEP": "13070746",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R HERMANTINO COELHO",
+                "NUMERO": "195",
+                "COMPLEMENTO": "AP 113 ED PLAZA",
+                "BAIRRO": "MANSOES SANTO ANTONIO",
+                "CEP": "13087500",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "88450236487",
+                "NOME": "IVONE DE ARAUJO BORGES TORRES",
+                "IDADE": "88 anos",
+                "LOCAL": "JOAO PESSOA\/PB",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "88450201420",
+                "NOME": "RAYONE BORGES TORRES",
+                "IDADE": "53 anos",
+                "LOCAL": "PATOS\/PB",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "88450740487",
+                "NOME": "RAYVON BORGES TORRES",
+                "IDADE": "53 anos",
+                "LOCAL": "CAMPINA GRANDE\/PB",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "CLAYTON JOSE TAVARES SETTE",
+            "IDADE": "",
+            "LOCALIDADE": "JOAO PESSOA\/PB",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "58781455453"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CENTRO EDUCACIONAL DE ENSINO SUPERIOR DE PATOS LTDA",
+                "CNPJ": "19768173000182",
+                "CIDADE": "PATOS-PB",
+                "PROFISSAO": "234520",
+                "DATA_ADMISSAO": "01\/03\/2016",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SECRETARIA DE ESTADO DA ADMINISTRACAO",
+                "CNPJ": "08761140000194",
+                "CIDADE": "JOAO PESSOA-PB",
+                "PROFISSAO": "223605",
+                "DATA_ADMISSAO": "23\/11\/2008",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "FUNDACAO FRANCISCO MASCARENHAS",
+                "CNPJ": "09277278000185",
+                "CIDADE": "PATOS-PB",
+                "PROFISSAO": "234435",
+                "DATA_ADMISSAO": "01\/08\/2006",
+                "DATA_DEMISSAO": "29\/02\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVICO SOCIAL DA INDUSTRIA SESI",
+                "CNPJ": "03775655000200",
+                "CIDADE": "PATOS-PB",
+                "PROFISSAO": "223605",
+                "DATA_ADMISSAO": "07\/07\/2008",
+                "DATA_DEMISSAO": "103",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

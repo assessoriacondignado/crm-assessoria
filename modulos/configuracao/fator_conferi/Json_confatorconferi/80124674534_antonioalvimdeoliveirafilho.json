@@ -1,0 +1,266 @@
+{
+    "CADASTRAIS": {
+        "CPF": "80124674534",
+        "NOME": "ANTONIO ALVIM DE OLIVEIRA FILHO",
+        "NOME_MAE": "MARIA LUCIA PEREIRA ALVIM",
+        "NASCTO": "24\/09\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "093052390515",
+        "NIT": "1293722272 ",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212405",
+        "PROFISSAO": "ANALISTA DE DESENVOLVIMENTO DE SISTEMAS",
+        "SALARIO": " 10.718,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7121027827",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1136245166",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "27\/02\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7132413343",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "71988037574",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71988421078",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "16\/12\/2006",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11993042080",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11993042080",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11952173089",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "26\/06\/2014",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "titoalvim@yahoo.com",
+            "titoalvim@yahoo.com.br",
+            "antonio.alvim@serpro.gov.br",
+            "antonioalvimfilho@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R SILVIO VALENTE",
+                "NUMERO": "48",
+                "COMPLEMENTO": "AP 102",
+                "BAIRRO": "ITAIGARA",
+                "CEP": "41815370",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "AV ANGELICA",
+                "NUMERO": "1508",
+                "COMPLEMENTO": "AP 201",
+                "BAIRRO": "AT DAS POMBAS",
+                "CEP": "40226445",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R ALAGOINHAS",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RIO VERMELHO",
+                "CEP": "41940620",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R ALAGOINHAS",
+                "NUMERO": "236",
+                "COMPLEMENTO": "PRQ CRU",
+                "BAIRRO": "RIO VERMELHO",
+                "CEP": "41940620",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R MAL FLORIANO",
+                "NUMERO": "472",
+                "COMPLEMENTO": "AP 302",
+                "BAIRRO": "CANELA",
+                "CEP": "40110010",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R BR DO BANANAL",
+                "NUMERO": "490",
+                "COMPLEMENTO": "AP 242",
+                "BAIRRO": "VL POMPEIA",
+                "CEP": "05024000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JARDIM FEDERACAO",
+                "NUMERO": "208",
+                "COMPLEMENTO": "AP 702 ED Res  Jardins",
+                "BAIRRO": "FEDERACAO",
+                "CEP": "40231060",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "AVENIDA JOANA ANGELICA",
+                "NUMERO": "1508",
+                "COMPLEMENTO": "AP 201",
+                "BAIRRO": "NAZARE",
+                "CEP": "40050002",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "3023803617",
+                "NOME": "MARIA LUCIA PEREIRA ALVIM",
+                "IDADE": "61 anos",
+                "LOCAL": "SANTOS DUMONT\/MG",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "7259749660",
+                "NOME": "MICHEL RAMON ALVIM",
+                "IDADE": "42 anos",
+                "LOCAL": "SETE LAGOAS\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "7277669614",
+                "NOME": "LEONEL RITY ALVIM",
+                "IDADE": "39 anos",
+                "LOCAL": "SANTOS DUMONT\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "8836255639",
+                "NOME": "MICHELE VALERIA ALVIM",
+                "IDADE": "37 anos",
+                "LOCAL": "IMBE DE MINAS\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "51273446534",
+                "NOME": "SILVANA PEREIRA ALVIM",
+                "IDADE": "55 anos",
+                "LOCAL": "FLORIANOPOLIS\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "66860580500",
+                "NOME": "MOISES PEREIRA ALVIM",
+                "IDADE": "54 anos",
+                "LOCAL": "MARUIM\/SE",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SERVICO FEDERAL DE PROCESSAMENTO DE DADOS (SERPRO)",
+                "CNPJ": "33683111000603",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "02\/04\/2012",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVICO FEDERAL DE PROCESSAMENTO DE DADOS (SERPRO)",
+                "CNPJ": "33683111000956",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "02\/04\/2012",
+                "DATA_DEMISSAO": "01\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

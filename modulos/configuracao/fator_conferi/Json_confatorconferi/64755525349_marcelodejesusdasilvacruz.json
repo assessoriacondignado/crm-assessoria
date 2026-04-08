@@ -1,0 +1,164 @@
+{
+    "CADASTRAIS": {
+        "CPF": "64755525349",
+        "NOME": "MARCELO DE JESUS DA SILVA CRUZ",
+        "NOME_MAE": "FRANCISCA DA SILVA DA CRUZ",
+        "NASCTO": "04\/07\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "029790411171",
+        "NIT": "16489998271",
+        "ESCOLARIDADE": "DA 5a. A 8a. SERIE INCOMPLETA DO 1o. GRAU(GINASIO INCOMPLETO)",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "848520",
+        "PROFISSAO": "MAGAREFE",
+        "SALARIO": " 5,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9833671104",
+            "OPERADORA": "TELEMAR\/MA",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "64999884503",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "98991837504",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "98992294576",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "12\/12\/2018",
+                "TIPO_TEL": "MOVEL PRE-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "98991622751",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R OITO",
+                "NUMERO": "90",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "75830065",
+                "CIDADE": "MINEIROS",
+                "ESTADO": "GO"
+            },
+            {
+                "LOGRADOURO": "TREZE",
+                "NUMERO": "68",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL J LIMA",
+                "CEP": "65130000",
+                "CIDADE": "PACO DO LUMIAR",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "R DOIS",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ST AURELIO",
+                "CEP": "75830194",
+                "CIDADE": "MINEIROS",
+                "ESTADO": "GO"
+            },
+            {
+                "LOGRADOURO": "RUA R TREZE",
+                "NUMERO": "68",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL J LIMA",
+                "CEP": "65110000",
+                "CIDADE": "SAO JOSE DE RIBAMAR",
+                "ESTADO": "MA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "29282748391",
+            "NOME": "FRANCISCA DA SILVA DA CRUZ",
+            "IDADE": "69 anos",
+            "LOCAL": "SAO LUIS\/MA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SERVI SAN VIGILANCIA E TRANSPORTE DE VALORES LTDA - EM RECUPERACAO JUDICIAL",
+                "CNPJ": "12066015000212",
+                "CIDADE": "SAO LUIS-MA",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "04\/11\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVIS SEGURANCA LTDA",
+                "CNPJ": "07945678000510",
+                "CIDADE": "SAO LUIS-MA",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "01\/02\/2024",
+                "DATA_DEMISSAO": "30\/04\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BRF S.A.",
+                "CNPJ": "01838723018255",
+                "CIDADE": "MINEIROS-GO",
+                "PROFISSAO": "848520",
+                "DATA_ADMISSAO": "12\/08\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

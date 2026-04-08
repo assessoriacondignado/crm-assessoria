@@ -1,0 +1,249 @@
+{
+    "CADASTRAIS": {
+        "CPF": "27717680890",
+        "NOME": "DANIEL ARAUJO MACHADO",
+        "NOME_MAE": "VERONICA ASSUNCAO ARAUJO",
+        "NASCTO": "11\/04\/1977",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12698951852",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "141505",
+        "PROFISSAO": "GERENTE DE HOTEL",
+        "SALARIO": " 14.348,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8335669718",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "8534623000",
+                "OPERADORA": "TELEMAR\/CE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8540068585",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1123401180",
+                "OPERADORA": "INTELIG TELECOM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11943837655",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "83991326026",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "83993610570",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "83993623121",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "85988080647",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "gerencia@verdegreen.com.br",
+            "machadodaniel@uol.com.br",
+            "gresidente@luzeirossaoluis.com.br",
+            "assistente@hotelluzeiros.com.br",
+            "damhotelaria@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CEL JUCA",
+                "NUMERO": "330",
+                "COMPLEMENTO": "1601",
+                "BAIRRO": "MEIRELES",
+                "CEP": "60170320",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R DEP MOREIRA DA ROCHA",
+                "NUMERO": "1183",
+                "COMPLEMENTO": "AP 1100",
+                "BAIRRO": "MEIRELES",
+                "CEP": "60160060",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO DIAS DE FREITAS",
+                "NUMERO": "47",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BANCARIOS",
+                "CEP": "58051410",
+                "CIDADE": "JOAO PESSOA",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "AV PINTO BANDEIRA",
+                "NUMERO": "705",
+                "COMPLEMENTO": "CS 3",
+                "BAIRRO": "ENG LUCIANO CAVALCANTE",
+                "CEP": "60811170",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R DA CANDELARIA",
+                "NUMERO": "93",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MANAIRA",
+                "CEP": "58038620",
+                "CIDADE": "JOAO PESSOA",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "R JOSE AUGUSTO TRINDADE",
+                "NUMERO": "376",
+                "COMPLEMENTO": "AP 102",
+                "BAIRRO": "TAMBAU",
+                "CEP": "58039020",
+                "CIDADE": "JOAO PESSOA",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "RUA SILVA PAULET",
+                "NUMERO": "205",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MEIRELES",
+                "CEP": "60120020",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "8394867740",
+                "NOME": "VERONICA ASSUNCAO ARAUJO",
+                "IDADE": "48 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "82905711353",
+                "NOME": "LUIZ EDUARDO ARAUJO MACHADO",
+                "IDADE": "46 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "DJ - HOTELARIA S.A",
+                "CNPJ": "04566342000205",
+                "CIDADE": "JOAO PESSOA-PB",
+                "PROFISSAO": "142105",
+                "DATA_ADMISSAO": "04\/03\/2016",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LUSITANIA EMPREENDIMENTOS TURISTICOS LTDA.",
+                "CNPJ": "03586356000228",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "141505",
+                "DATA_ADMISSAO": "26\/03\/2012",
+                "DATA_DEMISSAO": "29\/02\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "MACHADO EMPREENDIMENTOS IMOBILIARIOS LTDA",
+            "CNPJ": "15243711000164",
+            "CIDADE": "CARIRIACU-CE",
+            "QUALIFICACAO": "SÃ³cio",
+            "DATA_ENTRADA": "20141117",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

@@ -1,0 +1,159 @@
+{
+    "CADASTRAIS": {
+        "CPF": "17192787841",
+        "NOME": "ADEMIR LUIS DA SILVA",
+        "NOME_MAE": "MARIA JOSE SILVA",
+        "NASCTO": "18\/11\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "257557590183",
+        "NIT": "12431014519",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "313115",
+        "PROFISSAO": "ELETROTENICO NA FABRICACAO, MONTAGEM E INSTALACAO DE MAQUINAS E EQUIPAMENTOS",
+        "SALARIO": " 2.671,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1932962030",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1932271027",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19999419132",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19998321516",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11956871732",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "30\/04\/2020",
+                "TIPO_TEL": "MOVEL POS-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19996819217",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "19997113365",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "luisademir@terra.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "AV GEORGES ZAOUK",
+            "NUMERO": "142",
+            "COMPLEMENTO": "",
+            "BAIRRO": "JARDIM ICARAI",
+            "CEP": "13051411",
+            "CIDADE": "CAMPINAS",
+            "ESTADO": "SP"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "11203870",
+            "NOME": "MARIA JOSE SILVA",
+            "IDADE": "89 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SIGNUS INDUSTRIA OPTICA LTDA",
+                "CNPJ": "17339213000145",
+                "CIDADE": "MORUNGABA-SP",
+                "PROFISSAO": "810205",
+                "DATA_ADMISSAO": "01\/09\/2017",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SIGNUS INDUSTRIA COMERCIO IMPORTACAO E EXPORTACAO DE PRODUTOS OPTICOS - EIRELI",
+                "CNPJ": "17214880000100",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "313115",
+                "DATA_ADMISSAO": "01\/07\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "TECNOL TECNICA NACIONAL DE OCULOS LTDA",
+                "CNPJ": "44606085000121",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "414210",
+                "DATA_ADMISSAO": "15\/12\/2011",
+                "DATA_DEMISSAO": "24\/08\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

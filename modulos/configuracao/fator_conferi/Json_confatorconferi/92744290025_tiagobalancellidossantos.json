@@ -1,0 +1,245 @@
+{
+    "CADASTRAIS": {
+        "CPF": "92744290025",
+        "NOME": "TIAGO BALANCELLI DOS SANTOS",
+        "NOME_MAE": "NEUSA MARIA DOS SANTOS",
+        "NASCTO": "07\/04\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "346916717",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "072121030434",
+        "NIT": "12586302712",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "730105",
+        "PROFISSAO": "SUPERVISOR DE MONTAGEM E INSTALACAO ELETROELETRONICA",
+        "SALARIO": " 9.150,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "5131127004",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51994385012",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51996758080",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51991337659",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51999846810",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51998612516",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "quelepetry@ibest.com.br",
+            "tiagobalancelli@yahoo.com.br",
+            "tiagobalancelli@pop.com.br",
+            "tiagobalancelli@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R SRG LUIZ GONZAGA MARTINS RIBAS",
+                "NUMERO": "250",
+                "COMPLEMENTO": "S 2",
+                "BAIRRO": "UBERABA",
+                "CEP": "81560530",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "AV DORIVAL CANDIDO LUZ DE OLIVEIRA",
+                "NUMERO": "122",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COHAB C",
+                "CEP": "94030000",
+                "CIDADE": "GRAVATAI",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R CAP JOAO DORNELLES",
+                "NUMERO": "544",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ DOS ANJOS",
+                "CEP": "94180000",
+                "CIDADE": "GRAVATAI",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R ENGENHEIRO JOSE M. VIANNA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "94010080",
+                "CIDADE": "GRAVATAI",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R ALFREDO SOARES PITRES",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SALGADO FILHO",
+                "CEP": "94020050",
+                "CIDADE": "GRAVATAI",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R DOMINGOS DORIVALDO THIESEN",
+                "NUMERO": "431",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE DA MATRIZ",
+                "CEP": "94950590",
+                "CIDADE": "CACHOEIRINHA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R ARACATUBA",
+                "NUMERO": "532",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE DA MATRIZ",
+                "CEP": "94950520",
+                "CIDADE": "CACHOEIRINHA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA RAUL OBLADEN",
+                "NUMERO": "710",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ITALIA",
+                "CEP": "83020500",
+                "CIDADE": "SAO JOSE DOS PINHAIS",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "32027800",
+            "NOME": "NEUSA MARIA DOS SANTOS",
+            "IDADE": "70 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "QUELE CRISTINE BRUSDA PETRY",
+            "IDADE": "",
+            "LOCALIDADE": "GRAVATAI\/RS",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "95838872004"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "GDC ALIMENTOS S.A",
+                "CNPJ": "02279324002007",
+                "CIDADE": "ITAJAI-SC",
+                "PROFISSAO": "910105",
+                "DATA_ADMISSAO": "06\/08\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "METALURGICA THF INDUSTRIA E COMERCIO LTDA",
+                "CNPJ": "89013627000190",
+                "CIDADE": "CACHOEIRINHA-RS",
+                "PROFISSAO": "720215",
+                "DATA_ADMISSAO": "01\/07\/2022",
+                "DATA_DEMISSAO": "03\/09\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COSMA DO BRASIL PRODUTOS E SERVICOS AUTOMOTIVOS LTDA.",
+                "CNPJ": "02591818000585",
+                "CIDADE": "SANTO ANTONIO DA PATRULHA-RS",
+                "PROFISSAO": "730105",
+                "DATA_ADMISSAO": "16\/01\/2012",
+                "DATA_DEMISSAO": "01\/12\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "COSMA DO BRASIL PRODUTOS E SERVICOS AUTOMOTIVOS LTDA.",
+                "CNPJ": "02591818000747",
+                "CIDADE": "SAO JOSE DOS PINHAIS-PR",
+                "PROFISSAO": "720210",
+                "DATA_ADMISSAO": "01\/12\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "GKN DO BRASIL LTDA",
+                "CNPJ": "58512310000175",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "314110",
+                "DATA_ADMISSAO": "06\/08\/2001",
+                "DATA_DEMISSAO": "201",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

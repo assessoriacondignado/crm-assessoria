@@ -1,0 +1,283 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26547832864",
+        "NOME": "ROGERIO SCHNEIDER CANDINE",
+        "NOME_MAE": "MARIA TEREZA SCHNEIDER CANDINE",
+        "NASCTO": "12\/10\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "277307170116",
+        "NIT": "12629969497",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "710115",
+        "PROFISSAO": "SUPERVISOR DE PERFURACAO E DESMONTE",
+        "SALARIO": " 6.234,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4935411310",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "6434426915",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31998541983",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31995681978",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13996149501",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "49991742788",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "64984295805",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "rogeriocandine@oi.com.br",
+            "rscandine@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R RAIMUNDO GOMES DE OLIVEIRA",
+                "NUMERO": "35",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ST CENTRAL",
+                "CEP": "75701250",
+                "CIDADE": "CATALAO",
+                "ESTADO": "GO"
+            },
+            {
+                "LOGRADOURO": "R PAULO FORTES",
+                "NUMERO": "6471",
+                "COMPLEMENTO": "",
+                "BAIRRO": "APONIA",
+                "CEP": "76824082",
+                "CIDADE": "PORTO VELHO",
+                "ESTADO": "RO"
+            },
+            {
+                "LOGRADOURO": "R EVANGELINO MEIRELES",
+                "NUMERO": "15",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ST CENTRAL",
+                "CEP": "75701280",
+                "CIDADE": "CATALAO",
+                "ESTADO": "GO"
+            },
+            {
+                "LOGRADOURO": "R PANTEON",
+                "NUMERO": "6648",
+                "COMPLEMENTO": "NULL",
+                "BAIRRO": "IGARAPE",
+                "CEP": "76824282",
+                "CIDADE": "PORTO VELHO",
+                "ESTADO": "RO"
+            },
+            {
+                "LOGRADOURO": "ANCELMO NINO GRANZ",
+                "NUMERO": "350",
+                "COMPLEMENTO": "casa amarela",
+                "BAIRRO": "CENTRO",
+                "CEP": "89620000",
+                "CIDADE": "CAMPOS NOVOS",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "AVENIDA MARGON",
+                "NUMERO": "719",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA MARGON",
+                "CEP": "75711020",
+                "CIDADE": "CATALAO",
+                "ESTADO": "GO"
+            },
+            {
+                "LOGRADOURO": "RUA TRANCREDO NEVES",
+                "NUMERO": "296",
+                "COMPLEMENTO": "FRENTE AUXILIAD",
+                "BAIRRO": "CENTRO",
+                "CEP": "89620000",
+                "CIDADE": "CAMPOS NOVOS",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R FREI ROGERIO",
+                "NUMERO": "517",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "",
+                "CEP": "89620000",
+                "CIDADE": "CAMPOS NOVOS",
+                "ESTADO": "SC"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "11256662852",
+                "NOME": "MARIA TEREZA SCHNEIDER CANDINE",
+                "IDADE": "67 anos",
+                "LOCAL": "CATALAO\/GO",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "3818820988",
+                "NOME": "SHARON ROSE CANDINE LOPES",
+                "IDADE": "44 anos",
+                "LOCAL": "PORTO UNIAO\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "5713519996",
+                "NOME": "JULYA DANIELLY CANDINE GOULART",
+                "IDADE": "40 anos",
+                "LOCAL": "CATALAO\/GO",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "METSO BRASIL INDUSTRIA E COMERCIO LTDA",
+                "CNPJ": "16622284001755",
+                "CIDADE": "NOVA LIMA-MG",
+                "PROFISSAO": "950110",
+                "DATA_ADMISSAO": "20\/20\/1905",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CAMARGO CORREA INFRA LTDA",
+                "CNPJ": "11178032000874",
+                "CIDADE": "BIGUACU-SC",
+                "PROFISSAO": "710205",
+                "DATA_ADMISSAO": "24\/10\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "FAGUNDES CONSTRUCAO E MINERACAO S\/A",
+                "CNPJ": "90272337000736",
+                "CIDADE": "CATALAO-GO",
+                "PROFISSAO": "711205",
+                "DATA_ADMISSAO": "09\/07\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "CONSTRUCOES E COMERCIO CAMARGO CORREA S\/A",
+                "CNPJ": "61522512000102",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "710205",
+                "DATA_ADMISSAO": "25\/10\/1999",
+                "DATA_DEMISSAO": "21\/01\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ACCIONA CONSTRUCCION S.A",
+                "CNPJ": "03503152001258",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "710115",
+                "DATA_ADMISSAO": "22\/09\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "CONSORCIO CONSTRUTOR BELO MONTE",
+                "CNPJ": "13380006000183",
+                "CIDADE": "ALTAMIRA-PA",
+                "PROFISSAO": "710220",
+                "DATA_ADMISSAO": "10\/01\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "CONSTRUCOES E COMERCIO CAMARGO CORREA S\/A",
+                "CNPJ": "61522512003128",
+                "CIDADE": "AMERICANA-SP",
+                "PROFISSAO": "919105",
+                "DATA_ADMISSAO": "25\/10\/1999",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

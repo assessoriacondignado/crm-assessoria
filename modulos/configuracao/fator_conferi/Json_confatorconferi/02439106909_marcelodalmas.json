@@ -1,0 +1,261 @@
+{
+    "CADASTRAIS": {
+        "CPF": "2439106909",
+        "NOME": "MARCELO DALMAS",
+        "NOME_MAE": "EVA DALMAS",
+        "NASCTO": "08\/11\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "035168010930",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212405",
+        "PROFISSAO": "ANALISTA DE DESENVOLVIMENTO DE SISTEMAS",
+        "SALARIO": " 21.263,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4832231368",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "4832091368",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "24\/08\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4832331368",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "4821080300",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "48991410212",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "48991707798",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "48991135884",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "48991224507",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "m_dalmas@yahoo.com.br",
+            "m_dalmas@yahoo.com",
+            "marcelo@brasmap.com.br",
+            "fabianags79@gmail.com",
+            "marcelo.dalmas@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOAO PIO DUARTE SILVA",
+                "NUMERO": "180",
+                "COMPLEMENTO": "BL A ED PRINCENTON AP",
+                "BAIRRO": "CRG GRANDE",
+                "CEP": "88037000",
+                "CIDADE": "FLORIANOPOLIS",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R GEN OSORIO",
+                "NUMERO": "363",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VELHA",
+                "CEP": "89041001",
+                "CIDADE": "BLUMENAU",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "AV CASTELO BRANCO",
+                "NUMERO": "2373",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CIDADE ALTA",
+                "CEP": "97650000",
+                "CIDADE": "ITAQUI",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R LUIZ OSCAR DE CARVALHO",
+                "NUMERO": "75",
+                "COMPLEMENTO": "AP 24 ED ITAMBE",
+                "BAIRRO": "TRINDADE",
+                "CEP": "88036400",
+                "CIDADE": "FLORIANOPOLIS",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "RUA MARCUS AURELIO HOMEM",
+                "NUMERO": "95",
+                "COMPLEMENTO": "AP 402",
+                "BAIRRO": "CARVOEIRA",
+                "CEP": "88040440",
+                "CIDADE": "FLORIANOPOLIS",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "RUA LUIZ OSCAR DE CARVALHO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TRINDADE",
+                "CEP": "88036400",
+                "CIDADE": "FLORIANOPOLIS",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "RUA PRESIDENTE GAMA ROSA",
+                "NUMERO": "270",
+                "COMPLEMENTO": "AP 103",
+                "BAIRRO": "TRINDADE",
+                "CEP": "88036260",
+                "CIDADE": "FLORIANOPOLIS",
+                "ESTADO": "SC"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "1730743919",
+                "NOME": "EVA DALMAS",
+                "IDADE": "71 anos",
+                "LOCAL": "BLUMENAU\/SC",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "3719336921",
+                "NOME": "LAURA DALMAS",
+                "IDADE": "44 anos",
+                "LOCAL": "CURITIBA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "6718113980",
+                "NOME": "MARINA DALMAS",
+                "IDADE": "38 anos",
+                "LOCAL": "CURITIBA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "EDISON ROLDAO RIBEIRO PIRES",
+                "IDADE": "",
+                "LOCALIDADE": "SAO JOSE\/SC",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "68187548991"
+            },
+            {
+                "NOME": "JEAN CARLO EUFRASIO",
+                "IDADE": "",
+                "LOCALIDADE": "FLORIANOPOLIS\/SC",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "91240158904"
+            },
+            {
+                "NOME": "RITA DE CASSIA DE LIRA MARIOT",
+                "IDADE": "",
+                "LOCALIDADE": "FLORIANOPOLIS\/SC",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "24528080915"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "GRID SOLUTIONS TRANSMISSAO DE ENERGIA LTDA",
+                "CNPJ": "05356949001629",
+                "CIDADE": "FLORIANOPOLIS-SC",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "01\/01\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "REASON TECNOLOGIA S.A.",
+                "CNPJ": "85117687000283",
+                "CIDADE": "FLORIANOPOLIS-SC",
+                "PROFISSAO": "214405",
+                "DATA_ADMISSAO": "05\/20\/2006",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

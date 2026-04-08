@@ -1,0 +1,228 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26222087825",
+        "NOME": "GERSON BEZERRA E SILVA",
+        "NOME_MAE": "APARECIDA EFIGENIA E SILVA",
+        "NASCTO": "19\/01\/1979",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "252292470124",
+        "NIT": "13278936778",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411005",
+        "PROFISSAO": "AUXILIAR DE ESCRITORIO, EM GERAL",
+        "SALARIO": " 534,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1150806098",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1123413506",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1833561499",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11963413506",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11989855722",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "18996383232",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "18996816575",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "gerson@fcacessoria.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R APARECIDO VILLAS BOAS",
+                "NUMERO": "129",
+                "COMPLEMENTO": "COMPLEM CENTRO",
+                "BAIRRO": "CENTRO",
+                "CEP": "19830011",
+                "CIDADE": "ECHAPORA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R D MARCOS TEIXEIRA",
+                "NUMERO": "297",
+                "COMPLEMENTO": "",
+                "BAIRRO": "IPIRANGA",
+                "CEP": "04210020",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R D MARCOS TEIXEIRA",
+                "NUMERO": "7",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL NOGUEIRA",
+                "CEP": "09960360",
+                "CIDADE": "DIADEMA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R D MARCOS TEIXEIRA",
+                "NUMERO": "297",
+                "COMPLEMENTO": "VLA A",
+                "BAIRRO": "VL NOGUEIRA",
+                "CEP": "09960360",
+                "CIDADE": "DIADEMA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R  APARECIDO VILAS BOAS",
+                "NUMERO": "129",
+                "COMPLEMENTO": "COMPLEM CENTRO",
+                "BAIRRO": "JD V BELA VISTA",
+                "CEP": "19830000",
+                "CIDADE": "ECHAPORA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MARECHAL MALET",
+                "NUMERO": "243",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE DA VILA PRUDENTE",
+                "CEP": "03140020",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOM MARCOS TEIXEIRA",
+                "NUMERO": "163",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA NOGUEIRA",
+                "CEP": "09960360",
+                "CIDADE": "DIADEMA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "18289742851",
+                "NOME": "APARECIDA EFIGENIA E SILVA",
+                "IDADE": "67 anos",
+                "LOCAL": "DIADEMA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "28145205808",
+                "NOME": "PATRICIA BEZERRA E SILVA",
+                "IDADE": "48 anos",
+                "LOCAL": "DIADEMA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "32371522856",
+                "NOME": "CRISTIANE BEZERRA E SILVA",
+                "IDADE": "45 anos",
+                "LOCAL": "DIADEMA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "45832139801",
+                "NOME": "MARCELO BEZERRA E SILVA",
+                "IDADE": "30 anos",
+                "LOCAL": "DIADEMA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "HOSPITAL E MATERNIDADE SANTA JOANA S\/A",
+                "CNPJ": "60678604000113",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "05\/03\/2008",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VIVANTE SERVICOS DE FACILITIES LTDA.",
+                "CNPJ": "02608118000122",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "16\/10\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

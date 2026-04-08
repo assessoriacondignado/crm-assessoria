@@ -1,0 +1,180 @@
+{
+    "CADASTRAIS": {
+        "CPF": "29585942895",
+        "NOME": "EDGARD ALVES DE OLIVEIRA",
+        "NOME_MAE": "SHIRLEI TEREZINHA GUSELLA SANTOS",
+        "NASCTO": "20\/02\/1982",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "281029805",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "289154490191",
+        "NIT": "20035082121",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782510",
+        "PROFISSAO": "MOTORISTA DE CAMINHAO (ROTAS REGIONAIS E INTERNACIONAIS)",
+        "SALARIO": " 1.804,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1239116123",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1239421981",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "17997320909",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "17991234194",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "edgard_a_oliveira@hotmail.com",
+            "edgard.a.oliveira@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R VICENTE LEPORACE",
+                "NUMERO": "148",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL DIRCE",
+                "CEP": "12213010",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DELFIM",
+                "NUMERO": "121",
+                "COMPLEMENTO": "FDS",
+                "BAIRRO": "JD SATELITE",
+                "CEP": "12230410",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BENEDITO PEREIRA LIMA",
+                "NUMERO": "135",
+                "COMPLEMENTO": "C 4",
+                "BAIRRO": "JD TELESPARK",
+                "CEP": "12212700",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R GRAMADO",
+                "NUMERO": "360",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE RESIDENCIAL FLAMINGO",
+                "CEP": "15803255",
+                "CIDADE": "CATANDUVA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA VICENTE LEPORACE",
+                "NUMERO": "121",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA DIRCE",
+                "CEP": "12213010",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "8890017821",
+            "NOME": "SHIRLEI TEREZINHA GUSELLA SANTOS",
+            "IDADE": "62 anos",
+            "LOCAL": "CURITIBA\/PR",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TIC TRANSPORTES LTDA",
+                "CNPJ": "77184745000182",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "16\/06\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LWART SOLUCOES AMBIENTAIS S.A.",
+                "CNPJ": "46201083000188",
+                "CIDADE": "LENCOIS PAULISTA-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "06\/08\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "USINA SAO DOMINGOS-ACUCAR E ETANOL S\/A",
+                "CNPJ": "47063128000168",
+                "CIDADE": "CATANDUVA-SP",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "27\/03\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SPAIPA INDUSTRIA BRASILEIRA DE BEBIDAS LTDA",
+                "CNPJ": "00904448004399",
+                "CIDADE": "CATANDUVA-SP",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "11\/01\/2011",
+                "DATA_DEMISSAO": "11\/06\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

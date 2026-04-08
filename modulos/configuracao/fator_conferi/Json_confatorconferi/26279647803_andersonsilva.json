@@ -1,0 +1,330 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26279647803",
+        "NOME": "ANDERSON SILVA",
+        "NOME_MAE": "AMELIA DAS DORES SILVA",
+        "NASCTO": "21\/07\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "258136310167",
+        "NIT": "1254721263",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "314410",
+        "PROFISSAO": "TECNICO EM MANUTENCAO DE MAQUINAS",
+        "SALARIO": " 16.177,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1138646923",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1130915105",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1130915105",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1146241670",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1138713503",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11994054884",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11994172077",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11983324388",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "27\/11\/2008",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11987498913",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11987498923",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "s.ander@ig.com.br",
+            "z.ander@bol.com.br",
+            "s.kelly1@bol.com.br",
+            "s.ander@bol.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R GUANABARA",
+                "NUMERO": "25",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL BRASILIO MACHADO",
+                "CEP": "04288090",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ACUCENA",
+                "NUMERO": "430",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD DAS FLORES",
+                "CEP": "06110160",
+                "CIDADE": "OSASCO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ARACATUBA",
+                "NUMERO": "51",
+                "COMPLEMENTO": "",
+                "BAIRRO": "OLIMPICO",
+                "CEP": "09570130",
+                "CIDADE": "SAO CAETANO DO SUL",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV DOM PEDRO I",
+                "NUMERO": "335",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA OSASCO",
+                "CEP": "06083000",
+                "CIDADE": "OSASCO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CAYOWAA",
+                "NUMERO": "632",
+                "COMPLEMENTO": "AP 12",
+                "BAIRRO": "PERDIZES",
+                "CEP": "05018000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA DOM PEDRO I",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA OSASCO",
+                "CEP": "06083000",
+                "CIDADE": "OSASCO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA DOM PEDRO I",
+                "NUMERO": "335",
+                "COMPLEMENTO": "AP:62",
+                "BAIRRO": "VILA OSASCO",
+                "CEP": "06083010",
+                "CIDADE": "OSASCO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA PADRE CHICO",
+                "NUMERO": "85",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PERDIZES",
+                "CEP": "05008010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "36170448830",
+                "NOME": "AMELIA DAS DORES SILVA",
+                "IDADE": "69 anos",
+                "LOCAL": "OSASCO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "3314457430",
+                "NOME": "ANTONIA MARIA DAS DORES",
+                "IDADE": "98 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "7261189820",
+                "NOME": "ELIANA SILVA TUONO",
+                "IDADE": "61 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "14001930870",
+                "NOME": "SILVIANE SILVA RIPPER",
+                "IDADE": "57 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "29046387844",
+                "NOME": "DOUGLAS SILVA",
+                "IDADE": "45 anos",
+                "LOCAL": "OSASCO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "31994843870",
+                "NOME": "CRISTIAN SILVA",
+                "IDADE": "40 anos",
+                "LOCAL": "SANTANA DE PARNAIBA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ALEX SANDER CORREA MARTINS",
+                "IDADE": "",
+                "LOCALIDADE": "SAO JOSE\/SC",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "4130862910"
+            },
+            {
+                "NOME": "KELLY CRISTINA SEBRIAN SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "OSASCO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "16657408846"
+            },
+            {
+                "NOME": "PERSEU JESUS DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "PERUIBE\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "70223750891"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "REVVITY DO BRASIL LTDA",
+                "CNPJ": "00351210000124",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "314410",
+                "DATA_ADMISSAO": "26\/10\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "QIAGEN BIOTECNOLOGIA BRASIL LTDA.",
+                "CNPJ": "01334250000120",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "214325",
+                "DATA_ADMISSAO": "16\/20\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "BIO-RAD LABORATORIOS BRASIL LTDA.",
+                "CNPJ": "03188198000509",
+                "CIDADE": "ITAPEVI-SP",
+                "PROFISSAO": "313205",
+                "DATA_ADMISSAO": "01\/09\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "BIO-RAD LABORATORIOS BRASIL LTDA.",
+                "CNPJ": "03188198000410",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "313205",
+                "DATA_ADMISSAO": "21\/11\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

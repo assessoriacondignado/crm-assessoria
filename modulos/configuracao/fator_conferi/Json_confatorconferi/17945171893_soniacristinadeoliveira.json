@@ -1,0 +1,237 @@
+{
+    "CADASTRAIS": {
+        "CPF": "17945171893",
+        "NOME": "SONIA CRISTINA DE OLIVEIRA",
+        "NOME_MAE": "LIDIA DA SILVA DE OLIVEIRA",
+        "NASCTO": "21\/10\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "257682700183",
+        "NIT": "1239262666 ",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142320",
+        "PROFISSAO": "GERENTE DE VENDAS",
+        "SALARIO": " 16.942,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1933420748",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1933258216",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "04\/11\/2009",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19995923314",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19994450101",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19998181840",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1978173211",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19998732267",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "19\/01\/2019",
+                "TIPO_TEL": "MOVEL PRE-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "oliveira_sonia@allergan.com",
+            "soniapedrosa@directnet.com.br",
+            "pedrosojc@uol.com.br",
+            "oliveira-sonia@hotmail.com",
+            "oliveira.sonia@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JASMIM",
+                "NUMERO": "550",
+                "COMPLEMENTO": "AP 101 T 1",
+                "BAIRRO": "CH PRIMAVERA",
+                "CEP": "13087460",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R NASSIF JOSE MOKARZEL",
+                "NUMERO": "78",
+                "COMPLEMENTO": "JD VON ZUBEN",
+                "BAIRRO": "JD S VICENTE",
+                "CEP": "13045145",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CEL ARTUR DE PAULA FERREIRA",
+                "NUMERO": "59",
+                "COMPLEMENTO": "CJ 62",
+                "BAIRRO": "VL NOVA CONCEICAO",
+                "CEP": "04511060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R AGNALDO MACEDO",
+                "NUMERO": "400",
+                "COMPLEMENTO": "AP 73",
+                "BAIRRO": "JARDIM DOS OLIVEIRAS",
+                "CEP": "13044903",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JASMIM",
+                "NUMERO": "560",
+                "COMPLEMENTO": "BL A AP 101",
+                "BAIRRO": "CHACARA PRIMAVERA",
+                "CEP": "13087460",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "PRACA DIAS",
+                "NUMERO": "89",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COND ANA HELENA",
+                "CEP": "13820000",
+                "CIDADE": "JAGUARIUNA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA AGNALDO MACEDO",
+                "NUMERO": "400",
+                "COMPLEMENTO": "AP A73",
+                "BAIRRO": "JARDIM DOS OLIVEIRAS",
+                "CEP": "13044000",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ALVARO MULLER",
+                "NUMERO": "150",
+                "COMPLEMENTO": "APT 132",
+                "BAIRRO": "VILA ITAPURA",
+                "CEP": "13023180",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "11786840758",
+            "NOME": "LIDIA DA SILVA DE OLIVEIRA",
+            "IDADE": "40 anos",
+            "LOCAL": "RIO DE JANEIRO\/RJ",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "JOSE ALVES TIMOTEO",
+                "IDADE": "",
+                "LOCALIDADE": "OURO BRANCO\/AL",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "72345519487"
+            },
+            {
+                "NOME": "SONIA CRISTINA DE OLIVEIRA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "5536746847"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SOLIS DISTRIBUIDORA DE PRODUTOS PARA A SAUDE, SERVICOS COMERCIAIS E LOGISTICA LTDA",
+                "CNPJ": "06317222000119",
+                "CIDADE": "COLOMBO-PR",
+                "PROFISSAO": "142320",
+                "DATA_ADMISSAO": "13\/09\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ALLERGAN PRODUTOS FARMACEUTICOS LTDA.",
+                "CNPJ": "43426626000177",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142320",
+                "DATA_ADMISSAO": "02\/03\/1998",
+                "DATA_DEMISSAO": "15\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

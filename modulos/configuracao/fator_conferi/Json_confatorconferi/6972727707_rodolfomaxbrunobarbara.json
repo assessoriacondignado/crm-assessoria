@@ -1,0 +1,170 @@
+{
+    "CADASTRAIS": {
+        "CPF": "6972727707",
+        "NOME": "RODOLFO MAX BRUNO BARBARA",
+        "NOME_MAE": "GLORIA LUCIA BUNO BARBARA",
+        "NASCTO": "22\/08\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1901794885",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212405",
+        "PROFISSAO": "ANALISTA DE DESENVOLVIMENTO DE SISTEMAS",
+        "SALARIO": " 46.124,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8133667780",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8133263488",
+                "OPERADORA": "TELEMAR\/PE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21994140840",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21988223888",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "18\/01\/2018",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "81988514892",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "81996789540",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "rodolfomaxbb@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R FAUSTINO PORTO",
+                "NUMERO": "197",
+                "COMPLEMENTO": "AP 3202",
+                "BAIRRO": "BOA VIAGEM",
+                "CEP": "51020270",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R NACOES UNIDAS",
+                "NUMERO": "64",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ TAMANDARE",
+                "CEP": "28030030",
+                "CIDADE": "CAMPOS DOS GOYTACAZES",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R COPACABANA",
+                "NUMERO": "30",
+                "COMPLEMENTO": "AP 905",
+                "BAIRRO": "BOA VIAGEM",
+                "CEP": "51030590",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "AV NS DE COPACABANA",
+                "NUMERO": "30",
+                "COMPLEMENTO": "AP 905",
+                "BAIRRO": "LEME",
+                "CEP": "22010122",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PETROLEO BRASILEIRO S A PETROBRAS",
+                "CNPJ": "33000167024558",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "01\/03\/2004",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ALPEK POLYESTER BRASIL S.A.",
+                "CNPJ": "08220101000180",
+                "CIDADE": "IPOJUCA-PE",
+                "PROFISSAO": "142530",
+                "DATA_ADMISSAO": "02\/01\/2008",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "PETROLEO BRASILEIRO S A PETROBRAS",
+                "CNPJ": "33000167000101",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "01\/03\/2004",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

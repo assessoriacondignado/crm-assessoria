@@ -1,0 +1,273 @@
+{
+    "CADASTRAIS": {
+        "CPF": "1090316011",
+        "NOME": "JULIANNE TIM MACIEL",
+        "NOME_MAE": "DENIZE TIMM MACIEL",
+        "NASCTO": "06\/05\/1986",
+        "IDADE": "39 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "090080780450",
+        "NIT": "12827027706",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "422305",
+        "PROFISSAO": "OPERADOR DE TELEMARKETING ATIVO",
+        "SALARIO": " 1.500,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5534125078",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "5534026172",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5534116299",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "55991858868",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "55997118083",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "55984568363",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "15\/01\/2018",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "55991713828",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "55996476385",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "02\/04\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "juli_maciel05@hotmail.com",
+            "juliannetimmmaciel@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R GEN CANABARRO",
+                "NUMERO": "2348",
+                "COMPLEMENTO": "AP 101",
+                "BAIRRO": "NOVA ESPERANCA",
+                "CEP": "97503288",
+                "CIDADE": "URUGUAIANA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R VINTE E QUATRO DE MAIO",
+                "NUMERO": "1342",
+                "COMPLEMENTO": "",
+                "BAIRRO": "GUARANI",
+                "CEP": "93520610",
+                "CIDADE": "NOVO HAMBURGO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R JOSE GARIBALDI",
+                "NUMERO": "2603",
+                "COMPLEMENTO": "SAO MIGUEL",
+                "BAIRRO": "S MIGUEL",
+                "CEP": "97502804",
+                "CIDADE": "URUGUAIANA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R PRADO LIMA",
+                "NUMERO": "4001",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S JOAO",
+                "CEP": "97502526",
+                "CIDADE": "URUGUAIANA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R PRADO LIMA",
+                "NUMERO": "3904",
+                "COMPLEMENTO": "AP 201 PI KIELING",
+                "BAIRRO": "S JOAO",
+                "CEP": "97502584",
+                "CIDADE": "URUGUAIANA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R GEN BENTO MARTINS",
+                "NUMERO": "2671",
+                "COMPLEMENTO": "AP 1",
+                "BAIRRO": "CENTRO",
+                "CEP": "97501520",
+                "CIDADE": "URUGUAIANA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R VINTE E QUATRO DE MAIO",
+                "NUMERO": "1342",
+                "COMPLEMENTO": "AP 602",
+                "BAIRRO": "VL ROSA",
+                "CEP": "93315125",
+                "CIDADE": "NOVO HAMBURGO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R DR MAIA",
+                "NUMERO": "3699",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S JOAO",
+                "CEP": "97502377",
+                "CIDADE": "URUGUAIANA",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "44270593091",
+                "NOME": "DENIZE TIMM MACIEL",
+                "IDADE": "63 anos",
+                "LOCAL": "URUGUAIANA\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "81925816087",
+                "NOME": "EDUARDO TIMM MACIEL",
+                "IDADE": "29 anos",
+                "LOCAL": "URUGUAIANA\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "83690239087",
+                "NOME": "LUCIANNE TIMM MACIEL",
+                "IDADE": "36 anos",
+                "LOCAL": "URUGUAIANA\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ES PROFIT PROMOTORA DE NEGOCIOS LTDA",
+                "CNPJ": "10616284001170",
+                "CIDADE": "URUGUAIANA-RS",
+                "PROFISSAO": "142305",
+                "DATA_ADMISSAO": "17\/09\/2015",
+                "DATA_DEMISSAO": "02\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TELEVISAO URUGUAIANA LTDA",
+                "CNPJ": "87519237000161",
+                "CIDADE": "URUGUAIANA-RS",
+                "PROFISSAO": "520110",
+                "DATA_ADMISSAO": "15\/01\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "REAL NOVIDADES DISTRIBUIDORA LTDA",
+                "CNPJ": "07771731000180",
+                "CIDADE": "SAO LEOPOLDO-RS",
+                "PROFISSAO": "141415",
+                "DATA_ADMISSAO": "29\/10\/2012",
+                "DATA_DEMISSAO": "21\/11\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "WMS SUPERMERCADOS DO BRASIL LTDA.",
+                "CNPJ": "93209765021467",
+                "CIDADE": "URUGUAIANA-RS",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "29\/03\/2005",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "AHB INDUSTRIA, COMERCIO E REPRESENTACOES LTDA",
+                "CNPJ": "89631774000124",
+                "CIDADE": "NOVO HAMBURGO-RS",
+                "PROFISSAO": "422305",
+                "DATA_ADMISSAO": "07\/05\/2012",
+                "DATA_DEMISSAO": "27\/07\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

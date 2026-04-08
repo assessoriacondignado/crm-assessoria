@@ -1,0 +1,174 @@
+{
+    "CADASTRAIS": {
+        "CPF": "24933931801",
+        "NOME": "ALESSANDRO APARECIDO DOS SANTOS",
+        "NOME_MAE": "ENEDINA LOPES DOS SANTOS",
+        "NASCTO": "02\/12\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "257779720183",
+        "NIT": "12438393051",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1932462836",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1932460229",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1132460229",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19997021202",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19988316713",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19989812561",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "vicris94@terra.com.br",
+            "alessandroaps@yahoo.com",
+            "alessandroaps@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R AGUINALDO ACCIARI",
+                "NUMERO": "92",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM CAMPINEIRO",
+                "CEP": "13082385",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA NATHAN KRASILCHIK",
+                "NUMERO": "99",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD MIRASSOL",
+                "CEP": "13069508",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "482993324",
+            "NOME": "ENEDINA LOPES DOS SANTOS",
+            "IDADE": "78 anos",
+            "LOCAL": "CODO\/MA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "KERRY DO BRASIL LTDA",
+                "CNPJ": "02332686000143",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "04\/01\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "EXPERT CONSULTORIA E TERCEIRIZACAO DE MAO-DE-OBRA LTDA",
+                "CNPJ": "08848807000190",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "07\/12\/2020",
+                "DATA_DEMISSAO": "03\/01\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "MOGIANA ALIMENTOS S\/A",
+                "CNPJ": "45710423000133",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "862120",
+                "DATA_ADMISSAO": "01\/04\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "LEDERVIN INDUSTRIA E COMERCIO LTDA.",
+                "CNPJ": "00965703000235",
+                "CIDADE": "SUMARE-SP",
+                "PROFISSAO": "862155",
+                "DATA_ADMISSAO": "00\/20\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

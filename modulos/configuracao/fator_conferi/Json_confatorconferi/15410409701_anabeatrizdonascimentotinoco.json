@@ -1,0 +1,141 @@
+{
+    "CADASTRAIS": {
+        "CPF": "15410409701",
+        "NOME": "ANA BEATRIZ DO NASCIMENTO TINOCO",
+        "NOME_MAE": "ANA CRISTINA DO NASCIMENTO MOURA",
+        "NASCTO": "15\/02\/2001",
+        "IDADE": "25 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21969043695",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21998307107",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "09\/06\/2019",
+                "TIPO_TEL": "MOVEL PRE-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "aninhaa.bia.10@gmail.com",
+            "julieesthefani@gmail.com",
+            "bialoka@icloud.com",
+            "aninhaa.bia10@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "TRAV LUIZ DE MATOS",
+            "NUMERO": "110",
+            "COMPLEMENTO": "CASA 1",
+            "BAIRRO": "FONSECA",
+            "CEP": "24120220",
+            "CIDADE": "NITEROI",
+            "ESTADO": "RJ"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "2577695799",
+                "NOME": "ANA CRISTINA DO NASCIMENTO MOURA",
+                "IDADE": "55 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "11279392541",
+                "NOME": "MARILIA GABRIELA ANDRADE DO NASCIMENTO",
+                "IDADE": "16 anos",
+                "LOCAL": "",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "11281173550",
+                "NOME": "CRISTIAN DO NASCIMENTO ANDRADE",
+                "IDADE": "15 anos",
+                "LOCAL": "",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "14249778789",
+                "NOME": "RENAN DO NASCIMENTO MOURA",
+                "IDADE": "35 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "20905902700",
+                "NOME": "JULIE STHEFANI DO NASCIMENTO TINOCO",
+                "IDADE": "22 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "AGUAS DO RIO 4 SPE S.A",
+                "CNPJ": "42644220000106",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "01\/07\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "AMERICANAS S.A - EM RECUPERACAO JUDICIAL",
+                "CNPJ": "00776574088908",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "24\/09\/2021",
+                "DATA_DEMISSAO": "28\/09\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "CAFE LETICIA LTDA",
+                "CNPJ": "68710698000172",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "21\/20\/1911",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

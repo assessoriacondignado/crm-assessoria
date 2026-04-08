@@ -1,0 +1,167 @@
+{
+    "CADASTRAIS": {
+        "CPF": "73220892434",
+        "NOME": "JOSE ROGERIO NUNES DA SILVA",
+        "NOME_MAE": "SEVERINA SILVA DE SANTANA",
+        "NASCTO": "21\/09\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "037663410809",
+        "NIT": "1245867805 ",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521110",
+        "PROFISSAO": "VENDEDOR DE COMERCIO VAREJISTA",
+        "SALARIO": " 2.818,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8132744375",
+            "OPERADORA": "TELEMAR\/PE",
+            "DATA_REFERENCIA": "06\/09\/2012",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "81984840741",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81991033740",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "82988765517",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81999042218",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "07\/02\/2001",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "81985473092",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "09\/03\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "info@unorp.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOAO SALES DE MENEZES",
+                "NUMERO": "223",
+                "COMPLEMENTO": "",
+                "BAIRRO": "IPUTINGA",
+                "CEP": "50740110",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R NILOPOLIS",
+                "NUMERO": "51",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VARZEA",
+                "CEP": "50740390",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "RUA JOAO SALES DE MENEZES",
+                "NUMERO": "223",
+                "COMPLEMENTO": "",
+                "BAIRRO": "IPUTINGA",
+                "CEP": "50670390",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "6214342480",
+            "NOME": "SEVERINA SILVA DE SANTANA",
+            "IDADE": "48 anos",
+            "LOCAL": "SURUBIM\/PE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "DISBEC DISTRIBUIDORA LTDA",
+                "CNPJ": "02631392000201",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/11\/2007",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "DISBEC DISTRIBUIDORA LTDA",
+                "CNPJ": "02631392000465",
+                "CIDADE": "CABO DE SANTO AGOSTINHO-PE",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/11\/2007",
+                "DATA_DEMISSAO": "28\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "DISBEC DISTRIBUIDORA LTDA",
+                "CNPJ": "02631392000112",
+                "CIDADE": "PAULISTA-PE",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/11\/2007",
+                "DATA_DEMISSAO": "31\/08\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

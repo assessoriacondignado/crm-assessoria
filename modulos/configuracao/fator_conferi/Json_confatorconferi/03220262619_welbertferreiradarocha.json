@@ -1,0 +1,234 @@
+{
+    "CADASTRAIS": {
+        "CPF": "3220262619",
+        "NOME": "WELBERT FERREIRA DA ROCHA",
+        "NOME_MAE": "LUCIA FERREIRA DA ROCHA",
+        "NASCTO": "06\/11\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "7400184",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "100279790213",
+        "NIT": "12456167718",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411010",
+        "PROFISSAO": "ASSISTENTE ADMINISTRATIVO",
+        "SALARIO": " 3.286,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3132534846",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "2732612593",
+                "OPERADORA": "TELEMAR\/ES",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3134761543",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "3137861543",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31991828659",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31981122323",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31985253989",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "31991855159",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "27992249845",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "welbertf@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ALESSANDRA SALUM CADAR",
+                "NUMERO": "781",
+                "COMPLEMENTO": "AP 101",
+                "BAIRRO": "BURITIS",
+                "CEP": "30575190",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R DR CRISTIANO REZENDE",
+                "NUMERO": "5980",
+                "COMPLEMENTO": "",
+                "BAIRRO": "FLAVIO MARQUES LISBOA BARREIRO",
+                "CEP": "30620470",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "AV DO CONTORNO",
+                "NUMERO": "6594",
+                "COMPLEMENTO": "AND 4",
+                "BAIRRO": "LOURDES",
+                "CEP": "30110044",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "AV FLEMING",
+                "NUMERO": "48",
+                "COMPLEMENTO": "",
+                "BAIRRO": "OURO PRETO",
+                "CEP": "31310490",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RUA PASSA VINTE",
+                "NUMERO": "95",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTA TEREZINHA",
+                "CEP": "31360080",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RUA TITO GUIMARAES",
+                "NUMERO": "51",
+                "COMPLEMENTO": "APT 303",
+                "BAIRRO": "BURITIS",
+                "CEP": "30575070",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "LADEIRA SAO BENEDITO",
+                "NUMERO": "175",
+                "COMPLEMENTO": "CASA 1",
+                "BAIRRO": "CENTRO",
+                "CEP": "29200290",
+                "CIDADE": "GUARAPARI",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "RUA GUMERCINDO COUTO E SILVA",
+                "NUMERO": "565",
+                "COMPLEMENTO": "AP 202",
+                "BAIRRO": "ITAPOA",
+                "CEP": "31710050",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "924948388",
+            "NOME": "LUCIA FERREIRA DA ROCHA",
+            "IDADE": "70 anos",
+            "LOCAL": "MARACANAU\/CE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "POSTAL SAUDE - CAIXA DE ASSISTENCIA E SAUDE DOS EMPREGADOS DOS CORREIOS",
+                "CNPJ": "18275071001215",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "351305",
+                "DATA_ADMISSAO": "15\/06\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CEMIG SAUDE",
+                "CNPJ": "12055813000168",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "01\/03\/2001",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

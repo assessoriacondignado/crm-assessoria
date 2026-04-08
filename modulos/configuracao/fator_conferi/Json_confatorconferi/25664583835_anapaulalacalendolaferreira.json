@@ -1,0 +1,222 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25664583835",
+        "NOME": "ANA PAULA LACALENDOLA FERREIRA",
+        "NOME_MAE": "ROSEMEIRE DA SILVA LACALENDOLA",
+        "NASCTO": "26\/05\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Feminino",
+        "RG": "278400528",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "282470680191",
+        "NIT": "12602700772",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "231210",
+        "PROFISSAO": "PROFESSOR DE NIVEL SUPERIOR DO ENSINO FUNDAMENTAL (PRIMEIRA A QUARTA SERIE)",
+        "SALARIO": " 22,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1129443661",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11999577422",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11999577422",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11969049236",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11998930033",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "diogoafe@gmail.com",
+            "anapaulalacalendola@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CARLOS SILVA",
+                "NUMERO": "395",
+                "COMPLEMENTO": "AP 63 E",
+                "BAIRRO": "CH CALIFORNIA",
+                "CEP": "03405040",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CEL DIOGO",
+                "NUMERO": "138",
+                "COMPLEMENTO": "AP 54",
+                "BAIRRO": "JD DA GLORIA",
+                "CEP": "01545000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DA ORDEM",
+                "NUMERO": "71",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "VL NOVA SAVOIA",
+                "CEP": "03531030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PE JOAO DE SALES",
+                "NUMERO": "77",
+                "COMPLEMENTO": "AP 12 B",
+                "BAIRRO": "CJ HABITACIONAL PADRE MANOEL DA NOBREGA",
+                "CEP": "03590130",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DA ECONOMIA",
+                "NUMERO": "151",
+                "COMPLEMENTO": "FDS C 2",
+                "BAIRRO": "VL NOVA SAVOIA",
+                "CEP": "03532050",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV WALDEMAR TIETZ",
+                "NUMERO": "582",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CJ HABITACIONAL PADRE JOSE DE ANCHIETA",
+                "CEP": "03589000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MAJOR DIOGO",
+                "NUMERO": "138",
+                "COMPLEMENTO": "APARTAMENTO:54",
+                "BAIRRO": "BELA VISTA",
+                "CEP": "01324000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BENEDITO PASSOS",
+                "NUMERO": "68",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA MATILDE",
+                "CEP": "03512020",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "25679685809",
+                "NOME": "ROSEMEIRE DA SILVA LACALENDOLA",
+                "IDADE": "64 anos",
+                "LOCAL": "PRAIA GRANDE\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "43876402867",
+                "NOME": "MICAEL AZZI LACALENDOLA",
+                "IDADE": "15 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "DIOGO AZZI FERREIRA",
+            "IDADE": "",
+            "LOCALIDADE": "SAO PAULO\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "30889300879"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "REDE EDUCACIONAL DECISAO S.A.",
+                "CNPJ": "26258611000128",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "234624",
+                "DATA_ADMISSAO": "01\/01\/2017",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TOM EDUCACAO LTDA",
+                "CNPJ": "01148820000198",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "231210",
+                "DATA_ADMISSAO": "01\/08\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "EDITORA DECISAO LTDA.",
+                "CNPJ": "18689115000109",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "231210",
+                "DATA_ADMISSAO": "01\/08\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

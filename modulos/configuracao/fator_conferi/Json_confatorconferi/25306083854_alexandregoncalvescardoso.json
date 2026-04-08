@@ -1,0 +1,192 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25306083854",
+        "NOME": "ALEXANDRE GONCALVES CARDOSO",
+        "NOME_MAE": "MARCIA GONCALVES CARDOSO",
+        "NASCTO": "14\/10\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "257075600175",
+        "NIT": "1261536385",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521110",
+        "PROFISSAO": "VENDEDOR DE COMERCIO VAREJISTA",
+        "SALARIO": " 7.786,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1332335249",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1332524931",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13981259236",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13996438793",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13996519376",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13981117695",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13996107695",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "alexandre@jascardoso.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R D DUARTE LEOPOLDO E SILVA",
+                "NUMERO": "129",
+                "COMPLEMENTO": "BA",
+                "BAIRRO": "MARAPE",
+                "CEP": "11070131",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV BARAO DE PENEDO",
+                "NUMERO": "3",
+                "COMPLEMENTO": "AP 62",
+                "BAIRRO": "JOSE MENINO",
+                "CEP": "11065651",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV BARAO DE PENEDO",
+                "NUMERO": "3",
+                "COMPLEMENTO": "AP 62",
+                "BAIRRO": "JOSE MENINO",
+                "CEP": "11085651",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOUTOR CARVALHO DE MENDONCA",
+                "NUMERO": "258",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA BELMIRO",
+                "CEP": "11070101",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA SATURNINO DE BRITO",
+                "NUMERO": "100",
+                "COMPLEMENTO": "ALTOS",
+                "BAIRRO": "MARAPE",
+                "CEP": "11070000",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1326362127",
+            "NOME": "MARCIA GONCALVES CARDOSO",
+            "IDADE": "55 anos",
+            "LOCAL": "SAO JOAO DEL REI\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "LUCIENE MARTINS CUSTODIO CARDOSO",
+            "IDADE": "",
+            "LOCALIDADE": "SANTOS\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "27552680857"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "J A S CARDOSO   CIA LTDA",
+            "CNPJ": "01049293000164",
+            "CIDADE": "SANTOS-SP",
+            "PROFISSAO": "521110",
+            "DATA_ADMISSAO": "01\/10\/2011",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "JUDITE IMPORTADORA E EXPORTADORA LTDA",
+            "CNPJ": "05015986000197",
+            "CIDADE": "SANTOS-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20020412",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

@@ -1,0 +1,167 @@
+{
+    "CADASTRAIS": {
+        "CPF": "39869287824",
+        "NOME": "GABRIELA MORAIS DA SILVA",
+        "NOME_MAE": "SIMONE DA SILVA MORAIS",
+        "NASCTO": "02\/10\/1990",
+        "IDADE": "35 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "20788062322",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "351430",
+        "PROFISSAO": "AUXILIAR DE SERVICOS JURIDICOS",
+        "SALARIO": " 1.500,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11957604677",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11972193014",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "biziinha2007@hotmail.com",
+            "gabrielamorais0210@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOSE CORREIA LIMA",
+                "NUMERO": "115",
+                "COMPLEMENTO": "BL 10 AP 41",
+                "BAIRRO": "JD FELICIDADE ZONA OESTE",
+                "CEP": "05143320",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV APARECIDA DO RIO NEGRO",
+                "NUMERO": "435",
+                "COMPLEMENTO": "AP 1705",
+                "BAIRRO": "JD IRIS",
+                "CEP": "05144085",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "177575417",
+            "NOME": "SIMONE DA SILVA MORAIS",
+            "IDADE": "51 anos",
+            "LOCAL": "BELO HORIZONTE\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "RENATO DE OLIVEIRA LEMONTE",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "35456929813"
+            },
+            {
+                "NOME": "SIMONE DA SILVA MORAES",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "12984203852"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SENDAS DISTRIBUIDORA S\/A",
+                "CNPJ": "06057223030593",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "252105",
+                "DATA_ADMISSAO": "26\/12\/2023",
+                "DATA_DEMISSAO": "07\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CUSHMAN   WAKEFIELD SERVICOS GERAIS LTDA",
+                "CNPJ": "05752618000121",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "252105",
+                "DATA_ADMISSAO": "22\/07\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PETROENG - CONSULTORIA E PROJETOS INDUSTRIAIS LTDA",
+                "CNPJ": "04902445000118",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "11\/08\/2020",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "ACV TECLINE ENGENHARIA LTDA",
+                "CNPJ": "01448758000230",
+                "CIDADE": "MACAUBAL-SP",
+                "PROFISSAO": "351430",
+                "DATA_ADMISSAO": "10\/12\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "BUREAU VERITAS DO BRASIL SOC CLAS E CERTIFICADORA LTDA",
+                "CNPJ": "33177148001208",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "10\/10\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "HUBERT IMOVEIS E ADMINISTRACAO LTDA",
+                "CNPJ": "62816798000100",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "07\/10\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

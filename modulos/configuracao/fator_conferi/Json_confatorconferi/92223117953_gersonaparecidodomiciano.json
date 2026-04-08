@@ -1,0 +1,161 @@
+{
+    "CADASTRAIS": {
+        "CPF": "92223117953",
+        "NOME": "GERSON APARECIDO DOMICIANO",
+        "NOME_MAE": "TEREZA DE LURDES BISPO CONSTANTINO",
+        "NASCTO": "10\/05\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "064219670647",
+        "NIT": "1241174510",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "848510",
+        "PROFISSAO": "ACOUGUEIRO",
+        "SALARIO": " 2.627,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4136051485",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "4136211986",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "41985112051",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41985262971",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "gersondomiciano@oi.com.br",
+            "gersonaparecido20@hotmail.com",
+            "alerigolin@msn.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV BRASILIA",
+                "NUMERO": "365",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAMPO PEQUENO",
+                "CEP": "83404670",
+                "CIDADE": "COLOMBO",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "RUA DULCIDIO FALAVINHA",
+                "NUMERO": "599",
+                "COMPLEMENTO": "CS PROPRIA",
+                "BAIRRO": "GUARAITUBA",
+                "CEP": "83406040",
+                "CIDADE": "COLOMBO",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "2004957980",
+                "NOME": "SILVANA APARECIDA CONSTANTINO",
+                "IDADE": "49 anos",
+                "LOCAL": "COLOMBO\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "3129341900",
+                "NOME": "SOLANGE DE FATIMA CONSTANTINO",
+                "IDADE": "46 anos",
+                "LOCAL": "CURITIBA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ALEXANDRA GIMENES SOARES",
+            "IDADE": "",
+            "LOCALIDADE": "CURITIBA\/PR",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "2683837909"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COMERCIO DE CEREAIS DELA SANTOS LTDA",
+                "CNPJ": "80178080000109",
+                "CIDADE": "COLOMBO-PR",
+                "PROFISSAO": "848510",
+                "DATA_ADMISSAO": "01\/11\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "L.A.D.S SERVICOS ADMINISTRATIVOS LTDA",
+                "CNPJ": "33859974000184",
+                "CIDADE": "COLOMBO-PR",
+                "PROFISSAO": "848510",
+                "DATA_ADMISSAO": "01\/09\/2019",
+                "DATA_DEMISSAO": "30\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "L.A DELAMARTES SERVICOS ADMINISTRATIVOS LTDA",
+                "CNPJ": "33873467000103",
+                "CIDADE": "COLOMBO-PR",
+                "PROFISSAO": "848510",
+                "DATA_ADMISSAO": "01\/08\/2023",
+                "DATA_DEMISSAO": "31\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

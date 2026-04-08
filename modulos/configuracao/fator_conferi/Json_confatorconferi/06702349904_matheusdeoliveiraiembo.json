@@ -1,0 +1,95 @@
+{
+    "CADASTRAIS": {
+        "CPF": "6702349904",
+        "NOME": "MATHEUS DE OLIVEIRA IEMBO",
+        "NOME_MAE": "EVA GARCIA DE OLIVEIRA",
+        "NASCTO": "23\/09\/1997",
+        "IDADE": "28 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1640805568 ",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "622020",
+        "PROFISSAO": "TRABALHADOR VOLANTE DA AGRICULTURA",
+        "SALARIO": " 2.510,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "44997126515",
+            "OPERADORA": "TIM CELULAR S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "MOVEL",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": {
+        "EMAIL": "matheus2909oliveira@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CONDOR",
+                "NUMERO": "53",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "87550000",
+                "CIDADE": "ALTONIA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "SAN DIEGO",
+                "NUMERO": "95",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RURAL",
+                "CEP": "87550000",
+                "CIDADE": "ALTONIA",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1984084127",
+            "NOME": "EVA GARCIA DE OLIVEIRA",
+            "IDADE": "49 anos",
+            "LOCAL": "CAMPO GRANDE\/MS",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "C.VALE - COOPERATIVA AGROINDUSTRIAL",
+                "CNPJ": "77863223004366",
+                "CIDADE": "PALOTINA-PR",
+                "PROFISSAO": "848520",
+                "DATA_ADMISSAO": "02\/05\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "",
+                "CNPJ": "02819097900199",
+                "CIDADE": "",
+                "PROFISSAO": "622020",
+                "DATA_ADMISSAO": "11\/04\/2023",
+                "DATA_DEMISSAO": "30\/09\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,250 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26163891856",
+        "NOME": "ROGERIO MORENO DE OLIVEIRA",
+        "NOME_MAE": "MARINES MORENO DE OLIVEIRA",
+        "NASCTO": "10\/06\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "272262973",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "278752780116",
+        "NIT": "12664184298",
+        "ESCOLARIDADE": "SUPERIOR INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "252210",
+        "PROFISSAO": "CONTADOR",
+        "SALARIO": " 3.120,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1124847157",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1124137700",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "08\/09\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1166733879",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1124840933",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1124866744",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11979710918",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11961338876",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11962623348",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11964820216",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11964840933",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "rogeriomorenosp@globo.com",
+            "rogeriomoreno-sp@hotmail.com",
+            "rogeriomoreno_sp@hotmail.com",
+            "rogeriomoreno.eng@gmail.com",
+            "rogeriomorenoliveira@ig.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R TERESA ACKEL",
+                "NUMERO": "734",
+                "COMPLEMENTO": "C 1 OUT A",
+                "BAIRRO": "PRQ S MIGUEL",
+                "CEP": "07260100",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JATI",
+                "NUMERO": "266",
+                "COMPLEMENTO": "AP 3",
+                "BAIRRO": "CUMBICA",
+                "CEP": "07180900",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MERCURIO",
+                "NUMERO": "46",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD STA MARIA",
+                "CEP": "07133470",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JATI",
+                "NUMERO": "162",
+                "COMPLEMENTO": "AP 3",
+                "BAIRRO": "CIDADE JARDIM CUMBICA",
+                "CEP": "07180140",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R TRES",
+                "NUMERO": "35",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD DAS OLIVEIRA",
+                "CEP": "07263520",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA LUCIO MANSILA",
+                "NUMERO": "59",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA SILVIA",
+                "CEP": "03820190",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JATI",
+                "NUMERO": "165",
+                "COMPLEMENTO": "AP 03",
+                "BAIRRO": "CIDADE JARDIM CUMBICA",
+                "CEP": "07180140",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MERCURIO",
+                "NUMERO": "4",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM SANTA MARIA",
+                "CEP": "07133470",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "LUCIANA DE MOURA SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "GUARULHOS\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "34327218898"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "GAT LOGISTICA LTDA",
+                "CNPJ": "08165642000152",
+                "CIDADE": "GUARULHOS-SP",
+                "PROFISSAO": "252545",
+                "DATA_ADMISSAO": "17\/06\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TOURO DISTRIBUIDORA LTDA",
+                "CNPJ": "01368809000133",
+                "CIDADE": "GUARULHOS-SP",
+                "PROFISSAO": "252210",
+                "DATA_ADMISSAO": "07\/04\/2008",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

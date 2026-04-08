@@ -1,0 +1,185 @@
+{
+    "CADASTRAIS": {
+        "CPF": "84825103200",
+        "NOME": "JOSE ROBERTO MAIA DOS ANJOS",
+        "NOME_MAE": "MARIA DAS GRACAS MAIA DOS ANJOS",
+        "NASCTO": "18\/07\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1296479602",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "710205",
+        "PROFISSAO": "MESTRE (CONSTRUCAO CIVIL)",
+        "SALARIO": " 3.553,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9735613071",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9733032656",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92993348115",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "97991528782",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "97999036158",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "97991516502",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "97991675905",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV MANOEL BORBA GATO",
+                "NUMERO": "33",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "D PEDRO I",
+                "CEP": "69042500",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "RUA ARIOMA LIMA",
+                "NUMERO": "271",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CENTRO",
+                "CEP": "69460000",
+                "CIDADE": "COARI",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R ARIOMAR LIMA",
+                "NUMERO": "229",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "69460000",
+                "CIDADE": "COARI",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "34494014249",
+                "NOME": "MARIA DAS GRACAS MAIA DOS ANJOS",
+                "IDADE": "69 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "1078215243",
+                "NOME": "CELESTE MAIA DOS ANJOS",
+                "IDADE": "89 anos",
+                "LOCAL": "BENEVIDES\/PA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "61598550268",
+                "NOME": "ADRIANO MAIA DOS ANJOS",
+                "IDADE": "48 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "65438450234",
+                "NOME": "LUCIANA MAIA DOS ANJOS",
+                "IDADE": "46 anos",
+                "LOCAL": "LABREA\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "80929079272",
+                "NOME": "CARLOS ALBERTO MAIA DOS ANJOS",
+                "IDADE": "49 anos",
+                "LOCAL": "LABREA\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "PARENTE ANDRADE LTDA",
+            "CNPJ": "05057914000102",
+            "CIDADE": "MANAUS-AM",
+            "PROFISSAO": "710205",
+            "DATA_ADMISSAO": "22\/11\/2023",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

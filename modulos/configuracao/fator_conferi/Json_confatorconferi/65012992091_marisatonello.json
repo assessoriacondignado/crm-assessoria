@@ -1,0 +1,149 @@
+{
+    "CADASTRAIS": {
+        "CPF": "65012992091",
+        "NOME": "MARISA TONELLO",
+        "NOME_MAE": "ELMA TONELLO",
+        "NASCTO": "20\/07\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1250378132",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212405",
+        "PROFISSAO": "ANALISTA DE DESENVOLVIMENTO DE SISTEMAS",
+        "SALARIO": " 13.601,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5137133441",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "5137174247",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51980128090",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "51981798090",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "51996648665",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "mtonello@pop.com.br",
+            "marisa.tonello@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R AUGUSTO SPENGLER",
+                "NUMERO": "900",
+                "COMPLEMENTO": "STUDIO 4",
+                "BAIRRO": "CENTRO",
+                "CEP": "95915000",
+                "CIDADE": "SANTA CLARA DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R AUGUSTO SPENGLER",
+                "NUMERO": "351",
+                "COMPLEMENTO": "AP 301",
+                "BAIRRO": "UNIVERSITARIO",
+                "CEP": "96815654",
+                "CIDADE": "SANTA CRUZ DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R AUGUSTO SPENGLER",
+                "NUMERO": "900",
+                "COMPLEMENTO": "AP 4",
+                "BAIRRO": "SANTO INACIO",
+                "CEP": "96820020",
+                "CIDADE": "SANTA CRUZ DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA AUGUSTO SPENGLER",
+                "NUMERO": "90",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTO INACIO",
+                "CEP": "96820020",
+                "CIDADE": "SANTA CRUZ DO SUL",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "73201014087",
+            "NOME": "ELMA TONELLO",
+            "IDADE": "97 anos",
+            "LOCAL": "SELBACH\/RS",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "ALLIANCE ONE BRASIL EXPORTADORA DE TABACOS LTDA.",
+            "CNPJ": "33876145000100",
+            "CIDADE": "VENANCIO AIRES-RS",
+            "PROFISSAO": "212405",
+            "DATA_ADMISSAO": "01\/10\/2005",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

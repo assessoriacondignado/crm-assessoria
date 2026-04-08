@@ -1,0 +1,201 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26257888875",
+        "NOME": "EMERSON HENRIQUE DA SILVA",
+        "NOME_MAE": "SONIA APARECIDA RAMOS",
+        "NASCTO": "21\/07\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "29522549",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "262768400124",
+        "NIT": "12552464124",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521125",
+        "PROFISSAO": "REPOSITOR DE MERCADORIAS",
+        "SALARIO": " 982,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1149771001",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1149976274",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11988704107",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11962833161",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11980977002",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11991548967",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "sabrinapolizeli@gmail.com",
+            "daemersonsilva@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "JUSTINIANO",
+                "NUMERO": "21",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL S ALBERTO",
+                "CEP": "09240260",
+                "CIDADE": "SANTO ANDRE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "PRACA JOSE PEDRO DE ALCANTARA",
+                "NUMERO": "28",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE ORATORIO",
+                "CEP": "09251030",
+                "CIDADE": "SANTO ANDRE",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1480147044",
+            "NOME": "SONIA APARECIDA RAMOS",
+            "IDADE": "39 anos",
+            "LOCAL": "SAO LUIZ GONZAGA\/RS",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "SABRINA MARTIN POLIZELI DA SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "SANTO ANDRE\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "27706760839"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "QUALICAR RETIFICA DE MOTORES LTDA",
+                "CNPJ": "58732538000170",
+                "CIDADE": "SANTO ANDRE-SP",
+                "PROFISSAO": "721425",
+                "DATA_ADMISSAO": "21\/09\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LUCIO IMOVEIS LTDA",
+                "CNPJ": "55043319000196",
+                "CIDADE": "SANTO ANDRE-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "17\/08\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "BULLET DREAM MACHINE COMUNICACAO LTDA",
+                "CNPJ": "05558837000174",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "521125",
+                "DATA_ADMISSAO": "12\/12\/2016",
+                "DATA_DEMISSAO": "24\/12\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SEARA ALIMENTOS LTDA",
+                "CNPJ": "02914460019170",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "354130",
+                "DATA_ADMISSAO": "02\/10\/2014",
+                "DATA_DEMISSAO": "10\/10\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SEARA ALIMENTOS LTDA",
+                "CNPJ": "02914460011276",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "354130",
+                "DATA_ADMISSAO": "14\/07\/2014",
+                "DATA_DEMISSAO": "01\/10\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "GEO-GRAFICA E EDITORA LTDA",
+                "CNPJ": "44197044000129",
+                "CIDADE": "SANTO ANDRE-SP",
+                "PROFISSAO": "766215",
+                "DATA_ADMISSAO": "28\/01\/1999",
+                "DATA_DEMISSAO": "25\/06\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

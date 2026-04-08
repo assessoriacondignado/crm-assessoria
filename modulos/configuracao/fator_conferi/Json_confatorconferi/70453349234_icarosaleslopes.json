@@ -1,0 +1,200 @@
+{
+    "CADASTRAIS": {
+        "CPF": "70453349234",
+        "NOME": "ICARO SALES LOPES",
+        "NOME_MAE": "IRLANDEA SALES LOPES",
+        "NASCTO": "05\/03\/1982",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1267994202",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "314405",
+        "PROFISSAO": "TECNICO DE MANUTENCAO DE SISTEMAS E INSTRUMENTOS",
+        "SALARIO": " 19.841,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9233455686",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9236165823",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9233461677",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "26\/09\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9232344692",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "07\/07\/2007",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9232340846",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92986327050",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92996251897",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "islopes_icaro@hotmail.com",
+            "granito@netium.com.br",
+            "icaro_lopes@honda.com.br",
+            "icarolopes@oi.com.br",
+            "icaro.sales.lopes.isl@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV COSME FERREIRA",
+                "NUMERO": "2214",
+                "COMPLEMENTO": "AP 701 TRM",
+                "BAIRRO": "COROADO",
+                "CEP": "69082230",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R NONATO CASTRO",
+                "NUMERO": "9",
+                "COMPLEMENTO": "N 9",
+                "BAIRRO": "COROADO",
+                "CEP": "69082641",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R DR NERY",
+                "NUMERO": "2413",
+                "COMPLEMENTO": "BL 5 AP 201",
+                "BAIRRO": "ZUMBI DOS PALMARES",
+                "CEP": "69084260",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R CAMPOS BRAVOS",
+                "NUMERO": "133",
+                "COMPLEMENTO": "",
+                "BAIRRO": "REDENCAO",
+                "CEP": "69047000",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV JORN UMBERTO CALDERARO FILHO",
+                "NUMERO": "1973",
+                "COMPLEMENTO": "A 2800",
+                "BAIRRO": "PRQ 10 DE NOVEMBRO",
+                "CEP": "69055700",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R SAN JUAN",
+                "NUMERO": "235",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "S JORGE",
+                "CEP": "69033240",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV LEONARDO MALCHER",
+                "NUMERO": "1515",
+                "COMPLEMENTO": "AND 2",
+                "BAIRRO": "CENTRO",
+                "CEP": "69010170",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R GEORGETOWN",
+                "NUMERO": "10",
+                "COMPLEMENTO": "Q 62 CJ C ELISIOS",
+                "BAIRRO": "PLANALTO",
+                "CEP": "69045390",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "MOTO HONDA DA AMAZONIA LTDA",
+            "CNPJ": "04337168000148",
+            "CIDADE": "MANAUS-AM",
+            "PROFISSAO": "314405",
+            "DATA_ADMISSAO": "14\/04\/2008",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

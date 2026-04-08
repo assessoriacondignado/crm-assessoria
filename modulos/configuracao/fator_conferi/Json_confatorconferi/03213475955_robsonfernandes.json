@@ -1,0 +1,135 @@
+{
+    "CADASTRAIS": {
+        "CPF": "3213475955",
+        "NOME": "ROBSON FERNANDES",
+        "NOME_MAE": "MARIA VIEIRA DOS SANTOS",
+        "NASCTO": "25\/01\/1980",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "068265630680",
+        "NIT": "1260990252",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "821440",
+        "PROFISSAO": "OPERADOR DE TESOURA MECANICA E MAQUINA DE CORTE, NO ACABAMENTO DE CHAPAS E METAIS",
+        "SALARIO": " 3.908,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4232193300",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4232299975",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "42999620790",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "42998167318",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "42999012824",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CHEROKEE",
+                "NUMERO": "555",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CARA CARA",
+                "CEP": "84043330",
+                "CIDADE": "PONTA GROSSA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "AV QUATORZE BIS",
+                "NUMERO": "555",
+                "COMPLEMENTO": "FND",
+                "BAIRRO": "CARA CARA",
+                "CEP": "84043600",
+                "CIDADE": "PONTA GROSSA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "AV QUATORZE BIS",
+                "NUMERO": "525",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CARA CARA",
+                "CEP": "84043600",
+                "CIDADE": "PONTA GROSSA",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "13788647",
+            "NOME": "MARIA VIEIRA DOS SANTOS",
+            "IDADE": "80 anos",
+            "LOCAL": "RIO DE JANEIRO\/RJ",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "W3 INDUSTRIAS REUNIDAS S\/A",
+            "CNPJ": "81114803000179",
+            "CIDADE": "PONTA GROSSA-PR",
+            "PROFISSAO": "821440",
+            "DATA_ADMISSAO": "16\/09\/2008",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,197 @@
+{
+    "CADASTRAIS": {
+        "CPF": "12614539805",
+        "NOME": "RENATO SANTOS BRANDINI",
+        "NOME_MAE": "NADIVA DOS SANTOS BRANDINI",
+        "NASCTO": "21\/02\/1970",
+        "IDADE": "56 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "169397080141",
+        "NIT": "1230247636",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "516505",
+        "PROFISSAO": "AGENTE FUNERARIO",
+        "SALARIO": " 3.666,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1532926758",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "baixa"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "15997512102",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15998112755",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15997462815",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "11\/01\/2020",
+                "TIPO_TEL": "MOVEL PRE-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15998267656",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "15997169537",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "sanmai@terra.com.br",
+            "san22mai@terra.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DULCE RIOS DE OLIVEIRA",
+                "NUMERO": "16",
+                "COMPLEMENTO": "LUCINDA",
+                "BAIRRO": "JD SANDRA",
+                "CEP": "18031250",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PRIMEIRO DE MAIO",
+                "NUMERO": "38",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRAL PARQUE SOROCABA",
+                "CEP": "18051025",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOAQUIM CABRAL",
+                "NUMERO": "140",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD NOVA MANCHESTER",
+                "CEP": "18052120",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R AMADOR PEREIRA",
+                "NUMERO": "160",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "18160000",
+                "CIDADE": "SALTO DE PIRAPORA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA PEDRO SOLA",
+                "NUMERO": "160",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM NOVA MANCHESTER",
+                "CEP": "18052100",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MIGUEL S DE BARROS",
+                "NUMERO": "187",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "JD STA JULIETA",
+                "CEP": "18160000",
+                "CIDADE": "SALTO DE PIRAPORA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RODOVIA JOAO LEME DOS SANTOS",
+                "NUMERO": "105",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CHACARAS RESIDENCIAIS SANTA MARIA",
+                "CEP": "18119001",
+                "CIDADE": "VOTORANTIM",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV PEDRO PIRES DE MELLO",
+                "NUMERO": "1404",
+                "COMPLEMENTO": "",
+                "BAIRRO": "",
+                "CEP": "18160000",
+                "CIDADE": "SALTO DE PIRAPORA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "RMLM ADMINISTRACAO E SERVICOS LTDA",
+                "CNPJ": "42217035000127",
+                "CIDADE": "SOROCABA-SP",
+                "PROFISSAO": "516505",
+                "DATA_ADMISSAO": "18\/04\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "S.T.U.SOROCABA TRANSPORTES URBANOS LTDA",
+                "CNPJ": "71452106000174",
+                "CIDADE": "SOROCABA-SP",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "09\/10\/2008",
+                "DATA_DEMISSAO": "30\/07\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

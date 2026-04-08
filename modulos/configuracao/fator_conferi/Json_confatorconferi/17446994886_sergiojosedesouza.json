@@ -1,0 +1,178 @@
+{
+    "CADASTRAIS": {
+        "CPF": "17446994886",
+        "NOME": "SERGIO JOSE DE SOUZA",
+        "NOME_MAE": "MARIA DAS DORES SILVA",
+        "NASCTO": "11\/01\/1971",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "250545123",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "190318950132",
+        "NIT": "1230806411",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "414105",
+        "PROFISSAO": "ALMOXARIFE",
+        "SALARIO": " 2.519,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1126284940",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11987347997",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11984854490",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11981918861",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11963222249",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "rogerpic@ig.com.br",
+            "gaby.moda@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CEL MAGALHAES MESQUITA",
+                "NUMERO": "29",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD LAJEADO",
+                "CEP": "08441130",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DR ALMEIDA LIMA",
+                "NUMERO": "315",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BRAS",
+                "CEP": "03046010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DIGITALIS",
+                "NUMERO": "45",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ S CITY",
+                "CEP": "03570230",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ASTORIA",
+                "NUMERO": "59",
+                "COMPLEMENTO": "CS 1",
+                "BAIRRO": "PARQUE SAVOY CITY",
+                "CEP": "03570240",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "8992401",
+            "NOME": "MARIA DAS DORES SILVA",
+            "IDADE": "70 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "MARIA APARECIDA FORMIGA DE SOUZA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "27360550807"
+            },
+            {
+                "NOME": "PEDRO JOAO MARCHINI NETO",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "30801454883"
+            },
+            {
+                "NOME": "ROGERIO MENDES",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "395812844"
+            },
+            {
+                "NOME": "VICENTE ALVES DE ALMEIDA",
+                "IDADE": "",
+                "LOCALIDADE": "MOGI DAS CRUZES\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "10431635811"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "FUNCHAL ENTREPOSTO DE PESCADOS E DERIVADOS LTDA",
+            "CNPJ": "05999365000195",
+            "CIDADE": "SAO PAULO-SP",
+            "PROFISSAO": "414105",
+            "DATA_ADMISSAO": "01\/08\/2011",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

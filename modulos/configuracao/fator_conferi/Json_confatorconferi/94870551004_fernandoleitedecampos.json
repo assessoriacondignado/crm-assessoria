@@ -1,0 +1,260 @@
+{
+    "CADASTRAIS": {
+        "CPF": "94870551004",
+        "NOME": "FERNANDO LEITE DE CAMPOS",
+        "NOME_MAE": "ANA LUCIA LEITE DE CAMPOS",
+        "NASCTO": "09\/04\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "075686010450",
+        "NIT": "12731762685",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142305",
+        "PROFISSAO": "GERENTE COMERCIAL",
+        "SALARIO": " 14.500,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1135827641",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1138497192",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "29\/04\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5135083346",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "28\/04\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4832096899",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "91985587350",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11987479933",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "27\/07\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11985300085",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "27\/07\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11985300085",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "27\/07\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "48999316699",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "fcampos@plugin.com.br",
+            "fcampos@plug-in.com.br",
+            "acflc@ambev.com.br",
+            "fernando.campos@ambev.com.br",
+            "Fernandofields@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DR FADLO HAIDAR",
+                "NUMERO": "75",
+                "COMPLEMENTO": "AP 27",
+                "BAIRRO": "VL OLIMPIA",
+                "CEP": "04545050",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BR DO AMAZONAS",
+                "NUMERO": "302",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PETROPOLIS",
+                "CEP": "90670000",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R PEDROSO ALVARENGA",
+                "NUMERO": "1170",
+                "COMPLEMENTO": "AP 705",
+                "BAIRRO": "ITAIM BIBI",
+                "CEP": "04531004",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JACQUES FELIX",
+                "NUMERO": "326",
+                "COMPLEMENTO": "AP 143",
+                "BAIRRO": "VL NOVA CONCEICAO",
+                "CEP": "04509001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DIOGO JACOME",
+                "NUMERO": "954",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA NOVA CONSE",
+                "CEP": "04512001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CORONEL ARTUR DE PAULA FERREIRA",
+                "NUMERO": "95",
+                "COMPLEMENTO": "AP 161",
+                "BAIRRO": "VILA NOVA CONCEICAO",
+                "CEP": "04511060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BURUM",
+                "NUMERO": "235",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA ASSUNCAO",
+                "CEP": "91900170",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R BURUM",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA ASSUNCAO",
+                "CEP": "91900170",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "74976796000",
+            "NOME": "VANESSA LEITE DE CAMPOS",
+            "IDADE": "49 anos",
+            "LOCAL": "PORTO ALEGRE\/RS",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "AMBEV S.A.",
+                "CNPJ": "07526557000100",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "122405",
+                "DATA_ADMISSAO": "01\/07\/2016",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CRBS S\/A",
+                "CNPJ": "56228356007900",
+                "CIDADE": "ELDORADO DO SUL-RS",
+                "PROFISSAO": "123305",
+                "DATA_ADMISSAO": "01\/01\/2015",
+                "DATA_DEMISSAO": "01\/07\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "COMPANHIA DE BEBIDAS DAS AMERICAS - AMBEV",
+                "CNPJ": "02808708000107",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142305",
+                "DATA_ADMISSAO": "02\/02\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "COMPANHIA DE BEBIDAS DAS AMERICAS - AMBEV",
+                "CNPJ": "02808708006725",
+                "CIDADE": "LAGES-SC",
+                "PROFISSAO": "142305",
+                "DATA_ADMISSAO": "01\/04\/2009",
+                "DATA_DEMISSAO": "202",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,208 @@
+{
+    "CADASTRAIS": {
+        "CPF": "8946837721",
+        "NOME": "JULIANA HENRIQUES ALVARENGA",
+        "NOME_MAE": "EDMARIA HENRIQUES ALVARENGA",
+        "NASCTO": "02\/04\/1981",
+        "IDADE": "45 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "107982700361",
+        "NIT": "12802856563",
+        "ESCOLARIDADE": "SUPERIOR INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212410",
+        "PROFISSAO": "ANALISTA DE REDES E DE COMUNICACAO DE DADOS",
+        "SALARIO": " 6.812,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2227331252",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2133263035",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21979414544",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21981131129",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21998049499",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21999531639",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "juliana.halvarenga@telefonica.com",
+            "jujualvarenga@bol.com.br",
+            "juliana.alvarenga@vivo.com.br",
+            "julianahalvarenga@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CARMELA DUTRA",
+                "NUMERO": "5",
+                "COMPLEMENTO": "AP701",
+                "BAIRRO": "TIJUCA",
+                "CEP": "20550045",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA ANTONIO BAPTISTA BITTENCOURT",
+                "NUMERO": "105",
+                "COMPLEMENTO": "AP104",
+                "BAIRRO": "RECREIO DOS BANDEIRANTES",
+                "CEP": "22790250",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "AVENIDA AYRTON SENNA",
+                "NUMERO": "2200",
+                "COMPLEMENTO": "BL 2 TERREO",
+                "BAIRRO": "BARRA DA TIJUCA",
+                "CEP": "22775003",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA DOUTOR SIQUEIRA",
+                "NUMERO": "322",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE TAMANDARE",
+                "CEP": "28030130",
+                "CIDADE": "CAMPOS DOS GOYTACAZES",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "21353808734",
+                "NOME": "EDMARIA HENRIQUES ALVARENGA",
+                "IDADE": "69 anos",
+                "LOCAL": "CAMPOS DOS GOYTACAZES\/RJ",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "11396616713",
+                "NOME": "RAFAEL HENRIQUES ALVARENGA",
+                "IDADE": "40 anos",
+                "LOCAL": "SERRA\/ES",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "11884935745",
+                "NOME": "MARCOS HENRIQUES ALVARENGA",
+                "IDADE": "34 anos",
+                "LOCAL": "CAMPOS DOS GOYTACAZES\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TIM S A",
+                "CNPJ": "02421421000111",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "01\/11\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TELEFONICA BRASIL S.A.",
+                "CNPJ": "02558157001487",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "212410",
+                "DATA_ADMISSAO": "01\/07\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "VIVO S.A.",
+                "CNPJ": "02449992018101",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "313310",
+                "DATA_ADMISSAO": "22\/01\/2001",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "RJD COMERCIO E REPRESENTACAO DE PRODUTOS DE LIMPEZA LTDA",
+            "CNPJ": "26550683000144",
+            "CIDADE": "RIO DE JANEIRO-RJ",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20161116",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

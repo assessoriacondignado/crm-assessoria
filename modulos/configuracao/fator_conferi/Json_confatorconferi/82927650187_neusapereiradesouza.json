@@ -1,0 +1,175 @@
+{
+    "CADASTRAIS": {
+        "CPF": "82927650187",
+        "NOME": "NEUSA PEREIRA DE SOUZA",
+        "NOME_MAE": "MARIA NAZARE DO CARMO PEREIRA",
+        "NASCTO": "03\/08\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "030978331058",
+        "NIT": "1284613512",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521125",
+        "PROFISSAO": "REPOSITOR DE MERCADORIAS",
+        "SALARIO": " 1.622,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "6233232555",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2127963249",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "62985544840",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "62991247454",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "62995673905",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "62996960986",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "10\/11\/2018",
+                "TIPO_TEL": "MOVEL PRE-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DOIS",
+                "NUMERO": "713",
+                "COMPLEMENTO": "Q 5 LT 1 C 2",
+                "BAIRRO": "CENTRO",
+                "CEP": "76310000",
+                "CIDADE": "RIALMA",
+                "ESTADO": "GO"
+            },
+            {
+                "LOGRADOURO": "AV PEDRO LUDOVICO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "Q 13 LT 2",
+                "BAIRRO": "JD CALIXTO",
+                "CEP": "75134675",
+                "CIDADE": "ANAPOLIS",
+                "ESTADO": "GO"
+            },
+            {
+                "LOGRADOURO": "07",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "76300000",
+                "CIDADE": "CERES",
+                "ESTADO": "GO"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "71572759100",
+                "NOME": "MARIA NAZARE DO CARMO PEREIRA",
+                "IDADE": "70 anos",
+                "LOCAL": "RIALMA\/GO",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "12462854797",
+                "NOME": "DAVI ROBERTO DO CARMO GOMES",
+                "IDADE": "36 anos",
+                "LOCAL": "TERESOPOLIS\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "71020314168",
+                "NOME": "RONALDO PEREIRA DE SOUZA",
+                "IDADE": "48 anos",
+                "LOCAL": "RIALMA\/GO",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "85770477172",
+                "NOME": "EDILEUSA PEREIRA DE SOUZA REIS",
+                "IDADE": "52 anos",
+                "LOCAL": "GOIANIA\/GO",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "93075626104",
+                "NOME": "RONEIDE PEREIRA DE SOUZA OLIVEIRA",
+                "IDADE": "47 anos",
+                "LOCAL": "GOIANIA\/GO",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "SUPERMERCADO MERCACERES LTDA",
+            "CNPJ": "26742569000116",
+            "CIDADE": "CERES-GO",
+            "PROFISSAO": "521125",
+            "DATA_ADMISSAO": "12\/12\/2022",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

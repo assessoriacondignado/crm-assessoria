@@ -1,0 +1,169 @@
+{
+    "CADASTRAIS": {
+        "CPF": "83872086391",
+        "NOME": "JOSE PEREIRA VAZ FILHO",
+        "NOME_MAE": "MARIA FERREIRA DE LIMA VAZ",
+        "NASCTO": "30\/12\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "1675180",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1266263048",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "410105",
+        "PROFISSAO": "SUPERVISOR ADMINISTRATIVO",
+        "SALARIO": " 3.194,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9933170957",
+                "OPERADORA": "TELEMAR\/MA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8632128732",
+                "OPERADORA": "TELEMAR\/PI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "99999357889",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "86988011208",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "86988102071",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "22\/12\/2016",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "86988886513",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "03\/07\/2018",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "86988642447",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/04\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R POE CASTRO ALVES",
+                "NUMERO": "490",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ ALVORADA",
+                "CEP": "65634590",
+                "CIDADE": "TIMON",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "AVENIDA BENEDITO FERREIRA CAMPOS",
+                "NUMERO": "1185",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE ALVORADA",
+                "CEP": "65633280",
+                "CIDADE": "TIMON",
+                "ESTADO": "MA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "786361328",
+                "NOME": "ROSANGELA PEREIRA VAZ",
+                "IDADE": "48 anos",
+                "LOCAL": "TERESINA\/PI",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "70775567353",
+                "NOME": "FRANCISCA PEREIRA VAZ",
+                "IDADE": "61 anos",
+                "LOCAL": "TERESINA\/PI",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "83357637391",
+                "NOME": "ANTONIO LUIZ PEREIRA VAZ",
+                "IDADE": "50 anos",
+                "LOCAL": "TERESINA\/PI",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "89722140515",
+                "NOME": "EDILEUZA PEREIRA VAZ",
+                "IDADE": "53 anos",
+                "LOCAL": "BRASILIA\/DF",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "FRIGOTIL - FRIGORIFICO DE TIMON S\/A",
+            "CNPJ": "05699871000169",
+            "CIDADE": "TIMON-MA",
+            "PROFISSAO": "410105",
+            "DATA_ADMISSAO": "21\/01\/2020",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

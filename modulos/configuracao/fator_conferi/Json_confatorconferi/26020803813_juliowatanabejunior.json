@@ -1,0 +1,255 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26020803813",
+        "NOME": "JULIO WATANABE JUNIOR",
+        "NOME_MAE": "MITUKO KUROSAKA WATANABE",
+        "NASCTO": "18\/10\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "264719750116",
+        "NIT": "1901741420",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "214105",
+        "PROFISSAO": "ARQUITETO DE EDIFICACOES",
+        "SALARIO": " 29.212,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1141991362",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1138059732",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "29\/07\/2008",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1139142520",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1138344153",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1138344153",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19991336173",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11991336173",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11991336173",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "jwjr@bol.com.br",
+            "watab@globo.com",
+            "watab@hotmail.com",
+            "jwjr@ig.com.br",
+            "jwjr@hotmail.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ANDRE DREYFUS",
+                "NUMERO": "109",
+                "COMPLEMENTO": "AP 104",
+                "BAIRRO": "SUMARE",
+                "CEP": "01252901",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FONTES DA SILVA",
+                "NUMERO": "533",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD REGINA",
+                "CEP": "05174260",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FONTES DA SILVA",
+                "NUMERO": "537",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD REGINA",
+                "CEP": "05174260",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE TOBIAS DOS SANTO",
+                "NUMERO": "40",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PQ SAO DOMIN",
+                "CEP": "05121050",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANDRE DREYFUS",
+                "NUMERO": "109",
+                "COMPLEMENTO": "AP104BL2",
+                "BAIRRO": "SUMARE",
+                "CEP": "01252010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA AGENOR COUTO DE MAGALHAES",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM REGINA",
+                "CEP": "05174000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA AGENOR COUTO DE MAGALHAES",
+                "NUMERO": "1803",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM REGINA",
+                "CEP": "05174000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "13596918804",
+            "NOME": "MITUKO KUROSAKA WATANABE",
+            "IDADE": "80 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ALZENI VIEIRA DO SANTO WATANABE",
+                "IDADE": "",
+                "LOCALIDADE": "GUARULHOS\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "17346573838"
+            },
+            {
+                "NOME": "JOAO YUKIO VATANABE",
+                "IDADE": "",
+                "LOCALIDADE": "POA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "4431058800"
+            },
+            {
+                "NOME": "JULIO WATANABE",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "798775831"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CAIXA ECONOMICA FEDERAL",
+                "CNPJ": "00360305430974",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "214105",
+                "DATA_ADMISSAO": "07\/12\/2012",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MINISTERIO DA GESTAO E DA INOVACAO EM SERVICOS PUBLICOS",
+                "CNPJ": "00489828000236",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "252105",
+                "DATA_ADMISSAO": "26\/10\/2012",
+                "DATA_DEMISSAO": "612",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "MUNICIPIO DE BARUERI",
+                "CNPJ": "46523015000135",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "214105",
+                "DATA_ADMISSAO": "13\/06\/2006",
+                "DATA_DEMISSAO": "19\/10\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

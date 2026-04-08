@@ -1,0 +1,288 @@
+{
+    "CADASTRAIS": {
+        "CPF": "27328532831",
+        "NOME": "PERSIO GUIMARAES VIEIRA",
+        "NOME_MAE": "SEBIA DE BENZABE VIEIRA",
+        "NASCTO": "04\/06\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "29756840",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "225820040183",
+        "NIT": "12655954779",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212210",
+        "PROFISSAO": "ENGENHEIRO DE EQUIPAMENTOS EM COMPUTACAO",
+        "SALARIO": " 7.277,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1121089000",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1126926860",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1129352235",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1120211974",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1120211974",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11989895990",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11988425477",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11988485477",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11988485477",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11991465259",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "persiogv@terra.com.br",
+            "wsrprisecon@hotmail.com",
+            "persiogv@yahoo.com",
+            "persiogv@yahoo.com.br",
+            "persiogv@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ARROIO DO PONTAO",
+                "NUMERO": "120",
+                "COMPLEMENTO": "BL B AP 23",
+                "BAIRRO": "CJ HABITACIONAL SANTA ETELVINA III",
+                "CEP": "08485470",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AL LORENA",
+                "NUMERO": "307",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD PAULISTA",
+                "CEP": "01424001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R OSCAR FREIRE",
+                "NUMERO": "329",
+                "COMPLEMENTO": "CJ 41",
+                "BAIRRO": "CERQUEIRA CESAR",
+                "CEP": "01426001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PALMIRA B GALLI",
+                "NUMERO": "4",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD PALMIRA",
+                "CEP": "07075110",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JORGE OGUSHI",
+                "NUMERO": "51",
+                "COMPLEMENTO": "AP111 B",
+                "BAIRRO": "JD VL FORMOSA",
+                "CEP": "03471000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JORGE OGUSHI",
+                "NUMERO": "53",
+                "COMPLEMENTO": "AP111B",
+                "BAIRRO": "JARDIM VILA FORMOSA",
+                "CEP": "03471000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CAPITAO LORENA",
+                "NUMERO": "305",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA INVERNADA",
+                "CEP": "03350080",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CAPITAO LORENA",
+                "NUMERO": "307",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA INVERNADA",
+                "CEP": "03350080",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "81701870878",
+            "NOME": "SEBIA DE BENZABE VIEIRA",
+            "IDADE": "82 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "SEBIA DE BENZABE VIEIRA",
+            "IDADE": "",
+            "LOCALIDADE": "SAO PAULO\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "81701870878"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ITAU UNIBANCO S.A.",
+                "CNPJ": "60701190000104",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "09\/11\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ITAU UNIBANCO S.A.",
+                "CNPJ": "60701190496983",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "09\/11\/2020",
+                "DATA_DEMISSAO": "01\/05\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "CI T SOFTWARE S\/A",
+                "CNPJ": "00609634000146",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "212210",
+                "DATA_ADMISSAO": "09\/09\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "EDITORA QUADRA LTDA",
+                "CNPJ": "17866994000126",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "261120",
+                "DATA_ADMISSAO": "01\/05\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "CASA DOIS COMUNICACAO LTDA",
+                "CNPJ": "00935104000279",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "261120",
+                "DATA_ADMISSAO": "16\/06\/2008",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

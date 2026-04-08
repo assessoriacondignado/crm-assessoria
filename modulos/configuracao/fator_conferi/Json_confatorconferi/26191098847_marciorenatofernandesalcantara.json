@@ -1,0 +1,224 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26191098847",
+        "NOME": "MARCIO RENATO FERNANDES ALCANTARA",
+        "NOME_MAE": "MARIA DAS GRACAS FERNANDES ALCANTARA",
+        "NASCTO": "29\/01\/1979",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "225822480124",
+        "NIT": "1298459685 ",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "391210",
+        "PROFISSAO": "TECNICO DE GARANTIA DA QUALIDADE",
+        "SALARIO": " 4.500,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1143627791",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11984657301",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11969889582",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marciorfalcantara@gmail.com",
+            "marciorfalcantara@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R GASPAR RODRIGUES",
+                "NUMERO": "530",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CH MAFALDA",
+                "CEP": "03372000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R NORUEGA",
+                "NUMERO": "612",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JD AEROPORTO",
+                "CEP": "12231140",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FREI ORESTE GIRARDI",
+                "NUMERO": "127",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CONJUNTO HABITA",
+                "CEP": "08465040",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA FREI ORESTE GIRARDI",
+                "NUMERO": "12",
+                "COMPLEMENTO": "CJ PRES JUSCELI",
+                "BAIRRO": "CONJUNTO HABITACIONAL JUSCELINO KUBITSCHEK",
+                "CEP": "08465040",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "9165789334",
+                "NOME": "MARIA DAS GRACAS FERNANDES ALCANTARA",
+                "IDADE": "76 anos",
+                "LOCAL": "SAO JOSE DOS CAMPOS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "17779467600",
+                "NOME": "ENZO FERNANDES ALCANTARA",
+                "IDADE": "18 anos",
+                "LOCAL": "",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "31871506832",
+                "NOME": "MARCELO ADNO FERNANDES ALCANTARA",
+                "IDADE": "42 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "KENVUE LTDA.",
+                "CNPJ": "59748988000114",
+                "CIDADE": "SAO JOSE DOS CAMPOS-SP",
+                "PROFISSAO": "391210",
+                "DATA_ADMISSAO": "10\/07\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PETROREP SERVICOS LTDA",
+                "CNPJ": "11922312000179",
+                "CIDADE": "LAURO DE FREITAS-BA",
+                "PROFISSAO": "311105",
+                "DATA_ADMISSAO": "16\/05\/2022",
+                "DATA_DEMISSAO": "09\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "MANPOWER STAFFING LTDA.",
+                "CNPJ": "01894253000119",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "391210",
+                "DATA_ADMISSAO": "06\/03\/2023",
+                "DATA_DEMISSAO": "30\/06\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "THERASKIN FARMACEUTICA LTDA.",
+                "CNPJ": "61517397000188",
+                "CIDADE": "SAO BERNARDO DO CAMPO-SP",
+                "PROFISSAO": "391210",
+                "DATA_ADMISSAO": "03\/05\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "LUANDRE TEMPORARIOS LTDA",
+                "CNPJ": "04144144000172",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "321210",
+                "DATA_ADMISSAO": "01\/07\/2015",
+                "DATA_DEMISSAO": "02\/05\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "FOCUS TECNOLOGIA COMERCIAL QUIMICA LTDA",
+                "CNPJ": "10693887000285",
+                "CIDADE": "GUARULHOS-SP",
+                "PROFISSAO": "811005",
+                "DATA_ADMISSAO": "01\/10\/2013",
+                "DATA_DEMISSAO": "28\/08\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "SANRISIL S\/A INDUSTRIA E COMERCIO",
+                "CNPJ": "00783239000185",
+                "CIDADE": "ITAQUAQUECETUBA-SP",
+                "PROFISSAO": "311105",
+                "DATA_ADMISSAO": "02\/05\/2012",
+                "DATA_DEMISSAO": "26\/07\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "FOCUS TECNOLOGIA COMERCIAL QUIMICA LTDA",
+                "CNPJ": "10693887000102",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "811005",
+                "DATA_ADMISSAO": "01\/08\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "AUGUSTA E RESPEITAVEL LOJA SIMBOLICA COLUNAS DO MESTRE HIRAM ABIFF N 704",
+            "CNPJ": "39270322000196",
+            "CIDADE": "SAO PAULO-SP",
+            "QUALIFICACAO": "Diretor",
+            "DATA_ENTRADA": "20200831",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

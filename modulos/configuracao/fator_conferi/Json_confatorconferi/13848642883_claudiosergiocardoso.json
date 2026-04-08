@@ -1,0 +1,233 @@
+{
+    "CADASTRAIS": {
+        "CPF": "13848642883",
+        "NOME": "CLAUDIO SERGIO CARDOSO",
+        "NOME_MAE": "VICENTINA LUCIA DOS SANTOS",
+        "NASCTO": "12\/09\/1969",
+        "IDADE": "56 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "178537230132",
+        "NIT": "12697321227",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "721215",
+        "PROFISSAO": "OPERADOR DE MAQUINAS-FERRAMENTA CONVENCIONAIS",
+        "SALARIO": " 11,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1231252159",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1231253198",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1231325976",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1231261478",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "12992296119",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12988621333",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12992127073",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "imaria.cardosow@gmail.com",
+            "rcmnunes@itelefonica.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ALBERTO ANDALO",
+                "NUMERO": "506",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ S LUIS",
+                "CEP": "02840080",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CASSIANO RICARDO",
+                "NUMERO": "195",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL BELA",
+                "CEP": "12522490",
+                "CIDADE": "GUARATINGUETA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CASSIANO RICARDO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL BELA",
+                "CEP": "12522490",
+                "CIDADE": "GUARATINGUETA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BARBARA MARIA BARBOSA",
+                "NUMERO": "150",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM DO VALE II",
+                "CEP": "12519540",
+                "CIDADE": "GUARATINGUETA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FRANCISCO ALVARO PALAZZO DE CARVALHO",
+                "NUMERO": "155",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM DO VALE II",
+                "CEP": "12519440",
+                "CIDADE": "GUARATINGUETA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA EVANDRO ALVES DA SILVA",
+                "NUMERO": "136",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM DO VALE",
+                "CEP": "12518510",
+                "CIDADE": "GUARATINGUETA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "6139719658",
+            "NOME": "VICENTINA LUCIA DOS SANTOS",
+            "IDADE": "48 anos",
+            "LOCAL": "SAO JOSE DOS CAMPOS\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "EDNA MARIA MOREIRA NUNES",
+                "IDADE": "",
+                "LOCALIDADE": "GUARATINGUETA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "8601942806"
+            },
+            {
+                "NOME": "LUIS CLAUDIO DOS SANTOS MEIRELES",
+                "IDADE": "",
+                "LOCALIDADE": "GUARATINGUETA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "18566695801"
+            },
+            {
+                "NOME": "MARIA DA ROCHA",
+                "IDADE": "",
+                "LOCALIDADE": "GUARATINGUETA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "54865212868"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "DANFOSS DO BRASIL INDUSTRIA E COMERCIO LTDA",
+                "CNPJ": "62158480001142",
+                "CIDADE": "GUARATINGUETA-SP",
+                "PROFISSAO": "721215",
+                "DATA_ADMISSAO": "01\/11\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "AEROQUIP DO BRASIL LTDA",
+                "CNPJ": "33226184000161",
+                "CIDADE": "GUARATINGUETA-SP",
+                "PROFISSAO": "721215",
+                "DATA_ADMISSAO": "01\/08\/2021",
+                "DATA_DEMISSAO": "31\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "EATON LTDA",
+                "CNPJ": "54625819003350",
+                "CIDADE": "GUARATINGUETA-SP",
+                "PROFISSAO": "721215",
+                "DATA_ADMISSAO": "10\/07\/2000",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

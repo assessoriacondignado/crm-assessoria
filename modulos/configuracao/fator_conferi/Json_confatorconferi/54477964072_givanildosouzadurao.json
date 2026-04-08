@@ -1,0 +1,168 @@
+{
+    "CADASTRAIS": {
+        "CPF": "54477964072",
+        "NOME": "GIVANILDO SOUZA DURAO",
+        "NOME_MAE": "CARMELINDA SOUZA",
+        "NASCTO": "29\/12\/1969",
+        "IDADE": "56 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1232595096",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782410",
+        "PROFISSAO": "MOTORISTA DE ONIBUS URBANO",
+        "SALARIO": " 4.858,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5133873300",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5133640146",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51994412295",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51991764242",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51992138575",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51994027811",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "souzagiva29@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOAO HARTMANN",
+                "NUMERO": "310",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BRASILIA",
+                "CEP": "97900000",
+                "CIDADE": "CERRO LARGO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R PAULO RENATO KETZER DE SOUZA",
+                "NUMERO": "365",
+                "COMPLEMENTO": "AP 101",
+                "BAIRRO": "RUBEM BERTA",
+                "CEP": "91250554",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R JOSE GRIMBERG",
+                "NUMERO": "690",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "RUBEM BERTA",
+                "CEP": "91180650",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "VL RINCAO VERMELHO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "2 DIST",
+                "CEP": "97970000",
+                "CIDADE": "ROQUE GONZALES",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "88222470000",
+            "NOME": "CARMELINDA SOUZA",
+            "IDADE": "86 anos",
+            "LOCAL": "CERRO LARGO\/RS",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SOCIEDADE DE ONIBUS PORTO ALEGRENSE LTDA",
+                "CNPJ": "92688415000118",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "08\/12\/2009",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SOUL SOCIEDADE DE ONIBUS UNIAO LTDA",
+                "CNPJ": "98750359000180",
+                "CIDADE": "ALVORADA-RS",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "06\/02\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

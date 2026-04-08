@@ -1,0 +1,224 @@
+{
+    "CADASTRAIS": {
+        "CPF": "3084093709",
+        "NOME": "MARCELA CHAVES FRANCA",
+        "NOME_MAE": "NATALIA MARIA FRANCA",
+        "NASCTO": "24\/09\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "13003402225",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "231310",
+        "PROFISSAO": "PROFESSOR DE EDUCACAO ARTISTICA DO ENSINO FUNDAMENTAL",
+        "SALARIO": " 1.331,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1233512607",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1239173028",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "05\/02\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1239528982",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "22999283788",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12991158542",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "12991369774",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "davi_zi_fra@hotmail.com",
+            "marcela.chaves.franca@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R FRANCISCA MARIA DE JESUS",
+                "NUMERO": "248",
+                "COMPLEMENTO": "BL 2 AP 302",
+                "BAIRRO": "FLORADAS DE SAO JOSE",
+                "CEP": "12230083",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOAO AMERICO DA SILVA",
+                "NUMERO": "365",
+                "COMPLEMENTO": "AP 14",
+                "BAIRRO": "CENTRO",
+                "CEP": "12308660",
+                "CIDADE": "JACAREI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOUTOR SERGIO SANTOS",
+                "NUMERO": "165",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM PORTUGAL",
+                "CEP": "12232180",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA BENTO GUEDES",
+                "NUMERO": "85",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA FORMOSA",
+                "CEP": "12307630",
+                "CIDADE": "JACAREI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA BENTO GUEDES",
+                "NUMERO": "91",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "VILA FORMOSA",
+                "CEP": "12307630",
+                "CIDADE": "JACAREI",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "5934776185",
+                "NOME": "NATALIA MARIA FRANCA",
+                "IDADE": "29 anos",
+                "LOCAL": "SINOP\/MT",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "19998089751",
+                "NOME": "MADALENA FRANCA VIDAL",
+                "IDADE": "9 anos",
+                "LOCAL": "",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "21401389708",
+                "NOME": "BENTO FRANCA VIDAL",
+                "IDADE": "11 anos",
+                "LOCAL": "",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "JULIANA LEAO URQUIZA",
+            "IDADE": "",
+            "LOCALIDADE": "RECIFE\/PE",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "3073699430"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "FUNDACAO VALEPARAIBANA DE ENSINO",
+                "CNPJ": "60191244000120",
+                "CIDADE": "SAO JOSE DOS CAMPOS-SP",
+                "PROFISSAO": "232105",
+                "DATA_ADMISSAO": "01\/02\/2017",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "INSTITUTO EDUCACIONAL RIBEIRO GOULART LTDA",
+                "CNPJ": "00033755000192",
+                "CIDADE": "SAO JOSE DOS CAMPOS-SP",
+                "PROFISSAO": "231205",
+                "DATA_ADMISSAO": "05\/08\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "COLEGIO EVOLUTI LTDA",
+                "CNPJ": "01462072000113",
+                "CIDADE": "SAO JOSE DOS CAMPOS-SP",
+                "PROFISSAO": "232105",
+                "DATA_ADMISSAO": "14\/07\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "MAXIMO   VALERIO LTDA",
+                "CNPJ": "02246930000155",
+                "CIDADE": "JACAREI-SP",
+                "PROFISSAO": "231310",
+                "DATA_ADMISSAO": "04\/05\/2009",
+                "DATA_DEMISSAO": "27\/06\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

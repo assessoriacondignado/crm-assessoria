@@ -1,0 +1,147 @@
+{
+    "CADASTRAIS": {
+        "CPF": "89733347000",
+        "NOME": "VANTUIR EMERSON BATISTA A SILVEIRA",
+        "NOME_MAE": "ENI ALVES SILVEIRA",
+        "NASCTO": "03\/09\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "1057293837",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "064872810450",
+        "NIT": "1233422453",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "810205",
+        "PROFISSAO": "MESTRE (INDUSTRIA DE BORRACHA E PLASTICO)",
+        "SALARIO": " 6.896,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5134662404",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "5134789000",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51999758588",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51985223236",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "51998591535",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ALEXANDRE DE GUSMAO",
+                "NUMERO": "547",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ETN VELHA",
+                "CEP": "92030340",
+                "CIDADE": "CANOAS",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R ALEXANDRE DE GUSMAO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ESTANCIA VELHA",
+                "CEP": "92030340",
+                "CIDADE": "CANOAS",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R ALEXANDRE DE GUSMAO",
+                "NUMERO": "804",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ESTANCIA VELHA",
+                "CEP": "92030340",
+                "CIDADE": "CANOAS",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "6936873120",
+            "NOME": "ENI ALVES SILVEIRA",
+            "IDADE": "75 anos",
+            "LOCAL": "JATAI\/GO",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "EXATRON INDUSTRIA ELETRONICA LTDA",
+                "CNPJ": "90191529000122",
+                "CIDADE": "CANOAS-RS",
+                "PROFISSAO": "810205",
+                "DATA_ADMISSAO": "12\/04\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "IRIEL INDUSTRIA E COMERCIO DE SISTEMAS ELETRICOS LTDA",
+                "CNPJ": "06005455000186",
+                "CIDADE": "CANOAS-RS",
+                "PROFISSAO": "720210",
+                "DATA_ADMISSAO": "01\/06\/2005",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

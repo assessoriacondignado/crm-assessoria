@@ -1,0 +1,197 @@
+{
+    "CADASTRAIS": {
+        "CPF": "78464404620",
+        "NOME": "ADAO ALVES DE SOUZA",
+        "NOME_MAE": "VALDINA DESIDERIO DA SILVA",
+        "NASCTO": "25\/03\/1971",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12488643272",
+        "ESCOLARIDADE": "DA 5a. A 8a. SERIE INCOMPLETA DO 1o. GRAU(GINASIO INCOMPLETO)",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "717020",
+        "PROFISSAO": "SERVENTE DE OBRAS",
+        "SALARIO": " 330,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3832152098",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "3832168027",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "38999554850",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "38998208582",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "27\/08\/2015",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "38988041696",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/04\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DR JAIR RENALT DE CASTRO",
+                "NUMERO": "11",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CJ CLARICE ALVES VIEIRA",
+                "CEP": "39404775",
+                "CIDADE": "MONTES CLAROS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R CEL JOAQUIM COSTA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "39400049",
+                "CIDADE": "MONTES CLAROS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R DEZESSEIS",
+                "NUMERO": "213",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "JARAGUA",
+                "CEP": "39404209",
+                "CIDADE": "MONTES CLAROS",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "5278182679",
+                "NOME": "EVA ALVES DE SOUZA",
+                "IDADE": "50 anos",
+                "LOCAL": "MONTES CLAROS\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "5348144681",
+                "NOME": "MARINALVA ALVES DE SOUZA",
+                "IDADE": "46 anos",
+                "LOCAL": "CONTAGEM\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "6947860636",
+                "NOME": "MARCOLINA ALVES DE SOUZA",
+                "IDADE": "41 anos",
+                "LOCAL": "MONTES CLAROS\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "10397549610",
+                "NOME": "JOSE CARLOS ALVES DE SOUZA",
+                "IDADE": "35 anos",
+                "LOCAL": "NOVA SERRANA\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "11757218670",
+                "NOME": "FABIO JUNIO ALVES DE SOUZA",
+                "IDADE": "33 anos",
+                "LOCAL": "UBERLANDIA\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "MAX MIN CLUBE",
+                "CNPJ": "16921595000158",
+                "CIDADE": "MONTES CLAROS-MG",
+                "PROFISSAO": "517420",
+                "DATA_ADMISSAO": "22\/04\/2016",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MAO NA OBRA SERVICOS ESPECIALIZADOS LTDA",
+                "CNPJ": "21840515000170",
+                "CIDADE": "TEOFILO OTONI-MG",
+                "PROFISSAO": "717020",
+                "DATA_ADMISSAO": "16\/09\/2015",
+                "DATA_DEMISSAO": "11\/02\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "RCG ENGENHARIA E EMPREENDIMENTOS LTDA",
+                "CNPJ": "20069480000154",
+                "CIDADE": "UBERABA-MG",
+                "PROFISSAO": "717020",
+                "DATA_ADMISSAO": "01\/07\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "NOVA CINTRA DISTRIBUIDORA LTDA",
+                "CNPJ": "10611758000110",
+                "CIDADE": "MONTES CLAROS-MG",
+                "PROFISSAO": "783225",
+                "DATA_ADMISSAO": "01\/04\/2011",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

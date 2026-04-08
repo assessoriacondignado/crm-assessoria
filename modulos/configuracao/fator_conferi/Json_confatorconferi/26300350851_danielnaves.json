@@ -1,0 +1,168 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26300350851",
+        "NOME": "DANIEL NAVES",
+        "NOME_MAE": "MARELLENA FARIA NAVES",
+        "NASCTO": "07\/09\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "257416080116",
+        "NIT": "12541512424",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "724315",
+        "PROFISSAO": "SOLDADOR",
+        "SALARIO": " 23,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1938871242",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1932281777",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "19981382874",
+            "OPERADORA": "TIM CELULAR S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "MOVEL",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "danielnaves@live.com",
+            "dan.naves@hotmail.com",
+            "danielnaves77@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PALMAS",
+                "NUMERO": "321",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ DO HORTO",
+                "CEP": "13183662",
+                "CIDADE": "HORTOLANDIA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV DR ARLINDO JOAQUIM DE LEMOS",
+                "NUMERO": "713",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL LEMOS",
+                "CEP": "13100450",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DERCIDES ERNICA",
+                "NUMERO": "155",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD ADELAIDE",
+                "CEP": "13185345",
+                "CIDADE": "HORTOLANDIA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ARACOIABA DA SERRA",
+                "NUMERO": "626",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "C JARDIM",
+                "CEP": "13050420",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DERCIDES ERNICA",
+                "NUMERO": "175",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM ADELAIDE",
+                "CEP": "13185345",
+                "CIDADE": "HORTOLANDIA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "447891650",
+                "NOME": "MARELLENA FARIA NAVES",
+                "IDADE": "77 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "32670483895",
+                "NOME": "LUCIANE NAVES DA SILVA",
+                "IDADE": "52 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COMPANHIA DE SANEAMENTO BASICO DO ESTADO DE SAO PAULO - SABESP",
+                "CNPJ": "43776517022906",
+                "CIDADE": "MONTE MOR-SP",
+                "PROFISSAO": "724115",
+                "DATA_ADMISSAO": "04\/02\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "GREENBRIER MAXION - EQUIPAMENTOS E SERVICOS FERROVIARIOS S.A.",
+                "CNPJ": "21042930000188",
+                "CIDADE": "HORTOLANDIA-SP",
+                "PROFISSAO": "724315",
+                "DATA_ADMISSAO": "01\/03\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "AMSTED-MAXION FUNDICAO E EQUIPAMENTOS FERROVIARIOS S\/A",
+                "CNPJ": "01599436000454",
+                "CIDADE": "HORTOLANDIA-SP",
+                "PROFISSAO": "724315",
+                "DATA_ADMISSAO": "01\/03\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

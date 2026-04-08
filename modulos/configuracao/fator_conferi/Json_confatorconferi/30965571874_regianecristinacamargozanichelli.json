@@ -1,0 +1,188 @@
+{
+    "CADASTRAIS": {
+        "CPF": "30965571874",
+        "NOME": "REGIANE CRISTINA CAMARGO ZANICHELLI",
+        "NOME_MAE": "ROSIMEIRE APARECIDA CAMARGO",
+        "NASCTO": "16\/09\/1982",
+        "IDADE": "43 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "263064920116",
+        "NIT": "2099824399",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "131210",
+        "PROFISSAO": "GERENTE DE SERVICOS DE SAUDE",
+        "SALARIO": " 6.814,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1935331313",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1935617997",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9535331313",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1935619407",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1935619407",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19992590494",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19996043294",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19999802497",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "gabicacheados@hotmail.com",
+            "regianezanichele@hotmail.com",
+            "regianezanichelli@gmail.com",
+            "regianezanichelli@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV VINTE E CINCO",
+                "NUMERO": "1285",
+                "COMPLEMENTO": "C AV",
+                "BAIRRO": "SAUDE",
+                "CEP": "13501110",
+                "CIDADE": "RIO CLARO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV 25",
+                "NUMERO": "1315",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SAUDE",
+                "CEP": "13501110",
+                "CIDADE": "RIO CLARO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOSE GOMAR JANUZZI",
+                "NUMERO": "1105",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA SAO PEDRO",
+                "CEP": "13632193",
+                "CIDADE": "PIRASSUNUNGA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "30732936802",
+                "NOME": "ROSIMEIRE APARECIDA CAMARGO",
+                "IDADE": "49 anos",
+                "LOCAL": "REGINOPOLIS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "49832575869",
+                "NOME": "GABRIEL DE ALMEIDA",
+                "IDADE": "20 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "52966117800",
+                "NOME": "GABRIELLE DE ALMEIDA",
+                "IDADE": "20 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "IRMANDADE DA SANTA CASA DE MISERICORDIA DE RIO CLARO",
+            "CNPJ": "56384183000140",
+            "CIDADE": "RIO CLARO-SP",
+            "PROFISSAO": "131210",
+            "DATA_ADMISSAO": "13\/08\/2008",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

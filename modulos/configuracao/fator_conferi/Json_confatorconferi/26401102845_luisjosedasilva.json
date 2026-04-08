@@ -1,0 +1,135 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26401102845",
+        "NOME": "LUIS JOSE DA SILVA",
+        "NOME_MAE": "MARIA DOS ANJOS SILVA",
+        "NASCTO": "15\/01\/1976",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "043526670850",
+        "NIT": "1252756660",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "715610",
+        "PROFISSAO": "ELETRICISTA DE INSTALACOES (EDIFICIOS)",
+        "SALARIO": " 5.741,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1146424153",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "21\/06\/2002",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1146428101",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11948659483",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11986520938",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11988861783",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MARCELINO FERNANDEZ",
+                "NUMERO": "898",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL MONTE BELO",
+                "CEP": "08577600",
+                "CIDADE": "ITAQUAQUECETUBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA LEME",
+                "NUMERO": "77",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM DO CARMO",
+                "CEP": "08577620",
+                "CIDADE": "ITAQUAQUECETUBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DIAMANTE PRETO",
+                "NUMERO": "1234",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CHACARA CALIFORNIA",
+                "CEP": "03405000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "30012538",
+            "NOME": "MARIA DOS ANJOS SILVA",
+            "IDADE": "77 anos",
+            "LOCAL": "ITUACU\/BA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "J. C. DE OLIVEIRA INSTALACOES",
+            "CNPJ": "07587092000105",
+            "CIDADE": "CAMPINAS-SP",
+            "PROFISSAO": "715610",
+            "DATA_ADMISSAO": "06\/02\/2012",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

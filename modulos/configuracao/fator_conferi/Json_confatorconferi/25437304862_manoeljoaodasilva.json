@@ -1,0 +1,196 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25437304862",
+        "NOME": "MANOEL JOAO DA SILVA",
+        "NOME_MAE": "CICERA SEBASTIANA DA SILVA",
+        "NASCTO": "08\/01\/1976",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "270062701",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "225882540108",
+        "NIT": "1258549693",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "410105",
+        "PROFISSAO": "SUPERVISOR ADMINISTRATIVO",
+        "SALARIO": " 3.008,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1131068001",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1136600800",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1136600800",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1120355649",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11971635937",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11965118615",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11997209224",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "manoel.silva33@terra.com.br",
+            "mausilvamaral@gmail.com",
+            "manusilva@br.inter.net"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MARANHAO",
+                "NUMERO": "512",
+                "COMPLEMENTO": "",
+                "BAIRRO": "HIGIENOPOLIS",
+                "CEP": "01240000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ACARICOBA",
+                "NUMERO": "28",
+                "COMPLEMENTO": "C 1",
+                "BAIRRO": "CIDADE NOVA SAO MIGUEL",
+                "CEP": "08042240",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ARROIO ARAPONGAS",
+                "NUMERO": "20122",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CJ HABITACIONAL SANTA ETELVINA III",
+                "CEP": "08485440",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV BR DO REGO BARROS",
+                "NUMERO": "565",
+                "COMPLEMENTO": "C 2",
+                "BAIRRO": "VL CONGONHAS",
+                "CEP": "04612041",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R LUIS ARISTIDES",
+                "NUMERO": "8",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CONJUNTO HABITACIONAL SANTA ETELVINA III",
+                "CEP": "08485449",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R GEORGINA D BRAGHIROLI",
+                "NUMERO": "99",
+                "COMPLEMENTO": "CASA02",
+                "BAIRRO": "VL CURUCA",
+                "CEP": "08031560",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "105524484",
+            "NOME": "CICERA SEBASTIANA DA SILVA",
+            "IDADE": "65 anos",
+            "LOCAL": "CUIABA\/MT",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ELIANE DA SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "SAO PAULO\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "31041823886"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "ROTISSERIE ROMA LTDA",
+            "CNPJ": "03233882000123",
+            "CIDADE": "SAO PAULO-SP",
+            "PROFISSAO": "410105",
+            "DATA_ADMISSAO": "01\/09\/2023",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

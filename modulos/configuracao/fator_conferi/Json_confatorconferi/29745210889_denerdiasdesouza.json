@@ -1,0 +1,303 @@
+{
+    "CADASTRAIS": {
+        "CPF": "29745210889",
+        "NOME": "DENER DIAS DE SOUZA",
+        "NOME_MAE": "HERMINIA APARECIDA ALVES DE SOUZA",
+        "NASCTO": "07\/03\/1982",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "252521200108",
+        "NIT": "12918578934",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "142110",
+        "PROFISSAO": "GERENTE DE RISCOS",
+        "SALARIO": " 13.320,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1129165491",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1142243908",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1132329972",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1121210974",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "22\/02\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1133158552",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11963105770",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11967248596",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11996431588",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11974654144",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11981752505",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "denersouza@hotmail.com",
+            "dener.souza@ibi.com.br",
+            "deners@globo.com",
+            "dener.souza@redecard.com.br",
+            "dener.souza@orbitall.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R AUGUSTA",
+                "NUMERO": "901",
+                "COMPLEMENTO": "AP 305",
+                "BAIRRO": "CONSOLACAO",
+                "CEP": "01305100",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CNSO LAFAYETTE",
+                "NUMERO": "964",
+                "COMPLEMENTO": "AP 111",
+                "BAIRRO": "BARCELONA",
+                "CEP": "09550001",
+                "CIDADE": "SAO CAETANO DO SUL",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MAL DEODORO",
+                "NUMERO": "686",
+                "COMPLEMENTO": "AP 127",
+                "BAIRRO": "STA PAULA",
+                "CEP": "09541300",
+                "CIDADE": "SAO CAETANO DO SUL",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV MARCOS PENTEADO DE ULHOA RODRIGUES",
+                "NUMERO": "939",
+                "COMPLEMENTO": "AND 14",
+                "BAIRRO": "TAMBORE",
+                "CEP": "06460040",
+                "CIDADE": "BARUERI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE ROBERTO PEREIRA",
+                "NUMERO": "254",
+                "COMPLEMENTO": "C 2",
+                "BAIRRO": "JD IMP ZONA LESTE",
+                "CEP": "03934010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DEMERVAL DA FONSECA",
+                "NUMERO": "1",
+                "COMPLEMENTO": "BL 3 AP 13 1",
+                "BAIRRO": "JD STA TEREZINHA ZONA LESTE",
+                "CEP": "03572400",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R VINTE E CINCO DE MARCO",
+                "NUMERO": "493",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "01021000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV PRES JUSCELINO KUBITSCHEK",
+                "NUMERO": "1400",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL NOVA CONCEICAO",
+                "CEP": "04543000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "4208612894",
+                "NOME": "HERMINIA APARECIDA ALVES DE SOUZA",
+                "IDADE": "64 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "34296073885",
+                "NOME": "TALITA DIAS DE SOUZA PINTO",
+                "IDADE": "39 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "43930987813",
+                "NOME": "BRUNA DIAS DE SOUZA",
+                "IDADE": "32 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "DENER DIAS DE SOUZA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "2806834139"
+            },
+            {
+                "NOME": "FRANCISCO DIAS DE SOUZA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "3893423869"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "VISA DO BRASIL EMPREENDIMENTOS LTDA",
+                "CNPJ": "31551765000143",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "122755",
+                "DATA_ADMISSAO": "09\/12\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO CETELEM S.A.",
+                "CNPJ": "00558456000171",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "142110",
+                "DATA_ADMISSAO": "03\/12\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "REDECARD INSTITUICAO DE PAGAMENTO S.A.",
+                "CNPJ": "01425787000104",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "04\/06\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO BRADESCARD S.A.",
+                "CNPJ": "04184779000101",
+                "CIDADE": "OSASCO-SP",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "14\/02\/2011",
+                "DATA_DEMISSAO": "406",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

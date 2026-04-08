@@ -1,0 +1,267 @@
+{
+    "CADASTRAIS": {
+        "CPF": "53693124000",
+        "NOME": "SANDRO STEDILE ANGELI",
+        "NOME_MAE": "DOLAIMES MARIA STEDILE ANGELI",
+        "NASCTO": "07\/09\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12499503663",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "520110",
+        "PROFISSAO": "SUPERVISOR DE VENDAS COMERCIAL",
+        "SALARIO": " 7.700,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5432388190",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "5432145958",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "5432291700",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "54996915868",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "54999350789",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "54999042092",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "54999288543",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "54981141709",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "27\/07\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "sandro.angeli@cipnet.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R GEN OSORIO",
+                "NUMERO": "856",
+                "COMPLEMENTO": "AP 401",
+                "BAIRRO": "CENTRO",
+                "CEP": "96020000",
+                "CIDADE": "PELOTAS",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R ERNESTO ALVES",
+                "NUMERO": "240",
+                "COMPLEMENTO": "2",
+                "BAIRRO": "NOSSA SENHORA DE LOURDES",
+                "CEP": "95020360",
+                "CIDADE": "CAXIAS DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R PLACIDO DE CASTRO",
+                "NUMERO": "273",
+                "COMPLEMENTO": "AP  Apartamento  202",
+                "BAIRRO": "EXPOSICAO",
+                "CEP": "95084370",
+                "CIDADE": "CAXIAS DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "AV ITALIA",
+                "NUMERO": "347",
+                "COMPLEMENTO": "AP 602",
+                "BAIRRO": "SAO PELEGRINO",
+                "CEP": "95010040",
+                "CIDADE": "CAXIAS DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "AVENIDA RIO BRANCO",
+                "NUMERO": "247",
+                "COMPLEMENTO": "APART 212",
+                "BAIRRO": "SAO PELEGRINO",
+                "CEP": "95010060",
+                "CIDADE": "CAXIAS DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA PLACIDO DE CASTRO",
+                "NUMERO": "273",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AZENHA",
+                "CEP": "90650070",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "AVENIDA RIO BRANCO",
+                "NUMERO": "24",
+                "COMPLEMENTO": "SL202",
+                "BAIRRO": "SAO PELEGRINO",
+                "CEP": "95010060",
+                "CIDADE": "CAXIAS DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA DOM LUIZ VICTOR SARTORI",
+                "NUMERO": "524",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOSSA SENHORA DA SAUDE",
+                "CEP": "95032737",
+                "CIDADE": "CAXIAS DO SUL",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "28377931087",
+                "NOME": "DOLAIMES MARIA STEDILE ANGELI",
+                "IDADE": "82 anos",
+                "LOCAL": "CAXIAS DO SUL\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "53022378068",
+                "NOME": "FULVIA STEDILE ANGELI GAZOLA",
+                "IDADE": "57 anos",
+                "LOCAL": "CAXIAS DO SUL\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "53692837020",
+                "NOME": "FRANCA STEDILE ANGELI",
+                "IDADE": "55 anos",
+                "LOCAL": "CAXIAS DO SUL\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "LUISA WEISS ANGELI",
+            "IDADE": "",
+            "LOCALIDADE": "",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "2902343019"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "AGRALE SOCIEDADE ANONIMA",
+                "CNPJ": "88610324000192",
+                "CIDADE": "CAXIAS DO SUL-RS",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "01\/02\/2011",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LINTEC INDUSTRIA E COMERCIO DE MOTORES E EQUIPAMENTOS DE MOVIMENTACAO DE MATERIAIS LTDA",
+                "CNPJ": "23001852000107",
+                "CIDADE": "CAXIAS DO SUL-RS",
+                "PROFISSAO": "520110",
+                "DATA_ADMISSAO": "01\/02\/2011",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": [
+            {
+                "RAZAO_SOCIAL": "JDA EMPREENDIMENTOS E PARTICIPACOES SOCIETARIAS LTDA",
+                "CNPJ": "07439740000178",
+                "CIDADE": "CAXIAS DO SUL-RS",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20050609",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "DUMBO'S COMERCIAL IMPORTADORA LTDA",
+                "CNPJ": "01518533000122",
+                "CIDADE": "CAXIAS DO SUL-RS",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "19970801",
+                "VALOR_PARTICIPACAO": ""
+            }
+        ]
+    }
+}

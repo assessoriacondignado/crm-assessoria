@@ -1,0 +1,160 @@
+{
+    "CADASTRAIS": {
+        "CPF": "39741230320",
+        "NOME": "JAVAN DA SILVA COSTA",
+        "NOME_MAE": "IRENE DA SILVA COSTA",
+        "NASCTO": "01\/01\/1971",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "020759641198",
+        "NIT": "1244913254",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "414105",
+        "PROFISSAO": "ALMOXARIFE",
+        "SALARIO": " 2.931,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9832125135",
+                "OPERADORA": "TELEMAR\/MA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8632124177",
+                "OPERADORA": "TELEMAR\/PI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "86999288139",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "86988850081",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "86988860258",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "86988646811",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "86981815170",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "19\/06\/2018",
+                "TIPO_TEL": "MOVEL PRE-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "javanscosta@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV LUIS FIRMINO DE SOUSA",
+                "NUMERO": "1073",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S BENEDITO",
+                "CEP": "65636340",
+                "CIDADE": "TIMON",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "AVENIDA LUIS FIRMINO DE SOUSA",
+                "NUMERO": "2060",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SAO BENEDITO",
+                "CEP": "65636340",
+                "CIDADE": "TIMON",
+                "ESTADO": "MA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "348623747",
+            "NOME": "IRENE DA SILVA COSTA",
+            "IDADE": "90 anos",
+            "LOCAL": "TEIXEIRA DE FREITAS\/BA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "DISTRIMED COMERCIO E REPRESENTACOES LTDA",
+                "CNPJ": "08516958000141",
+                "CIDADE": "TERESINA-PI",
+                "PROFISSAO": "414105",
+                "DATA_ADMISSAO": "01\/07\/2011",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "DISTRIMED COMERCIO E REPRESENTACOES LTDA",
+                "CNPJ": "08516958000222",
+                "CIDADE": "TERESINA-PI",
+                "PROFISSAO": "414105",
+                "DATA_ADMISSAO": "01\/04\/2013",
+                "DATA_DEMISSAO": "30\/06\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

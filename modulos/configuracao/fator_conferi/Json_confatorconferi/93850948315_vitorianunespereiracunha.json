@@ -1,0 +1,164 @@
+{
+    "CADASTRAIS": {
+        "CPF": "93850948315",
+        "NOME": "VITORIA NUNES PEREIRA CUNHA",
+        "NOME_MAE": "HELENA NUNES PEREIRA",
+        "NASCTO": "08\/04\/1980",
+        "IDADE": "46 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "2034941189",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "322205",
+        "PROFISSAO": "TECNICO DE ENFERMAGEM",
+        "SALARIO": " 1.694,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9935220031",
+            "OPERADORA": "TELEMAR\/MA",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "99991104673",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "98991980307",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "99991203514",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "99992781804",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "99991587866",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "vnp706972@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ORFILENO LEDA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CENTRO",
+                "CEP": "65763000",
+                "CIDADE": "TUNTUM",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "RUA R ARISTON LEDA",
+                "NUMERO": "167",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S RAIMUNDO NONATO",
+                "CEP": "65763000",
+                "CIDADE": "TUNTUM",
+                "ESTADO": "MA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "378842552",
+                "NOME": "HELENA NUNES PEREIRA",
+                "IDADE": "83 anos",
+                "LOCAL": "PIRATUBA\/SC",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "62186561360",
+                "NOME": "LUDIMILA PEREIRA CUNHA",
+                "IDADE": "24 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "63181857394",
+                "NOME": "RIQUELME PEREIRA CUNHA",
+                "IDADE": "20 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "INSTITUTO DE APOIO AO DESENVOLVIMENTO DA VIDA HUMANA",
+                "CNPJ": "21843341000107",
+                "CIDADE": "SAO LUIS-MA",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "01\/04\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "INSTITUTO CIDADANIA E NATUREZA",
+                "CNPJ": "05487198000101",
+                "CIDADE": "SAO LUIS-MA",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "01\/07\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

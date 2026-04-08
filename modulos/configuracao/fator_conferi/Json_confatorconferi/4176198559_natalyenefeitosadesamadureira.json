@@ -1,0 +1,167 @@
+{
+    "CADASTRAIS": {
+        "CPF": "4176198559",
+        "NOME": "NATALYENE FEITOSA DE SA MADUREIRA",
+        "NOME_MAE": "JOSSINETE FEITOSA DE SA",
+        "NASCTO": "16\/03\/1990",
+        "IDADE": "36 anos",
+        "SEXO": "Feminino",
+        "RG": "33814872",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1293271876",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "322230",
+        "PROFISSAO": "AUXILIAR DE ENFERMAGEM",
+        "SALARIO": " 1.952,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7921071000",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7932548910",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "79991385037",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79998194300",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79996044363",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79988419335",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79988726849",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "feitosanatalyene@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DUZENTOS E VINTE E QUATRO MARCOS FREIRE",
+                "NUMERO": "3",
+                "COMPLEMENTO": "99",
+                "BAIRRO": "TAICOCA",
+                "CEP": "49160000",
+                "CIDADE": "NOSSA SENHORA DO SOCORRO",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "AV COLETORA",
+                "NUMERO": "1650",
+                "COMPLEMENTO": "BL 25 AP 203",
+                "BAIRRO": "FERNANDO COLLOR",
+                "CEP": "49160000",
+                "CIDADE": "NOSSA SENHORA DO SOCORRO",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "02",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MARCOS FREIRE II",
+                "CEP": "49160000",
+                "CIDADE": "NOSSA SENHORA DO SOCORRO",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R 28 A CJ MARCOS FREIRE I",
+                "NUMERO": "5",
+                "COMPLEMENTO": "",
+                "BAIRRO": "",
+                "CEP": "49160000",
+                "CIDADE": "NOSSA SENHORA DO SOCORRO",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "SAO LUCAS MEDICO HOSPITALAR S.A.",
+            "CNPJ": "13131370000100",
+            "CIDADE": "ARACAJU-SE",
+            "PROFISSAO": "322230",
+            "DATA_ADMISSAO": "09\/05\/2011",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "BNW PNEUS E RODAS LTDA",
+            "CNPJ": "35355475000185",
+            "CIDADE": "ARACAJU-SE",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20240709",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

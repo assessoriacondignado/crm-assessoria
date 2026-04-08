@@ -1,0 +1,275 @@
+{
+    "CADASTRAIS": {
+        "CPF": "18215445870",
+        "NOME": "LEANDRO DANIEL MARTINI",
+        "NOME_MAE": "WILMA APARECIDA DEL GALLO MARTINI",
+        "NASCTO": "17\/01\/1975",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "24766934",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "257705480116",
+        "NIT": "12498957288",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142105",
+        "PROFISSAO": "GERENTE ADMINISTRATIVO",
+        "SALARIO": " 15.557,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1933073698",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1932769901",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "29\/04\/1998",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1932430453",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1932430453",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11933414163",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19991907530",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19992490510",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19992496465",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11991907530",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "leandro.martini@letech.com.br",
+            "lizandra.martini@merial.com",
+            "leandro.martini@tess.net.br",
+            "leandro.martini@icloud.com",
+            "leandro.martini@dglnet.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R VERBO DIVINO",
+                "NUMERO": "1227",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CH STO ANTONIO ZONA SUL",
+                "CEP": "04719914",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PROFA REINE GERMANA CAZES",
+                "NUMERO": "200",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD MIRANDA",
+                "CEP": "13034652",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV WASHINGTON LUIS",
+                "NUMERO": "2700",
+                "COMPLEMENTO": "BL C AP 11",
+                "BAIRRO": "VL MARIETA",
+                "CEP": "13042903",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV WASHINGTON LUIS",
+                "NUMERO": "1800",
+                "COMPLEMENTO": "BL C AP 11",
+                "BAIRRO": "VL MARIETA",
+                "CEP": "13042901",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FRANCISCO BUENO LACERDA",
+                "NUMERO": "220",
+                "COMPLEMENTO": "AP 52 B BORA",
+                "BAIRRO": "JD D VIEIRA",
+                "CEP": "13036265",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BARAO DE PORTO FELIZ",
+                "NUMERO": "685",
+                "COMPLEMENTO": "CS  Casa  UNICA",
+                "BAIRRO": "JARDIM EULINA",
+                "CEP": "13063420",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA WASHINGTON LUIS",
+                "NUMERO": "2700",
+                "COMPLEMENTO": "BL C AP 11",
+                "BAIRRO": "VILA MARIETA",
+                "CEP": "13042105",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ALCIDES GUERNELLI",
+                "NUMERO": "67",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM MIRANDA",
+                "CEP": "13034600",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "27363796831",
+                "NOME": "WILMA APARECIDA DEL GALLO MARTINI",
+                "IDADE": "76 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "34466475890",
+                "NOME": "LIZANDRA DANIELE MARTINI",
+                "IDADE": "40 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "LIZANDRA DANIELE MARTINI",
+                "IDADE": "",
+                "LOCALIDADE": "CAMPINAS\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "34466475890"
+            },
+            {
+                "NOME": "RUTH MOTTA LIMA CASCON",
+                "IDADE": "",
+                "LOCALIDADE": "NITEROI\/RJ",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "27826538734"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "GLOBALIZATION PARTNERS PRESTACAO DE SERVICOS ADMINISTRATIVOS LTDA.",
+                "CNPJ": "28054581000163",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "253220",
+                "DATA_ADMISSAO": "03\/11\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "AVAYA BRASIL LTDA",
+                "CNPJ": "31241359000184",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142105",
+                "DATA_ADMISSAO": "17\/09\/2007",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "LE-TECH SOLUCOES EM TECNOLOGIA DE INFORMACAO LTDA",
+            "CNPJ": "05111408000154",
+            "CIDADE": "CAMPINAS-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20020620",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

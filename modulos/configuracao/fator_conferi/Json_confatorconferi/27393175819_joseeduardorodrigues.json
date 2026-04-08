@@ -1,0 +1,199 @@
+{
+    "CADASTRAIS": {
+        "CPF": "27393175819",
+        "NOME": "JOSE EDUARDO RODRIGUES",
+        "NOME_MAE": "DIRCE PORCANE RODRIGUES",
+        "NASCTO": "02\/01\/1976",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "229923240116",
+        "NIT": "1262391714",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "953105",
+        "PROFISSAO": "ELETRICISTA DE INSTALACOES (AERONAVES)",
+        "SALARIO": " 4.964,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "6233366215",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1633367231",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1633362156",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "16997341523",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16997039301",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "16991045350",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "jose.edu09@terra.com.br",
+            "rodrigues_jec@yahoo.com",
+            "rodrigues_jec@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV JOSE GRANADA GARCIA",
+                "NUMERO": "80",
+                "COMPLEMENTO": "CS  Casa  CS",
+                "BAIRRO": "RESIDENCIAL CAMBUY",
+                "CEP": "14805432",
+                "CIDADE": "ARARAQUARA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DIOGENES MUNIZ BARRETO",
+                "NUMERO": "1250",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA YAMADA",
+                "CEP": "14802145",
+                "CIDADE": "ARARAQUARA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DIOGENES MUNIZ BARRETO",
+                "NUMERO": "125",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "14801370",
+                "CIDADE": "ARARAQUARA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "30815969805",
+                "NOME": "DIRCE PORCANE RODRIGUES",
+                "IDADE": "88 anos",
+                "LOCAL": "ARARAQUARA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "545256836",
+                "NOME": "NELSON APARECIDO RODRIGUES",
+                "IDADE": "68 anos",
+                "LOCAL": "ARARAQUARA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "22015113819",
+                "NOME": "MARILSA RODRIGUES PENTEADO",
+                "IDADE": "64 anos",
+                "LOCAL": "ARARAQUARA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "EMBRAER S.A.",
+                "CNPJ": "07689002000421",
+                "CIDADE": "GAVIAO PEIXOTO-SP",
+                "PROFISSAO": "953105",
+                "DATA_ADMISSAO": "04\/11\/2014",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MINERVA S.A.",
+                "CNPJ": "67620377005183",
+                "CIDADE": "ARARAQUARA-SP",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "15\/07\/2014",
+                "DATA_DEMISSAO": "18\/08\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "IESA - PROJETOS, EQUIPAMENTOS E MONTAGENS S\/A. EM RECUPERACAO JUDICIAL",
+                "CNPJ": "29918943000856",
+                "CIDADE": "ARARAQUARA-SP",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "07\/07\/2008",
+                "DATA_DEMISSAO": "13\/02\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "CPFL ATENDE CENTRO DE CONTATOS E ATENDIMENTO LTDA.",
+                "CNPJ": "09606475000362",
+                "CIDADE": "ARARAQUARA-SP",
+                "PROFISSAO": "422315",
+                "DATA_ADMISSAO": "02\/09\/2014",
+                "DATA_DEMISSAO": "03\/11\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

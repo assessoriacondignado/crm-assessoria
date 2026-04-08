@@ -1,0 +1,172 @@
+{
+    "CADASTRAIS": {
+        "CPF": "13630583806",
+        "NOME": "RENATO NASCIMENTO",
+        "NOME_MAE": "NAIR PAVAN DO NASCIMENTO",
+        "NASCTO": "05\/02\/1972",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "21214053",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "192666470191",
+        "NIT": "1230247168",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "520110",
+        "PROFISSAO": "SUPERVISOR DE VENDAS COMERCIAL",
+        "SALARIO": " 18.948,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1150806700",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1150806700",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1127361017",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4832418723",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13981109084",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11992282143",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "renato_nascimento@ig.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JAU GUEDES DA FONSECA",
+                "NUMERO": "196",
+                "COMPLEMENTO": "AP 401",
+                "BAIRRO": "COQUEIROS",
+                "CEP": "88080080",
+                "CIDADE": "FLORIANOPOLIS",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R PARDAL MALLET",
+                "NUMERO": "21",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD MARILIA",
+                "CEP": "03579020",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DR JOAQUIM PEDRO VILACA",
+                "NUMERO": "92",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ MARIA LUIZA",
+                "CEP": "03451060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA PADRE EZEQUIEL RAMIN",
+                "NUMERO": "254",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM ALTO ALEGRE (SAO RAFAEL)",
+                "CEP": "08381700",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "4763125826",
+                "NOME": "NAIR PAVAN DO NASCIMENTO",
+                "IDADE": "75 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "13630579876",
+                "NOME": "ALEXANDRE NASCIMENTO",
+                "IDADE": "52 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "19077488812",
+                "NOME": "NANCI APULCRO DO NASCIMENTO",
+                "IDADE": "48 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "AJINOMOTO DO BRASIL INDUSTRIA E COMERCIO DE ALIMENTOS LTDA.",
+            "CNPJ": "46344354000669",
+            "CIDADE": "SAO PAULO-SP",
+            "PROFISSAO": "520110",
+            "DATA_ADMISSAO": "01\/06\/2010",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

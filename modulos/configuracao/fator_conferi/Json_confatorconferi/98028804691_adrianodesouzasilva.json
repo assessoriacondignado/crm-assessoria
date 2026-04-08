@@ -1,0 +1,207 @@
+{
+    "CADASTRAIS": {
+        "CPF": "98028804691",
+        "NOME": "ADRIANO DE SOUZA SILVA",
+        "NOME_MAE": "MARIA DE LOURDES SILVA SOUZA",
+        "NASCTO": "06\/06\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "MG6415939           ",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "092257220248",
+        "NIT": "1239885752",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "517310",
+        "PROFISSAO": "AGENTE DE SEGURANCA",
+        "SALARIO": " 3.779,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3136744120",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "3136744373",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3136742694",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31995558669",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31997301870",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31987165434",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "OI_POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31995281945",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31999641882",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "adrianodesouza73@yahoo.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R IPE ROXO",
+                "NUMERO": "59",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL FRANCISCO DE MOURA",
+                "CEP": "34525190",
+                "CIDADE": "SABARA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "AV GUARATAN",
+                "NUMERO": "633",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRADO",
+                "CEP": "30411018",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R CONCEICAO DO PARA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STA INES",
+                "CEP": "31060090",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R TRES",
+                "NUMERO": "59",
+                "COMPLEMENTO": "CS CASA",
+                "BAIRRO": "MORRO SAO FRANCISCO",
+                "CEP": "34505865",
+                "CIDADE": "SABARA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R CINCO",
+                "NUMERO": "85",
+                "COMPLEMENTO": "CS RUA",
+                "BAIRRO": "MORRO SAO FRANCISCO",
+                "CEP": "34505864",
+                "CIDADE": "SABARA",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "50391500",
+            "NOME": "MARIA DE LOURDES SILVA SOUZA",
+            "IDADE": "72 anos",
+            "LOCAL": "SERRINHA\/BA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "METRO BH S.A.",
+                "CNPJ": "46574475000192",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "517310",
+                "DATA_ADMISSAO": "28\/06\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PROSEGUR BRASIL S\/A TRANSPORTADORA DE VALORES E SEGURANCA",
+                "CNPJ": "17428731000135",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "16\/10\/2009",
+                "DATA_DEMISSAO": "03\/01\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "COMPANHIA BRASILEIRA DE TRENS URBANOS",
+                "CNPJ": "42357483000550",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "111405",
+                "DATA_ADMISSAO": "01\/09\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

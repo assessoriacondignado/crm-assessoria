@@ -1,0 +1,141 @@
+{
+    "CADASTRAIS": {
+        "CPF": "67879896015",
+        "NOME": "MARCIO ANDRE FONTANA",
+        "NOME_MAE": "NEREIDES BASSO FONTANA",
+        "NASCTO": "20\/03\/1973",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "057325950426",
+        "NIT": "1272696468",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411010",
+        "PROFISSAO": "ASSISTENTE ADMINISTRATIVO",
+        "SALARIO": " 4.833,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "5537381287",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "55996229938",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "55996341919",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "55999647255",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "fontana.marcioandre@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "ARGENTINA",
+                "NUMERO": "24",
+                "COMPLEMENTO": "CASA BRANCA",
+                "BAIRRO": "CENTRO",
+                "CEP": "98440000",
+                "CIDADE": "CAICARA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "AV BRASIL",
+                "NUMERO": "991",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "98440000",
+                "CIDADE": "CAICARA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R COMTIPO ARGENTINA",
+                "NUMERO": "4",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "98440000",
+                "CIDADE": "CAICARA",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "42228310000",
+                "NOME": "NEREIDES BASSO FONTANA",
+                "IDADE": "76 anos",
+                "LOCAL": "CAICARA\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "90462815072",
+                "NOME": "JEFERSON LUIS FONTANA",
+                "IDADE": "49 anos",
+                "LOCAL": "PALMEIRA DAS MISSOES\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "96857919020",
+                "NOME": "ELIANE FONTANA",
+                "IDADE": "45 anos",
+                "LOCAL": "SANTA CRUZ DO SUL\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "PRE MOLDADOS DALMOLIN LTDA",
+            "CNPJ": "93865202000187",
+            "CIDADE": "FREDERICO WESTPHALEN-RS",
+            "PROFISSAO": "411010",
+            "DATA_ADMISSAO": "01\/07\/2002",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

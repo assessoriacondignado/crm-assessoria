@@ -1,0 +1,288 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25470589870",
+        "NOME": "LEANDRO MONTEIRO DE ARAUJO",
+        "NOME_MAE": "MARIA APARECIDA MONTEIRO DE ARAUJO",
+        "NASCTO": "28\/04\/1978",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "271715741",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "282276160159",
+        "NIT": "12487713560",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "214915",
+        "PROFISSAO": "ENGENHEIRO DE SEGURANCA DO TRABALHO",
+        "SALARIO": " 1.700,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1120470048",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "02\/02\/2011",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1139445640",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1126135731",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1120470058",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1120470028",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11992830527",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11974492719",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11986736319",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "26\/10\/2008",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11991927031",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11996878132",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "leandro.araujo@cnec.com.br",
+            "reginaldo_caudas@hotmail.com",
+            "leandro_monteiro@hotmail.com",
+            "lm_araujo@terra.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AL DAS PRIMAVERAS",
+                "NUMERO": "810",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PIRUCAIA",
+                "CEP": "07636355",
+                "CIDADE": "MAIRIPORA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FRIEDRICH VON VOITH",
+                "NUMERO": "825",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD S JOAO JARAGUA",
+                "CEP": "02995000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV AFONSO LOPES DE BAIAO",
+                "NUMERO": "697",
+                "COMPLEMENTO": "597 ANTIGO",
+                "BAIRRO": "VL CAROLINA",
+                "CEP": "08040000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV AFONSO LOPES DE BAIAO",
+                "NUMERO": "59",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL JACUI",
+                "CEP": "08060120",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DA ALEGRIA",
+                "NUMERO": "108",
+                "COMPLEMENTO": "BL 5 AP 10",
+                "BAIRRO": "FLORADAS DE SAO JOSE",
+                "CEP": "12230086",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DA ALEGRIA",
+                "NUMERO": "106",
+                "COMPLEMENTO": "AP 101",
+                "BAIRRO": "FLORADAS DE SAO JOSE",
+                "CEP": "12230086",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PEDRO AMERICO",
+                "NUMERO": "32",
+                "COMPLEMENTO": "",
+                "BAIRRO": "REPUBLICA",
+                "CEP": "01045911",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV AFONSO LOPES DE BAIAO",
+                "NUMERO": "597",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA JACUI",
+                "CEP": "08060120",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "3887058844",
+            "NOME": "MARIA APARECIDA MONTEIRO DE ARAUJO",
+            "IDADE": "71 anos",
+            "LOCAL": "IBIPORA\/PR",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CRUZEIRO DO SUL EDUCACIONAL S.A.",
+                "CNPJ": "62984091000951",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "331305",
+                "DATA_ADMISSAO": "01\/09\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CRUZEIRO DO SUL EDUCACIONAL S.A.",
+                "CNPJ": "62984091000870",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "331305",
+                "DATA_ADMISSAO": "01\/09\/2023",
+                "DATA_DEMISSAO": "01\/12\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "SECID - SOCIEDADE EDUCACIONAL CIDADE DE SAO PAULO S.A.",
+                "CNPJ": "43395177000147",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "03\/09\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "ALLIBUS TRANSPORTES LTDA",
+                "CNPJ": "21590706000120",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "214915",
+                "DATA_ADMISSAO": "02\/04\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "VOITH HYDRO LTDA",
+                "CNPJ": "03400080000160",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "141205",
+                "DATA_ADMISSAO": "06\/06\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "LARAUJO ENGENHARIA E CONSULTORIA LTDA",
+            "CNPJ": "48081883000138",
+            "CIDADE": "SAO PAULO-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20220926",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

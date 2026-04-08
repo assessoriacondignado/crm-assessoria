@@ -1,0 +1,211 @@
+{
+    "CADASTRAIS": {
+        "CPF": "71740902220",
+        "NOME": "ANDRE WASHINGTON N NOGUEIRA",
+        "NOME_MAE": "MARIA ANDRELINA RODRIGUES DO NASCIMENTO",
+        "NASCTO": "17\/11\/1982",
+        "IDADE": "43 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "13283893429",
+        "ESCOLARIDADE": "PRIMEIRO GRAU (GINASIO)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "951105",
+        "PROFISSAO": "ELETRICISTA DE MANUTENCAO ELETROELETRONICA",
+        "SALARIO": " 1.464,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9138652500",
+            "OPERADORA": "TELEMAR\/PA",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "91991486351",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "91982939761",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "94996618218",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "91991899758",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "91991145695",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "saulo_borges@yahoo.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R NOVA II",
+                "NUMERO": "124",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S FRANCISCO",
+                "CEP": "68445000",
+                "CIDADE": "BARCARENA",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "R SATURNO",
+                "NUMERO": "400",
+                "COMPLEMENTO": "QD D",
+                "BAIRRO": "PARQUE VERDE",
+                "CEP": "66635470",
+                "CIDADE": "BELEM",
+                "ESTADO": "PA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "10974596400",
+                "NOME": "MARIA ANDRELINA RODRIGUES DO NASCIMENTO",
+                "IDADE": "31 anos",
+                "LOCAL": "",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "14512691456",
+                "NOME": "KAUANY ASSUNCAO RODRIGUES LEAL",
+                "IDADE": "10 anos",
+                "LOCAL": "",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "93053282291",
+                "NOME": "ADRIANE SUELY RODRIGUES DO NASCIMENTO",
+                "IDADE": "38 anos",
+                "LOCAL": "BARCARENA\/PA",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "BRIGITE BENEVIDES BORGES",
+                "IDADE": "",
+                "LOCALIDADE": "BRUMADINHO\/MG",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "77674480615"
+            },
+            {
+                "NOME": "SAULO DE VASCONCELLOS BORGES",
+                "IDADE": "",
+                "LOCALIDADE": "BRUMADINHO\/MG",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "74189786691"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SET LININGS PARA MONTAGEM INDUSTRIAL LTDA",
+                "CNPJ": "25461912000191",
+                "CIDADE": "BARCARENA-PA",
+                "PROFISSAO": "741105",
+                "DATA_ADMISSAO": "03\/04\/2017",
+                "DATA_DEMISSAO": "01\/04\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SET MANUTENCOES INDUSTRIAIS LTDA",
+                "CNPJ": "44803275000139",
+                "CIDADE": "BARCARENA-PA",
+                "PROFISSAO": "741105",
+                "DATA_ADMISSAO": "01\/04\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ARAUJO ABREU ENGENHARIA NORTE LTDA",
+                "CNPJ": "03543374000141",
+                "CIDADE": "BELEM-PA",
+                "PROFISSAO": "951105",
+                "DATA_ADMISSAO": "10\/12\/2012",
+                "DATA_DEMISSAO": "08\/04\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "MONTCALM MONTAGENS INDUSTRIAIS S\/A",
+                "CNPJ": "63081764001221",
+                "CIDADE": "TRES LAGOAS-MS",
+                "PROFISSAO": "715615",
+                "DATA_ADMISSAO": "29\/05\/2012",
+                "DATA_DEMISSAO": "810",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "CONSORCIO MIP\/MONTCALM",
+                "CNPJ": "11609464000116",
+                "CIDADE": "PARAUAPEBAS-PA",
+                "PROFISSAO": "951105",
+                "DATA_ADMISSAO": "15\/09\/2011",
+                "DATA_DEMISSAO": "205",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

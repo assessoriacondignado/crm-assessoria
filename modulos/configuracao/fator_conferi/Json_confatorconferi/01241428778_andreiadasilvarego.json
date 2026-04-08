@@ -1,0 +1,179 @@
+{
+    "CADASTRAIS": {
+        "CPF": "1241428778",
+        "NOME": "ANDREIA DA SILVA REGO",
+        "NOME_MAE": "SANDRA BERNADETE DA SILVA REGO",
+        "NASCTO": "10\/12\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "086765850302",
+        "NIT": "12596479623",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "413225",
+        "PROFISSAO": "ESCRITURARIO DE BANCO",
+        "SALARIO": " 3.606,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "2122563089",
+            "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "baixa"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "61982415000",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21985719950",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21999419950",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21986520319",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/04\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "andreia@ca2design.com.br",
+            "andreiasrego@yahoo.com.br",
+            "asrego@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AL S BOAVENTURA",
+                "NUMERO": "1029",
+                "COMPLEMENTO": "",
+                "BAIRRO": "FONSECA",
+                "CEP": "24130223",
+                "CIDADE": "NITEROI",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "Q 204",
+                "NUMERO": "0",
+                "COMPLEMENTO": "BL A AP 903",
+                "BAIRRO": "SUL AGUAS CLARAS",
+                "CEP": "71939540",
+                "CIDADE": "BRASILIA",
+                "ESTADO": "DF"
+            },
+            {
+                "LOGRADOURO": "RUA CINCO DE JULHO",
+                "NUMERO": "188",
+                "COMPLEMENTO": "APT 302",
+                "BAIRRO": "COPACABANA",
+                "CEP": "22051030",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "92638155772",
+                "NOME": "SANDRA BERNADETE DA SILVA REGO",
+                "IDADE": "74 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "8998593726",
+                "NOME": "VANESSA DA SILVA REGO",
+                "IDADE": "45 anos",
+                "LOCAL": "GUARULHOS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CAIXA ECONOMICA FEDERAL",
+                "CNPJ": "00360305000104",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "06\/03\/2006",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CAIXA ECONOMICA FEDERAL",
+                "CNPJ": "00360305360232",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "06\/03\/2006",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "CAIXA ECONOMICA FEDERAL",
+                "CNPJ": "00360305333855",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "06\/03\/2006",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "ARTE CA2 DESIGN LTDA",
+            "CNPJ": "04273589000152",
+            "CIDADE": "GUAPIMIRIM-RJ",
+            "QUALIFICACAO": "SÃ³cio",
+            "DATA_ENTRADA": "20010125",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

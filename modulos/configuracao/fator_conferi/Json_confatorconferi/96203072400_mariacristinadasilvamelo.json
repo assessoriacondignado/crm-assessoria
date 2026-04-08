@@ -1,0 +1,188 @@
+{
+    "CADASTRAIS": {
+        "CPF": "96203072400",
+        "NOME": "MARIA CRISTINA DA SILVA MELO",
+        "NOME_MAE": "MARIA JOANA DA SILVA",
+        "NASCTO": "01\/05\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1249476063 ",
+        "ESCOLARIDADE": "SUPERIOR INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411010",
+        "PROFISSAO": "ASSISTENTE ADMINISTRATIVO",
+        "SALARIO": " 2.992,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8134379289",
+            "OPERADORA": "TELEMAR\/PE",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "81993372922",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81994028942",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81988952046",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81983660078",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "20\/05\/2018",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "81987819914",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "maria.csmelo123@gmail.com",
+            "queremekarina@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOAO RIBEIRO",
+                "NUMERO": "210",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VARZEA",
+                "CEP": "50810494",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R HIDROLANDIA",
+                "NUMERO": "1405",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AT JOSE BONIFACIO",
+                "CEP": "52080530",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R MAJ JOAO RIBEIRO PINHEIRO",
+                "NUMERO": "210",
+                "COMPLEMENTO": "BL B AP 203",
+                "BAIRRO": "VARZEA",
+                "CEP": "50740170",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "RUA LEA PABST CRAVEIRO",
+                "NUMERO": "46",
+                "COMPLEMENTO": "",
+                "BAIRRO": "GUABIRABA",
+                "CEP": "52490130",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "AVENIDA ANTONIO CARLOS MAGALHAES",
+                "NUMERO": "0",
+                "COMPLEMENTO": "1257",
+                "BAIRRO": "PARQUE BELA VISTA",
+                "CEP": "40280000",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "5761409",
+            "NOME": "MARIA JOANA DA SILVA",
+            "IDADE": "66 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "REAL HOSPITAL PORTUGUES DE BENEFICENCIA EM PERNAMBUCO",
+                "CNPJ": "10892164000124",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "12\/05\/1993",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FUNDACAO UNIVERSIDADE DE PERNAMBUCO",
+                "CNPJ": "11022597000191",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "26\/06\/2006",
+                "DATA_DEMISSAO": "{Ã±\/{Ã±\/2023",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "SECRETARIA DE SAUDE",
+                "CNPJ": "10572048000128",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "03\/08\/1993",
+                "DATA_DEMISSAO": "{Ã±\/{Ã±\/2023",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

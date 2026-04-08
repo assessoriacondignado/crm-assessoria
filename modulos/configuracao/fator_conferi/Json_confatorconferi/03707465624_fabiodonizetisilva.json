@@ -1,0 +1,215 @@
+{
+    "CADASTRAIS": {
+        "CPF": "3707465624",
+        "NOME": "FABIO DONIZETI SILVA",
+        "NOME_MAE": "MARIA APARECIDA DOS REIS SILVA",
+        "NASCTO": "18\/01\/1980",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "121846360299",
+        "NIT": "1253594249 ",
+        "ESCOLARIDADE": "SUPERIOR INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782405",
+        "PROFISSAO": "MOTORISTA DE ONIBUS RODOVIARIO",
+        "SALARIO": " 5.481,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3535269028",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3535291750",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "35992241822",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "35997420290",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "35999285248",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV JUCA STOCKLER",
+                "NUMERO": "2205",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JOAO PAULO II",
+                "CEP": "37901506",
+                "CIDADE": "PASSOS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R RIO NEGRO",
+                "NUMERO": "1705",
+                "COMPLEMENTO": "C CXB",
+                "BAIRRO": "JD HARMONIA",
+                "CEP": "37900647",
+                "CIDADE": "PASSOS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R RIO NEGRO",
+                "NUMERO": "1710",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD HARMONIA",
+                "CEP": "37900647",
+                "CIDADE": "PASSOS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R RIO TIETE",
+                "NUMERO": "955",
+                "COMPLEMENTO": "SOBRE LOJA",
+                "BAIRRO": "JARDIM HARMONIA",
+                "CEP": "37900630",
+                "CIDADE": "PASSOS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R RIO PIRACICABA",
+                "NUMERO": "1510",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTA LUZIA",
+                "CEP": "37900550",
+                "CIDADE": "PASSOS",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "423118617",
+            "NOME": "MARIA APARECIDA DOS REIS SILVA",
+            "IDADE": "64 anos",
+            "LOCAL": "PATOS DE MINAS\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "MINASBEB COMERCIO DE BEBIDAS LTDA",
+                "CNPJ": "00907750000141",
+                "CIDADE": "PASSOS-MG",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "31\/05\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "EXPRESSO GARDENIA LTDA - EM RECUPERACAO JUDICIAL",
+                "CNPJ": "49914641001465",
+                "CIDADE": "PASSOS-MG",
+                "PROFISSAO": "782405",
+                "DATA_ADMISSAO": "28\/07\/2022",
+                "DATA_DEMISSAO": "23\/06\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "ABS DISTRIBUIDORA LTDA",
+                "CNPJ": "11209781000145",
+                "CIDADE": "PASSOS-MG",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "22\/09\/2020",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "ITAIQUARA ALIMENTOS S.A. EM RECUPERACAO JUDICIAL",
+                "CNPJ": "72111321002037",
+                "CIDADE": "PASSOS-MG",
+                "PROFISSAO": "783225",
+                "DATA_ADMISSAO": "22\/03\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "SOCIEDADE EMPRESARIAL DE COLETA E TRATAMENTO DE RESIDUOS LTDA",
+                "CNPJ": "10227685000167",
+                "CIDADE": "RIBEIRAO PRETO-SP",
+                "PROFISSAO": "252105",
+                "DATA_ADMISSAO": "09\/09\/2013",
+                "DATA_DEMISSAO": "10\/03\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "PETROPASSOS COMERCIO DE GAS LTDA",
+                "CNPJ": "05565547000158",
+                "CIDADE": "PASSOS-MG",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "01\/12\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "RAPIDO SUDOESTINO LTDA",
+                "CNPJ": "17844176000122",
+                "CIDADE": "PASSOS-MG",
+                "PROFISSAO": "782405",
+                "DATA_ADMISSAO": "13\/07\/2011",
+                "DATA_DEMISSAO": "19\/05\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

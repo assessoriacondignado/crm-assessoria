@@ -1,0 +1,122 @@
+{
+    "CADASTRAIS": {
+        "CPF": "97717231700",
+        "NOME": "GENECI MARTINS DA SILVA",
+        "NOME_MAE": "MARIA PEDRO DA SILVA",
+        "NASCTO": "27\/12\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "078308500302",
+        "NIT": "1241152848",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "517420",
+        "PROFISSAO": "VIGIA",
+        "SALARIO": " 4.408,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "2126453588",
+            "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21986190765",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "11\/08\/2008",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "21985422245",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R VINTE E CINCO",
+                "NUMERO": "148",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JOAQUIM DE OLIVEIRA",
+                "CEP": "24813608",
+                "CIDADE": "ITABORAI",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R VINTE E CINCO",
+                "NUMERO": "1480",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JOAQUIM DE OLIVEIRA",
+                "CEP": "24813608",
+                "CIDADE": "ITABORAI",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R WALDIR DOS SANTOS",
+                "NUMERO": "204",
+                "COMPLEMENTO": "Q 13 L 5",
+                "BAIRRO": "ENGENHO PEQUENO",
+                "CEP": "24417300",
+                "CIDADE": "SAO GONCALO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA WALDIR DOS SANTOS",
+                "NUMERO": "5",
+                "COMPLEMENTO": "QD 13",
+                "BAIRRO": "ENGENHO PEQUENO",
+                "CEP": "24417300",
+                "CIDADE": "SAO GONCALO",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "129752495",
+            "NOME": "MARIA PEDRO DA SILVA",
+            "IDADE": "97 anos",
+            "LOCAL": "PRINCESA ISABEL\/PB",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "CONDOMINIO QUINTA DOS ARCOS",
+            "CNPJ": "27791078000128",
+            "CIDADE": "NITEROI-RJ",
+            "PROFISSAO": "517420",
+            "DATA_ADMISSAO": "01\/08\/2002",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

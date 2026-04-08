@@ -1,0 +1,241 @@
+{
+    "CADASTRAIS": {
+        "CPF": "78719992572",
+        "NOME": "CIRO ROGERIO QUEIROZ BEZERRA",
+        "NOME_MAE": "MARIA GRACAS QUEIROZ DA ROCHA",
+        "NASCTO": "15\/06\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "744819911",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "088632990574",
+        "NIT": "1903095297",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "760605",
+        "PROFISSAO": "SUPERVISOR DAS ARTES GRAFICAS  (INDUSTRIA EDITORIAL E GRAFICA)",
+        "SALARIO": " 6.291,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7131152752",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7732221040",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "02\/03\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7130145418",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "77999982000",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "73991415233",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "13\/01\/2011",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "77991529811",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "73999621796",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "77988552060",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "incubadoradesites@gmail.com",
+            "advogadoalcantara.adriano@hotmail.com",
+            "tiodomirosilva@hotmail.com",
+            "dimensaojornaldimensao@yahoo.com.br",
+            "bescaldaferri@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CEL PESSOA",
+                "NUMERO": "8",
+                "COMPLEMENTO": "AND 1 S 101",
+                "BAIRRO": "PONTAL",
+                "CEP": "45654380",
+                "CIDADE": "ILHEUS",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "AV ITABUNA",
+                "NUMERO": "629",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S FRANCISCO",
+                "CEP": "45700000",
+                "CIDADE": "ITAPETINGA",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R D",
+                "NUMERO": "151",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CONQUISTA",
+                "CEP": "45650246",
+                "CIDADE": "ILHEUS",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R MARAGOGIPE",
+                "NUMERO": "99",
+                "COMPLEMENTO": "ED MARCIO JO",
+                "BAIRRO": "RIO VERMELHO",
+                "CEP": "41940240",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "VL CON PEREIRA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "AP 2 ED MERCES",
+                "BAIRRO": "MATATU",
+                "CEP": "40255435",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "AVENIDA TANCREDO NEVES",
+                "NUMERO": "151",
+                "COMPLEMENTO": "SOO FRANCISCO",
+                "BAIRRO": "SAO FRANCISCO",
+                "CEP": "45655120",
+                "CIDADE": "ILHEUS",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "AV PALMEIRAS",
+                "NUMERO": "36",
+                "COMPLEMENTO": "",
+                "BAIRRO": "",
+                "CEP": "45700000",
+                "CIDADE": "ITAPETINGA",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "RUA COMENDADOR PEREIRA DA SILVA",
+                "NUMERO": "135",
+                "COMPLEMENTO": "AP 202",
+                "BAIRRO": "BROTAS",
+                "CEP": "40285040",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "EDENIR LEA DE MOURA",
+                "IDADE": "",
+                "LOCALIDADE": "CABO FRIO\/RJ",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "50988255715"
+            },
+            {
+                "NOME": "FERNANDO JOSE DE CAMARGO",
+                "IDADE": "",
+                "LOCALIDADE": "GUARAMIRIM\/SC",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "3494885923"
+            },
+            {
+                "NOME": "MARCIO DA SILVA LOPES",
+                "IDADE": "",
+                "LOCALIDADE": "CABO FRIO\/RJ",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "37160877772"
+            },
+            {
+                "NOME": "MARCUS VINICIUS SILVA CAVALCANTI",
+                "IDADE": "",
+                "LOCALIDADE": "SALVADOR\/BA",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "54858135500"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "COLORGRAF GRAFICA EDITORA NORDESTE LTDA",
+            "CNPJ": "07643418000166",
+            "CIDADE": "ITAPETINGA-BA",
+            "PROFISSAO": "760605",
+            "DATA_ADMISSAO": "01\/10\/2021",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

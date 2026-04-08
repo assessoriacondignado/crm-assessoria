@@ -1,0 +1,215 @@
+{
+    "CADASTRAIS": {
+        "CPF": "32266496808",
+        "NOME": "JULIANA BATISTA DA SILVA",
+        "NOME_MAE": "MARINA BATISTA DA SILVA",
+        "NASCTO": "06\/05\/1984",
+        "IDADE": "41 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "294739410167",
+        "NIT": "13051689814",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "342105",
+        "PROFISSAO": "ANALISTA DE TRANSPORTE EM COMERCIO EXTERIOR",
+        "SALARIO": " 800,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1332228124",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1330214771",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "10\/02\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1330286237",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13974031336",
+                "OPERADORA": "NEXTEL",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13981596993",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13974037755",
+                "OPERADORA": "NEXTEL",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "13981116705",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "jubatista2006@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV BALDOMERO CHACON",
+                "NUMERO": "552",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MANOEL SALUSTIN",
+                "CEP": "59380000",
+                "CIDADE": "CURRAIS NOVOS",
+                "ESTADO": "RN"
+            },
+            {
+                "LOGRADOURO": "AV CNSO NEBIAS",
+                "NUMERO": "275",
+                "COMPLEMENTO": "AP 107",
+                "BAIRRO": "VL MATHIAS",
+                "CEP": "11015003",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA SILVA JARDIM",
+                "NUMERO": "509",
+                "COMPLEMENTO": "203",
+                "BAIRRO": "VILA MATHIAS",
+                "CEP": "11015021",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA CONSELHEIRO NEBIAS",
+                "NUMERO": "215",
+                "COMPLEMENTO": "107",
+                "BAIRRO": "VILA MATHIAS",
+                "CEP": "11015003",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "710690622",
+            "NOME": "MARINA BATISTA DA SILVA",
+            "IDADE": "95 anos",
+            "LOCAL": "ITAMONTE\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "HAMILTON DA SILVA MARTINS",
+                "IDADE": "",
+                "LOCALIDADE": "SANTOS\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "27918654897"
+            },
+            {
+                "NOME": "MARINA BATISTA SILVA DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "SANTOS\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "73249076872"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "MARIMEX DESPACHOS TRANSPORTES E SERVICOS LTDA",
+                "CNPJ": "45050663000159",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "354305",
+                "DATA_ADMISSAO": "01\/07\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MTN ASSESSORIA ADUANEIRA LTDA",
+                "CNPJ": "05962784000233",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "411045",
+                "DATA_ADMISSAO": "15\/04\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "TRADEWORKS SERVICOS DE COMERCIO EXTERIOR LTDA",
+                "CNPJ": "04955748000107",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "411045",
+                "DATA_ADMISSAO": "08\/08\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "J. - ENGENHARIA LTDA",
+                "CNPJ": "04304159000150",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "342105",
+                "DATA_ADMISSAO": "22\/12\/2011",
+                "DATA_DEMISSAO": "21\/11\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

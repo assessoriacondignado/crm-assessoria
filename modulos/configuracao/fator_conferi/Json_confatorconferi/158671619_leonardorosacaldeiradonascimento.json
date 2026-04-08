@@ -1,0 +1,177 @@
+{
+    "CADASTRAIS": {
+        "CPF": "158671619",
+        "NOME": "LEONARDO ROSA CALDEIRA DO NASCIMENTO",
+        "NOME_MAE": "ILZA CALDEIRA DO NASCIMENTO",
+        "NASCTO": "10\/08\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "106353430281",
+        "NIT": "1238309240",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "391125",
+        "PROFISSAO": "TECNICO DE PLANEJAMENTO DE PRODUCAO",
+        "SALARIO": " 5.696,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3133532172",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3130410233",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31993710699",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31996912433",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31996646211",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "31993696121",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "leotatao@yahoo.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AGENOR PEREIRA VIDAL",
+                "NUMERO": "116",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "AT",
+                "CEP": "84935000",
+                "CIDADE": "TOMAZINA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R H",
+                "NUMERO": "104",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CJ AGUA BRANCA",
+                "CEP": "32370440",
+                "CIDADE": "CONTAGEM",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO PRACA PIEDADE",
+                "NUMERO": "200",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BONSUCESSO BARREIRO",
+                "CEP": "30622040",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R SETE DE SETEMBRO",
+                "NUMERO": "175",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "VL PARIS",
+                "CEP": "32371590",
+                "CIDADE": "CONTAGEM",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R AURELIO LOPES",
+                "NUMERO": "295",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CONJUNTO AGUA BRANCA",
+                "CEP": "32370510",
+                "CIDADE": "CONTAGEM",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "83908153620",
+            "NOME": "LEONEL ROSA CALDEIRA DO NASCIMENTO",
+            "IDADE": "55 anos",
+            "LOCAL": "CONTAGEM\/MG",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PROGEN S.A.",
+                "CNPJ": "57748204000807",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "391125",
+                "DATA_ADMISSAO": "03\/05\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "STELLANTIS AUTOMOVEIS BRASIL LTDA.",
+                "CNPJ": "16701716000156",
+                "CIDADE": "BETIM-MG",
+                "PROFISSAO": "391205",
+                "DATA_ADMISSAO": "11\/01\/2007",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,232 @@
+{
+    "CADASTRAIS": {
+        "CPF": "66373310230",
+        "NOME": "MARCELA ALVES SOARES",
+        "NOME_MAE": "MARIA PERPETUO S ALVES SOARES",
+        "NASCTO": "19\/11\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12596483027",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "410105",
+        "PROFISSAO": "SUPERVISOR ADMINISTRATIVO",
+        "SALARIO": " 7.593,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7121028900",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9236467363",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "06\/08\/2007",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9236569909",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "75992092704",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "75999509262",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "75991247436",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "01\/07\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "75991804034",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "75992347307",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marcelaalves.imp@citeluz.com.br",
+            "marcela.mpq33@gmail.com",
+            "marcia_s.valente@hotmail.com",
+            "marcela.imp@hotmail.com",
+            "marcela.fsaba@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R RUBENS CARVALHO",
+                "NUMERO": "100",
+                "COMPLEMENTO": "RES VILLA MARIANA",
+                "BAIRRO": "GABRIELA",
+                "CEP": "44028589",
+                "CIDADE": "FEIRA DE SANTANA",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R ENG PAULO FRONTIN",
+                "NUMERO": "46",
+                "COMPLEMENTO": "CS 46 Q C",
+                "BAIRRO": "REDENCAO",
+                "CEP": "69049400",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R PARAU",
+                "NUMERO": "232",
+                "COMPLEMENTO": "PX IGREJA ADIVE",
+                "BAIRRO": "ALVORADA",
+                "CEP": "69043220",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R ARRUDA",
+                "NUMERO": "232",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JORGE TEIXEIRA",
+                "CEP": "69088037",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AVENIDA RUBENS CARVALHO",
+                "NUMERO": "440",
+                "COMPLEMENTO": "COND PALM GARDEM CS 15 G",
+                "BAIRRO": "PEDRA DO DESCANSO",
+                "CEP": "44007200",
+                "CIDADE": "FEIRA DE SANTANA",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "RUA CRICIUMA",
+                "NUMERO": "232",
+                "COMPLEMENTO": "F2",
+                "BAIRRO": "ALVORADA",
+                "CEP": "69042040",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "RUA MINAS GERAIS",
+                "NUMERO": "814",
+                "COMPLEMENTO": "CASA 10 COND  IPES",
+                "BAIRRO": "TRES PODERES",
+                "CEP": "65903020",
+                "CIDADE": "IMPERATRIZ",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "RUA SANTA TEREZINHA",
+                "NUMERO": "737",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOM SUCESSO",
+                "CEP": "65905080",
+                "CIDADE": "IMPERATRIZ",
+                "ESTADO": "MA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "MOTOPEL MOTOS E PECAS LTDA",
+                "CNPJ": "86698792000135",
+                "CIDADE": "FEIRA DE SANTANA-BA",
+                "PROFISSAO": "410235",
+                "DATA_ADMISSAO": "06\/04\/2017",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CITELUZ SERVICOS DE ILUMINACAO URBANA S\/A EM RECUPERACAO JUDICIAL",
+                "CNPJ": "02966986000931",
+                "CIDADE": "FEIRA DE SANTANA-BA",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "05\/05\/2003",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "CITELUZ SERVICOS DE ILUMINACAO URBANA S\/A EM RECUPERACAO JUDICIAL",
+                "CNPJ": "02966986001407",
+                "CIDADE": "IMPERATRIZ-MA",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "05\/05\/2003",
+                "DATA_DEMISSAO": "16\/01\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

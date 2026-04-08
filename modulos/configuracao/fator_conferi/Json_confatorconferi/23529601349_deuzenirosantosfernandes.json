@@ -1,0 +1,145 @@
+{
+    "CADASTRAIS": {
+        "CPF": "23529601349",
+        "NOME": "DEUZENIRO SANTOS FERNANDES",
+        "NOME_MAE": "JULIA SANTOS FERNANDES",
+        "NASCTO": "26\/12\/1963",
+        "IDADE": "62 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "007198081163",
+        "NIT": "12110875293",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "98996097899",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "98981600304",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "98988244812",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "TV PARAISO",
+                "NUMERO": "15",
+                "COMPLEMENTO": "Q 35",
+                "BAIRRO": "ESPACO SIDERAL",
+                "CEP": "65110000",
+                "CIDADE": "SAO JOSE DE RIBAMAR",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "R 13 DE MAIO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAMPINA",
+                "CEP": "65350000",
+                "CIDADE": "VITORIA DO MEARIM",
+                "ESTADO": "MA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "2472008082",
+            "NOME": "JULIA SANTOS FERNANDES",
+            "IDADE": "21 anos",
+            "LOCAL": "PORTO ALEGRE\/RS",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LUCENA INFRAESTRUTURA LTDA",
+                "CNPJ": "03992929000647",
+                "CIDADE": "SAO LUIS-MA",
+                "PROFISSAO": "715505",
+                "DATA_ADMISSAO": "22\/20\/2005",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LUCENA INFRAESTRUTURA LTDA",
+                "CNPJ": "03992929000213",
+                "CIDADE": "ITAPECURU MIRIM-MA",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "21\/07\/2020",
+                "DATA_DEMISSAO": "23\/08\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "BETONPOXI ENGENHARIA LTDA EM RECUPERACAO JUDICIAL",
+                "CNPJ": "03382783000103",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "715525",
+                "DATA_ADMISSAO": "11\/12\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "PELICANO CONSTRUCOES S.A.",
+                "CNPJ": "27426196000137",
+                "CIDADE": "SERRA-ES",
+                "PROFISSAO": "710205",
+                "DATA_ADMISSAO": "21\/11\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "DAN HEBERT ENGENHARIA S\/A",
+                "CNPJ": "36772051001231",
+                "CIDADE": "SAO LUIS-MA",
+                "PROFISSAO": "715725",
+                "DATA_ADMISSAO": "26\/03\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

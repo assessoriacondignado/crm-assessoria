@@ -1,0 +1,263 @@
+{
+    "CADASTRAIS": {
+        "CPF": "21892412861",
+        "NOME": "FRANCISCO DE BORJA CRUZ",
+        "NOME_MAE": "MARIA ELEONORA INACIO DE BORJA",
+        "NASCTO": "03\/02\/1981",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "288546710175",
+        "NIT": "1283717581",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212315",
+        "PROFISSAO": "ADMINISTRADOR DE SISTEMAS OPERACIONAIS",
+        "SALARIO": " 16.596,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1123737320",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "09\/04\/2011",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1126936107",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "05\/11\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1332278739",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11918754420",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11940842180",
+                "OPERADORA": "NEXTEL",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11971638263",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11943125827",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11996558192",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "fbc@unimes.com.br",
+            "ivymonteiro@yahoo.com.br",
+            "fbcdesign@gmail.com",
+            "francisco-cruz@uol.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R IPUGUACU",
+                "NUMERO": "19",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALIANCA",
+                "CEP": "06236745",
+                "CIDADE": "OSASCO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV PRES SARMIENTO",
+                "NUMERO": "38",
+                "COMPLEMENTO": "AP 605",
+                "BAIRRO": "TUPI",
+                "CEP": "11703630",
+                "CIDADE": "PRAIA GRANDE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MARACA",
+                "NUMERO": "165",
+                "COMPLEMENTO": "AL  Altos  NA AP 62 TOR 1",
+                "BAIRRO": "VILA GUARANI (Z SUL)",
+                "CEP": "04313210",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PROFESSOR TORRES HOMEM",
+                "NUMERO": "627",
+                "COMPLEMENTO": "",
+                "BAIRRO": "EMBARE",
+                "CEP": "11025021",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA CELSO GARCIA",
+                "NUMERO": "1907",
+                "COMPLEMENTO": "AP 14",
+                "BAIRRO": "BRAS",
+                "CEP": "03015000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MARACA",
+                "NUMERO": "363",
+                "COMPLEMENTO": "APT 41",
+                "BAIRRO": "VILA GUARANI (Z SUL)",
+                "CEP": "04313210",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "27436430807",
+                "NOME": "MARIA ELEONORA INACIO DE BORJA",
+                "IDADE": "85 anos",
+                "LOCAL": "SANTOS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "15917875804",
+                "NOME": "CRISTINA INACIO DE BORJA",
+                "IDADE": "53 anos",
+                "LOCAL": "SANTOS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "19765124848",
+                "NOME": "CRISTIANE INACIO DE BORJA",
+                "IDADE": "52 anos",
+                "LOCAL": "SANTOS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "IVANETE MONTEIRO",
+                "IDADE": "",
+                "LOCALIDADE": "RIO DE JANEIRO\/RJ",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "70600309800"
+            },
+            {
+                "NOME": "MARIA DA CONCEICAO DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "IGARASSU\/PE",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "4332580478"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "AMIL ASSISTENCIA MEDICA INTERNACIONAL S.A.",
+                "CNPJ": "29309127018469",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212315",
+                "DATA_ADMISSAO": "01\/04\/2019",
+                "DATA_DEMISSAO": "01\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "AMIL ASSISTENCIA MEDICA INTERNACIONAL S.A.",
+                "CNPJ": "29309127000179",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212315",
+                "DATA_ADMISSAO": "01\/01\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "UNIMED PAULISTANA SOC COOPERATIVA DE TRABALHO MEDICO - EM LIQUIDACAO EXTRAJUDICIAL",
+                "CNPJ": "43202472000130",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "10\/12\/2007",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "F.B.C. DESIGN S\/C LTDA",
+            "CNPJ": "05489285000190",
+            "CIDADE": "SANTOS-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20021120",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

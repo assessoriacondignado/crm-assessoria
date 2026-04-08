@@ -1,0 +1,173 @@
+{
+    "CADASTRAIS": {
+        "CPF": "69720762268",
+        "NOME": "FRANCISCO NOGUEIRA DA SILVA",
+        "NOME_MAE": "MARIA NOGUEIRA DA SILVA",
+        "NASCTO": "19\/06\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12775890425",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782510",
+        "PROFISSAO": "MOTORISTA DE CAMINHAO (ROTAS REGIONAIS E INTERNACIONAIS)",
+        "SALARIO": " 1.372,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "91986131610",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "91991742939",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "91981317117",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "30\/06\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "91981826489",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "angelitamenezes@oi.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PRES CASTELO BRANCO",
+                "NUMERO": "121",
+                "COMPLEMENTO": "ALTOS",
+                "BAIRRO": "MAE DO RIO",
+                "CEP": "68675000",
+                "CIDADE": "MAE DO RIO",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "R BERNARDO SAYAO",
+                "NUMERO": "440",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "68675000",
+                "CIDADE": "MAE DO RIO",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "AV BERNARDO SAYAO",
+                "NUMERO": "71",
+                "COMPLEMENTO": "BAIRRO HUMARIZAL",
+                "BAIRRO": "CENTRO",
+                "CEP": "68675970",
+                "CIDADE": "MAE DO RIO",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "R C CRISPIM MENDES",
+                "NUMERO": "340",
+                "COMPLEMENTO": "",
+                "BAIRRO": "",
+                "CEP": "68675000",
+                "CIDADE": "MAE DO RIO",
+                "ESTADO": "PA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "42123399",
+            "NOME": "MARIA NOGUEIRA DA SILVA",
+            "IDADE": "77 anos",
+            "LOCAL": "ARACOIABA\/CE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "JOSELINA DIONISIA MATOS DE JESUS",
+            "IDADE": "",
+            "LOCALIDADE": "MUNIZ FERREIRA\/BA",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "69720746572"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "MARBORGES AGROINDUSTRIA LTDA",
+                "CNPJ": "63878250000149",
+                "CIDADE": "MOJU-PA",
+                "PROFISSAO": "342310",
+                "DATA_ADMISSAO": "05\/02\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PAGANINI LOGISTICA LTDA",
+                "CNPJ": "12663272000150",
+                "CIDADE": "GOIANIA-GO",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "22\/07\/2015",
+                "DATA_DEMISSAO": "01\/01\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "M I PAGANINI CARGAS E TRANSPORTES LTDA",
+                "CNPJ": "19575461000110",
+                "CIDADE": "BOM JESUS DO TOCANTINS-PA",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "01\/01\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "LACEL LATICINIOS CERES LTDA - FALIDO",
+                "CNPJ": "01378322000212",
+                "CIDADE": "MAE DO RIO-PA",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "01\/06\/2007",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

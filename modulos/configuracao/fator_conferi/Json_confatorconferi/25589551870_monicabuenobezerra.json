@@ -1,0 +1,272 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25589551870",
+        "NOME": "MONICA BUENO BEZERRA",
+        "NOME_MAE": "THEREZA ROS BUENO",
+        "NASCTO": "07\/06\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Feminino",
+        "RG": "281917711",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "268711320116",
+        "NIT": "12554153401",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212405",
+        "PROFISSAO": "ANALISTA DE DESENVOLVIMENTO DE SISTEMAS",
+        "SALARIO": " 11.504,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1135074229",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1123077924",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "20\/03\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11987369646",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11951587296",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "20\/05\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11995265453",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "29\/04\/2015",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11995396379",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11996696357",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "monicabezerra@terra.com.br",
+            "monica.b.bezerra@oracle.com",
+            "monicabille50@gmail.com",
+            "astrolinebr@gmail.com",
+            "monicabb@yahoo.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R TRAJANO REIS",
+                "NUMERO": "47",
+                "COMPLEMENTO": "AP 61 ED PARIS OUT",
+                "BAIRRO": "JD DAS VERTENTES",
+                "CEP": "05541030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R KAORU ODA",
+                "NUMERO": "29",
+                "COMPLEMENTO": "AP 11 B S 1",
+                "BAIRRO": "JD DAS VERTENTES",
+                "CEP": "05541060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CAMPOS DO JORDAO",
+                "NUMERO": "200",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAXINGUI",
+                "CEP": "05516040",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA EUGENE CARRIERE",
+                "NUMERO": "17",
+                "COMPLEMENTO": "ED TOULON APT 11",
+                "BAIRRO": "JARDIM DAS VERTENTES",
+                "CEP": "05541100",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA BONIFACIO VERONESE",
+                "NUMERO": "9",
+                "COMPLEMENTO": "APTO 42C",
+                "BAIRRO": "JARDIM JAQUELINE",
+                "CEP": "05529060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "732627818",
+                "NOME": "THEREZA ROS BUENO",
+                "IDADE": "73 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "13644899886",
+                "NOME": "MAURICIO BUENO BEZERRA",
+                "IDADE": "54 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "27102962843",
+                "NOME": "MILENE BUENO BEZERRA",
+                "IDADE": "46 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "IRACI BUENO BEZERRA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "14652256841"
+            },
+            {
+                "NOME": "MONICA BILLE DA FONSECA",
+                "IDADE": "",
+                "LOCALIDADE": "DUQUE DE CAXIAS\/RJ",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "32149743"
+            },
+            {
+                "NOME": "MONICA CRISTINA DE OLIVEIRA LIMA",
+                "IDADE": "",
+                "LOCALIDADE": "RIO DE JANEIRO\/RJ",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "907096751"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ORACLE DO BRASIL SISTEMAS LTDA",
+                "CNPJ": "59456277000176",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "354130",
+                "DATA_ADMISSAO": "14\/02\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "DELOITTE ASSESSORIA E CONSULTORIA LTDA.",
+                "CNPJ": "02988231000180",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "22\/03\/2016",
+                "DATA_DEMISSAO": "01\/06\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "TATA CONSULTANCY SERVICES DO BRASIL LTDA",
+                "CNPJ": "04266331000129",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "142520",
+                "DATA_ADMISSAO": "01\/06\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "INFOSYS TECNOLOGIA DO BRASIL LTDA",
+                "CNPJ": "11030364000130",
+                "CIDADE": "NOVA LIMA-MG",
+                "PROFISSAO": "241040",
+                "DATA_ADMISSAO": "15\/04\/2013",
+                "DATA_DEMISSAO": "04\/04\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": [
+            {
+                "RAZAO_SOCIAL": "HELPTI TECNOLOGIA DA INFORMACAO LTDA",
+                "CNPJ": "08842921000103",
+                "CIDADE": "SAO PAULO-SP",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20070523",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "AMON-RA CONSULTORIA E SISTEMA DE INFORMACAO S\/C LTDA",
+                "CNPJ": "03718653000107",
+                "CIDADE": "CARAPICUIBA-SP",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20000320",
+                "VALOR_PARTICIPACAO": ""
+            }
+        ]
+    }
+}

@@ -1,0 +1,228 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25572081833",
+        "NOME": "JOAO CARLOS CORREA DA SILVA",
+        "NOME_MAE": "DOMICIA CORREA DA SILVA",
+        "NASCTO": "23\/06\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "29897629",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "280537260132",
+        "NIT": "1251993790",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521105",
+        "PROFISSAO": "VENDEDOR EM COMERCIO ATACADISTA",
+        "SALARIO": " 5.157,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1532253348",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "baixa"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "15988038148",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "OI_PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15988146934",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15988149737",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15988234244",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15988024441",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "vanessaso.correa@gmail.com",
+            "joaoc.sadia@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R REV JULIO DE OLIVEIRA ROSA",
+                "NUMERO": "11",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD PORTOBELLO",
+                "CEP": "18103755",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANGELO GIMENEZ",
+                "NUMERO": "100",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD IPE",
+                "CEP": "05797200",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA REVERENDO JULIO DE OLIVEIR",
+                "NUMERO": "69",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD PORTOBELLO",
+                "CEP": "18103755",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ANTONIO SERAFIM ESPIGARES",
+                "NUMERO": "61",
+                "COMPLEMENTO": "",
+                "BAIRRO": "EDEN",
+                "CEP": "18103180",
+                "CIDADE": "SOROCABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA OTUSCO",
+                "NUMERO": "144",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM IPE",
+                "CEP": "05797430",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "12804834824",
+                "NOME": "DOMICIA CORREA DA SILVA",
+                "IDADE": "77 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "11498085865",
+                "NOME": "EDUARDO CORREA DA SILVA",
+                "IDADE": "53 anos",
+                "LOCAL": "MARILIA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "12982308886",
+                "NOME": "AGNALDO CORREA DA SILVA",
+                "IDADE": "55 anos",
+                "LOCAL": "CURITIBA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "15365211839",
+                "NOME": "EDMILSON CORREA DA SILVA",
+                "IDADE": "52 anos",
+                "LOCAL": "SOROCABA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "22387905865",
+                "NOME": "SIMONE CORREA BARI",
+                "IDADE": "47 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "MARFRIG GLOBAL FOODS S.A.",
+                "CNPJ": "03853896003912",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "521105",
+                "DATA_ADMISSAO": "18\/06\/2015",
+                "DATA_DEMISSAO": "27\/07\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "GONCALVES   TORTOLA S\/A",
+                "CNPJ": "85070068002062",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "354135",
+                "DATA_ADMISSAO": "03\/06\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BRF S.A.",
+                "CNPJ": "01838723008373",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "08\/01\/2007",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "SADIA S.A.",
+                "CNPJ": "20730099007369",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "521105",
+                "DATA_ADMISSAO": "08\/01\/2007",
+                "DATA_DEMISSAO": "31\/12\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

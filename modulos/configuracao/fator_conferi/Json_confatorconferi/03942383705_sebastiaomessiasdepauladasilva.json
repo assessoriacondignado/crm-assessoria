@@ -1,0 +1,212 @@
+{
+    "CADASTRAIS": {
+        "CPF": "3942383705",
+        "NOME": "SEBASTIAO MESSIAS DE PAULA DA SILVA",
+        "NOME_MAE": "MARIA MARGARIDA DE PAULA DA SILVA",
+        "NASCTO": "10\/11\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "087414150353",
+        "NIT": "12519472105",
+        "ESCOLARIDADE": "PRIMEIRO GRAU (GINASIO)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "514225",
+        "PROFISSAO": "TRABALHADOR DE SERVICOS DE MANUTENCAO DE EDIFICIOS E LOGRADOUROS",
+        "SALARIO": " 930,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "22997073757",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "22998635878",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "22998148874",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "22998635555",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "luiz_lage@task.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R TEN OTAVIANO",
+                "NUMERO": "261",
+                "COMPLEMENTO": "AP 101 A",
+                "BAIRRO": "CENTRO",
+                "CEP": "28300000",
+                "CIDADE": "ITAPERUNA",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R JOSE RAIMUNDO DE OLIVEIRA",
+                "NUMERO": "55",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "28300000",
+                "CIDADE": "ITAPERUNA",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "TEN OTAVIANO",
+                "NUMERO": "2",
+                "COMPLEMENTO": "61",
+                "BAIRRO": "CENTRO",
+                "CEP": "28300000",
+                "CIDADE": "ITAPERUNA",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R JOSE RAIMUNDO DE OLIVEIRA",
+                "NUMERO": "149",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ITAPERUNA",
+                "CEP": "28300000",
+                "CIDADE": "ITAPERUNA",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R TEODORO GALVAO FRANCA",
+                "NUMERO": "79",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "28300000",
+                "CIDADE": "ITAPERUNA",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "87018730",
+                "NOME": "NELMA DE PAULA SILVA",
+                "IDADE": "59 anos",
+                "LOCAL": "ITAPERUNA\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "732957796",
+                "NOME": "ALEXANDRA DE PAULA SILVA",
+                "IDADE": "56 anos",
+                "LOCAL": "ITAPERUNA\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "7324726798",
+                "NOME": "JOELMA DE PAULA SILVA",
+                "IDADE": "54 anos",
+                "LOCAL": "ITAPERUNA\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "7667858748",
+                "NOME": "JOELSON DE PAULA SILVA",
+                "IDADE": "49 anos",
+                "LOCAL": "ITAPERUNA\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "8667912727",
+                "NOME": "FABIANO DE PAULA SILVA",
+                "IDADE": "45 anos",
+                "LOCAL": "ITAPERUNA\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "INACIA MARIA DA SILVA BEZERRA",
+            "IDADE": "",
+            "LOCALIDADE": "SAO JOSE DO BELMONTE\/PE",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "3998840419"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TRANSPORTES JR LTDA",
+                "CNPJ": "05867690000366",
+                "CIDADE": "ITAPERUNA-RJ",
+                "PROFISSAO": "514320",
+                "DATA_ADMISSAO": "01\/11\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FRINENSE ALIMENTOS LTDA",
+                "CNPJ": "07042642000364",
+                "CIDADE": "ITAPERUNA-RJ",
+                "PROFISSAO": "514320",
+                "DATA_ADMISSAO": "01\/09\/2021",
+                "DATA_DEMISSAO": "31\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "ALIMENTAR GARANTIA DA QUALIDADE ALIMENTAR LTDA",
+                "CNPJ": "17424903000100",
+                "CIDADE": "ITAPERUNA-RJ",
+                "PROFISSAO": "514320",
+                "DATA_ADMISSAO": "15\/08\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "FRINENSE ALIMENTOS LTDA",
+                "CNPJ": "07042642000100",
+                "CIDADE": "TRINDADE-GO",
+                "PROFISSAO": "514225",
+                "DATA_ADMISSAO": "01\/08\/2009",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

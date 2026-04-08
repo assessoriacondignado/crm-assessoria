@@ -1,0 +1,258 @@
+{
+    "CADASTRAIS": {
+        "CPF": "2320612971",
+        "NOME": "MAIK IGOAN TIGRINHO",
+        "NOME_MAE": "IVETE TEREZINHA ZANIN",
+        "NASCTO": "21\/05\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12857278537",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "214105",
+        "PROFISSAO": "ARQUITETO DE EDIFICACOES",
+        "SALARIO": " 10.863,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4121185401",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "4130859715",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "4133924228",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "4135445274",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "41991352332",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41984235777",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41992650975",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "41984811269",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "41988474237",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "ederanjos@uol.com.br",
+            "maik.tigrinho@caixa.gov.br",
+            "mtigrinho@hotmail.com",
+            "maiktigrinho@oi.com.br",
+            "maiktigrinho@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R VER JOAO DE OLIVEIRA TIGRINHO",
+                "NUMERO": "201",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL BANCARIA",
+                "CEP": "83601500",
+                "CIDADE": "CAMPO LARGO",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R ARLINDO FERNANDES",
+                "NUMERO": "227",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "BRAGA",
+                "CEP": "83020720",
+                "CIDADE": "SAO JOSE DOS PINHAIS",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R DOUTOR GOULIN",
+                "NUMERO": "594",
+                "COMPLEMENTO": "AP  Apartamento  03 BL  Blocos  A",
+                "BAIRRO": "JUVEVE",
+                "CEP": "80040280",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R PROFESSORA MARIETA DE SOUZA E SILVA",
+                "NUMERO": "1128",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE DA FONTE",
+                "CEP": "83050160",
+                "CIDADE": "SAO JOSE DOS PINHAIS",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R GOVERNADOR AGAMENON MAGALHAES",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CRISTO REI",
+                "CEP": "80050510",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R GOVERNADOR AGAMENON MAGALHAES",
+                "NUMERO": "55",
+                "COMPLEMENTO": "AP 101A",
+                "BAIRRO": "CRISTO REI",
+                "CEP": "80050510",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R HERCULANO DE SOUZA",
+                "NUMERO": "235",
+                "COMPLEMENTO": "CS 4",
+                "BAIRRO": "JARDIM DAS AMERICAS",
+                "CEP": "81530140",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "TRAVESSA LA VIOLETEIRA",
+                "NUMERO": "22",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM DA CONQUISTA (ZONA LESTE)",
+                "CEP": "08343200",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "14696479900",
+                "NOME": "IVETE TEREZINHA ZANIN",
+                "IDADE": "74 anos",
+                "LOCAL": "CAMPO LARGO\/PR",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "3634800992",
+                "NOME": "FRANCIELLE CAMILA TIGRINHO",
+                "IDADE": "44 anos",
+                "LOCAL": "CURITIBA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CAIXA ECONOMICA FEDERAL",
+                "CNPJ": "00360305538236",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "214105",
+                "DATA_ADMISSAO": "12\/09\/2005",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CAIXA ECONOMICA FEDERAL",
+                "CNPJ": "00360305269316",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "214105",
+                "DATA_ADMISSAO": "12\/09\/2005",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "TP3 ARQUITETURA E ENGENHARIA LTDA",
+            "CNPJ": "11792986000104",
+            "CIDADE": "CURITIBA-PR",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20100318",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

@@ -1,0 +1,200 @@
+{
+    "CADASTRAIS": {
+        "CPF": "32010095200",
+        "NOME": "ALDO VALERIO DE MACEDO",
+        "NOME_MAE": "ALDA VALERIO DOS SANTOS",
+        "NASCTO": "01\/03\/1971",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12317300583",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "317205",
+        "PROFISSAO": "OPERADOR DE COMPUTADOR (INCLUSIVE MICROCOMPUTADOR)",
+        "SALARIO": " 3.215,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9221262300",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92981380775",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92991993282",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92992752873",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92991748250",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "92991845225",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "aldo@graficavilo.com.br",
+            "ivaniagomes@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PROF AZEVEDO",
+                "NUMERO": "367",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COL ANTONIO ALEIXO",
+                "CEP": "69008050",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R ILIDIO LOPES",
+                "NUMERO": "82",
+                "COMPLEMENTO": "ESQ C S 1 MIG",
+                "BAIRRO": "JAPIIM",
+                "CEP": "69078530",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R PROFESSOR AZEVEDO",
+                "NUMERO": "10",
+                "COMPLEMENTO": "CASA A",
+                "BAIRRO": "COLONIA ANTONIO ALEIXO",
+                "CEP": "69008050",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "15331962220",
+                "NOME": "IVANETE DOS SANTOS CARMOS",
+                "IDADE": "70 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "21445214253",
+                "NOME": "CALMITA DOS SANTOS HIDALGO",
+                "IDADE": "72 anos",
+                "LOCAL": "TABATINGA\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "31407323253",
+                "NOME": "VALDENILDA VALERIO DOS SANTOS",
+                "IDADE": "61 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "61262030706",
+                "NOME": "LAUDELINO VALERIO DOS SANTOS",
+                "IDADE": "65 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "97819050268",
+                "NOME": "MARIA DAS DORES DOS SANTOS SILVA",
+                "IDADE": "63 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "GRAFICA E EDITORA SILVA LTDA",
+                "CNPJ": "05445663000133",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "318405",
+                "DATA_ADMISSAO": "01\/02\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ESM ZILO GRAFICA LTDA",
+                "CNPJ": "17458949000132",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "317205",
+                "DATA_ADMISSAO": "01\/08\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "GRAFICA ZILO LTDA",
+                "CNPJ": "34492298000116",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "318405",
+                "DATA_ADMISSAO": "01\/06\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

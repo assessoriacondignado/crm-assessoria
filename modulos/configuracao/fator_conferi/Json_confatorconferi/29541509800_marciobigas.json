@@ -1,0 +1,284 @@
+{
+    "CADASTRAIS": {
+        "CPF": "29541509800",
+        "NOME": "MARCIO BIGAS",
+        "NOME_MAE": "MARIA APARECIDA BIGAS",
+        "NASCTO": "12\/03\/1981",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "289267010132",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1130441434",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1158255697",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11959539930",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11980448062",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11975753123",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "07\/05\/2020",
+                "TIPO_TEL": "MOVEL POS-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11979679169",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "20\/01\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11974084229",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "inforsystemee@linkbr.com.br",
+            "marciobigas@gmail.com",
+            "marciobigas@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R OLIMPIO TELES DE MENESES",
+                "NUMERO": "426",
+                "COMPLEMENTO": "C 2",
+                "BAIRRO": "JD CAMPO DOS FERREIROS",
+                "CEP": "05857400",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MANUEL JORGE CORREA",
+                "NUMERO": "105",
+                "COMPLEMENTO": "FDS",
+                "BAIRRO": "JD ITAPEMIRIM",
+                "CEP": "08225220",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CAREIRO",
+                "NUMERO": "55",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD DANFER",
+                "CEP": "03758040",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV GEN PENHA BRASIL",
+                "NUMERO": "2322",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL NOVA CACHOEIRINHA",
+                "CEP": "02673000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CASA DO ATOR",
+                "NUMERO": "608",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL OLIMPIA",
+                "CEP": "04546002",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA OLIMPIO TELES DE MENESES",
+                "NUMERO": "590",
+                "COMPLEMENTO": "CS 2",
+                "BAIRRO": "JARDIM CAMPO DOS FERREIROS",
+                "CEP": "05857400",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "4002885836",
+                "NOME": "MARIA APARECIDA BIGAS",
+                "IDADE": "71 anos",
+                "LOCAL": "",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "11788785894",
+                "NOME": "PAULO ROBERTO BIGAS",
+                "IDADE": "52 anos",
+                "LOCAL": "PORTO ALEGRE\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "25782446854",
+                "NOME": "ROSANE BIGAS",
+                "IDADE": "51 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ALUIZIO CARLOS DE LIRA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "29313711818"
+            },
+            {
+                "NOME": "CRISTINA DA SILVA BIGAS",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "38772012889"
+            },
+            {
+                "NOME": "ESER DE OLIVEIRA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "35950802896"
+            },
+            {
+                "NOME": "FABIANO MOREIRA VILLARI",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "11889300870"
+            },
+            {
+                "NOME": "LUCIENE DE MESQUITA S BEZERRA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "29859301387"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "MANARILLO CUCINA BISTRO LTDA",
+                "CNPJ": "39581162000287",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "510135",
+                "DATA_ADMISSAO": "23\/04\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TAURUS TERCEIRIZACAO LTDA",
+                "CNPJ": "43680401000142",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "510135",
+                "DATA_ADMISSAO": "01\/12\/2021",
+                "DATA_DEMISSAO": "08\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "A3MA BAR E RESTAURANTES LTDA.",
+                "CNPJ": "20532268000181",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/11\/2012",
+                "DATA_DEMISSAO": "26\/04\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "BBM BAR E RESTAURANTES LTDA",
+                "CNPJ": "15043489000156",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "141510",
+                "DATA_ADMISSAO": "01\/11\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "RESTAURANTE DA PRACA 19 LTDA.",
+                "CNPJ": "06335698000182",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "513410",
+                "DATA_ADMISSAO": "01\/09\/2006",
+                "DATA_DEMISSAO": "503",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

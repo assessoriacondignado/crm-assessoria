@@ -1,0 +1,182 @@
+{
+    "CADASTRAIS": {
+        "CPF": "30035830263",
+        "NOME": "OZILEIA MIRANDA CARVALHO",
+        "NOME_MAE": "MARIA FELICIDADE MIRANDA ALVES",
+        "NASCTO": "25\/02\/1974",
+        "IDADE": "52 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1272261142",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "410105",
+        "PROFISSAO": "SUPERVISOR ADMINISTRATIVO",
+        "SALARIO": " 6.297,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9433241040",
+                "OPERADORA": "TELEMAR\/PA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9433246667",
+                "OPERADORA": "TELEMAR\/PA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "94981983231",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "94988010651",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "94984042729",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "94981580958",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "adm@paes-souza.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MAL RONDON",
+                "NUMERO": "286",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "AMAPA",
+                "CEP": "68502040",
+                "CIDADE": "MARABA",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "R VILA LOBOS",
+                "NUMERO": "21",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOM PLANALTO",
+                "CEP": "68501600",
+                "CIDADE": "MARABA",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "RUA VILA LOBOS",
+                "NUMERO": "0",
+                "COMPLEMENTO": "LT 21 QD 64",
+                "BAIRRO": "BOM PLANALTO",
+                "CEP": "68501600",
+                "CIDADE": "MARABA",
+                "ESTADO": "PA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "32908512220",
+                "NOME": "MARIA FELICIDADE MIRANDA ALVES",
+                "IDADE": "81 anos",
+                "LOCAL": "MARABA\/PA",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "23765690287",
+                "NOME": "OSILENE MIRANDA ALVES",
+                "IDADE": "59 anos",
+                "LOCAL": "MOGI MIRIM\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "26106159220",
+                "NOME": "OSIVANDA MIRANDA ALVES",
+                "IDADE": "59 anos",
+                "LOCAL": "MARABA\/PA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "2957917211",
+                "NOME": "ANA LUIZA MIRANDA CARVALHO",
+                "IDADE": "18 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "NACIONAL GAS BUTANO DISTRIBUIDORA LTDA",
+                "CNPJ": "06980064016771",
+                "CIDADE": "MARABA-PA",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "01\/03\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PARAGAS DISTRIBUIDORA LTDA",
+                "CNPJ": "05840319001706",
+                "CIDADE": "MARABA-PA",
+                "PROFISSAO": "342315",
+                "DATA_ADMISSAO": "15\/12\/2005",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

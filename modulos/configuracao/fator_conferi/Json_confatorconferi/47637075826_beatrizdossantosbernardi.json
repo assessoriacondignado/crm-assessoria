@@ -1,0 +1,146 @@
+{
+    "CADASTRAIS": {
+        "CPF": "47637075826",
+        "NOME": "BEATRIZ DOS SANTOS BERNARDI",
+        "NOME_MAE": "HELIETE DOS SANTOS BERNARDI",
+        "NASCTO": "10\/09\/1999",
+        "IDADE": "26 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "2129384967",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "322205",
+        "PROFISSAO": "TECNICO DE ENFERMAGEM",
+        "SALARIO": " 2.772,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11984783243",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11962761508",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "beatrizbernardi26@gmail.com",
+            "beatrizbernardi223@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "R FATIMA DO SUL",
+            "NUMERO": "9",
+            "COMPLEMENTO": "9 A",
+            "BAIRRO": "VL SIQUEIRA ZONA NORTE",
+            "CEP": "02817050",
+            "CIDADE": "SAO PAULO",
+            "ESTADO": "SP"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "12839535874",
+                "NOME": "HELIETE DOS SANTOS BERNARDI",
+                "IDADE": "58 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "47636975874",
+                "NOME": "LETICIA DOS SANTOS BERNARDI",
+                "IDADE": "24 anos",
+                "LOCAL": "",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "SUZANA CICERA DIAS",
+            "IDADE": "",
+            "LOCALIDADE": "SAO PAULO\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "29394033840"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "IRMANDADE DA SANTA CASA DE MISERICORDIA DE SAO PAULO",
+                "CNPJ": "62779145000270",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "03\/11\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "IMED - INSTITUTO DE MEDICINA, ESTUDOS E DESENVOLVIMENTO",
+                "CNPJ": "19324171001095",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "01\/04\/2024",
+                "DATA_DEMISSAO": "10\/05\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CENTRO DE ESTUDOS E PESQUISAS DR JOAO AMORIM",
+                "CNPJ": "66518267002550",
+                "CIDADE": "CARAPICUIBA-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "12\/07\/2021",
+                "DATA_DEMISSAO": "09\/11\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "COMERCIAL MALULI LTDA",
+                "CNPJ": "51669307000110",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/08\/2018",
+                "DATA_DEMISSAO": "24\/07\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "GRUPO CASAS BAHIA S.A.",
+                "CNPJ": "33041260107635",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "25\/10\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

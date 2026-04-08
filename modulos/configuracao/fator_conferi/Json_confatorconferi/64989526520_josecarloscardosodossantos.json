@@ -1,0 +1,279 @@
+{
+    "CADASTRAIS": {
+        "CPF": "64989526520",
+        "NOME": "JOSE CARLOS CARDOSO DOS SANTOS",
+        "NOME_MAE": "MARIA JOSE CARDOSO DOS SANTOS",
+        "NASCTO": "23\/03\/1973",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "066375230515",
+        "NIT": "12384847769",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "351605",
+        "PROFISSAO": "TECNICO EM SEGURANCA NO TRABALHO",
+        "SALARIO": " 2.431,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7133216500",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7133124053",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "71992361004",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71999213260",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71996839957",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "31\/01\/2020",
+                "TIPO_TEL": "MOVEL PRE-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71999487485",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71987528876",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "z3suculento@hotmail.com",
+            "josecarloscardoso230373@gmail.com",
+            "jopsecarloscardoso1973@gmail.com",
+            "tst_jc.cardoso@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ARARIBOIA",
+                "NUMERO": "90",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ITACARANHA",
+                "CEP": "40713700",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "TV COUTO MAIA",
+                "NUMERO": "227",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ENGOMADEIRA",
+                "CEP": "41200620",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "TV COUTO MAIA",
+                "NUMERO": "28",
+                "COMPLEMENTO": "AND 2",
+                "BAIRRO": "ENGOMADEIRA",
+                "CEP": "41200620",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R LUIZ REGIS PACHECO",
+                "NUMERO": "334",
+                "COMPLEMENTO": "",
+                "BAIRRO": "URUGUAI",
+                "CEP": "40451360",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R LUIZ REGIS PACHECO",
+                "NUMERO": "324",
+                "COMPLEMENTO": "AND 1 C",
+                "BAIRRO": "URUGUAI",
+                "CEP": "40451360",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "AV LUIZ TARQUINIO",
+                "NUMERO": "50",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "BOA VIAGEM",
+                "CEP": "40414120",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "TRAV DOUTOR COUTO MAIA",
+                "NUMERO": "28",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BONFIM",
+                "CEP": "40415240",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "RUA PRAIA DA BOA VIAGEM",
+                "NUMERO": "85",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOA VIAGEM",
+                "CEP": "40414010",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "68643500",
+            "NOME": "MARIA JOSE CARDOSO DOS SANTOS",
+            "IDADE": "77 anos",
+            "LOCAL": "CANUDOS\/BA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CONCREMAT ENGENHARIA E TECNOLOGIA S\/A",
+                "CNPJ": "33146648001797",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "351605",
+                "DATA_ADMISSAO": "14\/02\/2023",
+                "DATA_DEMISSAO": "31\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BUREAU VERITAS DO BRASIL SOC CLAS E CERTIFICADORA LTDA",
+                "CNPJ": "33177148000155",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "351605",
+                "DATA_ADMISSAO": "11\/07\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CAMARGO CORREA INFRA LTDA",
+                "CNPJ": "11178032001250",
+                "CIDADE": "CAMPESTRE-MG",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "26\/05\/2020",
+                "DATA_DEMISSAO": "23\/08\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "CONSORCIO SBEI-SK",
+                "CNPJ": "29140214000226",
+                "CIDADE": "PACAJA-PA",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/10\/2021",
+                "DATA_DEMISSAO": "20\/10\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "CONSTRUTORA BSM LTDA",
+                "CNPJ": "07324514000141",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "351605",
+                "DATA_ADMISSAO": "10\/04\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "CONSORCIO MOBILIDADE BAHIA",
+                "CNPJ": "19292694000106",
+                "CIDADE": "AMERICANA-SP",
+                "PROFISSAO": "351605",
+                "DATA_ADMISSAO": "01\/10\/2014",
+                "DATA_DEMISSAO": "03\/01\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "CONSTRUCOES E COMERCIO CAMARGO CORREA S\/A",
+                "CNPJ": "61522512003128",
+                "CIDADE": "AMERICANA-SP",
+                "PROFISSAO": "351605",
+                "DATA_ADMISSAO": "02\/10\/2012",
+                "DATA_DEMISSAO": "16\/08\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "CONSTRUTORA E INCORPORADORA ESPACO R2 LTDA",
+                "CNPJ": "04762908000193",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "351605",
+                "DATA_ADMISSAO": "01\/08\/2012",
+                "DATA_DEMISSAO": "20\/09\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

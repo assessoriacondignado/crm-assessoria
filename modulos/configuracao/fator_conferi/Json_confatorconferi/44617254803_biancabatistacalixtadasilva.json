@@ -1,0 +1,125 @@
+{
+    "CADASTRAIS": {
+        "CPF": "44617254803",
+        "NOME": "BIANCA BATISTA CALIXTA DA SILVA",
+        "NOME_MAE": "LUISA PEREIRA BATISTA",
+        "NASCTO": "22\/07\/1996",
+        "IDADE": "29 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "20624066368",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "763215",
+        "PROFISSAO": "COSTUREIRO, A  MAQUINA  NA CONFECCAO EM SERIE",
+        "SALARIO": " 1.176,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1433861440",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "14997210295",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "14998519076",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "R JOSE DEOCLECIANO RIBEIRO",
+            "NUMERO": "25",
+            "COMPLEMENTO": "",
+            "BAIRRO": "CENTRO",
+            "CEP": "18890057",
+            "CIDADE": "TAGUAI",
+            "ESTADO": "SP"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "20506593851",
+            "NOME": "LUISA PEREIRA BATISTA",
+            "IDADE": "50 anos",
+            "LOCAL": "TAQUARITUBA\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CONFECCOES SAO LUCAS DE TAGUAI LTDA",
+                "CNPJ": "16821956000194",
+                "CIDADE": "TAGUAI-SP",
+                "PROFISSAO": "763210",
+                "DATA_ADMISSAO": "07\/01\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VIRTUAL JEANS CONFECCOES DE TAGUAI LTDA",
+                "CNPJ": "27761707000177",
+                "CIDADE": "TAGUAI-SP",
+                "PROFISSAO": "763210",
+                "DATA_ADMISSAO": "04\/09\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "RAPHAEL BERGAMO DALCIN",
+                "CNPJ": "04303168000127",
+                "CIDADE": "TAGUAI-SP",
+                "PROFISSAO": "763215",
+                "DATA_ADMISSAO": "01\/08\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "BENEDITO ADORIVALDO DALCIN",
+                "CNPJ": "57355778000130",
+                "CIDADE": "TAQUARITUBA-SP",
+                "PROFISSAO": "763215",
+                "DATA_ADMISSAO": "01\/10\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

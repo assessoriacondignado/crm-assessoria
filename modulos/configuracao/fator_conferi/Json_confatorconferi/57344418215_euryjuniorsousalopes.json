@@ -1,0 +1,173 @@
+{
+    "CADASTRAIS": {
+        "CPF": "57344418215",
+        "NOME": "EURYJUNIOR SOUSA LOPES",
+        "NOME_MAE": "MARIA NEIDE SOUZA LOPES",
+        "NASCTO": "23\/05\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "12491179",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12618848022",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521125",
+        "PROFISSAO": "REPOSITOR DE MERCADORIAS",
+        "SALARIO": " 855,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92982455016",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92991592628",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92994038493",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "92994199805",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "eury.lopes72@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV COSME FERREIRA",
+                "NUMERO": "234",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALEIXO",
+                "CEP": "69083000",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R AFRANIO COUTINHO",
+                "NUMERO": "234",
+                "COMPLEMENTO": "NULL",
+                "BAIRRO": "NOVO ALEIXO",
+                "CEP": "69099065",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "77153553800",
+                "NOME": "MARIA NEIDE SOUZA LOPES",
+                "IDADE": "73 anos",
+                "LOCAL": "UTINGA\/BA",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "4324191522",
+                "NOME": "SARA SOUZA LOPES",
+                "IDADE": "38 anos",
+                "LOCAL": "UTINGA\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "77689526500",
+                "NOME": "RICARDO SOUZA LOPES",
+                "IDADE": "47 anos",
+                "LOCAL": "UTINGA\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PROCARGO SERVICOS DE ADMINISTRACAO DE EMPRESAS LTDA",
+                "CNPJ": "07142861000153",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "782220",
+                "DATA_ADMISSAO": "10\/05\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "RECOFARMA INDUSTRIA DO AMAZONAS LTDA",
+                "CNPJ": "61454393000106",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "02\/02\/2021",
+                "DATA_DEMISSAO": "02\/05\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "POOL ENGENHARIA, SERVICO, INDUSTRIA E COMERCIO DE CONSTRUCOES LTDA",
+                "CNPJ": "01106257000195",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "15\/05\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "BRASIL NORTE BEBIDAS S\/A",
+                "CNPJ": "34590315000158",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "414105",
+                "DATA_ADMISSAO": "10\/06\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "MOINHO SANTA LUCIA LTDA",
+                "CNPJ": "03286775000406",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "521125",
+                "DATA_ADMISSAO": "04\/04\/2011",
+                "DATA_DEMISSAO": "17\/12\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

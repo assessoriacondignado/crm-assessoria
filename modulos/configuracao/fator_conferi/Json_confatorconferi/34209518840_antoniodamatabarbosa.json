@@ -1,0 +1,184 @@
+{
+    "CADASTRAIS": {
+        "CPF": "34209518840",
+        "NOME": "ANTONIO DA MATA BARBOSA",
+        "NOME_MAE": "MARIA PEREIRA DA MATA BARBOSA",
+        "NASCTO": "13\/06\/1984",
+        "IDADE": "41 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "326222830191",
+        "NIT": "16091908228",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "992225",
+        "PROFISSAO": "AUXILIAR GERAL DE CONSERVACAO DE VIAS PERMANENTES (EXCETO TRILHOS)",
+        "SALARIO": " 919,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1333412929",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13996878121",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "12\/03\/2020",
+                "TIPO_TEL": "MOVEL POS-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13974104921",
+                "OPERADORA": "NEXTEL",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "13997778121",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "antonio@leonenet.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV SANTOS DUMONT",
+                "NUMERO": "272",
+                "COMPLEMENTO": "LJ DEPOSITO LEONE",
+                "BAIRRO": "SIT PAECARA VICENTE DE CARVALHO",
+                "CEP": "11460000",
+                "CIDADE": "GUARUJA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "TV TREZENTOS E SETENTA E UM",
+                "NUMERO": "54",
+                "COMPLEMENTO": "Q 137 L 22",
+                "BAIRRO": "MORRINHOS",
+                "CEP": "11495192",
+                "CIDADE": "GUARUJA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "TV QUATORZE",
+                "NUMERO": "126",
+                "COMPLEMENTO": "C 9",
+                "BAIRRO": "MORRINHOS",
+                "CEP": "11495205",
+                "CIDADE": "GUARUJA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "TV TREZENTOS E SETENTA E UM",
+                "NUMERO": "22",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MORRINHOS",
+                "CEP": "11495192",
+                "CIDADE": "GUARUJA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "TRAV TREZENTOS E QUARENTA E UM",
+                "NUMERO": "48",
+                "COMPLEMENTO": "QUADRA QUADRA 83 LOTE LOTE 2",
+                "BAIRRO": "MORRINHOS",
+                "CEP": "11495176",
+                "CIDADE": "GUARUJA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "TRAV DUZENTOS E QUARENTA E UM",
+                "NUMERO": "48",
+                "COMPLEMENTO": "QD83 L20",
+                "BAIRRO": "MORRINHOS",
+                "CEP": "11495123",
+                "CIDADE": "GUARUJA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "15900691888",
+            "NOME": "MARIA PEREIRA DA MATA BARBOSA",
+            "IDADE": "62 anos",
+            "LOCAL": "",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "HENRIQUE LEONE LTDA",
+                "CNPJ": "10560607000180",
+                "CIDADE": "GUARUJA-SP",
+                "PROFISSAO": "521140",
+                "DATA_ADMISSAO": "01\/08\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "HENRIQUE LEONE LTDA",
+                "CNPJ": "10560607000422",
+                "CIDADE": "GUARUJA-SP",
+                "PROFISSAO": "521140",
+                "DATA_ADMISSAO": "01\/06\/2018",
+                "DATA_DEMISSAO": "01\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "NICOLA LEONE FILHO GUARUJA LTDA",
+                "CNPJ": "64080393000173",
+                "CIDADE": "GUARUJA-SP",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/11\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "M. C. G. MADEIREIRA CASA GRANDE COMERCIO DE MADEIRAS E MATERIAIS PARA CONSTRUCAO LTDA",
+                "CNPJ": "03721408000140",
+                "CIDADE": "GUARUJA-SP",
+                "PROFISSAO": "992225",
+                "DATA_ADMISSAO": "15\/06\/2011",
+                "DATA_DEMISSAO": "30\/05\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

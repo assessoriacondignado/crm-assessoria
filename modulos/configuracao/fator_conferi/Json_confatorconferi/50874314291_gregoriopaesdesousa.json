@@ -1,0 +1,215 @@
+{
+    "CADASTRAIS": {
+        "CPF": "50874314291",
+        "NOME": "GREGORIO PAES DE SOUSA",
+        "NOME_MAE": "ANA MARIA DA SILVA PAES",
+        "NASCTO": "31\/12\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12691444025",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "914405",
+        "PROFISSAO": "MECANICO DE MANUTENCAO DE AUTOMOVEIS, MOTOCICLETAS E VEICULOS SIMILARES",
+        "SALARIO": " 1.596,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9232231340",
+            "OPERADORA": "TELEMAR\/AM",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92992785457",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92995171025",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92993575263",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "92995026518",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "gregypaes@gmail.com",
+            "greg.paes@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R IBIRAIARAS",
+                "NUMERO": "208",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69095622",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R PE JOAO RIBEIRO",
+                "NUMERO": "208",
+                "COMPLEMENTO": "LT C DOURADO",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69097000",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R VITORIA REGIA",
+                "NUMERO": "504",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AIDA MENDONCA",
+                "CEP": "69735000",
+                "CIDADE": "PRESIDENTE FIGUEIREDO",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R PE CICERO",
+                "NUMERO": "208",
+                "COMPLEMENTO": "LT C DOURADO",
+                "BAIRRO": "CIDADE DE DEUS",
+                "CEP": "69099568",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R HORTOLANDIA",
+                "NUMERO": "27",
+                "COMPLEMENTO": "Q 62 CJ O FROTA I",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69095509",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R NS DO SAMEIRO",
+                "NUMERO": "180",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE DE DEUS",
+                "CEP": "69099227",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R BARRETO FILHO",
+                "NUMERO": "659",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JORGE TEIXEIRA",
+                "CEP": "69088572",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AVENIDA NOSSA SENHORA DA CONCEICAO",
+                "NUMERO": "180",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE DE DEUS",
+                "CEP": "69099225",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1262834783",
+            "NOME": "ANA MARIA DA SILVA PAES",
+            "IDADE": "58 anos",
+            "LOCAL": "SAO GONCALO\/RJ",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "MINERACAO TABOCA S A",
+                "CNPJ": "34019992001605",
+                "CIDADE": "PRESIDENTE FIGUEIREDO-AM",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "01\/08\/2016",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
+                "CNPJ": "05477207000175",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "911305",
+                "DATA_ADMISSAO": "22\/09\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "MANAUS AMBIENTAL S.A.",
+                "CNPJ": "03264927000127",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "914405",
+                "DATA_ADMISSAO": "16\/05\/2011",
+                "DATA_DEMISSAO": "17\/04\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "BRASIL NORTE BEBIDAS S\/A",
+                "CNPJ": "34590315000158",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "314120",
+                "DATA_ADMISSAO": "01\/07\/2014",
+                "DATA_DEMISSAO": "01\/09\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

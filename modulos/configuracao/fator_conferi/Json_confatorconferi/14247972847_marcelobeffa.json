@@ -1,0 +1,157 @@
+{
+    "CADASTRAIS": {
+        "CPF": "14247972847",
+        "NOME": "MARCELO BEFFA",
+        "NOME_MAE": "TEREZA JEREMIAS BEFFA",
+        "NASCTO": "02\/07\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "200362768",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "206026200108",
+        "NIT": "12402066514",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "313205",
+        "PROFISSAO": "TECNICO DE MANUTENCAO ELETRONICA",
+        "SALARIO": " 2.779,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1122112892",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11942984517",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11993546940",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11972389207",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11982270748",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "19\/04\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11992716452",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "01\/07\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marbeff@ig.com.br",
+            "marbeff@hotmail.com",
+            "marbeff@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "RUA ANTONIO MUNIZ FAGUNDES",
+            "NUMERO": "86",
+            "COMPLEMENTO": "",
+            "BAIRRO": "VILA VIRGINIA",
+            "CEP": "03289150",
+            "CIDADE": "SAO PAULO",
+            "ESTADO": "SP"
+        }
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "JOAO VICENTE BEFFA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "5195039887"
+            },
+            {
+                "NOME": "MAGDA BEFFA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "18694522837"
+            },
+            {
+                "NOME": "MARCELO RIVERA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "11129488802"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LINK MISSAO CRITICA - OPERACAO, MANUTENCAO E PERFORMANCE LTDA",
+                "CNPJ": "20481993000178",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "313130",
+                "DATA_ADMISSAO": "23\/20\/2001",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CONBRAS SERVICOS TECNICOS DE SUPORTE LTDA",
+                "CNPJ": "33158874000473",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "313205",
+                "DATA_ADMISSAO": "01\/10\/2009",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

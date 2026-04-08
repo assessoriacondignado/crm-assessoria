@@ -1,0 +1,293 @@
+{
+    "CADASTRAIS": {
+        "CPF": "77844890487",
+        "NOME": "CLAUDIO HENRIQUE DE AZEVEDO LUZ",
+        "NOME_MAE": "MARIA DAS GRACAS DE AZEVEDO LUZ",
+        "NASCTO": "17\/10\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "17058261723",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "239430",
+        "PROFISSAO": "SUPERVISOR DE ENSINO",
+        "SALARIO": " 27,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8432065821",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "8432151200",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "8436111222",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "84987577161",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "84999855004",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "84994015399",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "84981326186",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "84994015336",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "chluz@oi.com.br",
+            "chaluz@bol.com.br",
+            "chaluz@walla.com",
+            "gastroluz@hotmail.com",
+            "gastroluz@bol.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV DA INTEGRACAO",
+                "NUMERO": "905",
+                "COMPLEMENTO": "COND GREE C 17",
+                "BAIRRO": "PAJUCARA",
+                "CEP": "59123610",
+                "CIDADE": "NATAL",
+                "ESTADO": "RN"
+            },
+            {
+                "LOGRADOURO": "AV BERNARDO VIEIRA",
+                "NUMERO": "5545",
+                "COMPLEMENTO": "AP 701",
+                "BAIRRO": "NOVA DESCOBERTA",
+                "CEP": "59056375",
+                "CIDADE": "NATAL",
+                "ESTADO": "RN"
+            },
+            {
+                "LOGRADOURO": "R JOSE DE ALENCAR",
+                "NUMERO": "878",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE ALTA",
+                "CEP": "59025140",
+                "CIDADE": "NATAL",
+                "ESTADO": "RN"
+            },
+            {
+                "LOGRADOURO": "R JOSE DE ALENCAR",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE ALTA",
+                "CEP": "59025140",
+                "CIDADE": "NATAL",
+                "ESTADO": "RN"
+            },
+            {
+                "LOGRADOURO": "TV BERNARDO VIEIRA",
+                "NUMERO": "4355",
+                "COMPLEMENTO": "COND MATA ATLANTICA AP",
+                "BAIRRO": "QUINTAS",
+                "CEP": "59050490",
+                "CIDADE": "NATAL",
+                "ESTADO": "RN"
+            },
+            {
+                "LOGRADOURO": "R PROF MANOEL FERNANDES",
+                "NUMERO": "1277",
+                "COMPLEMENTO": "AP 1100",
+                "BAIRRO": "TIROL",
+                "CEP": "59020610",
+                "CIDADE": "NATAL",
+                "ESTADO": "RN"
+            },
+            {
+                "LOGRADOURO": "AV AMINTAS BARROS",
+                "NUMERO": "4998",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVA DESCOBERTA",
+                "CEP": "59075250",
+                "CIDADE": "NATAL",
+                "ESTADO": "RN"
+            },
+            {
+                "LOGRADOURO": "R JOSE DE ALENCAR",
+                "NUMERO": "0",
+                "COMPLEMENTO": "BL A AP 302",
+                "BAIRRO": "CIDADE ALTA",
+                "CEP": "59025140",
+                "CIDADE": "NATAL",
+                "ESTADO": "RN"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "83885129434",
+            "NOME": "MARIA DAS GRACAS DE AZEVEDO LUZ",
+            "IDADE": "75 anos",
+            "LOCAL": "NATAL\/RN",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ILANA BARTH AMARAL DE ANDRADE LUZ",
+                "IDADE": "",
+                "LOCALIDADE": "NATAL\/RN",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "758889470"
+            },
+            {
+                "NOME": "SEBASTIANA NOGUEIRA DO CARMO",
+                "IDADE": "",
+                "LOCALIDADE": "JACIARA\/MT",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "84625031168"
+            },
+            {
+                "NOME": "SEBASTIAO RODRIGUES DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "VITORIA DA CONQUISTA\/BA",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "41532899572"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "FACS SERVICOS EDUCACIONAIS LTDA",
+                "CNPJ": "13526884004909",
+                "CIDADE": "NATAL-RN",
+                "PROFISSAO": "239410",
+                "DATA_ADMISSAO": "01\/02\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "RIO GRANDE DO NORTE SECRETARIA DA SAUDE PUBLICA",
+                "CNPJ": "08241754000145",
+                "CIDADE": "NATAL-RN",
+                "PROFISSAO": "225125",
+                "DATA_ADMISSAO": "08\/10\/1998",
+                "DATA_DEMISSAO": "{Ã±\/{Ã±\/2023",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "APEC - SOCIEDADE POTIGUAR DE EDUCACAO E CULTURA LTDA",
+                "CNPJ": "08480071000221",
+                "CIDADE": "NATAL-RN",
+                "PROFISSAO": "239430",
+                "DATA_ADMISSAO": "01\/08\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "APEC - SOCIEDADE POTIGUAR DE EDUCACAO E CULTURA LTDA",
+                "CNPJ": "08480071000140",
+                "CIDADE": "NATAL-RN",
+                "PROFISSAO": "239430",
+                "DATA_ADMISSAO": "01\/08\/2011",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": [
+            {
+                "RAZAO_SOCIAL": "INSTITUTO BARTH DA VISAO S\/S",
+                "CNPJ": "42477509000170",
+                "CIDADE": "NATAL-RN",
+                "QUALIFICACAO": "SÃ³cio com Capital",
+                "DATA_ENTRADA": "20221114",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "INSTITUTO DE ENDOSCOPIA DIGESTIVA DE NATAL S\/S",
+                "CNPJ": "08455255000150",
+                "CIDADE": "NATAL-RN",
+                "QUALIFICACAO": "SÃ³cio",
+                "DATA_ENTRADA": "20180522",
+                "VALOR_PARTICIPACAO": ""
+            }
+        ]
+    }
+}

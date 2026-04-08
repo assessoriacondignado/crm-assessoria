@@ -1,0 +1,197 @@
+{
+    "CADASTRAIS": {
+        "CPF": "40345521234",
+        "NOME": "JOSILENE DE SOUZA SOARES",
+        "NOME_MAE": "JANDIRA DE SOUZA SOARES",
+        "NASCTO": "15\/08\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12557716024",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "233210",
+        "PROFISSAO": "INSTRUTOR DE APRENDIZAGEM E TREINAMENTO INDUSTRIAL",
+        "SALARIO": " 4.868,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9232385642",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9236468941",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92994244391",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92996122252",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92988247555",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "josilenesoares2017@outlook.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ITABAIANA",
+                "NUMERO": "100",
+                "COMPLEMENTO": "Q",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69097759",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R LUZIA CONTENTE",
+                "NUMERO": "12",
+                "COMPLEMENTO": "Q 10",
+                "BAIRRO": "D PEDRO I",
+                "CEP": "69040300",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R UPANEMA",
+                "NUMERO": "372",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALVORADA",
+                "CEP": "69042090",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV MALHADA",
+                "NUMERO": "2",
+                "COMPLEMENTO": "QD 10",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69095644",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AVENIDA ITABERABA",
+                "NUMERO": "22",
+                "COMPLEMENTO": "QD 100",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69097760",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "17424680803",
+                "NOME": "JANDIRA DE SOUZA SOARES",
+                "IDADE": "76 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "3351944276",
+                "NOME": "ANDRE FELIPE DE SOUZA SOARES",
+                "IDADE": "28 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "15172611479",
+                "NOME": "IASMYN SOARES RODRIGUES",
+                "IDADE": "13 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "15172650458",
+                "NOME": "RYAN MIGUEL SOARES RODRIGUES",
+                "IDADE": "11 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "41259719863",
+                "NOME": "RENATA HILLARY SOARES RODRIGUES",
+                "IDADE": "17 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ATACADAO S.A.",
+                "CNPJ": "75315333011810",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "252405",
+                "DATA_ADMISSAO": "23\/04\/2018",
+                "DATA_DEMISSAO": "14\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SUMIDENSO DA AMAZONIA INDUSTRIAS ELETRICAS LTDA",
+                "CNPJ": "08962294000144",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "233210",
+                "DATA_ADMISSAO": "07\/02\/2008",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

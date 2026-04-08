@@ -1,0 +1,177 @@
+{
+    "CADASTRAIS": {
+        "CPF": "66569907204",
+        "NOME": "ELIELSON DA SILVA ARAUJO",
+        "NOME_MAE": "IZAURA BEZERRA DA SILVA",
+        "NASCTO": "07\/07\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1271253702",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782220",
+        "PROFISSAO": "OPERADOR DE EMPILHADEIRA",
+        "SALARIO": " 2.345,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9236575448",
+            "OPERADORA": "TELEMAR\/AM",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92994072549",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92988088191",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "kitsingerlucelia@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "BC CARAMBOLA",
+                "NUMERO": "97",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STA ETELVINA",
+                "CEP": "69059515",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R MARTINS PINA",
+                "NUMERO": "211",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COMPENSA",
+                "CEP": "69036030",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV JACAUNA",
+                "NUMERO": "171",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL AEROPORTO",
+                "CEP": "13054107",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JARDIM DAS FLORES",
+                "NUMERO": "97",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STA ETELVINA",
+                "CEP": "69059501",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R HELENA CARDOSO",
+                "NUMERO": "97",
+                "COMPLEMENTO": "M E 97 MA",
+                "BAIRRO": "STA ETELVINA",
+                "CEP": "69059290",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R ABACATE",
+                "NUMERO": "97",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STA ETELVINA",
+                "CEP": "69059512",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R JUPITER",
+                "NUMERO": "141",
+                "COMPLEMENTO": "LT C DOURADO",
+                "BAIRRO": "STA ETELVINA",
+                "CEP": "69059805",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R CAMPO DOURADO",
+                "NUMERO": "141",
+                "COMPLEMENTO": "LT C DOURADO",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "69095625",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "416083307",
+            "NOME": "IZAURA BEZERRA DA SILVA",
+            "IDADE": "109 anos",
+            "LOCAL": "FORTALEZA\/CE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "LUCELIA KITSINGER VIEIRA",
+                "IDADE": "",
+                "LOCALIDADE": "MANAUS\/AM",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "236173227"
+            },
+            {
+                "NOME": "LUCIELE KITSINGER VIEIRA",
+                "IDADE": "",
+                "LOCALIDADE": "MANAUS\/AM",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "1776790260"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "SAN MARINO CENTRO NAUTICO LIMITADA",
+            "CNPJ": "22994438000175",
+            "CIDADE": "MANAUS-AM",
+            "PROFISSAO": "782220",
+            "DATA_ADMISSAO": "01\/04\/2000",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

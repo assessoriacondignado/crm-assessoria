@@ -1,0 +1,269 @@
+{
+    "CADASTRAIS": {
+        "CPF": "10309600707",
+        "NOME": "CARLOS MAGNO SEGUNDO",
+        "NOME_MAE": "MARIA JOSE DA SILVA",
+        "NASCTO": "10\/07\/1984",
+        "IDADE": "41 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "114321670310",
+        "NIT": "20191539230",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "311515",
+        "PROFISSAO": "TECNICO DE UTILIDADE (PRODUCAO E DISTRIBUICAO DE VAPOR, GASES, OLEOS, COMBUSTIVEIS, ENERGIA)",
+        "SALARIO": " 750,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2135118750",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "2127361522",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "22981004626",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "22998188703",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21993131539",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "22998222696",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "22999556437",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "carlosmagnosegundo2019@hotmail.com",
+            "carlos.magno@r7.com",
+            "carlosmagnosegundo2016@hotmail.com",
+            "carlos.magno396@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV ATLANTICA",
+                "NUMERO": "14",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PR CAMPISTA",
+                "CEP": "27920325",
+                "CIDADE": "MACAE",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R PARANA",
+                "NUMERO": "467",
+                "COMPLEMENTO": "C DE RACAO BICHO",
+                "BAIRRO": "LAGOMAR",
+                "CEP": "27966070",
+                "CIDADE": "MACAE",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "AV LAGOMAR",
+                "NUMERO": "467",
+                "COMPLEMENTO": "C DE RACAO BICNHO DO M",
+                "BAIRRO": "ENGENHO DA PRAIA",
+                "CEP": "27966080",
+                "CIDADE": "MACAE",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R QUATRO",
+                "NUMERO": "163",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD CAMPOMAR",
+                "CEP": "28890341",
+                "CIDADE": "RIO DAS OSTRAS",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R MANOEL MOREL PECANHA",
+                "NUMERO": "9",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "MARAVILHA VISCONDE DE ITABORAI",
+                "CEP": "24875525",
+                "CIDADE": "ITABORAI",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R SETE",
+                "NUMERO": "0",
+                "COMPLEMENTO": "C 2",
+                "BAIRRO": "JD CAMPOMAR",
+                "CEP": "28890332",
+                "CIDADE": "RIO DAS OSTRAS",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "AV ATLANTICA",
+                "NUMERO": "14",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAVALEIROS",
+                "CEP": "27920390",
+                "CIDADE": "MACAE",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "AV GOVERNADOR GEREMIAS DE MATTOS FONTES",
+                "NUMERO": "14",
+                "COMPLEMENTO": "TRAVESSA 77",
+                "BAIRRO": "LAGOMAR",
+                "CEP": "27966585",
+                "CIDADE": "MACAE",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "2087790",
+            "NOME": "MARIA JOSE DA SILVA",
+            "IDADE": "85 anos",
+            "LOCAL": "MUNDO NOVO\/GO",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TELSAN ENGENHARIA E SERVICOS S.A.",
+                "CNPJ": "00740230001088",
+                "CIDADE": "MACAE-RJ",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "11\/07\/2022",
+                "DATA_DEMISSAO": "20\/04\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FUNDACAO GORCEIX",
+                "CNPJ": "23063118000164",
+                "CIDADE": "OURO PRETO-MG",
+                "PROFISSAO": "395105",
+                "DATA_ADMISSAO": "02\/05\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ANG SERVICOS DE LIMPEZA DE TERRENOS LTDA",
+                "CNPJ": "04690303000134",
+                "CIDADE": "MACAE-RJ",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "16\/07\/2020",
+                "DATA_DEMISSAO": "07\/03\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "VIX LOGISTICA S\/A",
+                "CNPJ": "32681371004917",
+                "CIDADE": "MACAE-RJ",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "21\/05\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "IMC SASTE-CONSTRUCOES, SERVICOS E COMERCIO LTDA.",
+                "CNPJ": "67706853000114",
+                "CIDADE": "CAIEIRAS-SP",
+                "PROFISSAO": "414110",
+                "DATA_ADMISSAO": "17\/10\/2013",
+                "DATA_DEMISSAO": "21\/05\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "BSM ENGENHARIA S.A.  EM RECUPERACAO JUDICIAL",
+                "CNPJ": "34078154001009",
+                "CIDADE": "MACAE-RJ",
+                "PROFISSAO": "414215",
+                "DATA_ADMISSAO": "10\/02\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "BRASIL SUPPLY S.A.",
+                "CNPJ": "05124249000718",
+                "CIDADE": "MACAE-RJ",
+                "PROFISSAO": "311515",
+                "DATA_ADMISSAO": "01\/08\/2009",
+                "DATA_DEMISSAO": "602",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

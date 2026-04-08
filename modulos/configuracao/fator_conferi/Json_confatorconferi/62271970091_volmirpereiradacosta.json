@@ -1,0 +1,140 @@
+{
+    "CADASTRAIS": {
+        "CPF": "62271970091",
+        "NOME": "VOLMIR PEREIRA DA COSTA",
+        "NOME_MAE": "LORENA SALETE DA COSTA",
+        "NASCTO": "07\/11\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "8066156588",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12321241707",
+        "ESCOLARIDADE": "SUPERIOR INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411010",
+        "PROFISSAO": "ASSISTENTE ADMINISTRATIVO",
+        "SALARIO": " 1.826,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "5121367969",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "54991018983",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "54996283741",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "vol.pc@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "R GERSON ANDREIS",
+            "NUMERO": "2523",
+            "COMPLEMENTO": "",
+            "BAIRRO": "CIDADE NOVA",
+            "CEP": "95112130",
+            "CIDADE": "CAXIAS DO SUL",
+            "ESTADO": "RS"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "50440152020",
+                "NOME": "LORENA SALETE DA COSTA",
+                "IDADE": "71 anos",
+                "LOCAL": "FARROUPILHA\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "1005074097",
+                "NOME": "WAGNER PEREIRA DA COSTA",
+                "IDADE": "37 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "56246102034",
+                "NOME": "ADEMIR DA COSTA",
+                "IDADE": "54 anos",
+                "LOCAL": "SOBRAL\/CE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "89593227091",
+                "NOME": "ADRIANA PEREIRA DA COSTA",
+                "IDADE": "49 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "M DIAS BRANCO S.A. INDUSTRIA E COMERCIO DE ALIMENTOS",
+                "CNPJ": "07206816004293",
+                "CIDADE": "BENTO GONCALVES-RS",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "02\/07\/2012",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ONIZ DISTRIBUIDORA S.A.",
+                "CNPJ": "90724261000147",
+                "CIDADE": "PASSO FUNDO-RS",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "11\/20\/2006",
+                "DATA_DEMISSAO": "27\/03\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "ONIZ DISTRIBUIDORA S.A.",
+                "CNPJ": "90724261000228",
+                "CIDADE": "CACHOEIRINHA-RS",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "11\/20\/2006",
+                "DATA_DEMISSAO": "27\/03\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

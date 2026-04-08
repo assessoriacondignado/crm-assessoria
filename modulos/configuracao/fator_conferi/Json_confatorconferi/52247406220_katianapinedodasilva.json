@@ -1,0 +1,170 @@
+{
+    "CADASTRAIS": {
+        "CPF": "52247406220",
+        "NOME": "KATIANA PINEDO DA SILVA",
+        "NOME_MAE": "MIRSA PINEDO MENDONCA",
+        "NASCTO": "30\/12\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1273898902",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "252405",
+        "PROFISSAO": "ANALISTA DE RECURSOS HUMANOS",
+        "SALARIO": " 9.693,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9236644571",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9236640183",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92985079191",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92991494050",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "09\/02\/2015",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "92991494020",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "katiana.s@samsung.com",
+            "katiana_pinedo@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R NOEMIA DE CARVALHO",
+                "NUMERO": "10",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PETROPOLIS",
+                "CEP": "69067190",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "TV EIFFEL",
+                "NUMERO": "23",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PETROPOLIS",
+                "CEP": "69067191",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R S PEDRO",
+                "NUMERO": "31",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PETROPOLIS",
+                "CEP": "69079420",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "44472048272",
+                "NOME": "MIRSA PINEDO MENDONCA",
+                "IDADE": "79 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "21477868291",
+                "NOME": "SIDNEY MENDONCA DA SILVA",
+                "IDADE": "62 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "27607135200",
+                "NOME": "KATIA REGINA PINEDO DA SILVA",
+                "IDADE": "58 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "33485941204",
+                "NOME": "ROSALIA MARIA PINEDO DA SILVA",
+                "IDADE": "53 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "60923709215",
+                "NOME": "BALTASAR REI PINEDO DA SILVA",
+                "IDADE": "57 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "SAMSUNG ELETRONICA DA AMAZONIA LTDA",
+            "CNPJ": "00280273000137",
+            "CIDADE": "MANAUS-AM",
+            "PROFISSAO": "252405",
+            "DATA_ADMISSAO": "13\/07\/2010",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

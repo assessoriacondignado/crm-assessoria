@@ -1,0 +1,168 @@
+{
+    "CADASTRAIS": {
+        "CPF": "34433979805",
+        "NOME": "RICARDO LIMA DA SILVA",
+        "NOME_MAE": "EUNICE LIMA DA SILVA",
+        "NASCTO": "26\/08\/1986",
+        "IDADE": "39 anos",
+        "SEXO": "Masculino",
+        "RG": "00000043654734X     ",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "328326050141",
+        "NIT": "1330774085",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "391205",
+        "PROFISSAO": "INSPETOR DE QUALIDADE",
+        "SALARIO": " 4.322,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1132326565",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1120533411",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11956290052",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11959793497",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11984554533",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11975509648",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "stefany2005@terra.com.br",
+            "www.stefany2005@terra.com.br",
+            "ricardolima.r10@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ALZIRO PINHEIRO MAGALHAES",
+                "NUMERO": "1156",
+                "COMPLEMENTO": "STO",
+                "BAIRRO": "PRQ S MIGUEL",
+                "CEP": "04855000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV FRANCISCO MATARAZZO",
+                "NUMERO": "1400",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AGUA BRANCA",
+                "CEP": "05001100",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R COTINGA",
+                "NUMERO": "236",
+                "COMPLEMENTO": "APARTAMENTO:11 BLOCO:F",
+                "BAIRRO": "VILA NOVA CURUCA",
+                "CEP": "08032500",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FONTANEZIA",
+                "NUMERO": "234",
+                "COMPLEMENTO": "C 2",
+                "BAIRRO": "JARDIM LAJEADO",
+                "CEP": "08041770",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "793661390",
+            "NOME": "EUNICE LIMA DA SILVA",
+            "IDADE": "49 anos",
+            "LOCAL": "TERESINA\/PI",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "REGIVALDO LIMA DA SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "VILA FORMOSA\/MS",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "70545995191"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "MORIPAR INDUSTRIA E COMERCIO DE PECAS AUTOMOTIVAS LTDA",
+            "CNPJ": "02698461000105",
+            "CIDADE": "ITAQUAQUECETUBA-SP",
+            "PROFISSAO": "391205",
+            "DATA_ADMISSAO": "02\/03\/2021",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

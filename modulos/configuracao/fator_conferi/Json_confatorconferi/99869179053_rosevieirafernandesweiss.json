@@ -1,0 +1,127 @@
+{
+    "CADASTRAIS": {
+        "CPF": "99869179053",
+        "NOME": "ROSE VIEIRA FERNANDES WEISS",
+        "NOME_MAE": "ELI VIEIRA FERNANDES",
+        "NASCTO": "16\/09\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "058873020434",
+        "NIT": "1271305567",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "514320",
+        "PROFISSAO": "AUXILIAR DE LIMPEZA",
+        "SALARIO": " 2.257,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5137131843",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "5137155857",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51998547939",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51998288929",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "rose.vieira197@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R LINDOLFO COLLOR",
+                "NUMERO": "425",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "SENAI",
+                "CEP": "96845800",
+                "CIDADE": "SANTA CRUZ DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R CAICARA",
+                "NUMERO": "70",
+                "COMPLEMENTO": "casa",
+                "BAIRRO": "PEDREIRA",
+                "CEP": "96845240",
+                "CIDADE": "SANTA CRUZ DO SUL",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "71920900004",
+                "NOME": "ELI VIEIRA FERNANDES",
+                "IDADE": "83 anos",
+                "LOCAL": "SANTA CRUZ DO SUL\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "2228598062",
+                "NOME": "MAIQUEL ANDRE WEISS",
+                "IDADE": "34 anos",
+                "LOCAL": "SANTA CRUZ DO SUL\/RS",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "GERACAO MATERIAIS PARA MOVEIS LTDA",
+            "CNPJ": "92629831000145",
+            "CIDADE": "SANTA CRUZ DO SUL-RS",
+            "PROFISSAO": "514320",
+            "DATA_ADMISSAO": "11\/20\/2006",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

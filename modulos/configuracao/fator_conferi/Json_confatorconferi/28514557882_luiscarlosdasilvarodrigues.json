@@ -1,0 +1,215 @@
+{
+    "CADASTRAIS": {
+        "CPF": "28514557882",
+        "NOME": "LUIS CARLOS DA SILVA RODRIGUES",
+        "NOME_MAE": "ALDENIRA DA SILVA RODRIGUES",
+        "NASCTO": "13\/04\/1981",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "35267356",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "197886040132",
+        "NIT": "1293870393",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "342210",
+        "PROFISSAO": "DESPACHANTE ADUANEIRO",
+        "SALARIO": " 4.795,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1332223921",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1334732872",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1333715035",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "13\/08\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13997810665",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13997991691",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13981117613",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "07\/12\/2007",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "apsilva@dow.com",
+            "wcaluis@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MONTENEGRO",
+                "NUMERO": "450",
+                "COMPLEMENTO": "AP 12",
+                "BAIRRO": "VL MAIA",
+                "CEP": "11410040",
+                "CIDADE": "GUARUJA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV THIAGO FERREIRA",
+                "NUMERO": "341",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL ALICE VICENTE DE CARVALHO",
+                "CEP": "11450001",
+                "CIDADE": "GUARUJA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PE ANCHIETA",
+                "NUMERO": "316",
+                "COMPLEMENTO": "AP 33",
+                "BAIRRO": "MACUCO",
+                "CEP": "11015120",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MONSENHOR PAULA RODRIGUES",
+                "NUMERO": "120",
+                "COMPLEMENTO": "AP  Apartamento  174",
+                "BAIRRO": "VILA BELMIRO",
+                "CEP": "11075350",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R VALDOMIRO MACARIO",
+                "NUMERO": "350",
+                "COMPLEMENTO": "AP 11 BL 10",
+                "BAIRRO": "JARDIM CONCEICAOZINHA (VICENTE DE CARVALHO)",
+                "CEP": "11472100",
+                "CIDADE": "GUARUJA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ALAGOAS",
+                "NUMERO": "94",
+                "COMPLEMENTO": "AP  6",
+                "BAIRRO": "JARDIM CUNHAMBEBE (VICENTE DE CARVALHO)",
+                "CEP": "11450100",
+                "CIDADE": "GUARUJA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RODOVIA ANCHIETA",
+                "NUMERO": "316",
+                "COMPLEMENTO": "33",
+                "BAIRRO": "ALEMOA",
+                "CEP": "11095000",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA RIO DE JANEIRO",
+                "NUMERO": "32",
+                "COMPLEMENTO": "5 ANDAR APT 51",
+                "BAIRRO": "VILA BELMIRO",
+                "CEP": "11075340",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "22138340",
+            "NOME": "ALDENIRA DA SILVA RODRIGUES",
+            "IDADE": "40 anos",
+            "LOCAL": "PACO DO LUMIAR\/MA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ALINE PEDRO DA SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "SAO VICENTE\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "34242501803"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "DCA DESPACHOS E CONSULTORIA ADUANEIRA LTDA",
+                "CNPJ": "67872259000101",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "342210",
+                "DATA_ADMISSAO": "05\/06\/2012",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SUCOCITRICO CUTRALE LTDA",
+                "CNPJ": "61649810000320",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "03\/05\/2010",
+                "DATA_DEMISSAO": "406",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

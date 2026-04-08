@@ -1,0 +1,232 @@
+{
+    "CADASTRAIS": {
+        "CPF": "11903398894",
+        "NOME": "JOSE ROBERTO GOMES DA SILVA",
+        "NOME_MAE": "MARIA AUGUSTA JANDI",
+        "NASCTO": "21\/07\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "194749344",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "164483690116",
+        "NIT": "12272018256",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142310",
+        "PROFISSAO": "GERENTE DE COMUNICACAO",
+        "SALARIO": " 27.265,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1141913594",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1533639000",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "15996763739",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15991153088",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15998181589",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15991180773",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "15991360241",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "jdsilva@leyroz.com.br",
+            "itaipu17@truenet.com.br",
+            "jmachado@grupopetropolis.com.br",
+            "jdsilva@picodi.com.br",
+            "jplv.silva@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R VITORIA BERTAGNA BISCARO",
+                "NUMERO": "133",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD AMERICA",
+                "CEP": "18556004",
+                "CIDADE": "BOITUVA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AL DAS MARITACAS",
+                "NUMERO": "23",
+                "COMPLEMENTO": "PORT PSG",
+                "BAIRRO": "PORTAL DOS PASSAROS II",
+                "CEP": "18552186",
+                "CIDADE": "BOITUVA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV BERNARDO VIEIRA DE MELO",
+                "NUMERO": "6447",
+                "COMPLEMENTO": "AP 601 BSQ DA TIJUCA",
+                "BAIRRO": "CANDEIAS",
+                "CEP": "54450020",
+                "CIDADE": "JABOATAO DOS GUARARAPES",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "AL AMAZONAS",
+                "NUMERO": "875",
+                "COMPLEMENTO": "AP 134 AND 13 ED MO",
+                "BAIRRO": "ALPHAVILLE INDUSTRIAL",
+                "CEP": "06454070",
+                "CIDADE": "BARUERI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AL GRAJAU",
+                "NUMERO": "601",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALPHAVILLE INDUSTRIAL",
+                "CEP": "06454050",
+                "CIDADE": "BARUERI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "ROD VICENTE PALMA",
+                "NUMERO": "350",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COLINA NOVA BOITUVA",
+                "CEP": "18557825",
+                "CIDADE": "BOITUVA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV MARIA NATALIA RIBEIRO VIANNA CINTI",
+                "NUMERO": "137",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AGUIA DA CASTELO",
+                "CEP": "18550526",
+                "CIDADE": "BOITUVA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "CALCADA DOS NARCISOS",
+                "NUMERO": "50",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COND CENTRO COMERCIAL ALPHAVILLE",
+                "CEP": "06453024",
+                "CIDADE": "BARUERI",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CERVEJARIA PETROPOLIS S\/A - EM RECUPERACAO JUDICIAL",
+                "CNPJ": "73410326005553",
+                "CIDADE": "BOITUVA-SP",
+                "PROFISSAO": "122620",
+                "DATA_ADMISSAO": "06\/01\/2014",
+                "DATA_DEMISSAO": "31\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PETROPOLIS TRANSPORTES E LOGISTICA LTDA",
+                "CNPJ": "51677281002287",
+                "CIDADE": "BOITUVA-SP",
+                "PROFISSAO": "122620",
+                "DATA_ADMISSAO": "01\/11\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CERVEJARIA PETROPOLIS S\/A - EM RECUPERACAO JUDICIAL",
+                "CNPJ": "73410326005634",
+                "CIDADE": "BOITUVA-SP",
+                "PROFISSAO": "141615",
+                "DATA_ADMISSAO": "06\/01\/2014",
+                "DATA_DEMISSAO": "31\/08\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "CERVEJARIA PETROPOLIS S\/A - EM RECUPERACAO JUDICIAL",
+                "CNPJ": "73410326000322",
+                "CIDADE": "BOITUVA-SP",
+                "PROFISSAO": "142310",
+                "DATA_ADMISSAO": "01\/06\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

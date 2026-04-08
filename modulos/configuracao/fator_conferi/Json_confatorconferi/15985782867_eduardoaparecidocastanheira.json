@@ -1,0 +1,239 @@
+{
+    "CADASTRAIS": {
+        "CPF": "15985782867",
+        "NOME": "EDUARDO APARECIDO CASTANHEIRA",
+        "NOME_MAE": "TERESA FATIMA CASTANHEIRA",
+        "NASCTO": "07\/02\/1975",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "251110588",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "209901190159",
+        "NIT": "1245480782",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411005",
+        "PROFISSAO": "AUXILIAR DE ESCRITORIO, EM GERAL",
+        "SALARIO": " 5.100,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1630105637",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1630105628",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1633017100",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1633017223",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1633392773",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "16997186395",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16999007223",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16997033401",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16996453404",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "20\/05\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "16997727342",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "05\/12\/2015",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "eacastanheira@uniara.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV ME ASSUNTA PERONE",
+                "NUMERO": "6",
+                "COMPLEMENTO": "Q D",
+                "BAIRRO": "JD STA CLARA VILA XAVIER",
+                "CEP": "14811380",
+                "CIDADE": "ARARAQUARA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV ME ASSUNTA PERONE",
+                "NUMERO": "493",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "JD STA CLARA VILA XAVIER",
+                "CEP": "14811380",
+                "CIDADE": "ARARAQUARA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV ME ASSUNTA PERONE",
+                "NUMERO": "439",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD STA CLARA VL",
+                "CEP": "14811380",
+                "CIDADE": "ARARAQUARA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA PINDORAMA",
+                "NUMERO": "70",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM AMERICA (VILA XAVIER)",
+                "CEP": "14811233",
+                "CIDADE": "ARARAQUARA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "13881587870",
+                "NOME": "TERESA FATIMA CASTANHEIRA",
+                "IDADE": "71 anos",
+                "LOCAL": "ARARAQUARA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "13881326804",
+                "NOME": "EMERSON CASTANHEIRO",
+                "IDADE": "52 anos",
+                "LOCAL": "ARARAQUARA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "18046336823",
+                "NOME": "EMERSON CASTANHEIRA",
+                "IDADE": "52 anos",
+                "LOCAL": "ARARAQUARA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "35554047840",
+                "NOME": "ROGERIO CASTANHEIRA PEREIRA",
+                "IDADE": "34 anos",
+                "LOCAL": "ARARAQUARA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "RAIMUNDO ALVES DE OLIVEIRA",
+            "IDADE": "",
+            "LOCALIDADE": "",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "4075730204"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO SAO BENTO DE ENSINO",
+                "CNPJ": "43969732000105",
+                "CIDADE": "ARARAQUARA-SP",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "01\/07\/1991",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CENTRO DE PROMOCAO EDUCACIONAL E SOCIAL NA COMUNIDADE",
+                "CNPJ": "48439681000115",
+                "CIDADE": "ARARAQUARA-SP",
+                "PROFISSAO": "233215",
+                "DATA_ADMISSAO": "01\/03\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,279 @@
+{
+    "CADASTRAIS": {
+        "CPF": "21276535805",
+        "NOME": "CLAUDIO NERIS MARTINS MENDES",
+        "NOME_MAE": "IDALICE NERIS MARTINS MENDES",
+        "NASCTO": "05\/09\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "269444890116",
+        "NIT": "1252531604",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "234520",
+        "PROFISSAO": "PROFESSOR DE ENSINO SUPERIOR NA AREA DE PRATICA DE ENSINO",
+        "SALARIO": " 3.682,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2122437927",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1122431909",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "GPON",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1122437927",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1122437927",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1122091052",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11960653572",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11966321088",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11986187970",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "01\/07\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11985791234",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11981756949",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marketing@ceteal.com",
+            "claudioeres@terra.com.br",
+            "claudioneris@uninove.br",
+            "soniafabiano@terra.com.br",
+            "claudioneres@terra.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV JOAO SIMAO DE CASTRO",
+                "NUMERO": "105",
+                "COMPLEMENTO": "CS B",
+                "BAIRRO": "VL SABRINA",
+                "CEP": "02141000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FRANCISCO ALVES BEZERRA",
+                "NUMERO": "6",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "PRQ EDU CHAVES",
+                "CEP": "02228000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FR CANECA",
+                "NUMERO": "963",
+                "COMPLEMENTO": "N",
+                "BAIRRO": "CONSOLACAO",
+                "CEP": "01307003",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R VERGUEIRO",
+                "NUMERO": "239",
+                "COMPLEMENTO": "",
+                "BAIRRO": "LIBERDADE",
+                "CEP": "01504001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV JOAO SIMAO DE CASTRO",
+                "NUMERO": "49",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA SABRINA",
+                "CEP": "02141000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FRANCISCO ALVES BEZERRA",
+                "NUMERO": "697",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ E CHAVES",
+                "CEP": "02228000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA MENDES DA ROCHA",
+                "NUMERO": "1093",
+                "COMPLEMENTO": "AP 52 TOR A",
+                "BAIRRO": "JARDIM BRASIL (ZONA NORTE)",
+                "CEP": "02227001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA AMARAL GURGEL",
+                "NUMERO": "166",
+                "COMPLEMENTO": "AP 103",
+                "BAIRRO": "VILA BUARQUE",
+                "CEP": "01221000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "16476686895",
+                "NOME": "IDALICE NERIS MARTINS MENDES",
+                "IDADE": "88 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "15375468808",
+                "NOME": "SOLANGE NERIS MARTINS MENDES",
+                "IDADE": "51 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CRUZEIRO DO SUL EDUCACIONAL S.A.",
+                "CNPJ": "62984091000951",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "234520",
+                "DATA_ADMISSAO": "01\/02\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO DE EDUCACAO SANTA RITA DE CASSIA",
+                "CNPJ": "61405205000141",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "239405",
+                "DATA_ADMISSAO": "26\/02\/2016",
+                "DATA_DEMISSAO": "08\/09\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO EDUCACIONAL NOVE DE JULHO",
+                "CNPJ": "43374768000804",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "234520",
+                "DATA_ADMISSAO": "01\/08\/2008",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO EDUCACIONAL NOVE DE JULHO",
+                "CNPJ": "43374768000308",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "234520",
+                "DATA_ADMISSAO": "01\/08\/2008",
+                "DATA_DEMISSAO": "107",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

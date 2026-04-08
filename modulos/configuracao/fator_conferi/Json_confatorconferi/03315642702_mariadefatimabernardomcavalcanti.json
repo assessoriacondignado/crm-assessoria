@@ -1,0 +1,153 @@
+{
+    "CADASTRAIS": {
+        "CPF": "3315642702",
+        "NOME": "MARIA DE FATIMA BERNARDO M CAVALCANTI",
+        "NOME_MAE": "RITA DE CASSIA BERNARDO MAGALHAES",
+        "NASCTO": "12\/03\/1973",
+        "IDADE": "53 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "083972520388",
+        "NIT": "1250539975",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "252305",
+        "PROFISSAO": "SECRETARIA  EXECUTIVA",
+        "SALARIO": " 8.193,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "2127715137",
+            "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21989875322",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21999993624",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21992714298",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21988711720",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21971476655",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "fatimamagalhaes@msn.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "R ITACIBA",
+            "NUMERO": "0",
+            "COMPLEMENTO": "LOT 90",
+            "BAIRRO": "VILA ITAMARATI",
+            "CEP": "25070170",
+            "CIDADE": "DUQUE DE CAXIAS",
+            "ESTADO": "RJ"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "56321732753",
+                "NOME": "RITA DE CASSIA BERNARDO MAGALHAES",
+                "IDADE": "76 anos",
+                "LOCAL": "DUQUE DE CAXIAS\/RJ",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "6006283700",
+                "NOME": "ANTONIO CARLOS BERNARDO MAGALHAES",
+                "IDADE": "52 anos",
+                "LOCAL": "",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "7956623782",
+                "NOME": "ALEXANDRE BERNARDO MAGALHAES",
+                "IDADE": "47 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "D.I.R INDUSTRIA COMERCIO DE FERRO E LOGISTICA LTDA",
+                "CNPJ": "41363348000120",
+                "CIDADE": "DUQUE DE CAXIAS-RJ",
+                "PROFISSAO": "252305",
+                "DATA_ADMISSAO": "01\/04\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "NOVO MINEIRAO INDUSTRIA E COMERCIO DE FERRO LTDA",
+                "CNPJ": "08395735000173",
+                "CIDADE": "DUQUE DE CAXIAS-RJ",
+                "PROFISSAO": "252305",
+                "DATA_ADMISSAO": "09\/07\/2008",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

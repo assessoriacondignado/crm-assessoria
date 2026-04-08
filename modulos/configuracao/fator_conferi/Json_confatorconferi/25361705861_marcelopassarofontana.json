@@ -1,0 +1,384 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25361705861",
+        "NOME": "MARCELO PASSARO FONTANA",
+        "NOME_MAE": "MARIA INES PASSARO FONTANA",
+        "NASCTO": "14\/06\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "25741793",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "257801590167",
+        "NIT": "12692309237",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1932437777",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1933437334",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1933688404",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "25\/01\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1933437000",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1933437295",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19983987014",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19991128818",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19991639463",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19998740934",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11950308691",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marcelofantana@yahoo.com",
+            "marcelopassarorontana@gmail.com",
+            "marcelofontana@sigmanet.com.br",
+            "marcelofontana@yahoo.com.br",
+            "marcelopassarofontana@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R BENEDITO OTAVIO",
+                "NUMERO": "225",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL INDUSTRIAL",
+                "CEP": "13035060",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV DIOGO ALVARES",
+                "NUMERO": "1630",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD SANTANA",
+                "CEP": "13088654",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R STO EGIDIO",
+                "NUMERO": "665",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STA TERESINHA",
+                "CEP": "02461011",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV NOVE DE JULHO",
+                "NUMERO": "96",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD SUMARE",
+                "CEP": "14025000",
+                "CIDADE": "RIBEIRAO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DOMENICO MUSTAFA",
+                "NUMERO": "55",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD PROGRESSO",
+                "CEP": "04848100",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PE AGOSTINHO",
+                "NUMERO": "1923",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BIGORRILHO",
+                "CEP": "80710000",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R JOSEANO COSTA PINTO",
+                "NUMERO": "334",
+                "COMPLEMENTO": "FDS",
+                "BAIRRO": "VL PROGRESSO",
+                "CEP": "13321220",
+                "CIDADE": "SALTO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE DE OLIVEIRA COELHO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL ANDRADE",
+                "CEP": "05727240",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "13789446823",
+                "NOME": "MARIA INES PASSARO FONTANA",
+                "IDADE": "76 anos",
+                "LOCAL": "JAGUARIUNA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "22251793879",
+                "NOME": "LUCIANA PASSARO FONTANA",
+                "IDADE": "44 anos",
+                "LOCAL": "JAGUARIUNA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "29593566830",
+                "NOME": "FERNANDO PASSARO FONTANA",
+                "IDADE": "47 anos",
+                "LOCAL": "IRACEMAPOLIS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "JERUSA GONCALVES",
+            "IDADE": "",
+            "LOCALIDADE": "GASPAR\/SC",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "4092648901"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ASSUPERO ENSINO SUPERIOR LTDA.",
+                "CNPJ": "06099229008781",
+                "CIDADE": "JUNDIAI-SP",
+                "PROFISSAO": "239410",
+                "DATA_ADMISSAO": "01\/03\/2017",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ASSUPERO ENSINO SUPERIOR LTDA.",
+                "CNPJ": "06099229005847",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "239410",
+                "DATA_ADMISSAO": "01\/03\/2011",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CENTRO ESTADUAL DE EDUCACAO TECNOLOGICA PAULA SOUZA",
+                "CNPJ": "62823257001687",
+                "CIDADE": "AMERICANA-SP",
+                "PROFISSAO": "234510",
+                "DATA_ADMISSAO": "15\/05\/2023",
+                "DATA_DEMISSAO": "{Ã±\/{Ã±\/2023",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL SENAC",
+                "CNPJ": "03709814007524",
+                "CIDADE": "AMERICANA-SP",
+                "PROFISSAO": "233215",
+                "DATA_ADMISSAO": "07\/03\/2022",
+                "DATA_DEMISSAO": "21\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "SOFTRACK SOLUCOES EM MONITORAMENTO LTDA.",
+                "CNPJ": "13050981000123",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "142515",
+                "DATA_ADMISSAO": "01\/08\/2023",
+                "DATA_DEMISSAO": "13\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "COLEGIO PECTRUS LTDA",
+                "CNPJ": "02311792000140",
+                "CIDADE": "HORTOLANDIA-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "22\/09\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "CENTRO ESTADUAL DE EDUCACAO TECNOLOGICA PAULA SOUZA",
+                "CNPJ": "62823257004350",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "331305",
+                "DATA_ADMISSAO": "07\/08\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "ANHANGUERA EDUCACIONAL LTDA",
+                "CNPJ": "05808792000815",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "234520",
+                "DATA_ADMISSAO": "10\/02\/2016",
+                "DATA_DEMISSAO": "01\/08\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "CENTRO ESTADUAL DE EDUCACAO TECNOLOGICA PAULA SOUZA",
+                "CNPJ": "62823257000109",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "234510",
+                "DATA_ADMISSAO": "01\/08\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ANHANGUERA EDUCACIONAL LTDA",
+                "CNPJ": "05808792000572",
+                "CIDADE": "JUNDIAI-SP",
+                "PROFISSAO": "234520",
+                "DATA_ADMISSAO": "01\/03\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "INSTITUTO FEDERAL DE EDUCACAO, CIENCIA E TECNOLOGIA DE SAO PAULO",
+                "CNPJ": "10882594000165",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "234120",
+                "DATA_ADMISSAO": "07\/03\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "ENGEMON COMERCIO E SERVICOS TECNICOS LTDA",
+                "CNPJ": "72745979000138",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "21\/06\/2012",
+                "DATA_DEMISSAO": "15\/08\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "SOCIEDADE CAMPINEIRA DE EDUCACAO E INSTRUCAO",
+                "CNPJ": "46020301000188",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "317210",
+                "DATA_ADMISSAO": "07\/05\/1999",
+                "DATA_DEMISSAO": "15\/06\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

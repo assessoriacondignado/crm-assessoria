@@ -1,0 +1,180 @@
+{
+    "CADASTRAIS": {
+        "CPF": "488422906",
+        "NOME": "ELIANE CAVALCANTE BLASQUE GAIOSKI",
+        "NOME_MAE": "JOSEFA APARECIDA CAVALCANTE BLASQUE",
+        "NASCTO": "18\/02\/1976",
+        "IDADE": "50 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12848961513",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "223405",
+        "PROFISSAO": "FARMACEUTICO",
+        "SALARIO": " 2.928,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4436242285",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4436212828",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "44999224824",
+            "OPERADORA": "TIM CELULAR S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "MOVEL",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "ecblasque@gmail.com",
+            "elianeblasque@unipar.br",
+            "elianeblasque@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R EPITACIO PESSOA",
+                "NUMERO": "1810",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "87470000",
+                "CIDADE": "MARILUZ",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "PC OSCAR THOMPSON FILHO",
+                "NUMERO": "3221",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "87470000",
+                "CIDADE": "MARILUZ",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "PC OSCAR THOMPSON FILHO",
+                "NUMERO": "3221",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ZONA I A",
+                "CEP": "87501360",
+                "CIDADE": "UMUARAMA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "AVENIDA GUARANI",
+                "NUMERO": "2801",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "ZONA IV",
+                "CEP": "87504030",
+                "CIDADE": "UMUARAMA",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "729249930",
+                "NOME": "JOSEFA APARECIDA CAVALCANTE BLASQUE",
+                "IDADE": "70 anos",
+                "LOCAL": "UMUARAMA\/PR",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "488420954",
+                "NOME": "LEANDRA CAVALCANTE BLASQUE COSTA",
+                "IDADE": "46 anos",
+                "LOCAL": "PITANGA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "2894063903",
+                "NOME": "JULIANA CAVALCANTE BLASQUE",
+                "IDADE": "45 anos",
+                "LOCAL": "CURITIBA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "3982026997",
+                "NOME": "JOSIANE CAVALCANTE BLASQUE DE",
+                "IDADE": "42 anos",
+                "LOCAL": "SAO MIGUEL DO IGUACU\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "9933838903",
+                "NOME": "LARA BLASQUE GAIOSKI",
+                "IDADE": "15 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "UNIMED NOROESTE DO PARANA COOPERATIVA DE TRABALHO MEDICO",
+                "CNPJ": "81710865000577",
+                "CIDADE": "UMUARAMA-PR",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "05\/06\/2017",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "UNIMED NOROESTE DO PARANA COOPERATIVA DE TRABALHO MEDICO",
+                "CNPJ": "81710865000143",
+                "CIDADE": "UMUARAMA-PR",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "05\/06\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "UNIPAR - SOCIEDADE EMPRESARIAL LTDA.",
+                "CNPJ": "75517151000110",
+                "CIDADE": "UMUARAMA-PR",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "10\/08\/2001",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

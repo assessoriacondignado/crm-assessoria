@@ -1,0 +1,202 @@
+{
+    "CADASTRAIS": {
+        "CPF": "63449315587",
+        "NOME": "PEDRINA OLIVEIRA CAMPOS",
+        "NOME_MAE": "MARIA DO CARMO GOMES DOS SANTOS",
+        "NASCTO": "29\/06\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Feminino",
+        "RG": "637408934",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1251180521",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "324115",
+        "PROFISSAO": "TECNICO EM RADIOLOGIA E IMAGENOLOGIA",
+        "SALARIO": " 3.457,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "7122039688",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "71988648087",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71988773369",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "71999164220",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "71981150184",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "71988637516",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "peucana@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R AUGUSTO FRANCA",
+                "NUMERO": "50",
+                "COMPLEMENTO": "ED FLAMING",
+                "BAIRRO": "DOIS DE JULHO",
+                "CEP": "40060090",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R ALMEIDA SANDE",
+                "NUMERO": "468",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BARRIS",
+                "CEP": "40070370",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R ALMEIDA SANDE",
+                "NUMERO": "11000",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BARRIS",
+                "CEP": "40070370",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "AV SANTOS DUMONT",
+                "NUMERO": "518",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "45820011",
+                "CIDADE": "EUNAPOLIS",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "LD DE COUTOS",
+                "NUMERO": "500",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COUTOS",
+                "CEP": "40760410",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "RUA ALMEIDA SANDE",
+                "NUMERO": "11",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "BARRIS",
+                "CEP": "40070370",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "RUA SAO SALVADOR",
+                "NUMERO": "37",
+                "COMPLEMENTO": "CA",
+                "BAIRRO": "LIBERDADE",
+                "CEP": "40325660",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "106325574",
+                "NOME": "MARIA DO CARMO GOMES DOS SANTOS",
+                "IDADE": "44 anos",
+                "LOCAL": "GUARULHOS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "8065668500",
+                "NOME": "MAYRA OLIVEIRA CAMPOS",
+                "IDADE": "16 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SANTA CASA DE MISERICORDIA DA BAHIA",
+                "CNPJ": "15153745000249",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "324115",
+                "DATA_ADMISSAO": "03\/04\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ONCOCLINICAS SALVADOR S.A",
+                "CNPJ": "16433593000110",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "324115",
+                "DATA_ADMISSAO": "01\/08\/2012",
+                "DATA_DEMISSAO": "01\/06\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

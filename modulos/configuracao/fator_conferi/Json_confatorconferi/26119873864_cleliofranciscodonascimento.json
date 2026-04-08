@@ -1,0 +1,165 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26119873864",
+        "NOME": "CLELIO FRANCISCO DO NASCIMENTO",
+        "NOME_MAE": "EUNICE HENKEN DO NASCIMENTO",
+        "NASCTO": "19\/11\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "288516254",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "276598400175",
+        "NIT": "12605318186",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "517330",
+        "PROFISSAO": "VIGILANTE",
+        "SALARIO": " 1.351,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1432399798",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "14998329694",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "14988032724",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "18\/11\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "14996636582",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "14996925116",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "cleliofnascimento@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV GETULIO VARGAS",
+                "NUMERO": "452",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOSQUE",
+                "CEP": "19010170",
+                "CIDADE": "PRESIDENTE PRUDENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV GETULIO VARGAS",
+                "NUMERO": "52",
+                "COMPLEMENTO": "Q 4",
+                "BAIRRO": "BOSQUE",
+                "CEP": "19010170",
+                "CIDADE": "PRESIDENTE PRUDENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R LUIZ DE OLIVEIRA NETO",
+                "NUMERO": "2016",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL S PAULO",
+                "CEP": "17022125",
+                "CIDADE": "BAURU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R LUIZ DE OLIVEIRA NETO",
+                "NUMERO": "2",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA SAO PAULO",
+                "CEP": "17022125",
+                "CIDADE": "BAURU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R LUIZ DE O NETO",
+                "NUMERO": "16",
+                "COMPLEMENTO": "QD2",
+                "BAIRRO": "VL S PAULO",
+                "CEP": "17022125",
+                "CIDADE": "BAURU",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "39868128811",
+            "NOME": "CRISLENE BALBINA DO NASCIMENTO",
+            "IDADE": "36 anos",
+            "LOCAL": "BAURU\/SP",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ALBATROZ SEGURANCA E VIGILANCIA LTDA",
+                "CNPJ": "66700295000117",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "16\/20\/1910",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SECURITY SEGURANCA LTDA",
+                "CNPJ": "00332087000102",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "08\/02\/2009",
+                "DATA_DEMISSAO": "26\/10\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

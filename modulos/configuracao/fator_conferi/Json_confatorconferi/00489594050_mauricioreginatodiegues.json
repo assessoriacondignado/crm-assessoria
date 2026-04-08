@@ -1,0 +1,308 @@
+{
+    "CADASTRAIS": {
+        "CPF": "489594050",
+        "NOME": "MAURICIO REGINATO DIEGUES",
+        "NOME_MAE": "LENIRA REGINATO DIEGUES",
+        "NASCTO": "01\/01\/1984",
+        "IDADE": "42 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "086731580400",
+        "NIT": "13603967851",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "520105",
+        "PROFISSAO": "SUPERVISOR DE VENDAS DE SERVICOS",
+        "SALARIO": " 3.500,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5133720973",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "5131108855",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "5132074474",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5132082484",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "5132484925",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51995787280",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51997539830",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51999289154",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51995368890",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51995530964",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "mauriciodiegues@terra.com.br",
+            "mauriciodiegues@bol.com.br",
+            "mauricio.diegues@ampm.com.br",
+            "mauriciordiegues@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ARCEBURGO",
+                "NUMERO": "94",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD STA FELICIDADE",
+                "CEP": "79064320",
+                "CIDADE": "CAMPO GRANDE",
+                "ESTADO": "MS"
+            },
+            {
+                "LOGRADOURO": "AV IND BELGRAF",
+                "NUMERO": "400",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "92990000",
+                "CIDADE": "ELDORADO DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R AZISE PEDRO FALCAO",
+                "NUMERO": "60",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ABERTA DOS MORROS",
+                "CEP": "91787789",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "AV JOAO PESSOA",
+                "NUMERO": "211",
+                "COMPLEMENTO": "AP  Apartamento  1101",
+                "BAIRRO": "CENTRO HISTORICO",
+                "CEP": "90040000",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "AV CARLOS GOMES",
+                "NUMERO": "258",
+                "COMPLEMENTO": "AP 16",
+                "BAIRRO": "BOA VISTA",
+                "CEP": "90480000",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R BALDOINO BOTTINI",
+                "NUMERO": "50",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ABERTA DOS MORROS",
+                "CEP": "91787775",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "ESTRADA JOAO SALOMONI",
+                "NUMERO": "79",
+                "COMPLEMENTO": "APT 103",
+                "BAIRRO": "VILA NOVA",
+                "CEP": "91740830",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "ESTRADA JOAO SALOMONI",
+                "NUMERO": "793",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA NOVA",
+                "CEP": "91740830",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "16624602015",
+                "NOME": "LENIRA REGINATO DIEGUES",
+                "IDADE": "73 anos",
+                "LOCAL": "SAO GONCALO\/RJ",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "88716937015",
+                "NOME": "FELIPE REGINATO DIEGUES",
+                "IDADE": "49 anos",
+                "LOCAL": "PORTO ALEGRE\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PARK PLACE TECHNOLOGY BRASIL TELECOMUNICACOES LTDA",
+                "CNPJ": "05489237000100",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "253215",
+                "DATA_ADMISSAO": "12\/09\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "AM\/PM COMESTIVEIS LTDA",
+                "CNPJ": "40299810000105",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "21\/06\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "TELEFONICA BRASIL S.A.",
+                "CNPJ": "02558157001720",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "12\/03\/2020",
+                "DATA_DEMISSAO": "08\/06\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "YES WAY COMERCIO E SERVICOS DE SOLUCOES AVANCADAS DE INFORMATICA LTDA",
+                "CNPJ": "02445986000139",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "520105",
+                "DATA_ADMISSAO": "15\/08\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "GPBR PARTICIPACOES LTDA.",
+                "CNPJ": "15664649000184",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "07\/03\/2016",
+                "DATA_DEMISSAO": "15\/08\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "GA EDUCACAO LTDA.",
+                "CNPJ": "87133666000104",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "354125",
+                "DATA_ADMISSAO": "01\/11\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "DELL COMPUTADORES DO BRASIL LTDA",
+                "CNPJ": "72381189000110",
+                "CIDADE": "ELDORADO DO SUL-RS",
+                "PROFISSAO": "354140",
+                "DATA_ADMISSAO": "12\/11\/2007",
+                "DATA_DEMISSAO": "10\/08\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

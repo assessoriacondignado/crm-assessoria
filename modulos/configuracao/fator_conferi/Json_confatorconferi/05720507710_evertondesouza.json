@@ -1,0 +1,183 @@
+{
+    "CADASTRAIS": {
+        "CPF": "5720507710",
+        "NOME": "EVERTON DE SOUZA",
+        "NOME_MAE": "MARIA DA PENHA SOUZA",
+        "NASCTO": "22\/03\/1976",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "102450194",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "095081750353",
+        "NIT": "1253815694 ",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782410",
+        "PROFISSAO": "MOTORISTA DE ONIBUS URBANO",
+        "SALARIO": " 2.818,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "2127592787",
+            "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+            "DATA_REFERENCIA": "22\/06\/2012",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21991848245",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21975536781",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21967479177",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "21964614329",
+                "OPERADORA": "NEXTEL",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "everton.desouza@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CELESTINO VALENTE PINTO",
+                "NUMERO": "14",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ ESPERANCA",
+                "CEP": "25046020",
+                "CIDADE": "DUQUE DE CAXIAS",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R CELESTINO VALENTE PINTO",
+                "NUMERO": "1",
+                "COMPLEMENTO": "LT 14 C 3",
+                "BAIRRO": "PRQ ESPERANCA",
+                "CEP": "25046020",
+                "CIDADE": "DUQUE DE CAXIAS",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R JOAO VICENTE",
+                "NUMERO": "933",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MADUREIRA",
+                "CEP": "21340020",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA CELESTINO VALENTE PINTO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "PRQ ESPER QU 1 CA 3 LT 14",
+                "BAIRRO": "PARQUE ESPERANCA",
+                "CEP": "25046020",
+                "CIDADE": "DUQUE DE CAXIAS",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA CELESTINO VALENTE PINTO",
+                "NUMERO": "2",
+                "COMPLEMENTO": "LT 14 QD 1",
+                "BAIRRO": "PARQUE ESPERANCA",
+                "CEP": "25046020",
+                "CIDADE": "DUQUE DE CAXIAS",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA ESOPO",
+                "NUMERO": "84",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOA SORTE",
+                "CEP": "26180220",
+                "CIDADE": "BELFORD ROXO",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "24690309",
+            "NOME": "MARIA DA PENHA SOUZA",
+            "IDADE": "67 anos",
+            "LOCAL": "TERESINA\/PI",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "VIACAO MONTES BRANCOS LTDA",
+                "CNPJ": "29850260000561",
+                "CIDADE": "ARARUAMA-RJ",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "12\/07\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VIACAO VILA REAL S\/A",
+                "CNPJ": "97417117000107",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "05\/02\/2010",
+                "DATA_DEMISSAO": "16\/06\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "PADARIA E MERCEARIA KOSU LTDA",
+            "CNPJ": "04103145000179",
+            "CIDADE": "BELFORD ROXO-RJ",
+            "QUALIFICACAO": "SÃ³cio",
+            "DATA_ENTRADA": "20071019",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

@@ -1,0 +1,244 @@
+{
+    "CADASTRAIS": {
+        "CPF": "18934456825",
+        "NOME": "MARCELO COUTINHO PEREIRA",
+        "NOME_MAE": "HILDA COUTINHO PEREIRA",
+        "NASCTO": "15\/08\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "28156320",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "215214010132",
+        "NIT": "1248623982",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782510",
+        "PROFISSAO": "MOTORISTA DE CAMINHAO (ROTAS REGIONAIS E INTERNACIONAIS)",
+        "SALARIO": " 7.685,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1139016275",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1123756482",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1144762149",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2130341200",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13996647651",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13997930580",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13997067062",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11971353797",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11989040896",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "m.coutinho.pereira@bol.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MANUEL BICUDO DE AGUIRRE",
+                "NUMERO": "333",
+                "COMPLEMENTO": "C 2",
+                "BAIRRO": "VL JAGUARI",
+                "CEP": "05162120",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MATOS DUARTE",
+                "NUMERO": "146",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL ZAT",
+                "CEP": "02976110",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FORTUNATO FERRAZ",
+                "NUMERO": "510",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL ANASTACIO",
+                "CEP": "05093000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ZINA B BERNARDI",
+                "NUMERO": "1100",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD I VELHO",
+                "CEP": "09351440",
+                "CIDADE": "MAUA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANGELO DELLA BETTA",
+                "NUMERO": "112",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM MAUA",
+                "CEP": "09340310",
+                "CIDADE": "MAUA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MANUEL BICUDO DE AGUIRRE",
+                "NUMERO": "351",
+                "COMPLEMENTO": "A CS 1",
+                "BAIRRO": "VILA JAGUARI",
+                "CEP": "05162120",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MARIA PRESTES MAIA",
+                "NUMERO": "300",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CARANDIRU",
+                "CEP": "02047901",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "51171414900",
+                "NOME": "HILDA COUTINHO PEREIRA",
+                "IDADE": "73 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "14844600818",
+                "NOME": "MARCOS COUTINHO PEREIRA",
+                "IDADE": "53 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "IC TRANSPORTES LTDA.",
+                "CNPJ": "49871213000188",
+                "CIDADE": "SUMARE-SP",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "03\/11\/2014",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VIMATLOG TRANSPORTES E LOGISTICA LTDA",
+                "CNPJ": "33163858000800",
+                "CIDADE": "SANTO ANDRE-SP",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "08\/10\/2010",
+                "DATA_DEMISSAO": "13\/10\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "VIMATLOG TRANSPORTES E LOGISTICA LTDA",
+                "CNPJ": "33163858000126",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "08\/10\/2010",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

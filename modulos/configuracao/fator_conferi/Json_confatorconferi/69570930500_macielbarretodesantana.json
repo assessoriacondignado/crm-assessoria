@@ -1,0 +1,157 @@
+{
+    "CADASTRAIS": {
+        "CPF": "69570930500",
+        "NOME": "MACIEL BARRETO DE SANTANA",
+        "NOME_MAE": "IVANETE SANTOS DE SANTANA",
+        "NASCTO": "15\/10\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "018145732160",
+        "NIT": "1260460676",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "252725",
+        "PROFISSAO": "",
+        "SALARIO": " 3.597,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "7932165380",
+            "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "79988116758",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79998005616",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999379967",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "alessandrazaniboni@hotmail.com",
+            "maciell.santana@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DISTRITO FEDERAL",
+                "NUMERO": "1036",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SIQUEIRA CAMPOS",
+                "CEP": "49075190",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "RUA TENENTE WALDIR DOS SANTOS",
+                "NUMERO": "640",
+                "COMPLEMENTO": "",
+                "BAIRRO": "FAROLANDIA",
+                "CEP": "49030720",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "4443728902",
+            "NOME": "IVANETE SANTOS DE SANTANA",
+            "IDADE": "49 anos",
+            "LOCAL": "IVATE\/PR",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "CARLOS FERREIRA SANTOS",
+                "IDADE": "",
+                "LOCALIDADE": "ARACATU\/BA",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "69570809515"
+            },
+            {
+                "NOME": "GEIZA MARQUES FONTELES",
+                "IDADE": "",
+                "LOCALIDADE": "CHAVAL\/CE",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "69570590300"
+            },
+            {
+                "NOME": "ORANI ANTONIA FERREIRA",
+                "IDADE": "",
+                "LOCALIDADE": "SERRA\/ES",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "69570680725"
+            },
+            {
+                "NOME": "TEREZINHA MACHADO DOS REIS",
+                "IDADE": "",
+                "LOCALIDADE": "ARACRUZ\/ES",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "69570949791"
+            },
+            {
+                "NOME": "VALDERES LUIS DE BONA",
+                "IDADE": "",
+                "LOCALIDADE": "BENTO GONCALVES\/RS",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "69570728000"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "CENCOSUD BRASIL COMERCIAL LTDA.",
+            "CNPJ": "39346861000161",
+            "CIDADE": "NOSSA SENHORA DO SOCORRO-SE",
+            "PROFISSAO": "252725",
+            "DATA_ADMISSAO": "02\/01\/2002",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

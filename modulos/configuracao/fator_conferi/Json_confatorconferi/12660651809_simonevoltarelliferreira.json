@@ -1,0 +1,157 @@
+{
+    "CADASTRAIS": {
+        "CPF": "12660651809",
+        "NOME": "SIMONE VOLTARELLI FERREIRA",
+        "NOME_MAE": "ELVIRA DE LOURDES C VOLTARELLI",
+        "NASCTO": "01\/10\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Feminino",
+        "RG": "21906666",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "182994310175",
+        "NIT": "1807758652",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "232115",
+        "PROFISSAO": "PROFESSOR DE DISCIPLINAS PEDAGOGICAS NO ENSINO MEDIO",
+        "SALARIO": " 51,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1936731690",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1936731453",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "19992807696",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "MOVEL",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "simonemyteacher@agrovaletambau.com.br",
+            "teachersimone123@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AVENIDA JOSE GATTO",
+                "NUMERO": "500",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "CENTRO",
+                "CEP": "13710000",
+                "CIDADE": "TAMBAU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R GERMANO CASSIOLATO",
+                "NUMERO": "174",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD TREVO",
+                "CEP": "13710000",
+                "CIDADE": "TAMBAU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R 13 DE MAIO",
+                "NUMERO": "430",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "13710000",
+                "CIDADE": "TAMBAU",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "23088545884",
+                "NOME": "NICHOLAS FERREIRA",
+                "IDADE": "22 anos",
+                "LOCAL": "TAMBAU\/SP",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "37396210879",
+                "NOME": "ANTHONY FERREIRA",
+                "IDADE": "20 anos",
+                "LOCAL": "TAMBAU\/SP",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "NICHOLAS FERREIRA",
+            "IDADE": "",
+            "LOCALIDADE": "TAMBAU\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "23088545884"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SERVICO SOCIAL DA INDUSTRIA - SESI",
+                "CNPJ": "03779133009586",
+                "CIDADE": "TAMBAU-SP",
+                "PROFISSAO": "232115",
+                "DATA_ADMISSAO": "21\/01\/2011",
+                "DATA_DEMISSAO": "13\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "AGRO PECUARIA VALE DO RIO PARDO LTDA.",
+                "CNPJ": "50072693000104",
+                "CIDADE": "TAMBAU-SP",
+                "PROFISSAO": "142105",
+                "DATA_ADMISSAO": "02\/04\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MUNICIPIO DE SANTA CRUZ DAS PALMEIRAS",
+                "CNPJ": "46371654000122",
+                "CIDADE": "SANTA CRUZ DAS PALMEIRAS-SP",
+                "PROFISSAO": "231210",
+                "DATA_ADMISSAO": "16\/03\/2020",
+                "DATA_DEMISSAO": "{Ã±\/{Ã±\/2023",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

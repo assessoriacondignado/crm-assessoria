@@ -1,0 +1,190 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26330266808",
+        "NOME": "LUIZ HENRIQUE DE CASTRO GALVAO",
+        "NOME_MAE": "LIDIA DE CASTRO GALVAO",
+        "NASCTO": "18\/07\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "268359349",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "263478370183",
+        "NIT": "1252101797",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "141205",
+        "PROFISSAO": "GERENTE DE PRODUCAO E OPERACOES",
+        "SALARIO": " 17.909,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1231221660",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1230130152",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "19\/07\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1231254657",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1231254657",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "12997866556",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12991529703",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "luiz-galvao@uol.com.br",
+            "lilatur@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ROBERTO OLIVEIRA SANTOS",
+                "NUMERO": "179",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "PRQ ARVORES",
+                "CEP": "12506270",
+                "CIDADE": "GUARATINGUETA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CARLOS A T BITTENCOURT",
+                "NUMERO": "293",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "PEDREGULHO",
+                "CEP": "12500000",
+                "CIDADE": "GUARATINGUETA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PROFESSOR CARLOS ALVIM TAQUES BITENCOURT",
+                "NUMERO": "293",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA COMENDADOR RODRIGUES ALVES",
+                "CEP": "12511020",
+                "CIDADE": "GUARATINGUETA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "16281736885",
+                "NOME": "LIDIA DE CASTRO GALVAO",
+                "IDADE": "82 anos",
+                "LOCAL": "GUARATINGUETA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "15946805827",
+                "NOME": "PATRICIA HELENA CASTRO GALVAO",
+                "IDADE": "58 anos",
+                "LOCAL": "GUARATINGUETA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "LIDIA DE CASTRO GALVAO",
+                "IDADE": "",
+                "LOCALIDADE": "GUARATINGUETA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "16281736885"
+            },
+            {
+                "NOME": "LILIANE CAMPOS DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "URUCUCA\/BA",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "80000606553"
+            },
+            {
+                "NOME": "MARIA CLAUDIA DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "GUARATINGUETA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "32586550811"
+            },
+            {
+                "NOME": "VICENTE DE PAULA ROSA DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "GUARATINGUETA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "40166031887"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "TEKNO S.A. INDUSTRIA E COMERCIO",
+            "CNPJ": "33467572000568",
+            "CIDADE": "GUARATINGUETA-SP",
+            "PROFISSAO": "141205",
+            "DATA_ADMISSAO": "03\/12\/1996",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

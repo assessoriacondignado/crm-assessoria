@@ -1,0 +1,255 @@
+{
+    "CADASTRAIS": {
+        "CPF": "13870795816",
+        "NOME": "PAULA GONCALVES FENGA",
+        "NOME_MAE": "LIDIA APARECIDA FENCA",
+        "NASCTO": "06\/10\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "230972100116",
+        "NIT": "1809036227",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "234520",
+        "PROFISSAO": "PROFESSOR DE ENSINO SUPERIOR NA AREA DE PRATICA DE ENSINO",
+        "SALARIO": " 69,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1633016600",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1633422314",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1633429188",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1630432318",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "31\/03\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1636023000",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "16996159039",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "17997591218",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "17981373303",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "17997083305",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "17997761413",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "paulinhafenga@yahoo.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV LUIZ EDUARDO TOLEDO PRADO",
+                "NUMERO": "847",
+                "COMPLEMENTO": "AP 124 TORRE 1",
+                "BAIRRO": "VL DO GOLF",
+                "CEP": "14027250",
+                "CIDADE": "RIBEIRAO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R LAFAIETE",
+                "NUMERO": "1636",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL SEIXAS",
+                "CEP": "14020053",
+                "CIDADE": "RIBEIRAO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV ARTHUR BUGNI",
+                "NUMERO": "185",
+                "COMPLEMENTO": "BL 3 AP 21",
+                "BAIRRO": "JD VITORIA",
+                "CEP": "14800075",
+                "CIDADE": "ARARAQUARA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV ARTHUR BUGNI",
+                "NUMERO": "187",
+                "COMPLEMENTO": "BL 1 AP 32",
+                "BAIRRO": "JD VITORIA",
+                "CEP": "14800075",
+                "CIDADE": "ARARAQUARA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PROF FRANCISCO DEGNI",
+                "NUMERO": "2150",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD QUITANDINHA",
+                "CEP": "14800060",
+                "CIDADE": "ARARAQUARA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOAQUIM J LIMA",
+                "NUMERO": "193",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "14700450",
+                "CIDADE": "BEBEDOURO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA LAFAIETE",
+                "NUMERO": "1636",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "14015080",
+                "CIDADE": "RIBEIRAO PRETO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "52046866819",
+            "NOME": "BRUNO FENGA DA SILVA",
+            "IDADE": "9 anos",
+            "LOCAL": "",
+            "PARENTESCO": "FILHO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CONTACT CENTER HOTLINE LTDA.",
+                "CNPJ": "27616761000129",
+                "CIDADE": "BEBEDOURO-SP",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "25\/10\/2023",
+                "DATA_DEMISSAO": "08\/05\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO DE EDUCACAO E CULTURA DO NORTE PAULISTA",
+                "CNPJ": "57713281000147",
+                "CIDADE": "BEBEDOURO-SP",
+                "PROFISSAO": "234520",
+                "DATA_ADMISSAO": "05\/08\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ACAO EDUCACIONAL CLARETIANA",
+                "CNPJ": "44943835000150",
+                "CIDADE": "BATATAIS-SP",
+                "PROFISSAO": "234520",
+                "DATA_ADMISSAO": "03\/02\/2014",
+                "DATA_DEMISSAO": "02\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ESCOLA DE ULTRA-SONOGRAFIA RIBEIRAO PRETO LTDA",
+                "CNPJ": "60250438000150",
+                "CIDADE": "RIBEIRAO PRETO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "18\/20\/1902",
+                "DATA_DEMISSAO": "25\/12\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

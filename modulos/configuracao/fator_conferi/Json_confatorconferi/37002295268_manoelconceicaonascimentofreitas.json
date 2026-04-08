@@ -1,0 +1,171 @@
+{
+    "CADASTRAIS": {
+        "CPF": "37002295268",
+        "NOME": "MANOEL CONCEICAO NASCIMENTO FREITAS",
+        "NOME_MAE": "MARIA EVA NASCIMENTO FREITAS",
+        "NASCTO": "05\/12\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1236580337",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "712130",
+        "PROFISSAO": "OPERADOR DE JIG (MINAS)",
+        "SALARIO": " 8.286,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9335491532",
+            "OPERADORA": "TELEMAR\/PA",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "93991295650",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "93992264392",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "22\/04\/2020",
+                "TIPO_TEL": "MOVEL PRE-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "93991057019",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "93991686522",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "93991763267",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "atendimento@fornix.com.br",
+            "atendimento@fortis.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV DO TURISMO",
+                "NUMERO": "1263",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TARUMA",
+                "CEP": "69041010",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "RUA R  DA FEIRINHA 240",
+                "NUMERO": "240",
+                "COMPLEMENTO": "NULL",
+                "BAIRRO": "CENTRO",
+                "CEP": "68275000",
+                "CIDADE": "PORTO TROMBETAS",
+                "ESTADO": "PA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "19540906253",
+                "NOME": "MARIA EVA NASCIMENTO FREITAS",
+                "IDADE": "78 anos",
+                "LOCAL": "SANTAREM\/PA",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "23141700249",
+                "NOME": "JOSE AUGUSTO NASCIMENTO FREITAS",
+                "IDADE": "60 anos",
+                "LOCAL": "SANTAREM\/PA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "40433633204",
+                "NOME": "MIGUEL ANGELO NASCIMENTO FREITAS",
+                "IDADE": "53 anos",
+                "LOCAL": "ORIXIMINA\/PA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "77395140206",
+                "NOME": "ANA PAULA FREITAS SILVA",
+                "IDADE": "43 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "MINERACAO RIO DO NORTE SA",
+            "CNPJ": "04932216000146",
+            "CIDADE": "ORIXIMINA-PA",
+            "PROFISSAO": "712130",
+            "DATA_ADMISSAO": "02\/08\/1995",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "MANOEL CONCEICAO NASCIMENTO DE FREITAS LTDA",
+            "CNPJ": "29787711000130",
+            "CIDADE": "ORIXIMINA-PA",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20230324",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

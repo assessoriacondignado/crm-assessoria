@@ -1,0 +1,178 @@
+{
+    "CADASTRAIS": {
+        "CPF": "1786979900",
+        "NOME": "JUAREZ BECA",
+        "NOME_MAE": "GUILHERMINA LUIZ DE SOUZA",
+        "NASCTO": "26\/12\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "71821501",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "059680070655",
+        "NIT": "1236735592",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782405",
+        "PROFISSAO": "MOTORISTA DE ONIBUS RODOVIARIO",
+        "SALARIO": " 3.480,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4334236321",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "4334773252",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "43996243694",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "43991213051",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "luceniaparecida03@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PRES KENNEDY",
+                "NUMERO": "660",
+                "COMPLEMENTO": "660",
+                "BAIRRO": "CENTRO",
+                "CEP": "86930000",
+                "CIDADE": "SAO JOAO DO IVAI",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R PRES KENED",
+                "NUMERO": "760",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "86930000",
+                "CIDADE": "SAO JOAO DO IVAI",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "ES KENNEDY",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "86930000",
+                "CIDADE": "SAO JOAO DO IVAI",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R CAMPO MOURAO",
+                "NUMERO": "807",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "86930000",
+                "CIDADE": "SAO JOAO DO IVAI",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "ROD PR 457",
+                "NUMERO": "0",
+                "COMPLEMENTO": "KM 3",
+                "BAIRRO": "CENTRO",
+                "CEP": "86945000",
+                "CIDADE": "SAO PEDRO DO IVAI",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R CAMPO MOURAO 00807",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "",
+                "CEP": "86930000",
+                "CIDADE": "SAO JOAO DO IVAI",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BRASIL SUL SANTO ANJO LINHAS RODOVIARIAS LTDA",
+                "CNPJ": "05233521001770",
+                "CIDADE": "MARINGA-PR",
+                "PROFISSAO": "782405",
+                "DATA_ADMISSAO": "08\/07\/2016",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COMACAL COMERCIO DE MATERIAIS DE CONSTRUCAO LTDA",
+                "CNPJ": "13571475000180",
+                "CIDADE": "SAO PEDRO DO IVAI-PR",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "16\/20\/1901",
+                "DATA_DEMISSAO": "06\/07\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "VIA RAPIDA TRANSPORTE E TURISMO LTDA",
+                "CNPJ": "02960222000181",
+                "CIDADE": "APUCARANA-PR",
+                "PROFISSAO": "782405",
+                "DATA_ADMISSAO": "26\/02\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "IVAICANA AGROPECUARIA LTDA. - EM RECUPERACAO JUDICIAL",
+                "CNPJ": "81264897000162",
+                "CIDADE": "SAO PEDRO DO IVAI-PR",
+                "PROFISSAO": "622110",
+                "DATA_ADMISSAO": "05\/07\/1999",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,275 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25593380848",
+        "NOME": "DEUZINO ELIZEU GOMES",
+        "NOME_MAE": "JURACI DE BARROS GOMES",
+        "NASCTO": "28\/11\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "240018400116",
+        "NIT": "12502960497",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "223505",
+        "PROFISSAO": "ENFERMEIRO",
+        "SALARIO": " 5.272,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1132083571",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1232046061",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "29\/06\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1230190901",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11932022375",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11971658855",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11984398939",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11980671030",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "24\/03\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11982899769",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "25\/11\/2007",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "gomesdeli@gmail.com",
+            "deligomes@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R S JOAO BATISTA",
+                "NUMERO": "58",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAMBUCI",
+                "CEP": "01527010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CARLOS MIACCI",
+                "NUMERO": "308",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CJ RESIDENCIAL DOM PEDRO I",
+                "CEP": "12232600",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PROFA ROSINHA CENDON",
+                "NUMERO": "145",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "MARIA HELENA",
+                "CEP": "31680360",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R WILSON MIRANDA",
+                "NUMERO": "17",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL PAULISTANA",
+                "CEP": "02318215",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA WLADIMIR HERZOG",
+                "NUMERO": "252",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BQ EUCALIPTOS",
+                "CEP": "12233610",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA OLGA FADEL ABARCA",
+                "NUMERO": "350",
+                "COMPLEMENTO": "AP 201",
+                "BAIRRO": "JARDIM SANTA TEREZINHA (ZONA LESTE)",
+                "CEP": "03572020",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA WLADIMIR HERZOG",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOSQUE DOS EUCALIPTOS",
+                "CEP": "12233610",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MAESTRO BORTOLUCCI",
+                "NUMERO": "154",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "TREMEMBE",
+                "CEP": "02357040",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "29737541863",
+            "NOME": "JURACI DE BARROS GOMES",
+            "IDADE": "78 anos",
+            "LOCAL": "SAO JOSE DOS CAMPOS\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "DELILANIA SALUSTRIANO GOMES",
+            "IDADE": "",
+            "LOCALIDADE": "VOTORANTIM\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "6190985467"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SERV SOCIAL DA IND DO PAPEL PAPELAO E CORT DO EST DE SP",
+                "CNPJ": "60961422000155",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "223505",
+                "DATA_ADMISSAO": "15\/10\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PREVENT SENIOR PRIVATE OPERADORA DE SAUDE LTDA",
+                "CNPJ": "00461479003421",
+                "CIDADE": "SAO BERNARDO DO CAMPO-SP",
+                "PROFISSAO": "223505",
+                "DATA_ADMISSAO": "23\/07\/2008",
+                "DATA_DEMISSAO": "01\/03\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "PREVENT SENIOR PRIVATE OPERADORA DE SAUDE LTDA",
+                "CNPJ": "00461479004150",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "223505",
+                "DATA_ADMISSAO": "23\/07\/2008",
+                "DATA_DEMISSAO": "01\/05\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "PREVENT SENIOR PRIVATE OPERADORA DE SAUDE LTDA",
+                "CNPJ": "00461479001054",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "01\/03\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "PREVENT SENIOR PRIVATE OPERADORA DE SAUDE LTDA",
+                "CNPJ": "00461479001305",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "223505",
+                "DATA_ADMISSAO": "23\/07\/2008",
+                "DATA_DEMISSAO": "01\/03\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "PREVENT SENIOR PRIVATE OPERADORA DE SAUDE LTDA",
+                "CNPJ": "00461479001992",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "223505",
+                "DATA_ADMISSAO": "01\/03\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

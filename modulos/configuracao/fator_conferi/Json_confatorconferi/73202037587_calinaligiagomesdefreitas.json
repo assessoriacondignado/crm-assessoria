@@ -1,0 +1,253 @@
+{
+    "CADASTRAIS": {
+        "CPF": "73202037587",
+        "NOME": "CALINA LIGIA GOMES DE FREITAS",
+        "NOME_MAE": "BELIONISIA GOMES DOS SANTOS",
+        "NASCTO": "18\/12\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "071973340566",
+        "NIT": "12865538054",
+        "ESCOLARIDADE": "ANALFABETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "234505",
+        "PROFISSAO": "PROFESSOR DE ENSINO SUPERIOR NA AREA DE DIDATICA",
+        "SALARIO": " 52,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7436413565",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8336243620",
+                "OPERADORA": "TELEMAR\/PB",
+                "DATA_REFERENCIA": "07\/07\/2007",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "74999631242",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "74999758912",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "74999968131",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "74999985775",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "74999978804",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL POS-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "info@pixelstudi.com",
+            "c_ligia@bol.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R RIO JACARE",
+                "NUMERO": "30",
+                "COMPLEMENTO": "",
+                "BAIRRO": "REC DAS ARVORES",
+                "CEP": "44900000",
+                "CIDADE": "IRECE",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R FUNDACAO BRADESCO",
+                "NUMERO": "1",
+                "COMPLEMENTO": "COLEGIO F BRADE",
+                "BAIRRO": "FUNDACAO BRADESCO",
+                "CEP": "44900000",
+                "CIDADE": "IRECE",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R VALDECI ORTINS DIAS",
+                "NUMERO": "77",
+                "COMPLEMENTO": "AND 1",
+                "BAIRRO": "JD CIDADE UNIVERSITARIA",
+                "CEP": "58051740",
+                "CIDADE": "JOAO PESSOA",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": ". RUA RIO JACARE",
+                "NUMERO": "20",
+                "COMPLEMENTO": "",
+                "BAIRRO": "LOTEAMENTO ASA SUL",
+                "CEP": "44900000",
+                "CIDADE": "IRECE",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R DERALDO SILVA DOURADO",
+                "NUMERO": "150",
+                "COMPLEMENTO": "",
+                "BAIRRO": "LTM MOURA",
+                "CEP": "44900000",
+                "CIDADE": "IRECE",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "RUA MARECHAL ESPERIDIAO ROSAS",
+                "NUMERO": "235",
+                "COMPLEMENTO": "AP 403 PRINCIPE DE VER",
+                "BAIRRO": "EXPEDICIONARIOS",
+                "CEP": "58041070",
+                "CIDADE": "JOAO PESSOA",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "R MRO DO CHAPEU",
+                "NUMERO": "220",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "CENTRO",
+                "CEP": "44900000",
+                "CIDADE": "IRECE",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "22738584500",
+                "NOME": "BELIONISIA GOMES DOS SANTOS",
+                "IDADE": "79 anos",
+                "LOCAL": "SAO GABRIEL\/BA",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "6659074511",
+                "NOME": "JOAO PEDRO GOMES DE CARVALHO",
+                "IDADE": "15 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "8212684571",
+                "NOME": "MARIA CLARA GOMES DE CARVALHO",
+                "IDADE": "19 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "FUNDACAO BRADESCO",
+                "CNPJ": "60701521000874",
+                "CIDADE": "IRECE-BA",
+                "PROFISSAO": "142105",
+                "DATA_ADMISSAO": "15\/01\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO EDUCATIVA DE IRECE S\/C",
+                "CNPJ": "14743900000133",
+                "CIDADE": "IRECE-BA",
+                "PROFISSAO": "239430",
+                "DATA_ADMISSAO": "02\/02\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "UESSBA UNIDADE DE ENSINO SUPERIOR DO SERTAO DA BAHIA S\/S LTDA",
+                "CNPJ": "03250536000153",
+                "CIDADE": "IRECE-BA",
+                "PROFISSAO": "234505",
+                "DATA_ADMISSAO": "01\/11\/2004",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "INSTITUTO DE ENSINO JMC LTDA",
+                "CNPJ": "04295102000132",
+                "CIDADE": "IRECE-BA",
+                "PROFISSAO": "333115",
+                "DATA_ADMISSAO": "01\/08\/2008",
+                "DATA_DEMISSAO": "18\/03\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "PROATIVA CONSULTORIA E ASSESSORIA EM RECURSOS HUMANOS LTDA",
+            "CNPJ": "06949900000166",
+            "CIDADE": "IRECE-BA",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20040825",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

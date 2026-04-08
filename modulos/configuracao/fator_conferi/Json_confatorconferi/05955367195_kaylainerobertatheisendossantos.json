@@ -1,0 +1,91 @@
+{
+    "CADASTRAIS": {
+        "CPF": "5955367195",
+        "NOME": "KAYLAINE ROBERTA THEISEN DOS SANTOS",
+        "NOME_MAE": "ADRIANA THEISEN",
+        "NASCTO": "07\/08\/2003",
+        "IDADE": "22 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "69992385582",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "MOVEL",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "R SALETE",
+            "NUMERO": "272",
+            "COMPLEMENTO": "N",
+            "BAIRRO": "",
+            "CEP": "78320000",
+            "CIDADE": "JUINA",
+            "ESTADO": "MT"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "325964050",
+                "NOME": "ADRIANA THEISEN",
+                "IDADE": "42 anos",
+                "LOCAL": "CARAZINHO\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "6027103167",
+                "NOME": "VICTOR THEISEN DOS SANTOS",
+                "IDADE": "27 anos",
+                "LOCAL": "JI PARANA\/RO",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "EPK-MT SERVICOS COMBINADOS DE ESCRITORIO LTDA",
+                "CNPJ": "41362956000110",
+                "CIDADE": "JUINA-MT",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "21\/09\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "DROGARIA SAO JORGE LTDA",
+                "CNPJ": "24769226000110",
+                "CIDADE": "JUINA-MT",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "15\/07\/2021",
+                "DATA_DEMISSAO": "18\/09\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

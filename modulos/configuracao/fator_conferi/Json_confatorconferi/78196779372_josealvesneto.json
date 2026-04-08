@@ -1,0 +1,314 @@
+{
+    "CADASTRAIS": {
+        "CPF": "78196779372",
+        "NOME": "JOSE ALVES NETO",
+        "NOME_MAE": "MARIA BENILDA PEREIRA",
+        "NASCTO": "23\/08\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "95029020650",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1490615148",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "410105",
+        "PROFISSAO": "SUPERVISOR ADMINISTRATIVO",
+        "SALARIO": " 2.199,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2125672636",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2126422896",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "26\/09\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2130970130",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "25\/05\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2136522731",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "2127752883",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21979597404",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21992706203",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21978095605",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "21996317752",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "21996483473",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "zejn.neto@hotmail.com",
+            "josealvesneto25@ig.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV FELICIANO SODRE",
+                "NUMERO": "756",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VARZEA",
+                "CEP": "25963027",
+                "CIDADE": "TERESOPOLIS",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R OLEGARIO MARIANO",
+                "NUMERO": "91",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL S LUIS",
+                "CEP": "25065181",
+                "CIDADE": "DUQUE DE CAXIAS",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R CMTE BARCELAR",
+                "NUMERO": "131",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "25946151",
+                "CIDADE": "GUAPIMIRIM",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "AV ALBERTO TORRES",
+                "NUMERO": "105",
+                "COMPLEMENTO": "AP 202",
+                "BAIRRO": "ALTO",
+                "CEP": "25964004",
+                "CIDADE": "TERESOPOLIS",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "EST DA INDEPENDENCIA",
+                "NUMERO": "1860",
+                "COMPLEMENTO": "C 2",
+                "BAIRRO": "INDEPENDENCIA",
+                "CEP": "25645343",
+                "CIDADE": "PETROPOLIS",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "EST UNIAO E INDUSTRIA",
+                "NUMERO": "20450",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PEDRO DO RIO",
+                "CEP": "25750222",
+                "CIDADE": "PETROPOLIS",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R AFONSO CAVALCANTI",
+                "NUMERO": "455",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "20211110",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R CISNE DE FARIA",
+                "NUMERO": "252",
+                "COMPLEMENTO": "AP 301",
+                "BAIRRO": "MARIA DA GRACA",
+                "CEP": "20785060",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "858841460",
+                "NOME": "MARIA BENILDA PEREIRA",
+                "IDADE": "71 anos",
+                "LOCAL": "CABROBO\/PE",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "856984400",
+                "NOME": "CICERO PEREIRA DE SOUZA",
+                "IDADE": "48 anos",
+                "LOCAL": "CABROBO\/PE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "5772976435",
+                "NOME": "ANTONIO ALVES FILHO",
+                "IDADE": "46 anos",
+                "LOCAL": "CABROBO\/PE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "6718780421",
+                "NOME": "EDNALVA MOTA PEREIRA",
+                "IDADE": "43 anos",
+                "LOCAL": "CABROBO\/PE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "36172779850",
+                "NOME": "ELIOMAR MOTA PEREIRA",
+                "IDADE": "40 anos",
+                "LOCAL": "OTACILIO COSTA\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "38940427882",
+                "NOME": "EDIVANIA MOTA PEREIRA",
+                "IDADE": "43 anos",
+                "LOCAL": "SUMARE\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "J F C   NATURAL SALADS DISTRIBUIDORA DE PRODUTOS HORTIFRUTIGRANJEIROS LTDA",
+                "CNPJ": "15268427000142",
+                "CIDADE": "TERESOPOLIS-RJ",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "01\/04\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "",
+                "CNPJ": "03889211700121",
+                "CIDADE": "",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "16\/10\/2019",
+                "DATA_DEMISSAO": "31\/03\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "",
+                "CNPJ": "0000000000NULL",
+                "CIDADE": "",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "16\/10\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "VIACAO TERESOPOLIS E TURISMO LTDA",
+                "CNPJ": "32179061000154",
+                "CIDADE": "TERESOPOLIS-RJ",
+                "PROFISSAO": "511215",
+                "DATA_ADMISSAO": "01\/07\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "V.V.V.S.L. SERVICOS ADMINISTRATIVOS LTDA",
+                "CNPJ": "09242636000114",
+                "CIDADE": "DUQUE DE CAXIAS-RJ",
+                "PROFISSAO": "141405",
+                "DATA_ADMISSAO": "01\/09\/2008",
+                "DATA_DEMISSAO": "23\/04\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

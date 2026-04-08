@@ -1,0 +1,160 @@
+{
+    "CADASTRAIS": {
+        "CPF": "43137590850",
+        "NOME": "LEO ALEXANDER LISBOA DOS SANTOS",
+        "NOME_MAE": "MARIA APARECIDA LISBOA DOS SANTOS",
+        "NASCTO": "16\/06\/1997",
+        "IDADE": "28 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "16414576825",
+        "ESCOLARIDADE": "PRIMEIRO GRAU (GINASIO)COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "514205",
+        "PROFISSAO": "COLETOR DE LIXO",
+        "SALARIO": " 1.670,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "18981639020",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "18991548772",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "18996846571",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "18996023029",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "29\/05\/2020",
+                "TIPO_TEL": "MOVEL POS-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "18997749609",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "13\/05\/2020",
+                "TIPO_TEL": "MOVEL PRE-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "leonino2030@gmail.com",
+            "leocowboy456@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CARLOS BERGER",
+                "NUMERO": "927",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VERDE PARQUE",
+                "CEP": "16078255",
+                "CIDADE": "ARACATUBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ALBERTO CONCEICAO DOS SANTOS",
+                "NUMERO": "270",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TV",
+                "CEP": "16075087",
+                "CIDADE": "ARACATUBA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1364393573",
+            "NOME": "MARIA APARECIDA LISBOA DOS SANTOS",
+            "IDADE": "57 anos",
+            "LOCAL": "CARIRA\/SE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SODEXO DO BRASIL COMERCIAL S.A.",
+                "CNPJ": "49930514000135",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "783215",
+                "DATA_ADMISSAO": "17\/10\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TELAS ESGALHA COMERCIO E SERVICOS LTDA",
+                "CNPJ": "05594941000114",
+                "CIDADE": "ARACATUBA-SP",
+                "PROFISSAO": "717020",
+                "DATA_ADMISSAO": "16\/01\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MONTE AZUL ENGENHARIA LTDA",
+                "CNPJ": "00405527000104",
+                "CIDADE": "ARACATUBA-SP",
+                "PROFISSAO": "514205",
+                "DATA_ADMISSAO": "03\/10\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "SUPERMERCADOS RONDON S.A.",
+                "CNPJ": "51010502000800",
+                "CIDADE": "ARACATUBA-SP",
+                "PROFISSAO": "784105",
+                "DATA_ADMISSAO": "13\/12\/2013",
+                "DATA_DEMISSAO": "11\/03\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

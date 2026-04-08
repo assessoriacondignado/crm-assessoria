@@ -1,0 +1,180 @@
+{
+    "CADASTRAIS": {
+        "CPF": "15180507863",
+        "NOME": "VALTER JOSE DA SILVA",
+        "NOME_MAE": "MARIA DE JESUS DA SILVA",
+        "NASCTO": "27\/07\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "225362170116",
+        "NIT": "12457279226",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "951105",
+        "PROFISSAO": "ELETRICISTA DE MANUTENCAO ELETROELETRONICA",
+        "SALARIO": " 5.241,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1121331269",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1121331282",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1147044324",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11995333154",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11975296529",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "14\/04\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "eletri2016@gmail.com",
+            "valtersilva76@hotmail.com",
+            "eletri@ig.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CHINA",
+                "NUMERO": "193",
+                "COMPLEMENTO": "C 1",
+                "BAIRRO": "JD MIMAS",
+                "CEP": "06807565",
+                "CIDADE": "EMBU DAS ARTES",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV PEDRO COSTA",
+                "NUMERO": "58",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ASSUNCAO",
+                "CEP": "09812610",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CHINA",
+                "NUMERO": "28",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD MIMAS",
+                "CEP": "06807565",
+                "CIDADE": "EMBU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R URSA MAIOR",
+                "NUMERO": "35",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE SATELITE SANTA BARBARA",
+                "CEP": "08330390",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "12372170",
+            "NOME": "MARIA DE JESUS DA SILVA",
+            "IDADE": "58 anos",
+            "LOCAL": "PRESIDENTE KENNEDY\/TO",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "VALTER SILVA DE JESUS",
+            "IDADE": "",
+            "LOCALIDADE": "CABO DE SANTO AGOSTINHO\/PE",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "90327497572"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "''GERRESHEIMER PLASTICOS SAO PAULO LTDA.''",
+                "CNPJ": "04797661000221",
+                "CIDADE": "COTIA-SP",
+                "PROFISSAO": "951105",
+                "DATA_ADMISSAO": "01\/05\/2024",
+                "DATA_DEMISSAO": "20\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "''GERRESHEIMER PLASTICOS SAO PAULO LTDA.''",
+                "CNPJ": "04797661000302",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "951105",
+                "DATA_ADMISSAO": "01\/03\/2021",
+                "DATA_DEMISSAO": "01\/05\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "''GERRESHEIMER PLASTICOS SAO PAULO LTDA.''",
+                "CNPJ": "04797661000140",
+                "CIDADE": "EMBU DAS ARTES-SP",
+                "PROFISSAO": "951105",
+                "DATA_ADMISSAO": "14\/06\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,273 @@
+{
+    "CADASTRAIS": {
+        "CPF": "69549516334",
+        "NOME": "DAVID EDUARDO BASTOS DE SOUSA",
+        "NOME_MAE": "MARIA ESTELA BASTOS DE SOUSA",
+        "NASCTO": "03\/08\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "237795356",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "19012123219",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "252105",
+        "PROFISSAO": "ADMINISTRADOR",
+        "SALARIO": " 8.367,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7930191981",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "7930191990",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "2132293238",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "7932552556",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2132680990",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21993199570",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79991606130",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81997881606",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21991169573",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "david.bastos@petrobras.com.br",
+            "david.bastos@bol.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV REPUBLICA DO CHILE",
+                "NUMERO": "500",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "20031170",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R MAJ ARMANDO DE SOUZA MELO",
+                "NUMERO": "207",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOA VIAGEM",
+                "CEP": "51130040",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R SA E SOUZA",
+                "NUMERO": "400",
+                "COMPLEMENTO": "AP 110",
+                "BAIRRO": "BOA VIAGEM",
+                "CEP": "51030065",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R RUFINO DE ALENCAR",
+                "NUMERO": "185",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "60060145",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "RUA CONEGO JOSE FELIX DE OLIVEIRA",
+                "NUMERO": "357",
+                "COMPLEMENTO": "AP 1101",
+                "BAIRRO": "COROA DO MEIO",
+                "CEP": "49035170",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "RUA SETUBAL",
+                "NUMERO": "1256",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOA VIAGEM",
+                "CEP": "51130010",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "RUA CONEGO JOSE FELIX DE OLIVEIRA",
+                "NUMERO": "3558",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COROA DO MEIO",
+                "CEP": "49035170",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "AVENIDA NOSSA SENHORA DE COPACABANA",
+                "NUMERO": "876",
+                "COMPLEMENTO": "AP303",
+                "BAIRRO": "COPACABANA",
+                "CEP": "22060002",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "28502140353",
+                "NOME": "MARIA ESTELA BASTOS DE SOUSA",
+                "IDADE": "84 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "46412972315",
+                "NOME": "ERIKA BASTOS BEZERRA",
+                "IDADE": "53 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "97946800363",
+                "NOME": "ISABELA BASTOS DE SOUSA",
+                "IDADE": "43 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PETROLEO BRASILEIRO S A PETROBRAS",
+                "CNPJ": "33000167000454",
+                "CIDADE": "VITORIA-ES",
+                "PROFISSAO": "252105",
+                "DATA_ADMISSAO": "02\/01\/2023",
+                "DATA_DEMISSAO": "01\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PETROLEO BRASILEIRO S A PETROBRAS",
+                "CNPJ": "33000167057723",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "252105",
+                "DATA_ADMISSAO": "01\/01\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PETROLEO BRASILEIRO S A PETROBRAS",
+                "CNPJ": "33000167057308",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "252105",
+                "DATA_ADMISSAO": "18\/11\/2002",
+                "DATA_DEMISSAO": "30\/06\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "PETROLEO BRASILEIRO S A PETROBRAS",
+                "CNPJ": "33000167111108",
+                "CIDADE": "IPOJUCA-PE",
+                "PROFISSAO": "252105",
+                "DATA_ADMISSAO": "18\/11\/2002",
+                "DATA_DEMISSAO": "30\/11\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

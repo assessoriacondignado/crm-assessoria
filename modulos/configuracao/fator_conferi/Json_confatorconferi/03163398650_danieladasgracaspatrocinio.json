@@ -1,0 +1,151 @@
+{
+    "CADASTRAIS": {
+        "CPF": "3163398650",
+        "NOME": "DANIELA DAS GRACAS PATROCINIO",
+        "NOME_MAE": "MARIA DAS GRACAS PATROCINIO",
+        "NASCTO": "28\/09\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "119369910256",
+        "NIT": "12610011093",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "354135",
+        "PROFISSAO": "TECNICO DE VENDAS",
+        "SALARIO": " 4.622,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "3133896500",
+            "OPERADORA": "TELEMAR\/MG",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31992274056",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31985352944",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "daniela@grupocei.com.br",
+            "danielagpatrocinio@gmail.com",
+            "daniela@grupocei.com",
+            "danipatrocinio@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "VL ADOLFO SALES",
+                "NUMERO": "136",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CENTRO",
+                "CEP": "60015010",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "AV WARLEY APARECIDO MARTINS",
+                "NUMERO": "347",
+                "COMPLEMENTO": "A",
+                "BAIRRO": "SOL DO BARREIRO BARREIRO",
+                "CEP": "30670370",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R TOYOTA",
+                "NUMERO": "870",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DT INDUST JARDIM PIEMONT NORTE",
+                "CEP": "32689314",
+                "CIDADE": "BETIM",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RUA BARIRI",
+                "NUMERO": "70",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SAO CAETANO",
+                "CEP": "32073640",
+                "CIDADE": "CONTAGEM",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "3010947801",
+            "NOME": "MARIA DAS GRACAS PATROCINIO",
+            "IDADE": "76 anos",
+            "LOCAL": "CAMPINAS\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "GE POWER CONVERSION BRASIL LTDA.",
+                "CNPJ": "07608927000158",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "142330",
+                "DATA_ADMISSAO": "10\/05\/2013",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "GE POWER CONVERSION BRASIL LTDA.",
+                "CNPJ": "07608927000239",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "354135",
+                "DATA_ADMISSAO": "10\/05\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "CEI- SERVICOS DE ENGENHARIA LTDA",
+                "CNPJ": "73738239000137",
+                "CIDADE": "CONTAGEM-MG",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "12\/06\/2009",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,245 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25188568896",
+        "NOME": "ALEXANDRE NADIN BARBOSA",
+        "NOME_MAE": "MARIA DO CARMO NADIN BARBOSA",
+        "NASCTO": "29\/12\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "24750491",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "232551000167",
+        "NIT": "1263549025",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "141205",
+        "PROFISSAO": "GERENTE DE PRODUCAO E OPERACOES",
+        "SALARIO": " 32.522,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1145956791",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1239163867",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "18\/02\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1239163867",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "18\/02\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1239172292",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1121758352",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13996117116",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12997233664",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12991080352",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11996148256",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12991816556",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "alexandre.barboza@ibezt.com.br",
+            "alexandre.barbosa@kautex.textron.com",
+            "alexandrenadim@linkbr.com.br",
+            "alexandre.barbosa@ibest.com.br",
+            "alexandre.nadinbarbosa@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ISAURINHA GARCIA",
+                "NUMERO": "68",
+                "COMPLEMENTO": "",
+                "BAIRRO": "URBANOVA",
+                "CEP": "12244501",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV BENEDITO REYNALDO BERNARDI",
+                "NUMERO": "456",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S BENEDITO",
+                "CEP": "15860000",
+                "CIDADE": "IBIRA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO CAMPOS MELLO",
+                "NUMERO": "206",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BSQ DOS EUCALIPTOS",
+                "CEP": "12233040",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV PROJETADA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "LAMBARI",
+                "CEP": "08900000",
+                "CIDADE": "GUARAREMA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "SHIGEHARI IEIRI",
+                "NUMERO": "73",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "VL BELA CINTRA",
+                "CEP": "13224131",
+                "CIDADE": "VARZEA PAULISTA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV CIDADE JARDIM",
+                "NUMERO": "2780",
+                "COMPLEMENTO": "AP64",
+                "BAIRRO": "BOSQUE DOS EUCA",
+                "CEP": "12233002",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ARNOLD GUT JUNIOR",
+                "NUMERO": "199",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "VILA SAO JOSE",
+                "CEP": "13224350",
+                "CIDADE": "VARZEA PAULISTA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "60750480815",
+                "NOME": "MARIA DO CARMO NADIN BARBOSA",
+                "IDADE": "75 anos",
+                "LOCAL": "CRUZEIRO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "30421733802",
+                "NOME": "DANIEL NADIN BARBOSA",
+                "IDADE": "46 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "31553766865",
+                "NOME": "REGIS NADIN BARBOSA",
+                "IDADE": "48 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "PLASTIC OMNIUM DO BRASIL LTDA",
+            "CNPJ": "02645941000108",
+            "CIDADE": "TAUBATE-SP",
+            "PROFISSAO": "141205",
+            "DATA_ADMISSAO": "03\/01\/2011",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,309 @@
+{
+    "CADASTRAIS": {
+        "CPF": "29760834871",
+        "NOME": "EROS THIAGO DE CAMPOS NASCIMENTO",
+        "NOME_MAE": "MARIA ANGELICA DE CAMPOS NASCIMENTO",
+        "NASCTO": "31\/03\/1980",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "262450520167",
+        "NIT": "13197372858",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "212405",
+        "PROFISSAO": "ANALISTA DE DESENVOLVIMENTO DE SISTEMAS",
+        "SALARIO": " 12.914,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1143997889",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1160144053",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1145090209",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "12\/08\/2008",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1145090290",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "12\/08\/2008",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1145090290",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "12\/08\/2008",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "62994903476",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11960144053",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11999530512",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11968738037",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "17\/09\/2015",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11984282823",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "ertos.thiago@uol.com.br",
+            "eros.nascimento@eds.com",
+            "eros.nascimento@hp.com",
+            "erosthiago@gmail.com",
+            "eros.thiago@uol.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R STA JULIETA",
+                "NUMERO": "80",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD MIRIAM",
+                "CEP": "04426090",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R NAZARET",
+                "NUMERO": "717",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BARCELONA",
+                "CEP": "09551200",
+                "CIDADE": "SAO CAETANO DO SUL",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R VINTE E QUATRO DE FEVEREIRO",
+                "NUMERO": "488",
+                "COMPLEMENTO": "AP  Apartamento  82 BL  Blocos  1",
+                "BAIRRO": "CASA BRANCA",
+                "CEP": "09015610",
+                "CIDADE": "SANTO ANDRE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA GUILHERME MARCONI",
+                "NUMERO": "377",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA ASSUNCAO",
+                "CEP": "09020270",
+                "CIDADE": "SANTO ANDRE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ALCIDES DE QUEIROS",
+                "NUMERO": "354",
+                "COMPLEMENTO": "AP82 BL1",
+                "BAIRRO": "CASA BRANCA",
+                "CEP": "09015550",
+                "CIDADE": "SANTO ANDRE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA VINTE E QUATRO DE FEVEREIRO",
+                "NUMERO": "354",
+                "COMPLEMENTO": "AP 82",
+                "BAIRRO": "CASA BRANCA",
+                "CEP": "09015610",
+                "CIDADE": "SANTO ANDRE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA VINTE E QUATRO DE FEVEREIRO",
+                "NUMERO": "48",
+                "COMPLEMENTO": "APT 82",
+                "BAIRRO": "CASA BRANCA",
+                "CEP": "09015610",
+                "CIDADE": "SANTO ANDRE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA GARCIA RODRIGUES",
+                "NUMERO": "511",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA ALPINA",
+                "CEP": "09090590",
+                "CIDADE": "SANTO ANDRE",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "92196004804",
+                "NOME": "MARIA ANGELICA DE CAMPOS NASCIMENTO",
+                "IDADE": "71 anos",
+                "LOCAL": "SANTO ANDRE\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "22300916894",
+                "NOME": "LUCAS VINICIUS DE CAMPOS NASCIMENTO",
+                "IDADE": "42 anos",
+                "LOCAL": "SANTO ANDRE\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "GETNET TECHNOLOGY AND OPERATIONS BRASIL LTDA",
+                "CNPJ": "08768794000140",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "142510",
+                "DATA_ADMISSAO": "04\/07\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "GENIAL INVESTIMENTOS CORRETORA DE VALORES MOBILIARIOS S.A.",
+                "CNPJ": "27652684000324",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "04\/05\/2020",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "MOTIVUS BRASIL LTDA.",
+                "CNPJ": "10607652000142",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "03\/06\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "DIGITALSERVICES.UOL S.A.",
+                "CNPJ": "01588770001050",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "01\/12\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "UNIVERSO ONLINE S\/A",
+                "CNPJ": "01109184000519",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "01\/12\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ENTERPRISE SERVICES BRASIL SERVICOS DE TECNOLOGIA LTDA",
+                "CNPJ": "02833315000145",
+                "CIDADE": "SAO BERNARDO DO CAMPO-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "31\/12\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "HEWLETT-PACKARD BRASIL LTDA",
+                "CNPJ": "61797924003502",
+                "CIDADE": "SAO BERNARDO DO CAMPO-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "01\/09\/2010",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,268 @@
+{
+    "CADASTRAIS": {
+        "CPF": "12214929851",
+        "NOME": "ANA PAULA MARQUES TELLES",
+        "NOME_MAE": "NEUZA HIPOLITA SOARES TELLES",
+        "NASCTO": "02\/12\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Feminino",
+        "RG": "20960006",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "200093440141",
+        "NIT": "1250205396",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "231305",
+        "PROFISSAO": "PROFESSOR DE CIENCIAS EXATAS E NATURAIS DO ENSINO FUNDAMENTAL",
+        "SALARIO": " 7.683,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1338780604",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "21\/09\/2010",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1334666666",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "61995598857",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16972241620",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16999652600",
+                "OPERADORA": "ALGAR CELULAR S\/A",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "13991633789",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "13991657607",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "alexandre.cfonseca@uol.com.br",
+            "m.roberto.faria@uol.com.br",
+            "anapaulatellescamargo@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R LAZARO DE SOUZA CAMPOS",
+                "NUMERO": "940",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S JOSE",
+                "CEP": "14401295",
+                "CIDADE": "FRANCA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PERO CORREA",
+                "NUMERO": "38",
+                "COMPLEMENTO": "AP 22",
+                "BAIRRO": "ITARARE",
+                "CEP": "11320140",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R GINO FERRARO",
+                "NUMERO": "2373",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "14401142",
+                "CIDADE": "FRANCA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV MANOEL DA NOBREGA",
+                "NUMERO": "566",
+                "COMPLEMENTO": "AP602",
+                "BAIRRO": "ITARARE",
+                "CEP": "11320200",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA MANOEL DA NOBREGA",
+                "NUMERO": "566",
+                "COMPLEMENTO": "AP 602",
+                "BAIRRO": "ITARARE",
+                "CEP": "11320201",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R GINO FERRARO",
+                "NUMERO": "2333",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "14401142",
+                "CIDADE": "FRANCA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA GENERAL OSORIO",
+                "NUMERO": "93",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM TRINTA E UM DE MARCO",
+                "CEP": "11515130",
+                "CIDADE": "CUBATAO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "15614682821",
+                "NOME": "NEUZA HIPOLITA SOARES TELLES",
+                "IDADE": "88 anos",
+                "LOCAL": "FRANCA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "6091003860",
+                "NOME": "RAQUEL MARQUES TELLES DE SOUZA",
+                "IDADE": "62 anos",
+                "LOCAL": "FRANCA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "44817301880",
+                "NOME": "EDUARDO TELLES CAMARGO",
+                "IDADE": "19 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "MARCIO ROBERTO FARIA",
+                "IDADE": "",
+                "LOCALIDADE": "SANTO ANDRE\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "7031787840"
+            },
+            {
+                "NOME": "MARCO TULIO CAMARGO",
+                "IDADE": "",
+                "LOCALIDADE": "FRANCA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "14553768844"
+            },
+            {
+                "NOME": "MARIA ISABEL NAVARRO LOPES",
+                "IDADE": "",
+                "LOCALIDADE": "MARILIA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "79204716800"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SERVICO SOCIAL DA INDUSTRIA - SESI",
+                "CNPJ": "03779133004274",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "231305",
+                "DATA_ADMISSAO": "28\/04\/2000",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SAO PAULO SECRETARIA DA EDUCACAO",
+                "CNPJ": "46384111010960",
+                "CIDADE": "FRANCA-SP",
+                "PROFISSAO": "331205",
+                "DATA_ADMISSAO": "07\/02\/2000",
+                "DATA_DEMISSAO": "{Ã±\/{Ã±\/2023",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "ESTADO DE SAO PAULO",
+                "CNPJ": "46379400000150",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "331205",
+                "DATA_ADMISSAO": "07\/02\/2000",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "MASTER WORK SERVICOS REFORMAS E COMERCIO LTDA",
+            "CNPJ": "14235458000134",
+            "CIDADE": "PRAIA GRANDE-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20230420",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

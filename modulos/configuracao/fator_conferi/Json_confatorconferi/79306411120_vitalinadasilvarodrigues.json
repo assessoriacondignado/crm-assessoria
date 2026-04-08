@@ -1,0 +1,141 @@
+{
+    "CADASTRAIS": {
+        "CPF": "79306411120",
+        "NOME": "VITALINA DA SILVA RODRIGUES",
+        "NOME_MAE": "CARLINDA PEREIRA DA SILVA",
+        "NASCTO": "24\/11\/1963",
+        "IDADE": "62 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "003576551880",
+        "NIT": "12806022403",
+        "ESCOLARIDADE": "PRIMEIRO GRAU (GINASIO)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "514320",
+        "PROFISSAO": "AUXILIAR DE LIMPEZA",
+        "SALARIO": " 702,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "6536247442",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "65992238962",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "MOVEL",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PAPA JOAO VINTE E TRES",
+                "NUMERO": "5",
+                "COMPLEMENTO": "Q 26",
+                "BAIRRO": "PRQ DO LAGO",
+                "CEP": "78120368",
+                "CIDADE": "VARZEA GRANDE",
+                "ESTADO": "MT"
+            },
+            {
+                "LOGRADOURO": "R DAS LARANJEIRAS",
+                "NUMERO": "5",
+                "COMPLEMENTO": "Q 26",
+                "BAIRRO": "PRQ DO LAGO",
+                "CEP": "78120610",
+                "CIDADE": "VARZEA GRANDE",
+                "ESTADO": "MT"
+            },
+            {
+                "LOGRADOURO": "R PAPA SAO JOAO",
+                "NUMERO": "23",
+                "COMPLEMENTO": "Q 26 5",
+                "BAIRRO": "PRQ DO LAGO",
+                "CEP": "78120879",
+                "CIDADE": "VARZEA GRANDE",
+                "ESTADO": "MT"
+            },
+            {
+                "LOGRADOURO": "R DAS LARANJEIRAS",
+                "NUMERO": "40000",
+                "COMPLEMENTO": "Q 26 LT 5",
+                "BAIRRO": "PRQ DO LAGO",
+                "CEP": "78120610",
+                "CIDADE": "VARZEA GRANDE",
+                "ESTADO": "MT"
+            },
+            {
+                "LOGRADOURO": "R PAPA JOAO VINTE E TRES",
+                "NUMERO": "26",
+                "COMPLEMENTO": "LT 5",
+                "BAIRRO": "POCAO",
+                "CEP": "78015615",
+                "CIDADE": "CUIABA",
+                "ESTADO": "MT"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "421600578",
+            "NOME": "CARLINDA PEREIRA DA SILVA",
+            "IDADE": "91 anos",
+            "LOCAL": "DOURADOS\/MS",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "C. N. AGUIAR COMERCIO DE TECIDOS LTDA",
+                "CNPJ": "14984720000143",
+                "CIDADE": "CUIABA-MT",
+                "PROFISSAO": "514320",
+                "DATA_ADMISSAO": "01\/02\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LINO LUIZ DE JESUS",
+                "CNPJ": "06147421000126",
+                "CIDADE": "CUIABA-MT",
+                "PROFISSAO": "513505",
+                "DATA_ADMISSAO": "01\/09\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "CONDOMINIO EMBAIXADOR",
+                "CNPJ": "00963595000180",
+                "CIDADE": "CUIABA-MT",
+                "PROFISSAO": "514320",
+                "DATA_ADMISSAO": "01\/06\/2000",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

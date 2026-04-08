@@ -1,0 +1,140 @@
+{
+    "CADASTRAIS": {
+        "CPF": "72708638904",
+        "NOME": "ALTAIR LENZ",
+        "NOME_MAE": "GESI DE OLIVEIRA LENZ",
+        "NASCTO": "17\/12\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12359390777",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142410",
+        "PROFISSAO": "GERENTE DE SUPRIMENTOS",
+        "SALARIO": " 5.157,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "5533522943",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "10\/12\/2007",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "55984099780",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "55984110528",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "altairlenz@hotmail.com",
+            "altairlenz@bol.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV FARROUPILHA",
+                "NUMERO": "5508",
+                "COMPLEMENTO": "407",
+                "BAIRRO": "MAL RONDON",
+                "CEP": "92020476",
+                "CIDADE": "CANOAS",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R VASCO ALVES",
+                "NUMERO": "2815",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CENTRO",
+                "CEP": "97800000",
+                "CIDADE": "SAO LUIZ GONZAGA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "GEN CAMARA",
+                "NUMERO": "1851",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "97800000",
+                "CIDADE": "SAO LUIZ GONZAGA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R MONSENHOR ESTANISLAU WOLSKI",
+                "NUMERO": "1692",
+                "COMPLEMENTO": "",
+                "BAIRRO": "",
+                "CEP": "97800000",
+                "CIDADE": "SAO LUIZ GONZAGA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R SILVA JD",
+                "NUMERO": "2430",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "",
+                "CEP": "97800000",
+                "CIDADE": "SAO LUIZ GONZAGA",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SOUZA CRUZ LTDA",
+                "CNPJ": "33009911004711",
+                "CIDADE": "CACHOEIRINHA-RS",
+                "PROFISSAO": "410240",
+                "DATA_ADMISSAO": "18\/08\/1995",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SOUZA CRUZ LTDA",
+                "CNPJ": "33009911004126",
+                "CIDADE": "PINHAIS-PR",
+                "PROFISSAO": "142410",
+                "DATA_ADMISSAO": "18\/08\/1995",
+                "DATA_DEMISSAO": "31\/07\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

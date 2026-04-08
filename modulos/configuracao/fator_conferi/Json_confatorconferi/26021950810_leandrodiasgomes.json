@@ -1,0 +1,298 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26021950810",
+        "NOME": "LEANDRO DIAS GOMES",
+        "NOME_MAE": "MARLI DIAS GOMES",
+        "NASCTO": "20\/12\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "269336250175",
+        "NIT": "12544822599",
+        "ESCOLARIDADE": "SUPERIOR INCOMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "313220",
+        "PROFISSAO": "TECNICO EM MANUTENCAO DE EQUIPAMENTOS DE INFORMATICA",
+        "SALARIO": " 1.800,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1137298711",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1137945407",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1128936130",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "19\/03\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1132421353",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11982465388",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11993176311",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11994055419",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11940554190",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11945297392",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "leandrod.gomes@outlook.com",
+            "patriciacadenagomes@gmail.com",
+            "dias.gomes2004@ig.com.br",
+            "leandrodgomes@vivointernetdiscada.com.br",
+            "leandrodgomes@itelefonica.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "PC NS DAS VITORIAS",
+                "NUMERO": "290",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL FORMOSA",
+                "CEP": "03356030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R VSC DE JERUMIM",
+                "NUMERO": "40",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD VILA FORMOSA",
+                "CEP": "03461060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV MONTEMAGNO",
+                "NUMERO": "3065",
+                "COMPLEMENTO": "C 1",
+                "BAIRRO": "CH BELENZINHO",
+                "CEP": "03379005",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ARTURO VITAL",
+                "NUMERO": "78",
+                "COMPLEMENTO": "11 C",
+                "BAIRRO": "CJ RESIDENCIAL JOSE BONIFACIO",
+                "CEP": "08250540",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R STA AURELIA",
+                "NUMERO": "263",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL S JOSE IPIRANGA",
+                "CEP": "04274040",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R LEONCIO DA COSTA VIEIRA",
+                "NUMERO": "64",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD PIQUEROBY",
+                "CEP": "03463070",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV DO ORATORIO",
+                "NUMERO": "1981",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ S LUCAS",
+                "CEP": "03221100",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MAFALDA",
+                "NUMERO": "1043",
+                "COMPLEMENTO": "C 3",
+                "BAIRRO": "CH BELENZINHO",
+                "CEP": "03377010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1225037751",
+            "NOME": "MARLI DIAS GOMES",
+            "IDADE": "52 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "PATRICIA CADENA GOMES",
+            "IDADE": "",
+            "LOCALIDADE": "SAO PAULO\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "22616228807"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "THS TECNOLOGIA INFORMACAO E COMUNICACAO LTDA",
+                "CNPJ": "10757593000199",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "212410",
+                "DATA_ADMISSAO": "01\/08\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TOTVS LARGE ENTERPRISE TECNOLOGIA S.A.",
+                "CNPJ": "82373077000252",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212420",
+                "DATA_ADMISSAO": "03\/11\/2021",
+                "DATA_DEMISSAO": "03\/04\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "CONNECTCOM TELEINFORMATICA COMERCIO E SERVICOS LTDA",
+                "CNPJ": "00308141000176",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "18\/02\/2021",
+                "DATA_DEMISSAO": "14\/10\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "SONDA PROCWORK INFORMATICA LTDA",
+                "CNPJ": "08733698000832",
+                "CIDADE": "SANTANA DE PARNAIBA-SP",
+                "PROFISSAO": "212420",
+                "DATA_ADMISSAO": "01\/11\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "STARTTECH INFORMATICA LTDA",
+                "CNPJ": "05039742000144",
+                "CIDADE": "CANOAS-RS",
+                "PROFISSAO": "313220",
+                "DATA_ADMISSAO": "01\/10\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "VINCIT TECNOLOGIA DE INFORMACAO LTDA",
+                "CNPJ": "03651785000150",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "317110",
+                "DATA_ADMISSAO": "16\/01\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "URANET PROJETOS E SISTEMAS LTDA",
+                "CNPJ": "03748414000191",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "313210",
+                "DATA_ADMISSAO": "01\/07\/2008",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

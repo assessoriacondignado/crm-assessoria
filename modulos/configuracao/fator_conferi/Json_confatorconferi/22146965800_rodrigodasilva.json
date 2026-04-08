@@ -1,0 +1,224 @@
+{
+    "CADASTRAIS": {
+        "CPF": "22146965800",
+        "NOME": "RODRIGO DA SILVA",
+        "NOME_MAE": "MARIA DA SILVA ALVES",
+        "NASCTO": "23\/05\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "34065469",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "265308930132",
+        "NIT": "1263905589 ",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "910105",
+        "PROFISSAO": "ENCARREGADO DE MANUTENCAO MECANICA DE SISTEMAS OPERACIONAIS",
+        "SALARIO": " 4.580,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1132291600",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11998187624",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11981876240",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "25\/07\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11996628163",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11975936812",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "rodponto@bol.com.br",
+            "rodponto@hotmail.com",
+            "ml_rosilva2@me.com",
+            "rodponto2@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DOS CORRETORES DE IMOVEIS",
+                "NUMERO": "511",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD STA EMILIA",
+                "CEP": "07134400",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV ODAIR SANTANELLI",
+                "NUMERO": "300",
+                "COMPLEMENTO": "BL 16 D AP 24 BL 16 D",
+                "BAIRRO": "PRQ CECAP",
+                "CEP": "07190910",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JUREMA",
+                "NUMERO": "6",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD IRENE",
+                "CEP": "07134300",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SILVIA",
+                "NUMERO": "30",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RCR S JORGE",
+                "CEP": "07144842",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SILVIA",
+                "NUMERO": "30",
+                "COMPLEMENTO": "1",
+                "BAIRRO": "JD IRENE",
+                "CEP": "07134310",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV MARGINAL DO RIO BAQUIRIVU",
+                "NUMERO": "660",
+                "COMPLEMENTO": "CJ 20",
+                "BAIRRO": "JD PRES DUTRA",
+                "CEP": "07172490",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R QUATRO",
+                "NUMERO": "45",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD DOS OLIVAS",
+                "CEP": "07263530",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DO ESPORTE",
+                "NUMERO": "275",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD GUARACY",
+                "CEP": "07262208",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "42082935",
+            "NOME": "MARIA DA SILVA ALVES",
+            "IDADE": "99 anos",
+            "LOCAL": "SINOP\/MT",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "MARIA VIEIRA MARQUES DA SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "MACEIO\/AL",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "270644415"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "A GERADORA ALUGUEL DE MAQUINAS S.A.",
+                "CNPJ": "33845322002053",
+                "CIDADE": "GUARULHOS-SP",
+                "PROFISSAO": "252105",
+                "DATA_ADMISSAO": "22\/11\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LOCAR GUINDASTES E TRANSPORTES INTERMODAIS S A",
+                "CNPJ": "43368422000127",
+                "CIDADE": "GUARULHOS-SP",
+                "PROFISSAO": "342305",
+                "DATA_ADMISSAO": "02\/01\/2023",
+                "DATA_DEMISSAO": "09\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "TRANSNORTE CARGAS E ENCOMENDAS LTDA",
+                "CNPJ": "65293383001401",
+                "CIDADE": "GUARULHOS-SP",
+                "PROFISSAO": "910105",
+                "DATA_ADMISSAO": "02\/01\/2003",
+                "DATA_DEMISSAO": "19\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "OESTE SERVICE TRANSPORTES RODOVIARIOS LTDA",
+            "CNPJ": "03805350000113",
+            "CIDADE": "GUARULHOS-SP",
+            "QUALIFICACAO": "SÃ³cio",
+            "DATA_ENTRADA": "20000511",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

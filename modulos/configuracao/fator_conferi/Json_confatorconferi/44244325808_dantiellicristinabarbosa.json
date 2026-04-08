@@ -1,0 +1,183 @@
+{
+    "CADASTRAIS": {
+        "CPF": "44244325808",
+        "NOME": "DANTIELLI CRISTINA BARBOSA",
+        "NOME_MAE": "ANA PAULA BORDINHON BARBOSA",
+        "NASCTO": "16\/09\/1995",
+        "IDADE": "30 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "20724277077",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1735233856",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "17992331479",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "17997758062",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "17981154867",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "17997583898",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "17997758885",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "danti.barbosa@hotmail.com",
+            "danti.cristinabarbosa@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R STA CATARINA",
+                "NUMERO": "279",
+                "COMPLEMENTO": "",
+                "BAIRRO": "HIGIENOPOLIS",
+                "CEP": "15804035",
+                "CIDADE": "CATANDUVA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R GRAMADO",
+                "NUMERO": "451",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE RESIDENCIAL FLAMINGO",
+                "CEP": "15803255",
+                "CIDADE": "CATANDUVA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "FARAH   PERUCHI LTDA",
+                "CNPJ": "03994686000171",
+                "CIDADE": "CATANDUVA-SP",
+                "PROFISSAO": "422105",
+                "DATA_ADMISSAO": "03\/06\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "F B S SISTEMAS DO BRASIL LTDA",
+                "CNPJ": "09107908000173",
+                "CIDADE": "CATANDUVA-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "16\/09\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "L C MOTA FILHO CATANDUVA",
+                "CNPJ": "30749726000192",
+                "CIDADE": "CATANDUVA-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "03\/11\/2020",
+                "DATA_DEMISSAO": "24\/06\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "FERNANDES E MARTINS CLINICA ODONTOLOGICA LTDA",
+                "CNPJ": "31368824000142",
+                "CIDADE": "CATANDUVA-SP",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "01\/12\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO ASSISTENCIAL, PROMOCIONAL E EDUCACIONAL RESSURREICAO - APER",
+                "CNPJ": "47073911001184",
+                "CIDADE": "CATANDUVA-SP",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "12\/03\/2014",
+                "DATA_DEMISSAO": "31\/07\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "GUERZONI   GAZONI LTDA",
+                "CNPJ": "11564832000157",
+                "CIDADE": "CATANDUVA-SP",
+                "PROFISSAO": "421125",
+                "DATA_ADMISSAO": "10\/10\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

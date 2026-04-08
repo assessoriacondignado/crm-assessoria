@@ -1,0 +1,230 @@
+{
+    "CADASTRAIS": {
+        "CPF": "19911253805",
+        "NOME": "LUCIANO GHILARDUCCI",
+        "NOME_MAE": "MARIAH FATIMA SOARES SANTOS",
+        "NASCTO": "07\/12\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "291047671",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "240038610141",
+        "NIT": "12506700686",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "351305",
+        "PROFISSAO": "TECNICO EM ADMINISTRACAO",
+        "SALARIO": " 14.802,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1239256574",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "6132227986",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1239391566",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "12991230777",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "61999810777",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "61984275962",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "13\/10\/2015",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "12996277667",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "lghila@hotmail.com",
+            "lucianoghilarducci@hotmail.com",
+            "lucianoghilarducci@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CORIFEU DE AZEVEDO MARQUES",
+                "NUMERO": "1437",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JD DAS INDUSTRIAS",
+                "CEP": "12241040",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MTO JOAO SEPE",
+                "NUMERO": "187",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JD MARIA ESTELA",
+                "CEP": "04181030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PROF JOSE ANTONIO COUTINHO CONDINO",
+                "NUMERO": "635",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD AMERICA",
+                "CEP": "12235361",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ITORORO",
+                "NUMERO": "555",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL CARDOSO",
+                "CEP": "12216783",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV GUADALUPE",
+                "NUMERO": "61",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD AMERICA",
+                "CEP": "12235000",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R TIJUCA",
+                "NUMERO": "486",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD SATELITE",
+                "CEP": "12230020",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SIQUEIRA CAMPOS",
+                "NUMERO": "651",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "12210250",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA GUADALUPE",
+                "NUMERO": "61",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "JD AMERICA",
+                "CEP": "12200000",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "INGRAM MICRO BRASIL LTDA",
+                "CNPJ": "01771935000134",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "351305",
+                "DATA_ADMISSAO": "01\/12\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "INGRAM MICRO INFORMATICA LTDA",
+                "CNPJ": "81627838000616",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "351305",
+                "DATA_ADMISSAO": "15\/10\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "IMAGEM SISTEMAS DE INFORMACOES LTDA",
+                "CNPJ": "07668045000188",
+                "CIDADE": "SAO JOSE DOS CAMPOS-SP",
+                "PROFISSAO": "354130",
+                "DATA_ADMISSAO": "14\/20\/2002",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "NOVELIS DO BRASIL LTDA.",
+                "CNPJ": "60561800004109",
+                "CIDADE": "PINDAMONHANGABA-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "18\/07\/2011",
+                "DATA_DEMISSAO": "13\/01\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

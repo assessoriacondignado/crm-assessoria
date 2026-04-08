@@ -1,0 +1,147 @@
+{
+    "CADASTRAIS": {
+        "CPF": "9747861879",
+        "NOME": "LUIS ROGERIO DE OLIVEIRA",
+        "NOME_MAE": "MARIA MARTA G DE OLIVEIRA",
+        "NASCTO": "13\/11\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "232522182",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12450585240",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521110",
+        "PROFISSAO": "VENDEDOR DE COMERCIO VAREJISTA",
+        "SALARIO": " 2.233,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1839092055",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "18981135556",
+            "OPERADORA": "TIM CELULAR S.A.",
+            "DATA_REFERENCIA": "05\/02\/2018",
+            "TIPO_TEL": "MOVEL",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": ""
+        }
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "luisrogeriovendas@hotmail.com",
+            "luisr5884@terra.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ESPERANTO",
+                "NUMERO": "110",
+                "COMPLEMENTO": "SALAO",
+                "BAIRRO": "VL FORMOSA",
+                "CEP": "19050060",
+                "CIDADE": "PRESIDENTE PRUDENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R XAVIER DE ALMEIDA",
+                "NUMERO": "155",
+                "COMPLEMENTO": "",
+                "BAIRRO": "IPIRANGA",
+                "CEP": "04211000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ANTONIO LUIS TOLEDO PENNAC",
+                "NUMERO": "192",
+                "COMPLEMENTO": "",
+                "BAIRRO": "C H ANA JACINTA",
+                "CEP": "19064130",
+                "CIDADE": "PRESIDENTE PRUDENTE",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "7911178801",
+            "NOME": "SANDRA MARIA DE OLIVEIRA MARIANI",
+            "IDADE": "55 anos",
+            "LOCAL": "OSASCO\/SP",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "INDUSTRIA E COMERCIO DE BEBIDAS FUNADA LTDA",
+                "CNPJ": "55325989000103",
+                "CIDADE": "PRESIDENTE PRUDENTE-SP",
+                "PROFISSAO": "521105",
+                "DATA_ADMISSAO": "09\/01\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FOSFERPET COMERCIO E LOGISTICA DE RACAO ANIMAL LTDA",
+                "CNPJ": "14419511000157",
+                "CIDADE": "PRESIDENTE PRUDENTE-SP",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "15\/20\/1906",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "VIGOR ALIMENTOS S.A",
+                "CNPJ": "13324184000197",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "14\/07\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "J.L. DISTRIBUIDORA DE PRODUTOS ALIMENTICIOS E LOGISTICA LTDA",
+                "CNPJ": "07355922000160",
+                "CIDADE": "PRESIDENTE PRUDENTE-SP",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/02\/2014",
+                "DATA_DEMISSAO": "11\/07\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "C.L.P. REPRESENTACOES COMERCIAIS LTDA",
+            "CNPJ": "27293739000195",
+            "CIDADE": "PRESIDENTE PRUDENTE-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20170314",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

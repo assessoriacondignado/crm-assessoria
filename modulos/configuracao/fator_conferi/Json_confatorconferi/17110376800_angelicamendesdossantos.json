@@ -1,0 +1,229 @@
+{
+    "CADASTRAIS": {
+        "CPF": "17110376800",
+        "NOME": "ANGELICA MENDES DOS SANTOS",
+        "NOME_MAE": "SEBASTIANA MENDES DOS SANTOS",
+        "NASCTO": "12\/08\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Feminino",
+        "RG": "238078383",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "263423720175",
+        "NIT": "12468108185",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411005",
+        "PROFISSAO": "AUXILIAR DE ESCRITORIO, EM GERAL",
+        "SALARIO": " 1.002,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1231042707",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1231223715",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "12\/07\/2006",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "12981216494",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16992729000",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12981758680",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "12988198171",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "07\/02\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "12991240436",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "santosangelica@vivointernetdiscada.com.br",
+            "santosangelica@itelefonica.com.br",
+            "angelica74@globo.com",
+            "angelicamendessantos@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CEZARIO ANTONIO DA SILVA",
+                "NUMERO": "154",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ S FRANCISCO",
+                "CEP": "12509170",
+                "CIDADE": "GUARATINGUETA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BENEDITO COSTA DE OLIVEIRA",
+                "NUMERO": "473",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL MUNICIPAL I",
+                "CEP": "12509800",
+                "CIDADE": "GUARATINGUETA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R TEN QUIRINO",
+                "NUMERO": "406",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PEDREGULHO",
+                "CEP": "14580000",
+                "CIDADE": "GUARA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R AMANCIO DE CASTRO COELHO",
+                "NUMERO": "344",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "S DIMAS",
+                "CEP": "12513190",
+                "CIDADE": "GUARATINGUETA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R GIULIO EREMITA",
+                "NUMERO": "132",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CJ CITY JARAGUA",
+                "CEP": "02998100",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV LAURO VIEIRA CHAVES",
+                "NUMERO": "553",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AEROPORTO",
+                "CEP": "60422700",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "PC STO ANTONIO",
+                "NUMERO": "29",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "12500350",
+                "CIDADE": "GUARATINGUETA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CEL VIRGILIO",
+                "NUMERO": "29",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "12501240",
+                "CIDADE": "GUARATINGUETA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "15624870",
+            "NOME": "SEBASTIANA MENDES DOS SANTOS",
+            "IDADE": "88 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "OBRA SOCIAL NOSSA SENHORA DA GLORIA - FAZENDA DA ESPERANCA",
+                "CNPJ": "48555775000150",
+                "CIDADE": "GUARATINGUETA-SP",
+                "PROFISSAO": "252105",
+                "DATA_ADMISSAO": "07\/04\/2015",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LIDER - COMERCIO DE EXTINTORES LTDA",
+                "CNPJ": "13378783000193",
+                "CIDADE": "RIBEIRAO PRETO-SP",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "01\/07\/2013",
+                "DATA_DEMISSAO": "31\/05\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "ARQUIDIOCESE DE APARECIDA",
+                "CNPJ": "53329421000550",
+                "CIDADE": "GUARATINGUETA-SP",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "06\/01\/2011",
+                "DATA_DEMISSAO": "412",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

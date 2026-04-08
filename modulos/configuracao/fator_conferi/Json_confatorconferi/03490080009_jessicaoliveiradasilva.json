@@ -1,0 +1,142 @@
+{
+    "CADASTRAIS": {
+        "CPF": "3490080009",
+        "NOME": "JESSICA OLIVEIRA DA SILVA",
+        "NOME_MAE": "ISABEL CRISTINA VIEIRA OLIVEIRA",
+        "NASCTO": "17\/11\/1993",
+        "IDADE": "32 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "16279176984",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "421125",
+        "PROFISSAO": "OPERADOR DE CAIXA",
+        "SALARIO": " 868,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "5137417535",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "55997280911",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "55999475529",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "55996788775",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "RUA R FILENO R CORREA",
+                "NUMERO": "95",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "VL SUL",
+                "CEP": "96570000",
+                "CIDADE": "CACAPAVA DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "AV PINHEIRO MACHADO",
+                "NUMERO": "92",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "96570000",
+                "CIDADE": "CACAPAVA DO SUL",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "4911898852",
+                "NOME": "ISABEL CRISTINA VIEIRA OLIVEIRA",
+                "IDADE": "58 anos",
+                "LOCAL": "RIO GRANDE\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "3085919090",
+                "NOME": "JULIA VIEIRA OLIVEIRA",
+                "IDADE": "31 anos",
+                "LOCAL": "RIO GRANDE\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "4219016082",
+                "NOME": "LIVIA VIEIRA OLIVEIRA",
+                "IDADE": "28 anos",
+                "LOCAL": "RIO GRANDE\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LIBRAGA, BRANDAO SUPERMERCADOS LTDA",
+                "CNPJ": "91292987002911",
+                "CIDADE": "CACAPAVA DO SUL-RS",
+                "PROFISSAO": "519905",
+                "DATA_ADMISSAO": "09\/12\/2016",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "DOM PEDRO RESTAURANTE E PIZZARIA LTDA.",
+                "CNPJ": "12546138000250",
+                "CIDADE": "CACAPAVA DO SUL-RS",
+                "PROFISSAO": "421125",
+                "DATA_ADMISSAO": "01\/08\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

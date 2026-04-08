@@ -1,0 +1,298 @@
+{
+    "CADASTRAIS": {
+        "CPF": "29748544869",
+        "NOME": "BEATRIZ MAIA ESTEVAM",
+        "NOME_MAE": "CORINA MAIA ESTEVAM",
+        "NASCTO": "18\/03\/1981",
+        "IDADE": "45 anos",
+        "SEXO": "Feminino",
+        "RG": "33463714",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "290782150159",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1132326079",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1136843085",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1137211946",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1123210947",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1134310109",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "19\/12\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11911344589",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11981451362",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11981451362",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11993540215",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11989486167",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "beatrizmaia@linkbr.com.br",
+            "luaclarabeatrice@bol.com.br",
+            "corina@bea3.com.br",
+            "beatrizmaia@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R WERNER GOLDBERG",
+                "NUMERO": "965",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD TUPANCI",
+                "CEP": "06414025",
+                "CIDADE": "BARUERI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV ALPHAVILLE",
+                "NUMERO": "779",
+                "COMPLEMENTO": "AND 16",
+                "BAIRRO": "DEZOITO DO FORTE EMPRESARIAL ALPHAVILLE",
+                "CEP": "06472900",
+                "CIDADE": "BARUERI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R OLIMPIADAS",
+                "NUMERO": "205",
+                "COMPLEMENTO": "CJ 13",
+                "BAIRRO": "VL OLIMPIA",
+                "CEP": "04551000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R D ARMANDO LOMBARDI",
+                "NUMERO": "103",
+                "COMPLEMENTO": "AP 43",
+                "BAIRRO": "VL PROGREDIOR",
+                "CEP": "05616010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CORINTO",
+                "NUMERO": "431",
+                "COMPLEMENTO": "AP 34 A",
+                "BAIRRO": "VL INDIANA",
+                "CEP": "05586900",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R LUA",
+                "NUMERO": "203",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD TUPANCI",
+                "CEP": "06414030",
+                "CIDADE": "BARUERI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA SETE DE SETEMBRO",
+                "NUMERO": "2902",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "13560180",
+                "CIDADE": "SAO CARLOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA WERNER GOLDBERG",
+                "NUMERO": "157",
+                "COMPLEMENTO": "TOR C AP 276",
+                "BAIRRO": "JARDIM TUPANCI",
+                "CEP": "06414025",
+                "CIDADE": "BARUERI",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "14539791826",
+                "NOME": "CORINA MAIA ESTEVAM",
+                "IDADE": "75 anos",
+                "LOCAL": "SAO CARLOS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "25801369830",
+                "NOME": "PATRICIA MAIA ESTEVAM",
+                "IDADE": "48 anos",
+                "LOCAL": "SAO CARLOS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "JUMP LABEL SOLUTIONS INFORMATICA LTDA",
+                "CNPJ": "09032085000164",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "01\/09\/2021",
+                "DATA_DEMISSAO": "24\/11\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MJV SOLUCOES EM TECNOLOGIA LTDA",
+                "CNPJ": "06944264000180",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "16\/12\/2020",
+                "DATA_DEMISSAO": "20\/08\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "BRADESCO SEGUROS S\/A",
+                "CNPJ": "33055146000193",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "06\/08\/2018",
+                "DATA_DEMISSAO": "05\/01\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "NTT DATA BRASIL CONSULTORIA DE NEGOCIOS E TECNOLOGIA DA INFORMACAO LTDA.",
+                "CNPJ": "04232671000139",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "11\/01\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ITAU UNIBANCO S.A.",
+                "CNPJ": "60701190000104",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "252210",
+                "DATA_ADMISSAO": "14\/08\/2012",
+                "DATA_DEMISSAO": "11\/07\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "TRDT BRASIL TECNOLOGIA LTDA",
+                "CNPJ": "08844348000177",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "252105",
+                "DATA_ADMISSAO": "12\/01\/2009",
+                "DATA_DEMISSAO": "308",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,219 @@
+{
+    "CADASTRAIS": {
+        "CPF": "11252429657",
+        "NOME": "BRUNO HENRIQUE DO CARMO SANTOS ASSIS",
+        "NOME_MAE": "ROSIMAR DO CARMO SANTOS",
+        "NASCTO": "19\/11\/1994",
+        "IDADE": "31 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "16099785591",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "848510",
+        "PROFISSAO": "ACOUGUEIRO",
+        "SALARIO": " 724,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "3332613837",
+            "OPERADORA": "TELEMAR\/MG",
+            "DATA_REFERENCIA": "21\/11\/2014",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "33984262188",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "33988769323",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "33984415925",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "33987260573",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "33988455896",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "brunohenriquecpmg@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ISRAEL PINHEIRO",
+                "NUMERO": "4047",
+                "COMPLEMENTO": "AP 102",
+                "BAIRRO": "LOURDES",
+                "CEP": "35032180",
+                "CIDADE": "GOVERNADOR VALADARES",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "AV JOAO DE DEUS COSTA",
+                "NUMERO": "130",
+                "COMPLEMENTO": "BL C AP 403",
+                "BAIRRO": "FNT GRANDE",
+                "CEP": "32040652",
+                "CIDADE": "CONTAGEM",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R PE PE ASSUNCAO",
+                "NUMERO": "265",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STO ANTONIO DO PON",
+                "CEP": "35106000",
+                "CIDADE": "BREJAUBINHA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R SEIS",
+                "NUMERO": "235",
+                "COMPLEMENTO": "",
+                "BAIRRO": "",
+                "CEP": "35240000",
+                "CIDADE": "CONSELHEIRO PENA",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "82748322568",
+                "NOME": "ROSIMAR DO CARMO SANTOS",
+                "IDADE": "44 anos",
+                "LOCAL": "SALVADOR\/BA",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "10984742603",
+                "NOME": "AUGUSTO DO CARMO SANTOS",
+                "IDADE": "28 anos",
+                "LOCAL": "GOVERNADOR VALADARES\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "11252427603",
+                "NOME": "SARAH MARIA DO CARMO SANTOS BARREIROS",
+                "IDADE": "24 anos",
+                "LOCAL": "CONSELHEIRO PENA\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "13540148710",
+                "NOME": "LEONARDO SANTOS FREIRE",
+                "IDADE": "35 anos",
+                "LOCAL": "PRAIA GRANDE\/ES",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "GRAJ SOLUCOES EM TRADE E PESSOAS LTDA",
+                "CNPJ": "16751261000183",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "354125",
+                "DATA_ADMISSAO": "17\/12\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738037406",
+                "CIDADE": "GOVERNADOR VALADARES-MG",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "12\/02\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MCA TELEMARKETING LTDA",
+                "CNPJ": "15411164000189",
+                "CIDADE": "TIMOTEO-MG",
+                "PROFISSAO": "422305",
+                "DATA_ADMISSAO": "12\/04\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "AREAL WR DO PORTO LTDA",
+                "CNPJ": "15291664000124",
+                "CIDADE": "JAGUARACU-MG",
+                "PROFISSAO": "848510",
+                "DATA_ADMISSAO": "01\/10\/2013",
+                "DATA_DEMISSAO": "05\/05\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "DELMUS HOTEL LTDA",
+                "CNPJ": "24013351000103",
+                "CIDADE": "CONSELHEIRO PENA-MG",
+                "PROFISSAO": "422110",
+                "DATA_ADMISSAO": "10\/03\/2012",
+                "DATA_DEMISSAO": "17\/09\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

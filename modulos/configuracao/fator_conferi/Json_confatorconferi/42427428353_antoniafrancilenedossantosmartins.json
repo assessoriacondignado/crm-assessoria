@@ -1,0 +1,142 @@
+{
+    "CADASTRAIS": {
+        "CPF": "42427428353",
+        "NOME": "ANTONIA FRANCILENE DOS SANTOS MARTINS",
+        "NOME_MAE": "MARIA FERREIRA DOS SANTOS",
+        "NASCTO": "26\/05\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Feminino",
+        "RG": "2000010561774",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "035425430710",
+        "NIT": "2124385762",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "763210",
+        "PROFISSAO": "COSTUREIRO NA CONFECCAO EM SERIE",
+        "SALARIO": " 1.491,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8534969679",
+            "OPERADORA": "TELEMAR\/CE",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "85989564032",
+            "OPERADORA": "OI MOVEL S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "PRE PAGO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "vmreis@usc.stcecilia.br",
+            "webmaster@hardmix.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PERNAMBUCO",
+                "NUMERO": "1663",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DEMOCRITO ROCHA",
+                "CEP": "60440140",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "AV DR THEBERGE",
+                "NUMERO": "2854",
+                "COMPLEMENTO": "B",
+                "BAIRRO": "PRES KENNEDY",
+                "CEP": "60355000",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "RUA DOUTORA SARA MESQUITA",
+                "NUMERO": "1663",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PICI",
+                "CEP": "60511110",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "1070770",
+                "NOME": "MARIA FERREIRA DOS SANTOS",
+                "IDADE": "81 anos",
+                "LOCAL": "SAO GONCALO\/RJ",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "5024147316",
+                "NOME": "DANIEL MARTINS TEIXEIRA",
+                "IDADE": "34 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "61037405331",
+                "NOME": "DEBORA MARTINS TEIXEIRA",
+                "IDADE": "26 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ELEANDRO DA SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "MARCELINO RAMOS\/RS",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "5296493907"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LRF CONFECCOES LTDA",
+                "CNPJ": "15552612000164",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "763210",
+                "DATA_ADMISSAO": "10\/02\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "INDUSTRIA DE CONFECCOES ST LTDA",
+                "CNPJ": "06346748000127",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "763210",
+                "DATA_ADMISSAO": "01\/11\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

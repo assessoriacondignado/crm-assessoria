@@ -1,0 +1,120 @@
+{
+    "CADASTRAIS": {
+        "CPF": "44508603220",
+        "NOME": "PRESLEY DE SOUZA FERREIRA",
+        "NOME_MAE": "MARIA DE LURDES DE SOUZA FERREIRA",
+        "NASCTO": "24\/03\/1974",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12513045450",
+        "ESCOLARIDADE": "PRIMEIRO GRAU (GINASIO)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "715135",
+        "PROFISSAO": "OPERADOR DE PA CARREGADEIRA",
+        "SALARIO": " 1.897,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9236548433",
+            "OPERADORA": "TELEMAR\/AM",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92994759350",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92991199311",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "presleyferreira43@gmail.com",
+            "presleyferreira@oi.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "R PALMEIRA BRANCA",
+            "NUMERO": "167",
+            "COMPLEMENTO": "",
+            "BAIRRO": "MONTE DAS OLIVEIRAS",
+            "CEP": "69093106",
+            "CIDADE": "MANAUS",
+            "ESTADO": "AM"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "16196975803",
+            "NOME": "MARIA DE LURDES DE SOUZA FERREIRA",
+            "IDADE": "79 anos",
+            "LOCAL": "",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "JURUA ESTALEIROS E NAVEGACAO LTDA",
+                "CNPJ": "63700553000177",
+                "CIDADE": "IRANDUBA-AM",
+                "PROFISSAO": "715125",
+                "DATA_ADMISSAO": "08\/01\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "HORIZONTE DA AMAZONIA LOGISTICA LTDA",
+                "CNPJ": "07462961000167",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "08\/09\/2022",
+                "DATA_DEMISSAO": "09\/12\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "TRANSPORTES BERTOLINI LTDA",
+                "CNPJ": "04503660000146",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "715135",
+                "DATA_ADMISSAO": "98\/19\/1901",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

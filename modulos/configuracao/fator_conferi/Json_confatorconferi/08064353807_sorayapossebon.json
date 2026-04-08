@@ -1,0 +1,169 @@
+{
+    "CADASTRAIS": {
+        "CPF": "8064353807",
+        "NOME": "SORAYA POSSEBON",
+        "NOME_MAE": "ANTONIO ROTELLA                                             ",
+        "NASCTO": "17\/12\/1969",
+        "IDADE": "56 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12335094809",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "410105",
+        "PROFISSAO": "SUPERVISOR ADMINISTRATIVO",
+        "SALARIO": " 3.454,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1332959933",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1332221271",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "20\/10\/1995",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1332959961",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "13991036140",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "MOVEL",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "baixa"
+        }
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "oficina-dlv@divena.com.br",
+            "soraya.possebon@divena.com.br",
+            "sorayapossebon@hotmail.com",
+            "soraiapossebom@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV DOUTOR ANTONIO MANOEL DE CA",
+                "NUMERO": "780",
+                "COMPLEMENTO": "BE AP86",
+                "BAIRRO": "MORRO DE NOVA C",
+                "CEP": "11080100",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MONSENHOR PAULA RODRIGUES",
+                "NUMERO": "156",
+                "COMPLEMENTO": "BL A AP 55",
+                "BAIRRO": "VILA BELMIRO",
+                "CEP": "11075350",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA RIO DE JANEIRO",
+                "NUMERO": "22",
+                "COMPLEMENTO": "AP 21 B",
+                "BAIRRO": "VILA BELMIRO",
+                "CEP": "11075340",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA MARGINAL DA VIA ANCHIETA",
+                "NUMERO": "2521",
+                "COMPLEMENTO": "VIA ANCHIETA",
+                "BAIRRO": "CHICO DE PAULA",
+                "CEP": "11090001",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "32966342820",
+            "NOME": "ANTONIO ROTELLA",
+            "IDADE": "116 anos",
+            "LOCAL": "VINHEDO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "SIDNEY DA SILVA VENTURA",
+            "IDADE": "",
+            "LOCALIDADE": "SAO VICENTE\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "12133556800"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CB MAR COMERCIO DE VEICULOS LTDA",
+                "CNPJ": "34499567000176",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "391210",
+                "DATA_ADMISSAO": "05\/01\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MARAMAR SERVICOS ADMINISTRATIVOS LTDA",
+                "CNPJ": "02498597000171",
+                "CIDADE": "SANTO ANDRE-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "08\/11\/2017",
+                "DATA_DEMISSAO": "08\/02\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "DIVENA LITORAL VEICULOS LTDA.",
+                "CNPJ": "02990234000159",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "01\/06\/1987",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

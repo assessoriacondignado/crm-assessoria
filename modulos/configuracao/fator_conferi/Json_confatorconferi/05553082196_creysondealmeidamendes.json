@@ -1,0 +1,184 @@
+{
+    "CADASTRAIS": {
+        "CPF": "5553082196",
+        "NOME": "CREYSON DE ALMEIDA MENDES",
+        "NOME_MAE": "JOSEFA LUMINATA DE ALMEIDA",
+        "NASCTO": "16\/04\/1998",
+        "IDADE": "28 anos",
+        "SEXO": "I",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "16416368316",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "6533562159",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "65999209349",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "65999750435",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "65999025200",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "65999177117",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "65998162993",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "09\/07\/2015",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R F",
+                "NUMERO": "807",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOSSA SENHORA APAREC",
+                "CEP": "78470000",
+                "CIDADE": "NOBRES",
+                "ESTADO": "MT"
+            },
+            {
+                "LOGRADOURO": "R DOS CAMABARAS",
+                "NUMERO": "2995",
+                "COMPLEMENTO": "COMP W",
+                "BAIRRO": "RES TOPAZIO",
+                "CEP": "78450000",
+                "CIDADE": "NOVA MUTUM",
+                "ESTADO": "MT"
+            },
+            {
+                "LOGRADOURO": "R CEL ARTUR BORGES",
+                "NUMERO": "1046",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "78470000",
+                "CIDADE": "NOBRES",
+                "ESTADO": "MT"
+            },
+            {
+                "LOGRADOURO": "HUMBERTO CASTELO BRANCO MERCEARIA J FILHO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "LJ MAGICELL",
+                "BAIRRO": "",
+                "CEP": "78470000",
+                "CIDADE": "ROSARIO OESTE",
+                "ESTADO": "MT"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "88093700153",
+            "NOME": "JOSEFA LUMINATA DE ALMEIDA",
+            "IDADE": "48 anos",
+            "LOCAL": "NOBRES\/MT",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "DEL MORO   DEL MORO LTDA",
+                "CNPJ": "00877761000630",
+                "CIDADE": "NOVA MUTUM-MT",
+                "PROFISSAO": "782310",
+                "DATA_ADMISSAO": "28\/09\/2021",
+                "DATA_DEMISSAO": "03\/06\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "RODOVIVOS TRANSPORTES LTDA",
+                "CNPJ": "07842082000160",
+                "CIDADE": "NOVA MUTUM-MT",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "10\/06\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COMELLI COMERCIO DE COMBUSTIVEIS LTDA",
+                "CNPJ": "18768803000156",
+                "CIDADE": "NOVA MUTUM-MT",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "16\/06\/2020",
+                "DATA_DEMISSAO": "30\/04\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "CARLOS DALMOLIN E CIA LTDA",
+                "CNPJ": "10366502000194",
+                "CIDADE": "ROSARIO OESTE-MT",
+                "PROFISSAO": "848510",
+                "DATA_ADMISSAO": "01\/12\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

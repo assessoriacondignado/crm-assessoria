@@ -1,0 +1,124 @@
+{
+    "CADASTRAIS": {
+        "CPF": "34383018300",
+        "NOME": "JOSE NILTON RIBEIRO BASTOS",
+        "NOME_MAE": "MARIA RIBEIRO BASTOS",
+        "NASCTO": "15\/10\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "2682125955",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "342315",
+        "PROFISSAO": "SUPERVISOR DE CARGA E DESCARGA",
+        "SALARIO": " 5.133,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9935233959",
+            "OPERADORA": "TELEMAR\/MA",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "99991771677",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "99984326311",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "99999048911",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "nilton_bastos@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ANTONIO DE MIRANDA",
+                "NUMERO": "15",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL REDENCAO",
+                "CEP": "65910353",
+                "CIDADE": "IMPERATRIZ",
+                "ESTADO": "MA"
+            },
+            {
+                "LOGRADOURO": "R SAO FRANCISCO",
+                "NUMERO": "780",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "NOVA IMPERATRIZ",
+                "CEP": "65907050",
+                "CIDADE": "IMPERATRIZ",
+                "ESTADO": "MA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1546809660",
+            "NOME": "MARIA RIBEIRO BASTOS",
+            "IDADE": "75 anos",
+            "LOCAL": "PIRAPETINGA\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "NILTON BASTOS",
+            "IDADE": "",
+            "LOCALIDADE": "PORTO ALEGRE\/RS",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "78508509049"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "HOTBEL COMERCIAL LTDA",
+            "CNPJ": "02871155000129",
+            "CIDADE": "IMPERATRIZ-MA",
+            "PROFISSAO": "342315",
+            "DATA_ADMISSAO": "01\/03\/2004",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,160 @@
+{
+    "CADASTRAIS": {
+        "CPF": "11945781440",
+        "NOME": "SUELLEN SOUZA HENRIQUES",
+        "NOME_MAE": "MARIA DO CARMO SOUZA",
+        "NASCTO": "14\/10\/1996",
+        "IDADE": "29 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "16637677095",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "521110",
+        "PROFISSAO": "VENDEDOR DE COMERCIO VAREJISTA",
+        "SALARIO": " 1.150,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "81987012072",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81994954560",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81983726267",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81983095698",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81988826977",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "27\/01\/2015",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "suellenhenriques.souza@gmail.com",
+            "sueelleensouza@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOAQUIM MENDES DA SILVA",
+                "NUMERO": "101",
+                "COMPLEMENTO": "C A",
+                "BAIRRO": "BULTRINS",
+                "CEP": "53320150",
+                "CIDADE": "OLINDA",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R JOAO LOPES",
+                "NUMERO": "81",
+                "COMPLEMENTO": "C IV",
+                "BAIRRO": "CURADO",
+                "CEP": "54270060",
+                "CIDADE": "JABOATAO DOS GUARARAPES",
+                "ESTADO": "PE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "12679739",
+            "NOME": "MARIA DO CARMO SOUZA",
+            "IDADE": "91 anos",
+            "LOCAL": "SAO LUIS\/MA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CALCENTER - CALCADOS CENTRO-OESTE LTDA",
+                "CNPJ": "15048754018055",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "10\/08\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "YOUTILITY CENTER DO BRASIL SERVICOS DE INFORMATICA E TELEMARKETING LTDA.",
+                "CNPJ": "16621776000320",
+                "CIDADE": "VOLTA REDONDA-RJ",
+                "PROFISSAO": "422310",
+                "DATA_ADMISSAO": "22\/11\/2022",
+                "DATA_DEMISSAO": "10\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738015780",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "23\/05\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "CINEMARK BRASIL S.A.",
+                "CNPJ": "00779721005968",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "421105",
+                "DATA_ADMISSAO": "21\/01\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

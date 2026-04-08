@@ -1,0 +1,230 @@
+{
+    "CADASTRAIS": {
+        "CPF": "29409003881",
+        "NOME": "MARCELO JOSE DA SILVA",
+        "NOME_MAE": "MARIA MINERVINA DA SILVA",
+        "NASCTO": "19\/08\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "30631539",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "220462290116",
+        "NIT": "12632018856",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212405",
+        "PROFISSAO": "ANALISTA DE DESENVOLVIMENTO DE SISTEMAS",
+        "SALARIO": " 3.000,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1159044444",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1159044444",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1125629210",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "05\/07\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11987053223",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11997360830",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "hastinphillo@hotmail.com",
+            "marcelo.silva@pronepsp.com.br",
+            "marcelo@pronepsp.com.br",
+            "marcelomingau@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R FRANCISCO LEITAO",
+                "NUMERO": "635",
+                "COMPLEMENTO": "AP 41",
+                "BAIRRO": "PINHEIROS",
+                "CEP": "05414025",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PELOTAS",
+                "NUMERO": "306",
+                "COMPLEMENTO": "AP 83",
+                "BAIRRO": "VL MARIANA",
+                "CEP": "04012001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PELOTAS",
+                "NUMERO": "683",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL MARIANA",
+                "CEP": "04012002",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV ENG LUIZ CARLOS BERRINI",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE MONCOES",
+                "CEP": "04571011",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "DESEMBARGADOR AUREO CERQUEIRA",
+                "NUMERO": "56",
+                "COMPLEMENTO": "A",
+                "BAIRRO": "CIDADE KEMEL",
+                "CEP": "08130410",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PELOTAS",
+                "NUMERO": "306",
+                "COMPLEMENTO": "AP 83",
+                "BAIRRO": "VILA MARIANA",
+                "CEP": "04012002",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ITAPIRU",
+                "NUMERO": "478",
+                "COMPLEMENTO": "AP122",
+                "BAIRRO": "SAUDE",
+                "CEP": "04143010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "10145443",
+            "NOME": "MARIA MINERVINA DA SILVA",
+            "IDADE": "89 anos",
+            "LOCAL": "ALAGOINHA\/PB",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "DIVCOM S\/A",
+                "CNPJ": "03755215000615",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "317205",
+                "DATA_ADMISSAO": "01\/04\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "DIVCOM S\/A",
+                "CNPJ": "03755215000100",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "317205",
+                "DATA_ADMISSAO": "01\/04\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "FARMOQUIMICA S A",
+                "CNPJ": "33349473000158",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "317205",
+                "DATA_ADMISSAO": "06\/02\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "STEFANINI CONSULTORIA E ASSESSORIA EM INFORMATICA S.A.",
+                "CNPJ": "58069360000120",
+                "CIDADE": "JAGUARIUNA-SP",
+                "PROFISSAO": "317210",
+                "DATA_ADMISSAO": "07\/07\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SONDA DO BRASIL LTDA",
+                "CNPJ": "64641327000710",
+                "CIDADE": "SANTANA DE PARNAIBA-SP",
+                "PROFISSAO": "212420",
+                "DATA_ADMISSAO": "10\/03\/2014",
+                "DATA_DEMISSAO": "07\/07\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "PRONEP SAO PAULO - SERVICOS ESPECIALIZADOS DOMICILIARES E HOSPITALARES LTDA",
+                "CNPJ": "02837922000183",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "01\/08\/2012",
+                "DATA_DEMISSAO": "18\/12\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,255 @@
+{
+    "CADASTRAIS": {
+        "CPF": "31600467881",
+        "NOME": "FERNANDO VITURINO FILHO",
+        "NOME_MAE": "LUCIA DE OLIVEIRA VITURINO",
+        "NASCTO": "20\/11\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "237201320116",
+        "NIT": "1260420225",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "717020",
+        "PROFISSAO": "SERVENTE DE OBRAS",
+        "SALARIO": " 1.994,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1934221650",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19993448549",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19991069852",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19991713119",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "19999003021",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "leemanet@hotmail.com",
+            "fviturino9@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MARIA ROSALIA VAZ TUCCORI CAPOSSOLI",
+                "NUMERO": "31",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CJ HABITACIONAL ALTO DO CASTELANI",
+                "CEP": "13363586",
+                "CIDADE": "CAPIVARI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA INDAIATUBA",
+                "NUMERO": "41",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL CRISTINA",
+                "CEP": "13401414",
+                "CIDADE": "PIRACICABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA INDAIATUBA",
+                "NUMERO": "4",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM TATUAPE",
+                "CEP": "13401414",
+                "CIDADE": "PIRACICABA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "19039894850",
+                "NOME": "LUCIA DE OLIVEIRA VITURINO",
+                "IDADE": "68 anos",
+                "LOCAL": "PIRACICABA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "22042517801",
+                "NOME": "NAISA DE OLIVEIRA VITURINO",
+                "IDADE": "45 anos",
+                "LOCAL": "PIRACICABA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "31003020879",
+                "NOME": "VANILDA DE OLIVEIRA VITURINO",
+                "IDADE": "43 anos",
+                "LOCAL": "PIRACICABA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "37403696808",
+                "NOME": "ANA PAULA DE OLIVEIRA VITURINO",
+                "IDADE": "39 anos",
+                "LOCAL": "PIRACICABA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "41299293808",
+                "NOME": "FELIPE DE OLIVEIRA VITURINO",
+                "IDADE": "32 anos",
+                "LOCAL": "PIRACICABA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "44583894830",
+                "NOME": "PAULO HENRIQUE DE OLIVEIRA VITURINO",
+                "IDADE": "29 anos",
+                "LOCAL": "LIMEIRA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "LEILA APARECIDA DA SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "PIRACICABA\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "33225383899"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LUIZ ANTONIO AGOSTINHO 74893297953",
+                "CNPJ": "28606202000109",
+                "CIDADE": "PIRACICABA-SP",
+                "PROFISSAO": "717020",
+                "DATA_ADMISSAO": "28\/05\/2024",
+                "DATA_DEMISSAO": "16\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "DUPLAS - INDUSTRIA DE PECAS PLASTICAS LTDA",
+                "CNPJ": "08740765000170",
+                "CIDADE": "PIRACICABA-SP",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "23\/10\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ATMOSFERA GESTAO E HIGIENIZACAO DE TEXTEIS S.A.",
+                "CNPJ": "00886257005666",
+                "CIDADE": "PIRACICABA-SP",
+                "PROFISSAO": "862120",
+                "DATA_ADMISSAO": "02\/01\/2024",
+                "DATA_DEMISSAO": "02\/05\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "F.R HIGIENIZACAO TEXTIL LTDA",
+                "CNPJ": "11333222000142",
+                "CIDADE": "RAFARD-SP",
+                "PROFISSAO": "516345",
+                "DATA_ADMISSAO": "25\/05\/2016",
+                "DATA_DEMISSAO": "13\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "MEGALASER INDUSTRIA METALURGICA LTDA",
+                "CNPJ": "08614279000296",
+                "CIDADE": "CAPIVARI-SP",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "15\/02\/2023",
+                "DATA_DEMISSAO": "10\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "MEGALASER INDUSTRIA METALURGICA LTDA",
+                "CNPJ": "08614279000105",
+                "CIDADE": "CAPIVARI-SP",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "10\/08\/2023",
+                "DATA_DEMISSAO": "08\/11\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "FRIGODELISS LTDA.",
+                "CNPJ": "11257856000163",
+                "CIDADE": "CAPIVARI-SP",
+                "PROFISSAO": "848520",
+                "DATA_ADMISSAO": "04\/05\/2015",
+                "DATA_DEMISSAO": "05\/05\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "MRM PLAST INDUSTRIA, COMERCIO, IMPORTACAO E EXPORTACAO LTDA",
+                "CNPJ": "08614466000199",
+                "CIDADE": "PIRACICABA-SP",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "06\/07\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

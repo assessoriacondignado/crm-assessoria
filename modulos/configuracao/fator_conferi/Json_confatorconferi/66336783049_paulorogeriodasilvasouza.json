@@ -1,0 +1,215 @@
+{
+    "CADASTRAIS": {
+        "CPF": "66336783049",
+        "NOME": "PAULO ROGERIO DA SILVA SOUZA",
+        "NOME_MAE": "MARIA TERESINHA DA SILVA SOUZA",
+        "NASCTO": "12\/07\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "1054540164",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "065115870426",
+        "NIT": "1241902248",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "354135",
+        "PROFISSAO": "TECNICO DE VENDAS",
+        "SALARIO": " 14.243,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5136515649",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1121335000",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5136515590",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51992629985",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51989231203",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51991924436",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51997844309",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51996320623",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "14\/05\/2020",
+                "TIPO_TEL": "MOVEL PRE-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "paulosouza@sulmail.com.br",
+            "paulosouza.sj.rs@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "PREF DORVAL FERREIRA",
+                "NUMERO": "208",
+                "COMPLEMENTO": "",
+                "BAIRRO": "LOT BELA VISTA",
+                "CEP": "96700000",
+                "CIDADE": "SAO JERONIMO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "AV FRANCISCO MATARAZZO",
+                "NUMERO": "1400",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AGUA BRANCA",
+                "CEP": "05001100",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV RAMIRO BARCELOS",
+                "NUMERO": "1600",
+                "COMPLEMENTO": "SL4 LJ MODA MORENA MAISSONLIN",
+                "BAIRRO": "CENTRO",
+                "CEP": "96700000",
+                "CIDADE": "SAO JERONIMO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "ROD RS",
+                "NUMERO": "401",
+                "COMPLEMENTO": "N 2001 SYL IND MAQ",
+                "BAIRRO": "IND",
+                "CEP": "96700000",
+                "CIDADE": "SAO JERONIMO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R CONSTANTINO PICARELLI",
+                "NUMERO": "420",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE ALTA",
+                "CEP": "96700000",
+                "CIDADE": "SAO JERONIMO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R CONSTANTINO PICARELLI",
+                "NUMERO": "432",
+                "COMPLEMENTO": "CIDADE ALTA",
+                "BAIRRO": "CID ALTA",
+                "CEP": "96700000",
+                "CIDADE": "SAO JERONIMO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "AV BENTO GONCALVES",
+                "NUMERO": "870",
+                "COMPLEMENTO": "C 870",
+                "BAIRRO": "CENTRO",
+                "CEP": "96700000",
+                "CIDADE": "SAO JERONIMO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R AMERICO MUNARI",
+                "NUMERO": "15",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE ALTA",
+                "CEP": "96700000",
+                "CIDADE": "SAO JERONIMO",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "207140090",
+            "NOME": "MARIA TERESINHA DA SILVA SOUZA",
+            "IDADE": "69 anos",
+            "LOCAL": "CACHOEIRINHA\/RS",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "HUSQVARNA DO BRASIL INDUSTRIA E COMERCIO DE PRODUTOS PARA FLORESTA E JARDIM LTDA.",
+            "CNPJ": "04098470000352",
+            "CIDADE": "SAO PAULO-SP",
+            "PROFISSAO": "354135",
+            "DATA_ADMISSAO": "14\/04\/2008",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

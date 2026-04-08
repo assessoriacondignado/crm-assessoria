@@ -1,0 +1,291 @@
+{
+    "CADASTRAIS": {
+        "CPF": "43712061234",
+        "NOME": "JOSE CAMBEIRO DA CUNHA JUNIOR",
+        "NOME_MAE": "ALZENIRA BICHARA DA CUNHA",
+        "NASCTO": "01\/02\/1973",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9232325727",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "07\/07\/2007",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9232360474",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9233028114",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "04\/10\/2008",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9233420474",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "06\/10\/2010",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9232321655",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92984047750",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "92984095344",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "92981120034",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "92988272284",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "92988337750",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "cambeiro@ovi.com",
+            "jcambeiro@uol.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "TV JALES",
+                "NUMERO": "1204",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVO ALEIXO",
+                "CEP": "69098123",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV RAMOS FERREIRA",
+                "NUMERO": "1663",
+                "COMPLEMENTO": "AP 304",
+                "BAIRRO": "PC 14 DE JANEIRO",
+                "CEP": "69020080",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R KAKO CAMINHA",
+                "NUMERO": "365",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRES VARGAS",
+                "CEP": "69025310",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R BELO HORIZONTE",
+                "NUMERO": "1820",
+                "COMPLEMENTO": "AP 1204 RB",
+                "BAIRRO": "ADRIANOPOLIS",
+                "CEP": "69057060",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AVENIDA RAMOS FERREIRA",
+                "NUMERO": "199",
+                "COMPLEMENTO": "BL SOLIM AP 1703 VISTA DEL RIO",
+                "BAIRRO": "CENTRO",
+                "CEP": "69010120",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "RUA BELO HORIZONTE",
+                "NUMERO": "1830",
+                "COMPLEMENTO": "AP 1204",
+                "BAIRRO": "ADRIANOPOLIS",
+                "CEP": "69057060",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AVENIDA RAMOS FERREIRA",
+                "NUMERO": "199",
+                "COMPLEMENTO": "BLSOLIMAP1703",
+                "BAIRRO": "PRACA 14 DE JANEIRO",
+                "CEP": "69020080",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "RUA RIO PURUS",
+                "NUMERO": "77",
+                "COMPLEMENTO": "APT 403",
+                "BAIRRO": "NOSSA SENHORA DAS GRACAS",
+                "CEP": "69053050",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "24303097268",
+                "NOME": "ALZENIRA BICHARA DA CUNHA",
+                "IDADE": "85 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "24041564204",
+                "NOME": "ALEXANDRE BICHARA DA CUNHA",
+                "IDADE": "60 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "32127570278",
+                "NOME": "MARCOS BICHARA DA CUNHA",
+                "IDADE": "57 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "SONIA REGIA LIMA",
+            "IDADE": "",
+            "LOCALIDADE": "CASTELO DO PIAUI\/PI",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "62233386353"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SAMSUNG ELETRONICA DA AMAZONIA LTDA",
+                "CNPJ": "00280273000137",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "142605",
+                "DATA_ADMISSAO": "08\/09\/2022",
+                "DATA_DEMISSAO": "01\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SAMSUNG ELETRONICA DA AMAZONIA LTDA",
+                "CNPJ": "00280273003152",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "142605",
+                "DATA_ADMISSAO": "01\/01\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FIT INSTITUTO DE TECNOLOGIA DA AMAZONIA",
+                "CNPJ": "28494214000180",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "06\/01\/2020",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "MICROSOFT MOBILE TECNOLOGIA LTDA.",
+                "CNPJ": "02140198000134",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "354305",
+                "DATA_ADMISSAO": "99\/19\/1904",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

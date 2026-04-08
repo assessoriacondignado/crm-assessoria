@@ -1,0 +1,172 @@
+{
+    "CADASTRAIS": {
+        "CPF": "4070481460",
+        "NOME": "EDILSON ALVES DOS SANTOS",
+        "NOME_MAE": "MARLENE ALVES DOS SANTOS",
+        "NASCTO": "18\/09\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1278513501",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "322205",
+        "PROFISSAO": "TECNICO DE ENFERMAGEM",
+        "SALARIO": " 3.689,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "82999447099",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "82981820247",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "82988085162",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "edilsonelisabeth@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R HADDOCK LOBO",
+                "NUMERO": "72",
+                "COMPLEMENTO": "701",
+                "BAIRRO": "ESTACIO",
+                "CEP": "20260132",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "AV MENINO MARCELO",
+                "NUMERO": "2213",
+                "COMPLEMENTO": "B 33 C 8",
+                "BAIRRO": "CIDADE UNIVERSITARIA",
+                "CEP": "57073470",
+                "CIDADE": "MACEIO",
+                "ESTADO": "AL"
+            },
+            {
+                "LOGRADOURO": "AV MENINO MARCELO",
+                "NUMERO": "33",
+                "COMPLEMENTO": "2213",
+                "BAIRRO": "CIDADE UNIVERSITARIA",
+                "CEP": "57073470",
+                "CIDADE": "MACEIO",
+                "ESTADO": "AL"
+            },
+            {
+                "LOGRADOURO": "R XINGU",
+                "NUMERO": "76",
+                "COMPLEMENTO": "",
+                "BAIRRO": "FEITOSA",
+                "CEP": "57043460",
+                "CIDADE": "MACEIO",
+                "ESTADO": "AL"
+            },
+            {
+                "LOGRADOURO": "R CEL ULISSES LUNA",
+                "NUMERO": "8",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PNT GROSSA",
+                "CEP": "57014200",
+                "CIDADE": "MACEIO",
+                "ESTADO": "AL"
+            },
+            {
+                "LOGRADOURO": "R LARGO DA PAZ",
+                "NUMERO": "29",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VERGEL DO LAGO",
+                "CEP": "57015320",
+                "CIDADE": "MACEIO",
+                "ESTADO": "AL"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "9886508",
+            "NOME": "MARLENE ALVES DOS SANTOS",
+            "IDADE": "53 anos",
+            "LOCAL": "LAPAO\/BA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SANTA CASA DE MISERICORDIA DE MACEIO",
+                "CNPJ": "12307187000150",
+                "CIDADE": "MACEIO-AL",
+                "PROFISSAO": "322205",
+                "DATA_ADMISSAO": "03\/06\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PREVINE ENGENHARIA DE SEGURANCA CONTRA INCENDIO LTDA",
+                "CNPJ": "20659052000181",
+                "CIDADE": "MACEIO-AL",
+                "PROFISSAO": "517110",
+                "DATA_ADMISSAO": "01\/05\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SPRINK SEGURANCA CONTRA INCENCIO LTDA EM RECUPERACAO JUDICIAL EM RECUPERACAO JUDICIAL",
+                "CNPJ": "42515478000102",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "517110",
+                "DATA_ADMISSAO": "23\/12\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "COOPERATIVA DE TRABALHO BOMBEIROS PROFISSIONAIS CIVIS DO ESTADO DE ALAGOAS",
+            "CNPJ": "17149593000155",
+            "CIDADE": "MACEIO-AL",
+            "QUALIFICACAO": "Diretor",
+            "DATA_ENTRADA": "20121107",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

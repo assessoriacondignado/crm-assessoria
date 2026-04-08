@@ -1,0 +1,166 @@
+{
+    "CADASTRAIS": {
+        "CPF": "8213856740",
+        "NOME": "JEAN PIERRE DE SA VILAR",
+        "NOME_MAE": "CLENILDA DE SA VILAR",
+        "NASCTO": "14\/07\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "103428490361",
+        "NIT": "12507509564",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "911305",
+        "PROFISSAO": "MECANICO DE MANUTENCAO DE MAQUINAS, EM GERAL",
+        "SALARIO": " 11,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "2137089981",
+            "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21998006940",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21997318921",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21968800587",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21998165499",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "jdesvilar@yahoo.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOSE FRANCISCO CORREA",
+                "NUMERO": "38",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ITAUNA",
+                "CEP": "24474767",
+                "CIDADE": "SAO GONCALO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R DR MEER MARIO KAUFMANN",
+                "NUMERO": "19",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STA ROSA DE LIMA",
+                "CEP": "91160600",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R JOSE FRANCISCO CORREA",
+                "NUMERO": "138",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ITAUNA",
+                "CEP": "24474767",
+                "CIDADE": "SAO GONCALO",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "1905323786",
+                "NOME": "CLENILDA DE SA VILAR",
+                "IDADE": "76 anos",
+                "LOCAL": "SAO GONCALO\/RJ",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "7003476746",
+                "NOME": "ANA CRISTINA DE SA VILAR TEIXEIRA",
+                "IDADE": "54 anos",
+                "LOCAL": "SAO GONCALO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "APOLO TUBOS E EQUIPAMENTOS S\/A",
+                "CNPJ": "33017088000103",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "911305",
+                "DATA_ADMISSAO": "02\/01\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CAMIL ALIMENTOS S.A.",
+                "CNPJ": "64904295002904",
+                "CIDADE": "SAO GONCALO-RJ",
+                "PROFISSAO": "911305",
+                "DATA_ADMISSAO": "02\/03\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "NOVA A3 INDUSTRIA E COMERCIO LTDA",
+                "CNPJ": "04918341000363",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "911305",
+                "DATA_ADMISSAO": "04\/04\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

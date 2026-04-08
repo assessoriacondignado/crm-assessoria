@@ -1,0 +1,323 @@
+{
+    "CADASTRAIS": {
+        "CPF": "62637010053",
+        "NOME": "JOLCIR ELISEU BRUM OLIVEIRA",
+        "NOME_MAE": "VELMA BRUM OLIVEIRA",
+        "NASCTO": "24\/12\/1969",
+        "IDADE": "56 anos",
+        "SEXO": "Masculino",
+        "RG": "6034003977",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "RS",
+        "TITULO_ELEITOR": "051804820442",
+        "NIT": "18087660213",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142105",
+        "PROFISSAO": "GERENTE ADMINISTRATIVO",
+        "SALARIO": " 8.803,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5131213999",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "4436228848",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "02\/04\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4430286650",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4432936700",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "4433462073",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "54996166618",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "44991363999",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51980363999",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "44984344401",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "03\/07\/2014",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "44998670729",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "28\/01\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "caroline.castro@fiepr.org.br",
+            "valmirledo@gmail.com",
+            "jolcir@hotmail.com",
+            "jolciroliveira@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOSE CORREIA DE AGUIAR",
+                "NUMERO": "361",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD LEBLON",
+                "CEP": "87053276",
+                "CIDADE": "MARINGA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "ROD PR 489",
+                "NUMERO": "489",
+                "COMPLEMENTO": "1400",
+                "BAIRRO": "JD UNIVERSITARIO",
+                "CEP": "87508210",
+                "CIDADE": "UMUARAMA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "JOAO WALDEMAR FONTOURA",
+                "NUMERO": "645",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "98476000",
+                "CIDADE": "SANTA CRUZ",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R ORLANDO NAVAQUI",
+                "NUMERO": "2295",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD ALTO DA BOA VISTA",
+                "CEP": "87506465",
+                "CIDADE": "UMUARAMA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "ROD PR QUATROCENTOS E OITENTA E NOVE",
+                "NUMERO": "1400",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD UNIVERSITARIO",
+                "CEP": "87508210",
+                "CIDADE": "UMUARAMA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R GEN PORTINHO",
+                "NUMERO": "1034",
+                "COMPLEMENTO": "AP 3",
+                "BAIRRO": "DQ CAXIAS PAZ",
+                "CEP": "97800000",
+                "CIDADE": "SAO LUIZ GONZAGA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R AQUILES GIRARDI",
+                "NUMERO": "696",
+                "COMPLEMENTO": "E",
+                "BAIRRO": "SEMINARIO",
+                "CEP": "89813290",
+                "CIDADE": "CHAPECO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R CURITIBA E",
+                "NUMERO": "422",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "89801340",
+                "CIDADE": "CHAPECO",
+                "ESTADO": "SC"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "42502004004",
+                "NOME": "ELIZETE ROZELEI BRUM OLIVEIRA",
+                "IDADE": "63 anos",
+                "LOCAL": "SANTIAGO\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "60765828049",
+                "NOME": "ROZELMA BRUM OLIVEIRA",
+                "IDADE": "59 anos",
+                "LOCAL": "SANTIAGO\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "VALMIR TRAVASSOS LEDO",
+            "IDADE": "",
+            "LOCALIDADE": "UMUARAMA\/PR",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "2112672959"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SERVICO NACIONAL DE APRENDIZAGEM INDUSTRIAL-SENAI",
+                "CNPJ": "03775069005063",
+                "CIDADE": "CAXIAS DO SUL-RS",
+                "PROFISSAO": "395105",
+                "DATA_ADMISSAO": "06\/06\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVICO NACIONAL DE APRENDIZAGEM INDUSTRIAL - SENAI",
+                "CNPJ": "03776284000958",
+                "CIDADE": "UMUARAMA-PR",
+                "PROFISSAO": "142105",
+                "DATA_ADMISSAO": "01\/03\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVICO NACIONAL DE APRENDIZAGEM INDUSTRIAL - SENAI",
+                "CNPJ": "03776284003035",
+                "CIDADE": "MARINGA-PR",
+                "PROFISSAO": "241040",
+                "DATA_ADMISSAO": "01\/10\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "UNIAO MARINGAENSE DE ENSINO LTDA",
+                "CNPJ": "05885457000144",
+                "CIDADE": "MARINGA-PR",
+                "PROFISSAO": "234810",
+                "DATA_ADMISSAO": "01\/08\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVICO NACIONAL DE APRENDIZAGEM INDUSTRIAL - SENAI",
+                "CNPJ": "03776284000109",
+                "CIDADE": "CURITIBA-PR",
+                "PROFISSAO": "241040",
+                "DATA_ADMISSAO": "01\/05\/2011",
+                "DATA_DEMISSAO": "30\/09\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": [
+            {
+                "RAZAO_SOCIAL": "CENTRO DE TRADICOES GAUCHAS RINCAO DOS XETAS",
+                "CNPJ": "28286152000111",
+                "CIDADE": "UMUARAMA-PR",
+                "QUALIFICACAO": "Presidente",
+                "DATA_ENTRADA": "20170721",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "ROZELMA BRUM OLIVEIRA   CIA LTDA",
+                "CNPJ": "86848298000290",
+                "CIDADE": "SANTIAGO-RS",
+                "QUALIFICACAO": "SÃ³cio",
+                "DATA_ENTRADA": "20010621",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "ROZELMA BRUM OLIVEIRA   CIA LTDA",
+                "CNPJ": "86848298000100",
+                "CIDADE": "SANTIAGO-RS",
+                "QUALIFICACAO": "SÃ³cio",
+                "DATA_ENTRADA": "20010621",
+                "VALOR_PARTICIPACAO": ""
+            }
+        ]
+    }
+}

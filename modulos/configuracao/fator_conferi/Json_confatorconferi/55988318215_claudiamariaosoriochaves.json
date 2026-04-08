@@ -1,0 +1,393 @@
+{
+    "CADASTRAIS": {
+        "CPF": "55988318215",
+        "NOME": "CLAUDIA MARIA OSORIO CHAVES",
+        "NOME_MAE": "MARIA FERNANDA OSORIO CHAVES",
+        "NASCTO": "18\/04\/1976",
+        "IDADE": "50 anos",
+        "SEXO": "Feminino",
+        "RG": "11642742",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1249352055 ",
+        "ESCOLARIDADE": "11",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "234505",
+        "PROFISSAO": "PROFESSOR DE ENSINO SUPERIOR NA AREA DE DIDATICA",
+        "SALARIO": " 10.030,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9232368150",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9236332954",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9233044124",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9235844142",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92981122406",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92981120641",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92991594078",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92994287659",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92981199720",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "claudiachaves@manaus.br",
+            "claudiachaves@viviax.com.br",
+            "phanaticus@hotmail.com",
+            "claudiamachaves@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R EUTIQUIO SOLEDADE",
+                "NUMERO": "585",
+                "COMPLEMENTO": "AP 202",
+                "BAIRRO": "TAUA",
+                "CEP": "21920055",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R EXPEDICIONARIOS",
+                "NUMERO": "2104",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COMPENSA",
+                "CEP": "69035096",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "PRQ SABIA",
+                "NUMERO": "76",
+                "COMPLEMENTO": "AP 504",
+                "BAIRRO": "D PEDRO I",
+                "CEP": "69040750",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R RIO JAVARI",
+                "NUMERO": "445",
+                "COMPLEMENTO": "AP 801",
+                "BAIRRO": "NOSSA SENHORA DAS GRACAS",
+                "CEP": "69053110",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "RUA PEDROSO ALVARENGA",
+                "NUMERO": "1062",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ITAIM BIBI",
+                "CEP": "04531004",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA JUFARI",
+                "NUMERO": "76",
+                "COMPLEMENTO": "AP 504",
+                "BAIRRO": "NOVA ESPERANCA",
+                "CEP": "69037478",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "RUA RIO PURUS",
+                "NUMERO": "449",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOSSA SENHORA DAS GRACAS",
+                "CEP": "69053050",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "2210436249",
+                "NOME": "MARIA FERNANDA OSORIO CHAVES",
+                "IDADE": "78 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "62665820234",
+                "NOME": "LARA SIMONE CHAVES DOS SANTOS",
+                "IDADE": "46 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "66215919268",
+                "NOME": "CLAUDIO DO CARMO CHAVES FILHO",
+                "IDADE": "44 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "LARA SIMONE CHAVES DOS SANTOS",
+            "IDADE": "",
+            "LOCALIDADE": "MANAUS\/AM",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "62665820234"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CENTRO DE ENSINO SUPERIOR NILTON LINS",
+                "CNPJ": "04803904000106",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "234505",
+                "DATA_ADMISSAO": "02\/02\/2006",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FUNDACAO UNIVERSIDADE DO AMAZONAS",
+                "CNPJ": "04378626000197",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "234505",
+                "DATA_ADMISSAO": "24\/06\/2019",
+                "DATA_DEMISSAO": "{Ã±\/{Ã±\/2023",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": [
+            {
+                "RAZAO_SOCIAL": "CHAVES PARTICIPACOES LTDA",
+                "CNPJ": "43785541000185",
+                "CIDADE": "MANAUS-AM",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20211006",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "EYE CENTER SERVICOS MEDICOS LTDA",
+                "CNPJ": "03556039000501",
+                "CIDADE": "MANAUS-AM",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20150730",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "EYE CENTER SERVICOS MEDICOS LTDA",
+                "CNPJ": "03556039000773",
+                "CIDADE": "MANAUS-AM",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20150730",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "EYE CENTER SERVICOS MEDICOS LTDA",
+                "CNPJ": "03556039001079",
+                "CIDADE": "MANAUS-AM",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20150730",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "EYE CENTER SERVICOS MEDICOS LTDA",
+                "CNPJ": "03556039000269",
+                "CIDADE": "MANAUS-AM",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20150730",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "EYE CENTER SERVICOS MEDICOS LTDA",
+                "CNPJ": "03556039000188",
+                "CIDADE": "MANAUS-AM",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20150730",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "EYE CENTER SERVICOS MEDICOS LTDA",
+                "CNPJ": "03556039000935",
+                "CIDADE": "MANAUS-AM",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20150730",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "EYE CENTER SERVICOS MEDICOS LTDA",
+                "CNPJ": "03556039000420",
+                "CIDADE": "MANAUS-AM",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20150730",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "EYE CENTER SERVICOS MEDICOS LTDA",
+                "CNPJ": "03556039000340",
+                "CIDADE": "MANAUS-AM",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20150730",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "EYE CENTER SERVICOS MEDICOS LTDA",
+                "CNPJ": "03556039000854",
+                "CIDADE": "MANAUS-AM",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20150730",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "EYE CENTER SERVICOS MEDICOS LTDA",
+                "CNPJ": "03556039000692",
+                "CIDADE": "MANAUS-AM",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20150730",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "EYE CENTER SERVICOS MEDICOS LTDA",
+                "CNPJ": "03556039001150",
+                "CIDADE": "MANAUS-AM",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20150730",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "EYE CENTER CONSULTORIA EM GESTAO EMPRESARIAL LTDA",
+                "CNPJ": "09128194000180",
+                "CIDADE": "MANAUS-AM",
+                "QUALIFICACAO": "SÃ³cio",
+                "DATA_ENTRADA": "20071016",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "EYE CENTER CONSULTORIA EM GESTAO EMPRESARIAL LTDA",
+                "CNPJ": "09128194000260",
+                "CIDADE": "MANAUS-AM",
+                "QUALIFICACAO": "SÃ³cio",
+                "DATA_ENTRADA": "20071016",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "EYE CENTER CONSULTORIA EM GESTAO EMPRESARIAL LTDA",
+                "CNPJ": "09128194000422",
+                "CIDADE": "MANAUS-AM",
+                "QUALIFICACAO": "SÃ³cio",
+                "DATA_ENTRADA": "20071016",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "EYE CENTER CONSULTORIA EM GESTAO EMPRESARIAL LTDA",
+                "CNPJ": "09128194000341",
+                "CIDADE": "MANAUS-AM",
+                "QUALIFICACAO": "SÃ³cio",
+                "DATA_ENTRADA": "20071016",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "PHANATICUS LTDA",
+                "CNPJ": "04717014000181",
+                "CIDADE": "MANAUS-AM",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20011009",
+                "VALOR_PARTICIPACAO": ""
+            }
+        ]
+    }
+}

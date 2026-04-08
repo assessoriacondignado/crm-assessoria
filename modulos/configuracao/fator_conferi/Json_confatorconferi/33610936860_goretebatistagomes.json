@@ -1,0 +1,210 @@
+{
+    "CADASTRAIS": {
+        "CPF": "33610936860",
+        "NOME": "GORETE BATISTA GOMES",
+        "NOME_MAE": "MARIA BATISTA GOMES",
+        "NASCTO": "14\/09\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "323730980116",
+        "NIT": "1627576152",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "514320",
+        "PROFISSAO": "AUXILIAR DE LIMPEZA",
+        "SALARIO": " 1.640,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1121468500",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1124994341",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11974414157",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11971053425",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "ricardo.gomes@itapemirimcorp.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CEU AZUL",
+                "NUMERO": "82",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ JUREMA",
+                "CEP": "07244425",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R IBIRAPUERA",
+                "NUMERO": "95",
+                "COMPLEMENTO": "A",
+                "BAIRRO": "PRQ JUREMA",
+                "CEP": "07244110",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CEU AZUL",
+                "NUMERO": "82",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL CAP RABELO",
+                "CEP": "07050160",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE CAMPANELLA",
+                "NUMERO": "196",
+                "COMPLEMENTO": "POUPA TEMPO",
+                "BAIRRO": "MACEDO",
+                "CEP": "07112100",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BOM JESUS DE PIRAPORA",
+                "NUMERO": "99",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL VIANELO",
+                "CEP": "13207270",
+                "CIDADE": "JUNDIAI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MIGUEL ALVES",
+                "NUMERO": "52",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AGUA CHATA",
+                "CEP": "07251120",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV PAULO BARRETO DE MENEZE",
+                "NUMERO": "118",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "CENTRO",
+                "CEP": "49100000",
+                "CIDADE": "SAO CRISTOVAO",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R POTIGUARA",
+                "NUMERO": "82",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ JUREMA",
+                "CEP": "07244120",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "129702552",
+                "NOME": "MARIA BATISTA GOMES",
+                "IDADE": "80 anos",
+                "LOCAL": "VARZEA DO POCO\/BA",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "12879378451",
+                "NOME": "ERIVAN GOMES DA SILVA",
+                "IDADE": "24 anos",
+                "LOCAL": "NATAL\/RN",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "48670020890",
+                "NOME": "ERIK GOMES DE LIMA",
+                "IDADE": "28 anos",
+                "LOCAL": "GUARULHOS\/SP",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "VIACAO SANTA CRUZ LTDA.",
+                "CNPJ": "52771516019233",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "514320",
+                "DATA_ADMISSAO": "01\/04\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VIACAO ITAPEMIRIM LTDA FALIDO",
+                "CNPJ": "27175975000107",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "513315",
+                "DATA_ADMISSAO": "01\/10\/2015",
+                "DATA_DEMISSAO": "01\/04\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "VIACAO ITAPEMIRIM LTDA FALIDO",
+                "CNPJ": "27175975017344",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "513315",
+                "DATA_ADMISSAO": "01\/04\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

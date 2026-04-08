@@ -1,0 +1,179 @@
+{
+    "CADASTRAIS": {
+        "CPF": "82793867691",
+        "NOME": "MARCOS ANTONIO DOS REIS",
+        "NOME_MAE": "MAURA RODRIGUES BRAGA REIS",
+        "NASCTO": "03\/08\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "085505240221",
+        "NIT": "12386272828",
+        "ESCOLARIDADE": "SUPERIOR INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "711205",
+        "PROFISSAO": "OPERADOR DE CAMINHAO (MINAS E PEDREIRAS)",
+        "SALARIO": " 2.975,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3137315939",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3135610630",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31996992878",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31986803133",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31988406815",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31988656815",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31988896815",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "05\/08\/2011",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "marcosantoniodosreis03@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MANOEL BANDEIRA",
+                "NUMERO": "230",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "NOVO ITABIRITO",
+                "CEP": "35456130",
+                "CIDADE": "ITABIRITO",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R MANOEL BANDEIRA",
+                "NUMERO": "230",
+                "COMPLEMENTO": "",
+                "BAIRRO": "",
+                "CEP": "35450000",
+                "CIDADE": "ITABIRITO",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R JOAO 23",
+                "NUMERO": "123",
+                "COMPLEMENTO": "",
+                "BAIRRO": "B IAPI",
+                "CEP": "35450000",
+                "CIDADE": "ITABIRITO",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "81379030625",
+            "NOME": "MAURA RODRIGUES BRAGA REIS",
+            "IDADE": "87 anos",
+            "LOCAL": "ITABIRITO\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "VALE S.A.",
+                "CNPJ": "33592510004494",
+                "CIDADE": "ITABIRITO-MG",
+                "PROFISSAO": "715125",
+                "DATA_ADMISSAO": "22\/06\/2004",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VALE S.A.",
+                "CNPJ": "33592510003412",
+                "CIDADE": "NOVA LIMA-MG",
+                "PROFISSAO": "711205",
+                "DATA_ADMISSAO": "12\/20\/1907",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "VALE S.A.",
+                "CNPJ": "33592510021747",
+                "CIDADE": "SANTA LUZIA-MG",
+                "PROFISSAO": "711205",
+                "DATA_ADMISSAO": "12\/04\/2011",
+                "DATA_DEMISSAO": "19\/07\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

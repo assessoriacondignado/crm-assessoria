@@ -1,0 +1,232 @@
+{
+    "CADASTRAIS": {
+        "CPF": "27340179895",
+        "NOME": "GUILHERME AZEVEDO CETOLO",
+        "NOME_MAE": "MARIA TERESA MARINHO AZEVEDO",
+        "NASCTO": "30\/11\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "121264740221",
+        "NIT": "2007534404",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "214405",
+        "PROFISSAO": "ENGENHEIRO MECANICO",
+        "SALARIO": " 9.731,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1933473256",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1933473256",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1933743256",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "3134973057",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3534412806",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19971424381",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19999958224",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19987628381",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19987681836",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19988634378",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "guimanja@gmail.com",
+            "guiazevedo@bol.com.br",
+            "guilherme_2006_10@globo.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R LUIZ RODRIGUES DE MORAES",
+                "NUMERO": "189",
+                "COMPLEMENTO": "SL 1",
+                "BAIRRO": "ALEMAES",
+                "CEP": "13416254",
+                "CIDADE": "PIRACICABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOAO BOTENE",
+                "NUMERO": "612",
+                "COMPLEMENTO": "AP 62",
+                "BAIRRO": "VL MONTEIRO",
+                "CEP": "13418555",
+                "CIDADE": "PIRACICABA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DR SILVESTRE FERRAZ",
+                "NUMERO": "1202",
+                "COMPLEMENTO": "AP 302",
+                "BAIRRO": "PINHEIRINHO",
+                "CEP": "37500054",
+                "CIDADE": "ITAJUBA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R ALECRINS",
+                "NUMERO": "234",
+                "COMPLEMENTO": "AP162",
+                "BAIRRO": "CAMBUI",
+                "CEP": "13024410",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOAO BOTENE",
+                "NUMERO": "410",
+                "COMPLEMENTO": "APT 73",
+                "BAIRRO": "VL MONTEIRO",
+                "CEP": "13418555",
+                "CIDADE": "PIRACICABA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "84938587815",
+                "NOME": "MARIA TERESA MARINHO AZEVEDO",
+                "IDADE": "70 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "3644000646",
+                "NOME": "RICARDO AZEVEDO CETOLO",
+                "IDADE": "50 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "40971196800",
+                "NOME": "MARCELO AZEVEDO GONCALVES DOS SANTOS",
+                "IDADE": "35 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "41916591892",
+                "NOME": "FERNANDO AZEVEDO GONCALVES DOS SANTOS",
+                "IDADE": "33 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "ENGETUBO SERVICE LTDA",
+            "CNPJ": "04148126000169",
+            "CIDADE": "PIRACICABA-SP",
+            "PROFISSAO": "214405",
+            "DATA_ADMISSAO": "10\/02\/2004",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,116 @@
+{
+    "CADASTRAIS": {
+        "CPF": "3048317007",
+        "NOME": "LUAN HENRIQUE DA SILVA",
+        "NOME_MAE": "JANIRA FAGUNDES DA SILVA",
+        "NASCTO": "01\/08\/1992",
+        "IDADE": "33 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1635004186",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "811770",
+        "PROFISSAO": "MOLDADOR DE PLASTICO POR INJECAO",
+        "SALARIO": " 3.981,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "5535511979",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "47991741199",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "MOVEL",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": "",
+    "ENDERECOS": "",
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "57503710004",
+                "NOME": "JANIRA FAGUNDES DA SILVA",
+                "IDADE": "55 anos",
+                "LOCAL": "",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "4522138008",
+                "NOME": "WILLIAN DA SILVA DOS SANTOS",
+                "IDADE": "24 anos",
+                "LOCAL": "",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "4522154046",
+                "NOME": "ROBERTA MUNIQUE SIQUEIRA",
+                "IDADE": "19 anos",
+                "LOCAL": "",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "4522160011",
+                "NOME": "KELIN DA SILVA DOS SANTOS",
+                "IDADE": "26 anos",
+                "LOCAL": "TENENTE PORTELA\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PLASTICOS ZANOTTI LTDA",
+                "CNPJ": "03532453000157",
+                "CIDADE": "MASSARANDUBA-SC",
+                "PROFISSAO": "811770",
+                "DATA_ADMISSAO": "15\/10\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "AGRICOLA FRAIBURGO SA",
+                "CNPJ": "86548724000351",
+                "CIDADE": "VACARIA-RS",
+                "PROFISSAO": "622505",
+                "DATA_ADMISSAO": "16\/20\/1901",
+                "DATA_DEMISSAO": "11\/03\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "VALDIR DALCIN   CIA LTDA",
+                "CNPJ": "94106945000136",
+                "CIDADE": "TENENTE PORTELA-RS",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "09\/04\/2014",
+                "DATA_DEMISSAO": "01\/12\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

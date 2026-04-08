@@ -1,0 +1,249 @@
+{
+    "CADASTRAIS": {
+        "CPF": "98012002434",
+        "NOME": "EDSON MOREIRA DA SILVA JUNIOR",
+        "NOME_MAE": "ADELIA BEZERRA MONDEGO",
+        "NASCTO": "12\/04\/1977",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "023908311295",
+        "NIT": "1168352857",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "811310",
+        "PROFISSAO": "OPERADOR DE EXPLORACAO DE PETROLEO",
+        "SALARIO": " 31.537,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7932312003",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "8432172945",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7932178257",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7932322136",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "79998817330",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "83999711758",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79988223736",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "OI_PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79991928200",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999941676",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "moreira.edson@yahoo.com.br",
+            "moreira.edson@terra.com.br",
+            "moreira.edsonjunior@gmail.com",
+            "emsjunior@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R FRANCISCO RABELO LEITE NETO",
+                "NUMERO": "820",
+                "COMPLEMENTO": "AP 202",
+                "BAIRRO": "ATALAIA",
+                "CEP": "49037240",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO JOSE SANTIAGO",
+                "NUMERO": "115",
+                "COMPLEMENTO": "AP 104 BL",
+                "BAIRRO": "BODOCONGO",
+                "CEP": "58430015",
+                "CIDADE": "CAMPINA GRANDE",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO ALEXANDRE MENEZES",
+                "NUMERO": "3434",
+                "COMPLEMENTO": "AP 1902",
+                "BAIRRO": "LUZIA",
+                "CEP": "49048020",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO JOSE SANTIAGO",
+                "NUMERO": "215",
+                "COMPLEMENTO": "BL R AP 202",
+                "BAIRRO": "BODOCONGO",
+                "CEP": "58430015",
+                "CIDADE": "CAMPINA GRANDE",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "R ODILON LUCIO DE SOUZA",
+                "NUMERO": "58",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MANGABEIRA",
+                "CEP": "58056420",
+                "CIDADE": "JOAO PESSOA",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "AV ADELIA FRANCO",
+                "NUMERO": "3434",
+                "COMPLEMENTO": "AP  Apartamento  1902",
+                "BAIRRO": "LUZIA",
+                "CEP": "49048010",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "AVENIDA SAO MIGUEL DOS CARIBES",
+                "NUMERO": "27",
+                "COMPLEMENTO": "CA A",
+                "BAIRRO": "NEOPOLIS",
+                "CEP": "59086500",
+                "CIDADE": "NATAL",
+                "ESTADO": "RN"
+            },
+            {
+                "LOGRADOURO": "AVENIDA ADELIA FRANCO",
+                "NUMERO": "3434",
+                "COMPLEMENTO": "BL  ALFA 1902",
+                "BAIRRO": "INACIO BARBOSA",
+                "CEP": "49040020",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "2823284249",
+            "NOME": "ADELIA BEZERRA MONDEGO",
+            "IDADE": "71 anos",
+            "LOCAL": "ARACAJU\/SE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PETROLEO BRASILEIRO S A PETROBRAS",
+                "CNPJ": "33000167001507",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "811310",
+                "DATA_ADMISSAO": "02\/08\/2006",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PETROLEO BRASILEIRO S A PETROBRAS",
+                "CNPJ": "33000167108492",
+                "CIDADE": "MACAE-RJ",
+                "PROFISSAO": "811310",
+                "DATA_ADMISSAO": "02\/08\/2006",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "PETROLEO BRASILEIRO S A PETROBRAS",
+                "CNPJ": "33000167081438",
+                "CIDADE": "JAPARATUBA-SE",
+                "PROFISSAO": "811310",
+                "DATA_ADMISSAO": "02\/08\/2006",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

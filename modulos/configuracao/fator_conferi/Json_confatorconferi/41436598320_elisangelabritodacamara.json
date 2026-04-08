@@ -1,0 +1,165 @@
+{
+    "CADASTRAIS": {
+        "CPF": "41436598320",
+        "NOME": "ELISANGELA BRITO DA CAMARA",
+        "NOME_MAE": "MARIA JOSE BRITO DA CAMARA",
+        "NASCTO": "28\/03\/1972",
+        "IDADE": "54 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "036198700760",
+        "NIT": "1246141385",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "251115",
+        "PROFISSAO": "CIENTISTA POLITICO",
+        "SALARIO": " 3.513,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8532967107",
+            "OPERADORA": "TELEMAR\/CE",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "85991038306",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "85991763234",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "85984004417",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "09\/02\/2013",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "85987477107",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "23\/08\/2014",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "webmaster@incomaq.com.br",
+            "transcor1@milton.cvtelecom.cv",
+            "elisangelacamara@oi.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV CONTORNO SUL",
+                "NUMERO": "102",
+                "COMPLEMENTO": "BL 25 AP",
+                "BAIRRO": "CJ ESPERANCA",
+                "CEP": "60763430",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "AVENIDA CONTORNO SUL",
+                "NUMERO": "25",
+                "COMPLEMENTO": "BL 25 AP 102",
+                "BAIRRO": "CONJUNTO ESPERANCA",
+                "CEP": "60763430",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "25679791234",
+                "NOME": "MARIA JOSE BRITO DA CAMARA",
+                "IDADE": "86 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "37790528300",
+                "NOME": "JOSE ENILDO BRITO DA CAMARA",
+                "IDADE": "57 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "38802589372",
+                "NOME": "JOSE ERICSSON BRITO DA CAMARA",
+                "IDADE": "55 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "41436580382",
+                "NOME": "ELISSANDRA BRITO DA CAMARA",
+                "IDADE": "49 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SERVICO SOCIAL DO COMERCIO - SESC - AR.CE.",
+                "CNPJ": "03612122000208",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "251115",
+                "DATA_ADMISSAO": "14\/02\/2013",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BEMFAM-CIDADANIA, EDUCACAO, DESENVOLVIMENTO SOCIAL E SAUDE-CEDESS",
+                "CNPJ": "07034535000807",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "01\/05\/2011",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

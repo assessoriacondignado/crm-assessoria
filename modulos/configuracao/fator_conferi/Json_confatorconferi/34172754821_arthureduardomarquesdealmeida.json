@@ -1,0 +1,152 @@
+{
+    "CADASTRAIS": {
+        "CPF": "34172754821",
+        "NOME": "ARTHUR EDUARDO MARQUES DE ALMEIDA",
+        "NOME_MAE": "ANTONIA DOS REIS MARQURS",
+        "NASCTO": "11\/09\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12636785169",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "914425",
+        "PROFISSAO": "MECANICO DE VEICULOS AUTOMOTORES A DIESEL (EXCETO TRATORES)",
+        "SALARIO": " 1.323,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1639661976",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1639663372",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "25\/02\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "16991488140",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16981072203",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "16988405857",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "09\/06\/2011",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "archupardal@hotmail.com",
+            "anapaula623@linkbr.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV RENE OLIVA STRANG",
+                "NUMERO": "1",
+                "COMPLEMENTO": "955",
+                "BAIRRO": "JD PAIVA",
+                "CEP": "14056849",
+                "CIDADE": "RIBEIRAO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV RENE O STRANG",
+                "NUMERO": "1955",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD PAIVA",
+                "CEP": "14056745",
+                "CIDADE": "RIBEIRAO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA RENE OLIVA STRANG",
+                "NUMERO": "1955",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM PAIVA",
+                "CEP": "14056770",
+                "CIDADE": "RIBEIRAO PRETO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ANA PAULA RAMOS",
+            "IDADE": "",
+            "LOCALIDADE": "RIBEIRAO PRETO\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "15628926817"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "RIO DE JANEIRO REFRESCOS LTDA",
+                "CNPJ": "00074569005080",
+                "CIDADE": "RIBEIRAO PRETO-SP",
+                "PROFISSAO": "914405",
+                "DATA_ADMISSAO": "05\/09\/2006",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COMPANHIA DE BEBIDAS IPIRANGA",
+                "CNPJ": "55960736000101",
+                "CIDADE": "RIBEIRAO PRETO-SP",
+                "PROFISSAO": "914425",
+                "DATA_ADMISSAO": "05\/09\/2006",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

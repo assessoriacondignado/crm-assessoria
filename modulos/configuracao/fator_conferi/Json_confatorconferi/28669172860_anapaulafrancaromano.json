@@ -1,0 +1,296 @@
+{
+    "CADASTRAIS": {
+        "CPF": "28669172860",
+        "NOME": "ANA PAULA FRANCA ROMANO",
+        "NOME_MAE": "SUELI DE FATIMA VIDAL",
+        "NASCTO": "30\/06\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Feminino",
+        "RG": "28018576",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "270801910108",
+        "NIT": "1279942389",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "239405",
+        "PROFISSAO": "COORDENADOR PEDAGOGICO",
+        "SALARIO": " 8.479,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1129561592",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1125660916",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1125684126",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11983865704",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11980505704",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11980505704",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11986835704",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11998328250",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "anapaularomano@hotmail.com",
+            "francaromano@globo.com",
+            "alexpauladuda@uol.com.br",
+            "anaalexduda@br.inter.net",
+            "paularom1@terra.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV CDA ELISABETH DE ROBIANO",
+                "NUMERO": "2000",
+                "COMPLEMENTO": "AP 14",
+                "BAIRRO": "JD AMERICA DA PENHA",
+                "CEP": "03704000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO JOSE DE MEDEIROS",
+                "NUMERO": "465",
+                "COMPLEMENTO": "BL 4 AP 71",
+                "BAIRRO": "VL PARANAGUA",
+                "CEP": "03808030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO JOAO DE MEDEIROS",
+                "NUMERO": "508",
+                "COMPLEMENTO": "1",
+                "BAIRRO": "ITAIM PAULISTA",
+                "CEP": "08140060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "EST D JOAO NERY",
+                "NUMERO": "508",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL SILVA TELES",
+                "CEP": "08110000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MANUEL BARBALHO DE LIMA",
+                "NUMERO": "8",
+                "COMPLEMENTO": "84",
+                "BAIRRO": "VL SILVA TELES",
+                "CEP": "08110330",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MANUEL BARBALHO DE LIMA",
+                "NUMERO": "84",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL SILVA TELES",
+                "CEP": "08110330",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PEDRO SOARES DE ANDRADE",
+                "NUMERO": "256",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL ROSARIA",
+                "CEP": "08021040",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PEDRO SOARES DE ANDRADE",
+                "NUMERO": "265",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL ROSARIA",
+                "CEP": "08021040",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "7499562832",
+                "NOME": "SUELI DE FATIMA VIDAL",
+                "IDADE": "70 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "48289311800",
+                "NOME": "MARIA EDUARDA FRANCA ROMANO",
+                "IDADE": "26 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ALEX DE JESUS ROMANO",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "17074235806"
+            },
+            {
+                "NOME": "ANDREA GOMES REIPERT SANTOS",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "12707950823"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COLEGIO VITAL BRAZIL LTDA",
+                "CNPJ": "13618854000188",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "231205",
+                "DATA_ADMISSAO": "17\/01\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CRUZEIRO DO SUL EDUCACIONAL S.A.",
+                "CNPJ": "62984091000870",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "239405",
+                "DATA_ADMISSAO": "02\/02\/2015",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CENTRO ESTADUAL DE EDUCACAO TECNOLOGICA PAULA SOUZA",
+                "CNPJ": "62823257021106",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "232115",
+                "DATA_ADMISSAO": "08\/03\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "INSTITUTO EDUCACIONAL TGMIGUEL LTDA",
+                "CNPJ": "12793958000166",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "331205",
+                "DATA_ADMISSAO": "21\/03\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "ESCOLA MEU CANTINHO DOURADO LTDA",
+                "CNPJ": "55705446000103",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "231210",
+                "DATA_ADMISSAO": "01\/03\/2010",
+                "DATA_DEMISSAO": "29\/01\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "COLEGIO NH LTDA",
+                "CNPJ": "07304920000142",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "231210",
+                "DATA_ADMISSAO": "01\/03\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

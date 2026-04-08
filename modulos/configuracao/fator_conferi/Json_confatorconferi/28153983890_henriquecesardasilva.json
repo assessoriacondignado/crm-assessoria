@@ -1,0 +1,269 @@
+{
+    "CADASTRAIS": {
+        "CPF": "28153983890",
+        "NOME": "HENRIQUE CESAR DA SILVA",
+        "NOME_MAE": "MARIA REGINA DE PAULA SILVA",
+        "NASCTO": "21\/01\/1981",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "215777690175",
+        "NIT": "1269734214",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "354205",
+        "PROFISSAO": "COMPRADOR",
+        "SALARIO": " 6.177,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1639457678",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1639457678",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1639421680",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "16991373684",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16991373684",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16988531456",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16997051382",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "16991212368",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "cowboysert@bol.com.br",
+            "henriquestz@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ERNESTO GUIDONI",
+                "NUMERO": "30",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JD S SEBASTIAO",
+                "CEP": "14750000",
+                "CIDADE": "PITANGUEIRAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV ANTONIO WALDIR MARTINELLI",
+                "NUMERO": "1755",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DT INDUST E EMPRESARIAL 2",
+                "CEP": "14175360",
+                "CIDADE": "SERTAOZINHO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ERNESTO GUIDONI",
+                "NUMERO": "30",
+                "COMPLEMENTO": "AP 11",
+                "BAIRRO": "JD S SEBASTIAO",
+                "CEP": "14169259",
+                "CIDADE": "SERTAOZINHO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R EGYDIO FAVARETTO",
+                "NUMERO": "111",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SHANGRI LA",
+                "CEP": "14161120",
+                "CIDADE": "SERTAOZINHO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE CARVALHO DE ARAUJO",
+                "NUMERO": "168",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM VENETO I",
+                "CEP": "14169530",
+                "CIDADE": "SERTAOZINHO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOSE CARVALHO DE ARAUJO",
+                "NUMERO": "168",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD VENETO II",
+                "CEP": "14169654",
+                "CIDADE": "SERTAOZINHO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MARCO ANTONIO BOLZAN",
+                "NUMERO": "255",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD PARAISO",
+                "CEP": "14750000",
+                "CIDADE": "PITANGUEIRAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ANGELO SCHIAVINATTO",
+                "NUMERO": "116",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CONJUNTO HABITACIONAL ANTONIO COSTA PATRAO",
+                "CEP": "14164108",
+                "CIDADE": "SERTAOZINHO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "18329665852",
+                "NOME": "MARIA REGINA DE PAULA SILVA",
+                "IDADE": "62 anos",
+                "LOCAL": "SERTAOZINHO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "5653836630",
+                "NOME": "MICHEL DE PAULA MACHADO",
+                "IDADE": "44 anos",
+                "LOCAL": "ALEM PARAIBA\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "8196744781",
+                "NOME": "DULCINEIA DE PAULA SILVA",
+                "IDADE": "49 anos",
+                "LOCAL": "VOLTA REDONDA\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "11092258655",
+                "NOME": "WASHINGTON LUIZ SILVA",
+                "IDADE": "34 anos",
+                "LOCAL": "FAMA\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "12364151759",
+                "NOME": "MAGNO DE PAULA MACHADO",
+                "IDADE": "41 anos",
+                "LOCAL": "VOLTA REDONDA\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "17557769775",
+                "NOME": "MICHELI DE PAULA MACHADO",
+                "IDADE": "44 anos",
+                "LOCAL": "TERESOPOLIS\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "MARIA REGINA DE PAULA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "SERTAOZINHO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "18329665852"
+            },
+            {
+                "NOME": "ZILDA MEIRELES DOS SANTOS",
+                "IDADE": "",
+                "LOCALIDADE": "SERTAOZINHO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "20155585860"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "PROMOEN-EQUIPAMENTOS INDUSTRIAIS LTDA",
+            "CNPJ": "00250937000115",
+            "CIDADE": "SERTAOZINHO-SP",
+            "PROFISSAO": "354205",
+            "DATA_ADMISSAO": "25\/10\/2010",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

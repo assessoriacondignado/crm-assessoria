@@ -1,0 +1,277 @@
+{
+    "CADASTRAIS": {
+        "CPF": "88868273004",
+        "NOME": "CRISTIAN SOARES DA SILVA",
+        "NOME_MAE": "MARIA JOAQUINA PINTO DA SILVA",
+        "NASCTO": "31\/08\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "1064484668",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "066592530442",
+        "NIT": "12735235701",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "252205",
+        "PROFISSAO": "AUDITOR (CONTADORES E AFINS)",
+        "SALARIO": " 4.088,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3134926074",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "5132646750",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1139634419",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "11\/04\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1127297314",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "53981242050",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "37998217815",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11984387743",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "01\/07\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11987320069",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11965620557",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "cristianss@gmail.com",
+            "cristianss34@gmail.com",
+            "s_leandro@live.com",
+            "cristian_soares_silva@carrefour.com",
+            "cristianss@pop.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOSE WALTER DE OLIVEIRA",
+                "NUMERO": "219",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AREAL",
+                "CEP": "96085410",
+                "CIDADE": "PELOTAS",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "AV OTAVIANO ALVES DE LIMA",
+                "NUMERO": "2756",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CASA VERDE BAIXA",
+                "CEP": "02501000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R UNIAO",
+                "NUMERO": "454",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ UNIAO",
+                "CEP": "13206650",
+                "CIDADE": "JUNDIAI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV FERREIRA VIANA",
+                "NUMERO": "841",
+                "COMPLEMENTO": "BL H AP 102",
+                "BAIRRO": "AREAL",
+                "CEP": "96085000",
+                "CIDADE": "PELOTAS",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R ALDORINDO OLIVEIRA MAIA",
+                "NUMERO": "23",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CIDADE VERDE",
+                "CEP": "92990000",
+                "CIDADE": "ELDORADO DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO MARIANTE",
+                "NUMERO": "373",
+                "COMPLEMENTO": "AP 103",
+                "BAIRRO": "CENTRO",
+                "CEP": "92990000",
+                "CIDADE": "ELDORADO DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R GEORGE EASTMAN",
+                "NUMERO": "100",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL TRAMONTANO",
+                "CEP": "05690000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R EUGENIO PUTTINI",
+                "NUMERO": "106",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ CIDADE JARDIM II",
+                "CEP": "13203533",
+                "CIDADE": "JUNDIAI",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1282644203",
+            "NOME": "MARIA JOAQUINA PINTO DA SILVA",
+            "IDADE": "79 anos",
+            "LOCAL": "ITAITUBA\/PA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "LEANDRO FERREIRA MALTA",
+                "IDADE": "",
+                "LOCALIDADE": "CAMPOS DOS GOYTACAZES\/RJ",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "15610199760"
+            },
+            {
+                "NOME": "ROBERTO TEIXEIRA MALTA",
+                "IDADE": "",
+                "LOCALIDADE": "DIVINOPOLIS\/MG",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "48747653604"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LINX SISTEMAS E CONSULTORIA LTDA",
+                "CNPJ": "54517628001593",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "354135",
+                "DATA_ADMISSAO": "02\/10\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SUPERMERCADOS MAMBO LTDA.",
+                "CNPJ": "71676316000146",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142320",
+                "DATA_ADMISSAO": "05\/08\/2015",
+                "DATA_DEMISSAO": "02\/05\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "COMERCIO VAREJISTA DE COMBUSTIVEIS VIA SUL LTDA",
+                "CNPJ": "15669570000146",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "252205",
+                "DATA_ADMISSAO": "01\/02\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "CARREFOUR COMERCIO E INDUSTRIA LTDA",
+                "CNPJ": "45543915000181",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "354205",
+                "DATA_ADMISSAO": "01\/08\/2011",
+                "DATA_DEMISSAO": "305",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

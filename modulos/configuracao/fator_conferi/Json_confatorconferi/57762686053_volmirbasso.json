@@ -1,0 +1,188 @@
+{
+    "CADASTRAIS": {
+        "CPF": "57762686053",
+        "NOME": "VOLMIR BASSO",
+        "NOME_MAE": "ZIBILA C BASSO",
+        "NASCTO": "08\/07\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "5136385000",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51997594751",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51998179091",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51999617032",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51997594750",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "29\/12\/2007",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "volmirbasso395@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R WALDEMAR JOSE BOHN",
+                "NUMERO": "1776",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "LN DOM DIOGO",
+                "CEP": "95748000",
+                "CIDADE": "SAO JOSE DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "NHEIRO MACHADO",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "95340000",
+                "CIDADE": "NOVA BASSANO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R RUA RUA PINHEIRO MACHADO            S\/N",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "95340000",
+                "CIDADE": "NOVA BASSANO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RAIMUNDA JOSE WESCHENESELDZR",
+                "NUMERO": "158",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "JULIO DE DARCILO",
+                "CEP": "95750000",
+                "CIDADE": "SALVADOR DO SUL",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SOLAR COMERCIO E AGROINDUSTRIA LTDA",
+                "CNPJ": "91362590006270",
+                "CIDADE": "SALVADOR DO SUL-RS",
+                "PROFISSAO": "141415",
+                "DATA_ADMISSAO": "07\/02\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SOLAR COMERCIO E AGROINDUSTRIA LTDA",
+                "CNPJ": "91362590008647",
+                "CIDADE": "BARAO-RS",
+                "PROFISSAO": "141415",
+                "DATA_ADMISSAO": "05\/01\/2022",
+                "DATA_DEMISSAO": "07\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SOLAR COMERCIO E AGROINDUSTRIA LTDA",
+                "CNPJ": "91362590007594",
+                "CIDADE": "TUPANDI-RS",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "08\/06\/2020",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "SOLAR COMERCIO E AGROINDUSTRIA LTDA",
+                "CNPJ": "91362590006601",
+                "CIDADE": "SALVADOR DO SUL-RS",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/05\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS SOLAR LTDA.",
+                "CNPJ": "15469928000944",
+                "CIDADE": "SALVADOR DO SUL-RS",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/05\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "SOLAR COMERCIO E AGROINDUSTRIA LTDA",
+                "CNPJ": "91362590000905",
+                "CIDADE": "SALVADOR DO SUL-RS",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "16\/08\/2006",
+                "DATA_DEMISSAO": "105",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

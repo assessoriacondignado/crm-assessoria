@@ -1,0 +1,151 @@
+{
+    "CADASTRAIS": {
+        "CPF": "31886109800",
+        "NOME": "GABRIELA CARR",
+        "NOME_MAE": "NADIA MARIA CAETANO CARR",
+        "NASCTO": "14\/09\/1983",
+        "IDADE": "42 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "223313830116",
+        "NIT": "2042738395",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "241005",
+        "PROFISSAO": "ADVOGADO",
+        "SALARIO": " 4.752,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1421061561",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1421061551",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1432433766",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "03\/02\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11998608657",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "14997786878",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "14997786878",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "gcarr@cabg.com.br",
+            "g24carr@gmail.com",
+            "gabi_carr@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOSE G FERNANDES",
+                "NUMERO": "468",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD M LUIZA II",
+                "CEP": "17203020",
+                "CIDADE": "JAU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA TREZE DE MAIO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "QD 18 22 APT 35",
+                "BAIRRO": "JARDIM ESTORIL IV",
+                "CEP": "17016170",
+                "CIDADE": "BAURU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA SAO GONCALO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "QD 8 42 BLOCO VILLAGE APTO",
+                "BAIRRO": "VILA ALTINOPOLIS",
+                "CEP": "17012170",
+                "CIDADE": "BAURU",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "14566296890",
+            "NOME": "NADIA MARIA CAETANO CARR",
+            "IDADE": "62 anos",
+            "LOCAL": "JAU\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "ABRAMIDES, GONCALVES E ADVOGADOS",
+            "CNPJ": "00373926000122",
+            "CIDADE": "BAURU-SP",
+            "PROFISSAO": "241005",
+            "DATA_ADMISSAO": "15\/10\/2009",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

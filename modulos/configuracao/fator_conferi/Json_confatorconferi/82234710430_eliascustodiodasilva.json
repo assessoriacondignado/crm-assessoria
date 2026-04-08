@@ -1,0 +1,168 @@
+{
+    "CADASTRAIS": {
+        "CPF": "82234710430",
+        "NOME": "ELIAS CUSTODIO DA SILVA",
+        "NOME_MAE": "SEVERINA CUSTODIO DA SILVA",
+        "NASCTO": "06\/12\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "036501410876",
+        "NIT": "1241935158",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "414140",
+        "PROFISSAO": "",
+        "SALARIO": " 1.579,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8135183619",
+            "OPERADORA": "TELEMAR\/PE",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "81973101422",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81985610185",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81985614604",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81987857565",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81984287642",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "custodio36@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R WELLINGTON MENDES GOMES DE OLIVEIRA",
+                "NUMERO": "50",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD STO INACIO",
+                "CEP": "54515545",
+                "CIDADE": "CABO DE SANTO AGOSTINHO",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R DAS GUAREBAS",
+                "NUMERO": "50",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S FRANCISCO",
+                "CEP": "54530020",
+                "CIDADE": "CABO DE SANTO AGOSTINHO",
+                "ESTADO": "PE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "3283954470",
+            "NOME": "SEVERINA CUSTODIO DA SILVA",
+            "IDADE": "89 anos",
+            "LOCAL": "GARANHUNS\/PE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "GEORG FISCHER FGS INDUSTRIA E COMERCIO LTDA",
+                "CNPJ": "02291486000602",
+                "CIDADE": "CABO DE SANTO AGOSTINHO-PE",
+                "PROFISSAO": "811775",
+                "DATA_ADMISSAO": "26\/09\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "DISTRIBUIDORA ADAUTO CARVALHO LTDA",
+                "CNPJ": "08072649000472",
+                "CIDADE": "CABO DE SANTO AGOSTINHO-PE",
+                "PROFISSAO": "414140",
+                "DATA_ADMISSAO": "26\/08\/2024",
+                "DATA_DEMISSAO": "09\/09\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "DAMASIO DISTRIBUIDORA DE MOTOPECAS DE PERNAMBUCO LTDA",
+                "CNPJ": "34336083000106",
+                "CIDADE": "CABO DE SANTO AGOSTINHO-PE",
+                "PROFISSAO": "414110",
+                "DATA_ADMISSAO": "09\/09\/2019",
+                "DATA_DEMISSAO": "29\/12\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "CREDIMOVEIS NOVOLAR LTDA EM RECUPERACAO JUDICIAL",
+                "CNPJ": "09930165001370",
+                "CIDADE": "JABOATAO DOS GUARARAPES-PE",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "01\/12\/2003",
+                "DATA_DEMISSAO": "19\/09\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

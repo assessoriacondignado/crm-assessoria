@@ -1,0 +1,317 @@
+{
+    "CADASTRAIS": {
+        "CPF": "82615608568",
+        "NOME": "MARCUS WENDELL BARAUNA DOS REIS",
+        "NOME_MAE": "ELIANA BARAUNA GOES",
+        "NASCTO": "29\/01\/1982",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "1006001905",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "097821640507",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7134984450",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "27\/08\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7134086676",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7134849709",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "71981626175",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71983849996",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71985285880",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "OI_PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71988364836",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "OI_PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71996032901",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marcusreis.mw@gmail.com",
+            "marcusreisbr@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV RADIAL C",
+                "NUMERO": "939",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AT DA CRUZ",
+                "CEP": "42808010",
+                "CIDADE": "CAMACARI",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R LUIZ VIANA NETO",
+                "NUMERO": "324",
+                "COMPLEMENTO": "A",
+                "BAIRRO": "PERIPERI",
+                "CEP": "40720220",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "TV GONCALVES DIAS",
+                "NUMERO": "8",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AT DA CRUZ",
+                "CEP": "42803139",
+                "CIDADE": "CAMACARI",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R ALM BARROSO DE PERIPERI",
+                "NUMERO": "92",
+                "COMPLEMENTO": "C A",
+                "BAIRRO": "COUTOS",
+                "CEP": "40760570",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "TV D JOAO VI",
+                "NUMERO": "18",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PERIPERI",
+                "CEP": "40720300",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "AV AFRANIO PEIXOTO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARIPE",
+                "CEP": "40800570",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "RUA AMBROSIO CALMON",
+                "NUMERO": "107",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PERIPERI",
+                "CEP": "40725630",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "AVENIDA DOIS DE JULHO",
+                "NUMERO": "21",
+                "COMPLEMENTO": "EDF ARTE BRASIL",
+                "BAIRRO": "PERIPERI",
+                "CEP": "40725720",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "17862256549",
+                "NOME": "ELIANA BARAUNA GOES",
+                "IDADE": "70 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "37456498857",
+                "NOME": "LUCIANA BARAUNA DE ARAUJO GOES",
+                "IDADE": "46 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "67947158568",
+                "NOME": "ADRIANA BARAUNA DE ARAUJO GOES",
+                "IDADE": "52 anos",
+                "LOCAL": "SALVADOR\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "83180273534",
+                "NOME": "CARLOS RAYDER BARAUNA DOS REIS",
+                "IDADE": "42 anos",
+                "LOCAL": "ARACAJU\/SE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "90478207549",
+                "NOME": "RICARDO BARAUNA DE ARAUJO GOES",
+                "IDADE": "49 anos",
+                "LOCAL": "SALVADOR\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "FUNDACAO LUIS EDUARDO MAGALHAES - CENTRO DE MODERNIZACAO E DESENVOLVIMENTO DA ADMINISTRACAO PUBLICA",
+                "CNPJ": "03037070000102",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "24\/20\/2006",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "HOME CLEAN SERVICOS GERAIS LTDA",
+                "CNPJ": "01755147000154",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "517410",
+                "DATA_ADMISSAO": "01\/07\/2022",
+                "DATA_DEMISSAO": "22\/07\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SODEXO DO BRASIL COMERCIAL S.A.",
+                "CNPJ": "49930514181768",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "18\/02\/2021",
+                "DATA_DEMISSAO": "03\/04\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "EMBREPAR AUTOMOTIVA LTDA",
+                "CNPJ": "08435684000409",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "08\/11\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "BOMIX INDUSTRIA DE EMBALAGENS LTDA",
+                "CNPJ": "01561279000145",
+                "CIDADE": "SIMOES FILHO-BA",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "05\/04\/2021",
+                "DATA_DEMISSAO": "03\/07\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "BAHIA SERVICOS DE SAUDE S\/A",
+                "CNPJ": "03376102000102",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/12\/2020",
+                "DATA_DEMISSAO": "17\/02\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "O BARATAO AUTO PECAS LTDA",
+                "CNPJ": "15655319000122",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "414105",
+                "DATA_ADMISSAO": "01\/09\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "IGUATEMI PNEUS LTDA",
+                "CNPJ": "13644398000140",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "414105",
+                "DATA_ADMISSAO": "05\/09\/2011",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,197 @@
+{
+    "CADASTRAIS": {
+        "CPF": "85867802604",
+        "NOME": "EDER GERALDO NATIVO",
+        "NOME_MAE": "MARIA NATIVO",
+        "NASCTO": "08\/03\/1972",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1275791009 ",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "991305",
+        "PROFISSAO": "FUNILEIRO DE VEICULOS (REPARACAO)",
+        "SALARIO": " 2.570,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3733510512",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3733231090",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "37999192090",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "37999947176",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "eder.nativo@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOAQUIM MURTINHO",
+                "NUMERO": "802",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "35588000",
+                "CIDADE": "ARCOS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R JUCA DIAS",
+                "NUMERO": "291",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "NOVO SAO JUDAS TADEU",
+                "CEP": "35588000",
+                "CIDADE": "ARCOS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "AV GOV VALADARES",
+                "NUMERO": "481",
+                "COMPLEMENTO": "AP 2",
+                "BAIRRO": "NS CARMO",
+                "CEP": "35588000",
+                "CIDADE": "ARCOS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R JOAQUIM MURTINHO",
+                "NUMERO": "489",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "35582000",
+                "CIDADE": "PAINS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R JOAQUIM MURTINHO",
+                "NUMERO": "162",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "35582000",
+                "CIDADE": "PAINS",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "2361268493",
+                "NOME": "MARIA NATIVO",
+                "IDADE": "94 anos",
+                "LOCAL": "ALAGOA NOVA\/PB",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "4145293673",
+                "NOME": "CLAUDIO MARCELO NATIVO FERREIRA DA SILVA",
+                "IDADE": "51 anos",
+                "LOCAL": "CORREGO FUNDO\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "4315338494",
+                "NOME": "EVANY FERNANDES DO NASCIMENTO",
+                "IDADE": "59 anos",
+                "LOCAL": "ALAGOA NOVA\/PB",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "8433339796",
+                "NOME": "ANTONIO FERNANDES DO NASCIMENTO",
+                "IDADE": "52 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "13732333701",
+                "NOME": "ALVANETE NATIVO DO NASCIMENTO",
+                "IDADE": "49 anos",
+                "LOCAL": "ALAGOA NOVA\/PB",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TRANSPORTADORA FONSECA E FILHOS LTDA",
+                "CNPJ": "01871506000139",
+                "CIDADE": "ARCOS-MG",
+                "PROFISSAO": "991305",
+                "DATA_ADMISSAO": "12\/03\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "EXPRESSO HM TRANSPORTES LTDA EM RECUPERACAO JUDICIAL",
+                "CNPJ": "07346779000140",
+                "CIDADE": "ARCOS-MG",
+                "PROFISSAO": "991305",
+                "DATA_ADMISSAO": "02\/07\/2018",
+                "DATA_DEMISSAO": "07\/09\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "FOS-QUIMICA E DERIVADOS LTDA",
+                "CNPJ": "04437440000161",
+                "CIDADE": "ARCOS-MG",
+                "PROFISSAO": "813110",
+                "DATA_ADMISSAO": "22\/04\/2010",
+                "DATA_DEMISSAO": "102",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

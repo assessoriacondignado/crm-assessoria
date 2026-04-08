@@ -1,0 +1,210 @@
+{
+    "CADASTRAIS": {
+        "CPF": "57186944272",
+        "NOME": "FRANCINEIA DA SILVA",
+        "NOME_MAE": "FRANCISCA DOLORES DA SILVA",
+        "NASCTO": "16\/03\/1976",
+        "IDADE": "50 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12517238334",
+        "ESCOLARIDADE": "PRIMEIRO GRAU (GINASIO)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "731180",
+        "PROFISSAO": "OPERADOR DE LINHA DE MONTAGEM (APARELHOS ELETRONICOS)",
+        "SALARIO": " 1.643,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9233468373",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "16\/11\/2013",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92992191952",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92992216254",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92995208042",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92981176934",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "92988071680",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/04\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "francineia.silva@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ANTONIO FERREIRA",
+                "NUMERO": "2",
+                "COMPLEMENTO": "4",
+                "BAIRRO": "PLANALTO",
+                "CEP": "69044804",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "BC FERNANDO ESGUIO",
+                "NUMERO": "60",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVA ESPERANCA",
+                "CEP": "69037315",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R D FERNANDO",
+                "NUMERO": "5",
+                "COMPLEMENTO": "CJ JD VERSALLES BAIRRO 10 Q17",
+                "BAIRRO": "PLANALTO",
+                "CEP": "69044610",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R AVOEIRAS",
+                "NUMERO": "5",
+                "COMPLEMENTO": "CJ VBELA",
+                "BAIRRO": "ALVORADA",
+                "CEP": "69042140",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R ARAUJO FILHO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "N 75",
+                "BAIRRO": "SAO FRANCISCO",
+                "CEP": "69079010",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R DOUTOR NILSON VASCONCELOS",
+                "NUMERO": "96",
+                "COMPLEMENTO": "",
+                "BAIRRO": "REDENCAO",
+                "CEP": "69049300",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R ANTONIO FERREIRA",
+                "NUMERO": "24",
+                "COMPLEMENTO": "PROXIMO AO COLEGIO",
+                "BAIRRO": "PLANALTO",
+                "CEP": "69044804",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "TRAVESSA MANDAGUARI",
+                "NUMERO": "135",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JORGE TEIXEIRA",
+                "CEP": "69088355",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "7951541435",
+            "NOME": "FRANCISCA DOLORES DA SILVA",
+            "IDADE": "74 anos",
+            "LOCAL": "BODOCO\/PE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "FRANCINEIA DA SILVA SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "BRAGANCA\/PA",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "1687533245"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "INVENTUS POWER ELETRONICA DO BRASIL LTDA",
+                "CNPJ": "00399541000134",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "862150",
+                "DATA_ADMISSAO": "24\/09\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SONY BRASIL LTDA.",
+                "CNPJ": "43447044000177",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "731180",
+                "DATA_ADMISSAO": "01\/10\/2002",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

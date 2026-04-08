@@ -1,0 +1,260 @@
+{
+    "CADASTRAIS": {
+        "CPF": "17273810843",
+        "NOME": "FABIO DE PAULA TREVIZOLLI",
+        "NOME_MAE": "MARTA DE PAULA TOLEDO TREVIZOLLI",
+        "NASCTO": "20\/07\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "257350930141",
+        "NIT": "12467628649",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "520110",
+        "PROFISSAO": "SUPERVISOR DE VENDAS COMERCIAL",
+        "SALARIO": " 4.871,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "6236368100",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "14\/05\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1938599246",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1938599246",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19989603053",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19993619242",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11982670121",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "19991145203",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "19991196848",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "fabio.trevizolli@bematech.com.br",
+            "fabio_zolli@yahoo.com",
+            "fabio.trevizolli@gmail.com",
+            "fabio_zolli@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ANTONIO OLIVEIRA VALENTE",
+                "NUMERO": "70",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL PARAISO",
+                "CEP": "13043490",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOAO PREVITALE",
+                "NUMERO": "2780",
+                "COMPLEMENTO": "BL A 3 AP 33 1",
+                "BAIRRO": "JD ALTO DA COLINA",
+                "CEP": "13272315",
+                "CIDADE": "VALINHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AL DOMINICA",
+                "NUMERO": "268",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COND RESIDENCIAL TERRAS DO CARIBE",
+                "CEP": "13272844",
+                "CIDADE": "VALINHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANGELA RUSSO TAFNER",
+                "NUMERO": "55",
+                "COMPLEMENTO": "BL A 3 AP 33",
+                "BAIRRO": "COUNTRY VILLE",
+                "CEP": "13050906",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AL DOS CURIOS",
+                "NUMERO": "198",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PORTAL DOS PASSAROS I",
+                "CEP": "18552204",
+                "CIDADE": "BOITUVA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA NICOLAU VON ZUBEN",
+                "NUMERO": "550",
+                "COMPLEMENTO": "BLE AP3",
+                "BAIRRO": "CAPELA",
+                "CEP": "13285512",
+                "CIDADE": "VINHEDO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOAO PREVITALLE",
+                "NUMERO": "2780",
+                "COMPLEMENTO": "CS 268",
+                "BAIRRO": "SANTA CRUZ",
+                "CEP": "13272400",
+                "CIDADE": "VALINHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R NATAL",
+                "NUMERO": "0",
+                "COMPLEMENTO": "QD 8 LT 1 Ã 3 AP 1702",
+                "BAIRRO": "ALTO DA GLORIA",
+                "CEP": "74815705",
+                "CIDADE": "GOIANIA",
+                "ESTADO": "GO"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CLARO S.A.",
+                "CNPJ": "40432544055120",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "142320",
+                "DATA_ADMISSAO": "12\/12\/2016",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CLARO S.A.",
+                "CNPJ": "40432544055200",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "142320",
+                "DATA_ADMISSAO": "12\/12\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "LINX SISTEMAS E CONSULTORIA LTDA",
+                "CNPJ": "54517628000198",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142305",
+                "DATA_ADMISSAO": "10\/08\/2015",
+                "DATA_DEMISSAO": "02\/04\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "MISTERCHEF SISTEMAS DE AUTOMACAO LTDA.",
+                "CNPJ": "09605375000150",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "520110",
+                "DATA_ADMISSAO": "01\/06\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "TOTVS LARGE ENTERPRISE TECNOLOGIA S.A.",
+                "CNPJ": "82373077001305",
+                "CIDADE": "GOIANIA-GO",
+                "PROFISSAO": "520110",
+                "DATA_ADMISSAO": "01\/04\/2011",
+                "DATA_DEMISSAO": "31\/05\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "COMERCIAL ZOLLI   CALIL LTDA",
+            "CNPJ": "08960690000132",
+            "CIDADE": "VALINHOS-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20070720",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

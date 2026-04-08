@@ -1,0 +1,180 @@
+{
+    "CADASTRAIS": {
+        "CPF": "54896851587",
+        "NOME": "RONALDO PINHEIRO NASCIMENTO",
+        "NOME_MAE": "LEONOR PINHEIRO NASCIMENTO",
+        "NASCTO": "16\/12\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "062126540574",
+        "NIT": "12395341551",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "517330",
+        "PROFISSAO": "VIGILANTE",
+        "SALARIO": " 1.142,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "7132305843",
+            "OPERADORA": "TELEMAR\/BA",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "71985553237",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71999198602",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL POS-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71987475494",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/04\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "ronaldo.pn@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DA BOLANDEIRA",
+                "NUMERO": "49",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "IMBUI",
+                "CEP": "41720440",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "AL PRAIA DO DESCOBRIMENTO",
+                "NUMERO": "49",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOCA DO RIO",
+                "CEP": "41705710",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R DA BOLANDEIRA",
+                "NUMERO": "48",
+                "COMPLEMENTO": "",
+                "BAIRRO": "IMBUI",
+                "CEP": "41720440",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "17770076587",
+                "NOME": "LEONOR PINHEIRO NASCIMENTO",
+                "IDADE": "79 anos",
+                "LOCAL": "SALVADOR\/BA",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "10933492472",
+                "NOME": "ALAIDE PEREIRA DA CRUZ",
+                "IDADE": "90 anos",
+                "LOCAL": "JOAO PESSOA\/PB",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "61113492520",
+                "NOME": "TELMA PINHEIRO NASCIMENTO",
+                "IDADE": "57 anos",
+                "LOCAL": "FEIRA DE SANTANA\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "63326922515",
+                "NOME": "CLEIDE PINHEIRO NASCIMENTO",
+                "IDADE": "54 anos",
+                "LOCAL": "SALVADOR\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "RENAFORTE SERVICOS DE SEGURANCA E TRANSPORTE DE VALORES LTDA",
+                "CNPJ": "00957525000110",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "23\/03\/2016",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BAHIA ALIMENTACAO LTDA",
+                "CNPJ": "08488131000171",
+                "CIDADE": "SIMOES FILHO-BA",
+                "PROFISSAO": "782310",
+                "DATA_ADMISSAO": "10\/03\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "TERCEIRIZAR EMPREENDIMENTOS LTDA",
+                "CNPJ": "11105960000132",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "517420",
+                "DATA_ADMISSAO": "16\/11\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "NORDESTE SEGURANCA E TRANSPORTE DE VALORES BAHIA LTDA",
+                "CNPJ": "05191191000130",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "02\/09\/2003",
+                "DATA_DEMISSAO": "23\/02\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

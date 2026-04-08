@@ -1,0 +1,86 @@
+{
+    "CADASTRAIS": {
+        "CPF": "10293993955",
+        "NOME": "ANA ALICE DE FATIMA RAVANELLO MACHADO",
+        "NOME_MAE": "CLEUNICE MARIA RAVANELLO MACHADO",
+        "NASCTO": "05\/02\/2001",
+        "IDADE": "25 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "2371029376",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521110",
+        "PROFISSAO": "VENDEDOR DE COMERCIO VAREJISTA",
+        "SALARIO": " 2.015,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "42991135675",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "42991424312",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "ana_rava10@hotmail.com"
+    },
+    "ENDERECOS": "",
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "5579002980",
+            "NOME": "CLEUNICE MARIA RAVANELLO MACHADO",
+            "IDADE": "47 anos",
+            "LOCAL": "CANTAGALO\/PR",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "33 DOCTOR PARANA LTDA",
+                "CNPJ": "47665343000139",
+                "CIDADE": "CANTAGALO-PR",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/07\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ELITON LUIZ RAVANELLO",
+                "CNPJ": "11944111000172",
+                "CIDADE": "CANTAGALO-PR",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/08\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,257 @@
+{
+    "CADASTRAIS": {
+        "CPF": "13148406818",
+        "NOME": "MAURY TAVARES",
+        "NOME_MAE": "MARLUCE DA SILVA TAVARES",
+        "NASCTO": "21\/11\/1969",
+        "IDADE": "56 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "172453130159",
+        "NIT": "12188785551",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "821445",
+        "PROFISSAO": "PREPARADOR DE SUCATA E APARAS",
+        "SALARIO": " 1.635,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1148281253",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1148281253",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8134690449",
+                "OPERADORA": "TELEMAR\/PE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11940185801",
+                "OPERADORA": "NEXTEL",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11993055678",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11996168601",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11996168601",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11947905900",
+                "OPERADORA": "NEXTEL",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "maury-t@hotmail.com",
+            "maurytavares44@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CEL DARIO FERRAZ DE SA",
+                "NUMERO": "280",
+                "COMPLEMENTO": "CS 1",
+                "BAIRRO": "CANDEIAS",
+                "CEP": "54430090",
+                "CIDADE": "JABOATAO DOS GUARARAPES",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R TERESINHA ARNONI CASTELLUCI",
+                "NUMERO": "16",
+                "COMPLEMENTO": "C 2",
+                "BAIRRO": "CENTRO",
+                "CEP": "18315000",
+                "CIDADE": "RIBEIRAO GRANDE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CEL DARIO FERRAZ DE SA",
+                "NUMERO": "4228",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CANDEIAS",
+                "CEP": "54450100",
+                "CIDADE": "JABOATAO DOS GUARARAPES",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R ADA MORTARI",
+                "NUMERO": "195",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SUISSA",
+                "CEP": "09424500",
+                "CIDADE": "RIBEIRAO PIRES",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOAQUIM MACHADO",
+                "NUMERO": "174",
+                "COMPLEMENTO": "",
+                "BAIRRO": "LAPA",
+                "CEP": "05050010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PIRATINI",
+                "NUMERO": "76",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "BARRA DE JANGADA",
+                "CEP": "54470520",
+                "CIDADE": "JABOATAO DOS GUARARAPES",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "JOSE RAVASIO",
+                "NUMERO": "4",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL AMELIA",
+                "CEP": "09406280",
+                "CIDADE": "RIBEIRAO PIRES",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA TEREZINHA ARNONI CASTELUCI",
+                "NUMERO": "16",
+                "COMPLEMENTO": "CS 2",
+                "BAIRRO": "SITIO MARIA JOA",
+                "CEP": "09450000",
+                "CIDADE": "RIO GRANDE DA SERRA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "7771858490",
+            "NOME": "MARLUCE DA SILVA TAVARES",
+            "IDADE": "37 anos",
+            "LOCAL": "SANTANA DO IPANEMA\/AL",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CONCESSIONARIA DAS LINHAS 8 E 9 DO SISTEMA DE TRENS METROPOLITANOS DE SAO PAULO S.A.",
+                "CNPJ": "42288184000187",
+                "CIDADE": "OSASCO-SP",
+                "PROFISSAO": "391130",
+                "DATA_ADMISSAO": "08\/09\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ALSTOM BRASIL ENERGIA E TRANSPORTE LTDA",
+                "CNPJ": "88309620001049",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "17\/12\/2018",
+                "DATA_DEMISSAO": "09\/03\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "PROENG MONTAGENS E MANUTENCAO INDUSTRIAL LTDA",
+                "CNPJ": "65966434000196",
+                "CIDADE": "SAO BERNARDO DO CAMPO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "12\/04\/2021",
+                "DATA_DEMISSAO": "08\/07\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "TEMOINSA DO BRASIL LTDA",
+                "CNPJ": "02587355000154",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "821445",
+                "DATA_ADMISSAO": "14\/20\/1908",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO DESP POLICIA MILITAR DO ESTADO DE SAO PAULO",
+                "CNPJ": "61935318000159",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "951105",
+                "DATA_ADMISSAO": "12\/07\/2011",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

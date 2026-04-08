@@ -1,0 +1,177 @@
+{
+    "CADASTRAIS": {
+        "CPF": "16843160816",
+        "NOME": "MARIA DE FATIMA ALBINO DA SILVA",
+        "NOME_MAE": "JOANA JOSE ROMAO",
+        "NASCTO": "28\/10\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "178128130191",
+        "NIT": "12423173727",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "223405",
+        "PROFISSAO": "FARMACEUTICO",
+        "SALARIO": " 3.371,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1932526204",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "29\/03\/2014",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19993593459",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "19998762216",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "fatialbino@yahoo.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R LUCIANA VON ZUBEN CORVINI",
+                "NUMERO": "64",
+                "COMPLEMENTO": "BL 2 AP 402",
+                "BAIRRO": "PRQ DAS CACHOEIRAS",
+                "CEP": "13044493",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CONCEICAO",
+                "NUMERO": "49",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "13010050",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SERRA DOS CRISTAIS",
+                "NUMERO": "302",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "JD SAO FERNANDO",
+                "CEP": "13100235",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "25620445844",
+            "NOME": "EDNEI ALBINO DA SILVA",
+            "IDADE": "52 anos",
+            "LOCAL": "CAMPINAS\/SP",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO EVANGELICA BENEFICENTE DE CAMPINAS",
+                "CNPJ": "44593523000245",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "20\/20\/1902",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "RAIA DROGASIL S\/A",
+                "CNPJ": "61585865025227",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "14\/08\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "RAIA DROGASIL S\/A",
+                "CNPJ": "61585865102582",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "11\/02\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "IRMANDADE DE SANTA CASA DE MISERICORDIA DE VALINHOS",
+                "CNPJ": "46056487000125",
+                "CIDADE": "VALINHOS-SP",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "20\/08\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "DROGARIA CARAMANTI LTDA",
+                "CNPJ": "10701510000654",
+                "CIDADE": "ITATIBA-SP",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "13\/01\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "DROGARIA SAO PAULO S.A.",
+                "CNPJ": "61412110003332",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "11\/20\/1910",
+                "DATA_DEMISSAO": "31\/08\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "DROGARIA SAO PAULO S.A.",
+                "CNPJ": "61412110037741",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "223405",
+                "DATA_ADMISSAO": "01\/09\/2012",
+                "DATA_DEMISSAO": "20\/12\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

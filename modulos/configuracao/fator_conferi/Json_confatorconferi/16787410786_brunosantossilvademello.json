@@ -1,0 +1,169 @@
+{
+    "CADASTRAIS": {
+        "CPF": "16787410786",
+        "NOME": "BRUNO SANTOS SILVA DE MELLO",
+        "NOME_MAE": "MARIA DA GLORIA SANTOS",
+        "NASCTO": "17\/03\/1996",
+        "IDADE": "30 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "20776300746",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "513435",
+        "PROFISSAO": "ATENDENTE DE LANCHONETE",
+        "SALARIO": " 404,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21995311997",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21995453394",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "21\/10\/2014",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "21995264030",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "12\/05\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "21971395063",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "loohsanttos237@gmail.com",
+            "bruno_reidelas_15@hotmail.com",
+            "bruno_reidelas_@hotmail.com",
+            "bruno.mello_@outlook.com",
+            "brunomello9923@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV ATAULFO DE PAIVA",
+                "NUMERO": "406",
+                "COMPLEMENTO": "MC DONALDS",
+                "BAIRRO": "LEBLON",
+                "CEP": "22440033",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "EST DO PORTO VELHO",
+                "NUMERO": "11",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CORDOVIL",
+                "CEP": "21012140",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "AV UM",
+                "NUMERO": "128",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "PARQUE DAS MISSOES",
+                "CEP": "25086450",
+                "CIDADE": "DUQUE DE CAXIAS",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R DEZENOVE",
+                "NUMERO": "119",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "PARQUE DAS MISSOES",
+                "CEP": "25086570",
+                "CIDADE": "DUQUE DE CAXIAS",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "21543747",
+            "NOME": "MARIA DA GLORIA SANTOS",
+            "IDADE": "69 anos",
+            "LOCAL": "SANTO ANTONIO DE POSSE\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "LORRANY SANTOS SILVA DE MELLO",
+            "IDADE": "",
+            "LOCALIDADE": "DUQUE DE CAXIAS\/RJ",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "6392398708"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "NIPA RIO COMERCIO DE ALIMENTOS LTDA",
+                "CNPJ": "09407721000608",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "141510",
+                "DATA_ADMISSAO": "30\/11\/2012",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ARCOS DOURADOS COMERCIO DE ALIMENTOS SA",
+                "CNPJ": "42591651001204",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "513435",
+                "DATA_ADMISSAO": "01\/07\/2014",
+                "DATA_DEMISSAO": "31\/12\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "ARCOS DOURADOS COMERCIO DE ALIMENTOS SA",
+                "CNPJ": "42591651001115",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "513435",
+                "DATA_ADMISSAO": "01\/05\/2014",
+                "DATA_DEMISSAO": "30\/06\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

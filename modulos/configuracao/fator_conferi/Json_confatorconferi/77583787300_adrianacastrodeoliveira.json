@@ -1,0 +1,228 @@
+{
+    "CADASTRAIS": {
+        "CPF": "77583787300",
+        "NOME": "ADRIANA CASTRO DE OLIVEIRA",
+        "NOME_MAE": "MARIA EUZANITA CASTRO OLIVEIRA",
+        "NASCTO": "25\/05\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1289424419",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "354145",
+        "PROFISSAO": "VENDEDOR PRACISTA",
+        "SALARIO": " 14.934,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8532475435",
+                "OPERADORA": "TELEMAR\/CE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8532579037",
+                "OPERADORA": "TELEMAR\/CE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "85996993254",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "22\/08\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "85991433845",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "85991710498",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "85991047485",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "icrocomputadores@hotmail.com",
+            "dricadecastro1@hotmail.com",
+            "dricadecastro1@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOAQUIM NABUCO",
+                "NUMERO": "133",
+                "COMPLEMENTO": "AP 502",
+                "BAIRRO": "MEIRELES",
+                "CEP": "60125120",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R LAURO MAIA",
+                "NUMERO": "999",
+                "COMPLEMENTO": "",
+                "BAIRRO": "FATIMA",
+                "CEP": "60055295",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R SEN POMPEU",
+                "NUMERO": "54",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "60025000",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "RUA PADRE CHEVALIER",
+                "NUMERO": "54",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JOAQUIM TAVORA",
+                "CEP": "60130080",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "RUA PROFESSOR JACINTO BOTELHO",
+                "NUMERO": "650",
+                "COMPLEMENTO": "AP 803",
+                "BAIRRO": "PATRIOLINO RIBEIRO",
+                "CEP": "60810050",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "15341216334",
+                "NOME": "ROBERTO CASTRO DE OLIVEIRA",
+                "IDADE": "64 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "23169320378",
+                "NOME": "ELIZABETH OLIVEIRA DA JUSTA FEIJAO",
+                "IDADE": "66 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "31033180300",
+                "NOME": "MARGARETH CASTRO DE OLIVEIRA",
+                "IDADE": "61 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "36589071349",
+                "NOME": "FRANCISCO VLADIMIR CASTRO DE OLIVEIRA",
+                "IDADE": "58 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "39091201304",
+                "NOME": "YURI CASTRO DE OLIVEIRA",
+                "IDADE": "57 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ADRIANA CASTRO DE OLIVEIRA",
+            "IDADE": "",
+            "LOCALIDADE": "CAUCAIA\/CE",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "5940497330"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "OLYMPUS OPTICAL DO BRASIL LTDA.",
+                "CNPJ": "04937243000888",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "354145",
+                "DATA_ADMISSAO": "08\/08\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PINHEIRO COMERCIO IMPORTACAO, EXPORTACAO DE EQUIPAMENTOS MEDICOS LTDA",
+                "CNPJ": "72158165000105",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "520110",
+                "DATA_ADMISSAO": "13\/20\/1908",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "D A PROMOTORA DE EVENTOS EIRELI",
+            "CNPJ": "17034607000195",
+            "CIDADE": "FORTALEZA-CE",
+            "QUALIFICACAO": "Titular Pessoa FÃ­sica Residente ou Domiciliado no Brasil",
+            "DATA_ENTRADA": "20121019",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

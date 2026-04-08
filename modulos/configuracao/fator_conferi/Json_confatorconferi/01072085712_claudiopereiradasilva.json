@@ -1,0 +1,168 @@
+{
+    "CADASTRAIS": {
+        "CPF": "1072085712",
+        "NOME": "CLAUDIO PEREIRA DA SILVA",
+        "NOME_MAE": "MARIA FRANCISCA PEREIRA DA SILVA",
+        "NASCTO": "07\/12\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "085485890361",
+        "NIT": "1250954181",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411010",
+        "PROFISSAO": "ASSISTENTE ADMINISTRATIVO",
+        "SALARIO": " 3.824,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "2131056767",
+            "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21986176666",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/04\/2012",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "21997398434",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "claudido@gmail.com",
+            "claudiopereira71@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOSE CAETANO",
+                "NUMERO": "40",
+                "COMPLEMENTO": "AND 3",
+                "BAIRRO": "MARE",
+                "CEP": "21044630",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R JOSE CAETANO",
+                "NUMERO": "403",
+                "COMPLEMENTO": "AND",
+                "BAIRRO": "MARE",
+                "CEP": "21044630",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R AFONSO CAVALCANTI",
+                "NUMERO": "13",
+                "COMPLEMENTO": "AP 1502",
+                "BAIRRO": "CIDADE NOVA",
+                "CEP": "20211110",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R LEOPOLDINA REGO",
+                "NUMERO": "647",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PENHA",
+                "CEP": "21021523",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA JOSE CAETANO",
+                "NUMERO": "3",
+                "COMPLEMENTO": "AND 3",
+                "BAIRRO": "MARE",
+                "CEP": "21044630",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "6024343",
+            "NOME": "MARIA FRANCISCA PEREIRA DA SILVA",
+            "IDADE": "62 anos",
+            "LOCAL": "BLUMENAU\/SC",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TERRAS DE AVENTURA INDUSTRIA DE ARTIGOS ESPORTIVOS S.A",
+                "CNPJ": "35943604009102",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "01\/09\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TALHOS E RETALHOS ATELIER - CONFECCAO DE ROUPAS LTDA.",
+                "CNPJ": "08306459000120",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "02\/11\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "TERRAS DE AVENTURA INDUSTRIA DE ARTIGOS ESPORTIVOS S.A",
+                "CNPJ": "35943604002523",
+                "CIDADE": "DUQUE DE CAXIAS-RJ",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "01\/10\/2012",
+                "DATA_DEMISSAO": "01\/11\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "TERRAS DE AVENTURA INDUSTRIA DE ARTIGOS ESPORTIVOS S.A",
+                "CNPJ": "35943604000580",
+                "CIDADE": "PIRAI-RJ",
+                "PROFISSAO": "414110",
+                "DATA_ADMISSAO": "24\/08\/2012",
+                "DATA_DEMISSAO": "110",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

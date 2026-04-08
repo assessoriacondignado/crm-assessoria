@@ -1,0 +1,225 @@
+{
+    "CADASTRAIS": {
+        "CPF": "9801611855",
+        "NOME": "RONALDO NEVES GONCALVES",
+        "NOME_MAE": "VILMA NEVES GONCALVES",
+        "NASCTO": "23\/01\/1971",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "204004980159",
+        "NIT": "12335771401",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "811005",
+        "PROFISSAO": "OPERADOR DE PROCESSOS QUIMICOS E PETROQUIMICOS",
+        "SALARIO": " 3.327,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1333628028",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1333014188",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3232231762",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1332231762",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13988658881",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13991365131",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "adelizeronaldo@ig.com.br",
+            "lariiineves@hotmail.com",
+            "adelizeneves@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PEDRO AMERICO",
+                "NUMERO": "117",
+                "COMPLEMENTO": "AP 42",
+                "BAIRRO": "CPO GRANDE",
+                "CEP": "11075400",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DR ARTUR PORCHAT DE ASSIS",
+                "NUMERO": "16",
+                "COMPLEMENTO": "AP 123",
+                "BAIRRO": "BOQUEIRAO",
+                "CEP": "11045540",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "ROD CON DOMENICO RANGONI",
+                "NUMERO": "585",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD DAS INDUSTRIAS",
+                "CEP": "11573000",
+                "CIDADE": "CUBATAO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV PRES WILSON",
+                "NUMERO": "1082",
+                "COMPLEMENTO": "310",
+                "BAIRRO": "CENTRO",
+                "CEP": "11320904",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CASPER LIBERO",
+                "NUMERO": "10",
+                "COMPLEMENTO": "AP 21",
+                "BAIRRO": "JOSE MENINO",
+                "CEP": "11065230",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PEDRO AMERICO",
+                "NUMERO": "115",
+                "COMPLEMENTO": "AP 42",
+                "BAIRRO": "CAMPO GRANDE",
+                "CEP": "11075400",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ALMIRANTE BARROSO",
+                "NUMERO": "134",
+                "COMPLEMENTO": "AP 13",
+                "BAIRRO": "CAMPO GRANDE",
+                "CEP": "11075440",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA PRESIDENTE WILSON",
+                "NUMERO": "0",
+                "COMPLEMENTO": "310",
+                "BAIRRO": "CENTRO",
+                "CEP": "11320000",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "10836591895",
+                "NOME": "VILMA NEVES GONCALVES",
+                "IDADE": "82 anos",
+                "LOCAL": "SANTOS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "13052629808",
+                "NOME": "RICARDO NEVES GONCALVES",
+                "IDADE": "57 anos",
+                "LOCAL": "SANTOS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ADELIZE DOS SANTOS NEVES GONCALVES",
+            "IDADE": "",
+            "LOCALIDADE": "SANTOS\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "13374074880"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "UNIPAR CARBOCLORO S.A.",
+                "CNPJ": "33958695000682",
+                "CIDADE": "CUBATAO-SP",
+                "PROFISSAO": "811005",
+                "DATA_ADMISSAO": "29\/03\/1993",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CARBOCLORO INDUSTRIAS QUIMICAS LTDA",
+                "CNPJ": "31659584000216",
+                "CIDADE": "CUBATAO-SP",
+                "PROFISSAO": "811005",
+                "DATA_ADMISSAO": "29\/03\/1993",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

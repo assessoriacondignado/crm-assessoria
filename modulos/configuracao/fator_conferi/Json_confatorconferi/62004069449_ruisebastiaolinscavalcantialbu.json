@@ -1,0 +1,206 @@
+{
+    "CADASTRAIS": {
+        "CPF": "62004069449",
+        "NOME": "RUI SEBASTIAO LINS CAVALCANTI ALBU",
+        "NOME_MAE": "MARIA RITA DE OLIVEIRA LINS",
+        "NASCTO": "19\/03\/1971",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12657997459",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "142405",
+        "PROFISSAO": "GERENTE DE COMPRAS",
+        "SALARIO": " 13.927,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8134652363",
+                "OPERADORA": "TELEMAR\/PE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8134634848",
+                "OPERADORA": "TELEMAR\/PE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "81999779581",
+            "OPERADORA": "",
+            "DATA_REFERENCIA": "11\/04\/2012",
+            "TIPO_TEL": "",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": ""
+        }
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "paloma@gbl.com.br",
+            "ruialbuquerque19@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV BOA VIAGEM",
+                "NUMERO": "420",
+                "COMPLEMENTO": "AP 601 ED RI",
+                "BAIRRO": "PINA",
+                "CEP": "51011000",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "1 TRAVESSA ANICETO VAREJAO",
+                "NUMERO": "1100",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CANDEIAS",
+                "CEP": "54430026",
+                "CIDADE": "JABOATAO DOS GUARARAPES",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R DEP VIEIRA SOUTO",
+                "NUMERO": "47",
+                "COMPLEMENTO": "Q N C B C",
+                "BAIRRO": "IMBIRIBEIRA",
+                "CEP": "51030750",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R JORGE COUCEIRO DA COSTA EIRAS",
+                "NUMERO": "671",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOA VIAGEM",
+                "CEP": "51021300",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R DOS NAVEGANTES",
+                "NUMERO": "2",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOA VIAGEM",
+                "CEP": "51021010",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R ARQO REGINALDO RANGEL",
+                "NUMERO": "155",
+                "COMPLEMENTO": "AP 1603",
+                "BAIRRO": "COCO",
+                "CEP": "60192320",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "RUA DOS NAVEGANTES",
+                "NUMERO": "1755",
+                "COMPLEMENTO": "AP 202",
+                "BAIRRO": "BOA VIAGEM",
+                "CEP": "51020010",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "21938415",
+            "NOME": "MARIA RITA DE OLIVEIRA LINS",
+            "IDADE": "89 anos",
+            "LOCAL": "RECIFE\/PE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ATACADAO S.A.",
+                "CNPJ": "75315333001180",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "354205",
+                "DATA_ADMISSAO": "01\/11\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ATACADAO S.A.",
+                "CNPJ": "75315333000109",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "354205",
+                "DATA_ADMISSAO": "01\/11\/2022",
+                "DATA_DEMISSAO": "01\/07\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "BOMPRECO SUPERMERCADOS DO NORDESTE LTDA",
+                "CNPJ": "13004510000502",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "142405",
+                "DATA_ADMISSAO": "01\/11\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "BOMPRECO SUPERMERCADOS DO NORDESTE LTDA",
+                "CNPJ": "13004510000189",
+                "CIDADE": "BARUERI-SP",
+                "PROFISSAO": "142405",
+                "DATA_ADMISSAO": "27\/09\/1996",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "WMS SUPERMERCADOS DO BRASIL LTDA.",
+                "CNPJ": "93209765034798",
+                "CIDADE": "OLINDA-PE",
+                "PROFISSAO": "142405",
+                "DATA_ADMISSAO": "27\/09\/1996",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "WMS SUPERMERCADOS DO BRASIL LTDA.",
+                "CNPJ": "93209765031187",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "142405",
+                "DATA_ADMISSAO": "01\/10\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

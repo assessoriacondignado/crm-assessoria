@@ -1,0 +1,194 @@
+{
+    "CADASTRAIS": {
+        "CPF": "41400434823",
+        "NOME": "VANESSA FONTEBASSO SILVA",
+        "NOME_MAE": "MARIA LUIZA FONTEBASSO SILVA",
+        "NASCTO": "30\/10\/1993",
+        "IDADE": "32 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "2049181674",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411010",
+        "PROFISSAO": "ASSISTENTE ADMINISTRATIVO",
+        "SALARIO": " 2.800,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1145958678",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11961978084",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "30\/05\/2020",
+                "TIPO_TEL": "MOVEL PRE-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11996457563",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11975456651",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11999070884",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "vaneeessa_fontebasso@hotmail.com",
+            "vane.fontebassosilva@gmail.com",
+            "vanessa.fontbasso@outlook.com",
+            "vanessa.fontebasso@outlook.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R POMPEIA",
+                "NUMERO": "102",
+                "COMPLEMENTO": "C 1",
+                "BAIRRO": "VL REAL",
+                "CEP": "13222157",
+                "CIDADE": "VARZEA PAULISTA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV HUMBERTO CERESER",
+                "NUMERO": "6800",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAXAMBU",
+                "CEP": "13218711",
+                "CIDADE": "JUNDIAI",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "4541714809",
+                "NOME": "MARIA LUIZA FONTEBASSO SILVA",
+                "IDADE": "64 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "38239036830",
+                "NOME": "ALINE FONTEBASSO SILVA",
+                "IDADE": "36 anos",
+                "LOCAL": "JUNDIAI\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "47912207813",
+                "NOME": "GABRIELA FONTEBASSO SILVA",
+                "IDADE": "25 anos",
+                "LOCAL": "JUNDIAI\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "54679597860",
+                "NOME": "GUSTAVO FONTEBASSO DA SILVA",
+                "IDADE": "16 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "MARIA LUIZA FONTEBASSO SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "SAO PAULO\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "4541714809"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SODEXO DO BRASIL COMERCIAL S.A.",
+                "CNPJ": "49930514000135",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "04\/10\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MARCENARIA PRUDENTE LTDA",
+                "CNPJ": "50947324000100",
+                "CIDADE": "JUNDIAI-SP",
+                "PROFISSAO": "318805",
+                "DATA_ADMISSAO": "01\/02\/2024",
+                "DATA_DEMISSAO": "15\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SINDICATO DOS EMPREGADOS NO COMERCIO DE JUNDIAI",
+                "CNPJ": "50981489000106",
+                "CIDADE": "JUNDIAI-SP",
+                "PROFISSAO": "422105",
+                "DATA_ADMISSAO": "16\/11\/2017",
+                "DATA_DEMISSAO": "15\/04\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO ACOLHIMENTO BOM PASTOR",
+                "CNPJ": "04115907000157",
+                "CIDADE": "JUNDIAI-SP",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "14\/04\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

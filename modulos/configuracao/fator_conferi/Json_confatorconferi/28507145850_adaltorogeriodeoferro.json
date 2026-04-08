@@ -1,0 +1,197 @@
+{
+    "CADASTRAIS": {
+        "CPF": "28507145850",
+        "NOME": "ADALTO ROGERIO DE O FERRO",
+        "NOME_MAE": "AMELIA OLIVEIRA FERRO",
+        "NASCTO": "12\/07\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "271765180167",
+        "NIT": "1272120277",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "342315",
+        "PROFISSAO": "SUPERVISOR DE CARGA E DESCARGA",
+        "SALARIO": " 6.784,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1144420222",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1144457710",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11997362231",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11973801989",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11953024973",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "daimariano@hotmail.com",
+            "adalto.rogerio@bol.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PRCA ISABEL",
+                "NUMERO": "257",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL LEOPOLIS",
+                "CEP": "07832190",
+                "CIDADE": "FRANCO DA ROCHA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PROF LUIZ MIGUEL CHRISTOFOLETTI",
+                "NUMERO": "21",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL S JOSE",
+                "CEP": "13310280",
+                "CIDADE": "ITU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PRINCESA ISABEL",
+                "NUMERO": "257",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SERPA",
+                "CEP": "07715035",
+                "CIDADE": "CAIEIRAS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "4655804831",
+                "NOME": "AMELIA OLIVEIRA FERRO",
+                "IDADE": "76 anos",
+                "LOCAL": "CAIEIRAS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "21534291881",
+                "NOME": "EDILSON ROGERIO OLIVEIRA FERRO",
+                "IDADE": "48 anos",
+                "LOCAL": "CAIEIRAS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "55910017420",
+                "NOME": "ODILON OLIVEIRA FERRO",
+                "IDADE": "80 anos",
+                "LOCAL": "LAGOA DA CANOA\/AL",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "69591180349",
+                "NOME": "LEOBINA OLIVEIRA CORREIA FERRO",
+                "IDADE": "88 anos",
+                "LOCAL": "CAPOEIRAS\/PE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "76261263868",
+                "NOME": "ITAMAR OLIVEIRA FERRO DE ALCANTARA",
+                "IDADE": "74 anos",
+                "LOCAL": "DIADEMA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "97673501449",
+                "NOME": "JOSEFA CORREIA FERRO",
+                "IDADE": "92 anos",
+                "LOCAL": "BOM CONSELHO\/PE",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "NAIR PAIVA DA SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "JACAREI\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "3869439823"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SOFTYS BRASIL LTDA.",
+                "CNPJ": "44145845001112",
+                "CIDADE": "CAIEIRAS-SP",
+                "PROFISSAO": "342315",
+                "DATA_ADMISSAO": "01\/08\/2001",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SOFTYS BRASIL LTDA.",
+                "CNPJ": "44145845001546",
+                "CIDADE": "CAJAMAR-SP",
+                "PROFISSAO": "414105",
+                "DATA_ADMISSAO": "01\/02\/2011",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

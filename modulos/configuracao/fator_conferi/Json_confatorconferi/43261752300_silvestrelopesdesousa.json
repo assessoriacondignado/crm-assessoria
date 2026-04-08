@@ -1,0 +1,167 @@
+{
+    "CADASTRAIS": {
+        "CPF": "43261752300",
+        "NOME": "SILVESTRE LOPES DE SOUSA",
+        "NOME_MAE": "MARIA CRISTINA DE SOUSA",
+        "NASCTO": "31\/12\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "124422750361",
+        "NIT": "12381393767",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "414105",
+        "PROFISSAO": "ALMOXARIFE",
+        "SALARIO": " 1.793,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2125646419",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "2133536698",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "09\/04\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21993040661",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "AUTOC",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21997903129",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21994850226",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21988621431",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/04\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "R DAS GARCAS",
+            "NUMERO": "62",
+            "COMPLEMENTO": "TV BETEL",
+            "BAIRRO": "SEN CAMARA",
+            "CEP": "21843790",
+            "CIDADE": "RIO DE JANEIRO",
+            "ESTADO": "RJ"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "119285657",
+            "NOME": "MARIA CRISTINA DE SOUSA",
+            "IDADE": "74 anos",
+            "LOCAL": "POMPEU\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TORRE E CIA SUPERMERCADOS S\/A",
+                "CNPJ": "07760885002039",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "414105",
+                "DATA_ADMISSAO": "05\/20\/2012",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TORRE E CIA SUPERMERCADOS S\/A",
+                "CNPJ": "07760885001903",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "414105",
+                "DATA_ADMISSAO": "22\/05\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "TORRE E CIA SUPERMERCADOS S\/A",
+                "CNPJ": "07760885000761",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "414105",
+                "DATA_ADMISSAO": "11\/03\/1998",
+                "DATA_DEMISSAO": "01\/12\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "TORRE E CIA SUPERMERCADOS S\/A",
+                "CNPJ": "07760885000680",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "414105",
+                "DATA_ADMISSAO": "01\/12\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "TORRE E CIA SUPERMERCADOS S\/A",
+                "CNPJ": "07760885001229",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "414215",
+                "DATA_ADMISSAO": "11\/03\/1998",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,225 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26005564862",
+        "NOME": "EDVALDO JOSE DA SILVA",
+        "NOME_MAE": "MARIA DE FATIMA DA SILVA",
+        "NASCTO": "11\/10\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "266571450108",
+        "NIT": "12700384816",
+        "ESCOLARIDADE": "DA 5a. A 8a. SERIE INCOMPLETA DO 1o. GRAU(GINASIO INCOMPLETO)",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "514110",
+        "PROFISSAO": "GARAGISTA",
+        "SALARIO": " 1.413,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1158419844",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1158446036",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11978907346",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11966638961",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11958228372",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "11\/08\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11953342081",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "edvaldodasilva78@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CARDOSO MOREIRA",
+                "NUMERO": "609",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD OLINDA",
+                "CEP": "05766290",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BRA DE BELA VISTA",
+                "NUMERO": "810",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL CONGONHAS",
+                "CEP": "04612002",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CARDOSO MOREIRA",
+                "NUMERO": "615",
+                "COMPLEMENTO": "A",
+                "BAIRRO": "JD OLINDA",
+                "CEP": "05766290",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R RENASCENCA",
+                "NUMERO": "142",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL CONGONHAS",
+                "CEP": "04612010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R GIOVANNI AMADEO",
+                "NUMERO": "66",
+                "COMPLEMENTO": "C 2",
+                "BAIRRO": "JD CATANDUVA",
+                "CEP": "05767400",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "CARDOSO MOREIRA",
+                "NUMERO": "373",
+                "COMPLEMENTO": "BL 7 AP",
+                "BAIRRO": "JD OLINDA",
+                "CEP": "05766290",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MONFORTE DE LEMOS",
+                "NUMERO": "510",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM UMUARAMA",
+                "CEP": "05783170",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1435531",
+            "NOME": "MARIA DE FATIMA DA SILVA",
+            "IDADE": "51 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TRANSWOLFF TRANSPORTES E TURISMO LTDA",
+                "CNPJ": "58322512000154",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "11\/09\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "JPJ PARK SERVICOS DE ESTACIONAMENTO LTDA",
+                "CNPJ": "09084510000169",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "514110",
+                "DATA_ADMISSAO": "01\/10\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "FP PARKING ESTACIONAMENTO LTDA",
+                "CNPJ": "20865886000143",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "514110",
+                "DATA_ADMISSAO": "03\/10\/2016",
+                "DATA_DEMISSAO": "01\/11\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "KING PARK VALET SERVICE ESTACIONAMENTO S\/S LTDA",
+                "CNPJ": "03780065000195",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "783110",
+                "DATA_ADMISSAO": "01\/09\/2015",
+                "DATA_DEMISSAO": "12\/03\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "DANIEL FERNANDES PIMENTA",
+                "CNPJ": "19587489000178",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "01\/07\/2014",
+                "DATA_DEMISSAO": "21\/11\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

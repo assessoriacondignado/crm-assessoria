@@ -1,0 +1,239 @@
+{
+    "CADASTRAIS": {
+        "CPF": "17356746808",
+        "NOME": "JOSE FRANCISCO DE OLIVEIRA NETO",
+        "NOME_MAE": "MARIA HELENA DE OLIVEIRA",
+        "NASCTO": "05\/05\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1247359929",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782220",
+        "PROFISSAO": "OPERADOR DE EMPILHADEIRA",
+        "SALARIO": " 3.675,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8233275928",
+                "OPERADORA": "TELEMAR\/AL",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1178060637",
+                "OPERADORA": "NEXTEL",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "82991372424",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "82993816164",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1178060637",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11942273036",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11999049203",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "francisco2399@itelefonica.com.br",
+            "josef1506@hotmail.com",
+            "francisco2399@vivointernetdiscada.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DOS ANDRADAS",
+                "NUMERO": "251",
+                "COMPLEMENTO": "AP 201 PE UNICO",
+                "BAIRRO": "CENTRO HISTORICO",
+                "CEP": "90020000",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R JOSUE ALVES MARQUES",
+                "NUMERO": "31",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "TABULEIRO DO MARTINS",
+                "CEP": "57081790",
+                "CIDADE": "MACEIO",
+                "ESTADO": "AL"
+            },
+            {
+                "LOGRADOURO": "TV MNS KOLLY",
+                "NUMERO": "90",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "13250304",
+                "CIDADE": "ITATIBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV VICENTE CATALANI",
+                "NUMERO": "3400",
+                "COMPLEMENTO": "BL 7 APT 732",
+                "BAIRRO": "JARDIM DAS NACOES",
+                "CEP": "13256700",
+                "CIDADE": "ITATIBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV VICENTE CATALANI",
+                "NUMERO": "7",
+                "COMPLEMENTO": "AP 705",
+                "BAIRRO": "JARDIM DAS NACOES",
+                "CEP": "13256700",
+                "CIDADE": "ITATIBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV VICENTE CATALANI",
+                "NUMERO": "32",
+                "COMPLEMENTO": "BL 7",
+                "BAIRRO": "JD NACOES",
+                "CEP": "13256700",
+                "CIDADE": "ITATIBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SALVADOR PINTO DA SILVA",
+                "NUMERO": "135",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA CENTENARIO",
+                "CEP": "13253342",
+                "CIDADE": "ITATIBA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "3222888",
+            "NOME": "MARIA HELENA DE OLIVEIRA",
+            "IDADE": "76 anos",
+            "LOCAL": "TREMEMBE\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SENDAS DISTRIBUIDORA S\/A",
+                "CNPJ": "06057223052562",
+                "CIDADE": "ITATIBA-SP",
+                "PROFISSAO": "521125",
+                "DATA_ADMISSAO": "26\/12\/2023",
+                "DATA_DEMISSAO": "23\/05\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "WISE PLASTICOS S.A",
+                "CNPJ": "04053268000142",
+                "CIDADE": "ITATIBA-SP",
+                "PROFISSAO": "782220",
+                "DATA_ADMISSAO": "15\/07\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TENDA ATACADO SA",
+                "CNPJ": "01157555005254",
+                "CIDADE": "ITATIBA-SP",
+                "PROFISSAO": "517425",
+                "DATA_ADMISSAO": "05\/06\/2024",
+                "DATA_DEMISSAO": "16\/07\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COVABRA SUPERMERCADOS LTDA",
+                "CNPJ": "61233151001075",
+                "CIDADE": "ITATIBA-SP",
+                "PROFISSAO": "517425",
+                "DATA_ADMISSAO": "13\/04\/2015",
+                "DATA_DEMISSAO": "16\/11\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "TIMAVO DO BRASIL INDUSTRIA TEXTIL LTDA",
+                "CNPJ": "44740066000193",
+                "CIDADE": "ITATIBA-SP",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "22\/03\/2004",
+                "DATA_DEMISSAO": "14\/09\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

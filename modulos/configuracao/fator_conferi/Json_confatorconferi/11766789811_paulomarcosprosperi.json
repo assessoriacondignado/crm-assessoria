@@ -1,0 +1,278 @@
+{
+    "CADASTRAIS": {
+        "CPF": "11766789811",
+        "NOME": "PAULO MARCOS PROSPERI",
+        "NOME_MAE": "MARIA EMILIA LUIS PROSPERI",
+        "NASCTO": "28\/02\/1974",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "230922375",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "227766860159",
+        "NIT": "12497456129",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212405",
+        "PROFISSAO": "ANALISTA DE DESENVOLVIMENTO DE SISTEMAS",
+        "SALARIO": " 1.816,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1121135211",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1136453591",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1137412912",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1138078121",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1121135862",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "91984263174",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "91984358512",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11982157627",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11999888565",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11981362381",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "pprosperi@timbrasil.com.br",
+            "pmarcosprosperi@ig.com.br",
+            "paulo.prosperi@db.com",
+            "pauloprosperi@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "TV S FRANCISCO",
+                "NUMERO": "246",
+                "COMPLEMENTO": "AP 1504 COB 4",
+                "BAIRRO": "CAMPINA",
+                "CEP": "66023530",
+                "CIDADE": "BELEM",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "R PASSO DA PATRIA",
+                "NUMERO": "855",
+                "COMPLEMENTO": "AP  Apartamento  13",
+                "BAIRRO": "BELA ALIANCA",
+                "CEP": "05085000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CONEGO EUGENIO LEITE",
+                "NUMERO": "1122",
+                "COMPLEMENTO": "AP94",
+                "BAIRRO": "CERQUEIRA CESAR",
+                "CEP": "05414001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOS MUNDURUCUS",
+                "NUMERO": "2256",
+                "COMPLEMENTO": "APART 701",
+                "BAIRRO": "BATISTA CAMPOS",
+                "CEP": "66033718",
+                "CIDADE": "BELEM",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "RUA CONEGO EUGENIO LEITE",
+                "NUMERO": "1122",
+                "COMPLEMENTO": "AP94",
+                "BAIRRO": "PINHEIROS",
+                "CEP": "05414000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CONEGO EUGENIO LEITE",
+                "NUMERO": "112",
+                "COMPLEMENTO": "APT 94",
+                "BAIRRO": "CERQUEIRA CESAR",
+                "CEP": "05414001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CONEGO EUGENIO LEITE",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CERQUEIRA CESAR",
+                "CEP": "05414001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ZAIRA",
+                "NUMERO": "225",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SUMARE",
+                "CEP": "01252060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "10742456870",
+            "NOME": "MARIMILIA PROSPERI",
+            "IDADE": "61 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ORACLE DO BRASIL SISTEMAS LTDA",
+                "CNPJ": "59456277000176",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142320",
+                "DATA_ADMISSAO": "13\/05\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COGNIZANT SERVICOS DE TECNOLOGIA E SOFTWARE DO BRASIL LTDA",
+                "CNPJ": "08323041000120",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142520",
+                "DATA_ADMISSAO": "01\/07\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ADP BRASIL LTDA",
+                "CNPJ": "47680798000123",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142520",
+                "DATA_ADMISSAO": "12\/20\/1904",
+                "DATA_DEMISSAO": "18\/02\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "SINQIA S.A.",
+                "CNPJ": "04065791000199",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "01\/04\/2010",
+                "DATA_DEMISSAO": "504",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "WKP CONSULTORIA EM INFORMATICA LTDA",
+            "CNPJ": "03351290000106",
+            "CIDADE": "POA-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "19990802",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

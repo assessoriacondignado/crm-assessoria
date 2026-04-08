@@ -1,0 +1,176 @@
+{
+    "CADASTRAIS": {
+        "CPF": "14743232864",
+        "NOME": "MARIA AUXILIADORA DA MOTA",
+        "NOME_MAE": "IRACI LEITE DA MOTA",
+        "NASCTO": "10\/12\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "185871780108",
+        "NIT": "1239954373 ",
+        "ESCOLARIDADE": "PRIMEIRO GRAU (GINASIO)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521135",
+        "PROFISSAO": "FRENTISTA",
+        "SALARIO": " 1.724,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8737734931",
+                "OPERADORA": "TELEMAR\/PE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "8739211033",
+                "OPERADORA": "TELEMAR\/PE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "87998079149",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "87981099676",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DONA MARIA QUEDAS",
+                "NUMERO": "9",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JD ANDARAI",
+                "CEP": "02175010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV SINESIO SEBASTIAO DE MELO",
+                "NUMERO": "22",
+                "COMPLEMENTO": "NEV ES PE",
+                "BAIRRO": "NEVES",
+                "CEP": "55398000",
+                "CIDADE": "JUCATI",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R DEOCLECIANO F DOS SANTOS",
+                "NUMERO": "91",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "55395000",
+                "CIDADE": "JUPI",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "RUA DEOCLECIANO F DOS SANTOS",
+                "NUMERO": "91",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "55398000",
+                "CIDADE": "JUCATI",
+                "ESTADO": "PE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "51396130420",
+                "NOME": "IRACI LEITE DA MOTA",
+                "IDADE": "93 anos",
+                "LOCAL": "JUPI\/PE",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "12543688846",
+                "NOME": "AURENI CARLOS DA MOTA DE MELO",
+                "IDADE": "56 anos",
+                "LOCAL": "GUARULHOS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "15231998818",
+                "NOME": "MARIA MADALENA DA MOTA",
+                "IDADE": "55 anos",
+                "LOCAL": "GUARULHOS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "15724217899",
+                "NOME": "SEBASTIAO LEITE DA MOTA",
+                "IDADE": "52 anos",
+                "LOCAL": "GUARULHOS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "25190138852",
+                "NOME": "ERNANDO LEITE DA MOTA",
+                "IDADE": "51 anos",
+                "LOCAL": "JUCATI\/PE",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "E S COMERCIO DE COMBUSTIVEIS LTDA",
+                "CNPJ": "49007288000115",
+                "CIDADE": "JUCATI-PE",
+                "PROFISSAO": "521135",
+                "DATA_ADMISSAO": "28\/09\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "RM COMERCIO DE COMBUSTIVEIS LTDA",
+                "CNPJ": "10976891000170",
+                "CIDADE": "GARANHUNS-PE",
+                "PROFISSAO": "521135",
+                "DATA_ADMISSAO": "15\/07\/2013",
+                "DATA_DEMISSAO": "30\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

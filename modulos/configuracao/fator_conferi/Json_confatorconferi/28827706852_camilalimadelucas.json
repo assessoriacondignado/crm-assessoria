@@ -1,0 +1,201 @@
+{
+    "CADASTRAIS": {
+        "CPF": "28827706852",
+        "NOME": "CAMILA LIMA DE LUCAS",
+        "NOME_MAE": "SUELI LIMA DE LUCAS",
+        "NASCTO": "25\/02\/1978",
+        "IDADE": "48 anos",
+        "SEXO": "Feminino",
+        "RG": "280782998",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "218314760116",
+        "NIT": "20945360627",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "515310",
+        "PROFISSAO": "AGENTE DE ACAO SOCIAL",
+        "SALARIO": " 1.900,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1732174642",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1740091700",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "17996017606",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "17997377707",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "17991182613",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "17997278425",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "kaluccapsico@hotmail.com",
+            "kalucca_psico@hotmail.com",
+            "ca.lucas@zipmail.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "RUA BARAO DO RIO BRANCO",
+                "NUMERO": "166",
+                "COMPLEMENTO": "AP 13",
+                "BAIRRO": "CENTRO",
+                "CEP": "14870330",
+                "CIDADE": "JABOTICABAL",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE AGRELLI",
+                "NUMERO": "353",
+                "COMPLEMENTO": "AP 33",
+                "BAIRRO": "JARDIM PANORAMA",
+                "CEP": "15091190",
+                "CIDADE": "SAO JOSE DO RIO PRETO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FELICIO BOTINO",
+                "NUMERO": "417",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "15895000",
+                "CIDADE": "CEDRAL",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "22462712828",
+                "NOME": "JORGE DE LUCAS NETO",
+                "IDADE": "43 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "45575948838",
+                "NOME": "GABRIEL LIMA DE LUCAS DOS REIS",
+                "IDADE": "17 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "INSTITUTO EDUCACIONAL FRANCISCO DE ASSIS",
+                "CNPJ": "05468904000160",
+                "CIDADE": "SAO JOSE DO RIO PRETO-SP",
+                "PROFISSAO": "251505",
+                "DATA_ADMISSAO": "02\/10\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CARITAS DIOCESANA DE SAO JOSE DO RIO PRETO",
+                "CNPJ": "45096062000187",
+                "CIDADE": "SAO JOSE DO RIO PRETO-SP",
+                "PROFISSAO": "239405",
+                "DATA_ADMISSAO": "22\/07\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "INSTITUTO SULAMERICANO PARA A PROMOCAO DA EQUIDADE NO DESENVOLVIMENTO SUSTENTAVEL E MULTISETORIAL",
+                "CNPJ": "08029075000107",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "515310",
+                "DATA_ADMISSAO": "01\/06\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": [
+            {
+                "RAZAO_SOCIAL": "C LUCAS LUCAS CONSULTORIA AMBIENTAL LTDA",
+                "CNPJ": "39275413000114",
+                "CIDADE": "JABOTICABAL-SP",
+                "QUALIFICACAO": "SÃ³cio",
+                "DATA_ENTRADA": "20201001",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "MWT PLANEJAMETO AMBIENTAL LTDA",
+                "CNPJ": "09312300000180",
+                "CIDADE": "CEDRAL-SP",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20071030",
+                "VALOR_PARTICIPACAO": ""
+            }
+        ]
+    }
+}

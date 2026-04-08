@@ -1,0 +1,265 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26008081838",
+        "NOME": "ERIC YOKODA KOHAMA",
+        "NOME_MAE": "DIRCE MITIE YOKODA KOHAMA",
+        "NASCTO": "10\/01\/1978",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "280767210183",
+        "NIT": "12538768618",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "225125",
+        "PROFISSAO": "",
+        "SALARIO": " 8.200,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1120928890",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1131293847",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "13\/07\/2016",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1120153896",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1131515449",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11941287645",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11975430395",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11981348162",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16991527590",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11961153896",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "ericyokoda@superig.com.br",
+            "erickohana@ig.com.br",
+            "yokodakohama@gmail.com",
+            "ericyokoda@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "PC RAGUEB CHOHFI",
+                "NUMERO": "1835",
+                "COMPLEMENTO": "BL 21 AP 22",
+                "BAIRRO": "CENTRO",
+                "CEP": "01022040",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PE ESTEVAO PERNET",
+                "NUMERO": "160",
+                "COMPLEMENTO": "AP 907",
+                "BAIRRO": "VL GOMES CARDIM",
+                "CEP": "03315000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV RAGUEB CHOHFI",
+                "NUMERO": "1111",
+                "COMPLEMENTO": "1835 BL 21 AP 22 1835",
+                "BAIRRO": "JD TRES MARIAS",
+                "CEP": "08375900",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BRUNO VALENTE",
+                "NUMERO": "440",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SERRINHA",
+                "CEP": "60742785",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R ITAPIRINAIA",
+                "NUMERO": "13",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD COLONIAL",
+                "CEP": "08375100",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV FORTE DO LEME",
+                "NUMERO": "13",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ S LOURENCO",
+                "CEP": "08340010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CEL JOAQUIM ANTONIO DIAS",
+                "NUMERO": "342",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL AZEVEDO",
+                "CEP": "03308030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV RAGUEB CHOHFI",
+                "NUMERO": "1835",
+                "COMPLEMENTO": "AP 22 BL 21",
+                "BAIRRO": "PARQUE SAO LOURENCO",
+                "CEP": "08340000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "15239031800",
+                "NOME": "DIRCE MITIE YOKODA KOHAMA",
+                "IDADE": "78 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "26216849808",
+                "NOME": "ALAN YOKODA KOHAMA",
+                "IDADE": "54 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "31131693809",
+                "NOME": "DANILO YOKODA KOHAMA",
+                "IDADE": "43 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "AMIL ASSISTENCIA MEDICA INTERNACIONAL S.A.",
+                "CNPJ": "29309127018469",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "131210",
+                "DATA_ADMISSAO": "03\/05\/2021",
+                "DATA_DEMISSAO": "01\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "AMIL ASSISTENCIA MEDICA INTERNACIONAL S.A.",
+                "CNPJ": "29309127000179",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "131210",
+                "DATA_ADMISSAO": "01\/01\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PREVENT SENIOR PRIVATE OPERADORA DE SAUDE LTDA",
+                "CNPJ": "00461479003006",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "225125",
+                "DATA_ADMISSAO": "01\/09\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

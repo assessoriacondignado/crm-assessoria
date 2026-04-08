@@ -1,0 +1,187 @@
+{
+    "CADASTRAIS": {
+        "CPF": "36472974888",
+        "NOME": "ABRAAO JOSE FERREIRA",
+        "NOME_MAE": "LUZIA CAMARGO TORRE FERREIRA",
+        "NASCTO": "31\/12\/1987",
+        "IDADE": "38 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "356717110191",
+        "NIT": "2065555881 ",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "517410",
+        "PROFISSAO": "PORTEIRO DE EDIFICIOS",
+        "SALARIO": " 2.200,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1141825288",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "24\/07\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1138290544",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11973239434",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11994096904",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11950510829",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "abraao_mf@hotmail.com",
+            "abraaojose2020@gmail.com",
+            "abraao_mf@hotmail.com.br",
+            "abraao_mf@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DIADEMA",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ETN LAGO AZUL",
+                "CEP": "07866200",
+                "CIDADE": "FRANCO DA ROCHA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DIADEMA",
+                "NUMERO": "1000",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "ETN LAGO AZUL",
+                "CEP": "07866200",
+                "CIDADE": "FRANCO DA ROCHA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SENDAS DISTRIBUIDORA S\/A",
+                "CNPJ": "06057223042176",
+                "CIDADE": "JUNDIAI-SP",
+                "PROFISSAO": "521125",
+                "DATA_ADMISSAO": "26\/12\/2023",
+                "DATA_DEMISSAO": "06\/12\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VIACAO CIDADE DE CAIEIRAS LIMITADA",
+                "CNPJ": "71896880000336",
+                "CIDADE": "FRANCO DA ROCHA-SP",
+                "PROFISSAO": "519935",
+                "DATA_ADMISSAO": "09\/12\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ALSA FORT SERVICOS LTDA.",
+                "CNPJ": "00496402000129",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "517410",
+                "DATA_ADMISSAO": "21\/07\/2023",
+                "DATA_DEMISSAO": "06\/09\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "JOTAEME - FITAFER INDUSTRIA METALURGICA LTDA",
+                "CNPJ": "68032648000264",
+                "CIDADE": "FRANCO DA ROCHA-SP",
+                "PROFISSAO": "391205",
+                "DATA_ADMISSAO": "18\/09\/2023",
+                "DATA_DEMISSAO": "13\/11\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "SOCIEDADE UNIFICADA PAULISTA DE ENSINO RENOVADO OBJETIVO - SUPERO LTDA",
+                "CNPJ": "43144880002207",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "517410",
+                "DATA_ADMISSAO": "01\/08\/2022",
+                "DATA_DEMISSAO": "02\/05\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "SOCIEDADE UNIFICADA PAULISTA DE EDUCACAO E COMUNICACAO SUPERO-EC LTDA",
+                "CNPJ": "02914675000252",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "517410",
+                "DATA_ADMISSAO": "01\/08\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "POWER - SEGURANCA E VIGILANCIA LTDA",
+                "CNPJ": "54506589000123",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "517330",
+                "DATA_ADMISSAO": "22\/02\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,348 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25807106806",
+        "NOME": "MARIA LUCIA JACINTHO",
+        "NOME_MAE": "MARIA DE LOURDES MARTINS JACINTHO",
+        "NASCTO": "01\/04\/1978",
+        "IDADE": "48 anos",
+        "SEXO": "Feminino",
+        "RG": "291322700",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "284249510132",
+        "NIT": "1253950581",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "413225",
+        "PROFISSAO": "ESCRITURARIO DE BANCO",
+        "SALARIO": " 12.056,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1131058179",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1137519179",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1134155100",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "02\/03\/2011",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1134812662",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11984721560",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11994141637",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11940430457",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11948338757",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "07\/02\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11988572725",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "malujac2009@terra.com.br",
+            "malujac@hmail.com",
+            "lucia.jacintho@nossacaixa.com.br",
+            "lucia.jacintho@bb.com.br",
+            "malujac@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "RES RUA NA GUINE TAMOS GASTIM",
+                "NUMERO": "39",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD OASIS",
+                "CEP": "11770000",
+                "CIDADE": "PERUIBE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R STA AMELIA",
+                "NUMERO": "34",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ STA AMELIA",
+                "CEP": "06852730",
+                "CIDADE": "ITAPECERICA DA SERRA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "PC MARGARIDA MARIA DA SILVA",
+                "NUMERO": "30",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL NHOCUNE",
+                "CEP": "03558090",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ERNESTO ROSA DA FONSECA",
+                "NUMERO": "533",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE PINHEIRO",
+                "CEP": "06767020",
+                "CIDADE": "TABOAO DA SERRA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MINISTRO HEITOR BASTOS TIG",
+                "NUMERO": "534",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM MONTE KE",
+                "CEP": "05634060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DONARIA MORAES DE FREITAS",
+                "NUMERO": "138",
+                "COMPLEMENTO": "TERREO",
+                "BAIRRO": "PQ PINHEIROS",
+                "CEP": "06767130",
+                "CIDADE": "TABOAO DA SERRA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BARTOLOMEO BON",
+                "NUMERO": "241",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD DRACENA",
+                "CEP": "05528200",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DONARIA MORAES DE FREITAS",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE PINHEIROS",
+                "CEP": "06767130",
+                "CIDADE": "TABOAO DA SERRA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "31744922896",
+                "NOME": "MARIA DE LOURDES MARTINS JACINTHO",
+                "IDADE": "78 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "24904337840",
+                "NOME": "DANIEL FRANCISCO JACINTHO",
+                "IDADE": "50 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "25382695806",
+                "NOME": "ANA CRISTINA JACINTHO SANTOS",
+                "IDADE": "49 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "3434923772",
+                "NOME": "MARIA APPARECIDA JACINTHO",
+                "IDADE": "88 anos",
+                "LOCAL": "SEROPEDICA\/RJ",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "3435105704",
+                "NOME": "RUTH LUCIA JACINTHO CONCEICAO",
+                "IDADE": "86 anos",
+                "LOCAL": "ARARUAMA\/RJ",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "17284503734",
+                "NOME": "JOSE LUIZ JACINTHO",
+                "IDADE": "82 anos",
+                "LOCAL": "SEROPEDICA\/RJ",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "43456406878",
+                "NOME": "FELIPE ANTONIO JACINTHO THEODORO",
+                "IDADE": "27 anos",
+                "LOCAL": "TABOAO DA SERRA\/SP",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "43456840802",
+                "NOME": "CAIO VINICIUS JACINTHO THEODORO",
+                "IDADE": "21 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ANTONIO ALVES DA COSTA",
+                "IDADE": "",
+                "LOCALIDADE": "RIO DAS PEDRAS\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "7771564828"
+            },
+            {
+                "NOME": "CLAUDIA FERREIRA DE OLIVEIRA REZENDE",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "53052307134"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000679976",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "29\/08\/2022",
+                "DATA_DEMISSAO": "08\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000529141",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "08\/02\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000459186",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "06\/09\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000664006",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/07\/2021",
+                "DATA_DEMISSAO": "06\/09\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000457728",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/02\/2021",
+                "DATA_DEMISSAO": "01\/03\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000684627",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "12\/06\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

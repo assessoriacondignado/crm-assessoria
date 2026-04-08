@@ -1,0 +1,235 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25456501880",
+        "NOME": "DAVID DA SILVA FEBRONIO",
+        "NOME_MAE": "ANTONIA DA SILVA FEBRONIO",
+        "NASCTO": "02\/08\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "276308645",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "276748740132",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1140042444",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1146535536",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11998313440",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11913282181",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11943975188",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11958251592",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "21\/02\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11962639829",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "febronio.david@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ARAPIRACA",
+                "NUMERO": "300",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD NAPOLI II",
+                "CEP": "08595620",
+                "CIDADE": "ITAQUAQUECETUBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R GILBERTO MENDES",
+                "NUMERO": "2",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ RODRIGO BARRETO",
+                "CEP": "07417150",
+                "CIDADE": "ARUJA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R GILBERTO MENDES",
+                "NUMERO": "206",
+                "COMPLEMENTO": "",
+                "BAIRRO": "P R BARRETO",
+                "CEP": "07417150",
+                "CIDADE": "ARUJA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "9982139851",
+                "NOME": "ANTONIA DA SILVA FEBRONIO",
+                "IDADE": "76 anos",
+                "LOCAL": "ARUJA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "28139850829",
+                "NOME": "ANA PAULA DA SILVA FEBRONIO",
+                "IDADE": "47 anos",
+                "LOCAL": "ARUJA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "DAVID DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "BARRETOS\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "30753736802"
+            },
+            {
+                "NOME": "SILVIA CANDIDO DE LIMA FEBRONIO",
+                "IDADE": "",
+                "LOCALIDADE": "ARUJA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "28070122803"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COMERCIAL ESPERANCA ATACADISTA IMPORTACAO E EXPORTACAO LTDA",
+                "CNPJ": "49092398000394",
+                "CIDADE": "ARUJA-SP",
+                "PROFISSAO": "342315",
+                "DATA_ADMISSAO": "01\/11\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "GMP RECURSOS HUMANOS LTDA",
+                "CNPJ": "23276201000111",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "410240",
+                "DATA_ADMISSAO": "21\/08\/2023",
+                "DATA_DEMISSAO": "01\/11\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "LSI - LOGISTICA S.A.",
+                "CNPJ": "04057495000731",
+                "CIDADE": "SAO CAETANO DO SUL-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "04\/09\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "LSI - LOGISTICA S.A.",
+                "CNPJ": "04057495000146",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "410205",
+                "DATA_ADMISSAO": "04\/04\/2012",
+                "DATA_DEMISSAO": "17\/05\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SAINT-GOBAIN DISTRIBUICAO BRASIL LTDA",
+                "CNPJ": "03840986005084",
+                "CIDADE": "GUARULHOS-SP",
+                "PROFISSAO": "141615",
+                "DATA_ADMISSAO": "03\/10\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "TROUW NUTRITION PREMIX NUTRICAO ANIMAL LTDA",
+                "CNPJ": "60835907000283",
+                "CIDADE": "ARUJA-SP",
+                "PROFISSAO": "414215",
+                "DATA_ADMISSAO": "03\/10\/2011",
+                "DATA_DEMISSAO": "103",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

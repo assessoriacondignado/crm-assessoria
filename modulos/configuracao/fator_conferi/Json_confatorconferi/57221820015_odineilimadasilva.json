@@ -1,0 +1,188 @@
+{
+    "CADASTRAIS": {
+        "CPF": "57221820015",
+        "NOME": "ODINEI LIMA DA SILVA",
+        "NOME_MAE": "EVA DE LIMA DA SILVA",
+        "NASCTO": "09\/01\/1971",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "1053062764",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "057703060400",
+        "NIT": "1254833391",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "391210",
+        "PROFISSAO": "TECNICO DE GARANTIA DA QUALIDADE",
+        "SALARIO": " 5.640,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5432115014",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5432115414",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "54991648529",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "54996069950",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "54999381343",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "54981294896",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "27\/07\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "odineilima@bol.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV DQ DE CAXIAS",
+                "NUMERO": "291",
+                "COMPLEMENTO": "BL E AP 301",
+                "BAIRRO": "FRAGATA",
+                "CEP": "96030001",
+                "CIDADE": "PELOTAS",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R BENTO GONCALVES",
+                "NUMERO": "2449",
+                "COMPLEMENTO": "AP Z",
+                "BAIRRO": "CENTRO",
+                "CEP": "95020412",
+                "CIDADE": "CAXIAS DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R PADRE PEDRO F. PICCOLI",
+                "NUMERO": "258",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOSSA SENHORA DA SAUDE",
+                "CEP": "95032770",
+                "CIDADE": "CAXIAS DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R PADRE PEDRO F. PICCOLI",
+                "NUMERO": "604",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOSSA SENHORA DA SAUDE",
+                "CEP": "95032770",
+                "CIDADE": "CAXIAS DO SUL",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "3465568303",
+            "NOME": "EVA DE LIMA DA SILVA",
+            "IDADE": "36 anos",
+            "LOCAL": "SANTA INES\/MA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BRASLUX INDUSTRIA DE AUTO PECAS LTDA",
+                "CNPJ": "88893490000143",
+                "CIDADE": "CAXIAS DO SUL-RS",
+                "PROFISSAO": "391210",
+                "DATA_ADMISSAO": "28\/08\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PROLARTEC COMERCIO DE SISTEMAS DE ENERGIA SOLAR LTDA",
+                "CNPJ": "32781690000150",
+                "CIDADE": "SAO MARCOS-RS",
+                "PROFISSAO": "252720",
+                "DATA_ADMISSAO": "02\/08\/2021",
+                "DATA_DEMISSAO": "09\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "MARCOPOLO SA",
+                "CNPJ": "88611835000986",
+                "CIDADE": "CAXIAS DO SUL-RS",
+                "PROFISSAO": "391105",
+                "DATA_ADMISSAO": "16\/07\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "MASSA FALIDA VOGES METALURGICA LTDA",
+                "CNPJ": "04654447000488",
+                "CIDADE": "CAXIAS DO SUL-RS",
+                "PROFISSAO": "318205",
+                "DATA_ADMISSAO": "21\/06\/2010",
+                "DATA_DEMISSAO": "18\/02\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

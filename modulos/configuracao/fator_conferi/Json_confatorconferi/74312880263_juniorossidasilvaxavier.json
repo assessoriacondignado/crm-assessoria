@@ -1,0 +1,245 @@
+{
+    "CADASTRAIS": {
+        "CPF": "74312880263",
+        "NOME": "JUNIO ROSSI DA SILVA XAVIER",
+        "NOME_MAE": "MARIA LUCINETE DA SILVA XAVIER",
+        "NASCTO": "21\/12\/1983",
+        "IDADE": "42 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12839942021",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782310",
+        "PROFISSAO": "MOTORISTA DE FURGAO OU VEICULO SIMILAR",
+        "SALARIO": " 1.974,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9232383207",
+            "OPERADORA": "TELEMAR\/AM",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92984912577",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92992681310",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92984335043",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92988063019",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "OI_PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92982635437",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "junio_rsxavier@hotmail.com",
+            "rossidasilvaxavier@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ANDRE V NEGREIROS",
+                "NUMERO": "23",
+                "COMPLEMENTO": "C A",
+                "BAIRRO": "D PEDRO I",
+                "CEP": "69042450",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "BC DOS FRANCESES",
+                "NUMERO": "23",
+                "COMPLEMENTO": "A",
+                "BAIRRO": "ALVORADA",
+                "CEP": "69043157",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R CARVALHO MOREIRA",
+                "NUMERO": "18",
+                "COMPLEMENTO": "PROXIMO A",
+                "BAIRRO": "D PEDRO I",
+                "CEP": "69042630",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R NELSON DA FONSECA",
+                "NUMERO": "197",
+                "COMPLEMENTO": "CAAS",
+                "BAIRRO": "SEN CAMARA",
+                "CEP": "21831336",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R NOVA ESPERANCA",
+                "NUMERO": "2",
+                "COMPLEMENTO": "C B",
+                "BAIRRO": "D PEDRO",
+                "CEP": "69620000",
+                "CIDADE": "AMATURA",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "PRQ ARUANA",
+                "NUMERO": "1",
+                "COMPLEMENTO": "V LOCAL",
+                "BAIRRO": "COMPENSA",
+                "CEP": "69036500",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R ANDRE V NEGREIROS",
+                "NUMERO": "19",
+                "COMPLEMENTO": "F 1",
+                "BAIRRO": "D PEDRO I",
+                "CEP": "69042450",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R E",
+                "NUMERO": "7",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVA REPUBLICA",
+                "CEP": "68025230",
+                "CIDADE": "SANTAREM",
+                "ESTADO": "PA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "44217501234",
+                "NOME": "MARIA LUCINETE DA SILVA XAVIER",
+                "IDADE": "61 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "582480213",
+                "NOME": "JONATAS DA SILVA XAVIER",
+                "IDADE": "34 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "78161916268",
+                "NOME": "JADSON DA SILVA XAVIER",
+                "IDADE": "40 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "89497082215",
+                "NOME": "JEOVANE DA SILVA XAVIER",
+                "IDADE": "38 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "96323361272",
+                "NOME": "JARLISSON DA SILVA XAVIER",
+                "IDADE": "36 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "HOSSOKAWA COMERCIO E REPRESENTACAO DE PRODUTOS DE HIGIENE E LIMPEZA LTDA",
+                "CNPJ": "05970054000101",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "782305",
+                "DATA_ADMISSAO": "10\/07\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "AMORE TRANSPORTE LTDA",
+                "CNPJ": "00395875000130",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "782310",
+                "DATA_ADMISSAO": "04\/02\/2014",
+                "DATA_DEMISSAO": "19\/09\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "VIACAO CARAVELAS LTDA",
+                "CNPJ": "05471255000156",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "21\/09\/2010",
+                "DATA_DEMISSAO": "24\/02\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,238 @@
+{
+    "CADASTRAIS": {
+        "CPF": "29746147870",
+        "NOME": "LEANDRO DE CARVALHO",
+        "NOME_MAE": "DARCI BARBOSA DE CARVALHO",
+        "NASCTO": "25\/07\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "213310740116",
+        "NIT": "1288967085",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "354130",
+        "PROFISSAO": "PROMOTOR DE VENDAS ESPECIALIZADO",
+        "SALARIO": " 7.142,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1121958700",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1122170741",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11995149948",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11981184999",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "68992179026",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11986189400",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "leandro.carvalho@br.issworld.com",
+            "worktime.e126127@telefonica.com.br",
+            "leandro.carvalho@bradescoseguros.com.br",
+            "bau_boy@hotmail.com",
+            "ld_carvalho@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV NICOLAU JACINTO",
+                "NUMERO": "685",
+                "COMPLEMENTO": "AP 81 B 1",
+                "BAIRRO": "JD ARTUR ALVIM",
+                "CEP": "03687010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PEDRAS NEGRAS",
+                "NUMERO": "8",
+                "COMPLEMENTO": "FDS PTCA",
+                "BAIRRO": "CIDADE PATRIARCA",
+                "CEP": "03556080",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ANICETO ORTEGA",
+                "NUMERO": "31",
+                "COMPLEMENTO": "C 1",
+                "BAIRRO": "VL REGINA ZONA LESTE",
+                "CEP": "08225040",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV BENEDITO SALGADO DA SILVA",
+                "NUMERO": "2",
+                "COMPLEMENTO": "C 2",
+                "BAIRRO": "VL NHOCUNE",
+                "CEP": "03563170",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R HENRIQUE JACOBS",
+                "NUMERO": "132",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA SANTA TERESA (ZONA LESTE)",
+                "CEP": "03566010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA HENRIQUE JACOBS",
+                "NUMERO": "136",
+                "COMPLEMENTO": "CS 2",
+                "BAIRRO": "VILA SANTA TERESA (ZONA LESTE)",
+                "CEP": "03566010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CESAR DIAZ",
+                "NUMERO": "124",
+                "COMPLEMENTO": "AP   33 BLOCO",
+                "BAIRRO": "CONJUNTO HABITACIONAL PADRE MANOEL DE PAIVA",
+                "CEP": "03591000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MIRADOR",
+                "NUMERO": "4",
+                "COMPLEMENTO": "FDS",
+                "BAIRRO": "CIDADE PATRIARCA",
+                "CEP": "03556070",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "31898860831",
+            "NOME": "DARCI BARBOSA DE CARVALHO",
+            "IDADE": "84 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ELISANGELA MARTINS GONCALVES",
+            "IDADE": "",
+            "LOCALIDADE": "SAO PAULO\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "31712440802"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TELEFONICA BRASIL S.A.",
+                "CNPJ": "02558157000162",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "354130",
+                "DATA_ADMISSAO": "13\/02\/2017",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TELEFONICA BRASIL S.A.",
+                "CNPJ": "02558157007922",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "354130",
+                "DATA_ADMISSAO": "13\/02\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "TOP SERVICE FACILITIES LTDA",
+                "CNPJ": "43709799000100",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "313315",
+                "DATA_ADMISSAO": "01\/09\/2010",
+                "DATA_DEMISSAO": "22\/08\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ATENTO BRASIL S\/A",
+                "CNPJ": "02879250004085",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212410",
+                "DATA_ADMISSAO": "01\/08\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

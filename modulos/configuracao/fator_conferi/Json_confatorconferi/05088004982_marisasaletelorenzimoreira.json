@@ -1,0 +1,173 @@
+{
+    "CADASTRAIS": {
+        "CPF": "5088004982",
+        "NOME": "MARISA SALETE LORENZI MOREIRA",
+        "NOME_MAE": "ARCILINA SALETE G ARAUJO",
+        "NASCTO": "05\/11\/1984",
+        "IDADE": "41 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "2005098326",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "862150",
+        "PROFISSAO": "OPERADOR DE MAQUINAS FIXAS, EM GERAL",
+        "SALARIO": " 4.713,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "4933260422",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "49999032383",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "49999426805",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "ropt@netsite.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV SEN ATTILIO FRANCISCO XAVIER FONTANA E",
+                "NUMERO": "600",
+                "COMPLEMENTO": "E",
+                "BAIRRO": "ENGENHO BRAUN",
+                "CEP": "89809000",
+                "CIDADE": "CHAPECO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R PRCA ISABEL E",
+                "NUMERO": "135",
+                "COMPLEMENTO": "E",
+                "BAIRRO": "S CRISTOVAO",
+                "CEP": "89804030",
+                "CIDADE": "CHAPECO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "AV SEN ATTILIO FRANCISCO XAVIER FONTANA E",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ENGENHO BRAUN",
+                "CEP": "89809000",
+                "CIDADE": "CHAPECO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R CRISTIANO TEROSA",
+                "NUMERO": "129",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "89880000",
+                "CIDADE": "CAXAMBU DO SUL",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "SELVINO BURTER",
+                "NUMERO": "557",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "89880000",
+                "CIDADE": "CAXAMBU DO SUL",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R SILVINO BURTET",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BRASILIA",
+                "CEP": "89880000",
+                "CIDADE": "CAXAMBU DO SUL",
+                "ESTADO": "SC"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "11477195947",
+                "NOME": "EMANUEL FELIPE MOREIRA",
+                "IDADE": "22 anos",
+                "LOCAL": "CAXAMBU DO SUL\/SC",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "11477280979",
+                "NOME": "ANA CAROLINA MOREIRA",
+                "IDADE": "24 anos",
+                "LOCAL": "CAXAMBU DO SUL\/SC",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COOPERATIVA CENTRAL AURORA ALIMENTOS",
+                "CNPJ": "83310441002241",
+                "CIDADE": "CHAPECO-SC",
+                "PROFISSAO": "862150",
+                "DATA_ADMISSAO": "01\/10\/2014",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BRF S.A.",
+                "CNPJ": "01838723033998",
+                "CIDADE": "CHAPECO-SC",
+                "PROFISSAO": "848520",
+                "DATA_ADMISSAO": "01\/09\/2009",
+                "DATA_DEMISSAO": "12\/05\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "SADIA S.A.",
+                "CNPJ": "20730099003452",
+                "CIDADE": "CHAPECO-SC",
+                "PROFISSAO": "848520",
+                "DATA_ADMISSAO": "01\/09\/2009",
+                "DATA_DEMISSAO": "31\/12\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

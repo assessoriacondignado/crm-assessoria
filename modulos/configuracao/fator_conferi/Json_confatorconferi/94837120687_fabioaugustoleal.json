@@ -1,0 +1,138 @@
+{
+    "CADASTRAIS": {
+        "CPF": "94837120687",
+        "NOME": "FABIO AUGUSTO LEAL",
+        "NOME_MAE": "ILZA MARIA APARECIDA LEAL",
+        "NASCTO": "25\/10\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "113358070256",
+        "NIT": "1281147002",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "391210",
+        "PROFISSAO": "TECNICO DE GARANTIA DA QUALIDADE",
+        "SALARIO": " 23.617,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3537218705",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9236343862",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92981170842",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "27\/07\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "97981106702",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "27\/07\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "fabioaugustoleal@yahoo.com.br",
+            "fabioaugustoleal@yahoo.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CINCO CURCIO",
+                "NUMERO": "67",
+                "COMPLEMENTO": "AP 102",
+                "BAIRRO": "ADRIANOPOLIS",
+                "CEP": "69057740",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "RUA JOSE ROMAO",
+                "NUMERO": "1279",
+                "COMPLEMENTO": "CASA 20",
+                "BAIRRO": "SAO JOSE OPERARIO",
+                "CEP": "69085288",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "68292805672",
+                "NOME": "ILZA MARIA APARECIDA LEAL",
+                "IDADE": "84 anos",
+                "LOCAL": "POCOS DE CALDAS\/MG",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "62877780678",
+                "NOME": "VALMIR JOSE LEAL",
+                "IDADE": "57 anos",
+                "LOCAL": "POCOS DE CALDAS\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ANALIA MARIA DA CONCEICAO",
+            "IDADE": "",
+            "LOCALIDADE": "GARANHUNS\/PE",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "59870982468"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "MOTO HONDA DA AMAZONIA LTDA",
+            "CNPJ": "04337168000148",
+            "CIDADE": "MANAUS-AM",
+            "PROFISSAO": "391210",
+            "DATA_ADMISSAO": "04\/06\/2002",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,183 @@
+{
+    "CADASTRAIS": {
+        "CPF": "46051996087",
+        "NOME": "ADRIANE MICHALSKI",
+        "NOME_MAE": "ELISABETH ELSA MICHALSKI",
+        "NASCTO": "16\/10\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Feminino",
+        "RG": "6037188759",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "054334530450",
+        "NIT": "1135674457",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411005",
+        "PROFISSAO": "AUXILIAR DE ESCRITORIO, EM GERAL",
+        "SALARIO": " 2.051,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5535123065",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1120134106",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "55999209921",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "55999694077",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "adrianemc@uol.com.br",
+            "adriane_czycza@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV JULIO FEHLAUER",
+                "NUMERO": "280",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "98780310",
+                "CIDADE": "SANTA ROSA",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA JULIO FEHLAUER",
+                "NUMERO": "280",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "98900000",
+                "CIDADE": "SANTA ROSA",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "75318261000",
+                "NOME": "ELISABETH ELSA MICHALSKI",
+                "IDADE": "90 anos",
+                "LOCAL": "SANTA ROSA\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "97949477091",
+                "NOME": "ILAIDI LENZ",
+                "IDADE": "66 anos",
+                "LOCAL": "CANDIDO GODOI\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "4710340021",
+                "NOME": "GABRIEL MICHALSKI DEWES",
+                "IDADE": "11 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "13646105909",
+                "NOME": "ANDRE MICHALSKI",
+                "IDADE": "12 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "13646129921",
+                "NOME": "GUSTAVO MICHALSKI",
+                "IDADE": "11 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "",
+                "CNPJ": "20097530000119",
+                "CIDADE": "",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "01\/10\/2015",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "DINAMICO EDUCACIONAL LTDA",
+                "CNPJ": "94188265000290",
+                "CIDADE": "SANTA ROSA-RS",
+                "PROFISSAO": "334105",
+                "DATA_ADMISSAO": "01\/08\/2005",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "",
+                "CNPJ": "00500175081704",
+                "CIDADE": "",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/10\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "",
+                "CNPJ": "00500175081704",
+                "CIDADE": "",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "01\/10\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

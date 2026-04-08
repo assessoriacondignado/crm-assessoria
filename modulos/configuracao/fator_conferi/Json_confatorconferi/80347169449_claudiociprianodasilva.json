@@ -1,0 +1,195 @@
+{
+    "CADASTRAIS": {
+        "CPF": "80347169449",
+        "NOME": "CLAUDIO CIPRIANO DA SILVA",
+        "NOME_MAE": "REGINA OLIVIA DA SILVA",
+        "NASCTO": "30\/04\/1972",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "021459641791",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8230223562",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8232642410",
+                "OPERADORA": "TELEMAR\/AL",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "34992408895",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "34999395514",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "82999081482",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "82987148916",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/04\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV S SEBASTIAO",
+                "NUMERO": "414",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JOSE PAULINO",
+                "CEP": "57690000",
+                "CIDADE": "ATALAIA",
+                "ESTADO": "AL"
+            },
+            {
+                "LOGRADOURO": "R PEDRO PEREIRA ACIOLY",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JOJE PAULINO",
+                "CEP": "57690000",
+                "CIDADE": "ATALAIA",
+                "ESTADO": "AL"
+            },
+            {
+                "LOGRADOURO": "LOT STA INES",
+                "NUMERO": "27",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JOSE PAULINO",
+                "CEP": "57690000",
+                "CIDADE": "ATALAIA",
+                "ESTADO": "AL"
+            },
+            {
+                "LOGRADOURO": "R HUMAITA",
+                "NUMERO": "43",
+                "COMPLEMENTO": "",
+                "BAIRRO": "FAROL",
+                "CEP": "57051360",
+                "CIDADE": "MACEIO",
+                "ESTADO": "AL"
+            },
+            {
+                "LOGRADOURO": "LOC LT T STA INES",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JOSE PAULINO",
+                "CEP": "57690000",
+                "CIDADE": "ATALAIA",
+                "ESTADO": "AL"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "4517285308",
+            "NOME": "REGINA OLIVIA DA SILVA",
+            "IDADE": "36 anos",
+            "LOCAL": "PACAJUS\/CE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TRANSPORTES E SERVICOS OLSEN LTDA",
+                "CNPJ": "76593763000317",
+                "CIDADE": "UBERABA-MG",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "02\/05\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FM MODEL TRANSPORTES LTDA",
+                "CNPJ": "05367368000700",
+                "CIDADE": "UBERABA-MG",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/05\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "UTINGA ACUCAR E ETANOL S\/A",
+                "CNPJ": "12275715000136",
+                "CIDADE": "RIO LARGO-AL",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "15\/10\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "TRANSPORTADORA TEIXEIRA LTDA",
+                "CNPJ": "04706720000128",
+                "CIDADE": "ATALAIA-AL",
+                "PROFISSAO": "782405",
+                "DATA_ADMISSAO": "01\/11\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

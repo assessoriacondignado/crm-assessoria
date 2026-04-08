@@ -1,0 +1,140 @@
+{
+    "CADASTRAIS": {
+        "CPF": "60018892361",
+        "NOME": "ANA PAULA MENDES",
+        "NOME_MAE": "MARIA DE FATIMA MENDES",
+        "NASCTO": "15\/11\/1988",
+        "IDADE": "37 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1600492864",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "354125",
+        "PROFISSAO": "ASSISTENTE DE VENDAS",
+        "SALARIO": " 4.189,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8632273671",
+                "OPERADORA": "TELEMAR\/PI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8632302000",
+                "OPERADORA": "TELEMAR\/PI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "86994697829",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "86988058837",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "paulaede@yahoo.com.br",
+            "anapaulamendes15@hotmail.com",
+            "anapaulamendes15@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "VITALINA PEREIRA",
+            "NUMERO": "44",
+            "COMPLEMENTO": "",
+            "BAIRRO": "CENTRO",
+            "CEP": "64453000",
+            "CIDADE": "CURRALINHOS",
+            "ESTADO": "PI"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "14452600",
+            "NOME": "MARIA DE FATIMA MENDES",
+            "IDADE": "62 anos",
+            "LOCAL": "SAO LUIS\/MA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ANNA PAULA SOUSA MENDES GOMES",
+                "IDADE": "",
+                "LOCALIDADE": "VALENCA DO PIAUI\/PI",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "86707914391"
+            },
+            {
+                "NOME": "LUIZA MARIA MENDES NUNES RODRIGUES",
+                "IDADE": "",
+                "LOCALIDADE": "VALENCA DO PIAUI\/PI",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "71850538387"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738020600",
+                "CIDADE": "TERESINA-PI",
+                "PROFISSAO": "354125",
+                "DATA_ADMISSAO": "13\/05\/2013",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738029659",
+                "CIDADE": "TERESINA-PI",
+                "PROFISSAO": "354125",
+                "DATA_ADMISSAO": "01\/05\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

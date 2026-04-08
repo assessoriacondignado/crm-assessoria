@@ -1,0 +1,214 @@
+{
+    "CADASTRAIS": {
+        "CPF": "28699421842",
+        "NOME": "ANDREI SANTOS RIBEIRO",
+        "NOME_MAE": "MARIA DA GRACA SANTOS RIBEIRO",
+        "NASCTO": "05\/04\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "333249136",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "271628140167",
+        "NIT": "2000377354",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142105",
+        "PROFISSAO": "GERENTE ADMINISTRATIVO",
+        "SALARIO": " 23.037,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "3133138961",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "15\/10\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1142260879",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31992850368",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31988184642",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31994070808",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31995200220",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31997161991",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "andreizr@yahoo.com",
+            "rodfscampos@ibest.com.br",
+            "andreisr@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R RUBENS CAPORALI RIBEIRO",
+                "NUMERO": "752",
+                "COMPLEMENTO": "AP 1404",
+                "BAIRRO": "BURITIS",
+                "CEP": "30575857",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R DR CELIO ANDRADE",
+                "NUMERO": "15",
+                "COMPLEMENTO": "AP 301",
+                "BAIRRO": "BURITIS",
+                "CEP": "30575265",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "AV OURO FINO",
+                "NUMERO": "17",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BSQ DOS EUCALIPTOS",
+                "CEP": "12233400",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ORIENTE",
+                "NUMERO": "919",
+                "COMPLEMENTO": "AP 11",
+                "BAIRRO": "BARCELONA",
+                "CEP": "09551010",
+                "CIDADE": "SAO CAETANO DO SUL",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV OURO FINO",
+                "NUMERO": "170",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "BSQ EUCALIPTOS",
+                "CEP": "12233400",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV OURO FINO",
+                "NUMERO": "170",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "BSQ EUCALIPTOS",
+                "CEP": "12233401",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA GUAMA",
+                "NUMERO": "16",
+                "COMPLEMENTO": "BL 7 AP 203",
+                "BAIRRO": "BURITIS",
+                "CEP": "30493340",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "AVENIDA PROFESSOR MARIO WERNECK",
+                "NUMERO": "1431",
+                "COMPLEMENTO": "BL A AP 902",
+                "BAIRRO": "ESTORIL",
+                "CEP": "30455610",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "6714386893",
+            "NOME": "MARIA DA GRACA SANTOS RIBEIRO",
+            "IDADE": "84 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ANDRE SANTOS DUMONT MENDES",
+            "IDADE": "",
+            "LOCALIDADE": "BELO HORIZONTE\/MG",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "57479534604"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "STELLANTIS AUTOMOVEIS BRASIL LTDA.",
+            "CNPJ": "16701716000156",
+            "CIDADE": "BETIM-MG",
+            "PROFISSAO": "142105",
+            "DATA_ADMISSAO": "27\/08\/2007",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

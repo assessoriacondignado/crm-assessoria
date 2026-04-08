@@ -1,0 +1,201 @@
+{
+    "CADASTRAIS": {
+        "CPF": "27916206803",
+        "NOME": "WANDERLEY JOSE OLIVEIRA",
+        "NOME_MAE": "MARIA DE LOURDES SANTOS OLIVEIRA",
+        "NASCTO": "22\/06\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "214352630132",
+        "NIT": "1250272229",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "862155",
+        "PROFISSAO": "OPERADOR DE UTILIDADE (PRODUCAO E DISTRIBUICAO DE VAPOR, GAS, OLEO, COMBUSTIVEL, ENERGIA, OXIGENIO)",
+        "SALARIO": " 5.388,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1239424790",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1233074933",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "22\/05\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "12996046656",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12998790553",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12997790553",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12997209025",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "saracristinasjc@yahoo.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PICO DO JARAGUA",
+                "NUMERO": "50",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD ALTOS DE SANTANA",
+                "CEP": "12214140",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV RUI BARBOSA",
+                "NUMERO": "3296",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "ALTO DA PONTE",
+                "CEP": "12213300",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUI BARBOSA",
+                "NUMERO": "3311",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALTO DA PONTE",
+                "CEP": "12212531",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA RUI BARBOSA",
+                "NUMERO": "3296",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALTO DA PONTE",
+                "CEP": "12212531",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "213838559",
+            "NOME": "MARIA DE LOURDES SANTOS OLIVEIRA",
+            "IDADE": "69 anos",
+            "LOCAL": "RUY BARBOSA\/BA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "LAIS DA SILVA AFONSO",
+                "IDADE": "",
+                "LOCALIDADE": "SAO JOSE DOS CAMPOS\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "39860938857"
+            },
+            {
+                "NOME": "MARIA EDNA DA SILVA AFONSO",
+                "IDADE": "",
+                "LOCALIDADE": "SAO JOSE DOS CAMPOS\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "4423361876"
+            },
+            {
+                "NOME": "SARA CRISTINA AFONSO",
+                "IDADE": "",
+                "LOCALIDADE": "SAO JOSE DOS CAMPOS\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "31558721878"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "J MACEDO S\/A",
+                "CNPJ": "14998371004530",
+                "CIDADE": "SAO JOSE DOS CAMPOS-SP",
+                "PROFISSAO": "862155",
+                "DATA_ADMISSAO": "08\/10\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "JOHNSON CONTROLS-HITACHI AR CONDICIONADO DO BRASIL LTDA.",
+                "CNPJ": "33284522000626",
+                "CIDADE": "SAO JOSE DOS CAMPOS-SP",
+                "PROFISSAO": "721405",
+                "DATA_ADMISSAO": "01\/03\/2010",
+                "DATA_DEMISSAO": "13\/05\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "W   W FERRAGENS ELETRICA HIDRAULICA LTDA",
+            "CNPJ": "52838755000163",
+            "CIDADE": "SAO JOSE DOS CAMPOS-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20231109",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

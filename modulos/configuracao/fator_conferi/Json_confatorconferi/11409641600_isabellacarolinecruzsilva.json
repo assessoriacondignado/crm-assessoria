@@ -1,0 +1,126 @@
+{
+    "CADASTRAIS": {
+        "CPF": "11409641600",
+        "NOME": "ISABELLA CAROLINE CRUZ SILVA",
+        "NOME_MAE": "MARIA CANDIDA DA CRUZ",
+        "NASCTO": "25\/10\/1999",
+        "IDADE": "26 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1625230220",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411005",
+        "PROFISSAO": "AUXILIAR DE ESCRITORIO, EM GERAL",
+        "SALARIO": " 1.740,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "33984035900",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "33999004906",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "isabellacaroline1234@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "R TARUMIRIM",
+            "NUMERO": "428",
+            "COMPLEMENTO": "",
+            "BAIRRO": "CARAPINA",
+            "CEP": "35060500",
+            "CIDADE": "GOVERNADOR VALADARES",
+            "ESTADO": "MG"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "409333697",
+            "NOME": "MARIA CANDIDA DA CRUZ",
+            "IDADE": "97 anos",
+            "LOCAL": "JUAZEIRO DO NORTE\/CE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "MAXIMA SERVICOS E OBRAS LTDA",
+                "CNPJ": "08764312000183",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "22\/11\/2023",
+                "DATA_DEMISSAO": "08\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MAXIMA SERVICOS E OBRAS LTDA",
+                "CNPJ": "08764312000264",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "08\/02\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "REDE HG COMBUSTIVEIS LTDA.",
+                "CNPJ": "13569064000150",
+                "CIDADE": "GOVERNADOR VALADARES-MG",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "26\/05\/2022",
+                "DATA_DEMISSAO": "30\/09\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738037406",
+                "CIDADE": "GOVERNADOR VALADARES-MG",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "04\/08\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "SUPERMERCADO COELHO DINIZ LTDA",
+                "CNPJ": "41930199000649",
+                "CIDADE": "GOVERNADOR VALADARES-MG",
+                "PROFISSAO": "421125",
+                "DATA_ADMISSAO": "14\/06\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,202 @@
+{
+    "CADASTRAIS": {
+        "CPF": "6486879610",
+        "NOME": "EDICELIO JOSE DOS SANTOS",
+        "NOME_MAE": "MARIA DAS GRACAS SANTOS",
+        "NASCTO": "19\/04\/1981",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "13303699894",
+        "ESCOLARIDADE": "PRIMEIRO GRAU (GINASIO)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "513205",
+        "PROFISSAO": "COZINHEIRO GERAL",
+        "SALARIO": " 1.681,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1147014663",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11979794051",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11966624873",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11962646919",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11967607589",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "07\/10\/2015",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "cejdsantos.ea@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ANTONIO CARLOS TORRES",
+                "NUMERO": "69",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "PRQ MARABA",
+                "CEP": "06766210",
+                "CIDADE": "TABOAO DA SERRA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R OLIMPIA THOMAZ DE AQUINO",
+                "NUMERO": "802",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD OLIVEIRAS",
+                "CEP": "06765370",
+                "CIDADE": "TABOAO DA SERRA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R OLIMPIA THOMAZ DE AQUINO",
+                "NUMERO": "881",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD OLIVEIRAS",
+                "CEP": "06765370",
+                "CIDADE": "TABOAO DA SERRA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R OLIMPIA THOMAZ DE AQUINO",
+                "NUMERO": "527",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD OLIVEIRAS",
+                "CEP": "06765370",
+                "CIDADE": "TABOAO DA SERRA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ALFREDO SCHILICK",
+                "NUMERO": "594",
+                "COMPLEMENTO": "OUTROS C",
+                "BAIRRO": "CH FLORA",
+                "CEP": "25635201",
+                "CIDADE": "PETROPOLIS",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R OLIMPIA THOMAZ DE AQUINO",
+                "NUMERO": "807",
+                "COMPLEMENTO": "LJ",
+                "BAIRRO": "JD OLIVEIRAS",
+                "CEP": "06765370",
+                "CIDADE": "TABOAO DA SERRA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PROF CELSO BENITES",
+                "NUMERO": "166",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AREAL",
+                "CEP": "96085353",
+                "CIDADE": "PELOTAS",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R PAULINO GUIMARAES",
+                "NUMERO": "509",
+                "COMPLEMENTO": "VL FELIPE B",
+                "BAIRRO": "CH FLORA",
+                "CEP": "25635360",
+                "CIDADE": "PETROPOLIS",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "5192358",
+            "NOME": "MARIA DAS GRACAS SANTOS",
+            "IDADE": "65 anos",
+            "LOCAL": "FORTALEZA\/CE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738012926",
+                "CIDADE": "TABOAO DA SERRA-SP",
+                "PROFISSAO": "517425",
+                "DATA_ADMISSAO": "01\/07\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "GENERAL PRIME BURGER EVENTOS E ALIMENTOS LTDA",
+                "CNPJ": "05952249000200",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "513205",
+                "DATA_ADMISSAO": "13\/12\/2011",
+                "DATA_DEMISSAO": "107",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "PUNTO ITALY COMERCIO LTDA",
+                "CNPJ": "15029764000187",
+                "CIDADE": "CAMPO GRANDE-MS",
+                "PROFISSAO": "513205",
+                "DATA_ADMISSAO": "01\/07\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

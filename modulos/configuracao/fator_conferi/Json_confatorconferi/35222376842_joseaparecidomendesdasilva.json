@@ -1,0 +1,258 @@
+{
+    "CADASTRAIS": {
+        "CPF": "35222376842",
+        "NOME": "JOSE APARECIDO MENDES DA SILVA",
+        "NOME_MAE": "VILMA MENDES DA SILVA",
+        "NASCTO": "01\/07\/1985",
+        "IDADE": "40 anos",
+        "SEXO": "Feminino",
+        "RG": "47700674",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "330767860116",
+        "NIT": "12862358241",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "821445",
+        "PROFISSAO": "PREPARADOR DE SUCATA E APARAS",
+        "SALARIO": " 1.474,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1145944393",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1145248822",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11976885095",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11994635481",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11950236748",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11965991608",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11946354815",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "90zemendes@gmail.com",
+            "josejesuscristo08@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R FABIO ZUIANI",
+                "NUMERO": "1341",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD GALETTO",
+                "CEP": "13253150",
+                "CIDADE": "ITATIBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE JORGE ANTONIO",
+                "NUMERO": "405",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD NARDIN",
+                "CEP": "13251650",
+                "CIDADE": "ITATIBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE MAXIMO DE ANTONI",
+                "NUMERO": "405",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD GALETTO",
+                "CEP": "13253190",
+                "CIDADE": "ITATIBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE JORGE ANTONIO",
+                "NUMERO": "401",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD NARDIN",
+                "CEP": "13251650",
+                "CIDADE": "ITATIBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE MAXIMO DE ANTONI",
+                "NUMERO": "401",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "JD GALETTO",
+                "CEP": "13253190",
+                "CIDADE": "ITATIBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOSE MAXIMO DE ANTONI",
+                "NUMERO": "0",
+                "COMPLEMENTO": "COMPLEM CS NRO 401",
+                "BAIRRO": "JARDIM GALETTO",
+                "CEP": "13253190",
+                "CIDADE": "ITATIBA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOAO BATISTA DE SA",
+                "NUMERO": "55",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA CREMONESI",
+                "CEP": "13255450",
+                "CIDADE": "ITATIBA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "44012713",
+            "NOME": "VILMA MENDES DA SILVA",
+            "IDADE": "71 anos",
+            "LOCAL": "RIO DE JANEIRO\/RJ",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PRESS-MAT INDUSTRIA E COMERCIO LTDA",
+                "CNPJ": "58861295000170",
+                "CIDADE": "ITATIBA-SP",
+                "PROFISSAO": "723315",
+                "DATA_ADMISSAO": "10\/02\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "OLIVEIRA   LOPES LTDA",
+                "CNPJ": "54514294001090",
+                "CIDADE": "ITATIBA-SP",
+                "PROFISSAO": "761410",
+                "DATA_ADMISSAO": "05\/08\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "WACKER NEUSON MAQUINAS LTDA",
+                "CNPJ": "87658787000161",
+                "CIDADE": "JUNDIAI-SP",
+                "PROFISSAO": "725205",
+                "DATA_ADMISSAO": "18\/09\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "EXPERT CONSULTORIA E TERCEIRIZACAO DE MAO-DE-OBRA LTDA",
+                "CNPJ": "08848807000190",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "12\/08\/2015",
+                "DATA_DEMISSAO": "09\/02\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "T.H.R. INDUSTRIA E COMERCIO DE EMBALAGENS LTDA",
+                "CNPJ": "00314544000470",
+                "CIDADE": "ITATIBA-SP",
+                "PROFISSAO": "821445",
+                "DATA_ADMISSAO": "10\/02\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "VALEO SISTEMAS AUTOMOTIVOS LTDA.",
+                "CNPJ": "57010662002880",
+                "CIDADE": "ITATIBA-SP",
+                "PROFISSAO": "862150",
+                "DATA_ADMISSAO": "05\/03\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "TIMAVO DO BRASIL INDUSTRIA TEXTIL LTDA",
+                "CNPJ": "44740066000193",
+                "CIDADE": "ITATIBA-SP",
+                "PROFISSAO": "311710",
+                "DATA_ADMISSAO": "03\/11\/2011",
+                "DATA_DEMISSAO": "22\/03\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

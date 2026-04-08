@@ -1,0 +1,230 @@
+{
+    "CADASTRAIS": {
+        "CPF": "71441930400",
+        "NOME": "JOSE ANTONIO DE OLIVEIRA VASCONCELOS",
+        "NOME_MAE": "ELIZABETE OLIVEIRA VASCONCELOS",
+        "NASCTO": "09\/09\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "017090521201",
+        "NIT": "12318388026",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "422120",
+        "PROFISSAO": "RECEPCIONISTA DE HOTEL",
+        "SALARIO": " 1.040,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8330888756",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "10\/03\/2020",
+                "TIPO_TEL": "METALICO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "8333214085",
+                "OPERADORA": "TELEMAR\/PB",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "8333219297",
+                "OPERADORA": "TELEMAR\/PB",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "83987001543",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "83991803008",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "teucelos@yahoo.com.br",
+            "pepyvasconcelos@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ANDERSON MELO RODRIGUES",
+                "NUMERO": "389",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JOSE AMERICO DE ALMEIDA",
+                "CEP": "58074711",
+                "CIDADE": "JOAO PESSOA",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "R ADAUTO HENRIQUES DE ARAUJO",
+                "NUMERO": "370",
+                "COMPLEMENTO": "C C",
+                "BAIRRO": "INTERMARES",
+                "CEP": "58102282",
+                "CIDADE": "CABEDELO",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "R PE UCHOA",
+                "NUMERO": "1825",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "64800106",
+                "CIDADE": "FLORIANO",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "R BARRAS",
+                "NUMERO": "3981",
+                "COMPLEMENTO": "",
+                "BAIRRO": "REAL COPAGRI",
+                "CEP": "64006200",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "AV JOSE MARTINS DE ANDRADE",
+                "NUMERO": "76",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STA ROSA",
+                "CEP": "58416665",
+                "CIDADE": "CAMPINA GRANDE",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "R VINTE E QUATRO DE MAIO",
+                "NUMERO": "58",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CATOLE",
+                "CEP": "58410415",
+                "CIDADE": "CAMPINA GRANDE",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "R STA FE",
+                "NUMERO": "261",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STA ROSA",
+                "CEP": "58416658",
+                "CIDADE": "CAMPINA GRANDE",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "R STA FE",
+                "NUMERO": "247",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STA ROSA",
+                "CEP": "58416658",
+                "CIDADE": "CAMPINA GRANDE",
+                "ESTADO": "PB"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "6772679407",
+                "NOME": "ELIZABETE OLIVEIRA VASCONCELOS",
+                "IDADE": "78 anos",
+                "LOCAL": "CAMPINA GRANDE\/PB",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "1033152412",
+                "NOME": "SUENIA OLIVEIRA VASCONCELOS",
+                "IDADE": "44 anos",
+                "LOCAL": "CAMPINA GRANDE\/PB",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "2730150447",
+                "NOME": "LUIZ MARCOLINO DE VASCONCELOS NETO",
+                "IDADE": "48 anos",
+                "LOCAL": "CAMPINA GRANDE\/PB",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "2756020443",
+                "NOME": "JOSINALDO OLIVEIRA VASCONCELOS",
+                "IDADE": "52 anos",
+                "LOCAL": "CAMPINA GRANDE\/PB",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CLINICA SANTA MARIA LTDA",
+                "CNPJ": "24109530000130",
+                "CIDADE": "CAMPINA GRANDE-PB",
+                "PROFISSAO": "513425",
+                "DATA_ADMISSAO": "01\/04\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "JLM HOTEIS LTDA",
+                "CNPJ": "21758191000125",
+                "CIDADE": "CAMPINA GRANDE-PB",
+                "PROFISSAO": "422120",
+                "DATA_ADMISSAO": "01\/03\/2015",
+                "DATA_DEMISSAO": "30\/03\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "JL EMPREENDIMENTOS IMOBILIARIOS LTDA",
+                "CNPJ": "08969826000175",
+                "CIDADE": "CAMPINA GRANDE-PB",
+                "PROFISSAO": "422120",
+                "DATA_ADMISSAO": "01\/05\/2001",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

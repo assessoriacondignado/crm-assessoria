@@ -1,0 +1,146 @@
+{
+    "CADASTRAIS": {
+        "CPF": "9878412628",
+        "NOME": "JALESSON AUGUSTO PATROCINIO DE MORAIS",
+        "NOME_MAE": "MAURA PATROCINIO DE MORAIS",
+        "NASCTO": "18\/02\/1997",
+        "IDADE": "29 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "2009065358",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411030",
+        "PROFISSAO": "AUXILIAR DE PESSOAL",
+        "SALARIO": " 2.861,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "3332730638",
+            "OPERADORA": "TELEMAR\/MG",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "33987550711",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "33988473956",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "33984039398",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "33984243000",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "jalesson@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "R CARLOS CHAGAS",
+            "NUMERO": "107",
+            "COMPLEMENTO": "",
+            "BAIRRO": "STA HELENA",
+            "CEP": "35059130",
+            "CIDADE": "GOVERNADOR VALADARES",
+            "ESTADO": "MG"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "59419865649",
+                "NOME": "MAURA PATROCINIO DE MORAIS",
+                "IDADE": "62 anos",
+                "LOCAL": "GOVERNADOR VALADARES\/MG",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "9896332681",
+                "NOME": "JALITON CESAR PATROCINIO DE MORAIS",
+                "IDADE": "32 anos",
+                "LOCAL": "GOVERNADOR VALADARES\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SICOOB AC CREDI - COOPERATIVA DE CREDITO DE LIVRE ADMISSAO DO LESTE E NORDESTE MINEIRO LTDA",
+                "CNPJ": "01559914000150",
+                "CIDADE": "GOVERNADOR VALADARES-MG",
+                "PROFISSAO": "411030",
+                "DATA_ADMISSAO": "10\/09\/2024",
+                "DATA_DEMISSAO": "21\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738037406",
+                "CIDADE": "GOVERNADOR VALADARES-MG",
+                "PROFISSAO": "521140",
+                "DATA_ADMISSAO": "06\/03\/2017",
+                "DATA_DEMISSAO": "06\/09\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "KURUMA VEICULOS S.A.",
+                "CNPJ": "00827783000858",
+                "CIDADE": "GOVERNADOR VALADARES-MG",
+                "PROFISSAO": "422105",
+                "DATA_ADMISSAO": "06\/04\/2015",
+                "DATA_DEMISSAO": "21\/12\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,228 @@
+{
+    "CADASTRAIS": {
+        "CPF": "73262544353",
+        "NOME": "ANDREZA GALINDO DINIZ FREITAS",
+        "NOME_MAE": "ROSA MARIA GALINDO DINIZ",
+        "NASCTO": "11\/06\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "2726871506",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "413225",
+        "PROFISSAO": "ESCRITURARIO DE BANCO",
+        "SALARIO": " 5.021,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8631949700",
+            "OPERADORA": "TELEMAR\/PI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "86998480739",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "86999741289",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "86999914904",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "86999211216",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "86994012054",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "grandabc@terra.com.br",
+            "andrezagdinizf@gmail.com",
+            "andrezadiniz@ibest.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PROF MARIO BATISTA",
+                "NUMERO": "900",
+                "COMPLEMENTO": "1",
+                "BAIRRO": "S CRISTOVAO",
+                "CEP": "64056030",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "RUA JOSE PAULINO",
+                "NUMERO": "752",
+                "COMPLEMENTO": "",
+                "BAIRRO": "FATIMA",
+                "CEP": "64049360",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "RUA ALAIDE MARQUES",
+                "NUMERO": "1280",
+                "COMPLEMENTO": "301 A",
+                "BAIRRO": "ININGA",
+                "CEP": "64049790",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "51460769368",
+                "NOME": "ROSA MARIA GALINDO DINIZ",
+                "IDADE": "72 anos",
+                "LOCAL": "TERESINA\/PI",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "81425740391",
+                "NOME": "ADONAI ALVES DINIZ II",
+                "IDADE": "46 anos",
+                "LOCAL": "SIMOES FILHO\/BA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "85652423315",
+                "NOME": "ANDREA GALINDO DINIZ PINA",
+                "IDADE": "45 anos",
+                "LOCAL": "MARABA\/PA",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "3938679352",
+                "NOME": "ANA LUIZA DINIZ FREITAS",
+                "IDADE": "19 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "5796562339",
+                "NOME": "NINA ROSA DINIZ FREITAS",
+                "IDADE": "16 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "CATIA DE SOUSA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "8545311818"
+            },
+            {
+                "NOME": "CATIA DE SOUSA",
+                "IDADE": "",
+                "LOCALIDADE": "PAULISTANA\/PI",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "91949882349"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000316156",
+                "CIDADE": "TERESINA-PI",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "13\/03\/2000",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000735710",
+                "CIDADE": "TERESINA-PI",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "04\/11\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000340456",
+                "CIDADE": "TERESINA-PI",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "30\/09\/2002",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SOCIEDADE PIAUIENSE DE ENSINO SUPERIOR LTDA",
+                "CNPJ": "03207910000138",
+                "CIDADE": "TERESINA-PI",
+                "PROFISSAO": "234510",
+                "DATA_ADMISSAO": "02\/02\/2004",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

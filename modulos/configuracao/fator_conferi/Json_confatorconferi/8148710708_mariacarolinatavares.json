@@ -1,0 +1,147 @@
+{
+    "CADASTRAIS": {
+        "CPF": "8148710708",
+        "NOME": "MARIA CAROLINA TAVARES",
+        "NOME_MAE": "EANE TAVARES",
+        "NASCTO": "21\/08\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "019118071449",
+        "NIT": "1164104339",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "252305",
+        "PROFISSAO": "SECRETARIA  EXECUTIVA",
+        "SALARIO": " 9.544,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2721224550",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2730196956",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "27981186263",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "27\/01\/2008",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "27981124316",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "mcarol.t@terra.com.br",
+            "mcaroltav@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV ENG CHARLES BITRAN",
+                "NUMERO": "369",
+                "COMPLEMENTO": "AP 505",
+                "BAIRRO": "JD CAMBURI",
+                "CEP": "29092270",
+                "CIDADE": "VITORIA",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "R AURORA DE AGUIAR FERREIRA",
+                "NUMERO": "90",
+                "COMPLEMENTO": "BL T AP 101",
+                "BAIRRO": "JD CAMBURI",
+                "CEP": "29090915",
+                "CIDADE": "VITORIA",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "R ELZIRA VIVACQUA",
+                "NUMERO": "315",
+                "COMPLEMENTO": "AP 203",
+                "BAIRRO": "JD CAMBURI",
+                "CEP": "29090350",
+                "CIDADE": "VITORIA",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "RUA AURORA DE AGUIAR FERREIRA",
+                "NUMERO": "90",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM CAMBURI",
+                "CEP": "29090310",
+                "CIDADE": "VITORIA",
+                "ESTADO": "ES"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "3391310120",
+            "NOME": "EANE TAVARES",
+            "IDADE": "89 anos",
+            "LOCAL": "VITORIA\/ES",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "RAFAELA LIPHAUS FARIAS",
+            "IDADE": "",
+            "LOCALIDADE": "VIANA\/ES",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "14692444703"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "ASSOCIACAO EDUCACIONAL DE VITORIA",
+            "CNPJ": "32478380000160",
+            "CIDADE": "VITORIA-ES",
+            "PROFISSAO": "252305",
+            "DATA_ADMISSAO": "01\/07\/2000",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

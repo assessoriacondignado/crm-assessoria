@@ -1,0 +1,137 @@
+{
+    "CADASTRAIS": {
+        "CPF": "2815104660",
+        "NOME": "VANDERSON THEODORO DE SOUZA",
+        "NOME_MAE": "MARIA DE SOUZA E SILVA",
+        "NASCTO": "22\/01\/1975",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "113887490230",
+        "NIT": "12417740321",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "784205",
+        "PROFISSAO": "ALIMENTADOR DE LINHA DE PRODUCAO",
+        "SALARIO": " 7,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "3132643548",
+            "OPERADORA": "TELEMAR\/MG",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31997409722",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31985658124",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31995687162",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL POS-PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "vanderson.vts@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DOIS DE MARCO",
+                "NUMERO": "35",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AMAZONAS",
+                "CEP": "32685132",
+                "CIDADE": "BETIM",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "AV FRANCISCO FIRMO DE MATOS",
+                "NUMERO": "1112",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ELDORADO",
+                "CEP": "32265470",
+                "CIDADE": "CONTAGEM",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RUA ENGENHEIRO BADY SALUM",
+                "NUMERO": "685",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MANGABEIRAS",
+                "CEP": "30210250",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "98297686",
+            "NOME": "MARIA DE SOUZA E SILVA",
+            "IDADE": "90 anos",
+            "LOCAL": "JANUARIA\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "STELLANTIS AUTOMOVEIS BRASIL LTDA.",
+                "CNPJ": "16701716000156",
+                "CIDADE": "BETIM-MG",
+                "PROFISSAO": "725505",
+                "DATA_ADMISSAO": "20\/20\/2007",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "INTERNI SISTEMAS AUTOMOTIVOS S\/A",
+                "CNPJ": "00750881000168",
+                "CIDADE": "BETIM-MG",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "01\/10\/2010",
+                "DATA_DEMISSAO": "10\/03\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

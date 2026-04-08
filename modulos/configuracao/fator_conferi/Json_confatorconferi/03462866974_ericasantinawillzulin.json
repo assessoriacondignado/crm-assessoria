@@ -1,0 +1,274 @@
+{
+    "CADASTRAIS": {
+        "CPF": "3462866974",
+        "NOME": "ERICA SANTINA WILL ZULIN",
+        "NOME_MAE": "LUCILEIA ZEFERINO WILL",
+        "NASCTO": "14\/07\/1983",
+        "IDADE": "42 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "070011460604",
+        "NIT": "2043736253",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "415205",
+        "PROFISSAO": "CARTEIRO",
+        "SALARIO": " 5.263,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4432751230",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "4133102418",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4435431942",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4435321892",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "4435431338",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "44991130716",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "44998057805",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "44999711153",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "44999370977",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "e669@hotmail.com",
+            "gotasdevaidade@gmail.com",
+            "e-669@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R GUARANI",
+                "NUMERO": "148",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "86970000",
+                "CIDADE": "CORUMBATAI DO SUL",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R PROJETADA FILHO",
+                "NUMERO": "280",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JD TROPICAL",
+                "CEP": "85440000",
+                "CIDADE": "UBIRATA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R NELSON PEREIRA DA SILVA",
+                "NUMERO": "263",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ DO LAGO",
+                "CEP": "85440000",
+                "CIDADE": "UBIRATA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R DAS PAINEIRAS",
+                "NUMERO": "423",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JD RESIDENCIAL ARAUCARIA",
+                "CEP": "87301370",
+                "CIDADE": "CAMPO MOURAO",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R XAXIM",
+                "NUMERO": "376",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "85460000",
+                "CIDADE": "QUEDAS DO IGUACU",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "AV PRES KENNEDY",
+                "NUMERO": "663",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "86960000",
+                "CIDADE": "BARBOSA FERRAZ",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R DEZENOVE DE DEZEMBRO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CJ MARIO PINHE",
+                "CEP": "86960000",
+                "CIDADE": "BARBOSA FERRAZ",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "RUA PALMEIRAS",
+                "NUMERO": "919",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "85460000",
+                "CIDADE": "QUEDAS DO IGUACU",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "89962656915",
+                "NOME": "LUCILEIA ZEFERINO WILL",
+                "IDADE": "59 anos",
+                "LOCAL": "UBIRATA\/PR",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "6258797911",
+                "NOME": "REGINALDO JUNIOR WILL",
+                "IDADE": "38 anos",
+                "LOCAL": "UBIRATA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "6513031923",
+                "NOME": "CLAUDYOMAR WILL",
+                "IDADE": "37 anos",
+                "LOCAL": "UBIRATA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "EMPRESA BRASILEIRA DE CORREIOS E TELEGRAFOS",
+                "CNPJ": "34028316457901",
+                "CIDADE": "UBIRATA-PR",
+                "PROFISSAO": "415205",
+                "DATA_ADMISSAO": "01\/06\/2006",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "EMPRESA BRASILEIRA DE CORREIOS E TELEGRAFOS",
+                "CNPJ": "34028316444257",
+                "CIDADE": "BARBOSA FERRAZ-PR",
+                "PROFISSAO": "415205",
+                "DATA_ADMISSAO": "14\/08\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "EMPRESA BRASILEIRA DE CORREIOS E TELEGRAFOS",
+                "CNPJ": "34028316659377",
+                "CIDADE": "CORUMBATAI DO SUL-PR",
+                "PROFISSAO": "415205",
+                "DATA_ADMISSAO": "10\/11\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "EMPRESA BRASILEIRA DE CORREIOS E TELEGRAFOS",
+                "CNPJ": "34028316676972",
+                "CIDADE": "CAMPO MOURAO-PR",
+                "PROFISSAO": "415205",
+                "DATA_ADMISSAO": "18\/11\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

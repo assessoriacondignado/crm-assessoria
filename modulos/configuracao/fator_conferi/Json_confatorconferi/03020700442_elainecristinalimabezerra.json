@@ -1,0 +1,168 @@
+{
+    "CADASTRAIS": {
+        "CPF": "3020700442",
+        "NOME": "ELAINE CRISTINA LIMA BEZERRA",
+        "NOME_MAE": "INACIA SEVERINA DE LIMA BEZERRA",
+        "NASCTO": "02\/12\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "042301510833",
+        "NIT": "13198091453",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "231210",
+        "PROFISSAO": "PROFESSOR DE NIVEL SUPERIOR DO ENSINO FUNDAMENTAL (PRIMEIRA A QUARTA SERIE)",
+        "SALARIO": " 399,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8137311667",
+                "OPERADORA": "TELEMAR\/PE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8137310352",
+                "OPERADORA": "TELEMAR\/PE",
+                "DATA_REFERENCIA": "24\/05\/2011",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "81992497479",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81994583057",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81982854489",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "05\/04\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R TEREZA CHAGAS",
+                "NUMERO": "537",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CRUZ ALTA",
+                "CEP": "55195202",
+                "CIDADE": "SANTA CRUZ DO CAPIBARIBE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R TEREZA CHAGAS",
+                "NUMERO": "537",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CRUZ ALTA",
+                "CEP": "56215000",
+                "CIDADE": "SANTA CRUZ",
+                "ESTADO": "PE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "89214765472",
+            "NOME": "INACIA SEVERINA DE LIMA BEZERRA",
+            "IDADE": "79 anos",
+            "LOCAL": "SANTA CRUZ DO CAPIBARIBE\/PE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "EAB EDUCACAO LTDA",
+                "CNPJ": "53078783000192",
+                "CIDADE": "SANTA CRUZ DO CAPIBARIBE-PE",
+                "PROFISSAO": "231205",
+                "DATA_ADMISSAO": "01\/02\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MUNICIPIO DE SANTA CRUZ DO CAPIBARIBE",
+                "CNPJ": "10091569000163",
+                "CIDADE": "SANTA CRUZ DO CAPIBARIBE-PE",
+                "PROFISSAO": "331205",
+                "DATA_ADMISSAO": "01\/02\/2023",
+                "DATA_DEMISSAO": "22\/12\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "ELIZABETH CRISTINA DE LIMA SILVA",
+                "CNPJ": "11285835000151",
+                "CIDADE": "SANTA CRUZ DO CAPIBARIBE-PE",
+                "PROFISSAO": "231210",
+                "DATA_ADMISSAO": "01\/06\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "G. M. DA SILVA ESCOLA",
+                "CNPJ": "24300964000113",
+                "CIDADE": "SANTA CRUZ DO CAPIBARIBE-PE",
+                "PROFISSAO": "231340",
+                "DATA_ADMISSAO": "01\/08\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "INSTITUTO DOM PEDRO I LTDA",
+                "CNPJ": "01179504000183",
+                "CIDADE": "SANTA CRUZ DO CAPIBARIBE-PE",
+                "PROFISSAO": "231305",
+                "DATA_ADMISSAO": "01\/03\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

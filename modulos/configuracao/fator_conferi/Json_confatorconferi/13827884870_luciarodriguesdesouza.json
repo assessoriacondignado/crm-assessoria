@@ -1,0 +1,160 @@
+{
+    "CADASTRAIS": {
+        "CPF": "13827884870",
+        "NOME": "LUCIA RODRIGUES DE SOUZA",
+        "NOME_MAE": "ANA RODRIGUES DE SOUZA",
+        "NASCTO": "26\/07\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Feminino",
+        "RG": "26881574",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "172936640116",
+        "NIT": "12544903440",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411005",
+        "PROFISSAO": "AUXILIAR DE ESCRITORIO, EM GERAL",
+        "SALARIO": " 1.000,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1839075427",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "21\/12\/2002",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "18998133548",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "18990754270",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "18997854966",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "18997969640",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "pedrohsa@ig.com.br",
+            "hidraulicalves@ig.com.br",
+            "reginaldo.henrique80@vivointernetdiscada.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R FRANCISCO DRIMEL",
+                "NUMERO": "42",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL FLORES",
+                "CEP": "19040340",
+                "CIDADE": "PRESIDENTE PRUDENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ELPIDIO ZAGO",
+                "NUMERO": "166",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RESIDENCIAL MARE MANSA",
+                "CEP": "19028020",
+                "CIDADE": "PRESIDENTE PRUDENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MICHIO KAWAGUSHI",
+                "NUMERO": "50",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM CINQUENTENARIO",
+                "CEP": "19061500",
+                "CIDADE": "PRESIDENTE PRUDENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA FRANCISCO DRIMEL",
+                "NUMERO": "125",
+                "COMPLEMENTO": "FUNDOS",
+                "BAIRRO": "VILA FLORES",
+                "CEP": "19040340",
+                "CIDADE": "PRESIDENTE PRUDENTE",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "10772871",
+            "NOME": "ANA RODRIGUES DE SOUZA",
+            "IDADE": "100 anos",
+            "LOCAL": "BELEM\/PA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COOPERATIVA REGIONAL DE ENSINO DE PRESIDENTE PRUDENTE",
+                "CNPJ": "68876408000165",
+                "CIDADE": "PRESIDENTE PRUDENTE-SP",
+                "PROFISSAO": "514320",
+                "DATA_ADMISSAO": "01\/02\/2017",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "REGINALDO HENRIQUE ALVES 26851838842",
+                "CNPJ": "14394141000140",
+                "CIDADE": "PRESIDENTE PRUDENTE-SP",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "01\/12\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,153 @@
+{
+    "CADASTRAIS": {
+        "CPF": "83923667604",
+        "NOME": "ROSMARIO PEREIRA LIMA",
+        "NOME_MAE": "MARIA ADELIA VIEIRA LIMA",
+        "NASCTO": "09\/02\/1971",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "100413260299",
+        "NIT": "1238289264",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "953115",
+        "PROFISSAO": "ELETRICISTA DE INSTALACOES (VEICULOS AUTOMOTORES E MAQUINAS OPERATRIZES, EXCETO AERONAVES E EMBARCACOES)",
+        "SALARIO": " 3.206,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "3136321693",
+            "OPERADORA": "TELEMAR\/MG",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31987983589",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31986724993",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "31987491519",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "16\/02\/2013",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ANTENAS",
+                "NUMERO": "28",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARAISO DAS PIABAS JUSTINOPOLIS",
+                "CEP": "33910090",
+                "CIDADE": "RIBEIRAO DAS NEVES",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R JOSE MARIA DE MENEZES",
+                "NUMERO": "28",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOTAFOGO JUSTINOPOLIS",
+                "CEP": "33902365",
+                "CIDADE": "RIBEIRAO DAS NEVES",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "FAZ DAS PIABAS",
+                "NUMERO": "121",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ZONA RURAL",
+                "CEP": "39230000",
+                "CIDADE": "BUENOPOLIS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R JOSE MARIA DE MENEZES",
+                "NUMERO": "121",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOTAFOGO JUSTINOPOLIS",
+                "CEP": "33902365",
+                "CIDADE": "RIBEIRAO DAS NEVES",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R FRANCISCO TOME DE SOUZA",
+                "NUMERO": "185",
+                "COMPLEMENTO": "NULL",
+                "BAIRRO": "ATALAIA (JUSTINOPOLIS)",
+                "CEP": "33933080",
+                "CIDADE": "RIBEIRAO DAS NEVES",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "77152018634",
+            "NOME": "MARIA ADELIA VIEIRA LIMA",
+            "IDADE": "82 anos",
+            "LOCAL": "RIBEIRAO DAS NEVES\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COMPANHIA ATUAL DE TRANSPORTES",
+                "CNPJ": "23929979000182",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "953115",
+                "DATA_ADMISSAO": "01\/01\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SARITUR SANTA RITA TRANSPORTE URBANO E RODOVIARIO LTDA",
+                "CNPJ": "20848420006502",
+                "CIDADE": "RIBEIRAO DAS NEVES-MG",
+                "PROFISSAO": "953115",
+                "DATA_ADMISSAO": "06\/07\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

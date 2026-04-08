@@ -1,0 +1,188 @@
+{
+    "CADASTRAIS": {
+        "CPF": "27845615854",
+        "NOME": "JULIO CESAR SILVA",
+        "NOME_MAE": "LUCIMAR RICARDO DE JESUS SILVA",
+        "NASCTO": "08\/09\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "215777100175",
+        "NIT": "1141635774",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "911305",
+        "PROFISSAO": "MECANICO DE MANUTENCAO DE MAQUINAS, EM GERAL",
+        "SALARIO": " 10.212,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1639423302",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1639473179",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1636296210",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1639162535",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "16991138522",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16997938889",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "16997938889",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "jczarabiazarabia@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PAULO MELONI",
+                "NUMERO": "984",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALVORADA",
+                "CEP": "14166135",
+                "CIDADE": "SERTAOZINHO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DOMINGOS FEREZIN",
+                "NUMERO": "121",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD L SILVA",
+                "CEP": "14169016",
+                "CIDADE": "SERTAOZINHO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA EXPEDICIONARIO LELLIS",
+                "NUMERO": "3040",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "JD ALVORADA",
+                "CEP": "14166070",
+                "CIDADE": "SERTAOZINHO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "9139501817",
+                "NOME": "LUCIMAR RICARDO DE JESUS SILVA",
+                "IDADE": "74 anos",
+                "LOCAL": "RIBEIRAO PRETO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "22050249810",
+                "NOME": "WILSON HENRIQUE SILVA",
+                "IDADE": "48 anos",
+                "LOCAL": "PONTAL\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "25956024895",
+                "NOME": "FLAVIA CRISTIANE SILVA HERRERA RODRIGUEZ",
+                "IDADE": "49 anos",
+                "LOCAL": "RIBEIRAO PRETO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "31893621812",
+                "NOME": "FERNANDA APARECIDA SILVA DE SOUZA",
+                "IDADE": "44 anos",
+                "LOCAL": "SERTAOZINHO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "TATIANE GUIRAU DOS SANTOS SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "SERTAOZINHO\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "27774194851"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "ELLO CORRENTES COMERCIO E INDUSTRIA LTDA",
+            "CNPJ": "64080021000147",
+            "CIDADE": "SERTAOZINHO-SP",
+            "PROFISSAO": "911305",
+            "DATA_ADMISSAO": "31\/07\/2007",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,245 @@
+{
+    "CADASTRAIS": {
+        "CPF": "40701166215",
+        "NOME": "SOLIANE COSTA PEREIRA",
+        "NOME_MAE": "MARIA DAS GRACAS COSTA PEREIRA",
+        "NASCTO": "05\/07\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12741178021",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "413110",
+        "PROFISSAO": "AUXILIAR DE CONTABILIDADE",
+        "SALARIO": " 2.041,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9221011820",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92984128334",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92981678078",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92991363065",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92999685906",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92993078970",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "01\/05\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "sollanecpereira@gmail.com",
+            "solianecpereira@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV CODAJAS",
+                "NUMERO": "1348",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CACHOEIRINHA",
+                "CEP": "69065130",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV NHAMUNDA",
+                "NUMERO": "1348",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PC 14 DE JANEIRO",
+                "CEP": "69020190",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV CODAJAS",
+                "NUMERO": "1348",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PC 14 DE JANEIRO",
+                "CEP": "69020515",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R BELO HORIZONTE",
+                "NUMERO": "54",
+                "COMPLEMENTO": "N 54 PX ESCOLA JORGE REZ ENDE",
+                "BAIRRO": "TANCREDO NEVES",
+                "CEP": "69087610",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R PRINCIPAL",
+                "NUMERO": "4",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PETROPOLIS",
+                "CEP": "69063401",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV RAMOS FERREIRA",
+                "NUMERO": "2378",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PC 14 DE JANEIRO",
+                "CEP": "69020080",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV JORGE BIVAQUA",
+                "NUMERO": "72",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JAPIIM",
+                "CEP": "69078100",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AVENIDA NHAMUNDA",
+                "NUMERO": "2372",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRACA 14 DE JANEIRO",
+                "CEP": "69020190",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "525096728",
+                "NOME": "MARIA DAS GRACAS COSTA PEREIRA",
+                "IDADE": "64 anos",
+                "LOCAL": "",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "2634281250",
+                "NOME": "NAYARA SYMONE PEREIRA DE LIMA",
+                "IDADE": "29 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "63006070380",
+                "NOME": "MARIA CLARA PEREIRA EVERTON",
+                "IDADE": "20 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "63399706308",
+                "NOME": "JADSON ARTHUR PEREIRA MEIRELES",
+                "IDADE": "9 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "70396595227",
+                "NOME": "THAYNARA VITORIA PEREIRA DE LIMA",
+                "IDADE": "24 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "AGENCIA AMAZONENSE DE DESENVOLVIMENTO ECONOMICO, SOCIAL E AMBIENTAL - AADESAM",
+                "CNPJ": "13272780000170",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "351105",
+                "DATA_ADMISSAO": "01\/07\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CHIBATAO NAVEGACAO E COMERCIO LTDA",
+                "CNPJ": "84098383000172",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "02\/01\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "BRAGA VEICULOS LTDA",
+                "CNPJ": "04011946000104",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "413110",
+                "DATA_ADMISSAO": "16\/04\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

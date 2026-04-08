@@ -1,0 +1,111 @@
+{
+    "CADASTRAIS": {
+        "CPF": "52101407841",
+        "NOME": "VITORIA MOTA DE OLIVEIRA",
+        "NOME_MAE": "MARIA JARDELIA VITALIANO MOTA",
+        "NASCTO": "02\/01\/2001",
+        "IDADE": "25 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1496626144",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521140",
+        "PROFISSAO": "",
+        "SALARIO": " 2.988,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19983258586",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19992960680",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV ARYMANA",
+                "NUMERO": "1030",
+                "COMPLEMENTO": "C 3",
+                "BAIRRO": "PRQ D PEDRO II",
+                "CEP": "13056440",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R COATIARA",
+                "NUMERO": "346",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ UNIV DE VIRACOPOS",
+                "CEP": "13056492",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ARACI",
+                "NUMERO": "1216",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ D PEDRO II",
+                "CEP": "13056420",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "39383993847",
+                "NOME": "MARIA JARDELIA VITALIANO MOTA",
+                "IDADE": "41 anos",
+                "LOCAL": "CAIUA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "52160463809",
+                "NOME": "VINICIUS MOTA DE OLIVEIRA",
+                "IDADE": "21 anos",
+                "LOCAL": "",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "PAGUE MENOS COMERCIO DE PRODUTOS ALIMENTICIOS LTDA",
+            "CNPJ": "60494416001450",
+            "CIDADE": "CAMPINAS-SP",
+            "PROFISSAO": "521140",
+            "DATA_ADMISSAO": "17\/20\/2002",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,226 @@
+{
+    "CADASTRAIS": {
+        "CPF": "58047140582",
+        "NOME": "MARCIA MARIA FELIX DE SANTANA CARNEIRO",
+        "NOME_MAE": "RITA OLIVEIRA DE SANTANA",
+        "NASCTO": "16\/01\/1971",
+        "IDADE": "55 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1197721076 ",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "421125",
+        "PROFISSAO": "OPERADOR DE CAIXA",
+        "SALARIO": " 1.454,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7532185156",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "7532762498",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "79999502525",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79981565313",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999543652",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79996565012",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "75999807624",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marciafelixx75@gmail.com",
+            "roberiobs@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "FAZ PEBA",
+                "NUMERO": "110",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RURAL SALGADALHA",
+                "CEP": "48730000",
+                "CIDADE": "CONCEICAO DO COITE",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R ALIPIO JOSE DOS SANTOS",
+                "NUMERO": "1",
+                "COMPLEMENTO": "AND",
+                "BAIRRO": "AMERICA",
+                "CEP": "49080030",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "PC OLIMPIO CAMPOS",
+                "NUMERO": "266",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "49010040",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R ISMAEL GONCALVES",
+                "NUMERO": "526",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "48400000",
+                "CIDADE": "RIBEIRA DO POMBAL",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R ALIPIO JOSE DOS SANTOS",
+                "NUMERO": "254",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AMERICA",
+                "CEP": "49080030",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "TV RUI BARBOSA",
+                "NUMERO": "477",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "48400000",
+                "CIDADE": "RIBEIRA DO POMBAL",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R DEP ANTONIO BRITO",
+                "NUMERO": "678",
+                "COMPLEMENTO": "",
+                "BAIRRO": "",
+                "CEP": "48400000",
+                "CIDADE": "RIBEIRA DO POMBAL",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "636367517",
+            "NOME": "RITA OLIVEIRA DE SANTANA",
+            "IDADE": "47 anos",
+            "LOCAL": "ARACAJU\/SE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ROBERIO BATISTA DOS SANTOS",
+            "IDADE": "",
+            "LOCALIDADE": "CICERO DANTAS\/BA",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "65111818553"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "M N SERVICOS LTDA",
+                "CNPJ": "56703139000156",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "521130",
+                "DATA_ADMISSAO": "17\/09\/2024",
+                "DATA_DEMISSAO": "28\/11\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FARMED COMERCIO DE MEDICAMENTOS LTDA",
+                "CNPJ": "48608177000100",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "521130",
+                "DATA_ADMISSAO": "07\/05\/2024",
+                "DATA_DEMISSAO": "11\/07\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LRX PRODUTOS FARMACEUTICOS LTDA",
+                "CNPJ": "17480541000329",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "421125",
+                "DATA_ADMISSAO": "04\/07\/2022",
+                "DATA_DEMISSAO": "30\/10\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

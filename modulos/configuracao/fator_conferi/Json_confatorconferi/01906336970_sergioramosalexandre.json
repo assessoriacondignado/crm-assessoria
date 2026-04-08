@@ -1,0 +1,210 @@
+{
+    "CADASTRAIS": {
+        "CPF": "1906336970",
+        "NOME": "SERGIO RAMOS ALEXANDRE",
+        "NOME_MAE": "REGINA APARECIDA RAMOS ALEXANDRE",
+        "NASCTO": "14\/08\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "61618791",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1249132598",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "391125",
+        "PROFISSAO": "TECNICO DE PLANEJAMENTO DE PRODUCAO",
+        "SALARIO": " 16.299,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4130492539",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "4130892499",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "15\/09\/2015",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4132662362",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4133717452",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4133717000",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "41995068207",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "41991203015",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "41999773048",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "sergio.r.alexandre@electrolux.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R LUCIO DE OLIVEIRA LARA",
+                "NUMERO": "212",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "SIT CERCADO",
+                "CEP": "81935158",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R TEIXEIRA DE FREITAS",
+                "NUMERO": "26",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "57340000",
+                "CIDADE": "FEIRA GRANDE",
+                "ESTADO": "AL"
+            },
+            {
+                "LOGRADOURO": "R ANA MARIA FOGGIATTO RODA",
+                "NUMERO": "3",
+                "COMPLEMENTO": "1",
+                "BAIRRO": "SIT CERCADO",
+                "CEP": "81935280",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R RUY LEAL",
+                "NUMERO": "663",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CPO DE SANTANA",
+                "CEP": "81490046",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R ANA MARIA FOGGIATTO RODA",
+                "NUMERO": "212",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SITIO CERCADO",
+                "CEP": "81935280",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "RUA ANA MARIA FOGGIATTO RODA",
+                "NUMERO": "301",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SITIO CERCADO",
+                "CEP": "81935280",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "39296261953",
+                "NOME": "REGINA APARECIDA RAMOS ALEXANDRE",
+                "IDADE": "68 anos",
+                "LOCAL": "CURITIBA\/PR",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "1038401925",
+                "NOME": "JESSICA RAMOS ALEXANDRE",
+                "IDADE": "31 anos",
+                "LOCAL": "CURITIBA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "3180728906",
+                "NOME": "CELIO RAMOS ALEXANDRE",
+                "IDADE": "45 anos",
+                "LOCAL": "CURITIBA\/PR",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "ELECTROLUX DO BRASIL S\/A",
+            "CNPJ": "76487032000125",
+            "CIDADE": "CURITIBA-PR",
+            "PROFISSAO": "391125",
+            "DATA_ADMISSAO": "06\/03\/1995",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

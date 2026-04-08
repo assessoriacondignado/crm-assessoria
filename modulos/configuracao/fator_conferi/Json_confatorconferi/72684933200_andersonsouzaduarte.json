@@ -1,0 +1,199 @@
+{
+    "CADASTRAIS": {
+        "CPF": "72684933200",
+        "NOME": "ANDERSON SOUZA DUARTE",
+        "NOME_MAE": "ANA MARIA SOUZA DUARTE",
+        "NASCTO": "18\/09\/1982",
+        "IDADE": "43 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1312824189 ",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "391210",
+        "PROFISSAO": "TECNICO DE GARANTIA DA QUALIDADE",
+        "SALARIO": " 1.431,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9236227793",
+            "OPERADORA": "TELEMAR\/AM",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "baixa"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92995262489",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92993359456",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92991524854",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "andersonbombasd@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R AYACUCHO",
+                "NUMERO": "112",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRES VARGAS",
+                "CEP": "69025330",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R AYACUCHO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRES VARGAS",
+                "CEP": "69025330",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R JUNCO VERDE",
+                "NUMERO": "66",
+                "COMPLEMENTO": "APARTAMENTO:BLOCO201 A",
+                "BAIRRO": "LAGO AZUL",
+                "CEP": "69018690",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "BECO BRAGANCA",
+                "NUMERO": "168",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRESIDENTE VARGAS",
+                "CEP": "69025350",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "9828308908",
+                "NOME": "ANA MARIA SOUZA DUARTE",
+                "IDADE": "31 anos",
+                "LOCAL": "LONDRINA\/PR",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "24791602897",
+                "NOME": "JOVANA CRISTINA DUARTE DOS SAN",
+                "IDADE": "49 anos",
+                "LOCAL": "BARUERI\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "76888576787",
+                "NOME": "RENATO DE SOUZA DUARTE",
+                "IDADE": "65 anos",
+                "LOCAL": "NOVA IGUACU\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "80919413749",
+                "NOME": "MARIA DE FATIMA DE SOUZA DUARTE",
+                "IDADE": "63 anos",
+                "LOCAL": "RIO DAS OSTRAS\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "H A CASTRO ENGENHARIA",
+                "CNPJ": "14951017000139",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "414140",
+                "DATA_ADMISSAO": "02\/01\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "APOEMA RESTAURANTES LTDA",
+                "CNPJ": "04739000000835",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "517420",
+                "DATA_ADMISSAO": "21\/12\/2022",
+                "DATA_DEMISSAO": "03\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "EMSA INTERMEDIACAO E AGENCIAMENTO DE SERVICOS LTDA",
+                "CNPJ": "24227527000111",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "391210",
+                "DATA_ADMISSAO": "04\/01\/2023",
+                "DATA_DEMISSAO": "08\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "MASA INDUSTRIA DE PLASTICOS DA AMAZONIA LTDA.",
+                "CNPJ": "31303127000103",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "12\/11\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "FLEXTRONICS DA AMAZONIA LTDA",
+                "CNPJ": "04454120000110",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "01\/08\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

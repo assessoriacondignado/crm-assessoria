@@ -1,0 +1,184 @@
+{
+    "CADASTRAIS": {
+        "CPF": "367799030",
+        "NOME": "ODAIR SANTOS DA ROSA",
+        "NOME_MAE": "IVONE SANTOS DA ROSA",
+        "NASCTO": "01\/04\/1982",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "076209050493",
+        "NIT": "1901076264",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411010",
+        "PROFISSAO": "ASSISTENTE ADMINISTRATIVO",
+        "SALARIO": " 5.692,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5137487727",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "5532326175",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5137146047",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51992769601",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51986434217",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "15\/05\/2016",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "51993068843",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "51996998127",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "catiaepreto@yahoo.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DOIS IRMAOS",
+                "NUMERO": "746",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CONSERVAS",
+                "CEP": "95901566",
+                "CIDADE": "LAJEADO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R EMILIO HAAS",
+                "NUMERO": "362",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD DO CEDRO",
+                "CEP": "95901392",
+                "CIDADE": "LAJEADO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R PAULINO GERALDO DA ROSA",
+                "NUMERO": "31",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CONSERVAS",
+                "CEP": "95901624",
+                "CIDADE": "LAJEADO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R CEL SOARES",
+                "NUMERO": "1874",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "97300372",
+                "CIDADE": "SAO GABRIEL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R AMETISTA",
+                "NUMERO": "25",
+                "COMPLEMENTO": "",
+                "BAIRRO": "IGREJINHA",
+                "CEP": "95910662",
+                "CIDADE": "LAJEADO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R CEL TRISTAO PINTO",
+                "NUMERO": "513",
+                "COMPLEMENTO": "AP 401",
+                "BAIRRO": "CENTRO",
+                "CEP": "97300232",
+                "CIDADE": "SAO GABRIEL",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1433394863",
+            "NOME": "IVONE SANTOS DA ROSA",
+            "IDADE": "68 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "FERROS CASTRO LTDA",
+            "CNPJ": "92102292000191",
+            "CIDADE": "LAJEADO-RS",
+            "PROFISSAO": "411010",
+            "DATA_ADMISSAO": "06\/03\/2008",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

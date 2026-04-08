@@ -1,0 +1,129 @@
+{
+    "CADASTRAIS": {
+        "CPF": "6087296395",
+        "NOME": "FRANCISCO ARAUJO GONCALVES",
+        "NOME_MAE": "ANTONIA ARAUJO",
+        "NASCTO": "28\/09\/1993",
+        "IDADE": "32 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1622458211",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521125",
+        "PROFISSAO": "REPOSITOR DE MERCADORIAS",
+        "SALARIO": " 1.850,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "61992372787",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "61981903313",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "86995533376",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "61994030971",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "franciscoraujo521@gmail.com",
+            "raimundogoncalves421@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "QR 601 CJ 17",
+            "NUMERO": "0",
+            "COMPLEMENTO": "10",
+            "BAIRRO": "SAMAMBAIA NORTE SAMAMBAIA",
+            "CEP": "72331017",
+            "CIDADE": "BRASILIA",
+            "ESTADO": "DF"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "549823328",
+            "NOME": "ANTONIA ARAUJO",
+            "IDADE": "51 anos",
+            "LOCAL": "SANTA LUZIA\/MA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SENDAS DISTRIBUIDORA S\/A",
+                "CNPJ": "06057223046163",
+                "CIDADE": "TERESINA-PI",
+                "PROFISSAO": "521125",
+                "DATA_ADMISSAO": "26\/12\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "GEC ENGENHARIA E CONSTRUCAO LTDA",
+                "CNPJ": "28546467000150",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "30\/09\/2020",
+                "DATA_DEMISSAO": "21\/09\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "COPIZA COMERCIO DE PRODUTOS ALIMENTICIOS LTDA",
+                "CNPJ": "07513341000371",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "414110",
+                "DATA_ADMISSAO": "01\/03\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

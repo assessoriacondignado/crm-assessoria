@@ -1,0 +1,171 @@
+{
+    "CADASTRAIS": {
+        "CPF": "89912454634",
+        "NOME": "EUGENIO CARLOS RIBEIRO JORGE",
+        "NOME_MAE": "MARIA LUCIA RIBEIRO JORGE",
+        "NASCTO": "01\/04\/1971",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "5845554",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "092989120281",
+        "NIT": "1239554263",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "414215",
+        "PROFISSAO": "CONFERENTE DE CARGA E DESCARGA",
+        "SALARIO": " 1.914,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "3232145967",
+            "OPERADORA": "TELEMAR\/MG",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "32991126147",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "32999677073",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "32987017447",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "32988039122",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "13\/12\/2017",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "32999235437",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "eugenioribeiro305@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PRINCIPAL",
+                "NUMERO": "50",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "36101000",
+                "CIDADE": "VALADARES",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RUA LUIZ VILLANI",
+                "NUMERO": "69",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SAO JUDAS TADEU",
+                "CEP": "36087640",
+                "CIDADE": "JUIZ DE FORA",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "91271592649",
+                "NOME": "MARIA LUCIA RIBEIRO JORGE",
+                "IDADE": "79 anos",
+                "LOCAL": "JUIZ DE FORA\/MG",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "1255706600",
+                "NOME": "ROSANA RIBEIRO DUTRA",
+                "IDADE": "52 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "3533444600",
+                "NOME": "ROSANGELA RIBEIRO MARTINS",
+                "IDADE": "49 anos",
+                "LOCAL": "JUIZ DE FORA\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "97509833604",
+                "NOME": "LUCIANA MARIA RIBEIRO DE OLIVEIRA",
+                "IDADE": "53 anos",
+                "LOCAL": "JUIZ DE FORA\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "EDMILSON TRANSPORTES LTDA",
+                "CNPJ": "12393322000127",
+                "CIDADE": "JUIZ DE FORA-MG",
+                "PROFISSAO": "414215",
+                "DATA_ADMISSAO": "01\/10\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TRANSPORTADORA PAULINERIS LTDA",
+                "CNPJ": "02863841000239",
+                "CIDADE": "JUIZ DE FORA-MG",
+                "PROFISSAO": "414215",
+                "DATA_ADMISSAO": "04\/05\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

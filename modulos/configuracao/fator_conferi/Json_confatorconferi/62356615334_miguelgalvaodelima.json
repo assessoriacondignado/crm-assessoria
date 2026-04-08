@@ -1,0 +1,165 @@
+{
+    "CADASTRAIS": {
+        "CPF": "62356615334",
+        "NOME": "MIGUEL GALVAO DE LIMA",
+        "NOME_MAE": "FRANCISCA DAS CHAGAS GALVAO",
+        "NASCTO": "29\/09\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12613617480",
+        "ESCOLARIDADE": "PRIMEIRO GRAU (GINASIO)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782405",
+        "PROFISSAO": "MOTORISTA DE ONIBUS RODOVIARIO",
+        "SALARIO": " 1.695,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8632203045",
+            "OPERADORA": "TELEMAR\/PI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "86994817327",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "86999168226",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "29\/08\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "98981691889",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "24\/01\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "86994817390",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "miguelgalvaolima2@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R BONANZA",
+                "NUMERO": "2871",
+                "COMPLEMENTO": "2875",
+                "BAIRRO": "PROMORAR",
+                "CEP": "64027360",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "R ACLIMACAO",
+                "NUMERO": "2875",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STO ANTONIO",
+                "CEP": "64028265",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "AVENIDA NORTE SUL",
+                "NUMERO": "2318",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTO ANTONIO",
+                "CEP": "64028350",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "RUA ACLIMACAO",
+                "NUMERO": "2871",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTO ANTONIO",
+                "CEP": "64028265",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "RUA JOSE LOPES DA SILVA",
+                "NUMERO": "3083",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTO ANTONIO",
+                "CEP": "64028310",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1125942479",
+            "NOME": "FRANCISCA DAS CHAGAS GALVAO",
+            "IDADE": "83 anos",
+            "LOCAL": "MOSSORO\/RN",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "FRETUR TRANSPORTES E TURISMO LTDA",
+                "CNPJ": "03531577000118",
+                "CIDADE": "TERESINA-PI",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "11\/09\/2014",
+                "DATA_DEMISSAO": "01\/11\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "AJURICABA SOARES DO REGO   CIA LTDA",
+                "CNPJ": "12187910000104",
+                "CIDADE": "TERESINA-PI",
+                "PROFISSAO": "782405",
+                "DATA_ADMISSAO": "02\/06\/2014",
+                "DATA_DEMISSAO": "10\/09\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

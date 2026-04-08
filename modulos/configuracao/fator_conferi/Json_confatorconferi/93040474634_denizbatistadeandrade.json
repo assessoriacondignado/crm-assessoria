@@ -1,0 +1,206 @@
+{
+    "CADASTRAIS": {
+        "CPF": "93040474634",
+        "NOME": "DENIZ BATISTA DE ANDRADE",
+        "NOME_MAE": "BENEDITA PEREIRA DE ANDRADE",
+        "NASCTO": "15\/01\/1977",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "105315830248",
+        "NIT": "1254085597",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "314110",
+        "PROFISSAO": "TECNICO MECANICO",
+        "SALARIO": " 50.413,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2227923107",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "3535235395",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "35997818910",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "35998518910",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "35998176626",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "35998938911",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "35999818910",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "thdzandrade@gmail.com",
+            "dzandrade@petrobras.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "TV RAMIRO MOURA",
+                "NUMERO": "30",
+                "COMPLEMENTO": "",
+                "BAIRRO": "USINA DE FURNAS",
+                "CEP": "37945000",
+                "CIDADE": "SAO JOSE DA BARRA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "AV ELIAS AGOSTINHO",
+                "NUMERO": "665",
+                "COMPLEMENTO": "",
+                "BAIRRO": "IMBETIBA",
+                "CEP": "27913350",
+                "CIDADE": "MACAE",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R GUAPE",
+                "NUMERO": "989",
+                "COMPLEMENTO": "",
+                "BAIRRO": "FURNAS",
+                "CEP": "37945000",
+                "CIDADE": "SAO JOSE DA BARRA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "AVENIDA DOM INACIO",
+                "NUMERO": "61",
+                "COMPLEMENTO": "CS 61",
+                "BAIRRO": "CENTRO",
+                "CEP": "37945000",
+                "CIDADE": "SAO JOSE DA BARRA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R CAMPO BELO",
+                "NUMERO": "258",
+                "COMPLEMENTO": "",
+                "BAIRRO": "FURNAS",
+                "CEP": "37945000",
+                "CIDADE": "SAO JOSE DA BARRA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "PERDOES",
+                "NUMERO": "1",
+                "COMPLEMENTO": "1",
+                "BAIRRO": "FURNAS",
+                "CEP": "37945000",
+                "CIDADE": "SAO JOSE DA BARRA",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "795155255",
+            "NOME": "BENEDITA PEREIRA DE ANDRADE",
+            "IDADE": "58 anos",
+            "LOCAL": "MANAUS\/AM",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "PETROLEO BRASILEIRO S A PETROBRAS",
+            "CNPJ": "33000167108492",
+            "CIDADE": "MACAE-RJ",
+            "PROFISSAO": "314110",
+            "DATA_ADMISSAO": "11\/01\/2004",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": [
+            {
+                "RAZAO_SOCIAL": "RESIDENCIAL AGUA LIMPA II SPE LTDA",
+                "CNPJ": "44760241000104",
+                "CIDADE": "SAO JOSE DA BARRA-MG",
+                "QUALIFICACAO": "SÃ³cio",
+                "DATA_ENTRADA": "20220106",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "RESIDENCIAL AGUA LIMPA SPE LTDA",
+                "CNPJ": "36187543000107",
+                "CIDADE": "SAO JOSE DA BARRA-MG",
+                "QUALIFICACAO": "SÃ³cio",
+                "DATA_ENTRADA": "20200130",
+                "VALOR_PARTICIPACAO": ""
+            }
+        ]
+    }
+}

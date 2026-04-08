@@ -1,0 +1,166 @@
+{
+    "CADASTRAIS": {
+        "CPF": "58909842091",
+        "NOME": "SONIA MARA CHINAZZO",
+        "NOME_MAE": "HORTENCILA CAVALET CHINAZZO",
+        "NASCTO": "14\/01\/1975",
+        "IDADE": "51 anos",
+        "SEXO": "Feminino",
+        "RG": "1053538029",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12480286691",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "422310",
+        "PROFISSAO": "OPERADOR DE TELEMARKETING ATIVO E RECEPTIVO",
+        "SALARIO": " 1.144,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "54991813323",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "54991315772",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "54993550082",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "54991662782",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "54999999736",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "sercon@st.com.br",
+            "soniamarachinazzo@yahoo.com.br",
+            "soniamarachinazzo@yahoo.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R LIBERATO SALZANO",
+                "NUMERO": "263",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CENTRO",
+                "CEP": "99700102",
+                "CIDADE": "ERECHIM",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R MARIA ROCHA DOS SANTOS",
+                "NUMERO": "94",
+                "COMPLEMENTO": "FDS",
+                "BAIRRO": "PRQ BANDEIRANTES I NOVA VENEZA",
+                "CEP": "13181777",
+                "CIDADE": "SUMARE",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "58909869020",
+                "NOME": "HORTENCILA CAVALET CHINAZZO",
+                "IDADE": "73 anos",
+                "LOCAL": "ERECHIM\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "95321063087",
+                "NOME": "RICARDO ELIAS CHINAZZO",
+                "IDADE": "46 anos",
+                "LOCAL": "ERECHIM\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "1022538039",
+                "NOME": "MARIANE CHINAZZO AZEVEDO",
+                "IDADE": "29 anos",
+                "LOCAL": "PASSO FUNDO\/RS",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ROTOMAZA INDUSTRIA E COMERCIO DE PLASTICOS LTDA",
+                "CNPJ": "37800990000152",
+                "CIDADE": "ERECHIM-RS",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "14\/10\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COMERCIO ATACADISTA EVS LTDA",
+                "CNPJ": "02229533000175",
+                "CIDADE": "ERECHIM-RS",
+                "PROFISSAO": "422310",
+                "DATA_ADMISSAO": "18\/04\/2012",
+                "DATA_DEMISSAO": "21\/03\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "MAGIA DO TEMPO TABACOS LTDA",
+            "CNPJ": "04648584000167",
+            "CIDADE": "ERECHIM-RS",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20010830",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

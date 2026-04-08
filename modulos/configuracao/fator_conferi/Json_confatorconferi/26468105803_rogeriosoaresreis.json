@@ -1,0 +1,177 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26468105803",
+        "NOME": "ROGERIO SOARES REIS",
+        "NOME_MAE": "ENILZA SOARES DOS SANTOS REIS",
+        "NASCTO": "27\/04\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "283105549",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "221815770159",
+        "NIT": "1261140785",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "725415",
+        "PROFISSAO": "MECANICO MONTADOR DE MOTORES DE EXPLOSAO E DIESEL",
+        "SALARIO": " 7.996,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1155142405",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "07\/08\/2004",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1155142406",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1155142406",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1138823379",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11979980732",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11960805214",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "23\/01\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R FELICE GIARDINI",
+                "NUMERO": "38",
+                "COMPLEMENTO": "B",
+                "BAIRRO": "JD COIMBRA",
+                "CEP": "04932390",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R VIRURI",
+                "NUMERO": "200",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD ALFREDO",
+                "CEP": "04909070",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOSE MARMOL",
+                "NUMERO": "40",
+                "COMPLEMENTO": "CS 3",
+                "BAIRRO": "CHACARA SANTANA",
+                "CEP": "05831120",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOSE MARMOL",
+                "NUMERO": "4",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CHACARA SANTANA",
+                "CEP": "05831120",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "12969529831",
+                "NOME": "ENILZA SOARES DOS SANTOS REIS",
+                "IDADE": "71 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "27758797806",
+                "NOME": "ROSANGELA DOS SANTOS REIS SILVA",
+                "IDADE": "45 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "30012504882",
+                "NOME": "MARIA REGIANE REIS BELLOTTI",
+                "IDADE": "43 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "35562372886",
+                "NOME": "WILLIAM SOARES REIS",
+                "IDADE": "37 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "MWM - TUPY DO BRASIL LTDA.",
+            "CNPJ": "02162259000750",
+            "CIDADE": "SAO PAULO-SP",
+            "PROFISSAO": "725415",
+            "DATA_ADMISSAO": "01\/12\/2017",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

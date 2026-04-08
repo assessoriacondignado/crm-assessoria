@@ -1,0 +1,180 @@
+{
+    "CADASTRAIS": {
+        "CPF": "44566397840",
+        "NOME": "MAYARA BRITO SILVA",
+        "NOME_MAE": "MARGARIDA VIEIRA BRITO SILVA",
+        "NASCTO": "08\/05\/1994",
+        "IDADE": "31 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "16472686042",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "513505",
+        "PROFISSAO": "AJUDANTE DE CHURRASQUEIRO",
+        "SALARIO": " 945,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "22997163843",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11932372639",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "82987175956",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "02\/20\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "mayarabrito.silva@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "R AUSTRALIA",
+            "NUMERO": "81",
+            "COMPLEMENTO": "BL 3 AP 31",
+            "BAIRRO": "INDEPENDENCIA",
+            "CEP": "09861390",
+            "CIDADE": "SAO BERNARDO DO CAMPO",
+            "ESTADO": "SP"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "38279039805",
+                "NOME": "MARCIA BRITO DA SILVA",
+                "IDADE": "36 anos",
+                "LOCAL": "SERRA\/ES",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "40965758877",
+                "NOME": "MARIANA BRITO SILVA",
+                "IDADE": "32 anos",
+                "LOCAL": "MACEIO\/AL",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "52065186895",
+                "NOME": "GABRIELA BRITO DE OLIVEIRA",
+                "IDADE": "20 anos",
+                "LOCAL": "",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "54093532850",
+                "NOME": "BEATRIZ BRITO DE AMORIM",
+                "IDADE": "15 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "63468649398",
+                "NOME": "ANA PAULA SANTOS SILVA",
+                "IDADE": "21 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "63468651376",
+                "NOME": "SERGIO RENNER SANTOS SILVA",
+                "IDADE": "20 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "63468652348",
+                "NOME": "ANNY HELLOA SANTOS SILVA",
+                "IDADE": "15 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SENDAS DISTRIBUIDORA S\/A",
+                "CNPJ": "06057223050438",
+                "CIDADE": "SAO BERNARDO DO CAMPO-SP",
+                "PROFISSAO": "513205",
+                "DATA_ADMISSAO": "27\/12\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ONDINA ALIMENTACAO E SERVICOS LTDA",
+                "CNPJ": "45558376000154",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "513505",
+                "DATA_ADMISSAO": "06\/01\/2023",
+                "DATA_DEMISSAO": "22\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "APETECE SISTEMAS DE ALIMENTACAO S.A.",
+                "CNPJ": "60166832000104",
+                "CIDADE": "SAO CAETANO DO SUL-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "28\/11\/2020",
+                "DATA_DEMISSAO": "10\/11\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "PTF ALIMENTACAO LTDA",
+                "CNPJ": "00156618000145",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "513505",
+                "DATA_ADMISSAO": "12\/04\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "GR SERVICOS E ALIMENTACAO LTDA.",
+                "CNPJ": "02905110000209",
+                "CIDADE": "SAO BERNARDO DO CAMPO-SP",
+                "PROFISSAO": "513505",
+                "DATA_ADMISSAO": "01\/07\/2013",
+                "DATA_DEMISSAO": "04\/12\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

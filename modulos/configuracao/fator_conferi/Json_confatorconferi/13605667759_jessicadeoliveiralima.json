@@ -1,0 +1,169 @@
+{
+    "CADASTRAIS": {
+        "CPF": "13605667759",
+        "NOME": "JESSICA DE OLIVEIRA LIMA",
+        "NOME_MAE": "LUCIENE DE OLIVEIRA LIMA",
+        "NASCTO": "12\/11\/1990",
+        "IDADE": "35 anos",
+        "SEXO": "Feminino",
+        "RG": "257148148",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "138210920361",
+        "NIT": "2076678994 ",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "141515",
+        "PROFISSAO": "GERENTE DE BAR",
+        "SALARIO": " 2.741,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": "",
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21973399531",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21993707240",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21994044714",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21988608642",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21968195378",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "igoralexsander100@gmail.com",
+            "ygoralessander100@gmail.com",
+            "ygoralexssander100@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R FOX",
+                "NUMERO": "45",
+                "COMPLEMENTO": "C 2",
+                "BAIRRO": "JD NOYA",
+                "CEP": "25561281",
+                "CIDADE": "SAO JOAO DE MERITI",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "AV ALBERTO DE OLIVEIRA",
+                "NUMERO": "3",
+                "COMPLEMENTO": "LT 13",
+                "BAIRRO": "VL S JOAO",
+                "CEP": "25570341",
+                "CIDADE": "SAO JOAO DE MERITI",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R IRAGUACI",
+                "NUMERO": "26",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL S JOAO",
+                "CEP": "25570290",
+                "CIDADE": "SAO JOAO DE MERITI",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "AV ALBERTO DE OLIVEIRA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "LT 13 B C 3",
+                "BAIRRO": "VL S JOAO",
+                "CEP": "25570341",
+                "CIDADE": "SAO JOAO DE MERITI",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "527242551",
+            "NOME": "LUCIENE DE OLIVEIRA LIMA",
+            "IDADE": "45 anos",
+            "LOCAL": "ITABAIANA\/SE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "HUMAITA FOOT COMERCIO DE ALIMENTOS E BEBIDAS LTDA",
+                "CNPJ": "51998071000166",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "141510",
+                "DATA_ADMISSAO": "01\/09\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LIMASANTOS BUFFET LTDA",
+                "CNPJ": "09562060000172",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "141515",
+                "DATA_ADMISSAO": "18\/09\/2015",
+                "DATA_DEMISSAO": "27\/09\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "RESTAURANTE E PIZZARIA DO CARLINHOS VSJ LTDA",
+                "CNPJ": "18521552000100",
+                "CIDADE": "SAO JOAO DE MERITI-RJ",
+                "PROFISSAO": "513610",
+                "DATA_ADMISSAO": "01\/08\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

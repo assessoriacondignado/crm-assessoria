@@ -1,0 +1,251 @@
+{
+    "CADASTRAIS": {
+        "CPF": "10809482878",
+        "NOME": "ELOISA ALICE RIBEIRO DO VALLE",
+        "NOME_MAE": "MARIA OLIVIA DE MACEDO RIBEIRO D",
+        "NASCTO": "20\/07\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "204059290116",
+        "NIT": "1704195820",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "413225",
+        "PROFISSAO": "ESCRITURARIO DE BANCO",
+        "SALARIO": " 9.638,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1921219229",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1932731400",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1932534830",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "13\/08\/2006",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1933427469",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19999719765",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19982219765",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "19981817020",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "19981818524",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "19997669024",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "eloisa.alice@zipmail.com.br",
+            "elvisbroccolo@ig.com.br",
+            "eloisa.alice@terra.com.br",
+            "jervalle@yahoo.com.br",
+            "eloisa_arv@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOSE MANOEL VILELA",
+                "NUMERO": "127",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ST CENTRAL",
+                "CEP": "75800008",
+                "CIDADE": "JATAI",
+                "ESTADO": "GO"
+            },
+            {
+                "LOGRADOURO": "R DR ALVES DO BANHO",
+                "NUMERO": "527",
+                "COMPLEMENTO": "BL B AP 12",
+                "BAIRRO": "S BERNARDO",
+                "CEP": "13030580",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R AMAZONAS",
+                "NUMERO": "403",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD CENTENARIO",
+                "CEP": "13845250",
+                "CIDADE": "MOGI GUACU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ABILIO VILELA JUNQUEIRA",
+                "NUMERO": "350",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CHACARA SANTA MARGARIDA",
+                "CEP": "13085420",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R URUGUAIANA",
+                "NUMERO": "1237",
+                "COMPLEMENTO": "AP51",
+                "BAIRRO": "BOSQUE",
+                "CEP": "13026002",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA BARRETO LEME",
+                "NUMERO": "1887",
+                "COMPLEMENTO": "AP 81",
+                "BAIRRO": "CAMBUI",
+                "CEP": "13025085",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ESMERALDA QUINTANILHA DA ROCHA",
+                "IDADE": "",
+                "LOCALIDADE": "",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "4138422749"
+            },
+            {
+                "NOME": "MARIA OLIVIA DE MACEDO RIBEIRO VALLE",
+                "IDADE": "",
+                "LOCALIDADE": "ALTEROSA\/MG",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "5916598831"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000276006",
+                "CIDADE": "JACUTINGA-MG",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "25\/07\/2005",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000601195",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "05\/01\/2015",
+                "DATA_DEMISSAO": "07\/08\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000457809",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "08\/07\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "BANCO DO BRASIL SA",
+                "CNPJ": "00000000512680",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "413225",
+                "DATA_ADMISSAO": "26\/02\/2007",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,225 @@
+{
+    "CADASTRAIS": {
+        "CPF": "1082376990",
+        "NOME": "FERNANDO FERREIRA QUIRINO",
+        "NOME_MAE": "MARIA FERREIRA QUIRINO",
+        "NASCTO": "18\/12\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "20041450900",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "623325",
+        "PROFISSAO": "SEXADOR",
+        "SALARIO": " 1.110,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "4834328176",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "48996519593",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "48998177860",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "48996095256",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "48996049312",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "48996317499",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PAULINO BURIGO",
+                "NUMERO": "722",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL NOVA",
+                "CEP": "88820000",
+                "CIDADE": "ICARA",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "GERAL CAMACHO",
+                "NUMERO": "1",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "CAMACHO",
+                "CEP": "88715000",
+                "CIDADE": "JAGUARUNA",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "EST GERAL CAMACHO",
+                "NUMERO": "113",
+                "COMPLEMENTO": "LT 5",
+                "BAIRRO": "CAMACHO",
+                "CEP": "88715000",
+                "CIDADE": "JAGUARUNA",
+                "ESTADO": "SC"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "339299630",
+            "NOME": "MARIA FERREIRA QUIRINO",
+            "IDADE": "89 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "JR CONSTRUCOES E TERRAPLENAGEM LTDA EPP",
+                "CNPJ": "05895635000118",
+                "CIDADE": "ICARA-SC",
+                "PROFISSAO": "514225",
+                "DATA_ADMISSAO": "03\/04\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "",
+                "CNPJ": "00000005895635",
+                "CIDADE": "",
+                "PROFISSAO": "514225",
+                "DATA_ADMISSAO": "01\/02\/2024",
+                "DATA_DEMISSAO": "03\/04\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ICRPLAST INDUSTRIA DE EMBALAGENS LTDA",
+                "CNPJ": "30278521000176",
+                "CIDADE": "VIAMAO-RS",
+                "PROFISSAO": "841115",
+                "DATA_ADMISSAO": "02\/05\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "PROAVE AGROINDUSTRIAL LIMITADA",
+                "CNPJ": "00202787000174",
+                "CIDADE": "ICARA-SC",
+                "PROFISSAO": "623325",
+                "DATA_ADMISSAO": "14\/01\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "RETRANS RECICLAGEM E LIMPEZA LTDA",
+                "CNPJ": "01572511000140",
+                "CIDADE": "TUBARAO-SC",
+                "PROFISSAO": "514205",
+                "DATA_ADMISSAO": "25\/02\/2016",
+                "DATA_DEMISSAO": "28\/03\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "RR INDUSTRIA DE EMBALAGENS PLASTICAS E TRANSPORTE DE CARGAS LTDA",
+                "CNPJ": "08639355000137",
+                "CIDADE": "ICARA-SC",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "04\/05\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "JJG PRODUTOS DE LIMPEZA E TRANSPORTES LTDA",
+                "CNPJ": "11496141000163",
+                "CIDADE": "ICARA-SC",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "03\/08\/2015",
+                "DATA_DEMISSAO": "22\/02\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ECOCICLE - INDUSTRIA DE RECICLADOS LTDA",
+                "CNPJ": "03484798000182",
+                "CIDADE": "ICARA-SC",
+                "PROFISSAO": "811110",
+                "DATA_ADMISSAO": "01\/09\/2012",
+                "DATA_DEMISSAO": "13\/03\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "HILDA POSSAMAI ZANELATTO INDUSTRIA E COMERCIO DE ARTEFATOS PLASTICOS LTDA",
+                "CNPJ": "00336082000140",
+                "CIDADE": "ICARA-SC",
+                "PROFISSAO": "811110",
+                "DATA_ADMISSAO": "03\/01\/2012",
+                "DATA_DEMISSAO": "109",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,160 @@
+{
+    "CADASTRAIS": {
+        "CPF": "41917112882",
+        "NOME": "MELINA NATANI BASTASINI",
+        "NOME_MAE": "MARIA ROSA BARALDI BASTASINI",
+        "NASCTO": "22\/09\/1993",
+        "IDADE": "32 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "2078241938",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "322205",
+        "PROFISSAO": "TECNICO DE ENFERMAGEM",
+        "SALARIO": " 3.237,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1733113000",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1735722261",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "17996385438",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "17996299332",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "17996413621",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MINORO TANAKA",
+                "NUMERO": "8",
+                "COMPLEMENTO": "140",
+                "BAIRRO": "COHAB",
+                "CEP": "15830000",
+                "CIDADE": "PINDORAMA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV S VICENTE DE PAULO",
+                "NUMERO": "1455",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ IRACEMA",
+                "CEP": "15809145",
+                "CIDADE": "CATANDUVA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA AUGUSTO JORGE",
+                "NUMERO": "44",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "CENTRO",
+                "CEP": "15830000",
+                "CIDADE": "PINDORAMA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MINORO TANAKA",
+                "NUMERO": "140",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BENEDITO FALCAO",
+                "CEP": "15830000",
+                "CIDADE": "PINDORAMA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "22508488828",
+                "NOME": "JOAO LUIZ BASTASINI",
+                "IDADE": "41 anos",
+                "LOCAL": "PINDORAMA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "31595261869",
+                "NOME": "PRISCILA APARECIDA BASTASINI",
+                "IDADE": "43 anos",
+                "LOCAL": "PINDORAMA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "55613913803",
+                "NOME": "HEITOR BASTASINI DE ALMEIDA",
+                "IDADE": "11 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "FUNDACAO PADRE ALBINO",
+            "CNPJ": "47074851000819",
+            "CIDADE": "CATANDUVA-SP",
+            "PROFISSAO": "322205",
+            "DATA_ADMISSAO": "13\/02\/2012",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

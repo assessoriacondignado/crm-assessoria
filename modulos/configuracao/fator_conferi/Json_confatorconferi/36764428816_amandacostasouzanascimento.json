@@ -1,0 +1,147 @@
+{
+    "CADASTRAIS": {
+        "CPF": "36764428816",
+        "NOME": "AMANDA COSTA SOUZA NASCIMENTO",
+        "NOME_MAE": "MARIA VALERIA DA COSTA",
+        "NASCTO": "30\/04\/1997",
+        "IDADE": "29 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "2014014909 ",
+        "ESCOLARIDADE": "SUPERIOR INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "354820",
+        "PROFISSAO": "ORGANIZADOR DE EVENTO",
+        "SALARIO": " 2.499,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1124861452",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1158272849",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11952519406",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11970716424",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "acsn12345@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R AFONSO DOMINGUES",
+                "NUMERO": "5",
+                "COMPLEMENTO": "B",
+                "BAIRRO": "JD ROSAS Z SUL",
+                "CEP": "05893020",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA AFONSO DOMINGUES",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM DAS ROSAS (ZONA SUL)",
+                "CEP": "05893020",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CAFE",
+                "NUMERO": "140",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE DAS NACOES",
+                "CEP": "07243240",
+                "CIDADE": "GUARULHOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "226497780",
+            "NOME": "MARIA VALERIA DA COSTA",
+            "IDADE": "62 anos",
+            "LOCAL": "",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "AMANDA ESTER DE SOUZA COSTA",
+            "IDADE": "",
+            "LOCALIDADE": "RIBEIRAO DAS NEVES\/MG",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "1989733654"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CONDOMINIO EDIFICIO THE METROPOLITAN HALL",
+                "CNPJ": "01768732000199",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "06\/03\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "EDIFICIO THE WORLD EXECUTIVE FLAT",
+                "CNPJ": "03526831000190",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "354820",
+                "DATA_ADMISSAO": "12\/12\/2018",
+                "DATA_DEMISSAO": "15\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

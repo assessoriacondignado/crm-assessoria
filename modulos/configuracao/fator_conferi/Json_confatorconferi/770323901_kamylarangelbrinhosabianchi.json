@@ -1,0 +1,184 @@
+{
+    "CADASTRAIS": {
+        "CPF": "770323901",
+        "NOME": "KAMYLA RANGEL BRINHOSA BIANCHI",
+        "NOME_MAE": "SUSANA RANGEL BRINHOSA",
+        "NASCTO": "30\/08\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "039068690922",
+        "NIT": "2681263284",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "351740",
+        "PROFISSAO": "TECNICO DE SEGUROS",
+        "SALARIO": " 5.825,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "4832460207",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "4830247777",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "4841053074",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "48996158671",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "27\/07\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "48999681074",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "27\/07\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "48984626694",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "kamyla@matrix.com.br",
+            "kabrinhosa@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "MARITAN",
+                "NUMERO": "1125",
+                "COMPLEMENTO": "",
+                "BAIRRO": "",
+                "CEP": "17940000",
+                "CIDADE": "SANTA MERCEDES",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R NS DE FATIMA",
+                "NUMERO": "236",
+                "COMPLEMENTO": "LJ",
+                "BAIRRO": "VINHOSA",
+                "CEP": "28300000",
+                "CIDADE": "ITAPERUNA",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R F A CLAUDINO",
+                "NUMERO": "1269",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CENTRO",
+                "CEP": "83800000",
+                "CIDADE": "MANDIRITUBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R BOM RETIRO",
+                "NUMERO": "146",
+                "COMPLEMENTO": "FDS",
+                "BAIRRO": "IPIRANGA",
+                "CEP": "88111400",
+                "CIDADE": "SAO JOSE",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "RUA MANOEL LOUREIRO",
+                "NUMERO": "395",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "BARREIROS",
+                "CEP": "88117330",
+                "CIDADE": "SAO JOSE",
+                "ESTADO": "SC"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "8114417927",
+                "NOME": "JOAO VITOR BRINHOSA",
+                "IDADE": "34 anos",
+                "LOCAL": "SAO JOSE\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "10098980947",
+                "NOME": "NICOLAS BRINHOSA BIANCHI",
+                "IDADE": "14 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "10098989901",
+                "NOME": "ANA CLARA BRINHOSA BIANCHI",
+                "IDADE": "14 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "GEORGE CORRETORA DE SEGUROS LTDA",
+            "CNPJ": "05638386000185",
+            "CIDADE": "FLORIANOPOLIS-SC",
+            "PROFISSAO": "351740",
+            "DATA_ADMISSAO": "01\/08\/2005",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

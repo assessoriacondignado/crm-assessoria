@@ -1,0 +1,285 @@
+{
+    "CADASTRAIS": {
+        "CPF": "27635286862",
+        "NOME": "IVAN DE ALMEIDA",
+        "NOME_MAE": "ISA DE ALMEIDA",
+        "NASCTO": "12\/12\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "256952700116",
+        "NIT": "1269115393",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "232155",
+        "PROFISSAO": "PROFESSOR DE MATEMATICA NO ENSINO MEDIO",
+        "SALARIO": " 2.775,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1333239770",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "baixa"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13992115883",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13991934296",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13991733787",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13991464406",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13997242031",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "gadepaz@terra.com.br",
+            "ivan.almd@gmail.com",
+            "almeidavelho@hotmail.com",
+            "anacarolina.teixc@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R TOCANTINS",
+                "NUMERO": "25",
+                "COMPLEMENTO": "AP 41",
+                "BAIRRO": "GONZAGA",
+                "CEP": "11055340",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FREITAS GUIMARAES",
+                "NUMERO": "556",
+                "COMPLEMENTO": "AP 34",
+                "BAIRRO": "CIDADE LIDER",
+                "CEP": "08280380",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R RAPOSO TAVARES",
+                "NUMERO": "1416",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PILARZINHO",
+                "CEP": "82100452",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R JOSE CLEMENTE PEREIRA",
+                "NUMERO": "20",
+                "COMPLEMENTO": "",
+                "BAIRRO": "C GRANDE",
+                "CEP": "11070320",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA FREITAS GUIMARAES",
+                "NUMERO": "556",
+                "COMPLEMENTO": "APTO 34",
+                "BAIRRO": "ITARARE",
+                "CEP": "11320080",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA FREITAS GUIMARAES",
+                "NUMERO": "122",
+                "COMPLEMENTO": "BL 1 APT 34",
+                "BAIRRO": "ITARARE",
+                "CEP": "11320080",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA VEREADOR FREITAS GUIMARAES",
+                "NUMERO": "556",
+                "COMPLEMENTO": "APTO 34   ITARARE",
+                "BAIRRO": "VILA NOVA",
+                "CEP": "11013490",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "12148904825",
+                "NOME": "ISA DE ALMEIDA",
+                "IDADE": "76 anos",
+                "LOCAL": "SAO VICENTE\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "11842890697",
+                "NOME": "PAULO CESAR DE ALMEIDA",
+                "IDADE": "73 anos",
+                "LOCAL": "CONTAGEM\/MG",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "16676097770",
+                "NOME": "SERGIO FERREIRA DE ALMEIDA",
+                "IDADE": "47 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "37221850097",
+                "NOME": "LUIZA DE ALMEIDA",
+                "IDADE": "106 anos",
+                "LOCAL": "AJURICABA\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ANDREIA FONTES LOBO",
+                "IDADE": "",
+                "LOCALIDADE": "SANTOS\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "26195741884"
+            },
+            {
+                "NOME": "IVAN DE ALMEIDA",
+                "IDADE": "",
+                "LOCALIDADE": "IBAITI\/PR",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "41461267897"
+            },
+            {
+                "NOME": "MILENNA FAUSTINO CARVALHO",
+                "IDADE": "",
+                "LOCALIDADE": "SANTOS\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "33606183860"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ESCOLA DE ENSINO FUNDAMENTAL E ENSINO MEDIO XIII DE JULHO LTDA",
+                "CNPJ": "72799497000160",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "232155",
+                "DATA_ADMISSAO": "03\/05\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "R.S. ALVES   BRAZ LTDA",
+                "CNPJ": "01478097000105",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "232115",
+                "DATA_ADMISSAO": "01\/02\/2013",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CENTRO EDUCACIONAL E CULTURAL DE PRAIA GRANDE LTDA.",
+                "CNPJ": "44293496000104",
+                "CIDADE": "PRAIA GRANDE-SP",
+                "PROFISSAO": "231325",
+                "DATA_ADMISSAO": "03\/02\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "TIVIT TERCEIRIZACAO DE PROCESSOS, SERVICOS E TECNOLOGIA S.A.",
+                "CNPJ": "07073027002873",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "422315",
+                "DATA_ADMISSAO": "14\/20\/2006",
+                "DATA_DEMISSAO": "08\/08\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "A P A BRAZ   CIA LTDA",
+                "CNPJ": "64714413000110",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "232115",
+                "DATA_ADMISSAO": "01\/02\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "MPV SERVICOS DE INFORMATICA LTDA",
+                "CNPJ": "10407729000130",
+                "CIDADE": "SAO VICENTE-SP",
+                "PROFISSAO": "313220",
+                "DATA_ADMISSAO": "09\/08\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,197 @@
+{
+    "CADASTRAIS": {
+        "CPF": "8048121794",
+        "NOME": "DARCY DE SOUZA",
+        "NOME_MAE": "ALZIRA JOVENTINA SOUZA",
+        "NASCTO": "16\/03\/1977",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "098352640345",
+        "NIT": "12793523609",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2127393315",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1130388000",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1130388000",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21971809666",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21974598983",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21975263551",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21973949150",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21986754148",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "03\/06\/2006",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DO SAPATEIRO",
+                "NUMERO": "480",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL SERRANA VILA INHOMIRIM",
+                "CEP": "25935430",
+                "CIDADE": "MAGE",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "AV LINEU DE PAULA MACHADO",
+                "NUMERO": "900",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD EVEREST",
+                "CEP": "05601001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DO SAPATEIRO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL SERRANA VILA INHOMIRIM",
+                "CEP": "25935430",
+                "CIDADE": "MAGE",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "7590964735",
+            "NOME": "JOSE PAULO DE SOUZA",
+            "IDADE": "50 anos",
+            "LOCAL": "",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BARRA NOVA ENGENHARIA LTDA",
+                "CNPJ": "05338129000128",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "414205",
+                "DATA_ADMISSAO": "02\/05\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "EPODONTO COMERCIO E SERVICOS LTDA",
+                "CNPJ": "00330676000143",
+                "CIDADE": "NITEROI-RJ",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "16\/11\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "JETON CONSTRUCOES LTDA",
+                "CNPJ": "29886470000186",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "715210",
+                "DATA_ADMISSAO": "01\/10\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "CONSORCIO MARACANA - RIO 2014",
+                "CNPJ": "12375626000161",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "414105",
+                "DATA_ADMISSAO": "14\/12\/2011",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

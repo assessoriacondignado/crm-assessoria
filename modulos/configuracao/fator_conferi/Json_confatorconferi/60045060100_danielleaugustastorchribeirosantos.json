@@ -1,0 +1,214 @@
+{
+    "CADASTRAIS": {
+        "CPF": "60045060100",
+        "NOME": "DANIELLE AUGUSTA STORCH RIBEIRO SANTOS",
+        "NOME_MAE": "IONE STORCH RIBEIRO",
+        "NASCTO": "02\/05\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Feminino",
+        "RG": "6932203",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "",
+        "NIT": "1260762138",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411005",
+        "PROFISSAO": "AUXILIAR DE ESCRITORIO, EM GERAL",
+        "SALARIO": " 4.332,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "6734210110",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "6734114101",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "67999713238",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "67999714806",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "67999718280",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "67999714880",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "16\/01\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "67999895600",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "danielleasrs@gmail.com",
+            "danielleasrs@dourados.br",
+            "danielleasrs@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R BALBINA DE MATOS",
+                "NUMERO": "1700",
+                "COMPLEMENTO": "C JP ITAIPU",
+                "BAIRRO": "JD TROPICAL",
+                "CEP": "79824010",
+                "CIDADE": "DOURADOS",
+                "ESTADO": "MS"
+            },
+            {
+                "LOGRADOURO": "R BENJAMIN CONSTANT",
+                "NUMERO": "1240",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD AMERICA",
+                "CEP": "79824120",
+                "CIDADE": "DOURADOS",
+                "ESTADO": "MS"
+            },
+            {
+                "LOGRADOURO": "R BR DO RIO BRANCO",
+                "NUMERO": "395",
+                "COMPLEMENTO": "BL B AP 32",
+                "BAIRRO": "JD CLIMAX",
+                "CEP": "79820011",
+                "CIDADE": "DOURADOS",
+                "ESTADO": "MS"
+            },
+            {
+                "LOGRADOURO": "R JOAQUIM ALVES TAVEIRA",
+                "NUMERO": "1810",
+                "COMPLEMENTO": "AP  Apartamento  3 BL  Blocos  B",
+                "BAIRRO": "JARDIM AMERICA",
+                "CEP": "79824100",
+                "CIDADE": "DOURADOS",
+                "ESTADO": "MS"
+            },
+            {
+                "LOGRADOURO": "R JOAQUIM ALVES TAVEIRA",
+                "NUMERO": "1810",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA PROGRESSO",
+                "CEP": "79825060",
+                "CIDADE": "DOURADOS",
+                "ESTADO": "MS"
+            },
+            {
+                "LOGRADOURO": "R JOAQUIM ALVES TAVEIRA",
+                "NUMERO": "1810",
+                "COMPLEMENTO": "BLB AP3",
+                "BAIRRO": "",
+                "CEP": "79925000",
+                "CIDADE": "PARANHOS",
+                "ESTADO": "MS"
+            },
+            {
+                "LOGRADOURO": "RUA JOAQUIM ALVES TAVEIRA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM AMERICA",
+                "CEP": "79824100",
+                "CIDADE": "DOURADOS",
+                "ESTADO": "MS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "8104654187",
+                "NOME": "IONE STORCH RIBEIRO",
+                "IDADE": "74 anos",
+                "LOCAL": "DOURADOS\/MS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "97940763172",
+                "NOME": "PATRICK STORCH RIBEIRO",
+                "IDADE": "49 anos",
+                "LOCAL": "DOURADOS\/MS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "SALVADOR AUGUSTO MACIEL RIBEIRO",
+            "IDADE": "",
+            "LOCALIDADE": "DOURADOS\/MS",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "6381294191"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "UNIGRAN EDUCACIONAL",
+            "CNPJ": "03361110000177",
+            "CIDADE": "DOURADOS-MS",
+            "PROFISSAO": "411005",
+            "DATA_ADMISSAO": "01\/08\/1996",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

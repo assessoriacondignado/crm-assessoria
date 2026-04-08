@@ -1,0 +1,264 @@
+{
+    "CADASTRAIS": {
+        "CPF": "21633656896",
+        "NOME": "MARCO AFONSO SIMOES JUNQUEIRA",
+        "NOME_MAE": "MABEL MACHADO SIMOES JUNQUEIRA",
+        "NASCTO": "23\/02\/1980",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "29551436X           ",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "271627760108",
+        "NIT": "13285609930",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142520",
+        "PROFISSAO": "GERENTE DE PROJETOS DE TECNOLOGIA DA INFORMACAO",
+        "SALARIO": " 10.246,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1138771023",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "09\/05\/2020",
+                "TIPO_TEL": "GPON",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1932955724",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1135692539",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "16\/03\/2009",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1136649900",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31987628327",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11951225000",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11951225000",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11972803360",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "16\/07\/2015",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11972803360",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "16\/07\/2015",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marcoeanna@superig.com.br",
+            "date_engenharia@mandic.com.br",
+            "date_logistica@cybertecnica.com",
+            "fiizuka@cybertecnica.com",
+            "marcojnqra@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R AFONSO CESAR DE SIQUEIRA",
+                "NUMERO": "101",
+                "COMPLEMENTO": "AP 81",
+                "BAIRRO": "VL ADYANA",
+                "CEP": "12243710",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CEL QUIRINO",
+                "NUMERO": "2134",
+                "COMPLEMENTO": "AP 34",
+                "BAIRRO": "CAMBUI",
+                "CEP": "13025003",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DOUTOR PAULO VIEIRA",
+                "NUMERO": "222",
+                "COMPLEMENTO": "AP  Apartamento  407",
+                "BAIRRO": "SUMARE",
+                "CEP": "01257000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BARBARA K LOUREIRO",
+                "NUMERO": "33",
+                "COMPLEMENTO": "AP 81",
+                "BAIRRO": "VL EMA",
+                "CEP": "12243040",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ALVES GUIMARAES",
+                "NUMERO": "1292",
+                "COMPLEMENTO": "APTO 33",
+                "BAIRRO": "PINHEIROS",
+                "CEP": "05410001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA FRANCISCO GALVAO FREIRE",
+                "NUMERO": "62",
+                "COMPLEMENTO": "",
+                "BAIRRO": "LOTEAMENTO URBANOVA II",
+                "CEP": "12244479",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ALVES GUIMARAES",
+                "NUMERO": "1292",
+                "COMPLEMENTO": "APT 33",
+                "BAIRRO": "PINHEIROS",
+                "CEP": "05410002",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA AFONSO CESAR DE SIQUEIRA",
+                "NUMERO": "10",
+                "COMPLEMENTO": "APTO 81",
+                "BAIRRO": "VILA ADYANA",
+                "CEP": "12243710",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "4250222691",
+            "NOME": "MABEL MACHADO SIMOES JUNQUEIRA",
+            "IDADE": "78 anos",
+            "LOCAL": "SAO JOSE DOS CAMPOS\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ARLINDO BATISTA BUENO",
+                "IDADE": "",
+                "LOCALIDADE": "SERRA NEGRA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "1628548894"
+            },
+            {
+                "NOME": "MARIA CAROLINA SEGATO KOMNISKI",
+                "IDADE": "",
+                "LOCALIDADE": "SOROCABA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "29566055854"
+            },
+            {
+                "NOME": "OIRAM JOSE BARBOSA DOS SANTOS JUNIOR",
+                "IDADE": "",
+                "LOCALIDADE": "SAO JOSE DOS CAMPOS\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "27869300225"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LABWARE BRASIL SERVICOS DE INFORMATICA LTDA",
+                "CNPJ": "13011238000164",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "123305",
+                "DATA_ADMISSAO": "16\/09\/2013",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CYBERTECNICA SMARTSOLUTIONS EM TECNOLOGIA LTDA.",
+                "CNPJ": "56793383000157",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142520",
+                "DATA_ADMISSAO": "01\/04\/2004",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

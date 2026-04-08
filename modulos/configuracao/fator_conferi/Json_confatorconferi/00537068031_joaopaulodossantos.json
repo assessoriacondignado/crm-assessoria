@@ -1,0 +1,140 @@
+{
+    "CADASTRAIS": {
+        "CPF": "537068031",
+        "NOME": "JOAO PAULO DOS SANTOS",
+        "NOME_MAE": "JANE MERIS DOS SANTOS",
+        "NASCTO": "21\/02\/1987",
+        "IDADE": "39 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "092075980434",
+        "NIT": "20101599964",
+        "ESCOLARIDADE": "SUPERIOR INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "317110",
+        "PROFISSAO": "PROGRAMADOR DE SISTEMAS DE INFORMACAO",
+        "SALARIO": " 4.000,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "5135231798",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "22\/04\/2015",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51995568183",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51996912432",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "51999781227",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "51993810443",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "juau_paulo@terra.com.br",
+            "joaopgremio@gmail.com",
+            "juau_paulo@ibest.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "RUA ALVICIO SCHEFFEL",
+            "NUMERO": "209",
+            "COMPLEMENTO": "",
+            "BAIRRO": "ALEXANDRIA",
+            "CEP": "95630000",
+            "CIDADE": "PAROBE",
+            "ESTADO": "RS"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "537081054",
+            "NOME": "ANA PAULA DOS SANTOS EDINGER",
+            "IDADE": "37 anos",
+            "LOCAL": "PAROBE\/RS",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CWI SOFTWARE LTDA",
+                "CNPJ": "00607819000111",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "317110",
+                "DATA_ADMISSAO": "03\/09\/2012",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CWI SOFTWARE LTDA",
+                "CNPJ": "00607819000200",
+                "CIDADE": "SAO LEOPOLDO-RS",
+                "PROFISSAO": "317110",
+                "DATA_ADMISSAO": "03\/09\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "FRANCISCO HAACK COMERCIAL DE ALIMENTOS",
+            "CNPJ": "01940564000177",
+            "CIDADE": "PAROBE-RS",
+            "QUALIFICACAO": "SÃ³cio Menor (Assistido\/Representado)",
+            "DATA_ENTRADA": "20011128",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

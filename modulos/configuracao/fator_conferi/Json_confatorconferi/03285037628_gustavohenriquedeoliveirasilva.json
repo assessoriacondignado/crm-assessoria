@@ -1,0 +1,229 @@
+{
+    "CADASTRAIS": {
+        "CPF": "3285037628",
+        "NOME": "GUSTAVO HENRIQUE DE OLIVEIRA SILVA",
+        "NOME_MAE": "REGINA CELIA DE OLIVEIRA SILVA",
+        "NASCTO": "18\/01\/1978",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "116698560205",
+        "NIT": "12616581118",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212405",
+        "PROFISSAO": "ANALISTA DE DESENVOLVIMENTO DE SISTEMAS",
+        "SALARIO": " 10.195,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "6130112864",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "23\/04\/2020",
+                "TIPO_TEL": "GPON",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "6135484571",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "05\/02\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "3134917110",
+                "OPERADORA": "TELEMAR\/MG",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "61991326677",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31988010813",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "61981130361",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "67981130038",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "27\/07\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "61983738855",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "28\/05\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "ghsilva@timbrasil.com.br",
+            "henrigu@bol.com.br",
+            "ghos174@bol.com.br",
+            "gustavo.hos@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PEDROGAO PEQUENO",
+                "NUMERO": "2",
+                "COMPLEMENTO": "AP 5 103",
+                "BAIRRO": "PAQUETA",
+                "CEP": "31340300",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R GERALDO COIMBRA",
+                "NUMERO": "174",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "NOSSA SENHORA DO O",
+                "CEP": "34515240",
+                "CIDADE": "SABARA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R HUMBERTO CAVALINI",
+                "NUMERO": "95",
+                "COMPLEMENTO": "AP 608",
+                "BAIRRO": "CENTRO",
+                "CEP": "29015340",
+                "CIDADE": "VITORIA",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "AV PARQUE AGUAS CLARAS",
+                "NUMERO": "0",
+                "COMPLEMENTO": "LT 3825 AVN PQ AG AGUAS CLARAS",
+                "BAIRRO": "NORTE AGUAS CLARAS",
+                "CEP": "71906500",
+                "CIDADE": "BRASILIA",
+                "ESTADO": "DF"
+            },
+            {
+                "LOGRADOURO": "AV PARQUE AGUAS CLARAS QUADRA 301 CONJUNTO 10",
+                "NUMERO": "",
+                "COMPLEMENTO": "AP  Apartamento  702",
+                "BAIRRO": "NORTE (AGUAS CLARAS)",
+                "CEP": "71901090",
+                "CIDADE": "BRASILIA",
+                "ESTADO": "DF"
+            },
+            {
+                "LOGRADOURO": "AVENIDA PARQUE AGUAS CLARAS",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SUL (AGUAS CLARAS)",
+                "CEP": "71930000",
+                "CIDADE": "BRASILIA",
+                "ESTADO": "DF"
+            },
+            {
+                "LOGRADOURO": "AVENIDA PARQUE AGUAS CLARAS",
+                "NUMERO": "3825",
+                "COMPLEMENTO": "AP 702",
+                "BAIRRO": "NORTE (AGUAS CLARAS)",
+                "CEP": "71906500",
+                "CIDADE": "BRASILIA",
+                "ESTADO": "DF"
+            },
+            {
+                "LOGRADOURO": "AVENIDA PARQUE AGUAS CLARAS",
+                "NUMERO": "3825",
+                "COMPLEMENTO": "APT 702",
+                "BAIRRO": "SUL (AGUAS CLARAS)",
+                "CEP": "71930000",
+                "CIDADE": "BRASILIA",
+                "ESTADO": "DF"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "148388779",
+            "NOME": "REGINA CELIA DE OLIVEIRA SILVA",
+            "IDADE": "62 anos",
+            "LOCAL": "BARRA DO PIRAI\/RJ",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "TIM S A",
+                "CNPJ": "02421421013957",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "142105",
+                "DATA_ADMISSAO": "01\/11\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TIM CELULAR S.A.",
+                "CNPJ": "04206050005140",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "15\/06\/2005",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

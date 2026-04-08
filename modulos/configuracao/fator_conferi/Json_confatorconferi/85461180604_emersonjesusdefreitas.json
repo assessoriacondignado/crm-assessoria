@@ -1,0 +1,210 @@
+{
+    "CADASTRAIS": {
+        "CPF": "85461180604",
+        "NOME": "EMERSON JESUS DE FREITAS",
+        "NOME_MAE": "MARIA APARECIDA DE FREITAS",
+        "NASCTO": "18\/12\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "6812165",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "113277490213",
+        "NIT": "1237835173 ",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "724315",
+        "PROFISSAO": "SOLDADOR",
+        "SALARIO": " 3.193,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "3538210151",
+            "OPERADORA": "TELEMAR\/MG",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "35984085230",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "35998834853",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "35998216205",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "henriques81@hotmail.com",
+            "emersonjesus.freitas@oi.cok.br",
+            "emersonjesus.freitas@oi.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ANTONIO BENTO",
+                "NUMERO": "92",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CASCALHO",
+                "CEP": "37205086",
+                "CIDADE": "LAVRAS",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R CASSIMIRO LUIZ DE ABREU",
+                "NUMERO": "130",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CENTRO",
+                "CEP": "37550208",
+                "CIDADE": "POUSO ALEGRE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R CASSIMIRO LUIZ DE ABREU",
+                "NUMERO": "120",
+                "COMPLEMENTO": "S L",
+                "BAIRRO": "CENTRO",
+                "CEP": "37550208",
+                "CIDADE": "POUSO ALEGRE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R R CASSEMIRO L DE ABREU",
+                "NUMERO": "120",
+                "COMPLEMENTO": "CS BRR CENTRO",
+                "BAIRRO": "SANTA LUZIA",
+                "CEP": "37550000",
+                "CIDADE": "POUSO ALEGRE",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "22749730",
+            "NOME": "MARIA APARECIDA DE FREITAS",
+            "IDADE": "61 anos",
+            "LOCAL": "VOLTA REDONDA\/RJ",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ROGERBRAS EMPREENDIMENTOS LTDA",
+                "CNPJ": "11796445000146",
+                "CIDADE": "IJACI-MG",
+                "PROFISSAO": "911305",
+                "DATA_ADMISSAO": "22\/01\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "DINIZ ENGENHARIA SOLUCOES INDUSTRIAIS LTDA",
+                "CNPJ": "36093122000117",
+                "CIDADE": "LAVRAS-MG",
+                "PROFISSAO": "911305",
+                "DATA_ADMISSAO": "23\/20\/2003",
+                "DATA_DEMISSAO": "03\/05\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "WANDERLEI GUALBERTO CPF 005883056-18",
+                "CNPJ": "14528989000115",
+                "CIDADE": "LAVRAS-MG",
+                "PROFISSAO": "724315",
+                "DATA_ADMISSAO": "03\/07\/2023",
+                "DATA_DEMISSAO": "30\/11\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "MUNDIAL FIRE SOLUCOES CONTRA INCENDIO LTDA",
+                "CNPJ": "36342734000104",
+                "CIDADE": "POUSO ALEGRE-MG",
+                "PROFISSAO": "724440",
+                "DATA_ADMISSAO": "01\/03\/2021",
+                "DATA_DEMISSAO": "01\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "SO BANHEIRAS INDUSTRIA E COMERCIO LTDA",
+                "CNPJ": "22258082000101",
+                "CIDADE": "CONGONHAL-MG",
+                "PROFISSAO": "724440",
+                "DATA_ADMISSAO": "01\/01\/2023",
+                "DATA_DEMISSAO": "05\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "MARELLI COFAP DO BRASIL LTDA.",
+                "CNPJ": "02865246000585",
+                "CIDADE": "LAVRAS-MG",
+                "PROFISSAO": "911305",
+                "DATA_ADMISSAO": "08\/01\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ELEVA IN-HAUS MANUTENCAO INDUSTRIAL LTDA",
+                "CNPJ": "02693750001606",
+                "CIDADE": "LAVRAS-MG",
+                "PROFISSAO": "911305",
+                "DATA_ADMISSAO": "03\/09\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "HANE BRASIL LTDA",
+                "CNPJ": "02467134000142",
+                "CIDADE": "BORDA DA MATA-MG",
+                "PROFISSAO": "911305",
+                "DATA_ADMISSAO": "02\/05\/2012",
+                "DATA_DEMISSAO": "20\/07\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

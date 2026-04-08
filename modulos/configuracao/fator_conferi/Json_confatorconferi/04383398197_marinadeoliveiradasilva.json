@@ -1,0 +1,130 @@
+{
+    "CADASTRAIS": {
+        "CPF": "4383398197",
+        "NOME": "MARINA DE OLIVEIRA DA SILVA",
+        "NOME_MAE": "MARIA ALVES DE OLIVEIRA DA SILVA",
+        "NASCTO": "25\/08\/1992",
+        "IDADE": "33 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "21062927127",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411005",
+        "PROFISSAO": "AUXILIAR DE ESCRITORIO, EM GERAL",
+        "SALARIO": " 707,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "6133391466",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "30\/01\/2015",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "60984606722",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "61985171465",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "61984606722",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "enfermeira@esterilize-df.com.br",
+            "marinasilva2508@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "R 14",
+            "NUMERO": "0",
+            "COMPLEMENTO": "LT 370",
+            "BAIRRO": "VL NOVA SAO SEBASTIAO",
+            "CEP": "71693117",
+            "CIDADE": "BRASILIA",
+            "ESTADO": "DF"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1218211881",
+            "NOME": "MARIA ALVES DE OLIVEIRA DA SILVA",
+            "IDADE": "80 anos",
+            "LOCAL": "LUPERCIO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ESTERILIZE - PRESTACAO DE SERVICOS DE ESTERILIZACAO LTDA",
+                "CNPJ": "26747677000181",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "223505",
+                "DATA_ADMISSAO": "24\/08\/2017",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "NUTRIBASE ALIMENTOS LTDA",
+                "CNPJ": "19217375000136",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "01\/11\/2013",
+                "DATA_DEMISSAO": "30\/10\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "NUTRIBASE NUTRIMENTOS LTDA",
+                "CNPJ": "01912125000150",
+                "CIDADE": "BRASILIA-DF",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "01\/10\/2011",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

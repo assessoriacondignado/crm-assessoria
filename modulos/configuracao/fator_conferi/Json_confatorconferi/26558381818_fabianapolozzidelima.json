@@ -1,0 +1,238 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26558381818",
+        "NOME": "FABIANA POLOZZI DE LIMA",
+        "NOME_MAE": "VERA LUCIA DE OLIVEIRA",
+        "NASCTO": "02\/07\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "274198610141",
+        "NIT": "12582833268",
+        "ESCOLARIDADE": "SUPERIOR INCOMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "317210",
+        "PROFISSAO": "TECNICO DE APOIO AO USUARIO DE INFORMATICA (HELPDESK)",
+        "SALARIO": " 1.020,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1938263449",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1938264333",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1938362507",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19974029939",
+                "OPERADORA": "NEXTEL",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19974224297",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19994244947",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19991131470",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "19994109158",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "fabianapolozzi@hotmail.com",
+            "lf.lima1975@uol.com.br",
+            "fabiana-polozzi@hotmail.com",
+            "fpolozzidelima@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOSE SABO",
+                "NUMERO": "425",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JOAO XXIII",
+                "CEP": "13283272",
+                "CIDADE": "VINHEDO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE SABO",
+                "NUMERO": "54090",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JOAO XXIII",
+                "CEP": "13283272",
+                "CIDADE": "VINHEDO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PAPA PIO DOZE",
+                "NUMERO": "1005",
+                "COMPLEMENTO": "C 2",
+                "BAIRRO": "JOAO XXIII",
+                "CEP": "13283142",
+                "CIDADE": "VINHEDO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PAPA PIO DOZE",
+                "NUMERO": "1007",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JOAO XXIII",
+                "CEP": "13283142",
+                "CIDADE": "VINHEDO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA PAPA PIO X",
+                "NUMERO": "99",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "JOAO XXIII",
+                "CEP": "13280000",
+                "CIDADE": "VINHEDO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "10900381",
+                "NOME": "VERA LUCIA DE OLIVEIRA",
+                "IDADE": "41 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "43636207814",
+                "NOME": "NICOLE POLOZZI LIMA",
+                "IDADE": "26 anos",
+                "LOCAL": "VINHEDO\/SP",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "50469144840",
+                "NOME": "NICOLAS POLOZZI LIMA",
+                "IDADE": "16 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ATOS BRASIL LTDA.",
+                "CNPJ": "64943665000111",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212420",
+                "DATA_ADMISSAO": "01\/02\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ATOS SERVICOS DE TECNOLOGIA DA INFORMACAO DO BRASIL LTDA.",
+                "CNPJ": "02804955000127",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "18\/05\/2015",
+                "DATA_DEMISSAO": "31\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "TECNOCOMP TECNOLOGIA E SERVICOS LTDA",
+                "CNPJ": "54892252000100",
+                "CIDADE": "SAO BERNARDO DO CAMPO-SP",
+                "PROFISSAO": "317110",
+                "DATA_ADMISSAO": "01\/07\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "SPDM - ASSOCIACAO PAULISTA PARA O DESENVOLVIMENTO DA MEDICINA",
+                "CNPJ": "61699567001164",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "317210",
+                "DATA_ADMISSAO": "11\/20\/1905",
+                "DATA_DEMISSAO": "14\/05\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

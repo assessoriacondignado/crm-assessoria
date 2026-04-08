@@ -1,0 +1,169 @@
+{
+    "CADASTRAIS": {
+        "CPF": "12058968808",
+        "NOME": "CESAR DANILO LOURENCO",
+        "NOME_MAE": "VERA LUCIA CINTRA LOURENCO",
+        "NASCTO": "12\/10\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "232033910191",
+        "NIT": "1246791649",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "313120",
+        "PROFISSAO": "TECNICO DE MANUTENCAO ELETRICA",
+        "SALARIO": " 15.981,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1135689102",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1932239598",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19999539688",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19997699273",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19981913275",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "19991925756",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "19993798578",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "cesar.dlourenco@yahoo.com.br",
+            "hermao@pop.com.br",
+            "cesar.lourenco@unilever.com",
+            "hermao1@pop.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "RUA PROF DIOMAR FERNANDES RALD",
+                "NUMERO": "111",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD SAO FRANCISC",
+                "CEP": "13272153",
+                "CIDADE": "VALINHOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA SAO PAULO",
+                "NUMERO": "355",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "VL SANTANA",
+                "CEP": "13274070",
+                "CIDADE": "VALINHOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "21984734881",
+                "NOME": "VERA LUCIA CINTRA LOURENCO",
+                "IDADE": "77 anos",
+                "LOCAL": "",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "14987152819",
+                "NOME": "MARCOS FERNANDO LOURENCO",
+                "IDADE": "56 anos",
+                "LOCAL": "VALINHOS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "25036463870",
+                "NOME": "CLAUDIA FERNANDA LOURENCO COZARO",
+                "IDADE": "52 anos",
+                "LOCAL": "VALINHOS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "UNILEVER BRASIL INDUSTRIAL LTDA",
+            "CNPJ": "01615814006487",
+            "CIDADE": "VINHEDO-SP",
+            "PROFISSAO": "313120",
+            "DATA_ADMISSAO": "22\/10\/1996",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

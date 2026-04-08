@@ -1,0 +1,193 @@
+{
+    "CADASTRAIS": {
+        "CPF": "72017252204",
+        "NOME": "DARLESON FIGUEIRA DE LIMA",
+        "NOME_MAE": "ROSENILDA OLIVEIRA FIGUEIRA",
+        "NASCTO": "10\/09\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "13033701026",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "731150",
+        "PROFISSAO": "MONTADOR DE EQUIPAMENTOS ELETRONICOS",
+        "SALARIO": " 1.239,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9335961125",
+            "OPERADORA": "TELEMAR\/PA",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92982295278",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "15\/04\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "92991986621",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "darlesonlima@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JANAUACA",
+                "NUMERO": "742",
+                "COMPLEMENTO": "PX GRAFICA GRAN",
+                "BAIRRO": "S JOSE OPERARIO",
+                "CEP": "69085240",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV RUI BARBOSA",
+                "NUMERO": "2915",
+                "COMPLEMENTO": "2915",
+                "BAIRRO": "LAGUINHO",
+                "CEP": "68041142",
+                "CIDADE": "SANTAREM",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "R TRES",
+                "NUMERO": "4",
+                "COMPLEMENTO": "SAO JOSE II",
+                "BAIRRO": "S JOSE OPERARIO",
+                "CEP": "69086040",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R PRINCIPAL",
+                "NUMERO": "42",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "68119000",
+                "CIDADE": "PIRAQUARA",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "RUA RIO URUPADI",
+                "NUMERO": "187",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SAO JOSE OPERARIO",
+                "CEP": "69085277",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AVENIDA RUI BARBOSA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALDEIA",
+                "CEP": "68040030",
+                "CIDADE": "SANTAREM",
+                "ESTADO": "PA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "20023901268",
+                "NOME": "ROSENILDA OLIVEIRA FIGUEIRA",
+                "IDADE": "67 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "68141599291",
+                "NOME": "MAXIMO FIGUEIRA DE LIMA",
+                "IDADE": "45 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COEMA COMERCIO DE PRODUTOS ALIMENTICIOS LTDA",
+                "CNPJ": "20085322000600",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "517425",
+                "DATA_ADMISSAO": "22\/06\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SUPERMERCADOS DB LTDA",
+                "CNPJ": "22991939001846",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "521140",
+                "DATA_ADMISSAO": "05\/10\/2017",
+                "DATA_DEMISSAO": "28\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SUPERMERCADOS DB LTDA",
+                "CNPJ": "22991939003385",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "21\/10\/2020",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "DIGIBOARD ELETRONICA DA AMAZONIA LTDA",
+                "CNPJ": "07448261000118",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "731150",
+                "DATA_ADMISSAO": "11\/09\/2013",
+                "DATA_DEMISSAO": "23\/08\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "PAM INDUSTRIA DE PLASTICOS INJETADOS LTDA",
+                "CNPJ": "04413977000191",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "414105",
+                "DATA_ADMISSAO": "04\/01\/2010",
+                "DATA_DEMISSAO": "27\/09\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

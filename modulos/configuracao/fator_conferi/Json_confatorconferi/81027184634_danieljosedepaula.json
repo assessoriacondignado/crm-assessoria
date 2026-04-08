@@ -1,0 +1,157 @@
+{
+    "CADASTRAIS": {
+        "CPF": "81027184634",
+        "NOME": "DANIEL JOSE DE PAULA",
+        "NOME_MAE": "MARIA JOSE DE PAULA",
+        "NASCTO": "31\/08\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "099460810256",
+        "NIT": "12419835273",
+        "ESCOLARIDADE": "PRIMEIRO GRAU (GINASIO)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "141205",
+        "PROFISSAO": "GERENTE DE PRODUCAO E OPERACOES",
+        "SALARIO": " 2.003,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "3136428655",
+            "OPERADORA": "TELEMAR\/MG",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31910427023",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31987012781",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "25\/10\/2017",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "31988558946",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "14\/10\/2008",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "31988608846",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "09\/09\/2013",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "31997267897",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "danieljpaula@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R TRES",
+                "NUMERO": "223",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DONA ROSARINHA",
+                "CEP": "33080318",
+                "CIDADE": "SANTA LUZIA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R DOIS",
+                "NUMERO": "128",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DONA ROSARINHA",
+                "CEP": "33080315",
+                "CIDADE": "SANTA LUZIA",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R PE PINA",
+                "NUMERO": "5",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "35140000",
+                "CIDADE": "TARUMIRIM",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "16400704",
+            "NOME": "MARIA JOSE DE PAULA",
+            "IDADE": "56 anos",
+            "LOCAL": "BELEM\/PA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "R CERVELLINI REVESTIMENTOS LTDA",
+                "CNPJ": "44865657001088",
+                "CIDADE": "CONTAGEM-MG",
+                "PROFISSAO": "342315",
+                "DATA_ADMISSAO": "14\/03\/2016",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MADECAUS COMERCIAL LTDA",
+                "CNPJ": "21435599000247",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "141205",
+                "DATA_ADMISSAO": "01\/03\/2011",
+                "DATA_DEMISSAO": "03\/03\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

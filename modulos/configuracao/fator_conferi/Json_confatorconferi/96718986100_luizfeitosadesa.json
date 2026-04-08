@@ -1,0 +1,174 @@
+{
+    "CADASTRAIS": {
+        "CPF": "96718986100",
+        "NOME": "LUIZ FEITOSA DE SA",
+        "NOME_MAE": "FRANCISCA ANTONIA DE SA",
+        "NASCTO": "19\/11\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "2231640",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "025623941503",
+        "NIT": "13060320895",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "811770",
+        "PROFISSAO": "MOLDADOR DE PLASTICO POR INJECAO",
+        "SALARIO": " 1.775,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1120652166",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1141094177",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11949632718",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "11\/01\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11954881288",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "30\/06\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CAMPANTE",
+                "NUMERO": "821",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL INDEPENDENCIA",
+                "CEP": "04224010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MIN RIBEIRO DA COSTA",
+                "NUMERO": "597",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DOS CASA",
+                "CEP": "09840560",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "QUADRA 3A",
+                "NUMERO": "5",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VLE DO PEDREGAL",
+                "CEP": "72860788",
+                "CIDADE": "NOVO GAMA",
+                "ESTADO": "GO"
+            },
+            {
+                "LOGRADOURO": "R NEBLINA",
+                "NUMERO": "31",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CATA PRETA",
+                "CEP": "09139070",
+                "CIDADE": "SANTO ANDRE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R GERALDA P B NOVA",
+                "NUMERO": "4",
+                "COMPLEMENTO": "",
+                "BAIRRO": "D CASA",
+                "CEP": "09841325",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA GERALDA PAIXAO BOA NOVA",
+                "NUMERO": "5",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DOS CASA",
+                "CEP": "09841325",
+                "CIDADE": "SAO BERNARDO DO CAMPO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "13585151825",
+            "NOME": "FRANCISCA ANTONIA DE SA",
+            "IDADE": "55 anos",
+            "LOCAL": "",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "5M COMERCIO ATACADISTA E VAREJISTA DE ALIMENTOS LTDA.",
+                "CNPJ": "10250585000828",
+                "CIDADE": "SAO BERNARDO DO CAMPO-SP",
+                "PROFISSAO": "782220",
+                "DATA_ADMISSAO": "05\/02\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MTX INDUSTRIA E COMERCIO LTDA",
+                "CNPJ": "04513277000179",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "811770",
+                "DATA_ADMISSAO": "01\/10\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "ELASTOFILM PARTICIPACOES LTDA",
+                "CNPJ": "58863382000167",
+                "CIDADE": "OSASCO-SP",
+                "PROFISSAO": "811770",
+                "DATA_ADMISSAO": "01\/08\/2001",
+                "DATA_DEMISSAO": "27\/11\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

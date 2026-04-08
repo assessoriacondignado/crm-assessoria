@@ -1,0 +1,260 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25773163802",
+        "NOME": "LETICIA Z MALAVOLTA",
+        "NOME_MAE": "MARIA TERESA ZAVITOSKI MALAVOLTA",
+        "NASCTO": "11\/01\/1978",
+        "IDADE": "48 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "268654870159",
+        "NIT": "13479526852",
+        "ESCOLARIDADE": "ANALFABETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "111415",
+        "PROFISSAO": "CHEFE DE ASSESSORIA TECNICA DO SERVICO PUBLICO MUNICIPAL",
+        "SALARIO": " 1.511,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1137264141",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1123895177",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "05\/04\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1123895177",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "05\/04\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1137350130",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1137350130",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11997784264",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11997784264",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11961843568",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11961843615",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "11961844132",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "letu@terra.com.br",
+            "lmalavolta@sti.com.br",
+            "leticiamalavolta@gmail.com",
+            "leticia.malavolta@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV CORIFEU DE AZEVEDO MARQUES",
+                "NUMERO": "1750",
+                "COMPLEMENTO": "AP 23",
+                "BAIRRO": "BUTANTA",
+                "CEP": "05582001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AL BR DE LIMEIRA",
+                "NUMERO": "1196",
+                "COMPLEMENTO": "AP 1 B",
+                "BAIRRO": "CPO ELISEOS",
+                "CEP": "01202002",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV GUSTAVO BERTHIER",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ADALGISA",
+                "CEP": "06030140",
+                "CIDADE": "OSASCO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DOUTOR JOAQUIM GOMES DE SOUZA",
+                "NUMERO": "187",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM PINHEIROS",
+                "CEP": "05596100",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "ALAMEDA BARAO DE LIMEIRA",
+                "NUMERO": "1196",
+                "COMPLEMENTO": "AP 1 B",
+                "BAIRRO": "CAMPOS ELISEOS",
+                "CEP": "01202001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA ANDREA PALLADIO",
+                "NUMERO": "94",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM CENTENARIO",
+                "CEP": "05365170",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DOUTOR JOAQUIM GOMES DE SOUZA",
+                "NUMERO": "18",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM PINHEIROS",
+                "CEP": "05596100",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "21354476840",
+            "NOME": "PEDRO ZAVITOSKI MALAVOLTA",
+            "IDADE": "44 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SERVICO SOCIAL DO COMERCIO - SESC - ADMINISTRACAO REGIONAL NO ESTADO DE SAO PAULO",
+                "CNPJ": "03667884001445",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "233225",
+                "DATA_ADMISSAO": "12\/04\/2016",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SERVICO SOCIAL DO COMERCIO - SESC - ADMINISTRACAO REGIONAL NO ESTADO DE SAO PAULO",
+                "CNPJ": "03667884001100",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "371410",
+                "DATA_ADMISSAO": "12\/04\/2016",
+                "DATA_DEMISSAO": "01\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "CONSELHO REGIONAL DE PSICOLOGIA DA 6 REGIAO - CRP-06",
+                "CNPJ": "37115433000100",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212310",
+                "DATA_ADMISSAO": "01\/04\/2015",
+                "DATA_DEMISSAO": "01\/04\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SECRETARIA MUNICIPAL DE DIREITOS HUMANOS E CIDADANIA",
+                "CNPJ": "07420613000127",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "111415",
+                "DATA_ADMISSAO": "01\/04\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

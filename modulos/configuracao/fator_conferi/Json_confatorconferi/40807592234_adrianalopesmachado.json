@@ -1,0 +1,116 @@
+{
+    "CADASTRAIS": {
+        "CPF": "40807592234",
+        "NOME": "ADRIANA LOPES MACHADO",
+        "NOME_MAE": "MARIA DAS GRACAS LOPES MACHADO",
+        "NASCTO": "03\/10\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "006003462305",
+        "NIT": "1242095330",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "421125",
+        "PROFISSAO": "OPERADOR DE CAIXA",
+        "SALARIO": " 2.414,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1932912901",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1932425960",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "08\/07\/2006",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "69995720619",
+            "OPERADORA": "",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R FRANCISCO CEARA BARBOSA",
+                "NUMERO": "270",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CH CAMPOS DOS AMARAIS",
+                "CEP": "13082030",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA JOAQUIM ULISSES SARMENTO",
+                "NUMERO": "530",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM AURELIA",
+                "CEP": "13033080",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "2916420479",
+            "NOME": "MARIA DAS GRACAS LOPES MACHADO",
+            "IDADE": "49 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SENDAS DISTRIBUIDORA S\/A",
+                "CNPJ": "06057223054506",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "421125",
+                "DATA_ADMISSAO": "27\/12\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CARREFOUR COMERCIO E INDUSTRIA LTDA",
+                "CNPJ": "45543915000505",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "21\/20\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

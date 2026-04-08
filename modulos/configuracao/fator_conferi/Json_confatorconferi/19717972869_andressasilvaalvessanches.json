@@ -1,0 +1,171 @@
+{
+    "CADASTRAIS": {
+        "CPF": "19717972869",
+        "NOME": "ANDRESSA SILVA ALVES SANCHES",
+        "NOME_MAE": "IVONE DA SILVA ALVES SANCHES",
+        "NASCTO": "22\/06\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "283611300183",
+        "NIT": "12619097896",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411010",
+        "PROFISSAO": "ASSISTENTE ADMINISTRATIVO",
+        "SALARIO": " 14.026,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1138334317",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11914247677",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11996415222",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11999796506",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "19997411744",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "andressa.silva1977@gmail.com",
+            "asanches@siemens.com.br",
+            "andressa.sanches@siemens.com",
+            "andas@lenovo.com",
+            "sanches.andressa@ig.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MIGUEL GARCIA LUCHINI",
+                "NUMERO": "134",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ DA REPRESA",
+                "CEP": "13214586",
+                "CIDADE": "JUNDIAI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R GONCALO COELHO",
+                "NUMERO": "22",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL NORMA",
+                "CEP": "13327312",
+                "CIDADE": "SALTO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JUNDIAI",
+                "NUMERO": "1185",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVA MATAO",
+                "CEP": "15990510",
+                "CIDADE": "MATAO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "COND FAZENDA PALMEIRAS IMPERIAIS",
+                "NUMERO": "183",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "ITAPECERICA",
+                "CEP": "13328301",
+                "CIDADE": "SALTO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "28332481805",
+                "NOME": "IVONE DA SILVA ALVES SANCHES",
+                "IDADE": "75 anos",
+                "LOCAL": "VINHEDO\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "18129524813",
+                "NOME": "MELISSA DA SILVA ALVES SANCHES",
+                "IDADE": "52 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LENOVO TECNOLOGIA (BRASIL) LIMITADA",
+                "CNPJ": "07275920000161",
+                "CIDADE": "INDAIATUBA-SP",
+                "PROFISSAO": "142605",
+                "DATA_ADMISSAO": "14\/01\/2008",
+                "DATA_DEMISSAO": "03\/09\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LENOVO TECNOLOGIA (BRASIL) LIMITADA",
+                "CNPJ": "07275920000595",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "14\/01\/2008",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

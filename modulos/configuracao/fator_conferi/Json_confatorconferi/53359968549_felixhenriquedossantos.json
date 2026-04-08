@@ -1,0 +1,203 @@
+{
+    "CADASTRAIS": {
+        "CPF": "53359968549",
+        "NOME": "FELIX HENRIQUE DOS SANTOS",
+        "NOME_MAE": "MARIA HELENA DOS SANTOS",
+        "NASCTO": "17\/05\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "013374402100",
+        "NIT": "12424424308",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "212405",
+        "PROFISSAO": "ANALISTA DE DESENVOLVIMENTO DE SISTEMAS",
+        "SALARIO": " 4.082,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7932187887",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "7930271713",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "7935221706",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7932435507",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "79991394335",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79988119650",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79988357827",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "79991338429",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "henriquefhs@yahoo.com",
+            "henriquefhs@yahoo.com.br",
+            "henriquefhs@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R B",
+                "NUMERO": "178",
+                "COMPLEMENTO": "RES MIRASOL Q1 LT13 MIRASO178",
+                "BAIRRO": "ZONA DE EXPANSAO ARUANA",
+                "CEP": "49000293",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R JOAO PASSOS DE SOUZA",
+                "NUMERO": "107",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALAGOAS",
+                "CEP": "49200000",
+                "CIDADE": "ESTANCIA",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R SANTA PAULINA DO CORACAO AGONIZANTE DE JESUS",
+                "NUMERO": "178",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ZONA DE EXPANSAO (ARUANA)",
+                "CEP": "49000798",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1571559",
+            "NOME": "MARIA HELENA DOS SANTOS",
+            "IDADE": "65 anos",
+            "LOCAL": "TOBIAS BARRETO\/SE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "MMS SOLUCOES E CONSULTORIA LTDA",
+                "CNPJ": "32031370000182",
+                "CIDADE": "SAO CRISTOVAO-SE",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "14\/08\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "APPLE TECNOLOGIA INFORMATICA LTDA",
+                "CNPJ": "07442969000161",
+                "CIDADE": "SAO CRISTOVAO-SE",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "21\/07\/2014",
+                "DATA_DEMISSAO": "24\/06\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "MIKERINOS TECNOLOGIA LTDA",
+                "CNPJ": "04121809000122",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "21\/07\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "INFOX TECNOLOGIA DA INFORMACAO LTDA",
+                "CNPJ": "15123946000112",
+                "CIDADE": "SAO CRISTOVAO-SE",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "01\/03\/2010",
+                "DATA_DEMISSAO": "11\/07\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

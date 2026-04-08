@@ -1,0 +1,287 @@
+{
+    "CADASTRAIS": {
+        "CPF": "28284885867",
+        "NOME": "RENATO JOSE MARIN",
+        "NOME_MAE": "SILVIA HELENA MARIN",
+        "NASCTO": "17\/12\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "30314791X           ",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "236167370159",
+        "NIT": "12639313179",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "233110",
+        "PROFISSAO": "PROFESSOR DE DESENHO TECNICO",
+        "SALARIO": " 1.609,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1135432757",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1735424592",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1735421287",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1128797476",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1735422493",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "17992287920",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "17996225840",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "17991875470",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "kakkaroto501@bol.com.br",
+            "isabeli1063@hotmail.com",
+            "renmarin@hotmail.com",
+            "renatojmarin@hotmail.com",
+            "renmarin@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R S SEBASTIAO",
+                "NUMERO": "153",
+                "COMPLEMENTO": "A",
+                "BAIRRO": "CENTRO",
+                "CEP": "14960040",
+                "CIDADE": "NOVO HORIZONTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R TEN FERREIRA",
+                "NUMERO": "87",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "14960044",
+                "CIDADE": "NOVO HORIZONTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CUSTODIO CARNEIRO NETO",
+                "NUMERO": "280",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "JD ALVORADA",
+                "CEP": "14967228",
+                "CIDADE": "NOVO HORIZONTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R EUCLIDES RODEGUER",
+                "NUMERO": "135",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD ACAPULCO",
+                "CEP": "14962302",
+                "CIDADE": "NOVO HORIZONTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV CEL JUNQUEIRA",
+                "NUMERO": "640",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "14960046",
+                "CIDADE": "NOVO HORIZONTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV GUIDO DELLA TOGNA",
+                "NUMERO": "498",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD AEROPORTO",
+                "CEP": "14962400",
+                "CIDADE": "NOVO HORIZONTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "PC NOVE DE JULHO",
+                "NUMERO": "67",
+                "COMPLEMENTO": "AP 22",
+                "BAIRRO": "CENTRO",
+                "CEP": "14960042",
+                "CIDADE": "NOVO HORIZONTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA SAO SEBASTIAO",
+                "NUMERO": "153",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "CENTRO",
+                "CEP": "14960000",
+                "CIDADE": "NOVO HORIZONTE",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "6609313890",
+                "NOME": "SILVIA HELENA MARIN",
+                "IDADE": "68 anos",
+                "LOCAL": "NOVO HORIZONTE\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "42463065842",
+                "NOME": "CAROLINA MARIN CRISTOVAO",
+                "IDADE": "34 anos",
+                "LOCAL": "NOVO HORIZONTE\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "MARIA JOSE BEZERRA",
+            "IDADE": "",
+            "LOCALIDADE": "SAO PAULO\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "11577861892"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "A.L. PROCOPIO DE OLIVEIRA CURSOS PREPARATORIOS LTDA",
+                "CNPJ": "42454244000194",
+                "CIDADE": "SAO JOSE DO RIO PRETO-SP",
+                "PROFISSAO": "234624",
+                "DATA_ADMISSAO": "29\/01\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SISTEMA EDUCACIONAL SANTA RITA LTDA",
+                "CNPJ": "08842557000181",
+                "CIDADE": "NOVO HORIZONTE-SP",
+                "PROFISSAO": "234810",
+                "DATA_ADMISSAO": "24\/01\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CENTRO ESTADUAL DE EDUCACAO TECNOLOGICA PAULA SOUZA",
+                "CNPJ": "62823257021289",
+                "CIDADE": "NOVO HORIZONTE-SP",
+                "PROFISSAO": "232115",
+                "DATA_ADMISSAO": "29\/01\/2014",
+                "DATA_DEMISSAO": "{Ã±\/{Ã±\/2023",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "SAO PAULO SECRETARIA DA EDUCACAO",
+                "CNPJ": "46384111012237",
+                "CIDADE": "CATANDUVA-SP",
+                "PROFISSAO": "331205",
+                "DATA_ADMISSAO": "16\/02\/2007",
+                "DATA_DEMISSAO": "{Ã±\/{Ã±\/2023",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "CENTRO ESTADUAL DE EDUCACAO TECNOLOGICA PAULA SOUZA",
+                "CNPJ": "62823257000109",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "233110",
+                "DATA_ADMISSAO": "29\/01\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "MARIO HENRIQUE MARCONDES PEREIRA",
+                "CNPJ": "07212755000107",
+                "CIDADE": "NOVO HORIZONTE-SP",
+                "PROFISSAO": "231330",
+                "DATA_ADMISSAO": "01\/12\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

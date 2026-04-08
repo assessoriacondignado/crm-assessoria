@@ -1,0 +1,144 @@
+{
+    "CADASTRAIS": {
+        "CPF": "84202998391",
+        "NOME": "MARCIA MABEL SILVA DE SOUSA",
+        "NOME_MAE": "MARIA MEDEIROS DA SILVA",
+        "NASCTO": "20\/08\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "020378581503",
+        "NIT": "1251063325",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "410235",
+        "PROFISSAO": "SUPERVISOR DE TESOURARIA",
+        "SALARIO": " 9.740,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8631311234",
+            "OPERADORA": "TELEMAR\/PI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "86994599774",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "86999875802",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "tesouraria@hsmaria.com.br",
+            "mabelmarcia@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "CJ RESIDENCIAL FORTES",
+                "NUMERO": "24",
+                "COMPLEMENTO": "QA",
+                "BAIRRO": "COMPRIDA",
+                "CEP": "64076115",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "R DOZE DE OUTUBRO",
+                "NUMERO": "14",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ PIAUI",
+                "CEP": "64025510",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "Q DEZ",
+                "NUMERO": "1",
+                "COMPLEMENTO": "Q 12 C 14",
+                "BAIRRO": "RENASCENCA",
+                "CEP": "64082010",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "R SRG R SILVA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "Q A C 24 24",
+                "BAIRRO": "CIDADE INDUSTRIAL",
+                "CEP": "64012001",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "RUA MONSENHOR ZAUL PEDREIRA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "QU A CA 24",
+                "BAIRRO": "EXTREMA",
+                "CEP": "64076448",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "27655431",
+            "NOME": "MARIA MEDEIROS DA SILVA",
+            "IDADE": "90 anos",
+            "LOCAL": "ESTEIO\/RS",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "MARISIA DE LIMA SOUZA",
+            "IDADE": "",
+            "LOCALIDADE": "",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "201964740"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "HOSPITAL MED IMAGEM S.A",
+            "CNPJ": "63326243000134",
+            "CIDADE": "TERESINA-PI",
+            "PROFISSAO": "410235",
+            "DATA_ADMISSAO": "01\/12\/2009",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,293 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25634634830",
+        "NOME": "GILSON NAKAZATO",
+        "NOME_MAE": "SETSUKO NAKAZATO",
+        "NASCTO": "05\/04\/1976",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "226497938",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "216642650159",
+        "NIT": "1364758381",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "317110",
+        "PROFISSAO": "PROGRAMADOR DE SISTEMAS DE INFORMACAO",
+        "SALARIO": " 10.878,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1136830348",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1136830348",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1134480248",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "18\/09\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1134480248",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "18\/09\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11973687181",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11973687181",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11999697287",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11972080787",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11982048086",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "gil.nak@gmail.com",
+            "contato@gilnak.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R JOAO CRUDO",
+                "NUMERO": "300",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CENTRO",
+                "CEP": "06090000",
+                "CIDADE": "OSASCO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PAULO OROZIMBO",
+                "NUMERO": "675",
+                "COMPLEMENTO": "CJ 43",
+                "BAIRRO": "CAMBUCI",
+                "CEP": "01535001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SANTINA DA COSTA",
+                "NUMERO": "131",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA CAMPESINA",
+                "CEP": "06023150",
+                "CIDADE": "OSASCO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA GENERAL MAC ARTHUR",
+                "NUMERO": "170",
+                "COMPLEMENTO": "BLOCO 4 APT 12",
+                "BAIRRO": "VILA LAGEADO",
+                "CEP": "05338000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MADRE JOANA ZONCA",
+                "NUMERO": "40",
+                "COMPLEMENTO": "",
+                "BAIRRO": "QUITAUNA",
+                "CEP": "06186230",
+                "CIDADE": "OSASCO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "20585370842",
+                "NOME": "SETSUKO NAKAZATO",
+                "IDADE": "78 anos",
+                "LOCAL": "VARGEM GRANDE PAULISTA\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "22038965153",
+                "NOME": "MARCOS VINICIUS NAKASATO",
+                "IDADE": "67 anos",
+                "LOCAL": "CAMPO GRANDE\/MS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "22039015191",
+                "NOME": "VITOR HUGO NAKAZATO",
+                "IDADE": "69 anos",
+                "LOCAL": "CAMPO GRANDE\/MS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "27841834837",
+                "NOME": "GINA FABIA NAKAZATO SUGIMURA",
+                "IDADE": "46 anos",
+                "LOCAL": "COTIA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "28518837120",
+                "NOME": "ALVARO LUIZ NAKAZATO",
+                "IDADE": "62 anos",
+                "LOCAL": "CAMPO GRANDE\/MS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "29124526860",
+                "NOME": "FABIO SERGIO NAKAZATO",
+                "IDADE": "48 anos",
+                "LOCAL": "OSASCO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "GIL TANAKA SPINEL",
+                "IDADE": "",
+                "LOCALIDADE": "TUPA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "21972822802"
+            },
+            {
+                "NOME": "MARLENE JORGE DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "JUIZ DE FORA\/MG",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "463032608"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "HOGARTH WORLDWIDE PUBLICIDADE BRASIL LTDA.",
+                "CNPJ": "18009420000102",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "317110",
+                "DATA_ADMISSAO": "01\/10\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FULANO MARKETING E TECNOLOGIA LTDA.",
+                "CNPJ": "03543289000183",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "317110",
+                "DATA_ADMISSAO": "03\/10\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SAM TRANSMEDIA PRODUTORA LTDA.",
+                "CNPJ": "17765426000139",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "317120",
+                "DATA_ADMISSAO": "01\/06\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "FLAGCX NETWORK PARTICIPACOES LTDA",
+                "CNPJ": "04620120000142",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "317120",
+                "DATA_ADMISSAO": "11\/20\/1910",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "ESTILO EDICOES E PRODUCOES LTDA",
+            "CNPJ": "01921149000176",
+            "CIDADE": "OSASCO-SP",
+            "QUALIFICACAO": "SÃ³cio",
+            "DATA_ENTRADA": "19970514",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

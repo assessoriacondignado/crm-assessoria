@@ -1,0 +1,256 @@
+{
+    "CADASTRAIS": {
+        "CPF": "28929699804",
+        "NOME": "ALESSANDRO FERNANDES LIMA CAVALARO",
+        "NOME_MAE": "MARGARIDA FERNANDES DA SILVA CAVALARO",
+        "NASCTO": "06\/05\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "289153074",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12503118307",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1233519995",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1239526229",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1239526229",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1239272036",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1139564358",
+                "OPERADORA": "GLOBAL CROSSING COMUNICACOES D",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "12991738169",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12991801568",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12991804611",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12997394596",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "12988325125",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "alimacava@gmail.com",
+            "alessa289px@lexxanet.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV ORUAL SALVADOR",
+                "NUMERO": "740",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD STA MARIA",
+                "CEP": "12328470",
+                "CIDADE": "JACAREI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV DIOGO FONTES",
+                "NUMERO": "454",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE NOVA JACAREI",
+                "CEP": "12325080",
+                "CIDADE": "JACAREI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV BRG FARIA LIMA",
+                "NUMERO": "10",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ MARTIM CERERE",
+                "CEP": "12227000",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV BRG FARIA LIMA",
+                "NUMERO": "2170",
+                "COMPLEMENTO": "EMPRESA",
+                "BAIRRO": "PUTIM",
+                "CEP": "12227901",
+                "CIDADE": "SAO JOSE DOS CAMPOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ALF POLI",
+                "NUMERO": "3354",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PAROLIN",
+                "CEP": "80220051",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R DOS FERROVIARIOS",
+                "NUMERO": "392",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD MESQUITA",
+                "CEP": "12327683",
+                "CIDADE": "JACAREI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV JORGE MALAQUIAS PEREIRA",
+                "NUMERO": "65",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD NOVA ESPERANCA",
+                "CEP": "12324450",
+                "CIDADE": "JACAREI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV DIOGO FONTES",
+                "NUMERO": "191",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CIDADE NOVA JACAREI",
+                "CEP": "12325080",
+                "CIDADE": "JACAREI",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "21811013880",
+                "NOME": "RAFAEL FERNANDES CAVALARO",
+                "IDADE": "45 anos",
+                "LOCAL": "JACAREI\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "32531563890",
+                "NOME": "NATALIA FERNANDES CAVALARO BARBOSA",
+                "IDADE": "41 anos",
+                "LOCAL": "JACAREI\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "EMBRAER S.A.",
+                "CNPJ": "07689002001070",
+                "CIDADE": "TAUBATE-SP",
+                "PROFISSAO": "725510",
+                "DATA_ADMISSAO": "01\/01\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "YABORA INDUSTRIA AERONAUTICA S.A.",
+                "CNPJ": "30657250000240",
+                "CIDADE": "TAUBATE-SP",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "99\/19\/1901",
+                "DATA_DEMISSAO": "31\/12\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

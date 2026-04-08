@@ -1,0 +1,244 @@
+{
+    "CADASTRAIS": {
+        "CPF": "1741548365",
+        "NOME": "RICARDO OLIVEIRA DE CARVALHO",
+        "NOME_MAE": "MARIA DA CONCEICAO OLIVEIRA DE CARVALHO",
+        "NASCTO": "24\/07\/1986",
+        "IDADE": "39 anos",
+        "SEXO": "Masculino",
+        "RG": "2168352",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1283165648",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "513405",
+        "PROFISSAO": "GARCOM",
+        "SALARIO": " 1.457,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8621077777",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "8632365749",
+                "OPERADORA": "TELEMAR\/PI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8632347344",
+                "OPERADORA": "TELEMAR\/PI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "86995003240",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "86988162784",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "86910021569",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "86988632895",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "86988162847",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "ricardo2001.oliveira@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ARAGUAIA",
+                "NUMERO": "17",
+                "COMPLEMENTO": "Q T",
+                "BAIRRO": "POR DO CENTRO",
+                "CEP": "64060380",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "LOT NOVA SANTANA",
+                "NUMERO": "6821",
+                "COMPLEMENTO": "Q X 1 LT 14",
+                "BAIRRO": "BOM PRINCIPIO",
+                "CEP": "64095030",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "LOT NOVA SANTANA",
+                "NUMERO": "14",
+                "COMPLEMENTO": "Q X 1",
+                "BAIRRO": "BOM PRINCIPIO",
+                "CEP": "64095030",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "R UM",
+                "NUMERO": "7332",
+                "COMPLEMENTO": "LT BEL TERRA 73",
+                "BAIRRO": "COLORADO",
+                "CEP": "64083010",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "R SIMPLICIO MENDES",
+                "NUMERO": "3223",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "64000110",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "R SIMPLICIO MENDES",
+                "NUMERO": "3223",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VERMELHA",
+                "CEP": "64018510",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "Q 3",
+                "NUMERO": "1",
+                "COMPLEMENTO": "Q 13",
+                "BAIRRO": "ITARARE",
+                "CEP": "64077020",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            },
+            {
+                "LOGRADOURO": "VL RESIDENCIAL ARAGUAIA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "Q N C 3",
+                "BAIRRO": "S SEBASTIAO",
+                "CEP": "64085050",
+                "CIDADE": "TERESINA",
+                "ESTADO": "PI"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "125675313",
+            "NOME": "MARIA DA CONCEICAO OLIVEIRA DE CARVALHO",
+            "IDADE": "66 anos",
+            "LOCAL": "LAGO DO JUNCO\/MA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "JJN ALIMENTOS LTDA",
+                "CNPJ": "19655709000153",
+                "CIDADE": "TERESINA-PI",
+                "PROFISSAO": "513405",
+                "DATA_ADMISSAO": "17\/12\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MUNICIPIO DE TERESINA",
+                "CNPJ": "06554869001560",
+                "CIDADE": "TERESINA-PI",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "11\/01\/2023",
+                "DATA_DEMISSAO": "14\/12\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738020600",
+                "CIDADE": "TERESINA-PI",
+                "PROFISSAO": "517425",
+                "DATA_ADMISSAO": "18\/03\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "TRANSCOL TRANSPORTES COLETIVOS LTDA",
+                "CNPJ": "07098999000100",
+                "CIDADE": "TERESINA-PI",
+                "PROFISSAO": "511215",
+                "DATA_ADMISSAO": "01\/03\/2008",
+                "DATA_DEMISSAO": "10\/01\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

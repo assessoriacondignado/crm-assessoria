@@ -1,0 +1,150 @@
+{
+    "CADASTRAIS": {
+        "CPF": "81860455549",
+        "NOME": "LIDIANE ROBERTA SILVA DE ASSIS",
+        "NOME_MAE": "ANA CRISTINA SANTOS SILVA",
+        "NASCTO": "01\/06\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "099342840574",
+        "NIT": "1278052107",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "231205",
+        "PROFISSAO": "PROFESSOR DA  EDUCACAO DE JOVENS E ADULTOS DO ENSINO FUNDAMENTAL (PRIMEIRA A QUARTA SERIE)",
+        "SALARIO": " 6.017,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "7141024341",
+            "OPERADORA": "TIM CELULAR S.A.",
+            "DATA_REFERENCIA": "07\/03\/2014",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "71992922312",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "07\/02\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "71999965572",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "71987501296",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "lidiassis12@hotmail.com",
+            "proflidiane@outlook.com",
+            "lidiassis10@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R FERNANDO CARDOSO",
+                "NUMERO": "22",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOCA DO RIO",
+                "CEP": "41710725",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "VL CARDOSO",
+                "NUMERO": "23",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAJAZEIRAS",
+                "CEP": "41343860",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "RUA FERNANDO CARDOSO",
+                "NUMERO": "23",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "BOCA DO RIO",
+                "CEP": "41710725",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "15704475",
+                "NOME": "ANA CRISTINA SANTOS SILVA",
+                "IDADE": "51 anos",
+                "LOCAL": "NATAL\/RN",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "7712603502",
+                "NOME": "LEANDRO VINICIUS DE ASSIS OLIVEIRA",
+                "IDADE": "27 anos",
+                "LOCAL": "SALVADOR\/BA",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ESCOLA DE 1 GRAU DE DESENVOLVIMENTO LTDA",
+                "CNPJ": "13209150000151",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "231205",
+                "DATA_ADMISSAO": "08\/04\/2010",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "A M SERVICO ADMINISTRATIVO LTDA",
+                "CNPJ": "14825756000265",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "231105",
+                "DATA_ADMISSAO": "02\/05\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

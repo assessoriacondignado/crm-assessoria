@@ -1,0 +1,172 @@
+{
+    "CADASTRAIS": {
+        "CPF": "58783202587",
+        "NOME": "CARLOS IRAN BARBOSA",
+        "NOME_MAE": "FRANCICA CLARA DE CONCEICAO SANTOS",
+        "NASCTO": "02\/11\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "016463682143",
+        "NIT": "1244329228",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411010",
+        "PROFISSAO": "ASSISTENTE ADMINISTRATIVO",
+        "SALARIO": " 2.492,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "7932451905",
+            "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "79988364080",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "OI_PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999963073",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79988427589",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79999074808",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "79988201802",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/08\/2018",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "carlosmiral@yahoo.com",
+            "iran.barbosa@oi.com.br",
+            "iram.barbosa@oi.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MANOEL GOMES DA ROCHA",
+                "NUMERO": "100",
+                "COMPLEMENTO": "",
+                "BAIRRO": "LUZIA",
+                "CEP": "49045480",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R FRANCISCO PORTUGAL",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SALGADO FILHO",
+                "CEP": "49020390",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "RUA CAPITAO MANOEL GOMES",
+                "NUMERO": "100",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTOS DUMONT",
+                "CEP": "49087040",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "PC DQ DE CAXIAS",
+                "NUMERO": "211",
+                "COMPLEMENTO": "",
+                "BAIRRO": "",
+                "CEP": "49900000",
+                "CIDADE": "PROPRIA",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CENCOSUD BRASIL COMERCIAL LTDA.",
+                "CNPJ": "39346861003500",
+                "CIDADE": "ARACAJU-SE",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "02\/01\/2002",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CENCOSUD BRASIL COMERCIAL LTDA.",
+                "CNPJ": "39346861014898",
+                "CIDADE": "NOSSA SENHORA DO SOCORRO-SE",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "01\/01\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "CENCOSUD BRASIL COMERCIAL LTDA.",
+                "CNPJ": "39346861000161",
+                "CIDADE": "NOSSA SENHORA DO SOCORRO-SE",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "01\/11\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,282 @@
+{
+    "CADASTRAIS": {
+        "CPF": "93877242553",
+        "NOME": "VILMAR PEREIRA DO NASCIMENTO",
+        "NOME_MAE": "MARIA LIMA DO NASCIMENTO",
+        "NASCTO": "12\/03\/1976",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "813883073",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "082707660590",
+        "NIT": "12651260454",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "711225",
+        "PROFISSAO": "OPERADOR DE MAQUINA PERFURADORA (MINAS E PEDREIRAS)",
+        "SALARIO": " 2.300,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7332369210",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7333131398",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "73981956666",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "75999740481",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "73988473515",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "74936141560",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "74999879360",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "ariana.melo84@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MARIQUINHA BORGES",
+                "NUMERO": "6",
+                "COMPLEMENTO": "AP 1",
+                "BAIRRO": "CENTRO IPIAU",
+                "CEP": "45570000",
+                "CIDADE": "IPIAU",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R DO BEM TE VI",
+                "NUMERO": "1511",
+                "COMPLEMENTO": "NA TV TICO TICO",
+                "BAIRRO": "CENTRONLPILAR",
+                "CEP": "48960000",
+                "CIDADE": "JAGUARARI",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "FAZ CARAIBAS",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ZONA RURAL PILAR",
+                "CEP": "48960000",
+                "CIDADE": "JAGUARARI",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R A",
+                "NUMERO": "72",
+                "COMPLEMENTO": "COND PARAI",
+                "BAIRRO": "COND PARAICONCEICAO",
+                "CEP": "45570000",
+                "CIDADE": "IPIAU",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "FAZ STA RITA",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "RURAL",
+                "CEP": "45570000",
+                "CIDADE": "IPIAU",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R BEM TE VI",
+                "NUMERO": "1505",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "PILAR",
+                "CEP": "48960000",
+                "CIDADE": "JAGUARARI",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R DA MACAMBIRA",
+                "NUMERO": "939",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "44480000",
+                "CIDADE": "JAGUARIPE",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R JOAQUIM DE QUEIROZ",
+                "NUMERO": "173",
+                "COMPLEMENTO": "LJ PRINCESINHA",
+                "BAIRRO": "CENTRO",
+                "CEP": "48903630",
+                "CIDADE": "JUAZEIRO",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "17026458",
+            "NOME": "MARIA LIMA DO NASCIMENTO",
+            "IDADE": "79 anos",
+            "LOCAL": "LAGOA SECA\/PB",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ARIANA DE MELO SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "JAGUARARI\/BA",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "2207471560"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "R D MINERACAO E CONSTRUCAO LTDA",
+                "CNPJ": "22192546000124",
+                "CIDADE": "MATIAS BARBOSA-MG",
+                "PROFISSAO": "715125",
+                "DATA_ADMISSAO": "01\/08\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TERRAFACIL SERVICOS DE TERRAPLENAGEM LTDA.",
+                "CNPJ": "04011297000141",
+                "CIDADE": "SANTA CRUZ DO SUL-RS",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/09\/2020",
+                "DATA_DEMISSAO": "16\/06\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "CONSORCIO SANTA RITA",
+                "CNPJ": "34394154000127",
+                "CIDADE": "MATIAS BARBOSA-MG",
+                "PROFISSAO": "711130",
+                "DATA_ADMISSAO": "07\/10\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "MINERACAO CARAIBA S\/A",
+                "CNPJ": "42509257000113",
+                "CIDADE": "JAGUARARI-BA",
+                "PROFISSAO": "711225",
+                "DATA_ADMISSAO": "01\/02\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "MINERACAO CARAIBA S\/A",
+                "CNPJ": "42509257000547",
+                "CIDADE": "CURACA-BA",
+                "PROFISSAO": "711225",
+                "DATA_ADMISSAO": "01\/12\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "MINERACAO CARAIBA S\/A",
+                "CNPJ": "42509257000890",
+                "CIDADE": "JAGUARARI-BA",
+                "PROFISSAO": "711225",
+                "DATA_ADMISSAO": "18\/02\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "U M MINERACAO E CONSTRUCAO S\/A",
+                "CNPJ": "18540906002108",
+                "CIDADE": "ITAGIBA-BA",
+                "PROFISSAO": "715115",
+                "DATA_ADMISSAO": "05\/11\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "",
+                "CNPJ": "00700074267278",
+                "CIDADE": "",
+                "PROFISSAO": "715115",
+                "DATA_ADMISSAO": "13\/09\/2011",
+                "DATA_DEMISSAO": "10\/10\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

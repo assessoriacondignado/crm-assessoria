@@ -1,0 +1,264 @@
+{
+    "CADASTRAIS": {
+        "CPF": "34746633215",
+        "NOME": "CESAR FERREIRA MAGALHAES",
+        "NOME_MAE": "MARINA FERREIRA MAGALHAES",
+        "NASCTO": "20\/01\/1973",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12703511894",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "413115",
+        "PROFISSAO": "AUXILIAR DE FATURAMENTO",
+        "SALARIO": " 3.607,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9232312166",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9236551700",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9236564066",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "19\/12\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92981175072",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92996092571",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92992802813",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "06\/03\/2012",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "92999717900",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "01\/04\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "92981158367",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "fgcesar@globo.com",
+            "cesarfm45@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R SANTOS DUMONT",
+                "NUMERO": "38",
+                "COMPLEMENTO": "C 3",
+                "BAIRRO": "STO AGOSTINHO",
+                "CEP": "69036715",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R VINTE E SETE",
+                "NUMERO": "150",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S JOSE OPERARIO",
+                "CEP": "69086280",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R CRISTINA TAVARES",
+                "NUMERO": "150",
+                "COMPLEMENTO": "JD DE VERSALES",
+                "BAIRRO": "PLANALTO",
+                "CEP": "69044745",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R SOLIMOES",
+                "NUMERO": "86",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STO AGOSTINHO",
+                "CEP": "69036710",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV CASSIOPEIA",
+                "NUMERO": "439",
+                "COMPLEMENTO": "26",
+                "BAIRRO": "STO AGOSTINHO",
+                "CEP": "69036600",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R ITOROROS",
+                "NUMERO": "32",
+                "COMPLEMENTO": "",
+                "BAIRRO": "NOVO ALEIXO",
+                "CEP": "69098244",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV TORQUATO TAPAJOS",
+                "NUMERO": "6295",
+                "COMPLEMENTO": "ROD VIDA",
+                "BAIRRO": "FLORES",
+                "CEP": "69058830",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R BETA",
+                "NUMERO": "176",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SANTO AGOSTINHO",
+                "CEP": "69036715",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "2561813576",
+                "NOME": "MARINA FERREIRA MAGALHAES",
+                "IDADE": "29 anos",
+                "LOCAL": "ARACAJU\/SE",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "56247265700",
+                "NOME": "SERGIO FERREIRA MAGALHAES",
+                "IDADE": "72 anos",
+                "LOCAL": "NILOPOLIS\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "58293256753",
+                "NOME": "EDSON FERREIRA MAGALHAES",
+                "IDADE": "68 anos",
+                "LOCAL": "NILOPOLIS\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "67018769272",
+                "NOME": "PAULO SERGIO MAGALHAES",
+                "IDADE": "53 anos",
+                "LOCAL": "CASTANHEIRAS\/RO",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "67916724200",
+                "NOME": "SONIA REGINA MAGALHAES",
+                "IDADE": "52 anos",
+                "LOCAL": "PRESIDENTE MEDICI\/RO",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "67983537204",
+                "NOME": "LUCAS ADRIANO MAGALHAES",
+                "IDADE": "47 anos",
+                "LOCAL": "PRESIDENTE MEDICI\/RO",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "DISTRIBUIDORA LOPES LTDA",
+                "CNPJ": "02796653000154",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "413115",
+                "DATA_ADMISSAO": "02\/05\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BOULEVARD LOCACAO DE IMOVEIS LTDA",
+                "CNPJ": "34571687000137",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "413115",
+                "DATA_ADMISSAO": "01\/11\/2006",
+                "DATA_DEMISSAO": "01\/04\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

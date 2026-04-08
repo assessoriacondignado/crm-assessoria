@@ -1,0 +1,209 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25102393847",
+        "NOME": "MARIA SOCORRO PORTELA DA SILVA",
+        "NOME_MAE": "MARIA MENDES PORTELA",
+        "NASCTO": "11\/12\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "254456920183",
+        "NIT": "1264857862",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "141410",
+        "PROFISSAO": "COMERCIANTE VAREJISTA",
+        "SALARIO": " 4.600,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2132581820",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "2124252679",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "09\/10\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21995485692",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13996358923",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21971465063",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "mariasp307@gmail.com",
+            "weslleypdj@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PTO LEANDRO JOAQUIM",
+                "NUMERO": "313",
+                "COMPLEMENTO": "BL 6 307",
+                "BAIRRO": "CIDADE DE DEUS",
+                "CEP": "22770650",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "AL JAUAPERI",
+                "NUMERO": "755",
+                "COMPLEMENTO": "AP 93",
+                "BAIRRO": "INDIANOPOLIS",
+                "CEP": "04523904",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MINISTRO GABRIEL DE PIZA",
+                "NUMERO": "777",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PECHINCHA",
+                "CEP": "22770360",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R CANDIDO BENICIO",
+                "NUMERO": "13",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRACA SECA",
+                "CEP": "22733000",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA OLIVEIRA LIMA",
+                "NUMERO": "3",
+                "COMPLEMENTO": "LJ ECASA",
+                "BAIRRO": "GRAJAU",
+                "CEP": "20561270",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA DO JEQUITIBA",
+                "NUMERO": "13",
+                "COMPLEMENTO": "",
+                "BAIRRO": "TANQUE",
+                "CEP": "22733490",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA DO JEQUITIBA",
+                "NUMERO": "2935",
+                "COMPLEMENTO": "13",
+                "BAIRRO": "TANQUE",
+                "CEP": "22733490",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "ALAMEDA JAUAPERI",
+                "NUMERO": "755",
+                "COMPLEMENTO": "AP 93",
+                "BAIRRO": "MOEMA",
+                "CEP": "04523013",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "3029131300",
+                "NOME": "MARIA MENDES PORTELA",
+                "IDADE": "75 anos",
+                "LOCAL": "BELEM\/PA",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "13904613782",
+                "NOME": "LUIZ WILLIAM PORTELA DA SILVA",
+                "IDADE": "35 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "17303479759",
+                "NOME": "WESLLEY PORTELA DE JESUS",
+                "IDADE": "27 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "WESLLEY PORTELA DE JESUS",
+            "IDADE": "",
+            "LOCALIDADE": "RIO DE JANEIRO\/RJ",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "17303479759"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "CARREFOUR COMERCIO E INDUSTRIA LTDA",
+            "CNPJ": "45543915000262",
+            "CIDADE": "RIO DE JANEIRO-RJ",
+            "PROFISSAO": "141410",
+            "DATA_ADMISSAO": "02\/05\/2005",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

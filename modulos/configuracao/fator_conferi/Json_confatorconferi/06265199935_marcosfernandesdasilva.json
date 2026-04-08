@@ -1,0 +1,155 @@
+{
+    "CADASTRAIS": {
+        "CPF": "6265199935",
+        "NOME": "MARCOS FERNANDES DA SILVA",
+        "NOME_MAE": "LEONICE DA CONCEICAO SILVA",
+        "NASCTO": "29\/05\/1989",
+        "IDADE": "36 anos",
+        "SEXO": "Masculino",
+        "RG": "101884848",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "091163760655",
+        "NIT": "13023329507",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "763215",
+        "PROFISSAO": "COSTUREIRO, A  MAQUINA  NA CONFECCAO EM SERIE",
+        "SALARIO": " 996,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "4436245404",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "22110459816",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "44988235476",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "44997188099",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DAS PRIMULAS",
+                "NUMERO": "4580",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "PRQ DAS JABOTICABEIRAS",
+                "CEP": "87509430",
+                "CIDADE": "UMUARAMA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "ROD PR TREZENTOS E VINTE E TRES",
+                "NUMERO": "308",
+                "COMPLEMENTO": "TRAVESSIA II 6",
+                "BAIRRO": "PRQ INDUST I",
+                "CEP": "87507013",
+                "CIDADE": "UMUARAMA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "ROD PR TREZENTOS E VINTE E TRES",
+                "NUMERO": "5",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PRQ INDUST I",
+                "CEP": "87507013",
+                "CIDADE": "UMUARAMA",
+                "ESTADO": "PR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1245099167",
+            "NOME": "LEONICE DA CONCEICAO SILVA",
+            "IDADE": "52 anos",
+            "LOCAL": "ALEGRE\/ES",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ESTOFADOS ORYON LTDA",
+                "CNPJ": "05285281000190",
+                "CIDADE": "UMUARAMA-PR",
+                "PROFISSAO": "763310",
+                "DATA_ADMISSAO": "27\/04\/2015",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ESTOFADOS ORYON LTDA",
+                "CNPJ": "05285281000270",
+                "CIDADE": "UMUARAMA-PR",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "27\/04\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "APARECIDA MENDES TAROCCO",
+                "CNPJ": "17889596000125",
+                "CIDADE": "UMUARAMA-PR",
+                "PROFISSAO": "763215",
+                "DATA_ADMISSAO": "15\/09\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "A. M. TAROCCO CONFECCOES",
+                "CNPJ": "02392149000199",
+                "CIDADE": "UMUARAMA-PR",
+                "PROFISSAO": "763215",
+                "DATA_ADMISSAO": "01\/02\/2011",
+                "DATA_DEMISSAO": "10\/03\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,312 @@
+{
+    "CADASTRAIS": {
+        "CPF": "95843523691",
+        "NOME": "MAYNARD MARQUES DE SANTA ROSA JUNIOR",
+        "NOME_MAE": "LUIZA FHILOMENA GONCALVES DE SANTA ROSA",
+        "NASCTO": "26\/12\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "187365432",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "AM",
+        "TITULO_ELEITOR": "",
+        "NIT": "12547322902",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "123605",
+        "PROFISSAO": "DIRETOR DE SERVICOS DE INFORMATICA",
+        "SALARIO": " 31.639,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1136416704",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1137297947",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2134597316",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "2130227316",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11943244355",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11975443233",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11957719955",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11970179955",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11976112706",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "priscilabmelo@gmail.com",
+            "karinainspiral@gmail.com",
+            "ceconomia@ufac.br",
+            "maynardjr@uol.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MIROEL SILVEIRA",
+                "NUMERO": "150",
+                "COMPLEMENTO": "COND JULIANA II 303 C C 303",
+                "BAIRRO": "STO ANTONIO",
+                "CEP": "69029520",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R RECIFE",
+                "NUMERO": "150",
+                "COMPLEMENTO": "COND JULIANA II 303 C",
+                "BAIRRO": "NOVA CIDADE",
+                "CEP": "69316248",
+                "CIDADE": "BOA VISTA",
+                "ESTADO": "RR"
+            },
+            {
+                "LOGRADOURO": "SQN 103 BLOCO D",
+                "NUMERO": "0",
+                "COMPLEMENTO": "AP 202",
+                "BAIRRO": "ASA NORTE",
+                "CEP": "70732040",
+                "CIDADE": "BRASILIA",
+                "ESTADO": "DF"
+            },
+            {
+                "LOGRADOURO": "R CARLOS WEBER",
+                "NUMERO": "633",
+                "COMPLEMENTO": "AP  Apartamento  212",
+                "BAIRRO": "VILA LEOPOLDINA",
+                "CEP": "05303000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MERGENTHALER",
+                "NUMERO": "345",
+                "COMPLEMENTO": "BL B APTO 202",
+                "BAIRRO": "VILA LEOPOLDINA",
+                "CEP": "05311030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CARLOS WEBER",
+                "NUMERO": "535",
+                "COMPLEMENTO": "AP 113 C",
+                "BAIRRO": "VILA LEOPOLDINA",
+                "CEP": "05303905",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA DAS LARANJEIRAS",
+                "NUMERO": "211",
+                "COMPLEMENTO": "AP 601",
+                "BAIRRO": "LARANJEIRAS",
+                "CEP": "22240004",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "RUA BOM PASTOR",
+                "NUMERO": "207",
+                "COMPLEMENTO": "APARTAMENTO 6606",
+                "BAIRRO": "TIJUCA",
+                "CEP": "20521060",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ELI CECILIO MARCELINO",
+                "IDADE": "",
+                "LOCALIDADE": "PAULISTA\/PE",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "41647408415"
+            },
+            {
+                "NOME": "PRISCILA BASTOS DE MELO DE SANTA ROSA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "9717748705"
+            },
+            {
+                "NOME": "VANTUIL ALMEIDA DE MELO",
+                "IDADE": "",
+                "LOCALIDADE": "RIO DE JANEIRO\/RJ",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "46806563791"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "DELL COMPUTADORES DO BRASIL LTDA",
+                "CNPJ": "72381189001192",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142315",
+                "DATA_ADMISSAO": "09\/11\/2015",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "DELL COMPUTADORES DO BRASIL LTDA",
+                "CNPJ": "72381189000110",
+                "CIDADE": "ELDORADO DO SUL-RS",
+                "PROFISSAO": "123605",
+                "DATA_ADMISSAO": "09\/11\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "TIVIT TERCEIRIZACAO DE PROCESSOS, SERVICOS E TECNOLOGIA S.A.",
+                "CNPJ": "07073027000900",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "123105",
+                "DATA_ADMISSAO": "15\/02\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "TIVIT TERCEIRIZACAO DE PROCESSOS, SERVICOS E TECNOLOGIA S.A.",
+                "CNPJ": "07073027000315",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "123105",
+                "DATA_ADMISSAO": "15\/02\/2012",
+                "DATA_DEMISSAO": "31\/08\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "REDE CONECTA SERVICOS DE REDE S.A",
+                "CNPJ": "69699742002105",
+                "CIDADE": "OLINDA-PE",
+                "PROFISSAO": "121005",
+                "DATA_ADMISSAO": "12\/04\/2011",
+                "DATA_DEMISSAO": "602",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": [
+            {
+                "RAZAO_SOCIAL": "SOLI LAVANDERIA LTDA",
+                "CNPJ": "46021357000157",
+                "CIDADE": "SAO PAULO-SP",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20220413",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "PLANET HOME MOVEIS E ARTIGOS DE COLCHOARIA LTDA",
+                "CNPJ": "29577951000100",
+                "CIDADE": "SAO PAULO-SP",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20180131",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "PLANET HOME MOVEIS E ARTIGOS DE COLCHOARIA LTDA",
+                "CNPJ": "29577951000290",
+                "CIDADE": "SAO PAULO-SP",
+                "QUALIFICACAO": "SÃ³cio-Administrador",
+                "DATA_ENTRADA": "20180131",
+                "VALOR_PARTICIPACAO": ""
+            }
+        ]
+    }
+}

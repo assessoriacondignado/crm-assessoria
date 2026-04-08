@@ -1,0 +1,182 @@
+{
+    "CADASTRAIS": {
+        "CPF": "13753966843",
+        "NOME": "MIKA MARCIA SAITO SAKODA",
+        "NOME_MAE": "TAKAKO MICHISHITA SAITO",
+        "NASCTO": "02\/07\/1970",
+        "IDADE": "55 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "204472440108",
+        "NIT": "12244582541",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "317110",
+        "PROFISSAO": "PROGRAMADOR DE SISTEMAS DE INFORMACAO",
+        "SALARIO": " 5.146,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1938387347",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19991207680",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19997043937",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19997043937",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19998495369",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "19997781530",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "smika@terra.com",
+            "smika@terra.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R EDMUNDO PLACIDO CHIAVEGATTO",
+                "NUMERO": "213",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD DOS OLIVEIRAS",
+                "CEP": "13044065",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R EOYS BLACK VIEIRA ALVES",
+                "NUMERO": "18",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE ALTO TAQUARAL",
+                "CEP": "13087760",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "23045300871",
+                "NOME": "TAKAKO MICHISHITA SAITO",
+                "IDADE": "86 anos",
+                "LOCAL": "JUNDIAI\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "7963218847",
+                "NOME": "GILBERTO KIMITO SAITO",
+                "IDADE": "59 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "43515527869",
+                "NOME": "MAURICIO HITOSHI SAKODA",
+                "IDADE": "31 anos",
+                "LOCAL": "CAMPINAS\/SP",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "53755161877",
+                "NOME": "DANIELA NAOMI SAKODA",
+                "IDADE": "17 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "MARILIA VICENTE DE OLIVEIRA",
+            "IDADE": "",
+            "LOCALIDADE": "TIMOTEO\/MG",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "69520976604"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "3M DO BRASIL LTDA",
+                "CNPJ": "45985371000108",
+                "CIDADE": "SUMARE-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "03\/09\/2012",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "GI GROUP SERVICES RECURSOS HUMANOS LTDA.",
+                "CNPJ": "03292418000108",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "317110",
+                "DATA_ADMISSAO": "23\/03\/2009",
+                "DATA_DEMISSAO": "27\/08\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

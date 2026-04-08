@@ -1,0 +1,180 @@
+{
+    "CADASTRAIS": {
+        "CPF": "7996129797",
+        "NOME": "VICTOR DA SILVA FREITAS",
+        "NOME_MAE": "MIRIAN DA SILVA FREITAS",
+        "NASCTO": "16\/01\/1980",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "020430741449",
+        "NIT": "12794636296",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411005",
+        "PROFISSAO": "AUXILIAR DE ESCRITORIO, EM GERAL",
+        "SALARIO": " 1.714,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2733174038",
+                "OPERADORA": "TELEMAR\/ES",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "2733274335",
+                "OPERADORA": "TELEMAR\/ES",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2732125060",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2732371037",
+                "OPERADORA": "TELEMAR\/ES",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "27996550923",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "27997661521",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "27999444549",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "darwest.jp@darwin.com.br",
+            "freitas.vix@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV AUGUSTO EMILIO ESTELITA LINS",
+                "NUMERO": "270",
+                "COMPLEMENTO": "LJ 1",
+                "BAIRRO": "JD CAMBURI",
+                "CEP": "29090590",
+                "CIDADE": "VITORIA",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "R GUACUI",
+                "NUMERO": "103",
+                "COMPLEMENTO": "AP 103",
+                "BAIRRO": "VALPARAISO",
+                "CEP": "29165807",
+                "CIDADE": "SERRA",
+                "ESTADO": "ES"
+            },
+            {
+                "LOGRADOURO": "AV RAUL OLIVEIRA NEVES",
+                "NUMERO": "265",
+                "COMPLEMENTO": ":265",
+                "BAIRRO": "JARDIM CAMBURI",
+                "CEP": "29092220",
+                "CIDADE": "VITORIA",
+                "ESTADO": "ES"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "233628711",
+            "NOME": "MIRIAN DA SILVA FREITAS",
+            "IDADE": "68 anos",
+            "LOCAL": "SERRA\/ES",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ALESSANDRA RIBEIRO BAPTISTA FREITAS",
+            "IDADE": "",
+            "LOCALIDADE": "VITORIA\/ES",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "9509636746"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CENTRO DE ENSINO CHARLES DARWIN LTDA",
+                "CNPJ": "32928561000141",
+                "CIDADE": "VITORIA-ES",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "01\/04\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "DARWIN PATRIMONIAL LTDA",
+                "CNPJ": "36049104000138",
+                "CIDADE": "VITORIA-ES",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "07\/20\/2006",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

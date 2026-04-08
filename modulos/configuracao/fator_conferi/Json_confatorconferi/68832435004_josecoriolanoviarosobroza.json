@@ -1,0 +1,171 @@
+{
+    "CADASTRAIS": {
+        "CPF": "68832435004",
+        "NOME": "JOSE CORIOLANO VIARO SOBROZA",
+        "NOME_MAE": "SELENE VIARO SOBROZA",
+        "NASCTO": "03\/06\/1972",
+        "IDADE": "53 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "056228390426",
+        "NIT": "1270093069 ",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142105",
+        "PROFISSAO": "GERENTE ADMINISTRATIVO",
+        "SALARIO": " 3.857,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "5532551816",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "55999462787",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "55997220615",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "11\/01\/2014",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "gbelo@terra.com.br",
+            "josesobroza@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R GARIBALDI",
+                "NUMERO": "1235",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTR0",
+                "CEP": "97760000",
+                "CIDADE": "JAGUARI",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R JOSE BONIFACIO",
+                "NUMERO": "1245",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "97760000",
+                "CIDADE": "JAGUARI",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "42069459004",
+                "NOME": "SELENE VIARO SOBROZA",
+                "IDADE": "85 anos",
+                "LOCAL": "JAGUARI\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "37280392091",
+                "NOME": "GISLAINE DE FATIMA SOBROZA BEC",
+                "IDADE": "63 anos",
+                "LOCAL": "JAGUARI\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "39248240020",
+                "NOME": "EDSON ANTONIO VIARO SOBROZA",
+                "IDADE": "64 anos",
+                "LOCAL": "NOVA PALMA\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "73035939004",
+                "NOME": "LUISA ROSELAINE SOBROZA MONTEIRO",
+                "IDADE": "59 anos",
+                "LOCAL": "JAGUARI\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "GUILHERME ANDRADE BELO",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "33853803830"
+            },
+            {
+                "NOME": "NILTON CORREA DE LIMA",
+                "IDADE": "",
+                "LOCALIDADE": "PETROPOLIS\/RJ",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "68942400787"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "BELTRAME COMERCIO DE MATERIAIS DE CONSTRUCAO LTDA",
+                "CNPJ": "87791992000109",
+                "CIDADE": "SANTA MARIA-RS",
+                "PROFISSAO": "354145",
+                "DATA_ADMISSAO": "01\/03\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LUZIANE FLORES GUERRA",
+                "CNPJ": "05739555000173",
+                "CIDADE": "JAGUARI-RS",
+                "PROFISSAO": "142105",
+                "DATA_ADMISSAO": "02\/01\/2020",
+                "DATA_DEMISSAO": "08\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "JOAO MARIO CRISTOFARI   CIA LTDA",
+                "CNPJ": "92730191000165",
+                "CIDADE": "JAGUARI-RS",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/10\/1999",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

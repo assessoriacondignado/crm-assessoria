@@ -1,0 +1,207 @@
+{
+    "CADASTRAIS": {
+        "CPF": "70620440244",
+        "NOME": "HENDERSON SILVEIRA DE SOUZA",
+        "NOME_MAE": "MARIA DAS GRACAS SILVEIRA DE SOUZA",
+        "NASCTO": "26\/10\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12826533020",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "725505",
+        "PROFISSAO": "MONTADOR DE VEICULOS (LINHA DE MONTAGEM)",
+        "SALARIO": " 2.841,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9236251338",
+            "OPERADORA": "TELEMAR\/AM",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92994483100",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92988141487",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "08\/09\/2012",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "92993382408",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "19\/03\/2013",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "92993584637",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "92988097710",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "hendersonsouza@oi.com.br",
+            "turboh838@ig.com.br",
+            "henderson_silveira@ig.com.br",
+            "hsilveira282@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "TV GUANABARA",
+                "NUMERO": "156",
+                "COMPLEMENTO": "VL DA PRATA",
+                "BAIRRO": "STA LUZIA",
+                "CEP": "69074515",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R DR DALMIR CAMARA",
+                "NUMERO": "614",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S JORGE",
+                "CEP": "69033070",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R PROMECIO",
+                "NUMERO": "215",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL DA PRATA",
+                "CEP": "69030510",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R ALCINDO GUANABARA",
+                "NUMERO": "156",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COMPENSA",
+                "CEP": "69035151",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R CECILIA MEIRELES",
+                "NUMERO": "156",
+                "COMPLEMENTO": "",
+                "BAIRRO": "STO ANTONIO",
+                "CEP": "69029330",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R RUBIDIO",
+                "NUMERO": "156",
+                "COMPLEMENTO": "VILA DA PRATA",
+                "BAIRRO": "VILA DA PRATA",
+                "CEP": "69030530",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "RUA PROMECIO",
+                "NUMERO": "1004",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA DA PRATA",
+                "CEP": "69030510",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "RUA VOLUNTARIOS DA PATRIA",
+                "NUMERO": "83",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA DA PRATA",
+                "CEP": "69030520",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "2943551627",
+            "NOME": "MARIA DAS GRACAS SILVEIRA DE SOUZA",
+            "IDADE": "57 anos",
+            "LOCAL": "PASSOS\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "HONDA COMPONENTES DA AMAZONIA LIMITADA",
+                "CNPJ": "05541925000163",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "723320",
+                "DATA_ADMISSAO": "01\/04\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MOTO HONDA DA AMAZONIA LTDA",
+                "CNPJ": "04337168000148",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "725505",
+                "DATA_ADMISSAO": "05\/04\/2004",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

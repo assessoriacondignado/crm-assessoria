@@ -1,0 +1,173 @@
+{
+    "CADASTRAIS": {
+        "CPF": "41603583300",
+        "NOME": "MARSELLE FERNANDES FONTENELLE",
+        "NOME_MAE": "MARIA ELIANICE FERNANDES FONTENELLE",
+        "NASCTO": "20\/01\/1970",
+        "IDADE": "56 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1248692600",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "234760",
+        "PROFISSAO": "PROFESSOR DE PSICOLOGIA DO ENSINO SUPERIOR",
+        "SALARIO": " 17.495,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8532248756",
+                "OPERADORA": "TELEMAR\/CE",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2124745214",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "2125103210",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "85996539980",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "21996256817",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marselle@unifor.br",
+            "marsellefontenelle@oi.com.br",
+            "marselle2@terra.com.br",
+            "furiajovempv@hotmail.com",
+            "marsellef@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R BENTO ALBUQUERQUE",
+                "NUMERO": "895",
+                "COMPLEMENTO": "1501",
+                "BAIRRO": "COCO",
+                "CEP": "60192055",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R FR ORLANDO",
+                "NUMERO": "315",
+                "COMPLEMENTO": "ALTOS",
+                "BAIRRO": "BOM FUTURO",
+                "CEP": "60425290",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "RUA TORRES CAMARA",
+                "NUMERO": "1100",
+                "COMPLEMENTO": "AP803",
+                "BAIRRO": "ALDEOTA",
+                "CEP": "60150060",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "RUA VICENTE LEITE",
+                "NUMERO": "497",
+                "COMPLEMENTO": "AP 500",
+                "BAIRRO": "MEIRELES",
+                "CEP": "60170150",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "45767041334",
+                "NOME": "MARIA ELIANICE FERNANDES FONTENELLE",
+                "IDADE": "84 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "49160940344",
+                "NOME": "OTAVIO FERNANDES FONTENELLE",
+                "IDADE": "51 anos",
+                "LOCAL": "FORTALEZA\/CE",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "FUNDACAO EDSON QUEIROZ",
+                "CNPJ": "07373434000186",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "234760",
+                "DATA_ADMISSAO": "01\/09\/2008",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "IREP SOCIEDADE DE ENSINO SUPERIOR, MEDIO E FUNDAMENTAL LTDA.",
+                "CNPJ": "02608755002908",
+                "CIDADE": "FORTALEZA-CE",
+                "PROFISSAO": "234105",
+                "DATA_ADMISSAO": "01\/09\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

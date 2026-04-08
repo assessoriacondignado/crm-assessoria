@@ -1,0 +1,175 @@
+{
+    "CADASTRAIS": {
+        "CPF": "65943139249",
+        "NOME": "MOACIR FERNANDES DE OLIVEIRA NETO",
+        "NOME_MAE": "JANE CONCEICAO O OLIVEIRA",
+        "NASCTO": "19\/12\/1979",
+        "IDADE": "46 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "20068070467",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782310",
+        "PROFISSAO": "MOTORISTA DE FURGAO OU VEICULO SIMILAR",
+        "SALARIO": " 1.318,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "9232285988",
+            "OPERADORA": "TELEMAR\/AM",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "baixa"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92984977131",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92984734596",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92993221207",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92992991207",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "92991731635",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R GARANHUS",
+                "NUMERO": "35",
+                "COMPLEMENTO": "CJ AJURICABA 938 938 35",
+                "BAIRRO": "ALVORADA",
+                "CEP": "69046670",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R GUANAMBI",
+                "NUMERO": "139",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COL TERRA NOVA",
+                "CEP": "69093499",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R GUANAMBI",
+                "NUMERO": "496",
+                "COMPLEMENTO": "",
+                "BAIRRO": "COL TERRA NOVA",
+                "CEP": "69093499",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R CHICO MENDES",
+                "NUMERO": "145",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PETROPOLIS",
+                "CEP": "69067640",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R GUANAMBI",
+                "NUMERO": "3",
+                "COMPLEMENTO": "SEM COMPLEMENTO",
+                "BAIRRO": "COLONIA TERRA NOVA",
+                "CEP": "69093499",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": "",
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "VEGA MANAUS TRANSPORTE DE PASSAGEIROS LTDA",
+                "CNPJ": "13928488000163",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "13\/11\/2020",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "F B A COMERCIO E REPRESENTACAO LTDA",
+                "CNPJ": "03978280000103",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "782310",
+                "DATA_ADMISSAO": "09\/01\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "GOLD BRASIL LOGISTICA LTDA",
+                "CNPJ": "07858696000130",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "16\/09\/2011",
+                "DATA_DEMISSAO": "601",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

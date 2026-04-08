@@ -1,0 +1,205 @@
+{
+    "CADASTRAIS": {
+        "CPF": "637619552",
+        "NOME": "RITA DE OLIVEIRA",
+        "NOME_MAE": "MARIA JOSE DOS SANTOS FILHA",
+        "NASCTO": "21\/03\/1979",
+        "IDADE": "47 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "015954362160",
+        "NIT": "12830623764",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "513205",
+        "PROFISSAO": "COZINHEIRO GERAL",
+        "SALARIO": " 800,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "2122540799",
+            "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "21986255186",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21975363621",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "vizinhorj_@hotmail.com",
+            "tomegisela5@gmail.com",
+            "fabio.guilherme@live.com",
+            "joicesilvasantos1@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R BELO HORIZONTE",
+                "NUMERO": "1155",
+                "COMPLEMENTO": "C FRENT CALC AMIGOS",
+                "BAIRRO": "ADRIANOPOLIS",
+                "CEP": "69057060",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R ESPERANCA",
+                "NUMERO": "239",
+                "COMPLEMENTO": "C 6",
+                "BAIRRO": "RONCADOR",
+                "CEP": "26381739",
+                "CIDADE": "QUEIMADOS",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R ESPERANCA",
+                "NUMERO": "239",
+                "COMPLEMENTO": "C 6",
+                "BAIRRO": "QUEIMADOS",
+                "CEP": "26325150",
+                "CIDADE": "QUEIMADOS",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R CEL PADILHA",
+                "NUMERO": "191",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DEZOITO DO FORTE",
+                "CEP": "49072140",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R ITAIOCOCA",
+                "NUMERO": "18",
+                "COMPLEMENTO": "C 1",
+                "BAIRRO": "CENTRO",
+                "CEP": "26325180",
+                "CIDADE": "QUEIMADOS",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R DIDO",
+                "NUMERO": "630",
+                "COMPLEMENTO": "",
+                "BAIRRO": "GLORIA",
+                "CEP": "30880040",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R DR LEVY BUQUERA",
+                "NUMERO": "500",
+                "COMPLEMENTO": "BL J AP 22",
+                "BAIRRO": "SIT CERCADO",
+                "CEP": "81910190",
+                "CIDADE": "CURITIBA",
+                "ESTADO": "PR"
+            },
+            {
+                "LOGRADOURO": "R MARICAO",
+                "NUMERO": "239",
+                "COMPLEMENTO": "C 1",
+                "BAIRRO": "SEPETIBA",
+                "CEP": "23530380",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "16557522",
+            "NOME": "MARIA JOSE DOS SANTOS FILHA",
+            "IDADE": "50 anos",
+            "LOCAL": "ITABAIANINHA\/SE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "FABIO GUILHERME SILAS DA SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "QUEIMADOS\/RJ",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "11209377799"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "JGM SERVICOS E CONSULTORIA LTDA",
+                "CNPJ": "09249322000143",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "514320",
+                "DATA_ADMISSAO": "22\/12\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PADARIA E CONFEITARIA DELICIAS DA PENHA LTDA",
+                "CNPJ": "53161249000145",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "513205",
+                "DATA_ADMISSAO": "15\/01\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PADARIA E CONFEITARIA PRACA XAVIER DE BRITO LTDA",
+                "CNPJ": "12165997000119",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "784205",
+                "DATA_ADMISSAO": "01\/06\/2013",
+                "DATA_DEMISSAO": "22\/03\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "SORVETERIA PINGO D'OURO LTDA",
+                "CNPJ": "28150662000167",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "513205",
+                "DATA_ADMISSAO": "01\/12\/2012",
+                "DATA_DEMISSAO": "26\/12\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

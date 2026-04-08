@@ -1,0 +1,267 @@
+{
+    "CADASTRAIS": {
+        "CPF": "98414402534",
+        "NOME": "ANDRE LUIZ FRANCISCO",
+        "NOME_MAE": "SAMARA CINTIA FRANCISCO",
+        "NASCTO": "14\/09\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "091522240523",
+        "NIT": "1401385839 ",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "241040",
+        "PROFISSAO": "ASSESSOR JURIDICO",
+        "SALARIO": " 18.435,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9536232727",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9536269280",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9536263064",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9536264280",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "95991154679",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "95988035258",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "22\/05\/2017",
+                "TIPO_TEL": "PRE",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "95981235551",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "27\/07\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "95991720821",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "06\/06\/2012",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "95981237078",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "andreluizfrancisco684@gmail.com",
+            "andresrad1000@hotmail.com",
+            "andreluiz.advogado@hotmail.com",
+            "andreluiz.francisco@aol.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R TACUTU",
+                "NUMERO": "255",
+                "COMPLEMENTO": "",
+                "BAIRRO": "S VICENTE",
+                "CEP": "69303462",
+                "CIDADE": "BOA VISTA",
+                "ESTADO": "RR"
+            },
+            {
+                "LOGRADOURO": "AV JOAO VINTE E TRES",
+                "NUMERO": "59",
+                "COMPLEMENTO": "C C LIBERDADE",
+                "BAIRRO": "STA CRUZ",
+                "CEP": "23570000",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "AV CB POLICIA MILITAR JOSE TABIRA DE ALENCAR MACEDO",
+                "NUMERO": "401",
+                "COMPLEMENTO": "C 16",
+                "BAIRRO": "UNIAO",
+                "CEP": "69313745",
+                "CIDADE": "BOA VISTA",
+                "ESTADO": "RR"
+            },
+            {
+                "LOGRADOURO": "R IZIDIO GALDINO DA SILVA",
+                "NUMERO": "1414",
+                "COMPLEMENTO": "",
+                "BAIRRO": "SEN HELIO CAMPOS",
+                "CEP": "69316516",
+                "CIDADE": "BOA VISTA",
+                "ESTADO": "RR"
+            },
+            {
+                "LOGRADOURO": "R ANGELIN",
+                "NUMERO": "366",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARAVIANA",
+                "CEP": "69307170",
+                "CIDADE": "BOA VISTA",
+                "ESTADO": "RR"
+            },
+            {
+                "LOGRADOURO": "AV ROMA",
+                "NUMERO": "679",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTENARIO",
+                "CEP": "69312660",
+                "CIDADE": "BOA VISTA",
+                "ESTADO": "RR"
+            },
+            {
+                "LOGRADOURO": "RUA FRANCISCO CUSTODIO DE ANDRADE",
+                "NUMERO": "1001",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ASA BRANCA",
+                "CEP": "69312258",
+                "CIDADE": "BOA VISTA",
+                "ESTADO": "RR"
+            },
+            {
+                "LOGRADOURO": "RUA ANTONIO BITENCOURT",
+                "NUMERO": "111",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "CENTRO",
+                "CEP": "69301290",
+                "CIDADE": "BOA VISTA",
+                "ESTADO": "RR"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "23973390568",
+                "NOME": "SAMARA CINTIA FRANCISCO",
+                "IDADE": "62 anos",
+                "LOCAL": "ITABUNA\/BA",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "1724255576",
+                "NOME": "THALITA MARLA FRANCISCO SANTA FE SOARES",
+                "IDADE": "41 anos",
+                "LOCAL": "BOA VISTA\/RR",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "FACULDADES CATHEDRAL DE ENSINO SUPERIOR",
+                "CNPJ": "03485283000105",
+                "CIDADE": "BOA VISTA-RR",
+                "PROFISSAO": "234520",
+                "DATA_ADMISSAO": "01\/08\/2017",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TRIBUNAL DE JUSTICA DO ESTADO DE RORAIMA",
+                "CNPJ": "34812669000108",
+                "CIDADE": "BOA VISTA-RR",
+                "PROFISSAO": "241040",
+                "DATA_ADMISSAO": "04\/02\/2021",
+                "DATA_DEMISSAO": "{Ã±\/{Ã±\/2023",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "BONFIM   MORAIS LTDA",
+                "CNPJ": "02777130000160",
+                "CIDADE": "BOA VISTA-RR",
+                "PROFISSAO": "521130",
+                "DATA_ADMISSAO": "01\/05\/2012",
+                "DATA_DEMISSAO": "27\/08\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "BATISTA   CIA LTDA",
+            "CNPJ": "02921784000116",
+            "CIDADE": "BOA VISTA-RR",
+            "QUALIFICACAO": "SÃ³cio",
+            "DATA_ENTRADA": "20031105",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

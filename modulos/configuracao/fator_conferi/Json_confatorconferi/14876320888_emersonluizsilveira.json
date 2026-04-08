@@ -1,0 +1,331 @@
+{
+    "CADASTRAIS": {
+        "CPF": "14876320888",
+        "NOME": "EMERSON LUIZ SILVEIRA",
+        "NOME_MAE": "MARIA DE LOURDES RODRIGUES SILVEIRA",
+        "NASCTO": "22\/09\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "163716262",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "171885480116",
+        "NIT": "12488746691",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1134961016",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1130657550",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1125893255",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "06\/11\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1135339163",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1151839969",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11992461226",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11951274350",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "14\/08\/2015",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11981097789",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11982081435",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11940275597",
+                "OPERADORA": "NEXTEL",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "gusnath@hotmail.com",
+            "gusnath@imaxima.com.br",
+            "gusnath@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R VSC DE PARNAIBA",
+                "NUMERO": "685",
+                "COMPLEMENTO": "AP 24",
+                "BAIRRO": "BRAS",
+                "CEP": "03045000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R INES BRASIL",
+                "NUMERO": "210",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BOA VISTA",
+                "CEP": "60867540",
+                "CIDADE": "FORTALEZA",
+                "ESTADO": "CE"
+            },
+            {
+                "LOGRADOURO": "R VSC DE PARNAIBA",
+                "NUMERO": "68",
+                "COMPLEMENTO": "5 C 5",
+                "BAIRRO": "BRAS",
+                "CEP": "03044000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R VSC DE JERUMIM",
+                "NUMERO": "43",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD VILA FORMOSA",
+                "CEP": "03461060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R VSC DE JERUMIM",
+                "NUMERO": "158",
+                "COMPLEMENTO": "LT 15",
+                "BAIRRO": "JD VILA FORMOSA",
+                "CEP": "03461060",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BACABAS",
+                "NUMERO": "44",
+                "COMPLEMENTO": "FDS",
+                "BAIRRO": "PRQ S LUCAS",
+                "CEP": "03240055",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R VSC DE LAGUNA",
+                "NUMERO": "198",
+                "COMPLEMENTO": "AP 24",
+                "BAIRRO": "MOOCA",
+                "CEP": "03112110",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV VILA EMA",
+                "NUMERO": "3883",
+                "COMPLEMENTO": "B2A12",
+                "BAIRRO": "VILA EMA",
+                "CEP": "03281001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "4752141370",
+            "NOME": "MARIA DE LOURDES RODRIGUES SILVEIRA",
+            "IDADE": "37 anos",
+            "LOCAL": "TANABI\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "JAIR MAGALHAES",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "9528636853"
+            },
+            {
+                "NOME": "RAQUEL MAGALHAES SILVEIRA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "18009236861"
+            },
+            {
+                "NOME": "SUELI FRANCO PINTO MARANGONI",
+                "IDADE": "",
+                "LOCALIDADE": "MAUA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "94038015815"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "FIRSTLAB INDUSTRIA IMPORTACAO E EXPORTACAO DE PRODUTOS PARA LABORATORIOS LTDA",
+                "CNPJ": "27089709000161",
+                "CIDADE": "PINHAIS-PR",
+                "PROFISSAO": "354130",
+                "DATA_ADMISSAO": "24\/20\/1902",
+                "DATA_DEMISSAO": "18\/05\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "OSANG DO BRASIL LIMITADA",
+                "CNPJ": "46283983000111",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "123305",
+                "DATA_ADMISSAO": "01\/08\/2022",
+                "DATA_DEMISSAO": "01\/11\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "LABTEST DIAGNOSTICA S\/A",
+                "CNPJ": "16516296000138",
+                "CIDADE": "LAGOA SANTA-MG",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "22\/06\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "ECO DIAGNOSTICA LTDA",
+                "CNPJ": "14633154000125",
+                "CIDADE": "NOVA LIMA-MG",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "09\/03\/2020",
+                "DATA_DEMISSAO": "05\/06\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "TRINITY BIOTECH DO BRASIL COMERCIO E IMPORTACAO LTDA",
+                "CNPJ": "15648426000123",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "142320",
+                "DATA_ADMISSAO": "06\/08\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "ABBOTT DIAGNOSTICOS RAPIDOS S.A.",
+                "CNPJ": "50248780000161",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "521105",
+                "DATA_ADMISSAO": "22\/02\/2016",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "BIO-RAD LABORATORIOS BRASIL LTDA.",
+                "CNPJ": "03188198000410",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "354145",
+                "DATA_ADMISSAO": "23\/01\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "EMERSON LUIZ SILVEIRA LTDA",
+            "CNPJ": "57056622000159",
+            "CIDADE": "SAO PAULO-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20240828",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

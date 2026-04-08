@@ -1,0 +1,174 @@
+{
+    "CADASTRAIS": {
+        "CPF": "64529274268",
+        "NOME": "MANOEL DO SOCORRO DO E S DA CRUZ",
+        "NOME_MAE": "CARMELITA DO ESPIRITO SANTO DA CRUZ",
+        "NASCTO": "05\/06\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "3768534",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1277752842",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "513405",
+        "PROFISSAO": "GARCOM",
+        "SALARIO": " 1.955,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9132352510",
+                "OPERADORA": "TELEMAR\/PA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9132340712",
+                "OPERADORA": "TELEMAR\/PA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "91991830801",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "91998145985",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "91992721927",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "91991945007",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "91993764095",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "silvmore@terra.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "TV B",
+                "NUMERO": "25",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ATALAIA",
+                "CEP": "67013160",
+                "CIDADE": "ANANINDEUA",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "QD DOIS",
+                "NUMERO": "0",
+                "COMPLEMENTO": "QD 2 CS 26",
+                "BAIRRO": "AGUAS LINDAS",
+                "CEP": "66690430",
+                "CIDADE": "BELEM",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "QD DOIS",
+                "NUMERO": "26",
+                "COMPLEMENTO": "",
+                "BAIRRO": "AGUAS LINDAS",
+                "CEP": "66690430",
+                "CIDADE": "BELEM",
+                "ESTADO": "PA"
+            },
+            {
+                "LOGRADOURO": "R CUPIJO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "RURAL",
+                "BAIRRO": "CAMETA",
+                "CEP": "68400000",
+                "CIDADE": "CAMETA",
+                "ESTADO": "PA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "935167200",
+            "NOME": "JOAO AIRTON SAMPAIO",
+            "IDADE": "37 anos",
+            "LOCAL": "CAMETA\/PA",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "MANOEL PEREIRA DA SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "FARIAS BRITO\/CE",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "4070895353"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "RESTAURANTE YAMAGA LTDA",
+            "CNPJ": "04812279000169",
+            "CIDADE": "ANANINDEUA-PA",
+            "PROFISSAO": "513405",
+            "DATA_ADMISSAO": "01\/03\/2006",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

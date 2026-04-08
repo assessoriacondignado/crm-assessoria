@@ -1,0 +1,138 @@
+{
+    "CADASTRAIS": {
+        "CPF": "80943004500",
+        "NOME": "ITALO DE JESUS NASCIMENTO",
+        "NOME_MAE": "ELIENE MARIA DE JESUS",
+        "NASCTO": "03\/03\/1981",
+        "IDADE": "45 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "092433240531",
+        "NIT": "1680159120",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142105",
+        "PROFISSAO": "GERENTE ADMINISTRATIVO",
+        "SALARIO": " 3.186,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "7133863110",
+            "OPERADORA": "TELEMAR\/BA",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "71988328459",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71999486635",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71986166213",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71992609594",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "18\/05\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "ijnascimento@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV COSME",
+                "NUMERO": "11",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "FAZ GRANDE DO RETIRO",
+                "CEP": "40350030",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "2? TRAVESSA OTONIEL DUTRA",
+                "NUMERO": "9",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "CURUZU",
+                "CEP": "40366585",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "39333426",
+            "NOME": "ELIENE MARIA DE JESUS",
+            "IDADE": "52 anos",
+            "LOCAL": "AGUAS BELAS\/PE",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COMERCIO DE COMBUSTIVEIS PACATUBA LTDA",
+                "CNPJ": "35579498000173",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "142105",
+                "DATA_ADMISSAO": "01\/06\/2023",
+                "DATA_DEMISSAO": "31\/12\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "RODRIGUES TORRES COMERCIO E DERIVADOS DE PETROLEO LTDA",
+                "CNPJ": "73413601000523",
+                "CIDADE": "SALVADOR-BA",
+                "PROFISSAO": "142105",
+                "DATA_ADMISSAO": "01\/09\/2012",
+                "DATA_DEMISSAO": "01\/06\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,228 @@
+{
+    "CADASTRAIS": {
+        "CPF": "97757764491",
+        "NOME": "RINALDO MANOEL DE SANTANA",
+        "NOME_MAE": "LUIZA LOURENCO DE SANTANA",
+        "NASCTO": "20\/09\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "023912771244",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "8332330077",
+                "OPERADORA": "TELEMAR\/PB",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "8332313392",
+                "OPERADORA": "TELEMAR\/PB",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "83993420652",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "83988572907",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "rosa.oliveira@r3solucoescorporativas.com.br",
+            "rinaldomanoel@hotmail.com",
+            "rinaldo.rms@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ARACAJU",
+                "NUMERO": "189",
+                "COMPLEMENTO": "Q 15",
+                "BAIRRO": "GROTAO",
+                "CEP": "58079776",
+                "CIDADE": "JOAO PESSOA",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "R ARACAJU",
+                "NUMERO": "15",
+                "COMPLEMENTO": "Q",
+                "BAIRRO": "GROTAO",
+                "CEP": "58079776",
+                "CIDADE": "JOAO PESSOA",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "AV CHESF",
+                "NUMERO": "9",
+                "COMPLEMENTO": "Q 72 L 250",
+                "BAIRRO": "DT INDUSTRIAL",
+                "CEP": "58082010",
+                "CIDADE": "JOAO PESSOA",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "R SILVIO ALMEIDA",
+                "NUMERO": "453",
+                "COMPLEMENTO": "",
+                "BAIRRO": "EXPEDICIONARIOS",
+                "CEP": "58041020",
+                "CIDADE": "JOAO PESSOA",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "RUA MANOEL BATISTA FREIRE",
+                "NUMERO": "300",
+                "COMPLEMENTO": "AP 201",
+                "BAIRRO": "JOAO PAULO II",
+                "CEP": "58076150",
+                "CIDADE": "JOAO PESSOA",
+                "ESTADO": "PB"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "405925700",
+                "NOME": "LUIZA LOURENCO DE SANTANA",
+                "IDADE": "82 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "1231563788",
+                "NOME": "ANDRE LUIZ LOURENCO DE SANTANA",
+                "IDADE": "55 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "6913539487",
+                "NOME": "LADJANE LOURENCO DE SANTANA",
+                "IDADE": "78 anos",
+                "LOCAL": "RECIFE\/PE",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "87551977791",
+                "NOME": "ANSELMO LOURENCO DE SANTANA",
+                "IDADE": "60 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "95122281491",
+                "NOME": "RIVALDO MANOEL DE SANTANA",
+                "IDADE": "51 anos",
+                "LOCAL": "JOAO PESSOA\/PB",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "JOSEFA ELIANE DA SILVA FIGUEIREDO",
+            "IDADE": "",
+            "LOCALIDADE": "JOAO PESSOA\/PB",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "71453504400"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "MINSAIT BRASIL LTDA",
+                "CNPJ": "05276991001982",
+                "CIDADE": "JOAO PESSOA-PB",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "01\/02\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "INDRA BRASIL SOLUCOES E SERVICOS TECNOLOGICOS LTDA",
+                "CNPJ": "01645738002112",
+                "CIDADE": "JOAO PESSOA-PB",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "20\/20\/2001",
+                "DATA_DEMISSAO": "31\/01\/2022",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "TARGUS SISTEMAS DE INFORMACAO LTDA",
+                "CNPJ": "08855899000136",
+                "CIDADE": "JOAO PESSOA-PB",
+                "PROFISSAO": "317210",
+                "DATA_ADMISSAO": "01\/08\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "R3 SOLUCOES CORPORATIVAS EM INFORMATICA LTDA",
+                "CNPJ": "11745428000180",
+                "CIDADE": "JOAO PESSOA-PB",
+                "PROFISSAO": "910105",
+                "DATA_ADMISSAO": "01\/05\/2010",
+                "DATA_DEMISSAO": "112",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "FUNDACAO ELIM DE ASSISTENCIA SOCIAL",
+            "CNPJ": "08336695000199",
+            "CIDADE": "JOAO PESSOA-PB",
+            "QUALIFICACAO": "SecretÃ¡rio",
+            "DATA_ENTRADA": "20021019",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

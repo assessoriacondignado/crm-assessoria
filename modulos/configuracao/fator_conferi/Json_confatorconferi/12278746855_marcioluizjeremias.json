@@ -1,0 +1,115 @@
+{
+    "CADASTRAIS": {
+        "CPF": "12278746855",
+        "NOME": "MARCIO LUIZ JEREMIAS",
+        "NOME_MAE": "BENEDITA DE JESUS JEREMIAS",
+        "NASCTO": "17\/12\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "202643740132",
+        "NIT": "2012088636",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "811805",
+        "PROFISSAO": "OPERADOR DE MAQUINA DE PRODUTOS FARMACEUTICOS",
+        "SALARIO": " 5.095,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1533534090",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "09\/03\/2020",
+                "TIPO_TEL": "GPON",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1532473823",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "15997271796",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15997619373",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "marcioluis51@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "R PADRE CARLOS OTHINO GALLO",
+            "NUMERO": "40",
+            "COMPLEMENTO": "",
+            "BAIRRO": "VOSSOROCA",
+            "CEP": "18116120",
+            "CIDADE": "VOTORANTIM",
+            "ESTADO": "SP"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "12278568817",
+            "NOME": "BENEDITA DE JESUS JEREMIAS",
+            "IDADE": "89 anos",
+            "LOCAL": "VOTORANTIM\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ANA PAULA DA SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "VOTORANTIM\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "40559045840"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "CATALENT BRASIL LTDA.",
+            "CNPJ": "45569555000197",
+            "CIDADE": "SOROCABA-SP",
+            "PROFISSAO": "811805",
+            "DATA_ADMISSAO": "03\/03\/2008",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

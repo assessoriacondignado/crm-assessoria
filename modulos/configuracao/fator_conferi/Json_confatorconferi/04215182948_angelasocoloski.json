@@ -1,0 +1,180 @@
+{
+    "CADASTRAIS": {
+        "CPF": "4215182948",
+        "NOME": "ANGELA SOCOLOSKI",
+        "NOME_MAE": "ZOFIA WRONSKI SOCOLOSKI",
+        "NASCTO": "26\/07\/1982",
+        "IDADE": "43 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "040286870981",
+        "NIT": "12852551588",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "414210",
+        "PROFISSAO": "APONTADOR DE PRODUCAO",
+        "SALARIO": " 1.198,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "4936213265",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "49991598702",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "49991255913",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "09\/05\/2005",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "49991253225",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "49991274348",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "paulgi@ig.com.br",
+            "angelasocolloski@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PE MARCOS SIMONI",
+                "NUMERO": "354",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL EDE",
+                "CEP": "02203010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV MARTINS PIASESKI",
+                "NUMERO": "435",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "89910000",
+                "CIDADE": "DESCANSO",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "R SAO VALENTIN",
+                "NUMERO": "0",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "ZONA RURAL",
+                "CEP": "89910000",
+                "CIDADE": "DESCANSO",
+                "ESTADO": "SC"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "2937509983",
+                "NOME": "ZOFIA WRONSKI SOCOLOSKI",
+                "IDADE": "73 anos",
+                "LOCAL": "PRAIA GRANDE\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "2947278925",
+                "NOME": "VANUSA SOCOLOSKI",
+                "IDADE": "46 anos",
+                "LOCAL": "DESCANSO\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "3533669947",
+                "NOME": "ISABEL SOCOLOSKI",
+                "IDADE": "45 anos",
+                "LOCAL": "SAO JOSE DO CEDRO\/SC",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "27224861804",
+                "NOME": "ROBERTO SOCOLOSKI",
+                "IDADE": "48 anos",
+                "LOCAL": "SAO PAULO\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "11676650903",
+                "NOME": "GABRIEL HENRIQUE SOCOLOSKI",
+                "IDADE": "15 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SEARA ALIMENTOS LTDA",
+                "CNPJ": "02914460026540",
+                "CIDADE": "SAO MIGUEL DO OESTE-SC",
+                "PROFISSAO": "840105",
+                "DATA_ADMISSAO": "22\/08\/2011",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SUL VALLE ALIMENTOS LTDA",
+                "CNPJ": "08326333000117",
+                "CIDADE": "SAO MIGUEL DO OESTE-SC",
+                "PROFISSAO": "414210",
+                "DATA_ADMISSAO": "22\/08\/2011",
+                "DATA_DEMISSAO": "01\/01\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

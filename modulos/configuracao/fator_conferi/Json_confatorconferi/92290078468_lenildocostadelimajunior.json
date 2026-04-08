@@ -1,0 +1,173 @@
+{
+    "CADASTRAIS": {
+        "CPF": "92290078468",
+        "NOME": "LENILDO COSTA DE LIMA JUNIOR",
+        "NOME_MAE": "HILDA VALERIA DE LIMA",
+        "NASCTO": "08\/01\/1972",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "047257310884",
+        "NIT": "2068170861",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "782410",
+        "PROFISSAO": "MOTORISTA DE ONIBUS URBANO",
+        "SALARIO": " 3.552,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "8133383477",
+            "OPERADORA": "TELEMAR\/PE",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "81981211703",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81984064894",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81995480434",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81986879310",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "81999149133",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "14\/11\/2007",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV BARRETO DE MENEZES",
+                "NUMERO": "28",
+                "COMPLEMENTO": "AP 405",
+                "BAIRRO": "MARCOS FREIRE",
+                "CEP": "54360160",
+                "CIDADE": "JABOATAO DOS GUARARAPES",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "AV MIN MARCOS FREIRE",
+                "NUMERO": "28",
+                "COMPLEMENTO": "AP 405",
+                "BAIRRO": "STO ALEIXO",
+                "CEP": "54140000",
+                "CIDADE": "JABOATAO DOS GUARARAPES",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R JOSE DA SILVA LUCENA",
+                "NUMERO": "615",
+                "COMPLEMENTO": "",
+                "BAIRRO": "IMBIRIBEIRA",
+                "CEP": "51160350",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "RUA RIO BRANCO DO SUL",
+                "NUMERO": "0",
+                "COMPLEMENTO": "",
+                "BAIRRO": "IBURA",
+                "CEP": "51230030",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "RUA RIO BRANCO DO SUL",
+                "NUMERO": "178",
+                "COMPLEMENTO": "",
+                "BAIRRO": "IBURA",
+                "CEP": "51230030",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "87912104453",
+            "NOME": "LUCIANO VALERIO DE LIMA",
+            "IDADE": "55 anos",
+            "LOCAL": "OLINDA\/PE",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "METROPOLITANA EMPRESA DE TRANSPORTE COLETIVO S.A.",
+                "CNPJ": "10407005000197",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "01\/02\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "BORBOREMA IMPERIAL TRANSPORTES LTDA",
+                "CNPJ": "10882777000180",
+                "CIDADE": "RECIFE-PE",
+                "PROFISSAO": "782410",
+                "DATA_ADMISSAO": "31\/07\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

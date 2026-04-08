@@ -1,0 +1,191 @@
+{
+    "CADASTRAIS": {
+        "CPF": "69133115672",
+        "NOME": "CLEUDSON LUCIO DE OLIVEIRA",
+        "NOME_MAE": "MARIA ROSA DE OLIVEIRA",
+        "NASCTO": "09\/02\/1972",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "087711370213",
+        "NIT": "12312284148",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "391210",
+        "PROFISSAO": "TECNICO DE GARANTIA DA QUALIDADE",
+        "SALARIO": " 4.500,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1932411893",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1932424473",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "1932424473",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19981888852",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19981888852",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19982161176",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "22\/08\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "19982161176",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "22\/08\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "19984014510",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "22\/08\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "cleudson.lucio@terra.com.br",
+            "cleudson.lucio@uol.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R GERMANIA",
+                "NUMERO": "553",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BONFIM",
+                "CEP": "13070770",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA SALVADOR PENTEADO",
+                "NUMERO": "356",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA ROSSI BORGHI E SIQUEIRA",
+                "CEP": "13070270",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "3792633",
+            "NOME": "MARIA ROSA DE OLIVEIRA",
+            "IDADE": "64 anos",
+            "LOCAL": "BELO HORIZONTE\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "CARMELITA GOMES RIBEIRO DE SOUZA",
+            "IDADE": "",
+            "LOCALIDADE": "CAMPINAS\/SP",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "70092133649"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "AGROSALLES COMERCIO DE SEMENTES LTDA",
+                "CNPJ": "49621717000573",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "141205",
+                "DATA_ADMISSAO": "01\/03\/2019",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "AGROSALLES COMERCIO DE SEMENTES LTDA",
+                "CNPJ": "49621717000140",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "391210",
+                "DATA_ADMISSAO": "01\/03\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "LABORATORIO DE ANALISES DE SEMENTES DE CAMPINAS LTDA",
+                "CNPJ": "48840599000106",
+                "CIDADE": "CAMPINAS-SP",
+                "PROFISSAO": "321105",
+                "DATA_ADMISSAO": "01\/02\/2007",
+                "DATA_DEMISSAO": "30\/07\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

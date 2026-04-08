@@ -1,0 +1,138 @@
+{
+    "CADASTRAIS": {
+        "CPF": "93168470015",
+        "NOME": "MARIANE FROHLICH",
+        "NOME_MAE": "OLANDA FROHLICH",
+        "NASCTO": "26\/07\/1980",
+        "IDADE": "45 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "072812680400",
+        "NIT": "1260828369",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142120",
+        "PROFISSAO": "",
+        "SALARIO": " 12.089,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "5137154474",
+            "OPERADORA": "OI",
+            "DATA_REFERENCIA": "04\/03\/2014",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51997622962",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51992622962",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51995086095",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "mariane2003@gmail.com",
+            "mariane2003@terra.com.br",
+            "admariane@terra.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "R DONA CRISTINA",
+            "NUMERO": "165",
+            "COMPLEMENTO": "",
+            "BAIRRO": "MARGARIDA",
+            "CEP": "96825510",
+            "CIDADE": "SANTA CRUZ DO SUL",
+            "ESTADO": "RS"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "12093220059",
+                "NOME": "OLANDA FROHLICH",
+                "IDADE": "87 anos",
+                "LOCAL": "SANTA CRUZ DO SUL\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "76464652087",
+                "NOME": "MARCIA FROHLICH",
+                "IDADE": "47 anos",
+                "LOCAL": "SANTA CRUZ DO SUL\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "ALMIRO MUELLER",
+            "IDADE": "",
+            "LOCALIDADE": "SANTA CRUZ DO SUL\/RS",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "20509502091"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PHILIP MORRIS BRASIL INDUSTRIA E COMERCIO LTDA.",
+                "CNPJ": "04041933001311",
+                "CIDADE": "SANTA CRUZ DO SUL-RS",
+                "PROFISSAO": "142120",
+                "DATA_ADMISSAO": "08\/11\/2010",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PHILIP MORRIS BRASIL INDUSTRIA E COMERCIO LTDA.",
+                "CNPJ": "04041933001400",
+                "CIDADE": "SANTA CRUZ DO SUL-RS",
+                "PROFISSAO": "411010",
+                "DATA_ADMISSAO": "08\/11\/2010",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

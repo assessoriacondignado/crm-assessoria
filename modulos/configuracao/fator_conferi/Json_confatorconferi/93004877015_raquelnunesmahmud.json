@@ -1,0 +1,189 @@
+{
+    "CADASTRAIS": {
+        "CPF": "93004877015",
+        "NOME": "RAQUEL NUNES MAHMUD",
+        "NOME_MAE": "MARCIRIA PINTO NUNES",
+        "NASCTO": "10\/05\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Feminino",
+        "RG": "5066718544",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "067841920493",
+        "NIT": "1704510832",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "231210",
+        "PROFISSAO": "PROFESSOR DE NIVEL SUPERIOR DO ENSINO FUNDAMENTAL (PRIMEIRA A QUARTA SERIE)",
+        "SALARIO": " 3.683,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5534123305",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "5534124157",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5534011657",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "15\/07\/2010",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "55999782083",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "55999977401",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "55984450646",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "55999056252",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "raquelnm28@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": {
+            "LOGRADOURO": "BARRA DO QUARAI",
+            "NUMERO": "210",
+            "COMPLEMENTO": "",
+            "BAIRRO": "CENTRO",
+            "CEP": "97538000",
+            "CIDADE": "BARRA DO QUARAI",
+            "ESTADO": "RS"
+        }
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "63321572087",
+                "NOME": "MARCIRIA PINTO NUNES",
+                "IDADE": "73 anos",
+                "LOCAL": "URUGUAIANA\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "71597832049",
+                "NOME": "DOUGLAS PINTO NUNES",
+                "IDADE": "52 anos",
+                "LOCAL": "URUGUAIANA\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "89079000000",
+                "NOME": "MARCELO PINTO NUNES",
+                "IDADE": "51 anos",
+                "LOCAL": "URUGUAIANA\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "97021857004",
+                "NOME": "FABRICIO PINTO NUNES",
+                "IDADE": "46 anos",
+                "LOCAL": "RIO GRANDE\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "4634410010",
+                "NOME": "HANI NUNES MAHMUD JABER",
+                "IDADE": "25 anos",
+                "LOCAL": "URUGUAIANA\/RS",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SOCIEDADE MERIDIONAL DE EDUCACAO SOME",
+                "CNPJ": "92023159001545",
+                "CIDADE": "URUGUAIANA-RS",
+                "PROFISSAO": "231210",
+                "DATA_ADMISSAO": "13\/02\/2023",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "INSTITUTO LAURA VICUNA",
+                "CNPJ": "87516910000100",
+                "CIDADE": "URUGUAIANA-RS",
+                "PROFISSAO": "239405",
+                "DATA_ADMISSAO": "15\/04\/2002",
+                "DATA_DEMISSAO": "16\/03\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "SECRETARIA DA EDUCACAO",
+                "CNPJ": "92941681000100",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "232115",
+                "DATA_ADMISSAO": "02\/06\/2003",
+                "DATA_DEMISSAO": "{Ã±\/{Ã±\/2023",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

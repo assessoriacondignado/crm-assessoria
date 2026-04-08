@@ -1,0 +1,165 @@
+{
+    "CADASTRAIS": {
+        "CPF": "1330613538",
+        "NOME": "ANA PAULA ANDRADE SANTOS",
+        "NOME_MAE": "MARLENE ANDRADE SANTOS",
+        "NASCTO": "15\/10\/1982",
+        "IDADE": "43 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1357043781",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "331110",
+        "PROFISSAO": "AUXILIAR DE DESENVOLVIMENTO INFANTIL",
+        "SALARIO": " 2.570,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1332362927",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1332362927",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13991459890",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13997188541",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13997088541",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R FABIANO DE LUCENA",
+                "NUMERO": "145",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CJ RESIDENCIAL TANCREDO NEVES",
+                "CEP": "11350300",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PEDRO AMERICO",
+                "NUMERO": "32",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CPO GRANDE",
+                "CEP": "11075400",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ESPIRITO SANTO",
+                "NUMERO": "155",
+                "COMPLEMENTO": "FDS FUNDOS",
+                "BAIRRO": "CAMPO GRANDE",
+                "CEP": "11075390",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOAO GONZAGA DE MENESES",
+                "NUMERO": "291",
+                "COMPLEMENTO": "",
+                "BAIRRO": "",
+                "CEP": "48435000",
+                "CIDADE": "ADUSTINA",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "LOC SITIO UMBURANA",
+                "NUMERO": "0",
+                "COMPLEMENTO": "ZONA RURAL",
+                "BAIRRO": "",
+                "CEP": "48435000",
+                "CIDADE": "ADUSTINA",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1853538",
+            "NOME": "MARLENE ANDRADE SANTOS",
+            "IDADE": "65 anos",
+            "LOCAL": "ADUSTINA\/BA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COMUNIDADE ASSISTENCIAL ESPIRITA LAR VENERANDA",
+                "CNPJ": "58167032000166",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "331110",
+                "DATA_ADMISSAO": "10\/02\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "NOVOS RUMOS LTDA",
+                "CNPJ": "03799174000154",
+                "CIDADE": "SANTOS-SP",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "01\/06\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

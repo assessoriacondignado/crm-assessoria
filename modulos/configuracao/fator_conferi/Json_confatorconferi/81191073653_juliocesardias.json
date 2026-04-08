@@ -1,0 +1,182 @@
+{
+    "CADASTRAIS": {
+        "CPF": "81191073653",
+        "NOME": "JULIO CESAR DIAS",
+        "NOME_MAE": "MARIA DO CARMO DE OLIVEIRA DIAS",
+        "NASCTO": "20\/11\/1971",
+        "IDADE": "54 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12401648641",
+        "ESCOLARIDADE": "DA 5a. A 8a. SERIE INCOMPLETA DO 1o. GRAU(GINASIO INCOMPLETO)",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "715615",
+        "PROFISSAO": "ELETRICISTA DE INSTALACOES",
+        "SALARIO": " 1.775,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "3133824431",
+            "OPERADORA": "TELEMAR\/MG",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "31991561572",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31998667075",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31999833715",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31910314358",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "31986670759",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "13\/02\/2010",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "juliodias@juliodias.com.br",
+            "dias2@oi.com.br",
+            "juliocesardias038@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R C",
+                "NUMERO": "225",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALPES",
+                "CEP": "30451697",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "RUA FRANCISCO FALEIRO LOPES",
+                "NUMERO": "225",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ITAIPU (BARREIRO)",
+                "CEP": "30662690",
+                "CIDADE": "BELO HORIZONTE",
+                "ESTADO": "MG"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "701219661",
+            "NOME": "MARIA DO CARMO DE OLIVEIRA DIAS",
+            "IDADE": "77 anos",
+            "LOCAL": "BELO HORIZONTE\/MG",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ADICAO DISTRIBUICAO EXPRESS S\/A",
+                "CNPJ": "04149637009070",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "517425",
+                "DATA_ADMISSAO": "23\/04\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "WMB SUPERMERCADOS DO BRASIL LTDA.",
+                "CNPJ": "00063960002306",
+                "CIDADE": "CONTAGEM-MG",
+                "PROFISSAO": "410105",
+                "DATA_ADMISSAO": "22\/20\/1911",
+                "DATA_DEMISSAO": "15\/04\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "E M INSTALACOES LTDA",
+                "CNPJ": "01497356000145",
+                "CIDADE": "BETIM-MG",
+                "PROFISSAO": "715615",
+                "DATA_ADMISSAO": "09\/05\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "CONCRETUS CONSTRUCOES LTDA",
+                "CNPJ": "10566927000147",
+                "CIDADE": "CONTAGEM-MG",
+                "PROFISSAO": "715610",
+                "DATA_ADMISSAO": "03\/09\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "REC INSTALACOES LTDA",
+                "CNPJ": "04124653000133",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "951105",
+                "DATA_ADMISSAO": "01\/03\/2012",
+                "DATA_DEMISSAO": "30\/09\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

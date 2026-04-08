@@ -1,0 +1,231 @@
+{
+    "CADASTRAIS": {
+        "CPF": "56753330291",
+        "NOME": "CALIL JUNIO CAVALCANTE SATO",
+        "NOME_MAE": "RAIMUNDA SILVA CAVALCANTE",
+        "NASCTO": "24\/09\/1975",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1251733492 ",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "410205",
+        "PROFISSAO": "SUPERVISOR DE ALMOXARIFADO",
+        "SALARIO": " 3.267,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9230239541",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9233214286",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "01\/08\/2008",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9233214287",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "01\/08\/2008",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9236395035",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92984377667",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92985009781",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92985147417",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92984076133",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92996141018",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "calilcavalcante@oi.com.br",
+            "calilcavalcante@gmail.com",
+            "calilsato@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R LUIS VEZON",
+                "NUMERO": "210",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ZUMBI DOS PALMARES",
+                "CEP": "69084055",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R RAIMUNDO A BORGES",
+                "NUMERO": "1",
+                "COMPLEMENTO": "68",
+                "BAIRRO": "ALEIXO",
+                "CEP": "69083150",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV BURITI",
+                "NUMERO": "7040",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DT INDUST I",
+                "CEP": "69075000",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV BURITI",
+                "NUMERO": "5395",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DT INDUST I",
+                "CEP": "69075000",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "RUA RAIMUNDO A. BORGES",
+                "NUMERO": "168",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ALEIXO",
+                "CEP": "69083150",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "1054478546",
+            "NOME": "RAIMUNDA SILVA CAVALCANTE",
+            "IDADE": "45 anos",
+            "LOCAL": "BONITO\/BA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CENTRO DE ENSINO SUPERIOR NILTON LINS",
+                "CNPJ": "04803904000106",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "234505",
+                "DATA_ADMISSAO": "06\/08\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "METAL ALUMINIO LTDA",
+                "CNPJ": "07675099000170",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "410205",
+                "DATA_ADMISSAO": "09\/08\/2021",
+                "DATA_DEMISSAO": "17\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "AGA MOVEIS INDUSTRIA E COMERCIO DE MOVEIS LTDA",
+                "CNPJ": "09487195000110",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "141205",
+                "DATA_ADMISSAO": "16\/11\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "HITACHI ASTEMO MANAUS BRAKE SYSTEMS LTDA.",
+                "CNPJ": "01771241000105",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "142415",
+                "DATA_ADMISSAO": "01\/08\/2011",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

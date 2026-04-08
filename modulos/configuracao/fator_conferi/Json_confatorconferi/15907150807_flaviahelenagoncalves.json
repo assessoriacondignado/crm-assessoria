@@ -1,0 +1,184 @@
+{
+    "CADASTRAIS": {
+        "CPF": "15907150807",
+        "NOME": "FLAVIA HELENA GONCALVES",
+        "NOME_MAE": "OLINDA CHIAPETTA GONCALVES",
+        "NASCTO": "24\/02\/1972",
+        "IDADE": "54 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "203951550175",
+        "NIT": "1239297062",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "411010",
+        "PROFISSAO": "ASSISTENTE ADMINISTRATIVO",
+        "SALARIO": " 6.107,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1332254609",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13981179032",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13997150059",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13997302684",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "13997372402",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "fla24@bol.com.br",
+            "flaursa@icloud.com",
+            "flaursa@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV ANA COSTA",
+                "NUMERO": "467",
+                "COMPLEMENTO": "AP 1802",
+                "BAIRRO": "GONZAGA",
+                "CEP": "11060003",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV MARECHAL FLORIANO PEIXOTO",
+                "NUMERO": "274",
+                "COMPLEMENTO": "AP 13",
+                "BAIRRO": "JOSE MENINO",
+                "CEP": "11060302",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "7516823813",
+                "NOME": "OLINDA CHIAPETTA GONCALVES",
+                "IDADE": "96 anos",
+                "LOCAL": "SANTOS\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "42134672870",
+                "NOME": "BARBARA GABRIELA RIBEIRO",
+                "IDADE": "30 anos",
+                "LOCAL": "ITAPIRA\/SP",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "44828912827",
+                "NOME": "GIAN HENRIQUE RIBEIRO",
+                "IDADE": "28 anos",
+                "LOCAL": "ITAPIRA\/SP",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "47710174841",
+                "NOME": "LEONARDO GUSTAVO RIBEIRO",
+                "IDADE": "25 anos",
+                "LOCAL": "JAGUARIUNA\/SP",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "47710208843",
+                "NOME": "CARLOS CRISTIANO RIBEIRO",
+                "IDADE": "26 anos",
+                "LOCAL": "ITAPIRA\/SP",
+                "PARENTESCO": "FILHO(A)"
+            },
+            {
+                "CPF": "56174638880",
+                "NOME": "MATHEUS MURIEL RIBEIRO",
+                "IDADE": "23 anos",
+                "LOCAL": "ITAPIRA\/SP",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "FLAVIA HELENA GONCALVES LEMOS",
+                "IDADE": "",
+                "LOCALIDADE": "PITANGUI\/MG",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "3653956684"
+            },
+            {
+                "NOME": "OLINDA CHIAPETTA GONCALVES",
+                "IDADE": "",
+                "LOCALIDADE": "SANTOS\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "7516823813"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "SANTOS BRASIL PARTICIPACOES S.A.",
+            "CNPJ": "02762121000953",
+            "CIDADE": "GUARUJA-SP",
+            "PROFISSAO": "411010",
+            "DATA_ADMISSAO": "01\/10\/2011",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,140 @@
+{
+    "CADASTRAIS": {
+        "CPF": "27077643883",
+        "NOME": "ROSEMEIRE PEDROSO",
+        "NOME_MAE": "ROSA LOPES",
+        "NASCTO": "04\/10\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Feminino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "285278370116",
+        "NIT": "1250635324",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142320",
+        "PROFISSAO": "GERENTE DE VENDAS",
+        "SALARIO": " 2.757,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1532514735",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1532513090",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "15988322831",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15996011988",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "15997236900",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "maurosergioinformatica@ig.com.br",
+            "rose.p.moura@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "LG STA CRUZ",
+                "NUMERO": "2286",
+                "COMPLEMENTO": "FRT OUT C",
+                "BAIRRO": "JD STA CRUZ",
+                "CEP": "18275710",
+                "CIDADE": "TATUI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R VALFREDO GOMES DE ARAUJO",
+                "NUMERO": "82",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "58123000",
+                "CIDADE": "BOA VISTA",
+                "ESTADO": "PB"
+            },
+            {
+                "LOGRADOURO": "R SANTA CRUZ",
+                "NUMERO": "2286",
+                "COMPLEMENTO": "",
+                "BAIRRO": "LOTEAMENTO MODENA",
+                "CEP": "18276020",
+                "CIDADE": "TATUI",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "89309960",
+            "NOME": "ROSA LOPES",
+            "IDADE": "72 anos",
+            "LOCAL": "CURITIBA\/PR",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "COMERCIAL PEIXOTO DE TATUI LTDA",
+            "CNPJ": "72185002000103",
+            "CIDADE": "TATUI-SP",
+            "PROFISSAO": "142320",
+            "DATA_ADMISSAO": "02\/01\/2013",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

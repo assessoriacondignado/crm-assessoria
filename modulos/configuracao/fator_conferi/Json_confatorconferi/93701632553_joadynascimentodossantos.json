@@ -1,0 +1,179 @@
+{
+    "CADASTRAIS": {
+        "CPF": "93701632553",
+        "NOME": "JOADY NASCIMENTO DOS SANTOS",
+        "NOME_MAE": "ELIZETE NASCIMENTO DOS SANTOS",
+        "NASCTO": "31\/01\/1977",
+        "IDADE": "49 anos",
+        "SEXO": "I",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "078351940540",
+        "NIT": "12655735066",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "142305",
+        "PROFISSAO": "GERENTE COMERCIAL",
+        "SALARIO": " 1.123,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "7436115247",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "7436110506",
+                "OPERADORA": "TELEMAR\/BA",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "74981417721",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "74988082957",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "74988118505",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "74988640266",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "74998852145",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "joadysantos@oi.com.br"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R MORAOZINHO",
+                "NUMERO": "82",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MARINGA",
+                "CEP": "48902527",
+                "CIDADE": "JUAZEIRO",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R GASPAR DE LEMOS",
+                "NUMERO": "82",
+                "COMPLEMENTO": "NS PEN",
+                "BAIRRO": "NOSSA SENHORA DA PENHA",
+                "CEP": "48902722",
+                "CIDADE": "JUAZEIRO",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R UM",
+                "NUMERO": "82",
+                "COMPLEMENTO": "AP 82",
+                "BAIRRO": "PIRANGA",
+                "CEP": "48900072",
+                "CIDADE": "JUAZEIRO",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "988297507",
+            "NOME": "ELIZETE NASCIMENTO DOS SANTOS",
+            "IDADE": "59 anos",
+            "LOCAL": "CALDEIRAO GRANDE\/BA",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "AGROBRAS AGRICOLA TROPICAL DO BRASIL LTDA",
+                "CNPJ": "24380727000290",
+                "CIDADE": "CASA NOVA-BA",
+                "PROFISSAO": "411005",
+                "DATA_ADMISSAO": "18\/09\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "CAPIM FRIOS LTDA",
+                "CNPJ": "17995737000194",
+                "CIDADE": "JUAZEIRO-BA",
+                "PROFISSAO": "521125",
+                "DATA_ADMISSAO": "13\/06\/2024",
+                "DATA_DEMISSAO": "10\/09\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MANOEL DE SOUZA SANTOS DE JUAZEIRO",
+                "CNPJ": "07337289000188",
+                "CIDADE": "JUAZEIRO-BA",
+                "PROFISSAO": "142305",
+                "DATA_ADMISSAO": "01\/04\/2017",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

@@ -1,0 +1,259 @@
+{
+    "CADASTRAIS": {
+        "CPF": "94990905091",
+        "NOME": "BRUNO DE AZEVEDO IVANOFF",
+        "NOME_MAE": "MARCIA VALESKA AZEVEDO IVANOFF",
+        "NASCTO": "24\/08\/1978",
+        "IDADE": "47 anos",
+        "SEXO": "Masculino",
+        "RG": "6056132399",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "069278740418",
+        "NIT": "20083171619",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "513205",
+        "PROFISSAO": "COZINHEIRO GERAL",
+        "SALARIO": " 1.091,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5132203070",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5132491878",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5137798090",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "31\/01\/2013",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5132122756",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "5132768090",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "51981168090",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51992402406",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51991937134",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "51981112840",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "51992376009",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "brunoivanoff@globo.com.br",
+            "ivanoffgastro@gmail.com",
+            "brunoivanoff@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DONA AUGUSTA",
+                "NUMERO": "333",
+                "COMPLEMENTO": "CJ 204 5",
+                "BAIRRO": "MENINO DEUS",
+                "CEP": "90850130",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R SILVEIRO",
+                "NUMERO": "120",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MENINO DEUS",
+                "CEP": "90850000",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R SARMENTO LEITE",
+                "NUMERO": "860",
+                "COMPLEMENTO": "AP 601",
+                "BAIRRO": "CENTRO HISTORICO",
+                "CEP": "90050170",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA DONA ONDINA",
+                "NUMERO": "180",
+                "COMPLEMENTO": "AP 502",
+                "BAIRRO": "MENINO DEUS",
+                "CEP": "90850020",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA LEOPOLDO BIER",
+                "NUMERO": "591",
+                "COMPLEMENTO": "APT 606",
+                "BAIRRO": "SANTANA",
+                "CEP": "90620100",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "AVENIDA ICARAI",
+                "NUMERO": "1048",
+                "COMPLEMENTO": "AP 702",
+                "BAIRRO": "CRISTAL",
+                "CEP": "90810000",
+                "CIDADE": "PORTO ALEGRE",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA FERNANDO MACHADO",
+                "NUMERO": "369",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "96400450",
+                "CIDADE": "BAGE",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "99194503087",
+            "NOME": "ERICA DE AZEVEDO IVANOFF",
+            "IDADE": "43 anos",
+            "LOCAL": "PORTO ALEGRE\/RS",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "SERVICO NACIONAL DE APRENDIZAGEM COMERCIAL SENAC AR\/RS",
+                "CNPJ": "03422707004333",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "233215",
+                "DATA_ADMISSAO": "13\/11\/2014",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "COMERCIAL DE ALIMENTOS KET LTDA",
+                "CNPJ": "07528076000133",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "513205",
+                "DATA_ADMISSAO": "01\/06\/2012",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "COMERCIAL DE ALIMENTOS KET LTDA",
+                "CNPJ": "07528076000214",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "513205",
+                "DATA_ADMISSAO": "15\/07\/2010",
+                "DATA_DEMISSAO": "23\/04\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            },
+            {
+                "RAZAO_SOCIAL": "IAIA COMERCIO DE ALIMENTOS LTDA",
+                "CNPJ": "04738699000142",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "513205",
+                "DATA_ADMISSAO": "15\/04\/2012",
+                "DATA_DEMISSAO": "19\/05\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

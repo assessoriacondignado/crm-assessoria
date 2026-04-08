@@ -1,0 +1,235 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25361568856",
+        "NOME": "MARCELO DONIZETTI BUENO",
+        "NOME_MAE": "DERCY FERREIRA DA SILVA",
+        "NASCTO": "10\/04\/1976",
+        "IDADE": "50 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "267659040116",
+        "NIT": "1243112420",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "123105",
+        "PROFISSAO": "DIRETOR ADMINISTRATIVO",
+        "SALARIO": " 17.500,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1334652333",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1335611623",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1330431296",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1335614765",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1335613827",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "13997986324",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "13981165854",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "05\/01\/2018",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "13981228886",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "13981620777",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "13981499560",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "marsbue@gmail.com",
+            "monatolacy@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PROFA EULINA TRINDADE",
+                "NUMERO": "103",
+                "COMPLEMENTO": "",
+                "BAIRRO": "ESP DOS BARREIROS",
+                "CEP": "11340220",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV PRES WILSON",
+                "NUMERO": "963",
+                "COMPLEMENTO": "A 504",
+                "BAIRRO": "ITARARE",
+                "CEP": "11320001",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ALEIXO GARCIA",
+                "NUMERO": "124",
+                "COMPLEMENTO": "7",
+                "BAIRRO": "CATIAPOA",
+                "CEP": "11390260",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R TOLENTINO FILGUEIRAS",
+                "NUMERO": "77",
+                "COMPLEMENTO": "",
+                "BAIRRO": "GONZAGA",
+                "CEP": "11060470",
+                "CIDADE": "SANTOS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV CAP LUIS HORNEAUX DE MOURA",
+                "NUMERO": "170",
+                "COMPLEMENTO": "32 PARAIS",
+                "BAIRRO": "JD PARAISO",
+                "CEP": "11370500",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "ROD PE MANOEL DA NOBREGA",
+                "NUMERO": "21500",
+                "COMPLEMENTO": "KM 286 4",
+                "BAIRRO": "SAMARITA",
+                "CEP": "11346300",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DONA ANITA COSTA",
+                "NUMERO": "31",
+                "COMPLEMENTO": "TV",
+                "BAIRRO": "VL VOTURUA",
+                "CEP": "11380300",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R GENERAL SAN MARTIN",
+                "NUMERO": "68",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM INDEPENDENCIA",
+                "CEP": "11380480",
+                "CIDADE": "SAO VICENTE",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "3453457897",
+            "NOME": "DERCY FERREIRA DA SILVA",
+            "IDADE": "65 anos",
+            "LOCAL": "PRAIA GRANDE\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "SANTOS CONTAINER LTDA",
+            "CNPJ": "67298356000124",
+            "CIDADE": "SAO VICENTE-SP",
+            "PROFISSAO": "123105",
+            "DATA_ADMISSAO": "01\/04\/2008",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

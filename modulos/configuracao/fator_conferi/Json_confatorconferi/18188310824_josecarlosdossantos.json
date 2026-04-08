@@ -1,0 +1,137 @@
+{
+    "CADASTRAIS": {
+        "CPF": "18188310824",
+        "NOME": "JOSE CARLOS DOS SANTOS",
+        "NOME_MAE": "ANTONIA BEZERRA DOS SANTOS",
+        "NASCTO": "06\/12\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "249062220141",
+        "NIT": "12492908846",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "848515",
+        "PROFISSAO": "DESOSSADOR",
+        "SALARIO": " 972,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "1738332800",
+            "OPERADORA": "VIVO",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "17996285211",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "17996285215",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "17996463210",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "josesantos061276@gmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "TRAV ERMELINDA GABRIEL CARTA",
+                "NUMERO": "75",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "CENTRO",
+                "CEP": "15640000",
+                "CIDADE": "SAO JOAO DAS DUAS PONTES",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R IRMAOS BRANDINI",
+                "NUMERO": "520",
+                "COMPLEMENTO": "CASA",
+                "BAIRRO": "",
+                "CEP": "15640000",
+                "CIDADE": "SAO JOAO DAS DUAS PONTES",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "20050429",
+            "NOME": "ANTONIA BEZERRA DOS SANTOS",
+            "IDADE": "87 anos",
+            "LOCAL": "POMBAL\/PB",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "COFCO INTERNATIONAL BRASIL S.A.",
+                "CNPJ": "06315338002405",
+                "CIDADE": "MERIDIANO-SP",
+                "PROFISSAO": "782510",
+                "DATA_ADMISSAO": "01\/04\/2013",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FRIGOESTRELA S\/A",
+                "CNPJ": "52645009001125",
+                "CIDADE": "ESTRELA D'OESTE-SP",
+                "PROFISSAO": "848515",
+                "DATA_ADMISSAO": "01\/06\/2011",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "GERALDO MOREIRA DO NASCIMENTO E OUTROS",
+            "CNPJ": "16908417000197",
+            "CIDADE": "SAO JOAO DAS DUAS PONTES-SP",
+            "QUALIFICACAO": "Produtor Rural",
+            "DATA_ENTRADA": "20120925",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

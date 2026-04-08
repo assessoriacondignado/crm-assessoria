@@ -1,0 +1,215 @@
+{
+    "CADASTRAIS": {
+        "CPF": "1023835533",
+        "NOME": "PABLO DIEGO SANTANA DE OLIVEIRA LIMA",
+        "NOME_MAE": "GLAUCIA SANTANA DE OLIVEIRA LIMA",
+        "NASCTO": "21\/07\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "018857972135",
+        "NIT": "12936823767",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "225125",
+        "PROFISSAO": "",
+        "SALARIO": " 6.471,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1132843190",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1139384524",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "31\/05\/2012",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11911529041",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11998406868",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "79991914575",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "27\/07\/2016",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11999263420",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "79999339198",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": "pablodiego.81@hotmail.com"
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R UM",
+                "NUMERO": "151",
+                "COMPLEMENTO": "AP103 ED CARMEL COND PACIFICO",
+                "BAIRRO": "ZONA DE EXPANSAO ARUANA",
+                "CEP": "49000632",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            },
+            {
+                "LOGRADOURO": "R ALTO DO RESERVATORIO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "30",
+                "BAIRRO": "NOVA DESCOBERTA",
+                "CEP": "52091210",
+                "CIDADE": "RECIFE",
+                "ESTADO": "PE"
+            },
+            {
+                "LOGRADOURO": "R DOS INGLESES 222",
+                "NUMERO": "222",
+                "COMPLEMENTO": "AP  Apartamento  51",
+                "BAIRRO": "MORRO DOS INGLESES",
+                "CEP": "01329902",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R FLAVIO DE MELO",
+                "NUMERO": "180",
+                "COMPLEMENTO": "APTO 193",
+                "BAIRRO": "VL MARIANA",
+                "CEP": "04117130",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA URANO",
+                "NUMERO": "18",
+                "COMPLEMENTO": "AP 84",
+                "BAIRRO": "ACLIMACAO",
+                "CEP": "01529010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA BENJAMIN FONTES",
+                "NUMERO": "151",
+                "COMPLEMENTO": "AP 203",
+                "BAIRRO": "LUZIA",
+                "CEP": "49045110",
+                "CIDADE": "ARACAJU",
+                "ESTADO": "SE"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "86439010590",
+            "NOME": "PEDRO RAPHAEL DE OLIVEIRA LIMA",
+            "IDADE": "31 anos",
+            "LOCAL": "",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO EDUCACIONAL NOVE DE JULHO",
+                "CNPJ": "43374768000561",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "234520",
+                "DATA_ADMISSAO": "22\/02\/2022",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "HOSPITAL DO SERVIDOR PUBLICO MUNICIPAL",
+                "CNPJ": "46854998000192",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "225125",
+                "DATA_ADMISSAO": "17\/08\/2018",
+                "DATA_DEMISSAO": "{Ã±\/{Ã±\/2023",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "FUNDO MUNICIPAL DE SAUDE",
+                "CNPJ": "11417909000166",
+                "CIDADE": "CARMOPOLIS-SE",
+                "PROFISSAO": "225125",
+                "DATA_ADMISSAO": "03\/01\/2012",
+                "DATA_DEMISSAO": "13\/02\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "LIMA SALES SERVICOS MEDICOS LTDA",
+            "CNPJ": "31841181000102",
+            "CIDADE": "SAO PAULO-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20181023",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

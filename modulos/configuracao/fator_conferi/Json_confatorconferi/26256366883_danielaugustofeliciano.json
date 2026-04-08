@@ -1,0 +1,217 @@
+{
+    "CADASTRAIS": {
+        "CPF": "26256366883",
+        "NOME": "DANIEL AUGUSTO FELICIANO",
+        "NOME_MAE": "MARIA HELENA FELICIANO",
+        "NASCTO": "31\/10\/1977",
+        "IDADE": "48 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "284565110132",
+        "NIT": "1293683077",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142105",
+        "PROFISSAO": "GERENTE ADMINISTRATIVO",
+        "SALARIO": " 81.341,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1121351649",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1134572667",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1120939683",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11919256144",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11911054505",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11911364205",
+                "OPERADORA": "",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "77999157850",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "77999306910",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "HIAE\/daniel.feliciano@varian.com",
+            "daniel.feliciano@varianmedical.com.br",
+            "daniel.feliciano@varian.com",
+            "daug1977@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ALESSANDRO DI BERARDO",
+                "NUMERO": "1900",
+                "COMPLEMENTO": "C 70",
+                "BAIRRO": "MEDEIROS",
+                "CEP": "13212448",
+                "CIDADE": "JUNDIAI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ALESSANDRO DI BERARDO",
+                "NUMERO": "70",
+                "COMPLEMENTO": "",
+                "BAIRRO": "MEDEIROS",
+                "CEP": "13212448",
+                "CIDADE": "JUNDIAI",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R LUIS PEREIRA LOPES",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD CENTENARIO",
+                "CEP": "08430370",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AV ROSARIA",
+                "NUMERO": "573",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL ROSARIA",
+                "CEP": "08021070",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PONTA DE LUCENA",
+                "NUMERO": "25",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD MARABA",
+                "CEP": "08270340",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE TAVARES DE SIQUEIRA",
+                "NUMERO": "80",
+                "COMPLEMENTO": "AP  Apartamento  21",
+                "BAIRRO": "PARQUE SAO JORGE",
+                "CEP": "03085030",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA LUIS PEREIRA LOPES",
+                "NUMERO": "152",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD CENTENARIO",
+                "CEP": "08430370",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R LUIS PEREIRA LOPES",
+                "NUMERO": "13",
+                "COMPLEMENTO": "C 02",
+                "BAIRRO": "J CENTENARIO",
+                "CEP": "08430370",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "4364620440",
+            "NOME": "MARIA HELENA FELICIANO",
+            "IDADE": "44 anos",
+            "LOCAL": "TANGARA\/RN",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "VARIAN MEDICAL SYSTEMS BRASIL LTDA.",
+            "CNPJ": "03009915000156",
+            "CIDADE": "JUNDIAI-SP",
+            "PROFISSAO": "142105",
+            "DATA_ADMISSAO": "12\/04\/2000",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": ""
+}

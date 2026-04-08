@@ -1,0 +1,183 @@
+{
+    "CADASTRAIS": {
+        "CPF": "95049444500",
+        "NOME": "DENISE SILVA COSTA",
+        "NOME_MAE": "IDALIA ALVES DA SILVA",
+        "NASCTO": "02\/01\/1977",
+        "IDADE": "49 anos",
+        "SEXO": "Feminino",
+        "RG": "647586568",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "083082450507",
+        "NIT": "1268750004",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "142210",
+        "PROFISSAO": "GERENTE DE DEPARTAMENTO PESSOAL",
+        "SALARIO": " 5.800,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "7133597717",
+            "OPERADORA": "TELEMAR\/BA",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "media"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "71991297938",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71992863317",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71986043883",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71986067929",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "71999494295",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "deny_costasilva@hotmail.com",
+            "denise@acont.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R PROF JAIME DE SA MENEZES",
+                "NUMERO": "1070",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAJAZEIRAS VII",
+                "CEP": "41337100",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "AV TANCREDO NEVES",
+                "NUMERO": "1283",
+                "COMPLEMENTO": "ED OMEGA",
+                "BAIRRO": "CAM DAS ARVORES",
+                "CEP": "41820021",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "R EMIDIO DOS SANTOS",
+                "NUMERO": "285",
+                "COMPLEMENTO": "AP 506 ED ANA MARIA",
+                "BAIRRO": "BARBALHO",
+                "CEP": "40301015",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "RUA GENERAL LABATUT",
+                "NUMERO": "72",
+                "COMPLEMENTO": "AP 602",
+                "BAIRRO": "BARRIS",
+                "CEP": "40070100",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            },
+            {
+                "LOGRADOURO": "AVENIDA VASCO DA GAMA",
+                "NUMERO": "237",
+                "COMPLEMENTO": "",
+                "BAIRRO": "FEDERACAO",
+                "CEP": "40230731",
+                "CIDADE": "SALVADOR",
+                "ESTADO": "BA"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "24871524",
+            "NOME": "IDALIA ALVES DA SILVA",
+            "IDADE": "58 anos",
+            "LOCAL": "SAO PAULO\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "IVANILDES SILVA COSTA",
+            "IDADE": "",
+            "LOCALIDADE": "SALVADOR\/BA",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "1540340538"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "ACONT CONTADORES ASSOCIADOS",
+            "CNPJ": "01209864000180",
+            "CIDADE": "SALVADOR-BA",
+            "PROFISSAO": "142210",
+            "DATA_ADMISSAO": "03\/05\/2010",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "M.R.I COMERCIAL DISTRIBUIDORA LTDA",
+            "CNPJ": "04284975000140",
+            "CIDADE": "SALVADOR-BA",
+            "QUALIFICACAO": "SÃ³cio",
+            "DATA_ENTRADA": "20011018",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

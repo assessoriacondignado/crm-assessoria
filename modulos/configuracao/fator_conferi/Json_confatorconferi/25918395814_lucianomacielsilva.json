@@ -1,0 +1,297 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25918395814",
+        "NOME": "LUCIANO MACIEL SILVA",
+        "NOME_MAE": "ADELINA DE JESUS MACIEL SILVA",
+        "NASCTO": "01\/07\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "30063615",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "276812130116",
+        "NIT": "1254399246",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "391115",
+        "PROFISSAO": "CONTROLADOR DE ENTRADA E SAIDA",
+        "SALARIO": " 3.528,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1142039785",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1142447404",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "30\/04\/2007",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1170031413",
+                "OPERADORA": "NEXTEL",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1170032355",
+                "OPERADORA": "NEXTEL",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11960738788",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11961048122",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11994292166",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11946277805",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11962882182",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "luciano_maciel@hotmail.com",
+            "lucianomaciel2011@bol.com.br",
+            "luciano.8722@globo.com",
+            "luciano.maciel2414@terra.com.br",
+            "luciano_maciel2000@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R IGUAPE",
+                "NUMERO": "399",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD ANGELA",
+                "CEP": "06824060",
+                "CIDADE": "EMBU DAS ARTES",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DO BOSQUE",
+                "NUMERO": "1589",
+                "COMPLEMENTO": "CJ 707",
+                "BAIRRO": "BARRA FUNDA",
+                "CEP": "01136001",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R CRUZEIRO",
+                "NUMERO": "549",
+                "COMPLEMENTO": "",
+                "BAIRRO": "BARRA FUNDA",
+                "CEP": "01137000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R AVARE",
+                "NUMERO": "309",
+                "COMPLEMENTO": "CS 2",
+                "BAIRRO": "JD ANGELA",
+                "CEP": "06824270",
+                "CIDADE": "EMBU DAS ARTES",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R DR ALBERTO LYRA",
+                "NUMERO": "24",
+                "COMPLEMENTO": "C 7",
+                "BAIRRO": "JD PANORAMA",
+                "CEP": "05679165",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R BABILONIA",
+                "NUMERO": "74",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL OLINDA",
+                "CEP": "06810200",
+                "CIDADE": "EMBU DAS ARTES",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA IGUAPE",
+                "NUMERO": "339",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD DOM JOSE",
+                "CEP": "06824060",
+                "CIDADE": "EMBU",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA IGUAPE",
+                "NUMERO": "435",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM ANGELA",
+                "CEP": "06824060",
+                "CIDADE": "EMBU DAS ARTES",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "22257187172",
+                "NOME": "ADELINA DE JESUS MACIEL SILVA",
+                "IDADE": "76 anos",
+                "LOCAL": "EMBU DAS ARTES\/SP",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "10129140899",
+                "NOME": "ROSINETE MACIEL SILVA",
+                "IDADE": "55 anos",
+                "LOCAL": "EMBU DAS ARTES\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "17698046842",
+                "NOME": "ROSIVALDO MACIEL SILVA",
+                "IDADE": "52 anos",
+                "LOCAL": "EMBU DAS ARTES\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "22791281878",
+                "NOME": "FABIANO MACIEL SILVA",
+                "IDADE": "40 anos",
+                "LOCAL": "EMBU DAS ARTES\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "27835753880",
+                "NOME": "CRISTIANO MACIEL SILVA",
+                "IDADE": "47 anos",
+                "LOCAL": "TABOAO DA SERRA\/SP",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ELIANE MARIA DA SILVA",
+                "IDADE": "",
+                "LOCALIDADE": "ITAPECERICA DA SERRA\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "26456965896"
+            },
+            {
+                "NOME": "JOEL ARAUJO DE OLIVEIRA",
+                "IDADE": "",
+                "LOCALIDADE": "VALPARAISO DE GOIAS\/GO",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "86534467534"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ACACIA COMERCIO, MONITORAMENTO E SERVICOS TERCEIRIZADOS LTDA",
+                "CNPJ": "16648140000100",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "391115",
+                "DATA_ADMISSAO": "16\/05\/2018",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "FORT KNOX TECNOLOGIA DE SEGURANCA LTDA",
+                "CNPJ": "03705140000153",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "517410",
+                "DATA_ADMISSAO": "27\/03\/2015",
+                "DATA_DEMISSAO": "22\/03\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "PRIME SERVICOS E COMERCIO DE MONITORAMENTO LTDA",
+                "CNPJ": "05875982000189",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "422215",
+                "DATA_ADMISSAO": "01\/06\/2012",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

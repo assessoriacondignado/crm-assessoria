@@ -1,0 +1,233 @@
+{
+    "CADASTRAIS": {
+        "CPF": "48105457253",
+        "NOME": "LUCIANO INACIO DE MELO",
+        "NOME_MAE": "SONIA MARIA VITORELLI DE MELO",
+        "NASCTO": "26\/12\/1976",
+        "IDADE": "49 anos",
+        "SEXO": "Masculino",
+        "RG": "2461362",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "PR",
+        "TITULO_ELEITOR": "",
+        "NIT": "1348281689",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "234510",
+        "PROFISSAO": "PROFESSOR DE ENSINO SUPERIOR NA AREA DE ORIENTACAO EDUCACIONAL",
+        "SALARIO": " 183,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1131657876",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1150622317",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "14\/05\/2020",
+                "TIPO_TEL": "GPON",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1137987653",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11945338014",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11963143239",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11982965522",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "07\/10\/2009",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11941480873",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "04\/03\/2013",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "11976535848",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "apcavalcanteinformatica@gmail.com",
+            "marcioburgardt@gmail.com",
+            "sergio.attanasio@gmail.com",
+            "lucianoimelo@hotmail.com",
+            "lucianoimelo@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R CARNEIRO DA CUNHA",
+                "NUMERO": "405",
+                "COMPLEMENTO": "AP 64",
+                "BAIRRO": "VL DA SAUDE",
+                "CEP": "04144000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ITAPIRU",
+                "NUMERO": "380",
+                "COMPLEMENTO": "AP 42",
+                "BAIRRO": "SAUDE",
+                "CEP": "04143010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R MARIA BUCALEM HADDAD",
+                "NUMERO": "61",
+                "COMPLEMENTO": "AP  Apartamento  83 BL  Blocos  CRISTINA",
+                "BAIRRO": "VILA FIRMIANO PINTO",
+                "CEP": "04125010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MARIA BUCALEM HADDAD",
+                "NUMERO": "6",
+                "COMPLEMENTO": "APT 63",
+                "BAIRRO": "VILA FIRMIANO PINTO",
+                "CEP": "04125010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MINAS GERAIS",
+                "NUMERO": "428",
+                "COMPLEMENTO": "AP 87",
+                "BAIRRO": "HIGIENOPOLIS",
+                "CEP": "01244010",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA PALMIRA BERTTOCO LACUTICE",
+                "NUMERO": "11",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PARQUE RESIDENCIAL DOM LAFAYETE LIBANIO",
+                "CEP": "15046150",
+                "CIDADE": "SAO JOSE DO RIO PRETO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "27630408889",
+            "NOME": "ADRIANO VITORELLI DE MELO",
+            "IDADE": "46 anos",
+            "LOCAL": "RIO DE JANEIRO\/RJ",
+            "PARENTESCO": "IRMAO(A)"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "GABRIELA ALVAREZ BURGARDT",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "31282757857"
+            },
+            {
+                "NOME": "MARCIO PINTO VIEIRA",
+                "IDADE": "",
+                "LOCALIDADE": "RIO DE JANEIRO\/RJ",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "11331371724"
+            },
+            {
+                "NOME": "MARCIO ROBERTO BURGARDT DE SOUZA",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "3791291912"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "VSTP EDUCACAO S.A.",
+            "CNPJ": "11319526000155",
+            "CIDADE": "SAO PAULO-SP",
+            "PROFISSAO": "234510",
+            "DATA_ADMISSAO": "01\/11\/2014",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "L A MELO SERVICOS DE INFORMATICA LTDA",
+            "CNPJ": "05634839000103",
+            "CIDADE": "SAO PAULO-SP",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "20030425",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

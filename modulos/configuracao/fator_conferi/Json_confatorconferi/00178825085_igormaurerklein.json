@@ -1,0 +1,161 @@
+{
+    "CADASTRAIS": {
+        "CPF": "178825085",
+        "NOME": "IGOR MAURER KLEIN",
+        "NOME_MAE": "VERA REJANE MAURER KLEIN",
+        "NASCTO": "14\/10\/1981",
+        "IDADE": "44 anos",
+        "SEXO": "Masculino",
+        "RG": "1654440730",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "082435230450",
+        "NIT": "1256043971",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "313120",
+        "PROFISSAO": "TECNICO DE MANUTENCAO ELETRICA",
+        "SALARIO": " 20.682,00",
+        "CLASSE_ECONOMICA": "A",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5135906248",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5130371926",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "5135686749",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": {
+            "NUMERO": "51981717371",
+            "OPERADORA": "TIM CELULAR S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "MOVEL",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "psigor@brahma.com.br",
+            "nielkmi@gmail.com",
+            "imklein@ibestvip.com",
+            "imklein@ibestvip.com.br",
+            "igor.klein@yahoo.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ADONIRAN BARBOSA",
+                "NUMERO": "46",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "SIT PAECARA VICENTE DE CARVALHO",
+                "CEP": "11451360",
+                "CIDADE": "GUARUJA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R STO INACIO",
+                "NUMERO": "368",
+                "COMPLEMENTO": "CS 368",
+                "BAIRRO": "CRISTO REI",
+                "CEP": "93020450",
+                "CIDADE": "SAO LEOPOLDO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R ARNO SCHUCH",
+                "NUMERO": "540",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VICENTINA",
+                "CEP": "93025410",
+                "CIDADE": "SAO LEOPOLDO",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "RUA MEDIANEIRA",
+                "NUMERO": "271",
+                "COMPLEMENTO": "AP 203 A",
+                "BAIRRO": "CRISTO REI",
+                "CEP": "93020440",
+                "CIDADE": "SAO LEOPOLDO",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "20452870097",
+                "NOME": "VERA REJANE MAURER KLEIN",
+                "IDADE": "68 anos",
+                "LOCAL": "SAO LEOPOLDO\/RS",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "2085516033",
+                "NOME": "RENATA MAURER KLEIN",
+                "IDADE": "35 anos",
+                "LOCAL": "SAO LEOPOLDO\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "PETROLEO BRASILEIRO S A PETROBRAS",
+                "CNPJ": "33000167010255",
+                "CIDADE": "CANOAS-RS",
+                "PROFISSAO": "313120",
+                "DATA_ADMISSAO": "01\/08\/2012",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "PETROBRAS LOGISTICA DE EXPLORACAO E PRODUCAO S A",
+                "CNPJ": "04207640000128",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "391130",
+                "DATA_ADMISSAO": "15\/08\/2005",
+                "DATA_DEMISSAO": "31\/07\/2012",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

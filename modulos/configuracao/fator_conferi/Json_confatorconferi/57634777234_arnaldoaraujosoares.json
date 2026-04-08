@@ -1,0 +1,261 @@
+{
+    "CADASTRAIS": {
+        "CPF": "57634777234",
+        "NOME": "ARNALDO ARAUJO SOARES",
+        "NOME_MAE": "ZOILA ARAUJO SOARES",
+        "NASCTO": "29\/05\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "12445103446",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "311410",
+        "PROFISSAO": "TECNICO EM PLASTICO",
+        "SALARIO": " 4.274,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "9232492126",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "9233429026",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9236168212",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "9232494331",
+                "OPERADORA": "TELEMAR\/AM",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "92981284519",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92988042126",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92988559024",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92992372361",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "92992517462",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": "",
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R A VASCONCELOS",
+                "NUMERO": "10",
+                "COMPLEMENTO": "Q 13",
+                "BAIRRO": "PURAQUEQUARA",
+                "CEP": "69009302",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R DOIS",
+                "NUMERO": "10",
+                "COMPLEMENTO": "",
+                "BAIRRO": "LIRIO DO VALE",
+                "CEP": "69038003",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R DOS BREUS",
+                "NUMERO": "2",
+                "COMPLEMENTO": "SN ALAMEDAALAMEDAA 2",
+                "BAIRRO": "GILBERTO MESTRINHO",
+                "CEP": "69086487",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R DOS BREUS",
+                "NUMERO": "10",
+                "COMPLEMENTO": "",
+                "BAIRRO": "GILBERTO MESTRINHO",
+                "CEP": "69086487",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R DAS PIACAVAS",
+                "NUMERO": "198",
+                "COMPLEMENTO": "",
+                "BAIRRO": "GILBERTO MESTRINHO",
+                "CEP": "69086505",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R DOS CAIMBES",
+                "NUMERO": "10",
+                "COMPLEMENTO": "Q A6",
+                "BAIRRO": "GILBERTO MESTRINHO",
+                "CEP": "69086484",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "AV SOLIMOES",
+                "NUMERO": "805",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DT INDUST I",
+                "CEP": "69075200",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            },
+            {
+                "LOGRADOURO": "R A VASCONCELOS",
+                "NUMERO": "2",
+                "COMPLEMENTO": "10 M E 537 GILBERTO MEST C",
+                "BAIRRO": "PURAQUEQUARA",
+                "CEP": "69009302",
+                "CIDADE": "MANAUS",
+                "ESTADO": "AM"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "60089563204",
+                "NOME": "IONE ARAUJO SOARES",
+                "IDADE": "49 anos",
+                "LOCAL": "MANAUS\/AM",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "99208121291",
+                "NOME": "IOLANDA ARAUJO SOARES",
+                "IDADE": "51 anos",
+                "LOCAL": "BARRA DO PIRAI\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "NOVATEC INDUSTRIA DE PLASTICOS LTDA",
+                "CNPJ": "33141159000185",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "311410",
+                "DATA_ADMISSAO": "24\/20\/1908",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "TUTIPLAST INDUSTRIA E COMERCIO LTDA",
+                "CNPJ": "84501873000330",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "862150",
+                "DATA_ADMISSAO": "01\/04\/2019",
+                "DATA_DEMISSAO": "13\/08\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "SPRINGER PLASTICOS DA AMAZONIA LTDA.",
+                "CNPJ": "04350484000150",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "725010",
+                "DATA_ADMISSAO": "18\/12\/2018",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "FLEXTRONICS DA AMAZONIA LTDA",
+                "CNPJ": "04454120000110",
+                "CIDADE": "MANAUS-AM",
+                "PROFISSAO": "311410",
+                "DATA_ADMISSAO": "11\/07\/1994",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

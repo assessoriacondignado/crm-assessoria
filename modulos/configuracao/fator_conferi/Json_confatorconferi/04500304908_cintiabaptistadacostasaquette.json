@@ -1,0 +1,140 @@
+{
+    "CADASTRAIS": {
+        "CPF": "4500304908",
+        "NOME": "CINTIA BAPTISTA DA COSTA SAQUETTE",
+        "NOME_MAE": "CARMEN LUZIA DA COSTA",
+        "NASCTO": "27\/03\/1982",
+        "IDADE": "44 anos",
+        "SEXO": "Feminino",
+        "RG": "4130738",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "040394470965",
+        "NIT": "13349781720",
+        "ESCOLARIDADE": "SEGUNDO GRAU(COLEGIAL)COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "521110",
+        "PROFISSAO": "VENDEDOR DE COMERCIO VAREJISTA",
+        "SALARIO": " 1.842,00",
+        "CLASSE_ECONOMICA": "D",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": {
+            "NUMERO": "7134837213",
+            "OPERADORA": "CLARO S.A.",
+            "DATA_REFERENCIA": "",
+            "TIPO_TEL": "FIXO",
+            "TEM_ZAP": "",
+            "NAO_PERTUBE": "nÃ£o",
+            "IMG": "",
+            "PRIORIDADE": "alta"
+        }
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "47988037057",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "47991619534",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "06\/01\/2009",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "cintia.saquette@lojasrenner.com.br",
+            "cintiabap@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R VSC DE TAUNAY",
+                "NUMERO": "1",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "89201420",
+                "CIDADE": "JOINVILLE",
+                "ESTADO": "SC"
+            },
+            {
+                "LOGRADOURO": "RUA GUANABARA",
+                "NUMERO": "1485",
+                "COMPLEMENTO": "",
+                "BAIRRO": "GUANABARA",
+                "CEP": "89207301",
+                "CIDADE": "JOINVILLE",
+                "ESTADO": "SC"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "41930908920",
+                "NOME": "CARMEN LUZIA DA COSTA",
+                "IDADE": "77 anos",
+                "LOCAL": "JOINVILLE\/SC",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "13937807926",
+                "NOME": "HELOISE DA COSTA SAQUETTE",
+                "IDADE": "11 anos",
+                "LOCAL": "",
+                "PARENTESCO": "FILHO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738047126",
+                "CIDADE": "SAO BENTO DO SUL-SC",
+                "PROFISSAO": "141415",
+                "DATA_ADMISSAO": "02\/20\/1904",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738011792",
+                "CIDADE": "BALNEARIO CAMBORIU-SC",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "02\/05\/2021",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738000243",
+                "CIDADE": "JOINVILLE-SC",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "02\/20\/1904",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

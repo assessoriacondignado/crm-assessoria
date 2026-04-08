@@ -1,0 +1,254 @@
+{
+    "CADASTRAIS": {
+        "CPF": "15461770789",
+        "NOME": "IAGO MORAIS SILVA",
+        "NOME_MAE": "TELMA TIAGO MORAIS SILVA",
+        "NASCTO": "12\/06\/1995",
+        "IDADE": "30 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "",
+        "NIT": "1629042615",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "520110",
+        "PROFISSAO": "SUPERVISOR DE VENDAS COMERCIAL",
+        "SALARIO": " 4.747,00",
+        "CLASSE_ECONOMICA": "C",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2132961269",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2122187843",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "33984170170",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21982242064",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21988855577",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21988857774",
+                "OPERADORA": "OI MOVEL S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "21992024518",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "iagomoraissilva@hotmail.com",
+            "devonnin@icloud.com",
+            "iago_morais_@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R ALCIDES DE OLIVEIRA",
+                "NUMERO": "213",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "INHAUMA",
+                "CEP": "20765190",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R CINCO",
+                "NUMERO": "174",
+                "COMPLEMENTO": "BL 8 AP 301",
+                "BAIRRO": "SERTAO DO RIO DOCE I",
+                "CEP": "35055277",
+                "CIDADE": "GOVERNADOR VALADARES",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R CAPISTRANO DE ABREU",
+                "NUMERO": "75",
+                "COMPLEMENTO": "C B",
+                "BAIRRO": "ALTINOPOLIS",
+                "CEP": "35053080",
+                "CIDADE": "GOVERNADOR VALADARES",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R ISRAEL PINHEIRO",
+                "NUMERO": "2836",
+                "COMPLEMENTO": "LJ",
+                "BAIRRO": "CENTRO",
+                "CEP": "35010130",
+                "CIDADE": "GOVERNADOR VALADARES",
+                "ESTADO": "MG"
+            },
+            {
+                "LOGRADOURO": "R ICAMIABAS",
+                "NUMERO": "213",
+                "COMPLEMENTO": "",
+                "BAIRRO": "INHAUMA",
+                "CEP": "20766100",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R BISPO LACERDA",
+                "NUMERO": "89",
+                "COMPLEMENTO": "",
+                "BAIRRO": "DEL CASTILHO",
+                "CEP": "21051120",
+                "CIDADE": "RIO DE JANEIRO",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "84529202704",
+                "NOME": "TELMA TIAGO MORAIS SILVA",
+                "IDADE": "63 anos",
+                "LOCAL": "GOVERNADOR VALADARES\/MG",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "11992892725",
+                "NOME": "JONATHAN TIAGO MORAIS SILVA",
+                "IDADE": "35 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "18310926707",
+                "NOME": "MATHEUS MORAIS SILVA",
+                "IDADE": "26 anos",
+                "LOCAL": "RIO DE JANEIRO\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "IAGO PEREIRA MORAIS",
+            "IDADE": "",
+            "LOCALIDADE": "RIO DE JANEIRO\/RJ",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "1167400194"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738029900",
+                "CIDADE": "BELO HORIZONTE-MG",
+                "PROFISSAO": "520110",
+                "DATA_ADMISSAO": "01\/06\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738041276",
+                "CIDADE": "DIVINOPOLIS-MG",
+                "PROFISSAO": "520110",
+                "DATA_ADMISSAO": "01\/05\/2023",
+                "DATA_DEMISSAO": "01\/06\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "LOJAS RENNER S.A.",
+                "CNPJ": "92754738037406",
+                "CIDADE": "GOVERNADOR VALADARES-MG",
+                "PROFISSAO": "520110",
+                "DATA_ADMISSAO": "15\/12\/2020",
+                "DATA_DEMISSAO": "01\/05\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "MARISA LOJAS S.A.",
+                "CNPJ": "61189288044208",
+                "CIDADE": "GOVERNADOR VALADARES-MG",
+                "PROFISSAO": "521140",
+                "DATA_ADMISSAO": "08\/04\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "C A MODAS S.A.",
+                "CNPJ": "45242914016605",
+                "CIDADE": "RIO DE JANEIRO-RJ",
+                "PROFISSAO": "421125",
+                "DATA_ADMISSAO": "10\/04\/2014",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

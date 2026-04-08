@@ -1,0 +1,277 @@
+{
+    "CADASTRAIS": {
+        "CPF": "69119414072",
+        "NOME": "FABIO COIMBRA FARIAS",
+        "NOME_MAE": "MARLEY NITA COIMBRA FARIAS",
+        "NASCTO": "04\/08\/1973",
+        "IDADE": "52 anos",
+        "SEXO": "Masculino",
+        "RG": "9051008911",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "RR",
+        "TITULO_ELEITOR": "059835640485",
+        "NIT": "",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "",
+        "CBO": "",
+        "PROFISSAO": "",
+        "SALARIO": "",
+        "CLASSE_ECONOMICA": "",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "5432234555",
+                "OPERADORA": "OI",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "5430254555",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "5430255556",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "54996001289",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "54981161724",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "28\/10\/2017",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "54999738124",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "54991782006",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "54981219592",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "aletubos@terra.com.br",
+            "soares.d@uol.com.br",
+            "f.farias@zaz.com.br",
+            "f.farias@terra.com.br",
+            "fabiofarias@gmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R VINTE DE SETEMBRO",
+                "NUMERO": "48",
+                "COMPLEMENTO": "AP 201",
+                "BAIRRO": "NOSSA SENHORA DE LOURDES",
+                "CEP": "95020450",
+                "CIDADE": "CAXIAS DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R JOAO VENZON",
+                "NUMERO": "160",
+                "COMPLEMENTO": "N BL B AP 31 ST",
+                "BAIRRO": "RIO BRANCO",
+                "CEP": "95084050",
+                "CIDADE": "CAXIAS DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R JOSE SOARES DE OLIVEIRA",
+                "NUMERO": "2016",
+                "COMPLEMENTO": "",
+                "BAIRRO": "PIO X",
+                "CEP": "95034100",
+                "CIDADE": "CAXIAS DO SUL",
+                "ESTADO": "RS"
+            },
+            {
+                "LOGRADOURO": "R VINTE DE SETEMBRO",
+                "NUMERO": "2348",
+                "COMPLEMENTO": "S\/C",
+                "BAIRRO": "NOSSA SENHORA DE LOURDES",
+                "CEP": "95020450",
+                "CIDADE": "CAXIAS DO SUL",
+                "ESTADO": "RS"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "2243451093",
+                "NOME": "VITOR GABRIEL COIMBRA FARIAS",
+                "IDADE": "34 anos",
+                "LOCAL": "PELOTAS\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "92113249049",
+                "NOME": "AIRTON LAERTE COIMBRA FARIAS",
+                "IDADE": "49 anos",
+                "LOCAL": "CANOAS\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "99016915087",
+                "NOME": "CLAUDIA REGINA COIMBRA FARIAS",
+                "IDADE": "43 anos",
+                "LOCAL": "PELOTAS\/RS",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": {
+            "NOME": "FABIO COSTA SILVA",
+            "IDADE": "",
+            "LOCALIDADE": "RIO DE JANEIRO\/RJ",
+            "TP_VINCULO": "E-MAIL",
+            "CPF": "69119406215"
+        }
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "VOGEL SOLUCOES EM TELECOMUNICACOES E INFORMATICA S.A.",
+                "CNPJ": "05872814001020",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "16\/01\/2024",
+                "DATA_DEMISSAO": "30\/11\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "VOGEL SOLUCOES EM TELECOMUNICACOES E INFORMATICA S.A.",
+                "CNPJ": "05872814001373",
+                "CIDADE": "UBERLANDIA-MG",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "06\/01\/2023",
+                "DATA_DEMISSAO": "16\/01\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ALGAR TELECOM S\/A",
+                "CNPJ": "71208516016259",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "01\/12\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ALGAR SOLUCOES EM TIC S\/A",
+                "CNPJ": "22166193003375",
+                "CIDADE": "CANOAS-RS",
+                "PROFISSAO": "",
+                "DATA_ADMISSAO": "01\/09\/2020",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2022"
+            },
+            {
+                "RAZAO_SOCIAL": "SUL AMERICANA TECNOLOGIA E INFORMATICA LTDA",
+                "CNPJ": "02639055000848",
+                "CIDADE": "CAXIAS DO SUL-RS",
+                "PROFISSAO": "521110",
+                "DATA_ADMISSAO": "26\/10\/2015",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "CIRION TECHNOLOGIES DO BRASIL LTDA",
+                "CNPJ": "72843212001113",
+                "CIDADE": "PORTO ALEGRE-RS",
+                "PROFISSAO": "253215",
+                "DATA_ADMISSAO": "03\/04\/2013",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            },
+            {
+                "RAZAO_SOCIAL": "GLOBAL VILLAGE TELECOM S.A.",
+                "CNPJ": "03420926001953",
+                "CIDADE": "CAXIAS DO SUL-RS",
+                "PROFISSAO": "142320",
+                "DATA_ADMISSAO": "12\/07\/2001",
+                "DATA_DEMISSAO": "0",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2012"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": {
+            "RAZAO_SOCIAL": "EASYWARE INFORMATICA LTDA",
+            "CNPJ": "73471526000123",
+            "CIDADE": "CAXIAS DO SUL-RS",
+            "QUALIFICACAO": "SÃ³cio-Administrador",
+            "DATA_ENTRADA": "19970303",
+            "VALOR_PARTICIPACAO": ""
+        }
+    }
+}

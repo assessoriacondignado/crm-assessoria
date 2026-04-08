@@ -1,0 +1,241 @@
+{
+    "CADASTRAIS": {
+        "CPF": "20012856800",
+        "NOME": "RODRIGO FONSECA DA FONSECA",
+        "NOME_MAE": "LUZIA FONSECA DA FONSECA",
+        "NASCTO": "24\/09\/1974",
+        "IDADE": "51 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "235243660132",
+        "NIT": "13758711893",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "",
+        "CBO": "212405",
+        "PROFISSAO": "ANALISTA DE DESENVOLVIMENTO DE SISTEMAS",
+        "SALARIO": " 12.043,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1938288007",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1921039578",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "02\/05\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1921039578",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "02\/05\/2014",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1921024500",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "19991715356",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19991930120",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19999373760",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19991911930",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "19993474529",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "CLARO PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "sim",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "rodrigoff@bigfoot.com",
+            "rodrigoff@geocities.com",
+            "rodrigoff@geocities.com.br",
+            "rodrigoff.geo@gmail.com",
+            "rodrigoff.geo@yahoo.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R VINTE E QUATRO DE DEZEMBRO",
+                "NUMERO": "3082",
+                "COMPLEMENTO": "",
+                "BAIRRO": "POLON",
+                "CEP": "17507030",
+                "CIDADE": "MARILIA",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R SALVADOR LOMBARDI NETO",
+                "NUMERO": "550",
+                "COMPLEMENTO": "BL 3 AP 3",
+                "BAIRRO": "VL NOVA TEIXEIRA",
+                "CEP": "13034830",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R GUERRA JUNQUEIRA",
+                "NUMERO": "19",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JD NOSSA SENHORA AUXILIADORA",
+                "CEP": "13076266",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R ADELINO MARTINS",
+                "NUMERO": "500",
+                "COMPLEMENTO": "T 2 A125",
+                "BAIRRO": "M STO ANTONIO",
+                "CEP": "13087510",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA MARIA ASSUMPTA D'ALESSANDRO BERTHO",
+                "NUMERO": "67",
+                "COMPLEMENTO": "",
+                "BAIRRO": "JARDIM SANTA GENEBRA",
+                "CEP": "13080210",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA CULTO A CIENCIA",
+                "NUMERO": "343",
+                "COMPLEMENTO": "BL RIO NEGRO ACU APT 82",
+                "BAIRRO": "BOTAFOGO",
+                "CEP": "13020060",
+                "CIDADE": "CAMPINAS",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "RUA VINTE E QUATRO DE DEZEMBRO",
+                "NUMERO": "308",
+                "COMPLEMENTO": "",
+                "BAIRRO": "POLON",
+                "CEP": "17507030",
+                "CIDADE": "MARILIA",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "16690168891",
+            "NOME": "LUZIA FONSECA DA FONSECA",
+            "IDADE": "85 anos",
+            "LOCAL": "MARILIA\/SP",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": "",
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "ACCENTURE DO BRASIL LTDA",
+                "CNPJ": "96534094000158",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "15\/07\/2021",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ATOS SERVICOS DE TECNOLOGIA DA INFORMACAO DO BRASIL LTDA.",
+                "CNPJ": "02804955000127",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "01\/11\/2019",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2019"
+            },
+            {
+                "RAZAO_SOCIAL": "BULL LTDA",
+                "CNPJ": "21649280000133",
+                "CIDADE": "SAO PAULO-SP",
+                "PROFISSAO": "212405",
+                "DATA_ADMISSAO": "04\/01\/2010",
+                "DATA_DEMISSAO": "",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

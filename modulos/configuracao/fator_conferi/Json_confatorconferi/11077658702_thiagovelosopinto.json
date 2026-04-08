@@ -1,0 +1,274 @@
+{
+    "CADASTRAIS": {
+        "CPF": "11077658702",
+        "NOME": "THIAGO VELOSO PINTO",
+        "NOME_MAE": "SHIRLEI VELOSO PINTO",
+        "NASCTO": "18\/09\/1984",
+        "IDADE": "41 anos",
+        "SEXO": "Masculino",
+        "RG": "",
+        "ORGAO_EMISSOR": "",
+        "UF_EMISSAO": "",
+        "TITULO_ELEITOR": "113173390337",
+        "NIT": "13181934622",
+        "ESCOLARIDADE": "SUPERIOR COMPLETO",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "331205",
+        "PROFISSAO": "PROFESSOR DE NIVEL MEDIO NO ENSINO FUNDAMENTAL",
+        "SALARIO": " 1.386,00",
+        "CLASSE_ECONOMICA": "E",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "2133543795",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "2433524367",
+                "OPERADORA": "TELEMAR NORTE LESTE S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "24999923807",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "POS PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "24999032249",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "24999633863",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "PRE PAGO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "24981192843",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            },
+            {
+                "NUMERO": "21996481724",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "camilacassia@hotmail.com",
+            "ana_carolina211@hotmail.com",
+            "camilacaethiago@gmail.com",
+            "thiazus@hotmail.com"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "R DR JOAO MAIA",
+                "NUMERO": "11",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CENTRO",
+                "CEP": "27511070",
+                "CIDADE": "RESENDE",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R ALFREDO SODRE",
+                "NUMERO": "30",
+                "COMPLEMENTO": "C",
+                "BAIRRO": "CPO ALEGRE",
+                "CEP": "27580000",
+                "CIDADE": "ITATIAIA",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R CEL JOSE ALFREDO",
+                "NUMERO": "0",
+                "COMPLEMENTO": "22 B",
+                "BAIRRO": "CPO ALEGRE",
+                "CEP": "27580000",
+                "CIDADE": "ITATIAIA",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "CORONEL JOSE ALFREDO SODRE",
+                "NUMERO": "22",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "CAMPO ALEGRE",
+                "CEP": "27580000",
+                "CIDADE": "ITATIAIA",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "R OBYLOYOLA",
+                "NUMERO": "256",
+                "COMPLEMENTO": "",
+                "BAIRRO": "CAMPO ALEGRE",
+                "CEP": "27580000",
+                "CIDADE": "ITATIAIA",
+                "ESTADO": "RJ"
+            },
+            {
+                "LOGRADOURO": "AV EDUARDO COTRIM",
+                "NUMERO": "431",
+                "COMPLEMENTO": "CS",
+                "BAIRRO": "CPO ALEGRE",
+                "CEP": "27580000",
+                "CIDADE": "ITATIAIA",
+                "ESTADO": "RJ"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": [
+            {
+                "CPF": "5291306700",
+                "NOME": "SHIRLEI VELOSO PINTO",
+                "IDADE": "64 anos",
+                "LOCAL": "ITATIAIA\/RJ",
+                "PARENTESCO": "MAE"
+            },
+            {
+                "CPF": "11544263783",
+                "NOME": "RAPHAEL VELOSO PINTO",
+                "IDADE": "39 anos",
+                "LOCAL": "BRASILIA\/DF",
+                "PARENTESCO": "IRMAO(A)"
+            },
+            {
+                "CPF": "13521975703",
+                "NOME": "MATHEUS VELOSO PINTO",
+                "IDADE": "36 anos",
+                "LOCAL": "ITATIAIA\/RJ",
+                "PARENTESCO": "IRMAO(A)"
+            }
+        ]
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "ANA CAROLINA DA SILVA PINTO",
+                "IDADE": "",
+                "LOCALIDADE": "RESENDE\/RJ",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "14546502737"
+            },
+            {
+                "NOME": "CAMILA CASSIA DA SILVA PINTO",
+                "IDADE": "",
+                "LOCALIDADE": "ITATIAIA\/RJ",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "10279720718"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": [
+            {
+                "RAZAO_SOCIAL": "CAMPANHA NACIONAL DE ESCOLAS DA COMUNIDADE",
+                "CNPJ": "33621384112260",
+                "CIDADE": "ITATIAIA-RJ",
+                "PROFISSAO": "231315",
+                "DATA_ADMISSAO": "01\/03\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO EDUCACIONAL DOM BOSCO",
+                "CNPJ": "31463235000143",
+                "CIDADE": "RESENDE-RJ",
+                "PROFISSAO": "231315",
+                "DATA_ADMISSAO": "01\/02\/2024",
+                "DATA_DEMISSAO": "{\/{",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "ASSOCIACAO DO COLEGIO SANTA ANGELA DE RESENDE",
+                "CNPJ": "31458714000171",
+                "CIDADE": "RESENDE-RJ",
+                "PROFISSAO": "231210",
+                "DATA_ADMISSAO": "01\/02\/2007",
+                "DATA_DEMISSAO": "17\/02\/2026",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2024"
+            },
+            {
+                "RAZAO_SOCIAL": "MUNICIPIO DE PORTO REAL",
+                "CNPJ": "01612355000102",
+                "CIDADE": "PORTO REAL-RJ",
+                "PROFISSAO": "231315",
+                "DATA_ADMISSAO": "12\/06\/2023",
+                "DATA_DEMISSAO": "{Ã±\/{Ã±\/2023",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2023"
+            },
+            {
+                "RAZAO_SOCIAL": "MUNICIPIO DE ITATIAIA",
+                "CNPJ": "31846892000170",
+                "CIDADE": "ITATIAIA-RJ",
+                "PROFISSAO": "232120",
+                "DATA_ADMISSAO": "02\/02\/2015",
+                "DATA_DEMISSAO": "01\/01\/2016",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2016"
+            },
+            {
+                "RAZAO_SOCIAL": "MUNICIPIO DE QUATIS",
+                "CNPJ": "39560008000148",
+                "CIDADE": "QUATIS-RJ",
+                "PROFISSAO": "331205",
+                "DATA_ADMISSAO": "07\/11\/2013",
+                "DATA_DEMISSAO": "07\/05\/2014",
+                "MOTIVO_DESLIGAMENTO": "",
+                "ANO_BASE": "2014"
+            }
+        ]
+    },
+    "EMPRESAS_SOCIO": ""
+}

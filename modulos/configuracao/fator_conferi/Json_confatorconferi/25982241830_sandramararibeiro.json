@@ -1,0 +1,206 @@
+{
+    "CADASTRAIS": {
+        "CPF": "25982241830",
+        "NOME": "SANDRA MARA RIBEIRO",
+        "NOME_MAE": "DALVA MARIA RIBEIRO",
+        "NASCTO": "11\/01\/1977",
+        "IDADE": "49 anos",
+        "SEXO": "Feminino",
+        "RG": "279786220",
+        "ORGAO_EMISSOR": "SSP",
+        "UF_EMISSAO": "SP",
+        "TITULO_ELEITOR": "282439850141",
+        "NIT": "1267040077",
+        "ESCOLARIDADE": "",
+        "NACIONALIDADE": "Brasileiro ",
+        "CBO": "252210",
+        "PROFISSAO": "CONTADOR",
+        "SALARIO": " 15.420,00",
+        "CLASSE_ECONOMICA": "B",
+        "CONSTA_OBITO": ""
+    },
+    "TELEFONES_FIXO": {
+        "TELEFONE": [
+            {
+                "NUMERO": "1135158916",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1120537676",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "1129561467",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "media"
+            },
+            {
+                "NUMERO": "1120524919",
+                "OPERADORA": "VIVO",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "FIXO",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "TELEFONES_MOVEL": {
+        "TELEFONE": [
+            {
+                "NUMERO": "11993717619",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "alta"
+            },
+            {
+                "NUMERO": "11963487999",
+                "OPERADORA": "TIM CELULAR S.A.",
+                "DATA_REFERENCIA": "30\/03\/2009",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": ""
+            },
+            {
+                "NUMERO": "11993711761",
+                "OPERADORA": "CLARO S.A.",
+                "DATA_REFERENCIA": "",
+                "TIPO_TEL": "MOVEL",
+                "TEM_ZAP": "",
+                "NAO_PERTUBE": "nÃ£o",
+                "IMG": "",
+                "PRIORIDADE": "baixa"
+            }
+        ]
+    },
+    "EMAILS": {
+        "EMAIL": [
+            "sandra_mara_ribeiro@hotmail.com",
+            "sandra@socioambiental.org",
+            "sandra_ribeiro@ig.com.br"
+        ]
+    },
+    "ENDERECOS": {
+        "ENDERECO": [
+            {
+                "LOGRADOURO": "AV PE GREGORIO MAFRA",
+                "NUMERO": "876",
+                "COMPLEMENTO": "VL TAQUAR 1",
+                "BAIRRO": "VL TAQUARI",
+                "CEP": "08230413",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R JOSE CUBAS DO PRADO",
+                "NUMERO": "37",
+                "COMPLEMENTO": "CS 3",
+                "BAIRRO": "JD HELENA",
+                "CEP": "08420180",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "R PE ANTAO JORGE",
+                "NUMERO": "461",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VL PROGRESSO ZONA LESTE",
+                "CEP": "08245100",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            },
+            {
+                "LOGRADOURO": "AVENIDA PADRE GREGORIO MAFRA",
+                "NUMERO": "876",
+                "COMPLEMENTO": "",
+                "BAIRRO": "VILA TAQUARI",
+                "CEP": "08230000",
+                "CIDADE": "SAO PAULO",
+                "ESTADO": "SP"
+            }
+        ]
+    },
+    "POSSIVEIS_PARENTES": {
+        "CONTATO": {
+            "CPF": "203891830",
+            "NOME": "DALVA MARIA RIBEIRO",
+            "IDADE": "77 anos",
+            "LOCAL": "TANGARA DA SERRA\/MT",
+            "PARENTESCO": "MAE"
+        }
+    },
+    "POSSIVEIS_CONTATOS": {
+        "CONTATO": [
+            {
+                "NOME": "PAULO CEZAR BERNARDES NEGREIROS",
+                "IDADE": "",
+                "LOCALIDADE": "CURITIBA\/PR",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "41257740997"
+            },
+            {
+                "NOME": "SANDRA SOUZA RODRIGUES DE MORAES",
+                "IDADE": "",
+                "LOCALIDADE": "SAO PAULO\/SP",
+                "TP_VINCULO": "E-MAIL",
+                "CPF": "14866410833"
+            }
+        ]
+    },
+    "REFERENCIA_PROFISSIONAL": {
+        "EMPRESA": {
+            "RAZAO_SOCIAL": "INSTITUTO SOCIOAMBIENTAL",
+            "CNPJ": "00081906000188",
+            "CIDADE": "SAO PAULO-SP",
+            "PROFISSAO": "252210",
+            "DATA_ADMISSAO": "10\/01\/2007",
+            "DATA_DEMISSAO": "{\/{",
+            "MOTIVO_DESLIGAMENTO": "",
+            "ANO_BASE": "2024"
+        }
+    },
+    "EMPRESAS_SOCIO": {
+        "EMPRESA_SOCIO": [
+            {
+                "RAZAO_SOCIAL": "MARIEL EVENTOS, PROMOCOES E PRODUCOES ARTISTICAS S\/C LTDA",
+                "CNPJ": "03408919000107",
+                "CIDADE": "SAO PAULO-SP",
+                "QUALIFICACAO": "SÃ³cio",
+                "DATA_ENTRADA": "19990920",
+                "VALOR_PARTICIPACAO": ""
+            },
+            {
+                "RAZAO_SOCIAL": "MARIEL EMPREENDIMENTOS, PARTICIPACOES, ADMINISTRACAO E COMERCIAL LTDA",
+                "CNPJ": "02572158000161",
+                "CIDADE": "SAO PAULO-SP",
+                "QUALIFICACAO": "SÃ³cio",
+                "DATA_ENTRADA": "19980415",
+                "VALOR_PARTICIPACAO": ""
+            }
+        ]
+    }
+}
