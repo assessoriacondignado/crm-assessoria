@@ -25,7 +25,7 @@ try {
     }
 
     // Regras de hierarquia de visibilidade
-    $restricao_meu_regist  = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA_MEU_REGIST', 'FUNCAO');
+    $restricao_meu_regist  = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA_MEU_REGISTRO', 'FUNCAO');
     $restricao_hierarquia  = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA_HIERARQUIA', 'FUNCAO');
 
     // Busca id_empresa do usuário logado (só quando necessário)
