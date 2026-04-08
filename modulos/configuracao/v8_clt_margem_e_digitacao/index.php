@@ -21,25 +21,7 @@ $restricao_lote_editar = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_CONS
 $restricao_lote_excluir = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_CONSULTA_LOTE_EXCLUIR', 'FUNCAO');
 
 // REGRA DE BLOQUEIO DA ABA IA
-$restricao_ia = false;
-$grp_ia = '';
-$id_sessao_ia = (int)($_SESSION['usuario_id'] ?? $_SESSION['id_usuario'] ?? 0);
-
-if ($id_sessao_ia > 0) {
-    $stmtDbGrp = $pdo->prepare("SELECT GRUPO_USUARIOS FROM CLIENTE_USUARIO WHERE ID = ? LIMIT 1");
-    $stmtDbGrp->execute([$id_sessao_ia]);
-    $grp_ia = $stmtDbGrp->fetchColumn();
-}
-if (empty($grp_ia)) { $grp_ia = $_SESSION['GRUPO_USUARIOS'] ?? $_SESSION['grupo_usuarios'] ?? $_SESSION['grupo'] ?? ''; }
-
-if (!empty($grp_ia)) {
-    $stmtPermIA = $pdo->prepare("SELECT COUNT(*) FROM CLIENTE_USUARIO_PERMISSAO WHERE CHAVE = 'SUBMENU_OP_INTEGRACAO_V8_IA' AND UPPER(TRIM(GRUPO_USUARIOS)) = UPPER(TRIM(?))");
-    $stmtPermIA->execute([$grp_ia]);
-    if ($stmtPermIA->fetchColumn() > 0) { $restricao_ia = true; }
-}
-
-$perfil_ia = (int)($_SESSION['perfil'] ?? 0);
-if ($perfil_ia === 1 || strtoupper(trim($grp_ia)) === 'MASTER' || strtoupper(trim($grp_ia)) === 'ADMIN') { $restricao_ia = false; }
+$restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO');
 ?>
 
 <style>

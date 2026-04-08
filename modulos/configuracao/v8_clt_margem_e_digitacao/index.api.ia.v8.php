@@ -4,41 +4,14 @@
 @session_start();
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/conexao.php';
-if(!isset($pdo) && isset($conn)) { $pdo = $conn; } 
+if(!isset($pdo) && isset($conn)) { $pdo = $conn; }
 $pdo->exec("SET NAMES utf8mb4");
 
 // =========================================================================
-// BLOQUEIO DE PERMISSÃO (SEGURANÇA DO GRUPO)
+// BLOQUEIO DE PERMISSÃO (usa o mesmo sistema central do projeto)
 // =========================================================================
-$acessoLiberado = true; 
-$grupo_logado = '';
-$id_sessao_ia = (int)($_SESSION['usuario_id'] ?? $_SESSION['id_usuario'] ?? 0);
-
-if ($id_sessao_ia > 0) {
-    $stmtDbGrp = $pdo->prepare("SELECT GRUPO_USUARIOS FROM CLIENTE_USUARIO WHERE ID = ? LIMIT 1");
-    $stmtDbGrp->execute([$id_sessao_ia]);
-    $grp_ia_banco = $stmtDbGrp->fetchColumn();
-    if ($grp_ia_banco) { $grupo_logado = $grp_ia_banco; }
-}
-
-if (empty($grupo_logado)) { $grupo_logado = $_SESSION['usuario_grupo'] ?? $_SESSION['GRUPO_USUARIOS'] ?? $_SESSION['grupo_usuarios'] ?? $_SESSION['grupo'] ?? ''; }
-
-if (!empty($grupo_logado)) {
-    $stmtPerm = $pdo->prepare("SELECT GRUPO_USUARIOS FROM CLIENTE_USUARIO_PERMISSAO WHERE CHAVE = 'SUBMENU_OP_INTEGRACAO_V8_IA' LIMIT 1");
-    $stmtPerm->execute();
-    $grupos_bloqueados_str = $stmtPerm->fetchColumn();
-    if (!empty($grupos_bloqueados_str)) {
-        $grupos_bloqueados = array_map('trim', explode(',', strtoupper($grupos_bloqueados_str)));
-        if (in_array(strtoupper(trim($grupo_logado)), $grupos_bloqueados)) {
-            $acessoLiberado = false;
-        }
-    }
-}
-
-$perfil_ia = (int)($_SESSION['perfil'] ?? 0);
-if ($perfil_ia === 1 || strtoupper(trim($grupo_logado)) === 'MASTER' || strtoupper(trim($grupo_logado)) === 'ADMIN') {
-    $acessoLiberado = true;
-}
+include_once $_SERVER['DOCUMENT_ROOT'] . '/modulos/cliente_e_usuario/checar_permissoes.php';
+$acessoLiberado = verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO');
 
 if (!$acessoLiberado):
 ?>
