@@ -21,7 +21,7 @@ if ($id_sessao_ia > 0) {
     if ($grp_ia_banco) { $grupo_logado = $grp_ia_banco; }
 }
 
-if (empty($grupo_logado)) { $grupo_logado = $_SESSION['GRUPO_USUARIOS'] ?? $_SESSION['grupo_usuarios'] ?? $_SESSION['grupo'] ?? ''; }
+if (empty($grupo_logado)) { $grupo_logado = $_SESSION['usuario_grupo'] ?? $_SESSION['GRUPO_USUARIOS'] ?? $_SESSION['grupo_usuarios'] ?? $_SESSION['grupo'] ?? ''; }
 
 if (!empty($grupo_logado)) {
     $stmtPerm = $pdo->prepare("SELECT GRUPO_USUARIOS FROM CLIENTE_USUARIO_PERMISSAO WHERE CHAVE = 'SUBMENU_OP_INTEGRACAO_V8_IA' LIMIT 1");
