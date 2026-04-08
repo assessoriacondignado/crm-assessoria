@@ -4,6 +4,13 @@ set_time_limit(0);
 ini_set('display_errors', 0);
 error_reporting(0);
 
+// Aceita chamadas apenas do próprio servidor (processo interno)
+$ip_chamador = $_SERVER['REMOTE_ADDR'] ?? '';
+if (!in_array($ip_chamador, ['127.0.0.1', '::1', $_SERVER['SERVER_ADDR'] ?? ''])) {
+    http_response_code(403);
+    exit;
+}
+
 require_once '../../../conexao.php';
 if(!isset($pdo) && isset($conn)) { $pdo = $conn; } 
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

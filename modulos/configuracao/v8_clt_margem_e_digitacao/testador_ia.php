@@ -1,3 +1,18 @@
+<?php
+session_start();
+require_once '../../../conexao.php';
+if(!isset($pdo) && isset($conn)) { $pdo = $conn; }
+include_once $_SERVER['DOCUMENT_ROOT'] . '/modulos/cliente_e_usuario/checar_permissoes.php';
+
+$grupo = strtoupper(trim($_SESSION['usuario_grupo'] ?? ''));
+$logado = !empty($_SESSION['usuario_cpf']);
+$is_admin = in_array($grupo, ['MASTER', 'ADMIN', 'ADMINISTRADOR']);
+
+if (!$logado || !$is_admin) {
+    http_response_code(403);
+    die('<div style="font-family:sans-serif;text-align:center;padding:60px"><h2>403 - Acesso Restrito</h2><p>Esta ferramenta é exclusiva para administradores do sistema.</p></div>');
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
