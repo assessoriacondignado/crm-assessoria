@@ -15,6 +15,9 @@ uploads/
 modulos/banco_dados/Aquivo_importacao/
 txt/
 
+# JSONs de cache do fator_conferi (gerados pelo sistema)
+modulos/configuracao/fator_conferi/Json_confatorconferi/
+
 # Configurações do servidor
 .env
 .env.*
