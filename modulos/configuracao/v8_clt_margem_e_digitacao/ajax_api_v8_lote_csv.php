@@ -632,7 +632,8 @@ try {
             for($i = 1; $i <= 10; $i++) { $cabecalho[] = "CELULAR $i"; }
             fputcsv($fp, $cabecalho, ";");
             
-            $stmtCpfs = $pdo->prepare("SELECT c.*, l.NOME_IMPORTACAO, ca.TABELA_PADRAO FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE c JOIN INTEGRACAO_V8_IMPORTACAO_LOTE l ON c.LOTE_ID = l.ID LEFT JOIN INTEGRACAO_V8_CHAVE_ACESSO ca ON l.CHAVE_ID = ca.ID WHERE c.LOTE_ID = ?"); 
+            // Somente CPFs com VALOR_LIQUIDO preenchido e maior que zero
+            $stmtCpfs = $pdo->prepare("SELECT c.*, l.NOME_IMPORTACAO, ca.TABELA_PADRAO FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE c JOIN INTEGRACAO_V8_IMPORTACAO_LOTE l ON c.LOTE_ID = l.ID LEFT JOIN INTEGRACAO_V8_CHAVE_ACESSO ca ON l.CHAVE_ID = ca.ID WHERE c.LOTE_ID = ? AND c.VALOR_LIQUIDO IS NOT NULL AND c.VALOR_LIQUIDO > 0");
             $stmtCpfs->execute([$id_lote]);
             
             $stmtEnd = $pdo->prepare("SELECT logradouro, numero, bairro, cidade, uf, cep FROM enderecos WHERE cpf = ? ORDER BY id DESC LIMIT 1");
