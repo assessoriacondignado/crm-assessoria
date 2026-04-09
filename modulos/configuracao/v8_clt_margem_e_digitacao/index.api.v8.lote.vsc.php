@@ -1027,8 +1027,13 @@
     }
 
     async function v8ReprocessarConsentimento(id) {
+        const lote = (windowDadosLoteAtual || []).find(l => l.ID == id);
+        const qtd = lote ? (lote.funil?.dataprev || '?') : '?';
         v8Confirmar('📡 Reprocessar Consentimento',
-            'Re-verifica todos os CPFs que estão <strong>aguardando retorno da Dataprev</strong>.<br><small class="text-muted">Não gera novo custo — apenas relê o resultado existente.</small>',
+            `<strong>${qtd} CPF(s)</strong> estão aguardando retorno da Dataprev.<br><br>
+            Esta ação irá <strong>re-consultar o consentimento já existente</strong> na V8 para verificar se a Dataprev já processou a resposta.<br><br>
+            <span class="text-success fw-bold">✅ Sem novo custo</span> — nenhum novo consentimento é criado.<br>
+            <small class="text-muted">Se a Dataprev ainda não respondeu, o CPF volta para a fila de espera.</small>`,
             'btn-primary', '#1a73e8',
             async () => {
                 const res = await v8Req('ajax_api_v8_lote_csv.php', 'reprocessar_consentimento', { id_lote: id }, true, "Reprocessando...");
@@ -1038,9 +1043,19 @@
     }
 
     async function v8ReprocessarErros(id) {
+        const lote = (windowDadosLoteAtual || []).find(l => l.ID == id);
+        const qtd = lote ? ((lote.funil?.m_err || 0) + (lote.funil?.s_err || 0) + (lote.funil?.c_err || 0)) : '?';
         v8Confirmar('⚠️ Reprocessar Erros',
-            'Refaz a simulação dos CPFs que retornaram com <strong>erro de margem</strong>.<br><small class="text-muted">Não gera novo custo — recupera consentimento existente na V8.</small>',
-            'btn-primary', '#1a73e8',
+            `<strong>${qtd} CPF(s)</strong> com erro serão reprocessados.<br><br>
+            Esta ação retenta a consulta de margem e simulação para CPFs com:<br>
+            <ul class="mb-1 mt-1 text-start" style="font-size:0.9em">
+              <li><strong>Erro de Margem</strong> — retorno negativo da Dataprev</li>
+              <li><strong>Erro de Simulação</strong> — margem encontrada, mas simulação falhou</li>
+              <li><strong>Erro de Consulta</strong> — falha na leitura do consentimento</li>
+            </ul>
+            <span class="text-success fw-bold">✅ Sem novo custo</span> — reutiliza o consentimento já existente na V8.<br>
+            <small class="text-muted">CPFs com rejeição definitiva (demitido, CNPJ inválido, etc.) continuarão com erro.</small>`,
+            'btn-warning', '#ffc107',
             async () => {
                 const res = await v8Req('ajax_api_v8_lote_csv.php', 'reprocessar_erros', { id_lote: id }, true, "Reprocessando...");
                 if(res.success) { alert("✅ " + res.msg); if(res.cpf_dono) v8AcordarRobo(res.cpf_dono); v8CarregarLotesCSV(); }
@@ -1049,8 +1064,19 @@
     }
 
     async function v8ReprocessarTodos(id) {
+        const lote = (windowDadosLoteAtual || []).find(l => l.ID == id);
+        const total = lote ? (lote.QTD_TOTAL || '?') : '?';
         v8Confirmar('🔁 Reprocessar Tudo',
-            '⚠️ <strong>ATENÇÃO:</strong> Todos os CPFs serão zerados e o processo iniciará do zero.<br><small class="text-danger">Os custos de consulta poderão ser cobrados novamente.</small>',
+            `⚠️ <strong>ATENÇÃO: Esta é a ação mais drástica.</strong><br><br>
+            <strong>Todos os ${total} CPFs</strong> do lote serão zerados e o processo reiniciará completamente do zero.<br><br>
+            Isso inclui:<br>
+            <ul class="mb-1 mt-1 text-start" style="font-size:0.9em">
+              <li>CPFs com erro</li>
+              <li>CPFs já simulados com sucesso</li>
+              <li>CPFs aguardando Dataprev</li>
+            </ul>
+            <span class="text-danger fw-bold">⚠️ Pode gerar novo custo</span> — novos consentimentos serão solicitados para todos os CPFs.<br>
+            <small class="text-muted">Use apenas se quiser refazer o lote inteiro do início.</small>`,
             'btn-danger', '#dc3545',
             async () => {
                 const res = await v8Req('ajax_api_v8_lote_csv.php', 'reprocessar_todos', { id_lote: id }, true, "Reprocessando...");
@@ -1060,8 +1086,11 @@
     }
 
     function v8ExportarResultado(id) {
+        const lote = (windowDadosLoteAtual || []).find(l => l.ID == id);
+        const qtd_ok = lote ? (lote.funil?.s_ok || 0) : '?';
         v8Confirmar('📁 Exportar Resultado',
-            'Baixa a planilha CSV com todos os resultados do lote (margem, simulação, status de cada CPF).',
+            `Será gerada uma planilha CSV com os <strong>${qtd_ok} CPF(s) que possuem valor simulado</strong> (valor líquido maior que zero).<br><br>
+            <span class="text-muted" style="font-size:0.9em">CPFs sem simulação, com erro ou sem valor líquido <strong>não serão incluídos</strong> na exportação.</span>`,
             'btn-success', '#198754',
             () => { window.open(`ajax_api_v8_lote_csv.php?acao=exportar_resultado_lote&id_lote=${id}`, '_blank'); });
     }

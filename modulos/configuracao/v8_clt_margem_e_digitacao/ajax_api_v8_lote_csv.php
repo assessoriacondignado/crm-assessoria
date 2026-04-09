@@ -570,7 +570,7 @@ try {
             for ($i = 1; $i <= 10; $i++) { $cabecalho[] = "CELULAR $i"; }
             fputcsv($output, $cabecalho, ";");
 
-            $sqlCpfs = "SELECT c.*, ? as NOME_IMPORTACAO, ? as TABELA_PADRAO_LOTE FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE c WHERE c.LOTE_ID = ?";
+            $sqlCpfs = "SELECT c.*, ? as NOME_IMPORTACAO, ? as TABELA_PADRAO_LOTE FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE c WHERE c.LOTE_ID = ? AND c.VALOR_LIQUIDO IS NOT NULL AND c.VALOR_LIQUIDO > 0";
             $stmtCpfs = $pdo->prepare($sqlCpfs);
             $stmtCpfs->execute([$lote['NOME_IMPORTACAO'], $lote['TABELA_PADRAO'] ?? '', $id_lote]);
 
