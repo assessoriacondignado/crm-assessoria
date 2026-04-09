@@ -70,6 +70,9 @@ try {
     $stmtGrupos = $pdo->query("SELECT NOME_GRUPO FROM SISTEMA_GRUPOS_USUARIO WHERE STATUS = 'ATIVO' ORDER BY NOME_GRUPO ASC");
     $grupos_disponiveis = $stmtGrupos->fetchAll(PDO::FETCH_COLUMN);
 
+    $stmtEmpresas = $pdo->query("SELECT ID, NOME_CADASTRO FROM CLIENTE_EMPRESAS ORDER BY NOME_CADASTRO ASC");
+    $lista_empresas_usuarios = $stmtEmpresas->fetchAll(PDO::FETCH_ASSOC);
+
     if ($pode_ver_todos) {
         $filtro_sql = ""; $params = []; $contador_params = 1;
 
@@ -452,6 +455,26 @@ include $caminho_header;
                                     </select>
                                     <?php else: ?>
                                         <input type="text" class="form-control border-dark bg-secondary text-white fw-bold text-uppercase" value="<?= htmlspecialchars($usuario_ficha['Situação'] ?? '') ?>" disabled>
+                                    <?php endif; ?>
+                                </div>
+
+                                <div class="col-md-8 mt-3">
+                                    <label class="fw-bold"><i class="fas fa-building me-1"></i> Empresa / Vínculo</label>
+                                    <?php if($pode_editar): ?>
+                                    <select name="id_empresa" class="form-select border-dark">
+                                        <option value="">-- Sem Vínculo --</option>
+                                        <?php foreach(($lista_empresas_usuarios ?? []) as $emp): ?>
+                                            <option value="<?= $emp['ID'] ?>" <?= ($usuario_ficha['id_empresa'] ?? '') == $emp['ID'] ? 'selected' : '' ?>><?= htmlspecialchars($emp['NOME_CADASTRO']) ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                    <?php else: ?>
+                                        <?php
+                                            $nome_emp_atual = 'Sem Vínculo';
+                                            foreach(($lista_empresas_usuarios ?? []) as $emp) {
+                                                if ($emp['ID'] == ($usuario_ficha['id_empresa'] ?? '')) { $nome_emp_atual = $emp['NOME_CADASTRO']; break; }
+                                            }
+                                        ?>
+                                        <input type="text" class="form-control border-dark bg-secondary text-white fw-bold" value="<?= htmlspecialchars($nome_emp_atual) ?>" disabled>
                                     <?php endif; ?>
                                 </div>
                             </div>

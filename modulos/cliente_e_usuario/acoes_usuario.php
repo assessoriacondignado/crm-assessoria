@@ -107,12 +107,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['acao_crud'])) {
             
             $celular = preg_replace('/[^0-9]/', '', $_POST['celular'] ?? '');
             $grupo_whats = trim($_POST['grupo_whats'] ?? '');
-            $grupo_usuarios = trim($_POST['grupo_usuarios'] ?? ''); 
+            $grupo_usuarios = trim($_POST['grupo_usuarios'] ?? '');
             $situacao = trim($_POST['situacao'] ?? '');
             $data_expirar = !empty($_POST['data_expirar']) ? $_POST['data_expirar'] : null;
+            $id_empresa = !empty($_POST['id_empresa']) ? intval($_POST['id_empresa']) : null;
 
-            $sql = "UPDATE CLIENTE_USUARIO SET NOME=:nome, USUARIO=:usuario, CELULAR=:celular, GRUPO_WHATS=:grupo_whats, GRUPO_USUARIOS=:grupo_usuarios, Situação=:situacao, DATA_EXPIRAR=:data_expirar WHERE CPF=:cpf1 OR CPF=:cpf2 OR CPF=:cpf3";
-            $params = ['nome'=>$nome, 'usuario'=>$usuario, 'celular'=>$celular, 'grupo_whats'=>$grupo_whats, 'grupo_usuarios'=>$grupo_usuarios, 'situacao'=>$situacao, 'data_expirar'=>$data_expirar, 'cpf1'=>$cpf_cru, 'cpf2'=>$cpf_so_numeros, 'cpf3'=>$cpf_com_11_digitos];
+            $sql = "UPDATE CLIENTE_USUARIO SET NOME=:nome, USUARIO=:usuario, CELULAR=:celular, GRUPO_WHATS=:grupo_whats, GRUPO_USUARIOS=:grupo_usuarios, Situação=:situacao, DATA_EXPIRAR=:data_expirar, id_empresa=:id_empresa WHERE CPF=:cpf1 OR CPF=:cpf2 OR CPF=:cpf3";
+            $params = ['nome'=>$nome, 'usuario'=>$usuario, 'celular'=>$celular, 'grupo_whats'=>$grupo_whats, 'grupo_usuarios'=>$grupo_usuarios, 'situacao'=>$situacao, 'data_expirar'=>$data_expirar, 'id_empresa'=>$id_empresa, 'cpf1'=>$cpf_cru, 'cpf2'=>$cpf_so_numeros, 'cpf3'=>$cpf_com_11_digitos];
             
             $pdo->prepare($sql)->execute($params);
 
