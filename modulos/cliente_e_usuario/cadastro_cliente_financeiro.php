@@ -19,15 +19,10 @@ if (file_exists($caminho_permissoes)) { include_once $caminho_permissoes; }
 // ====================================================================================
 // REGRAS DE PERMISSÃO E TRAVA DA TELA
 // ====================================================================================
-if (!verificaPermissao($pdo, 'USUARIO_FINANCEIRO', 'TELA')) {
-    include $caminho_header;
-    die("<div class='container mt-5'><div class='alert alert-danger text-center shadow-lg border-dark p-4 rounded-3'><h4 class='fw-bold mb-3'><i class='fas fa-ban'></i> Acesso Negado</h4><p class='mb-0'>Seu grupo de usuário não tem permissão para acessar o Painel Financeiro.</p></div></div>");
-}
-
-$pode_ver_outros = verificaPermissao($pdo, 'SUBMENU_CADASTRO_USUARIO_FINANCEIRO_VER_MEU_CLIENTE', 'TELA');
-
-// ✨ REGRA APLICADA: Bloqueia o botão e a ação de lançamento na Carteira Principal
+$pode_ver_outros       = verificaPermissao($pdo, 'SUBMENU_CADASTRO_USUARIO_FINANCEIRO_VER_MEU_CLIENTE', 'FUNCAO');
 $pode_inserir_carteira = verificaPermissao($pdo, 'FUNCAO_MENU_FINANCEIRO_LANCAMENTO', 'FUNCAO');
+$pode_ver_planilha     = verificaPermissao($pdo, 'PLANILHA CLIENTE_CADASTRO_FINANCEIRO_HISTORICO_CARTEIRA', 'FUNCAO');
+$pode_ver_comissoes    = verificaPermissao($pdo, 'SUBMENU_FIN_PAINEL', 'TELA');
 
 $cpf_alvo = $_GET['cpf'] ?? '';
 $cpf_alvo = preg_replace('/[^0-9]/', '', $cpf_alvo);
@@ -35,6 +30,7 @@ $cpf_alvo = preg_replace('/[^0-9]/', '', $cpf_alvo);
 if (!$pode_ver_outros || empty($cpf_alvo)) {
     $cpf_alvo = $_SESSION['usuario_cpf'];
 }
+$cpf_alvo = preg_replace('/[^0-9]/', '', $cpf_alvo);
 
 $stmtUsr = $pdo->prepare("SELECT u.NOME, u.CPF, c.SALDO AS SALDO_FATOR FROM CLIENTE_USUARIO u LEFT JOIN CLIENTE_CADASTRO c ON u.CPF = c.CPF WHERE u.CPF = ? LIMIT 1");
 $stmtUsr->execute([$cpf_alvo]);
@@ -97,21 +93,24 @@ $ver_extrato = $_GET['extrato'] ?? null;
 $extrato_linhas = [];
 $erro_extrato = null;
 
-$periodo = $_GET['periodo'] ?? 'TODO_PERIODO'; // Mudado o padrão para TODO_PERIODO
-$data_inicio = date('Y-m-01 00:00:00');
-$data_fim = date('Y-m-t 23:59:59');
+$periodo = $_GET['periodo'] ?? 'DIA_ATUAL';
+$data_inicio = date('Y-m-d 00:00:00');
+$data_fim = date('Y-m-d 23:59:59');
 
 if ($ver_extrato) {
     try {
         if ($periodo == 'PERSONALIZADO') {
-            $data_inicio = ($_GET['data_inicio'] ?? date('Y-m-01')) . " 00:00:00";
-            $data_fim = ($_GET['data_fim'] ?? date('Y-m-t')) . " 23:59:59";
+            $data_inicio = ($_GET['data_inicio'] ?? date('Y-m-d')) . " 00:00:00";
+            $data_fim = ($_GET['data_fim'] ?? date('Y-m-d')) . " 23:59:59";
         } elseif ($periodo == 'TODO_PERIODO') {
             $data_inicio = '2000-01-01 00:00:00';
             $data_fim = '2099-12-31 23:59:59';
         } elseif ($periodo == 'MES_ATUAL') {
             $data_inicio = date('Y-m-01 00:00:00');
             $data_fim = date('Y-m-t 23:59:59');
+        } elseif ($periodo == 'DIA_ATUAL') {
+            $data_inicio = date('Y-m-d 00:00:00');
+            $data_fim = date('Y-m-d 23:59:59');
         }
 
         if ($ver_extrato == 'CARTEIRA') {
@@ -150,6 +149,43 @@ if ($ver_extrato) {
     }
 }
 
+// ====================================================================================
+// COMISSÕES DE REVENDA
+// ====================================================================================
+$comissoes = [];
+$erro_comissoes = null;
+try {
+    $stmtCom = $pdo->prepare("
+        SELECT cc.ID, cc.PEDIDO_ID, cc.DATA_BASE, cc.VALOR_BASE_VENDA, cc.VALOR_COMISSAO,
+               cc.STATUS_COMISSAO, cc.DATA_CONFERENCIA, cc.DATA_PAGAMENTO,
+               cp.CODIGO as NUM_PEDIDO, cp.PRODUTO_NOME
+        FROM COMERCIAL_COMISSOES cc
+        JOIN FINANCEIRO_VENDEDORES fv ON cc.VENDEDOR_ID = fv.ID
+        LEFT JOIN COMERCIAL_PEDIDOS cp ON cc.PEDIDO_ID = cp.ID
+        WHERE fv.DOCUMENTO_VENDEDOR = ?
+        ORDER BY cc.DATA_BASE DESC
+        LIMIT 200
+    ");
+    $stmtCom->execute([$cpf_alvo]);
+    $comissoes = $stmtCom->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    $erro_comissoes = $e->getMessage();
+}
+
+$total_comissao_pago = 0;
+$total_comissao_conferido = 0;
+$total_comissao_pendente = 0;
+foreach ($comissoes as $com) {
+    $st = strtoupper(trim($com['STATUS_COMISSAO'] ?? ''));
+    if ($st === 'PAGO') {
+        $total_comissao_pago += (float)$com['VALOR_COMISSAO'];
+    } elseif ($st === 'CONFERIDO') {
+        $total_comissao_conferido += (float)$com['VALOR_COMISSAO'];
+    } elseif ($st === 'SEM CONFERENCIA') {
+        $total_comissao_pendente += (float)$com['VALOR_COMISSAO'];
+    }
+}
+
 include $caminho_header;
 ?>
 
@@ -177,6 +213,9 @@ include $caminho_header;
     </li>
     <li class="nav-item" role="presentation">
         <button class="nav-link text-dark" id="entregas-tab" data-bs-toggle="tab" data-bs-target="#entregas" type="button" role="tab"><i class="fas fa-truck me-1"></i> Entregas</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link text-dark" id="revenda-tab" data-bs-toggle="tab" data-bs-target="#revenda" type="button" role="tab"><i class="fas fa-percentage me-1"></i> Revenda / Comissões</button>
     </li>
 </ul>
 
@@ -286,6 +325,99 @@ include $caminho_header;
             </div>
         </div>
     </div>
+
+    <div class="tab-pane fade" id="revenda" role="tabpanel">
+
+        <div class="row g-3 mb-4">
+            <div class="col-md-3">
+                <div class="card text-center border-success shadow-sm h-100">
+                    <div class="card-header bg-success text-white fw-bold py-2"><i class="fas fa-check-circle me-1"></i> Total Pago</div>
+                    <div class="card-body d-flex flex-column justify-content-center">
+                        <h3 class="text-success fw-bold">R$ <?= number_format($total_comissao_pago, 2, ',', '.') ?></h3>
+                        <p class="small text-muted mb-0">Comissões já pagas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center border-info shadow-sm h-100">
+                    <div class="card-header bg-info text-white fw-bold py-2"><i class="fas fa-hourglass-half me-1"></i> Conferido / Aguard. Pgto.</div>
+                    <div class="card-body d-flex flex-column justify-content-center">
+                        <h3 class="text-info fw-bold">R$ <?= number_format($total_comissao_conferido, 2, ',', '.') ?></h3>
+                        <p class="small text-muted mb-0">Confirmado, a pagar</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center border-warning shadow-sm h-100">
+                    <div class="card-header bg-warning text-dark fw-bold py-2"><i class="fas fa-clock me-1"></i> Sem Conferência</div>
+                    <div class="card-body d-flex flex-column justify-content-center">
+                        <h3 class="text-warning fw-bold" style="text-shadow: 0 0 1px #000;">R$ <?= number_format($total_comissao_pendente, 2, ',', '.') ?></h3>
+                        <p class="small text-muted mb-0">Aguardando conferência</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center border-primary shadow-sm h-100">
+                    <div class="card-header bg-primary text-white fw-bold py-2"><i class="fas fa-list me-1"></i> Total de Registros</div>
+                    <div class="card-body d-flex flex-column justify-content-center">
+                        <h3 class="text-primary fw-bold"><?= count($comissoes) ?></h3>
+                        <p class="small text-muted mb-0">Lançamentos encontrados</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-dark shadow-sm">
+            <div class="card-header bg-dark text-white fw-bold"><i class="fas fa-percentage me-1"></i> Relatório de Comissões de Revenda (Últimos 200)</div>
+            <?php if ($erro_comissoes): ?>
+                <div class="alert alert-danger m-3 border-dark fw-bold">
+                    <i class="fas fa-exclamation-triangle me-2"></i> ERRO: <?= htmlspecialchars($erro_comissoes) ?>
+                </div>
+            <?php else: ?>
+            <div class="table-responsive bg-white">
+                <table class="table table-hover table-striped text-center mb-0 align-middle">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Data Base</th>
+                            <th>Pedido</th>
+                            <th class="text-start">Produto</th>
+                            <th>Valor Venda (R$)</th>
+                            <th>Comissão (R$)</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php if (empty($comissoes)): ?>
+                            <tr><td colspan="5" class="py-5 fw-bold text-muted fs-5">Nenhuma comissão registrada para este revendedor.</td></tr>
+                        <?php else: ?>
+                            <?php foreach ($comissoes as $com):
+                                $status_com = trim($com['STATUS_COMISSAO'] ?? '');
+                                $status_up  = strtoupper($status_com);
+                                $badge_class = match($status_up) {
+                                    'PAGO'             => 'bg-success',
+                                    'CONFERIDO'        => 'bg-info',
+                                    'SEM CONFERENCIA'  => 'bg-warning text-dark',
+                                    'ESTORNADO'        => 'bg-danger',
+                                    default            => 'bg-secondary'
+                                };
+                            ?>
+                                <tr>
+                                    <td class="text-nowrap"><?= !empty($com['DATA_BASE']) ? date('d/m/Y', strtotime($com['DATA_BASE'])) : '--' ?></td>
+                                    <td class="fw-bold text-primary"><?= !empty($com['NUM_PEDIDO']) ? '#' . htmlspecialchars($com['NUM_PEDIDO']) : '#' . ($com['PEDIDO_ID'] ?? '--') ?></td>
+                                    <td class="text-start text-break"><?= htmlspecialchars($com['PRODUTO_NOME'] ?? '--') ?></td>
+                                    <td class="fw-bold">R$ <?= number_format((float)($com['VALOR_BASE_VENDA'] ?? 0), 2, ',', '.') ?></td>
+                                    <td class="fw-bold text-success fs-6">R$ <?= number_format((float)($com['VALOR_COMISSAO'] ?? 0), 2, ',', '.') ?></td>
+                                    <td><span class="badge <?= $badge_class ?> shadow-sm px-3"><?= htmlspecialchars($status_com) ?></span></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </tbody>
+                </table>
+            </div>
+            <?php endif; ?>
+        </div>
+    </div>
+
 </div>
 
 <?php if ($ver_extrato): ?>
@@ -305,8 +437,9 @@ include $caminho_header;
                         <div class="col-md-3">
                             <label class="small fw-bold text-muted">Período:</label>
                             <select name="periodo" class="form-select border-dark fw-bold" onchange="toggleDatas(this.value)">
-                                <option value="TODO_PERIODO" <?= $periodo=='TODO_PERIODO'?'selected':'' ?>>Todo o Período</option>
+                                <option value="DIA_ATUAL" <?= $periodo=='DIA_ATUAL'?'selected':'' ?>>Hoje</option>
                                 <option value="MES_ATUAL" <?= $periodo=='MES_ATUAL'?'selected':'' ?>>Mês Atual</option>
+                                <option value="TODO_PERIODO" <?= $periodo=='TODO_PERIODO'?'selected':'' ?>>Todo o Período</option>
                                 <option value="PERSONALIZADO" <?= $periodo=='PERSONALIZADO'?'selected':'' ?>>Personalizado</option>
                             </select>
                         </div>

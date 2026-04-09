@@ -59,7 +59,7 @@ if (!empty($grupo_usuario_tela) && !in_array($grupo_usuario_tela, ['MASTER', 'AD
 </style>
 
 <div class="container-fluid mt-4">
-    <h2><i class="fa fa-cogs text-primary"></i> Módulo Fator Conferi</h2>
+    <h2><i class="fa fa-cogs text-primary"></i> Módulo Atualização Cadastral</h2>
     <hr>
 
     <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -93,7 +93,7 @@ if (!empty($grupo_usuario_tela) && !in_array($grupo_usuario_tela, ['MASTER', 'AD
             <div class="row mb-4">
                 <div class="col-md-12">
                     <div class="caixa-upload shadow-sm border-primary">
-                        <h5 class="fw-bold text-primary mb-3"><i class="fas fa-paste me-2"></i>Consulta Massiva Fator Conferi</h5>
+                        <h5 class="fw-bold text-primary mb-3"><i class="fas fa-paste me-2"></i>Consulta Massiva Atualização Cadastral</h5>
                         <p class="text-muted small mb-4">Cole a lista de CPFs abaixo. O sistema limpa formatações automaticamente.<br><strong class="text-danger">Atenção: Limite máximo de 2.000 CPFs por lote.</strong></p>
                         
                         <form id="form_upload_lote" class="row justify-content-center g-3">
@@ -168,7 +168,7 @@ if (!empty($grupo_usuario_tela) && !in_array($grupo_usuario_tela, ['MASTER', 'AD
         </div>
         
         <?php if ($perm_token): ?>
-        <div class="tab-pane fade" id="tokens" role="tabpanel"><h4 class="mb-4 text-dark fw-bold">Gerenciamento de Tokens Fator Conferi</h4><div class="row mt-3 g-3"><div class="col-md-4"><div class="card shadow-sm border-dark"><div class="card-body text-center bg-light"><label class="fw-bold mb-2">Token Manual (Painel):</label><input type="text" id="tk_manual" class="form-control border-dark mb-3 text-center fw-bold"><button class="btn btn-success btn-sm w-100 fw-bold btn-salvar-token" data-mod="manual"><i class="fas fa-save me-1"></i> Salvar Manual</button></div></div></div><div class="col-md-4"><div class="card shadow-sm border-dark"><div class="card-body text-center bg-light"><label class="fw-bold mb-2">Token Lote (API Automática):</label><input type="text" id="tk_lote" class="form-control border-dark mb-3 text-center fw-bold"><button class="btn btn-success btn-sm w-100 fw-bold btn-salvar-token" data-mod="lote"><i class="fas fa-save me-1"></i> Salvar Lote</button></div></div></div><div class="col-md-4"><div class="card shadow-sm border-primary"><div class="card-body text-center bg-light border border-primary rounded"><label class="fw-bold mb-2 text-primary">Token CSV (Fila Em Massa):</label><input type="text" id="tk_csv" class="form-control border-primary mb-3 text-center fw-bold"><button class="btn btn-primary btn-sm w-100 fw-bold btn-salvar-token" data-mod="csv"><i class="fas fa-save me-1"></i> Salvar Token CSV</button></div></div></div></div></div>
+        <div class="tab-pane fade" id="tokens" role="tabpanel"><h4 class="mb-4 text-dark fw-bold">Gerenciamento de Tokens Atualização Cadastral</h4><div class="row mt-3 g-3"><div class="col-md-4"><div class="card shadow-sm border-dark"><div class="card-body text-center bg-light"><label class="fw-bold mb-2">Token Manual (Painel):</label><input type="text" id="tk_manual" class="form-control border-dark mb-3 text-center fw-bold"><button class="btn btn-success btn-sm w-100 fw-bold btn-salvar-token" data-mod="manual"><i class="fas fa-save me-1"></i> Salvar Manual</button></div></div></div><div class="col-md-4"><div class="card shadow-sm border-dark"><div class="card-body text-center bg-light"><label class="fw-bold mb-2">Token Lote (API Automática):</label><input type="text" id="tk_lote" class="form-control border-dark mb-3 text-center fw-bold"><button class="btn btn-success btn-sm w-100 fw-bold btn-salvar-token" data-mod="lote"><i class="fas fa-save me-1"></i> Salvar Lote</button></div></div></div><div class="col-md-4"><div class="card shadow-sm border-primary"><div class="card-body text-center bg-light border border-primary rounded"><label class="fw-bold mb-2 text-primary">Token CSV (Fila Em Massa):</label><input type="text" id="tk_csv" class="form-control border-primary mb-3 text-center fw-bold"><button class="btn btn-primary btn-sm w-100 fw-bold btn-salvar-token" data-mod="csv"><i class="fas fa-save me-1"></i> Salvar Token CSV</button></div></div></div></div></div>
         <?php endif; ?>
 
         <?php if ($perm_robo): ?>
@@ -179,12 +179,57 @@ if (!empty($grupo_usuario_tela) && !in_array($grupo_usuario_tela, ['MASTER', 'AD
 
 <div class="modal fade" id="modalEditCliente" tabindex="-1"><div class="modal-dialog"><div class="modal-content border-dark shadow-sm"><div class="modal-header bg-dark text-white"><h5 class="modal-title fw-bold">Editar Cliente</h5><button type="button" class="btn-close btn-close-white fechar-modal" data-bs-dismiss="modal"></button></div><div class="modal-body bg-light"><input type="hidden" id="edit_cli_cpf"><div class="form-group mb-3"><label class="fw-bold small">Custo por Consulta (R$):</label><input type="number" step="0.01" id="edit_cli_custo" class="form-control border-dark"></div><div class="form-group"><label class="fw-bold small">Grupo WhatsApp (ID):</label><input type="text" id="edit_cli_grupo" class="form-control border-dark"></div></div><div class="modal-footer bg-light"><button type="button" class="btn btn-secondary fechar-modal" data-bs-dismiss="modal">Fechar</button><button type="button" class="btn btn-primary fw-bold px-4" id="btn_salvar_cli">Salvar Alterações</button></div></div></div></div>
 <div class="modal fade" id="modalSaldo" tabindex="-1"><div class="modal-dialog"><div class="modal-content border-dark shadow-sm"><div class="modal-header bg-primary text-white"><h5 class="modal-title fw-bold"><i class="fas fa-coins me-2"></i> Movimentar Saldo</h5><button type="button" class="btn-close btn-close-white fechar-modal" data-bs-dismiss="modal"></button></div><div class="modal-body bg-light"><input type="hidden" id="saldo_cli_cpf"><div class="form-group mb-3"><label class="fw-bold small">Tipo de Operação:</label><select id="saldo_tipo" class="form-select border-dark fw-bold"><option value="CREDITO" class="text-success">🟢 Adicionar Saldo (Crédito)</option><option value="DEBITO" class="text-danger">🔴 Remover Saldo (Débito)</option></select></div><div class="form-group mb-3"><label class="fw-bold small">Valor (R$):</label><input type="number" step="0.01" id="saldo_valor" class="form-control border-dark text-primary fw-bold fs-5"></div><div class="form-group"><label class="fw-bold small">Motivo / Observação:</label><input type="text" id="saldo_motivo" class="form-control border-dark" value="Recarga Manual"></div></div><div class="modal-footer bg-light"><button type="button" class="btn btn-secondary fechar-modal" data-bs-dismiss="modal">Cancelar</button><button type="button" class="btn btn-success fw-bold px-4 shadow-sm" id="btn_salvar_saldo"><i class="fas fa-check"></i> Confirmar</button></div></div></div></div>
-<div class="modal fade" id="modalExtrato" tabindex="-1"><div class="modal-dialog modal-lg"><div class="modal-content border-dark shadow-sm"><div class="modal-header bg-dark text-white"><h5 class="modal-title fw-bold"><i class="fas fa-list me-2"></i> Extrato do Cliente</h5><button type="button" class="btn-close btn-close-white fechar-modal" data-bs-dismiss="modal"></button></div><div class="modal-body" style="max-height: 500px; overflow-y: auto; padding:0;"><table class="table table-hover table-sm text-center mb-0 align-middle"><thead class="table-light sticky-top shadow-sm"><tr><th>Data</th><th>Tipo</th><th>Valor (R$)</th><th>Saldo Atual (R$)</th><th>Motivo</th></tr></thead><tbody id="tbody_extrato"></tbody></table></div><div class="modal-footer bg-light"><button type="button" class="btn btn-secondary fw-bold px-4 fechar-modal" data-bs-dismiss="modal">Fechar Extrato</button></div></div></div></div>
+<div class="modal fade" id="modalExtrato" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content border-dark shadow-sm">
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title fw-bold"><i class="fas fa-list me-2"></i> Extrato — Atualização Cadastral</h5>
+                <button type="button" class="btn-close btn-close-white fechar-modal" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="p-3 bg-white border-bottom">
+                <div class="row g-2 align-items-end">
+                    <div class="col-md-4">
+                        <label class="small fw-bold text-muted">Período:</label>
+                        <select id="extrato_periodo" class="form-select form-select-sm border-dark fw-bold" onchange="toggleExtratoPersonalizado(this.value)">
+                            <option value="HOJE" selected>Hoje</option>
+                            <option value="MES">Mês Atual</option>
+                            <option value="TODO">Todo o Período</option>
+                            <option value="CUSTOM">Personalizado</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 d-none div-extrato-datas">
+                        <label class="small fw-bold text-muted">Início:</label>
+                        <input type="date" id="extrato_data_inicio" class="form-control form-control-sm border-dark">
+                    </div>
+                    <div class="col-md-3 d-none div-extrato-datas">
+                        <label class="small fw-bold text-muted">Fim:</label>
+                        <input type="date" id="extrato_data_fim" class="form-control form-control-sm border-dark">
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-dark btn-sm w-100 fw-bold" onclick="aplicarFiltroExtrato()"><i class="fas fa-filter"></i> Filtrar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body p-0" style="max-height: 450px; overflow-y: auto;">
+                <table class="table table-hover table-sm text-center mb-0 align-middle">
+                    <thead class="table-light sticky-top shadow-sm">
+                        <tr><th>Data</th><th>Tipo</th><th>Valor (R$)</th><th>Saldo Atual (R$)</th><th>Motivo</th></tr>
+                    </thead>
+                    <tbody id="tbody_extrato"></tbody>
+                </table>
+            </div>
+            <div class="modal-footer bg-light">
+                <button type="button" class="btn btn-secondary fw-bold px-4 fechar-modal" data-bs-dismiss="modal">Fechar Extrato</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
 const canEditSaldo = <?= $perm_saldo_editar ?>;
+const cpfLogado = '<?= $cpf_logado_tela ?>';
 
 $(document).ready(function() {
     const ajax_url = 'fator_conferi.ajax.php';
@@ -193,10 +238,10 @@ $(document).ready(function() {
     function carregarClientes() {
         $.post(ajax_url, { acao: 'listar_clientes' }, function(res) {
             if(res.success) {
-                let html = ''; 
-                let options = '<option value="" disabled selected>-- Selecione o Cliente (Obrigatório) --</option>'; 
-                let optionsLote = '<option value="" disabled selected>-- Selecione o Cliente (Obrigatório) --</option>';
-                
+                let html = '';
+                let options = '';
+                let optionsLote = '';
+
                 res.data.forEach(c => {
                     let btnAcoes = '';
                     if (canEditSaldo) {
@@ -208,9 +253,14 @@ $(document).ready(function() {
                     options += `<option value="${c.CPF}">${c.NOME} (Saldo: R$ ${parseFloat(c.SALDO).toFixed(2)})</option>`;
                     optionsLote += `<option value="${c.CPF}">${c.NOME} (Custo: R$ ${parseFloat(c.CUSTO_CONSULTA).toFixed(2)} | Saldo: R$ ${parseFloat(c.SALDO).toFixed(2)})</option>`;
                 });
-                $('#tabela_clientes').html(html); 
+                $('#tabela_clientes').html(html);
                 $('#cliente_cobrar').html(options);
                 $('#lote_cliente_cobrar').html(optionsLote);
+                // Auto-seleciona o usuário logado
+                if (cpfLogado) {
+                    $('#cliente_cobrar').val(cpfLogado);
+                    $('#lote_cliente_cobrar').val(cpfLogado);
+                }
             }
         }, 'json');
     }
@@ -234,7 +284,53 @@ $(document).ready(function() {
     $('#btn_salvar_cli').click(function() { $.post(ajax_url, { acao: 'salvar_dados_cliente', cpf: $('#edit_cli_cpf').val(), custo: $('#edit_cli_custo').val(), grupo: $('#edit_cli_grupo').val() }, function(res) { if(res.success) { $('#modalEditCliente').modal('hide'); carregarClientes(); } else { alert(res.msg); } }, 'json'); }); 
     $(document).on('click', '.btn-saldo-cli', function() { $('#saldo_cli_cpf').val($(this).data('cpf')); $('#saldo_valor').val(''); $('#modalSaldo').modal('show'); }); 
     $('#btn_salvar_saldo').click(function() { $.post(ajax_url, { acao: 'movimentar_saldo', cpf: $('#saldo_cli_cpf').val(), tipo: $('#saldo_tipo').val(), valor: $('#saldo_valor').val(), motivo: $('#saldo_motivo').val() }, function(res) { if(res.success) { alert(res.msg); $('#modalSaldo').modal('hide'); carregarClientes(); } else { alert(res.msg); } }, 'json'); }); 
-    $(document).on('click', '.btn-extrato-cli', function() { let cpf = $(this).data('cpf'); $('#tbody_extrato').html('<tr><td colspan="5" class="py-4 text-muted"><i class="fas fa-spinner fa-spin me-2"></i> Carregando...</td></tr>'); $('#modalExtrato').modal('show'); $.post(ajax_url, { acao: 'carregar_extrato', cpf: cpf }, function(res) { if(res.success) { let html = ''; res.data.forEach(e => { let badge = e.TIPO === 'CREDITO' ? '<span class="badge bg-success">CREDITO</span>' : '<span class="badge bg-danger">DEBITO</span>'; let corValor = e.TIPO === 'CREDITO' ? 'text-success' : 'text-danger'; let sinal = e.TIPO === 'CREDITO' ? '+' : '-'; html += `<tr class="border-bottom"><td class="small text-muted fw-bold">${e.DATA_FORMATADA}</td><td>${badge}</td><td class="${corValor} fw-bold">${sinal} R$ ${parseFloat(e.VALOR).toFixed(2)}</td><td class="fw-bold text-dark">R$ ${parseFloat(e.SALDO_ATUAL).toFixed(2)}</td><td class="small text-start">${e.MOTIVO}</td></tr>`; }); if(html === '') html = '<tr><td colspan="5" class="py-4 fw-bold">Nenhuma movimentação registrada.</td></tr>'; $('#tbody_extrato').html(html); } }, 'json'); }); 
+    let cpfExtratoAtual = '';
+
+    function carregarExtrato(cpf, dataInicio, dataFim) {
+        $('#tbody_extrato').html('<tr><td colspan="5" class="py-4 text-muted"><i class="fas fa-spinner fa-spin me-2"></i> Carregando...</td></tr>');
+        $.post(ajax_url, { acao: 'carregar_extrato', cpf: cpf, data_inicio: dataInicio, data_fim: dataFim }, function(res) {
+            if (res.success) {
+                let html = '';
+                res.data.forEach(e => {
+                    let badge = e.TIPO === 'CREDITO' ? '<span class="badge bg-success">CRÉDITO</span>' : '<span class="badge bg-danger">DÉBITO</span>';
+                    let corValor = e.TIPO === 'CREDITO' ? 'text-success' : 'text-danger';
+                    let sinal = e.TIPO === 'CREDITO' ? '+' : '-';
+                    html += `<tr class="border-bottom"><td class="small text-muted fw-bold">${e.DATA_FORMATADA}</td><td>${badge}</td><td class="${corValor} fw-bold">${sinal} R$ ${parseFloat(e.VALOR).toFixed(2)}</td><td class="fw-bold text-dark">R$ ${parseFloat(e.SALDO_ATUAL).toFixed(2)}</td><td class="small text-start">${e.MOTIVO}</td></tr>`;
+                });
+                if (html === '') html = '<tr><td colspan="5" class="py-4 fw-bold text-muted">Nenhuma movimentação neste período.</td></tr>';
+                $('#tbody_extrato').html(html);
+            }
+        }, 'json');
+    }
+
+    function getExtratoDatas() {
+        const periodo = $('#extrato_periodo').val();
+        const hoje = new Date().toISOString().split('T')[0];
+        if (periodo === 'HOJE')  return { inicio: hoje, fim: hoje };
+        if (periodo === 'MES')  { const d = new Date(); return { inicio: `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-01`, fim: hoje }; }
+        if (periodo === 'TODO') return { inicio: '2000-01-01', fim: '2099-12-31' };
+        return { inicio: $('#extrato_data_inicio').val() || hoje, fim: $('#extrato_data_fim').val() || hoje };
+    }
+
+    window.toggleExtratoPersonalizado = function(val) {
+        if (val === 'CUSTOM') { $('.div-extrato-datas').removeClass('d-none'); }
+        else { $('.div-extrato-datas').addClass('d-none'); }
+    };
+
+    window.aplicarFiltroExtrato = function() {
+        if (!cpfExtratoAtual) return;
+        const d = getExtratoDatas();
+        carregarExtrato(cpfExtratoAtual, d.inicio, d.fim);
+    };
+
+    $(document).on('click', '.btn-extrato-cli', function() {
+        cpfExtratoAtual = $(this).data('cpf');
+        $('#extrato_periodo').val('HOJE');
+        $('.div-extrato-datas').addClass('d-none');
+        const d = getExtratoDatas();
+        $('#modalExtrato').modal('show');
+        carregarExtrato(cpfExtratoAtual, d.inicio, d.fim);
+    }); 
     $('.fechar-modal').click(function() { $(this).closest('.modal').modal('hide'); });
 
     window.fcCarregarLotes = function(isAuto = false) {

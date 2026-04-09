@@ -114,6 +114,18 @@ if (!$credencialIA) {
 // =========================================================================
 // FUNÇÕES AUXILIARES DE INTEGRAÇÃO E TABELA
 // =========================================================================
+
+/**
+ * Calcula o próximo intervalo de retry baseado no tempo decorrido desde a consulta V8.
+ * Intervalos: 5min → 30min → 1h → 1h ... até 24h (TIMEOUT)
+ */
+function calcularProximoRetryV8($elapsed_seconds) {
+    $elapsed_min = $elapsed_seconds / 60;
+    if ($elapsed_min < 6)  return 300;  // retry em 5 minutos
+    if ($elapsed_min < 36) return 1800; // retry em 30 minutos
+    return 3600;                        // retry em 1 hora
+}
+
 function gerarTokenV8_Local($cred) {
     $payload = http_build_query(['grant_type'=>'password', 'username'=>$cred['USERNAME_API'], 'password'=>$cred['PASSWORD_API'], 'audience'=>$cred['AUDIENCE'], 'client_id'=>$cred['CLIENT_ID'], 'scope'=>'offline_access']);
     $ch = curl_init("https://auth.v8sistema.com/oauth/token"); curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); curl_setopt($ch, CURLOPT_POST, true); curl_setopt($ch, CURLOPT_POSTFIELDS, $payload); curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/x-www-form-urlencoded']);
@@ -286,12 +298,72 @@ try {
     switch ($acao) {
         
         // ---------------------------------------------------------------------
-        // 1 - O GPTMAKE ENVIAR REQUISIÇÃO DE CONSENTIMENTO (consulta_completa)
+        // 1 - O GPTMAKER ENVIA REQUISIÇÃO DE CONSENTIMENTO (consulta_completa)
+        // Lógica de polling assíncrono com janela de 24h:
+        //   → 1ª chamada: verifica V8 por ~50s, se não vier → devolve AGUARDANDO_DATAPREV
+        //   → Chamadas seguintes: verifica V8 imediatamente, devolve resultado ou próximo retry
+        //   → Intervalos de retry: 5min → 30min → 1h/hora até 24h → TIMEOUT
         // ---------------------------------------------------------------------
         case 'consulta_completa':
             $telefone = preg_replace('/\D/', '', $req['telefone'] ?? '11900000000');
             $tokenV8 = gerarTokenV8_Local($credencialIA);
 
+            // ── PASSO 1: Verifica se já existe uma consulta aguardando retorno da Dataprev ──
+            $stmtAguard = $pdo->prepare("
+                SELECT rc.CONSULT_ID, s.ID as SESSAO_ID, s.DATA_INICIO
+                FROM INTEGRACAO_V8_REGISTROCONSULTA rc
+                JOIN INTEGRACAO_V8_IA_SESSAO s ON s.CONSULT_ID = rc.CONSULT_ID
+                WHERE rc.CPF_CONSULTADO = ?
+                  AND rc.STATUS_V8 = 'AGUARDANDO MARGEM'
+                  AND s.STATUS_SESSAO = 'AGUARDANDO_DATAPREV'
+                ORDER BY s.DATA_INICIO ASC LIMIT 1
+            ");
+            $stmtAguard->execute([$cpf]);
+            $consultaAguardando = $stmtAguard->fetch(PDO::FETCH_ASSOC);
+
+            if ($consultaAguardando) {
+                $ultimo_consult_id = $consultaAguardando['CONSULT_ID'];
+                $sessao_id         = (int)$consultaAguardando['SESSAO_ID'];
+                $elapsed           = time() - strtotime($consultaAguardando['DATA_INICIO']);
+
+                // Janela de 24h esgotada → TIMEOUT definitivo
+                if ($elapsed >= 86400) {
+                    $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'TIMEOUT_DATAPREV' WHERE ID = ?")->execute([$sessao_id]);
+                    $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA SET STATUS_V8 = 'TIMEOUT_DATAPREV', ULTIMA_ATUALIZACAO = NOW() WHERE CONSULT_ID = ?")->execute([$ultimo_consult_id]);
+                    enviarResposta($cpf, $acao, ['success' => false, 'status' => 'TIMEOUT', 'error' => 'Aguardamos 24 horas sem retorno da Dataprev. Solicite um novo consentimento.']);
+                }
+
+                // Verifica V8 agora (resposta imediata, sem sleep)
+                $chC = curl_init("https://bff.v8sistema.com/private-consignment/consult/{$ultimo_consult_id}");
+                curl_setopt($chC, CURLOPT_RETURNTRANSFER, true); curl_setopt($chC, CURLOPT_HTTPGET, true); curl_setopt($chC, CURLOPT_HTTPHEADER, ["Authorization: Bearer $tokenV8"]);
+                $resC = curl_exec($chC); curl_close($chC); $jsonC = json_decode($resC, true);
+                $st = strtoupper($jsonC['status'] ?? '');
+
+                if (in_array($st, ['SUCCESS', 'COMPLETED', 'WAITING_CREDIT_ANALYSIS', 'APPROVED', 'PRE_APPROVED', 'SIMULATED', 'READY', 'AVAILABLE', 'MARGIN_AVAILABLE', 'AUTHORIZED', 'DONE', 'FINISHED'])) {
+                    $margem = $jsonC['availableMargin'] ?? $jsonC['marginBaseValue'] ?? $jsonC['availableMarginValue'] ?? $jsonC['maxAmount'] ?? 0;
+                    $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'MARGEM_LIBERADA' WHERE ID = ?")->execute([$sessao_id]);
+                    $simDados = processarSimulacaoPadrao($ultimo_consult_id, $cpf, (float)$margem, $pdo, $credencialIA, $tokenV8);
+                    $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'SIMULACAO_PRONTA' WHERE ID = ?")->execute([$sessao_id]);
+                    enviarResposta($cpf, $acao, ['success' => true, 'status' => 'CONCLUIDO', 'margem_disponivel' => (float)$margem, 'simulacao_padrao' => $simDados]);
+                } elseif (in_array($st, ['ERROR', 'REJECTED', 'DENIED', 'CANCELED', 'EXPIRED', 'FAILED'])) {
+                    $erroMsg_V8 = extrairErroV8($jsonC);
+                    $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'ERRO_MARGEM' WHERE ID = ?")->execute([$sessao_id]);
+                    $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA SET STATUS_V8 = 'ERRO-MARGEM', MENSAGEM_ERRO = ?, ULTIMA_ATUALIZACAO = NOW() WHERE CONSULT_ID = ?")->execute([$erroMsg_V8, $ultimo_consult_id]);
+                    enviarResposta($cpf, $acao, ['success' => false, 'status' => 'ERRO', 'error' => $erroMsg_V8]);
+                } else {
+                    // Ainda processando → informa o próximo intervalo de retry
+                    $retry_em  = calcularProximoRetryV8($elapsed);
+                    $retry_min = round($retry_em / 60);
+                    enviarResposta($cpf, $acao, [
+                        'success'            => false,
+                        'status'             => 'AGUARDANDO_DATAPREV',
+                        'msg'                => "Dataprev ainda processando. Tente novamente em {$retry_min} minuto(s).",
+                        'retry_em_segundos'  => $retry_em
+                    ]);
+                }
+            }
+
+            // ── PASSO 2: Nenhuma consulta aguardando – fluxo normal ──
             $pdo->prepare("INSERT INTO INTEGRACAO_V8_IA_SESSAO (TOKEN_IA_USADO, TELEFONE_CLIENTE, CPF_CLIENTE, STATUS_SESSAO) VALUES (?, ?, ?, 'BUSCANDO_V8')")->execute([$tokenIA, $telefone, $cpf]);
             $sessao_id = $pdo->lastInsertId();
 
@@ -304,16 +376,16 @@ try {
             $erroMsg_V8 = '';
 
             if (!$ultimo_consult_id) {
-                $cenario = '1.1.1'; 
+                $cenario = '1.1.1';
             } else {
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET CONSULT_ID = ? WHERE ID = ?")->execute([$ultimo_consult_id, $sessao_id]);
 
                 $chC = curl_init("https://bff.v8sistema.com/private-consignment/consult/{$ultimo_consult_id}");
                 curl_setopt($chC, CURLOPT_RETURNTRANSFER, true); curl_setopt($chC, CURLOPT_HTTPGET, true); curl_setopt($chC, CURLOPT_HTTPHEADER, ["Authorization: Bearer $tokenV8"]);
                 $resC = curl_exec($chC); curl_close($chC); $jsonC = json_decode($resC, true);
-                
+
                 $st = strtoupper($jsonC['status'] ?? '');
-                
+
                 if (in_array($st, ['SUCCESS', 'COMPLETED', 'WAITING_CREDIT_ANALYSIS', 'APPROVED', 'PRE_APPROVED', 'SIMULATED', 'READY', 'AVAILABLE', 'MARGIN_AVAILABLE', 'AUTHORIZED', 'DONE', 'FINISHED'])) {
                     $cenario = '1.1.2';
                     $margem = $jsonC['availableMargin'] ?? $jsonC['marginBaseValue'] ?? $jsonC['availableMarginValue'] ?? $jsonC['maxAmount'] ?? 0;
@@ -323,24 +395,25 @@ try {
                     $cenario = '1.1.4';
                     $erroMsg_V8 = extrairErroV8($jsonC);
                 } else {
-                    $cenario = '1.1.1'; 
+                    $cenario = '1.1.1';
                 }
             }
 
             if ($cenario === '1.1.1') {
+                // Novo consentimento → dispara V8 e faz checagens rápidas iniciais (~50s)
                 $cliente = buscarOuAtualizarCadastro($cpf, $pdo, $credencialIA);
                 $ultimo_consult_id = processarConsentimentoDireto($cpf, $telefone, $cliente, $pdo, $credencialIA);
-                
+
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET CONSULT_ID = ?, STATUS_SESSAO = 'AGUARDANDO_DATAPREV' WHERE ID = ?")->execute([$ultimo_consult_id, $sessao_id]);
 
                 $conseguiu_margem = false;
-                for ($i = 0; $i < 3; $i++) {
-                    sleep(15); 
+                for ($i = 0; $i < 5; $i++) {
+                    sleep(10); // 5 tentativas × 10s = 50s
                     $chC = curl_init("https://bff.v8sistema.com/private-consignment/consult/{$ultimo_consult_id}");
                     curl_setopt($chC, CURLOPT_RETURNTRANSFER, true); curl_setopt($chC, CURLOPT_HTTPGET, true); curl_setopt($chC, CURLOPT_HTTPHEADER, ["Authorization: Bearer $tokenV8"]);
                     $resC = curl_exec($chC); curl_close($chC); $jsonC = json_decode($resC, true);
                     $st = strtoupper($jsonC['status'] ?? '');
-                    
+
                     if (in_array($st, ['SUCCESS', 'COMPLETED', 'WAITING_CREDIT_ANALYSIS', 'APPROVED', 'PRE_APPROVED', 'SIMULATED', 'READY', 'AVAILABLE', 'MARGIN_AVAILABLE', 'AUTHORIZED', 'DONE', 'FINISHED'])) {
                         $margem = $jsonC['availableMargin'] ?? $jsonC['marginBaseValue'] ?? $jsonC['availableMarginValue'] ?? $jsonC['maxAmount'] ?? 0;
                         $conseguiu_margem = true;
@@ -360,52 +433,35 @@ try {
                     $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'SIMULACAO_PRONTA' WHERE ID = ?")->execute([$sessao_id]);
                     enviarResposta($cpf, $acao, ['success' => true, 'status' => 'CONCLUIDO', 'margem_disponivel' => (float)$margem, 'simulacao_padrao' => $simDados]);
                 } else {
-                    $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'TIMEOUT_DATAPREV' WHERE ID = ?")->execute([$sessao_id]);
-                    $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA SET STATUS_V8 = 'TIMEOUT_DATAPREV', ULTIMA_ATUALIZACAO = NOW() WHERE CONSULT_ID = ?")->execute([$ultimo_consult_id]);
-                    enviarResposta($cpf, $acao, ['success' => false, 'status' => 'TIMEOUT', 'error' => 'SEM RETORNO DATA PREV, PRECISA DE NOVA SOLICITAÇÃO DE CONSENTIMENTO']);
+                    // Não chegou em 50s → entra na janela de 24h; IA deve tentar de volta em 5min
+                    enviarResposta($cpf, $acao, [
+                        'success'           => false,
+                        'status'            => 'AGUARDANDO_DATAPREV',
+                        'msg'               => 'Consentimento enviado. Dataprev ainda processando. Tente novamente em 5 minuto(s).',
+                        'retry_em_segundos' => 300
+                    ]);
                 }
 
             } elseif ($cenario === '1.1.2') {
+                // Margem já disponível → responde imediatamente
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'MARGEM_LIBERADA' WHERE ID = ?")->execute([$sessao_id]);
                 $simDados = processarSimulacaoPadrao($ultimo_consult_id, $cpf, (float)$margem, $pdo, $credencialIA, $tokenV8);
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'SIMULACAO_PRONTA' WHERE ID = ?")->execute([$sessao_id]);
                 enviarResposta($cpf, $acao, ['success' => true, 'status' => 'CONCLUIDO', 'margem_disponivel' => (float)$margem, 'simulacao_padrao' => $simDados]);
 
             } elseif ($cenario === '1.1.3') {
+                // Consulta anterior em processamento → salva como AGUARDANDO e pede retry em 5min
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'AGUARDANDO_DATAPREV' WHERE ID = ?")->execute([$sessao_id]);
-                $conseguiu_margem = false;
-                for ($i = 0; $i < 3; $i++) {
-                    sleep(15); 
-                    $chC = curl_init("https://bff.v8sistema.com/private-consignment/consult/{$ultimo_consult_id}");
-                    curl_setopt($chC, CURLOPT_RETURNTRANSFER, true); curl_setopt($chC, CURLOPT_HTTPGET, true); curl_setopt($chC, CURLOPT_HTTPHEADER, ["Authorization: Bearer $tokenV8"]);
-                    $resC = curl_exec($chC); curl_close($chC); $jsonC = json_decode($resC, true);
-                    $st = strtoupper($jsonC['status'] ?? '');
-                    
-                    if (in_array($st, ['SUCCESS', 'COMPLETED', 'WAITING_CREDIT_ANALYSIS', 'APPROVED', 'PRE_APPROVED', 'SIMULATED', 'READY', 'AVAILABLE', 'MARGIN_AVAILABLE', 'AUTHORIZED', 'DONE', 'FINISHED'])) {
-                        $margem = $jsonC['availableMargin'] ?? $jsonC['marginBaseValue'] ?? $jsonC['availableMarginValue'] ?? $jsonC['maxAmount'] ?? 0;
-                        $conseguiu_margem = true;
-                        break;
-                    }
-                    if (in_array($st, ['ERROR', 'REJECTED', 'DENIED', 'CANCELED', 'EXPIRED', 'FAILED'])) {
-                        $erroMsg_V8 = extrairErroV8($jsonC);
-                        $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'ERRO_MARGEM' WHERE ID = ?")->execute([$sessao_id]);
-                        $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA SET STATUS_V8 = 'ERRO-MARGEM', MENSAGEM_ERRO = ?, ULTIMA_ATUALIZACAO = NOW() WHERE CONSULT_ID = ?")->execute([$erroMsg_V8, $ultimo_consult_id]);
-                        enviarResposta($cpf, $acao, ['success' => false, 'status' => 'ERRO', 'error' => $erroMsg_V8]);
-                    }
-                }
-
-                if ($conseguiu_margem) {
-                    $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'MARGEM_LIBERADA' WHERE ID = ?")->execute([$sessao_id]);
-                    $simDados = processarSimulacaoPadrao($ultimo_consult_id, $cpf, (float)$margem, $pdo, $credencialIA, $tokenV8);
-                    $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'SIMULACAO_PRONTA' WHERE ID = ?")->execute([$sessao_id]);
-                    enviarResposta($cpf, $acao, ['success' => true, 'status' => 'CONCLUIDO', 'margem_disponivel' => (float)$margem, 'simulacao_padrao' => $simDados]);
-                } else {
-                    $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'TIMEOUT_DATAPREV' WHERE ID = ?")->execute([$sessao_id]);
-                    $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA SET STATUS_V8 = 'TIMEOUT_DATAPREV', ULTIMA_ATUALIZACAO = NOW() WHERE CONSULT_ID = ?")->execute([$ultimo_consult_id]);
-                    enviarResposta($cpf, $acao, ['success' => false, 'status' => 'TIMEOUT', 'error' => 'SEM RETORNO DATA PREV, PRECISA DE NOVA SOLICITAÇÃO DE CONSENTIMENTO']);
-                }
+                $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA SET STATUS_V8 = 'AGUARDANDO MARGEM', ULTIMA_ATUALIZACAO = NOW() WHERE CONSULT_ID = ?")->execute([$ultimo_consult_id]);
+                enviarResposta($cpf, $acao, [
+                    'success'           => false,
+                    'status'            => 'AGUARDANDO_DATAPREV',
+                    'msg'               => 'Dataprev ainda processando o consentimento anterior. Tente novamente em 5 minuto(s).',
+                    'retry_em_segundos' => 300
+                ]);
 
             } elseif ($cenario === '1.1.4') {
+                // Erro definitivo no V8 → responde imediatamente
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'ERRO_MARGEM' WHERE ID = ?")->execute([$sessao_id]);
                 $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA SET STATUS_V8 = 'ERRO-MARGEM', MENSAGEM_ERRO = ?, ULTIMA_ATUALIZACAO = NOW() WHERE CONSULT_ID = ?")->execute([$erroMsg_V8, $ultimo_consult_id]);
                 enviarResposta($cpf, $acao, ['success' => false, 'status' => 'ERRO', 'error' => $erroMsg_V8]);

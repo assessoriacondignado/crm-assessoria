@@ -278,8 +278,10 @@ try {
         case 'carregar_extrato':
             $cpf = preg_replace('/\D/', '', $_POST['cpf'] ?? '');
             if ($tem_restricao && $cpf !== $cpf_logado) { ob_end_clean(); echo json_encode(['success' => false, 'msg' => 'Acesso negado.']); exit; }
-            $stmt = $pdo->prepare("SELECT TIPO, MOTIVO, VALOR, SALDO_ATUAL, DATE_FORMAT(DATA_HORA, '%d/%m/%Y %H:%i') as DATA_FORMATADA FROM fatorconferi_CLIENTE_FINANCEIRO_EXTRATO WHERE CPF_CLIENTE = ? ORDER BY DATA_HORA DESC LIMIT 100");
-            $stmt->execute([$cpf]); ob_end_clean(); echo json_encode(['success' => true, 'data' => $stmt->fetchAll(PDO::FETCH_ASSOC)]); break;
+            $data_inicio = ($_POST['data_inicio'] ?? date('Y-m-d')) . ' 00:00:00';
+            $data_fim    = ($_POST['data_fim']    ?? date('Y-m-d')) . ' 23:59:59';
+            $stmt = $pdo->prepare("SELECT TIPO, MOTIVO, VALOR, SALDO_ATUAL, DATE_FORMAT(DATA_HORA, '%d/%m/%Y %H:%i') as DATA_FORMATADA FROM fatorconferi_CLIENTE_FINANCEIRO_EXTRATO WHERE CPF_CLIENTE = ? AND DATA_HORA BETWEEN ? AND ? ORDER BY DATA_HORA DESC LIMIT 500");
+            $stmt->execute([$cpf, $data_inicio, $data_fim]); ob_end_clean(); echo json_encode(['success' => true, 'data' => $stmt->fetchAll(PDO::FETCH_ASSOC)]); break;
 
         case 'salvar_dados_cliente':
             if ($restricao_saldo_editar) { ob_end_clean(); echo json_encode(['success' => false, 'msg' => 'Acesso Negado: Seu grupo não tem permissão para editar dados.']); exit; }
