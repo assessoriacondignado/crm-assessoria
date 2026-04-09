@@ -64,6 +64,12 @@ if ($perm_chat)         $tab_ativa = $tab_ativa ?: 'tab-chat';
             <?php if($perm_chat): ?>
             <li class="nav-item"><button class="nav-link <?= $tab_ativa==='tab-chat' ? 'active' : '' ?> border-dark text-dark fw-bold" data-bs-toggle="tab" data-bs-target="#tab-chat" type="button" onclick="iniciarChat()"><i class="fab fa-whatsapp text-success me-1"></i> Chat</button></li>
             <?php endif; ?>
+
+            <li class="nav-item ms-auto">
+                <button class="nav-link border-dark text-dark" data-bs-toggle="tab" data-bs-target="#tab-manual" type="button">
+                    <i class="fas fa-book-open me-1 text-secondary"></i> Manual do Usuário
+                </button>
+            </li>
         </ul>
 
         <div class="tab-content">
@@ -511,6 +517,26 @@ if ($perm_chat)         $tab_ativa = $tab_ativa ?: 'tab-chat';
                     </div>
                 </div>
 
+            </div>
+
+            <!-- ============================================================ -->
+            <!-- ABA MANUAL DO USUÁRIO                                         -->
+            <!-- ============================================================ -->
+            <div class="tab-pane fade" id="tab-manual">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="fw-bold text-dark m-0"><i class="fas fa-book-open text-secondary me-2"></i> Manual do Usuário — WhatsApp Cloud API</h5>
+                    <a href="manual_usuario.html" target="_blank" class="btn btn-outline-dark btn-sm fw-bold shadow-sm">
+                        <i class="fas fa-external-link-alt me-1"></i> Abrir em nova aba
+                    </a>
+                </div>
+                <div class="border border-dark rounded shadow-sm overflow-hidden" style="height:620px;">
+                    <iframe src="manual_usuario.html" width="100%" height="100%" frameborder="0" style="display:block;" title="Manual do Usuário WhatsApp Oficial"></iframe>
+                </div>
+                <div class="text-end mt-2">
+                    <a href="manual_usuario.html" target="_blank" class="text-muted small">
+                        <i class="fas fa-print me-1"></i> Para salvar como PDF: abra em nova aba e use Ctrl+P → Salvar como PDF
+                    </a>
+                </div>
             </div>
 
         </div>

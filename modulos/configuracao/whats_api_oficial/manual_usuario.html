@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manual do Usuário — WhatsApp Cloud API (Oficial)</title>
+<style>
+  /* =====================================================
+     FONTES E BASE
+  ===================================================== */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #1a1a2e;
+    background: #f5f5f5;
+  }
+
+  /* =====================================================
+     WRAPPER DE IMPRESSÃO
+  ===================================================== */
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    background: white;
+    margin: 0 auto 20px;
+    padding: 18mm 16mm 16mm;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  }
+
+  /* =====================================================
+     CAPA
+  ===================================================== */
+  .capa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 240mm;
+    text-align: center;
+    background: linear-gradient(145deg, #0d1b2a 0%, #1b4332 60%, #25D366 100%);
+    border-radius: 12px;
+    padding: 40px;
+    color: white;
+  }
+  .capa .logo-wa {
+    width: 90px; height: 90px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 52px;
+    margin-bottom: 28px;
+    box-shadow: 0 0 0 8px rgba(37,211,102,0.25);
+  }
+  .capa h1 { font-size: 28px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 10px; }
+  .capa h2 { font-size: 17px; font-weight: 400; opacity: 0.85; margin-bottom: 30px; }
+  .capa .badge-version {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 5px 18px;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  .capa .tagline {
+    margin-top: 32px;
+    font-size: 12px;
+    opacity: 0.6;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 20px;
+    width: 100%;
+  }
+
+  /* =====================================================
+     SUMÁRIO
+  ===================================================== */
+  .sumario h2 { font-size: 18px; font-weight: 800; color: #1b4332; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 3px solid #25D366; }
+  .sumario ol { list-style: none; counter-reset: sumario-counter; }
+  .sumario ol > li { counter-increment: sumario-counter; display: flex; align-items: baseline; padding: 6px 0; border-bottom: 1px dotted #e0e0e0; }
+  .sumario ol > li::before { content: counter(sumario-counter) "."; font-weight: 700; color: #25D366; min-width: 28px; }
+  .sumario ol > li .titulo { flex: 1; font-weight: 600; font-size: 13px; }
+  .sumario ol > li .pagina { font-size: 12px; color: #888; }
+  .sumario ol > li.sub { padding-left: 28px; }
+  .sumario ol > li.sub::before { content: ""; min-width: 28px; }
+  .sumario ol > li.sub .titulo { font-weight: 400; font-size: 12px; color: #555; }
+
+  /* =====================================================
+     SEÇÕES
+  ===================================================== */
+  .secao {
+    page-break-before: always;
+  }
+  .secao-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: linear-gradient(90deg, #1b4332, #25D366);
+    color: white;
+    padding: 14px 20px;
+    border-radius: 10px;
+    margin-bottom: 22px;
+  }
+  .secao-header .numero {
+    background: rgba(255,255,255,0.2);
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; font-weight: 800;
+    flex-shrink: 0;
+  }
+  .secao-header h2 { font-size: 17px; font-weight: 700; margin: 0; }
+  .secao-header p { font-size: 11px; opacity: 0.85; margin: 2px 0 0; }
+
+  /* =====================================================
+     SUBTÍTULOS
+  ===================================================== */
+  h3 { font-size: 14px; font-weight: 700; color: #1b4332; margin: 20px 0 10px; padding-left: 10px; border-left: 4px solid #25D366; }
+  h4 { font-size: 13px; font-weight: 600; color: #0d1b2a; margin: 14px 0 8px; }
+
+  p { margin-bottom: 10px; }
+  ul, ol { padding-left: 20px; margin-bottom: 12px; }
+  li { margin-bottom: 5px; }
+  strong { font-weight: 700; }
+  code { background: #f0f0f0; padding: 1px 5px; border-radius: 4px; font-size: 11.5px; font-family: 'Courier New', monospace; }
+
+  /* =====================================================
+     BLOCOS DE ILUSTRAÇÃO (simulam telas)
+  ===================================================== */
+  .tela {
+    border: 2px solid #dee2e6;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 16px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .tela-barra {
+    background: #1a1a2e;
+    padding: 7px 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .tela-barra span.dot {
+    width: 10px; height: 10px; border-radius: 50%; display: inline-block;
+  }
+  .tela-barra .dot-r { background: #ff5f57; }
+  .tela-barra .dot-y { background: #febc2e; }
+  .tela-barra .dot-g { background: #28c840; }
+  .tela-barra .url {
+    background: rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.7);
+    font-size: 10px;
+    padding: 2px 10px;
+    border-radius: 4px;
+    margin-left: 8px;
+    flex: 1;
+    font-family: monospace;
+  }
+  .tela-corpo {
+    background: #f8f9fa;
+    padding: 16px;
+  }
+
+  /* tabs simuladas */
+  .mock-tabs {
+    display: flex;
+    gap: 2px;
+    border-bottom: 2px solid #dee2e6;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+  .mock-tab {
+    padding: 6px 14px;
+    border-radius: 6px 6px 0 0;
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid #dee2e6;
+    border-bottom: none;
+    background: #f0f0f0;
+    color: #666;
+  }
+  .mock-tab.ativo {
+    background: white;
+    color: #1b4332;
+    border-bottom: 3px solid #25D366;
+  }
+
+  /* cards simulados */
+  .mock-card {
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+  }
+  .mock-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 8px;
+  }
+
+  /* hierarquia visual */
+  .hierarquia {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 12px 0;
+  }
+  .hier-nivel {
+    display: flex;
+    align-items: stretch;
+  }
+  .hier-linha {
+    width: 28px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hier-linha .v-line {
+    width: 2px;
+    background: #dee2e6;
+    flex: 1;
+  }
+  .hier-linha .h-line {
+    width: 14px;
+    height: 2px;
+    background: #dee2e6;
+    margin-top: 14px;
+  }
+  .hier-item {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin: 3px 0;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .hier-bm   { background: #fff3cd; border: 2px solid #ffc107; color: #856404; }
+  .hier-waba { background: #cce5ff; border: 2px solid #004085; color: #004085; }
+  .hier-phone { background: #d4edda; border: 2px solid #155724; color: #155724; }
+
+  /* fluxo/setas */
+  .fluxo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin: 16px 0;
+    flex-wrap: wrap;
+  }
+  .fluxo-item {
+    background: #0d1b2a;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .fluxo-item.verde { background: #1b4332; }
+  .fluxo-item.wa { background: #25D366; color: #fff; }
+  .fluxo-seta { font-size: 18px; color: #888; }
+
+  /* balões de chat simulados */
+  .mock-chat {
+    background: #e5ddd5;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .balao-env {
+    align-self: flex-end;
+    background: #dcf8c6;
+    border-radius: 12px 0 12px 12px;
+    padding: 7px 12px;
+    max-width: 75%;
+    font-size: 12px;
+  }
+  .balao-rec {
+    align-self: flex-start;
+    background: white;
+    border-radius: 0 12px 12px 12px;
+    padding: 7px 12px;
+    max-width: 75%;
+    font-size: 12px;
+    border: 1px solid #eee;
+  }
+  .balao-hora { font-size: 10px; color: #888; text-align: right; margin-top: 2px; }
+
+  /* tabelas */
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 12px; }
+  th { background: #1a1a2e; color: white; padding: 7px 10px; text-align: left; }
+  td { padding: 6px 10px; border-bottom: 1px solid #f0f0f0; }
+  tr:nth-child(even) td { background: #fafafa; }
+
+  /* alertas */
+  .alerta { padding: 10px 14px; border-radius: 8px; margin: 12px 0; font-size: 12px; }
+  .alerta-info  { background: #cce5ff; border-left: 4px solid #004085; }
+  .alerta-warn  { background: #fff3cd; border-left: 4px solid #856404; }
+  .alerta-ok    { background: #d4edda; border-left: 4px solid #155724; }
+  .alerta-erro  { background: #f8d7da; border-left: 4px solid #721c24; }
+
+  /* passos numerados */
+  .passo { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 14px; }
+  .passo .num { background: #25D366; color: white; border-radius: 50%; width: 26px; height: 26px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; }
+  .passo .conteudo { flex: 1; }
+  .passo .conteudo strong { display: block; font-size: 13px; margin-bottom: 3px; }
+  .passo .conteudo span { font-size: 12px; color: #555; }
+
+  /* campo simulado */
+  .mock-campo {
+    background: white;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+    color: #aaa;
+    margin-bottom: 4px;
+  }
+  .mock-campo.destaque { border-color: #25D366; color: #333; }
+  .mock-label { font-size: 11px; font-weight: 600; margin-bottom: 2px; color: #444; }
+  .mock-btn {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 700;
+    margin: 2px;
+  }
+  .mock-btn-dark  { background: #1a1a2e; color: white; }
+  .mock-btn-green { background: #25D366; color: white; }
+  .mock-btn-blue  { background: #004085; color: white; }
+  .mock-btn-red   { background: #dc3545; color: white; }
+  .mock-btn-gray  { background: #6c757d; color: white; }
+
+  /* permissões */
+  .perm-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 12px 0; }
+  .perm-item { background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 8px; padding: 10px 12px; }
+  .perm-item .chave { font-family: monospace; font-size: 10px; color: #666; }
+  .perm-item .nome  { font-size: 12px; font-weight: 600; color: #333; margin-top: 4px; }
+  .perm-item .desc  { font-size: 11px; color: #888; margin-top: 2px; }
+
+  /* janela 24h */
+  .janela-box {
+    display: flex;
+    gap: 16px;
+    align-items: stretch;
+    margin: 16px 0;
+  }
+  .janela-aberta { flex: 1; background: #d4edda; border: 2px solid #28a745; border-radius: 10px; padding: 14px; }
+  .janela-fechada { flex: 1; background: #f8d7da; border: 2px solid #dc3545; border-radius: 10px; padding: 14px; }
+  .janela-box h4 { font-size: 13px; margin-bottom: 8px; }
+
+  /* status badges */
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 600; }
+  .badge-green { background: #d4edda; color: #155724; }
+  .badge-red   { background: #f8d7da; color: #721c24; }
+  .badge-blue  { background: #cce5ff; color: #004085; }
+  .badge-gray  { background: #e2e3e5; color: #383d41; }
+  .badge-yellow { background: #fff3cd; color: #856404; }
+
+  /* rodapé */
+  .rodape { text-align: center; color: #888; font-size: 10px; margin-top: 30px; padding-top: 14px; border-top: 1px solid #e0e0e0; }
+
+  /* separador */
+  hr { border: none; border-top: 1px solid #e0e0e0; margin: 20px 0; }
+
+  /* =====================================================
+     IMPRESSÃO / PDF
+  ===================================================== */
+  @media print {
+    body { background: white; font-size: 12px; }
+    .page { box-shadow: none; margin: 0; padding: 15mm 14mm; width: 100%; page-break-after: always; }
+    .page:last-child { page-break-after: avoid; }
+    .secao { page-break-before: always; }
+    .no-break { page-break-inside: avoid; }
+    h3 { page-break-after: avoid; }
+
+    /* Remove links underline em PDF */
+    a { text-decoration: none; color: inherit; }
+  }
+
+  @page {
+    size: A4;
+    margin: 15mm 14mm;
+  }
+
+  /* Botão de impressão (só na tela) */
+  .print-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(37,211,102,0.4);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .print-btn:hover { background: #1ebe5a; }
+  @media print { .print-btn { display: none; } }
+</style>
+</head>
+<body>
+
+<!-- BOTÃO IMPRIMIR -->
+<button class="print-btn" onclick="window.print()">
+  🖨️ Salvar como PDF
+</button>
+
+<!-- =====================================================
+     CAPA
+===================================================== -->
+<div class="page">
+  <div class="capa">
+    <div class="logo-wa">📱</div>
+    <h1>WhatsApp Cloud API</h1>
+    <h2>Manual do Usuário — Módulo Oficial</h2>
+    <div class="badge-version">VERSÃO 1.0 &nbsp;|&nbsp; 2026</div>
+    <p style="margin-top:28px; font-size:13px; opacity:0.8; max-width:380px; line-height:1.7;">
+      Guia completo para cadastro de credenciais, gerenciamento de modelos,
+      disparo manual, campanhas em lote e atendimento via Chat.
+    </p>
+    <div class="tagline">
+      CRM Interno &nbsp;·&nbsp; Módulo: Configurações &gt; WhatsApp Oficial
+    </div>
+  </div>
+</div>
+
+<!-- =====================================================
+     SUMÁRIO
+===================================================== -->
+<div class="page">
+  <div class="sumario">
+    <h2>Sumário</h2>
+    <ol>
+      <li><span class="titulo">Visão Geral do Módulo</span><span class="pagina">3</span></li>
+      <li class="sub"><span class="titulo">O que é o WhatsApp Cloud API?</span><span class="pagina">3</span></li>
+      <li class="sub"><span class="titulo">Hierarquia de credenciais</span><span class="pagina">3</span></li>
+
+      <li><span class="titulo">Permissões de Acesso</span><span class="pagina">4</span></li>
+      <li class="sub"><span class="titulo">Chaves de permissão disponíveis</span><span class="pagina">4</span></li>
+      <li class="sub"><span class="titulo">Como bloquear/liberar para um usuário</span><span class="pagina">4</span></li>
+
+      <li><span class="titulo">Aba: Credenciais da Meta</span><span class="pagina">5</span></li>
+      <li class="sub"><span class="titulo">Cadastrar BM (Business Manager)</span><span class="pagina">5</span></li>
+      <li class="sub"><span class="titulo">Adicionar WABA</span><span class="pagina">6</span></li>
+      <li class="sub"><span class="titulo">Adicionar Phone ID (número)</span><span class="pagina">6</span></li>
+      <li class="sub"><span class="titulo">Configurar o Webhook</span><span class="pagina">7</span></li>
+
+      <li><span class="titulo">Aba: Modelos</span><span class="pagina">8</span></li>
+      <li class="sub"><span class="titulo">Visualizar templates da Meta</span><span class="pagina">8</span></li>
+      <li class="sub"><span class="titulo">Status dos templates</span><span class="pagina">8</span></li>
+
+      <li><span class="titulo">Aba: Disparo Manual</span><span class="pagina">9</span></li>
+      <li class="sub"><span class="titulo">Enviar mensagem de texto</span><span class="pagina">9</span></li>
+      <li class="sub"><span class="titulo">Enviar via template aprovado</span><span class="pagina">9</span></li>
+
+      <li><span class="titulo">Aba: Campanha / Lote</span><span class="pagina">10</span></li>
+      <li class="sub"><span class="titulo">Importar lista por tela</span><span class="pagina">10</span></li>
+      <li class="sub"><span class="titulo">Importar lista via CSV</span><span class="pagina">11</span></li>
+      <li class="sub"><span class="titulo">Processar e acompanhar disparo</span><span class="pagina">11</span></li>
+      <li class="sub"><span class="titulo">Exportar resultado</span><span class="pagina">12</span></li>
+
+      <li><span class="titulo">Aba: Histórico</span><span class="pagina">12</span></li>
+
+      <li><span class="titulo">Aba: Chat</span><span class="pagina">13</span></li>
+      <li class="sub"><span class="titulo">Regra da janela 24h</span><span class="pagina">13</span></li>
+      <li class="sub"><span class="titulo">Iniciar nova conversa</span><span class="pagina">14</span></li>
+      <li class="sub"><span class="titulo">Enviar mensagem de texto</span><span class="pagina">14</span></li>
+      <li class="sub"><span class="titulo">Enviar template (janela fechada)</span><span class="pagina">15</span></li>
+      <li class="sub"><span class="titulo">Enviar arquivo/mídia</span><span class="pagina">15</span></li>
+      <li class="sub"><span class="titulo">Modelos CRM (respostas rápidas)</span><span class="pagina">16</span></li>
+      <li class="sub"><span class="titulo">Finalizar atendimento</span><span class="pagina">16</span></li>
+
+      <li><span class="titulo">Glossário</span><span class="pagina">17</span></li>
+    </ol>
+  </div>
+
+  <div class="rodape">WhatsApp Cloud API — Manual do Usuário v1.0 &nbsp;|&nbsp; Uso interno</div>
+</div>
+
+<!-- =====================================================
+     SEÇÃO 1: VISÃO GERAL
+===================================================== -->
+<div class="page secao">
+  <div class="secao-header">
+    <div class="numero">1</div>
+    <div>
+      <h2>Visão Geral do Módulo</h2>
+      <p>Entendendo o WhatsApp Cloud API e como as credenciais se organizam</p>
+    </div>
+  </div>
+
+  <h3>1.1 O que é o WhatsApp Cloud API?</h3>
+  <p>O <strong>WhatsApp Cloud API (Oficial)</strong> é o canal de comunicação empresarial via WhatsApp fornecido pela Meta. Diferente de integrações não oficiais, ele:</p>
+  <ul>
+    <li>É aprovado e hospedado pela própria Meta — não há risco de bloqueio de número.</li>
+    <li>Permite envio de <strong>templates aprovados</strong> a qualquer momento.</li>
+    <li>Permite envio de <strong>mensagens livres</strong> dentro de uma janela de 24h (após o cliente enviar qualquer mensagem).</li>
+    <li>Oferece <strong>webhook</strong> para receber mensagens e atualizações de status em tempo real.</li>
+  </ul>
+
+  <h3>1.2 Hierarquia de Credenciais</h3>
+  <p>Antes de usar qualquer funcionalidade, é preciso cadastrar as credenciais na seguinte estrutura:</p>
+
+  <div class="hierarquia">
+    <div class="hier-nivel">
+      <div class="hier-item hier-bm">
+        🏢 <strong>BM — Business Manager (Gerenciador de Negócios)</strong><br>
+        <span style="font-weight:400;font-size:11px;">Contém: App ID, App Secret, Token Permanente, Token do Webhook.<br>Uma empresa pode ter mais de um BM.</span>
+      </div>
+    </div>
+    <div class="hier-nivel" style="margin-left:20px;">
+      <div style="width:2px; background:#dee2e6; margin: 0 13px;"></div>
+      <div class="hier-item hier-waba" style="flex:1;">
+        💼 <strong>WABA — WhatsApp Business Account</strong><br>
+        <span style="font-weight:400;font-size:11px;">Conta de negócios do WhatsApp vinculada ao BM. Um BM pode ter várias WABAs.</span>
+      </div>
+    </div>
+    <div class="hier-nivel" style="margin-left:40px;">
+      <div style="width:2px; background:#dee2e6; margin: 0 13px;"></div>
+      <div class="hier-item hier-phone" style="flex:1;">
+        📱 <strong>Phone ID — Número de Telefone</strong><br>
+        <span style="font-weight:400;font-size:11px;">ID do número ativo. Uma WABA pode ter vários números (ex: Atendimento, Vendas).</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="alerta-info alerta">
+    <strong>📌 Onde obter esses dados?</strong> Acesse <code>business.facebook.com</code> → Configurações → selecione a Conta do WhatsApp para ver o WABA ID e Phone Number ID. O Token Permanente é gerado em <code>developers.facebook.com</code> → Seu App → Ferramentas → Token de Acesso do Sistema.
+  </div>
+
+  <div class="fluxo">
+    <div class="fluxo-item">Meta for Developers<br><small>App + Token</small></div>
+    <div class="fluxo-seta">→</div>
+    <div class="fluxo-item">Business Suite<br><small>WABA + Phone</small></div>
+    <div class="fluxo-seta">→</div>
+    <div class="fluxo-item verde">Cadastro no CRM<br><small>BM → WABA → Phone</small></div>
+    <div class="fluxo-seta">→</div>
+    <div class="fluxo-item wa">Pronto para<br>Disparar!</div>
+  </div>
+</div>
+
+<!-- =====================================================
+     SEÇÃO 2: PERMISSÕES
+===================================================== -->
+<div class="page secao">
+  <div class="secao-header">
+    <div class="numero">2</div>
+    <div>
+      <h2>Permissões de Acesso</h2>
+      <p>Controle granular por aba e por hierarquia de dados</p>
+    </div>
+  </div>
+
+  <h3>2.1 Chaves de Permissão Disponíveis</h3>
+  <p>O sistema usa um modelo de <strong>bloqueio</strong>: quando uma chave é atribuída a um usuário, aquela aba ou função fica <em>oculta</em>. Sem nenhuma restrição, o usuário vê tudo.</p>
+
+  <div class="perm-grid">
+    <div class="perm-item">
+      <div class="chave">SUBMENU_OP_WHATOFICIAL_CREDENCIAIS_DA_META</div>
+      <div class="nome">🔐 Credenciais da Meta</div>
+      <div class="desc">Oculta a aba de cadastro de BM, WABA e Phone IDs.</div>
+    </div>
+    <div class="perm-item">
+      <div class="chave">SUBMENU_OP_WHATOFICIAL_MODELOS</div>
+      <div class="nome">📋 Modelos</div>
+      <div class="desc">Oculta a visualização dos templates aprovados na Meta.</div>
+    </div>
+    <div class="perm-item">
+      <div class="chave">SUBMENU_OP_WHATOFICIAL_DISPARO_MANUAL</div>
+      <div class="nome">✉️ Disparo Manual</div>
+      <div class="desc">Oculta o formulário de envio avulso de mensagens.</div>
+    </div>
+    <div class="perm-item">
+      <div class="chave">SUBMENU_OP_WHATOFICIAL_CAMPANHA_LOTE</div>
+      <div class="nome">📣 Campanha / Lote</div>
+      <div class="desc">Oculta importação e disparo em massa.</div>
+    </div>
+    <div class="perm-item">
+      <div class="chave">SUBMENU_OP_WHATOFICIAL_HISTORICO</div>
+      <div class="nome">📜 Histórico</div>
+      <div class="desc">Oculta o log de mensagens enviadas e recebidas.</div>
+    </div>
+    <div class="perm-item">
+      <div class="chave">SUBMENU_OP_WHATOFICIAL_CHAT</div>
+      <div class="nome">💬 Chat</div>
+      <div class="desc">Oculta o painel de atendimento em tempo real.</div>
+    </div>
+    <div class="perm-item">
+      <div class="chave">SUBMENU_OP_WHATOFICIAL_MEU_CADASTRO</div>
+      <div class="nome">👤 Somente meu cadastro</div>
+      <div class="desc">Limita campanhas: usuário vê apenas os seus próprios registros.</div>
+    </div>
+    <div class="perm-item">
+      <div class="chave">SUBMENU_OP_WHATOFICIAL_CAMPANHA_HIERARQUIA</div>
+      <div class="nome">🏢 Hierarquia empresa</div>
+      <div class="desc">Limita campanhas ao escopo da empresa (não vê outras empresas).</div>
+    </div>
+  </div>
+
+  <h3>2.2 Como Aplicar uma Permissão a um Usuário</h3>
+
+  <div class="passo">
+    <div class="num">1</div>
+    <div class="conteudo">
+      <strong>Acesse: Configurações → Usuários → Permissões</strong>
+      <span>Localize o usuário na lista e clique em "Gerenciar Permissões".</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">2</div>
+    <div class="conteudo">
+      <strong>Busque pela chave desejada</strong>
+      <span>Use o filtro para localizar <code>SUBMENU_OP_WHATOFICIAL_</code> e marque as que devem ser bloqueadas para aquele usuário.</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">3</div>
+    <div class="conteudo">
+      <strong>Salve e peça ao usuário relogar</strong>
+      <span>As abas bloqueadas desaparecem automaticamente ao recarregar o módulo.</span>
+    </div>
+  </div>
+
+  <div class="alerta-warn alerta">
+    <strong>⚠️ Atenção:</strong> Usuários do tipo <em>Master/Admin</em> têm acesso total e não são afetados pelas permissões de bloqueio.
+  </div>
+</div>
+
+<!-- =====================================================
+     SEÇÃO 3: CREDENCIAIS
+===================================================== -->
+<div class="page secao">
+  <div class="secao-header">
+    <div class="numero">3</div>
+    <div>
+      <h2>Aba: Credenciais da Meta</h2>
+      <p>Cadastro completo da hierarquia BM → WABA → Phone ID</p>
+    </div>
+  </div>
+
+  <!-- Ilustração da aba -->
+  <div class="tela no-break">
+    <div class="tela-barra">
+      <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+      <span class="url">https://seucrm.com.br/modulos/configuracao/whats_api_oficial/</span>
+    </div>
+    <div class="tela-corpo">
+      <div class="mock-tabs">
+        <div class="mock-tab ativo">⚙️ Credenciais da Meta</div>
+        <div class="mock-tab">📋 Modelos</div>
+        <div class="mock-tab">✉️ Disparo Manual</div>
+        <div class="mock-tab">📣 Campanha / Lote</div>
+        <div class="mock-tab">📜 Histórico</div>
+        <div class="mock-tab">💬 Chat</div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+        <strong style="font-size:13px;">🏗️ Gerenciadores de Negócios (BM) da Empresa</strong>
+        <span class="mock-btn mock-btn-dark">+ Novo BM</span>
+      </div>
+      <div style="background:#d4edda;border-radius:6px;padding:8px 12px;font-size:11px;margin-bottom:10px;">
+        🔗 <strong>Webhook URL:</strong> <code>https://seucrm.com.br/modulos/.../webhook_meta.php</code>
+        <span class="mock-btn mock-btn-gray" style="font-size:10px;padding:2px 8px;">📋 Copiar</span>
+      </div>
+      <div class="mock-card">
+        <div class="mock-card-header">
+          🏢 BM Principal &nbsp;<span class="badge badge-yellow">ID: 12345678901234</span>
+          <div>
+            <span class="mock-btn mock-btn-blue">+ WABA</span>
+            <span class="mock-btn mock-btn-gray">✏️ Editar</span>
+            <span class="mock-btn mock-btn-red">🗑️</span>
+          </div>
+        </div>
+        <div style="margin-left:20px;">
+          <div class="mock-card" style="border-color:#004085;">
+            <div class="mock-card-header" style="font-size:11px;">
+              💼 WABA: 98765432109876
+              <div><span class="mock-btn mock-btn-green" style="font-size:10px;">+ Phone</span></div>
+            </div>
+            <div style="margin-left:16px;display:flex;gap:8px;flex-wrap:wrap;">
+              <span style="background:#d4edda;border-radius:6px;padding:4px 10px;font-size:11px;">📱 Atendimento <code style="font-size:10px;">10293847561234</code></span>
+              <span style="background:#d4edda;border-radius:6px;padding:4px 10px;font-size:11px;">📱 Vendas <code style="font-size:10px;">56473829104857</code></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>3.1 Cadastrar um Novo BM</h3>
+  <div class="passo">
+    <div class="num">1</div>
+    <div class="conteudo">
+      <strong>Clique em "+ Novo BM"</strong>
+      <span>O modal de cadastro será aberto com os seguintes campos.</span>
+    </div>
+  </div>
+
+  <div class="no-break" style="background:#f8f9fa;border:1px solid #dee2e6;border-radius:8px;padding:14px;margin:10px 0;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+      <div>
+        <div class="mock-label">Apelido (Nome amigável)</div>
+        <div class="mock-campo destaque">Ex: BM Principal, BM Filial SP</div>
+      </div>
+      <div>
+        <div class="mock-label">Business Manager ID (Meta)</div>
+        <div class="mock-campo">123456789012345</div>
+      </div>
+      <div>
+        <div class="mock-label">App ID (Meta for Developers)</div>
+        <div class="mock-campo">987654321098765</div>
+      </div>
+      <div>
+        <div class="mock-label">App Secret</div>
+        <div class="mock-campo">••••••••••••••••••</div>
+      </div>
+      <div style="grid-column:1/-1">
+        <div class="mock-label" style="color:#155724;">Token de Acesso Permanente ★</div>
+        <div class="mock-campo destaque" style="border-color:#25D366;">EAAxxxxxxxx... (token longo gerado na Meta)</div>
+        <div style="font-size:10px;color:#888;margin-top:3px;">Gerado em: Meta for Developers → Seu App → Ferramentas → Token de Acesso do Sistema</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="passo">
+    <div class="num">2</div>
+    <div class="conteudo">
+      <strong>Clique em "Salvar BM"</strong>
+      <span>O BM aparece como um card expansível na lista. O Token Permanente é usado para todas as chamadas da API.</span>
+    </div>
+  </div>
+
+  <h3>3.2 Adicionar WABA ao BM</h3>
+  <div class="passo">
+    <div class="num">1</div>
+    <div class="conteudo">
+      <strong>Dentro do card do BM, clique em "+ WABA"</strong>
+      <span>Informe o <strong>WhatsApp Business Account ID</strong> (encontrado no Meta Business Suite → Configurações → Contas do WhatsApp).</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">2</div>
+    <div class="conteudo">
+      <strong>Clique em "Salvar WABA"</strong>
+      <span>A WABA aparece abaixo do BM, pronta para receber Phone IDs.</span>
+    </div>
+  </div>
+
+  <h3>3.3 Adicionar Phone ID (Número)</h3>
+  <div class="passo">
+    <div class="num">1</div>
+    <div class="conteudo">
+      <strong>Dentro da WABA, clique em "+ Phone"</strong>
+      <span>Informe o <strong>Phone Number ID</strong> (obtido no Painel da WABA na Meta) e um apelido amigável como "Atendimento" ou "Vendas".</span>
+    </div>
+  </div>
+  <div class="alerta-info alerta">
+    <strong>📌 Nota:</strong> O Phone Number ID é diferente do número de telefone. É um identificador numérico longo (ex: <code>102345678901234</code>) visível no painel do Meta for Developers ou Business Suite.
+  </div>
+</div>
+
+<!-- =====================================================
+     SEÇÃO 3 (continuação) — WEBHOOK
+===================================================== -->
+<div class="page secao">
+  <div class="secao-header">
+    <div class="numero">3</div>
+    <div>
+      <h2>Credenciais da Meta — Configuração do Webhook</h2>
+      <p>Receber mensagens e status de entrega em tempo real</p>
+    </div>
+  </div>
+
+  <h3>3.4 Configurar o Webhook na Meta</h3>
+  <p>O webhook é o canal pelo qual a Meta <strong>envia ao CRM</strong> as mensagens recebidas dos clientes e as atualizações de status (entregue, lido, erro). Sem o webhook, o Chat e o Histórico não funcionam.</p>
+
+  <div class="passo">
+    <div class="num">1</div>
+    <div class="conteudo">
+      <strong>Copie a URL do Webhook</strong>
+      <span>Na aba Credenciais, copie a URL exibida no banner verde. Ela tem o formato:<br><code>https://seudominio.com.br/modulos/configuracao/whats_api_oficial/webhook_meta.php</code></span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">2</div>
+    <div class="conteudo">
+      <strong>Acesse: Meta for Developers → Seu App → WhatsApp → Configuração</strong>
+      <span>Role até a seção "Webhooks" e clique em "Editar".</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">3</div>
+    <div class="conteudo">
+      <strong>Cole a URL e o Verify Token</strong>
+      <span>No campo <em>Callback URL</em> cole a URL do CRM. No campo <em>Verify Token</em> informe o Token de Verificação gerado no cadastro do BM. Clique em "Verificar e Salvar".</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">4</div>
+    <div class="conteudo">
+      <strong>Assine os campos de webhook</strong>
+      <span>Após salvar, assine os campos: <code>messages</code> e <code>message_status_updates</code>.</span>
+    </div>
+  </div>
+
+  <div class="tela no-break">
+    <div class="tela-barra">
+      <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+      <span class="url">developers.facebook.com → Seu App → WhatsApp → Configuração → Webhooks</span>
+    </div>
+    <div class="tela-corpo">
+      <div style="border:1px solid #dee2e6;border-radius:8px;padding:14px;background:white;">
+        <div style="font-weight:700;margin-bottom:12px;">Editar Webhook</div>
+        <div class="mock-label">URL de Callback</div>
+        <div class="mock-campo destaque">https://seucrm.com.br/modulos/configuracao/whats_api_oficial/webhook_meta.php</div>
+        <div class="mock-label" style="margin-top:10px;">Token de Verificação</div>
+        <div class="mock-campo destaque">(mesmo token cadastrado no BM do CRM)</div>
+        <div style="margin-top:14px;display:flex;gap:8px;">
+          <span class="mock-btn mock-btn-dark">Verificar e Salvar</span>
+          <span class="mock-btn mock-btn-gray">Cancelar</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="alerta-ok alerta">
+    <strong>✅ Tudo certo quando:</strong> A Meta exibe "Verificado" ao lado da URL. A partir daí, toda mensagem recebida de clientes aparece no Chat do CRM em segundos.
+  </div>
+
+  <div class="alerta-warn alerta">
+    <strong>⚠️ O Webhook pertence ao BM/App</strong>, não à conta de WhatsApp individual. Uma única URL de webhook pode atender todos os Phone IDs do mesmo App.
+  </div>
+</div>
+
+<!-- =====================================================
+     SEÇÃO 4: MODELOS
+===================================================== -->
+<div class="page secao">
+  <div class="secao-header">
+    <div class="numero">4</div>
+    <div>
+      <h2>Aba: Modelos</h2>
+      <p>Visualização em tempo real dos templates aprovados na Meta</p>
+    </div>
+  </div>
+
+  <p>Os <strong>templates</strong> são mensagens pré-aprovadas pela Meta que podem ser enviadas a qualquer momento, mesmo fora da janela de 24h. O CRM <strong>não cria</strong> templates — isso é feito no Gerenciador de Negócios (business.facebook.com). Esta aba exibe a lista atual importada da API.</p>
+
+  <div class="tela no-break">
+    <div class="tela-barra">
+      <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+      <span class="url">Aba: Modelos</span>
+    </div>
+    <div class="tela-corpo">
+      <div style="display:flex;justify-content:flex-end;margin-bottom:10px;">
+        <span class="mock-btn mock-btn-dark">🔄 Atualizar Lista</span>
+      </div>
+      <table>
+        <thead><tr><th>Nome do Template</th><th>Categoria</th><th>Idioma</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td><code>boas_vindas_credito</code></td><td>MARKETING</td><td>pt_BR</td><td><span class="badge badge-green">APPROVED</span></td></tr>
+          <tr><td><code>proposta_margem</code></td><td>UTILITY</td><td>pt_BR</td><td><span class="badge badge-green">APPROVED</span></td></tr>
+          <tr><td><code>lembrete_assinatura</code></td><td>UTILITY</td><td>pt_BR</td><td><span class="badge badge-yellow">PENDING</span></td></tr>
+          <tr><td><code>oferta_especial</code></td><td>MARKETING</td><td>pt_BR</td><td><span class="badge badge-red">REJECTED</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h3>4.1 Status dos Templates</h3>
+
+  <table>
+    <thead><tr><th>Status</th><th>Significado</th><th>Pode Usar no CRM?</th></tr></thead>
+    <tbody>
+      <tr><td><span class="badge badge-green">APPROVED</span></td><td>Aprovado pela Meta. Pronto para envio.</td><td>✅ Sim</td></tr>
+      <tr><td><span class="badge badge-yellow">PENDING</span></td><td>Em análise pela Meta. Aguardar aprovação.</td><td>⏳ Não</td></tr>
+      <tr><td><span class="badge badge-red">REJECTED</span></td><td>Reprovado. Edite e reenvie para análise.</td><td>❌ Não</td></tr>
+      <tr><td><span class="badge badge-gray">PAUSED</span></td><td>Pausado temporariamente pela Meta (baixa qualidade).</td><td>⚠️ Não</td></tr>
+    </tbody>
+  </table>
+
+  <div class="alerta-info alerta">
+    <strong>💡 Dica:</strong> Para criar um novo template, acesse <code>business.facebook.com</code> → Ferramentas de Conta → Modelos de Mensagem. Após aprovação (geralmente 24h), clique em <strong>"Atualizar Lista"</strong> no CRM para sincronizar.
+  </div>
+
+  <h3>4.2 Estrutura de um Template com Variáveis</h3>
+  <p>Templates podem conter variáveis no formato <code>{{1}}</code>, <code>{{2}}</code>. Exemplo:</p>
+
+  <div style="background:#f0f0f0;border-radius:8px;padding:14px;font-family:monospace;font-size:12px;margin:10px 0;">
+    Olá, <span style="color:#25D366;font-weight:700;">{{1}}</span>! Temos uma proposta especial para você:<br>
+    Margem disponível: R$ <span style="color:#25D366;font-weight:700;">{{2}}</span><br>
+    Parcela: R$ <span style="color:#25D366;font-weight:700;">{{3}}</span> — <span style="color:#25D366;font-weight:700;">{{4}}</span> meses.<br>
+    Responda SIM para saber mais!
+  </div>
+
+  <p>Na aba <strong>Disparo Manual</strong> e na <strong>Campanha/Lote</strong>, essas variáveis são preenchidas automaticamente com os dados de cada cliente (nome, margem, parcela, prazo).</p>
+</div>
+
+<!-- =====================================================
+     SEÇÃO 5: DISPARO MANUAL
+===================================================== -->
+<div class="page secao">
+  <div class="secao-header">
+    <div class="numero">5</div>
+    <div>
+      <h2>Aba: Disparo Manual</h2>
+      <p>Envio avulso para um número específico</p>
+    </div>
+  </div>
+
+  <p>Use o Disparo Manual para enviar uma mensagem individual a um número específico — seja para testes, atendimento pontual ou comunicação direta com um cliente.</p>
+
+  <div class="tela no-break">
+    <div class="tela-barra">
+      <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+      <span class="url">Aba: Disparo Manual</span>
+    </div>
+    <div class="tela-corpo">
+      <div style="background:white;border:1px solid #dee2e6;border-radius:8px;padding:16px;max-width:520px;margin:0 auto;">
+        <div style="font-weight:700;margin-bottom:14px;border-bottom:1px solid #eee;padding-bottom:8px;">✉️ Disparar Mensagem Avulsa</div>
+        <div class="mock-label">Número Oficial (Remetente)</div>
+        <div class="mock-campo destaque">📱 Atendimento — 10293847561234</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px;">
+          <div>
+            <div class="mock-label">Destino (com DDI e DDD)</div>
+            <div class="mock-campo">5562999999999</div>
+          </div>
+          <div>
+            <div class="mock-label">Tipo de Mensagem</div>
+            <div class="mock-campo destaque">Template Aprovado</div>
+          </div>
+        </div>
+        <div style="margin-top:10px;">
+          <div class="mock-label">Template</div>
+          <div class="mock-campo destaque">proposta_margem | pt_BR</div>
+        </div>
+        <div style="margin-top:10px;">
+          <div class="mock-label">Variáveis (separadas por vírgula)</div>
+          <div class="mock-campo">João, 1500.00, 250.00, 6</div>
+        </div>
+        <div style="margin-top:14px;">
+          <span class="mock-btn mock-btn-blue" style="display:block;text-align:center;">✈️ Enviar</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>5.1 Enviar Mensagem de Texto Livre</h3>
+  <div class="passo">
+    <div class="num">1</div>
+    <div class="conteudo">
+      <strong>Selecione o remetente</strong>
+      <span>Escolha qual número oficial da empresa irá enviar.</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">2</div>
+    <div class="conteudo">
+      <strong>Preencha o número destino</strong>
+      <span>Sempre com DDI + DDD + número. Ex: <code>5562999998888</code> para Goiás-Brasil.</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">3</div>
+    <div class="conteudo">
+      <strong>Selecione "Texto Livre (Janela 24h)"</strong>
+      <span>Digite o conteúdo da mensagem. <em>Atenção: só funciona se o cliente tiver enviado alguma mensagem nas últimas 24h.</em></span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">4</div>
+    <div class="conteudo">
+      <strong>Clique em "Enviar"</strong>
+      <span>O sistema exibe o resultado (✅ Enviado ou ❌ Falha) abaixo do botão.</span>
+    </div>
+  </div>
+
+  <h3>5.2 Enviar via Template Aprovado</h3>
+  <div class="passo">
+    <div class="num">1</div>
+    <div class="conteudo">
+      <strong>Selecione "Template Aprovado" no campo Tipo</strong>
+      <span>O formulário adapta campos extras: seletor de template, URL de imagem (opcional) e variáveis.</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">2</div>
+    <div class="conteudo">
+      <strong>Escolha o template na lista</strong>
+      <span>Apenas templates com status <span class="badge badge-green">APPROVED</span> aparecem disponíveis.</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">3</div>
+    <div class="conteudo">
+      <strong>Preencha as variáveis separadas por vírgula</strong>
+      <span>Se o template tem <code>{{1}}</code>, <code>{{2}}</code>, <code>{{3}}</code>, informe os valores na mesma ordem. Ex: <code>João, 1500.00, 250.00</code></span>
+    </div>
+  </div>
+
+  <div class="alerta-warn alerta">
+    <strong>⚠️ Janela 24h:</strong> Envios de texto livre <strong>falham</strong> se o cliente não tiver interagido nas últimas 24h. Nesse caso, use sempre um Template Aprovado para retomar a conversa.
+  </div>
+</div>
+
+<!-- =====================================================
+     SEÇÃO 6: CAMPANHA / LOTE
+===================================================== -->
+<div class="page secao">
+  <div class="secao-header">
+    <div class="numero">6</div>
+    <div>
+      <h2>Aba: Campanha / Lote</h2>
+      <p>Importação e disparo em massa para listas de contatos</p>
+    </div>
+  </div>
+
+  <p>A aba Campanha permite importar centenas ou milhares de números e disparar um template automaticamente para todos, com controle de progresso em tempo real.</p>
+
+  <div class="tela no-break">
+    <div class="tela-barra">
+      <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+      <span class="url">Aba: Campanha / Lote</span>
+    </div>
+    <div class="tela-corpo">
+      <div style="display:grid;grid-template-columns:1fr 2fr;gap:14px;">
+        <div style="background:white;border:1px solid #dee2e6;border-radius:8px;padding:12px;">
+          <div style="font-weight:700;color:#155724;border-bottom:1px solid #eee;margin-bottom:10px;padding-bottom:6px;">📤 Importar Lista</div>
+          <div class="mock-label">Nome da Campanha</div>
+          <div class="mock-campo">Campanha Março 2026</div>
+          <div class="mock-label" style="margin-top:8px;">Remetente</div>
+          <div class="mock-campo">📱 Atendimento</div>
+          <div class="mock-label" style="margin-top:8px;">Template</div>
+          <div class="mock-campo">proposta_margem|pt_BR</div>
+          <div style="display:flex;gap:6px;margin:10px 0;font-size:11px;">
+            <span style="background:#1a1a2e;color:white;padding:4px 10px;border-radius:15px;">Colar na Tela</span>
+            <span style="background:#f0f0f0;padding:4px 10px;border-radius:15px;">Enviar CSV</span>
+          </div>
+          <div style="height:60px;border:1px dashed #aaa;border-radius:4px;background:#f8f9fa;display:flex;align-items:center;justify-content:center;font-size:11px;color:#888;">Cole os números aqui</div>
+          <span class="mock-btn mock-btn-green" style="display:block;text-align:center;margin-top:10px;">💾 Criar Campanha</span>
+        </div>
+        <div style="background:white;border:1px solid #dee2e6;border-radius:8px;padding:12px;">
+          <div style="font-weight:700;color:#004085;border-bottom:1px solid #eee;margin-bottom:10px;padding-bottom:6px;">📊 Acompanhamento</div>
+          <table>
+            <thead><tr><th>Campanha</th><th>Env/Falha/Total</th><th>Progresso</th><th>Ações</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>Campanha Março</td>
+                <td><span class="badge badge-green">847</span> / <span class="badge badge-red">12</span> / 1000</td>
+                <td style="width:100px;"><div style="background:#e9ecef;border-radius:4px;height:8px;"><div style="background:#25D366;width:85%;height:8px;border-radius:4px;"></div></div><small>85%</small></td>
+                <td><span class="mock-btn mock-btn-green" style="font-size:10px;padding:2px 6px;">▶ Processar</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>6.1 Importar Lista pela Tela (Cola de Números)</h3>
+  <div class="passo">
+    <div class="num">1</div>
+    <div class="conteudo">
+      <strong>Preencha Nome, Remetente e Template</strong>
+      <span>Escolha o template aprovado que será enviado para todos da lista.</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">2</div>
+    <div class="conteudo">
+      <strong>Selecione "Colar na Tela" e cole os números</strong>
+      <span>Um número por linha, com DDI e DDD. Ex: <code>5562999998888</code></span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">3</div>
+    <div class="conteudo">
+      <strong>Clique em "Criar Campanha"</strong>
+      <span>Os números são importados e ficam com status PENDENTE. A campanha aparece na tabela à direita.</span>
+    </div>
+  </div>
+
+  <h3>6.2 Importar Lista via Arquivo CSV</h3>
+  <p>Para envios com dados personalizados (nome, margem, parcela, prazo), use o CSV com o seguinte formato:</p>
+
+  <div style="background:#1a1a2e;color:#f8f9fa;border-radius:8px;padding:14px;font-family:monospace;font-size:12px;margin:10px 0;line-height:1.8;">
+    NUMERO; NOME; CPF; MARGEM; PARCELA; PRAZO; VALOR_LIQUIDO<br>
+    <span style="color:#98d9a0;">5562999998888; João Silva; 12345678900; 1500.00; 250.00; 6; 1480.00</span><br>
+    <span style="color:#98d9a0;">5511988887777; Maria Souza; 98765432100; 2000.00; 310.00; 8; 1950.00</span>
+  </div>
+
+  <div class="alerta-warn alerta">
+    <strong>📁 Formato do CSV:</strong> Separador ponto-e-vírgula (<code>;</code>), sem aspas. A primeira linha é o cabeçalho e é ignorada na importação. O CPF é mascarado automaticamente no sistema.
+  </div>
+
+  <h3>6.3 Processar e Acompanhar o Disparo</h3>
+  <div class="passo">
+    <div class="num">1</div>
+    <div class="conteudo">
+      <strong>Clique em "▶ Processar" na campanha desejada</strong>
+      <span>O sistema processa em lotes de 10 mensagens por vez. O progresso atualiza automaticamente.</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">2</div>
+    <div class="conteudo">
+      <strong>Acompanhe os contadores: Enviados / Falhas / Total</strong>
+      <span>A barra de progresso avança a cada lote concluído.</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">3</div>
+    <div class="conteudo">
+      <strong>Ao concluir, o botão mostra "✅ Finalizado"</strong>
+      <span>Clique em "📥 Exportar" para baixar um CSV com o resultado completo (status por número).</span>
+    </div>
+  </div>
+</div>
+
+<!-- =====================================================
+     SEÇÃO 7: HISTÓRICO
+===================================================== -->
+<div class="page secao">
+  <div class="secao-header">
+    <div class="numero">7</div>
+    <div>
+      <h2>Aba: Histórico</h2>
+      <p>Log completo de mensagens enviadas e recebidas</p>
+    </div>
+  </div>
+
+  <p>O Histórico registra todas as mensagens trafegadas pelo módulo — enviadas pelo CRM e recebidas via webhook. É útil para auditoria, resolução de problemas e comprovação de envios.</p>
+
+  <div class="tela no-break">
+    <div class="tela-barra">
+      <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+      <span class="url">Aba: Histórico</span>
+    </div>
+    <div class="tela-corpo">
+      <table>
+        <thead>
+          <tr><th>Data/Hora</th><th>Direção</th><th>Remetente</th><th>Destinatário</th><th>Tipo</th><th>Conteúdo</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-size:10px;">09/04/2026 14:32</td>
+            <td><span class="badge badge-blue">ENVIADA</span></td>
+            <td style="font-size:10px;">10293847...</td>
+            <td style="font-size:10px;">5562999...</td>
+            <td>template</td>
+            <td style="text-align:left;font-size:11px;">proposta_margem</td>
+            <td><span class="badge badge-green">read</span></td>
+          </tr>
+          <tr>
+            <td style="font-size:10px;">09/04/2026 14:35</td>
+            <td><span class="badge badge-green">RECEBIDA</span></td>
+            <td style="font-size:10px;">5562999...</td>
+            <td style="font-size:10px;">10293847...</td>
+            <td>text</td>
+            <td style="text-align:left;font-size:11px;">👤 [João]: SIM, quero!</td>
+            <td><span class="badge badge-green">received</span></td>
+          </tr>
+          <tr>
+            <td style="font-size:10px;">09/04/2026 14:41</td>
+            <td><span class="badge badge-blue">ENVIADA</span></td>
+            <td style="font-size:10px;">10293847...</td>
+            <td style="font-size:10px;">5562999...</td>
+            <td>text</td>
+            <td style="text-align:left;font-size:11px;">Ótimo João! Já vou...</td>
+            <td><span class="badge badge-yellow">delivered</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h3>7.1 Significado dos Status de Envio</h3>
+  <table>
+    <thead><tr><th>Status</th><th>Significado</th></tr></thead>
+    <tbody>
+      <tr><td><span class="badge badge-gray">sent</span></td><td>Mensagem enviada ao servidor da Meta (não chegou ao celular ainda).</td></tr>
+      <tr><td><span class="badge badge-yellow">delivered</span></td><td>Mensagem entregue ao celular do destinatário (não lida).</td></tr>
+      <tr><td><span class="badge badge-green">read</span></td><td>Mensagem lida pelo destinatário.</td></tr>
+      <tr><td><span class="badge badge-green">received</span></td><td>Mensagem recebida de um cliente via webhook.</td></tr>
+      <tr><td><span class="badge badge-red">failed</span></td><td>Erro no envio. Detalhes do erro são exibidos na coluna Retorno.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="alerta-info alerta">
+    <strong>💡 Dica:</strong> O status <code>read</code> só é atualizado se o cliente não tiver desativado as confirmações de leitura no seu WhatsApp.
+  </div>
+</div>
+
+<!-- =====================================================
+     SEÇÃO 8: CHAT — INTRODUÇÃO + JANELA 24H
+===================================================== -->
+<div class="page secao">
+  <div class="secao-header">
+    <div class="numero">8</div>
+    <div>
+      <h2>Aba: Chat</h2>
+      <p>Atendimento em tempo real com clientes via WhatsApp</p>
+    </div>
+  </div>
+
+  <p>O Chat é o painel de atendimento ao vivo. Ele exibe as conversas organizadas por status, mostra os balões de mensagem e permite ao atendente responder diretamente pelo CRM.</p>
+
+  <h3>8.1 Regra da Janela de 24 Horas (Meta)</h3>
+  <p>A Meta impõe uma regra fundamental para o uso da API:</p>
+
+  <div class="janela-box no-break">
+    <div class="janela-aberta">
+      <h4>🟢 Janela ABERTA</h4>
+      <p style="font-size:12px;"><strong>Condição:</strong> O cliente enviou alguma mensagem nas últimas 24 horas.</p>
+      <p style="font-size:12px;"><strong>O que posso enviar:</strong></p>
+      <ul style="font-size:12px;">
+        <li>✅ Texto livre (qualquer conteúdo)</li>
+        <li>✅ Imagens, áudios, documentos</li>
+        <li>✅ Templates aprovados</li>
+      </ul>
+      <p style="font-size:11px;color:#555;margin-top:8px;">A janela se renova a cada mensagem recebida do cliente.</p>
+    </div>
+    <div class="janela-fechada">
+      <h4>🔴 Janela FECHADA</h4>
+      <p style="font-size:12px;"><strong>Condição:</strong> O cliente não enviou mensagem há mais de 24 horas.</p>
+      <p style="font-size:12px;"><strong>O que posso enviar:</strong></p>
+      <ul style="font-size:12px;">
+        <li>❌ Texto livre — BLOQUEADO pela Meta</li>
+        <li>❌ Imagens/arquivos avulsos</li>
+        <li>✅ Apenas Templates aprovados</li>
+      </ul>
+      <p style="font-size:11px;color:#555;margin-top:8px;">Envie um template para reabrir a janela.</p>
+    </div>
+  </div>
+
+  <div class="alerta-ok alerta">
+    <strong>✅ Comportamento no CRM:</strong> O sistema exibe um banner colorido indicando o status da janela. Quando fechada, o campo de texto é desativado automaticamente — apenas o seletor de templates permanece disponível.
+  </div>
+
+  <h3>8.2 Layout do Chat</h3>
+
+  <div class="tela">
+    <div class="tela-barra">
+      <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+      <span class="url">Aba: Chat — Atendimento em Tempo Real</span>
+    </div>
+    <div class="tela-corpo" style="padding:0;">
+      <div style="display:grid;grid-template-columns:1fr 2fr;height:280px;">
+        <!-- Coluna esquerda -->
+        <div style="border-right:2px solid #dee2e6;overflow:hidden;">
+          <div style="background:#1a1a2e;padding:8px;display:flex;gap:4px;flex-wrap:wrap;">
+            <div style="background:white;border-radius:4px;padding:3px 6px;font-size:10px;flex:1;">Todos os números ▾</div>
+            <div style="background:white;border-radius:4px;padding:3px 6px;font-size:10px;flex:1;">Aguardando ▾</div>
+            <div style="background:#25D366;border-radius:4px;padding:3px 6px;font-size:12px;color:white;">+</div>
+          </div>
+          <div style="padding:8px 0;">
+            <div style="padding:8px 10px;background:#e8f5e9;border-bottom:1px solid #f0f0f0;">
+              <div style="font-size:12px;font-weight:700;">João Silva</div>
+              <div style="font-size:10px;color:#555;">5562999998888</div>
+              <div style="font-size:10px;color:#888;display:flex;justify-content:space-between;"><span>SIM, quero!</span><span class="badge badge-green">Aberta</span></div>
+            </div>
+            <div style="padding:8px 10px;border-bottom:1px solid #f0f0f0;">
+              <div style="font-size:12px;font-weight:700;">Maria Souza</div>
+              <div style="font-size:10px;color:#555;">5511988887777</div>
+              <div style="font-size:10px;color:#888;display:flex;justify-content:space-between;"><span>[Imagem]</span><span class="badge badge-red">Fechada</span></div>
+            </div>
+            <div style="padding:8px 10px;">
+              <div style="font-size:12px;font-weight:700;">Carlos Lima</div>
+              <div style="font-size:10px;color:#555;">5521977776666</div>
+              <div style="font-size:10px;color:#888;display:flex;justify-content:space-between;"><span>Preciso de ajuda</span><span class="badge badge-yellow">Aguardando</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- Coluna direita -->
+        <div style="display:flex;flex-direction:column;">
+          <div style="padding:8px 12px;background:#f8f9fa;border-bottom:1px solid #dee2e6;display:flex;justify-content:space-between;align-items:center;">
+            <div>
+              <strong style="font-size:13px;">João Silva</strong>
+              <span style="font-size:10px;color:#888;margin-left:8px;">5562999998888 · 📱 Atendimento</span>
+            </div>
+            <div style="display:flex;gap:6px;">
+              <span class="badge badge-green" style="font-size:10px;">🟢 Janela aberta</span>
+              <span class="mock-btn mock-btn-red" style="font-size:10px;padding:2px 8px;">Finalizar</span>
+            </div>
+          </div>
+          <div style="flex:1;background:#e5ddd5;padding:10px;overflow-y:auto;" class="mock-chat">
+            <div class="balao-env">proposta_margem enviado ✅<div class="balao-hora">14:32</div></div>
+            <div class="balao-rec">👤 [João]: SIM, quero!<div class="balao-hora">14:35</div></div>
+            <div class="balao-env">Ótimo João! Já estou verificando os dados.<div class="balao-hora">14:36</div></div>
+          </div>
+          <div style="padding:8px;background:white;border-top:1px solid #dee2e6;display:flex;gap:6px;align-items:center;">
+            <div style="background:#f0f0f0;border-radius:4px;padding:4px 8px;font-size:10px;">texto ▾</div>
+            <div style="flex:1;background:#f0f0f0;border-radius:20px;padding:6px 12px;font-size:11px;color:#888;">Digite uma mensagem...</div>
+            <div style="background:#25D366;border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;color:white;font-size:14px;">➤</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- =====================================================
+     SEÇÃO 8 (continuação): CHAT — FUNÇÕES
+===================================================== -->
+<div class="page secao">
+  <div class="secao-header">
+    <div class="numero">8</div>
+    <div>
+      <h2>Chat — Funções de Atendimento</h2>
+      <p>Iniciar conversa, enviar mensagens e gerenciar atendimentos</p>
+    </div>
+  </div>
+
+  <h3>8.3 Iniciar uma Nova Conversa</h3>
+  <p>Para entrar em contato com um cliente que ainda não iniciou conversa:</p>
+  <div class="passo">
+    <div class="num">1</div>
+    <div class="conteudo">
+      <strong>Clique no botão "+" (verde) no topo da lista</strong>
+      <span>O modal "Nova Conversa" será exibido.</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">2</div>
+    <div class="conteudo">
+      <strong>Selecione o número remetente e informe o telefone do cliente</strong>
+      <span>O número deve incluir DDI e DDD. Ex: <code>5562999998888</code></span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">3</div>
+    <div class="conteudo">
+      <strong>Clique em "Iniciar Conversa"</strong>
+      <span>Uma conversa é criada na lista. Como a janela estará <strong>fechada</strong> (o cliente nunca escreveu), será necessário enviar um <strong>template aprovado</strong> como primeira mensagem.</span>
+    </div>
+  </div>
+
+  <h3>8.4 Enviar Mensagem de Texto (Janela Aberta)</h3>
+  <div class="passo">
+    <div class="num">1</div>
+    <div class="conteudo">
+      <strong>Selecione a conversa na lista</strong>
+      <span>Verifique que o banner indica <span class="badge badge-green">🟢 Janela aberta</span>.</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">2</div>
+    <div class="conteudo">
+      <strong>No seletor de tipo, escolha "texto"</strong>
+      <span>O campo de digitação estará ativo.</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">3</div>
+    <div class="conteudo">
+      <strong>Digite e envie com Enter ou botão ➤</strong>
+      <span>O balão aparece imediatamente do lado direito (enviada). O status atualiza conforme a entrega.</span>
+    </div>
+  </div>
+
+  <h3>8.5 Enviar Template (Janela Fechada ou Iniciar Contato)</h3>
+  <div class="passo">
+    <div class="num">1</div>
+    <div class="conteudo">
+      <strong>No seletor de tipo, escolha "template"</strong>
+      <span>Um seletor adicional aparece com os templates aprovados disponíveis.</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">2</div>
+    <div class="conteudo">
+      <strong>Selecione o template desejado e clique em ➤ Enviar</strong>
+      <span>O template é enviado imediatamente. Se o cliente responder, a janela de 24h abre e você poderá enviar texto livre.</span>
+    </div>
+  </div>
+
+  <h3>8.6 Enviar Arquivo / Mídia</h3>
+  <div class="passo">
+    <div class="num">1</div>
+    <div class="conteudo">
+      <strong>No seletor, escolha "arquivo"</strong>
+      <span>Um botão de seleção de arquivo é exibido no lugar do campo de texto.</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">2</div>
+    <div class="conteudo">
+      <strong>Selecione o arquivo e clique em ➤</strong>
+      <span>Tipos aceitos: imagem (jpg, png, gif, webp), vídeo (mp4), áudio (mp3, ogg, opus) e documento (pdf). Limite: 16MB por arquivo.</span>
+    </div>
+  </div>
+  <div class="alerta-warn alerta">
+    <strong>⚠️ Atenção:</strong> Envio de arquivos só é possível com a <strong>janela aberta</strong>. Fora da janela, use apenas templates.
+  </div>
+
+  <h3>8.7 Modelos CRM (Respostas Rápidas)</h3>
+  <p>Modelos CRM são textos salvos <em>dentro do próprio CRM</em> (diferentes dos templates da Meta). Servem para agilizar respostas padrão frequentes.</p>
+  <div class="passo">
+    <div class="num">1</div>
+    <div class="conteudo">
+      <strong>Clique em "📁 Modelos CRM" na área de input</strong>
+      <span>O modal de modelos rápidos abre com a lista de textos cadastrados.</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">2</div>
+    <div class="conteudo">
+      <strong>Clique em "Usar" ao lado do modelo desejado</strong>
+      <span>O texto é copiado para o campo de mensagem. Você pode editar antes de enviar.</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">3</div>
+    <div class="conteudo">
+      <strong>Para criar um novo modelo: clique em "+ Novo Modelo"</strong>
+      <span>Defina um nome e o conteúdo. Os modelos ficam disponíveis para todos os atendentes da empresa.</span>
+    </div>
+  </div>
+
+  <h3>8.8 Finalizar Atendimento</h3>
+  <div class="passo">
+    <div class="num">1</div>
+    <div class="conteudo">
+      <strong>Clique em "Finalizar" no cabeçalho da conversa</strong>
+      <span>O status da conversa muda para <span class="badge badge-gray">FINALIZADO</span> e ela sai do filtro padrão.</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">2</div>
+    <div class="conteudo">
+      <strong>Se o cliente responder após finalizar</strong>
+      <span>A conversa reabre automaticamente com status <span class="badge badge-yellow">AGUARDANDO</span> e aparece na lista novamente.</span>
+    </div>
+  </div>
+
+  <h3>8.9 Status de Atendimento</h3>
+  <table>
+    <thead><tr><th>Status</th><th>Significado</th><th>Ação</th></tr></thead>
+    <tbody>
+      <tr><td><span class="badge badge-yellow">AGUARDANDO</span></td><td>Cliente aguardando atendimento</td><td>Clique para abrir e iniciar atendimento</td></tr>
+      <tr><td><span class="badge badge-blue">EM_ATENDIMENTO</span></td><td>Atendente está na conversa ativa</td><td>Responder e finalizar ao concluir</td></tr>
+      <tr><td><span class="badge badge-gray">FINALIZADO</span></td><td>Atendimento encerrado</td><td>Reativado automaticamente se cliente responder</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- =====================================================
+     SEÇÃO 9: GLOSSÁRIO
+===================================================== -->
+<div class="page secao">
+  <div class="secao-header">
+    <div class="numero">9</div>
+    <div>
+      <h2>Glossário</h2>
+      <p>Termos técnicos utilizados no módulo</p>
+    </div>
+  </div>
+
+  <table>
+    <thead><tr><th style="width:160px;">Termo</th><th>Definição</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Meta</strong></td>
+        <td>Empresa controladora do Facebook, Instagram e WhatsApp. Fornece a API oficial para envio de mensagens.</td>
+      </tr>
+      <tr>
+        <td><strong>WhatsApp Cloud API</strong></td>
+        <td>API oficial da Meta hospedada na nuvem deles. Diferente da API On-Premise, não requer servidor dedicado.</td>
+      </tr>
+      <tr>
+        <td><strong>BM (Business Manager)</strong></td>
+        <td>Gerenciador de Negócios da Meta. Agrupa o App, credenciais e contas de WhatsApp de uma empresa.</td>
+      </tr>
+      <tr>
+        <td><strong>App ID / App Secret</strong></td>
+        <td>Identificadores do aplicativo criado no Meta for Developers. O App é necessário para autenticar chamadas da API.</td>
+      </tr>
+      <tr>
+        <td><strong>Token Permanente</strong></td>
+        <td>Chave de autenticação de longa duração gerada para um usuário do sistema no Meta for Developers. Necessário para todas as chamadas.</td>
+      </tr>
+      <tr>
+        <td><strong>WABA</strong></td>
+        <td>WhatsApp Business Account. Conta de negócios que agrupa os números de telefone oficiais.</td>
+      </tr>
+      <tr>
+        <td><strong>Phone Number ID</strong></td>
+        <td>Identificador numérico do número de telefone cadastrado na WABA. Diferente do número de telefone em si.</td>
+      </tr>
+      <tr>
+        <td><strong>Webhook</strong></td>
+        <td>URL do CRM que a Meta chama automaticamente quando há uma mensagem nova ou atualização de status.</td>
+      </tr>
+      <tr>
+        <td><strong>Verify Token</strong></td>
+        <td>Token cadastrado no BM e informado à Meta para autenticar o webhook no momento da configuração.</td>
+      </tr>
+      <tr>
+        <td><strong>Template</strong></td>
+        <td>Mensagem pré-aprovada pela Meta que pode ser enviada a qualquer momento, inclusive fora da janela 24h.</td>
+      </tr>
+      <tr>
+        <td><strong>Janela 24h</strong></td>
+        <td>Período de 24 horas após a última mensagem do cliente no qual é permitido enviar texto livre. Após esse prazo, apenas templates.</td>
+      </tr>
+      <tr>
+        <td><strong>DDI</strong></td>
+        <td>Código internacional do país. Brasil: 55. Sempre incluir antes do DDD e número ao enviar mensagens.</td>
+      </tr>
+      <tr>
+        <td><strong>Modelo CRM</strong></td>
+        <td>Texto de resposta rápida salvo no CRM (diferente dos templates da Meta). Não precisam de aprovação.</td>
+      </tr>
+      <tr>
+        <td><strong>VerificaBloqueio</strong></td>
+        <td>Função interna do CRM. Retorna verdadeiro quando o usuário tem aquela chave de permissão bloqueada.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <div style="background:linear-gradient(90deg,#1b4332,#25D366);border-radius:10px;padding:20px;color:white;text-align:center;margin-top:20px;">
+    <div style="font-size:32px;margin-bottom:10px;">📱</div>
+    <div style="font-size:16px;font-weight:700;margin-bottom:6px;">WhatsApp Cloud API — Manual do Usuário</div>
+    <div style="font-size:12px;opacity:0.85;">Versão 1.0 · Abril/2026 · Uso Interno</div>
+    <div style="font-size:11px;opacity:0.7;margin-top:10px;">Para dúvidas ou problemas técnicos, entre em contato com o suporte do sistema.</div>
+  </div>
+
+  <div class="rodape">Este documento pode ser exportado como PDF usando a função de impressão do navegador (Ctrl+P → Salvar como PDF).</div>
+</div>
+
+</body>
+</html>
