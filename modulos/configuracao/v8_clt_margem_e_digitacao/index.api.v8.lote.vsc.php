@@ -922,7 +922,7 @@
             tooltipTriggerList.map(function (tooltipTriggerEl) { return new bootstrap.Tooltip(tooltipTriggerEl); }); 
             
             if(temRodando) { 
-                if(!intervaloLoteV8) intervaloLoteV8 = setInterval(v8CarregarLotesCSV, 10000); 
+                if(!intervaloLoteV8) intervaloLoteV8 = setInterval(v8CarregarLotesCSV, 20000);
                 if(typeof v8AtualizarSaldosTopo === "function") v8AtualizarSaldosTopo(); 
             } else { 
                 if(intervaloLoteV8) { clearInterval(intervaloLoteV8); intervaloLoteV8 = null; if(typeof v8AtualizarSaldosTopo === "function") v8AtualizarSaldosTopo(); } 

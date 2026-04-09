@@ -541,6 +541,128 @@ try {
             fclose($output); 
             exit;
 
+        case 'exportar_resultado_lote':
+            $id_lote = (int)($_GET['id_lote'] ?? $_POST['id_lote'] ?? 0);
+            if (!$id_lote) die('ID do lote não informado.');
+
+            $perm_meu_registro = function_exists('verificaPermissao') ? verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_CONSULTA_LOTE_MEU_REGISTRO', 'FUNCAO') : true;
+
+            $stmtLote = $pdo->prepare("SELECT l.*, ca.TABELA_PADRAO FROM INTEGRACAO_V8_IMPORTACAO_LOTE l LEFT JOIN INTEGRACAO_V8_CHAVE_ACESSO ca ON l.CHAVE_ID = ca.ID WHERE l.ID = ?");
+            $stmtLote->execute([$id_lote]);
+            $lote = $stmtLote->fetch(PDO::FETCH_ASSOC);
+
+            if (!$lote) die('Lote não encontrado.');
+            if (!$perm_meu_registro && $lote['CPF_USUARIO'] !== $usuario_logado_cpf) die('Acesso negado a este lote.');
+
+            ob_end_clean();
+            header('Content-Type: text/csv; charset=utf-8');
+            header('Content-Disposition: attachment; filename="Lote_' . $id_lote . '_' . date('dmY_Hi') . '.csv"');
+
+            $output = fopen('php://output', 'w');
+            fputs($output, "\xEF\xBB\xBF");
+
+            $cabecalho = [
+                'ID LOTE', 'DATA E HORA SIMULACAO', 'CPF', 'NOME', 'NASCIMENTO', 'SEXO', 'STATUS_V8', 'OBSERVACAO', 'TABELA SIMULADA', 'MARGEM', 'PRAZO', 'VALOR_LIBERADO', 'STATUS_WHATSAPP',
+                'LOGRADOURO', 'NUMERO', 'BAIRRO', 'CIDADE', 'UF', 'CEP',
+                'EMAIL 1', 'EMAIL 2', 'EMAIL 3',
+                'DDD'
+            ];
+            for ($i = 1; $i <= 10; $i++) { $cabecalho[] = "CELULAR $i"; }
+            fputcsv($output, $cabecalho, ";");
+
+            $sqlCpfs = "SELECT c.*, ? as NOME_IMPORTACAO, ? as TABELA_PADRAO_LOTE FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE c WHERE c.LOTE_ID = ?";
+            $stmtCpfs = $pdo->prepare($sqlCpfs);
+            $stmtCpfs->execute([$lote['NOME_IMPORTACAO'], $lote['TABELA_PADRAO'] ?? '', $id_lote]);
+
+            $stmtEnd   = $pdo->prepare("SELECT logradouro, numero, bairro, cidade, uf, cep FROM enderecos WHERE cpf = ? ORDER BY id DESC LIMIT 1");
+            $stmtEmail = $pdo->prepare("SELECT email FROM emails WHERE cpf = ? ORDER BY id DESC LIMIT 3");
+            $stmtTel   = $pdo->prepare("SELECT telefone_cel FROM telefones WHERE cpf = ? ORDER BY id DESC LIMIT 10");
+
+            while ($row = $stmtCpfs->fetch(PDO::FETCH_ASSOC)) {
+                $linha = [
+                    $row['LOTE_ID'],
+                    $row['DATA_SIMULACAO'] ? date('d/m/Y H:i', strtotime($row['DATA_SIMULACAO'])) : '-',
+                    $row['CPF'] . " ",
+                    $row['NOME'],
+                    $row['NASCIMENTO'] ? date('d/m/Y', strtotime($row['NASCIMENTO'])) : '',
+                    ($row['SEXO'] ?? '') == 'male' ? 'MASCULINO' : (($row['SEXO'] ?? '') == 'female' ? 'FEMININO' : ''),
+                    $row['STATUS_V8'],
+                    $row['OBSERVACAO'],
+                    $row['TABELA_PADRAO_LOTE'] ?: '-',
+                    $row['VALOR_MARGEM'] ? 'R$ ' . number_format($row['VALOR_MARGEM'], 2, ',', '.') : '-',
+                    $row['PRAZO'] ? $row['PRAZO'] . 'x' : '-',
+                    $row['VALOR_LIQUIDO'] ? 'R$ ' . number_format($row['VALOR_LIQUIDO'], 2, ',', '.') : '-',
+                    $row['STATUS_WHATSAPP'] ?? 'NAO ENVIADO'
+                ];
+
+                $stmtEnd->execute([$row['CPF']]);
+                $end = $stmtEnd->fetch(PDO::FETCH_ASSOC);
+                if ($end) {
+                    $linha[] = $end['logradouro']; $linha[] = $end['numero']; $linha[] = $end['bairro'];
+                    $linha[] = $end['cidade']; $linha[] = $end['uf']; $linha[] = $end['cep'] ? $end['cep'] . " " : '';
+                } else {
+                    $linha = array_merge($linha, ['', '', '', '', '', '']);
+                }
+
+                $stmtEmail->execute([$row['CPF']]);
+                $emails = $stmtEmail->fetchAll(PDO::FETCH_COLUMN);
+                for ($i = 0; $i < 3; $i++) { $linha[] = $emails[$i] ?? ''; }
+
+                $stmtTel->execute([$row['CPF']]);
+                $telefones = $stmtTel->fetchAll(PDO::FETCH_COLUMN);
+                $ddd = (isset($telefones[0]) && strlen($telefones[0]) >= 10) ? substr($telefones[0], 0, 2) : '';
+                $linha[] = $ddd;
+                for ($i = 0; $i < 10; $i++) {
+                    $tel = $telefones[$i] ?? '';
+                    $linha[] = $tel ? $tel . " " : '';
+                }
+
+                fputcsv($output, $linha, ";");
+            }
+            fclose($output);
+            exit;
+
+        case 'exportar_planilha_importada':
+            $id_lote = (int)($_GET['id_lote'] ?? $_POST['id_lote'] ?? 0);
+            if (!$id_lote) die('ID do lote não informado.');
+
+            $perm_meu_registro = function_exists('verificaPermissao') ? verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_CONSULTA_LOTE_MEU_REGISTRO', 'FUNCAO') : true;
+
+            $stmtLote = $pdo->prepare("SELECT * FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?");
+            $stmtLote->execute([$id_lote]);
+            $lote = $stmtLote->fetch(PDO::FETCH_ASSOC);
+
+            if (!$lote) die('Lote não encontrado.');
+            if (!$perm_meu_registro && $lote['CPF_USUARIO'] !== $usuario_logado_cpf) die('Acesso negado a este lote.');
+
+            ob_end_clean();
+            header('Content-Type: text/csv; charset=utf-8');
+            header('Content-Disposition: attachment; filename="Planilha_Importada_Lote_' . $id_lote . '_' . date('dmY_Hi') . '.csv"');
+
+            $output = fopen('php://output', 'w');
+            fputs($output, "\xEF\xBB\xBF");
+
+            fputcsv($output, ['CPF', 'NOME', 'NASCIMENTO', 'SEXO', 'STATUS_V8', 'OBSERVACAO', 'VALOR_MARGEM', 'PRAZO', 'VALOR_LIQUIDO'], ";");
+
+            $stmtCpfs = $pdo->prepare("SELECT CPF, NOME, NASCIMENTO, SEXO, STATUS_V8, OBSERVACAO, VALOR_MARGEM, PRAZO, VALOR_LIQUIDO FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE WHERE LOTE_ID = ? ORDER BY ID ASC");
+            $stmtCpfs->execute([$id_lote]);
+
+            while ($row = $stmtCpfs->fetch(PDO::FETCH_ASSOC)) {
+                fputcsv($output, [
+                    $row['CPF'] . " ",
+                    $row['NOME'],
+                    $row['NASCIMENTO'] ? date('d/m/Y', strtotime($row['NASCIMENTO'])) : '',
+                    ($row['SEXO'] ?? '') == 'male' ? 'MASCULINO' : (($row['SEXO'] ?? '') == 'female' ? 'FEMININO' : ''),
+                    $row['STATUS_V8'],
+                    $row['OBSERVACAO'],
+                    $row['VALOR_MARGEM'] ? number_format($row['VALOR_MARGEM'], 2, ',', '.') : '',
+                    $row['PRAZO'] ?? '',
+                    $row['VALOR_LIQUIDO'] ? number_format($row['VALOR_LIQUIDO'], 2, ',', '.') : ''
+                ], ";");
+            }
+            fclose($output);
+            exit;
+
         case 'alternar_status_lote':
             $id_lote = (int)$_POST['id_lote'];
             $novo_status = $_POST['novo_status'] === 'ATIVO' ? 'ATIVO' : 'INATIVO';
