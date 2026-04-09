@@ -19,16 +19,9 @@ try {
         exit;
     }
 
-    // =========================================================================
-    // FUNÇÃO HIPOTÉTICA DE PERMISSÃO (Substitua pela real do seu sistema)
-    // =========================================================================
-    if (!function_exists('VerificaBloqueio')) {
-        function VerificaBloqueio($chave) {
-            // Coloque aqui a lógica real que checa se o grupo do usuário está na lista de bloqueios
-            // Retorne TRUE se ele estiver bloqueado. FALSE se ele tiver acesso livre.
-            return false; 
-        }
-    }
+    $caminho_perm = $_SERVER['DOCUMENT_ROOT'] . '/modulos/cliente_e_usuario/checar_permissoes.php';
+    if (file_exists($caminho_perm)) { require_once $caminho_perm; }
+    if (!function_exists('VerificaBloqueio')) { function VerificaBloqueio($chave) { return false; } }
 
     switch ($acao) {
         
@@ -100,20 +93,22 @@ try {
             break;
 
         case 'listar_campanhas':
+            $bloqueado_meu     = VerificaBloqueio('SUBMENU_OP_WHATOFICIAL_MEU_CADASTRO');
+            $bloqueado_empresa = VerificaBloqueio('SUBMENU_OP_WHATOFICIAL_CAMPANHA_HIERARQUIA');
+
             $filtro = "1=1";
-            
-            // Verificação de bloqueios usando as Chaves da sua imagem
-            $bloqueado_meu = VerificaBloqueio('SUBMENU_OP_WHATS_API_DISPARO_MEU_REGISTRO'); 
-            $bloqueado_empresa = VerificaBloqueio('SUBMENU_OP_WHATS_API_DISPARO_EMPRESA'); 
+            $params = [];
 
-            if ($bloqueado_meu) { 
-                $filtro .= " AND CPF_USUARIO = '{$cpf_logado}'"; 
-            } elseif ($bloqueado_empresa && !empty($id_empresa)) { 
-                $filtro .= " AND ID_EMPRESA = '{$id_empresa}'"; 
+            if ($bloqueado_meu) {
+                $filtro .= " AND CPF_USUARIO = ?";
+                $params[] = $cpf_logado;
+            } elseif ($bloqueado_empresa && !empty($id_empresa)) {
+                $filtro .= " AND ID_EMPRESA = ?";
+                $params[] = $id_empresa;
             }
-            // Master passa direto pelo IF acima e o filtro continua "1=1", vendo tudo!
+            // MASTER/ADMIN: filtro = "1=1", vê tudo
 
-            $sql = "SELECT 
+            $sql = "SELECT
                         NOME_CAMPANHA, NOME_USUARIO, DATA_IMPORTACAO,
                         COUNT(ID) as TOTAL,
                         SUM(CASE WHEN STATUS_DISPARO = 'ENVIADO' THEN 1 ELSE 0 END) as ENVIADOS,
@@ -124,8 +119,9 @@ try {
                     WHERE $filtro
                     GROUP BY NOME_CAMPANHA, NOME_USUARIO, DATA_IMPORTACAO, STATUS_IMPORTACAO
                     ORDER BY MAX(DATA_IMPORTACAO) DESC";
-            
-            $stmt = $pdo->query($sql);
+
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute($params);
             echo json_encode(['success' => true, 'data' => $stmt->fetchAll(PDO::FETCH_ASSOC)]);
             break;
 
