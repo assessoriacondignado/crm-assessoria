@@ -14,6 +14,7 @@ $perm_modelos     = !VerificaBloqueio('SUBMENU_OP_WHATOFICIAL_MODELOS');
 $perm_manual      = !VerificaBloqueio('SUBMENU_OP_WHATOFICIAL_DISPARO_MANUAL');
 $perm_campanha    = !VerificaBloqueio('SUBMENU_OP_WHATOFICIAL_CAMPANHA_LOTE');
 $perm_historico   = !VerificaBloqueio('SUBMENU_OP_WHATOFICIAL_HISTORICO');
+$perm_chat        = !VerificaBloqueio('SUBMENU_OP_WHATOFICIAL_CHAT');
 
 // Determina qual aba abre como padrão (a primeira disponível)
 $tab_ativa = '';
@@ -22,6 +23,7 @@ if ($perm_modelos)      $tab_ativa = $tab_ativa ?: 'tab-templates';
 if ($perm_manual)       $tab_ativa = $tab_ativa ?: 'tab-teste';
 if ($perm_campanha)     $tab_ativa = $tab_ativa ?: 'tab-campanha';
 if ($perm_historico)    $tab_ativa = $tab_ativa ?: 'tab-historico';
+if ($perm_chat)         $tab_ativa = $tab_ativa ?: 'tab-chat';
 ?>
 
 <style>
@@ -57,6 +59,10 @@ if ($perm_historico)    $tab_ativa = $tab_ativa ?: 'tab-historico';
 
             <?php if($perm_historico): ?>
             <li class="nav-item"><button class="nav-link <?= $tab_ativa==='tab-historico' ? 'active' : '' ?> border-dark text-dark" data-bs-toggle="tab" data-bs-target="#tab-historico" type="button" onclick="carregarHistorico()"><i class="fas fa-history me-1 text-warning"></i> Histórico</button></li>
+            <?php endif; ?>
+
+            <?php if($perm_chat): ?>
+            <li class="nav-item"><button class="nav-link <?= $tab_ativa==='tab-chat' ? 'active' : '' ?> border-dark text-dark fw-bold" data-bs-toggle="tab" data-bs-target="#tab-chat" type="button" onclick="iniciarChat()"><i class="fab fa-whatsapp text-success me-1"></i> Chat</button></li>
             <?php endif; ?>
         </ul>
 
@@ -346,12 +352,173 @@ if ($perm_historico)    $tab_ativa = $tab_ativa ?: 'tab-historico';
                 </div>
             </div>
 
+            <!-- ============================================================ -->
+            <!-- ABA CHAT                                                      -->
+            <!-- ============================================================ -->
+            <div class="tab-pane fade <?= $tab_ativa==='tab-chat' ? 'show active' : '' ?>" id="tab-chat">
+                <style>
+                    #chat-lista-conversas { height: 560px; overflow-y: auto; border-right: 2px solid #dee2e6; }
+                    #chat-lista-conversas .conv-item { cursor: pointer; padding: 10px 12px; border-bottom: 1px solid #f0f0f0; transition: background 0.15s; }
+                    #chat-lista-conversas .conv-item:hover, #chat-lista-conversas .conv-item.ativo { background: #e8f5e9; }
+                    #chat-mensagens-box { height: 420px; overflow-y: auto; background: #f7f7f7; padding: 12px; border-radius: 8px; }
+                    .msg-enviada { text-align: right; }
+                    .msg-enviada .balao { background: #dcf8c6; border-radius: 12px 0 12px 12px; display: inline-block; padding: 8px 12px; max-width: 75%; text-align: left; word-break: break-word; }
+                    .msg-recebida .balao { background: #fff; border: 1px solid #e0e0e0; border-radius: 0 12px 12px 12px; display: inline-block; padding: 8px 12px; max-width: 75%; word-break: break-word; }
+                    .msg-hora { font-size: 0.7rem; color: #999; margin-top: 2px; }
+                    .janela-badge-aberta { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+                    .janela-badge-fechada { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+                </style>
+
+                <div class="row g-0">
+                    <!-- PAINEL ESQUERDO: lista de conversas -->
+                    <div class="col-md-4 col-lg-3" id="chat-lista-conversas">
+                        <div class="p-2 bg-dark text-white d-flex gap-2 align-items-center">
+                            <select id="chat-filtro-numero" class="form-select form-select-sm border-dark text-dark" style="max-width:140px" onchange="carregarConversas()">
+                                <option value="">Todos os números</option>
+                            </select>
+                            <select id="chat-filtro-status" class="form-select form-select-sm border-dark text-dark" onchange="carregarConversas()">
+                                <option value="TODOS">Todos</option>
+                                <option value="AGUARDANDO">Aguardando</option>
+                                <option value="EM_ATENDIMENTO">Em Atendimento</option>
+                                <option value="FINALIZADO">Finalizado</option>
+                            </select>
+                            <button class="btn btn-sm btn-success text-nowrap fw-bold" onclick="abrirModalNovaConversa()" title="Nova conversa"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <div id="chat-lista-itens">
+                            <div class="text-center py-4 text-muted small">Carregando...</div>
+                        </div>
+                    </div>
+
+                    <!-- PAINEL DIREITO: conversa aberta -->
+                    <div class="col-md-8 col-lg-9 d-flex flex-column" style="height:560px;">
+                        <!-- Header da conversa -->
+                        <div id="chat-header" class="p-2 bg-light border-bottom d-flex justify-content-between align-items-center" style="min-height:52px;">
+                            <span class="text-muted fst-italic small">Selecione uma conversa</span>
+                        </div>
+
+                        <!-- Mensagens -->
+                        <div id="chat-mensagens-box" class="flex-grow-1">
+                            <div class="text-center text-muted small fst-italic py-4">Nenhuma conversa selecionada.</div>
+                        </div>
+
+                        <!-- Barra de input -->
+                        <div id="chat-input-area" class="p-2 border-top bg-white" style="display:none;">
+                            <!-- Banner janela -->
+                            <div id="chat-banner-janela" class="mb-2 px-3 py-1 rounded small text-center fw-bold" style="display:none;"></div>
+
+                            <!-- Assinatura + Modelos CRM -->
+                            <div class="d-flex gap-2 mb-2 align-items-center">
+                                <div class="input-group input-group-sm" style="max-width:220px">
+                                    <span class="input-group-text bg-secondary text-white border-dark"><i class="fas fa-signature"></i></span>
+                                    <input type="text" id="chat-assinatura" class="form-control border-dark" placeholder="Assinatura (opcional)" onchange="salvarAssinatura()">
+                                </div>
+                                <select id="chat-sel-modelo" class="form-select form-select-sm border-dark" onchange="aplicarModeloCRM()" style="max-width:180px">
+                                    <option value="">💬 Modelos CRM</option>
+                                </select>
+                                <button class="btn btn-sm btn-outline-secondary" onclick="abrirModalModelos()" title="Gerenciar modelos"><i class="fas fa-cog"></i></button>
+                            </div>
+
+                            <!-- Tipo de mensagem + Input -->
+                            <div id="chat-area-texto">
+                                <div class="input-group">
+                                    <select id="chat-tipo-msg" class="form-select form-select-sm border-dark fw-bold" style="max-width:160px" onchange="mudarTipoChat()">
+                                        <option value="text">✍️ Texto Livre</option>
+                                        <option value="template">📋 Template Meta</option>
+                                        <option value="image">🖼️ Imagem</option>
+                                        <option value="document">📄 Documento</option>
+                                        <option value="audio">🎵 Áudio</option>
+                                    </select>
+                                    <textarea id="chat-texto" class="form-control border-dark" rows="2" placeholder="Digite sua mensagem..." style="resize:none;"></textarea>
+                                    <button class="btn btn-success fw-bold px-3" onclick="enviarMensagemChat()" id="btn-enviar-chat"><i class="fas fa-paper-plane"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Area template Meta -->
+                            <div id="chat-area-template" style="display:none;">
+                                <div class="d-flex gap-2">
+                                    <select id="chat-tpl-nome" class="form-select form-select-sm border-success fw-bold flex-grow-1">
+                                        <option value="">Selecione o Template...</option>
+                                    </select>
+                                    <input type="text" id="chat-tpl-vars" class="form-control form-control-sm border-dark" placeholder="Variáveis: João, 1500.00" style="max-width:220px">
+                                    <button class="btn btn-success fw-bold" onclick="enviarMensagemChat()"><i class="fas fa-paper-plane"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Area arquivo -->
+                            <div id="chat-area-arquivo" style="display:none;">
+                                <div class="d-flex gap-2 align-items-center">
+                                    <input type="file" id="chat-arquivo" class="form-control form-control-sm border-dark">
+                                    <input type="text" id="chat-arquivo-caption" class="form-control form-control-sm border-dark" placeholder="Legenda (opcional)">
+                                    <button class="btn btn-success fw-bold text-nowrap" onclick="enviarMensagemChat()"><i class="fas fa-paper-plane me-1"></i> Enviar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Finalizar conversa -->
+                        <div id="chat-footer-btns" class="px-2 pb-2 bg-white" style="display:none;">
+                            <button class="btn btn-sm btn-outline-danger fw-bold" onclick="finalizarConversa()"><i class="fas fa-check-circle me-1"></i> Finalizar Conversa</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL NOVA CONVERSA -->
+                <div class="modal fade" id="modalNovaConversa" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content border-success">
+                            <div class="modal-header bg-success text-white"><h5 class="modal-title fw-bold"><i class="fab fa-whatsapp me-2"></i> Nova Conversa</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label class="small fw-bold">Número Remetente (nosso):</label>
+                                    <select id="nc-phone-id" class="form-select border-dark"></select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="small fw-bold">WhatsApp do Cliente (com DDI+DDD):</label>
+                                    <input type="text" id="nc-telefone" class="form-control border-dark" placeholder="5562999999999">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="small fw-bold">Nome do Cliente (opcional):</label>
+                                    <input type="text" id="nc-nome" class="form-control border-dark">
+                                </div>
+                            </div>
+                            <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button><button class="btn btn-success fw-bold" onclick="criarNovaConversa()"><i class="fas fa-plus me-1"></i> Iniciar</button></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL MODELOS CRM -->
+                <div class="modal fade" id="modalModelos" tabindex="-1">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content border-dark">
+                            <div class="modal-header bg-dark text-white"><h5 class="modal-title fw-bold"><i class="fas fa-comment-dots me-2"></i> Modelos de Mensagem (CRM)</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+                            <div class="modal-body">
+                                <div class="row g-3 mb-3">
+                                    <div class="col-md-4">
+                                        <input type="text" id="modelo-nome" class="form-control border-dark" placeholder="Nome do modelo">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <textarea id="modelo-conteudo" class="form-control border-dark" rows="2" placeholder="Conteúdo (use {nome}, {valor} como variáveis)"></textarea>
+                                    </div>
+                                    <div class="col-md-2 d-flex align-items-end">
+                                        <input type="hidden" id="modelo-id" value="0">
+                                        <button class="btn btn-dark fw-bold w-100" onclick="salvarModelo()"><i class="fas fa-save"></i> Salvar</button>
+                                    </div>
+                                </div>
+                                <div id="lista-modelos-crm">
+                                    <div class="text-center text-muted py-3">Carregando...</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </div>
 </div>
 
 <script>
-    let templatesCarregados = false; 
+    let templatesCarregados = false;
 
     async function waReq(acao, dados = {}) {
         const fd = new FormData(); fd.append('acao', acao);
@@ -727,6 +894,331 @@ if ($perm_historico)    $tab_ativa = $tab_ativa ?: 'tab-historico';
     }
 
     window.onload = () => { if(document.getElementById('formConfig')) carregarConfig(); };
+
+    // =========================================================================
+    // CHAT
+    // =========================================================================
+    let chatConversaAtual = null;
+    let chatUltimoMsgId   = 0;
+    let chatPollingTimer  = null;
+    let chatTemplatesMeta = [];
+
+    async function chatReq(acao, dados = {}) {
+        const fd = new FormData(); fd.append('acao', acao);
+        for (let k in dados) fd.append(k, dados[k]);
+        try {
+            const res = await fetch('chat.ajax.php', { method: 'POST', body: fd });
+            return await res.json();
+        } catch(e) { return { success: false, msg: 'Erro de conexão.' }; }
+    }
+
+    async function iniciarChat() {
+        const r = await chatReq('listar_numeros_chat');
+        if (r.success) {
+            const sels = ['chat-filtro-numero', 'nc-phone-id'].map(id => document.getElementById(id)).filter(Boolean);
+            sels.forEach(sel => {
+                const isNC = sel.id === 'nc-phone-id';
+                sel.innerHTML = isNC ? '' : '<option value="">Todos os números</option>';
+                r.numeros.forEach(n => {
+                    const label = (n.NOME_BM ? n.NOME_BM + ' › ' : '') + n.NOME_NUMERO;
+                    sel.innerHTML += `<option value="${n.PHONE_NUMBER_ID}">${label}</option>`;
+                });
+            });
+        }
+        carregarConversas();
+        carregarModelosCRM();
+    }
+
+    async function carregarConversas() {
+        const status  = document.getElementById('chat-filtro-status')?.value || 'TODOS';
+        const phoneId = document.getElementById('chat-filtro-numero')?.value || '';
+        const r = await chatReq('listar_conversas', { status, phone_number_id: phoneId });
+        const div = document.getElementById('chat-lista-itens');
+        if (!div) return;
+
+        if (!r.success || !r.conversas.length) {
+            div.innerHTML = '<div class="text-center text-muted small py-4">Nenhuma conversa.</div>';
+            return;
+        }
+
+        div.innerHTML = r.conversas.map(cv => {
+            const janelaBadge = cv.STATUS_JANELA === 'ABERTA'
+                ? '<span class="badge janela-badge-aberta" style="font-size:0.65rem">●  Janela Aberta</span>'
+                : '<span class="badge janela-badge-fechada" style="font-size:0.65rem">● Janela Fechada</span>';
+            const statusBadge = cv.STATUS_ATENDIMENTO === 'AGUARDANDO'
+                ? '<span class="badge bg-warning text-dark" style="font-size:0.65rem">Aguardando</span>'
+                : (cv.STATUS_ATENDIMENTO === 'FINALIZADO' ? '<span class="badge bg-secondary" style="font-size:0.65rem">Finalizado</span>' : '');
+            const ativo = chatConversaAtual?.ID == cv.ID ? 'ativo' : '';
+            return `<div class="conv-item ${ativo}" onclick="selecionarConversa(${cv.ID})">
+                <div class="d-flex justify-content-between align-items-start">
+                    <strong class="small text-truncate" style="max-width:120px">${escHtml(cv.NOME_CLIENTE || cv.TELEFONE_CLIENTE)}</strong>
+                    <span class="text-muted" style="font-size:0.7rem">${cv.ULTIMA_MSG_BR || ''}</span>
+                </div>
+                <div class="text-muted small text-truncate" style="font-size:0.75rem">${escHtml(cv.ULTIMO_TRECHO || '...')}</div>
+                <div class="d-flex gap-1 mt-1">${janelaBadge}${statusBadge}</div>
+            </div>`;
+        }).join('');
+    }
+
+    async function selecionarConversa(id) {
+        clearInterval(chatPollingTimer);
+        const r = await chatReq('abrir_conversa', { conversa_id: id });
+        if (!r.success) return alert(r.msg);
+
+        chatConversaAtual = r.conversa;
+        chatUltimoMsgId   = 0;
+
+        // Destaca item na lista
+        document.querySelectorAll('.conv-item').forEach(el => el.classList.remove('ativo'));
+        document.querySelectorAll('.conv-item').forEach(el => {
+            if (el.onclick?.toString().includes(`(${id})`)) el.classList.add('ativo');
+        });
+
+        atualizarHeaderChat(r.conversa, r.janela_aberta);
+        renderMensagens(r.mensagens);
+        chatUltimoMsgId = r.mensagens.length ? Math.max(...r.mensagens.map(m => m.ID)) : 0;
+
+        // Assinatura
+        document.getElementById('chat-assinatura').value = r.conversa.ASSINATURA || '';
+
+        // Templates Meta
+        await carregarTemplatesMetaChat(r.conversa.PHONE_NUMBER_ID);
+
+        // Exibe input area
+        document.getElementById('chat-input-area').style.display = '';
+        document.getElementById('chat-footer-btns').style.display = r.conversa.STATUS_ATENDIMENTO !== 'FINALIZADO' ? '' : 'none';
+        atualizarBannerJanela(r.janela_aberta, r.conversa.DATA_JANELA_EXPIRA);
+        mudarTipoChat();
+
+        // Inicia polling
+        chatPollingTimer = setInterval(() => pollingMensagens(), 5000);
+    }
+
+    function atualizarHeaderChat(cv, janela_aberta) {
+        const header = document.getElementById('chat-header');
+        const janelaBadge = janela_aberta
+            ? '<span class="badge janela-badge-aberta ms-2">Janela 24h Aberta</span>'
+            : '<span class="badge janela-badge-fechada ms-2">Janela 24h Fechada</span>';
+        const statusMap = { AGUARDANDO: 'warning', EM_ATENDIMENTO: 'success', FINALIZADO: 'secondary' };
+        const cor = statusMap[cv.STATUS_ATENDIMENTO] || 'secondary';
+        header.innerHTML = `
+            <div>
+                <strong class="text-dark">${escHtml(cv.NOME_CLIENTE || 'Cliente')} </strong>
+                <code class="small text-muted">${escHtml(cv.TELEFONE_CLIENTE)}</code>
+                ${janelaBadge}
+                <span class="badge bg-${cor} ms-1 small">${cv.STATUS_ATENDIMENTO}</span>
+            </div>
+            <div class="small text-muted">Atendente: ${escHtml(cv.NOME_ATENDENTE || '—')}</div>`;
+    }
+
+    function renderMensagens(msgs) {
+        const box = document.getElementById('chat-mensagens-box');
+        if (!msgs.length) { box.innerHTML = '<div class="text-center text-muted small fst-italic py-4">Nenhuma mensagem ainda.</div>'; return; }
+        box.innerHTML = msgs.map(m => renderBalao(m)).join('');
+        box.scrollTop = box.scrollHeight;
+    }
+
+    function renderBalao(m) {
+        const cls     = m.DIRECAO === 'ENVIADA' ? 'msg-enviada' : 'msg-recebida';
+        const hora    = m.DATA_HORA ? m.DATA_HORA.substr(11, 5) : '';
+        const status  = m.DIRECAO === 'ENVIADA' ? renderStatusIcon(m.STATUS_ENVIO) : '';
+        let conteudo  = escHtml(m.CONTEUDO || '');
+
+        if (m.ARQUIVO_PATH) {
+            const ext = m.ARQUIVO_PATH.split('.').pop().toLowerCase();
+            const url = '/modulos/configuracao/whats_api_oficial/' + m.ARQUIVO_PATH;
+            if (['jpg','jpeg','png','gif','webp'].includes(ext)) {
+                conteudo += `<br><img src="${url}" style="max-width:200px;border-radius:8px;margin-top:4px" onclick="window.open('${url}')">`;
+            } else if (['mp3','ogg','opus'].includes(ext)) {
+                conteudo += `<br><audio controls src="${url}" style="max-width:200px"></audio>`;
+            } else {
+                conteudo += `<br><a href="${url}" target="_blank" class="btn btn-sm btn-outline-dark mt-1"><i class="fas fa-file"></i> Abrir arquivo</a>`;
+            }
+        }
+
+        return `<div class="${cls} mb-2">
+            <div class="balao">${conteudo}</div>
+            <div class="msg-hora">${hora} ${status}</div>
+        </div>`;
+    }
+
+    function renderStatusIcon(status) {
+        if (status === 'read')       return '<i class="fas fa-check-double text-primary"></i>';
+        if (status === 'delivered')  return '<i class="fas fa-check-double text-muted"></i>';
+        if (status === 'sent')       return '<i class="fas fa-check text-muted"></i>';
+        if (status === 'failed')     return '<i class="fas fa-times text-danger"></i>';
+        return '';
+    }
+
+    function atualizarBannerJanela(aberta, expira) {
+        const banner = document.getElementById('chat-banner-janela');
+        if (!banner) return;
+        if (aberta && expira) {
+            const restante = Math.max(0, Math.floor((new Date(expira) - new Date()) / 60000));
+            banner.className = 'mb-2 px-3 py-1 rounded small text-center fw-bold janela-badge-aberta';
+            banner.textContent = `✅ Janela aberta — ${restante} min restantes. Envio de texto livre liberado.`;
+            banner.style.display = '';
+        } else {
+            banner.className = 'mb-2 px-3 py-1 rounded small text-center fw-bold janela-badge-fechada';
+            banner.textContent = '🔒 Janela 24h fechada. Use um Template Meta aprovado para reabrir a conversa.';
+            banner.style.display = '';
+        }
+    }
+
+    function mudarTipoChat() {
+        const tipo = document.getElementById('chat-tipo-msg')?.value || 'text';
+        const janela = chatConversaAtual ? chatConversaAtual.STATUS_JANELA === 'ABERTA' : false;
+
+        document.getElementById('chat-area-texto').style.display    = (tipo === 'text') ? '' : 'none';
+        document.getElementById('chat-area-template').style.display = (tipo === 'template') ? '' : 'none';
+        document.getElementById('chat-area-arquivo').style.display  = ['image','document','audio','video'].includes(tipo) ? '' : 'none';
+
+        // Desabilita texto se janela fechada
+        const txtArea = document.getElementById('chat-texto');
+        if (txtArea) {
+            txtArea.disabled = (tipo === 'text' && !janela);
+            txtArea.placeholder = (tipo === 'text' && !janela) ? '🔒 Janela fechada. Selecione "Template Meta" para enviar.' : 'Digite sua mensagem...';
+        }
+    }
+
+    async function carregarTemplatesMetaChat(phoneId) {
+        if (!phoneId) return;
+        const r = await waReq('listar_templates_meta', { phone_id: phoneId });
+        const sel = document.getElementById('chat-tpl-nome');
+        if (!sel) return;
+        sel.innerHTML = '<option value="">Selecione o Template...</option>';
+        chatTemplatesMeta = [];
+        if (r.success) {
+            r.data.filter(t => t.status === 'APPROVED').forEach(t => {
+                chatTemplatesMeta.push(t);
+                sel.innerHTML += `<option value="${t.name}|${t.language}">${t.name} (${t.language})</option>`;
+            });
+        }
+    }
+
+    async function pollingMensagens() {
+        if (!chatConversaAtual) return;
+        const r = await chatReq('polling_mensagens', { conversa_id: chatConversaAtual.ID, ultimo_id: chatUltimoMsgId });
+        if (!r.success) return;
+
+        if (r.mensagens.length) {
+            const box = document.getElementById('chat-mensagens-box');
+            r.mensagens.forEach(m => { box.innerHTML += renderBalao(m); chatUltimoMsgId = Math.max(chatUltimoMsgId, m.ID); });
+            box.scrollTop = box.scrollHeight;
+        }
+
+        // Atualiza banner da janela
+        chatConversaAtual.STATUS_JANELA    = r.janela_aberta ? 'ABERTA' : 'FECHADA';
+        chatConversaAtual.DATA_JANELA_EXPIRA = r.data_expira;
+        atualizarBannerJanela(r.janela_aberta, r.data_expira);
+        mudarTipoChat();
+    }
+
+    async function enviarMensagemChat() {
+        if (!chatConversaAtual) return;
+        const btn  = document.getElementById('btn-enviar-chat');
+        const tipo = document.getElementById('chat-tipo-msg').value;
+
+        const fd = new FormData();
+        fd.append('acao', 'enviar_mensagem');
+        fd.append('conversa_id', chatConversaAtual.ID);
+        fd.append('tipo', tipo);
+
+        if (tipo === 'text') {
+            const txt = document.getElementById('chat-texto').value.trim();
+            if (!txt) return;
+            fd.append('conteudo', txt);
+        } else if (tipo === 'template') {
+            const tpl = document.getElementById('chat-tpl-nome').value;
+            if (!tpl) return alert('Selecione um template.');
+            fd.append('template_name', tpl);
+            fd.append('variaveis', document.getElementById('chat-tpl-vars').value);
+        } else {
+            const arquivo = document.getElementById('chat-arquivo').files[0];
+            if (!arquivo) return alert('Selecione um arquivo.');
+            fd.append('arquivo', arquivo);
+            fd.append('caption', document.getElementById('chat-arquivo-caption').value);
+        }
+
+        if (btn) { btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>'; }
+
+        try {
+            const res  = await fetch('chat.ajax.php', { method: 'POST', body: fd });
+            const data = await res.json();
+
+            if (data.success) {
+                document.getElementById('chat-texto').value = '';
+                document.getElementById('chat-arquivo').value = '';
+                await pollingMensagens();
+                carregarConversas();
+            } else {
+                alert('Erro: ' + data.msg);
+            }
+        } finally {
+            if (btn) { btn.disabled = false; btn.innerHTML = '<i class="fas fa-paper-plane"></i>'; }
+        }
+    }
+
+    async function finalizarConversa() {
+        if (!chatConversaAtual) return;
+        if (!confirm('Finalizar esta conversa?')) return;
+        const r = await chatReq('finalizar_conversa', { conversa_id: chatConversaAtual.ID });
+        if (r.success) { carregarConversas(); chatConversaAtual = null; document.getElementById('chat-input-area').style.display = 'none'; document.getElementById('chat-footer-btns').style.display = 'none'; document.getElementById('chat-header').innerHTML = '<span class="text-muted fst-italic small">Selecione uma conversa</span>'; }
+    }
+
+    async function salvarAssinatura() {
+        if (!chatConversaAtual) return;
+        await chatReq('salvar_assinatura', { conversa_id: chatConversaAtual.ID, assinatura: document.getElementById('chat-assinatura').value });
+    }
+
+    // Modelos CRM
+    async function carregarModelosCRM() {
+        const r = await chatReq('listar_modelos');
+        const sel = document.getElementById('chat-sel-modelo');
+        if (sel) {
+            sel.innerHTML = '<option value="">💬 Modelos CRM</option>';
+            (r.modelos || []).forEach(m => sel.innerHTML += `<option value="${escHtml(m.CONTEUDO)}">${escHtml(m.NOME_MODELO)}</option>`);
+        }
+        const lista = document.getElementById('lista-modelos-crm');
+        if (!lista) return;
+        lista.innerHTML = !r.modelos?.length ? '<div class="text-muted text-center py-2">Nenhum modelo cadastrado.</div>'
+            : '<table class="table table-sm table-hover mb-0"><thead class="table-dark"><tr><th>Nome</th><th>Conteúdo</th><th></th></tr></thead><tbody>'
+                + r.modelos.map(m => `<tr><td class="fw-bold">${escHtml(m.NOME_MODELO)}</td><td class="text-truncate" style="max-width:250px">${escHtml(m.CONTEUDO)}</td><td><button class="btn btn-sm btn-outline-secondary py-0 px-1 me-1" onclick="editarModelo(${m.ID},'${escHtml(m.NOME_MODELO)}',\`${m.CONTEUDO.replace(/`/g,"'")}\`)"><i class="fas fa-edit"></i></button><button class="btn btn-sm btn-outline-danger py-0 px-1" onclick="excluirModelo(${m.ID})"><i class="fas fa-trash"></i></button></td></tr>`).join('')
+                + '</tbody></table>';
+    }
+
+    function aplicarModeloCRM() {
+        const sel = document.getElementById('chat-sel-modelo');
+        if (sel?.value) { document.getElementById('chat-texto').value = sel.value; sel.value = ''; }
+    }
+
+    function abrirModalModelos() { carregarModelosCRM(); new bootstrap.Modal(document.getElementById('modalModelos')).show(); }
+
+    function editarModelo(id, nome, conteudo) {
+        document.getElementById('modelo-id').value      = id;
+        document.getElementById('modelo-nome').value    = nome;
+        document.getElementById('modelo-conteudo').value = conteudo;
+    }
+
+    async function salvarModelo() {
+        const r = await chatReq('salvar_modelo', { modelo_id: document.getElementById('modelo-id').value, nome_modelo: document.getElementById('modelo-nome').value, conteudo: document.getElementById('modelo-conteudo').value });
+        if (r.success) { document.getElementById('modelo-id').value = '0'; document.getElementById('modelo-nome').value = ''; document.getElementById('modelo-conteudo').value = ''; carregarModelosCRM(); }
+        else alert(r.msg);
+    }
+
+    async function excluirModelo(id) {
+        if (!confirm('Excluir este modelo?')) return;
+        await chatReq('excluir_modelo', { modelo_id: id }); carregarModelosCRM();
+    }
+
+    // Modal nova conversa
+    function abrirModalNovaConversa() { new bootstrap.Modal(document.getElementById('modalNovaConversa')).show(); }
+
+    async function criarNovaConversa() {
+        const r = await chatReq('nova_conversa', { phone_number_id: document.getElementById('nc-phone-id').value, telefone_cliente: document.getElementById('nc-telefone').value, nome_cliente: document.getElementById('nc-nome').value });
+        if (r.success) { bootstrap.Modal.getInstance(document.getElementById('modalNovaConversa'))?.hide(); carregarConversas(); selecionarConversa(r.conversa_id); }
+        else alert(r.msg);
+    }
 </script>
 
 <?php 
