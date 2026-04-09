@@ -3,6 +3,54 @@
 // Módulo isolado para gestão de Lotes CSV da V8
 @session_start();
 ?>
+<style>
+/* === V8 MENU AÇÕES LOTE === */
+.v8-acoes-dropdown { min-width: 270px; border-radius: 12px !important; overflow: hidden; border: 1px solid #dee2e6 !important; }
+.v8-top-actions { padding: 6px 8px; background: #f8f9fa; border-bottom: 1px solid #dee2e6; }
+.v8-top-actions .dropdown-item {
+    border-radius: 6px; font-size: 12px; padding: 5px 10px;
+    transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+.v8-top-actions .dropdown-item:hover:not(:disabled) { background: #e2e8f0; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+.v8-secao-hdr {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 9px 14px; font-size: 11px; font-weight: 800; letter-spacing: 0.4px;
+    cursor: pointer; user-select: none; transition: filter 0.15s;
+}
+.v8-secao-hdr:hover { filter: brightness(0.91); }
+.v8-secao-hdr.v8-azul  { background: #1a73e8; color: #fff; }
+.v8-secao-hdr.v8-verde { background: #198754; color: #fff; }
+.v8-chevron { transition: transform 0.2s ease; font-size: 10px; }
+.v8-chevron.aberto { transform: rotate(180deg); }
+.v8-item {
+    display: flex; align-items: center; width: 100%; background: none; border: none;
+    padding: 9px 14px; text-align: left; cursor: pointer; text-decoration: none;
+    color: #212529; border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.15s ease, transform 0.1s ease, box-shadow 0.12s ease;
+}
+.v8-item:last-child { border-bottom: none; }
+.v8-item:hover:not(:disabled) { transform: translateX(3px); }
+.v8-item-azul:hover:not(:disabled)  { background: rgba(26,115,232,.09); box-shadow: inset 3px 0 0 #1a73e8; color: #1a4fa8; }
+.v8-item-verde:hover:not(:disabled) { background: rgba(25,135,84,.09);  box-shadow: inset 3px 0 0 #198754; color: #145e3c; }
+.v8-item-icon { font-size: 17px; margin-right: 10px; min-width: 22px; text-align: center; flex-shrink: 0; }
+.v8-item-txt  { display: flex; flex-direction: column; line-height: 1.3; }
+.v8-item-txt strong { font-size: 12px; font-weight: 700; }
+.v8-item-txt small  { font-size: 10px; color: #6c757d; margin-top: 1px; }
+.v8-manut { opacity: .55; cursor: not-allowed !important; }
+.v8-manut small { color: #fd7e14 !important; font-weight: 600; }
+.v8-secao-bdy { animation: v8Slide .15s ease; }
+@keyframes v8Slide { from { opacity:0; transform:translateY(-4px); } to { opacity:1; transform:translateY(0); } }
+.v8-rodape-acoes { padding: 6px 8px; border-top: 1px solid #f0d0d0; background: #fff8f8; }
+.v8-btn-apagar {
+    display: flex; align-items: center; width: 100%; background: none; border: none;
+    padding: 6px 10px; border-radius: 6px; cursor: pointer; color: #dc3545;
+    font-size: 12px; font-weight: 700; transition: background .15s, box-shadow .15s;
+}
+.v8-btn-apagar:hover { background: rgba(220,53,69,.1); box-shadow: 0 1px 4px rgba(220,53,69,.2); }
+/* confirm modal */
+#v8ModalConfirm .modal-header { border-bottom: none; border-left: 4px solid #0d6efd; border-radius: 0; padding-bottom: 4px; }
+#v8ModalConfirm .modal-footer { border-top: none; padding-top: 4px; }
+</style>
 
 <div class="caixa-upload shadow-sm border-success mb-4 text-start" style="border: 2px dashed #198754; background: #f8fff9; padding: 15px 25px; border-radius: 10px;">
     
@@ -17,13 +65,25 @@
         <div class="alert alert-warning small text-start border-warning mb-4 shadow-sm" style="background-color: #fff8e6;">
             <h6 class="fw-bold text-danger mb-2"><i class="fas fa-exclamation-triangle"></i> ATENÇÃO ÀS REGRAS DE USO:</h6>
             <ul class="mb-0 ps-3">
-                <li><b>1:</b> Limite de <b>1.000 CPFs</b> por importação.</li>
+                <li><b>1:</b> Limite de <b>100.000 CPFs</b> por importação.</li>
                 <li><b>2:</b> Cada usuário pode rodar <b>1 lote em simultâneo</b>.</li>
                 <li><b>3:</b> O usuário pode ter lotes agendados, criando um fluxo de 1 lote por dia.</li>
                 <li><b>4:</b> Formatos aceitos em Excel (.csv):
                     <ul class="mb-0 ps-3">
-                        <li><b>1 - Lista da assessoria:</b> Somente a coluna CPF.</li>
-                        <li><b>2 - Lista externa:</b> Colunas CPF, NOME, DATA NASCIMENTO, SEXO.</li>
+                        <li>
+                            <span class="badge bg-secondary text-white me-1" style="cursor:help;" data-bs-toggle="tooltip" data-bs-placement="right"
+                                title="Somente para lista fornecida pela Assessoria. O sistema busca os dados cadastrais automaticamente na base interna.">
+                                Lista da Assessoria
+                            </span>
+                            Coluna obrigatória: <b>CPF</b>
+                        </li>
+                        <li class="mt-1">
+                            <span class="badge bg-dark text-white me-1" style="cursor:help;" data-bs-toggle="tooltip" data-bs-placement="right"
+                                title="Para lista externa (não vinculada à Assessoria). O banco exige todos os dados das colunas exatos e no formato correto.">
+                                Lista Externa
+                            </span>
+                            Colunas obrigatórias: <b>CPF, NOME, DATA NASCIMENTO, SEXO</b>
+                        </li>
                     </ul>
                 </li>
                 <li class="mt-1"><b>5:</b> Cuidado no uso de opções e automações, os mesmos podem gerar custos ou impedir a consulta.</li>
@@ -68,10 +128,11 @@
                 <div class="row g-2 align-items-end text-start">
                     <div class="col-md-3">
                         <label class="fw-bold small text-dark mb-1">Agendamento:</label>
-                        <select name="agendamento_tipo" class="form-select form-select-sm border-primary" onchange="v8MudarTipoAgendamento(this.value)">
+                        <select name="agendamento_tipo" id="sel_agendamento_tipo" class="form-select form-select-sm border-primary" onchange="v8MudarTipoAgendamento(this.value)">
                             <option value="IMEDIATO">Imediato (Agora)</option>
                             <option value="PROGRAMADO">Data/Hora Específica</option>
                             <option value="DIA_MES">Todo dia X do mês</option>
+                            <option value="DIARIO">🔁 Início Diário (Horário Fixo)</option>
                         </select>
                     </div>
                     <div class="col-md-2 d-none" id="div_data_hora_agendada">
@@ -81,6 +142,27 @@
                     <div class="col-md-2 d-none" id="div_dia_mes_agendado">
                         <label class="fw-bold small text-dark mb-1">Dia do Mês (1 a 31):</label>
                         <input type="number" min="1" max="31" name="dia_mes_agendado" class="form-control form-control-sm border-primary" placeholder="Ex: 5">
+                    </div>
+                    <div class="col-md-2 d-none" id="div_hora_inicio_diario">
+                        <label class="fw-bold small text-dark mb-1">Horário de Início:</label>
+                        <input type="time" name="hora_inicio_diario" id="hora_inicio_diario" class="form-control form-control-sm border-warning fw-bold">
+                    </div>
+                    <div class="col-12 d-none" id="div_dias_mes_diario">
+                        <label class="fw-bold small text-dark mb-1">Dias do Mês: <span class="text-muted fw-normal">(deixe vazio = todos os dias)</span></label>
+                        <div class="border border-warning rounded p-2 bg-white shadow-sm">
+                            <div class="d-flex flex-wrap gap-1 mb-2" id="v8_dias_picker">
+                                <?php for($d=1; $d<=31; $d++): ?>
+                                <button type="button" class="btn btn-outline-secondary btn-sm v8-dia-btn fw-bold"
+                                    style="width:34px; height:30px; font-size:11px; padding:0;"
+                                    data-dia="<?= $d ?>" onclick="v8ToggleDia(this)"><?= $d ?></button>
+                                <?php endfor; ?>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <button type="button" class="btn btn-sm btn-warning border-dark fw-bold" onclick="v8SelecionarTodosDias()">Todos os dias</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary border-dark fw-bold" onclick="v8LimparDias()">Limpar</button>
+                            </div>
+                            <input type="hidden" name="dias_mes_diario" id="dias_mes_diario_val" value="TODOS">
+                        </div>
                     </div>
                     <div class="col-md-2">
                         <label class="fw-bold small text-dark mb-1">Limite Diário:</label>
@@ -202,6 +284,7 @@
                             <option value="IMEDIATO">Imediato (Agora)</option>
                             <option value="PROGRAMADO">Data/Hora Específica</option>
                             <option value="DIA_MES">Todo dia X do mês</option>
+                            <option value="DIARIO">🔁 Início Diário (Horário Fixo)</option>
                         </select>
                     </div>
                     <div class="col-md-4 d-none" id="div_edit_data_hora_agendada">
@@ -211,6 +294,27 @@
                     <div class="col-md-4 d-none" id="div_edit_dia_mes_agendado">
                         <label class="fw-bold small text-dark mb-1">Dia do Mês (1 a 31):</label>
                         <input type="number" min="1" max="31" id="edit_dia_mes_agendado" class="form-control border-primary" placeholder="Ex: 5">
+                    </div>
+                    <div class="col-md-4 d-none" id="div_edit_hora_inicio_diario">
+                        <label class="fw-bold small text-dark mb-1">Horário de Início:</label>
+                        <input type="time" id="edit_hora_inicio_diario" class="form-control border-warning fw-bold">
+                    </div>
+                    <div class="col-12 d-none" id="div_edit_dias_mes_diario">
+                        <label class="fw-bold small text-dark mb-1">Dias do Mês: <span class="text-muted fw-normal">(deixe vazio = todos os dias)</span></label>
+                        <div class="border border-warning rounded p-2 bg-white shadow-sm">
+                            <div class="d-flex flex-wrap gap-1 mb-2" id="v8_dias_picker_edit">
+                                <?php for($d=1; $d<=31; $d++): ?>
+                                <button type="button" class="btn btn-outline-secondary btn-sm v8-dia-btn-edit fw-bold"
+                                    style="width:34px; height:30px; font-size:11px; padding:0;"
+                                    data-dia="<?= $d ?>" onclick="v8ToggleDiaEdit(this)"><?= $d ?></button>
+                                <?php endfor; ?>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <button type="button" class="btn btn-sm btn-warning border-dark fw-bold" onclick="v8SelecionarTodosDiasEdit()">Todos os dias</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary border-dark fw-bold" onclick="v8LimparDiasEdit()">Limpar</button>
+                            </div>
+                            <input type="hidden" id="edit_dias_mes_diario" value="TODOS">
+                        </div>
                     </div>
                     <div class="col-md-4">
                         <label class="fw-bold small text-dark mb-1">Limite Diário (0 = Sem Limite):</label>
@@ -310,8 +414,26 @@
         </div>
     </div>
 </div>
+<!-- Modal de Confirmação de Ações V8 -->
+<div class="modal fade" id="v8ModalConfirm" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content shadow-lg border-0" style="border-radius:14px; overflow:hidden;">
+            <div class="modal-header py-2 px-3" id="v8ConfirmHdr">
+                <h6 class="modal-title fw-bold mb-0" id="v8ConfirmTitulo"></h6>
+            </div>
+            <div class="modal-body py-2 px-3">
+                <p class="small text-muted mb-0" id="v8ConfirmDescricao"></p>
+            </div>
+            <div class="modal-footer py-2 px-3 gap-2">
+                <button type="button" class="btn btn-sm btn-secondary px-3" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-sm fw-bold px-3" id="v8ConfirmBtnOk">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
-    let modalEditarLoteObj, modalAnotacoesLoteObj, modalAppendLoteObj;
+    let modalEditarLoteObj, modalAnotacoesLoteObj, modalAppendLoteObj, v8ModalConfirmObj;
     let windowDadosLoteAtual = [];
     let intervaloLoteV8 = null;
     let isMenuAcoesAberto = false; // TRAVA: Previne o piscar da tela enquanto o menu está aberto
@@ -325,19 +447,26 @@
         if(document.getElementById('modalEditarLote')) modalEditarLoteObj = new bootstrap.Modal(document.getElementById('modalEditarLote'));
         if(document.getElementById('modalAnotacoesLote')) modalAnotacoesLoteObj = new bootstrap.Modal(document.getElementById('modalAnotacoesLote'));
         if(document.getElementById('modalAppendLote')) modalAppendLoteObj = new bootstrap.Modal(document.getElementById('modalAppendLote'));
+        if(document.getElementById('v8ModalConfirm')) v8ModalConfirmObj = new bootstrap.Modal(document.getElementById('v8ModalConfirm'));
 
         const tabLote = document.querySelector('[data-bs-target="#tab-lote-csv"]');
         if(tabLote) {
             tabLote.addEventListener('shown.bs.tab', function (e) {
                 v8CarregarLotesCSV();
                 if(typeof windowListaChavesCache !== 'undefined') {
-                    let o = '<option value="">-- Selecione a Chave/Cliente --</option>'; 
-                    windowListaChavesCache.forEach(c => { o += `<option value="${c.ID}">${c.CLIENTE_NOME} (Saldo: R$ ${c.SALDO})</option>`; }); 
+                    let o = '<option value="">-- Selecione a Chave/Cliente --</option>';
+                    windowListaChavesCache.forEach(c => { o += `<option value="${c.ID}">${c.CLIENTE_NOME} (Saldo: R$ ${c.SALDO})</option>`; });
                     document.querySelectorAll('.v8-dropdown-clientes').forEach(s => s.innerHTML = o);
+                }
+                // Inicia verificação de agendamentos diários a cada 60s enquanto a aba está aberta
+                if(!window._v8DiarioInterval) {
+                    v8VerificarAgendamentosDiarios(); // Roda imediatamente ao abrir a aba
+                    window._v8DiarioInterval = setInterval(v8VerificarAgendamentosDiarios, 60000);
                 }
             });
             tabLote.addEventListener('hidden.bs.tab', function (e) {
                 if(intervaloLoteV8) { clearInterval(intervaloLoteV8); intervaloLoteV8 = null; }
+                if(window._v8DiarioInterval) { clearInterval(window._v8DiarioInterval); window._v8DiarioInterval = null; }
             });
         }
         
@@ -392,15 +521,86 @@
     function v8MudarTipoAgendamento(val) {
         document.getElementById('div_data_hora_agendada').classList.add('d-none');
         document.getElementById('div_dia_mes_agendado').classList.add('d-none');
+        document.getElementById('div_hora_inicio_diario').classList.add('d-none');
+        document.getElementById('div_dias_mes_diario').classList.add('d-none');
         if (val === 'PROGRAMADO') document.getElementById('div_data_hora_agendada').classList.remove('d-none');
         if (val === 'DIA_MES') document.getElementById('div_dia_mes_agendado').classList.remove('d-none');
+        if (val === 'DIARIO') {
+            document.getElementById('div_hora_inicio_diario').classList.remove('d-none');
+            document.getElementById('div_dias_mes_diario').classList.remove('d-none');
+        }
     }
 
     function v8MudarTipoAgendamentoEdit(val) {
         document.getElementById('div_edit_data_hora_agendada').classList.add('d-none');
         document.getElementById('div_edit_dia_mes_agendado').classList.add('d-none');
+        document.getElementById('div_edit_hora_inicio_diario').classList.add('d-none');
+        document.getElementById('div_edit_dias_mes_diario').classList.add('d-none');
         if (val === 'PROGRAMADO') document.getElementById('div_edit_data_hora_agendada').classList.remove('d-none');
         if (val === 'DIA_MES') document.getElementById('div_edit_dia_mes_agendado').classList.remove('d-none');
+        if (val === 'DIARIO') {
+            document.getElementById('div_edit_hora_inicio_diario').classList.remove('d-none');
+            document.getElementById('div_edit_dias_mes_diario').classList.remove('d-none');
+        }
+    }
+
+    // --- SELETOR DE DIAS (NOVO / FORMULÁRIO) ---
+    function v8ToggleDia(btn) {
+        btn.classList.toggle('btn-outline-secondary');
+        btn.classList.toggle('btn-warning');
+        v8AtualizarHiddenDias();
+    }
+    function v8SelecionarTodosDias() {
+        document.querySelectorAll('.v8-dia-btn').forEach(b => {
+            b.classList.remove('btn-outline-secondary'); b.classList.add('btn-warning');
+        });
+        document.getElementById('dias_mes_diario_val').value = 'TODOS';
+    }
+    function v8LimparDias() {
+        document.querySelectorAll('.v8-dia-btn').forEach(b => {
+            b.classList.remove('btn-warning'); b.classList.add('btn-outline-secondary');
+        });
+        document.getElementById('dias_mes_diario_val').value = 'TODOS';
+    }
+    function v8AtualizarHiddenDias() {
+        let selecionados = [];
+        document.querySelectorAll('.v8-dia-btn.btn-warning').forEach(b => selecionados.push(b.dataset.dia));
+        document.getElementById('dias_mes_diario_val').value = selecionados.length > 0 ? selecionados.join(',') : 'TODOS';
+    }
+
+    // --- SELETOR DE DIAS (EDIÇÃO) ---
+    function v8ToggleDiaEdit(btn) {
+        btn.classList.toggle('btn-outline-secondary');
+        btn.classList.toggle('btn-warning');
+        v8AtualizarHiddenDiasEdit();
+    }
+    function v8SelecionarTodosDiasEdit() {
+        document.querySelectorAll('.v8-dia-btn-edit').forEach(b => {
+            b.classList.remove('btn-outline-secondary'); b.classList.add('btn-warning');
+        });
+        document.getElementById('edit_dias_mes_diario').value = 'TODOS';
+    }
+    function v8LimparDiasEdit() {
+        document.querySelectorAll('.v8-dia-btn-edit').forEach(b => {
+            b.classList.remove('btn-warning'); b.classList.add('btn-outline-secondary');
+        });
+        document.getElementById('edit_dias_mes_diario').value = 'TODOS';
+    }
+    function v8AtualizarHiddenDiasEdit() {
+        let selecionados = [];
+        document.querySelectorAll('.v8-dia-btn-edit.btn-warning').forEach(b => selecionados.push(b.dataset.dia));
+        document.getElementById('edit_dias_mes_diario').value = selecionados.length > 0 ? selecionados.join(',') : 'TODOS';
+    }
+    function v8CarregarDiasEdit(diasStr) {
+        v8LimparDiasEdit();
+        if (!diasStr || diasStr === 'TODOS') { v8SelecionarTodosDiasEdit(); return; }
+        let arr = diasStr.split(',').map(s => s.trim());
+        document.querySelectorAll('.v8-dia-btn-edit').forEach(b => {
+            if (arr.includes(b.dataset.dia)) {
+                b.classList.remove('btn-outline-secondary'); b.classList.add('btn-warning');
+            }
+        });
+        document.getElementById('edit_dias_mes_diario').value = diasStr;
     }
 
     // --- FUNÇÃO EXPORTAR TUDO (MÁSTER) ---
@@ -494,6 +694,10 @@
                 
                 if(l.AGENDAMENTO_TIPO === 'PROGRAMADO') agendamentoInfo = `<span class="badge bg-warning text-dark ms-1">⏳ ${l.DATA_HORA_AGENDADA || 'Imediato'}</span>`;
                 if(l.AGENDAMENTO_TIPO === 'DIA_MES') agendamentoInfo = `<span class="badge bg-warning text-dark ms-1">⏳ Dia ${l.DIA_MES_AGENDADO || 'Atual'}</span>`;
+                if(l.AGENDAMENTO_TIPO === 'DIARIO') {
+                    let diasLabel = (!l.DIAS_MES_DIARIO || l.DIAS_MES_DIARIO === 'TODOS') ? 'todo dia' : 'dias ' + l.DIAS_MES_DIARIO;
+                    agendamentoInfo = `<span class="badge bg-warning text-dark ms-1">🔁 ${l.HORA_INICIO_DIARIO || '--:--'} (${diasLabel})</span>`;
+                }
                 if(l.LIMITE_DIARIO > 0) agendamentoInfo += `<span class="badge bg-info text-dark ms-1">Lmt: ${l.LIMITE_DIARIO} (Hj: ${l.PROCESSADOS_HOJE})</span>`;
 
                 let statusAtual = l.STATUS_FILA || l.status_fila || l.Status_Fila;
@@ -504,11 +708,16 @@
                 if (statusAtual === 'PENDENTE' && agendamentoTipoAtual !== 'IMEDIATO') {
                     statusAtual = 'AGENDADO';
                 }
+                // DIÁRIO aguardando horário aparece como AGUARDANDO_DIARIO
+                if (statusAtual === 'AGUARDANDO_DIARIO') { statusAtual = 'AGUARDANDO_DIARIO'; }
 
                 let idLoteReal = l.ID || l.id;
 
-                if (statusAtual === 'AGENDADO') { 
-                    badge = `<span class="badge bg-secondary border border-dark text-white"><i class="fas fa-calendar-alt"></i> AGENDADO</span>`; 
+                if (statusAtual === 'AGUARDANDO_DIARIO') {
+                    badge = `<span class="badge bg-info text-dark border border-dark"><i class="fas fa-clock me-1"></i> AGUARDANDO HORÁRIO</span>`;
+                    btnPausarLi = `<li><button class="dropdown-item fw-bold text-secondary" onclick="v8PausarRetomarLote(${idLoteReal}, 'PAUSAR')"><i class="fas fa-pause me-2"></i> Pausar Diário</button></li>`;
+                } else if (statusAtual === 'AGENDADO') {
+                    badge = `<span class="badge bg-secondary border border-dark text-white"><i class="fas fa-calendar-alt"></i> AGENDADO</span>`;
                     btnPausarLi = `<li><button class="dropdown-item fw-bold text-secondary" onclick="v8PausarRetomarLote(${idLoteReal}, 'PAUSAR')"><i class="fas fa-pause me-2"></i> Pausar (Cancelar Agend.)</button></li>`;
                 } else if (statusAtual === 'PROCESSANDO') { 
                     temRodando = true; 
@@ -592,47 +801,111 @@
                 let corStatusLote = statusLote === 'ATIVO' ? 'text-success' : 'text-danger';
                 let labelStatusLote = `<div class="mb-2 fw-bold ${corStatusLote}" style="font-size:11px;"><i class="fas fa-circle" style="font-size: 8px;"></i> ${statusLote}</div>`;
 
-                let btnAnotacoesLi = `<li><button class="dropdown-item fw-bold text-info" onclick="v8AbrirModalAnotacoes(${idLoteReal})"><i class="fas fa-sticky-note text-dark me-2"></i> <span class="text-dark">Anotações</span></button></li>`;
-                
+                // === NOVO MENU AÇÕES V8 LOTE ===
+                let isDiario = (l.AGENDAMENTO_TIPO === 'DIARIO');
                 let novoStatusTroca = statusLote === 'ATIVO' ? 'INATIVO' : 'ATIVO';
-                let btnAlternarStatusLi = `<li><button class="dropdown-item fw-bold text-secondary" onclick="v8AlternarStatusLote(${idLoteReal}, '${novoStatusTroca}')"><i class="fas fa-power-off me-2"></i> Tornar ${novoStatusTroca}</button></li><li><hr class="dropdown-divider"></li>`;
+                let iconeStatusTroca = statusLote === 'ATIVO' ? '🔴' : '🟢';
 
-                let btnExportarLi = `<li><a class="dropdown-item fw-bold text-success" href="ajax_api_v8_lote_csv.php?acao=exportar_resultado_lote&id_lote=${idLoteReal}" target="_blank"><i class="fas fa-file-excel me-2"></i> Exportar Resultado</a></li>`;
-                let btnRepErrosLi = `<li><button class="dropdown-item fw-bold text-warning" onclick="v8ReprocessarSimulacao(${idLoteReal})" data-bs-toggle="tooltip" data-bs-placement="left" title="Recupera o registro de margem e faz nova simulação."><i class="fas fa-sync-alt text-dark me-2"></i> <span class="text-dark">Reprocessar Simulação</span></button></li>`;
-                let btnRepTodosLi = `<li><button class="dropdown-item fw-bold text-dark" onclick="v8ReprocessarTodos(${idLoteReal})" data-bs-toggle="tooltip" data-bs-placement="left" title="Zera todo o histórico e reprocessa o lote."><i class="fas fa-redo me-2"></i> Reprocessar Todos</button></li>`;
-                
-                let btnEnviarWhatsLi = `<li><button class="dropdown-item fw-bold text-success" onclick="v8EnviarRelatorioLoteWhats(${idLoteReal})"><i class="fab fa-whatsapp me-2"></i> Enviar Relatório Whats</button></li>`;
+                // Extrai o conteúdo do btnPausarLi sem o wrapper <li>
+                // Para DIÁRIO: bloqueia Retomar manual (só pode pausar)
+                let btnPausarBtnRaw = btnPausarLi ? btnPausarLi.replace(/^<li>/, '').replace(/<\/li>$/, '').trim() : '';
+                let btnPausarBtn = btnPausarBtnRaw;
+                if (isDiario && (statusAtual === 'PAUSADO' || statusAtual === 'AGENDADO')) {
+                    btnPausarBtn = `<button class="dropdown-item fw-bold text-muted" disabled title="Lote Diário: o robô inicia automaticamente no horário configurado"><i class="fas fa-play me-2"></i> Ligar Robô (Automático)</button>`;
+                }
 
-                let btnEditarLi = '';
+                let btnTopEditar = '';
                 if (!restricaoLoteEditar) {
                     if (statusAtual === 'PAUSADO') {
-                        btnEditarLi = `<li><button class="dropdown-item fw-bold text-primary" onclick="v8AbrirModalEditarLote(${idLoteReal})"><i class="fas fa-edit me-2"></i> Editar Lote</button></li>`;
+                        btnTopEditar = `<button class="dropdown-item fw-bold text-primary" onclick="v8AbrirModalEditarLote(${idLoteReal})"><i class="fas fa-edit me-2"></i> Editar Lote</button>`;
                     } else {
-                        btnEditarLi = `<li><button class="dropdown-item fw-bold text-muted" disabled title="O Lote precisa estar PAUSADO para edição"><i class="fas fa-edit me-2"></i> Editar Lote (Requer Pausa)</button></li>`;
+                        btnTopEditar = `<button class="dropdown-item text-muted" disabled title="O Lote precisa estar PAUSADO para edição"><i class="fas fa-edit me-2"></i> Editar Lote (requer pausa)</button>`;
                     }
                 }
 
-                let btnApagarLi = '';
+                let btnRodapeApagar = '';
                 if (!restricaoLoteExcluir) {
-                    btnApagarLi = `<li><hr class="dropdown-divider"></li><li><button class="dropdown-item fw-bold text-danger" onclick="v8ExcluirLote(${idLoteReal})"><i class="fas fa-trash me-2"></i> Apagar Lote</button></li>`;
+                    btnRodapeApagar = `<button class="v8-btn-apagar" onclick="v8ExcluirLote(${idLoteReal})"><i class="fas fa-trash me-2"></i> 🗑️ Apagar Lote</button>`;
                 }
 
                 let menuAcoes = `
                 <div class="btn-group dropstart w-100">
-                  <button class="btn btn-sm btn-dark dropdown-toggle fw-bold shadow-sm w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="markMenuAsOpen()">
-                    <i class="fas fa-bars"></i> Mais
+                  <button class="btn btn-sm btn-dark dropdown-toggle fw-bold shadow-sm w-100" type="button"
+                          data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" onclick="markMenuAsOpen()">
+                    <i class="fas fa-bars"></i> Ações
                   </button>
-                  <ul class="dropdown-menu shadow-lg border-dark">
-                    ${btnAnotacoesLi}
-                    ${btnAlternarStatusLi}
-                    ${btnPausarLi}
-                    ${btnEditarLi}
-                    ${btnExportarLi}
-                    ${btnEnviarWhatsLi}
-                    ${btnRepErrosLi}
-                    ${btnRepTodosLi}
-                    ${btnApagarLi}
-                  </ul>
+                  <div class="dropdown-menu shadow-lg p-0 v8-acoes-dropdown">
+
+                    <div class="v8-top-actions">
+                      ${btnPausarBtn}
+                      <button class="dropdown-item fw-bold text-secondary" onclick="v8AlternarStatusLote(${idLoteReal}, '${novoStatusTroca}')">
+                        <i class="fas fa-power-off me-2"></i>${iconeStatusTroca} Tornar ${novoStatusTroca}
+                      </button>
+                      ${btnTopEditar}
+                    </div>
+
+                    <div class="v8-secao">
+                      <div class="v8-secao-hdr v8-azul" onclick="v8ToggleSecaoLote(this); event.stopPropagation();">
+                        <span>🔄 REPROCESSAMENTO</span>
+                        <i class="fas fa-chevron-down v8-chevron"></i>
+                      </div>
+                      <div class="v8-secao-bdy" style="display:none;">
+                        <button class="v8-item v8-item-azul" onclick="v8ReprocessarConsentimento(${idLoteReal})">
+                          <span class="v8-item-icon">📡</span>
+                          <span class="v8-item-txt"><strong>Consentimento</strong><small>Re-verifica CPFs aguardando Dataprev. Sem novo custo.</small></span>
+                        </button>
+                        <button class="v8-item v8-item-azul" onclick="v8ReprocessarErros(${idLoteReal})">
+                          <span class="v8-item-icon">⚠️</span>
+                          <span class="v8-item-txt"><strong>Erros</strong><small>Refaz simulação dos CPFs com erro de margem. Sem novo custo.</small></span>
+                        </button>
+                        ${isDiario
+                            ? `<button class="v8-item v8-manut" disabled>
+                                <span class="v8-item-icon">🔁</span>
+                                <span class="v8-item-txt"><strong>Tudo</strong><small>🔒 Bloqueado para lotes Diários.</small></span>
+                               </button>`
+                            : `<button class="v8-item v8-item-azul" onclick="v8ReprocessarTodos(${idLoteReal})">
+                                <span class="v8-item-icon">🔁</span>
+                                <span class="v8-item-txt"><strong>Tudo</strong><small>Reinicia todos os CPFs do zero. Pode gerar novo custo.</small></span>
+                               </button>`
+                        }
+                      </div>
+                    </div>
+
+                    <div class="v8-secao">
+                      <div class="v8-secao-hdr v8-verde" onclick="v8ToggleSecaoLote(this); event.stopPropagation();">
+                        <span>📊 RELATÓRIOS/CAMPANHAS</span>
+                        <i class="fas fa-chevron-down v8-chevron"></i>
+                      </div>
+                      <div class="v8-secao-bdy" style="display:none;">
+                        <button class="v8-item v8-item-verde" onclick="v8ExportarResultado(${idLoteReal})">
+                          <span class="v8-item-icon">📁</span>
+                          <span class="v8-item-txt"><strong>Exportar Resultado</strong><small>Baixar planilha CSV com todos os resultados do lote.</small></span>
+                        </button>
+                        <button class="v8-item v8-item-verde" onclick="v8EnviarRelatorioLoteWhats(${idLoteReal})">
+                          <span class="v8-item-icon">📱</span>
+                          <span class="v8-item-txt"><strong>Disparar via Grupo Whats</strong><small>Envia relatório CSV no grupo WhatsApp da equipe.</small></span>
+                        </button>
+                        <button class="v8-item v8-item-verde v8-manut" disabled>
+                          <span class="v8-item-icon">📲</span>
+                          <span class="v8-item-txt"><strong>Disparar msg via Grupo Whats</strong><small>🔧 Em manutenção</small></span>
+                        </button>
+                        <button class="v8-item v8-item-verde v8-manut" disabled>
+                          <span class="v8-item-icon">💬</span>
+                          <span class="v8-item-txt"><strong>Disparar msg via Whats</strong><small>🔧 Em manutenção</small></span>
+                        </button>
+                        <button class="v8-item v8-item-verde v8-manut" disabled>
+                          <span class="v8-item-icon">📡</span>
+                          <span class="v8-item-txt"><strong>Disparar via API Meta</strong><small>🔧 Em manutenção</small></span>
+                        </button>
+                        <button class="v8-item v8-item-verde v8-manut" disabled>
+                          <span class="v8-item-icon">🎯</span>
+                          <span class="v8-item-txt"><strong>Criar Campanha</strong><small>🔧 Em manutenção</small></span>
+                        </button>
+                      </div>
+                    </div>
+
+                    ${btnRodapeApagar ? `<div class="v8-rodape-acoes">${btnRodapeApagar}</div>` : ''}
+                  </div>
                 </div>`;
 
                 tb.innerHTML += `<tr class="bg-white border-bottom border-secondary">
@@ -659,11 +932,37 @@
         }
     }
 
+    // --- CONFIRM MODAL HELPER ---
+    function v8Confirmar(titulo, descricao, corBtn, corBorda, callback) {
+        document.getElementById('v8ConfirmTitulo').innerHTML = titulo;
+        document.getElementById('v8ConfirmDescricao').innerHTML = descricao;
+        const btnOk = document.getElementById('v8ConfirmBtnOk');
+        btnOk.className = 'btn btn-sm fw-bold px-3 ' + corBtn;
+        document.getElementById('v8ConfirmHdr').style.borderLeftColor = corBorda;
+        btnOk.onclick = () => { v8ModalConfirmObj.hide(); callback(); };
+        v8ModalConfirmObj.show();
+    }
+
+    // --- TOGGLE ACCORDION DO MENU ---
+    function v8ToggleSecaoLote(hdr) {
+        const body = hdr.nextElementSibling;
+        const chevron = hdr.querySelector('.v8-chevron');
+        const aberto = body.style.display !== 'none';
+        body.style.display = aberto ? 'none' : 'block';
+        chevron.classList.toggle('aberto', !aberto);
+    }
+
     // --- FUNÇÕES DE AÇÃO DO LOTE ---
     async function v8AlternarStatusLote(idLote, novoStatus) {
-        if(!confirm(`Deseja tornar este lote ${novoStatus}?`)) return;
-        const res = await v8Req('ajax_api_v8_lote_csv.php', 'alternar_status_lote', { id_lote: idLote, novo_status: novoStatus }, true, "Alterando Status...");
-        if(res.success) { v8CarregarLotesCSV(); } else { alert("❌ Erro: " + res.msg); }
+        const desc = novoStatus === 'INATIVO'
+            ? 'O lote ficará invisível e não será processado até ser reativado.'
+            : 'O lote voltará a aparecer e poderá ser processado normalmente.';
+        const cor = novoStatus === 'INATIVO' ? 'btn-warning' : 'btn-success';
+        const borda = novoStatus === 'INATIVO' ? '#ffc107' : '#198754';
+        v8Confirmar(`🔌 Tornar ${novoStatus}`, desc, cor, borda, async () => {
+            const res = await v8Req('ajax_api_v8_lote_csv.php', 'alternar_status_lote', { id_lote: idLote, novo_status: novoStatus }, true, "Alterando Status...");
+            if(res.success) { v8CarregarLotesCSV(); } else { alert("❌ Erro: " + res.msg); }
+        });
     }
 
     function v8AbrirModalEditarLote(id) {
@@ -672,7 +971,7 @@
 
         document.getElementById('edit_lote_id').value = id;
         document.getElementById('edit_lote_agrupamento').value = lote.NOME_IMPORTACAO || lote.nome_importacao;
-        
+
         let agTipo = lote.AGENDAMENTO_TIPO || lote.agendamento_tipo || 'IMEDIATO';
         document.getElementById('edit_agendamento_tipo').value = agTipo;
         v8MudarTipoAgendamentoEdit(agTipo);
@@ -680,6 +979,8 @@
         let dh = lote.DATA_HORA_AGENDADA || lote.data_hora_agendada;
         document.getElementById('edit_data_hora_agendada').value = dh ? dh.substring(0, 16) : '';
         document.getElementById('edit_dia_mes_agendado').value = lote.DIA_MES_AGENDADO || lote.dia_mes_agendado || '';
+        document.getElementById('edit_hora_inicio_diario').value = lote.HORA_INICIO_DIARIO || lote.hora_inicio_diario || '';
+        v8CarregarDiasEdit(lote.DIAS_MES_DIARIO || lote.dias_mes_diario || 'TODOS');
         document.getElementById('edit_limite_diario').value = lote.LIMITE_DIARIO || lote.limite_diario || 0;
 
         document.getElementById('edit_somente_simular').checked = (lote.SOMENTE_SIMULAR == 1 || lote.somente_simular == 1);
@@ -691,12 +992,18 @@
     }
 
     async function v8SalvarEdicaoLote() {
+        let agTipoEdit = document.getElementById('edit_agendamento_tipo').value;
+        if (agTipoEdit === 'DIARIO' && !document.getElementById('edit_hora_inicio_diario').value) {
+            return alert("Informe o horário de início para o agendamento Diário.");
+        }
         let payload = {
             id_lote: document.getElementById('edit_lote_id').value,
             agrupamento: document.getElementById('edit_lote_agrupamento').value,
-            agendamento_tipo: document.getElementById('edit_agendamento_tipo').value,
+            agendamento_tipo: agTipoEdit,
             data_hora_agendada: document.getElementById('edit_data_hora_agendada').value,
             dia_mes_agendado: document.getElementById('edit_dia_mes_agendado').value,
+            hora_inicio_diario: document.getElementById('edit_hora_inicio_diario').value,
+            dias_mes_diario: document.getElementById('edit_dias_mes_diario').value,
             limite_diario: document.getElementById('edit_limite_diario').value,
             somente_simular: document.getElementById('edit_somente_simular').checked ? 1 : 0,
             atualizar_telefone: document.getElementById('edit_atualizar_telefone').checked ? 1 : 0,
@@ -710,41 +1017,88 @@
     }
 
     async function v8EnviarRelatorioLoteWhats(id) {
-        if(!confirm("Deseja gerar o arquivo CSV deste lote e disparar agora mesmo no WhatsApp da equipe?")) return;
-        const res = await v8Req('ajax_api_v8_lote_csv.php', 'enviar_relatorio_whatsapp', { id_lote: id }, true, "Gerando e Enviando...");
-        if(res.success) { alert("✅ " + res.msg); } else { alert("❌ Erro: " + res.msg); }
+        v8Confirmar('📱 Disparar via Grupo Whats',
+            'Gera o arquivo CSV deste lote e envia agora mesmo no grupo WhatsApp da equipe.',
+            'btn-success', '#198754',
+            async () => {
+                const res = await v8Req('ajax_api_v8_lote_csv.php', 'enviar_relatorio_whatsapp', { id_lote: id }, true, "Gerando e Enviando...");
+                if(res.success) { alert("✅ " + res.msg); } else { alert("❌ Erro: " + res.msg); }
+            });
     }
 
-    async function v8ReprocessarSimulacao(id) {
-        if(!confirm('Deseja recuperar as margens e reprocessar as simulações apenas dos CPFs com ERRO? \n\n⚠️ O sistema irá recuperar os IDs disponíveis e refazer a simulação padrão, sem gerar novas consultas na Dataprev.')) return;
-        const res = await v8Req('ajax_api_v8_lote_csv.php', 'reprocessar_simulacao', { id_lote: id }, true, "Reprocessando...");
-        if(res.success) { alert("✅ " + res.msg); if(res.cpf_dono) v8AcordarRobo(res.cpf_dono); v8CarregarLotesCSV(); } 
-        else { alert("❌ Erro: " + res.msg); }
+    async function v8ReprocessarConsentimento(id) {
+        v8Confirmar('📡 Reprocessar Consentimento',
+            'Re-verifica todos os CPFs que estão <strong>aguardando retorno da Dataprev</strong>.<br><small class="text-muted">Não gera novo custo — apenas relê o resultado existente.</small>',
+            'btn-primary', '#1a73e8',
+            async () => {
+                const res = await v8Req('ajax_api_v8_lote_csv.php', 'reprocessar_consentimento', { id_lote: id }, true, "Reprocessando...");
+                if(res.success) { alert("✅ " + res.msg); if(res.cpf_dono) v8AcordarRobo(res.cpf_dono); v8CarregarLotesCSV(); }
+                else { alert("❌ Erro: " + res.msg); }
+            });
     }
-    
+
+    async function v8ReprocessarErros(id) {
+        v8Confirmar('⚠️ Reprocessar Erros',
+            'Refaz a simulação dos CPFs que retornaram com <strong>erro de margem</strong>.<br><small class="text-muted">Não gera novo custo — recupera consentimento existente na V8.</small>',
+            'btn-primary', '#1a73e8',
+            async () => {
+                const res = await v8Req('ajax_api_v8_lote_csv.php', 'reprocessar_erros', { id_lote: id }, true, "Reprocessando...");
+                if(res.success) { alert("✅ " + res.msg); if(res.cpf_dono) v8AcordarRobo(res.cpf_dono); v8CarregarLotesCSV(); }
+                else { alert("❌ Erro: " + res.msg); }
+            });
+    }
+
     async function v8ReprocessarTodos(id) {
-        if(!confirm('⚠️ ATENÇÃO: Deseja ZERAR e reprocessar TODOS os CPFs deste lote do zero? \n\nO lote inteiro será reiniciado e os custos de API poderão ser cobrados novamente.')) return;
-        const res = await v8Req('ajax_api_v8_lote_csv.php', 'reprocessar_todos', { id_lote: id }, true, "Reprocessando...");
-        if(res.success) { alert("✅ " + res.msg); if(res.cpf_dono) v8AcordarRobo(res.cpf_dono); v8CarregarLotesCSV(); } 
-        else { alert("❌ Erro: " + res.msg); }
+        v8Confirmar('🔁 Reprocessar Tudo',
+            '⚠️ <strong>ATENÇÃO:</strong> Todos os CPFs serão zerados e o processo iniciará do zero.<br><small class="text-danger">Os custos de consulta poderão ser cobrados novamente.</small>',
+            'btn-danger', '#dc3545',
+            async () => {
+                const res = await v8Req('ajax_api_v8_lote_csv.php', 'reprocessar_todos', { id_lote: id }, true, "Reprocessando...");
+                if(res.success) { alert("✅ " + res.msg); if(res.cpf_dono) v8AcordarRobo(res.cpf_dono); v8CarregarLotesCSV(); }
+                else { alert("❌ Erro: " + res.msg); }
+            });
+    }
+
+    function v8ExportarResultado(id) {
+        v8Confirmar('📁 Exportar Resultado',
+            'Baixa a planilha CSV com todos os resultados do lote (margem, simulação, status de cada CPF).',
+            'btn-success', '#198754',
+            () => { window.open(`ajax_api_v8_lote_csv.php?acao=exportar_resultado_lote&id_lote=${id}`, '_blank'); });
     }
 
     async function v8PausarRetomarLote(id, acao) {
-        let msg = acao === 'PAUSAR' ? 'Deseja pausar o processamento deste lote?' : (acao === 'RETOMAR_LIMITE' ? 'Deseja ignorar o limite e continuar processando o lote hoje?' : 'Deseja retomar o processamento deste lote?');
-        if(!confirm(msg)) return;
-        const res = await v8Req('ajax_api_v8_lote_csv.php', 'pausar_retomar_lote', { id_lote: id, acao_lote: acao }, true, "Aguarde...");
-        if(res.success) { if(res.cpf_dono && acao !== 'PAUSAR') v8AcordarRobo(res.cpf_dono); v8CarregarLotesCSV(); } 
-        else { alert("❌ Erro: " + res.msg); }
+        const cfgs = {
+            'PAUSAR':        { t: '⏸️ Pausar Lote',      d: 'O processamento será interrompido. Os CPFs já processados são mantidos.',           cor: 'btn-warning', b: '#ffc107' },
+            'RETOMAR':       { t: '▶️ Retomar Lote',      d: 'O processamento será reiniciado do ponto onde parou.',                              cor: 'btn-primary', b: '#0d6efd' },
+            'RETOMAR_LIMITE':{ t: '⏩ Continuar Hoje',    d: 'Ignora o limite diário e continua processando o lote hoje.',                         cor: 'btn-primary', b: '#0d6efd' }
+        };
+        const cfg = cfgs[acao] || cfgs['PAUSAR'];
+        v8Confirmar(cfg.t, cfg.d, cfg.cor, cfg.b, async () => {
+            const res = await v8Req('ajax_api_v8_lote_csv.php', 'pausar_retomar_lote', { id_lote: id, acao_lote: acao }, true, "Aguarde...");
+            if(res.success) { if(res.cpf_dono && acao !== 'PAUSAR') v8AcordarRobo(res.cpf_dono); v8CarregarLotesCSV(); }
+            else { alert("❌ Erro: " + res.msg); }
+        });
     }
 
-    async function v8ExcluirLote(id) { 
-        if(!confirm('Apagar Lote e todo o histórico vinculado?')) return; 
-        const res = await v8Req('ajax_api_v8_lote_csv.php', 'excluir_lote', { id_lote: id }, true, "Apagando..."); 
-        if(res.success) v8CarregarLotesCSV(); else alert("Erro: " + res.msg); 
+    async function v8ExcluirLote(id) {
+        v8Confirmar('🗑️ Apagar Lote',
+            '⚠️ <strong>Esta ação é irreversível.</strong> O lote e todo o histórico vinculado serão apagados permanentemente.',
+            'btn-danger', '#dc3545',
+            async () => {
+                const res = await v8Req('ajax_api_v8_lote_csv.php', 'excluir_lote', { id_lote: id }, true, "Apagando...");
+                if(res.success) v8CarregarLotesCSV(); else alert("Erro: " + res.msg);
+            });
     }
     
-    async function v8ForcarProcessamentoLote() { 
-        const res = await v8Req('ajax_api_v8_lote_csv.php', 'forcar_processamento_lote', {}, true, "Destravando..."); 
+    async function v8VerificarAgendamentosDiarios() {
+        try {
+            const res = await v8Req('ajax_api_v8_lote_csv.php', 'verificar_agendamentos_diarios', {}, false);
+            if (res && res.disparados > 0) { v8CarregarLotesCSV(); }
+        } catch(e) {}
+    }
+
+    async function v8ForcarProcessamentoLote() {
+        const res = await v8Req('ajax_api_v8_lote_csv.php', 'forcar_processamento_lote', {}, true, "Destravando...");
         if(res.success) { alert("✅ " + res.msg); v8CarregarLotesCSV(); } 
     }
 

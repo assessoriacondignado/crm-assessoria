@@ -31,6 +31,15 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
   .table-fila th { background-color: #343a40; color: white; font-size: 0.75rem; text-transform: uppercase; text-align: center; vertical-align: middle; }
   .table-fila td { text-align: center; vertical-align: middle; }
   .filtro-avancado-box { background: #f8f9fa; border: 1px solid #ced4da; border-radius: 8px; padding: 15px; margin-bottom: 20px; box-shadow: inset 0 1px 3px rgba(0,0,0,.05); }
+  /* === Botões de Reprocessamento Manual === */
+  .v8m-btn-rep { display: block; width: 100%; background: none; border: 1px solid; border-radius: 5px; padding: 3px 7px; font-size: 10px; font-weight: 700; cursor: pointer; transition: background .12s, box-shadow .12s; }
+  .v8m-btn-rep:hover { box-shadow: 0 1px 4px rgba(0,0,0,.15); }
+  .v8m-btn-azul    { border-color: #1a73e8; color: #1a73e8; }
+  .v8m-btn-azul:hover    { background: rgba(26,115,232,.1); }
+  .v8m-btn-cinza   { border-color: #6c757d; color: #6c757d; }
+  .v8m-btn-cinza:hover   { background: rgba(108,117,125,.1); }
+  .v8m-btn-vermelho { border-color: #dc3545; color: #dc3545; }
+  .v8m-btn-vermelho:hover { background: rgba(220,53,69,.1); }
 </style>
 
 <div id="v8-loader" class="v8-loader-overlay"><div class="v8-loader-content"><div class="spinner-border text-danger" style="width: 3rem; height: 3rem;" role="status"></div><h5 id="v8-loader-msg" class="mt-3 text-dark fw-bold">Aguarde...</h5></div></div>
@@ -63,17 +72,31 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
                 <div class="tab-content">
                     
                     <div class="tab-pane fade show active" id="tab-consulta">
-                        <div class="caixa-cobranca mb-4">
-                            <label class="form-label fw-bold small text-success">Sua Chave/Credencial Disponível (Dono):</label>
-                            <select id="v8_cobrar_manual" class="form-select form-select-sm v8-dropdown-clientes fw-bold" onchange="v8AtualizarSaldosTopo()"></select>
+                        <div class="caixa-cobranca mb-3">
+                            <a data-bs-toggle="collapse" href="#collapseChaveManual" role="button" aria-expanded="true" aria-controls="collapseChaveManual" class="text-decoration-none d-block">
+                                <div class="fw-bold small text-success d-flex justify-content-between align-items-center">
+                                    <span><i class="fas fa-key me-1"></i> Sua Chave/Credencial Disponível (Dono)</span>
+                                    <i class="fas fa-chevron-down text-dark fs-6"></i>
+                                </div>
+                            </a>
+                            <div class="collapse show mt-2" id="collapseChaveManual">
+                                <select id="v8_cobrar_manual" class="form-select form-select-sm v8-dropdown-clientes fw-bold" onchange="v8AtualizarSaldosTopo()"></select>
+                            </div>
                         </div>
-                        
+
                         <div class="bg-light p-3 border rounded shadow-sm mb-4">
-                            <h6 class="fw-bold text-danger border-bottom pb-2 mb-3"><i class="fas fa-search me-2"></i>PASSO 1: Localizar Cadastro do Cliente</h6>
-                            <div class="row mb-3"><div class="col-md-12 position-relative"><label class="form-label fw-bold text-dark mb-1">Pesquisar Cliente (CPF, Nome ou Duplo com vírgula):</label><div class="input-group input-group-sm"><span class="input-group-text bg-white border-dark"><i class="fas fa-search text-muted"></i></span><input type="text" id="v8_busca_cliente" class="form-control border-dark border-start-0" placeholder="Ex: MARIA DA SILVA, 000.000.000-00" autocomplete="off" onkeyup="v8PesquisarClienteBanco(this.value)"></div><div id="v8_resultado_busca" class="list-group position-absolute w-100 shadow-lg border border-dark d-none" style="z-index: 1000; top: 60px; max-height: 250px; overflow-y: auto;"></div></div></div>
-                            <div id="v8_alerta_cadastro" class="alert alert-info d-none small fw-bold py-2 mb-3"></div>
-                            <div class="row g-2 mb-3"><div class="col-md-3"><label class="form-label fw-bold text-dark mb-1">CPF:</label><input type="text" id="v8_input_cpf" class="form-control form-control-sm border-secondary bg-light" readonly></div><div class="col-md-3"><label class="form-label fw-bold text-dark mb-1">Nascimento:</label><input type="date" id="v8_input_nascimento" class="form-control form-control-sm border-secondary bg-light" readonly></div><div class="col-md-6"><label class="form-label fw-bold text-dark mb-1">Nome Completo:</label><input type="text" id="v8_input_nome" class="form-control form-control-sm border-secondary bg-light fw-bold" readonly></div></div>
-                            <div class="row g-2 align-items-end"><div class="col-md-3"><label class="form-label fw-bold text-dark mb-1">Gênero:</label><select id="v8_input_genero" class="form-select form-select-sm border-dark"><option value="female">Feminino</option><option value="male">Masculino</option></select></div><div class="col-md-4"><label class="form-label fw-bold text-dark mb-1">Telefone (Opcional):</label><input type="text" id="v8_input_telefone" class="form-control form-control-sm border-dark" maxlength="11" placeholder="Somente números"></div><input type="hidden" id="v8_input_email" value="cliente@gmail.com"><div class="col-md-5 d-flex gap-2"><button class="btn btn-secondary btn-sm w-25 fw-bold shadow-sm" onclick="v8LimparFormulario()"><i class="fas fa-eraser"></i></button><button id="btn_gerar_consent" class="btn btn-danger btn-sm w-75 fw-bold shadow-sm" onclick="v8ExecutarPasso1E2()"><i class="fas fa-play me-1"></i> Gerar Consentimento</button></div></div>
+                            <a data-bs-toggle="collapse" href="#collapsePasso1" role="button" aria-expanded="true" aria-controls="collapsePasso1" class="text-decoration-none d-block">
+                                <h6 class="fw-bold text-danger mb-0 d-flex justify-content-between align-items-center">
+                                    <span><i class="fas fa-search me-2"></i>PASSO 1: Localizar Cadastro do Cliente</span>
+                                    <i class="fas fa-chevron-down text-dark fs-6"></i>
+                                </h6>
+                            </a>
+                            <div class="collapse show mt-3" id="collapsePasso1">
+                                <div class="row mb-3"><div class="col-md-12 position-relative"><label class="form-label fw-bold text-dark mb-1">Pesquisar Cliente (CPF, Nome ou Duplo com vírgula):</label><div class="input-group input-group-sm"><span class="input-group-text bg-white border-dark"><i class="fas fa-search text-muted"></i></span><input type="text" id="v8_busca_cliente" class="form-control border-dark border-start-0" placeholder="Ex: MARIA DA SILVA, 000.000.000-00" autocomplete="off" onkeyup="v8PesquisarClienteBanco(this.value)"></div><div id="v8_resultado_busca" class="list-group position-absolute w-100 shadow-lg border border-dark d-none" style="z-index: 1000; top: 60px; max-height: 250px; overflow-y: auto;"></div></div></div>
+                                <div id="v8_alerta_cadastro" class="alert alert-info d-none small fw-bold py-2 mb-3"></div>
+                                <div class="row g-2 mb-3"><div class="col-md-3"><label class="form-label fw-bold text-dark mb-1">CPF:</label><input type="text" id="v8_input_cpf" class="form-control form-control-sm border-secondary bg-light" readonly></div><div class="col-md-3"><label class="form-label fw-bold text-dark mb-1">Nascimento:</label><input type="date" id="v8_input_nascimento" class="form-control form-control-sm border-secondary bg-light" readonly></div><div class="col-md-6"><label class="form-label fw-bold text-dark mb-1">Nome Completo:</label><input type="text" id="v8_input_nome" class="form-control form-control-sm border-secondary bg-light fw-bold" readonly></div></div>
+                                <div class="row g-2 align-items-end"><div class="col-md-3"><label class="form-label fw-bold text-dark mb-1">Gênero:</label><select id="v8_input_genero" class="form-select form-select-sm border-dark"><option value="female">Feminino</option><option value="male">Masculino</option></select></div><div class="col-md-4"><label class="form-label fw-bold text-dark mb-1">Telefone (Opcional):</label><input type="text" id="v8_input_telefone" class="form-control form-control-sm border-dark" maxlength="11" placeholder="Somente números"></div><input type="hidden" id="v8_input_email" value="cliente@gmail.com"><div class="col-md-5 d-flex gap-2"><button class="btn btn-secondary btn-sm w-25 fw-bold shadow-sm" onclick="v8LimparFormulario()"><i class="fas fa-eraser"></i></button><button id="btn_gerar_consent" class="btn btn-danger btn-sm w-75 fw-bold shadow-sm" onclick="v8ExecutarPasso1E2()"><i class="fas fa-play me-1"></i> Gerar Consentimento</button></div></div>
+                            </div>
                         </div>
                         
                         <div class="d-flex justify-content-between align-items-center mt-5 mb-2">
@@ -86,8 +109,8 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
                         <div class="collapse mb-3" id="collapseMontadorFila"><div class="filtro-avancado-box"><h6 class="text-dark fw-bold border-bottom pb-2 mb-3"><i class="fas fa-search me-2 text-primary"></i>Buscar Operações</h6><div class="row g-2 align-items-end"><div class="col-md-2"><label class="small fw-bold text-dark mb-1">Data Inicial</label><input type="date" id="filtro_fila_data_ini" class="form-control border-secondary"></div><div class="col-md-2"><label class="small fw-bold text-dark mb-1">Data Final</label><input type="date" id="filtro_fila_data_fim" class="form-control border-secondary"></div><div class="col-md-2"><label class="small fw-bold text-dark mb-1">CPF</label><input type="text" id="filtro_fila_cpf" class="form-control border-secondary" placeholder="Somente números"></div><div class="col-md-3"><label class="small fw-bold text-dark mb-1">Nome do Cliente</label><input type="text" id="filtro_fila_nome" class="form-control border-secondary" placeholder="Parte do nome"></div><div class="col-md-3 d-flex gap-2"><button class="btn btn-outline-secondary btn-sm w-100 fw-bold shadow-sm" onclick="v8LimparFiltrosFila()">Limpar</button><button class="btn btn-primary btn-sm w-100 fw-bold shadow-sm border-dark" onclick="v8CarregarFila()"><i class="fas fa-search"></i> Executar</button></div></div></div></div>
                         <div class="table-responsive border border-dark rounded shadow-sm" style="max-height: 600px; overflow-y: auto;">
                             <table class="table table-hover table-bordered table-sm align-middle mb-0 table-fila">
-                                <thead><tr><th>Data Fila</th><th>CPF</th><th class="border-start border-end border-danger">Autorização ID Consulta</th><th class="border-end border-danger">ID Config (Margem)</th><th class="border-end border-danger">ID Simulação</th><th class="border-end border-danger">ID Proposta</th><th>Ações</th></tr></thead>
-                                <tbody id="v8_fila_body" class="bg-white"><tr><td colspan="7" class="py-4 text-muted">Carregando fila...</td></tr></tbody>
+                                <thead><tr><th>ID / Data</th><th>Cliente e Origem</th><th class="border-start border-end border-danger">Autorização ID Consulta</th><th class="border-end border-danger">ID Config (Margem)</th><th class="border-end border-danger">ID Simulação</th><th class="border-end border-danger">ID Proposta</th><th style="min-width:120px;">Ações</th><th style="min-width:110px;">Campanhas</th></tr></thead>
+                                <tbody id="v8_fila_body" class="bg-white"><tr><td colspan="8" class="py-4 text-muted">Carregando fila...</td></tr></tbody>
                             </table>
                         </div>
                     </div>
@@ -180,6 +203,24 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
 <div class="modal fade" id="modalPendenciaPix" tabindex="-1"><div class="modal-dialog"><div class="modal-content border-dark shadow-lg"><div class="modal-header bg-warning text-dark border-bottom border-dark"><h5 class="modal-title fw-bold text-uppercase"><i class="fas fa-exclamation-triangle me-2"></i> Resolver Pendência PIX</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body bg-light p-4"><input type="hidden" id="v8_pend_id_db"><div class="mb-3"><label class="fw-bold text-dark mb-1">Nova Chave PIX</label><input type="text" id="v8_pend_pix" class="form-control border-dark"></div><div class="mb-4"><label class="fw-bold text-dark mb-1">Tipo da Chave</label><select id="v8_pend_tipo_pix" class="form-select border-dark"><option value="CPF">CPF</option><option value="PHONE">Celular</option><option value="EMAIL">E-mail</option><option value="RANDOM">Aleatória</option></select></div><button type="button" class="btn btn-success w-100 fw-bold border-dark shadow-sm fs-5" onclick="v8ResolverPendenciaPix()"><i class="fas fa-paper-plane me-2"></i> Salvar</button></div></div></div></div>
 
 <div class="modal fade" id="modalAjusteSaldo" tabindex="-1"><div class="modal-dialog"><div class="modal-content border-dark shadow-lg"><div class="modal-header bg-primary text-white border-bottom border-dark"><h5 class="modal-title fw-bold text-uppercase"><i class="fas fa-coins me-2"></i> Ajuste de Saldo</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body bg-light p-4"><input type="hidden" id="ajuste_chave_id"><div class="mb-3"><label class="fw-bold text-dark mb-1">Tipo</label><select id="ajuste_tipo" class="form-select border-dark fw-bold"><option value="CREDITO" class="text-success">Adicionar (Crédito)</option><option value="DEBITO" class="text-danger">Remover (Débito)</option></select></div><div class="mb-3"><label class="fw-bold text-dark mb-1">Valor (R$)</label><input type="number" id="ajuste_valor" class="form-control border-dark fw-bold fs-5 text-primary" step="0.01"></div><div class="mb-4"><label class="fw-bold text-dark mb-1">Motivo</label><input type="text" id="ajuste_obs" class="form-control border-dark"></div><button type="button" class="btn btn-success w-100 fw-bold border-dark shadow-sm fs-5" onclick="v8SalvarAjusteSaldo()"><i class="fas fa-save me-2"></i> Confirmar</button></div></div></div></div>
+
+<!-- Modal confirmação ações manuais V8 -->
+<div class="modal fade" id="v8ManualConfirm" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content shadow-lg border-0" style="border-radius:14px; overflow:hidden;">
+            <div class="modal-header py-2 px-3" id="v8ManualConfirmHdr">
+                <h6 class="modal-title fw-bold mb-0" id="v8ManualConfirmTitulo"></h6>
+            </div>
+            <div class="modal-body py-2 px-3">
+                <p class="small text-muted mb-0" id="v8ManualConfirmDescricao"></p>
+            </div>
+            <div class="modal-footer py-2 px-3 gap-2">
+                <button type="button" class="btn btn-sm btn-secondary px-3" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-sm fw-bold px-3" id="v8ManualConfirmBtnOk">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
@@ -356,7 +397,7 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
         const r = await v8Req('v8_api.ajax.php', 'listar_fila_consultas', payload, false); 
         if(r.success) { 
             windowDadosFilaAtual = r.data; tb.innerHTML = ''; 
-            if(r.data.length === 0) return tb.innerHTML = '<tr><td colspan="7" class="text-muted py-4 text-center fw-bold">Nenhum resultado encontrado na fila.</td></tr>'; 
+            if(r.data.length === 0) return tb.innerHTML = '<tr><td colspan="8" class="text-muted py-4 text-center fw-bold">Nenhum resultado encontrado na fila.</td></tr>'; 
             
             r.data.forEach(x => { 
                 let colAuth = `<span class="badge bg-light text-muted border">Vazio</span>`; let colConf = `<span class="badge bg-light text-muted border">Vazio</span>`; let colSim  = `<span class="badge bg-light text-muted border">Vazio</span>`; let colProp = `<span class="badge bg-light text-muted border">Vazio</span>`; let btnAcoes = ''; let msgErroLimpa = "Erro na V8"; 
@@ -367,7 +408,7 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
                 if (x.STATUS_V8 === 'ERRO-AUT') { colAuth = `${badgeFonteAuth}<span class="badge bg-danger mb-1" title="${msgErroLimpa}" data-bs-toggle="tooltip">ERRO-AUT</span><br><small class="text-muted" style="font-size:10px;">ID: ${consultIdVisual}<br>${x.DATA_RETORNO_BR || ''}</small>`; btnAcoes = `<button class="btn btn-sm btn-danger fw-bold shadow-sm w-100" onclick="v8ReenviarAut(${x.ID})"><i class="fas fa-paper-plane"></i> Reenviar AUT</button>`; } else if (x.STATUS_V8 === 'ERRO ID CONSENTIMENTO') { colAuth = `<span class="badge bg-danger mb-1" title="${msgErroLimpa}" data-bs-toggle="tooltip">ERRO API</span><br><small class="text-muted" style="font-size:10px;">${x.DATA_RETORNO_BR || ''}</small>`; } else if (x.CONSULT_ID && x.STATUS_V8 !== 'AGUARDANDO ID CONSENTIMENTO') { colAuth = `${badgeFonteAuth}<span class="badge bg-success mb-1">OK-CONSENTIMENTO</span><br><small class="text-muted" style="font-size:10px;">ID: ${consultIdVisual}<br>${x.DATA_RETORNO_BR || ''}</small>`; if((x.STATUS_V8 === 'OK-CONSENTIMENTO' || x.STATUS_V8 === 'CONSENTIMENTO AUTOMÁTICO OK') && x.VALOR_MARGEM === null && x.STATUS_CONFIG_ID !== 'ERRO CONSIG_ID' && x.STATUS_CONFIG_ID !== 'ERRO CACHE V8') { btnAcoes = `<button class="btn btn-sm btn-info border-dark fw-bold shadow-sm w-100 text-dark" disabled><i class="fas fa-cogs fa-spin"></i> Margem...</button>`; if(!windowPollingData[x.ID]) { setTimeout(() => { v8BotaoNovaMargem(x.ID, false); }, 1000); } } } else { colAuth = `<span class="badge bg-info text-dark mb-1">Aguardando...</span><br><small class="text-muted" style="font-size:10px;">${x.DATA_RETORNO_BR || ''}</small>`; } 
                 
                 let fontMargem = x.FONTE_CONSIG_ID ? x.FONTE_CONSIG_ID : "V8"; let badgeFonteMargem = `<span class="badge bg-secondary rounded-pill mb-1" style="font-size:8.5px;">FONTE: ${fontMargem}</span><br>`; 
-                if (x.STATUS_V8 === 'ERRO-MARGEM' || x.STATUS_V8 === 'ERRO LEITURA MARGEM' || x.STATUS_CONFIG_ID === 'ERRO CONSIG_ID' || x.STATUS_CONFIG_ID === 'ERRO CACHE V8') { let detalheErroConf = x.OBS_CONFIG_ID || msgErroLimpa; colConf = `${badgeFonteMargem}<span class="badge bg-danger mb-1">REJEITADO</span><br><small class="text-danger fw-bold d-block" style="font-size:9px;">${detalheErroConf}</small>`; btnAcoes = `<button class="btn btn-sm btn-warning border-dark fw-bold shadow-sm w-100" onclick="v8BotaoNovaMargem(${x.ID}, true)"><i class="fas fa-sync"></i> Forçar Margem</button>`; } else if (x.STATUS_V8 === 'AGUARDANDO MARGEM' || x.STATUS_V8 === 'AGUARDANDO V8 MARGEM E PRAZOS') { 
+                if (x.STATUS_V8 === 'ERRO-MARGEM' || x.STATUS_V8 === 'ERRO LEITURA MARGEM' || x.STATUS_CONFIG_ID === 'ERRO CONSIG_ID' || x.STATUS_CONFIG_ID === 'ERRO CACHE V8') { let detalheErroConf = x.OBS_CONFIG_ID || msgErroLimpa; colConf = `${badgeFonteMargem}<span class="badge bg-danger mb-1">REJEITADO</span><br><small class="text-danger fw-bold d-block" style="font-size:9px;">${detalheErroConf}</small>`; } else if (x.STATUS_V8 === 'AGUARDANDO MARGEM' || x.STATUS_V8 === 'AGUARDANDO V8 MARGEM E PRAZOS') { 
                     colConf = `${badgeFonteMargem}<span class="badge bg-warning text-dark mb-1"><i class="fas fa-spinner fa-spin"></i> Lendo Margem...</span>`; 
                     btnAcoes = `<button class="btn btn-sm btn-info border-dark shadow-sm w-100 mb-1" disabled><i class="fas fa-cogs fa-spin"></i> Processando...</button><button class="btn btn-sm btn-danger border-dark shadow-sm w-100" onclick="v8PararFluxo(${x.ID})">Parar Timer</button>`;
                     if(!windowPollingData[x.ID]) { v8IniciarPollingMargem(x.ID); }
@@ -376,7 +417,7 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
                     colConf = `${badgeFonteMargem}<span class="badge bg-success mb-1">MARGEM OK</span><br><span class="text-success fw-bold fs-6">R$ ${x.VALOR_MARGEM}</span><br><small class="text-dark d-block" style="font-size:10px;">Prazos: ${prazosFormatados}</small>`; 
                     
                     if (!x.SIMULATION_ID && x.STATUS_V8 !== 'ERRO-SIMULACAO') { 
-                        btnAcoes = `<button class="btn btn-sm btn-primary border-dark shadow-sm fw-bold w-100 mb-1" onclick="v8ExecutarSimulacao('PADRÃO', ${x.ID})"><i class="fas fa-calculator"></i> Simulação Padrão</button><button class="btn btn-sm btn-warning border-dark shadow-sm fw-bold w-100 mb-1" onclick="v8BotaoNovaMargem(${x.ID}, true)"><i class="fas fa-sync"></i> Margem DATAPREV</button>`; 
+                        btnAcoes = `<button class="btn btn-sm btn-primary border-dark shadow-sm fw-bold w-100 mb-1" onclick="v8ExecutarSimulacao('PADRÃO', ${x.ID})"><i class="fas fa-calculator"></i> Simulação Padrão</button>`; 
                     } else if (x.SIMULATION_ID || x.VALOR_LIBERADO == '0.00') { 
                         let obsSimText = x.OBS_SIMULATION_ID && x.OBS_SIMULATION_ID !== 'Cálculo concluído' ? `<br><small class="text-danger fw-bold mt-1 d-block" style="font-size:9px; line-height: 1.1; white-space: normal;">${x.OBS_SIMULATION_ID}</small>` : '';
                         colSim = `<span class="badge bg-success mb-1">SIMULADO</span><br><b class="text-success fs-6">R$ ${x.VALOR_LIBERADO || '0.00'}</b><br><small class="text-dark" style="font-size:10px;">Parcela: R$ ${x.VALOR_PARCELA || '0.00'} <br>Prazo: ${x.PRAZO_SIMULACAO || 24}x</small>${obsSimText}`; 
@@ -386,7 +427,75 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
                 
                 if (x.STATUS_PROPOSTA_REAL_TIME || (x.STATUS_V8 && x.STATUS_V8.includes('PROPOSTA:'))) { let propId = x.NUMERO_PROPOSTA || x.STATUS_V8.replace('PROPOSTA:', '').trim(); let propStatus = x.STATUS_PROPOSTA_REAL_TIME ? x.STATUS_PROPOSTA_REAL_TIME.toUpperCase() : 'AGUARDANDO'; let corBadge = 'warning text-dark'; if(propStatus.includes('CAN') || propStatus.includes('ERR')) corBadge = 'danger'; if(propStatus.includes('APROV') || propStatus.includes('PAG')) corBadge = 'success'; let btnFormalizacao = (x.LINK_PROPOSTA && x.LINK_PROPOSTA !== 'null' && x.LINK_PROPOSTA !== '') ? `<button class="btn btn-sm btn-outline-primary mt-1 shadow-sm w-100 fw-bold" style="font-size:10px;" onclick="v8VerLinkAssinatura('${x.LINK_PROPOSTA}')"><i class="fas fa-link"></i> Assinatura</button>` : ''; colProp = `<span class="badge bg-${corBadge} border border-dark mb-1">${propStatus}</span><br><a href="javascript:void(0)" onclick="v8AbrirAcompanhamento('${propId}')" class="text-primary fw-bold" style="font-size:12px;">${propId}</a>${btnFormalizacao}`; btnAcoes = `<button class="btn btn-sm btn-secondary border-dark shadow-sm fw-bold w-100 mb-1"><i class="fas fa-check"></i> Emitida</button>`; } else if (x.STATUS_V8 === 'ERRO PROPOSTA') { colProp = `<span class="badge bg-danger mb-1">ERRO V8</span><br><small class="text-danger fw-bold d-block" style="font-size:9px;">${msgErroLimpa}</small>`; btnAcoes = perm_digitar ? `<button class="btn btn-sm btn-dark border-secondary shadow-sm fw-bold w-100 mb-1" onclick="v8AbrirModalDigitar(${x.ID})"><i class="fas fa-edit"></i> Corrigir Erro</button>` : `<button class="btn btn-sm btn-dark" disabled>Bloqueado</button>`; } 
                 
-                tb.innerHTML += `<tr class="border-bottom border-dark"><td class="small fw-bold text-muted">${x.DATA_FILA_BR || ''}</td><td class="text-start"><span class="fw-bold fs-6 text-dark">${x.CPF_CONSULTADO || ''}</span><br><span class="text-muted small" style="font-size:10px;">${x.NOME_COMPLETO || 'NÃO INFORMADO'}</span></td><td class="border-start border-end border-danger bg-light p-2 text-center align-middle">${colAuth}</td><td class="border-end border-danger bg-light p-2 text-center align-middle">${colConf}</td><td class="border-end border-danger bg-light p-2 text-center align-middle">${colSim}</td><td class="border-end border-danger bg-light p-2 text-center align-middle">${colProp}</td><td class="p-2 text-center align-middle">${btnAcoes}</td></tr>`; 
+                // === Botões de reprocessamento contextual (aparecem conforme o fluxo) ===
+                let emProc = !!windowPollingData[x.ID];
+                let statusAtivo = x.STATUS_V8 === 'AGUARDANDO MARGEM' || x.STATUS_V8 === 'AGUARDANDO V8 MARGEM E PRAZOS';
+                if (!emProc && !statusAtivo) {
+                    let repBtns = '';
+                    let temErroMargem = (x.STATUS_V8 === 'ERRO-MARGEM' || x.STATUS_V8 === 'ERRO LEITURA MARGEM' || x.STATUS_CONFIG_ID === 'ERRO CONSIG_ID' || x.STATUS_CONFIG_ID === 'ERRO CACHE V8' || x.STATUS_V8 === 'ERRO-SIMULACAO');
+                    let esperandoDataprev = x.CONSULT_ID && !x.VALOR_MARGEM && x.STATUS_V8 !== 'OK-CONSENTIMENTO' && x.STATUS_V8 !== 'CONSENTIMENTO AUTOMÁTICO OK';
+                    if (esperandoDataprev)  repBtns += `<button class="v8m-btn-rep v8m-btn-azul mt-1" onclick="v8ReprocessarConsentimentoManual(${x.ID})">🔍 Buscar Consentimento</button>`;
+                    repBtns += `<button class="v8m-btn-rep v8m-btn-cinza mt-1" onclick="v8ReprocessarTudoManual(${x.ID})">🆕 Nova Consulta</button>`;
+                    repBtns += `<button class="v8m-btn-rep v8m-btn-vermelho mt-1" onclick="v8ApagarConsultaManual(${x.ID})">🗑️ Apagar</button>`;
+                    btnAcoes += repBtns;
+                }
+
+                // === Coluna Campanhas: aparece quando o robô finalizou ===
+                let fluxoFinalizado = !!(x.SIMULATION_ID || (x.STATUS_V8 && x.STATUS_V8.includes('PROPOSTA:')));
+                let colCampanhas = '<span class="text-muted" style="font-size:11px;">—</span>';
+                if (fluxoFinalizado) {
+                    colCampanhas = `<div class="btn-group dropstart w-100">
+                      <button class="btn btn-sm btn-success dropdown-toggle fw-bold shadow-sm" type="button"
+                              data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                        <i class="fas fa-bullhorn"></i>
+                      </button>
+                      <div class="dropdown-menu shadow-lg p-0 v8-acoes-dropdown">
+                        <div class="v8-secao">
+                          <div class="v8-secao-hdr v8-verde" onclick="v8ToggleSecaoLote(this); event.stopPropagation();">
+                            <span>📊 DISPAROS/CAMPANHAS</span>
+                            <i class="fas fa-chevron-down v8-chevron"></i>
+                          </div>
+                          <div class="v8-secao-bdy" style="display:none;">
+                            <button class="v8-item v8-item-verde v8-manut" disabled>
+                              <span class="v8-item-icon">📲</span>
+                              <span class="v8-item-txt"><strong>Disparar via Grupo Whats</strong><small>🔧 Em manutenção</small></span>
+                            </button>
+                            <button class="v8-item v8-item-verde v8-manut" disabled>
+                              <span class="v8-item-icon">💬</span>
+                              <span class="v8-item-txt"><strong>Disparar msg via Whats</strong><small>🔧 Em manutenção</small></span>
+                            </button>
+                            <button class="v8-item v8-item-verde v8-manut" disabled>
+                              <span class="v8-item-icon">📡</span>
+                              <span class="v8-item-txt"><strong>Disparar via API Meta</strong><small>🔧 Em manutenção</small></span>
+                            </button>
+                            <button class="v8-item v8-item-verde v8-manut" disabled>
+                              <span class="v8-item-icon">🎯</span>
+                              <span class="v8-item-txt"><strong>Criar Campanha</strong><small>🔧 Em manutenção</small></span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>`;
+                }
+
+                let nomeUsuario = x.NOME_USUARIO || x.CPF_USUARIO || '—';
+                let usernameApi = x.USERNAME_API || '—';
+                let tabelaPadrao = x.TABELA_PADRAO || '—';
+                let prazoPadrao = x.PRAZO_PADRAO ? x.PRAZO_PADRAO + 'x' : '—';
+
+                tb.innerHTML += `<tr class="border-bottom border-dark">
+                <td class="text-center align-middle" style="min-width:70px;">
+                  <span class="fw-bold text-muted fs-6">#${x.ID}</span><br>
+                  <small class="text-muted" style="font-size:10px;">${x.DATA_FILA_BR || ''}</small>
+                </td>
+                <td class="text-start align-middle" style="font-size:11px; line-height:1.6; min-width:180px;">
+                  <span class="fw-bold text-dark" style="font-size:13px;">${x.CPF_CONSULTADO || ''}</span><br>
+                  <span class="text-muted">${x.NOME_COMPLETO || 'NÃO INFORMADO'}</span>
+                  <hr class="my-1">
+                  <div><b>Usuário:</b> ${nomeUsuario}</div>
+                  <div><b>API:</b> ${usernameApi}</div>
+                  <div><b>Tabela:</b> ${tabelaPadrao} &nbsp;·&nbsp; <b>Prazo:</b> ${prazoPadrao}</div>
+                </td><td class="border-start border-end border-danger bg-light p-2 text-center align-middle">${colAuth}</td><td class="border-end border-danger bg-light p-2 text-center align-middle">${colConf}</td><td class="border-end border-danger bg-light p-2 text-center align-middle">${colSim}</td><td class="border-end border-danger bg-light p-2 text-center align-middle">${colProp}</td><td class="p-2 text-center align-middle">${btnAcoes}</td><td class="p-2 text-center align-middle">${colCampanhas}</td></tr>`; 
             }); 
             var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]')); tooltipTriggerList.map(function (tooltipTriggerEl) { return new bootstrap.Tooltip(tooltipTriggerEl); }); 
         } 
@@ -428,18 +537,80 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
         v8CarregarFila(); 
         const tick = async () => { 
             windowPollingData[idFila].attempts++; 
-            if(windowPollingData[idFila].attempts > 12) { v8PararFluxo(idFila, 'TEMPO ESGOTADO'); return alert("A Dataprev demorou muito na fila " + idFila + ". O sistema parou de escutar. Tente forçar a margem depois."); } 
+            if(windowPollingData[idFila].attempts > 11) { v8PararFluxo(idFila, 'TEMPO ESGOTADO'); return alert("A Dataprev demorou muito na fila " + idFila + ". O sistema parou de escutar. Tente reprocessar depois."); }
             const resPolling = await v8Req('v8_api.ajax.php', 'checar_margem_e_simular', { id_fila: idFila }, false); 
             if(resPolling.status === 'concluido') { clearTimeout(windowPollingData[idFila].timer); delete windowPollingData[idFila]; v8CarregarFila(); return; } 
             else if(resPolling.status === 'erro') { clearTimeout(windowPollingData[idFila].timer); delete windowPollingData[idFila]; v8CarregarFila(); return alert("❌ Erro Dataprev: " + resPolling.msg); } 
-            else if (resPolling.status === 'pendente') { if (windowPollingData[idFila]) { windowPollingData[idFila].timer = setTimeout(tick, 10000); } } 
-        }; 
-        windowPollingData[idFila].timer = setTimeout(tick, 120000);
+            else if (resPolling.status === 'pendente') { if (windowPollingData[idFila]) { windowPollingData[idFila].timer = setTimeout(tick, 30000); } }
+        };
+        windowPollingData[idFila].timer = setTimeout(tick, 10000);
     }
 
     async function v8BotaoNovaMargem(idFila, forcar_dataprev = false) { v8IniciarPollingMargem(idFila); }
     async function v8ReenviarAut(idFila) { const res = await v8Req('v8_api.ajax.php', 'reenviar_autorizacao_automatica', { id_fila: idFila }, true, "Reenviando..."); v8CarregarFila(); if(res.success) alert("Autorizado!"); else alert("Erro: " + res.msg); }
-    async function v8PararFluxo(idFila, motivo = 'PARADO PELO USUÁRIO') { if(motivo === 'PARADO PELO USUÁRIO' && !confirm("Deseja parar?")) return; if(windowPollingData && windowPollingData[idFila]) { clearTimeout(windowPollingData[idFila].timer); delete windowPollingData[idFila]; } await v8Req('v8_api.ajax.php', 'parar_fluxo', { id_fila: idFila, motivo: motivo }, true, "Parando..."); v8CarregarFila(); }
+    async function v8PararFluxo(idFila, motivo = 'PARADO PELO USUÁRIO') {
+        if (motivo === 'PARADO PELO USUÁRIO') {
+            v8ConfirmarManual('⏹️ Parar Processamento', 'Interrompe o acompanhamento desta consulta. Você poderá reprocessar depois.', 'btn-warning', '#ffc107', async () => {
+                if(windowPollingData && windowPollingData[idFila]) { clearTimeout(windowPollingData[idFila].timer); delete windowPollingData[idFila]; }
+                await v8Req('v8_api.ajax.php', 'parar_fluxo', { id_fila: idFila, motivo: motivo }, true, "Parando..."); v8CarregarFila();
+            });
+        } else {
+            if(windowPollingData && windowPollingData[idFila]) { clearTimeout(windowPollingData[idFila].timer); delete windowPollingData[idFila]; }
+            await v8Req('v8_api.ajax.php', 'parar_fluxo', { id_fila: idFila, motivo: motivo }, true, "Parando..."); v8CarregarFila();
+        }
+    }
+
+    // === CONFIRM MODAL MANUAL ===
+    let v8ManualConfirmObj;
+    document.addEventListener("DOMContentLoaded", () => {
+        const el = document.getElementById('v8ManualConfirm');
+        if (el) v8ManualConfirmObj = new bootstrap.Modal(el);
+    });
+    function v8ConfirmarManual(titulo, descricao, corBtn, corBorda, callback) {
+        document.getElementById('v8ManualConfirmTitulo').innerHTML = titulo;
+        document.getElementById('v8ManualConfirmDescricao').innerHTML = descricao;
+        const btnOk = document.getElementById('v8ManualConfirmBtnOk');
+        btnOk.className = 'btn btn-sm fw-bold px-3 ' + corBtn;
+        document.getElementById('v8ManualConfirmHdr').style.borderLeftColor = corBorda;
+        btnOk.onclick = () => { v8ManualConfirmObj.hide(); callback(); };
+        v8ManualConfirmObj.show();
+    }
+
+    // === REPROCESSAMENTO MANUAL ===
+    function v8ReprocessarConsentimentoManual(id) {
+        v8ConfirmarManual('📡 Reprocessar Consentimento',
+            'Re-verifica se a Dataprev já retornou para esta consulta.<br><small class="text-muted">Não gera novo custo — relê o resultado existente.</small>',
+            'btn-primary', '#1a73e8',
+            () => { v8IniciarPollingMargem(id); });
+    }
+
+    function v8ReprocessarErrosManual(id) {
+        v8ConfirmarManual('⚠️ Reprocessar Erros',
+            'Força uma nova leitura de margem para esta consulta.<br><small class="text-muted">Recupera o consentimento existente e tenta novamente.</small>',
+            'btn-primary', '#1a73e8',
+            () => { v8BotaoNovaMargem(id, true); });
+    }
+
+    async function v8ReprocessarTudoManual(id) {
+        v8ConfirmarManual('🔁 Reprocessar Tudo',
+            '⚠️ <strong>ATENÇÃO:</strong> A consulta será reiniciada do zero — consentimento, margem e simulação serão apagados.<br><small class="text-danger">Pode gerar novo custo de consulta.</small>',
+            'btn-danger', '#dc3545',
+            async () => {
+                const res = await v8Req('v8_api.ajax.php', 'reiniciar_consulta_fila', { id_fila: id }, true, "Reiniciando...");
+                if (res.success) { v8CarregarFila(); v8IniciarPollingMargem(id); }
+                else alert("❌ Erro: " + res.msg);
+            });
+    }
+
+    async function v8ApagarConsultaManual(id) {
+        v8ConfirmarManual('🗑️ Apagar Consulta',
+            '⚠️ <strong>Esta ação é irreversível.</strong> O registro será removido permanentemente da fila.',
+            'btn-danger', '#dc3545',
+            async () => {
+                const res = await v8Req('v8_api.ajax.php', 'apagar_consulta_manual', { id_fila: id }, true, "Apagando...");
+                if (res.success) v8CarregarFila(); else alert("❌ Erro: " + res.msg);
+            });
+    }
     
     function v8AbrirAcompanhamento(numProposta) { document.querySelector('[data-bs-target="#tab-acompanhamento"]').click(); document.getElementById('filtro_prop_numero').value = numProposta; document.getElementById('filtro_prop_cpf').value = ''; document.getElementById('filtro_prop_status').value = ''; v8CarregarPropostas(); }
     async function v8CarregarPropostas() { const tb = document.getElementById('v8_tbody_propostas'); tb.innerHTML = '<tr><td colspan="5" class="py-4 text-center"><i class="fas fa-spinner fa-spin"></i></td></tr>'; const payload = { data_ini: document.getElementById('filtro_prop_data_ini') ? document.getElementById('filtro_prop_data_ini').value : '', data_fim: document.getElementById('filtro_prop_data_fim') ? document.getElementById('filtro_prop_data_fim').value : '', cpf: document.getElementById('filtro_prop_cpf').value.replace(/\D/g, ''), numero: document.getElementById('filtro_prop_numero').value, status: document.getElementById('filtro_prop_status').value }; const res = await v8Req('ajax_api_v8_acompanhamento_proposta.php', 'listar_propostas', payload, false); if (res.success) { tb.innerHTML = ''; if(res.data.length === 0) return tb.innerHTML = '<tr><td colspan="5" class="text-muted py-4 text-center fw-bold">Nenhuma proposta.</td></tr>'; res.data.forEach(p => { let statusUpper = p.STATUS_PROPOSTA_V8 ? p.STATUS_PROPOSTA_V8.toUpperCase() : 'AGUARDANDO'; let btnColor = "secondary"; if (statusUpper.includes('PEND')) btnColor = "warning text-dark"; if (statusUpper.includes('CAN') || statusUpper.includes('ERR')) btnColor = "danger"; if (statusUpper.includes('APROV') || statusUpper.includes('PAG')) btnColor = "success"; let linkHtml = p.LINK_PROPOSTA && p.LINK_PROPOSTA !== '' && p.LINK_PROPOSTA !== 'null' ? `<br><button class="btn btn-sm btn-outline-primary mt-2 shadow-sm" onclick="v8VerLinkAssinatura('${p.LINK_PROPOSTA}')"><i class="fas fa-link"></i> Copiar Assinatura</button>` : ''; tb.innerHTML += `<tr class="border-bottom border-dark"><td class="text-center small text-muted">${p.DATA_DIGITACAO_BR || ''}</td><td><span class="fw-bold">${p.CPF_CLIENTE || ''}</span><br><small>${p.NOME_CLIENTE || ''}</small></td><td class="text-center"><b class="text-success">R$ ${p.VALOR_LIBERADO || '0.00'}</b><br><small class="text-muted">${p.PRAZO || '0'}x de R$ ${p.PARCELA || '0.00'}</small></td><td class="text-center bg-light p-2"><span class="fw-bold">${p.NUMERO_PROPOSTA || ''}</span><br><span class="badge bg-${btnColor} mt-1">${statusUpper}</span>${linkHtml}</td><td class="p-2"><button class="btn btn-sm btn-info w-100 mb-1" onclick="v8SincronizarStatus(${p.ID})"><i class="fas fa-sync"></i> Status</button><button class="btn btn-sm btn-warning w-100 mb-1" onclick="v8AbrirModalPendencia(${p.ID}, '${p.NUMERO_PROPOSTA}')"><i class="fas fa-exclamation-circle"></i> Pendência</button><button class="btn btn-sm btn-danger w-100" onclick="v8CancelarProposta(${p.ID}, '${p.NUMERO_PROPOSTA}')"><i class="fas fa-times-circle"></i> Cancelar</button></td></tr>`; }); } }

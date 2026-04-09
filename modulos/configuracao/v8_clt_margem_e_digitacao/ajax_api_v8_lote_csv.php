@@ -30,6 +30,8 @@ try {
             $agendamento_tipo = $_POST['agendamento_tipo'] ?? 'IMEDIATO';
             $data_hora_agendada = !empty($_POST['data_hora_agendada']) ? $_POST['data_hora_agendada'] : null;
             $dia_mes_agendado = !empty($_POST['dia_mes_agendado']) ? (int)$_POST['dia_mes_agendado'] : null;
+            $hora_inicio_diario = ($agendamento_tipo === 'DIARIO' && !empty($_POST['hora_inicio_diario'])) ? trim($_POST['hora_inicio_diario']) : null;
+            $dias_mes_diario = ($agendamento_tipo === 'DIARIO' && !empty($_POST['dias_mes_diario'])) ? trim($_POST['dias_mes_diario']) : null;
             $limite_diario = (int)($_POST['limite_diario'] ?? 0);
             $atualizar_telefone = (isset($_POST['atualizar_telefone']) && $_POST['atualizar_telefone'] == '1') ? 1 : 0;
             $enviar_whats = (isset($_POST['enviar_whats']) && $_POST['enviar_whats'] == '1') ? 1 : 0;
@@ -64,33 +66,47 @@ try {
             if ($idx_cpf === -1) { throw new Exception("CSV Inválido! A planilha precisa ter no mínimo o cabeçalho 'CPF'."); }
 
             $linhas_validas = [];
-            while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
-                if(count($data) == 1 && strpos($data[0], ',') !== false) { $data = explode(',', $data[0]); }
-                $cpf = isset($data[$idx_cpf]) ? str_pad(preg_replace('/\D/', '', $data[$idx_cpf]), 11, '0', STR_PAD_LEFT) : '';
-                if (strlen($cpf) == 11) {
+            $linhas_descartadas = 0;
+            while (($data = fgetcsv($handle, 0, ";")) !== FALSE) {
+                try {
+                    if (count($data) == 1 && strpos($data[0], ',') !== false) { $data = explode(',', $data[0]); }
+                    $cpf = isset($data[$idx_cpf]) ? str_pad(preg_replace('/\D/', '', $data[$idx_cpf]), 11, '0', STR_PAD_LEFT) : '';
+                    if (strlen($cpf) !== 11) { $linhas_descartadas++; continue; }
                     $nasc = ($idx_nasc !== -1 && isset($data[$idx_nasc])) ? trim($data[$idx_nasc]) : '';
                     if (strpos($nasc, '/') !== false) { $p = explode('/', $nasc); if (count($p) == 3) $nasc = "{$p[2]}-{$p[1]}-{$p[0]}"; }
+                    // Valida formato YYYY-MM-DD; descarta datas inválidas sem interromper
+                    if (!empty($nasc)) {
+                        $dt = DateTime::createFromFormat('Y-m-d', $nasc);
+                        $nasc = ($dt && $dt->format('Y-m-d') === $nasc) ? $nasc : null;
+                    } else { $nasc = null; }
                     $sexo = ($idx_sexo !== -1 && isset($data[$idx_sexo])) ? strtoupper(trim($data[$idx_sexo])) : '';
                     $genero = (strpos($sexo, 'M') === 0) ? 'male' : 'female';
                     $nome = ($idx_nome !== -1 && isset($data[$idx_nome])) ? mb_strtoupper(trim($data[$idx_nome]), 'UTF-8') : 'NÃO INFORMADO';
                     $linhas_validas[] = ['cpf' => $cpf, 'nascimento' => $nasc, 'sexo' => $genero, 'nome' => $nome];
-                }
+                } catch (Exception $e) { $linhas_descartadas++; continue; }
             }
             fclose($handle);
 
             $total = count($linhas_validas);
             if ($total == 0) throw new Exception("Nenhum CPF válido localizado no arquivo.");
-            if ($total > 1000) throw new Exception("Atenção: O limite máximo é de 1.000 CPFs por importação.");
+            if ($total > 100000) throw new Exception("Atenção: O limite máximo é de 100.000 CPFs por importação.");
 
             $custo_lote = $total * (float)$chave['CUSTO_CONSULTA'];
             if ((float)$chave['SALDO'] < $custo_lote && $custo_lote > 0) { throw new Exception("Saldo Insuficiente! Lote custará R$ " . number_format($custo_lote, 2, ',', '.') . ". Saldo atual: R$ " . number_format((float)$chave['SALDO'], 2, ',', '.')); }
 
             $pdo->beginTransaction();
             
-            $stmtLote = $pdo->prepare("INSERT INTO INTEGRACAO_V8_IMPORTACAO_LOTE 
-                (NOME_IMPORTACAO, USUARIO_ID, CPF_USUARIO, CHAVE_ID, ARQUIVO_CAMINHO, QTD_TOTAL, AGENDAMENTO_TIPO, DATA_HORA_AGENDADA, DIA_MES_AGENDADO, LIMITE_DIARIO, ATUALIZAR_TELEFONE, ENVIAR_WHATSAPP, SOMENTE_SIMULAR, ENVIAR_ARQUIVO_WHATSAPP) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-            $stmtLote->execute([$agrupamento, $dono_lote_id, $dono_lote_cpf, $chave_id, $_FILES['arquivo_csv']['name'], $total, $agendamento_tipo, $data_hora_agendada, $dia_mes_agendado, $limite_diario, $atualizar_telefone, $enviar_whats, $somente_simular, $enviar_arquivo_whatsapp]);
+            // DIARIO: validar que tem hora configurada
+            if ($agendamento_tipo === 'DIARIO' && empty($hora_inicio_diario)) {
+                throw new Exception("Para agendamento Diário, informe o horário de início.");
+            }
+            // DIARIO: status inicial = aguardando, não dispara worker imediatamente
+            $status_fila_inicial = ($agendamento_tipo === 'DIARIO') ? 'AGUARDANDO_DIARIO' : 'PENDENTE';
+
+            $stmtLote = $pdo->prepare("INSERT INTO INTEGRACAO_V8_IMPORTACAO_LOTE
+                (NOME_IMPORTACAO, USUARIO_ID, CPF_USUARIO, CHAVE_ID, ARQUIVO_CAMINHO, QTD_TOTAL, AGENDAMENTO_TIPO, DATA_HORA_AGENDADA, DIA_MES_AGENDADO, HORA_INICIO_DIARIO, DIAS_MES_DIARIO, LIMITE_DIARIO, ATUALIZAR_TELEFONE, ENVIAR_WHATSAPP, SOMENTE_SIMULAR, ENVIAR_ARQUIVO_WHATSAPP, STATUS_FILA)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            $stmtLote->execute([$agrupamento, $dono_lote_id, $dono_lote_cpf, $chave_id, $_FILES['arquivo_csv']['name'], $total, $agendamento_tipo, $data_hora_agendada, $dia_mes_agendado, $hora_inicio_diario, $dias_mes_diario, $limite_diario, $atualizar_telefone, $enviar_whats, $somente_simular, $enviar_arquivo_whatsapp, $status_fila_inicial]);
             $id_lote = $pdo->lastInsertId();
 
             $stmtCpf = $pdo->prepare("INSERT INTO INTEGRACAO_V8_REGISTROCONSULTA_LOTE (LOTE_ID, CPF, NOME, NASCIMENTO, SEXO, STATUS_V8, VALOR_MARGEM, CONSULT_ID, CONFIG_ID, OBSERVACAO) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
@@ -101,29 +117,48 @@ try {
                 $stmtBuscaManual = $pdo->prepare("SELECT r.CONSULT_ID, s.CONFIG_ID, s.MARGEM_DISPONIVEL as VALOR_MARGEM FROM INTEGRACAO_V8_REGISTRO_SIMULACAO s JOIN INTEGRACAO_V8_REGISTROCONSULTA r ON r.ID = s.ID_FILA WHERE s.CPF = ? AND s.MARGEM_DISPONIVEL > 0 AND r.CONSULT_ID IS NOT NULL ORDER BY s.ID DESC LIMIT 1");
             }
 
-            foreach ($linhas_validas as $l) { 
-                $status_v8 = 'NA FILA'; $v_margem = null; $c_id = null; $cfg_id = null; $obs = null;
-                if ($somente_simular == 1) {
-                    $achou = false;
-                    $stmtBuscaLote->execute([$l['cpf']]); $margLote = $stmtBuscaLote->fetch(PDO::FETCH_ASSOC);
-                    if ($margLote) { $c_id = $margLote['CONSULT_ID']; $cfg_id = $margLote['CONFIG_ID']; $v_margem = $margLote['VALOR_MARGEM']; $achou = true; } 
-                    else {
-                        $stmtBuscaManual->execute([$l['cpf']]); $margManual = $stmtBuscaManual->fetch(PDO::FETCH_ASSOC);
-                        if ($margManual) { $c_id = $margManual['CONSULT_ID']; $cfg_id = $margManual['CONFIG_ID']; $v_margem = $margManual['VALOR_MARGEM']; $achou = true; }
+            $inseridos = 0; $erros_insert = 0;
+            foreach ($linhas_validas as $l) {
+                try {
+                    $status_v8 = 'NA FILA'; $v_margem = null; $c_id = null; $cfg_id = null; $obs = null;
+                    if ($somente_simular == 1) {
+                        $achou = false;
+                        $stmtBuscaLote->execute([$l['cpf']]); $margLote = $stmtBuscaLote->fetch(PDO::FETCH_ASSOC);
+                        if ($margLote) { $c_id = $margLote['CONSULT_ID']; $cfg_id = $margLote['CONFIG_ID']; $v_margem = $margLote['VALOR_MARGEM']; $achou = true; }
+                        else {
+                            $stmtBuscaManual->execute([$l['cpf']]); $margManual = $stmtBuscaManual->fetch(PDO::FETCH_ASSOC);
+                            if ($margManual) { $c_id = $margManual['CONSULT_ID']; $cfg_id = $margManual['CONFIG_ID']; $v_margem = $margManual['VALOR_MARGEM']; $achou = true; }
+                        }
+                        if ($achou) { $status_v8 = 'AGUARDANDO SIMULACAO'; $obs = 'Pulo direto para simulação (Margem prévia localizada localmente).'; }
+                        else { $status_v8 = 'RECUPERAR V8'; $obs = 'Buscando consentimento e margem direto na API da V8...'; }
                     }
-                    if ($achou) { $status_v8 = 'AGUARDANDO SIMULACAO'; $obs = 'Pulo direto para simulação (Margem prévia localizada localmente).'; } 
-                    else { $status_v8 = 'RECUPERAR V8'; $obs = 'Buscando consentimento e margem direto na API da V8...'; }
-                }
-                $stmtCpf->execute([$id_lote, $l['cpf'], $l['nome'], $l['nascimento'], $l['sexo'], $status_v8, $v_margem, $c_id, $cfg_id, $obs]); 
+                    $stmtCpf->execute([$id_lote, $l['cpf'], $l['nome'], $l['nascimento'], $l['sexo'], $status_v8, $v_margem, $c_id, $cfg_id, $obs]);
+                    $inseridos++;
+                } catch (Exception $e) { $erros_insert++; continue; }
+            }
+
+            // Atualiza QTD_TOTAL com o que realmente foi inserido
+            if ($inseridos !== $total) {
+                $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_TOTAL = ? WHERE ID = ?")->execute([$inseridos, $id_lote]);
+                $total = $inseridos;
             }
 
             $pdo->commit();
 
-            $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
-            $url_worker = $protocol . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']) . '/worker_v8_lote.php?user_cpf=' . $dono_lote_cpf;
-            $ch = curl_init(); curl_setopt($ch, CURLOPT_URL, $url_worker); curl_setopt($ch, CURLOPT_TIMEOUT, 1); curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); curl_exec($ch); curl_close($ch);
+            $aviso_descarte = ($linhas_descartadas + $erros_insert) > 0
+                ? " ({$linhas_descartadas} linhas com erro de formato descartadas.)"
+                : '';
 
-            ob_end_clean(); echo json_encode(['success' => true, 'msg' => "Lote de $total CPFs enviado com sucesso! Processamento iniciado.", 'cpf_dono' => $dono_lote_cpf]); exit;
+            if ($agendamento_tipo !== 'DIARIO') {
+                $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
+                $url_worker = $protocol . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']) . '/worker_v8_lote.php?user_cpf=' . $dono_lote_cpf;
+                $ch = curl_init(); curl_setopt($ch, CURLOPT_URL, $url_worker); curl_setopt($ch, CURLOPT_TIMEOUT, 1); curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); curl_exec($ch); curl_close($ch);
+                $msg_retorno = "Lote de $total CPFs enviado com sucesso! Processamento iniciado.{$aviso_descarte}";
+            } else {
+                $msg_retorno = "Lote de $total CPFs criado! Será iniciado automaticamente às {$hora_inicio_diario} nos dias configurados.";
+            }
+
+            ob_end_clean(); echo json_encode(['success' => true, 'msg' => $msg_retorno, 'cpf_dono' => $dono_lote_cpf]); exit;
 
         // ==================================================================================================
         // NOVA AÇÃO DE APPEND: INCLUIR MAIS CLIENTE
@@ -178,13 +213,15 @@ try {
                     // SE O CPF JÁ ESTÁ NO LOTE, ELE PULA (Evita duplicar)
                     if (isset($hashExistentes[$cpf])) continue;
 
-                    $nasc = ($idx_nasc !== -1 && isset($data[$idx_nasc])) ? trim($data[$idx_nasc]) : '';
-                    if (strpos($nasc, '/') !== false) { $p = explode('/', $nasc); if (count($p) == 3) $nasc = "{$p[2]}-{$p[1]}-{$p[0]}"; }
-                    $sexo = ($idx_sexo !== -1 && isset($data[$idx_sexo])) ? strtoupper(trim($data[$idx_sexo])) : '';
-                    $genero = (strpos($sexo, 'M') === 0) ? 'male' : 'female';
-                    $nome = ($idx_nome !== -1 && isset($data[$idx_nome])) ? mb_strtoupper(trim($data[$idx_nome]), 'UTF-8') : 'NÃO INFORMADO';
-                    
-                    $linhas_validas_novas[] = ['cpf' => $cpf, 'nascimento' => $nasc, 'sexo' => $genero, 'nome' => $nome];
+                    try {
+                        $nasc = ($idx_nasc !== -1 && isset($data[$idx_nasc])) ? trim($data[$idx_nasc]) : '';
+                        if (strpos($nasc, '/') !== false) { $p = explode('/', $nasc); if (count($p) == 3) $nasc = "{$p[2]}-{$p[1]}-{$p[0]}"; }
+                        if (!empty($nasc)) { $dt = DateTime::createFromFormat('Y-m-d', $nasc); $nasc = ($dt && $dt->format('Y-m-d') === $nasc) ? $nasc : null; } else { $nasc = null; }
+                        $sexo = ($idx_sexo !== -1 && isset($data[$idx_sexo])) ? strtoupper(trim($data[$idx_sexo])) : '';
+                        $genero = (strpos($sexo, 'M') === 0) ? 'male' : 'female';
+                        $nome = ($idx_nome !== -1 && isset($data[$idx_nome])) ? mb_strtoupper(trim($data[$idx_nome]), 'UTF-8') : 'NÃO INFORMADO';
+                        $linhas_validas_novas[] = ['cpf' => $cpf, 'nascimento' => $nasc, 'sexo' => $genero, 'nome' => $nome];
+                    } catch (Exception $e) { continue; }
                     $hashExistentes[$cpf] = true; 
                 }
             }
@@ -208,30 +245,39 @@ try {
                 $stmtBuscaManual = $pdo->prepare("SELECT r.CONSULT_ID, s.CONFIG_ID, s.MARGEM_DISPONIVEL as VALOR_MARGEM FROM INTEGRACAO_V8_REGISTRO_SIMULACAO s JOIN INTEGRACAO_V8_REGISTROCONSULTA r ON r.ID = s.ID_FILA WHERE s.CPF = ? AND s.MARGEM_DISPONIVEL > 0 AND r.CONSULT_ID IS NOT NULL ORDER BY s.ID DESC LIMIT 1");
             }
 
-            foreach ($linhas_validas_novas as $l) { 
-                $status_v8 = 'NA FILA'; $v_margem = null; $c_id = null; $cfg_id = null; $obs = null;
-                if ($somente_simular == 1) {
-                    $achou = false;
-                    $stmtBuscaLote->execute([$l['cpf']]); $margLote = $stmtBuscaLote->fetch(PDO::FETCH_ASSOC);
-                    if ($margLote) { $c_id = $margLote['CONSULT_ID']; $cfg_id = $margLote['CONFIG_ID']; $v_margem = $margLote['VALOR_MARGEM']; $achou = true; } 
-                    else {
-                        $stmtBuscaManual->execute([$l['cpf']]); $margManual = $stmtBuscaManual->fetch(PDO::FETCH_ASSOC);
-                        if ($margManual) { $c_id = $margManual['CONSULT_ID']; $cfg_id = $margManual['CONFIG_ID']; $v_margem = $margManual['VALOR_MARGEM']; $achou = true; }
+            $inseridos_novos = 0; $erros_insert_novos = 0;
+            foreach ($linhas_validas_novas as $l) {
+                try {
+                    $status_v8 = 'NA FILA'; $v_margem = null; $c_id = null; $cfg_id = null; $obs = null;
+                    if ($somente_simular == 1) {
+                        $achou = false;
+                        $stmtBuscaLote->execute([$l['cpf']]); $margLote = $stmtBuscaLote->fetch(PDO::FETCH_ASSOC);
+                        if ($margLote) { $c_id = $margLote['CONSULT_ID']; $cfg_id = $margLote['CONFIG_ID']; $v_margem = $margLote['VALOR_MARGEM']; $achou = true; }
+                        else {
+                            $stmtBuscaManual->execute([$l['cpf']]); $margManual = $stmtBuscaManual->fetch(PDO::FETCH_ASSOC);
+                            if ($margManual) { $c_id = $margManual['CONSULT_ID']; $cfg_id = $margManual['CONFIG_ID']; $v_margem = $margManual['VALOR_MARGEM']; $achou = true; }
+                        }
+                        if ($achou) { $status_v8 = 'AGUARDANDO SIMULACAO'; $obs = 'Pulo direto para simulação (Margem prévia localizada).'; }
+                        else { $status_v8 = 'RECUPERAR V8'; $obs = 'Buscando consentimento e margem direto na API...'; }
                     }
-                    if ($achou) { $status_v8 = 'AGUARDANDO SIMULACAO'; $obs = 'Pulo direto para simulação (Margem prévia localizada).'; } 
-                    else { $status_v8 = 'RECUPERAR V8'; $obs = 'Buscando consentimento e margem direto na API...'; }
-                }
-                $stmtCpf->execute([$id_lote, $l['cpf'], $l['nome'], $l['nascimento'], $l['sexo'], $status_v8, $v_margem, $c_id, $cfg_id, $obs]); 
+                    $stmtCpf->execute([$id_lote, $l['cpf'], $l['nome'], $l['nascimento'], $l['sexo'], $status_v8, $v_margem, $c_id, $cfg_id, $obs]);
+                    $inseridos_novos++;
+                } catch (Exception $e) { $erros_insert_novos++; continue; }
             }
 
+            // Ajusta QTD_TOTAL com o que realmente foi inserido
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_TOTAL = QTD_TOTAL + ?, STATUS_FILA = 'PENDENTE' WHERE ID = ?")->execute([$inseridos_novos, $id_lote]);
+
             $pdo->commit();
+
+            $aviso_append = ($erros_insert_novos > 0) ? " ({$erros_insert_novos} linhas com erro de formato descartadas.)" : '';
 
             // Desperta o robô
             $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
             $url_worker = $protocol . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']) . '/worker_v8_lote.php?user_cpf=' . $dono_lote_cpf;
             $ch = curl_init(); curl_setopt($ch, CURLOPT_URL, $url_worker); curl_setopt($ch, CURLOPT_TIMEOUT, 1); curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); curl_exec($ch); curl_close($ch);
 
-            ob_end_clean(); echo json_encode(['success' => true, 'msg' => "$total_novos CPFs inéditos foram incluídos ao lote com sucesso!", 'cpf_dono' => $dono_lote_cpf]); exit;
+            ob_end_clean(); echo json_encode(['success' => true, 'msg' => "{$inseridos_novos} CPFs inéditos foram incluídos ao lote com sucesso!{$aviso_append}", 'cpf_dono' => $dono_lote_cpf]); exit;
 
         case 'listar_lotes':
             $perm_meu_registro = function_exists('verificaPermissao') ? verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_CONSULTA_LOTE_MEU_REGISTRO', 'FUNCAO') : true;
@@ -507,20 +553,24 @@ try {
             $agendamento_tipo = $_POST['agendamento_tipo'];
             $data_hora_agendada = !empty($_POST['data_hora_agendada']) ? $_POST['data_hora_agendada'] : null;
             $dia_mes_agendado = !empty($_POST['dia_mes_agendado']) ? (int)$_POST['dia_mes_agendado'] : null;
+            $hora_inicio_diario = ($agendamento_tipo === 'DIARIO' && !empty($_POST['hora_inicio_diario'])) ? trim($_POST['hora_inicio_diario']) : null;
+            $dias_mes_diario = ($agendamento_tipo === 'DIARIO' && !empty($_POST['dias_mes_diario'])) ? trim($_POST['dias_mes_diario']) : null;
             $limite_diario = (int)$_POST['limite_diario'];
             $somente_simular = (int)$_POST['somente_simular'];
             $atualizar_telefone = (int)$_POST['atualizar_telefone'];
             $enviar_whats = (int)$_POST['enviar_whats'];
             $enviar_arquivo_whatsapp = (int)$_POST['enviar_arquivo_whatsapp'];
 
-            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET 
-                NOME_IMPORTACAO = ?, AGENDAMENTO_TIPO = ?, DATA_HORA_AGENDADA = ?, DIA_MES_AGENDADO = ?, 
-                LIMITE_DIARIO = ?, SOMENTE_SIMULAR = ?, ATUALIZAR_TELEFONE = ?, ENVIAR_WHATSAPP = ?, ENVIAR_ARQUIVO_WHATSAPP = ? 
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET
+                NOME_IMPORTACAO = ?, AGENDAMENTO_TIPO = ?, DATA_HORA_AGENDADA = ?, DIA_MES_AGENDADO = ?,
+                HORA_INICIO_DIARIO = ?, DIAS_MES_DIARIO = ?,
+                LIMITE_DIARIO = ?, SOMENTE_SIMULAR = ?, ATUALIZAR_TELEFONE = ?, ENVIAR_WHATSAPP = ?, ENVIAR_ARQUIVO_WHATSAPP = ?
                 WHERE ID = ?")->execute([
-                $agrupamento, $agendamento_tipo, $data_hora_agendada, $dia_mes_agendado, 
+                $agrupamento, $agendamento_tipo, $data_hora_agendada, $dia_mes_agendado,
+                $hora_inicio_diario, $dias_mes_diario,
                 $limite_diario, $somente_simular, $atualizar_telefone, $enviar_whats, $enviar_arquivo_whatsapp, $id_lote
             ]);
-            
+
             ob_end_clean(); echo json_encode(['success' => true, 'msg' => 'Configurações do Lote atualizadas com sucesso!']); exit;
 
         case 'enviar_relatorio_whatsapp':
@@ -688,14 +738,38 @@ try {
             $pdo->prepare("DELETE FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?")->execute([$id_lote]);
             ob_end_clean(); echo json_encode(['success' => true, 'msg' => 'Lote e histórico apagados com sucesso.']); exit;
 
+        case 'reprocessar_consentimento':
+            // Re-verifica apenas CPFs com AGUARDANDO DATAPREV → volta para AGUARDANDO MARGEM (FASE 2 relê o status da V8)
+            $id_lote = (int)$_POST['id_lote'];
+            $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'AGUARDANDO MARGEM', OBSERVACAO = 'Reverificando: aguardando retorno da Dataprev...' WHERE LOTE_ID = ? AND STATUS_V8 = 'AGUARDANDO DATAPREV'")->execute([$id_lote]);
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PENDENTE' WHERE ID = ?")->execute([$id_lote]);
+            $stmtDono = $pdo->prepare("SELECT CPF_USUARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?");
+            $stmtDono->execute([$id_lote]); $cpf_dono = $stmtDono->fetchColumn();
+            $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
+            $url_worker = $protocol . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']) . '/worker_v8_lote.php?user_cpf=' . $cpf_dono;
+            $ch = curl_init(); curl_setopt($ch, CURLOPT_URL, $url_worker); curl_setopt($ch, CURLOPT_TIMEOUT, 1); curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); curl_exec($ch); curl_close($ch);
+            ob_end_clean(); echo json_encode(['success' => true, 'msg' => 'CPFs aguardando Dataprev enviados para reverificação.', 'cpf_dono' => $cpf_dono]); exit;
+
+        case 'reprocessar_erros':
+            // Reprocessa apenas CPFs com status de ERRO (não inclui AGUARDANDO DATAPREV)
+            $id_lote = (int)$_POST['id_lote'];
+            $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'RECUPERAR V8', OBSERVACAO = 'Reprocessando erro: recuperando margem/simulação...' WHERE LOTE_ID = ? AND STATUS_V8 IN ('ERRO CONSULTA', 'ERRO MARGEM', 'ERRO SIMULACAO')")->execute([$id_lote]);
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PENDENTE' WHERE ID = ?")->execute([$id_lote]);
+            $stmtDono = $pdo->prepare("SELECT CPF_USUARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?");
+            $stmtDono->execute([$id_lote]); $cpf_dono = $stmtDono->fetchColumn();
+            $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
+            $url_worker = $protocol . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']) . '/worker_v8_lote.php?user_cpf=' . $cpf_dono;
+            $ch = curl_init(); curl_setopt($ch, CURLOPT_URL, $url_worker); curl_setopt($ch, CURLOPT_TIMEOUT, 1); curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); curl_exec($ch); curl_close($ch);
+            ob_end_clean(); echo json_encode(['success' => true, 'msg' => 'CPFs com erro enviados para reprocessamento.', 'cpf_dono' => $cpf_dono]); exit;
+
         case 'reprocessar_simulacao':
             $id_lote = (int)$_POST['id_lote'];
             $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'RECUPERAR V8', OBSERVACAO = 'Recuperando Margem/Simulação...' WHERE LOTE_ID = ? AND STATUS_V8 NOT IN ('OK', 'AGUARDANDO MARGEM', 'AGUARDANDO SIMULACAO')")->execute([$id_lote]);
             $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PENDENTE' WHERE ID = ?")->execute([$id_lote]);
-            
+
             $stmtDono = $pdo->prepare("SELECT CPF_USUARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?");
             $stmtDono->execute([$id_lote]); $cpf_dono = $stmtDono->fetchColumn();
-            
+
             $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
             $url_worker = $protocol . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']) . '/worker_v8_lote.php?user_cpf=' . $cpf_dono;
             $ch = curl_init(); curl_setopt($ch, CURLOPT_URL, $url_worker); curl_setopt($ch, CURLOPT_TIMEOUT, 1); curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); curl_exec($ch); curl_close($ch);
@@ -737,6 +811,56 @@ try {
             }
             ob_end_clean(); echo json_encode(['success' => true, 'msg' => 'Ação processada com sucesso.', 'cpf_dono' => $cpf_dono]); exit;
             
+        // =====================================================================
+        // VERIFICAR AGENDAMENTOS DIÁRIOS (chamado pelo frontend a cada minuto)
+        // =====================================================================
+        case 'verificar_agendamentos_diarios':
+            $hora_atual = date('H:i');
+            $dia_atual = (int)date('j'); // 1-31
+            $data_hoje = date('Y-m-d');
+
+            // 1. Resetar PROCESSADOS_HOJE para lotes diários que não foram resetados hoje
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE
+                SET PROCESSADOS_HOJE = 0, ULTIMO_PROCESSAMENTO = NULL
+                WHERE AGENDAMENTO_TIPO = 'DIARIO'
+                  AND (ULTIMO_PROCESSAMENTO IS NULL OR ULTIMO_PROCESSAMENTO < ?)
+                  AND STATUS_FILA NOT IN ('PENDENTE', 'PROCESSANDO')")->execute([$data_hoje]);
+
+            // 2. Encontrar lotes AGUARDANDO_DIARIO cujo horário bateu agora (±1min) e dia bate
+            $stmtD = $pdo->query("SELECT * FROM INTEGRACAO_V8_IMPORTACAO_LOTE
+                WHERE AGENDAMENTO_TIPO = 'DIARIO'
+                  AND STATUS_FILA = 'AGUARDANDO_DIARIO'
+                  AND STATUS_LOTE = 'ATIVO'
+                  AND HORA_INICIO_DIARIO IS NOT NULL
+                  AND (ULTIMO_PROCESSAMENTO IS NULL OR ULTIMO_PROCESSAMENTO < '{$data_hoje}')");
+
+            $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
+            $disparados = 0;
+            while ($loteDiario = $stmtD->fetch(PDO::FETCH_ASSOC)) {
+                $hora_lote = substr($loteDiario['HORA_INICIO_DIARIO'], 0, 5);
+
+                // Verifica se o horário bate (janela de 1 minuto)
+                if ($hora_lote !== $hora_atual) continue;
+
+                // Verifica se o dia bate
+                $dias_config = trim($loteDiario['DIAS_MES_DIARIO'] ?? 'TODOS');
+                if (!empty($dias_config) && $dias_config !== 'TODOS') {
+                    $dias_arr = array_map('intval', explode(',', $dias_config));
+                    if (!in_array($dia_atual, $dias_arr)) continue;
+                }
+
+                // Dispara: muda para PENDENTE e marca o dia
+                $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE
+                    SET STATUS_FILA = 'PENDENTE', PROCESSADOS_HOJE = 0, ULTIMO_PROCESSAMENTO = ?
+                    WHERE ID = ?")->execute([$data_hoje, $loteDiario['ID']]);
+
+                // Acorda o worker
+                $url_worker = $protocol . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']) . '/worker_v8_lote.php?user_cpf=' . $loteDiario['CPF_USUARIO'];
+                $ch = curl_init(); curl_setopt($ch, CURLOPT_URL, $url_worker); curl_setopt($ch, CURLOPT_TIMEOUT, 1); curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); curl_exec($ch); curl_close($ch);
+                $disparados++;
+            }
+            ob_end_clean(); echo json_encode(['success' => true, 'disparados' => $disparados, 'hora' => $hora_atual]); exit;
+
         case 'forcar_processamento_lote':
             $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
             $stmtDonos = $pdo->query("SELECT DISTINCT CPF_USUARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE STATUS_FILA IN ('PENDENTE', 'PROCESSANDO')");
