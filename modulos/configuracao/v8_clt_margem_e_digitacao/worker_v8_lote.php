@@ -231,7 +231,10 @@ while(true) {
                         }
                         if (!$config_id_poll) $config_id_poll = $consult_id;
 
-                        $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'AGUARDANDO SIMULACAO', VALOR_MARGEM = ?, CONFIG_ID = ?, OBSERVACAO = 'Margem lida em {$tentativa_poll}x polling ({$tentativa_poll}0s)!' WHERE ID = ?")->execute([(float)$margem_poll, $config_id_poll, $cpfFase1['ID']]);
+                        // Atualiza margem e dispara simulação imediatamente
+                        $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'AGUARDANDO SIMULACAO', VALOR_MARGEM = ?, CONFIG_ID = ?, OBSERVACAO = 'Margem lida em {$tentativa_poll}x polling — simulando...' WHERE ID = ?")->execute([(float)$margem_poll, $config_id_poll, $cpfFase1['ID']]);
+                        $cpfFase1['VALOR_MARGEM'] = $margem_poll; $cpfFase1['CONFIG_ID'] = $config_id_poll;
+                        v8SimularLote($cpfFase1, $config_id_poll, $consult_id, (float)$margem_poll, $id_lote, $prazo_padrao, $headers, $lote, $pdo);
                         $polling_resolvido = true;
                         break;
 
@@ -335,7 +338,9 @@ while(true) {
 
             if(!$config_id) $config_id = $consult_id;
             
-            $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'AGUARDANDO SIMULACAO', VALOR_MARGEM = ?, CONFIG_ID = ?, OBSERVACAO = 'Margem lida com sucesso! Aguardando Simulação...' WHERE ID = ?")->execute([(float)$margem, $config_id, $cpfFase2['ID']]);
+            $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'AGUARDANDO SIMULACAO', VALOR_MARGEM = ?, CONFIG_ID = ?, OBSERVACAO = 'Margem lida — simulando...' WHERE ID = ?")->execute([(float)$margem, $config_id, $cpfFase2['ID']]);
+            $cpfFase2['VALOR_MARGEM'] = $margem; $cpfFase2['CONFIG_ID'] = $config_id;
+            v8SimularLote($cpfFase2, $config_id, $consult_id, (float)$margem, $id_lote, $prazo_padrao, $headers, $lote, $pdo);
             
         } elseif (in_array($status_api, ['PROCESSING', 'PENDING', 'WAITING', 'WAITING_CONSULT', 'ANALYZING', 'IN_PROGRESS', 'PENDING_CONSULTATION', 'CONSENT_APPROVED'])) {
             $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'AGUARDANDO DATAPREV', OBSERVACAO = 'Dataprev demorando. Retido para reprocessamento manual.' WHERE ID = ?")->execute([$cpfFase2['ID']]);
@@ -349,152 +354,13 @@ while(true) {
         continue; 
     }
 
-    // FASE 3: SIMULAÇÃO PADRÃO E FATOR CONFERI
+    // FASE 3: FALLBACK — simula CPFs que já estavam em AGUARDANDO SIMULACAO antes da mudança
     $stmtF3 = $pdo->prepare("SELECT * FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE WHERE LOTE_ID = ? AND STATUS_V8 = 'AGUARDANDO SIMULACAO' ORDER BY ID ASC LIMIT 1");
     $stmtF3->execute([$id_lote]);
     if ($cpfFase3 = $stmtF3->fetch(PDO::FETCH_ASSOC)) {
         $work_found = true;
-        $config_id = $cpfFase3['CONFIG_ID'];
-        $consult_id = $cpfFase3['CONSULT_ID'];
-        $margem = (float)$cpfFase3['VALOR_MARGEM'];
-
-        $payload_sim_array = [ 'consult_id' => $consult_id, 'config_id' => $config_id, 'number_of_installments' => $prazo_padrao, 'installment_face_value' => $margem ];
-        $url_sim = "https://bff.v8sistema.com/private-consignment/simulation";
-        
-        $tentativas = 0; $max_tentativas = 5; $sim_obj = null; $httpS = 0; $observacao_final = 'Simulação e Margem extraídas com sucesso!'; $sucesso_sim = false; $erro_fatal = '';
-
-        while ($tentativas < $max_tentativas) {
-            $payload_sim = json_encode($payload_sim_array);
-            $chS = curl_init($url_sim); curl_setopt($chS, CURLOPT_RETURNTRANSFER, true); curl_setopt($chS, CURLOPT_POST, true); curl_setopt($chS, CURLOPT_POSTFIELDS, $payload_sim); curl_setopt($chS, CURLOPT_HTTPHEADER, $headers);
-            $resS = curl_exec($chS); $httpS = curl_getinfo($chS, CURLINFO_HTTP_CODE); curl_close($chS);
-            $jsonS = json_decode($resS, true);
-            
-            gravarLogIntegracao('logs_consulta_lote', $cpfFase3['CPF'], "FASE 3: SIMULACAO (TENTATIVA " . ($tentativas+1) . ")", $url_sim, json_decode($payload_sim, true), $jsonS, $httpS);
-
-            if ($httpS >= 200 && $httpS < 300 && !empty($jsonS)) { $sim_obj = isset($jsonS[0]) ? $jsonS[0] : $jsonS; $sucesso_sim = true; break; }
-
-            $erroMsg = strtolower($jsonS['detail'] ?? $jsonS['message'] ?? mb_substr($resS, 0, 200));
-            if (strpos($erroMsg, '50000') !== false) {
-                $observacao_final = 'O valor solicitado não pode ser maior que 50000.';
-                unset($payload_sim_array['installment_face_value']); $payload_sim_array['disbursed_amount'] = 50000; $tentativas++; continue;
-            } elseif (strpos($erroMsg, 'desembolso') !== false) {
-                $erro_fatal = 'A simulação não passou nos critérios de elegibilidade por valor mínimo de desembolso.'; break; 
-            } elseif (strpos($erroMsg, 'margem dispon') !== false || strpos($erroMsg, 'maior que a margem') !== false) {
-                $observacao_final = 'O valor da parcela não pode ser maior que a margem disponível do funcionário (parcela enquadrada em lup 10%)';
-                if (isset($payload_sim_array['installment_face_value'])) { $payload_sim_array['installment_face_value'] = round($payload_sim_array['installment_face_value'] * 0.90, 2); }
-                $tentativas++; continue;
-            } else {
-                $erro_fatal = $jsonS['detail'] ?? $jsonS['message'] ?? mb_substr($resS, 0, 200); break;
-            }
-        }
-
-        if ($sucesso_sim) {
-            $valor_liberado = $sim_obj['disbursement_amount'] ?? $sim_obj['disbursed_amount'] ?? 0;
-            $sim_id = $sim_obj['id_simulation'] ?? $sim_obj['id'] ?? null;
-            
-            // =========================================================================
-            // FATOR CONFERI (ATUALIZACAO CADASTRAL + COBRANÇA + SALVAR DADOS + CACHE)
-            // =========================================================================
-            if ($lote['ATUALIZAR_TELEFONE'] == 1) {
-                $cpf_dono_lote = $lote['CPF_USUARIO'];
-                $cpf_busca = ltrim($cpfFase3['CPF'], '0'); 
-                
-                $stmtFc = $pdo->prepare("SELECT SALDO, CUSTO_CONSULTA FROM CLIENTE_CADASTRO WHERE CPF = ?"); 
-                $stmtFc->execute([$cpf_dono_lote]); 
-                $cliFc = $stmtFc->fetch(PDO::FETCH_ASSOC);
-                
-                $custo_fc = (float)($cliFc['CUSTO_CONSULTA'] ?? 0); 
-                $saldo_fc = (float)($cliFc['SALDO'] ?? 0);
-                
-                if ($cliFc && $saldo_fc >= $custo_fc) {
-                    $stmtCfgFC = $pdo->query("SELECT TOKEN_LOTE FROM WAPI_CONFIG_BOT_FATOR WHERE ID = 1"); 
-                    $tkFC = trim($stmtCfgFC->fetchColumn());
-                    
-                    if (!empty($tkFC)) {
-                        
-                        // 1. VERIFICA O CACHE COMPARTILHADO PRIMEIRO!
-                        $dir_fc_json = $_SERVER['DOCUMENT_ROOT'] . '/modulos/configuracao/fator_conferi/Json_confatorconferi/';
-                        $arquivos_cache = glob($dir_fc_json . $cpf_busca . "_*.json");
-                        
-                        $usou_cache_fc = false;
-                        
-                        if (!empty($arquivos_cache)) {
-                            $json_salvo = @file_get_contents($arquivos_cache[0]);
-                            $array_fc = json_decode($json_salvo, true);
-                            
-                            if (isset($array_fc['CADASTRAIS']['NOME']) && !empty($array_fc['CADASTRAIS']['NOME'])) {
-                                $usou_cache_fc = true;
-                                
-                                // Atualiza as tabelas do CRM com os dados do cache
-                                inserirDadosOficiais_V8($cpf_busca, $array_fc, $pdo);
-                                
-                                gravarLogIntegracao('logs_automacao', $cpfFase3['CPF'], 'FATOR CONFERI: ATUALIZACAO CADASTRAL (VIA CACHE)', 'CACHE LOCAL', "Leitura de arquivo JSON", $array_fc, 200);
-                                
-                                // NOTA: Se usou o cache, NÃO COBRA do saldo! Sai de graça.
-                            }
-                        }
-                        
-                        // 2. SE NÃO ACHOU NO CACHE, BATE NA API!
-                        if (!$usou_cache_fc) {
-                            $urlFC = "https://fator.confere.link/api/?acao=CONS_CPF&TK=" . $tkFC . "&DADO=" . $cpf_busca;
-                            
-                            $chFC = curl_init($urlFC); 
-                            curl_setopt($chFC, CURLOPT_RETURNTRANSFER, true); 
-                            curl_setopt($chFC, CURLOPT_SSL_VERIFYPEER, false); 
-                            curl_setopt($chFC, CURLOPT_TIMEOUT, 30);
-                            $resFC = curl_exec($chFC); 
-                            $httpFC = curl_getinfo($chFC, CURLINFO_HTTP_CODE); 
-                            curl_close($chFC);
-                            
-                            gravarLogIntegracao('logs_automacao', $cpfFase3['CPF'], 'FATOR CONFERI: ATUALIZACAO CADASTRAL (VIA API)', $urlFC, "GET Request", $resFC, $httpFC);
-                            
-                            if ($httpFC >= 200 && $httpFC < 300) {
-                                $xmlString = mb_convert_encoding($resFC, 'UTF-8', 'ISO-8859-1'); 
-                                if(strpos($xmlString, '<') !== false) { $xmlString = substr($xmlString, strpos($xmlString, '<')); } 
-                                libxml_use_internal_errors(true);
-                                $xmlObject = simplexml_load_string($xmlString, 'SimpleXMLElement', LIBXML_NOCDATA);
-                                
-                                if ($xmlObject && isset($xmlObject->CADASTRAIS->NOME)) {
-                                    
-                                    $array_fc = xmlToArray_V8($xmlObject);
-                                    
-                                    // A) SALVAR DADOS NO CRM
-                                    inserirDadosOficiais_V8($cpf_busca, $array_fc, $pdo);
-                                    
-                                    // B) CRIAR O ARQUIVO DE CACHE COMPARTILHADO
-                                    $json_final_fc = json_encode($array_fc, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
-                                    $cad_fc = $array_fc['CADASTRAIS'] ?? [];
-                                    $nome_cliente_fc = trim((string)($cad_fc['NOME'] ?? ''));
-                                    $nome_limpo_fc = strtolower(preg_replace('/[^A-Za-z0-9]/', '', str_replace(' ', '', $nome_cliente_fc)));
-                                    
-                                    if (!is_dir($dir_fc_json)) { @mkdir($dir_fc_json, 0777, true); }
-                                    $arquivo_cache_fc = $dir_fc_json . "{$cpf_busca}_{$nome_limpo_fc}.json";
-                                    @file_put_contents($arquivo_cache_fc, $json_final_fc);
-                                    
-                                    // C) EFETUAR O DESCONTO (Já que bateu na API externa)
-                                    if ($custo_fc > 0) {
-                                        $novo_saldo_fc = $saldo_fc - $custo_fc;
-                                        $pdo->prepare("UPDATE CLIENTE_CADASTRO SET SALDO = ? WHERE CPF = ?")->execute([$novo_saldo_fc, $cpf_dono_lote]);
-                                        
-                                        $motivo_fc = "LOTE V8 - ENRIQUECIMENTO CPF {$cpfFase3['CPF']} (API)";
-                                        $pdo->prepare("INSERT INTO fatorconferi_CLIENTE_FINANCEIRO_EXTRATO (CPF_CLIENTE, TIPO, MOTIVO, VALOR, SALDO_ANTERIOR, SALDO_ATUAL, DATA_HORA) VALUES (?, 'DEBITO', ?, ?, ?, ?, NOW())")->execute([$cpf_dono_lote, $motivo_fc, $custo_fc, $saldo_fc, $novo_saldo_fc]);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            // =========================================================================
-
-            $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'OK', VALOR_LIQUIDO = ?, PRAZO = ?, SIMULATION_ID = ?, OBSERVACAO = ?, DATA_SIMULACAO = NOW() WHERE ID = ?")->execute([(float)$valor_liberado, $prazo_padrao, $sim_id, $observacao_final, $cpfFase3['ID']]);
-            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_PROCESSADA = QTD_PROCESSADA + 1, QTD_SUCESSO = QTD_SUCESSO + 1 WHERE ID = ?")->execute([$id_lote]);
-
-        } else {
-            $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'ERRO SIMULACAO', OBSERVACAO = ?, DATA_SIMULACAO = NOW() WHERE ID = ?")->execute([$erro_fatal, $cpfFase3['ID']]);
-            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_PROCESSADA = QTD_PROCESSADA + 1, QTD_ERRO = QTD_ERRO + 1 WHERE ID = ?")->execute([$id_lote]);
-        }
-        sleep(2); continue; 
+        v8SimularLote($cpfFase3, $cpfFase3['CONFIG_ID'], $cpfFase3['CONSULT_ID'], (float)$cpfFase3['VALOR_MARGEM'], $id_lote, $prazo_padrao, $headers, $lote, $pdo);
+        sleep(2); continue;
     }
 
     if (!$work_found) {
@@ -504,6 +370,90 @@ while(true) {
         } else {
             $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'CONCLUIDO', DATA_FINALIZACAO = NOW() WHERE ID = ?")->execute([$id_lote]);
         }
+    }
+}
+
+// ===============================================
+// FUNÇÃO: SIMULAÇÃO PADRÃO + FATOR CONFERI
+// Chamada inline após margem resolvida (FASE 1 e FASE 2)
+// e também usada pela FASE 3 como fallback.
+// ===============================================
+function v8SimularLote($cpfRow, $config_id_sim, $consult_id_sim, $margem_sim, $id_lote, $prazo_padrao, $headers, $lote, $pdo) {
+    $url_sim = "https://bff.v8sistema.com/private-consignment/simulation";
+    $payload_sim_array = [ 'consult_id' => $consult_id_sim, 'config_id' => $config_id_sim, 'number_of_installments' => $prazo_padrao, 'installment_face_value' => $margem_sim ];
+
+    $tentativas = 0; $max_tentativas = 5; $sim_obj = null; $sucesso_sim = false; $erro_fatal = ''; $observacao_final = 'Simulação e Margem extraídas com sucesso!';
+
+    while ($tentativas < $max_tentativas) {
+        $payload_sim = json_encode($payload_sim_array);
+        $chS = curl_init($url_sim); curl_setopt($chS, CURLOPT_RETURNTRANSFER, true); curl_setopt($chS, CURLOPT_POST, true); curl_setopt($chS, CURLOPT_POSTFIELDS, $payload_sim); curl_setopt($chS, CURLOPT_HTTPHEADER, $headers);
+        $resS = curl_exec($chS); $httpS = curl_getinfo($chS, CURLINFO_HTTP_CODE); curl_close($chS);
+        $jsonS = json_decode($resS, true);
+
+        gravarLogIntegracao('logs_consulta_lote', $cpfRow['CPF'], "SIMULACAO (TENTATIVA " . ($tentativas+1) . ")", $url_sim, json_decode($payload_sim, true), $jsonS, $httpS);
+
+        if ($httpS >= 200 && $httpS < 300 && !empty($jsonS)) { $sim_obj = isset($jsonS[0]) ? $jsonS[0] : $jsonS; $sucesso_sim = true; break; }
+
+        $erroMsg = strtolower($jsonS['detail'] ?? $jsonS['message'] ?? mb_substr($resS, 0, 200));
+        if (strpos($erroMsg, '50000') !== false) {
+            $observacao_final = 'O valor solicitado não pode ser maior que 50000.';
+            unset($payload_sim_array['installment_face_value']); $payload_sim_array['disbursed_amount'] = 50000; $tentativas++; continue;
+        } elseif (strpos($erroMsg, 'desembolso') !== false) {
+            $erro_fatal = 'A simulação não passou nos critérios de elegibilidade por valor mínimo de desembolso.'; break;
+        } elseif (strpos($erroMsg, 'margem dispon') !== false || strpos($erroMsg, 'maior que a margem') !== false) {
+            $observacao_final = 'O valor da parcela não pode ser maior que a margem disponível do funcionário (parcela enquadrada em lup 10%)';
+            if (isset($payload_sim_array['installment_face_value'])) { $payload_sim_array['installment_face_value'] = round($payload_sim_array['installment_face_value'] * 0.90, 2); }
+            $tentativas++; continue;
+        } else {
+            $erro_fatal = $jsonS['detail'] ?? $jsonS['message'] ?? mb_substr($resS, 0, 200); break;
+        }
+    }
+
+    if ($sucesso_sim) {
+        $valor_liberado = $sim_obj['disbursement_amount'] ?? $sim_obj['disbursed_amount'] ?? 0;
+        $sim_id = $sim_obj['id_simulation'] ?? $sim_obj['id'] ?? null;
+
+        // FATOR CONFERI
+        if ($lote['ATUALIZAR_TELEFONE'] == 1) {
+            $cpf_dono_lote = $lote['CPF_USUARIO'];
+            $cpf_busca = ltrim($cpfRow['CPF'], '0');
+            $stmtFc = $pdo->prepare("SELECT SALDO, CUSTO_CONSULTA FROM CLIENTE_CADASTRO WHERE CPF = ?");
+            $stmtFc->execute([$cpf_dono_lote]); $cliFc = $stmtFc->fetch(PDO::FETCH_ASSOC);
+            $custo_fc = (float)($cliFc['CUSTO_CONSULTA'] ?? 0); $saldo_fc = (float)($cliFc['SALDO'] ?? 0);
+            if ($cliFc && $saldo_fc >= $custo_fc) {
+                $stmtCfgFC = $pdo->query("SELECT TOKEN_LOTE FROM WAPI_CONFIG_BOT_FATOR WHERE ID = 1"); $tkFC = trim($stmtCfgFC->fetchColumn());
+                if (!empty($tkFC)) {
+                    $dir_fc_json = $_SERVER['DOCUMENT_ROOT'] . '/modulos/configuracao/fator_conferi/Json_confatorconferi/';
+                    $arquivos_cache = glob($dir_fc_json . $cpf_busca . "_*.json");
+                    $usou_cache_fc = false;
+                    if (!empty($arquivos_cache)) { $json_salvo = @file_get_contents($arquivos_cache[0]); $array_fc = json_decode($json_salvo, true); if (isset($array_fc['CADASTRAIS']['NOME']) && !empty($array_fc['CADASTRAIS']['NOME'])) { $usou_cache_fc = true; inserirDadosOficiais_V8($cpf_busca, $array_fc, $pdo); } }
+                    if (!$usou_cache_fc) {
+                        $urlFC = "https://fator.confere.link/api/?acao=CONS_CPF&TK=" . $tkFC . "&DADO=" . $cpf_busca;
+                        $chFC = curl_init($urlFC); curl_setopt($chFC, CURLOPT_RETURNTRANSFER, true); curl_setopt($chFC, CURLOPT_SSL_VERIFYPEER, false); curl_setopt($chFC, CURLOPT_TIMEOUT, 30);
+                        $resFC = curl_exec($chFC); $httpFC = curl_getinfo($chFC, CURLINFO_HTTP_CODE); curl_close($chFC);
+                        if ($httpFC >= 200 && $httpFC < 300) {
+                            $xmlString = mb_convert_encoding($resFC, 'UTF-8', 'ISO-8859-1'); if(strpos($xmlString, '<') !== false) { $xmlString = substr($xmlString, strpos($xmlString, '<')); }
+                            libxml_use_internal_errors(true); $xmlObject = simplexml_load_string($xmlString, 'SimpleXMLElement', LIBXML_NOCDATA);
+                            if ($xmlObject && isset($xmlObject->CADASTRAIS->NOME)) {
+                                $array_fc = xmlToArray_V8($xmlObject); inserirDadosOficiais_V8($cpf_busca, $array_fc, $pdo);
+                                $json_final_fc = json_encode($array_fc, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+                                $cad_fc = $array_fc['CADASTRAIS'] ?? []; $nome_cliente_fc = trim((string)($cad_fc['NOME'] ?? ''));
+                                $nome_limpo_fc = strtolower(preg_replace('/[^A-Za-z0-9]/', '', str_replace(' ', '', $nome_cliente_fc)));
+                                if (!is_dir($dir_fc_json)) { @mkdir($dir_fc_json, 0777, true); }
+                                @file_put_contents($dir_fc_json . "{$cpf_busca}_{$nome_limpo_fc}.json", $json_final_fc);
+                                if ($custo_fc > 0) { $novo_saldo_fc = $saldo_fc - $custo_fc; $pdo->prepare("UPDATE CLIENTE_CADASTRO SET SALDO = ? WHERE CPF = ?")->execute([$novo_saldo_fc, $cpf_dono_lote]); $pdo->prepare("INSERT INTO fatorconferi_CLIENTE_FINANCEIRO_EXTRATO (CPF_CLIENTE, TIPO, MOTIVO, VALOR, SALDO_ANTERIOR, SALDO_ATUAL, DATA_HORA) VALUES (?, 'DEBITO', ?, ?, ?, ?, NOW())")->execute([$cpf_dono_lote, "LOTE V8 - ENRIQUECIMENTO CPF {$cpfRow['CPF']} (API)", $custo_fc, $saldo_fc, $novo_saldo_fc]); }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'OK', VALOR_LIQUIDO = ?, PRAZO = ?, SIMULATION_ID = ?, OBSERVACAO = ?, DATA_SIMULACAO = NOW() WHERE ID = ?")->execute([(float)$valor_liberado, $prazo_padrao, $sim_id, $observacao_final, $cpfRow['ID']]);
+        $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_PROCESSADA = QTD_PROCESSADA + 1, QTD_SUCESSO = QTD_SUCESSO + 1 WHERE ID = ?")->execute([$id_lote]);
+    } else {
+        $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'ERRO SIMULACAO', OBSERVACAO = ?, DATA_SIMULACAO = NOW() WHERE ID = ?")->execute([$erro_fatal, $cpfRow['ID']]);
+        $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_PROCESSADA = QTD_PROCESSADA + 1, QTD_ERRO = QTD_ERRO + 1 WHERE ID = ?")->execute([$id_lote]);
     }
 }
 
