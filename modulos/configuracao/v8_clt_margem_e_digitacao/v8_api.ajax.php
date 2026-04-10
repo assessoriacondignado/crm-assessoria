@@ -215,30 +215,35 @@ try {
             echo json_encode(['success' => true, 'msg' => 'Saldo ajustado!']); break;
 
         case 'listar_fila_consultas':
-            $filtro_cpf = preg_replace('/\D/', '', $_POST['cpf'] ?? ''); $filtro_nome = trim($_POST['nome'] ?? ''); $data_ini = trim($_POST['data_ini'] ?? ''); $data_fim = trim($_POST['data_fim'] ?? '');
+            $filtro_cpf = preg_replace('/\D/', '', $_POST['cpf'] ?? ''); $filtro_nome = trim($_POST['nome'] ?? ''); $data_ini = trim($_POST['data_ini'] ?? ''); $data_fim = trim($_POST['data_fim'] ?? ''); $filtro_origem = trim($_POST['origem'] ?? '');
             $where = " WHERE 1=1 "; $params = [];
             if ($restricao_minha_fila) { $where .= " AND c.CPF_USUARIO = ? "; $params[] = $usuario_logado_cpf; }
             if (!empty($data_ini)) { $where .= " AND DATE(c.DATA_FILA) >= ? "; $params[] = $data_ini; }
             if (!empty($data_fim)) { $where .= " AND DATE(c.DATA_FILA) <= ? "; $params[] = $data_fim; }
             if (!empty($filtro_cpf)) { $where .= " AND c.CPF_CONSULTADO LIKE ? "; $params[] = "%$filtro_cpf%"; }
             if (!empty($filtro_nome)) { $where .= " AND c.NOME_COMPLETO LIKE ? "; $params[] = "%$filtro_nome%"; }
+            if ($filtro_origem === 'IA BOT') { $where .= " AND c.FONTE_CONSULT_ID = 'IA BOT' "; }
+            elseif ($filtro_origem === 'MANUAL') { $where .= " AND (c.FONTE_CONSULT_ID IS NULL OR c.FONTE_CONSULT_ID != 'IA BOT') "; }
             $sql = "SELECT c.*, DATE_FORMAT(c.DATA_FILA, '%d/%m/%Y %H:%i') as DATA_FILA_BR, DATE_FORMAT(c.ULTIMA_ATUALIZACAO, '%d/%m/%Y %H:%i') as DATA_RETORNO_BR, s.CONFIG_ID, s.NOME_TABELA, s.MARGEM_DISPONIVEL as VALOR_MARGEM, s.PRAZOS_DISPONIVEIS as PRAZOS, s.SIMULATION_ID, s.STATUS_CONFIG_ID, s.OBS_CONFIG_ID, s.OBS_SIMULATION_ID, s.FONTE_CONSIG_ID, s.VALOR_LIBERADO, s.VALOR_PARCELA, s.PRAZO_SIMULACAO, DATE_FORMAT(s.DATA_CONFIG_ID, '%d/%m/%Y %H:%i') as DATA_CONFIG_BR, p.NUMERO_PROPOSTA, p.STATUS_PROPOSTA_V8 as STATUS_PROPOSTA_REAL_TIME, p.LINK_PROPOSTA, ch.USERNAME_API, ch.TABELA_PADRAO, ch.PRAZO_PADRAO, ch.CLIENTE_NOME, u.NOME as NOME_USUARIO FROM INTEGRACAO_V8_REGISTROCONSULTA c LEFT JOIN INTEGRACAO_V8_REGISTRO_SIMULACAO s ON s.ID = ( SELECT ID FROM INTEGRACAO_V8_REGISTRO_SIMULACAO s2 WHERE s2.ID_FILA = c.ID ORDER BY s2.ID DESC LIMIT 1 ) LEFT JOIN INTEGRACAO_V8_REGISTRO_PROPOSTA p ON c.STATUS_V8 LIKE CONCAT('%', p.NUMERO_PROPOSTA, '%') LEFT JOIN INTEGRACAO_V8_CHAVE_ACESSO ch ON c.CHAVE_ID = ch.ID LEFT JOIN CLIENTE_USUARIO u ON c.CPF_USUARIO COLLATE utf8mb4_unicode_ci = u.CPF COLLATE utf8mb4_unicode_ci $where ORDER BY c.ID DESC LIMIT 20";
             $stmt = $pdo->prepare($sql); $stmt->execute($params); echo json_encode(['success' => true, 'data' => $stmt->fetchAll(PDO::FETCH_ASSOC)]); break;
 
         case 'exportar_fila_consultas':
-            $filtro_cpf = preg_replace('/\D/', '', $_GET['cpf'] ?? ''); 
-            $filtro_nome = trim($_GET['nome'] ?? ''); 
-            $data_ini = trim($_GET['data_ini'] ?? ''); 
+            $filtro_cpf = preg_replace('/\D/', '', $_GET['cpf'] ?? '');
+            $filtro_nome = trim($_GET['nome'] ?? '');
+            $data_ini = trim($_GET['data_ini'] ?? '');
             $data_fim = trim($_GET['data_fim'] ?? '');
-            
-            $where = " WHERE 1=1 "; 
+            $filtro_origem = trim($_GET['origem'] ?? '');
+
+            $where = " WHERE 1=1 ";
             $params = [];
-            
+
             if ($restricao_minha_fila) { $where .= " AND c.CPF_USUARIO = ? "; $params[] = $usuario_logado_cpf; }
             if (!empty($data_ini)) { $where .= " AND DATE(c.DATA_FILA) >= ? "; $params[] = $data_ini; }
             if (!empty($data_fim)) { $where .= " AND DATE(c.DATA_FILA) <= ? "; $params[] = $data_fim; }
             if (!empty($filtro_cpf)) { $where .= " AND c.CPF_CONSULTADO LIKE ? "; $params[] = "%$filtro_cpf%"; }
             if (!empty($filtro_nome)) { $where .= " AND c.NOME_COMPLETO LIKE ? "; $params[] = "%$filtro_nome%"; }
+            if ($filtro_origem === 'IA BOT') { $where .= " AND c.FONTE_CONSULT_ID = 'IA BOT' "; }
+            elseif ($filtro_origem === 'MANUAL') { $where .= " AND (c.FONTE_CONSULT_ID IS NULL OR c.FONTE_CONSULT_ID != 'IA BOT') "; }
             
             $sql = "SELECT c.*, DATE_FORMAT(c.DATA_FILA, '%d/%m/%Y %H:%i') as DATA_FILA_BR, 
                     s.MARGEM_DISPONIVEL as VALOR_MARGEM, s.VALOR_LIBERADO, s.PRAZO_SIMULACAO as PRAZO, s.DATA_SIMULATION_ID, s.NOME_TABELA
