@@ -115,11 +115,12 @@ while(true) {
     $chave_id = $lote['CHAVE_ID'];
     $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PROCESSANDO' WHERE ID = ?")->execute([$id_lote]);
 
-    $stmtKeySet = $pdo->prepare("SELECT TABELA_PADRAO, PRAZO_PADRAO FROM INTEGRACAO_V8_CHAVE_ACESSO WHERE ID = ?");
+    $stmtKeySet = $pdo->prepare("SELECT TABELA_PADRAO, PRAZO_PADRAO, INTERVALO_CONSENTIMENTO FROM INTEGRACAO_V8_CHAVE_ACESSO WHERE ID = ?");
     $stmtKeySet->execute([$chave_id]);
     $keySet = $stmtKeySet->fetch(PDO::FETCH_ASSOC);
     $tabela_padrao = !empty($keySet['TABELA_PADRAO']) ? $keySet['TABELA_PADRAO'] : 'CLT Acelera';
     $prazo_padrao = !empty($keySet['PRAZO_PADRAO']) ? (int)$keySet['PRAZO_PADRAO'] : 24;
+    $intervalo_consentimento = max(0, (int)($keySet['INTERVALO_CONSENTIMENTO'] ?? 0));
 
     $token = null;
     if(isset($tokens_cache[$chave_id]) && (time() - $tokens_cache[$chave_id]['time'] < 3000)) { 
@@ -249,6 +250,9 @@ while(true) {
         $telefone = '11900000000';
         $stmtT = $pdo->prepare("SELECT telefone_cel FROM telefones WHERE cpf = ? LIMIT 1"); $stmtT->execute([$cpfFase1['CPF']]);
         if ($t = $stmtT->fetchColumn()) { $telefone = $t; $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET TELEFONES_LOCAL = ? WHERE ID = ?")->execute([$telefone, $cpfFase1['ID']]); }
+
+        // Intervalo configurado por chave antes de cada consentimento
+        if ($intervalo_consentimento > 0) { sleep($intervalo_consentimento); }
 
         $payload_cons = json_encode([ 'borrowerDocumentNumber' => $cpfFase1['CPF'], 'gender' => $cpfFase1['SEXO'] ?: 'female', 'birthDate' => $cpfFase1['NASCIMENTO'], 'signerName' => $cpfFase1['NOME'], 'signerEmail' => 'cliente@gmail.com', 'signerPhone' => ['countryCode' => '55', 'areaCode' => substr($telefone, 0, 2), 'phoneNumber' => substr($telefone, 2)], 'provider' => 'QI' ]);
 

@@ -170,6 +170,8 @@ try {
 
         case 'salvar_chave_v8':
             $id = (int)($_POST['id'] ?? 0); $tabela_padrao = trim($_POST['tabela_padrao'] ?? 'CLT Acelera'); $prazo_padrao = (int)($_POST['prazo_padrao'] ?? 24);
+            $intervalo_consentimento = max(0, (int)($_POST['intervalo_consentimento'] ?? 0));
+            try { $pdo->exec("ALTER TABLE INTEGRACAO_V8_CHAVE_ACESSO ADD COLUMN INTERVALO_CONSENTIMENTO INT NOT NULL DEFAULT 0"); } catch(Exception $e){}
             $client_id = trim($_POST['client_id'] ?? ''); $audience = trim($_POST['audience'] ?? '');
 
             if(empty($client_id) || empty($audience)) {
@@ -197,12 +199,12 @@ try {
                     if ($restricao_custo_cliente) { $custo_consulta = (float)$chaveExist['CUSTO_CONSULTA']; }
                     if ($restricao_custo_api) { $custo_v8 = (float)$chaveExist['CUSTO_V8']; }
                 }
-                $pdo->prepare("UPDATE INTEGRACAO_V8_CHAVE_ACESSO SET CLIENTE_NOME=?, CLIENT_ID=?, AUDIENCE=?, USERNAME_API=?, PASSWORD_API=?, CUSTO_CONSULTA=?, CUSTO_V8=?, TABELA_PADRAO=?, PRAZO_PADRAO=?, CPF_USUARIO=?, NOME_USUARIO=? WHERE ID=?")->execute([$cliente_nome, $client_id, $audience, $username_api, $password_api, $custo_consulta, $custo_v8, $tabela_padrao, $prazo_padrao, $cpf_dono, $nome_dono, $id]);
+                $pdo->prepare("UPDATE INTEGRACAO_V8_CHAVE_ACESSO SET CLIENTE_NOME=?, CLIENT_ID=?, AUDIENCE=?, USERNAME_API=?, PASSWORD_API=?, CUSTO_CONSULTA=?, CUSTO_V8=?, TABELA_PADRAO=?, PRAZO_PADRAO=?, INTERVALO_CONSENTIMENTO=?, CPF_USUARIO=?, NOME_USUARIO=? WHERE ID=?")->execute([$cliente_nome, $client_id, $audience, $username_api, $password_api, $custo_consulta, $custo_v8, $tabela_padrao, $prazo_padrao, $intervalo_consentimento, $cpf_dono, $nome_dono, $id]);
             } else {
                 if ($restricao_chave) { $client_id = ''; $audience = ''; $username_api = ''; $password_api = ''; }
                 if ($restricao_custo_cliente) { $custo_consulta = 0; }
                 if ($restricao_custo_api) { $custo_v8 = 0; }
-                $pdo->prepare("INSERT INTO INTEGRACAO_V8_CHAVE_ACESSO (CLIENTE_NOME, CLIENT_ID, AUDIENCE, USERNAME_API, PASSWORD_API, CUSTO_CONSULTA, CUSTO_V8, CPF_USUARIO, NOME_USUARIO, TABELA_PADRAO, PRAZO_PADRAO) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")->execute([$cliente_nome, $client_id, $audience, $username_api, $password_api, $custo_consulta, $custo_v8, $cpf_dono, $nome_dono, $tabela_padrao, $prazo_padrao]);
+                $pdo->prepare("INSERT INTO INTEGRACAO_V8_CHAVE_ACESSO (CLIENTE_NOME, CLIENT_ID, AUDIENCE, USERNAME_API, PASSWORD_API, CUSTO_CONSULTA, CUSTO_V8, CPF_USUARIO, NOME_USUARIO, TABELA_PADRAO, PRAZO_PADRAO, INTERVALO_CONSENTIMENTO) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")->execute([$cliente_nome, $client_id, $audience, $username_api, $password_api, $custo_consulta, $custo_v8, $cpf_dono, $nome_dono, $tabela_padrao, $prazo_padrao, $intervalo_consentimento]);
             }
             echo json_encode(['success' => true, 'msg' => 'Chave salva com sucesso!']); break;
 
