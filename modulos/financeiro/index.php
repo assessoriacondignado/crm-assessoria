@@ -61,7 +61,11 @@
                   </div>
                   <div class="col-md-3 text-end">
                       <button class="btn btn-info fw-bold border-dark w-100 shadow-sm mb-2 text-dark" type="button" onclick="abrirModalExtratoPagBank()"><i class="fas fa-list-alt me-1"></i> Ver Extrato Completo</button>
-                      <button class="btn btn-primary fw-bold border-dark w-100 shadow-sm mb-2" id="btnSincApi" onclick="sincronizarPagBank()"><i class="fas fa-sync-alt me-1"></i> Sincronizar API (24h)</button>
+                      <div class="d-flex gap-1 mb-2">
+                          <input type="date" id="sincDataInicio" class="form-control form-control-sm border-dark" title="Data Início">
+                          <input type="date" id="sincDataFim" class="form-control form-control-sm border-dark" title="Data Fim">
+                      </div>
+                      <button class="btn btn-primary fw-bold border-dark w-100 shadow-sm mb-2" id="btnSincApi" onclick="sincronizarPagBank()"><i class="fas fa-sync-alt me-1"></i> Sincronizar por Período</button>
                       <button class="btn btn-outline-secondary btn-sm fw-bold border-dark w-100 shadow-sm" onclick="document.getElementById('fileExtrato').click()"><i class="fas fa-file-csv me-1"></i> Subir CSV Manual</button>
                       <input type="file" id="fileExtrato" accept=".csv" style="display:none;" onchange="importarExtrato(this)">
                   </div>
@@ -652,16 +656,36 @@
   // ===============================================
   // BOTÃO DE SINCRONIZAÇÃO PAGBANK (API)
   // ===============================================
+  // Preenche datas padrão: último mês até hoje
+  (function() {
+      const hoje = new Date();
+      const fim = hoje.toISOString().slice(0, 10);
+      const ini = new Date(hoje.getFullYear(), hoje.getMonth(), 1).toISOString().slice(0, 10);
+      document.addEventListener('DOMContentLoaded', function() {
+          const di = document.getElementById('sincDataInicio');
+          const df = document.getElementById('sincDataFim');
+          if (di && !di.value) di.value = ini;
+          if (df && !df.value) df.value = fim;
+      });
+  })();
+
   async function sincronizarPagBank() {
       const btn = document.getElementById('btnSincApi');
+      const dataInicio = document.getElementById('sincDataInicio').value;
+      const dataFim    = document.getElementById('sincDataFim').value;
+
+      if (!dataInicio || !dataFim) { alert('Selecione o período de início e fim antes de sincronizar.'); return; }
+      if (dataInicio > dataFim) { alert('A data de início não pode ser maior que a data fim.'); return; }
+
       const originalHtml = btn.innerHTML;
-      
       btn.innerHTML = '<i class="fas fa-spinner fa-spin me-1"></i> Conectando ao Banco...';
       btn.disabled = true;
 
       try {
           const fd = new FormData();
           fd.append('acao', 'sincronizar_extrato');
+          fd.append('data_inicio', dataInicio);
+          fd.append('data_fim', dataFim);
 
           const res = await fetch('api_pagbank.php', { method: 'POST', body: fd });
           const j = await res.json();

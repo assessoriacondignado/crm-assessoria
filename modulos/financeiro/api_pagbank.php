@@ -25,8 +25,12 @@ try {
     // FUNÇÃO 1: SINCRONIZAR SAÍDAS (24H)
     // =======================================================
     if ($acao === 'sincronizar_extrato') {
-        $data_inicio = date('Y-m-d', strtotime('-1 days'));
-        $data_fim = date('Y-m-d');
+        $data_inicio = !empty($_POST['data_inicio']) ? $_POST['data_inicio'] : date('Y-m-d', strtotime('-1 days'));
+        $data_fim    = !empty($_POST['data_fim'])    ? $_POST['data_fim']    : date('Y-m-d');
+        // Validação básica do formato
+        if (!preg_match('/^\d{4}-\d{2}-\d{2}$/', $data_inicio) || !preg_match('/^\d{4}-\d{2}-\d{2}$/', $data_fim)) {
+            echo json_encode(['success' => false, 'msg' => 'Datas inválidas. Use o formato AAAA-MM-DD.']); exit;
+        }
 
         $url = "https://api.pagseguro.com/digital-account/v1/statements?initial_date={$data_inicio}&final_date={$data_fim}";
 
@@ -68,7 +72,8 @@ try {
                 } else { $qtdIgnorados++; }
             }
         }
-        echo json_encode(['success' => true, 'msg' => "Sincronização 24h finalizada! ✓ Novas despesas importadas: {$qtdImportados} | ⚠ Já existiam: {$qtdIgnorados}."]);
+        $periodo = date('d/m/Y', strtotime($data_inicio)) . ' a ' . date('d/m/Y', strtotime($data_fim));
+        echo json_encode(['success' => true, 'msg' => "Sincronização ({$periodo}) finalizada! ✓ Novas despesas importadas: {$qtdImportados} | ⚠ Já existiam: {$qtdIgnorados}."]);
         exit;
     }
 
