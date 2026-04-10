@@ -214,7 +214,22 @@
     <h5 class="fw-bold text-dark mb-0"><i class="fas fa-list me-2"></i> Gerenciador de Lotes Exportação V8</h5>
     <div class="d-flex gap-2">
         <?php if (function_exists('verificaPermissao') && verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_CONSULTA_LOTE_EXPORTAR_TUDO', 'FUNCAO')): ?>
-        <button class="btn btn-outline-danger btn-sm fw-bold shadow-sm bg-white border-dark" onclick="v8ExportarTudoLotes()"><i class="fas fa-file-export me-1"></i> Exportar Tudo</button>
+        <div class="dropdown">
+            <button class="btn btn-outline-danger btn-sm fw-bold shadow-sm bg-white border-dark dropdown-toggle" data-bs-toggle="dropdown">
+                <i class="fas fa-file-export me-1"></i> Exportar
+            </button>
+            <ul class="dropdown-menu shadow border-dark" style="font-size:13px;">
+                <li><a class="dropdown-item fw-bold" href="#" onclick="v8ExportarTudoLotes(false)">
+                    <i class="fas fa-download me-2 text-dark"></i> Exportar Tudo
+                    <div class="small text-muted fw-normal">Todos os CPFs dos lotes filtrados</div>
+                </a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item fw-bold" href="#" onclick="v8ExportarTudoLotes(true)">
+                    <i class="fas fa-check-circle me-2 text-success"></i> Exportar com Valor Líquido
+                    <div class="small text-muted fw-normal">Somente CPFs com simulação aprovada</div>
+                </a></li>
+            </ul>
+        </div>
         <?php endif; ?>
         
         <button class="btn btn-outline-dark btn-sm fw-bold shadow-sm bg-white border-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiltroLote"><i class="fas fa-filter me-1"></i> Filtro Aprimorado</button>
@@ -604,13 +619,15 @@
     }
 
     // --- FUNÇÃO EXPORTAR TUDO (MÁSTER) ---
-    function v8ExportarTudoLotes() {
-        if(!confirm("Deseja exportar todos os CPFs de TODOS os lotes que estão filtrados na tabela atualmente?\n\nDependendo da quantidade de CPFs, o download pode levar alguns segundos para começar.")) return;
-        
+    function v8ExportarTudoLotes(somente_simulados = false) {
+        const msg = somente_simulados
+            ? "Deseja exportar somente os CPFs com VALOR LÍQUIDO (simulação aprovada) dos lotes filtrados?"
+            : "Deseja exportar todos os CPFs dos lotes que estão filtrados na tabela atualmente?";
+        if(!confirm(msg + "\n\nDependendo da quantidade de CPFs, o download pode levar alguns segundos para começar.")) return;
+
         let regras = v8ObterRegrasLote();
         let encodedRegras = encodeURIComponent(regras);
-        
-        let url = `ajax_api_v8_lote_csv.php?acao=exportar_tudo_lotes&regras=${encodedRegras}`;
+        let url = `ajax_api_v8_lote_csv.php?acao=exportar_tudo_lotes&regras=${encodedRegras}&somente_simulados=${somente_simulados ? 1 : 0}`;
         window.open(url, '_blank');
     }
 

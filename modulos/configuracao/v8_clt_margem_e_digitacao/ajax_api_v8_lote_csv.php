@@ -494,11 +494,13 @@ try {
 
             ob_end_clean(); 
             header('Content-Type: text/csv; charset=utf-8'); 
-            header('Content-Disposition: attachment; filename="Exportacao_Massa_V8_' . date('dmY_Hi') . '.csv"');
-            
-            $output = fopen('php://output', 'w'); 
-            fputs($output, "\xEF\xBB\xBF"); 
-            
+            $somente_simulados = isset($_GET['somente_simulados']) && $_GET['somente_simulados'] == '1';
+            $sufixo_arquivo = $somente_simulados ? 'ComValorLiquido' : 'Tudo';
+            header('Content-Disposition: attachment; filename="Exportacao_V8_' . $sufixo_arquivo . '_' . date('dmY_Hi') . '.csv"');
+
+            $output = fopen('php://output', 'w');
+            fputs($output, "\xEF\xBB\xBF");
+
             $cabecalho = [
                 'NOME PLANILHA', 'DATA E HORA SIMULACAO', 'CPF', 'NOME', 'NASCIMENTO', 'SEXO', 'STATUS_V8', 'OBSERVACAO', 'TABELA SIMULADA', 'MARGEM', 'PRAZO', 'VALOR_LIBERADO', 'STATUS_WHATSAPP',
                 'LOGRADOURO', 'NUMERO', 'BAIRRO', 'CIDADE', 'UF', 'CEP',
@@ -507,16 +509,17 @@ try {
             ];
             for($i = 1; $i <= 10; $i++) { $cabecalho[] = "CELULAR $i"; }
             fputcsv($output, $cabecalho, ";");
-            
+
             $inQuery = implode(',', array_fill(0, count($lote_ids), '?'));
+            $filtro_simulados = $somente_simulados ? " AND c.VALOR_LIQUIDO IS NOT NULL AND c.VALOR_LIQUIDO > 0 " : "";
             $sqlCpfs = "
-                SELECT c.*, l.NOME_IMPORTACAO, ca.TABELA_PADRAO 
-                FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE c 
-                JOIN INTEGRACAO_V8_IMPORTACAO_LOTE l ON c.LOTE_ID = l.ID 
+                SELECT c.*, l.NOME_IMPORTACAO, ca.TABELA_PADRAO
+                FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE c
+                JOIN INTEGRACAO_V8_IMPORTACAO_LOTE l ON c.LOTE_ID = l.ID
                 LEFT JOIN INTEGRACAO_V8_CHAVE_ACESSO ca ON l.CHAVE_ID = ca.ID
-                WHERE c.LOTE_ID IN ($inQuery)
+                WHERE c.LOTE_ID IN ($inQuery) $filtro_simulados
             ";
-            $stmtCpfs = $pdo->prepare($sqlCpfs); 
+            $stmtCpfs = $pdo->prepare($sqlCpfs);
             $stmtCpfs->execute($lote_ids);
             
             $stmtEnd = $pdo->prepare("SELECT logradouro, numero, bairro, cidade, uf, cep FROM enderecos WHERE cpf = ? ORDER BY id DESC LIMIT 1");
