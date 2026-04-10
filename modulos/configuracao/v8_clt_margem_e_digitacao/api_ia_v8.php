@@ -211,7 +211,10 @@ function processarConsentimentoDireto($cpf, $telefone, $cliente, $pdo, $credenci
         $pdo->prepare("INSERT INTO INTEGRACAO_V8_EXTRATO_CLIENTE (CHAVE_ID, TIPO_MOVIMENTO, TIPO_CUSTO, VALOR, CUSTO_V8, SALDO_ANTERIOR, SALDO_ATUAL) VALUES (?, 'DEBITO', ?, ?, ?, ?, ?)")->execute([$credencialIA['CHAVE_REAL_V8'], "CONSENTIMENTO IA - CPF {$cpf}", $custo, (float)$credencialIA['CUSTO_V8'], $saldo, $saldo_atualizado]);
     }
 
-    $pdo->prepare("INSERT INTO INTEGRACAO_V8_REGISTROCONSULTA (CONSULT_ID, CPF_CONSULTADO, CHAVE_ID, USUARIO_ID, CPF_USUARIO, STATUS_V8, NOME_COMPLETO, DATA_NASCIMENTO, TELEFONE, FONTE_CONSULT_ID) VALUES (?, ?, ?, ?, ?, 'AGUARDANDO MARGEM', ?, ?, ?, 'IA BOT')")->execute([$consult_id, $cpf, $credencialIA['CHAVE_REAL_V8'], $credencialIA['ID_USUARIO_DONO'], $credencialIA['CPF_DONO'], $cliente['nome'], $cliente['nascimento'], $telefone]);
+    $stmtEmpIA = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+    $stmtEmpIA->execute([$credencialIA['CPF_DONO']]);
+    $empresa_id_ia = $stmtEmpIA->fetchColumn() ?: null;
+    $pdo->prepare("INSERT INTO INTEGRACAO_V8_REGISTROCONSULTA (CONSULT_ID, CPF_CONSULTADO, CHAVE_ID, USUARIO_ID, CPF_USUARIO, STATUS_V8, NOME_COMPLETO, DATA_NASCIMENTO, TELEFONE, FONTE_CONSULT_ID, EMPRESA_ID) VALUES (?, ?, ?, ?, ?, 'AGUARDANDO MARGEM', ?, ?, ?, 'IA BOT', ?)")->execute([$consult_id, $cpf, $credencialIA['CHAVE_REAL_V8'], $credencialIA['ID_USUARIO_DONO'], $credencialIA['CPF_DONO'], $cliente['nome'], $cliente['nascimento'], $telefone, $empresa_id_ia]);
 
     return $consult_id;
 }
@@ -283,6 +286,14 @@ function processarSimulacaoPadrao($consult_id, $cpf, $margem, $pdo, $credencialI
     if ($id_fila) {
         $pdo->prepare("INSERT INTO INTEGRACAO_V8_REGISTRO_SIMULACAO (ID_FILA, CPF, CONFIG_ID, NOME_TABELA, MARGEM_DISPONIVEL, TIPO_SIMULACAO, SIMULATION_ID, STATUS_SIMULATION_ID, DATA_SIMULATION_ID, STATUS_CONFIG_ID, VALOR_LIBERADO, VALOR_PARCELA, PRAZO_SIMULACAO) VALUES (?, ?, ?, ?, ?, 'PADRÃO IA', ?, 'SIMULACAO OK', NOW(), 'MARGEM OK', ?, ?, ?)")->execute([$id_fila, $cpf, $tab['config_id'], $tab['nome_tb_final'], $margem, $sim_id, (float)$valor_lib, (float)$valor_parc, $prazo_padrao]);
         $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA SET STATUS_V8 = 'OK-SIMULACAO', ULTIMA_ATUALIZACAO = NOW() WHERE ID = ?")->execute([$id_fila]);
+    }
+    // Notificação de simulação
+    if (!empty($credencialIA['NOTIF_SIMULACAO'])) {
+        $stmtNome = $pdo->prepare("SELECT nome FROM dados_cadastrais WHERE cpf = ? LIMIT 1");
+        $stmtNome->execute([$cpf]);
+        $nomeCliente = $stmtNome->fetchColumn() ?: $cpf;
+        $pdo->prepare("INSERT INTO INTEGRACAO_V8_IA_NOTIFICACOES (CREDENCIAL_ID, CPF_DONO, TIPO, NOME_CLIENTE, CPF_CLIENTE, VALOR, PRAZO, PARCELA, NOME_ROBO) VALUES (?, ?, 'SIMULACAO', ?, ?, ?, ?, ?, ?)")
+            ->execute([$credencialIA['ID'], $credencialIA['CPF_DONO'], $nomeCliente, $cpf, (float)$valor_lib, (int)$prazo_padrao, (float)$valor_parc, $credencialIA['NOME_ROBO']]);
     }
 
     return ['simulation_id' => $sim_id, 'tabela' => $tab['nome_tb_final'], 'valor_liberado' => (float)$valor_lib, 'valor_parcela' => (float)$valor_parc, 'prazo' => $prazo_padrao];
@@ -605,6 +616,11 @@ try {
             if($id_fila) {
                 $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA SET STATUS_V8 = ?, ULTIMA_ATUALIZACAO = NOW() WHERE ID = ?")->execute(['PROPOSTA: ' . $proposal_id, $id_fila]);
                 $pdo->prepare("INSERT INTO INTEGRACAO_V8_REGISTRO_PROPOSTA (CPF_USUARIO, CPF_CLIENTE, NOME_CLIENTE, NUMERO_PROPOSTA, PRAZO, PARCELA, VALOR_LIBERADO, STATUS_PROPOSTA_V8, LINK_PROPOSTA, DATA_STATUS, DATA_DIGITACAO) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), NOW())")->execute([$credencialIA['CPF_DONO'], $cpf, $cliente['nome'], $proposal_id, $prazo, (float)($sim_obj['installment_value']??0), (float)($sim_obj['disbursement_amount']??0), 'AGUARDANDO', $url_formalizacao]);
+            }
+            // Notificação de proposta
+            if (!empty($credencialIA['NOTIF_PROPOSTA'])) {
+                $pdo->prepare("INSERT INTO INTEGRACAO_V8_IA_NOTIFICACOES (CREDENCIAL_ID, CPF_DONO, TIPO, NOME_CLIENTE, CPF_CLIENTE, VALOR, PRAZO, PARCELA, NUMERO_PROPOSTA, NOME_ROBO) VALUES (?, ?, 'PROPOSTA', ?, ?, ?, ?, ?, ?, ?)")
+                    ->execute([$credencialIA['ID'], $credencialIA['CPF_DONO'], $cliente['nome'], $cpf, (float)($sim_obj['disbursement_amount']??0), $prazo, (float)($sim_obj['installment_value']??0), $proposal_id, $credencialIA['NOME_ROBO']]);
             }
             enviarResposta($cpf, $acao, ['success' => true, 'proposal_id' => $proposal_id, 'link_assinatura' => $url_formalizacao, 'msg' => 'Proposta gerada!' ]);
             break;

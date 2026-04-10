@@ -53,6 +53,7 @@ else:
                     <thead class="table-dark">
                         <tr>
                             <th>Nome do Robô / Automação</th>
+                            <th class="text-danger">PARÂMETROS</th>
                             <th>Chave V8 Associada</th>
                             <th>Dono do Saldo (CPF)</th>
                             <th>Token de Autenticação (Bearer)</th>
@@ -61,9 +62,39 @@ else:
                         </tr>
                     </thead>
                     <tbody id="tbody_tokens_ia">
-                        <tr><td colspan="6" class="py-4 text-muted"><i class="fas fa-spinner fa-spin"></i> Carregando tokens...</td></tr>
+                        <tr><td colspan="7" class="py-4 text-muted"><i class="fas fa-spinner fa-spin"></i> Carregando tokens...</td></tr>
                     </tbody>
                 </table>
+            </div>
+        </div>
+
+        <!-- PAINEL DE NOTIFICAÇÕES -->
+        <div class="col-md-12 mb-4" id="painel_notificacoes_ia" style="display:none;">
+            <div class="card border-warning shadow-sm">
+                <div class="card-header bg-warning text-dark d-flex justify-content-between align-items-center fw-bold py-2">
+                    <span><i class="fas fa-bell me-2"></i> Notificações da IA <span class="badge bg-dark ms-1" id="badge_notif_ia">0</span></span>
+                    <button class="btn btn-sm btn-dark fw-bold" onclick="marcarTodasLidasIA()"><i class="fas fa-check-double me-1"></i> Marcar todas como lidas</button>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive" style="max-height: 350px; overflow-y:auto;">
+                        <table class="table table-sm table-hover mb-0 text-center" style="font-size:12px;">
+                            <thead class="table-secondary sticky-top">
+                                <tr>
+                                    <th>Data/Hora</th>
+                                    <th>Robô</th>
+                                    <th>Tipo</th>
+                                    <th>Nome Cliente</th>
+                                    <th>CPF</th>
+                                    <th>Valor</th>
+                                    <th>Detalhes</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody_notificacoes_ia">
+                                <tr><td colspan="7" class="text-muted py-3">Sem notificações.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -168,7 +199,8 @@ else:
                 tabIA.addEventListener('shown.bs.tab', function (e) {
                     carregarTokensIA();
                     carregarSessoesIA();
-                    if(!intervalMonitorIA) intervalMonitorIA = setInterval(carregarSessoesIA, 10000); 
+                    carregarNotificacoesIA();
+                    if(!intervalMonitorIA) intervalMonitorIA = setInterval(() => { carregarSessoesIA(); carregarNotificacoesIA(); }, 10000);
                 });
                 tabIA.addEventListener('hidden.bs.tab', function (e) {
                     if(intervalMonitorIA) { clearInterval(intervalMonitorIA); intervalMonitorIA = null; }
@@ -176,6 +208,8 @@ else:
             } else {
                 carregarTokensIA();
                 carregarSessoesIA();
+                carregarNotificacoesIA();
+                setInterval(() => { carregarSessoesIA(); carregarNotificacoesIA(); }, 10000);
             }
         });
 
@@ -221,11 +255,11 @@ else:
             const res = await v8Req(ARQUIVO_AJAX_IA, 'listar_tokens', {}, false);
             if (res.success) {
                 tb.innerHTML = '';
-                if (res.data.length === 0) { tb.innerHTML = '<tr><td colspan="6" class="py-4 text-muted fw-bold">Nenhum token gerado ainda.</td></tr>'; return; }
+                if (res.data.length === 0) { tb.innerHTML = '<tr><td colspan="7" class="py-4 text-muted fw-bold">Nenhum token gerado ainda.</td></tr>'; return; }
                 res.data.forEach(t => {
                     let badgeStatus = t.STATUS === 'ATIVO' ? '<span class="badge bg-success">ATIVO</span>' : '<span class="badge bg-danger">INATIVO</span>';
-                    
-                    let actReativarOuRevogar = t.STATUS === 'ATIVO' 
+
+                    let actReativarOuRevogar = t.STATUS === 'ATIVO'
                         ? `<li><a class="dropdown-item fw-bold text-warning" href="#" onclick="revogarTokenIA(${t.ID})"><i class="fas fa-ban me-2"></i> Revogar (Inativar)</a></li>`
                         : `<li><a class="dropdown-item fw-bold text-success" href="#" onclick="reativarTokenIA(${t.ID})"><i class="fas fa-check-circle me-2"></i> Reativar Robô</a></li>`;
 
@@ -243,10 +277,34 @@ else:
                             <li><a class="dropdown-item fw-bold text-danger" href="#" onclick="excluirTokenIA(${t.ID})"><i class="fas fa-trash-alt me-2"></i> Excluir (Deletar)</a></li>
                         </ul>
                     </div>`;
-                    
+
+                    // Toggles de notificação inline
+                    const chkSim = parseInt(t.NOTIF_SIMULACAO) === 1;
+                    const chkPro = parseInt(t.NOTIF_PROPOSTA) === 1;
+                    let colParametros = `
+                        <div class="d-flex flex-column gap-1 align-items-start" style="min-width:155px;">
+                            <div class="form-check form-switch mb-0">
+                                <input class="form-check-input" type="checkbox" id="ns_${t.ID}" ${chkSim ? 'checked' : ''}
+                                    onchange="salvarNotificacaoIA(${t.ID})"
+                                    title="Notificar quando IA tiver simulação pronta">
+                                <label class="form-check-label small fw-bold text-primary" for="ns_${t.ID}">
+                                    <i class="fas fa-chart-bar me-1"></i>Aviso Simulação
+                                </label>
+                            </div>
+                            <div class="form-check form-switch mb-0">
+                                <input class="form-check-input" type="checkbox" id="np_${t.ID}" ${chkPro ? 'checked' : ''}
+                                    onchange="salvarNotificacaoIA(${t.ID})"
+                                    title="Notificar quando IA enviar proposta">
+                                <label class="form-check-label small fw-bold text-success" for="np_${t.ID}">
+                                    <i class="fas fa-file-contract me-1"></i>Aviso Proposta
+                                </label>
+                            </div>
+                        </div>`;
+
                     tb.innerHTML += `
                         <tr class="border-bottom border-dark">
                             <td class="fw-bold text-dark">${t.NOME_ROBO}</td>
+                            <td class="text-start px-2">${colParametros}</td>
                             <td class="text-success fw-bold">${t.NOME_CHAVE_V8}</td>
                             <td class="text-danger fw-bold">${t.CPF_DONO}</td>
                             <td>
@@ -261,6 +319,52 @@ else:
                     `;
                 });
             }
+        }
+
+        async function salvarNotificacaoIA(id) {
+            const notifSim = document.getElementById('ns_' + id)?.checked ? 1 : 0;
+            const notifPro = document.getElementById('np_' + id)?.checked ? 1 : 0;
+            await v8Req(ARQUIVO_AJAX_IA, 'salvar_notificacoes', { id, notif_simulacao: notifSim, notif_proposta: notifPro }, false);
+        }
+
+        async function carregarNotificacoesIA() {
+            const res = await v8Req(ARQUIVO_AJAX_IA, 'listar_notificacoes', {}, false);
+            if (!res.success) return;
+            const painel = document.getElementById('painel_notificacoes_ia');
+            const badge = document.getElementById('badge_notif_ia');
+            const tb = document.getElementById('tbody_notificacoes_ia');
+            if (!painel || !badge || !tb) return;
+
+            badge.textContent = res.total;
+            painel.style.display = res.total > 0 ? '' : 'none';
+            if (res.total === 0) { tb.innerHTML = '<tr><td colspan="7" class="text-muted py-3">Sem notificações.</td></tr>'; return; }
+
+            tb.innerHTML = '';
+            res.data.forEach(n => {
+                const isSim = n.TIPO === 'SIMULACAO';
+                const badge_tipo = isSim
+                    ? '<span class="badge bg-primary">Simulação</span>'
+                    : '<span class="badge bg-success">Proposta</span>';
+                const detalhe = isSim
+                    ? `Vlr: <b class="text-success">R$ ${parseFloat(n.VALOR||0).toFixed(2).replace('.',',')}</b><br><small>${n.PRAZO||''}x de R$ ${parseFloat(n.PARCELA||0).toFixed(2).replace('.',',')}</small>`
+                    : `Vlr: <b class="text-success">R$ ${parseFloat(n.VALOR||0).toFixed(2).replace('.',',')}</b><br><small class="text-muted">#${n.NUMERO_PROPOSTA||''}</small>`;
+                tb.innerHTML += `<tr>
+                    <td class="small text-muted">${n.DATA_BR}</td>
+                    <td class="fw-bold">${n.NOME_ROBO||'—'}</td>
+                    <td>${badge_tipo}</td>
+                    <td class="text-start">${n.NOME_CLIENTE||'—'}</td>
+                    <td class="text-danger fw-bold">${n.CPF_CLIENTE||''}</td>
+                    <td>${detalhe}</td>
+                    <td></td>
+                </tr>`;
+            });
+        }
+
+        async function marcarTodasLidasIA() {
+            await v8Req(ARQUIVO_AJAX_IA, 'marcar_lidas', {}, false);
+            document.getElementById('painel_notificacoes_ia').style.display = 'none';
+            document.getElementById('badge_notif_ia').textContent = '0';
+            document.getElementById('tbody_notificacoes_ia').innerHTML = '<tr><td colspan="7" class="text-muted py-3">Sem notificações.</td></tr>';
         }
 
         async function revogarTokenIA(id) {

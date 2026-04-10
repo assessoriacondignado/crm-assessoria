@@ -67,6 +67,14 @@ try {
     $restricao_chave = function_exists('verificaPermissao') ? !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_CHAVE', 'FUNCAO') : false;
     $restricao_custo_cliente = function_exists('verificaPermissao') ? !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_CUSTO_CLIENTE', 'FUNCAO') : false;
     $restricao_custo_api = function_exists('verificaPermissao') ? !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_CUSTO_API', 'FUNCAO') : false;
+    // Hierarquia por empresa: se o usuário NÃO tem a permissão, vê somente registros da sua empresa
+    $restricao_hierarquia_fila = function_exists('verificaPermissao') ? !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_HIERARQUIA', 'FUNCAO') : true;
+    $id_empresa_logado = null;
+    if ($restricao_hierarquia_fila && !$restricao_minha_fila) {
+        $stmtEmp = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+        $stmtEmp->execute([$usuario_logado_cpf]);
+        $id_empresa_logado = $stmtEmp->fetchColumn() ?: null;
+    }
 
     $URL_AUTENTICACAO = "https://auth.v8sistema.com/oauth/token"; 
     $URL_CONSULTA = "https://bff.v8sistema.com/private-consignment/consult"; 
@@ -236,6 +244,7 @@ try {
 
             $where = " WHERE 1=1 "; $params = [];
             if ($restricao_minha_fila) { $where .= " AND c.CPF_USUARIO = ? "; $params[] = $usuario_logado_cpf; }
+            elseif ($restricao_hierarquia_fila && $id_empresa_logado) { $where .= " AND c.EMPRESA_ID = ? "; $params[] = $id_empresa_logado; }
 
             foreach ($filtros as $f) {
                 $campo_key = $f['campo'] ?? ''; $operador = $f['operador'] ?? 'CONTEM'; $valor = trim($f['valor'] ?? '');
@@ -283,6 +292,7 @@ try {
             $params = [];
 
             if ($restricao_minha_fila) { $where .= " AND c.CPF_USUARIO = ? "; $params[] = $usuario_logado_cpf; }
+            elseif ($restricao_hierarquia_fila && $id_empresa_logado) { $where .= " AND c.EMPRESA_ID = ? "; $params[] = $id_empresa_logado; }
             foreach ($filtros as $f) {
                 $campo_key = $f['campo'] ?? ''; $operador = $f['operador'] ?? 'CONTEM'; $valor = trim($f['valor'] ?? '');
                 if (empty($campo_key) || !isset($campos_map_exp[$campo_key]) || $valor === '') continue;
@@ -424,7 +434,10 @@ try {
                 if (strpos($res_auth, 'consult_already_approved') === false) { throw new Exception("ERRO AO AUTORIZAR (HTTP {$http_auth}): " . $res_auth); }
             }
 
-            $pdo->prepare("INSERT INTO INTEGRACAO_V8_REGISTROCONSULTA (CONSULT_ID, CPF_CONSULTADO, CHAVE_ID, USUARIO_ID, CPF_USUARIO, STATUS_V8, NOME_COMPLETO, DATA_NASCIMENTO, EMAIL, TELEFONE, FONTE_CONSULT_ID) VALUES (?, ?, ?, ?, ?, 'AGUARDANDO MARGEM', ?, ?, ?, ?, ?)")->execute([$consult_id, $cpf, $chave_id, $usuario_logado_id, $usuario_logado_cpf, $nome, $nascimento, $email, $telefone, $fonte_usada]);
+            $stmtEmpNew = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+            $stmtEmpNew->execute([$usuario_logado_cpf]);
+            $empresa_id_novo_reg = $stmtEmpNew->fetchColumn() ?: null;
+            $pdo->prepare("INSERT INTO INTEGRACAO_V8_REGISTROCONSULTA (CONSULT_ID, CPF_CONSULTADO, CHAVE_ID, USUARIO_ID, CPF_USUARIO, STATUS_V8, NOME_COMPLETO, DATA_NASCIMENTO, EMAIL, TELEFONE, FONTE_CONSULT_ID, EMPRESA_ID) VALUES (?, ?, ?, ?, ?, 'AGUARDANDO MARGEM', ?, ?, ?, ?, ?, ?)")->execute([$consult_id, $cpf, $chave_id, $usuario_logado_id, $usuario_logado_cpf, $nome, $nascimento, $email, $telefone, $fonte_usada, $empresa_id_novo_reg]);
             
             // =====================================================================
             // EFETUA A COBRANÇA (DESCONTO DO SALDO) NO MOMENTO DO CONSENTIMENTO

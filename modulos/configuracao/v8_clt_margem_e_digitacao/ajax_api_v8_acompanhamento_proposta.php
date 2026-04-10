@@ -15,9 +15,18 @@ try {
 
     $acao = $_POST['acao'] ?? '';
     $usuario_logado_id = $_SESSION['usuario_id'] ?? 1;
-    
+
     // ✨ CPF DO USUÁRIO LOGADO PARA TRAVA DE SEGURANÇA ✨
     $usuario_logado_cpf = preg_replace('/\D/', '', $_SESSION['usuario_cpf'] ?? '');
+
+    // Hierarquia por empresa nas propostas
+    $restricao_hierarquia_proposta = function_exists('verificaPermissao') ? !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_HIERARQUIA', 'FUNCAO') : true;
+    $id_empresa_logado_proposta = null;
+    if ($restricao_hierarquia_proposta) {
+        $stmtEmpP = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+        $stmtEmpP->execute([$usuario_logado_cpf]);
+        $id_empresa_logado_proposta = $stmtEmpP->fetchColumn() ?: null;
+    }
 
     function v8_api_request_with_lock($url, $method, $payload, $headers, $chave_id) {
         $lock_dir = $_SERVER['DOCUMENT_ROOT'] . '/logs_v8';
@@ -84,12 +93,16 @@ try {
                 $stmtChaves->execute([$usuario_logado_id, $usuario_logado_cpf]);
                 if (!$stmtChaves->fetchColumn()) {
                     // Bloqueio Total: Usuário não tem chave. Retorna vazio imediatamente.
-                    echo json_encode(['success' => true, 'data' => []]); exit; 
+                    echo json_encode(['success' => true, 'data' => []]); exit;
                 }
 
                 // Força mostrar apenas as propostas do CPF do usuário logado
                 $where .= " AND p.CPF_USUARIO = ? ";
                 $params[] = $usuario_logado_cpf;
+            } elseif ($restricao_hierarquia_proposta && $id_empresa_logado_proposta) {
+                // Usuário vê somente propostas da sua empresa
+                $where .= " AND p.EMPRESA_ID = ? ";
+                $params[] = $id_empresa_logado_proposta;
             }
 
             if (!empty($data_ini)) { $where .= " AND DATE(p.DATA_DIGITACAO) >= ? "; $params[] = $data_ini; }

@@ -130,6 +130,29 @@ try {
             $pdo->prepare("DELETE FROM INTEGRACAO_V8_IA_CREDENCIAIS WHERE ID = ?")->execute([$id]);
             ob_end_clean(); echo json_encode(['success' => true, 'msg' => 'Token excluído definitivamente.']); exit;
 
+        case 'salvar_notificacoes':
+            $id = (int)($_POST['id'] ?? 0);
+            $notif_sim = (int)($_POST['notif_simulacao'] ?? 0) ? 1 : 0;
+            $notif_pro = (int)($_POST['notif_proposta'] ?? 0) ? 1 : 0;
+            if ($id <= 0) throw new Exception("ID inválido.");
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IA_CREDENCIAIS SET NOTIF_SIMULACAO = ?, NOTIF_PROPOSTA = ? WHERE ID = ?")->execute([$notif_sim, $notif_pro, $id]);
+            ob_end_clean(); echo json_encode(['success' => true]); exit;
+
+        case 'listar_notificacoes':
+            $stmt = $pdo->prepare("SELECT n.*, DATE_FORMAT(n.DATA_CRIACAO, '%d/%m/%Y %H:%i') as DATA_BR
+                FROM INTEGRACAO_V8_IA_NOTIFICACOES n
+                WHERE n.CPF_DONO = ? AND n.LIDA = 0
+                ORDER BY n.DATA_CRIACAO DESC LIMIT 50");
+            $stmt->execute([$usuario_logado_cpf]);
+            $notifs = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $stmtTot = $pdo->prepare("SELECT COUNT(*) FROM INTEGRACAO_V8_IA_NOTIFICACOES WHERE CPF_DONO = ? AND LIDA = 0");
+            $stmtTot->execute([$usuario_logado_cpf]);
+            ob_end_clean(); echo json_encode(['success' => true, 'data' => $notifs, 'total' => (int)$stmtTot->fetchColumn()]); exit;
+
+        case 'marcar_lidas':
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IA_NOTIFICACOES SET LIDA = 1 WHERE CPF_DONO = ?")->execute([$usuario_logado_cpf]);
+            ob_end_clean(); echo json_encode(['success' => true]); exit;
+
         case 'listar_sessoes':
             $where = "";
             $params = [];

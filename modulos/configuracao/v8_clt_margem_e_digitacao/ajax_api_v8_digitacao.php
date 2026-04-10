@@ -205,9 +205,17 @@ try {
             $url_formalizacao = $prop_res['formalization_url'] ?? '';
 
             $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA SET STATUS_V8 = ?, MENSAGEM_ERRO = NULL, ULTIMA_ATUALIZACAO = NOW() WHERE ID = ?")->execute(['PROPOSTA: ' . $proposal_id, $id_fila]);
-            
-            $sqlInsertProposta = "INSERT INTO INTEGRACAO_V8_REGISTRO_PROPOSTA (CPF_USUARIO, CPF_CLIENTE, NOME_CLIENTE, CONSIG_ID, SIMULATION_CONSIG, NUMERO_PROPOSTA, PRAZO, PARCELA, VALOR_LIBERADO, OBSERVACAO_GERAL, STATUS_PROPOSTA_V8, LINK_PROPOSTA, DATA_STATUS, DATA_DIGITACAO) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), NOW())";
-            $pdo->prepare($sqlInsertProposta)->execute([$usuario_logado_cpf, $fila['CPF_CONSULTADO'], $_POST['nome'] ?? $fila['NOME_COMPLETO'], $simulacao['CONFIG_ID'], $simulacao['SIMULATION_ID'], $proposal_id, $simulacao['PRAZO_SIMULACAO'], $simulacao['VALOR_PARCELA'], $simulacao['VALOR_LIBERADO'], $obs, $status_proposta_inicial, $url_formalizacao]);
+
+            // Empresa vinculada ao registro (herdada da fila ou buscada do usuário)
+            $empresa_id_proposta = $fila['EMPRESA_ID'] ?? null;
+            if (!$empresa_id_proposta) {
+                $stmtEmpProp = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+                $stmtEmpProp->execute([$usuario_logado_cpf]);
+                $empresa_id_proposta = $stmtEmpProp->fetchColumn() ?: null;
+            }
+
+            $sqlInsertProposta = "INSERT INTO INTEGRACAO_V8_REGISTRO_PROPOSTA (CPF_USUARIO, CPF_CLIENTE, NOME_CLIENTE, CONSIG_ID, SIMULATION_CONSIG, NUMERO_PROPOSTA, PRAZO, PARCELA, VALOR_LIBERADO, OBSERVACAO_GERAL, STATUS_PROPOSTA_V8, LINK_PROPOSTA, EMPRESA_ID, DATA_STATUS, DATA_DIGITACAO) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), NOW())";
+            $pdo->prepare($sqlInsertProposta)->execute([$usuario_logado_cpf, $fila['CPF_CONSULTADO'], $_POST['nome'] ?? $fila['NOME_COMPLETO'], $simulacao['CONFIG_ID'], $simulacao['SIMULATION_ID'], $proposal_id, $simulacao['PRAZO_SIMULACAO'], $simulacao['VALOR_PARCELA'], $simulacao['VALOR_LIBERADO'], $obs, $status_proposta_inicial, $url_formalizacao, $empresa_id_proposta]);
             $pdo->prepare("INSERT INTO INTEGRACAO_V8_REGISTRO_PROPOSTA_HISTORICO (NUMERO_PROPOSTA, STATUS, DATA_STATUS, OBSERVACAO) VALUES (?, ?, NOW(), ?)")->execute([$proposal_id, $status_proposta_inicial, "Proposta criada."]);
 
             ob_end_clean(); echo json_encode(['success' => true, 'proposal_id' => $proposal_id, 'url' => $url_formalizacao]); exit;

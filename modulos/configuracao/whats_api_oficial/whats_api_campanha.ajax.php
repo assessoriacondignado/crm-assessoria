@@ -12,12 +12,18 @@ try {
     $cpf_logado = $_SESSION['usuario_cpf'] ?? '';
     $id_usuario = $_SESSION['usuario_id'] ?? null;
     $nome_usuario = $_SESSION['usuario_nome'] ?? '';
-    $id_empresa = $_SESSION['empresa_id'] ?? null;
 
     if (empty($cpf_logado)) {
         echo json_encode(['success' => false, 'msg' => 'Sessão expirada.']);
         exit;
     }
+
+    if (!isset($_SESSION['empresa_id'])) {
+        $stmtEmp = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+        $stmtEmp->execute([$cpf_logado]);
+        $_SESSION['empresa_id'] = $stmtEmp->fetchColumn() ?: 1;
+    }
+    $id_empresa = $_SESSION['empresa_id'];
 
     $caminho_perm = $_SERVER['DOCUMENT_ROOT'] . '/modulos/cliente_e_usuario/checar_permissoes.php';
     if (file_exists($caminho_perm)) { require_once $caminho_perm; }
@@ -30,6 +36,9 @@ try {
             $phone_id = trim($_POST['phone_id_remetente'] ?? '');
             $template_name = trim($_POST['template_name'] ?? '');
             $tipo_importacao = trim($_POST['tipo_importacao'] ?? 'tela');
+            $intervalo_segundos  = max(1, (int)($_POST['intervalo_segundos'] ?? 5));
+            $pausa_apos_qtde     = max(0, (int)($_POST['pausa_apos_qtde'] ?? 0));
+            $pausa_duracao_seg   = max(1, (int)($_POST['pausa_duracao_segundos'] ?? 60));
 
             if (empty($nome_campanha) || empty($phone_id) || empty($template_name)) {
                 echo json_encode(['success' => false, 'msg' => 'Preencha todos os campos.']); exit;
@@ -89,6 +98,11 @@ try {
                 if ($exec && $stmt->rowCount() > 0) $sucesso++; else $erros++;
             }
 
+            // Salva configurações de disparo desta campanha
+            $pdo->prepare("INSERT INTO WHATSAPP_OFICIAL_CAMPANHA_META (NOME_CAMPANHA, INTERVALO_SEGUNDOS, PAUSA_APOS_QTDE, PAUSA_DURACAO_SEGUNDOS)
+                VALUES (?, ?, ?, ?) ON DUPLICATE KEY UPDATE INTERVALO_SEGUNDOS=VALUES(INTERVALO_SEGUNDOS), PAUSA_APOS_QTDE=VALUES(PAUSA_APOS_QTDE), PAUSA_DURACAO_SEGUNDOS=VALUES(PAUSA_DURACAO_SEGUNDOS)")
+                ->execute([$nome_campanha, $intervalo_segundos, $pausa_apos_qtde, $pausa_duracao_seg]);
+
             echo json_encode(['success' => true, 'msg' => "Importação Concluída. $sucesso números inseridos (Ignorados: $erros)."]);
             break;
 
@@ -109,16 +123,20 @@ try {
             // MASTER/ADMIN: filtro = "1=1", vê tudo
 
             $sql = "SELECT
-                        NOME_CAMPANHA, NOME_USUARIO, DATA_IMPORTACAO,
-                        COUNT(ID) as TOTAL,
-                        SUM(CASE WHEN STATUS_DISPARO = 'ENVIADO' THEN 1 ELSE 0 END) as ENVIADOS,
-                        SUM(CASE WHEN STATUS_DISPARO = 'FALHA' THEN 1 ELSE 0 END) as FALHAS,
-                        MAX(DATA_STATUS) as ULTIMO_STATUS,
-                        STATUS_IMPORTACAO
-                    FROM WHATSAPP_OFICIAL_CAMPANHA_LOTE
+                        l.NOME_CAMPANHA, l.NOME_USUARIO, l.DATA_IMPORTACAO,
+                        COUNT(l.ID) as TOTAL,
+                        SUM(CASE WHEN l.STATUS_DISPARO = 'ENVIADO' THEN 1 ELSE 0 END) as ENVIADOS,
+                        SUM(CASE WHEN l.STATUS_DISPARO = 'FALHA' THEN 1 ELSE 0 END) as FALHAS,
+                        MAX(l.DATA_STATUS) as ULTIMO_STATUS,
+                        l.STATUS_IMPORTACAO,
+                        COALESCE(m.INTERVALO_SEGUNDOS, 5) as INTERVALO_SEGUNDOS,
+                        COALESCE(m.PAUSA_APOS_QTDE, 0) as PAUSA_APOS_QTDE,
+                        COALESCE(m.PAUSA_DURACAO_SEGUNDOS, 60) as PAUSA_DURACAO_SEGUNDOS
+                    FROM WHATSAPP_OFICIAL_CAMPANHA_LOTE l
+                    LEFT JOIN WHATSAPP_OFICIAL_CAMPANHA_META m ON m.NOME_CAMPANHA = l.NOME_CAMPANHA
                     WHERE $filtro
-                    GROUP BY NOME_CAMPANHA, NOME_USUARIO, DATA_IMPORTACAO, STATUS_IMPORTACAO
-                    ORDER BY MAX(DATA_IMPORTACAO) DESC";
+                    GROUP BY l.NOME_CAMPANHA, l.NOME_USUARIO, l.DATA_IMPORTACAO, l.STATUS_IMPORTACAO, m.INTERVALO_SEGUNDOS, m.PAUSA_APOS_QTDE, m.PAUSA_DURACAO_SEGUNDOS
+                    ORDER BY MAX(l.DATA_IMPORTACAO) DESC";
 
             $stmt = $pdo->prepare($sql);
             $stmt->execute($params);
@@ -127,61 +145,79 @@ try {
 
         case 'processar_lote':
             $nome_campanha = $_POST['nome_campanha'];
-            
-            $stmt = $pdo->prepare("SELECT * FROM WHATSAPP_OFICIAL_CAMPANHA_LOTE WHERE NOME_CAMPANHA = ? AND STATUS_DISPARO = 'PENDENTE' LIMIT 10");
-            $stmt->execute([$nome_campanha]);
-            $pendentes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-            if (count($pendentes) === 0) {
+            // Busca 1 pendente por vez (timing controlado pelo frontend)
+            $stmt = $pdo->prepare("SELECT * FROM WHATSAPP_OFICIAL_CAMPANHA_LOTE WHERE NOME_CAMPANHA = ? AND STATUS_DISPARO = 'PENDENTE' LIMIT 1");
+            $stmt->execute([$nome_campanha]);
+            $p = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            if (!$p) {
                 echo json_encode(['success' => true, 'msg' => 'Campanha Finalizada', 'concluido' => true]); exit;
             }
 
-            $stmtT = $pdo->prepare("SELECT PERMANENT_TOKEN FROM WHATSAPP_OFICIAL_CONTAS WHERE CPF_USUARIO = ?");
-            $stmtT->execute([$cpf_logado]);
-            $token = $stmtT->fetchColumn();
+            // Busca token pelo BM associado ao Phone ID do registro
+            $stmtToken = $pdo->prepare("
+                SELECT bm.PERMANENT_TOKEN
+                FROM WHATSAPP_OFICIAL_BM bm
+                JOIN WHATSAPP_OFICIAL_WABA waba ON waba.BM_ID = bm.ID
+                JOIN WHATSAPP_OFICIAL_NUMEROS num ON num.WABA_ID = waba.ID
+                WHERE num.PHONE_NUMBER_ID = ?
+                LIMIT 1
+            ");
+            $stmtToken->execute([$p['PHONE_NUMBER_ID']]);
+            $token = $stmtToken->fetchColumn();
 
-            foreach ($pendentes as $p) {
-                $partes_tpl = explode('|', $p['TEMPLATE_NAME']);
-                $t_name = $partes_tpl[0];
-                $t_lang = $partes_tpl[1] ?? 'pt_BR';
-
-                $parametros = [
-                    ["type" => "text", "text" => $p['NOME'] ?? 'Cliente']
-                ];
-
-                $payload = [
-                    "messaging_product" => "whatsapp",
-                    "to" => $p['NUMERO'],
-                    "type" => "template",
-                    "template" => [
-                        "name" => $t_name,
-                        "language" => ["code" => $t_lang],
-                        "components" => [
-                            [
-                                "type" => "body",
-                                "parameters" => $parametros
-                            ]
-                        ]
-                    ]
-                ];
-
-                $ch = curl_init("https://graph.facebook.com/v19.0/{$p['PHONE_NUMBER_ID']}/messages");
-                curl_setopt($ch, CURLOPT_POST, true);
-                curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($payload));
-                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                curl_setopt($ch, CURLOPT_HTTPHEADER, ['Authorization: Bearer ' . $token, 'Content-Type: application/json']);
-                $res = curl_exec($ch);
-                $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-                curl_close($ch);
-
-                $res_json = json_decode($res, true);
-                $status_disparo = ($http_code == 200 && isset($res_json['messages'])) ? 'ENVIADO' : 'FALHA';
-
-                $pdo->prepare("UPDATE WHATSAPP_OFICIAL_CAMPANHA_LOTE SET STATUS_DISPARO = ?, DATA_STATUS = NOW() WHERE ID = ?")
-                    ->execute([$status_disparo, $p['ID']]);
+            // Fallback: token antigo
+            if (!$token) {
+                $stmtT = $pdo->prepare("SELECT PERMANENT_TOKEN FROM WHATSAPP_OFICIAL_CONTAS WHERE CPF_USUARIO = ?");
+                $stmtT->execute([$cpf_logado]);
+                $token = $stmtT->fetchColumn();
             }
 
-            echo json_encode(['success' => true, 'concluido' => false]);
+            $partes_tpl = explode('|', $p['TEMPLATE_NAME']);
+            $t_name = $partes_tpl[0];
+            $t_lang = $partes_tpl[1] ?? 'pt_BR';
+
+            // Monta parâmetros do template com variáveis disponíveis
+            $parametros = [];
+            if (!empty($p['NOME']))    $parametros[] = ["type" => "text", "text" => $p['NOME']];
+            if (!empty($p['MARGEM']))  $parametros[] = ["type" => "text", "text" => 'R$ ' . number_format((float)$p['MARGEM'], 2, ',', '.')];
+            if (!empty($p['PARCELA'])) $parametros[] = ["type" => "text", "text" => 'R$ ' . number_format((float)$p['PARCELA'], 2, ',', '.')];
+            if (!empty($p['PRAZO']))   $parametros[] = ["type" => "text", "text" => $p['PRAZO'] . 'x'];
+            if (empty($parametros))    $parametros[] = ["type" => "text", "text" => "Cliente"];
+
+            $payload = [
+                "messaging_product" => "whatsapp",
+                "to" => $p['NUMERO'],
+                "type" => "template",
+                "template" => [
+                    "name" => $t_name,
+                    "language" => ["code" => $t_lang],
+                    "components" => [["type" => "body", "parameters" => $parametros]]
+                ]
+            ];
+
+            $ch = curl_init("https://graph.facebook.com/v19.0/{$p['PHONE_NUMBER_ID']}/messages");
+            curl_setopt($ch, CURLOPT_POST, true);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($payload));
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, ['Authorization: Bearer ' . $token, 'Content-Type: application/json']);
+            $res = curl_exec($ch);
+            $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            curl_close($ch);
+
+            $res_json = json_decode($res, true);
+            $status_disparo = ($http_code == 200 && isset($res_json['messages'])) ? 'ENVIADO' : 'FALHA';
+
+            $pdo->prepare("UPDATE WHATSAPP_OFICIAL_CAMPANHA_LOTE SET STATUS_DISPARO = ?, DATA_STATUS = NOW() WHERE ID = ?")
+                ->execute([$status_disparo, $p['ID']]);
+
+            // Contagem restante
+            $stmtRest = $pdo->prepare("SELECT COUNT(*) FROM WHATSAPP_OFICIAL_CAMPANHA_LOTE WHERE NOME_CAMPANHA = ? AND STATUS_DISPARO = 'PENDENTE'");
+            $stmtRest->execute([$nome_campanha]);
+            $restantes = (int)$stmtRest->fetchColumn();
+
+            echo json_encode(['success' => true, 'concluido' => false, 'status' => $status_disparo, 'restantes' => $restantes]);
             break;
 
         case 'excluir_campanha':

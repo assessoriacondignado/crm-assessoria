@@ -105,6 +105,10 @@ if ($perm_chat)         $tab_ativa = $tab_ativa ?: 'tab-chat';
                             </div>
                             <div class="modal-body">
                                 <input type="hidden" id="bm_db_id" value="0">
+                                <div class="alert alert-info border-info py-2 mb-3 d-flex align-items-center gap-2">
+                                    <i class="fas fa-building text-primary"></i>
+                                    <span class="fw-bold small">Empresa vinculada: <span id="bm_nome_empresa_label" class="text-primary">—</span></span>
+                                </div>
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <label class="small fw-bold">Apelido (Nome amigável):</label>
@@ -124,7 +128,11 @@ if ($perm_chat)         $tab_ativa = $tab_ativa ?: 'tab-chat';
                                     </div>
                                     <div class="col-12">
                                         <label class="small fw-bold text-success">Token de Acesso Permanente:</label>
-                                        <textarea id="bm_token" class="form-control border-success fw-bold" rows="3" placeholder="EAAxxxxxxxx..."></textarea>
+                                        <div id="bm_token_masked_box" class="d-none mb-2 p-2 bg-light border border-secondary rounded small text-muted fw-bold">
+                                            <i class="fas fa-lock me-1 text-warning"></i> Token atual: <span id="bm_token_masked_val" class="font-monospace text-dark"></span>
+                                            <span class="text-danger ms-2" style="font-size:0.75rem;">(Preencha abaixo apenas se quiser substituir)</span>
+                                        </div>
+                                        <textarea id="bm_token" class="form-control border-success fw-bold" rows="3" placeholder="EAAxxxxxxxx... (deixe em branco para manter o atual)"></textarea>
                                         <small class="text-muted">Gerado no Meta for Developers → Seu App → Ferramentas → Token de Acesso do Sistema.</small>
                                     </div>
                                 </div>
@@ -308,7 +316,35 @@ if ($perm_chat)         $tab_ativa = $tab_ativa ?: 'tab-chat';
                                     </div>
                                 </div>
 
-                                <button type="submit" id="btnSalvarCampanha" class="btn btn-success w-100 fw-bold mt-3 shadow-sm"><i class="fas fa-save"></i> Criar Campanha</button>
+                                <!-- Opções de Agendamento e Limites -->
+                                <hr class="my-2">
+                                <small class="text-muted fw-bold d-block mb-2"><i class="fas fa-cogs me-1"></i> Opções de Agendamento e Limites</small>
+                                <div class="row g-2 mb-2">
+                                    <div class="col-6">
+                                        <label class="small fw-bold">Intervalo entre disparos:</label>
+                                        <div class="input-group input-group-sm">
+                                            <input type="number" id="camp_intervalo" name="intervalo_segundos" class="form-control border-primary fw-bold" value="5" min="1" required>
+                                            <span class="input-group-text border-primary bg-white small text-muted">seg</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="small fw-bold">Pausa a cada X disparos:</label>
+                                        <div class="input-group input-group-sm">
+                                            <input type="number" id="camp_pausa_qtde" name="pausa_apos_qtde" class="form-control border-warning fw-bold" value="0" min="0" placeholder="0 = sem pausa" onchange="togglePausaDuracao()">
+                                            <span class="input-group-text border-warning bg-white small text-muted">msgs</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12" id="div_camp_pausa_duracao" style="display:none;">
+                                        <label class="small fw-bold text-warning">Duração da pausa:</label>
+                                        <div class="input-group input-group-sm">
+                                            <input type="number" id="camp_pausa_duracao" name="pausa_duracao_segundos" class="form-control border-warning fw-bold" value="60" min="1">
+                                            <span class="input-group-text border-warning bg-white small text-muted">seg</span>
+                                        </div>
+                                        <small class="text-muted" style="font-size:10px;">Pausa de <strong id="lbl_pausa_seg">60</strong>s a cada <strong id="lbl_pausa_qtde">0</strong> disparos</small>
+                                    </div>
+                                </div>
+
+                                <button type="submit" id="btnSalvarCampanha" class="btn btn-success w-100 fw-bold mt-1 shadow-sm"><i class="fas fa-save"></i> Criar Campanha</button>
                             </form>
                         </div>
                     </div>
@@ -316,6 +352,7 @@ if ($perm_chat)         $tab_ativa = $tab_ativa ?: 'tab-chat';
                     <div class="col-md-8">
                         <div class="bg-white p-3 border border-dark rounded shadow-sm h-100">
                             <h5 class="fw-bold text-primary border-bottom border-primary pb-2"><i class="fas fa-tasks"></i> Acompanhamento de Disparos</h5>
+                            <div id="camp-status-disparo" class="alert alert-secondary py-1 px-2 small fw-bold mb-2" style="display:none;"></div>
                             <div class="table-responsive" style="max-height: 450px; overflow-y: auto;">
                                 <table class="table table-hover align-middle text-center" style="font-size: 0.85rem;">
                                     <thead class="table-dark">
@@ -614,6 +651,7 @@ if ($perm_chat)         $tab_ativa = $tab_ativa ?: 'tab-chat';
                     <button class="accordion-button fw-bold ${idx > 0 ? 'collapsed' : ''}" type="button" data-bs-toggle="collapse" data-bs-target="#bm-${bm.ID}">
                         <i class="fas fa-building text-warning me-2"></i>
                         ${escHtml(bm.NOME_BM)}
+                        ${bm.NOME_EMPRESA ? '<small class="text-danger ms-2 fw-normal"><i class="fas fa-briefcase me-1"></i>' + escHtml(bm.NOME_EMPRESA) + '</small>' : ''}
                         <span class="badge bg-dark ms-2">${bm.QTD_WABAS} WABA(s)</span>
                         <small class="text-muted ms-3 fw-normal">BM ID: ${escHtml(bm.BM_ID)}</small>
                     </button>
@@ -622,7 +660,7 @@ if ($perm_chat)         $tab_ativa = $tab_ativa ?: 'tab-chat';
                     <div class="accordion-body bg-light">
                         <div class="d-flex justify-content-end gap-2 mb-3">
                             <button class="btn btn-sm btn-outline-primary fw-bold" onclick="abrirModalWABA(${bm.ID})"><i class="fas fa-plus me-1"></i> Adicionar WABA</button>
-                            <button class="btn btn-sm btn-outline-secondary fw-bold" onclick="editarBM(${bm.ID},'${escHtml(bm.NOME_BM)}','${escHtml(bm.BM_ID)}','${escHtml(bm.APP_ID)}')"><i class="fas fa-edit me-1"></i> Editar BM</button>
+                            <button class="btn btn-sm btn-outline-secondary fw-bold" onclick="editarBM(${bm.ID},'${escHtml(bm.NOME_BM)}','${escHtml(bm.BM_ID)}','${escHtml(bm.APP_ID)}','${escHtml(bm.NOME_EMPRESA||'')}','${escHtml(bm.TOKEN_MASKED||'')}')"><i class="fas fa-edit me-1"></i> Editar BM</button>
                             <button class="btn btn-sm btn-outline-danger fw-bold" onclick="excluirBM(${bm.ID}, '${escHtml(bm.NOME_BM)}')"><i class="fas fa-trash me-1"></i> Excluir BM</button>
                         </div>`;
 
@@ -683,9 +721,12 @@ if ($perm_chat)         $tab_ativa = $tab_ativa ?: 'tab-chat';
         document.getElementById('bm_db_id').value = '0';
         document.getElementById('modal-bm-titulo').textContent = 'Novo Gerenciador de Negócios';
         ['bm_nome','bm_id_meta','bm_app_id','bm_app_secret','bm_token'].forEach(id => { const el = document.getElementById(id); if(el) el.value=''; });
+        document.getElementById('bm_nome_empresa_label').textContent = '—';
+        document.getElementById('bm_token_masked_box').classList.add('d-none');
+        document.getElementById('bm_token_masked_val').textContent = '';
         new bootstrap.Modal(document.getElementById('modalBM')).show();
     }
-    function editarBM(id, nome, bm_id_meta, app_id) {
+    function editarBM(id, nome, bm_id_meta, app_id, nome_empresa, token_masked) {
         document.getElementById('bm_db_id').value = id;
         document.getElementById('modal-bm-titulo').textContent = 'Editar BM — ' + nome;
         document.getElementById('bm_nome').value = nome;
@@ -693,6 +734,16 @@ if ($perm_chat)         $tab_ativa = $tab_ativa ?: 'tab-chat';
         document.getElementById('bm_app_id').value = app_id;
         document.getElementById('bm_app_secret').value = '';
         document.getElementById('bm_token').value = '';
+        // Empresa vinculada
+        document.getElementById('bm_nome_empresa_label').textContent = nome_empresa || '—';
+        // Token mascarado
+        if (token_masked) {
+            document.getElementById('bm_token_masked_val').textContent = token_masked;
+            document.getElementById('bm_token_masked_box').classList.remove('d-none');
+        } else {
+            document.getElementById('bm_token_masked_box').classList.add('d-none');
+            document.getElementById('bm_token_masked_val').textContent = '';
+        }
         new bootstrap.Modal(document.getElementById('modalBM')).show();
     }
     async function salvarBM() {
@@ -858,59 +909,126 @@ if ($perm_chat)         $tab_ativa = $tab_ativa ?: 'tab-chat';
         if(!tb) return;
 
         const r = await reqCampanha('listar_campanhas', {});
-        
+
         if(r.success) {
             tb.innerHTML = '';
-            if(r.data.length === 0) return tb.innerHTML = '<tr><td colspan="5" class="py-3">Nenhuma campanha registrada.</td></tr>';
-            
+            if(r.data.length === 0) return tb.innerHTML = '<tr><td colspan="5" class="py-3 text-muted">Nenhuma campanha registrada.</td></tr>';
+
             r.data.forEach(c => {
+                const cfg = {
+                    intervalo:     parseInt(c.INTERVALO_SEGUNDOS) || 5,
+                    pausa_apos:    parseInt(c.PAUSA_APOS_QTDE) || 0,
+                    pausa_duracao: parseInt(c.PAUSA_DURACAO_SEGUNDOS) || 60
+                };
+                // Armazena config para reuso
+                campConfigs[c.NOME_CAMPANHA] = cfg;
+
                 let proc = parseInt(c.ENVIADOS) + parseInt(c.FALHAS);
                 let percentual = Math.round((proc / c.TOTAL) * 100) || 0;
                 let cor = percentual === 100 ? 'bg-success' : 'bg-primary';
+
+                // Info de timing
+                let cfgLabel = `<small class="text-muted fw-normal d-block" style="font-size:10px;">`;
+                cfgLabel += `⏱ ${cfg.intervalo}s/msg`;
+                if (cfg.pausa_apos > 0) cfgLabel += ` · ⏸ ${cfg.pausa_duracao}s a cada ${cfg.pausa_apos}`;
+                cfgLabel += `</small>`;
 
                 let btnAcao = '';
                 if (percentual < 100) {
                     if (campanhaEmAndamento === c.NOME_CAMPANHA && !disparoPausado) {
                         btnAcao += `<button class="btn btn-sm btn-warning fw-bold text-dark me-1" onclick="pausarDisparo()"><i class="fas fa-pause"></i> Pausar</button>`;
                     } else {
-                        btnAcao += `<button class="btn btn-sm btn-primary fw-bold me-1" onclick="iniciarDisparo('${c.NOME_CAMPANHA}')"><i class="fas fa-play"></i> Iniciar</button>`;
+                            const safeName = c.NOME_CAMPANHA.replace(/'/g, "\\'");
+                        btnAcao += `<button class="btn btn-sm btn-primary fw-bold me-1" onclick="iniciarDisparo('${safeName}')"><i class="fas fa-play"></i> Iniciar</button>`;
                     }
                 } else {
                     btnAcao += `<button class="btn btn-sm btn-outline-success fw-bold disabled me-1"><i class="fas fa-check"></i></button>`;
                 }
-                
+
                 btnAcao += `<button class="btn btn-sm btn-danger fw-bold me-1" onclick="excluirCampanha('${c.NOME_CAMPANHA}')"><i class="fas fa-trash"></i></button>`;
                 btnAcao += `<a href="whats_api_campanha.ajax.php?acao=exportar_excel&nome_campanha=${c.NOME_CAMPANHA}" class="btn btn-sm btn-success fw-bold" target="_blank"><i class="fas fa-file-excel"></i></a>`;
 
-                tb.innerHTML += `<tr><td class="fw-bold">${c.NOME_CAMPANHA}<br><small class="text-muted fw-normal">${c.DATA_IMPORTACAO}</small></td><td>${c.NOME_USUARIO}</td><td class="fw-bold"><span class="text-success">${c.ENVIADOS}</span> / <span class="text-danger">${c.FALHAS}</span> / ${c.TOTAL}</td><td><div class="progress border border-dark" style="height: 20px;"><div class="progress-bar ${cor} fw-bold" style="width: ${percentual}%;">${percentual}%</div></div></td><td><div class="d-flex justify-content-center">${btnAcao}</div></td></tr>`;
+                tb.innerHTML += `<tr>
+                    <td class="fw-bold text-start">${c.NOME_CAMPANHA}<br><small class="text-muted fw-normal">${c.DATA_IMPORTACAO}</small>${cfgLabel}</td>
+                    <td>${c.NOME_USUARIO}</td>
+                    <td class="fw-bold"><span class="text-success">${c.ENVIADOS}</span> / <span class="text-danger">${c.FALHAS}</span> / ${c.TOTAL}</td>
+                    <td><div class="progress border border-dark" style="height: 20px;"><div class="progress-bar ${cor} fw-bold" style="width: ${percentual}%;">${percentual}%</div></div></td>
+                    <td><div class="d-flex justify-content-center">${btnAcao}</div></td>
+                </tr>`;
             });
         }
     }
 
-    let disparoPausado = false; let campanhaEmAndamento = null;
+    function togglePausaDuracao() {
+        const qtde = parseInt(document.getElementById('camp_pausa_qtde')?.value || '0');
+        const div = document.getElementById('div_camp_pausa_duracao');
+        if (!div) return;
+        if (qtde > 0) {
+            div.style.display = '';
+            document.getElementById('lbl_pausa_qtde').textContent = qtde;
+            document.getElementById('lbl_pausa_seg').textContent = document.getElementById('camp_pausa_duracao').value;
+        } else {
+            div.style.display = 'none';
+        }
+    }
+    document.getElementById('camp_pausa_duracao')?.addEventListener('input', () => {
+        document.getElementById('lbl_pausa_seg').textContent = document.getElementById('camp_pausa_duracao').value;
+    });
+
+    let disparoPausado = false;
+    let campanhaEmAndamento = null;
+    let campConfigs = {}; // {nome: {intervalo, pausa_apos, pausa_duracao}}
+    let campContador = 0;
+    let campPausandoTimer = null;
 
     async function iniciarDisparo(nome_campanha) {
         if(!confirm(`Iniciar disparo: ${nome_campanha}?`)) return;
-        disparoPausado = false; campanhaEmAndamento = nome_campanha;
-        carregarCampanhas(); processarLoteMeta(nome_campanha);
+        disparoPausado = false;
+        campanhaEmAndamento = nome_campanha;
+        campContador = 0;
+        if (campPausandoTimer) { clearTimeout(campPausandoTimer); campPausandoTimer = null; }
+        carregarCampanhas();
+        processarLoteMeta(nome_campanha);
     }
 
     function pausarDisparo() {
-        disparoPausado = true; campanhaEmAndamento = null;
-        alert("Pausado."); carregarCampanhas(); 
+        disparoPausado = true;
+        campanhaEmAndamento = null;
+        if (campPausandoTimer) { clearTimeout(campPausandoTimer); campPausandoTimer = null; }
+        alert('Pausado.'); carregarCampanhas();
     }
 
     async function processarLoteMeta(nome_campanha) {
-        if(disparoPausado) return;
-        const r = await reqCampanha('processar_lote', { nome_campanha: nome_campanha });
-        carregarCampanhas(); 
-        if (r.success && r.concluido === false) {
-            setTimeout(() => { processarLoteMeta(nome_campanha); }, 1000);
-        } else if (r.concluido === true) {
-            campanhaEmAndamento = null; alert(`Campanha finalizada!`); carregarCampanhas();
+        if (disparoPausado) return;
+        const r = await reqCampanha('processar_lote', { nome_campanha });
+        if (!r.success) { campanhaEmAndamento = null; alert('Erro no processamento.'); return; }
+        if (r.concluido === true) { campanhaEmAndamento = null; campContador = 0; alert('Campanha finalizada!'); carregarCampanhas(); return; }
+
+        campContador++;
+        const cfg = campConfigs[nome_campanha] || { intervalo: 5, pausa_apos: 0, pausa_duracao: 60 };
+        const devePausar = cfg.pausa_apos > 0 && (campContador % cfg.pausa_apos === 0);
+
+        if (devePausar) {
+            // Atualiza tabela para mostrar situação atual
+            carregarCampanhas();
+            mostrarStatusDisparo(`⏸️ Pausa de ${cfg.pausa_duracao}s após ${campContador} disparos... (${r.restantes ?? '?'} restantes)`, 'warning');
+            campPausandoTimer = setTimeout(() => {
+                if (!disparoPausado) processarLoteMeta(nome_campanha);
+            }, cfg.pausa_duracao * 1000);
         } else {
-            campanhaEmAndamento = null; alert('Erro no lote.');
+            mostrarStatusDisparo(`🚀 Disparado: ${campContador} | Restantes: ${r.restantes ?? '?'} | Status: ${r.status}`, r.status === 'ENVIADO' ? 'success' : 'danger');
+            campPausandoTimer = setTimeout(() => {
+                if (!disparoPausado) processarLoteMeta(nome_campanha);
+            }, cfg.intervalo * 1000);
         }
+    }
+
+    function mostrarStatusDisparo(msg, tipo) {
+        let el = document.getElementById('camp-status-disparo');
+        if (!el) return;
+        el.className = `alert alert-${tipo} py-1 px-2 small fw-bold mb-1`;
+        el.textContent = msg;
+        el.style.display = '';
     }
 
     async function excluirCampanha(nome_campanha) {
