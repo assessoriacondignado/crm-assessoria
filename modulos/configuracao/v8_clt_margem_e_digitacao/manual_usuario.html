@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manual do Usuário — V8 CLT Margem e Digitação</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body { font-family: 'Inter','Segoe UI',Arial,sans-serif; font-size: 13px; line-height: 1.6; color: #1a1a2e; background: #f5f5f5; }
+
+  .page { width: 210mm; min-height: 297mm; background: white; margin: 0 auto 20px; padding: 18mm 16mm 16mm; box-shadow: 0 4px 24px rgba(0,0,0,0.12); }
+
+  /* CAPA */
+  .capa { display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:240mm; text-align:center; background:linear-gradient(145deg,#0d1b2a 0%,#1a237e 60%,#1565c0 100%); border-radius:12px; padding:40px; color:white; }
+  .capa .logo { width:90px;height:90px;background:#1565c0;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:48px;margin-bottom:28px;box-shadow:0 0 0 8px rgba(21,101,192,0.25); }
+  .capa h1 { font-size:28px;font-weight:800;letter-spacing:-0.5px;margin-bottom:10px; }
+  .capa h2 { font-size:17px;font-weight:400;opacity:0.85;margin-bottom:30px; }
+  .capa .badge-version { background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:20px;padding:5px 18px;font-size:12px;letter-spacing:1px; }
+  .capa p { margin-top:28px;font-size:13px;opacity:0.8;max-width:380px;line-height:1.7; }
+  .capa .tagline { margin-top:32px;font-size:12px;opacity:0.6;border-top:1px solid rgba(255,255,255,0.2);padding-top:20px;width:100%; }
+
+  /* SUMÁRIO */
+  .sumario h2 { font-size:18px;font-weight:800;color:#1a237e;margin-bottom:20px;padding-bottom:8px;border-bottom:3px solid #1565c0; }
+  .sumario ol { list-style:none;counter-reset:sc; }
+  .sumario ol>li { counter-increment:sc;display:flex;align-items:baseline;padding:6px 0;border-bottom:1px dotted #e0e0e0; }
+  .sumario ol>li::before { content:counter(sc)".";font-weight:700;color:#1565c0;min-width:28px; }
+  .sumario ol>li .titulo { flex:1;font-weight:600;font-size:13px; }
+  .sumario ol>li .pagina { font-size:12px;color:#888; }
+  .sumario ol>li.sub { padding-left:28px; }
+  .sumario ol>li.sub::before { content:"";min-width:28px; }
+  .sumario ol>li.sub .titulo { font-weight:400;font-size:12px;color:#555; }
+
+  /* SEÇÕES */
+  .secao { page-break-before:always; }
+  .secao-header { display:flex;align-items:center;gap:14px;background:linear-gradient(90deg,#1a237e,#1565c0);color:white;padding:14px 20px;border-radius:10px;margin-bottom:22px; }
+  .secao-header .numero { background:rgba(255,255,255,0.2);width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;flex-shrink:0; }
+  .secao-header h2 { font-size:17px;font-weight:700;margin:0; }
+  .secao-header p { font-size:11px;opacity:0.85;margin:2px 0 0; }
+
+  h3 { font-size:14px;font-weight:700;color:#1a237e;margin:20px 0 10px;padding-left:10px;border-left:4px solid #1565c0; }
+  h4 { font-size:13px;font-weight:600;color:#0d1b2a;margin:14px 0 8px; }
+  p { margin-bottom:10px; }
+  ul,ol { padding-left:20px;margin-bottom:12px; }
+  li { margin-bottom:5px; }
+  strong { font-weight:700; }
+  code { background:#f0f0f0;padding:1px 5px;border-radius:4px;font-size:11.5px;font-family:'Courier New',monospace; }
+
+  /* TELA SIMULADA */
+  .tela { border:2px solid #dee2e6;border-radius:10px;overflow:hidden;margin:16px 0;box-shadow:0 2px 8px rgba(0,0,0,0.08); }
+  .tela-barra { background:#1a1a2e;padding:7px 14px;display:flex;align-items:center;gap:6px; }
+  .tela-barra .dot { width:10px;height:10px;border-radius:50%;display:inline-block; }
+  .dot-r{background:#ff5f57;} .dot-y{background:#febc2e;} .dot-g{background:#28c840;}
+  .tela-barra .url { background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);font-size:10px;padding:2px 10px;border-radius:4px;margin-left:8px;flex:1;font-family:monospace; }
+  .tela-corpo { background:#f8f9fa;padding:16px; }
+
+  .mock-tabs { display:flex;gap:2px;border-bottom:2px solid #dee2e6;margin-bottom:14px;flex-wrap:wrap; }
+  .mock-tab { padding:6px 12px;border-radius:6px 6px 0 0;font-size:11px;font-weight:600;border:1px solid #dee2e6;border-bottom:none;background:#f0f0f0;color:#666; }
+  .mock-tab.ativo { background:white;color:#1a237e;border-bottom:3px solid #1565c0; }
+
+  .mock-card { background:white;border:1px solid #dee2e6;border-radius:8px;padding:12px;margin-bottom:10px; }
+  .mock-card-header { display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:12px;color:#333;margin-bottom:8px; }
+
+  /* FLUXO */
+  .fluxo { display:flex;align-items:center;justify-content:center;gap:6px;margin:16px 0;flex-wrap:wrap; }
+  .fluxo-item { background:#0d1b2a;color:white;padding:8px 14px;border-radius:8px;font-size:11px;font-weight:600;text-align:center; }
+  .fluxo-item.azul { background:#1565c0; }
+  .fluxo-item.verde { background:#1b4332; }
+  .fluxo-item.laranja { background:#e65100; }
+  .fluxo-seta { font-size:18px;color:#888; }
+
+  /* CAMPOS */
+  .mock-campo { background:white;border:1px solid #ced4da;border-radius:5px;padding:5px 10px;font-size:12px;color:#aaa;margin-bottom:4px; }
+  .mock-campo.destaque { border-color:#1565c0;color:#333; }
+  .mock-campo.readonly { background:#f0f0f0;color:#666; }
+  .mock-label { font-size:11px;font-weight:600;margin-bottom:2px;color:#444; }
+  .mock-btn { display:inline-block;padding:5px 14px;border-radius:5px;font-size:11px;font-weight:700;margin:2px; }
+  .mock-btn-dark  { background:#1a1a2e;color:white; }
+  .mock-btn-blue  { background:#1565c0;color:white; }
+  .mock-btn-green { background:#2e7d32;color:white; }
+  .mock-btn-red   { background:#dc3545;color:white; }
+  .mock-btn-gray  { background:#6c757d;color:white; }
+  .mock-btn-orange{ background:#e65100;color:white; }
+  .mock-btn-yellow{ background:#f9a825;color:#333; }
+
+  /* TABELAS */
+  table { width:100%;border-collapse:collapse;margin:12px 0;font-size:12px; }
+  th { background:#1a237e;color:white;padding:7px 10px;text-align:left; }
+  td { padding:6px 10px;border-bottom:1px solid #f0f0f0; }
+  tr:nth-child(even) td { background:#fafafa; }
+
+  /* ALERTAS */
+  .alerta { padding:10px 14px;border-radius:8px;margin:12px 0;font-size:12px; }
+  .alerta-info  { background:#e3f2fd;border-left:4px solid #1565c0; }
+  .alerta-warn  { background:#fff3e0;border-left:4px solid #e65100; }
+  .alerta-ok    { background:#e8f5e9;border-left:4px solid #2e7d32; }
+  .alerta-erro  { background:#ffebee;border-left:4px solid #c62828; }
+
+  /* PASSOS */
+  .passo { display:flex;gap:12px;align-items:flex-start;margin-bottom:14px; }
+  .passo .num { background:#1565c0;color:white;border-radius:50%;width:26px;height:26px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800; }
+  .passo .conteudo { flex:1; }
+  .passo .conteudo strong { display:block;font-size:13px;margin-bottom:3px; }
+  .passo .conteudo span { font-size:12px;color:#555; }
+
+  /* BADGES */
+  .badge { display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:600; }
+  .badge-green  { background:#e8f5e9;color:#1b5e20; }
+  .badge-blue   { background:#e3f2fd;color:#0d47a1; }
+  .badge-red    { background:#ffebee;color:#b71c1c; }
+  .badge-yellow { background:#fff9c4;color:#f57f17; }
+  .badge-gray   { background:#f5f5f5;color:#424242; }
+  .badge-orange { background:#fff3e0;color:#e65100; }
+  .badge-purple { background:#f3e5f5;color:#6a1b9a; }
+
+  /* PERMISSÕES */
+  .perm-grid { display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:12px 0; }
+  .perm-item { background:#f8f9fa;border:1px solid #dee2e6;border-radius:8px;padding:10px 12px; }
+  .perm-item .chave { font-family:monospace;font-size:10px;color:#666; }
+  .perm-item .nome  { font-size:12px;font-weight:600;color:#333;margin-top:4px; }
+  .perm-item .desc  { font-size:11px;color:#888;margin-top:2px; }
+
+  /* FASES DO WORKER */
+  .fases { display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0; }
+  .fase { border-radius:8px;padding:10px;text-align:center;font-size:11px; }
+  .fase .num { font-size:18px;font-weight:800;margin-bottom:4px; }
+  .fase .label { font-weight:600;margin-bottom:4px; }
+  .fase .desc { font-size:10px;opacity:0.8; }
+  .fase-1 { background:#e8f5e9;border:2px solid #2e7d32;color:#1b5e20; }
+  .fase-2 { background:#e3f2fd;border:2px solid #1565c0;color:#0d47a1; }
+  .fase-3 { background:#fff3e0;border:2px solid #e65100;color:#bf360c; }
+  .fase-4 { background:#ffebee;border:2px solid #c62828;color:#b71c1c; }
+
+  /* BLOCOS DIGITAÇÃO */
+  .bloco-dig { background:#f8f9fa;border:2px solid #1565c0;border-radius:10px;padding:14px;margin:12px 0; }
+  .bloco-dig-header { color:#1a237e;font-weight:800;font-size:13px;margin-bottom:10px;display:flex;align-items:center;gap:8px; }
+
+  hr { border:none;border-top:1px solid #e0e0e0;margin:20px 0; }
+  .rodape { text-align:center;color:#888;font-size:10px;margin-top:30px;padding-top:14px;border-top:1px solid #e0e0e0; }
+  .no-break { page-break-inside:avoid; }
+
+  /* PRINT */
+  @media print {
+    body { background:white;font-size:12px; }
+    .page { box-shadow:none;margin:0;padding:15mm 14mm;width:100%;page-break-after:always; }
+    .page:last-child { page-break-after:avoid; }
+    .secao { page-break-before:always; }
+    a { text-decoration:none;color:inherit; }
+  }
+  @page { size:A4;margin:15mm 14mm; }
+
+  .print-btn { position:fixed;bottom:24px;right:24px;background:#1565c0;color:white;border:none;padding:13px 22px;border-radius:30px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 4px 16px rgba(21,101,192,0.4);z-index:9999;display:flex;align-items:center;gap:8px; }
+  .print-btn:hover { background:#0d47a1; }
+  @media print { .print-btn { display:none; } }
+</style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">🖨️ Salvar como PDF</button>
+
+<!-- CAPA -->
+<div class="page">
+  <div class="capa">
+    <div class="logo">🔑</div>
+    <h1>V8 CLT — Margem e Digitação</h1>
+    <h2>Manual do Usuário</h2>
+    <div class="badge-version">VERSÃO 1.0 &nbsp;|&nbsp; 2026</div>
+    <p>Guia completo para consulta de clientes, simulação de crédito consignado CLT, envio de propostas e acompanhamento pelo sistema V8.</p>
+    <div class="tagline">CRM Interno &nbsp;·&nbsp; Módulo: Configurações &gt; V8 CLT Margem e Digitação</div>
+  </div>
+</div>
+
+<!-- SUMÁRIO -->
+<div class="page">
+  <div class="sumario">
+    <h2>Sumário</h2>
+    <ol>
+      <li><span class="titulo">Visão Geral do Módulo</span><span class="pagina">3</span></li>
+      <li class="sub"><span class="titulo">O que é o V8 Sistema?</span><span class="pagina">3</span></li>
+      <li class="sub"><span class="titulo">Fluxo geral de uma consulta</span><span class="pagina">3</span></li>
+
+      <li><span class="titulo">Permissões de Acesso</span><span class="pagina">4</span></li>
+      <li class="sub"><span class="titulo">Chaves de permissão disponíveis</span><span class="pagina">4</span></li>
+
+      <li><span class="titulo">Aba: Nova Consulta / Fila</span><span class="pagina">5</span></li>
+      <li class="sub"><span class="titulo">Selecionar chave/credencial</span><span class="pagina">5</span></li>
+      <li class="sub"><span class="titulo">Localizar e consultar um cliente</span><span class="pagina">5</span></li>
+      <li class="sub"><span class="titulo">Entendendo a tabela da fila</span><span class="pagina">6</span></li>
+      <li class="sub"><span class="titulo">Botões de reprocessamento</span><span class="pagina">6</span></li>
+      <li class="sub"><span class="titulo">Filtro avançado e exportação</span><span class="pagina">7</span></li>
+
+      <li><span class="titulo">Modal de Digitação</span><span class="pagina">8</span></li>
+      <li class="sub"><span class="titulo">Bloco 1: Dados Cadastrais</span><span class="pagina">8</span></li>
+      <li class="sub"><span class="titulo">Bloco 2: Simulações</span><span class="pagina">9</span></li>
+      <li class="sub"><span class="titulo">Bloco 3: PIX</span><span class="pagina">9</span></li>
+      <li class="sub"><span class="titulo">Bloco 4: Observação e envio</span><span class="pagina">10</span></li>
+
+      <li><span class="titulo">Aba: Consulta em Lote (CSV)</span><span class="pagina">10</span></li>
+      <li class="sub"><span class="titulo">Formato do arquivo CSV</span><span class="pagina">10</span></li>
+      <li class="sub"><span class="titulo">Prioridades do Worker</span><span class="pagina">11</span></li>
+
+      <li><span class="titulo">Aba: Acompanhamento de Propostas</span><span class="pagina">11</span></li>
+      <li class="sub"><span class="titulo">Sincronizar status</span><span class="pagina">12</span></li>
+      <li class="sub"><span class="titulo">Resolver pendência de PIX</span><span class="pagina">12</span></li>
+      <li class="sub"><span class="titulo">Cancelar proposta</span><span class="pagina">12</span></li>
+
+      <li><span class="titulo">Aba: Chaves e Custos</span><span class="pagina">13</span></li>
+      <li><span class="titulo">Aba: Extrato</span><span class="pagina">14</span></li>
+
+      <li><span class="titulo">Tabela de Status</span><span class="pagina">15</span></li>
+      <li class="sub"><span class="titulo">Status da consulta (fila)</span><span class="pagina">15</span></li>
+      <li class="sub"><span class="titulo">Status da proposta</span><span class="pagina">15</span></li>
+
+      <li><span class="titulo">Glossário</span><span class="pagina">16</span></li>
+    </ol>
+  </div>
+  <div class="rodape">V8 CLT — Manual do Usuário v1.0 &nbsp;|&nbsp; Uso interno</div>
+</div>
+
+<!-- SEÇÃO 1: VISÃO GERAL -->
+<div class="page secao">
+  <div class="secao-header">
+    <div class="numero">1</div>
+    <div><h2>Visão Geral do Módulo</h2><p>O que é o V8 e como funciona o fluxo de consulta</p></div>
+  </div>
+
+  <h3>1.1 O que é o V8 Sistema?</h3>
+  <p>O <strong>V8 Sistema</strong> é uma plataforma de integração com a <strong>Dataprev</strong> que permite consultar a margem consignável de trabalhadores CLT. Com ele é possível:</p>
+  <ul>
+    <li>Gerar um <strong>consentimento</strong> (autorização) para consultar os dados do trabalhador junto à Dataprev.</li>
+    <li>Ler a <strong>margem disponível</strong> retornada pela Dataprev após o consentimento.</li>
+    <li>Executar uma <strong>simulação</strong> de crédito com base na margem lida.</li>
+    <li>Enviar a <strong>proposta</strong> para assinatura digital e formalização do contrato.</li>
+  </ul>
+
+  <h3>1.2 Fluxo Geral de uma Consulta</h3>
+
+  <div class="fluxo no-break">
+    <div class="fluxo-item">① Selecionar<br>Chave V8</div>
+    <div class="fluxo-seta">→</div>
+    <div class="fluxo-item azul">② Localizar<br>Cliente</div>
+    <div class="fluxo-seta">→</div>
+    <div class="fluxo-item azul">③ Gerar<br>Consentimento</div>
+    <div class="fluxo-seta">→</div>
+    <div class="fluxo-item laranja">④ Aguardar<br>Dataprev</div>
+    <div class="fluxo-seta">→</div>
+    <div class="fluxo-item verde">⑤ Simular<br>Crédito</div>
+    <div class="fluxo-seta">→</div>
+    <div class="fluxo-item verde">⑥ Enviar<br>Proposta</div>
+  </div>
+
+  <div class="alerta-info alerta">
+    <strong>⏱️ Tempo médio:</strong> Os passos ① ao ③ são instantâneos. O passo ④ (resposta da Dataprev) pode levar de segundos a até 5 minutos. O sistema faz polling automático a cada 30 segundos, com até 11 tentativas.
+  </div>
+
+  <h3>1.3 Responsabilidades de Cada Etapa</h3>
+  <table>
+    <thead><tr><th>Etapa</th><th>Quem executa</th><th>O que acontece</th></tr></thead>
+    <tbody>
+      <tr><td>① Selecionar Chave</td><td>Usuário</td><td>Define qual credencial V8 (saldo) será usada</td></tr>
+      <tr><td>② Localizar Cliente</td><td>Usuário</td><td>Busca CPF/Nome no banco de dados do CRM</td></tr>
+      <tr><td>③ Gerar Consentimento</td><td>Sistema + V8</td><td>Cria autorização junto à Dataprev e debita saldo</td></tr>
+      <tr><td>④ Aguardar Dataprev</td><td>Dataprev + Sistema</td><td>Dataprev processa e retorna margem disponível</td></tr>
+      <tr><td>⑤ Simular Crédito</td><td>Sistema + V8</td><td>Calcula parcela, prazo e valor liberado</td></tr>
+      <tr><td>⑥ Enviar Proposta</td><td>Usuário + V8</td><td>Usuário preenche dados, sistema envia e retorna link de assinatura</td></tr>
+    </tbody>
+  </table>
+
+  <div class="alerta-warn alerta">
+    <strong>💰 Atenção ao saldo:</strong> O custo é debitado no passo ③ (criação do consentimento). Reprocessamentos que apenas verificam a Dataprev <strong>não geram novo custo</strong>. Apenas "Reprocessar Tudo" pode gerar cobrança adicional.
+  </div>
+</div>
+
+<!-- SEÇÃO 2: PERMISSÕES -->
+<div class="page secao">
+  <div class="secao-header">
+    <div class="numero">2</div>
+    <div><h2>Permissões de Acesso</h2><p>Controle granular por aba e funcionalidade</p></div>
+  </div>
+
+  <p>O sistema usa um modelo de <strong>bloqueio</strong>: quando uma chave é atribuída ao usuário, aquela aba ou função fica oculta/restrita. Sem nenhuma restrição, o usuário tem acesso total.</p>
+
+  <div class="perm-grid">
+    <div class="perm-item">
+      <div class="chave">SUBMENU_OP_INTEGRACAO_V8_NOVA_CONSULTA_FILA_MEU_REGITRO</div>
+      <div class="nome">👤 Somente meu registro</div>
+      <div class="desc">Restringe a fila: usuário vê apenas suas próprias consultas.</div>
+    </div>
+    <div class="perm-item">
+      <div class="chave">SUBMENU_OP_INTEGRACAO_V8_NOVA_CONSULTA_DIGITAÇÃO</div>
+      <div class="nome">✏️ Digitação e Simulação</div>
+      <div class="desc">Bloqueia o botão de abrir o modal de digitação/simulação/proposta.</div>
+    </div>
+    <div class="perm-item">
+      <div class="chave">SUBMENU_OP_INTEGRACAO_V8_CONSULTA_LOTE</div>
+      <div class="nome">📁 Consulta em Lote</div>
+      <div class="desc">Oculta a aba de importação CSV em lote.</div>
+    </div>
+    <div class="perm-item">
+      <div class="chave">SUBMENU_OP_INTEGRACAO_V8_CHAVE_CUSTO</div>
+      <div class="nome">🔑 Chaves e Custos</div>
+      <div class="desc">Oculta a aba de gerenciamento de credenciais V8.</div>
+    </div>
+    <div class="perm-item">
+      <div class="chave">SUBMENU_OP_INTEGRACAO_V8_EXTRATO</div>
+      <div class="nome">📊 Extrato</div>
+      <div class="desc">Oculta a aba de extrato de movimentações de saldo.</div>
+    </div>
+    <div class="perm-item">
+      <div class="chave">SUBMENU_OP_INTEGRACAO_V8_CHAVE</div>
+      <div class="nome">🔒 Ver credenciais</div>
+      <div class="desc">Oculta Username e Password da API V8 na tela de chaves.</div>
+    </div>
+    <div class="perm-item">
+      <div class="chave">SUBMENU_OP_INTEGRACAO_V8_CUSTO_CLIENTE</div>
+      <div class="nome">💲 Ver custo do cliente</div>
+      <div class="desc">Oculta o campo "Custo p/ Cliente" na gestão de chaves.</div>
+    </div>
+    <div class="perm-item">
+      <div class="chave">SUBMENU_OP_INTEGRACAO_V8_CUSTO_API</div>
+      <div class="nome">💲 Ver custo da API</div>
+      <div class="desc">Oculta o campo "Seu Custo API" na gestão de chaves.</div>
+    </div>
+    <div class="perm-item">
+      <div class="chave">SUBMENU_OP_INTEGRACAO_V8_IA</div>
+      <div class="nome">🤖 Atendimento IA</div>
+      <div class="desc">Oculta a aba de integração com chatbot/IA.</div>
+    </div>
+  </div>
+
+  <div class="alerta-info alerta">
+    <strong>👑 Master/Admin:</strong> Usuários do tipo Master ou Admin têm acesso total e não são afetados pelas permissões de bloqueio.
+  </div>
+</div>
+
+<!-- SEÇÃO 3: NOVA CONSULTA -->
+<div class="page secao">
+  <div class="secao-header">
+    <div class="numero">3</div>
+    <div><h2>Aba: Nova Consulta / Fila</h2><p>Criar consultas, acompanhar o processamento e reprocessar erros</p></div>
+  </div>
+
+  <div class="tela no-break">
+    <div class="tela-barra">
+      <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+      <span class="url">Módulo V8 — Aba: Nova Consulta / Fila</span>
+    </div>
+    <div class="tela-corpo">
+      <div class="mock-tabs">
+        <div class="mock-tab ativo">🔍 Nova Consulta / Fila</div>
+        <div class="mock-tab">📁 Consulta em Lote</div>
+        <div class="mock-tab">📋 Acompanhamento</div>
+        <div class="mock-tab">🔑 Chaves e Custos</div>
+        <div class="mock-tab">📊 Extrato</div>
+      </div>
+      <!-- Chave -->
+      <div class="mock-card" style="border-color:#1565c0;">
+        <div class="mock-label">🔑 Selecione sua Chave/Credencial Disponível (Dono)</div>
+        <div class="mock-campo destaque">João Silva — Saldo: R$ 150,00 — Tabela: CLT Acelera</div>
+      </div>
+      <!-- Passo 1 -->
+      <div class="mock-card">
+        <div style="font-weight:700;font-size:12px;margin-bottom:10px;color:#1a237e;">📋 PASSO 1 — Localizar Cadastro do Cliente</div>
+        <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:8px;align-items:end;">
+          <div>
+            <div class="mock-label">Pesquisar Cliente (CPF, Nome ou ambos)</div>
+            <div class="mock-campo destaque">MARIA DA SILVA, 123.456.789-00</div>
+          </div>
+          <div>
+            <div class="mock-label">CPF</div>
+            <div class="mock-campo readonly">123.456.789-00</div>
+          </div>
+          <div>
+            <div class="mock-label">Nascimento</div>
+            <div class="mock-campo readonly">15-06-1985</div>
+          </div>
+          <div>
+            <div class="mock-label">Gênero</div>
+            <div class="mock-campo destaque">Feminino</div>
+          </div>
+        </div>
+        <div style="margin-top:10px;display:flex;gap:6px;">
+          <span class="mock-btn mock-btn-gray">🗑️ Limpar</span>
+          <span class="mock-btn mock-btn-blue">▶️ Gerar Consentimento</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>3.1 Selecionar Chave / Credencial</h3>
+  <p>Antes de qualquer consulta, selecione a <strong>chave de acesso V8</strong> que será usada. Cada chave tem um saldo próprio — ao gerar um consentimento, o custo é debitado automaticamente.</p>
+  <div class="alerta-warn alerta">
+    <strong>⚠️ Importante:</strong> Se o saldo da chave for insuficiente, a consulta será recusada pelo sistema. Solicite recarga ao responsável pelas chaves.
+  </div>
+
+  <h3>3.2 Localizar e Consultar um Cliente</h3>
+  <div class="passo">
+    <div class="num">1</div>
+    <div class="conteudo">
+      <strong>Digite CPF, Nome ou ambos no campo "Pesquisar Cliente"</strong>
+      <span>O autocomplete sugere clientes cadastrados no CRM. Ex: <code>MARIA DA SILVA, 123.456.789-00</code>. Clique no nome para selecionar.</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">2</div>
+    <div class="conteudo">
+      <strong>Verifique os dados preenchidos automaticamente</strong>
+      <span>CPF, Data de Nascimento e Nome são preenchidos do banco. Confira o Gênero (necessário para o V8).</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">3</div>
+    <div class="conteudo">
+      <strong>Clique em "▶️ Gerar Consentimento"</strong>
+      <span>O sistema cria o consentimento na V8, debita o saldo e adiciona o cliente à fila com status <span class="badge badge-blue">AGUARDANDO MARGEM</span>. O polling automático começa a cada 30 segundos.</span>
+    </div>
+  </div>
+</div>
+
+<!-- SEÇÃO 3 continuação: FILA -->
+<div class="page secao">
+  <div class="secao-header">
+    <div class="numero">3</div>
+    <div><h2>Nova Consulta — Entendendo a Fila</h2><p>Colunas, botões de ação e como reprocessar</p></div>
+  </div>
+
+  <h3>3.3 A Tabela da Fila — Colunas</h3>
+
+  <div class="tela no-break">
+    <div class="tela-barra">
+      <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+      <span class="url">Tabela da Fila</span>
+    </div>
+    <div class="tela-corpo" style="padding:8px;">
+      <table style="font-size:11px;">
+        <thead><tr><th>ID/Data</th><th>Cliente / Origem</th><th>Autorização</th><th>Config Margem</th><th>Simulação</th><th>Proposta</th><th>Status</th><th>Ações</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>1042<br><small style="color:#888">09/04 14:22</small></td>
+            <td>Maria da Silva<br><small>123.456.789-00</small><br><span class="badge badge-gray">Manual</span></td>
+            <td><span class="badge badge-green">CON-7892</span></td>
+            <td><span class="badge badge-green">CFG-441</span></td>
+            <td><span class="badge badge-green">SIM-2210</span></td>
+            <td><span class="badge badge-blue">PROP-8832</span></td>
+            <td><span class="badge badge-green">OK-SIMULACAO</span></td>
+            <td style="white-space:nowrap;">
+              <span title="Reprocessar Consentimento" style="cursor:pointer;">📡</span>
+              <span title="Reprocessar Erros" style="cursor:pointer;">⚠️</span>
+              <span title="Reprocessar Tudo" style="cursor:pointer;">🔁</span>
+              <span title="Digitação" style="cursor:pointer;">✏️</span>
+              <span title="Apagar" style="cursor:pointer;">🗑️</span>
+            </td>
+          </tr>
+          <tr>
+            <td>1043<br><small style="color:#888">09/04 14:30</small></td>
+            <td>Carlos Lima<br><small>987.654.321-00</small><br><span class="badge badge-blue">Lote</span></td>
+            <td><span class="badge badge-green">CON-7893</span></td>
+            <td><span class="badge badge-gray">—</span></td>
+            <td><span class="badge badge-gray">—</span></td>
+            <td><span class="badge badge-gray">—</span></td>
+            <td><span class="badge badge-yellow">AGUARDANDO MARGEM</span></td>
+            <td style="white-space:nowrap;">📡 ⚠️ 🔁 🗑️</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h3>3.4 Botões de Ação por Linha</h3>
+  <table>
+    <thead><tr><th>Ícone</th><th>Nome</th><th>O que faz</th><th>Gera custo?</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>📡</td>
+        <td><strong>Reprocessar Consentimento</strong></td>
+        <td>Verifica se a Dataprev já retornou a margem. Não cria novo consentimento.</td>
+        <td><span class="badge badge-green">Não</span></td>
+      </tr>
+      <tr>
+        <td>⚠️</td>
+        <td><strong>Reprocessar Erros</strong></td>
+        <td>Força nova leitura de margem usando o consentimento já existente.</td>
+        <td><span class="badge badge-green">Não</span></td>
+      </tr>
+      <tr>
+        <td>🔁</td>
+        <td><strong>Reprocessar Tudo</strong></td>
+        <td>Reinicia o fluxo do zero, criando novo consentimento na V8.</td>
+        <td><span class="badge badge-red">Sim ⚠️</span></td>
+      </tr>
+      <tr>
+        <td>✏️</td>
+        <td><strong>Digitação / Simulação</strong></td>
+        <td>Abre o modal de digitação para simular e enviar a proposta.</td>
+        <td><span class="badge badge-green">Não</span></td>
+      </tr>
+      <tr>
+        <td>🗑️</td>
+        <td><strong>Apagar Consulta</strong></td>
+        <td>Remove a consulta permanentemente. Ação irreversível.</td>
+        <td><span class="badge badge-green">Não</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="alerta-erro alerta">
+    <strong>🔁 Atenção ao "Reprocessar Tudo":</strong> Esta ação cria um novo consentimento na V8, gerando novo débito de saldo. Use apenas quando os demais reprocessamentos não resolverem o problema e a Dataprev não retornou resposta após longa espera.
+  </div>
+
+  <h3>3.5 Filtro Avançado e Exportação</h3>
+  <div class="passo">
+    <div class="num">1</div>
+    <div class="conteudo">
+      <strong>Clique em "🔍 Filtro Avançado"</strong>
+      <span>Aparece um painel com filtros por Data Inicial, Data Final, CPF e Nome do Cliente.</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">2</div>
+    <div class="conteudo">
+      <strong>Preencha os campos desejados e clique em "Executar"</strong>
+      <span>A tabela é atualizada exibindo apenas os registros do período/cliente filtrado.</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">3</div>
+    <div class="conteudo">
+      <strong>Clique em "📊 EXPORTAR" para baixar o CSV</strong>
+      <span>Exporta todos os dados da fila (incluindo filtros ativos) para análise em Excel.</span>
+    </div>
+  </div>
+</div>
+
+<!-- SEÇÃO 4: MODAL DE DIGITAÇÃO -->
+<div class="page secao">
+  <div class="secao-header">
+    <div class="numero">4</div>
+    <div><h2>Modal de Digitação</h2><p>Preenchimento de dados para simulação e envio de proposta</p></div>
+  </div>
+
+  <p>O Modal de Digitação é aberto ao clicar no ícone ✏️ de uma consulta com status <span class="badge badge-green">OK-SIMULACAO</span> ou <span class="badge badge-yellow">AGUARDANDO SIMULACAO</span>. Ele é dividido em <strong>4 blocos</strong>.</p>
+
+  <!-- BLOCO 1 -->
+  <div class="bloco-dig no-break">
+    <div class="bloco-dig-header">📋 BLOCO 1 — Dados Cadastrais</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
+      <div>
+        <div class="mock-label">CPF <span style="color:#888;font-size:10px;">(readonly)</span></div>
+        <div class="mock-campo readonly">123.456.789-00</div>
+      </div>
+      <div>
+        <div class="mock-label">Nome Completo</div>
+        <div class="mock-campo destaque">Maria da Silva</div>
+      </div>
+      <div>
+        <div class="mock-label">E-mail</div>
+        <div class="mock-campo">maria@gmail.com</div>
+      </div>
+      <div>
+        <div class="mock-label">Nascimento</div>
+        <div class="mock-campo">15-06-1985</div>
+      </div>
+      <div>
+        <div class="mock-label">Nome da Mãe</div>
+        <div class="mock-campo">Ana da Silva</div>
+      </div>
+      <div>
+        <div class="mock-label">RG</div>
+        <div class="mock-campo">1234567</div>
+      </div>
+      <div>
+        <div class="mock-label">Sexo</div>
+        <div class="mock-campo destaque">Feminino ▾</div>
+      </div>
+      <div>
+        <div class="mock-label">Telefone</div>
+        <div class="mock-campo">(62) 99999-8888 ▾</div>
+      </div>
+      <div style="display:flex;align-items:flex-end;">
+        <span class="mock-btn mock-btn-blue" style="font-size:10px;">🔄 Atualização Cadastral</span>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px;">
+      <div style="grid-column:1/-1">
+        <div class="mock-label">Endereço</div>
+        <div class="mock-campo">Rua das Flores, 123, Centro, Goiânia - GO ▾</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="alerta-info alerta">
+    <strong>🔄 Atualização Cadastral:</strong> O botão consulta o Fator Conferi e outras bases de dados para preencher automaticamente dados faltantes como nome da mãe, endereço e telefone. Útil quando o cadastro do cliente está incompleto.
+  </div>
+
+  <!-- BLOCO 2 -->
+  <div class="bloco-dig no-break">
+    <div class="bloco-dig-header">📊 BLOCO 2 — Simulações</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:8px;align-items:end;margin-bottom:12px;">
+      <div>
+        <div class="mock-label">Prazo</div>
+        <div class="mock-campo destaque">24 meses ▾</div>
+      </div>
+      <div>
+        <div class="mock-label">Tipo de Busca</div>
+        <div class="mock-campo">Por Parcela em R$ ▾</div>
+      </div>
+      <div>
+        <div class="mock-label">Valor (R$)</div>
+        <div class="mock-campo destaque">350,00</div>
+      </div>
+      <div>
+        <span class="mock-btn mock-btn-blue">🔄 Simular</span>
+      </div>
+    </div>
+    <table style="font-size:11px;">
+      <thead><tr><th>Escolher</th><th>Tipo</th><th>Prazo</th><th>Parcela</th><th>Valor Liberado</th><th>Data</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>⚪ (radio)</td><td><span class="badge badge-blue">PADRÃO</span></td><td>24m</td><td>R$ 312,00</td><td><strong>R$ 6.480,00</strong></td><td>09/04 14:33</td>
+        </tr>
+        <tr style="background:#e8f5e9;">
+          <td>🔵 (selecionada)</td><td><span class="badge badge-green">PERSONALIZADA</span></td><td>24m</td><td>R$ 350,00</td><td><strong>R$ 7.200,00</strong></td><td>09/04 14:41</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- SEÇÃO 4 continuação -->
+<div class="page secao">
+  <div class="secao-header">
+    <div class="numero">4</div>
+    <div><h2>Modal de Digitação — Simulação, PIX e Envio</h2><p>Completando e enviando a proposta para a V8</p></div>
+  </div>
+
+  <h3>4.1 Tipos de Simulação</h3>
+  <table>
+    <thead><tr><th>Tipo</th><th>Como funciona</th><th>Quando usar</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="badge badge-blue">PADRÃO</span></td>
+        <td>Usa a margem disponível como parcela e aplica o prazo padrão da chave. Calculada automaticamente pelo sistema.</td>
+        <td>Primeira opção — usar sempre que a simulação automática retornar valor adequado.</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-green">PERSONALIZADA</span></td>
+        <td>Usuário define o prazo, o tipo (por parcela ou por valor total) e o valor. Simulação é recalculada pela V8.</td>
+        <td>Quando o cliente prefere parcela específica ou quando a simulação padrão falha.</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-purple">IA</span></td>
+        <td>Simulação gerada automaticamente pelo atendimento IA integrado.</td>
+        <td>Consultas originadas pelo chatbot.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="alerta-info alerta">
+    <strong>🔄 Retry inteligente:</strong> Se a simulação falhar, o sistema tenta automaticamente até 5 vezes com ajustes:<br>
+    → Valor acima de R$ 50.000: reduz para R$ 50.000<br>
+    → Margem insuficiente: reduz a parcela em 10% e tenta novamente<br>
+    → Critério de desembolso mínimo não atingido: zera a simulação
+  </div>
+
+  <!-- BLOCO 3 -->
+  <div class="bloco-dig no-break">
+    <div class="bloco-dig-header">💳 BLOCO 3 — PIX (Dados de Recebimento)</div>
+    <div style="display:grid;grid-template-columns:2fr 1fr;gap:10px;">
+      <div>
+        <div class="mock-label">Chave PIX ★ (obrigatório)</div>
+        <div class="mock-campo destaque">123.456.789-00</div>
+        <div style="font-size:10px;color:#888;margin-top:2px;">Pode ser CPF, celular, e-mail ou chave aleatória</div>
+      </div>
+      <div>
+        <div class="mock-label">Tipo de Chave</div>
+        <div class="mock-campo destaque">CPF ▾</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCO 4 -->
+  <div class="bloco-dig no-break">
+    <div class="bloco-dig-header">📝 BLOCO 4 — Observação</div>
+    <div class="mock-campo" style="min-height:50px;color:#aaa;">Digite aqui anotações sobre esta proposta (opcional)...</div>
+  </div>
+
+  <h3>4.2 Enviar a Proposta</h3>
+  <div class="passo">
+    <div class="num">1</div>
+    <div class="conteudo">
+      <strong>Preencha todos os blocos (1 a 4)</strong>
+      <span>Campos obrigatórios: Nome, CPF, Nascimento, Sexo, PIX. Os demais têm valores padrão se não preenchidos.</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">2</div>
+    <div class="conteudo">
+      <strong>Selecione a simulação desejada (radio button)</strong>
+      <span>Escolha entre a simulação Padrão ou qualquer simulação Personalizada já calculada.</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">3</div>
+    <div class="conteudo">
+      <strong>Clique em "Enviar Proposta"</strong>
+      <span>O sistema salva os dados no CRM e envia para a V8. Em caso de sucesso, exibe o <strong>link de assinatura digital</strong> para o cliente.</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">4</div>
+    <div class="conteudo">
+      <strong>Compartilhe o link com o cliente</strong>
+      <span>O link pode ser copiado e enviado por WhatsApp, e-mail ou SMS. O cliente assina digitalmente pelo celular.</span>
+    </div>
+  </div>
+
+  <div class="alerta-ok alerta">
+    <strong>✅ Após envio:</strong> A proposta aparece na aba "Acompanhamento de Propostas" com status <span class="badge badge-yellow">AGUARDANDO</span>. Acompanhe lá a evolução até <span class="badge badge-green">PAGA</span>.
+  </div>
+</div>
+
+<!-- SEÇÃO 5: LOTE -->
+<div class="page secao">
+  <div class="secao-header">
+    <div class="numero">5</div>
+    <div><h2>Aba: Consulta em Lote (CSV)</h2><p>Processamento automático de múltiplos clientes em fila</p></div>
+  </div>
+
+  <p>A Consulta em Lote permite importar um arquivo CSV com centenas de clientes e processar todos automaticamente em background — sem necessidade de interação manual para cada um.</p>
+
+  <h3>5.1 Formato do Arquivo CSV</h3>
+  <p>O arquivo deve ter cabeçalho e separador ponto-e-vírgula (<code>;</code>):</p>
+
+  <div style="background:#1a1a2e;color:#f8f9fa;border-radius:8px;padding:14px;font-family:monospace;font-size:12px;margin:10px 0;line-height:1.8;">
+    NUMERO; NOME; CPF; MARGEM; PARCELA; PRAZO; VALOR_LIQUIDO<br>
+    <span style="color:#90caf9;">5562999998888; João Silva; 12345678900; 1500.00; 250.00; 6; 1480.00</span><br>
+    <span style="color:#90caf9;">5511988887777; Maria Souza; 98765432100; 2000.00; 310.00; 8; 1950.00</span>
+  </div>
+
+  <div class="alerta-info alerta">
+    <strong>📌 Dica:</strong> O campo VALOR_LIQUIDO pode ser usado para filtrar o relatório do WhatsApp (apenas clientes com valor líquido > 0 recebem o disparo). Os demais campos são usados para simulação personalizada automática.
+  </div>
+
+  <h3>5.2 Como Importar um Lote</h3>
+  <div class="passo">
+    <div class="num">1</div>
+    <div class="conteudo">
+      <strong>Acesse a aba "Consulta em Lote (CSV)"</strong>
+      <span>Certifique-se de ter permissão <code>SUBMENU_OP_INTEGRACAO_V8_CONSULTA_LOTE</code>.</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">2</div>
+    <div class="conteudo">
+      <strong>Selecione o arquivo CSV e a chave V8</strong>
+      <span>Escolha qual credencial será usada para os consentimentos do lote.</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">3</div>
+    <div class="conteudo">
+      <strong>Clique em "Importar"</strong>
+      <span>Os registros entram na fila com status <span class="badge badge-gray">NA FILA</span>. O worker de background começa a processar automaticamente.</span>
+    </div>
+  </div>
+
+  <h3>5.3 Prioridades do Worker de Processamento</h3>
+  <p>O worker roda em background e processa os registros em <strong>ordem de prioridade</strong>. Registros mais avançados no fluxo são processados primeiro:</p>
+
+  <div class="fases no-break">
+    <div class="fase fase-1">
+      <div class="num">1ª</div>
+      <div class="label">AGUARDANDO SIMULAÇÃO</div>
+      <div class="desc">Margem já lida — apenas simula. Mais rápido, sem custo extra.</div>
+    </div>
+    <div class="fase fase-2">
+      <div class="num">2ª</div>
+      <div class="label">AGUARDANDO MARGEM</div>
+      <div class="desc">Consentimento ok — verifica retorno da Dataprev.</div>
+    </div>
+    <div class="fase fase-3">
+      <div class="num">3ª</div>
+      <div class="label">RECUPERAR V8</div>
+      <div class="desc">Busca consentimento existente na V8 sem criar novo.</div>
+    </div>
+    <div class="fase fase-4">
+      <div class="num">4ª</div>
+      <div class="label">NA FILA</div>
+      <div class="desc">Cria novo consentimento. Gera custo de saldo.</div>
+    </div>
+  </div>
+
+  <div class="alerta-ok alerta">
+    <strong>✅ Por que essa ordem importa?</strong> Se você reprocessar um registro manualmente (ex: "Reprocessar Consentimento"), ele volta para a fase 2 (AGUARDANDO MARGEM) e é processado <strong>antes</strong> dos registros NA FILA — sem precisar esperar a fila inteira.
+  </div>
+
+  <div class="alerta-warn alerta">
+    <strong>⏱️ Timeout do Worker:</strong> O worker roda por no máximo 280 segundos e depois inicia nova execução. Lotes grandes são processados em múltiplos ciclos automaticamente. Não é necessário intervir manualmente.
+  </div>
+</div>
+
+<!-- SEÇÃO 6: ACOMPANHAMENTO -->
+<div class="page secao">
+  <div class="secao-header">
+    <div class="numero">6</div>
+    <div><h2>Aba: Acompanhamento de Propostas</h2><p>Monitorar, resolver pendências e cancelar propostas enviadas</p></div>
+  </div>
+
+  <div class="tela no-break">
+    <div class="tela-barra">
+      <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+      <span class="url">Aba: Acompanhamento de Propostas</span>
+    </div>
+    <div class="tela-corpo">
+      <div style="display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
+        <div class="mock-campo" style="width:110px;">09/04/2026</div>
+        <div class="mock-campo" style="width:110px;">09/04/2026</div>
+        <div class="mock-campo" style="width:130px;">CPF do cliente</div>
+        <div class="mock-campo" style="width:100px;">Nº Proposta</div>
+        <div class="mock-campo" style="width:130px;">Todos os status ▾</div>
+        <span class="mock-btn mock-btn-blue">🔍 Filtrar</span>
+      </div>
+      <table style="font-size:11px;">
+        <thead><tr><th>Data</th><th>Cliente</th><th>Valores</th><th>Proposta</th><th>Status</th><th>Ações</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>09/04 14:45</td>
+            <td>Maria da Silva<br><small>123.456.789-00</small></td>
+            <td>R$ 7.200,00<br>24x R$ 350,00</td>
+            <td><strong>PROP-8832</strong></td>
+            <td><span class="badge badge-yellow">AGUARDANDO</span></td>
+            <td>
+              <span class="mock-btn mock-btn-blue" style="font-size:10px;padding:2px 6px;">🔄 Status</span>
+              <span class="mock-btn mock-btn-gray" style="font-size:10px;padding:2px 6px;">🔗 Link</span>
+              <span class="mock-btn mock-btn-red" style="font-size:10px;padding:2px 6px;">❌ Cancelar</span>
+            </td>
+          </tr>
+          <tr>
+            <td>08/04 10:12</td>
+            <td>Carlos Lima<br><small>987.654.321-00</small></td>
+            <td>R$ 5.400,00<br>18x R$ 320,00</td>
+            <td><strong>PROP-8801</strong></td>
+            <td><span class="badge badge-orange">PENDÊNCIA</span></td>
+            <td>
+              <span class="mock-btn mock-btn-orange" style="font-size:10px;padding:2px 6px;">⚠️ Resolver</span>
+              <span class="mock-btn mock-btn-red" style="font-size:10px;padding:2px 6px;">❌ Cancelar</span>
+            </td>
+          </tr>
+          <tr>
+            <td>07/04 09:00</td>
+            <td>Ana Souza<br><small>111.222.333-44</small></td>
+            <td>R$ 9.600,00<br>24x R$ 480,00</td>
+            <td><strong>PROP-8750</strong></td>
+            <td><span class="badge badge-green">PAGA</span></td>
+            <td><span class="mock-btn mock-btn-gray" style="font-size:10px;padding:2px 6px;">🔗 Link</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h3>6.1 Sincronizar Status com a V8</h3>
+  <div class="passo">
+    <div class="num">1</div>
+    <div class="conteudo">
+      <strong>Clique em "🔄 Status" na linha da proposta</strong>
+      <span>O sistema consulta a API V8 em tempo real e atualiza o status no CRM. Útil quando o status parece desatualizado.</span>
+    </div>
+  </div>
+
+  <h3>6.2 Resolver Pendência de PIX</h3>
+  <p>Quando o status é <span class="badge badge-orange">PENDÊNCIA</span>, geralmente significa que a chave PIX informada está incorreta ou inválida.</p>
+  <div class="passo">
+    <div class="num">1</div>
+    <div class="conteudo">
+      <strong>Clique em "⚠️ Resolver"</strong>
+      <span>O modal de pendência exibe o motivo informado pela V8.</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">2</div>
+    <div class="conteudo">
+      <strong>Informe a nova chave PIX e o tipo correto</strong>
+      <span>Corrija apenas a chave PIX — não é necessário resimular ou reenviar toda a proposta.</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">3</div>
+    <div class="conteudo">
+      <strong>Clique em "Salvar PIX"</strong>
+      <span>O status atualiza para <span class="badge badge-blue">PIX ATUALIZADO</span> e a V8 processa o pagamento com a nova chave.</span>
+    </div>
+  </div>
+
+  <h3>6.3 Cancelar uma Proposta</h3>
+  <div class="passo">
+    <div class="num">1</div>
+    <div class="conteudo">
+      <strong>Clique em "❌ Cancelar"</strong>
+      <span>Um modal de confirmação solicita o motivo do cancelamento (campo obrigatório).</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">2</div>
+    <div class="conteudo">
+      <strong>Informe o motivo e confirme</strong>
+      <span>O cancelamento é enviado para a V8. Propostas já pagas <strong>não podem</strong> ser canceladas.</span>
+    </div>
+  </div>
+  <div class="alerta-warn alerta">
+    <strong>⚠️ Atenção:</strong> O cancelamento é definitivo. Certifique-se com o cliente antes de cancelar. Uma nova proposta precisará ser gerada do zero se o cliente mudar de ideia.
+  </div>
+</div>
+
+<!-- SEÇÃO 7: CHAVES E CUSTOS -->
+<div class="page secao">
+  <div class="secao-header">
+    <div class="numero">7</div>
+    <div><h2>Aba: Chaves e Custos</h2><p>Gerenciar credenciais de acesso à API V8 e controlar saldos</p></div>
+  </div>
+
+  <p>Cada <strong>chave de acesso</strong> representa uma credencial junto ao V8 Sistema com saldo próprio. Um usuário pode ter uma ou mais chaves, e cada chave tem custos configuráveis.</p>
+
+  <div class="tela no-break">
+    <div class="tela-barra">
+      <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+      <span class="url">Aba: Chaves e Custos</span>
+    </div>
+    <div class="tela-corpo">
+      <div style="display:flex;justify-content:flex-end;margin-bottom:10px;">
+        <span class="mock-btn mock-btn-dark">+ Nova Chave</span>
+      </div>
+      <table style="font-size:11px;">
+        <thead><tr><th>Cliente / Credencial</th><th>Dono</th><th>Custo p/ Cliente</th><th>Custo API</th><th>Saldo Atual</th><th>Tabela / Prazo</th><th>Ações</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>CLT Acelera</strong></td>
+            <td>João Silva</td>
+            <td>R$ 3,50</td>
+            <td>R$ 2,00</td>
+            <td><strong style="color:#1b5e20;">R$ 150,00</strong></td>
+            <td>CLT Acelera / 24m</td>
+            <td>
+              <span class="mock-btn mock-btn-blue" style="font-size:10px;padding:2px 6px;">✏️ Editar</span>
+              <span class="mock-btn mock-btn-red" style="font-size:10px;padding:2px 6px;">🗑️</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h3>7.1 Cadastrar Nova Chave V8</h3>
+  <div class="passo">
+    <div class="num">1</div>
+    <div class="conteudo">
+      <strong>Clique em "+ Nova Chave"</strong>
+      <span>O modal de cadastro será exibido com os seguintes campos.</span>
+    </div>
+  </div>
+
+  <div class="no-break" style="background:#f8f9fa;border:1px solid #dee2e6;border-radius:8px;padding:14px;margin:10px 0;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+      <div>
+        <div class="mock-label">Usuário do Sistema (Dono da Chave) ★</div>
+        <div class="mock-campo destaque">João Silva ▾</div>
+      </div>
+      <div>
+        <div class="mock-label">Tabela Padrão</div>
+        <div class="mock-campo">CLT Acelera</div>
+      </div>
+      <div>
+        <div class="mock-label">Client ID (V8)</div>
+        <div class="mock-campo">DHWogdaYmEI8n5bwwxPD...</div>
+      </div>
+      <div>
+        <div class="mock-label">Prazo Padrão (meses)</div>
+        <div class="mock-campo">24</div>
+      </div>
+      <div>
+        <div class="mock-label">Username API (e-mail)</div>
+        <div class="mock-campo destaque">usuario@empresa.com</div>
+      </div>
+      <div>
+        <div class="mock-label">Password API</div>
+        <div class="mock-campo">••••••••••••</div>
+      </div>
+      <div>
+        <div class="mock-label">Custo p/ Cliente (R$)</div>
+        <div class="mock-campo">3,50</div>
+      </div>
+      <div>
+        <div class="mock-label">Seu Custo API (R$)</div>
+        <div class="mock-campo">2,00</div>
+      </div>
+    </div>
+  </div>
+
+  <table>
+    <thead><tr><th>Campo</th><th>Descrição</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Dono da Chave</strong></td><td>Usuário do CRM responsável por esta credencial. O saldo aparece no dropdown de chaves desse usuário.</td></tr>
+      <tr><td><strong>Client ID / Audience</strong></td><td>Identificadores técnicos fornecidos pelo V8 Sistema. Geralmente iguais para todas as chaves da empresa.</td></tr>
+      <tr><td><strong>Username / Password API</strong></td><td>Credenciais de acesso à API V8. Visíveis apenas para quem tem permissão <code>SUBMENU_OP_INTEGRACAO_V8_CHAVE</code>.</td></tr>
+      <tr><td><strong>Custo p/ Cliente</strong></td><td>Valor debitado do saldo do cliente a cada consentimento gerado.</td></tr>
+      <tr><td><strong>Custo API</strong></td><td>Custo real cobrado pela V8 Sistema por consulta (para controle interno).</td></tr>
+      <tr><td><strong>Tabela Padrão</strong></td><td>Produto de crédito padrão enviado nas simulações (ex: CLT Acelera, CLT Premium).</td></tr>
+      <tr><td><strong>Prazo Padrão</strong></td><td>Prazo em meses usado pela simulação automática (ex: 24, 36, 48).</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SEÇÃO 8: EXTRATO -->
+<div class="page secao">
+  <div class="secao-header">
+    <div class="numero">8</div>
+    <div><h2>Aba: Extrato</h2><p>Histórico de movimentações de saldo por credencial</p></div>
+  </div>
+
+  <p>O Extrato mostra todo o histórico de débitos e créditos de uma chave V8 — permite auditar quando cada consulta foi cobrada e qual o saldo resultante.</p>
+
+  <div class="tela no-break">
+    <div class="tela-barra">
+      <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+      <span class="url">Aba: Extrato</span>
+    </div>
+    <div class="tela-corpo">
+      <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px;flex-wrap:wrap;">
+        <div>
+          <div class="mock-label">Chave / Credencial</div>
+          <div class="mock-campo destaque" style="width:200px;">João Silva — CLT Acelera ▾</div>
+        </div>
+        <div style="display:flex;gap:6px;align-items:flex-end;flex-wrap:wrap;">
+          <span class="mock-btn mock-btn-green">💰 Ajustar Saldo</span>
+          <span class="mock-btn mock-btn-blue">📊 Exportar Custo API</span>
+          <span class="mock-btn mock-btn-blue">📊 Exportar Extrato Cliente</span>
+        </div>
+      </div>
+      <div style="background:#f0f4ff;border-radius:8px;padding:10px;margin-bottom:12px;font-size:12px;">
+        <strong>Dono:</strong> João Silva &nbsp;|&nbsp; <strong>Cliente:</strong> Empresa ABC &nbsp;|&nbsp; <strong>Saldo Atual:</strong> <span style="color:#1b5e20;font-weight:700;">R$ 150,00</span>
+      </div>
+      <table style="font-size:11px;">
+        <thead><tr><th>Data/Hora</th><th>Motivo / Referência</th><th>Tipo</th><th>Valor Cliente</th><th>Saldo Anterior</th><th>Saldo Atual</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>09/04 14:22</td>
+            <td>Consentimento CPF 123.456.789-00</td>
+            <td><span class="badge badge-red">DEBITO</span></td>
+            <td>R$ 3,50</td>
+            <td>R$ 153,50</td>
+            <td><strong>R$ 150,00</strong></td>
+          </tr>
+          <tr>
+            <td>09/04 14:30</td>
+            <td>Consentimento CPF 987.654.321-00</td>
+            <td><span class="badge badge-red">DEBITO</span></td>
+            <td>R$ 3,50</td>
+            <td>R$ 157,00</td>
+            <td><strong>R$ 153,50</strong></td>
+          </tr>
+          <tr>
+            <td>08/04 09:00</td>
+            <td>Crédito Manual — Recarga mensal</td>
+            <td><span class="badge badge-green">CREDITO</span></td>
+            <td>R$ 100,00</td>
+            <td>R$ 57,00</td>
+            <td><strong>R$ 157,00</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h3>8.1 Ajustar Saldo Manualmente</h3>
+  <div class="passo">
+    <div class="num">1</div>
+    <div class="conteudo">
+      <strong>Selecione a chave e clique em "💰 Ajustar Saldo"</strong>
+      <span>O modal permite adicionar crédito (recarga) ou debitar saldo manualmente.</span>
+    </div>
+  </div>
+  <div class="passo">
+    <div class="num">2</div>
+    <div class="conteudo">
+      <strong>Informe o tipo (Crédito/Débito), o valor e o motivo</strong>
+      <span>O motivo fica registrado no extrato para auditoria futura.</span>
+    </div>
+  </div>
+
+  <h3>8.2 Exportações Disponíveis</h3>
+  <table>
+    <thead><tr><th>Exportação</th><th>Conteúdo</th><th>Uso</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>📊 Exportar Custo API</strong></td>
+        <td>Lista cada consulta com o custo real da V8 Sistema.</td>
+        <td>Controle interno — conciliação com fatura V8.</td>
+      </tr>
+      <tr>
+        <td><strong>📊 Exportar Extrato Cliente</strong></td>
+        <td>Lista débitos e créditos com o valor cobrado do cliente.</td>
+        <td>Prestação de contas ao cliente/parceiro.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SEÇÃO 9: STATUS -->
+<div class="page secao">
+  <div class="secao-header">
+    <div class="numero">9</div>
+    <div><h2>Tabela de Status</h2><p>Referência completa de todos os status possíveis</p></div>
+  </div>
+
+  <h3>9.1 Status da Consulta (Fila)</h3>
+  <table>
+    <thead><tr><th>Status</th><th>Significado</th><th>Ação Recomendada</th></tr></thead>
+    <tbody>
+      <tr><td><span class="badge badge-yellow">AGUARDANDO MARGEM</span></td><td>Consentimento criado. Aguardando retorno da Dataprev.</td><td>Aguardar (~5 min) ou usar 📡 Reprocessar Consentimento.</td></tr>
+      <tr><td><span class="badge badge-yellow">AGUARDANDO DATAPREV</span></td><td>Dataprev não respondeu no tempo esperado (>5 min).</td><td>Aguardar 10+ minutos e usar 📡 ou ⚠️.</td></tr>
+      <tr><td><span class="badge badge-yellow">AGUARDANDO SIMULACAO</span></td><td>Margem lida com sucesso. Aguardando simulação.</td><td>Automático (lote) ou abrir modal ✏️ e simular.</td></tr>
+      <tr><td><span class="badge badge-green">OK-SIMULACAO</span></td><td>Simulação concluída. Pronto para enviar proposta.</td><td>Clicar ✏️ e enviar proposta.</td></tr>
+      <tr><td><span class="badge badge-gray">SOLICITADO</span></td><td>Consulta realizada, mas consentimento não autorizado ainda.</td><td>Reprocessar consentimento (📡).</td></tr>
+      <tr><td><span class="badge badge-red">ERRO-AUT</span></td><td>Falha ao criar/autorizar consentimento na V8.</td><td>Verificar dados do cliente e usar 🔁 Reprocessar Tudo.</td></tr>
+      <tr><td><span class="badge badge-red">ERRO-MARGEM</span></td><td>Dataprev retornou erro na leitura de margem.</td><td>Usar ⚠️ Reprocessar Erros após alguns minutos.</td></tr>
+      <tr><td><span class="badge badge-red">ERRO-SIMULACAO</span></td><td>Simulação não passou nos critérios da V8.</td><td>Abrir modal ✏️ e tentar simulação personalizada com valor menor.</td></tr>
+      <tr><td><span class="badge badge-red">ERRO PROPOSTA</span></td><td>Erro ao enviar proposta para a V8.</td><td>Corrigir dados (especialmente PIX) e resimular.</td></tr>
+      <tr><td><span class="badge badge-blue">PROPOSTA: [ID]</span></td><td>Proposta enviada com sucesso.</td><td>Acompanhar na aba "Acompanhamento de Propostas".</td></tr>
+      <tr><td><span class="badge badge-gray">PARADO PELO USUARIO</span></td><td>Fluxo pausado manualmente.</td><td>Reprocessar quando desejar retomar.</td></tr>
+      <tr><td><span class="badge badge-red">TIMEOUT_DATAPREV</span></td><td>Dataprev não respondeu em 1 minuto (processamento lote).</td><td>Aguardar e usar 📡 Reprocessar Consentimento.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>9.2 Status da Proposta</h3>
+  <table>
+    <thead><tr><th>Status</th><th>Significado</th></tr></thead>
+    <tbody>
+      <tr><td><span class="badge badge-yellow">AGUARDANDO</span></td><td>Proposta enviada, aguardando assinatura do cliente.</td></tr>
+      <tr><td><span class="badge badge-orange">PENDÊNCIA / Com Pendência</span></td><td>Dados incorretos (geralmente PIX inválido). Resolver com ⚠️.</td></tr>
+      <tr><td><span class="badge badge-blue">APROVADA</span></td><td>Proposta aprovada pela V8. Aguardando desembolso.</td></tr>
+      <tr><td><span class="badge badge-green">PAGA</span></td><td>Desembolso realizado com sucesso.</td></tr>
+      <tr><td><span class="badge badge-red">CANCELADA</span></td><td>Proposta cancelada pelo usuário ou cliente.</td></tr>
+      <tr><td><span class="badge badge-blue">PIX ATUALIZADO</span></td><td>PIX corrigido após pendência. Aguardando processamento.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SEÇÃO 10: GLOSSÁRIO -->
+<div class="page secao">
+  <div class="secao-header">
+    <div class="numero">10</div>
+    <div><h2>Glossário</h2><p>Termos técnicos utilizados no módulo V8</p></div>
+  </div>
+
+  <table>
+    <thead><tr><th style="width:160px;">Termo</th><th>Definição</th></tr></thead>
+    <tbody>
+      <tr><td><strong>V8 Sistema</strong></td><td>Plataforma de integração que intermedia a consulta de margem consignável CLT junto à Dataprev.</td></tr>
+      <tr><td><strong>Dataprev</strong></td><td>Empresa pública responsável pelo processamento de dados previdenciários dos trabalhadores brasileiros. Retorna a margem consignável disponível.</td></tr>
+      <tr><td><strong>Consentimento</strong></td><td>Autorização eletrônica criada junto à Dataprev para consultar os dados do trabalhador. Cada consentimento tem um custo de saldo.</td></tr>
+      <tr><td><strong>Margem Consignável</strong></td><td>Valor máximo de desconto em folha que o trabalhador pode comprometer com crédito consignado CLT.</td></tr>
+      <tr><td><strong>Chave de Acesso</strong></td><td>Credencial V8 com Client ID, Username e Password que autentica o CRM junto à API V8. Tem saldo próprio.</td></tr>
+      <tr><td><strong>Saldo</strong></td><td>Crédito disponível na chave V8 para gerar novos consentimentos. Cada consentimento debita o valor configurado em "Custo p/ Cliente".</td></tr>
+      <tr><td><strong>Simulação Padrão</strong></td><td>Cálculo automático de parcela e valor usando a margem lida e o prazo/tabela padrão da chave.</td></tr>
+      <tr><td><strong>Simulação Personalizada</strong></td><td>Cálculo manual onde o usuário define prazo, tipo e valor desejado.</td></tr>
+      <tr><td><strong>Proposta</strong></td><td>Contrato de crédito consignado enviado para assinatura digital do cliente. Após assinado, vai para análise e desembolso.</td></tr>
+      <tr><td><strong>Link de Assinatura</strong></td><td>URL gerada pela V8 que o cliente acessa para assinar digitalmente o contrato de crédito.</td></tr>
+      <tr><td><strong>PIX</strong></td><td>Chave de recebimento do crédito pelo cliente. Pode ser CPF, celular, e-mail ou chave aleatória. Obrigatório na proposta.</td></tr>
+      <tr><td><strong>Polling</strong></td><td>Processo automático de verificação periódica. O sistema consulta a Dataprev a cada 30 segundos até receber a margem.</td></tr>
+      <tr><td><strong>Worker</strong></td><td>Processo em background que processa automaticamente os registros do lote, seguindo as prioridades de fase.</td></tr>
+      <tr><td><strong>Timeout</strong></td><td>Limite de tempo excedido. Quando a Dataprev não responde em ~5 minutos, o registro entra em status de timeout para reprocessamento manual.</td></tr>
+      <tr><td><strong>Retry Inteligente</strong></td><td>Lógica de tentativa automática com ajuste de parâmetros quando uma simulação falha.</td></tr>
+      <tr><td><strong>Tabela</strong></td><td>Produto de crédito consignado (ex: CLT Acelera, CLT Premium). Define taxas e condições do empréstimo.</td></tr>
+      <tr><td><strong>LUP 10%</strong></td><td>Critério da V8 que exige que a parcela não seja menor que 10% abaixo da margem disponível.</td></tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <div style="background:linear-gradient(90deg,#1a237e,#1565c0);border-radius:10px;padding:20px;color:white;text-align:center;margin-top:20px;">
+    <div style="font-size:32px;margin-bottom:10px;">🔑</div>
+    <div style="font-size:16px;font-weight:700;margin-bottom:6px;">V8 CLT — Margem e Digitação — Manual do Usuário</div>
+    <div style="font-size:12px;opacity:0.85;">Versão 1.0 · Abril/2026 · Uso Interno</div>
+    <div style="font-size:11px;opacity:0.7;margin-top:10px;">Para dúvidas ou problemas técnicos, entre em contato com o suporte do sistema.</div>
+  </div>
+
+  <div class="rodape">Este documento pode ser exportado como PDF usando a função de impressão do navegador (Ctrl+P → Salvar como PDF).</div>
+</div>
+
+</body>
+</html>

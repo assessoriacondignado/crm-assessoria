@@ -67,6 +67,8 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
                     <li class="nav-item <?= !$perm_extrato ? 'd-none' : '' ?>"><button class="nav-link text-muted fw-bold" data-bs-toggle="pill" data-bs-target="#tab-extrato" onclick="v8PopularSelectExtrato()"><i class="fas fa-file-invoice-dollar me-1"></i> Extrato</button></li>
                     
                     <li class="nav-item <?= $restricao_ia ? 'd-none' : '' ?>"><button class="nav-link text-danger fw-bold" data-bs-toggle="pill" data-bs-target="#tab-atendimento-ia"><i class="fas fa-robot me-1"></i> ATENDIMENTO IA</button></li>
+
+                    <li class="nav-item ms-auto"><button class="nav-link text-muted fw-bold" data-bs-toggle="pill" data-bs-target="#tab-manual-v8"><i class="fas fa-book-open me-1"></i> Manual do Usuário</button></li>
                 </ul>
                 
                 <div class="tab-content">
@@ -161,6 +163,22 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
                             echo '<div class="alert alert-warning fw-bold"><i class="fas fa-exclamation-triangle"></i> Módulo de IA não encontrado. Crie o arquivo index.api.ia.v8.php na mesma pasta.</div>';
                         }
                         ?>
+                    </div>
+
+                    <!-- ABA MANUAL DO USUÁRIO V8 -->
+                    <div class="tab-pane fade" id="tab-manual-v8">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="fw-bold text-dark m-0"><i class="fas fa-book-open text-secondary me-2"></i> Manual do Usuário — V8 CLT Margem e Digitação</h5>
+                            <a href="manual_usuario.html" target="_blank" class="btn btn-outline-dark btn-sm fw-bold shadow-sm">
+                                <i class="fas fa-external-link-alt me-1"></i> Abrir em nova aba
+                            </a>
+                        </div>
+                        <div class="border border-dark rounded shadow-sm overflow-hidden" style="height:620px;">
+                            <iframe src="manual_usuario.html" width="100%" height="100%" frameborder="0" style="display:block;" title="Manual do Usuário V8"></iframe>
+                        </div>
+                        <div class="text-end mt-2">
+                            <span class="text-muted small"><i class="fas fa-print me-1"></i> Para salvar como PDF: abra em nova aba e use Ctrl+P → Salvar como PDF</span>
+                        </div>
                     </div>
 
                 </div>
