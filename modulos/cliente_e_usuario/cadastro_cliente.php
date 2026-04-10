@@ -30,6 +30,7 @@ $pode_ver_todos = verificaPermissao($pdo, 'FUNCAO_CADASTRO_CLIENTE_MEU_CPF', 'FU
 
 // ✨ REGRA APLICADA: Se for bloqueado, ele não poderá excluir ou editar a ficha
 $pode_editar_excluir = verificaPermissao($pdo, 'FUNCAO_CADASTRO_CLIENTE_EDITAR_EXCLUIR', 'FUNCAO');
+$bloquear_pedido_tarefas = !verificaPermissao($pdo, 'FUNCAO_CADASTRO_CLIENTE_PEDIDO_PRODUTOS', 'FUNCAO');
 
 if (!$pode_ver_todos) {
     $cpf_selecionado = $_SESSION['usuario_cpf'];
@@ -471,12 +472,14 @@ $readonly_attr = (!$pode_editar_excluir) ? 'disabled readonly' : '';
                 <div class="card-header bg-dark text-white py-3 border-bottom border-dark d-flex justify-content-between align-items-center flex-wrap gap-2">
                     <h5 class="fw-bold mb-0 text-uppercase"><i class="fas fa-address-book text-success me-2"></i> Ficha Cadastral (ID: <?= htmlspecialchars($cliente_ficha['ID']) ?>)</h5>
                     <div class="d-flex gap-2 align-items-center flex-wrap">
+                        <?php if (!$bloquear_pedido_tarefas): ?>
                         <button class="btn btn-sm btn-warning fw-bold text-dark" onclick="abrirModalPedido('<?= htmlspecialchars($cliente_ficha['NOME']) ?>','<?= htmlspecialchars($cliente_ficha['CELULAR'] ?? '') ?>')">
                             <i class="fas fa-shopping-cart me-1"></i> Pedido
                         </button>
                         <button class="btn btn-sm btn-info fw-bold text-dark" onclick="abrirModalTarefas('<?= htmlspecialchars($cliente_ficha['CPF']) ?>','<?= htmlspecialchars($cliente_ficha['NOME']) ?>')">
                             <i class="fas fa-tasks me-1"></i> Tarefas
                         </button>
+                        <?php endif; ?>
                         <?php if($pode_ver_todos): ?>
                             <?php $urlRetorno = $is_busca_avancada ? '?' . preg_replace('/&?cpf_selecionado=[^&]*/', '', preg_replace('/&?acao=[^&]*/', '', $_SERVER['QUERY_STRING'])) : '?busca=' . urlencode($termo_busca); ?>
                             <a href="<?= $urlRetorno ?>" class="btn btn-sm btn-outline-light"><i class="fas fa-arrow-left"></i> Voltar</a>
