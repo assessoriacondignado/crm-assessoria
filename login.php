@@ -505,7 +505,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login_submit']) && !$r
                         <!-- Campos empresa (ocultos por padrão) -->
                         <div id="boxCadEmpresa" class="d-none border border-secondary rounded p-3 mb-3 bg-white">
                             <label class="small fw-bold mb-1 text-dark">Nome da Empresa:</label>
-                            <input type="text" id="cadNomeEmpresa" class="form-control border-secondary mb-3" placeholder="Razão social ou nome fantasia" style="text-transform:uppercase;">
+                            <input type="text" id="cadNomeEmpresa" class="form-control border-secondary mb-3" placeholder="Razão social ou nome fantasia" maxlength="150" style="text-transform:uppercase;">
 
                             <label class="small fw-bold mb-1 text-dark">CNPJ:</label>
                             <input type="text" id="cadCnpj" class="form-control border-secondary" oninput="mascaraCnpj(this)" maxlength="18" placeholder="00.000.000/0000-00">

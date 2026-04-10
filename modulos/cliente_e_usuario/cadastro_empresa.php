@@ -12,7 +12,9 @@ $caminho_header = $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 if (!file_exists($caminho_conexao)) {
     die("<h1 style='color:red;'>ERRO CRÍTICO:</h1> O arquivo de conexão não foi encontrado no caminho: <b>$caminho_conexao</b>");
 }
-include $caminho_conexao; 
+include $caminho_conexao;
+try { $pdo->exec("ALTER TABLE CLIENTE_EMPRESAS MODIFY COLUMN NOME_CADASTRO VARCHAR(150)"); } catch(Exception $e){}
+try { $pdo->exec("ALTER TABLE CLIENTE_CADASTRO MODIFY COLUMN NOME_EMPRESA VARCHAR(150)"); } catch(Exception $e){}
 
 $termo_busca = isset($_GET['busca']) ? trim($_GET['busca']) : '';
 $acao = isset($_GET['acao']) ? $_GET['acao'] : '';
@@ -399,7 +401,7 @@ include $caminho_header;
                             </div>
                             <div class="col-md-7">
                                 <label class="fw-bold">Nome / Razão Social</label>
-                                <input type="text" class="form-control border-dark" name="nome_cadastro" value="<?= htmlspecialchars($empresa_ficha['NOME_CADASTRO']) ?>" required>
+                                <input type="text" class="form-control border-dark" name="nome_cadastro" value="<?= htmlspecialchars($empresa_ficha['NOME_CADASTRO']) ?>" maxlength="150" required>
                             </div>
                             
                             <div class="col-md-12 mt-4 mb-2">
