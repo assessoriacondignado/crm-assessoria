@@ -101,19 +101,48 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
                             </div>
                         </div>
                         
-                        <div class="d-flex justify-content-between align-items-center mt-5 mb-2">
-                            <h5 class="mb-0 text-secondary fw-bold"><i class="fas fa-list-alt me-2"></i> Fila e Status das Operações</h5>
-                            <div class="d-flex gap-2">
-                                <button class="btn btn-outline-dark btn-sm fw-bold shadow-sm bg-white" onclick="v8ExportarFilaManual()"><i class="fas fa-file-export text-success me-1"></i> EXPORTAR</button>
-                                <button class="btn btn-dark btn-sm fw-bold shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMontadorFila"><i class="fas fa-filter me-1"></i> Filtro Avançado</button>
+                        <!-- MONTADOR DE FILTROS DA FILA -->
+                        <div class="mt-5 mb-2">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="mb-0 text-secondary fw-bold"><i class="fas fa-list-alt me-2"></i> Fila e Status das Operações</h5>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-outline-success btn-sm fw-bold shadow-sm" onclick="v8ExportarFilaManual()"><i class="fas fa-file-export me-1"></i> Exportar Tudo</button>
+                                    <button class="btn btn-dark btn-sm fw-bold shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMontadorFila"><i class="fas fa-filter me-1"></i> Filtro Aprimorado</button>
+                                    <button class="btn btn-sm fw-bold shadow-sm" style="background:#f9a825;color:#333;" onclick="v8CarregarFila(0)"><i class="fas fa-sync me-1"></i> Atualizar Tabela</button>
+                                </div>
+                            </div>
+
+                            <div class="collapse show mb-3" id="collapseMontadorFila">
+                                <div class="border border-secondary rounded overflow-hidden shadow-sm">
+                                    <div class="px-3 py-2 fw-bold text-white d-flex align-items-center justify-content-between" style="background:#1a2332;">
+                                        <span><i class="fas fa-filter me-2 text-success"></i> MONTADOR DE FILTROS (FILA)</span>
+                                        <button class="btn btn-sm btn-outline-light py-0 px-2" onclick="v8FiltroAddLinha()" title="Adicionar filtro"><i class="fas fa-plus"></i> Adicionar Filtro</button>
+                                    </div>
+                                    <div class="bg-dark px-3 py-2">
+                                        <div class="alert alert-info py-1 px-2 mb-2 small fw-bold">
+                                            <i class="fas fa-info-circle me-1"></i> Dica: Por padrão o sistema lista os 100 registros mais recentes. Use os filtros para segmentar a busca.
+                                        </div>
+                                        <div id="v8_filtros_container"></div>
+                                        <div class="d-flex gap-2 mt-2">
+                                            <button class="btn btn-sm btn-outline-light fw-bold px-4" onclick="v8LimparFiltrosFila()">Limpar Filtros</button>
+                                            <button class="btn btn-sm fw-bold px-4" style="background:#00c853;color:#fff;" onclick="v8CarregarFila(0)"><i class="fas fa-search me-1"></i> Executar Filtro</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="collapse mb-3" id="collapseMontadorFila"><div class="filtro-avancado-box"><h6 class="text-dark fw-bold border-bottom pb-2 mb-3"><i class="fas fa-search me-2 text-primary"></i>Buscar Operações</h6><div class="row g-2 align-items-end"><div class="col-md-2"><label class="small fw-bold text-dark mb-1">Data Inicial</label><input type="date" id="filtro_fila_data_ini" class="form-control border-secondary"></div><div class="col-md-2"><label class="small fw-bold text-dark mb-1">Data Final</label><input type="date" id="filtro_fila_data_fim" class="form-control border-secondary"></div><div class="col-md-2"><label class="small fw-bold text-dark mb-1">CPF</label><input type="text" id="filtro_fila_cpf" class="form-control border-secondary" placeholder="Somente números"></div><div class="col-md-2"><label class="small fw-bold text-dark mb-1">Nome do Cliente</label><input type="text" id="filtro_fila_nome" class="form-control border-secondary" placeholder="Parte do nome"></div><div class="col-md-2"><label class="small fw-bold text-dark mb-1">Origem</label><select id="filtro_fila_origem" class="form-select border-secondary fw-bold"><option value="">Todas as origens</option><option value="MANUAL">👤 Manual / Lote</option><option value="IA BOT">🤖 IA / Bot</option></select></div><div class="col-md-2 d-flex gap-2"><button class="btn btn-outline-secondary btn-sm w-100 fw-bold shadow-sm" onclick="v8LimparFiltrosFila()">Limpar</button><button class="btn btn-primary btn-sm w-100 fw-bold shadow-sm border-dark" onclick="v8CarregarFila()"><i class="fas fa-search"></i> Executar</button></div></div></div></div>
+
                         <div class="table-responsive border border-dark rounded shadow-sm" style="max-height: 600px; overflow-y: auto;">
                             <table class="table table-hover table-bordered table-sm align-middle mb-0 table-fila">
                                 <thead><tr><th>ID / Data</th><th>Cliente e Origem</th><th class="border-start border-end border-danger">Autorização ID Consulta</th><th class="border-end border-danger">ID Config (Margem)</th><th class="border-end border-danger">ID Simulação</th><th class="border-end border-danger">ID Proposta</th><th style="min-width:120px;">Ações</th><th style="min-width:110px;">Campanhas</th></tr></thead>
                                 <tbody id="v8_fila_body" class="bg-white"><tr><td colspan="8" class="py-4 text-muted">Carregando fila...</td></tr></tbody>
                             </table>
+                        </div>
+                        <div id="v8_fila_paginacao" class="text-center mt-2 d-none">
+                            <button class="btn btn-outline-dark fw-bold px-5" onclick="v8CarregarMais()">
+                                <i class="fas fa-chevron-down me-2"></i> Carregar mais 100 registros
+                            </button>
+                            <div class="text-muted small mt-1" id="v8_fila_contador"></div>
                         </div>
                     </div>
 
@@ -262,8 +291,10 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
             pendencia: new bootstrap.Modal(document.getElementById('modalPendenciaPix')),
             ajusteSaldo: new bootstrap.Modal(document.getElementById('modalAjusteSaldo'))
         };
-        v8CarregarCadastros(); v8CarregarDadosIniciais(); v8CarregarFila();
+        v8CarregarCadastros(); v8CarregarDadosIniciais(); v8CarregarFila(0);
         v8AtualizarSaldosTopo();
+        // Inicia com uma linha de filtro vazia para orientar o usuário
+        v8FiltroAddLinha();
     });
 
     function v8Loading(show, msg = "Aguarde...") { document.getElementById('v8-loader').style.display = show ? 'block' : 'none'; if(show) document.getElementById('v8-loader-msg').innerText = msg; }
@@ -397,27 +428,106 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
     }
 
     function v8LimparFormulario() { document.getElementById('v8_input_cpf').value = ''; document.getElementById('v8_input_nascimento').value = ''; document.getElementById('v8_input_nome').value = ''; document.getElementById('v8_input_telefone').value = ''; document.getElementById('v8_alerta_cadastro').classList.add('d-none'); document.getElementById('v8_busca_cliente').focus(); }
-    function v8LimparFiltrosFila() { document.getElementById('filtro_fila_data_ini').value = ''; document.getElementById('filtro_fila_data_fim').value = ''; document.getElementById('filtro_fila_cpf').value = ''; document.getElementById('filtro_fila_nome').value = ''; document.getElementById('filtro_fila_origem').value = ''; v8CarregarFila(); }
+    // =========================================================================
+    // MONTADOR DE FILTROS — FILA V8
+    // =========================================================================
+    const V8_FILTRO_CAMPOS = [
+        { value: 'ID',               label: 'ID do Registro' },
+        { value: 'DATA_FILA',        label: 'Data da Consulta (AAAA-MM-DD)' },
+        { value: 'CPF_CONSULTADO',   label: 'CPF do Cliente' },
+        { value: 'NOME_COMPLETO',    label: 'Nome do Cliente' },
+        { value: 'STATUS_V8',        label: 'Status V8 (Ex: OK-SIMULACAO)' },
+        { value: 'FONTE_CONSULT_ID', label: 'Origem (Ex: IA BOT, NOVA CRIADA)' },
+        { value: 'NOME_USUARIO',     label: 'Usuário Responsável' },
+        { value: 'CLIENTE_NOME',     label: 'Chave/Credencial V8' },
+        { value: 'CONSULT_ID',       label: 'ID Autorização/Consentimento' },
+        { value: 'NUMERO_PROPOSTA',  label: 'Nº Proposta' },
+        { value: 'CPF_USUARIO',      label: 'CPF do Usuário' },
+    ];
+    const V8_FILTRO_OPERADORES = [
+        { value: 'CONTEM',  label: 'Contém' },
+        { value: 'IGUAL',   label: 'Igual a' },
+        { value: 'COMECA',  label: 'Começa com' },
+        { value: 'TERMINA', label: 'Termina com' },
+        { value: 'MAIOR',   label: 'Maior que' },
+        { value: 'MENOR',   label: 'Menor que' },
+    ];
+
+    function v8FiltroAddLinha(campo='', operador='CONTEM', valor='') {
+        const cont = document.getElementById('v8_filtros_container');
+        const id = Date.now();
+        const optCampos = V8_FILTRO_CAMPOS.map(c => `<option value="${c.value}" ${c.value===campo?'selected':''}>${c.label}</option>`).join('');
+        const optOps    = V8_FILTRO_OPERADORES.map(o => `<option value="${o.value}" ${o.value===operador?'selected':''}>${o.label}</option>`).join('');
+        const div = document.createElement('div');
+        div.className = 'row g-2 mb-2 align-items-center filtro-linha';
+        div.dataset.id = id;
+        div.innerHTML = `
+            <div class="col-md-4">
+                <select class="form-select form-select-sm border-secondary bg-dark text-white fw-bold filtro-campo">
+                    <option value="">-- Selecione o campo --</option>${optCampos}
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select class="form-select form-select-sm border-secondary bg-dark text-white filtro-operador">
+                    ${optOps}
+                </select>
+            </div>
+            <div class="col-md-4">
+                <input type="text" class="form-control form-control-sm border-secondary bg-dark text-white filtro-valor" placeholder="Valor do filtro..." value="${valor.replace(/"/g,'&quot;')}">
+            </div>
+            <div class="col-md-1 text-end">
+                <button class="btn btn-sm btn-outline-danger px-2" onclick="this.closest('.filtro-linha').remove()" title="Remover"><i class="fas fa-times"></i></button>
+            </div>`;
+        cont.appendChild(div);
+    }
+
+    function v8ColetarFiltros() {
+        const linhas = document.querySelectorAll('#v8_filtros_container .filtro-linha');
+        const filtros = [];
+        linhas.forEach(l => {
+            const campo = l.querySelector('.filtro-campo').value;
+            const operador = l.querySelector('.filtro-operador').value;
+            const valor = l.querySelector('.filtro-valor').value.trim();
+            if (campo && valor) filtros.push({ campo, operador, valor });
+        });
+        return filtros;
+    }
+
+    function v8LimparFiltrosFila() {
+        document.getElementById('v8_filtros_container').innerHTML = '';
+        v8CarregarFila(0);
+    }
 
     function v8ExportarFilaManual() {
-        let data_ini = document.getElementById('filtro_fila_data_ini') ? document.getElementById('filtro_fila_data_ini').value : '';
-        let data_fim = document.getElementById('filtro_fila_data_fim') ? document.getElementById('filtro_fila_data_fim').value : '';
-        let cpf = document.getElementById('filtro_fila_cpf') ? document.getElementById('filtro_fila_cpf').value.replace(/\D/g, '') : '';
-        let nome = document.getElementById('filtro_fila_nome') ? document.getElementById('filtro_fila_nome').value : '';
-        let origem = document.getElementById('filtro_fila_origem') ? document.getElementById('filtro_fila_origem').value : '';
-        let url = `v8_api.ajax.php?acao=exportar_fila_consultas&data_ini=${data_ini}&data_fim=${data_fim}&cpf=${cpf}&nome=${nome}&origem=${encodeURIComponent(origem)}`;
+        const filtros = v8ColetarFiltros();
+        const url = `v8_api.ajax.php?acao=exportar_fila_consultas&filtros=${encodeURIComponent(JSON.stringify(filtros))}`;
         window.open(url, '_blank');
     }
 
-    async function v8CarregarFila() { 
-        const tb = document.getElementById('v8_fila_body'); 
-        tb.innerHTML = '<tr><td colspan="7" class="text-center py-4 text-muted"><i class="fas fa-spinner fa-spin me-2"></i> Carregando fila...</td></tr>'; 
-        const payload = { data_ini: document.getElementById('filtro_fila_data_ini') ? document.getElementById('filtro_fila_data_ini').value : '', data_fim: document.getElementById('filtro_fila_data_fim') ? document.getElementById('filtro_fila_data_fim').value : '', cpf: document.getElementById('filtro_fila_cpf') ? document.getElementById('filtro_fila_cpf').value.replace(/\D/g, '') : '', nome: document.getElementById('filtro_fila_nome') ? document.getElementById('filtro_fila_nome').value : '', origem: document.getElementById('filtro_fila_origem') ? document.getElementById('filtro_fila_origem').value : '' };
+    let v8FilaOffsetAtual = 0;
+
+    async function v8CarregarMais() {
+        await v8CarregarFila(v8FilaOffsetAtual, true);
+    }
+
+    async function v8CarregarFila(offset = 0, append = false) {
+        const tb = document.getElementById('v8_fila_body');
+        const pagDiv = document.getElementById('v8_fila_paginacao');
+        const contador = document.getElementById('v8_fila_contador');
+        if (!append) {
+            tb.innerHTML = '<tr><td colspan="8" class="text-center py-4 text-muted"><i class="fas fa-spinner fa-spin me-2"></i> Carregando fila...</td></tr>';
+            pagDiv.classList.add('d-none');
+        }
+        const filtros = v8ColetarFiltros();
+        const payload = { filtros: JSON.stringify(filtros), offset: offset };
         const r = await v8Req('v8_api.ajax.php', 'listar_fila_consultas', payload, false); 
-        if(r.success) { 
-            windowDadosFilaAtual = r.data; tb.innerHTML = ''; 
-            if(r.data.length === 0) return tb.innerHTML = '<tr><td colspan="8" class="text-muted py-4 text-center fw-bold">Nenhum resultado encontrado na fila.</td></tr>'; 
-            
+        if(r.success) {
+            v8FilaOffsetAtual = (r.offset || 0) + (r.data?.length || 0);
+            if (!append) { windowDadosFilaAtual = r.data; tb.innerHTML = ''; } else { windowDadosFilaAtual = (windowDadosFilaAtual||[]).concat(r.data); }
+            if(r.data.length === 0 && !append) return tb.innerHTML = '<tr><td colspan="8" class="text-muted py-4 text-center fw-bold">Nenhum resultado encontrado na fila.</td></tr>';
+            // Paginação
+            if (r.has_more) { pagDiv.classList.remove('d-none'); contador.textContent = `Exibindo ${v8FilaOffsetAtual} de ${r.total} registros`; } else { pagDiv.classList.add('d-none'); if (r.total > 100) contador.textContent = `Total: ${r.total} registros`; }
+
             r.data.forEach(x => { 
                 let colAuth = `<span class="badge bg-light text-muted border">Vazio</span>`; let colConf = `<span class="badge bg-light text-muted border">Vazio</span>`; let colSim  = `<span class="badge bg-light text-muted border">Vazio</span>`; let colProp = `<span class="badge bg-light text-muted border">Vazio</span>`; let btnAcoes = ''; let msgErroLimpa = "Erro na V8"; 
                 if(x.MENSAGEM_ERRO) { try { let jsonErro = JSON.parse(x.MENSAGEM_ERRO); msgErroLimpa = jsonErro.detail || jsonErro.message || jsonErro.title || "Erro API"; } catch(e) { msgErroLimpa = String(x.MENSAGEM_ERRO).replace(/"/g, "'"); } } 
@@ -541,10 +651,10 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
         btnGerar.innerHTML = textoOriginal;
         btnGerar.disabled = false;
 
-        if(!res.success) { v8CarregarFila(); return alert("Erro: " + res.msg); } 
+        if(!res.success) { v8CarregarFila(0); return alert("Erro: " + res.msg); } 
         
         v8LimparFormulario();
-        v8CarregarFila(); 
+        v8CarregarFila(0); 
         v8AtualizarSaldosTopo();
         v8IniciarPollingMargem(res.id_fila); 
     }
@@ -553,29 +663,29 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
         if(!windowPollingData) windowPollingData = {}; 
         if(windowPollingData[idFila]) return; 
         windowPollingData[idFila] = { attempts: 0, timer: null }; 
-        v8CarregarFila(); 
+        v8CarregarFila(0); 
         const tick = async () => { 
             windowPollingData[idFila].attempts++; 
             if(windowPollingData[idFila].attempts > 11) { v8PararFluxo(idFila, 'TEMPO ESGOTADO'); return alert("A Dataprev demorou muito na fila " + idFila + ". O sistema parou de escutar. Tente reprocessar depois."); }
             const resPolling = await v8Req('v8_api.ajax.php', 'checar_margem_e_simular', { id_fila: idFila }, false); 
-            if(resPolling.status === 'concluido') { clearTimeout(windowPollingData[idFila].timer); delete windowPollingData[idFila]; v8CarregarFila(); return; } 
-            else if(resPolling.status === 'erro') { clearTimeout(windowPollingData[idFila].timer); delete windowPollingData[idFila]; v8CarregarFila(); return alert("❌ Erro Dataprev: " + resPolling.msg); } 
+            if(resPolling.status === 'concluido') { clearTimeout(windowPollingData[idFila].timer); delete windowPollingData[idFila]; v8CarregarFila(0); return; } 
+            else if(resPolling.status === 'erro') { clearTimeout(windowPollingData[idFila].timer); delete windowPollingData[idFila]; v8CarregarFila(0); return alert("❌ Erro Dataprev: " + resPolling.msg); } 
             else if (resPolling.status === 'pendente') { if (windowPollingData[idFila]) { windowPollingData[idFila].timer = setTimeout(tick, 30000); } }
         };
         windowPollingData[idFila].timer = setTimeout(tick, 10000);
     }
 
     async function v8BotaoNovaMargem(idFila, forcar_dataprev = false) { v8IniciarPollingMargem(idFila); }
-    async function v8ReenviarAut(idFila) { const res = await v8Req('v8_api.ajax.php', 'reenviar_autorizacao_automatica', { id_fila: idFila }, true, "Reenviando..."); v8CarregarFila(); if(res.success) alert("Autorizado!"); else alert("Erro: " + res.msg); }
+    async function v8ReenviarAut(idFila) { const res = await v8Req('v8_api.ajax.php', 'reenviar_autorizacao_automatica', { id_fila: idFila }, true, "Reenviando..."); v8CarregarFila(0); if(res.success) alert("Autorizado!"); else alert("Erro: " + res.msg); }
     async function v8PararFluxo(idFila, motivo = 'PARADO PELO USUÁRIO') {
         if (motivo === 'PARADO PELO USUÁRIO') {
             v8ConfirmarManual('⏹️ Parar Processamento', 'Interrompe o acompanhamento desta consulta. Você poderá reprocessar depois.', 'btn-warning', '#ffc107', async () => {
                 if(windowPollingData && windowPollingData[idFila]) { clearTimeout(windowPollingData[idFila].timer); delete windowPollingData[idFila]; }
-                await v8Req('v8_api.ajax.php', 'parar_fluxo', { id_fila: idFila, motivo: motivo }, true, "Parando..."); v8CarregarFila();
+                await v8Req('v8_api.ajax.php', 'parar_fluxo', { id_fila: idFila, motivo: motivo }, true, "Parando..."); v8CarregarFila(0);
             });
         } else {
             if(windowPollingData && windowPollingData[idFila]) { clearTimeout(windowPollingData[idFila].timer); delete windowPollingData[idFila]; }
-            await v8Req('v8_api.ajax.php', 'parar_fluxo', { id_fila: idFila, motivo: motivo }, true, "Parando..."); v8CarregarFila();
+            await v8Req('v8_api.ajax.php', 'parar_fluxo', { id_fila: idFila, motivo: motivo }, true, "Parando..."); v8CarregarFila(0);
         }
     }
 
@@ -616,7 +726,7 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
             'btn-danger', '#dc3545',
             async () => {
                 const res = await v8Req('v8_api.ajax.php', 'reiniciar_consulta_fila', { id_fila: id }, true, "Reiniciando...");
-                if (res.success) { v8CarregarFila(); v8IniciarPollingMargem(id); }
+                if (res.success) { v8CarregarFila(0); v8IniciarPollingMargem(id); }
                 else alert("❌ Erro: " + res.msg);
             });
     }
@@ -627,7 +737,7 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
             'btn-danger', '#dc3545',
             async () => {
                 const res = await v8Req('v8_api.ajax.php', 'apagar_consulta_manual', { id_fila: id }, true, "Apagando...");
-                if (res.success) v8CarregarFila(); else alert("❌ Erro: " + res.msg);
+                if (res.success) v8CarregarFila(0); else alert("❌ Erro: " + res.msg);
             });
     }
     
@@ -762,10 +872,10 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
     }
 
     function v8PreencherEnderecoSelecionado() { let index = document.getElementById('v8_dig_seletor_endereco').value; if(index === "") return; let end = listaEnderecosFC[index]; document.getElementById('v8_dig_cep').value = end.CEP ? end.CEP.replace(/\D/g, '') : ''; document.getElementById('v8_dig_logradouro').value = end.LOGRADOURO || ''; document.getElementById('v8_dig_numero').value = end.NUMERO && end.NUMERO !== 'S/N' ? end.NUMERO : '0'; document.getElementById('v8_dig_bairro').value = end.BAIRRO || ''; document.getElementById('v8_dig_cidade').value = end.CIDADE || ''; document.getElementById('v8_dig_uf').value = end.ESTADO || ''; }
-    async function v8ExecutarSimulacao(tipo, idFila) { v8Loading(true, "Simulando..."); let payload = { id_fila: idFila, tipo: tipo }; if (tipo === 'PERSONALIZADA') { payload.prazo = document.getElementById('v8_sim_prazo').value; payload.valor = document.getElementById('v8_sim_valor').value; payload.tipo_busca = document.getElementById('v8_sim_tipo_busca').value; if (!payload.valor || payload.valor <= 0) { v8Loading(false); return alert("Digite um valor válido."); } } const res = await v8Req('ajax_api_v8_digitacao.php', 'passo4_simular', payload, false); v8Loading(false); if (res.success) { if (tipo === 'PADRÃO') v8CarregarFila(); else v8CarregarHistoricoSimulacoes(idFila); } else alert("❌ Erro: " + res.msg); }
+    async function v8ExecutarSimulacao(tipo, idFila) { v8Loading(true, "Simulando..."); let payload = { id_fila: idFila, tipo: tipo }; if (tipo === 'PERSONALIZADA') { payload.prazo = document.getElementById('v8_sim_prazo').value; payload.valor = document.getElementById('v8_sim_valor').value; payload.tipo_busca = document.getElementById('v8_sim_tipo_busca').value; if (!payload.valor || payload.valor <= 0) { v8Loading(false); return alert("Digite um valor válido."); } } const res = await v8Req('ajax_api_v8_digitacao.php', 'passo4_simular', payload, false); v8Loading(false); if (res.success) { if (tipo === 'PADRÃO') v8CarregarFila(0); else v8CarregarHistoricoSimulacoes(idFila); } else alert("❌ Erro: " + res.msg); }
     function v8FazerSimulacaoPersonalizada() { let idFila = document.getElementById('v8_id_fila_modal').value; v8ExecutarSimulacao('PERSONALIZADA', idFila); }
     async function v8CarregarHistoricoSimulacoes(idFila) { const tb = document.getElementById('v8_bloco2_historico'); tb.innerHTML = '<tr><td colspan="6" class="text-center py-3"><i class="fas fa-spinner fa-spin"></i></td></tr>'; const res = await v8Req('ajax_api_v8_digitacao.php', 'listar_simulacoes_banco', { id_fila: idFila }, false); if (res.success) { tb.innerHTML = ''; if (res.data.length === 0) return tb.innerHTML = '<tr><td colspan="6" class="text-center py-3">Nenhuma simulação.</td></tr>'; res.data.forEach(s => { tb.innerHTML += `<tr><td><input type="radio" name="radio_simulacao" value="${s.ID}" class="form-check-input" style="width: 20px; height: 20px; cursor: pointer;"></td><td class="fw-bold">${s.TIPO_SIMULACAO}</td><td>${s.PRAZO_SIMULACAO}x</td><td class="text-danger fw-bold">R$ ${parseFloat(s.VALOR_PARCELA).toFixed(2).replace('.',',')}</td><td class="text-success fw-bold">R$ ${parseFloat(s.VALOR_LIBERADO).toFixed(2).replace('.',',')}</td><td class="small text-muted">${s.DATA_BR}</td></tr>`; }); } }
-    async function v8EnviarProposta() { let idFila = document.getElementById('v8_id_fila_modal').value; let radios = document.getElementsByName('radio_simulacao'); let idSimBanco = null; for (let i = 0; i < radios.length; i++) { if (radios[i].checked) { idSimBanco = radios[i].value; break; } } if (!idSimBanco) return alert("Selecione uma simulação no Bloco 2 clicando na bolinha (ESCOLHER)."); let payload = { id_fila: idFila, id_sim_banco: idSimBanco, nome: document.getElementById('v8_dig_nome').value, email: document.getElementById('v8_dig_email').value, nascimento: document.getElementById('v8_dig_nascimento').value, nome_mae: document.getElementById('v8_dig_mae').value, rg: document.getElementById('v8_dig_rg').value, sexo: document.getElementById('v8_dig_sexo').value, telefone: document.getElementById('v8_dig_telefone').value, cep: document.getElementById('v8_dig_cep').value, logradouro: document.getElementById('v8_dig_logradouro').value, numero: document.getElementById('v8_dig_numero').value, bairro: document.getElementById('v8_dig_bairro').value, cidade: document.getElementById('v8_dig_cidade').value, uf: document.getElementById('v8_dig_uf').value, pix: document.getElementById('v8_dig_pix').value, tipo_pix: document.getElementById('v8_dig_tipo_pix').value, obs: document.getElementById('v8_dig_observacao').value }; if(!payload.pix) return alert("A chave PIX no Bloco 3 é obrigatória."); const res = await v8Req('ajax_api_v8_digitacao.php', 'passo5_enviar_proposta', payload, true, "Enviando..."); if (res.success) { alert("✅ Proposta gerada."); v8VerLinkAssinatura(res.url); v8Modais.simulacao.hide(); v8CarregarFila(); v8CarregarPropostas(); v8AtualizarSaldosTopo(); } else alert("❌ Erro: " + res.msg); }
+    async function v8EnviarProposta() { let idFila = document.getElementById('v8_id_fila_modal').value; let radios = document.getElementsByName('radio_simulacao'); let idSimBanco = null; for (let i = 0; i < radios.length; i++) { if (radios[i].checked) { idSimBanco = radios[i].value; break; } } if (!idSimBanco) return alert("Selecione uma simulação no Bloco 2 clicando na bolinha (ESCOLHER)."); let payload = { id_fila: idFila, id_sim_banco: idSimBanco, nome: document.getElementById('v8_dig_nome').value, email: document.getElementById('v8_dig_email').value, nascimento: document.getElementById('v8_dig_nascimento').value, nome_mae: document.getElementById('v8_dig_mae').value, rg: document.getElementById('v8_dig_rg').value, sexo: document.getElementById('v8_dig_sexo').value, telefone: document.getElementById('v8_dig_telefone').value, cep: document.getElementById('v8_dig_cep').value, logradouro: document.getElementById('v8_dig_logradouro').value, numero: document.getElementById('v8_dig_numero').value, bairro: document.getElementById('v8_dig_bairro').value, cidade: document.getElementById('v8_dig_cidade').value, uf: document.getElementById('v8_dig_uf').value, pix: document.getElementById('v8_dig_pix').value, tipo_pix: document.getElementById('v8_dig_tipo_pix').value, obs: document.getElementById('v8_dig_observacao').value }; if(!payload.pix) return alert("A chave PIX no Bloco 3 é obrigatória."); const res = await v8Req('ajax_api_v8_digitacao.php', 'passo5_enviar_proposta', payload, true, "Enviando..."); if (res.success) { alert("✅ Proposta gerada."); v8VerLinkAssinatura(res.url); v8Modais.simulacao.hide(); v8CarregarFila(0); v8CarregarPropostas(); v8AtualizarSaldosTopo(); } else alert("❌ Erro: " + res.msg); }
 
 </script>
 
