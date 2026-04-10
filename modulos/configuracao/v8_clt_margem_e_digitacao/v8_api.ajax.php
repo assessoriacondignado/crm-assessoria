@@ -171,7 +171,9 @@ try {
         case 'salvar_chave_v8':
             $id = (int)($_POST['id'] ?? 0); $tabela_padrao = trim($_POST['tabela_padrao'] ?? 'CLT Acelera'); $prazo_padrao = (int)($_POST['prazo_padrao'] ?? 24);
             $intervalo_consentimento = max(0, (int)($_POST['intervalo_consentimento'] ?? 0));
-            try { $pdo->exec("ALTER TABLE INTEGRACAO_V8_CHAVE_ACESSO ADD COLUMN INTERVALO_CONSENTIMENTO INT NOT NULL DEFAULT 0"); } catch(Exception $e){}
+            try { $pdo->exec("ALTER TABLE INTEGRACAO_V8_CHAVE_ACESSO ADD COLUMN INTERVALO_CONSENTIMENTO INT NOT NULL DEFAULT 120"); } catch(Exception $e){}
+            try { $pdo->exec("ALTER TABLE INTEGRACAO_V8_CHAVE_ACESSO MODIFY COLUMN INTERVALO_CONSENTIMENTO INT NOT NULL DEFAULT 120"); } catch(Exception $e){}
+            $pdo->exec("UPDATE INTEGRACAO_V8_CHAVE_ACESSO SET INTERVALO_CONSENTIMENTO = 120 WHERE INTERVALO_CONSENTIMENTO = 0");
             $client_id = trim($_POST['client_id'] ?? ''); $audience = trim($_POST['audience'] ?? '');
 
             if(empty($client_id) || empty($audience)) {
