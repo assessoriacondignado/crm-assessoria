@@ -468,13 +468,20 @@ $readonly_attr = (!$pode_editar_excluir) ? 'disabled readonly' : '';
                 </div>
             <?php else: ?>
             <div class="card border-dark shadow-lg rounded-3">
-                <div class="card-header bg-dark text-white py-3 border-bottom border-dark d-flex justify-content-between align-items-center">
+                <div class="card-header bg-dark text-white py-3 border-bottom border-dark d-flex justify-content-between align-items-center flex-wrap gap-2">
                     <h5 class="fw-bold mb-0 text-uppercase"><i class="fas fa-address-book text-success me-2"></i> Ficha Cadastral (ID: <?= htmlspecialchars($cliente_ficha['ID']) ?>)</h5>
-                    
-                    <?php if($pode_ver_todos): ?>
-                        <?php $urlRetorno = $is_busca_avancada ? '?' . preg_replace('/&?cpf_selecionado=[^&]*/', '', preg_replace('/&?acao=[^&]*/', '', $_SERVER['QUERY_STRING'])) : '?busca=' . urlencode($termo_busca); ?>
-                        <a href="<?= $urlRetorno ?>" class="btn btn-sm btn-outline-light"><i class="fas fa-arrow-left"></i> Voltar</a>
-                    <?php endif; ?>
+                    <div class="d-flex gap-2 align-items-center flex-wrap">
+                        <button class="btn btn-sm btn-warning fw-bold text-dark" onclick="abrirModalPedido('<?= htmlspecialchars($cliente_ficha['NOME']) ?>','<?= htmlspecialchars($cliente_ficha['CELULAR'] ?? '') ?>')">
+                            <i class="fas fa-shopping-cart me-1"></i> Pedido
+                        </button>
+                        <button class="btn btn-sm btn-info fw-bold text-dark" onclick="abrirModalTarefas('<?= htmlspecialchars($cliente_ficha['CPF']) ?>','<?= htmlspecialchars($cliente_ficha['NOME']) ?>')">
+                            <i class="fas fa-tasks me-1"></i> Tarefas
+                        </button>
+                        <?php if($pode_ver_todos): ?>
+                            <?php $urlRetorno = $is_busca_avancada ? '?' . preg_replace('/&?cpf_selecionado=[^&]*/', '', preg_replace('/&?acao=[^&]*/', '', $_SERVER['QUERY_STRING'])) : '?busca=' . urlencode($termo_busca); ?>
+                            <a href="<?= $urlRetorno ?>" class="btn btn-sm btn-outline-light"><i class="fas fa-arrow-left"></i> Voltar</a>
+                        <?php endif; ?>
+                    </div>
                 </div>
                 <div class="card-body bg-light">
                     
@@ -695,9 +702,218 @@ if (formImportacao) {
         btn.innerHTML = '<i class="fas fa-upload me-2"></i> Iniciar Importação';
     });
 }
+
+// ============================================================
+// MODAL PEDIDO
+// ============================================================
+async function abrirModalPedido(nomeCliente, telefone) {
+    document.getElementById('ped_cliente').value = nomeCliente;
+    document.getElementById('ped_telefone').value = telefone;
+    document.getElementById('ped_produto').innerHTML = '<option value="">Carregando...</option>';
+    document.getElementById('ped_variacao').innerHTML = '<option value="">Selecione um produto primeiro</option>';
+    document.getElementById('ped_unitario').value = '';
+    document.getElementById('ped_qtd').value = 1;
+    document.getElementById('ped_obs').value = '';
+    document.getElementById('ped_msg').innerHTML = '';
+
+    const fd = new FormData(); fd.append('acao','buscar_produtos');
+    const r = await fetch('/modulos/comercial/pedidos/pedidos.ajax.php', {method:'POST', body:fd});
+    const d = await r.json();
+    let opts = '<option value="">-- Selecione o produto --</option>';
+    (d.data||[]).forEach(p => opts += `<option value="${p.NOME}">${p.NOME}</option>`);
+    document.getElementById('ped_produto').innerHTML = opts;
+
+    new bootstrap.Modal(document.getElementById('modalNovoPedido')).show();
+}
+
+async function pedCarregarVariacoes() {
+    const prod = document.getElementById('ped_produto').value;
+    document.getElementById('ped_variacao').innerHTML = '<option value="">Carregando...</option>';
+    document.getElementById('ped_unitario').value = '';
+    if (!prod) { document.getElementById('ped_variacao').innerHTML = '<option value="">Selecione um produto primeiro</option>'; return; }
+    const fd = new FormData(); fd.append('acao','buscar_variacoes'); fd.append('produto_nome', prod);
+    const r = await fetch('/modulos/comercial/pedidos/pedidos.ajax.php', {method:'POST', body:fd});
+    const d = await r.json();
+    let opts = '<option value="">Único</option>';
+    (d.data||[]).forEach(v => opts += `<option value="${v.NOME_VARIACAO}" data-valor="${v.VALOR_VENDA}">${v.NOME_VARIACAO} — R$ ${parseFloat(v.VALOR_VENDA).toFixed(2).replace('.',',')}</option>`);
+    document.getElementById('ped_variacao').innerHTML = opts;
+}
+
+function pedSetValor() {
+    const sel = document.getElementById('ped_variacao');
+    const opt = sel.options[sel.selectedIndex];
+    const val = opt?.dataset?.valor;
+    if (val) document.getElementById('ped_unitario').value = parseFloat(val).toFixed(2);
+}
+
+async function salvarPedidoCliente() {
+    const btn = document.getElementById('btnSalvarPedido');
+    const msg = document.getElementById('ped_msg');
+    const cliente   = document.getElementById('ped_cliente').value.trim();
+    const telefone  = document.getElementById('ped_telefone').value.trim();
+    const produto   = document.getElementById('ped_produto').value.trim();
+    const variacao  = document.getElementById('ped_variacao').value.trim();
+    const unitario  = parseFloat(document.getElementById('ped_unitario').value) || 0;
+    const qtd       = parseInt(document.getElementById('ped_qtd').value) || 1;
+    const obs       = document.getElementById('ped_obs').value.trim();
+
+    if (!produto || unitario <= 0) { msg.innerHTML = '<div class="alert alert-danger py-2 mb-0">Selecione o produto e informe o valor.</div>'; return; }
+
+    btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+    const fd = new FormData();
+    fd.append('acao','salvar_pedido'); fd.append('cliente', cliente); fd.append('telefone', telefone);
+    fd.append('produto_base', produto); fd.append('produto_variacao', variacao||'');
+    fd.append('unitario', unitario); fd.append('qtd', qtd);
+    fd.append('acrescimo',0); fd.append('variacao',0); fd.append('desconto',0);
+    fd.append('cupom_nome',''); fd.append('cupom_val',0); fd.append('fidelidade',0); fd.append('iva',0);
+    fd.append('total', (unitario * qtd).toFixed(2)); fd.append('obs', obs);
+    const r = await fetch('/modulos/comercial/pedidos/pedidos.ajax.php', {method:'POST', body:fd});
+    const d = await r.json();
+    if (d.success) {
+        msg.innerHTML = `<div class="alert alert-success py-2 mb-0"><i class="fas fa-check-circle me-1"></i> ${d.msg}</div>`;
+        setTimeout(() => bootstrap.Modal.getInstance(document.getElementById('modalNovoPedido')).hide(), 1800);
+    } else {
+        msg.innerHTML = `<div class="alert alert-danger py-2 mb-0">${d.msg||'Erro ao salvar.'}</div>`;
+    }
+    btn.disabled = false; btn.innerHTML = '<i class="fas fa-save me-1"></i> Salvar Pedido';
+}
+
+// ============================================================
+// MODAL TAREFAS
+// ============================================================
+let _tarefasCpf = '', _tarefasNome = '';
+
+async function abrirModalTarefas(cpf, nome) {
+    _tarefasCpf = cpf; _tarefasNome = nome;
+    document.getElementById('tar_titulo').value = '';
+    document.getElementById('tar_descricao').value = '';
+    document.getElementById('tar_vencimento').value = '';
+    document.getElementById('tar_msg').innerHTML = '';
+    await carregarTarefasCliente();
+    new bootstrap.Modal(document.getElementById('modalTarefasCliente')).show();
+}
+
+async function carregarTarefasCliente() {
+    const tb = document.getElementById('tbodyTarefas');
+    tb.innerHTML = '<tr><td colspan="5" class="text-center text-muted py-3"><i class="fas fa-spinner fa-spin"></i></td></tr>';
+    const fd = new FormData(); fd.append('acao','listar_tarefas'); fd.append('cpf', _tarefasCpf);
+    const r = await fetch('cliente_ajax.php', {method:'POST', body:fd});
+    const d = await r.json();
+    if (!d.success || !d.data.length) { tb.innerHTML = '<tr><td colspan="5" class="text-center text-muted py-3">Nenhuma tarefa cadastrada.</td></tr>'; return; }
+    tb.innerHTML = d.data.map(t => {
+        const stCls = t.STATUS_TAREFA === 'Concluída' ? 'bg-success' : t.STATUS_TAREFA === 'Em andamento' ? 'bg-warning text-dark' : 'bg-secondary';
+        const venc  = t.DATA_VENCIMENTO ? new Date(t.DATA_VENCIMENTO).toLocaleDateString('pt-BR') : '—';
+        return `<tr>
+            <td class="fw-bold small">${t.TITULO_TAREFA}</td>
+            <td class="small text-muted">${t.DESCRICAO||'—'}</td>
+            <td class="small">${venc}</td>
+            <td><span class="badge ${stCls}">${t.STATUS_TAREFA||'Pendente'}</span></td>
+            <td>
+                <select class="form-select form-select-sm border-dark" onchange="atualizarStatusTarefa(${t.ID}, this.value)" style="min-width:130px">
+                    <option ${t.STATUS_TAREFA==='Pendente'?'selected':''}>Pendente</option>
+                    <option ${t.STATUS_TAREFA==='Em andamento'?'selected':''}>Em andamento</option>
+                    <option ${t.STATUS_TAREFA==='Concluída'?'selected':''}>Concluída</option>
+                </select>
+            </td>
+        </tr>`;
+    }).join('');
+}
+
+async function salvarTarefaCliente() {
+    const btn = document.getElementById('btnSalvarTarefa');
+    const msg = document.getElementById('tar_msg');
+    const titulo    = document.getElementById('tar_titulo').value.trim();
+    const descricao = document.getElementById('tar_descricao').value.trim();
+    const vencimento= document.getElementById('tar_vencimento').value;
+    if (!titulo) { msg.innerHTML = '<div class="alert alert-danger py-2 mb-0">Informe o título da tarefa.</div>'; return; }
+    btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+    const fd = new FormData();
+    fd.append('acao','salvar_tarefa'); fd.append('cpf', _tarefasCpf); fd.append('nome', _tarefasNome);
+    fd.append('titulo', titulo); fd.append('descricao', descricao); fd.append('vencimento', vencimento);
+    const r = await fetch('cliente_ajax.php', {method:'POST', body:fd});
+    const d = await r.json();
+    if (d.success) { msg.innerHTML = '<div class="alert alert-success py-2 mb-0"><i class="fas fa-check-circle me-1"></i> Tarefa salva!</div>'; document.getElementById('tar_titulo').value=''; document.getElementById('tar_descricao').value=''; document.getElementById('tar_vencimento').value=''; await carregarTarefasCliente(); }
+    else { msg.innerHTML = `<div class="alert alert-danger py-2 mb-0">${d.msg||'Erro.'}</div>`; }
+    btn.disabled = false; btn.innerHTML = '<i class="fas fa-plus me-1"></i> Adicionar';
+}
+
+async function atualizarStatusTarefa(id, status) {
+    const fd = new FormData(); fd.append('acao','atualizar_status'); fd.append('id', id); fd.append('status', status);
+    await fetch('cliente_ajax.php', {method:'POST', body:fd});
+    await carregarTarefasCliente();
+}
 </script>
 
-</div> <?php 
+<!-- ===== MODAL NOVO PEDIDO ===== -->
+<div class="modal fade" id="modalNovoPedido" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content border-dark">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title fw-bold"><i class="fas fa-shopping-cart me-2 text-warning"></i> Novo Pedido</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-3">
+          <div class="col-md-7"><label class="fw-bold small">Cliente</label><input type="text" id="ped_cliente" class="form-control border-dark bg-light" readonly></div>
+          <div class="col-md-5"><label class="fw-bold small">Telefone</label><input type="text" id="ped_telefone" class="form-control border-dark"></div>
+          <div class="col-md-6">
+            <label class="fw-bold small">Produto</label>
+            <select id="ped_produto" class="form-select border-dark" onchange="pedCarregarVariacoes()"><option value="">-- Selecione --</option></select>
+          </div>
+          <div class="col-md-6">
+            <label class="fw-bold small">Variação</label>
+            <select id="ped_variacao" class="form-select border-dark" onchange="pedSetValor()"><option value="">Único</option></select>
+          </div>
+          <div class="col-md-4"><label class="fw-bold small">Valor Unitário (R$)</label><input type="number" id="ped_unitario" class="form-control border-dark" min="0" step="0.01" placeholder="0,00"></div>
+          <div class="col-md-2"><label class="fw-bold small">Qtd.</label><input type="number" id="ped_qtd" class="form-control border-dark" value="1" min="1"></div>
+          <div class="col-md-6"><label class="fw-bold small">Observação</label><input type="text" id="ped_obs" class="form-control border-dark" placeholder="Opcional"></div>
+        </div>
+        <div id="ped_msg" class="mt-3"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" id="btnSalvarPedido" class="btn btn-warning fw-bold text-dark" onclick="salvarPedidoCliente()"><i class="fas fa-save me-1"></i> Salvar Pedido</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MODAL TAREFAS ===== -->
+<div class="modal fade" id="modalTarefasCliente" tabindex="-1">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content border-dark">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title fw-bold"><i class="fas fa-tasks me-2 text-info"></i> Tarefas do Cliente</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Form nova tarefa -->
+        <div class="border border-dark rounded p-3 bg-light mb-4">
+          <h6 class="fw-bold mb-3 text-dark"><i class="fas fa-plus-circle me-1 text-success"></i> Nova Tarefa</h6>
+          <div class="row g-2">
+            <div class="col-md-5"><label class="fw-bold small">Título *</label><input type="text" id="tar_titulo" class="form-control border-dark" placeholder="Ex: Ligar para cliente, Enviar proposta..."></div>
+            <div class="col-md-5"><label class="fw-bold small">Descrição</label><input type="text" id="tar_descricao" class="form-control border-dark" placeholder="Detalhes (opcional)"></div>
+            <div class="col-md-2"><label class="fw-bold small">Vencimento</label><input type="date" id="tar_vencimento" class="form-control border-dark"></div>
+          </div>
+          <div id="tar_msg" class="mt-2"></div>
+          <button type="button" id="btnSalvarTarefa" class="btn btn-success fw-bold mt-3" onclick="salvarTarefaCliente()"><i class="fas fa-plus me-1"></i> Adicionar</button>
+        </div>
+        <!-- Lista de tarefas -->
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover align-middle small">
+            <thead class="table-dark"><tr><th>Título</th><th>Descrição</th><th>Vencimento</th><th>Status</th><th style="width:160px">Alterar Status</th></tr></thead>
+            <tbody id="tbodyTarefas"><tr><td colspan="5" class="text-center text-muted py-3">Carregando...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div> <?php
 $caminho_footer = $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php';
 if (file_exists($caminho_footer)) { include $caminho_footer; }
 ?>
