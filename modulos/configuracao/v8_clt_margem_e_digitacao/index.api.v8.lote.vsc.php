@@ -622,11 +622,31 @@
         row.innerHTML = `
             <div class="col-md-3">
                 <select class="form-select form-select-sm border-dark regra-campo text-dark fw-bold">
-                    <option value="l.ID">ID do Lote</option>
-                    <option value="l.NOME_IMPORTACAO">Nome do Agrupamento</option>
-                    <option value="c.CLIENTE_NOME">Nome do Cliente/Credencial V8</option>
-                    <option value="l.STATUS_FILA">Status Progresso (Ex: CONCLUIDO)</option>
-                    <option value="l.STATUS_LOTE">Status do Robô (ATIVO/INATIVO)</option>
+                    <optgroup label="Identificação">
+                        <option value="l.ID">ID do Lote</option>
+                        <option value="l.NOME_IMPORTACAO">Nome do Agrupamento</option>
+                        <option value="c.CLIENTE_NOME">Nome do Cliente/Credencial V8</option>
+                        <option value="l.CPF_USUARIO">CPF do Usuário</option>
+                    </optgroup>
+                    <optgroup label="Status">
+                        <option value="l.STATUS_FILA">Status Progresso (Ex: CONCLUIDO)</option>
+                        <option value="l.STATUS_LOTE">Status do Robô (ATIVO/INATIVO)</option>
+                        <option value="l.AGENDAMENTO_TIPO">Tipo de Agendamento</option>
+                    </optgroup>
+                    <optgroup label="Resultados">
+                        <option value="l.QTD_TOTAL">Total de CPFs</option>
+                        <option value="l.QTD_PROCESSADA">Qtd. Processada</option>
+                        <option value="l.QTD_SUCESSO">Qtd. Sucesso</option>
+                        <option value="l.QTD_ERRO">Qtd. Erro</option>
+                        <option value="l.PROCESSADOS_HOJE">Processados Hoje</option>
+                        <option value="l.LIMITE_DIARIO">Limite Diário</option>
+                    </optgroup>
+                    <optgroup label="Datas">
+                        <option value="l.DATA_IMPORTACAO">Data de Importação</option>
+                        <option value="l.DATA_FINALIZACAO">Data de Finalização</option>
+                        <option value="l.DATA_HORA_AGENDADA">Data/Hora Agendada</option>
+                        <option value="l.ULTIMO_PROCESSAMENTO">Último Processamento</option>
+                    </optgroup>
                 </select>
             </div>
             <div class="col-md-3">
@@ -635,6 +655,8 @@
                     <option value="nao_contem">Não contém</option>
                     <option value="comeca_com">Começa com</option>
                     <option value="igual">Exatamente igual a</option>
+                    <option value="maior_que">Maior que</option>
+                    <option value="menor_que">Menor que</option>
                     <option value="vazio">É Vazio</option>
                 </select>
             </div>

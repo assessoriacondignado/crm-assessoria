@@ -294,31 +294,35 @@ try {
                     $operador = $r['operador'];
                     $valor = $r['valor'];
 
-                    $allowed_campos = ['l.ID', 'l.NOME_IMPORTACAO', 'c.CLIENTE_NOME', 'l.STATUS_FILA', 'l.STATUS_LOTE'];
+                    $allowed_campos = [
+                        'l.ID', 'l.NOME_IMPORTACAO', 'c.CLIENTE_NOME', 'l.STATUS_FILA', 'l.STATUS_LOTE',
+                        'l.QTD_TOTAL', 'l.QTD_PROCESSADA', 'l.QTD_SUCESSO', 'l.QTD_ERRO',
+                        'l.PROCESSADOS_HOJE', 'l.LIMITE_DIARIO',
+                        'l.DATA_IMPORTACAO', 'l.DATA_FINALIZACAO', 'l.DATA_HORA_AGENDADA', 'l.ULTIMO_PROCESSAMENTO',
+                        'l.AGENDAMENTO_TIPO', 'l.CPF_USUARIO'
+                    ];
                     if(!in_array($campo, $allowed_campos)) continue;
 
                     if ($campo === 'l.STATUS_LOTE') $temFiltroStatusLote = true;
 
                     if ($operador == 'vazio') {
                         $where .= " AND ($campo IS NULL OR $campo = '') ";
-                    } else {
-                        if ($operador == 'contem') {
-                            $where .= " AND $campo LIKE ? ";
-                            $params[] = "%$valor%";
-                        } elseif ($operador == 'nao_contem') {
-                            $where .= " AND $campo NOT LIKE ? ";
-                            $params[] = "%$valor%";
-                        } elseif ($operador == 'comeca_com') {
-                            $where .= " AND $campo LIKE ? ";
-                            $params[] = "$valor%";
-                        } elseif ($operador == 'igual') {
-                            $where .= " AND $campo = ? ";
-                            $params[] = $valor;
-                        }
+                    } elseif ($operador == 'maior_que') {
+                        $where .= " AND $campo > ? "; $params[] = $valor;
+                    } elseif ($operador == 'menor_que') {
+                        $where .= " AND $campo < ? "; $params[] = $valor;
+                    } elseif ($operador == 'contem') {
+                        $where .= " AND $campo LIKE ? "; $params[] = "%$valor%";
+                    } elseif ($operador == 'nao_contem') {
+                        $where .= " AND $campo NOT LIKE ? "; $params[] = "%$valor%";
+                    } elseif ($operador == 'comeca_com') {
+                        $where .= " AND $campo LIKE ? "; $params[] = "$valor%";
+                    } elseif ($operador == 'igual') {
+                        $where .= " AND $campo = ? "; $params[] = $valor;
                     }
                 }
             }
-            
+
             // Padrão: Se não filtrou por Status Lote, lista apenas os Ativos
             if (!$temFiltroStatusLote) {
                 $where .= " AND (l.STATUS_LOTE = 'ATIVO' OR l.STATUS_LOTE IS NULL) ";
@@ -441,31 +445,35 @@ try {
                     $operador = $r['operador'];
                     $valor = $r['valor'];
 
-                    $allowed_campos = ['l.ID', 'l.NOME_IMPORTACAO', 'c.CLIENTE_NOME', 'l.STATUS_FILA', 'l.STATUS_LOTE'];
+                    $allowed_campos = [
+                        'l.ID', 'l.NOME_IMPORTACAO', 'c.CLIENTE_NOME', 'l.STATUS_FILA', 'l.STATUS_LOTE',
+                        'l.QTD_TOTAL', 'l.QTD_PROCESSADA', 'l.QTD_SUCESSO', 'l.QTD_ERRO',
+                        'l.PROCESSADOS_HOJE', 'l.LIMITE_DIARIO',
+                        'l.DATA_IMPORTACAO', 'l.DATA_FINALIZACAO', 'l.DATA_HORA_AGENDADA', 'l.ULTIMO_PROCESSAMENTO',
+                        'l.AGENDAMENTO_TIPO', 'l.CPF_USUARIO'
+                    ];
                     if(!in_array($campo, $allowed_campos)) continue;
 
                     if ($campo === 'l.STATUS_LOTE') $temFiltroStatusLote = true;
 
                     if ($operador == 'vazio') {
                         $where .= " AND ($campo IS NULL OR $campo = '') ";
-                    } else {
-                        if ($operador == 'contem') {
-                            $where .= " AND $campo LIKE ? ";
-                            $params[] = "%$valor%";
-                        } elseif ($operador == 'nao_contem') {
-                            $where .= " AND $campo NOT LIKE ? ";
-                            $params[] = "%$valor%";
-                        } elseif ($operador == 'comeca_com') {
-                            $where .= " AND $campo LIKE ? ";
-                            $params[] = "$valor%";
-                        } elseif ($operador == 'igual') {
-                            $where .= " AND $campo = ? ";
-                            $params[] = $valor;
-                        }
+                    } elseif ($operador == 'maior_que') {
+                        $where .= " AND $campo > ? "; $params[] = $valor;
+                    } elseif ($operador == 'menor_que') {
+                        $where .= " AND $campo < ? "; $params[] = $valor;
+                    } elseif ($operador == 'contem') {
+                        $where .= " AND $campo LIKE ? "; $params[] = "%$valor%";
+                    } elseif ($operador == 'nao_contem') {
+                        $where .= " AND $campo NOT LIKE ? "; $params[] = "%$valor%";
+                    } elseif ($operador == 'comeca_com') {
+                        $where .= " AND $campo LIKE ? "; $params[] = "$valor%";
+                    } elseif ($operador == 'igual') {
+                        $where .= " AND $campo = ? "; $params[] = $valor;
                     }
                 }
             }
-            
+
             if (!$temFiltroStatusLote) {
                 $where .= " AND (l.STATUS_LOTE = 'ATIVO' OR l.STATUS_LOTE IS NULL) ";
             }
