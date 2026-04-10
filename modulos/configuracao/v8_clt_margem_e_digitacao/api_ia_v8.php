@@ -48,6 +48,55 @@ function normalizarStringIA($str) {
     return strtr($str, $map);
 }
 
+// =========================================================================
+// ENVIO DE NOTIFICAÇÃO WHATSAPP PARA O GRUPO DA EMPRESA DO CPF_DONO
+// =========================================================================
+function enviarNotificacaoWhatsApp($pdo, $cpf_dono, $mensagem) {
+    try {
+        // 1. id_empresa do dono do token
+        $stmtEmp = $pdo->prepare("SELECT u.id_empresa, e.GRUPO_WHATS FROM CLIENTE_USUARIO u LEFT JOIN CLIENTE_EMPRESAS e ON e.ID = u.id_empresa WHERE u.CPF = ? LIMIT 1");
+        $stmtEmp->execute([$cpf_dono]);
+        $rowEmp = $stmtEmp->fetch(PDO::FETCH_ASSOC);
+        $id_empresa = $rowEmp['id_empresa'] ?? null;
+        $grupo_whats = preg_replace('/\D/', '', $rowEmp['GRUPO_WHATS'] ?? '');
+
+        if (empty($grupo_whats) || empty($id_empresa)) return;
+
+        // 2. Busca Phone Number ID + Token da empresa
+        $stmtNum = $pdo->prepare("
+            SELECT n.PHONE_NUMBER_ID, bm.PERMANENT_TOKEN
+            FROM WHATSAPP_OFICIAL_NUMEROS n
+            INNER JOIN WHATSAPP_OFICIAL_CONTAS c ON c.ID = n.CONTA_ID
+            INNER JOIN WHATSAPP_OFICIAL_BM bm ON c.bm_id = bm.ID
+            WHERE bm.id_empresa = ?
+            LIMIT 1
+        ");
+        $stmtNum->execute([$id_empresa]);
+        $rowNum = $stmtNum->fetch(PDO::FETCH_ASSOC);
+
+        if (empty($rowNum['PHONE_NUMBER_ID']) || empty($rowNum['PERMANENT_TOKEN'])) return;
+
+        $phone_id = $rowNum['PHONE_NUMBER_ID'];
+        $token    = $rowNum['PERMANENT_TOKEN'];
+
+        // 3. Envia mensagem de texto simples
+        $payload = [
+            "messaging_product" => "whatsapp",
+            "to"                => $grupo_whats,
+            "type"              => "text",
+            "text"              => ["body" => $mensagem]
+        ];
+
+        $ch = curl_init("https://graph.facebook.com/v19.0/{$phone_id}/messages");
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($payload));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, ['Authorization: Bearer ' . $token, 'Content-Type: application/json']);
+        curl_exec($ch);
+        curl_close($ch);
+    } catch (Exception $e) { /* silencia erros de notificação para não quebrar o fluxo principal */ }
+}
+
 function extrairErroV8($jsonC) {
     if (isset($jsonC['reasons']) && is_array($jsonC['reasons']) && count($jsonC['reasons']) > 0) {
         $motivos = [];
@@ -294,6 +343,12 @@ function processarSimulacaoPadrao($consult_id, $cpf, $margem, $pdo, $credencialI
         $nomeCliente = $stmtNome->fetchColumn() ?: $cpf;
         $pdo->prepare("INSERT INTO INTEGRACAO_V8_IA_NOTIFICACOES (CREDENCIAL_ID, CPF_DONO, TIPO, NOME_CLIENTE, CPF_CLIENTE, VALOR, PRAZO, PARCELA, NOME_ROBO) VALUES (?, ?, 'SIMULACAO', ?, ?, ?, ?, ?, ?)")
             ->execute([$credencialIA['ID'], $credencialIA['CPF_DONO'], $nomeCliente, $cpf, (float)$valor_lib, (int)$prazo_padrao, (float)$valor_parc, $credencialIA['NOME_ROBO']]);
+        $msgSimulacao = "🤖 *{$credencialIA['NOME_ROBO']}* — Simulação Aprovada\n"
+            . "👤 Cliente: {$nomeCliente} | CPF: " . substr($cpf,0,3) . ".***.***-" . substr($cpf,-2) . "\n"
+            . "💰 Liberado: R$ " . number_format((float)$valor_lib, 2, ',', '.') . "\n"
+            . "📅 Prazo: {$prazo_padrao}x | Parcela: R$ " . number_format((float)$valor_parc, 2, ',', '.') . "\n"
+            . "🕐 " . date('d/m/Y H:i');
+        enviarNotificacaoWhatsApp($pdo, $credencialIA['CPF_DONO'], $msgSimulacao);
     }
 
     return ['simulation_id' => $sim_id, 'tabela' => $tab['nome_tb_final'], 'valor_liberado' => (float)$valor_lib, 'valor_parcela' => (float)$valor_parc, 'prazo' => $prazo_padrao];
@@ -621,6 +676,16 @@ try {
             if (!empty($credencialIA['NOTIF_PROPOSTA'])) {
                 $pdo->prepare("INSERT INTO INTEGRACAO_V8_IA_NOTIFICACOES (CREDENCIAL_ID, CPF_DONO, TIPO, NOME_CLIENTE, CPF_CLIENTE, VALOR, PRAZO, PARCELA, NUMERO_PROPOSTA, NOME_ROBO) VALUES (?, ?, 'PROPOSTA', ?, ?, ?, ?, ?, ?, ?)")
                     ->execute([$credencialIA['ID'], $credencialIA['CPF_DONO'], $cliente['nome'], $cpf, (float)($sim_obj['disbursement_amount']??0), $prazo, (float)($sim_obj['installment_value']??0), $proposal_id, $credencialIA['NOME_ROBO']]);
+                $nomeClienteProp = $cliente['nome'] ?? $cpf;
+                $valorLibProp    = (float)($sim_obj['disbursement_amount'] ?? 0);
+                $valorParcProp   = (float)($sim_obj['installment_value'] ?? 0);
+                $msgProposta = "🤖 *{$credencialIA['NOME_ROBO']}* — Proposta Digitada\n"
+                    . "👤 Cliente: {$nomeClienteProp} | CPF: " . substr($cpf,0,3) . ".***.***-" . substr($cpf,-2) . "\n"
+                    . "📋 Proposta: {$proposal_id}\n"
+                    . "💰 Liberado: R$ " . number_format($valorLibProp, 2, ',', '.') . "\n"
+                    . "📅 Prazo: {$prazo}x | Parcela: R$ " . number_format($valorParcProp, 2, ',', '.') . "\n"
+                    . "🕐 " . date('d/m/Y H:i');
+                enviarNotificacaoWhatsApp($pdo, $credencialIA['CPF_DONO'], $msgProposta);
             }
             enviarResposta($cpf, $acao, ['success' => true, 'proposal_id' => $proposal_id, 'link_assinatura' => $url_formalizacao, 'msg' => 'Proposta gerada!' ]);
             break;
