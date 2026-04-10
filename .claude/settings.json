@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -n \"id_empresa\" /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/*.php)",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e ':*)",
+      "Bash(git commit -m ':*)",
+      "Bash(mysql -u root -e \"SHOW TABLES FROM crm LIKE '%WHATS%';\")",
+      "Bash(mysql -e \"SHOW TABLES LIKE '%WHATS%';\")"
+    ]
+  }
+}

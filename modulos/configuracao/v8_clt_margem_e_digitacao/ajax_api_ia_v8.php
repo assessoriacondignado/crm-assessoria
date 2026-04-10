@@ -11,6 +11,8 @@ try {
     require_once $_SERVER['DOCUMENT_ROOT'] . '/conexao.php';
     if (!isset($pdo) && isset($conn)) { $pdo = $conn; }
     $pdo->exec("SET NAMES utf8mb4");
+    try { $pdo->exec("ALTER TABLE INTEGRACAO_V8_IA_CREDENCIAIS ADD COLUMN NOTIF_SIMULACAO TINYINT(1) NOT NULL DEFAULT 1"); } catch(Exception $e){}
+    try { $pdo->exec("ALTER TABLE INTEGRACAO_V8_IA_CREDENCIAIS ADD COLUMN NOTIF_PROPOSTA  TINYINT(1) NOT NULL DEFAULT 1"); } catch(Exception $e){}
 
     $acao = $_POST['acao'] ?? '';
     $usuario_logado_cpf = preg_replace('/\D/', '', $_SESSION['usuario_cpf'] ?? '');

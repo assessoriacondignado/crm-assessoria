@@ -147,6 +147,10 @@ if (empty($authHeader) || !preg_match('/Bearer\s(\S+)/', $authHeader, $matches))
 
 $tokenIA = $matches[1];
 
+// Migrações automáticas — colunas de notificação WhatsApp por token
+try { $pdo->exec("ALTER TABLE INTEGRACAO_V8_IA_CREDENCIAIS ADD COLUMN NOTIF_SIMULACAO TINYINT(1) NOT NULL DEFAULT 1"); } catch(Exception $e){}
+try { $pdo->exec("ALTER TABLE INTEGRACAO_V8_IA_CREDENCIAIS ADD COLUMN NOTIF_PROPOSTA  TINYINT(1) NOT NULL DEFAULT 1"); } catch(Exception $e){}
+
 $stmtCred = $pdo->prepare("SELECT i.*, c.SALDO as SALDO_CLIENTE, c.CUSTO_CONSULTA as CUSTO_CLIENTE, v.CUSTO_V8, v.ID as CHAVE_REAL_V8, v.USERNAME_API, v.PASSWORD_API, v.CLIENT_ID, v.AUDIENCE, v.TABELA_PADRAO, v.PRAZO_PADRAO, u.ID as ID_USUARIO_DONO 
                            FROM INTEGRACAO_V8_IA_CREDENCIAIS i 
                            JOIN CLIENTE_CADASTRO c ON i.CPF_DONO = c.CPF
