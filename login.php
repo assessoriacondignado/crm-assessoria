@@ -76,25 +76,71 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ajax_action'])) {
         $nome = mb_strtoupper(trim($_POST['nome'] ?? ''), 'UTF-8');
         $celular_puro = preg_replace('/\D/', '', $_POST['celular'] ?? '');
         $email = strtolower(trim($_POST['email'] ?? ''));
+        $tem_empresa = !empty($_POST['tem_empresa']) && $_POST['tem_empresa'] == '1';
+        $nome_empresa = mb_strtoupper(trim($_POST['nome_empresa'] ?? ''), 'UTF-8');
+        $cnpj_puro = preg_replace('/\D/', '', $_POST['cnpj'] ?? '');
 
         // Validação de CPF
         if (!validarCpfMatematico($cpf_puro)) {
             echo json_encode(['success' => false, 'message' => 'CPF inválido. Verifique a numeração digitada.']); exit;
         }
-        $cpf_padrao = str_pad($cpf_puro, 11, '0', STR_PAD_LEFT); // Garante 11 dígitos para não quebrar o banco
+        $cpf_padrao = str_pad($cpf_puro, 11, '0', STR_PAD_LEFT);
 
         // Validação de E-mail
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             echo json_encode(['success' => false, 'message' => 'Formato de E-mail inválido.']); exit;
         }
 
-        // Validação de Celular e DDD (Deve ter 10 ou 11 dígitos, e DDD entre 11 e 99)
+        // Validação de Celular e DDD
         if (strlen($celular_puro) < 10 || strlen($celular_puro) > 11) {
             echo json_encode(['success' => false, 'message' => 'O celular precisa ter o DDD + 8 ou 9 dígitos.']); exit;
         }
         $ddd = (int)substr($celular_puro, 0, 2);
         if ($ddd < 11 || $ddd > 99) {
             echo json_encode(['success' => false, 'message' => 'O DDD do celular é inválido para o Brasil.']); exit;
+        }
+
+        // Validações de empresa (quando ativado)
+        if ($tem_empresa) {
+            if (empty($nome_empresa)) {
+                echo json_encode(['success' => false, 'message' => 'Informe o nome da empresa.']); exit;
+            }
+            if (strlen($cnpj_puro) !== 14) {
+                echo json_encode(['success' => false, 'message' => 'CNPJ inválido. Informe os 14 dígitos.']); exit;
+            }
+            // Validação matemática do CNPJ
+            $cnpjArr = array_map('intval', str_split($cnpj_puro));
+            if (count(array_unique($cnpjArr)) === 1) {
+                echo json_encode(['success' => false, 'message' => 'CNPJ inválido (sequência repetida).']); exit;
+            }
+            $pesos1 = [5,4,3,2,9,8,7,6,5,4,3,2];
+            $pesos2 = [6,5,4,3,2,9,8,7,6,5,4,3,2];
+            $soma1 = 0; for($i=0;$i<12;$i++) $soma1 += $cnpjArr[$i]*$pesos1[$i];
+            $d1 = $soma1 % 11 < 2 ? 0 : 11 - ($soma1 % 11);
+            $soma2 = 0; for($i=0;$i<13;$i++) $soma2 += $cnpjArr[$i]*$pesos2[$i];
+            $d2 = $soma2 % 11 < 2 ? 0 : 11 - ($soma2 % 11);
+            if ($cnpjArr[12] !== $d1 || $cnpjArr[13] !== $d2) {
+                echo json_encode(['success' => false, 'message' => 'CNPJ inválido. Verifique os dígitos informados.']); exit;
+            }
+
+            // Verifica se CNPJ já existe
+            $stmtCnpj = $pdo->prepare("SELECT NOME_CADASTRO FROM CLIENTE_EMPRESAS WHERE CNPJ = ? LIMIT 1");
+            $stmtCnpj->execute([$cnpj_puro]);
+            if ($empresaExist = $stmtCnpj->fetch(PDO::FETCH_ASSOC)) {
+                // Monta nome-usuário no formato EMPRESA.CLIENTE para o aviso
+                $primeiroNomeEmpresa  = strtok($nome_empresa, ' ');
+                $primeiroNomeCliente  = strtok($nome, ' ');
+                $usuario_aviso = strtoupper($primeiroNomeEmpresa . '.' . $primeiroNomeCliente);
+                $msgSuporte = "⚠️ *CNPJ JÁ CADASTRADO — SOLICITAÇÃO DE ACESSO*\n\n"
+                    . "👤 *Nome:* $nome\n"
+                    . "📱 *Celular:* $celular_puro\n"
+                    . "🏢 *Empresa informada:* $nome_empresa\n"
+                    . "🔢 *CNPJ:* " . preg_replace('/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/', '$1.$2.$3/$4-$5', $cnpj_puro) . "\n"
+                    . "👤 *Usuário sugerido:* $usuario_aviso\n"
+                    . "⏰ " . date('d/m/Y H:i:s');
+                dispararWhatsLogin($pdo, '120363406245292046', $msgSuporte);
+                echo json_encode(['success' => false, 'message' => 'Este CNPJ já possui cadastro no sistema. Nossa equipe de suporte foi notificada e entrará em contato com você em breve.']); exit;
+            }
         }
 
         // Verifica se CPF já existe no Banco
@@ -104,6 +150,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ajax_action'])) {
             echo json_encode(['success' => false, 'message' => 'Este CPF já possui cadastro! Faça login ou recupere sua senha.']); exit;
         }
 
+        // Monta nome de usuário: EMPRESA.CLIENTE quando tem empresa, CPF quando não tem
+        $usuario_login = $cpf_padrao;
+        if ($tem_empresa) {
+            $primeiroNomeEmpresa = preg_replace('/[^A-Z0-9]/', '', strtoupper(strtok($nome_empresa, ' ')));
+            $primeiroNomeCliente = preg_replace('/[^A-Z0-9]/', '', strtoupper(strtok($nome, ' ')));
+            $usuario_login = $primeiroNomeEmpresa . '.' . $primeiroNomeCliente;
+            // Garante unicidade adicionando sufixo numérico se necessário
+            $baseUsuario = $usuario_login; $sufixo = 1;
+            while (true) {
+                $stmtU = $pdo->prepare("SELECT COUNT(*) FROM CLIENTE_USUARIO WHERE USUARIO = ?");
+                $stmtU->execute([$usuario_login]);
+                if ($stmtU->fetchColumn() == 0) break;
+                $usuario_login = $baseUsuario . $sufixo++;
+            }
+        }
+
         try {
             $pdo->beginTransaction();
 
@@ -111,17 +173,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ajax_action'])) {
             $stmt1 = $pdo->prepare("INSERT INTO CLIENTE_CADASTRO (CPF, NOME, CELULAR, SITUACAO, SALDO, CUSTO_CONSULTA) VALUES (?, ?, ?, 'ATIVO', 0.00, 0.50)");
             $stmt1->execute([$cpf_padrao, $nome, $celular_puro]);
 
-            // Insere Credencial de Usuário (Senha padrão é o CPF, mesmo orientando o reset)
+            // Insere Credencial de Usuário
             $senha_hash = password_hash($cpf_padrao, PASSWORD_DEFAULT);
             $stmt2 = $pdo->prepare("INSERT INTO CLIENTE_USUARIO (CPF, NOME, USUARIO, SENHA, CELULAR, EMAIL, GRUPO_USUARIOS, Situação, Tentativas) VALUES (?, ?, ?, ?, ?, ?, 'CONSULTOR', 'ativo', 0)");
-            $stmt2->execute([$cpf_padrao, $nome, $cpf_padrao, $senha_hash, $celular_puro, $email]);
+            $stmt2->execute([$cpf_padrao, $nome, $usuario_login, $senha_hash, $celular_puro, $email]);
+
+            // Insere empresa e vincula o CPF caso informado
+            if ($tem_empresa) {
+                $pdo->prepare("INSERT INTO CLIENTE_EMPRESAS (CNPJ, NOME_CADASTRO, CELULAR) VALUES (?, ?, ?)")
+                    ->execute([$cnpj_puro, $nome_empresa, $celular_puro]);
+                $pdo->prepare("UPDATE CLIENTE_CADASTRO SET CNPJ = ? WHERE CPF = ?")
+                    ->execute([$cnpj_puro, $cpf_padrao]);
+            }
 
             $pdo->commit();
-            
-            $_SESSION['last_cadastro'] = time(); // Grava tempo do anti-spam
+            $_SESSION['last_cadastro'] = time();
 
-            // Disparo W-API
-            $msgWhats = "🎉 *Cadastro Realizado com Sucesso!*\n\nOlá, *$nome*!\nSeja bem-vindo(a) ao portal Assessoria Consignado.\n\nSeu acesso foi liberado com o perfil de *Consultor*.\n\n👤 *Usuário:* $cpf_padrao\n\n🔒 *Atenção:* Por questões de segurança, não enviamos senhas.\nAcesse o site abaixo, clique em \"Esqueceu a senha?\" e faça o reset para criar a sua senha de acesso.\n\n🌐 Acesse: https://".$_SERVER['HTTP_HOST'];
+            // Disparo W-API ao próprio usuário
+            $msgWhats = "🎉 *Cadastro Realizado com Sucesso!*\n\nOlá, *$nome*!\nSeja bem-vindo(a) ao portal Assessoria Consignado.\n\nSeu acesso foi liberado com o perfil de *Consultor*.\n\n👤 *Usuário:* $usuario_login\n\n🔒 *Atenção:* Por questões de segurança, não enviamos senhas.\nAcesse o site abaixo, clique em \"Esqueceu a senha?\" e faça o reset para criar a sua senha de acesso.\n\n🌐 Acesse: https://".$_SERVER['HTTP_HOST'];
             dispararWhatsLogin($pdo, $celular_puro, $msgWhats);
 
             echo json_encode(['success' => true, 'message' => 'Cadastro realizado com sucesso! As instruções de acesso foram enviadas no seu WhatsApp.']);
@@ -373,20 +442,38 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login_submit']) && !$r
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body text-start bg-light p-4">
-                    <p class="small text-muted mb-4 border-bottom pb-2">Preencha os dados abaixo para liberar o seu painel de Consultor.</p>
+                    <p class="small text-muted mb-3 border-bottom pb-2">Preencha os dados abaixo para liberar o seu painel de Consultor.</p>
                     <form id="formNovoCadastro">
                         <label class="small fw-bold mb-1">CPF (Apenas números):</label>
                         <input type="text" id="cadCpf" class="form-control border-dark mb-3" oninput="mascaraCpf(this)" maxlength="14" placeholder="000.000.000-00" required>
-                        
+
                         <label class="small fw-bold mb-1">Nome Completo:</label>
                         <input type="text" id="cadNome" class="form-control border-dark mb-3" placeholder="Digite seu nome completo" required>
-                        
+
                         <label class="small fw-bold mb-1">Celular / WhatsApp (Com DDD):</label>
                         <input type="text" id="cadCelular" class="form-control border-dark mb-3" oninput="mascaraCelular(this)" maxlength="15" placeholder="(00) 00000-0000" required>
-                        
+
                         <label class="small fw-bold mb-1">E-mail de Contato:</label>
-                        <input type="email" id="cadEmail" class="form-control border-dark mb-4" placeholder="seu@email.com" required>
-                        
+                        <input type="email" id="cadEmail" class="form-control border-dark mb-3" placeholder="seu@email.com" required>
+
+                        <!-- Toggle empresa -->
+                        <div class="form-check form-switch border border-secondary rounded p-2 mb-3 bg-white d-flex align-items-center gap-2">
+                            <input class="form-check-input mt-0" type="checkbox" id="cadTemEmpresa" onchange="toggleCadEmpresa(this)">
+                            <label class="form-check-label small fw-bold mb-0" for="cadTemEmpresa">
+                                <i class="fas fa-building text-secondary me-1"></i> Quero cadastrar minha empresa (CNPJ)
+                            </label>
+                        </div>
+
+                        <!-- Campos empresa (ocultos por padrão) -->
+                        <div id="boxCadEmpresa" class="d-none border border-secondary rounded p-3 mb-3 bg-white">
+                            <label class="small fw-bold mb-1 text-dark">Nome da Empresa:</label>
+                            <input type="text" id="cadNomeEmpresa" class="form-control border-secondary mb-3" placeholder="Razão social ou nome fantasia" style="text-transform:uppercase;">
+
+                            <label class="small fw-bold mb-1 text-dark">CNPJ:</label>
+                            <input type="text" id="cadCnpj" class="form-control border-secondary" oninput="mascaraCnpj(this)" maxlength="18" placeholder="00.000.000/0000-00">
+                            <div id="cadCnpjFeedback" class="small mt-1" style="min-height:18px;"></div>
+                        </div>
+
                         <button type="submit" class="btn btn-success w-100 fw-bold border-dark shadow-sm py-2 fs-5" id="btnSalvarCadastro"><i class="fas fa-check-circle me-1"></i> FINALIZAR CADASTRO</button>
                     </form>
                 </div>
@@ -468,14 +555,69 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login_submit']) && !$r
             i.value = v;
         }
 
+        function mascaraCnpj(i) {
+            let v = i.value.replace(/\D/g,'');
+            if(v.length > 14) v = v.substring(0,14);
+            if(v.length > 12) v = v.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2}).*/,'$1.$2.$3/$4-$5');
+            else if(v.length > 8) v = v.replace(/^(\d{2})(\d{3})(\d{3})(\d{0,4}).*/,'$1.$2.$3/$4');
+            else if(v.length > 5) v = v.replace(/^(\d{2})(\d{3})(\d{0,3}).*/,'$1.$2.$3');
+            else if(v.length > 2) v = v.replace(/^(\d{2})(\d{0,3}).*/,'$1.$2');
+            i.value = v;
+            validarCnpjFrontend(v);
+        }
+
+        function validarCnpjFrontend(val) {
+            const fb = document.getElementById('cadCnpjFeedback');
+            const nums = val.replace(/\D/g,'');
+            if(nums.length < 14) { fb.textContent = ''; return false; }
+            if(/^(\d)\1{13}$/.test(nums)) { fb.innerHTML = '<span class="text-danger">CNPJ inválido.</span>'; return false; }
+            const calc = (n, p) => n.split('').slice(0,p.length).reduce((a,d,i) => a + parseInt(d)*p[i], 0);
+            const p1=[5,4,3,2,9,8,7,6,5,4,3,2], p2=[6,5,4,3,2,9,8,7,6,5,4,3,2];
+            const r1 = calc(nums,p1) % 11; const d1 = r1 < 2 ? 0 : 11-r1;
+            const r2 = calc(nums,p2) % 11; const d2 = r2 < 2 ? 0 : 11-r2;
+            const ok = parseInt(nums[12])===d1 && parseInt(nums[13])===d2;
+            fb.innerHTML = ok ? '<span class="text-success"><i class="fas fa-check-circle"></i> CNPJ válido</span>' : '<span class="text-danger"><i class="fas fa-times-circle"></i> CNPJ inválido</span>';
+            return ok;
+        }
+
+        function toggleCadEmpresa(chk) {
+            const box = document.getElementById('boxCadEmpresa');
+            const nomeEmp = document.getElementById('cadNomeEmpresa');
+            const cnpj = document.getElementById('cadCnpj');
+            if(chk.checked) {
+                box.classList.remove('d-none');
+                nomeEmp.required = true; cnpj.required = true;
+            } else {
+                box.classList.add('d-none');
+                nomeEmp.required = false; cnpj.required = false;
+                nomeEmp.value = ''; cnpj.value = '';
+                document.getElementById('cadCnpjFeedback').textContent = '';
+            }
+        }
+
         function abrirModalCadastro() {
             document.getElementById('formNovoCadastro').reset();
+            document.getElementById('cadTemEmpresa').checked = false;
+            toggleCadEmpresa({checked: false});
             mCadastro.show();
         }
 
         document.getElementById('formNovoCadastro').addEventListener('submit', function(e) {
             e.preventDefault();
             const btn = document.getElementById('btnSalvarCadastro');
+            const temEmpresa = document.getElementById('cadTemEmpresa').checked;
+
+            // Validação CNPJ no frontend antes de enviar
+            if(temEmpresa) {
+                const cnpjVal = document.getElementById('cadCnpj').value;
+                if(!validarCnpjFrontend(cnpjVal)) {
+                    alert('CNPJ inválido. Verifique o número digitado.'); return;
+                }
+                if(!document.getElementById('cadNomeEmpresa').value.trim()) {
+                    alert('Informe o nome da empresa.'); return;
+                }
+            }
+
             btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Aguarde...'; btn.disabled = true;
 
             const fd = new FormData();
@@ -484,6 +626,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login_submit']) && !$r
             fd.append('nome', document.getElementById('cadNome').value);
             fd.append('celular', document.getElementById('cadCelular').value);
             fd.append('email', document.getElementById('cadEmail').value);
+            fd.append('tem_empresa', temEmpresa ? '1' : '0');
+            if(temEmpresa) {
+                fd.append('nome_empresa', document.getElementById('cadNomeEmpresa').value);
+                fd.append('cnpj', document.getElementById('cadCnpj').value);
+            }
 
             fetch('login.php', { method: 'POST', body: fd })
             .then(r => r.json())
@@ -493,6 +640,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login_submit']) && !$r
                     alert(res.message);
                     mCadastro.hide();
                     this.reset();
+                    toggleCadEmpresa({checked: false});
                 } else {
                     alert(res.message);
                 }
