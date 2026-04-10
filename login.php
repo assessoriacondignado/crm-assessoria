@@ -624,6 +624,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login_submit']) && !$r
                     fb.innerHTML = _msgJaCadastrado(res.detalhe.replace(' já possui cadastro.',''));
                 } else {
                     _cadDupl[campo] = false;
+                    fb.innerHTML = '<span class="text-success"><i class="fas fa-check-circle"></i> Disponível</span>';
                 }
             } catch(e) { _cadDupl[campo] = false; fb.innerHTML = ''; }
             _atualizarBotaoCadastro();
