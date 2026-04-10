@@ -269,6 +269,14 @@
       document.querySelectorAll('.calc-edit').forEach(el => el.addEventListener('input', () => calcTotal('vp')));
       
       load(); carregarListaProdutos();
+
+      // Pré-preenchimento via URL (vindo da ficha do cliente)
+      const urlP = new URLSearchParams(window.location.search);
+      if (urlP.has('pre_cliente')) {
+          document.getElementById('nCli').value = urlP.get('pre_cliente');
+          document.getElementById('nTel').value = urlP.get('pre_tel') || '';
+          modais.new.show();
+      }
   });
 
   async function callApi(acao, dados = {}) {

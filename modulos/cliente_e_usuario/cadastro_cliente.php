@@ -473,9 +473,9 @@ $readonly_attr = (!$pode_editar_excluir) ? 'disabled readonly' : '';
                     <h5 class="fw-bold mb-0 text-uppercase"><i class="fas fa-address-book text-success me-2"></i> Ficha Cadastral (ID: <?= htmlspecialchars($cliente_ficha['ID']) ?>)</h5>
                     <div class="d-flex gap-2 align-items-center flex-wrap">
                         <?php if (!$bloquear_pedido_tarefas): ?>
-                        <button class="btn btn-sm btn-warning fw-bold text-dark" onclick="abrirModalPedido('<?= htmlspecialchars($cliente_ficha['NOME']) ?>','<?= htmlspecialchars($cliente_ficha['CELULAR'] ?? '') ?>')">
+                        <a href="/modulos/comercial/pedidos/index.php?pre_cliente=<?= urlencode($cliente_ficha['NOME']) ?>&pre_tel=<?= urlencode($cliente_ficha['CELULAR'] ?? '') ?>" class="btn btn-sm btn-warning fw-bold text-dark">
                             <i class="fas fa-shopping-cart me-1"></i> Pedido
-                        </button>
+                        </a>
                         <button class="btn btn-sm btn-info fw-bold text-dark" onclick="abrirModalTarefas('<?= htmlspecialchars($cliente_ficha['CPF']) ?>','<?= htmlspecialchars($cliente_ficha['NOME']) ?>')">
                             <i class="fas fa-tasks me-1"></i> Tarefas
                         </button>
