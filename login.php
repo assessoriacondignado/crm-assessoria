@@ -64,6 +64,41 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ajax_action'])) {
     header('Content-Type: application/json');
     $action = $_POST['ajax_action'];
 
+    // --- VERIFICAÇÃO DE DUPLICIDADE (chamado em tempo real pelo frontend) ---
+    if ($action == 'verificar_campo') {
+        $campo = $_POST['campo'] ?? '';
+        $valor = trim($_POST['valor'] ?? '');
+        $existe = false; $detalhe = '';
+
+        if ($campo === 'cpf') {
+            $v = str_pad(preg_replace('/\D/','',$valor), 11, '0', STR_PAD_LEFT);
+            $s = $pdo->prepare("SELECT COUNT(*) FROM CLIENTE_CADASTRO WHERE CPF = ?");
+            $s->execute([$v]);
+            $existe = $s->fetchColumn() > 0;
+            $detalhe = 'CPF já possui cadastro.';
+        } elseif ($campo === 'celular') {
+            $v = preg_replace('/\D/','',$valor);
+            $s = $pdo->prepare("SELECT COUNT(*) FROM CLIENTE_USUARIO WHERE CELULAR = ?");
+            $s->execute([$v]);
+            $existe = $s->fetchColumn() > 0;
+            $detalhe = 'Celular já possui cadastro.';
+        } elseif ($campo === 'email') {
+            $v = strtolower($valor);
+            $s = $pdo->prepare("SELECT COUNT(*) FROM CLIENTE_USUARIO WHERE EMAIL = ?");
+            $s->execute([$v]);
+            $existe = $s->fetchColumn() > 0;
+            $detalhe = 'E-mail já possui cadastro.';
+        } elseif ($campo === 'cnpj') {
+            $v = preg_replace('/\D/','',$valor);
+            $s = $pdo->prepare("SELECT COUNT(*) FROM CLIENTE_EMPRESAS WHERE CNPJ = ?");
+            $s->execute([$v]);
+            $existe = $s->fetchColumn() > 0;
+            $detalhe = 'CNPJ já possui cadastro.';
+        }
+        echo json_encode(['existe' => $existe, 'detalhe' => $detalhe]);
+        exit;
+    }
+
     // --- FLUXO DE NOVO CADASTRO ---
     if ($action == 'novo_cadastro') {
         // Segurança Anti-Spam: Limita 1 cadastro a cada 2 minutos por sessão
@@ -558,41 +593,77 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login_submit']) && !$r
             i.value = v;
         }
 
+        // Estado de duplicidade por campo
+        const _cadDupl = { cpf: false, celular: false, email: false, cnpj: false };
+
+        function _atualizarBotaoCadastro() {
+            const temDupl = Object.values(_cadDupl).some(v => v);
+            document.getElementById('btnSalvarCadastro').disabled = temDupl;
+        }
+
+        function _msgJaCadastrado(label) {
+            return `<span class="text-danger fw-bold"><i class="fas fa-exclamation-circle"></i> ${label} já possui cadastro — `
+                + `<a href="#" onclick="mCadastro.hide();abrirModalReset();return false;" class="fw-bold text-danger">Recuperar senha</a> `
+                + `ou <a href="#" onclick="mCadastro.hide();abrirModalSuporte();return false;" class="fw-bold text-danger">Falar com suporte</a></span>`;
+        }
+
+        async function verificarDuplicidade(campo, valor, fbId) {
+            const fb = document.getElementById(fbId);
+            fb.innerHTML = '<span class="text-muted"><i class="fas fa-spinner fa-spin"></i> Verificando...</span>';
+            const fd = new FormData();
+            fd.append('ajax_action','verificar_campo');
+            fd.append('campo', campo);
+            fd.append('valor', valor);
+            try {
+                const res = await fetch('login.php', {method:'POST', body:fd}).then(r=>r.json());
+                if(res.existe) {
+                    _cadDupl[campo] = true;
+                    fb.innerHTML = _msgJaCadastrado(res.detalhe.replace(' já possui cadastro.',''));
+                } else {
+                    _cadDupl[campo] = false;
+                }
+            } catch(e) { _cadDupl[campo] = false; }
+            _atualizarBotaoCadastro();
+        }
+
         function validarCpfCampo() {
             const val = document.getElementById('cadCpf').value.replace(/\D/g,'');
             const fb  = document.getElementById('cadCpfFeedback');
-            if(!val) { fb.innerHTML=''; return false; }
-            if(val.length < 11) { fb.innerHTML='<span class="text-warning"><i class="fas fa-circle-notch"></i> CPF incompleto</span>'; return false; }
-            // Dígitos verificadores
-            if(/^(\d)\1{10}$/.test(val)) { fb.innerHTML='<span class="text-danger"><i class="fas fa-times-circle"></i> CPF inválido</span>'; return false; }
+            if(!val) { fb.innerHTML=''; _cadDupl.cpf=false; _atualizarBotaoCadastro(); return false; }
+            if(val.length < 11) { fb.innerHTML='<span class="text-warning"><i class="fas fa-circle-notch"></i> CPF incompleto</span>'; _cadDupl.cpf=false; _atualizarBotaoCadastro(); return false; }
+            if(/^(\d)\1{10}$/.test(val)) { fb.innerHTML='<span class="text-danger"><i class="fas fa-times-circle"></i> CPF inválido</span>'; _cadDupl.cpf=false; _atualizarBotaoCadastro(); return false; }
             let ok = true;
             for(let t=9;t<11;t++){
                 let d=0; for(let c=0;c<t;c++) d+=parseInt(val[c])*((t+1)-c);
                 d=((10*d)%11)%10; if(parseInt(val[t])!==d){ok=false;break;}
             }
-            if(ok){ fb.innerHTML='<span class="text-success"><i class="fas fa-check-circle"></i> CPF válido</span>'; return true; }
-            else  { fb.innerHTML='<span class="text-danger"><i class="fas fa-times-circle"></i> CPF inválido</span>'; return false; }
+            if(!ok){ fb.innerHTML='<span class="text-danger"><i class="fas fa-times-circle"></i> CPF inválido</span>'; _cadDupl.cpf=false; _atualizarBotaoCadastro(); return false; }
+            fb.innerHTML='<span class="text-success"><i class="fas fa-check-circle"></i> CPF válido</span>';
+            verificarDuplicidade('cpf', val, 'cadCpfFeedback');
+            return true;
         }
 
         function validarCelularCampo() {
             const val = document.getElementById('cadCelular').value.replace(/\D/g,'');
             const fb  = document.getElementById('cadCelularFeedback');
-            if(!val){ fb.innerHTML=''; return false; }
-            if(val.length < 10){ fb.innerHTML='<span class="text-warning"><i class="fas fa-circle-notch"></i> Celular incompleto (DDD + número)</span>'; return false; }
+            if(!val){ fb.innerHTML=''; _cadDupl.celular=false; _atualizarBotaoCadastro(); return false; }
+            if(val.length < 10){ fb.innerHTML='<span class="text-warning"><i class="fas fa-circle-notch"></i> Celular incompleto (DDD + número)</span>'; _cadDupl.celular=false; _atualizarBotaoCadastro(); return false; }
             const ddd = parseInt(val.substring(0,2));
-            if(ddd < 11 || ddd > 99){ fb.innerHTML='<span class="text-danger"><i class="fas fa-times-circle"></i> DDD inválido</span>'; return false; }
-            fb.innerHTML='<span class="text-success"><i class="fas fa-check-circle"></i> Celular válido</span>'; return true;
+            if(ddd < 11 || ddd > 99){ fb.innerHTML='<span class="text-danger"><i class="fas fa-times-circle"></i> DDD inválido</span>'; _cadDupl.celular=false; _atualizarBotaoCadastro(); return false; }
+            fb.innerHTML='<span class="text-success"><i class="fas fa-check-circle"></i> Celular válido</span>';
+            verificarDuplicidade('celular', val, 'cadCelularFeedback');
+            return true;
         }
 
         function validarEmailCampo() {
             const val = document.getElementById('cadEmail').value.trim();
             const fb  = document.getElementById('cadEmailFeedback');
-            if(!val){ fb.innerHTML=''; return false; }
+            if(!val){ fb.innerHTML=''; _cadDupl.email=false; _atualizarBotaoCadastro(); return false; }
             const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
-            fb.innerHTML = ok
-                ? '<span class="text-success"><i class="fas fa-check-circle"></i> E-mail válido</span>'
-                : '<span class="text-danger"><i class="fas fa-times-circle"></i> Formato de e-mail inválido</span>';
-            return ok;
+            if(!ok){ fb.innerHTML='<span class="text-danger"><i class="fas fa-times-circle"></i> Formato de e-mail inválido</span>'; _cadDupl.email=false; _atualizarBotaoCadastro(); return false; }
+            fb.innerHTML='<span class="text-success"><i class="fas fa-check-circle"></i> E-mail válido</span>';
+            verificarDuplicidade('email', val, 'cadEmailFeedback');
+            return true;
         }
 
         function mascaraCnpj(i) {
@@ -609,15 +680,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login_submit']) && !$r
         function validarCnpjFrontend(val) {
             const fb = document.getElementById('cadCnpjFeedback');
             const nums = val.replace(/\D/g,'');
-            if(nums.length < 14) { fb.textContent = ''; return false; }
-            if(/^(\d)\1{13}$/.test(nums)) { fb.innerHTML = '<span class="text-danger">CNPJ inválido.</span>'; return false; }
+            if(nums.length < 14) { fb.textContent = ''; _cadDupl.cnpj=false; _atualizarBotaoCadastro(); return false; }
+            if(/^(\d)\1{13}$/.test(nums)) { fb.innerHTML = '<span class="text-danger"><i class="fas fa-times-circle"></i> CNPJ inválido</span>'; _cadDupl.cnpj=false; _atualizarBotaoCadastro(); return false; }
             const calc = (n, p) => n.split('').slice(0,p.length).reduce((a,d,i) => a + parseInt(d)*p[i], 0);
             const p1=[5,4,3,2,9,8,7,6,5,4,3,2], p2=[6,5,4,3,2,9,8,7,6,5,4,3,2];
             const r1 = calc(nums,p1) % 11; const d1 = r1 < 2 ? 0 : 11-r1;
             const r2 = calc(nums,p2) % 11; const d2 = r2 < 2 ? 0 : 11-r2;
             const ok = parseInt(nums[12])===d1 && parseInt(nums[13])===d2;
-            fb.innerHTML = ok ? '<span class="text-success"><i class="fas fa-check-circle"></i> CNPJ válido</span>' : '<span class="text-danger"><i class="fas fa-times-circle"></i> CNPJ inválido</span>';
-            return ok;
+            if(!ok){ fb.innerHTML='<span class="text-danger"><i class="fas fa-times-circle"></i> CNPJ inválido</span>'; _cadDupl.cnpj=false; _atualizarBotaoCadastro(); return false; }
+            fb.innerHTML='<span class="text-success"><i class="fas fa-check-circle"></i> CNPJ válido</span>';
+            verificarDuplicidade('cnpj', nums, 'cadCnpjFeedback');
+            return true;
         }
 
         function toggleCadEmpresa(chk) {
@@ -632,6 +705,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login_submit']) && !$r
                 nomeEmp.required = false; cnpj.required = false;
                 nomeEmp.value = ''; cnpj.value = '';
                 document.getElementById('cadCnpjFeedback').textContent = '';
+                _cadDupl.cnpj = false; _atualizarBotaoCadastro();
             }
         }
 
@@ -639,6 +713,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login_submit']) && !$r
             document.getElementById('formNovoCadastro').reset();
             document.getElementById('cadTemEmpresa').checked = false;
             toggleCadEmpresa({checked: false});
+            // Limpa feedbacks e estado de duplicidade
+            ['cadCpfFeedback','cadCelularFeedback','cadEmailFeedback','cadCnpjFeedback'].forEach(id => {
+                const el = document.getElementById(id); if(el) el.innerHTML='';
+            });
+            _cadDupl.cpf=false; _cadDupl.celular=false; _cadDupl.email=false; _cadDupl.cnpj=false;
+            _atualizarBotaoCadastro();
             mCadastro.show();
         }
 
