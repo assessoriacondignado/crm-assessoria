@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', 0);
+ob_start();
 session_start();
 
 $caminho_conexao = $_SERVER['DOCUMENT_ROOT'] . '/conexao.php';
@@ -61,7 +63,8 @@ function validarCpfMatematico($cpf) {
 // REQUISIÇÕES AJAX (MODAIS)
 // =======================================================
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ajax_action'])) {
-    header('Content-Type: application/json');
+    ob_end_clean();
+    header('Content-Type: application/json; charset=utf-8');
     $action = $_POST['ajax_action'];
 
     // --- VERIFICAÇÃO DE DUPLICIDADE (chamado em tempo real pelo frontend) ---
@@ -622,7 +625,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login_submit']) && !$r
                 } else {
                     _cadDupl[campo] = false;
                 }
-            } catch(e) { _cadDupl[campo] = false; }
+            } catch(e) { _cadDupl[campo] = false; fb.innerHTML = ''; }
             _atualizarBotaoCadastro();
         }
 
