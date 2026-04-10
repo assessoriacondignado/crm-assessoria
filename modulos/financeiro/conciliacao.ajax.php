@@ -27,70 +27,69 @@ try {
             }
 
             $tmpName = $_FILES['arquivo_csv']['tmp_name'];
-            $handle = fopen($tmpName, "r");
+
+            // Detecta encoding do arquivo (PagBank exporta em Windows-1252 ou UTF-8)
+            $conteudoRaw = file_get_contents($tmpName);
+            $encodingDetectado = mb_detect_encoding($conteudoRaw, ['UTF-8', 'Windows-1252', 'ISO-8859-1'], true);
+            if ($encodingDetectado && $encodingDetectado !== 'UTF-8') {
+                $conteudoRaw = mb_convert_encoding($conteudoRaw, 'UTF-8', $encodingDetectado);
+            }
+            // Remove BOM UTF-8 se presente
+            $conteudoRaw = ltrim($conteudoRaw, "\xEF\xBB\xBF");
+
+            $handle = fopen('data://text/plain,' . rawurlencode($conteudoRaw), 'r');
             if ($handle === FALSE) {
                 echo json_encode(['success' => false, 'msg' => 'Não foi possível ler o arquivo CSV.']); exit;
             }
 
-            // Ignorar as 4 primeiras linhas (Cabeçalho inútil do Pagbank)
-            for ($i = 0; $i < 4; $i++) { fgetcsv($handle, 10000, ";"); }
+            // Formato real do CSV PagBank:
+            // CODIGO DA TRANSACAO ; DATA ; TIPO ; DESCRICAO ; VALOR
+            // Pular apenas a 1ª linha (cabeçalho)
+            fgetcsv($handle, 10000, ";");
 
             $qtdImportados = 0;
-            $qtdIgnorados = 0;
+            $qtdIgnorados  = 0;
+            $qtdEntradas   = 0;
 
             while (($row = fgetcsv($handle, 10000, ";")) !== FALSE) {
                 if (count($row) < 5) continue;
 
-                $dataStr = trim($row[0]);
-                $tipo = trim($row[1]);
-                $codigo_transacao = trim($row[2]);
-                $valorStr = trim($row[3]);
-                $descricao = mb_strtoupper(trim($row[4]), 'UTF-8');
+                $codigo_transacao = trim($row[0]);
+                $dataStr          = trim($row[1]);
+                $tipo             = mb_strtoupper(trim($row[2]), 'UTF-8');
+                $descricao        = mb_strtoupper(trim($row[3]), 'UTF-8');
+                $valorStr         = trim($row[4]);
 
-                // LÓGICA DE NEGÓCIO: Apenas SAÍDAS (valores negativos)
+                if (empty($codigo_transacao) || empty($dataStr)) continue;
+
+                // Converter valor: "34,00" ou "-7,99" → float
                 $valorNum = (float) str_replace(',', '.', str_replace('.', '', $valorStr));
-                if ($valorNum >= 0) continue; 
-                
+
+                // Apenas SAÍDAS (valores negativos)
+                if ($valorNum >= 0) { $qtdEntradas++; continue; }
+
                 $valorPositivo = abs($valorNum);
 
-                // Converter "20/09/2024" para "2024-09-20"
-                $partesData = explode('/', $dataStr);
-                $dataBanco = null;
-                if (count($partesData) == 3) {
-                    $dataBanco = $partesData[2] . '-' . $partesData[1] . '-' . $partesData[0];
-                }
+                // Converter "25/03/2026" → "2026-03-25"
+                $partes = explode('/', $dataStr);
+                if (count($partes) !== 3) continue;
+                $dataBanco = $partes[2] . '-' . $partes[1] . '-' . $partes[0];
 
-                if (!$dataBanco || empty($codigo_transacao)) continue;
-
-                // Verifica se já existe na nova tabela (PAGAS)
+                // Deduplica pelo CODIGO DA TRANSACAO
                 $check = $pdo->prepare("SELECT ID FROM FINANCEIRO_CONTAS_PAGAS WHERE CODIGO_BANCO = ? LIMIT 1");
                 $check->execute([$codigo_transacao]);
-                
+
                 if ($check->rowCount() == 0) {
-                    $sqlInsert = "INSERT INTO FINANCEIRO_CONTAS_PAGAS (
-                                    CODIGO_BANCO, 
-                                    OBSERVACAO, 
-                                    VALOR_PAGO, 
-                                    DATA_VENCIMENTO, 
-                                    DATA_PAGAMENTO, 
-                                    STATUS_PAGAMENTO, 
-                                    DATA_CONCILIACAO
-                                  ) VALUES (?, ?, ?, ?, ?, 'PAGO', NULL)";
-                                  
-                    $pdo->prepare($sqlInsert)->execute([
-                        $codigo_transacao, 
-                        $descricao . " (Extrato Pagbank)", 
-                        $valorPositivo, 
-                        $dataBanco, 
-                        $dataBanco
-                    ]);
+                    $obs = $descricao . ' (' . $tipo . ')';
+                    $pdo->prepare("INSERT INTO FINANCEIRO_CONTAS_PAGAS (CODIGO_BANCO, OBSERVACAO, VALOR_PAGO, DATA_VENCIMENTO, DATA_PAGAMENTO, STATUS_PAGAMENTO, DATA_CONCILIACAO) VALUES (?, ?, ?, ?, ?, 'PAGO', NULL)")
+                        ->execute([$codigo_transacao, $obs, $valorPositivo, $dataBanco, $dataBanco]);
                     $qtdImportados++;
                 } else {
                     $qtdIgnorados++;
                 }
             }
             fclose($handle);
-            echo json_encode(['success' => true, 'msg' => "Processamento concluído. Importados: {$qtdImportados} | Ignorados/Já existentes: {$qtdIgnorados}."]);
+            echo json_encode(['success' => true, 'msg' => "Importação concluída! ✓ Saídas importadas: {$qtdImportados} | ⚠ Já existiam: {$qtdIgnorados} | ↩ Entradas ignoradas: {$qtdEntradas}."]);
             break;
 
 
