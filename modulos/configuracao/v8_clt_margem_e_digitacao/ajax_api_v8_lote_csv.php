@@ -353,9 +353,22 @@ try {
             $lote_ids = array_column($lotes, 'ID');
             if (!empty($lote_ids)) {
                 $inQuery = implode(',', array_fill(0, count($lote_ids), '?'));
+
+                // Contagens totais por status
                 $stmtStats = $pdo->prepare("SELECT LOTE_ID, STATUS_V8, COUNT(*) as qtd FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE WHERE LOTE_ID IN ($inQuery) GROUP BY LOTE_ID, STATUS_V8");
                 $stmtStats->execute($lote_ids);
                 $rawStats = $stmtStats->fetchAll(PDO::FETCH_ASSOC);
+
+                // Contagens do dia (desde 00h) — consentimentos e simulações
+                $stmtHoje = $pdo->prepare("SELECT LOTE_ID,
+                    SUM(CASE WHEN DATA_CONSENTIMENTO >= CURDATE() THEN 1 ELSE 0 END) as c_hoje,
+                    SUM(CASE WHEN DATA_SIMULACAO >= CURDATE() AND STATUS_V8 = 'OK' THEN 1 ELSE 0 END) as s_hoje
+                    FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE WHERE LOTE_ID IN ($inQuery) GROUP BY LOTE_ID");
+                $stmtHoje->execute($lote_ids);
+                $hojeByLote = [];
+                foreach ($stmtHoje->fetchAll(PDO::FETCH_ASSOC) as $r) {
+                    $hojeByLote[$r['LOTE_ID']] = ['c_hoje' => (int)$r['c_hoje'], 's_hoje' => (int)$r['s_hoje']];
+                }
 
                 $statsByLote = [];
                 foreach($rawStats as $row) {
@@ -393,7 +406,13 @@ try {
 
                 foreach ($lotes as &$l) {
                     $lid = $l['ID'];
-                    $l['funil'] = isset($statsByLote[$lid]) ? $statsByLote[$lid] : ['c_ok'=>0, 'c_err'=>0, 'm_ok'=>0, 'm_err'=>0, 's_ok'=>0, 's_err'=>0, 'dataprev'=>0];
+                    $hoje = $hojeByLote[$lid] ?? ['c_hoje'=>0, 's_hoje'=>0];
+                    $funil = isset($statsByLote[$lid]) ? $statsByLote[$lid] : ['c_ok'=>0, 'c_err'=>0, 'm_ok'=>0, 'm_err'=>0, 's_ok'=>0, 's_err'=>0, 'dataprev'=>0];
+                    $funil['c_hoje'] = $hoje['c_hoje'];
+                    $funil['s_hoje'] = $hoje['s_hoje'];
+                    // m_hoje: aprovações de margem hoje ≈ simulações OK + erros de simulação hoje (mesma rodada)
+                    $funil['m_hoje'] = $hoje['s_hoje']; // aproximação conservadora (simulação implica margem OK)
+                    $l['funil'] = $funil;
                 }
             }
 
@@ -942,14 +961,20 @@ try {
             $dia_atual = (int)date('j'); // 1-31
             $data_hoje = date('Y-m-d');
 
-            // 1. Resetar PROCESSADOS_HOJE para lotes diários que não foram resetados hoje
+            // Garante coluna nova sem quebrar instalações existentes
+            try { $pdo->exec("ALTER TABLE INTEGRACAO_V8_IMPORTACAO_LOTE ADD COLUMN AUTO_REPROCESS_CHECKPOINT INT NOT NULL DEFAULT 0"); } catch(Exception $e){}
+
+            // 1. Resetar contadores do dia para lotes diários que ainda não foram resetados hoje
             $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE
-                SET PROCESSADOS_HOJE = 0, ULTIMO_PROCESSAMENTO = NULL
+                SET PROCESSADOS_HOJE = 0, AUTO_REPROCESS_CHECKPOINT = 0, ULTIMO_PROCESSAMENTO = NULL
                 WHERE AGENDAMENTO_TIPO = 'DIARIO'
                   AND (ULTIMO_PROCESSAMENTO IS NULL OR ULTIMO_PROCESSAMENTO < ?)
                   AND STATUS_FILA NOT IN ('PENDENTE', 'PROCESSANDO')")->execute([$data_hoje]);
 
-            // 2. Encontrar lotes AGUARDANDO_DIARIO cujo horário bateu agora (±1min) e dia bate
+            $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
+            $disparados = 0;
+
+            // 2. Disparar lotes AGUARDANDO_DIARIO cujo horário já passou hoje e ainda não rodaram
             $stmtD = $pdo->query("SELECT * FROM INTEGRACAO_V8_IMPORTACAO_LOTE
                 WHERE AGENDAMENTO_TIPO = 'DIARIO'
                   AND STATUS_FILA = 'AGUARDANDO_DIARIO'
@@ -957,13 +982,11 @@ try {
                   AND HORA_INICIO_DIARIO IS NOT NULL
                   AND (ULTIMO_PROCESSAMENTO IS NULL OR ULTIMO_PROCESSAMENTO < '{$data_hoje}')");
 
-            $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
-            $disparados = 0;
             while ($loteDiario = $stmtD->fetch(PDO::FETCH_ASSOC)) {
                 $hora_lote = substr($loteDiario['HORA_INICIO_DIARIO'], 0, 5);
 
-                // Verifica se o horário bate (janela de 1 minuto)
-                if ($hora_lote !== $hora_atual) continue;
+                // Dispara se o horário configurado já chegou (aceita janela perdida do mesmo dia)
+                if ($hora_lote > $hora_atual) continue;
 
                 // Verifica se o dia bate
                 $dias_config = trim($loteDiario['DIAS_MES_DIARIO'] ?? 'TODOS');
@@ -972,16 +995,40 @@ try {
                     if (!in_array($dia_atual, $dias_arr)) continue;
                 }
 
-                // Dispara: muda para PENDENTE e marca o dia
+                // Dispara: muda para PENDENTE, zera contadores e marca o dia
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE
-                    SET STATUS_FILA = 'PENDENTE', PROCESSADOS_HOJE = 0, ULTIMO_PROCESSAMENTO = ?
+                    SET STATUS_FILA = 'PENDENTE', PROCESSADOS_HOJE = 0, AUTO_REPROCESS_CHECKPOINT = 0, ULTIMO_PROCESSAMENTO = ?
                     WHERE ID = ?")->execute([$data_hoje, $loteDiario['ID']]);
 
-                // Acorda o worker
                 $url_worker = $protocol . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']) . '/worker_v8_lote.php?user_cpf=' . $loteDiario['CPF_USUARIO'];
                 $ch = curl_init(); curl_setopt($ch, CURLOPT_URL, $url_worker); curl_setopt($ch, CURLOPT_TIMEOUT, 1); curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); curl_exec($ch); curl_close($ch);
                 $disparados++;
             }
+
+            // 3. Reprocessamento automático: a cada 250 consentimentos enviados no dia, re-verifica DATAPREV
+            $stmtAR = $pdo->query("SELECT l.ID, l.CPF_USUARIO, l.PROCESSADOS_HOJE, l.AUTO_REPROCESS_CHECKPOINT
+                FROM INTEGRACAO_V8_IMPORTACAO_LOTE l
+                WHERE l.AGENDAMENTO_TIPO = 'DIARIO'
+                  AND l.STATUS_LOTE = 'ATIVO'
+                  AND l.STATUS_FILA IN ('PENDENTE','PROCESSANDO','AGUARDANDO_DIARIO')
+                  AND l.PROCESSADOS_HOJE >= l.AUTO_REPROCESS_CHECKPOINT + 250
+                  AND EXISTS (
+                      SELECT 1 FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE r
+                      WHERE r.LOTE_ID = l.ID AND r.STATUS_V8 = 'AGUARDANDO DATAPREV'
+                  )");
+
+            while ($lAR = $stmtAR->fetch(PDO::FETCH_ASSOC)) {
+                // Avança o checkpoint para evitar re-trigger antes de mais 250
+                $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET AUTO_REPROCESS_CHECKPOINT = PROCESSADOS_HOJE WHERE ID = ?")->execute([$lAR['ID']]);
+                // Manda AGUARDANDO_DATAPREV → AGUARDANDO MARGEM (FASE 2 relê o status na V8)
+                $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'AGUARDANDO MARGEM', OBSERVACAO = 'Reprocessamento automático (a cada 250 consentimentos do dia)' WHERE LOTE_ID = ? AND STATUS_V8 = 'AGUARDANDO DATAPREV'")->execute([$lAR['ID']]);
+                // Se estava aguardando horário, acorda para rodar FASE 2
+                $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PENDENTE' WHERE ID = ? AND STATUS_FILA = 'AGUARDANDO_DIARIO'")->execute([$lAR['ID']]);
+                $url_worker = $protocol . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']) . '/worker_v8_lote.php?user_cpf=' . $lAR['CPF_USUARIO'];
+                $ch = curl_init(); curl_setopt($ch, CURLOPT_URL, $url_worker); curl_setopt($ch, CURLOPT_TIMEOUT, 1); curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); curl_exec($ch); curl_close($ch);
+                $disparados++;
+            }
+
             ob_end_clean(); echo json_encode(['success' => true, 'disparados' => $disparados, 'hora' => $hora_atual]); exit;
 
         case 'forcar_processamento_lote':

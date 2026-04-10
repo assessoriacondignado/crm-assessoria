@@ -53,6 +53,10 @@ limparLogsAntigos($_SERVER['DOCUMENT_ROOT'] . '/logs_v8/logs_consulta_lote', 7);
 limparLogsAntigos($_SERVER['DOCUMENT_ROOT'] . '/logs_v8/logs_automacao', 7);
 // =========================================================================
 
+// Garante colunas novas sem quebrar instalações existentes
+try { $pdo->exec("ALTER TABLE INTEGRACAO_V8_REGISTROCONSULTA_LOTE ADD COLUMN DATA_CONSENTIMENTO DATETIME NULL"); } catch(Exception $e){}
+try { $pdo->exec("ALTER TABLE INTEGRACAO_V8_IMPORTACAO_LOTE ADD COLUMN AUTO_REPROCESS_CHECKPOINT INT NOT NULL DEFAULT 0"); } catch(Exception $e){}
+
 $user_cpf = preg_replace('/\D/', '', $_GET['user_cpf'] ?? '');
 if (empty($user_cpf)) { exit; }
 
@@ -278,7 +282,8 @@ while(true) {
 
                 gravarLogIntegracao('logs_consulta_lote', $cpfFase1['CPF'], 'FASE 1.1: AUTORIZAR', "https://bff.v8sistema.com/private-consignment/consult/{$consult_id}/authorize", [], json_decode($resA, true), $httpA);
 
-                $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'AGUARDANDO MARGEM', CONSULT_ID = ?, OBSERVACAO = 'Consultado! Verificando retorno da Dataprev (até 1 minuto)...' WHERE ID = ?")->execute([$consult_id, $cpfFase1['ID']]);
+                $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'AGUARDANDO MARGEM', CONSULT_ID = ?, DATA_CONSENTIMENTO = NOW(), OBSERVACAO = 'Consultado! Verificando retorno da Dataprev (até 1 minuto)...' WHERE ID = ?")->execute([$consult_id, $cpfFase1['ID']]);
+                $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET PROCESSADOS_HOJE = PROCESSADOS_HOJE + 1 WHERE ID = ?")->execute([$id_lote]);
 
                 // =====================================================================
                 // EFETUA A COBRANÇA DA V8

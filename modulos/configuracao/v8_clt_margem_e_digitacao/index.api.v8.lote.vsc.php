@@ -743,20 +743,21 @@
                 let qtdProcessadaAtual = l.QTD_PROCESSADA || l.qtd_processada || 0;
                 let pNum = qtdTotalAtual > 0 ? Math.round((qtdProcessadaAtual / qtdTotalAtual) * 100) : 0; 
                 
-                let f = l.funil || {c_ok:0, c_err:0, m_ok:0, m_err:0, s_ok:0, s_err:0, dataprev:0};
+                let f = l.funil || {c_ok:0, c_err:0, m_ok:0, m_err:0, s_ok:0, s_err:0, dataprev:0, c_hoje:0, m_hoje:0, s_hoje:0};
                 let c_ok = f.c_ok || 0; let c_err = f.c_err || 0;
                 let m_ok = f.m_ok || 0; let m_err = f.m_err || 0;
                 let s_ok = f.s_ok || 0; let s_err = f.s_err || 0;
                 let dataprev = f.dataprev || 0;
+                let c_hoje = f.c_hoje || 0; let m_hoje = f.m_hoje || 0; let s_hoje = f.s_hoje || 0;
 
                 let htmlDataprev = dataprev > 0 ? `<div class="mb-1 text-danger fw-bold" style="font-size:10px;"><i class="fas fa-clock text-secondary" style="width:15px;"></i> Dataprev: ${dataprev}</div>` : '';
 
                 let funilHtml = `
-                <div class="text-start d-inline-block" style="font-size: 11px; min-width: 130px;">
+                <div class="text-start d-inline-block" style="font-size: 11px; min-width: 155px;">
                     ${htmlDataprev}
-                    <div class="mb-1"><i class="fas fa-id-card text-secondary" style="width:15px;"></i> Consen.: <span class="text-success fw-bold">${c_ok}</span> / <span class="text-danger">${c_err}</span></div>
-                    <div class="mb-1"><i class="fas fa-search-dollar text-secondary" style="width:15px;"></i> Margem: <span class="text-success fw-bold">${m_ok}</span> / <span class="text-danger">${m_err}</span></div>
-                    <div class="mb-1"><i class="fas fa-calculator text-secondary" style="width:15px;"></i> Simul.: <span class="text-success fw-bold">${s_ok}</span> / <span class="text-danger">${s_err}</span></div>
+                    <div class="mb-1"><i class="fas fa-id-card text-secondary" style="width:15px;"></i> Consen.: <span class="text-success fw-bold">${c_ok}</span> / <span class="text-danger">${c_err}</span> <span class="badge bg-info text-dark ms-1" title="Hoje (desde 00h)">${c_hoje} hj</span></div>
+                    <div class="mb-1"><i class="fas fa-search-dollar text-secondary" style="width:15px;"></i> Margem: <span class="text-success fw-bold">${m_ok}</span> / <span class="text-danger">${m_err}</span> <span class="badge bg-info text-dark ms-1" title="Hoje (desde 00h)">${m_hoje} hj</span></div>
+                    <div class="mb-1"><i class="fas fa-calculator text-secondary" style="width:15px;"></i> Simul.: <span class="text-success fw-bold">${s_ok}</span> / <span class="text-danger">${s_err}</span> <span class="badge bg-info text-dark ms-1" title="Hoje (desde 00h)">${s_hoje} hj</span></div>
                     <div class="border-top pt-1 mt-1 text-primary"><i class="fas fa-users text-secondary" style="width:15px;"></i> Total: <b>${qtdTotalAtual}</b></div>
                 </div>`;
 
