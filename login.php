@@ -445,16 +445,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login_submit']) && !$r
                     <p class="small text-muted mb-3 border-bottom pb-2">Preencha os dados abaixo para liberar o seu painel de Consultor.</p>
                     <form id="formNovoCadastro">
                         <label class="small fw-bold mb-1">CPF (Apenas números):</label>
-                        <input type="text" id="cadCpf" class="form-control border-dark mb-3" oninput="mascaraCpf(this)" maxlength="14" placeholder="000.000.000-00" required>
+                        <input type="text" id="cadCpf" class="form-control border-dark" oninput="mascaraCpf(this);validarCpfCampo()" onblur="validarCpfCampo()" maxlength="14" placeholder="000.000.000-00" required>
+                        <div id="cadCpfFeedback" class="small mb-2 mt-1" style="min-height:18px;"></div>
 
                         <label class="small fw-bold mb-1">Nome Completo:</label>
                         <input type="text" id="cadNome" class="form-control border-dark mb-3" placeholder="Digite seu nome completo" required>
 
                         <label class="small fw-bold mb-1">Celular / WhatsApp (Com DDD):</label>
-                        <input type="text" id="cadCelular" class="form-control border-dark mb-3" oninput="mascaraCelular(this)" maxlength="15" placeholder="(00) 00000-0000" required>
+                        <input type="text" id="cadCelular" class="form-control border-dark" oninput="mascaraCelular(this);validarCelularCampo()" onblur="validarCelularCampo()" maxlength="15" placeholder="(00) 00000-0000" required>
+                        <div id="cadCelularFeedback" class="small mb-2 mt-1" style="min-height:18px;"></div>
 
                         <label class="small fw-bold mb-1">E-mail de Contato:</label>
-                        <input type="email" id="cadEmail" class="form-control border-dark mb-3" placeholder="seu@email.com" required>
+                        <input type="email" id="cadEmail" class="form-control border-dark" oninput="validarEmailCampo()" onblur="validarEmailCampo()" placeholder="seu@email.com" required>
+                        <div id="cadEmailFeedback" class="small mb-3 mt-1" style="min-height:18px;"></div>
 
                         <!-- Toggle empresa -->
                         <div class="form-check form-switch border border-secondary rounded p-2 mb-3 bg-white d-flex align-items-center gap-2">
@@ -555,6 +558,43 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login_submit']) && !$r
             i.value = v;
         }
 
+        function validarCpfCampo() {
+            const val = document.getElementById('cadCpf').value.replace(/\D/g,'');
+            const fb  = document.getElementById('cadCpfFeedback');
+            if(!val) { fb.innerHTML=''; return false; }
+            if(val.length < 11) { fb.innerHTML='<span class="text-warning"><i class="fas fa-circle-notch"></i> CPF incompleto</span>'; return false; }
+            // Dígitos verificadores
+            if(/^(\d)\1{10}$/.test(val)) { fb.innerHTML='<span class="text-danger"><i class="fas fa-times-circle"></i> CPF inválido</span>'; return false; }
+            let ok = true;
+            for(let t=9;t<11;t++){
+                let d=0; for(let c=0;c<t;c++) d+=parseInt(val[c])*((t+1)-c);
+                d=((10*d)%11)%10; if(parseInt(val[t])!==d){ok=false;break;}
+            }
+            if(ok){ fb.innerHTML='<span class="text-success"><i class="fas fa-check-circle"></i> CPF válido</span>'; return true; }
+            else  { fb.innerHTML='<span class="text-danger"><i class="fas fa-times-circle"></i> CPF inválido</span>'; return false; }
+        }
+
+        function validarCelularCampo() {
+            const val = document.getElementById('cadCelular').value.replace(/\D/g,'');
+            const fb  = document.getElementById('cadCelularFeedback');
+            if(!val){ fb.innerHTML=''; return false; }
+            if(val.length < 10){ fb.innerHTML='<span class="text-warning"><i class="fas fa-circle-notch"></i> Celular incompleto (DDD + número)</span>'; return false; }
+            const ddd = parseInt(val.substring(0,2));
+            if(ddd < 11 || ddd > 99){ fb.innerHTML='<span class="text-danger"><i class="fas fa-times-circle"></i> DDD inválido</span>'; return false; }
+            fb.innerHTML='<span class="text-success"><i class="fas fa-check-circle"></i> Celular válido</span>'; return true;
+        }
+
+        function validarEmailCampo() {
+            const val = document.getElementById('cadEmail').value.trim();
+            const fb  = document.getElementById('cadEmailFeedback');
+            if(!val){ fb.innerHTML=''; return false; }
+            const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+            fb.innerHTML = ok
+                ? '<span class="text-success"><i class="fas fa-check-circle"></i> E-mail válido</span>'
+                : '<span class="text-danger"><i class="fas fa-times-circle"></i> Formato de e-mail inválido</span>';
+            return ok;
+        }
+
         function mascaraCnpj(i) {
             let v = i.value.replace(/\D/g,'');
             if(v.length > 14) v = v.substring(0,14);
@@ -607,14 +647,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login_submit']) && !$r
             const btn = document.getElementById('btnSalvarCadastro');
             const temEmpresa = document.getElementById('cadTemEmpresa').checked;
 
-            // Validação CNPJ no frontend antes de enviar
+            // Validação completa no frontend antes de enviar
+            if(!validarCpfCampo())     { alert('CPF inválido. Verifique o número digitado.'); return; }
+            if(!validarCelularCampo()) { alert('Celular inválido. Informe o DDD + número.'); return; }
+            if(!validarEmailCampo())   { alert('Formato de e-mail inválido.'); return; }
             if(temEmpresa) {
-                const cnpjVal = document.getElementById('cadCnpj').value;
-                if(!validarCnpjFrontend(cnpjVal)) {
-                    alert('CNPJ inválido. Verifique o número digitado.'); return;
-                }
                 if(!document.getElementById('cadNomeEmpresa').value.trim()) {
                     alert('Informe o nome da empresa.'); return;
+                }
+                if(!validarCnpjFrontend(document.getElementById('cadCnpj').value)) {
+                    alert('CNPJ inválido. Verifique o número digitado.'); return;
                 }
             }
 
