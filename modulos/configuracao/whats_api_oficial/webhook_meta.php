@@ -92,7 +92,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     foreach ($value['messages'] as $msg_item) {
                         $message_id       = $msg_item['id'];
-                        $telefone_cliente = $msg_item['from'];
+                        // Suporta tanto número de telefone quanto username (@nome) — adaptação Meta junho/2025
+                        $from_raw         = $msg_item['from'] ?? '';
+                        $telefone_cliente = substr($from_raw, 0, 100); // seguro para phone ou @username
                         $tipo             = $msg_item['type'];
                         $conteudo         = '';
                         $arquivo_path     = null;

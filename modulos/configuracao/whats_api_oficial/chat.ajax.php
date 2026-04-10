@@ -10,12 +10,18 @@ try {
 
     $cpf_logado   = $_SESSION['usuario_cpf'] ?? '';
     $nome_logado  = $_SESSION['usuario_nome'] ?? '';
-    $id_empresa   = $_SESSION['empresa_id'] ?? null;
     $acao         = $_POST['acao'] ?? $_GET['acao'] ?? '';
 
     if (empty($cpf_logado)) {
         echo json_encode(['success' => false, 'msg' => 'Sessão expirada.']); exit;
     }
+
+    if (!isset($_SESSION['empresa_id'])) {
+        $stmtEmp = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+        $stmtEmp->execute([$cpf_logado]);
+        $_SESSION['empresa_id'] = $stmtEmp->fetchColumn() ?: 1;
+    }
+    $id_empresa = $_SESSION['empresa_id'];
 
     // Helper: busca token pelo Phone ID (BM → fallback legado)
     function getTokenChat($phone_id, $pdo) {

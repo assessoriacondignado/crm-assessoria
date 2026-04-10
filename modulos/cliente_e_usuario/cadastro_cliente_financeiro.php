@@ -186,6 +186,34 @@ foreach ($comissoes as $com) {
     }
 }
 
+// ====================================================================================
+// GESTÃO DE INDICAÇÃO
+// ====================================================================================
+$vendedor_ind = null;
+$link_indicacao = null;
+$clientes_indicados = [];
+$tabela_comissao_ind = [];
+try {
+    $stmtVend = $pdo->prepare("SELECT ID, NOME, LINK_TOKEN FROM FINANCEIRO_VENDEDORES WHERE DOCUMENTO_VENDEDOR = ? LIMIT 1");
+    $stmtVend->execute([$cpf_alvo]);
+    $vendedor_ind = $stmtVend->fetch(PDO::FETCH_ASSOC);
+
+    if ($vendedor_ind) {
+        if ($vendedor_ind['LINK_TOKEN']) {
+            $base_url = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'];
+            $link_indicacao = $base_url . '/indicacao.php?ref=' . $vendedor_ind['LINK_TOKEN'];
+        }
+
+        $stmtInd = $pdo->prepare("SELECT CPF, NOME, CELULAR, NOME_EMPRESA, SITUACAO FROM CLIENTE_CADASTRO WHERE VENDEDOR_REF_ID = ? ORDER BY NOME ASC");
+        $stmtInd->execute([$vendedor_ind['ID']]);
+        $clientes_indicados = $stmtInd->fetchAll(PDO::FETCH_ASSOC);
+
+        $stmtTab = $pdo->prepare("SELECT fv.OPCAO_COMISSAO, cv.NOME_VARIACAO, cv.VALOR_VENDA, cv.TIPO_COMISSAO, cv.VALOR_COMISSAO, ci.NOME as PRODUTO_NOME FROM FINANCEIRO_VENDEDOR_VARIACOES fv INNER JOIN CATALOGO_VARIACOES cv ON fv.VARIACAO_ID = cv.ID INNER JOIN CATALOGO_ITENS ci ON cv.ITEM_ID = ci.ID WHERE fv.VENDEDOR_ID = ? ORDER BY ci.NOME ASC");
+        $stmtTab->execute([$vendedor_ind['ID']]);
+        $tabela_comissao_ind = $stmtTab->fetchAll(PDO::FETCH_ASSOC);
+    }
+} catch (PDOException $e) { /* silencioso */ }
+
 include $caminho_header;
 ?>
 
@@ -217,6 +245,11 @@ include $caminho_header;
     <li class="nav-item" role="presentation">
         <button class="nav-link text-dark" id="revenda-tab" data-bs-toggle="tab" data-bs-target="#revenda" type="button" role="tab"><i class="fas fa-percentage me-1"></i> Revenda / Comissões</button>
     </li>
+    <?php if ($vendedor_ind): ?>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link text-danger fw-bold" id="indicacao-tab" data-bs-toggle="tab" data-bs-target="#indicacao" type="button" role="tab"><i class="fas fa-share-alt me-1"></i> Gestão de Indicação</button>
+    </li>
+    <?php endif; ?>
 </ul>
 
 <div class="tab-content" id="financeiroTabsContent">
@@ -418,6 +451,147 @@ include $caminho_header;
         </div>
     </div>
 
+    <?php if ($vendedor_ind): ?>
+    <div class="tab-pane fade" id="indicacao" role="tabpanel">
+
+        <!-- LINK DE INDICAÇÃO -->
+        <div class="card border-dark shadow-sm mb-4">
+            <div class="card-header bg-dark text-white fw-bold py-2"><i class="fas fa-link me-2"></i> Seu Link de Indicação</div>
+            <div class="card-body bg-light">
+                <?php if ($link_indicacao): ?>
+                <p class="small text-muted mb-2">Compartilhe este link com seus clientes. Quando eles se cadastrarem por ele, serão automaticamente vinculados a você.</p>
+                <div class="input-group">
+                    <input type="text" id="linkIndicacaoInput" class="form-control border-dark fw-bold" value="<?= htmlspecialchars($link_indicacao) ?>" readonly>
+                    <button class="btn btn-primary fw-bold border-dark" onclick="copiarLinkInd()" title="Copiar link">
+                        <i class="fas fa-copy me-1"></i> Copiar
+                    </button>
+                </div>
+                <small id="msgCopiado" class="text-success fw-bold mt-1" style="display:none;"><i class="fas fa-check me-1"></i> Link copiado!</small>
+                <?php else: ?>
+                <div class="alert alert-warning border-dark fw-bold py-2 mb-0">
+                    <i class="fas fa-exclamation-triangle me-2"></i> Seu link de indicação ainda não foi gerado. Solicite ao administrador do sistema.
+                </div>
+                <?php endif; ?>
+            </div>
+        </div>
+
+        <!-- INDICADORES: RESUMO -->
+        <div class="row g-3 mb-4">
+            <div class="col-md-4">
+                <div class="card text-center border-primary shadow-sm h-100">
+                    <div class="card-header bg-primary text-white fw-bold py-2"><i class="fas fa-users me-1"></i> Total de Indicados</div>
+                    <div class="card-body">
+                        <h2 class="text-primary fw-bold"><?= count($clientes_indicados) ?></h2>
+                        <p class="small text-muted mb-0">Clientes que se cadastraram pelo seu link</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center border-success shadow-sm h-100">
+                    <div class="card-header bg-success text-white fw-bold py-2"><i class="fas fa-box-open me-1"></i> Produtos Liberados</div>
+                    <div class="card-body">
+                        <h2 class="text-success fw-bold"><?= count($tabela_comissao_ind) ?></h2>
+                        <p class="small text-muted mb-0">Variações com comissão configurada</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center border-warning shadow-sm h-100">
+                    <div class="card-header bg-warning text-dark fw-bold py-2"><i class="fas fa-hand-holding-usd me-1"></i> Comissões a Receber</div>
+                    <div class="card-body">
+                        <h2 class="text-warning fw-bold">R$ <?= number_format($total_comissao_pendente + $total_comissao_conferido, 2, ',', '.') ?></h2>
+                        <p class="small text-muted mb-0">Pendente + Conferido</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CLIENTES INDICADOS -->
+        <div class="card border-dark shadow-sm mb-4">
+            <div class="card-header bg-dark text-white fw-bold py-2">
+                <i class="fas fa-user-friends me-2"></i> Clientes Vinculados a Você
+                <span class="badge bg-primary ms-2"><?= count($clientes_indicados) ?></span>
+            </div>
+            <?php if (empty($clientes_indicados)): ?>
+            <div class="card-body text-center text-muted py-5 fw-bold">
+                <i class="fas fa-user-plus fa-2x mb-3 d-block text-secondary"></i>
+                Nenhum cliente indicado ainda. Compartilhe seu link!
+            </div>
+            <?php else: ?>
+            <div class="table-responsive">
+                <table class="table table-hover table-striped mb-0 align-middle">
+                    <thead class="table-dark">
+                        <tr><th>#</th><th>Nome</th><th>CPF</th><th>Celular</th><th>Empresa</th><th class="text-center">Situação</th></tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($clientes_indicados as $i => $cli): ?>
+                        <tr>
+                            <td class="text-muted small"><?= $i + 1 ?></td>
+                            <td class="fw-bold text-primary"><?= htmlspecialchars($cli['NOME'] ?? '-') ?></td>
+                            <td><code><?= substr($cli['CPF'],0,3).'.'.substr($cli['CPF'],3,3).'.'.substr($cli['CPF'],6,3).'-'.substr($cli['CPF'],9,2) ?></code></td>
+                            <td><?= htmlspecialchars($cli['CELULAR'] ?? '-') ?></td>
+                            <td><?= htmlspecialchars($cli['NOME_EMPRESA'] ?? '-') ?></td>
+                            <td class="text-center">
+                                <?php $sit = strtoupper($cli['SITUACAO'] ?? ''); ?>
+                                <span class="badge <?= $sit === 'ATIVO' ? 'bg-success' : 'bg-secondary' ?>"><?= htmlspecialchars($cli['SITUACAO'] ?? 'N/A') ?></span>
+                            </td>
+                        </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+            <?php endif; ?>
+        </div>
+
+        <!-- TABELA DE COMISSÃO -->
+        <div class="card border-dark shadow-sm mb-4">
+            <div class="card-header bg-dark text-white fw-bold py-2"><i class="fas fa-money-check-alt me-2"></i> Sua Tabela de Comissões por Produto</div>
+            <?php if (empty($tabela_comissao_ind)): ?>
+            <div class="card-body text-center text-muted py-5 fw-bold">
+                <i class="fas fa-inbox fa-2x mb-3 d-block text-secondary"></i>
+                Nenhum produto liberado ainda. Consulte o administrador.
+            </div>
+            <?php else: ?>
+            <div class="table-responsive">
+                <table class="table table-hover table-striped mb-0 align-middle text-center">
+                    <thead class="table-dark">
+                        <tr><th class="text-start">Produto</th><th class="text-start">Variação / Plano</th><th>Valor de Venda</th><th>Sua Comissão</th><th>Modalidade</th></tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($tabela_comissao_ind as $tab):
+                            $regra = $tab['TIPO_COMISSAO'] === 'PERCENTUAL'
+                                ? $tab['VALOR_COMISSAO'] . '%'
+                                : 'R$ ' . number_format((float)$tab['VALOR_COMISSAO'], 2, ',', '.');
+                            $opcao = $tab['OPCAO_COMISSAO'] ?? 'COMISSAO';
+                        ?>
+                        <tr>
+                            <td class="fw-bold text-start text-primary"><?= htmlspecialchars($tab['PRODUTO_NOME']) ?></td>
+                            <td class="text-start"><?= htmlspecialchars($tab['NOME_VARIACAO']) ?> <span class="badge bg-secondary">R$ <?= number_format((float)$tab['VALOR_VENDA'],2,',','.') ?></span></td>
+                            <td class="fw-bold">R$ <?= number_format((float)$tab['VALOR_VENDA'],2,',','.') ?></td>
+                            <td class="fw-bold text-success fs-6"><?= $regra ?></td>
+                            <td>
+                                <?php if ($opcao === 'DESCONTO'): ?>
+                                <span class="badge bg-warning text-dark border border-dark"><i class="fas fa-tag me-1"></i> Desconto no Pedido</span>
+                                <?php else: ?>
+                                <span class="badge bg-success border border-dark"><i class="fas fa-hand-holding-usd me-1"></i> Comissão Direta</span>
+                                <?php endif; ?>
+                            </td>
+                        </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer bg-light border-dark small text-muted fw-bold">
+                <i class="fas fa-info-circle me-1 text-primary"></i>
+                <b>Comissão Direta:</b> valor pago a você após o pedido ser confirmado. &nbsp;|&nbsp;
+                <b>Desconto no Pedido:</b> o valor da sua comissão é aplicado como desconto para o cliente no momento da venda.
+            </div>
+            <?php endif; ?>
+        </div>
+
+    </div>
+    <?php endif; ?>
+
 </div>
 
 <?php if ($ver_extrato): ?>
@@ -586,10 +760,23 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-</div> 
-<?php 
+</div>
+
+<script>
+function copiarLinkInd() {
+    const el = document.getElementById('linkIndicacaoInput');
+    if (!el) return;
+    el.select(); el.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(el.value).then(() => {
+        const msg = document.getElementById('msgCopiado');
+        if (msg) { msg.style.display = 'inline'; setTimeout(() => msg.style.display = 'none', 2500); }
+    });
+}
+</script>
+
+<?php
 $caminho_footer = $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php';
 if (file_exists($caminho_footer)) {
-    include $caminho_footer; 
+    include $caminho_footer;
 }
 ?>

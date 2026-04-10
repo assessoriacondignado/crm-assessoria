@@ -72,6 +72,12 @@ try {
             $stmt = $pdo->query("SELECT ID, NOME FROM FINANCEIRO_VENDEDORES WHERE STATUS = 'ATIVO' ORDER BY NOME ASC");
             echo json_encode(['success' => true, 'data' => $stmt->fetchAll(PDO::FETCH_ASSOC)]);
             break;
+        case 'buscar_vendedores_filtro':
+            $termo = "%" . trim($_POST['termo'] ?? '') . "%";
+            $stmt = $pdo->prepare("SELECT ID, NOME FROM FINANCEIRO_VENDEDORES WHERE STATUS = 'ATIVO' AND NOME LIKE ? ORDER BY NOME ASC LIMIT 20");
+            $stmt->execute([$termo]);
+            echo json_encode(['success' => true, 'data' => $stmt->fetchAll(PDO::FETCH_ASSOC)]);
+            break;
 
         default: echo json_encode(['success' => false, 'msg' => 'Ação não especificada.']); break;
     }

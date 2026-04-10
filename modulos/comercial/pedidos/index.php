@@ -319,36 +319,84 @@
       if(opt) {
           const valor = opt.getAttribute('data-valor');
           document.getElementById(prefix + 'Unit').value = parseFloat(valor).toFixed(2);
+          // Limpa desconto de indicação anterior ao mudar variação
+          let descField = document.getElementById(prefix + 'Desc');
+          if(descField) { descField.value = '0'; }
+          let infoEl = document.getElementById('infoDescIndicacao_' + prefix);
+          if(infoEl) infoEl.innerHTML = '';
           calcTotal(prefix);
+          // Verifica desconto de indicação para nova variação
+          verificarDescontoIndicacao(prefix);
       }
   }
 
   let delayTimer;
   async function buscarClienteAJAX(termo, prefix = 'n') {
-      clearTimeout(delayTimer); 
+      clearTimeout(delayTimer);
       let ul = document.getElementById('listaClientes_' + prefix);
       if (termo.length < 3) { ul.style.display = 'none'; return; }
-      
+
       delayTimer = setTimeout(async () => {
           const r = await callApi('buscar_clientes', { termo: termo });
           if (r.success && r.data.length > 0) {
               ul.innerHTML = '';
               r.data.forEach(c => {
                   let li = document.createElement('li');
-                  li.innerHTML = `<strong>${c.NOME}</strong> <br><small>CPF: ${c.CPF}</small>`;
-                  li.onclick = () => { 
-                      document.getElementById(prefix + 'Cli').value = c.NOME; 
-                      if(prefix === 'n') { 
+                  let badgeVend = c.VENDEDOR_NOME ? ` <span class="badge bg-warning text-dark border border-dark" style="font-size:0.7rem;"><i class="fas fa-user-tie me-1"></i>${c.VENDEDOR_NOME}</span>` : '';
+                  li.innerHTML = `<strong>${c.NOME}</strong>${badgeVend}<br><small class="text-muted">CPF: ${c.CPF}</small>`;
+                  li.onclick = () => {
+                      document.getElementById(prefix + 'Cli').value = c.NOME;
+                      if(prefix === 'n') {
                           let telField = document.getElementById('nTel');
-                          if(telField) telField.value = c.CELULAR || ''; 
+                          if(telField) telField.value = c.CELULAR || '';
                       }
-                      ul.style.display = 'none'; 
+                      // Auto-preenche vendedor se cliente foi indicado e campo vendedor está vazio
+                      let vendField = document.getElementById(prefix + 'Vend');
+                      let vendIdField = document.getElementById(prefix + 'VendId');
+                      if(c.VENDEDOR_REF_ID && c.VENDEDOR_NOME && vendField && (!vendField.value || vendField.value.trim() === '')) {
+                          vendField.value = c.VENDEDOR_NOME;
+                          vendIdField.value = c.VENDEDOR_REF_ID;
+                          // Mostra badge de indicação
+                          let badgeEl = document.getElementById('badgeVendorRef_' + prefix);
+                          if(!badgeEl) {
+                              badgeEl = document.createElement('div');
+                              badgeEl.id = 'badgeVendorRef_' + prefix;
+                              vendField.parentElement.appendChild(badgeEl);
+                          }
+                          badgeEl.innerHTML = `<span class="badge bg-warning text-dark border border-dark mt-1"><i class="fas fa-link me-1"></i> Indicado por: ${c.VENDEDOR_NOME}</span>`;
+                          // Verifica desconto de indicação se variação já estiver selecionada
+                          verificarDescontoIndicacao(prefix);
+                      }
+                      ul.style.display = 'none';
                   };
                   ul.appendChild(li);
               });
               ul.style.display = 'block';
           } else { ul.style.display = 'none'; }
       }, 400);
+  }
+
+  async function verificarDescontoIndicacao(prefix) {
+      const vendId = document.getElementById(prefix + 'VendId')?.value;
+      const variacaoNome = document.getElementById(prefix + 'Variacao')?.value;
+      const total = parseFloat(document.getElementById(prefix + 'Total')?.value) || 0;
+      if (!vendId || !variacaoNome || !total) return;
+
+      const r = await callApi('buscar_desconto_indicacao', { vendedor_id: vendId, variacao_nome: variacaoNome, total: total });
+      if (r && r.desconto > 0) {
+          let descField = document.getElementById(prefix + 'Desc');
+          if (descField && (parseFloat(descField.value) || 0) === 0) {
+              descField.value = r.desconto.toFixed(2);
+              calcTotal(prefix);
+              let infoEl = document.getElementById('infoDescIndicacao_' + prefix);
+              if (!infoEl) {
+                  infoEl = document.createElement('div');
+                  infoEl.id = 'infoDescIndicacao_' + prefix;
+                  descField.parentElement.appendChild(infoEl);
+              }
+              infoEl.innerHTML = `<small class="text-warning fw-bold"><i class="fas fa-tag me-1"></i> Desconto de indicação: R$ ${r.desconto.toFixed(2).replace('.', ',')}</small>`;
+          }
+      }
   }
 
   let timerVend;
@@ -460,10 +508,12 @@
      }));
   }
 
-  function openNew() { 
-      document.getElementById('fNew').reset(); 
+  function openNew() {
+      document.getElementById('fNew').reset();
       document.getElementById('nVendId').value = '';
-      modais.new.show(); 
+      let badge = document.getElementById('badgeVendorRef_n'); if(badge) badge.innerHTML = '';
+      let infoDesc = document.getElementById('infoDescIndicacao_n'); if(infoDesc) infoDesc.innerHTML = '';
+      modais.new.show();
   }
 
   document.getElementById('fNew').addEventListener('submit', async e => {

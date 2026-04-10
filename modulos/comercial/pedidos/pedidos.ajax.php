@@ -22,36 +22,48 @@ try {
         $stmt->execute([$itemId, $tipoAcao, $obs, $usuario]);
     }
 
+    // Retorna ['opcao'=>'COMISSAO'|'DESCONTO', 'tipo'=>..., 'valor'=>..., 'calculado'=>0] ou null
+    function buscarRegraComissao($pdo, $vendedorId, $variacaoNome) {
+        if (!$vendedorId || !$variacaoNome) return null;
+        $stmt = $pdo->prepare("SELECT fv.OPCAO_COMISSAO, cv.TIPO_COMISSAO, cv.VALOR_COMISSAO FROM FINANCEIRO_VENDEDOR_VARIACOES fv INNER JOIN CATALOGO_VARIACOES cv ON fv.VARIACAO_ID = cv.ID WHERE fv.VENDEDOR_ID = ? AND cv.NOME_VARIACAO = ? LIMIT 1");
+        $stmt->execute([$vendedorId, $variacaoNome]);
+        return $stmt->fetch(PDO::FETCH_ASSOC) ?: null;
+    }
+
     function calcularEGerarComissao($pdo, $pedidoId, $vendedorId, $produtoBaseNome, $variacaoNome, $valorTotalVenda) {
         if (empty($vendedorId) || $valorTotalVenda <= 0) return;
         try {
-            $stmtProd = $pdo->prepare("SELECT ID FROM CATALOGO_ITENS WHERE NOME = ? LIMIT 1");
-            $stmtProd->execute([$produtoBaseNome]);
-            $produtoId = $stmtProd->fetchColumn();
-            if (!$produtoId) return;
+            // Verifica opção do vendedor para esta variação
+            $regra = buscarRegraComissao($pdo, $vendedorId, $variacaoNome);
 
-            $stmtRegra = $pdo->prepare("SELECT TIPO_COMISSAO, VALOR_COMISSAO FROM FINANCEIRO_ENTIDADE_PRODUTOS WHERE ENTIDADE_ID = ? AND PRODUTO_ID = ? LIMIT 1");
-            $stmtRegra->execute([$vendedorId, $produtoId]);
-            $regra = $stmtRegra->fetch(PDO::FETCH_ASSOC);
-
-            if (!$regra && !empty($variacaoNome)) {
-                $stmtRegraGeral = $pdo->prepare("SELECT TIPO_COMISSAO, VALOR_COMISSAO FROM CATALOGO_VARIACOES WHERE ITEM_ID = ? AND NOME_VARIACAO = ? LIMIT 1");
-                $stmtRegraGeral->execute([$produtoId, $variacaoNome]);
-                $regra = $stmtRegraGeral->fetch(PDO::FETCH_ASSOC);
+            if (!$regra) {
+                // Fallback: busca regra geral via CATALOGO_VARIACOES
+                $stmtProd = $pdo->prepare("SELECT ID FROM CATALOGO_ITENS WHERE NOME = ? LIMIT 1");
+                $stmtProd->execute([$produtoBaseNome]);
+                $produtoId = $stmtProd->fetchColumn();
+                if ($produtoId && !empty($variacaoNome)) {
+                    $stmtRegraGeral = $pdo->prepare("SELECT TIPO_COMISSAO, VALOR_COMISSAO FROM CATALOGO_VARIACOES WHERE ITEM_ID = ? AND NOME_VARIACAO = ? LIMIT 1");
+                    $stmtRegraGeral->execute([$produtoId, $variacaoNome]);
+                    $regraGeral = $stmtRegraGeral->fetch(PDO::FETCH_ASSOC);
+                    if ($regraGeral) $regra = array_merge(['OPCAO_COMISSAO' => 'COMISSAO'], $regraGeral);
+                }
             }
 
             if ($regra && $regra['VALOR_COMISSAO'] > 0) {
-                $valorComissao = 0;
-                if (strtoupper($regra['TIPO_COMISSAO']) === 'PERCENTUAL') {
-                    $valorComissao = $valorTotalVenda * ($regra['VALOR_COMISSAO'] / 100);
-                } else {
-                    $valorComissao = $regra['VALOR_COMISSAO']; 
-                }
+                $valorComissao = strtoupper($regra['TIPO_COMISSAO']) === 'PERCENTUAL'
+                    ? $valorTotalVenda * ($regra['VALOR_COMISSAO'] / 100)
+                    : (float)$regra['VALOR_COMISSAO'];
 
-                $sqlComissao = "INSERT INTO COMERCIAL_COMISSOES (PEDIDO_ID, VENDEDOR_ID, DATA_BASE, VALOR_BASE_VENDA, VALOR_COMISSAO, STATUS_COMISSAO) 
-                                VALUES (?, ?, CURDATE(), ?, ?, 'SEM CONFERENCIA')";
-                $pdo->prepare($sqlComissao)->execute([$pedidoId, $vendedorId, $valorTotalVenda, $valorComissao]);
-                registrarHistorico($pdo, $pedidoId, 'COMISSÃO GERADA', "Comissão de R$ " . number_format($valorComissao, 2, ',', '.') . " calculada via sistema.", 'Robô Financeiro');
+                $opcao = $regra['OPCAO_COMISSAO'] ?? 'COMISSAO';
+
+                if ($opcao === 'DESCONTO') {
+                    // Desconto já foi aplicado no front e no total do pedido — apenas registra no histórico
+                    registrarHistorico($pdo, $pedidoId, 'DESCONTO INDICAÇÃO', "Desconto de R$ " . number_format($valorComissao, 2, ',', '.') . " aplicado (indicação do vendedor ID {$vendedorId}).", 'Robô Financeiro');
+                } else {
+                    $sqlComissao = "INSERT INTO COMERCIAL_COMISSOES (PEDIDO_ID, VENDEDOR_ID, DATA_BASE, VALOR_BASE_VENDA, VALOR_COMISSAO, STATUS_COMISSAO) VALUES (?, ?, CURDATE(), ?, ?, 'SEM CONFERENCIA')";
+                    $pdo->prepare($sqlComissao)->execute([$pedidoId, $vendedorId, $valorTotalVenda, $valorComissao]);
+                    registrarHistorico($pdo, $pedidoId, 'COMISSÃO GERADA', "Comissão de R$ " . number_format($valorComissao, 2, ',', '.') . " calculada via sistema.", 'Robô Financeiro');
+                }
             }
         } catch (Exception $e) { }
     }
@@ -59,10 +71,22 @@ try {
     switch ($acao) {
         case 'buscar_clientes':
             $termo = "%" . trim($_POST['termo'] ?? '') . "%";
-            $stmt = $pdo->prepare("SELECT CPF, NOME, CELULAR FROM CLIENTE_CADASTRO WHERE NOME LIKE ? OR CPF LIKE ? LIMIT 15");
+            $stmt = $pdo->prepare("SELECT c.CPF, c.NOME, c.CELULAR, c.VENDEDOR_REF_ID, v.NOME as VENDEDOR_NOME FROM CLIENTE_CADASTRO c LEFT JOIN FINANCEIRO_VENDEDORES v ON c.VENDEDOR_REF_ID = v.ID WHERE c.NOME LIKE ? OR c.CPF LIKE ? LIMIT 15");
             $stmt->execute([$termo, $termo]);
             echo json_encode(['success' => true, 'data' => $stmt->fetchAll(PDO::FETCH_ASSOC)]);
             break;
+        case 'buscar_desconto_indicacao':
+            // Retorna valor de desconto caso vendedor+variacao tenha OPCAO_COMISSAO=DESCONTO
+            $vendedor_id = (int)$_POST['vendedor_id']; $variacao_nome = trim($_POST['variacao_nome'] ?? ''); $total = (float)$_POST['total'];
+            if ($vendedor_id <= 0 || empty($variacao_nome) || $total <= 0) { echo json_encode(['desconto' => 0]); break; }
+            $stmtV = $pdo->prepare("SELECT fv.OPCAO_COMISSAO, cv.TIPO_COMISSAO, cv.VALOR_COMISSAO FROM FINANCEIRO_VENDEDOR_VARIACOES fv INNER JOIN CATALOGO_VARIACOES cv ON fv.VARIACAO_ID = cv.ID INNER JOIN CATALOGO_ITENS ci ON cv.ITEM_ID = ci.ID WHERE fv.VENDEDOR_ID = ? AND cv.NOME_VARIACAO = ? LIMIT 1");
+            $stmtV->execute([$vendedor_id, $variacao_nome]);
+            $regra = $stmtV->fetch(PDO::FETCH_ASSOC);
+            $desconto = 0;
+            if ($regra && $regra['OPCAO_COMISSAO'] === 'DESCONTO' && $regra['VALOR_COMISSAO'] > 0) {
+                $desconto = strtoupper($regra['TIPO_COMISSAO']) === 'PERCENTUAL' ? round($total * ($regra['VALOR_COMISSAO'] / 100), 2) : (float)$regra['VALOR_COMISSAO'];
+            }
+            echo json_encode(['desconto' => $desconto]); break;
         case 'buscar_produtos':
             $stmt = $pdo->query("SELECT ID, NOME FROM CATALOGO_ITENS WHERE STATUS_ITEM = 'Ativo' ORDER BY NOME ASC");
             echo json_encode(['success' => true, 'data' => $stmt->fetchAll(PDO::FETCH_ASSOC)]);

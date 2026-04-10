@@ -24,7 +24,15 @@
         <div class="row g-2 align-items-end">
             <div class="col-md-3"><label class="small fw-bold">Data Início:</label><input type="date" id="fDataIni" class="form-control border-dark"></div>
             <div class="col-md-3"><label class="small fw-bold">Data Fim:</label><input type="date" id="fDataFim" class="form-control border-dark"></div>
-            <div class="col-md-4"><label class="small fw-bold">Vendedor / Afiliado:</label><select id="fVend" class="form-select border-dark"><option value="">-- Todos os Vendedores --</option></select></div>
+            <div class="col-md-4">
+                <label class="small fw-bold">Vendedor / Afiliado:</label>
+                <div class="position-relative">
+                    <input type="hidden" id="fVend" value="">
+                    <input type="text" id="fVendBusca" class="form-control border-dark fw-bold" placeholder="Buscar por qualquer parte do nome..." autocomplete="off" onkeyup="buscarVendedorFiltro(this.value)" oninput="if(!this.value){document.getElementById('fVend').value='';document.getElementById('fVendNome').innerText='Todos';}">
+                    <ul id="listaVendFiltro" class="list-unstyled bg-white position-absolute w-100 border border-dark rounded-bottom shadow-lg" style="display:none; z-index:9999; max-height:200px; overflow-y:auto; margin:0; padding:0;"></ul>
+                </div>
+                <small class="text-muted">Filtrado: <span id="fVendNome" class="fw-bold text-primary">Todos</span></small>
+            </div>
             <div class="col-md-2"><button class="btn btn-primary w-100 fw-bold border-dark shadow-sm" onclick="carregarTodasEtapas()"><i class="fas fa-sync-alt me-1"></i> Atualizar</button></div>
         </div>
     </div>
@@ -107,13 +115,12 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-      // Define filtros iniciais (Mês atual)
       const data = new Date();
       document.getElementById('fDataIni').value = new Date(data.getFullYear(), data.getMonth(), 1).toISOString().split('T')[0];
       document.getElementById('fDataFim').value = new Date(data.getFullYear(), data.getMonth() + 1, 0).toISOString().split('T')[0];
-      
-      carregarVendedoresFiltro();
       carregarTodasEtapas();
+      // Fecha dropdown ao clicar fora
+      document.addEventListener('click', e => { if(!e.target.closest('#fVendBusca') && !e.target.closest('#listaVendFiltro')) document.getElementById('listaVendFiltro').style.display = 'none'; });
   });
 
   async function callApi(acao, dados = {}) {
@@ -122,13 +129,32 @@
       } catch(e) { return { success: false, msg: "Erro de conexão." }; }
   }
 
-  async function carregarVendedoresFiltro() {
-      const r = await callApi('listar_vendedores_filtro');
-      if(r.success) {
-          let ops = '<option value="">-- Todos os Vendedores --</option>';
-          r.data.forEach(v => ops += `<option value="${v.ID}">${v.NOME}</option>`);
-          document.getElementById('fVend').innerHTML = ops;
-      }
+  let timerVendFiltro;
+  async function buscarVendedorFiltro(termo) {
+      clearTimeout(timerVendFiltro);
+      const ul = document.getElementById('listaVendFiltro');
+      if (!termo || termo.length < 1) { ul.style.display = 'none'; return; }
+      timerVendFiltro = setTimeout(async () => {
+          const r = await callApi('buscar_vendedores_filtro', { termo: termo });
+          if (r.success && r.data.length > 0) {
+              ul.innerHTML = `<li style="padding:8px 12px; cursor:pointer; border-bottom:1px solid #eee; background:#f8f9fa;" onclick="selecionarVendedorFiltro('', 'Todos')"><em>-- Todos os Vendedores --</em></li>`;
+              r.data.forEach(v => {
+                  ul.innerHTML += `<li style="padding:8px 12px; cursor:pointer; border-bottom:1px solid #eee;" onmouseover="this.style.background='#f4511e'; this.style.color='white'" onmouseout="this.style.background=''; this.style.color=''" onclick="selecionarVendedorFiltro(${v.ID}, '${v.NOME.replace(/'/g, "\\'")}')">${v.NOME}</li>`;
+              });
+              ul.style.display = 'block';
+          } else {
+              ul.innerHTML = `<li style="padding:8px 12px; color:#999;">Nenhum vendedor encontrado.</li>`;
+              ul.style.display = 'block';
+          }
+      }, 300);
+  }
+
+  function selecionarVendedorFiltro(id, nome) {
+      document.getElementById('fVend').value = id;
+      document.getElementById('fVendBusca').value = id ? nome : '';
+      document.getElementById('fVendNome').innerText = id ? nome : 'Todos';
+      document.getElementById('listaVendFiltro').style.display = 'none';
+      carregarTodasEtapas();
   }
 
   function carregarTodasEtapas() {

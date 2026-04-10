@@ -91,7 +91,7 @@
       <div class="tab-pane fade" id="planoContas"><div class="d-flex justify-content-between mb-3"><h5 class="fw-bold text-dark m-0 align-self-center"><i class="fas fa-sitemap text-primary me-2"></i>Árvore de Contas Cadastradas</h5><button class="btn btn-primary fw-bold border-dark shadow-sm" onclick="abrirModalPlanoConta()"><i class="fas fa-plus me-1"></i> Criar Nova Conta</button></div><div class="table-responsive border border-dark rounded shadow-sm"><table class="table table-hover mb-0 align-middle"><thead class="table-dark text-white border-dark"><tr><th>Tipo</th><th>Caminho Completo da Conta</th><th>Status</th><th class="text-center">Ações</th></tr></thead><tbody id="tbody-plano-contas"><tr><td colspan="4" class="text-center py-3">Carregando...</td></tr></tbody></table></div></div>
       <div class="tab-pane fade" id="contasBancarias"><div class="d-flex justify-content-between mb-3"><h5 class="fw-bold text-dark m-0 align-self-center"><i class="fas fa-university text-info me-2"></i>Contas de Movimentação (Bancos)</h5><button class="btn btn-info text-dark fw-bold border-dark shadow-sm" onclick="abrirModalContaBancaria()"><i class="fas fa-plus me-1"></i> Adicionar Banco</button></div><div class="table-responsive border border-dark rounded shadow-sm"><table class="table table-hover mb-0 align-middle"><thead class="table-dark text-white border-dark"><tr><th>Nome da Conta (Apelido)</th><th>Dados Bancários (Ag/CC/Pix)</th><th class="text-center">Ações</th></tr></thead><tbody id="tbody-contas-bancarias"><tr><td colspan="3" class="text-center py-3">Carregando...</td></tr></tbody></table></div></div>
       <div class="tab-pane fade" id="entidades"><div class="d-flex justify-content-between mb-3"><h5 class="fw-bold text-dark m-0 align-self-center">Gerenciamento de Entidades</h5><button class="btn btn-primary fw-bold border-dark shadow-sm" onclick="abrirModalVinculo('ENTIDADE')"><i class="fas fa-link me-1"></i> Vincular Nova Entidade</button></div><div class="table-responsive border border-dark rounded"><table class="table table-hover mb-0 align-middle"><thead class="table-dark text-white border-dark"><tr><th>Nome / Razão Social</th><th>Documento</th><th>Tipo Base</th><th>Status</th><th class="text-center">Ações</th></tr></thead><tbody id="tbody-entidades"></tbody></table></div></div>
-      <div class="tab-pane fade" id="vendedores"><div class="d-flex justify-content-between mb-3"><h5 class="fw-bold text-dark m-0 align-self-center">Gerenciamento de Vendedores</h5><button class="btn btn-warning text-dark fw-bold border-dark shadow-sm" onclick="abrirModalVinculo('VENDEDOR')"><i class="fas fa-link me-1"></i> Vincular Novo Vendedor</button></div><div class="table-responsive border border-dark rounded"><table class="table table-hover mb-0 align-middle"><thead class="table-dark text-white border-dark"><tr><th>Nome / Razão Social</th><th>Documento</th><th>Tipo Base</th><th>Status</th><th class="text-center">Ações</th></tr></thead><tbody id="tbody-vendedores"></tbody></table></div></div>
+      <div class="tab-pane fade" id="vendedores"><div class="d-flex justify-content-between mb-3"><h5 class="fw-bold text-dark m-0 align-self-center">Gerenciamento de Vendedores</h5><button class="btn btn-warning text-dark fw-bold border-dark shadow-sm" onclick="abrirModalVinculo('VENDEDOR')"><i class="fas fa-link me-1"></i> Vincular Novo Vendedor</button></div><div class="table-responsive border border-dark rounded"><table class="table table-hover mb-0 align-middle"><thead class="table-dark text-white border-dark"><tr><th>Nome / Razão Social</th><th>Documento</th><th>Tipo Base</th><th class="text-center">Indicados</th><th>Link de Indicação</th><th>Status</th><th class="text-center">Ações</th></tr></thead><tbody id="tbody-vendedores"></tbody></table></div></div>
     </div>
 </div>
 
@@ -240,7 +240,29 @@
 <div class="modal fade" id="mContaBancaria"><div class="modal-dialog"><div class="modal-content border-dark shadow-lg"><div class="modal-header bg-info text-dark border-dark"><h5 class="modal-title fw-bold text-uppercase"><i class="fas fa-university me-2"></i>Conta de Movimentação</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body bg-light"><form id="fContaBancaria"><input type="hidden" id="cbId"><div class="mb-3"><label class="small fw-bold">Apelido da Conta:</label><input type="text" id="cbNome" class="form-control border-dark text-uppercase fw-bold" required></div><div class="mb-4"><label class="small fw-bold">Dados Bancários / PIX:</label><textarea id="cbDados" class="form-control border-dark" rows="3" required></textarea></div><button type="submit" class="btn btn-info text-dark w-100 fw-bold border-dark shadow-sm">Salvar</button></form></div></div></div></div>
 <div class="modal fade" id="mPlanoConta"><div class="modal-dialog"><div class="modal-content border-dark shadow-lg"><div class="modal-header bg-primary text-white border-dark"><h5 class="modal-title fw-bold text-uppercase"><i class="fas fa-sitemap me-2"></i>Conta Hierárquica</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body bg-light"><form id="fPlanoConta"><input type="hidden" id="pcId"><div class="mb-3"><label class="small fw-bold">Tipo da Conta:</label><select id="pcTipo" class="form-select border-dark fw-bold" required onchange="carregarPaisSelect()"><option value="">-- Selecione --</option><option value="ENTRADA">ENTRADA (Receitas)</option><option value="SAIDA">SAÍDA (Despesas)</option></select></div><div class="mb-3"><label class="small fw-bold">Selecione a Conta PAI:</label><select id="pcParent" class="form-select border-dark"><option value="">-- É UMA CONTA PRINCIPAL RAIZ --</option></select></div><div class="mb-4"><label class="small fw-bold text-primary">Nome Específico:</label><input type="text" id="pcNome" class="form-control border-dark text-uppercase fw-bold" required></div><button type="submit" class="btn btn-primary w-100 fw-bold border-dark shadow-sm">Gravar no Plano</button></form></div></div></div></div>
 <div class="modal fade" id="mVinculo"><div class="modal-dialog"><div class="modal-content border-dark shadow-lg"><div class="modal-header bg-dark text-white border-bottom border-dark"><h5 class="modal-title fw-bold text-uppercase" id="titVinculo">Vincular Cadastro</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body bg-light"><form id="fVinculo"><input type="hidden" id="vDestino"><input type="hidden" id="vId"><div class="mb-3 position-relative"><label class="fw-bold small text-primary"><i class="fas fa-search"></i> Buscar Nome, CPF ou CNPJ:</label><input type="text" id="vBusca" class="form-control border-dark fw-bold text-uppercase" autocomplete="off" onkeyup="buscarBase(this.value)" required><ul id="listaBase" class="list-unstyled autocomplete-lista shadow-lg rounded-bottom"></ul></div><div class="row mb-4"><div class="col-md-8"><label class="fw-bold small">Nome Selecionado:</label><input type="text" id="vNome" class="form-control border-dark bg-white" readonly required></div><div class="col-md-4"><label class="fw-bold small">Tipo / Base:</label><input type="text" id="vTipo" class="form-control border-dark bg-white fw-bold text-secondary" readonly></div><input type="hidden" id="vDoc"></div><button type="submit" class="btn btn-primary w-100 fw-bold border-dark shadow-sm"><i class="fas fa-save me-1"></i> Salvar Vínculo</button></form></div></div></div></div>
-<div class="modal fade" id="mComissaoVendedor"><div class="modal-dialog modal-xl"><div class="modal-content border-dark shadow-lg"><div class="modal-header bg-warning text-dark border-bottom border-dark"><h5 class="modal-title fw-bold text-uppercase"><i class="fas fa-money-check-alt me-2"></i>Tabelas e Comissões Liberadas</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body bg-light"><h5 class="fw-bold text-dark border-bottom border-dark pb-2 mb-3" id="nomeVendedorTabela">Vendedor: </h5><form id="fComissaoVend" class="row g-2 align-items-end mb-4 bg-white p-3 border border-dark rounded shadow-sm"><input type="hidden" id="cVendId"><div class="col-md-9"><label class="small fw-bold text-primary">Selecione o Produto e Variação que este vendedor pode vender:</label><select id="cVariacaoId" class="form-select border-dark fw-bold" required></select></div><div class="col-md-3"><button type="submit" class="btn btn-success w-100 fw-bold border-dark shadow-sm"><i class="fas fa-check-circle me-1"></i> Liberar Venda</button></div></form><div class="table-responsive border border-dark rounded shadow-sm"><table class="table table-sm table-hover mb-0 align-middle"><thead class="table-dark text-white border-dark"><tr><th>Produto Base</th><th>Nome da Variação (Preço)</th><th>Sua Comissão (Regra)</th><th class="text-center">Ações</th></tr></thead><tbody id="tbodyComVend"><tr><td colspan="4" class="text-center py-4 text-muted">Carregando tabelas...</td></tr></tbody></table></div></div></div></div></div>
+<div class="modal fade" id="mComissaoVendedor"><div class="modal-dialog modal-xl"><div class="modal-content border-dark shadow-lg"><div class="modal-header bg-warning text-dark border-bottom border-dark"><h5 class="modal-title fw-bold text-uppercase"><i class="fas fa-money-check-alt me-2"></i>Tabelas e Comissões Liberadas</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body bg-light"><h5 class="fw-bold text-dark border-bottom border-dark pb-2 mb-3" id="nomeVendedorTabela">Vendedor: </h5><form id="fComissaoVend" class="row g-2 align-items-end mb-4 bg-white p-3 border border-dark rounded shadow-sm"><input type="hidden" id="cVendId"><div class="col-md-9"><label class="small fw-bold text-primary">Selecione o Produto e Variação que este vendedor pode vender:</label><select id="cVariacaoId" class="form-select border-dark fw-bold" required></select></div><div class="col-md-3"><button type="submit" class="btn btn-success w-100 fw-bold border-dark shadow-sm"><i class="fas fa-check-circle me-1"></i> Liberar Venda</button></div></form><div class="table-responsive border border-dark rounded shadow-sm"><table class="table table-sm table-hover mb-0 align-middle"><thead class="table-dark text-white border-dark"><tr><th>Produto Base</th><th>Nome da Variação (Preço)</th><th>Comissão (Regra)</th><th class="text-center">Opção do Vendedor</th><th class="text-center">Ações</th></tr></thead><tbody id="tbodyComVend"><tr><td colspan="5" class="text-center py-4 text-muted">Carregando tabelas...</td></tr></tbody></table></div><div class="alert alert-info border-info mt-3 py-2 small fw-bold"><i class="fas fa-info-circle me-2"></i> <b>COMISSÃO</b>: valor pago ao vendedor após o pedido. &nbsp;|&nbsp; <b>DESCONTO</b>: desconto automático aplicado no pedido, no valor da comissão.</div></div></div></div></div>
+
+<div class="modal fade" id="mIndicados" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content border-dark shadow-lg">
+      <div class="modal-header bg-primary text-white border-dark">
+        <h5 class="modal-title fw-bold text-uppercase"><i class="fas fa-users me-2"></i>Clientes Indicados — <span id="nomeVendedorIndicados"></span></h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body bg-light p-0">
+        <div class="table-responsive">
+          <table class="table table-hover mb-0 align-middle">
+            <thead class="table-dark text-white border-dark sticky-top">
+              <tr><th>Nome</th><th>CPF</th><th>Celular</th><th>Empresa</th><th>Situação</th><th>Cadastro</th></tr>
+            </thead>
+            <tbody id="tbodyIndicados"><tr><td colspan="6" class="text-center py-4 text-muted">Carregando...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer bg-light border-top border-dark"><button class="btn btn-dark fw-bold border-dark" data-bs-dismiss="modal">Fechar</button></div>
+    </div>
+  </div>
+</div>
 
 <div class="modal fade" id="mExtratoPagBank" tabindex="-1">
   <div class="modal-dialog modal-lg">
@@ -288,16 +310,17 @@
   let modais = {}; let delayTimer; window.listaContasCache = []; window.caixaList = [];
 
   document.addEventListener("DOMContentLoaded", () => {
-      modais = { 
-          lancamento: new bootstrap.Modal(document.getElementById('mNovoLancamento')), 
-          visLancamento: new bootstrap.Modal(document.getElementById('mVisLancamento')), 
+      modais = {
+          lancamento: new bootstrap.Modal(document.getElementById('mNovoLancamento')),
+          visLancamento: new bootstrap.Modal(document.getElementById('mVisLancamento')),
           conciliar: new bootstrap.Modal(document.getElementById('mConciliar')),
-          vinculo: new bootstrap.Modal(document.getElementById('mVinculo')), 
-          comissaoVend: new bootstrap.Modal(document.getElementById('mComissaoVendedor')), 
-          plano: new bootstrap.Modal(document.getElementById('mPlanoConta')), 
-          banco: new bootstrap.Modal(document.getElementById('mContaBancaria')), 
+          vinculo: new bootstrap.Modal(document.getElementById('mVinculo')),
+          comissaoVend: new bootstrap.Modal(document.getElementById('mComissaoVendedor')),
+          plano: new bootstrap.Modal(document.getElementById('mPlanoConta')),
+          banco: new bootstrap.Modal(document.getElementById('mContaBancaria')),
           visPlano: new bootstrap.Modal(document.getElementById('mVisPlanoConta')),
-          extratoPagbank: new bootstrap.Modal(document.getElementById('mExtratoPagBank'))
+          extratoPagbank: new bootstrap.Modal(document.getElementById('mExtratoPagBank')),
+          indicados: new bootstrap.Modal(document.getElementById('mIndicados'))
       };
       carregarCaixa();
   });
@@ -704,10 +727,95 @@
   function abrirModalVinculo(tipo, id=0, nome='', doc='', tipoBase='') { document.getElementById('fVinculo').reset(); document.getElementById('vDestino').value = tipo; document.getElementById('vId').value = id; document.getElementById('titVinculo').innerText = id > 0 ? `Editar Vínculo (${tipo})` : `Vincular Novo ${tipo}`; if(id > 0) { document.getElementById('vBusca').value = nome; document.getElementById('vNome').value = nome; document.getElementById('vDoc').value = doc; document.getElementById('vTipo').value = tipoBase; } modais.vinculo.show(); }
   document.getElementById('fVinculo').addEventListener('submit', async e => { e.preventDefault(); const dest = document.getElementById('vDestino').value; const f = { id: document.getElementById('vId').value, nome: document.getElementById('vNome').value, documento: document.getElementById('vDoc').value, tipo: document.getElementById('vTipo').value }; const r = await callFinanceiro(dest === 'ENTIDADE' ? 'salvar_entidade' : 'salvar_vendedor', f); if(r.success) { modais.vinculo.hide(); dest === 'ENTIDADE' ? carregarEntidades() : carregarVendedores(); } else alert(r.msg); });
   async function carregarEntidades() { const r = await callFinanceiro('listar_entidades'); const tb = document.getElementById('tbody-entidades'); tb.innerHTML = ''; if(r.success) r.data.forEach(x => { tb.innerHTML += `<tr class="border-bottom border-dark"><td class="fw-bold text-primary">${x.NOME}</td><td>${x.DOCUMENTO}</td><td><span class="badge bg-secondary">${x.TIPO_VINCULO}</span></td><td><span class="badge bg-success">Ativo</span></td><td class="text-center"><button class="btn btn-sm btn-dark fw-bold shadow-sm me-1" onclick="abrirModalVinculo('ENTIDADE', ${x.ID}, '${x.NOME}', '${x.DOCUMENTO}', '${x.TIPO_VINCULO}')"><i class="fas fa-edit"></i></button><button class="btn btn-sm btn-danger fw-bold shadow-sm" onclick="if(confirm('Desvincular?')) callFinanceiro('excluir_entidade',{id:${x.ID}}).then(carregarEntidades)"><i class="fas fa-unlink"></i></button></td></tr>`; }); }
-  async function carregarVendedores() { const r = await callFinanceiro('listar_vendedores'); const tb = document.getElementById('tbody-vendedores'); tb.innerHTML = ''; if(r.success) r.data.forEach(x => { tb.innerHTML += `<tr class="border-bottom border-dark"><td class="fw-bold text-warning text-dark">${x.NOME}</td><td>${x.DOCUMENTO_VENDEDOR}</td><td><span class="badge bg-secondary">${x.TIPO_VINCULO}</span></td><td><span class="badge bg-success">Ativo</span></td><td class="text-center"><button class="btn btn-sm btn-success fw-bold border-dark shadow-sm me-1" onclick="abrirComissoesVendedor(${x.ID}, '${x.NOME}')" title="Tabelas de Comissão Liberadas"><i class="fas fa-money-check-alt"></i> Liberação</button><button class="btn btn-sm btn-dark fw-bold shadow-sm me-1" onclick="abrirModalVinculo('VENDEDOR', ${x.ID}, '${x.NOME}', '${x.DOCUMENTO_VENDEDOR}', '${x.TIPO_VINCULO}')"><i class="fas fa-edit"></i></button><button class="btn btn-sm btn-danger fw-bold shadow-sm" onclick="if(confirm('Desvincular?')) callFinanceiro('excluir_vendedor',{id:${x.ID}}).then(carregarVendedores)"><i class="fas fa-unlink"></i></button></td></tr>`; }); }
+  async function carregarVendedores() {
+    const r = await callFinanceiro('listar_vendedores');
+    const tb = document.getElementById('tbody-vendedores');
+    tb.innerHTML = '';
+    if(r.success) r.data.forEach(x => {
+      let linkHtml = x.LINK_INDICACAO
+        ? `<div class="d-flex align-items-center gap-1"><input type="text" value="${x.LINK_INDICACAO}" readonly class="form-control form-control-sm border-dark fw-bold" style="font-size:0.75rem; max-width:260px;" id="lnk_${x.ID}"><button class="btn btn-sm btn-outline-dark border-dark shadow-sm" title="Copiar link" onclick="copiarLink('lnk_${x.ID}')"><i class="fas fa-copy"></i></button></div>`
+        : `<button class="btn btn-sm btn-info text-dark fw-bold border-dark shadow-sm" onclick="gerarLinkVendedor(${x.ID})"><i class="fas fa-link me-1"></i> Gerar Link</button>`;
+      tb.innerHTML += `<tr class="border-bottom border-dark">
+        <td class="fw-bold text-dark">${x.NOME}</td>
+        <td>${x.DOCUMENTO_VENDEDOR}</td>
+        <td><span class="badge bg-secondary">${x.TIPO_VINCULO}</span></td>
+        <td class="text-center"><span class="badge bg-primary fs-6" style="cursor:pointer;" title="Ver clientes indicados" onclick="verIndicados(${x.ID}, '${x.NOME.replace(/'/g,"\\'")}')">${x.TOTAL_INDICADOS ?? 0}</span></td>
+        <td>${linkHtml}</td>
+        <td><span class="badge bg-success">Ativo</span></td>
+        <td class="text-center">
+          <button class="btn btn-sm btn-success fw-bold border-dark shadow-sm me-1" onclick="abrirComissoesVendedor(${x.ID}, '${x.NOME}')" title="Tabelas de Comissão Liberadas"><i class="fas fa-money-check-alt"></i> Liberação</button>
+          <button class="btn btn-sm btn-dark fw-bold shadow-sm me-1" onclick="abrirModalVinculo('VENDEDOR', ${x.ID}, '${x.NOME}', '${x.DOCUMENTO_VENDEDOR}', '${x.TIPO_VINCULO}')"><i class="fas fa-edit"></i></button>
+          <button class="btn btn-sm btn-danger fw-bold shadow-sm" onclick="if(confirm('Desvincular?')) callFinanceiro('excluir_vendedor',{id:${x.ID}}).then(carregarVendedores)"><i class="fas fa-unlink"></i></button>
+        </td></tr>`;
+    });
+  }
+  async function gerarLinkVendedor(id) {
+    if(!confirm('Gerar link único de indicação para este vendedor?')) return;
+    const r = await callFinanceiro('gerar_link_vendedor', { id: id });
+    if(r.success) { carregarVendedores(); } else { alert(r.msg); }
+  }
+  async function verIndicados(vendedorId, nomeVendedor) {
+    document.getElementById('nomeVendedorIndicados').innerText = nomeVendedor;
+    document.getElementById('tbodyIndicados').innerHTML = '<tr><td colspan="6" class="text-center py-4 text-primary"><i class="fas fa-spinner fa-spin"></i> Buscando...</td></tr>';
+    modais.indicados.show();
+    const r = await callFinanceiro('listar_indicados_vendedor', { vendedor_id: vendedorId });
+    const tb = document.getElementById('tbodyIndicados');
+    if (r.success) {
+      if (!r.data.length) { tb.innerHTML = '<tr><td colspan="6" class="text-center py-4 text-muted fw-bold">Nenhum cliente indicado ainda.</td></tr>'; return; }
+      tb.innerHTML = '';
+      r.data.forEach(c => {
+        let sit = c.SITUACAO === 'ATIVO' ? '<span class="badge bg-success">ATIVO</span>' : `<span class="badge bg-secondary">${c.SITUACAO || 'N/A'}</span>`;
+        tb.innerHTML += `<tr class="border-bottom border-dark">
+          <td class="fw-bold text-primary">${c.NOME || '-'}</td>
+          <td><code>${c.CPF}</code></td>
+          <td>${c.CELULAR || '-'}</td>
+          <td>${c.NOME_EMPRESA || '-'}</td>
+          <td>${sit}</td>
+          <td class="small text-muted">${c.DATA_CADASTRO_BR || '-'}</td>
+        </tr>`;
+      });
+    } else { tb.innerHTML = `<tr><td colspan="6" class="text-center text-danger py-4">${r.msg}</td></tr>`; }
+  }
+
+  function copiarLink(inputId) {
+    const el = document.getElementById(inputId); el.select(); el.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(el.value).then(() => {
+      const btn = el.nextElementSibling; const orig = btn.innerHTML;
+      btn.innerHTML = '<i class="fas fa-check text-success"></i>'; btn.classList.add('btn-success'); btn.classList.remove('btn-outline-dark');
+      setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('btn-success'); btn.classList.add('btn-outline-dark'); }, 1800);
+    });
+  }
   async function carregarSelectCatalogoComissoes() { const r = await callFinanceiro('buscar_variacoes_catalogo'); if(r.success) { let ops = '<option value="">-- Selecione o Produto / Variação --</option>'; r.data.forEach(p => { let valor_venda = parseFloat(p.VALOR_VENDA).toFixed(2).replace('.', ','); let regra_comissao = p.TIPO_COMISSAO === 'PERCENTUAL' ? p.VALOR_COMISSAO+'%' : 'R$ '+p.VALOR_COMISSAO; ops += `<option value="${p.ID}">📦 ${p.PRODUTO_NOME} ➡ [${p.NOME_VARIACAO}] - Venda: R$ ${valor_venda} | Comissão: ${regra_comissao}</option>`; }); document.getElementById('cVariacaoId').innerHTML = ops; } }
   function abrirComissoesVendedor(idVendedor, nomeVendedor) { document.getElementById('cVendId').value = idVendedor; document.getElementById('nomeVendedorTabela').innerHTML = `<i class="fas fa-user-tie me-2"></i>${nomeVendedor}`; carregarSelectCatalogoComissoes(); carregarTabelasLiberadas(); modais.comissaoVend.show(); }
-  async function carregarTabelasLiberadas() { const tb = document.getElementById('tbodyComVend'); tb.innerHTML = '<tr><td colspan="4" class="text-center py-4 text-primary"><i class="fas fa-spinner fa-spin"></i> Lendo tabelas...</td></tr>'; const r = await callFinanceiro('listar_comissoes_vendedor', { vendedor_id: document.getElementById('cVendId').value }); tb.innerHTML = ''; if(r.success) { if(r.data.length === 0) { tb.innerHTML = '<tr><td colspan="4" class="text-center py-4 text-muted fw-bold">Nenhuma tabela liberada.</td></tr>'; return; } r.data.forEach(x => { tb.innerHTML += `<tr class="border-bottom border-dark"><td class="fw-bold text-primary">${x.PRODUTO_NOME}</td><td class="fw-bold">${x.NOME_VARIACAO} <span class="badge bg-secondary">R$ ${parseFloat(x.VALOR_VENDA).toFixed(2).replace('.', ',')}</span></td><td class="fw-bold text-success">${x.TIPO_COMISSAO === 'PERCENTUAL' ? x.VALOR_COMISSAO+' %' : 'R$ '+x.VALOR_COMISSAO}</td><td class="text-center"><button class="btn btn-sm btn-danger border-dark" onclick="if(confirm('Remover permissão?')) callFinanceiro('excluir_comissao_vendedor',{id:${x.VINCULO_ID}}).then(carregarTabelasLiberadas)"><i class="fas fa-trash"></i></button></td></tr>`; }); } }
+  async function carregarTabelasLiberadas() {
+    const tb = document.getElementById('tbodyComVend');
+    tb.innerHTML = '<tr><td colspan="5" class="text-center py-4 text-primary"><i class="fas fa-spinner fa-spin"></i> Lendo tabelas...</td></tr>';
+    const r = await callFinanceiro('listar_comissoes_vendedor', { vendedor_id: document.getElementById('cVendId').value });
+    tb.innerHTML = '';
+    if(r.success) {
+      if(r.data.length === 0) { tb.innerHTML = '<tr><td colspan="5" class="text-center py-4 text-muted fw-bold">Nenhuma tabela liberada.</td></tr>'; return; }
+      r.data.forEach(x => {
+        let opcao = x.OPCAO_COMISSAO || 'COMISSAO';
+        let btnCom = opcao === 'COMISSAO'
+          ? `<button class="btn btn-sm btn-success fw-bold border-dark shadow-sm" disabled title="Ativo"><i class="fas fa-hand-holding-usd me-1"></i> Comissão</button>`
+          : `<button class="btn btn-sm btn-outline-success border-dark" onclick="toggleOpcaoComissao(${x.VINCULO_ID}, 'COMISSAO')" title="Clique para alterar para Comissão"><i class="fas fa-hand-holding-usd me-1"></i> Comissão</button>`;
+        let btnDes = opcao === 'DESCONTO'
+          ? `<button class="btn btn-sm btn-warning fw-bold border-dark shadow-sm text-dark" disabled title="Ativo"><i class="fas fa-tag me-1"></i> Desconto</button>`
+          : `<button class="btn btn-sm btn-outline-warning border-dark text-dark" onclick="toggleOpcaoComissao(${x.VINCULO_ID}, 'DESCONTO')" title="Clique para alterar para Desconto"><i class="fas fa-tag me-1"></i> Desconto</button>`;
+        tb.innerHTML += `<tr class="border-bottom border-dark">
+          <td class="fw-bold text-primary">${x.PRODUTO_NOME}</td>
+          <td class="fw-bold">${x.NOME_VARIACAO} <span class="badge bg-secondary">R$ ${parseFloat(x.VALOR_VENDA).toFixed(2).replace('.', ',')}</span></td>
+          <td class="fw-bold text-success">${x.TIPO_COMISSAO === 'PERCENTUAL' ? x.VALOR_COMISSAO+' %' : 'R$ '+x.VALOR_COMISSAO}</td>
+          <td class="text-center"><div class="btn-group btn-group-sm">${btnCom}${btnDes}</div></td>
+          <td class="text-center"><button class="btn btn-sm btn-danger border-dark" onclick="if(confirm('Remover permissão?')) callFinanceiro('excluir_comissao_vendedor',{id:${x.VINCULO_ID}}).then(carregarTabelasLiberadas)"><i class="fas fa-trash"></i></button></td>
+        </tr>`;
+      });
+    }
+  }
+  async function toggleOpcaoComissao(vinculoId, novaOpcao) {
+    const r = await callFinanceiro('atualizar_opcao_comissao', { id: vinculoId, opcao: novaOpcao });
+    if(r.success) carregarTabelasLiberadas(); else alert(r.msg);
+  }
   document.getElementById('fComissaoVend').addEventListener('submit', async e => { e.preventDefault(); const f = { vendedor_id: document.getElementById('cVendId').value, variacao_id: document.getElementById('cVariacaoId').value }; const r = await callFinanceiro('salvar_comissao_vendedor', f); if(r.success) { carregarTabelasLiberadas(); } else { alert(r.msg); } });
 </script>
 

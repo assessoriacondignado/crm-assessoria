@@ -196,7 +196,22 @@ try {
         case 'excluir_entidade':
             $pdo->prepare("DELETE FROM FINANCEIRO_ENTIDADES WHERE ID = ?")->execute([(int)$_POST['id']]); echo json_encode(['success' => true]); break;
         case 'listar_vendedores':
-            echo json_encode(['success' => true, 'data' => $pdo->query("SELECT * FROM FINANCEIRO_VENDEDORES ORDER BY NOME ASC")->fetchAll(PDO::FETCH_ASSOC)]); break;
+            $rows = $pdo->query("SELECT v.*, (SELECT COUNT(*) FROM CLIENTE_CADASTRO c WHERE c.VENDEDOR_REF_ID = v.ID) as TOTAL_INDICADOS FROM FINANCEIRO_VENDEDORES v ORDER BY v.NOME ASC")->fetchAll(PDO::FETCH_ASSOC);
+            $base = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'];
+            foreach($rows as &$r) { $r['LINK_INDICACAO'] = $r['LINK_TOKEN'] ? $base . '/indicacao.php?ref=' . $r['LINK_TOKEN'] : null; }
+            echo json_encode(['success' => true, 'data' => $rows]); break;
+        case 'listar_indicados_vendedor':
+            $vid = (int)$_POST['vendedor_id'];
+            $stmt = $pdo->prepare("SELECT CPF, NOME, CELULAR, NOME_EMPRESA, SITUACAO, DATA_CADASTRO FROM CLIENTE_CADASTRO WHERE VENDEDOR_REF_ID = ? ORDER BY NOME ASC");
+            $stmt->execute([$vid]);
+            $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            foreach($rows as &$r) { $r['DATA_CADASTRO_BR'] = $r['DATA_CADASTRO'] ? date('d/m/Y', strtotime($r['DATA_CADASTRO'])) : null; }
+            echo json_encode(['success' => true, 'data' => $rows]); break;
+        case 'gerar_link_vendedor':
+            $id = (int)$_POST['id']; $token = bin2hex(random_bytes(24));
+            $pdo->prepare("UPDATE FINANCEIRO_VENDEDORES SET LINK_TOKEN = ? WHERE ID = ?")->execute([$token, $id]);
+            $base = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'];
+            echo json_encode(['success' => true, 'link' => $base . '/indicacao.php?ref=' . $token]); break;
         case 'salvar_vendedor':
             $doc = trim($_POST['documento']); $nome = trim($_POST['nome']); $tipo = $_POST['tipo']; $id = (int)($_POST['id'] ?? 0);
             try { if($id > 0) { $pdo->prepare("UPDATE FINANCEIRO_VENDEDORES SET DOCUMENTO_VENDEDOR=?, NOME=?, TIPO_VINCULO=? WHERE ID=?")->execute([$doc, $nome, $tipo, $id]); echo json_encode(['success' => true, 'msg' => 'Atualizado!']); } else { $pdo->prepare("INSERT INTO FINANCEIRO_VENDEDORES (DOCUMENTO_VENDEDOR, NOME, TIPO_VINCULO) VALUES (?, ?, ?)")->execute([$doc, $nome, $tipo]); echo json_encode(['success' => true, 'msg' => 'Vinculado!']); } } catch (PDOException $e) { if($e->getCode() == 23000) echo json_encode(['success' => false, 'msg' => 'Documento já vinculado!']); else throw $e; } break;
@@ -205,9 +220,13 @@ try {
         case 'buscar_variacoes_catalogo':
             $sql = "SELECT v.ID, v.NOME_VARIACAO, v.VALOR_VENDA, v.TIPO_COMISSAO, v.VALOR_COMISSAO, p.NOME as PRODUTO_NOME FROM CATALOGO_VARIACOES v INNER JOIN CATALOGO_ITENS p ON v.ITEM_ID = p.ID WHERE v.STATUS_VARIACAO = 'Ativo' AND p.STATUS_ITEM = 'Ativo' ORDER BY p.NOME ASC, v.NOME_VARIACAO ASC"; echo json_encode(['success' => true, 'data' => $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC)]); break;
         case 'listar_comissoes_vendedor':
-            $stmt = $pdo->prepare("SELECT fv.ID as VINCULO_ID, v.NOME_VARIACAO, v.VALOR_VENDA, v.TIPO_COMISSAO, v.VALOR_COMISSAO, p.NOME as PRODUTO_NOME FROM FINANCEIRO_VENDEDOR_VARIACOES fv INNER JOIN CATALOGO_VARIACOES v ON fv.VARIACAO_ID = v.ID INNER JOIN CATALOGO_ITENS p ON v.ITEM_ID = p.ID WHERE fv.VENDEDOR_ID = ? ORDER BY p.NOME ASC"); $stmt->execute([(int)$_POST['vendedor_id']]); echo json_encode(['success' => true, 'data' => $stmt->fetchAll(PDO::FETCH_ASSOC)]); break;
+            $stmt = $pdo->prepare("SELECT fv.ID as VINCULO_ID, fv.OPCAO_COMISSAO, v.NOME_VARIACAO, v.VALOR_VENDA, v.TIPO_COMISSAO, v.VALOR_COMISSAO, p.NOME as PRODUTO_NOME FROM FINANCEIRO_VENDEDOR_VARIACOES fv INNER JOIN CATALOGO_VARIACOES v ON fv.VARIACAO_ID = v.ID INNER JOIN CATALOGO_ITENS p ON v.ITEM_ID = p.ID WHERE fv.VENDEDOR_ID = ? ORDER BY p.NOME ASC"); $stmt->execute([(int)$_POST['vendedor_id']]); echo json_encode(['success' => true, 'data' => $stmt->fetchAll(PDO::FETCH_ASSOC)]); break;
         case 'salvar_comissao_vendedor':
-            $id_vendedor = (int)$_POST['vendedor_id']; $id_variacao = (int)$_POST['variacao_id']; $check = $pdo->prepare("SELECT ID FROM FINANCEIRO_VENDEDOR_VARIACOES WHERE VENDEDOR_ID = ? AND VARIACAO_ID = ?"); $check->execute([$id_vendedor, $id_variacao]); if($check->rowCount() > 0) { echo json_encode(['success' => false, 'msg' => 'Este produto já está liberado!']); break; } $pdo->prepare("INSERT INTO FINANCEIRO_VENDEDOR_VARIACOES (VENDEDOR_ID, VARIACAO_ID) VALUES (?, ?)")->execute([$id_vendedor, $id_variacao]); echo json_encode(['success' => true, 'msg' => 'Tabela liberada!']); break;
+            $id_vendedor = (int)$_POST['vendedor_id']; $id_variacao = (int)$_POST['variacao_id']; $check = $pdo->prepare("SELECT ID FROM FINANCEIRO_VENDEDOR_VARIACOES WHERE VENDEDOR_ID = ? AND VARIACAO_ID = ?"); $check->execute([$id_vendedor, $id_variacao]); if($check->rowCount() > 0) { echo json_encode(['success' => false, 'msg' => 'Este produto já está liberado!']); break; } $pdo->prepare("INSERT INTO FINANCEIRO_VENDEDOR_VARIACOES (VENDEDOR_ID, VARIACAO_ID, OPCAO_COMISSAO) VALUES (?, ?, 'COMISSAO')")->execute([$id_vendedor, $id_variacao]); echo json_encode(['success' => true, 'msg' => 'Tabela liberada!']); break;
+        case 'atualizar_opcao_comissao':
+            $id = (int)$_POST['id']; $opcao = $_POST['opcao'] === 'DESCONTO' ? 'DESCONTO' : 'COMISSAO';
+            $pdo->prepare("UPDATE FINANCEIRO_VENDEDOR_VARIACOES SET OPCAO_COMISSAO = ? WHERE ID = ?")->execute([$opcao, $id]);
+            echo json_encode(['success' => true]); break;
         case 'excluir_comissao_vendedor':
             $pdo->prepare("DELETE FROM FINANCEIRO_VENDEDOR_VARIACOES WHERE ID = ?")->execute([(int)$_POST['id']]); echo json_encode(['success' => true]); break;
         default: echo json_encode(['success' => false, 'msg' => 'Ação não especificada.']); break;

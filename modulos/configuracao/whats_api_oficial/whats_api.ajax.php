@@ -20,7 +20,14 @@ try {
     if (file_exists($caminho_perm)) { require_once $caminho_perm; }
     if (!function_exists('VerificaBloqueio')) { function VerificaBloqueio($chave) { return false; } }
 
-    $id_empresa = $_SESSION['empresa_id'] ?? null;
+    // Busca empresa_id da sessão; se ausente, busca do banco e salva na sessão
+    if (!isset($_SESSION['empresa_id'])) {
+        $stmtEmp = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+        $stmtEmp->execute([$cpf_logado]);
+        $empRow = $stmtEmp->fetchColumn();
+        $_SESSION['empresa_id'] = $empRow ?: 1; // fallback para empresa 1
+    }
+    $id_empresa = $_SESSION['empresa_id'];
 
     // Helper: busca token pelo Phone ID (BM hierarchy → fallback legado)
     function getTokenPorPhoneId($phone_id, $pdo) {
@@ -57,12 +64,24 @@ try {
 
         case 'listar_bms':
             // Lista todos os BMs da empresa do usuário logado
-            $stmt = $pdo->prepare("SELECT b.*, COUNT(c.ID) as QTD_WABAS FROM WHATSAPP_OFICIAL_BM b
+            $stmt = $pdo->prepare("SELECT b.*, COUNT(c.ID) as QTD_WABAS,
+                COALESCE(e.NOME_CADASTRO, '') as NOME_EMPRESA
+                FROM WHATSAPP_OFICIAL_BM b
                 LEFT JOIN WHATSAPP_OFICIAL_CONTAS c ON c.bm_id = b.ID
+                LEFT JOIN CLIENTE_EMPRESAS e ON e.ID = b.id_empresa
                 WHERE b.id_empresa = ?
                 GROUP BY b.ID ORDER BY b.NOME_BM ASC");
             $stmt->execute([$id_empresa]);
             $bms = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            // Máscara: primeiros 10 + *** + últimos 5 chars do token
+            foreach ($bms as &$bm) {
+                $tok = $bm['PERMANENT_TOKEN'] ?? '';
+                $bm['TOKEN_MASKED'] = strlen($tok) > 15
+                    ? substr($tok, 0, 10) . '•••••••••••••••' . substr($tok, -5)
+                    : str_repeat('•', strlen($tok));
+                unset($bm['PERMANENT_TOKEN']); // nunca envia o token completo ao front
+            }
+            unset($bm);
 
             // Para cada BM, carrega suas WABAs com os phones
             foreach ($bms as &$bm) {
