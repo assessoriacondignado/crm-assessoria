@@ -109,14 +109,14 @@ try {
         if (!$is_busca_avancada && !empty($termo_busca) && empty($cpf_selecionado)) {
             $termo_limpo_num = preg_replace('/[^0-9]/', '', $termo_busca);
             
-            // Adicionado prefixo 'c.'
-            $filtro_sql .= " AND (c.NOME LIKE :termo OR c.BANCO_NOME LIKE :termo ";
-            $params[':termo'] = "$termo_busca%";
-            
+            $filtro_sql .= " AND (c.NOME LIKE :termo OR c.BANCO_NOME LIKE :termo OR c.NOME_EMPRESA LIKE :termo OR e.NOME_CADASTRO LIKE :termo ";
+            $params[':termo'] = "%$termo_busca%";
+
             if (!empty($termo_limpo_num)) {
-                $filtro_sql .= " OR c.CPF LIKE :cpf OR c.CELULAR LIKE :celular ";
-                $params[':cpf'] = "$termo_limpo_num%";
+                $filtro_sql .= " OR c.CPF LIKE :cpf OR c.CELULAR LIKE :celular OR c.CNPJ LIKE :cnpj ";
+                $params[':cpf']    = "$termo_limpo_num%";
                 $params[':celular'] = "$termo_limpo_num%";
+                $params[':cnpj']   = "$termo_limpo_num%";
             }
             $filtro_sql .= ") ";
         } elseif ($is_busca_avancada && empty($cpf_selecionado)) {
@@ -146,11 +146,11 @@ try {
 
         if ((!empty($termo_busca) || $is_busca_avancada) && empty($cpf_selecionado)) {
             // Modificado para incluir a tabela CLIENTE_USUARIO e pegar o EMAIL
-            $sql_base = " FROM CLIENTE_CADASTRO c LEFT JOIN CLIENTE_USUARIO u ON c.CPF = u.CPF WHERE 1=1 " . $filtro_sql;
-            
+            $sql_base = " FROM CLIENTE_CADASTRO c LEFT JOIN CLIENTE_USUARIO u ON c.CPF = u.CPF LEFT JOIN CLIENTE_EMPRESAS e ON c.CNPJ = e.CNPJ WHERE 1=1 " . $filtro_sql;
+
             // Remoção do COUNT(*) pesado
             $limite_busca = $limites_por_pagina + 1;
-            $sql_dados = "SELECT c.*, u.EMAIL " . $sql_base . " LIMIT " . (int)$limite_busca . " OFFSET " . (int)$offset;
+            $sql_dados = "SELECT c.*, u.EMAIL, e.NOME_CADASTRO as NOME_EMPRESA_VINCULADA " . $sql_base . " LIMIT " . (int)$limite_busca . " OFFSET " . (int)$offset;
             $stmt = $pdo->prepare($sql_dados);
             $stmt->execute($params);
             $resultados_busca = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -228,7 +228,7 @@ $readonly_attr = (!$pode_editar_excluir) ? 'disabled readonly' : '';
 <div class="row justify-content-center mb-2">
     <div class="col-md-8">
         <form action="" method="GET" class="d-flex shadow-sm mb-2">
-            <input type="text" name="busca" class="form-control form-control-lg border-success" placeholder="Pesquisar cliente (Nome, CPF, Celular)..." value="<?= $is_busca_avancada ? '' : htmlspecialchars($termo_busca) ?>" <?= $is_busca_avancada ? 'disabled' : 'autofocus' ?>>
+            <input type="text" name="busca" class="form-control form-control-lg border-success" placeholder="Pesquisar por Nome, CPF, Celular, Empresa, CNPJ..." value="<?= $is_busca_avancada ? '' : htmlspecialchars($termo_busca) ?>" <?= $is_busca_avancada ? 'disabled' : 'autofocus' ?>>
             <button type="submit" class="btn btn-success btn-lg px-4 ms-2 fw-bold text-dark border-dark" <?= $is_busca_avancada ? 'disabled' : '' ?>><i class="fas fa-search"></i> Buscar</button>
             <button type="button" class="btn btn-dark btn-lg px-4 ms-2 fw-bold shadow-sm border-dark" onclick="abrirCadastro()"><i class="fas fa-plus text-info"></i> Novo</button>
             <button type="button" class="btn btn-primary btn-lg px-4 ms-2 fw-bold shadow-sm border-dark" data-bs-toggle="modal" data-bs-target="#modalImportacao"><i class="fas fa-file-import"></i> Importar</button>
