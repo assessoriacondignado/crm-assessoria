@@ -89,7 +89,31 @@
       </div>
 
       <div class="tab-pane fade" id="planoContas"><div class="d-flex justify-content-between mb-3"><h5 class="fw-bold text-dark m-0 align-self-center"><i class="fas fa-sitemap text-primary me-2"></i>Árvore de Contas Cadastradas</h5><button class="btn btn-primary fw-bold border-dark shadow-sm" onclick="abrirModalPlanoConta()"><i class="fas fa-plus me-1"></i> Criar Nova Conta</button></div><div class="table-responsive border border-dark rounded shadow-sm"><table class="table table-hover mb-0 align-middle"><thead class="table-dark text-white border-dark"><tr><th>Tipo</th><th>Caminho Completo da Conta</th><th>Status</th><th class="text-center">Ações</th></tr></thead><tbody id="tbody-plano-contas"><tr><td colspan="4" class="text-center py-3">Carregando...</td></tr></tbody></table></div></div>
-      <div class="tab-pane fade" id="contasBancarias"><div class="d-flex justify-content-between mb-3"><h5 class="fw-bold text-dark m-0 align-self-center"><i class="fas fa-university text-info me-2"></i>Contas de Movimentação (Bancos)</h5><button class="btn btn-info text-dark fw-bold border-dark shadow-sm" onclick="abrirModalContaBancaria()"><i class="fas fa-plus me-1"></i> Adicionar Banco</button></div><div class="table-responsive border border-dark rounded shadow-sm"><table class="table table-hover mb-0 align-middle"><thead class="table-dark text-white border-dark"><tr><th>Nome da Conta (Apelido)</th><th>Dados Bancários (Ag/CC/Pix)</th><th class="text-center">Ações</th></tr></thead><tbody id="tbody-contas-bancarias"><tr><td colspan="3" class="text-center py-3">Carregando...</td></tr></tbody></table></div></div>
+      <div class="tab-pane fade" id="contasBancarias">
+        <div class="d-flex justify-content-between mb-3">
+          <h5 class="fw-bold text-dark m-0 align-self-center"><i class="fas fa-university text-info me-2"></i>Contas de Movimentação (Bancos)</h5>
+          <button class="btn btn-info text-dark fw-bold border-dark shadow-sm" onclick="abrirModalContaBancaria()"><i class="fas fa-plus me-1"></i> Adicionar Banco</button>
+        </div>
+        <div class="table-responsive border border-dark rounded shadow-sm mb-4">
+          <table class="table table-hover mb-0 align-middle"><thead class="table-dark text-white border-dark"><tr><th>Nome da Conta (Apelido)</th><th>Dados Bancários (Ag/CC/Pix)</th><th class="text-center">Ações</th></tr></thead><tbody id="tbody-contas-bancarias"><tr><td colspan="3" class="text-center py-3">Carregando...</td></tr></tbody></table>
+        </div>
+
+        <!-- CONFIGURAÇÃO PAGBANK -->
+        <div class="card border-dark shadow-sm">
+          <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+            <span class="fw-bold"><i class="fas fa-key me-2 text-warning"></i> Configuração PagBank — Token de Acesso à API</span>
+            <span id="pagbank_atualizado" class="small text-muted"></span>
+          </div>
+          <div class="card-body bg-light">
+            <p class="small text-muted mb-3">Gere seu token em <b>PagBank → Extrato → API → Tokens de acesso</b> e cole abaixo. O sistema usará este token para sincronizar o extrato automaticamente.</p>
+            <div class="input-group">
+              <input type="text" id="inputPagbankToken" class="form-control border-dark fw-bold font-monospace" placeholder="Cole aqui o token do PagBank...">
+              <button class="btn btn-warning fw-bold text-dark border-dark" onclick="salvarTokenPagBank()"><i class="fas fa-save me-1"></i> Salvar Token</button>
+            </div>
+            <div id="pagbank_msg" class="mt-2"></div>
+          </div>
+        </div>
+      </div>
       <div class="tab-pane fade" id="entidades"><div class="d-flex justify-content-between mb-3"><h5 class="fw-bold text-dark m-0 align-self-center">Gerenciamento de Entidades</h5><button class="btn btn-primary fw-bold border-dark shadow-sm" onclick="abrirModalVinculo('ENTIDADE')"><i class="fas fa-link me-1"></i> Vincular Nova Entidade</button></div><div class="table-responsive border border-dark rounded"><table class="table table-hover mb-0 align-middle"><thead class="table-dark text-white border-dark"><tr><th>Nome / Razão Social</th><th>Documento</th><th>Tipo Base</th><th>Status</th><th class="text-center">Ações</th></tr></thead><tbody id="tbody-entidades"></tbody></table></div></div>
       <div class="tab-pane fade" id="vendedores"><div class="d-flex justify-content-between mb-3"><h5 class="fw-bold text-dark m-0 align-self-center">Gerenciamento de Vendedores</h5><button class="btn btn-warning text-dark fw-bold border-dark shadow-sm" onclick="abrirModalVinculo('VENDEDOR')"><i class="fas fa-link me-1"></i> Vincular Novo Vendedor</button></div><div class="table-responsive border border-dark rounded"><table class="table table-hover mb-0 align-middle"><thead class="table-dark text-white border-dark"><tr><th>Nome / Razão Social</th><th>Documento</th><th>Tipo Base</th><th class="text-center">Indicados</th><th>Link de Indicação</th><th>Status</th><th class="text-center">Ações</th></tr></thead><tbody id="tbody-vendedores"></tbody></table></div></div>
     </div>
@@ -711,9 +735,39 @@
   }
 
   // ABA DEMAIS E VÍNCULOS
-  async function carregarContasBancarias() { const tb = document.getElementById('tbody-contas-bancarias'); tb.innerHTML = '<tr><td colspan="3" class="text-center py-3"><i class="fas fa-spinner fa-spin"></i> Lendo contas bancárias...</td></tr>'; const r = await callFinanceiro('listar_contas_bancarias'); if(r.success) { tb.innerHTML = ''; if(r.data.length === 0) { tb.innerHTML = '<tr><td colspan="3" class="text-center py-4 text-muted fw-bold">Nenhum banco cadastrado.</td></tr>'; return; } r.data.forEach(x => { tb.innerHTML += `<tr class="border-bottom border-dark"><td class="fw-bold text-info text-dark"><i class="fas fa-university me-2"></i> ${x.NOME_CONTA}</td><td class="small text-muted" style="white-space: pre-wrap;">${x.DADOS_BANCARIOS}</td><td class="text-center"><button class="btn btn-sm btn-danger border-dark shadow-sm" onclick="if(confirm('Excluir essa conta?')) callFinanceiro('excluir_conta_bancaria',{id:${x.ID}}).then(carregarContasBancarias)"><i class="fas fa-trash"></i></button></td></tr>`; }); } }
+  async function carregarContasBancarias() {
+    const tb = document.getElementById('tbody-contas-bancarias');
+    tb.innerHTML = '<tr><td colspan="3" class="text-center py-3"><i class="fas fa-spinner fa-spin"></i> Lendo contas bancárias...</td></tr>';
+    const r = await callFinanceiro('listar_contas_bancarias');
+    if(r.success) {
+      tb.innerHTML = '';
+      if(r.data.length === 0) { tb.innerHTML = '<tr><td colspan="3" class="text-center py-4 text-muted fw-bold">Nenhum banco cadastrado.</td></tr>'; }
+      else r.data.forEach(x => { tb.innerHTML += `<tr class="border-bottom border-dark"><td class="fw-bold text-info text-dark"><i class="fas fa-university me-2"></i> ${x.NOME_CONTA}</td><td class="small text-muted" style="white-space: pre-wrap;">${x.DADOS_BANCARIOS}</td><td class="text-center"><button class="btn btn-sm btn-danger border-dark shadow-sm" onclick="if(confirm('Excluir essa conta?')) callFinanceiro('excluir_conta_bancaria',{id:${x.ID}}).then(carregarContasBancarias)"><i class="fas fa-trash"></i></button></td></tr>`; });
+    }
+    // Carrega token salvo
+    const cfg = await callFinanceiro('ler_config_financeiro', { chave: 'PAGBANK_TOKEN' });
+    if (cfg.valor) {
+      document.getElementById('inputPagbankToken').value = cfg.valor;
+      const dt = cfg.atualizado_em ? new Date(cfg.atualizado_em).toLocaleString('pt-BR') : '';
+      document.getElementById('pagbank_atualizado').textContent = dt ? 'Salvo em: ' + dt : '';
+    }
+  }
   function abrirModalContaBancaria() { document.getElementById('fContaBancaria').reset(); document.getElementById('cbId').value = ""; modais.banco.show(); }
   document.getElementById('fContaBancaria').addEventListener('submit', async e => { e.preventDefault(); const f = { id: document.getElementById('cbId').value, nome: document.getElementById('cbNome').value, dados: document.getElementById('cbDados').value }; const r = await callFinanceiro('salvar_conta_bancaria', f); if(r.success) { modais.banco.hide(); carregarContasBancarias(); } else { alert(r.msg); } });
+
+  async function salvarTokenPagBank() {
+    const token = document.getElementById('inputPagbankToken').value.trim();
+    const msg   = document.getElementById('pagbank_msg');
+    if (!token) { msg.innerHTML = '<div class="alert alert-danger py-2 mb-0 small">Cole o token antes de salvar.</div>'; return; }
+    const r = await callFinanceiro('salvar_config_financeiro', { chave: 'PAGBANK_TOKEN', valor: token });
+    if (r.success) {
+      msg.innerHTML = '<div class="alert alert-success py-2 mb-0 small"><i class="fas fa-check-circle me-1"></i> Token salvo! A sincronização já usará o novo token.</div>';
+      document.getElementById('pagbank_atualizado').textContent = 'Salvo em: ' + new Date().toLocaleString('pt-BR');
+      setTimeout(() => msg.innerHTML = '', 4000);
+    } else {
+      msg.innerHTML = `<div class="alert alert-danger py-2 mb-0 small">${r.msg}</div>`;
+    }
+  }
   async function carregarListaPlanoContas() { const tb = document.getElementById('tbody-plano-contas'); tb.innerHTML = '<tr><td colspan="4" class="text-center py-3"><i class="fas fa-spinner fa-spin"></i> Lendo plano de contas...</td></tr>'; const r = await callFinanceiro('listar_plano_contas'); if(r.success) { window.listaContasCache = r.data; tb.innerHTML = ''; if(r.data.length === 0) { tb.innerHTML = '<tr><td colspan="4" class="text-center py-4 text-muted fw-bold">A árvore está vazia. Crie as contas!</td></tr>'; return; } r.data.forEach(x => { let cls = x.TIPO === 'ENTRADA' ? 'text-success' : 'text-danger'; let statusBadge = x.STATUS === 'ATIVO' ? '<span class="badge bg-success">ATIVO</span>' : '<span class="badge bg-secondary">INATIVO</span>'; tb.innerHTML += `<tr class="border-bottom border-dark"><td class="fw-bold ${cls}">${x.TIPO}</td><td class="fw-bold text-dark"><i class="fas fa-level-up-alt text-muted me-2" style="transform: rotate(90deg);"></i> ${x.CAMINHO_HIERARQUIA}</td><td>${statusBadge}</td><td class="text-center"><button class="btn btn-sm btn-primary border-dark shadow-sm fw-bold" onclick="abrirVisPlanoConta(${x.ID})"><i class="fas fa-eye me-1"></i> Visualizar</button></td></tr>`; }); } }
   function abrirVisPlanoConta(id) { const pc = window.listaContasCache.find(x => x.ID == id); if(!pc) return; document.getElementById('visPcTipo').innerText = pc.TIPO; document.getElementById('visPcCaminho').innerText = pc.CAMINHO_HIERARQUIA; document.getElementById('visPcStatus').innerHTML = pc.STATUS === 'ATIVO' ? '<span class="badge bg-success fs-6">ATIVO</span>' : '<span class="badge bg-secondary fs-6">INATIVO</span>'; let btnStatus = pc.STATUS === 'ATIVO' ? `<button class="btn btn-secondary border-dark fw-bold me-2 shadow-sm" onclick="mudarStatusPlanoConta(${pc.ID}, 'INATIVO')"><i class="fas fa-ban me-1"></i> Inativar</button>` : `<button class="btn btn-success border-dark fw-bold me-2 shadow-sm" onclick="mudarStatusPlanoConta(${pc.ID}, 'ATIVO')"><i class="fas fa-check me-1"></i> Ativar</button>`; document.getElementById('visPcFooter').innerHTML = `${btnStatus} <button class="btn btn-warning border-dark fw-bold text-dark me-2 shadow-sm" onclick="editarPlanoConta(${pc.ID})"><i class="fas fa-edit me-1"></i> Editar</button> <button class="btn btn-danger border-dark fw-bold shadow-sm" onclick="excluirPlanoConta(${pc.ID})"><i class="fas fa-trash me-1"></i> Excluir</button>`; modais.visPlano.show(); }
   async function mudarStatusPlanoConta(id, novoStatus) { if(!confirm(`Alterar status para ${novoStatus}?`)) return; const r = await callFinanceiro('mudar_status_plano_conta', { id: id, status: novoStatus }); if(r.success) { await carregarListaPlanoContas(); abrirVisPlanoConta(id); } }

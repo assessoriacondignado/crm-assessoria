@@ -229,6 +229,22 @@ try {
             echo json_encode(['success' => true]); break;
         case 'excluir_comissao_vendedor':
             $pdo->prepare("DELETE FROM FINANCEIRO_VENDEDOR_VARIACOES WHERE ID = ?")->execute([(int)$_POST['id']]); echo json_encode(['success' => true]); break;
+        case 'salvar_config_financeiro':
+            try { $pdo->exec("CREATE TABLE IF NOT EXISTS FINANCEIRO_CONFIG (CHAVE VARCHAR(100) NOT NULL PRIMARY KEY, VALOR TEXT, ATUALIZADO_EM DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP)"); } catch(Exception $e){}
+            $chave = trim($_POST['chave'] ?? '');
+            $valor = trim($_POST['valor'] ?? '');
+            if (empty($chave)) { echo json_encode(['success' => false, 'msg' => 'Chave inválida.']); break; }
+            $pdo->prepare("INSERT INTO FINANCEIRO_CONFIG (CHAVE, VALOR) VALUES (?, ?) ON DUPLICATE KEY UPDATE VALOR = ?, ATUALIZADO_EM = NOW()")->execute([$chave, $valor, $valor]);
+            echo json_encode(['success' => true, 'msg' => 'Configuração salva!']); break;
+
+        case 'ler_config_financeiro':
+            try { $pdo->exec("CREATE TABLE IF NOT EXISTS FINANCEIRO_CONFIG (CHAVE VARCHAR(100) NOT NULL PRIMARY KEY, VALOR TEXT, ATUALIZADO_EM DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP)"); } catch(Exception $e){}
+            $chave = trim($_POST['chave'] ?? '');
+            $stmt = $pdo->prepare("SELECT VALOR, ATUALIZADO_EM FROM FINANCEIRO_CONFIG WHERE CHAVE = ?");
+            $stmt->execute([$chave]);
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            echo json_encode(['success' => true, 'valor' => $row['VALOR'] ?? '', 'atualizado_em' => $row['ATUALIZADO_EM'] ?? null]); break;
+
         default: echo json_encode(['success' => false, 'msg' => 'Ação não especificada.']); break;
     }
 } catch (Exception $e) { echo json_encode(['success' => false, 'msg' => "Erro do BD: " . $e->getMessage()]); }

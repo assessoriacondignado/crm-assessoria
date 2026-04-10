@@ -11,9 +11,13 @@ try {
     $acao = $_POST['acao'] ?? '';
 
     // =======================================================
-    // SEU TOKEN GERADO NO PAINEL DO PAGBANK
+    // TOKEN DO PAGBANK — lido do banco de dados (FINANCEIRO_CONFIG)
     // =======================================================
-    $token = '2dc753e0-d62e-4e7e-9bec-ec2fa1d87eb19c5dffe44b2abee6f0d45e51ffa0a4be159d-8e8e-4b10-8dc4-bff57a667e36'; 
+    try { $pdo->exec("CREATE TABLE IF NOT EXISTS FINANCEIRO_CONFIG (CHAVE VARCHAR(100) NOT NULL PRIMARY KEY, VALOR TEXT, ATUALIZADO_EM DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP)"); } catch(Exception $e){}
+    $stmtTok = $pdo->prepare("SELECT VALOR FROM FINANCEIRO_CONFIG WHERE CHAVE = 'PAGBANK_TOKEN'");
+    $stmtTok->execute();
+    $token = $stmtTok->fetchColumn() ?: '';
+    if (empty($token)) { ob_end_clean(); echo json_encode(['success' => false, 'msg' => 'Token do PagBank não configurado. Acesse Financeiro → Contas Bancárias → Configuração PagBank.']); exit; }
 
     // (A trava de segurança foi removida daqui para não causar mais o erro da tela vermelha)
 
