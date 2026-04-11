@@ -60,8 +60,8 @@ try {
                FROM INTEGRACAO_V8_CHAVE_ACESSO ca";
 
         $sqlChaves = $v8_restricao_meu_usuario
-            ? "$sqlChavesSel WHERE ca.CPF_USUARIO = ? ORDER BY ca.STATUS DESC, ca.CLIENTE_NOME ASC"
-            : "$sqlChavesSel ORDER BY ca.STATUS DESC, ca.CLIENTE_NOME ASC";
+            ? "$sqlChavesSel WHERE ca.STATUS = 'ATIVO' AND ca.CPF_USUARIO = ? ORDER BY ca.CLIENTE_NOME ASC"
+            : "$sqlChavesSel WHERE ca.STATUS = 'ATIVO' ORDER BY ca.CLIENTE_NOME ASC";
 
         $stmtChaves = $v8_restricao_meu_usuario
             ? $pdo->prepare($sqlChaves)
@@ -455,24 +455,24 @@ if (file_exists($caminho_header)) {
                                     <div class="v8h-metric-row">
                                         <span class="v8h-icon"><i class="fas fa-credit-card"></i></span>
                                         <span class="v8h-label">Consen.:</span>
-                                        <span class="v8h-val"><?= (int)$chave['CONSEN_HOJE'] ?> / <?= (int)$chave['CONSEN_TOTAL'] ?></span>
+                                        <span class="v8h-val"><?= (int)$chave['CONSEN_HOJE'] ?></span>
                                         <span class="badge-hj"><?= (int)$chave['CONSEN_HOJE'] ?> hj</span>
                                     </div>
                                     <div class="v8h-metric-row">
                                         <span class="v8h-icon"><i class="fas fa-search"></i></span>
                                         <span class="v8h-label">Margem:</span>
-                                        <span class="v8h-val"><?= (int)$chave['MARGEM_HOJE'] ?> / <?= (int)$chave['MARGEM_TOTAL'] ?></span>
+                                        <span class="v8h-val"><?= (int)$chave['MARGEM_HOJE'] ?></span>
                                         <span class="badge-hj"><?= (int)$chave['MARGEM_HOJE'] ?> hj</span>
                                     </div>
                                     <div class="v8h-metric-row">
                                         <span class="v8h-icon"><i class="fas fa-file-alt"></i></span>
                                         <span class="v8h-label">Simul.:</span>
-                                        <span class="v8h-val"><?= (int)$chave['SIMUL_HOJE'] ?> / <?= (int)$chave['SIMUL_TOTAL'] ?></span>
+                                        <span class="v8h-val"><?= (int)$chave['SIMUL_HOJE'] ?></span>
                                         <span class="badge-hj"><?= (int)$chave['SIMUL_HOJE'] ?> hj</span>
                                     </div>
 
                                     <div class="v8h-total-row">
-                                        <i class="fas fa-users me-1 text-muted"></i> Total: <?= number_format((int)$chave['CONSEN_TOTAL'], 0, ',', '.') ?>
+                                        <i class="fas fa-users me-1 text-muted"></i> Total histórico: <?= number_format((int)$chave['CONSEN_TOTAL'], 0, ',', '.') ?>
                                     </div>
                                 </div>
                             </div>
