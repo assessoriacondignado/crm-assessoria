@@ -24,8 +24,9 @@ try {
     if (file_exists($caminho_permissoes)) { include_once $caminho_permissoes; }
 
     // Verifica se o usuário tem acesso ao módulo V8
+    // verificaPermissao retorna TRUE quando o grupo NÃO está bloqueado (tem acesso livre)
     $temAcessoV8 = function_exists('verificaPermissao')
-        ? !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_NOVA_CONSULTA_DIGITAÇÃO', 'FUNCAO')
+        ? verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_NOVA_CONSULTA_DIGITAÇÃO', 'FUNCAO')
         : $is_master;
 
     if ($temAcessoV8) {
