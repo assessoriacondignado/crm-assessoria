@@ -134,8 +134,8 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
 
                         <div class="table-responsive border border-dark rounded shadow-sm" style="max-height: 600px; overflow-y: auto;">
                             <table class="table table-hover table-bordered table-sm align-middle mb-0 table-fila">
-                                <thead><tr><th>ID / Data</th><th>Cliente e Origem</th><th class="border-start border-end border-danger">Autorização ID Consulta</th><th class="border-end border-danger">ID Config (Margem)</th><th class="border-end border-danger">ID Simulação</th><th class="border-end border-danger">ID Proposta</th><th style="min-width:120px;">Ações</th><th style="min-width:110px;">Campanhas</th></tr></thead>
-                                <tbody id="v8_fila_body" class="bg-white"><tr><td colspan="8" class="py-4 text-muted">Carregando fila...</td></tr></tbody>
+                                <thead><tr><th>ID / Data</th><th>Cliente e Origem</th><th>Origem Consulta</th><th class="border-start border-end border-danger">Autorização ID Consulta</th><th class="border-end border-danger">ID Config (Margem)</th><th class="border-end border-danger">ID Simulação</th><th class="border-end border-danger">ID Proposta</th><th style="min-width:120px;">Ações</th><th style="min-width:110px;">Campanhas</th></tr></thead>
+                                <tbody id="v8_fila_body" class="bg-white"><tr><td colspan="9" class="py-4 text-muted">Carregando fila...</td></tr></tbody>
                             </table>
                         </div>
                         <div id="v8_fila_paginacao" class="text-center mt-2 d-none">
@@ -520,7 +520,7 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
         const pagDiv = document.getElementById('v8_fila_paginacao');
         const contador = document.getElementById('v8_fila_contador');
         if (!append) {
-            tb.innerHTML = '<tr><td colspan="8" class="text-center py-4 text-muted"><i class="fas fa-spinner fa-spin me-2"></i> Carregando fila...</td></tr>';
+            tb.innerHTML = '<tr><td colspan="9" class="text-center py-4 text-muted"><i class="fas fa-spinner fa-spin me-2"></i> Carregando fila...</td></tr>';
             pagDiv.classList.add('d-none');
         }
         const filtros = v8ColetarFiltros();
@@ -529,7 +529,7 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
         if(r.success) {
             v8FilaOffsetAtual = (r.offset || 0) + (r.data?.length || 0);
             if (!append) { windowDadosFilaAtual = r.data; tb.innerHTML = ''; } else { windowDadosFilaAtual = (windowDadosFilaAtual||[]).concat(r.data); }
-            if(r.data.length === 0 && !append) return tb.innerHTML = '<tr><td colspan="8" class="text-muted py-4 text-center fw-bold">Nenhum resultado encontrado na fila.</td></tr>';
+            if(r.data.length === 0 && !append) return tb.innerHTML = '<tr><td colspan="9" class="text-muted py-4 text-center fw-bold">Nenhum resultado encontrado na fila.</td></tr>';
             // Paginação
             if (r.has_more) { pagDiv.classList.remove('d-none'); contador.textContent = `Exibindo ${v8FilaOffsetAtual} de ${r.total} registros`; } else { pagDiv.classList.add('d-none'); if (r.total > 100) contador.textContent = `Total: ${r.total} registros`; }
 
@@ -619,14 +619,13 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
 
                 const isIaBot = (x.FONTE_CONSULT_ID || '').toUpperCase() === 'IA BOT';
                 const badgeOrigem = isIaBot
-                    ? `<span class="badge mt-1 d-inline-block" style="background:#8e44ad;font-size:9px;">🤖 API / IA</span>`
-                    : `<span class="badge bg-secondary mt-1 d-inline-block" style="font-size:9px;">✋ FILA / MANUAL</span>`;
+                    ? `<span class="badge mt-1 d-inline-block" style="background:#8e44ad;font-size:9px;"><i class="fas fa-robot me-1"></i>API / IA</span>`
+                    : `<span class="badge bg-secondary mt-1 d-inline-block" style="font-size:9px;"><i class="fas fa-hand-paper me-1"></i>FILA / MANUAL</span>`;
 
                 tb.innerHTML += `<tr class="border-bottom border-dark">
                 <td class="text-center align-middle" style="min-width:70px;">
                   <span class="fw-bold text-muted fs-6">#${x.ID}</span><br>
-                  <small class="text-muted" style="font-size:10px;">${x.DATA_FILA_BR || ''}</small><br>
-                  ${badgeOrigem}
+                  <small class="text-muted" style="font-size:10px;">${x.DATA_FILA_BR || ''}</small>
                 </td>
                 <td class="text-start align-middle" style="font-size:11px; line-height:1.6; min-width:180px;">
                   <span class="fw-bold text-dark" style="font-size:13px;">${x.CPF_CONSULTADO || ''}</span><br>
@@ -635,7 +634,9 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
                   <div><b>Usuário:</b> ${nomeUsuario}</div>
                   <div><b>API:</b> ${usernameApi}</div>
                   <div><b>Tabela:</b> ${tabelaPadrao} &nbsp;·&nbsp; <b>Prazo:</b> ${prazoPadrao}</div>
-                </td><td class="border-start border-end border-danger bg-light p-2 text-center align-middle">${colAuth}</td><td class="border-end border-danger bg-light p-2 text-center align-middle">${colConf}</td><td class="border-end border-danger bg-light p-2 text-center align-middle">${colSim}</td><td class="border-end border-danger bg-light p-2 text-center align-middle">${colProp}</td><td class="p-2 text-center align-middle">${btnAcoes}</td><td class="p-2 text-center align-middle">${colCampanhas}</td></tr>`; 
+                </td>
+                <td class="text-center align-middle p-2">${badgeOrigem}</td>
+                <td class="border-start border-end border-danger bg-light p-2 text-center align-middle">${colAuth}</td><td class="border-end border-danger bg-light p-2 text-center align-middle">${colConf}</td><td class="border-end border-danger bg-light p-2 text-center align-middle">${colSim}</td><td class="border-end border-danger bg-light p-2 text-center align-middle">${colProp}</td><td class="p-2 text-center align-middle">${btnAcoes}</td><td class="p-2 text-center align-middle">${colCampanhas}</td></tr>`; 
             }); 
             var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]')); tooltipTriggerList.map(function (tooltipTriggerEl) { return new bootstrap.Tooltip(tooltipTriggerEl); }); 
         } 
