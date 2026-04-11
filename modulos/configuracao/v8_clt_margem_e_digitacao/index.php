@@ -564,7 +564,7 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
                 // === Botões de reprocessamento contextual (aparecem conforme o fluxo) ===
                 let emProc = !!windowPollingData[x.ID];
                 let statusAtivo = x.STATUS_V8 === 'AGUARDANDO MARGEM' || x.STATUS_V8 === 'AGUARDANDO V8 MARGEM E PRAZOS';
-                if (!emProc && !statusAtivo) {
+                if (!emProc && !statusAtivo && !isIaBot) {
                     let repBtns = '';
                     let temErroMargem = (x.STATUS_V8 === 'ERRO-MARGEM' || x.STATUS_V8 === 'ERRO LEITURA MARGEM' || x.STATUS_CONFIG_ID === 'ERRO CONSIG_ID' || x.STATUS_CONFIG_ID === 'ERRO CACHE V8' || x.STATUS_V8 === 'ERRO-SIMULACAO');
                     let esperandoDataprev = x.CONSULT_ID && !x.VALOR_MARGEM && x.STATUS_V8 !== 'OK-CONSENTIMENTO' && x.STATUS_V8 !== 'CONSENTIMENTO AUTOMÁTICO OK';
@@ -617,10 +617,16 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
                 let tabelaPadrao = x.TABELA_PADRAO || '—';
                 let prazoPadrao = x.PRAZO_PADRAO ? x.PRAZO_PADRAO + 'x' : '—';
 
+                const isIaBot = (x.FONTE_CONSULT_ID || '').toUpperCase() === 'IA BOT';
+                const badgeOrigem = isIaBot
+                    ? `<span class="badge mt-1 d-inline-block" style="background:#8e44ad;font-size:9px;">🤖 API / IA</span>`
+                    : `<span class="badge bg-secondary mt-1 d-inline-block" style="font-size:9px;">✋ FILA / MANUAL</span>`;
+
                 tb.innerHTML += `<tr class="border-bottom border-dark">
                 <td class="text-center align-middle" style="min-width:70px;">
                   <span class="fw-bold text-muted fs-6">#${x.ID}</span><br>
-                  <small class="text-muted" style="font-size:10px;">${x.DATA_FILA_BR || ''}</small>
+                  <small class="text-muted" style="font-size:10px;">${x.DATA_FILA_BR || ''}</small><br>
+                  ${badgeOrigem}
                 </td>
                 <td class="text-start align-middle" style="font-size:11px; line-height:1.6; min-width:180px;">
                   <span class="fw-bold text-dark" style="font-size:13px;">${x.CPF_CONSULTADO || ''}</span><br>

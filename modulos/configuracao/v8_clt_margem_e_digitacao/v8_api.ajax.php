@@ -246,7 +246,7 @@ try {
                 'CPF_USUARIO'      => 'c.CPF_USUARIO',
             ];
 
-            $where = " WHERE c.FONTE_CONSULT_ID != 'IA BOT' "; $params = [];
+            $where = " WHERE 1=1 "; $params = [];
             if ($restricao_minha_fila) { $where .= " AND c.CPF_USUARIO = ? "; $params[] = $usuario_logado_cpf; }
             elseif ($restricao_hierarquia_fila && $id_empresa_logado) { $where .= " AND c.EMPRESA_ID = ? "; $params[] = $id_empresa_logado; }
 
@@ -292,7 +292,7 @@ try {
                 'NUMERO_PROPOSTA' => 'p.NUMERO_PROPOSTA', 'CPF_USUARIO' => 'c.CPF_USUARIO',
             ];
 
-            $where = " WHERE c.FONTE_CONSULT_ID != 'IA BOT' ";
+            $where = " WHERE 1=1 ";
             $params = [];
 
             if ($restricao_minha_fila) { $where .= " AND c.CPF_USUARIO = ? "; $params[] = $usuario_logado_cpf; }
