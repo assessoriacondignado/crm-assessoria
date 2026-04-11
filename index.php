@@ -42,20 +42,26 @@ try {
             $v8_empresa_logado = $stmtEmpV8->fetchColumn() ?: null;
         }
 
-        // --- Widget 1: Chaves V8 com contagens ---
+        // --- Widget 1: Chaves V8 com contagens (hoje e total) ---
+        $subConsenHoje  = "(SELECT COUNT(*) FROM INTEGRACAO_V8_REGISTROCONSULTA rc WHERE rc.CHAVE_ID = ca.ID AND DATE(rc.DATA_FILA) = CURDATE())";
+        $subConsenTotal = "(SELECT COUNT(*) FROM INTEGRACAO_V8_REGISTROCONSULTA rc WHERE rc.CHAVE_ID = ca.ID)";
+        $subMargemHoje  = "(SELECT COUNT(*) FROM INTEGRACAO_V8_REGISTROCONSULTA rc LEFT JOIN INTEGRACAO_V8_REGISTRO_SIMULACAO rs ON rs.ID_FILA = rc.ID WHERE rc.CHAVE_ID = ca.ID AND rs.MARGEM_DISPONIVEL IS NOT NULL AND DATE(rc.DATA_FILA) = CURDATE())";
+        $subMargemTotal = "(SELECT COUNT(*) FROM INTEGRACAO_V8_REGISTROCONSULTA rc LEFT JOIN INTEGRACAO_V8_REGISTRO_SIMULACAO rs ON rs.ID_FILA = rc.ID WHERE rc.CHAVE_ID = ca.ID AND rs.MARGEM_DISPONIVEL IS NOT NULL)";
+        $subSimulHoje   = "(SELECT COUNT(*) FROM INTEGRACAO_V8_REGISTROCONSULTA rc LEFT JOIN INTEGRACAO_V8_REGISTRO_SIMULACAO rs ON rs.ID_FILA = rc.ID WHERE rc.CHAVE_ID = ca.ID AND rs.SIMULATION_ID IS NOT NULL AND DATE(rc.DATA_FILA) = CURDATE())";
+        $subSimulTotal  = "(SELECT COUNT(*) FROM INTEGRACAO_V8_REGISTROCONSULTA rc LEFT JOIN INTEGRACAO_V8_REGISTRO_SIMULACAO rs ON rs.ID_FILA = rc.ID WHERE rc.CHAVE_ID = ca.ID AND rs.SIMULATION_ID IS NOT NULL)";
+
+        $sqlChavesSel = "SELECT ca.ID, ca.CLIENTE_NOME, ca.STATUS, ca.SALDO,
+                      $subConsenHoje  as CONSEN_HOJE,
+                      $subConsenTotal as CONSEN_TOTAL,
+                      $subMargemHoje  as MARGEM_HOJE,
+                      $subMargemTotal as MARGEM_TOTAL,
+                      $subSimulHoje   as SIMUL_HOJE,
+                      $subSimulTotal  as SIMUL_TOTAL
+               FROM INTEGRACAO_V8_CHAVE_ACESSO ca";
+
         $sqlChaves = $v8_restricao_meu_usuario
-            ? "SELECT ca.ID, ca.CLIENTE_NOME, ca.STATUS, ca.SALDO,
-                      (SELECT COUNT(*) FROM INTEGRACAO_V8_REGISTROCONSULTA rc WHERE rc.CHAVE_ID = ca.ID AND DATE(rc.DATA_FILA) = CURDATE()) as CONSEN_HOJE,
-                      (SELECT COUNT(*) FROM INTEGRACAO_V8_REGISTROCONSULTA rc WHERE rc.CHAVE_ID = ca.ID) as CONSEN_TOTAL,
-                      (SELECT COUNT(*) FROM INTEGRACAO_V8_REGISTROCONSULTA rc WHERE rc.CHAVE_ID = ca.ID AND rc.STATUS_V8 REGEXP 'MARGIN|MARGEM|OK|LIBERADA|AVAILABLE|APPROVED|PRE_APPROVED') as MARGEM_OK,
-                      (SELECT COUNT(*) FROM INTEGRACAO_V8_REGISTRO_SIMULACAO rs LEFT JOIN INTEGRACAO_V8_REGISTROCONSULTA rc2 ON rs.ID_FILA = rc2.ID WHERE rc2.CHAVE_ID = ca.ID) as SIMUL_TOTAL
-               FROM INTEGRACAO_V8_CHAVE_ACESSO ca WHERE ca.CPF_USUARIO = ? ORDER BY ca.STATUS DESC, ca.CLIENTE_NOME ASC"
-            : "SELECT ca.ID, ca.CLIENTE_NOME, ca.STATUS, ca.SALDO,
-                      (SELECT COUNT(*) FROM INTEGRACAO_V8_REGISTROCONSULTA rc WHERE rc.CHAVE_ID = ca.ID AND DATE(rc.DATA_FILA) = CURDATE()) as CONSEN_HOJE,
-                      (SELECT COUNT(*) FROM INTEGRACAO_V8_REGISTROCONSULTA rc WHERE rc.CHAVE_ID = ca.ID) as CONSEN_TOTAL,
-                      (SELECT COUNT(*) FROM INTEGRACAO_V8_REGISTROCONSULTA rc WHERE rc.CHAVE_ID = ca.ID AND rc.STATUS_V8 REGEXP 'MARGIN|MARGEM|OK|LIBERADA|AVAILABLE|APPROVED|PRE_APPROVED') as MARGEM_OK,
-                      (SELECT COUNT(*) FROM INTEGRACAO_V8_REGISTRO_SIMULACAO rs LEFT JOIN INTEGRACAO_V8_REGISTROCONSULTA rc2 ON rs.ID_FILA = rc2.ID WHERE rc2.CHAVE_ID = ca.ID) as SIMUL_TOTAL
-               FROM INTEGRACAO_V8_CHAVE_ACESSO ca ORDER BY ca.STATUS DESC, ca.CLIENTE_NOME ASC";
+            ? "$sqlChavesSel WHERE ca.CPF_USUARIO = ? ORDER BY ca.STATUS DESC, ca.CLIENTE_NOME ASC"
+            : "$sqlChavesSel ORDER BY ca.STATUS DESC, ca.CLIENTE_NOME ASC";
 
         $stmtChaves = $v8_restricao_meu_usuario
             ? $pdo->prepare($sqlChaves)
@@ -63,7 +69,7 @@ try {
         if ($v8_restricao_meu_usuario) { $stmtChaves->execute([$cpf_logado]); }
         $v8_chaves = $stmtChaves->fetchAll(PDO::FETCH_ASSOC);
 
-        // --- Widget 2: Histórico das últimas 10 consultas ---
+        // --- Widget 2: Histórico das últimas 10 consultas (mesmos campos da fila do módulo) ---
         $whereHist = " WHERE 1=1 ";
         $paramsHist = [];
         if ($v8_restricao_minha_fila) {
@@ -75,9 +81,22 @@ try {
         }
 
         $sqlHist = "SELECT c.ID, c.CPF_CONSULTADO, c.NOME_COMPLETO, c.STATUS_V8,
-                           DATE_FORMAT(c.DATA_FILA, '%d/%m/%Y %H:%i') as DATA_BR,
-                           ch.CLIENTE_NOME, u.NOME as NOME_USUARIO, c.FONTE_CONSULT_ID
+                           c.CONSULT_ID, c.FONTE_CONSULT_ID, c.MENSAGEM_ERRO,
+                           DATE_FORMAT(c.DATA_FILA, '%d/%m/%Y %H:%i') as DATA_FILA_BR,
+                           DATE_FORMAT(c.ULTIMA_ATUALIZACAO, '%d/%m/%Y %H:%i') as DATA_RETORNO_BR,
+                           s.CONFIG_ID, s.FONTE_CONSIG_ID, s.MARGEM_DISPONIVEL as VALOR_MARGEM,
+                           s.PRAZOS_DISPONIVEIS as PRAZOS, s.SIMULATION_ID,
+                           s.STATUS_CONFIG_ID, s.OBS_SIMULATION_ID,
+                           s.VALOR_LIBERADO, s.VALOR_PARCELA, s.PRAZO_SIMULACAO,
+                           DATE_FORMAT(s.DATA_CONFIG_ID, '%d/%m/%Y %H:%i') as DATA_CONFIG_BR,
+                           p.NUMERO_PROPOSTA, p.STATUS_PROPOSTA_V8 as STATUS_PROPOSTA_REAL,
+                           ch.CLIENTE_NOME, ch.TABELA_PADRAO, ch.PRAZO_PADRAO, ch.USERNAME_API,
+                           u.NOME as NOME_USUARIO
                     FROM INTEGRACAO_V8_REGISTROCONSULTA c
+                    LEFT JOIN INTEGRACAO_V8_REGISTRO_SIMULACAO s
+                        ON s.ID = (SELECT ID FROM INTEGRACAO_V8_REGISTRO_SIMULACAO s2 WHERE s2.ID_FILA = c.ID ORDER BY s2.ID DESC LIMIT 1)
+                    LEFT JOIN INTEGRACAO_V8_REGISTRO_PROPOSTA p
+                        ON c.STATUS_V8 LIKE CONCAT('%', p.NUMERO_PROPOSTA, '%')
                     LEFT JOIN INTEGRACAO_V8_CHAVE_ACESSO ch ON c.CHAVE_ID = ch.ID
                     LEFT JOIN CLIENTE_USUARIO u ON c.CPF_USUARIO COLLATE utf8mb4_unicode_ci = u.CPF COLLATE utf8mb4_unicode_ci
                     $whereHist
@@ -251,71 +270,99 @@ if (file_exists($caminho_header)) {
         margin-top: 5px;
     }
 
-    .card-v8 {
-        background-color: #2471a3;
-        color: #ffffff;
-        border: 2px solid #ffffff;
-        outline: 2px solid #2471a3;
-        border-radius: 4px;
-        padding: 10px 12px;
-        min-height: 90px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        position: relative;
+    /* Card V8 — estilo igual ao do módulo */
+    .card-v8-hub {
+        border: 1px solid #dee2e6;
+        border-radius: 6px;
         overflow: hidden;
-        transition: background-color 0.2s;
-        text-decoration: none;
+        box-shadow: 0 1px 4px rgba(0,0,0,.1);
+        background: #fff;
+        font-size: 0.78rem;
     }
-    .card-v8:hover { background-color: #1a5276; outline-color: #1a5276; color: #fff; }
-    .card-v8.inativo { background-color: #95a5a6; outline-color: #95a5a6; cursor: default; }
-    .card-v8.inativo:hover { background-color: #85929e; outline-color: #85929e; }
-
-    .card-v8 .icon-v8-bg {
-        font-size: 42px;
-        position: absolute;
-        right: 8px;
-        top: 50%;
-        transform: translateY(-50%);
-        opacity: 0.15;
+    .card-v8-hub .v8h-header {
+        background-color: #1a2332;
         color: #fff;
-    }
-    .card-v8 .v8-nome {
         font-weight: 800;
         font-size: 0.72rem;
         text-transform: uppercase;
-        line-height: 1.2;
-        margin-bottom: 6px;
+        padding: 7px 10px;
+        line-height: 1.3;
     }
-    .card-v8 .v8-badge-status {
-        font-size: 0.6rem;
-        font-weight: 700;
-        padding: 1px 6px;
-        border-radius: 10px;
-        background: rgba(255,255,255,0.25);
-        display: inline-block;
-        margin-bottom: 6px;
+    .card-v8-hub .v8h-body {
+        padding: 8px 10px;
     }
-    .card-v8 .v8-stats {
-        font-size: 0.62rem;
-        background: rgba(0,0,0,0.2);
-        padding: 3px 7px;
-        border-radius: 3px;
-        font-weight: 600;
+    .card-v8-hub .v8h-status-row {
         display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
     }
-    .card-v8 .v8-stats span { white-space: nowrap; }
+    .v8h-dot-ativo  { color: #27ae60; font-weight: 700; }
+    .v8h-dot-inativo{ color: #95a5a6; font-weight: 700; }
+    .btn-v8h-acoes {
+        font-size: 0.65rem;
+        padding: 2px 8px;
+        font-weight: 700;
+        background: #343a40;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+    .btn-v8h-acoes:hover { background: #495057; color:#fff; }
+    .btn-v8h-acoes.disabled { background:#adb5bd; cursor:default; pointer-events:none; }
+    .card-v8-hub .v8h-metric-row {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 4px;
+        font-size: 0.72rem;
+    }
+    .card-v8-hub .v8h-metric-row .v8h-icon {
+        width: 18px;
+        text-align: center;
+        color: #6c757d;
+    }
+    .card-v8-hub .v8h-metric-row .v8h-label {
+        flex: 1;
+        color: #333;
+        font-weight: 600;
+    }
+    .card-v8-hub .v8h-metric-row .v8h-val {
+        font-weight: 700;
+        color: #1a2332;
+    }
+    .badge-hj {
+        font-size: 0.6rem;
+        background: #0dcaf0;
+        color: #000;
+        border-radius: 10px;
+        padding: 1px 6px;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+    .card-v8-hub .v8h-total-row {
+        margin-top: 6px;
+        border-top: 1px solid #e9ecef;
+        padding-top: 5px;
+        font-size: 0.72rem;
+        color: #555;
+        font-weight: 600;
+    }
 
-    /* Tabela histórico */
-    .tbl-v8-hist { font-size: 0.78rem; }
-    .tbl-v8-hist th { background-color: #2471a3; color: #fff; font-weight: 600; white-space: nowrap; }
-    .tbl-v8-hist td { vertical-align: middle; }
-    .badge-v8-ok   { background-color: #27ae60; color: #fff; }
-    .badge-v8-err  { background-color: #c0392b; color: #fff; }
-    .badge-v8-pend { background-color: #f39c12; color: #fff; }
-    .badge-v8-ia   { background-color: #8e44ad; color: #fff; }
+    /* Tabela histórico — espelho do módulo */
+    .tbl-v8-hist { font-size: 0.73rem; }
+    .tbl-v8-hist th {
+        background-color: #343a40;
+        color: #fff;
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        text-align: center;
+        vertical-align: middle;
+        white-space: nowrap;
+    }
+    .tbl-v8-hist td { text-align: center; vertical-align: middle; }
 </style>
 
 <div class="d-flex justify-content-between align-items-center border-bottom border-dark pb-2 mb-4">
@@ -390,39 +437,45 @@ if (file_exists($caminho_header)) {
                     </div>
                 <?php else: ?>
                     <?php foreach ($v8_chaves as $chave): ?>
-                        <?php
-                            $ativo = strtoupper($chave['STATUS'] ?? '') === 'ATIVO';
-                            $linkV8 = '/modulos/configuracao/v8_clt_margem_e_digitacao/index.api.ia.v8.php';
-                        ?>
+                        <?php $ativo = strtoupper($chave['STATUS'] ?? '') === 'ATIVO'; ?>
                         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                            <?php if ($ativo): ?>
-                                <a href="<?= $linkV8 ?>" class="card-v8 d-block">
-                            <?php else: ?>
-                                <div class="card-v8 inativo">
-                            <?php endif; ?>
+                            <div class="card-v8-hub">
+                                <div class="v8h-header"><?= htmlspecialchars($chave['CLIENTE_NOME']) ?></div>
+                                <div class="v8h-body">
+                                    <div class="v8h-status-row">
+                                        <?php if ($ativo): ?>
+                                            <span class="v8h-dot-ativo"><i class="fas fa-circle" style="font-size:0.55rem;"></i> ATIVO</span>
+                                            <a href="/modulos/configuracao/v8_clt_margem_e_digitacao/index.php" class="btn-v8h-acoes"><i class="fas fa-bars me-1"></i>Ações</a>
+                                        <?php else: ?>
+                                            <span class="v8h-dot-inativo"><i class="far fa-circle" style="font-size:0.55rem;"></i> INATIVO</span>
+                                            <span class="btn-v8h-acoes disabled"><i class="fas fa-bars me-1"></i>Ações</span>
+                                        <?php endif; ?>
+                                    </div>
 
-                                <i class="fas fa-microchip icon-v8-bg"></i>
-                                <div>
-                                    <div class="v8-nome"><?= htmlspecialchars($chave['CLIENTE_NOME']) ?></div>
-                                    <span class="v8-badge-status"><?= $ativo ? '● ATIVO' : '○ INATIVO' ?></span>
-                                </div>
-                                <div class="v8-stats">
-                                    <span title="Consentimentos hoje / total">
-                                        <i class="fas fa-handshake me-1"></i>Consen: <?= (int)$chave['CONSEN_HOJE'] ?>/<?= (int)$chave['CONSEN_TOTAL'] ?>
-                                    </span>
-                                    <span title="Consultas com margem aprovada">
-                                        <i class="fas fa-check-circle me-1"></i>Margem: <?= (int)$chave['MARGEM_OK'] ?>
-                                    </span>
-                                    <span title="Simulações realizadas">
-                                        <i class="fas fa-calculator me-1"></i>Simul: <?= (int)$chave['SIMUL_TOTAL'] ?>
-                                    </span>
-                                </div>
+                                    <div class="v8h-metric-row">
+                                        <span class="v8h-icon"><i class="fas fa-credit-card"></i></span>
+                                        <span class="v8h-label">Consen.:</span>
+                                        <span class="v8h-val"><?= (int)$chave['CONSEN_HOJE'] ?> / <?= (int)$chave['CONSEN_TOTAL'] ?></span>
+                                        <span class="badge-hj"><?= (int)$chave['CONSEN_HOJE'] ?> hj</span>
+                                    </div>
+                                    <div class="v8h-metric-row">
+                                        <span class="v8h-icon"><i class="fas fa-search"></i></span>
+                                        <span class="v8h-label">Margem:</span>
+                                        <span class="v8h-val"><?= (int)$chave['MARGEM_HOJE'] ?> / <?= (int)$chave['MARGEM_TOTAL'] ?></span>
+                                        <span class="badge-hj"><?= (int)$chave['MARGEM_HOJE'] ?> hj</span>
+                                    </div>
+                                    <div class="v8h-metric-row">
+                                        <span class="v8h-icon"><i class="fas fa-file-alt"></i></span>
+                                        <span class="v8h-label">Simul.:</span>
+                                        <span class="v8h-val"><?= (int)$chave['SIMUL_HOJE'] ?> / <?= (int)$chave['SIMUL_TOTAL'] ?></span>
+                                        <span class="badge-hj"><?= (int)$chave['SIMUL_HOJE'] ?> hj</span>
+                                    </div>
 
-                            <?php if ($ativo): ?>
-                                </a>
-                            <?php else: ?>
+                                    <div class="v8h-total-row">
+                                        <i class="fas fa-users me-1 text-muted"></i> Total: <?= number_format((int)$chave['CONSEN_TOTAL'], 0, ',', '.') ?>
+                                    </div>
                                 </div>
-                            <?php endif; ?>
+                            </div>
                         </div>
                     <?php endforeach; ?>
                 <?php endif; ?>
@@ -445,53 +498,94 @@ if (file_exists($caminho_header)) {
                     <span class="text-muted fw-bold fst-italic">Nenhuma consulta registrada.</span>
                 </div>
             <?php else: ?>
-                <div class="table-responsive">
-                    <table class="table table-hover table-bordered mb-0 tbl-v8-hist">
+                <div class="table-responsive border border-dark rounded shadow-sm" style="max-height:520px; overflow-y:auto;">
+                    <table class="table table-hover table-bordered table-sm align-middle mb-0 tbl-v8-hist">
                         <thead>
                             <tr>
-                                <th>Data</th>
-                                <th>CPF</th>
-                                <th>Nome</th>
-                                <th>Chave / Robô</th>
-                                <th>Usuário</th>
-                                <th>Status</th>
+                                <th>ID / Data</th>
+                                <th>Cliente e Origem</th>
+                                <th class="border-start border-end border-danger">Autorização ID Consulta</th>
+                                <th class="border-end border-danger">ID Config (Margem)</th>
+                                <th class="border-end border-danger">ID Simulação</th>
+                                <th class="border-end border-danger">ID Proposta</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <?php foreach ($v8_historico as $h): ?>
-                                <?php
-                                    $st = strtoupper($h['STATUS_V8'] ?? '');
-                                    $isIA = (strtoupper($h['FONTE_CONSULT_ID'] ?? '') === 'IA BOT');
-                                    if ($isIA) {
-                                        $badgeCls = 'badge-v8-ia'; $badgeIcon = 'fa-robot';
-                                    } elseif (preg_match('/ERROR|ERRO|REJECT|DENIED|CANCEL|FAILED|TIMEOUT/', $st)) {
-                                        $badgeCls = 'badge-v8-err'; $badgeIcon = 'fa-times-circle';
-                                    } elseif (preg_match('/MARGIN|MARGEM|OK|SIMULAT|PRONTA|AVAILABLE|APPROVED|PRE_APPROVED|LIBERADA/', $st)) {
-                                        $badgeCls = 'badge-v8-ok'; $badgeIcon = 'fa-check-circle';
-                                    } else {
-                                        $badgeCls = 'badge-v8-pend'; $badgeIcon = 'fa-clock';
-                                    }
-                                ?>
-                                <tr>
-                                    <td class="text-nowrap"><?= htmlspecialchars($h['DATA_BR']) ?></td>
-                                    <td class="text-nowrap"><?= htmlspecialchars($h['CPF_CONSULTADO']) ?></td>
-                                    <td><?= htmlspecialchars($h['NOME_COMPLETO'] ?? '--') ?></td>
-                                    <td class="text-nowrap"><?= htmlspecialchars($h['CLIENTE_NOME'] ?? '--') ?></td>
-                                    <td><?= htmlspecialchars($h['NOME_USUARIO'] ?? '--') ?></td>
-                                    <td>
-                                        <span class="badge <?= $badgeCls ?> d-inline-flex align-items-center gap-1" style="font-size:0.65rem;">
-                                            <i class="fas <?= $badgeIcon ?>"></i>
-                                            <?= htmlspecialchars(mb_substr($h['STATUS_V8'] ?? 'AGUARDANDO', 0, 30, 'UTF-8')) ?>
-                                        </span>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
+                        <tbody class="bg-white">
+                        <?php foreach ($v8_historico as $h):
+                            // ---- Coluna Autorização ----
+                            $fontAuth   = !empty($h['FONTE_CONSULT_ID']) ? $h['FONTE_CONSULT_ID'] : 'NOVO CONSENTIMENTO';
+                            $consultVis = !empty($h['CONSULT_ID']) ? mb_substr($h['CONSULT_ID'], 0, 8) : 'N/A';
+                            $st = strtoupper($h['STATUS_V8'] ?? '');
+                            if (strpos($st,'ERRO') !== false || strpos($st,'ERROR') !== false) {
+                                $badgeAuth = '<span class="badge bg-danger mb-1">' . htmlspecialchars($h['STATUS_V8']) . '</span>';
+                            } elseif (!empty($h['CONSULT_ID'])) {
+                                $badgeAuth = '<span class="badge bg-success mb-1">OK-CONSENTIMENTO</span>';
+                            } else {
+                                $badgeAuth = '<span class="badge bg-secondary mb-1">' . htmlspecialchars($h['STATUS_V8'] ?? 'AGUARDANDO') . '</span>';
+                            }
+
+                            // ---- Coluna Margem ----
+                            $fontMargem = !empty($h['FONTE_CONSIG_ID']) ? $h['FONTE_CONSIG_ID'] : 'V8';
+                            if (!empty($h['VALOR_MARGEM'])) {
+                                $prazosF = '24x';
+                                if (!empty($h['PRAZOS'])) {
+                                    $arr = json_decode($h['PRAZOS'], true);
+                                    $prazosF = is_array($arr) ? implode(', ', $arr) . 'x' : $h['PRAZOS'];
+                                }
+                                $colMargem = '<span class="badge bg-secondary rounded-pill mb-1" style="font-size:8px;">FONTE: ' . htmlspecialchars($fontMargem) . '</span><br>'
+                                           . '<span class="badge bg-success mb-1">MARGEM OK</span><br>'
+                                           . '<span class="text-success fw-bold">R$ ' . htmlspecialchars($h['VALOR_MARGEM']) . '</span><br>'
+                                           . '<small class="text-dark d-block" style="font-size:10px;">Prazos: ' . htmlspecialchars($prazosF) . '</small>';
+                            } else {
+                                $colMargem = '<span class="badge bg-light text-muted border">Vazio</span>';
+                            }
+
+                            // ---- Coluna Simulação ----
+                            if (!empty($h['SIMULATION_ID'])) {
+                                $colSimul = '<span class="badge bg-success mb-1">SIMULADO</span><br>'
+                                          . '<b class="text-success fs-6">R$ ' . htmlspecialchars($h['VALOR_LIBERADO'] ?? '0.00') . '</b><br>'
+                                          . '<small class="text-dark" style="font-size:10px;">Parcela: R$ ' . htmlspecialchars($h['VALOR_PARCELA'] ?? '0.00')
+                                          . '<br>Prazo: ' . htmlspecialchars($h['PRAZO_SIMULACAO'] ?? 24) . 'x</small>';
+                            } else {
+                                $colSimul = '<span class="badge bg-light text-muted border">Vazio</span>';
+                            }
+
+                            // ---- Coluna Proposta ----
+                            $colProp = !empty($h['NUMERO_PROPOSTA'])
+                                ? '<span class="badge bg-primary">' . htmlspecialchars($h['NUMERO_PROPOSTA']) . '</span>'
+                                : '<span class="badge bg-light text-muted border">Vazio</span>';
+                        ?>
+                            <tr>
+                                <td class="text-nowrap" style="min-width:100px;">
+                                    <b class="text-primary">#<?= (int)$h['ID'] ?></b><br>
+                                    <small class="text-muted"><?= htmlspecialchars($h['DATA_FILA_BR']) ?></small>
+                                </td>
+                                <td style="min-width:160px; text-align:left;">
+                                    <b><?= htmlspecialchars($h['CPF_CONSULTADO']) ?></b><br>
+                                    <span class="text-dark"><?= htmlspecialchars($h['NOME_COMPLETO'] ?? '--') ?></span><br>
+                                    <small class="text-muted">Usuário: <?= htmlspecialchars($h['NOME_USUARIO'] ?? '--') ?></small><br>
+                                    <small class="text-muted">API: <?= htmlspecialchars($h['USERNAME_API'] ?? '--') ?></small><br>
+                                    <small class="text-muted">Tabela: <?= htmlspecialchars($h['TABELA_PADRAO'] ?? '--') ?> &nbsp;·&nbsp; Prazo: <?= (int)($h['PRAZO_PADRAO'] ?? 24) ?>x</small>
+                                </td>
+                                <td style="min-width:130px;">
+                                    <span class="badge bg-dark rounded-pill mb-1" style="font-size:8px;">FONTE: <?= htmlspecialchars($fontAuth) ?></span><br>
+                                    <?= $badgeAuth ?>
+                                    <?php if (!empty($h['CONSULT_ID'])): ?>
+                                        <br><small class="text-muted">ID: <?= htmlspecialchars($consultVis) ?></small>
+                                        <?php if (!empty($h['DATA_RETORNO_BR'])): ?><br><small class="text-muted"><?= htmlspecialchars($h['DATA_RETORNO_BR']) ?></small><?php endif; ?>
+                                    <?php endif; ?>
+                                </td>
+                                <td style="min-width:130px;"><?= $colMargem ?></td>
+                                <td style="min-width:130px;"><?= $colSimul ?></td>
+                                <td style="min-width:100px;"><?= $colProp ?></td>
+                            </tr>
+                        <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
             <?php endif; ?>
             <div class="text-end mt-2">
-                <a href="/modulos/configuracao/v8_clt_margem_e_digitacao/index.api.ia.v8.php" class="btn btn-sm btn-outline-primary">
+                <a href="/modulos/configuracao/v8_clt_margem_e_digitacao/index.php" class="btn btn-sm btn-outline-primary">
                     <i class="fas fa-external-link-alt me-1"></i> Ver módulo completo V8
                 </a>
             </div>
@@ -503,11 +597,11 @@ if (file_exists($caminho_header)) {
 // Chevron toggle para as seções V8
 document.querySelectorAll('#collapseV8Chaves, #collapseV8Hist').forEach(function(el) {
     el.addEventListener('show.bs.collapse', function() {
-        var icon = document.querySelector('[data-bs-target="#' + el.id + '"] .fa-chevron-down, [data-bs-target="#' + el.id + '"] .fa-chevron-up');
+        var icon = document.querySelector('[data-bs-target="#' + el.id + '"] i.fas');
         if (icon) { icon.classList.replace('fa-chevron-down', 'fa-chevron-up'); }
     });
     el.addEventListener('hide.bs.collapse', function() {
-        var icon = document.querySelector('[data-bs-target="#' + el.id + '"] .fa-chevron-up, [data-bs-target="#' + el.id + '"] .fa-chevron-down');
+        var icon = document.querySelector('[data-bs-target="#' + el.id + '"] i.fas');
         if (icon) { icon.classList.replace('fa-chevron-up', 'fa-chevron-down'); }
     });
 });
