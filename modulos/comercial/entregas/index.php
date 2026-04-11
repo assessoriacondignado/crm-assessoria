@@ -299,7 +299,7 @@
      e.preventDefault();
      const f = { cliente: document.getElementById('nCli').value, produto: document.getElementById('nProd').value, dataPrevista: document.getElementById('nDate').value, status: document.getElementById('nStatus').value, obs: document.getElementById('nObs').value };
      const r = await callApi('salvar_entrega', f);
-     if(r.success){ modais.new.hide(); load(); } else alert(r.msg);
+     if(r.success){ modais.new.hide(); load(); } else crmToast(r.msg, r.success === false ? "error" : "info");
   });
 
   async function viewPedido(entrega_id) {
@@ -316,14 +316,14 @@
           document.getElementById('vpDataPrev').value = d.DATA_PREVISTA_RENOVACAO || ''; document.getElementById('vpDataEfetiva').value = d.DATA_EFETIVA_RENOVACAO || '';
           document.getElementById('vpObs').value = d.OBSERVACAO || '';
           modais.viewPed.show();
-      } else { alert(r.msg); }
+      } else { crmToast(r.msg, r.success === false ? "error" : "info"); }
   }
   
   document.getElementById('fViewPedido').addEventListener('submit', async e => {
       e.preventDefault();
       const f = { entrega_id: document.getElementById('vpEntId').value, pedido_id: document.getElementById('vpPedId').value, cliente: document.getElementById('vpCli').value, produto: document.getElementById('vpProd').value, unitario: document.getElementById('vpUnit').value, qtd: document.getElementById('vpQtd').value, acrescimo: document.getElementById('vpAcres').value, variacao: document.getElementById('vpVar').value, desconto: document.getElementById('vpDesc').value, cupom_nome: document.getElementById('vpCupomNome').value, cupom_val: document.getElementById('vpCupomVal').value, fidelidade: document.getElementById('vpFidel').value, iva: document.getElementById('vpIva').value, total: document.getElementById('vpTotal').value, data_prevista: document.getElementById('vpDataPrev').value, data_efetiva: document.getElementById('vpDataEfetiva').value, obs: document.getElementById('vpObs').value };
       const r = await callApi('editar_pedido_via_entrega', f);
-      if(r.success) { modais.viewPed.hide(); load(); alert(r.msg); }
+      if(r.success) { modais.viewPed.hide(); load(); crmToast(r.msg, r.success === false ? "error" : "info"); }
   });
 
   function openSt(id, st) { document.getElementById('sRow').value=id; document.getElementById('sVal').value=st; document.getElementById('sObs').value=''; modais.st.show(); }
@@ -335,7 +335,7 @@
   function openWapi(id) { document.getElementById('extRow').value=id; document.getElementById('extMsg').value=''; modais.ext.show(); }
   document.getElementById('fExt').addEventListener('submit', async e => {
      e.preventDefault(); const r = await callApi('registro_externo', { id: document.getElementById('extRow').value, obs: document.getElementById('extMsg').value });
-     if(r.success){ modais.ext.hide(); alert('Registrado!'); }
+     if(r.success){ modais.ext.hide(); crmToast("Registrado!", "warning", 5000); }
   });
 
   async function deleteOrder(id) { if(confirm("Deseja apagar esta Ficha de Entrega permanentemente?")) { const r = await callApi('excluir_entrega', {id: id}); if(r.success) load(); } }

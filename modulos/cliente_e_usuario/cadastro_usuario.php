@@ -595,7 +595,7 @@ if ($eh_admin):
         .then(r => r.json())
         .then(data => {
             if(data.sucesso) {
-                alert(`${nome} será deslogado no próximo clique dele no sistema!`);
+                crmToast(nome + " será deslogado no próximo clique.", "warning", 5000);
                 carregarUsuariosOnline(); 
             }
         });
@@ -638,7 +638,7 @@ document.getElementById('areaFiltros')?.addEventListener('click', function(e) {
         if (area.querySelectorAll('.linha-filtro').length > 1) {
             e.target.closest('.linha-filtro').remove();
         } else {
-            alert('Você precisa ter pelo menos uma regra de filtro!');
+            crmToast("Você precisa ter pelo menos uma regra de filtro!", "warning", 5000);
         }
     }
 });
@@ -671,20 +671,20 @@ function enviarLinkReset(cpfDestino, isSelf) {
                 document.getElementById('divLinkResetResult').classList.remove('d-none');
                 document.getElementById('inputLinkGerado').value = res.link;
                 if(res.wapi) {
-                    alert('✅ Link gerado E enviado para o WhatsApp do usuário com sucesso!');
+                    crmToast("✅ Link gerado E enviado para o WhatsApp do usuário com sucesso!", "warning", 5000);
                 } else {
-                    alert('⚠️ Link gerado com sucesso! ' + res.info + '\nVocê precisará copiar e enviar manualmente.');
+                    crmToast("✅ Link gerado! " + res.info + " Copie e envie manualmente.", "success");
                 }
             } else {
-                alert('✅ Link de redefinição enviado para o seu WhatsApp com sucesso! Verifique seu celular.');
+                crmToast("✅ Link de redefinição enviado para o seu WhatsApp com sucesso! Verifique seu celular.", "warning", 5000);
             }
         } else {
-            alert('❌ Erro: ' + res.message);
+            crmToast("❌ " + res.message, "error", 6000);
         }
     }).catch(() => {
         btn.innerHTML = originalHtml;
         btn.disabled = false;
-        alert('Falha na comunicação com o servidor.');
+        crmToast("Falha na comunicação com o servidor.", "warning", 5000);
     });
 }
 
@@ -693,7 +693,7 @@ function copiarLink() {
     copyText.select();
     copyText.setSelectionRange(0, 99999); 
     navigator.clipboard.writeText(copyText.value);
-    alert("Copiado com sucesso!");
+    crmToast("Copiado com sucesso!", "info", 5000);
 }
 </script>
 

@@ -318,7 +318,7 @@ include $caminho_header;
             return await response.json();
         } catch (error) {
             console.error("Erro na API:", error);
-            alert("Aviso: Falha de comunicação com o servidor MySQL.");
+            crmToast("Aviso: Falha de comunicação com o servidor MySQL.", "info", 5000);
             return { success: false, message: error.toString() };
         }
     }
@@ -367,7 +367,7 @@ include $caminho_header;
     function searchClientsToLink() {
         const term = document.getElementById('searchClientTerm').value;
         const sel = document.getElementById('selLinkedClient');
-        if (term.length < 3) { alert('Digite pelo menos 3 letras ou números para buscar.'); return; }
+        if (term.length < 3) { crmToast("Digite pelo menos 3 letras ou números para buscar.", "warning", 5000); return; }
         
         sel.innerHTML = '<option value="">Buscando no banco...</option>';
         apiCall('searchClient', { term: term }).then(results => {
@@ -381,7 +381,7 @@ include $caminho_header;
     document.getElementById('formEditClient').addEventListener('submit', e => {
         e.preventDefault(); 
         const selectedVal = document.getElementById('selLinkedClient').value;
-        if (!selectedVal) { alert("Por favor, pesquise e selecione um cliente na lista."); return; }
+        if (!selectedVal) { crmToast("Por favor, pesquise e selecione um cliente na lista.", "info", 5000); return; }
 
         const btn = document.getElementById('btnSaveClient'); btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Salvando...'; btn.disabled = true;
         const parts = selectedVal.split('|');
@@ -389,7 +389,7 @@ include $caminho_header;
         
         apiCall('updateContactInfo', form).then(r => { 
             btn.innerHTML = '<i class="fas fa-save me-2"></i> Salvar Vínculo no Histórico'; btn.disabled = false; 
-            alert(r.message || "Ação concluída."); 
+            crmToast(r.message || "Ação concluída.", "info"); 
             if(r.success) { mEditClient.hide(); loadAutoLogs(); }
         });
     });
@@ -457,7 +457,7 @@ include $caminho_header;
         let schedule = {}; for(let i=0; i<7; i++) { schedule[i] = { active: document.getElementById(`sc_active_${i}`).checked, start: document.getElementById(`sc_start_${i}`).value, end: document.getElementById(`sc_end_${i}`).value }; }
         let blocos = []; document.querySelectorAll('.block-card').forEach(el => { const type = el.getAttribute('data-type'); const id = el.getAttribute('data-id'); let b = { id: id, tipo: type }; if(type==='verificacao') { b.nextStep = el.querySelector('.block-next-step').value; b.msgKnown = el.querySelector('.block-msg-known').value; b.msgNew = el.querySelector('.block-msg-new').value; } else if (type==='menu') { b.msgMenu = el.querySelector('.block-msg-menu').value; b.msgError = el.querySelector('.block-msg-error').value; b.options = []; el.querySelectorAll('.option-row').forEach(row => { b.options.push({ opt: row.querySelector('.opt-key').value, resp: row.querySelector('.opt-resp').value }); }); } else { b.gatilhos = el.querySelector('.block-trigger').value; b.msgSmart = el.querySelector('.block-msg-smart').value; } blocos.push(b); });
         const form = { instanceId: document.getElementById('cfgInstId').value, ativo: document.getElementById('cfgActive').checked, mensagem: document.getElementById('cfgMsg').value, grupoAviso: document.getElementById('cfgGroup').value, schedule: schedule, chatbot: { ativo: document.getElementById('botActive').checked, blocos: blocos } };
-        apiCall('saveInstanceConfigApi', form).then(r => { btn.innerHTML = '<i class="fas fa-save me-2"></i>Salvar Fluxo'; btn.disabled = false; alert(r.message || "Fluxo gravado com sucesso."); if(r.success) mCfg.hide(); });
+        apiCall('saveInstanceConfigApi', form).then(r => { btn.innerHTML = '<i class="fas fa-save me-2"></i>Salvar Fluxo'; btn.disabled = false; crmToast(r.message || "Fluxo gravado com sucesso.", "success"); if(r.success) mCfg.hide(); });
     });
 
     function toggleDest() { const type = document.querySelector('input[name="destType"]:checked').value; document.getElementById('divManual').classList.toggle('hidden', type !== 'manual'); document.getElementById('divClient').classList.toggle('hidden', type !== 'client'); }
@@ -474,7 +474,7 @@ include $caminho_header;
     document.getElementById('formSend')?.addEventListener('submit', e => { 
         e.preventDefault(); 
         const idx = document.getElementById('selInstance').value; 
-        if(idx === "") { alert('Erro: Selecione uma instância primeiro.'); return; } 
+        if(idx === "") { crmToast("Erro: Selecione uma instância primeiro.", "warning", 5000); return; } 
         const inst = instances[idx]; 
         let target = "", isGroup = false; 
         const destType = document.querySelector('input[name="destType"]:checked').value; 
@@ -486,7 +486,7 @@ include $caminho_header;
             target = document.getElementById('selClient').value; 
         }
         
-        if(!target) { alert('Erro: Selecione ou digite o destinatário.'); return; } 
+        if(!target) { crmToast("Erro: Selecione ou digite o destinatário.", "warning", 5000); return; } 
         
         const msgType = document.querySelector('input[name="msgType"]:checked').value;
         const btn = document.getElementById('btnSend'); 
@@ -495,12 +495,12 @@ include $caminho_header;
 
         if (msgType === 'text') {
             const tx = document.getElementById('msgText').value; 
-            if(!tx) { alert('Digite a mensagem.'); btn.disabled=false; btn.innerHTML='<i class="fas fa-paper-plane me-2"></i> Executar Disparo'; return; }
+            if(!tx) { crmToast("Digite a mensagem.", "warning", 5000); btn.disabled=false; btn.innerHTML='<i class="fas fa-paper-plane me-2"></i> Executar Disparo'; return; }
             
             apiCall('sendWapiMessage', { target: target, message: tx, instanceId: inst.instanceId, isGroup: isGroup }).then(r => { 
                 btn.disabled = false; 
                 btn.innerHTML = '<i class="fas fa-paper-plane me-2"></i> Executar Disparo'; 
-                alert(r.message); 
+                crmToast(r.message, "info"); 
                 if(r.success) { document.getElementById('msgText').value=''; }
             }); 
         } else {
@@ -508,7 +508,7 @@ include $caminho_header;
             const docExt = document.getElementById('docExt').value;
             
             if(!docUrl || !docExt) { 
-                alert('A URL do arquivo e a Extensão são obrigatórias.'); 
+                crmToast("A URL do arquivo e a Extensão são obrigatórias.", "warning", 5000); 
                 btn.disabled=false; 
                 btn.innerHTML='<i class="fas fa-paper-plane me-2"></i> Executar Disparo'; 
                 return; 
@@ -525,7 +525,7 @@ include $caminho_header;
             }).then(r => { 
                 btn.disabled = false; 
                 btn.innerHTML = '<i class="fas fa-paper-plane me-2"></i> Executar Disparo'; 
-                alert(r.message); 
+                crmToast(r.message, "info"); 
                 if(r.success) { 
                     document.getElementById('docUrl').value=''; 
                     document.getElementById('docExt').value=''; 
@@ -538,11 +538,11 @@ include $caminho_header;
     
     function openTplModal(idx=null){ document.getElementById('formTpl').reset(); if(idx!==null){ const t=templates[idx]; document.getElementById('tRow').value=t.id; document.getElementById('tName').value=t.nome; document.getElementById('tObj').value=t.objetivo; document.getElementById('tContent').value=t.conteudo; }else{ document.getElementById('tRow').value=""; } mTpl.show(); }
     
-    document.getElementById('formTpl').addEventListener('submit',e=>{ e.preventDefault(); const f={ id:document.getElementById('tRow').value, nome:document.getElementById('tName').value, objetivo:document.getElementById('tObj').value, conteudo:document.getElementById('tContent').value }; const fu = f.id ? 'editTemplate' : 'saveTemplate'; apiCall(fu, f).then(r => { if(r.success){ mTpl.hide(); loadTemplates(); } else alert(r.message); }); });
+    document.getElementById('formTpl').addEventListener('submit',e=>{ e.preventDefault(); const f={ id:document.getElementById('tRow').value, nome:document.getElementById('tName').value, objetivo:document.getElementById('tObj').value, conteudo:document.getElementById('tContent').value }; const fu = f.id ? 'editTemplate' : 'saveTemplate'; apiCall(fu, f).then(r => { if(r.success){ mTpl.hide(); loadTemplates(); } else crmToast(r.message, "info"); }); });
 
     function openInstanceModal(idx=null){ document.getElementById('formNew').reset(); if(idx!==null){ const i=instances[idx]; document.getElementById('iRow').value=i.id; document.getElementById('iName').value=i.nome; document.getElementById('iID').value=i.instanceId; document.getElementById('iType').value=i.tipo; document.getElementById('iToken').value=i.token; document.getElementById('iPhone').value=i.telefone; document.getElementById('iDate').value=i.vencimento; document.getElementById('btnSaveInstance').innerText="Atualizar Registro"; } else { document.getElementById('iRow').value=""; document.getElementById('btnSaveInstance').innerText="Salvar Nova Instância"; } mNew.show(); }
 
-    document.getElementById('formNew').addEventListener('submit',e=>{ e.preventDefault(); const b=document.getElementById('btnSaveInstance'); b.disabled=true; const f={ id:document.getElementById('iRow').value, nome:document.getElementById('iName').value, instanceId:document.getElementById('iID').value, tipo:document.getElementById('iType').value, token:document.getElementById('iToken').value, telefone:document.getElementById('iPhone').value, vencimento:document.getElementById('iDate').value }; const fu = f.id ? 'editInstanceInSheet' : 'addInstanceToSheet'; apiCall(fu, f).then(r => { b.disabled=false; if(r.success){ mNew.hide(); loadInstances(); } else alert(r.message || "Erro ao salvar no Banco de Dados."); }); });
+    document.getElementById('formNew').addEventListener('submit',e=>{ e.preventDefault(); const b=document.getElementById('btnSaveInstance'); b.disabled=true; const f={ id:document.getElementById('iRow').value, nome:document.getElementById('iName').value, instanceId:document.getElementById('iID').value, tipo:document.getElementById('iType').value, token:document.getElementById('iToken').value, telefone:document.getElementById('iPhone').value, vencimento:document.getElementById('iDate').value }; const fu = f.id ? 'editInstanceInSheet' : 'addInstanceToSheet'; apiCall(fu, f).then(r => { b.disabled=false; if(r.success){ mNew.hide(); loadInstances(); } else crmToast(r.message || "Erro ao salvar.", "error", 6000); }); });
 
     function cmd(a,i){ 
         const x=instances[i]; 
@@ -551,13 +551,13 @@ include $caminho_header;
         
         apiCall('executeCommand', { action: a, instanceId: x.instanceId }).then(r => { 
             if(r.success){ 
-                alert('Status da requisição: '+(r.data||'Comando processado')); 
+                crmToast("✅ " + (r.data||"Comando processado"), "success"); 
                 if(a==='status' || a==='restart') loadInstances(); 
-            } else alert('Erro reportado pela API: '+(r.message||r.error)); 
+            } else crmToast("❌ " + (r.message||r.error), "error", 6000); 
         }); 
     }
 
-    function conn(i){ const x=instances[i]; mConn.show(); document.getElementById('qrImg').classList.add('hidden'); document.getElementById('qrLoad').classList.remove('hidden'); apiCall('executeCommand', { action: 'qrcode', instanceId: x.instanceId }).then(r => { document.getElementById('qrLoad').classList.add('hidden'); if(r.success && r.type==='qrcode'){ document.getElementById('qrImg').src=r.data.includes('base64')?r.data:'data:image/png;base64,'+r.data; document.getElementById('qrImg').classList.remove('hidden'); } else alert('Falha ao obter QR Code: '+(r.message||r.error||'Instância pode já estar conectada.')); }); }
+    function conn(i){ const x=instances[i]; mConn.show(); document.getElementById('qrImg').classList.add('hidden'); document.getElementById('qrLoad').classList.remove('hidden'); apiCall('executeCommand', { action: 'qrcode', instanceId: x.instanceId }).then(r => { document.getElementById('qrLoad').classList.add('hidden'); if(r.success && r.type==='qrcode'){ document.getElementById('qrImg').src=r.data.includes('base64')?r.data:'data:image/png;base64,'+r.data; document.getElementById('qrImg').classList.remove('hidden'); } else crmToast("❌ Falha QR: " + (r.message||r.error||"Instância conectada?"), "error", 6000); }); }
 
     // ===============================================
     // LÓGICA DO MODAL DE FILA
@@ -616,7 +616,7 @@ include $caminho_header;
         apiCall('clearQueue', { instanceId: currentQueueInstId }).then(r => {
             btn.innerHTML = originalHtml;
             btn.disabled = false;
-            alert(r.message || "Comando enviado para a W-API.");
+            crmToast(r.message || "Comando enviado.", "info");
             if(r.success) {
                 mQueue.hide();
             }
@@ -624,11 +624,11 @@ include $caminho_header;
     }
 
     function deleteMessageFromQueue(msgId) {
-        if(!msgId) { alert('ID da mensagem não encontrado.'); return; }
+        if(!msgId) { crmToast("ID da mensagem não encontrado.", "warning", 5000); return; }
         if(!confirm('Tem certeza que deseja apagar ESTA mensagem específica da fila?')) return;
         
         apiCall('deleteQueueMessage', { instanceId: currentQueueInstId, messageId: msgId }).then(r => {
-            alert(r.message || "Comando enviado.");
+            crmToast(r.message || "Comando enviado.", "info");
             if(r.success) {
                 // Procura a instância pelo ID pra recarregar a fila visualmente
                 const idx = instances.findIndex(i => i.instanceId === currentQueueInstId);

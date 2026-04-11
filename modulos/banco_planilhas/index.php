@@ -409,12 +409,12 @@ function limparFiltroGeral() { document.getElementById('areaFiltrosExp').innerHT
 
 function filtrarCatologoPlanilhas() {
     const rules = getRegrasAtuais();
-    if(rules.length === 0) { alert('Crie pelo menos uma regra para filtrar o catálogo!'); return; }
+    if(rules.length === 0) { crmToast("Crie pelo menos uma regra para filtrar o catálogo!", "warning", 5000); return; }
     const btn = document.getElementById('btnExecutarFiltro'); btn.innerHTML = '<i class="fas fa-spinner fa-spin me-1"></i> Filtrando Catálogo...'; btn.disabled = true;
     const formData = new FormData(); formData.append('acao', 'buscar_planilhas_filtro'); formData.append('rules', JSON.stringify(rules));
     fetch('ajax_acervo.php', { method: 'POST', body: formData }).then(res => res.json()).then(data => {
         btn.innerHTML = '<i class="fas fa-search me-1"></i> Filtrar Catálogo'; btn.disabled = false;
-        if(data.sucesso) { globalFiles = data.planilhas; new bootstrap.Collapse(document.getElementById('painelBuscaAvancada'), {toggle: false}).hide(); filterList(); } else alert('Erro: ' + data.erro);
+        if(data.sucesso) { globalFiles = data.planilhas; new bootstrap.Collapse(document.getElementById('painelBuscaAvancada'), {toggle: false}).hide(); filterList(); } else crmToast("❌ " + data.erro, "error", 6000);
     });
 }
 
@@ -495,19 +495,19 @@ function salvarEdicao() {
     formData.append('desc', quillFicha.root.innerHTML);
     
     fetch('ajax_acervo.php', { method: 'POST', body: formData }).then(res => res.json()).then(data => { 
-        if(data.sucesso) { bootstrap.Modal.getInstance(document.getElementById('modalFicha')).hide(); loadFiles(); } else alert('Erro: ' + data.erro); 
+        if(data.sucesso) { bootstrap.Modal.getInstance(document.getElementById('modalFicha')).hide(); loadFiles(); } else crmToast("❌ " + data.erro, "error", 6000); 
     });
 }
 
 function excluirPlanilha() {
     if(confirm('Tem certeza absoluta? Isso deletará o arquivo gigante do servidor.')) {
         const formData = new FormData(); formData.append('acao', 'excluir'); formData.append('id', document.getElementById('edit_id').value);
-        fetch('ajax_acervo.php', { method: 'POST', body: formData }).then(res => res.json()).then(data => { if(data.sucesso) { bootstrap.Modal.getInstance(document.getElementById('modalFicha')).hide(); loadFiles(); } else alert('Erro: ' + data.erro); });
+        fetch('ajax_acervo.php', { method: 'POST', body: formData }).then(res => res.json()).then(data => { if(data.sucesso) { bootstrap.Modal.getInstance(document.getElementById('modalFicha')).hide(); loadFiles(); } else crmToast("❌ " + data.erro, "error", 6000); });
     }
 }
 
 function enviarParaPreview() {
-    let fileInput = document.getElementById('i_arquivo'); if(fileInput.files.length === 0) { alert('Selecione um arquivo!'); return; }
+    let fileInput = document.getElementById('i_arquivo'); if(fileInput.files.length === 0) { crmToast("Selecione um arquivo!", "warning", 5000); return; }
     let btn = document.getElementById('btn_preview'); btn.innerHTML = '<i class="fas fa-spinner fa-spin text-info me-2"></i> Lendo arquivo...'; btn.disabled = true;
     let formData = new FormData(); formData.append('arquivo_csv', fileInput.files[0]);
     fetch('upload_cache_planilhas.php', { method: 'POST', body: formData }).then(r => r.json()).then(data => {
@@ -517,7 +517,7 @@ function enviarParaPreview() {
             let trH = '<tr>'; data.cabecalhos.forEach(c => trH += `<th>${c}</th>`); trH += '</tr>'; document.getElementById('preview_head').innerHTML = trH;
             let bH = ''; data.amostra.forEach(l => { bH += '<tr class="border-bottom border-dark bg-white">'; l.forEach(c => bH += `<td>${c}</td>`); bH += '</tr>'; });
             document.getElementById('preview_body').innerHTML = bH; document.getElementById('import-step-1').classList.add('hidden'); document.getElementById('import-step-2').classList.remove('hidden');
-        } else alert('Erro: ' + data.erro);
+        } else crmToast("❌ " + data.erro, "error", 6000);
     });
 }
 
@@ -528,8 +528,8 @@ function salvarNoBanco() {
     document.getElementById('i_desc').value = quillImport.root.innerHTML;
     let formData = new FormData(document.getElementById('formUp')); formData.append('arquivo_cache', document.getElementById('cache_filename').value); formData.append('cabecalhos', document.getElementById('cache_headers').value);
     fetch('salvar_planilha_bd.php', { method: 'POST', body: formData }).then(r => r.json()).then(data => {
-        if(data.sucesso) { alert('Planilha importada com sucesso!'); document.getElementById('formUp').reset(); quillImport.setContents([]); cancelarImportacao(); switchTab('list'); } 
-        else { alert('Erro: ' + data.erro); btn.innerHTML = '<i class="fas fa-save me-1"></i> Confirmar e Salvar Planilha'; btn.disabled = false; }
+        if(data.sucesso) { crmToast("Planilha importada com sucesso!", "warning", 5000); document.getElementById('formUp').reset(); quillImport.setContents([]); cancelarImportacao(); switchTab('list'); } 
+        else { crmToast("❌ " + data.erro, "error", 6000); btn.innerHTML = '<i class="fas fa-save me-1"></i> Confirmar e Salvar Planilha'; btn.disabled = false; }
     });
 }
 </script>

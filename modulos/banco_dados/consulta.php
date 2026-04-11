@@ -1839,7 +1839,7 @@ document.getElementById('areaFiltros')?.addEventListener('click', function(e) {
         const area = document.getElementById('areaFiltros');
         if (area.querySelectorAll('.linha-filtro').length > 1) {
             e.target.closest('.linha-filtro').remove();
-        } else { alert('Você precisa ter pelo menos uma regra de filtro!'); }
+        } else { crmToast("Você precisa ter pelo menos uma regra de filtro!", "warning", 5000); }
     }
 });
 </script>

@@ -203,7 +203,7 @@
 
   async function avancarEtapa(className, novaEtapa) {
       const checkboxes = document.querySelectorAll(`.${className}:checked`);
-      if(checkboxes.length === 0) { alert("Selecione pelo menos uma comissão na caixinha!"); return; }
+      if(checkboxes.length === 0) { crmToast("Selecione pelo menos uma comissão na caixinha!", "info", 5000); return; }
       
       let msg = novaEtapa === 'ESTORNADO' ? "ATENÇÃO: Deseja ESTORNAR as comissões selecionadas?" : `Mover ${checkboxes.length} comissões para o status ${novaEtapa}?`;
       if(!confirm(msg)) return;
@@ -215,7 +215,7 @@
           if(document.getElementById('chkAll1')) document.getElementById('chkAll1').checked = false;
           if(document.getElementById('chkAll2')) document.getElementById('chkAll2').checked = false;
           carregarTodasEtapas();
-      } else { alert(r.msg); }
+      } else { crmToast(r.msg, r.success === false ? "error" : "info"); }
   }
 </script>
 

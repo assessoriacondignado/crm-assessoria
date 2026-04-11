@@ -339,7 +339,7 @@ try {
         let fileInput = document.getElementById('arquivo_csv');
         let btn = document.getElementById('btn_upload');
 
-        if(!nome || fileInput.files.length === 0) return alert('Preencha o nome e selecione o Arquivo!');
+        if(!nome || fileInput.files.length === 0) return crmToast("Preencha o nome e selecione o Arquivo!", "warning", 5000);
 
         let formData = new FormData();
         formData.append('arquivo_csv', fileInput.files[0]);
@@ -402,12 +402,12 @@ try {
                         document.getElementById('amostra_body').innerHTML = htmlBody;
 
                         mudarEtapa('etapa2');
-                    } else { alert("Erro: " + data.erro); }
+                    } else { crmToast("❌ " + data.erro, "error", 6000); }
                 } catch (e) {
-                    alert('ERRO DE SERVIDOR: Resposta do PHP é inválida. Detalhes: ' + xhr.responseText.substring(0, 100));
+                    crmToast("❌ Erro servidor: resposta inválida.", "error", 7000);
                 }
             } else {
-                alert('ERRO DE SERVIDOR HTTP ' + xhr.status + ': O Servidor bloqueou o pacote.');
+                crmToast("❌ Erro HTTP " + xhr.status + ": servidor bloqueou.", "error", 7000);
             }
         };
 
@@ -415,7 +415,7 @@ try {
             btn.innerHTML = 'Próximo Passo <i class="fas fa-arrow-right ms-1"></i>';
             btn.disabled = false;
             document.getElementById('container_progresso_upload').style.display = 'none';
-            alert('ERRO DE REDE: Falha na conexão com o servidor durante o upload.');
+            crmToast("ERRO DE REDE: Falha na conexão com o servidor durante o upload.", "warning", 5000);
         };
 
         xhr.send(formData);
@@ -526,7 +526,7 @@ try {
             if(select.value !== "") mapeamento[select.getAttribute('data-colunabanco')] = parseInt(select.value);
         });
 
-        if(!mapeamento.hasOwnProperty('cpf')) return alert("Aviso: É obrigatório vincular a coluna 'CPF'!");
+        if(!mapeamento.hasOwnProperty('cpf')) return crmToast("Aviso: É obrigatório vincular a coluna 'CPF'!", "info", 5000);
 
         let btn = document.getElementById('btn_testar_importacao');
         let iconAntigo = btn.innerHTML;
@@ -570,12 +570,12 @@ try {
                 let modal = new bootstrap.Modal(document.getElementById('modalTesteImportacao'));
                 modal.show();
             } else {
-                alert("Erro no teste: " + data.erro);
+                crmToast("❌ Erro no teste: " + data.erro, "error", 6000);
             }
         }).catch(e => {
             btn.innerHTML = iconAntigo;
             btn.disabled = false;
-            alert("Erro de conexão ao realizar o teste.");
+            crmToast("Erro de conexão ao realizar o teste.", "info", 5000);
         });
     }
 
@@ -596,15 +596,15 @@ try {
         let idCampanhaVinculo = document.getElementById('id_campanha_alvo').value;
         let apagarContratos = document.getElementById('apagar_contratos_alvo') ? document.getElementById('apagar_contratos_alvo').value : 'NAO';
 
-        if(!modelo) return alert("Selecione o Modelo de Tabela!");
+        if(!modelo) return crmToast("Selecione o Modelo de Tabela!", "info", 5000);
         
         let mapeamento = {};
         document.querySelectorAll('.sel-mapeamento').forEach(select => {
             if(select.value !== "") mapeamento[select.getAttribute('data-colunabanco')] = parseInt(select.value);
         });
 
-        if(!mapeamento.hasOwnProperty('cpf')) return alert("Aviso: É obrigatório vincular a coluna 'CPF'!");
-        if(modelo.includes('inss') && !mapeamento.hasOwnProperty('matricula_nb')) return alert("Aviso: É obrigatório vincular a coluna 'MATRÍCULA' para dados do INSS!");
+        if(!mapeamento.hasOwnProperty('cpf')) return crmToast("Aviso: É obrigatório vincular a coluna 'CPF'!", "info", 5000);
+        if(modelo.includes('inss') && !mapeamento.hasOwnProperty('matricula_nb')) return crmToast("Aviso: É obrigatório vincular a coluna 'MATRÍCULA' para dados do INSS!", "info", 5000);
 
         let formData = new FormData();
         formData.append('arquivo_cache', arquivoCache);
@@ -622,7 +622,7 @@ try {
                 mudarEtapa('etapa3'); 
                 carregarFilaDashboard();
             } else {
-                alert("Erro ao iniciar a tarefa: " + data.erro);
+                crmToast("❌ Erro ao iniciar: " + data.erro, "error", 6000);
             }
         });
     }
@@ -761,13 +761,13 @@ try {
 
                 mudarEtapa('etapa2');
             } else {
-                alert("Erro: " + data.erro);
+                crmToast("❌ " + data.erro, "error", 6000);
             }
         })
         .catch(e => {
             btn.innerHTML = iconAntigo;
             btn.disabled = false;
-            alert('Erro de conexão ao tentar reutilizar o arquivo.');
+            crmToast("Erro de conexão ao tentar reutilizar o arquivo.", "warning", 5000);
         });
     }
 </script>

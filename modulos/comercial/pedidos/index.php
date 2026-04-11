@@ -546,7 +546,7 @@
          gerar_entrega: document.getElementById('nGerarEntrega').checked ? '1' : '0'
      };
      const r = await callApi('salvar_pedido', f);
-     if(r.success){ modais.new.hide(); load(); alert(r.msg); } else alert(r.msg);
+     if(r.success){ modais.new.hide(); load(); crmToast(r.msg, r.success === false ? "error" : "info"); } else crmToast(r.msg, r.success === false ? "error" : "info");
   });
 
   async function viewPedido(id) {
@@ -592,7 +592,7 @@
           
           document.getElementById('vpObs').value = d.OBSERVACAO || '';
           modais.viewPed.show();
-      } else { alert(r.msg); }
+      } else { crmToast(r.msg, r.success === false ? "error" : "info"); }
   }
 
   async function openRenovacao(id) {
@@ -623,7 +623,7 @@
           data_efetiva: document.getElementById('vpDataEfetiva').value, obs: document.getElementById('vpObs').value 
       };
       const r = await callApi('editar_pedido_completo', f);
-      if(r.success) { modais.viewPed.hide(); load(); alert(r.msg); } else alert(r.msg);
+      if(r.success) { modais.viewPed.hide(); load(); crmToast(r.msg, r.success === false ? "error" : "info"); } else crmToast(r.msg, r.success === false ? "error" : "info");
   });
 
   function openSt(id, st) { document.getElementById('sRow').value=id; document.getElementById('sVal').value=st; document.getElementById('sObs').value=''; modais.st.show(); }
@@ -635,14 +635,14 @@
   function openWapi(id) { document.getElementById('extRow').value=id; document.getElementById('extMsg').value=''; modais.ext.show(); }
   document.getElementById('fExt').addEventListener('submit', async e => {
      e.preventDefault(); const r = await callApi('registro_externo', { id: document.getElementById('extRow').value, obs: document.getElementById('extMsg').value });
-     if(r.success){ modais.ext.hide(); alert('Registrado no histórico!'); }
+     if(r.success){ modais.ext.hide(); crmToast("Registrado no histórico!", "warning", 5000); }
   });
 
   async function gerarEntrega(id) {
      if(confirm("Deseja enviar este pedido para o setor de Logística/Entregas?")) {
          let obs = prompt("Deseja adicionar alguma observação para a logística? (Opcional)");
          const r = await callApi('gerar_entrega', { pedido_id: id, obs: obs });
-         if(r.success) { alert(r.msg); load(); } else { alert(r.msg); }
+         if(r.success) { crmToast(r.msg, r.success === false ? "error" : "info"); load(); } else { crmToast(r.msg, r.success === false ? "error" : "info"); }
      }
   }
 

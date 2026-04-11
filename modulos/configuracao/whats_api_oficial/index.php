@@ -608,7 +608,7 @@ if ($perm_chat)         $tab_ativa = $tab_ativa ?: 'tab-chat';
         } catch(e) { return { success: false, msg: 'Erro na campanha.' }; }
     }
 
-    function copiarTexto(id) { let c = document.getElementById(id); c.select(); document.execCommand("copy"); alert("Copiado!"); }
+    function copiarTexto(id) { let c = document.getElementById(id); c.select(); document.execCommand("copy"); crmToast("Copiado!", "info", 5000); }
 
     function mudarTipoTeste() {
         const tipo = document.getElementById('tst_tipo').value;
@@ -755,13 +755,13 @@ if ($perm_chat)         $tab_ativa = $tab_ativa ?: 'tab-chat';
             app_secret: document.getElementById('bm_app_secret').value,
             token: document.getElementById('bm_token').value
         });
-        alert(r.msg);
+        crmToast(r.msg, r.success === false ? "error" : "info");
         if (r.success) { bootstrap.Modal.getInstance(document.getElementById('modalBM'))?.hide(); carregarConfig(); }
     }
     async function excluirBM(id, nome) {
         if (!confirm(`Excluir o BM "${nome}" e TODAS as WABAs e Números vinculados?\n\nEsta ação é irreversível.`)) return;
         const r = await waReq('excluir_bm', { bm_db_id: id });
-        alert(r.msg); carregarConfig();
+        crmToast(r.msg, r.success === false ? "error" : "info"); carregarConfig();
     }
 
     // --- Modal WABA ---
@@ -777,13 +777,13 @@ if ($perm_chat)         $tab_ativa = $tab_ativa ?: 'tab-chat';
             conta_id: document.getElementById('waba_conta_id').value,
             waba_id: document.getElementById('waba_id_input').value
         });
-        alert(r.msg);
+        crmToast(r.msg, r.success === false ? "error" : "info");
         if (r.success) { bootstrap.Modal.getInstance(document.getElementById('modalWABA'))?.hide(); carregarConfig(); }
     }
     async function excluirWABA(conta_id) {
         if (!confirm('Excluir esta conta WABA e todos os números vinculados?')) return;
         const r = await waReq('excluir_waba', { conta_id });
-        alert(r.msg); carregarConfig();
+        crmToast(r.msg, r.success === false ? "error" : "info"); carregarConfig();
     }
 
     // --- Modal Phone ---
@@ -799,7 +799,7 @@ if ($perm_chat)         $tab_ativa = $tab_ativa ?: 'tab-chat';
             phone_id: document.getElementById('phone_id_input').value,
             nome_numero: document.getElementById('phone_nome_input').value
         });
-        alert(r.msg);
+        crmToast(r.msg, r.success === false ? "error" : "info");
         if (r.success) { bootstrap.Modal.getInstance(document.getElementById('modalPhone'))?.hide(); carregarConfig(); }
     }
     async function excluirNumero(id) {
@@ -898,7 +898,7 @@ if ($perm_chat)         $tab_ativa = $tab_ativa ?: 'tab-chat';
         btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processando...';
         
         const r = await reqCampanha('importar_campanha', document.getElementById('formCampanha'));
-        alert(r.msg);
+        crmToast(r.msg, r.success === false ? "error" : "info");
         if (r.success) { document.getElementById('formCampanha').reset(); carregarCampanhas(); }
         btn.disabled = false; btn.innerHTML = '<i class="fas fa-save"></i> Criar Campanha';
     });
@@ -995,14 +995,14 @@ if ($perm_chat)         $tab_ativa = $tab_ativa ?: 'tab-chat';
         disparoPausado = true;
         campanhaEmAndamento = null;
         if (campPausandoTimer) { clearTimeout(campPausandoTimer); campPausandoTimer = null; }
-        alert('Pausado.'); carregarCampanhas();
+        crmToast("Pausado.", "warning", 5000); carregarCampanhas();
     }
 
     async function processarLoteMeta(nome_campanha) {
         if (disparoPausado) return;
         const r = await reqCampanha('processar_lote', { nome_campanha });
-        if (!r.success) { campanhaEmAndamento = null; alert('Erro no processamento.'); return; }
-        if (r.concluido === true) { campanhaEmAndamento = null; campContador = 0; alert('Campanha finalizada!'); carregarCampanhas(); return; }
+        if (!r.success) { campanhaEmAndamento = null; crmToast("Erro no processamento.", "warning", 5000); return; }
+        if (r.concluido === true) { campanhaEmAndamento = null; campContador = 0; crmToast("Campanha finalizada!", "warning", 5000); carregarCampanhas(); return; }
 
         campContador++;
         const cfg = campConfigs[nome_campanha] || { intervalo: 5, pausa_apos: 0, pausa_duracao: 60 };
@@ -1034,7 +1034,7 @@ if ($perm_chat)         $tab_ativa = $tab_ativa ?: 'tab-chat';
     async function excluirCampanha(nome_campanha) {
         if(!confirm(`Excluir campanha: ${nome_campanha}?`)) return;
         const r = await reqCampanha('excluir_campanha', { nome_campanha: nome_campanha });
-        alert(r.msg); if(r.success) carregarCampanhas();
+        crmToast(r.msg, r.success === false ? "error" : "info"); if(r.success) carregarCampanhas();
     }
 
     window.onload = () => { if(document.getElementById('formConfig')) carregarConfig(); };
@@ -1107,7 +1107,7 @@ if ($perm_chat)         $tab_ativa = $tab_ativa ?: 'tab-chat';
     async function selecionarConversa(id) {
         clearInterval(chatPollingTimer);
         const r = await chatReq('abrir_conversa', { conversa_id: id });
-        if (!r.success) return alert(r.msg);
+        if (!r.success) return crmToast(r.msg, r.success === false ? "error" : "info");
 
         chatConversaAtual = r.conversa;
         chatUltimoMsgId   = 0;
@@ -1274,12 +1274,12 @@ if ($perm_chat)         $tab_ativa = $tab_ativa ?: 'tab-chat';
             fd.append('conteudo', txt);
         } else if (tipo === 'template') {
             const tpl = document.getElementById('chat-tpl-nome').value;
-            if (!tpl) return alert('Selecione um template.');
+            if (!tpl) return crmToast("Selecione um template.", "warning", 5000);
             fd.append('template_name', tpl);
             fd.append('variaveis', document.getElementById('chat-tpl-vars').value);
         } else {
             const arquivo = document.getElementById('chat-arquivo').files[0];
-            if (!arquivo) return alert('Selecione um arquivo.');
+            if (!arquivo) return crmToast("Selecione um arquivo.", "warning", 5000);
             fd.append('arquivo', arquivo);
             fd.append('caption', document.getElementById('chat-arquivo-caption').value);
         }
@@ -1296,7 +1296,7 @@ if ($perm_chat)         $tab_ativa = $tab_ativa ?: 'tab-chat';
                 await pollingMensagens();
                 carregarConversas();
             } else {
-                alert('Erro: ' + data.msg);
+                crmToast("❌ " + data.msg, "error", 6000);
             }
         } finally {
             if (btn) { btn.disabled = false; btn.innerHTML = '<i class="fas fa-paper-plane"></i>'; }
@@ -1347,7 +1347,7 @@ if ($perm_chat)         $tab_ativa = $tab_ativa ?: 'tab-chat';
     async function salvarModelo() {
         const r = await chatReq('salvar_modelo', { modelo_id: document.getElementById('modelo-id').value, nome_modelo: document.getElementById('modelo-nome').value, conteudo: document.getElementById('modelo-conteudo').value });
         if (r.success) { document.getElementById('modelo-id').value = '0'; document.getElementById('modelo-nome').value = ''; document.getElementById('modelo-conteudo').value = ''; carregarModelosCRM(); }
-        else alert(r.msg);
+        else crmToast(r.msg, r.success === false ? "error" : "info");
     }
 
     async function excluirModelo(id) {
@@ -1361,7 +1361,7 @@ if ($perm_chat)         $tab_ativa = $tab_ativa ?: 'tab-chat';
     async function criarNovaConversa() {
         const r = await chatReq('nova_conversa', { phone_number_id: document.getElementById('nc-phone-id').value, telefone_cliente: document.getElementById('nc-telefone').value, nome_cliente: document.getElementById('nc-nome').value });
         if (r.success) { bootstrap.Modal.getInstance(document.getElementById('modalNovaConversa'))?.hide(); carregarConversas(); selecionarConversa(r.conversa_id); }
-        else alert(r.msg);
+        else crmToast(r.msg, r.success === false ? "error" : "info");
     }
 </script>
 

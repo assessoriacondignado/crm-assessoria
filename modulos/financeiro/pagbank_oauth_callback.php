@@ -14,7 +14,7 @@ define('PAGBANK_TOKEN_URL', 'https://connect.pagbank.com.br/oauth2/token');
 
 function fecharComErro($msg) {
     $safe = addslashes(htmlspecialchars($msg, ENT_QUOTES));
-    echo "<script>alert('Erro PagBank OAuth: {$safe}'); window.close();</script>";
+    echo "<script>crmToast("Erro PagBank OAuth: {$safe}", "warning", 5000); window.close();</script>";
     exit;
 }
 

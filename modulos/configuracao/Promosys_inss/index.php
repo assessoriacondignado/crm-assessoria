@@ -187,8 +187,8 @@ $(document).ready(function() {
         let cpf_cobrar = $('#cliente_cobrar').val(); 
         let forcar = $('#forcar_api').is(':checked') ? 1 : 0; 
         
-        if(!cpf) { alert("Digite o CPF!"); return; } 
-        if(!cpf_cobrar) { alert("É obrigatório selecionar de qual cliente será cobrada a consulta!"); return; } 
+        if(!cpf) { crmToast("Digite o CPF!", "info", 5000); return; } 
+        if(!cpf_cobrar) { crmToast("É obrigatório selecionar de qual cliente será cobrada a consulta!", "info", 5000); return; } 
 
         $(this).html('<i class="fa fa-spinner fa-spin"></i> Consultando...').prop('disabled', true); 
         $('#resultado_consulta').hide(); 
@@ -208,12 +208,12 @@ $(document).ready(function() {
                 $('#resultado_consulta').fadeIn(); 
             } 
         }, 'json').fail(function() { 
-            alert("Erro de comunicação."); 
+            crmToast("❌ Erro de comunicação.", "error", 6000); 
             $('#btn_consultar').html('<i class="fa fa-search me-1"></i> Consultar').prop('disabled', false); 
         }); 
     });
 
-    $(document).on('click', '.btn-edit-cli', function() { $('#edit_cli_cpf').val($(this).data('cpf')); $('#edit_cli_custo').val($(this).data('custo')); $('#edit_cli_grupo').val($(this).data('grupo')); $('#modalEditCliente').modal('show'); }); $('#btn_salvar_cli').click(function() { $.post(ajax_url, { acao: 'salvar_dados_cliente', cpf: $('#edit_cli_cpf').val(), custo: $('#edit_cli_custo').val(), grupo: $('#edit_cli_grupo').val() }, function(res) { if(res.success) { $('#modalEditCliente').modal('hide'); carregarClientes(); } else { alert(res.msg); } }, 'json'); }); $(document).on('click', '.btn-saldo-cli', function() { $('#saldo_cli_cpf').val($(this).data('cpf')); $('#saldo_valor').val(''); $('#modalSaldo').modal('show'); }); $('#btn_salvar_saldo').click(function() { $.post(ajax_url, { acao: 'movimentar_saldo', cpf: $('#saldo_cli_cpf').val(), tipo: $('#saldo_tipo').val(), valor: $('#saldo_valor').val(), motivo: $('#saldo_motivo').val() }, function(res) { if(res.success) { alert(res.msg); $('#modalSaldo').modal('hide'); carregarClientes(); } else { alert(res.msg); } }, 'json'); }); $(document).on('click', '.btn-extrato-cli', function() { let cpf = $(this).data('cpf'); $('#tbody_extrato').html('<tr><td colspan="5" class="py-4 text-muted"><i class="fas fa-spinner fa-spin me-2"></i> Carregando...</td></tr>'); $('#modalExtrato').modal('show'); $.post(ajax_url, { acao: 'carregar_extrato', cpf: cpf }, function(res) { if(res.success) { let html = ''; res.data.forEach(e => { let badge = e.TIPO === 'CREDITO' ? '<span class="badge bg-success">CREDITO</span>' : '<span class="badge bg-danger">DEBITO</span>'; let corValor = e.TIPO === 'CREDITO' ? 'text-success' : 'text-danger'; let sinal = e.TIPO === 'CREDITO' ? '+' : '-'; html += `<tr class="border-bottom"><td class="small text-muted fw-bold">${e.DATA_FORMATADA}</td><td>${badge}</td><td class="${corValor} fw-bold">${sinal} R$ ${parseFloat(e.VALOR).toFixed(2)}</td><td class="fw-bold text-dark">R$ ${parseFloat(e.SALDO_ATUAL).toFixed(2)}</td><td class="small text-start">${e.MOTIVO}</td></tr>`; }); if(html === '') html = '<tr><td colspan="5" class="py-4 fw-bold">Nenhuma movimentação registrada.</td></tr>'; $('#tbody_extrato').html(html); } }, 'json'); }); $('.fechar-modal').click(function() { $(this).closest('.modal').modal('hide'); });
+    $(document).on('click', '.btn-edit-cli', function() { $('#edit_cli_cpf').val($(this).data('cpf')); $('#edit_cli_custo').val($(this).data('custo')); $('#edit_cli_grupo').val($(this).data('grupo')); $('#modalEditCliente').modal('show'); }); $('#btn_salvar_cli').click(function() { $.post(ajax_url, { acao: 'salvar_dados_cliente', cpf: $('#edit_cli_cpf').val(), custo: $('#edit_cli_custo').val(), grupo: $('#edit_cli_grupo').val() }, function(res) { if(res.success) { $('#modalEditCliente').modal('hide'); carregarClientes(); } else { crmToast(res.msg, res.success === false ? "error" : "info"); } }, 'json'); }); $(document).on('click', '.btn-saldo-cli', function() { $('#saldo_cli_cpf').val($(this).data('cpf')); $('#saldo_valor').val(''); $('#modalSaldo').modal('show'); }); $('#btn_salvar_saldo').click(function() { $.post(ajax_url, { acao: 'movimentar_saldo', cpf: $('#saldo_cli_cpf').val(), tipo: $('#saldo_tipo').val(), valor: $('#saldo_valor').val(), motivo: $('#saldo_motivo').val() }, function(res) { if(res.success) { crmToast(res.msg, res.success === false ? "error" : "info"); $('#modalSaldo').modal('hide'); carregarClientes(); } else { crmToast(res.msg, res.success === false ? "error" : "info"); } }, 'json'); }); $(document).on('click', '.btn-extrato-cli', function() { let cpf = $(this).data('cpf'); $('#tbody_extrato').html('<tr><td colspan="5" class="py-4 text-muted"><i class="fas fa-spinner fa-spin me-2"></i> Carregando...</td></tr>'); $('#modalExtrato').modal('show'); $.post(ajax_url, { acao: 'carregar_extrato', cpf: cpf }, function(res) { if(res.success) { let html = ''; res.data.forEach(e => { let badge = e.TIPO === 'CREDITO' ? '<span class="badge bg-success">CREDITO</span>' : '<span class="badge bg-danger">DEBITO</span>'; let corValor = e.TIPO === 'CREDITO' ? 'text-success' : 'text-danger'; let sinal = e.TIPO === 'CREDITO' ? '+' : '-'; html += `<tr class="border-bottom"><td class="small text-muted fw-bold">${e.DATA_FORMATADA}</td><td>${badge}</td><td class="${corValor} fw-bold">${sinal} R$ ${parseFloat(e.VALOR).toFixed(2)}</td><td class="fw-bold text-dark">R$ ${parseFloat(e.SALDO_ATUAL).toFixed(2)}</td><td class="small text-start">${e.MOTIVO}</td></tr>`; }); if(html === '') html = '<tr><td colspan="5" class="py-4 fw-bold">Nenhuma movimentação registrada.</td></tr>'; $('#tbody_extrato').html(html); } }, 'json'); }); $('.fechar-modal').click(function() { $(this).closest('.modal').modal('hide'); });
 
     window.pmCarregarLotes = function() {
         $('#tbody_lotes').html('<tr><td colspan="5" class="py-4 text-muted"><i class="fas fa-spinner fa-spin me-2"></i> Buscando histórico de lotes...</td></tr>');
@@ -286,9 +286,9 @@ $(document).ready(function() {
         let clienteCobrar = $('#lote_cliente_cobrar').val();
         let file = $('#lote_arquivo')[0].files[0];
         
-        if(!agrup || !file) return alert("Preencha o Agrupamento e selecione o CSV.");
-        if(!clienteCobrar) return alert("Selecione qual cliente pagará pelos cadastros validados deste lote.");
-        if(file.type !== 'text/csv' && !file.name.endsWith('.csv')) return alert("O arquivo deve ser obrigatoriamente .csv!");
+        if(!agrup || !file) return crmToast("Preencha o Agrupamento e selecione o CSV.", "info", 5000);
+        if(!clienteCobrar) return crmToast("Selecione qual cliente pagará pelos cadastros validados deste lote.", "info", 5000);
+        if(file.type !== 'text/csv' && !file.name.endsWith('.csv')) return crmToast("O arquivo deve ser obrigatoriamente .csv!", "info", 5000);
 
         $('#btn_enviar_lote').html('<i class="fas fa-spinner fa-spin"></i> Enviando...').prop('disabled', true);
         
@@ -304,25 +304,25 @@ $(document).ready(function() {
                 $('#btn_enviar_lote').html('<i class="fas fa-play me-1"></i> Iniciar Importação').prop('disabled', false);
                 if(res.success) {
                     $('#form_upload_lote')[0].reset();
-                    alert("✅ Lote enviado com sucesso! O processamento já entrou na fila e acontecerá em segundo plano. Só haverá cobrança quando o lote finalizar.");
+                    crmToast("✅ Lote enviado com sucesso! O processamento já entrou na fila e acontecerá em segundo plano. Só haverá cobrança quando o lote finalizar.", "success");
                     pmCarregarLotes(); 
-                } else { alert("❌ Erro ao enviar lote: " + res.msg); }
+                } else { crmToast("❌ " + res.msg, "error", 6000); }
             },
-            error: function(err) { $('#btn_enviar_lote').html('<i class="fas fa-play me-1"></i> Iniciar Importação').prop('disabled', false); alert("Erro de comunicação durante o upload do CSV. Verifique a aba Network (F12)."); }
+            error: function(err) { $('#btn_enviar_lote').html('<i class="fas fa-play me-1"></i> Iniciar Importação').prop('disabled', false); crmToast("❌ Erro de comunicação.", "error", 6000); }
         });
     });
 
     window.pmExcluirLote = function(id_lote, agrupamento) { 
         if(!confirm(`Atenção: Isso excluirá o registro do lote [${agrupamento}].\nOs clientes validados NÃO serão apagados do sistema principal.\n\nConfirma a exclusão do Histórico?`)) return; 
-        $.post(ajax_url, { acao: 'excluir_lote_csv', id: id_lote }, function(res) { if(res.success) { alert("✅ " + res.msg); pmCarregarLotes(); } else { alert("❌ Erro: " + res.msg); } }, 'json'); 
+        $.post(ajax_url, { acao: 'excluir_lote_csv', id: id_lote }, function(res) { if(res.success) { crmToast("✅ " + res.msg, "success"); pmCarregarLotes(); } else { crmToast("❌ " + res.msg, "error", 6000); } }, 'json'); 
     }
 
     window.pmForcarProcessamento = function() {
-        $.post(ajax_url, { acao: 'forcar_processamento_lote' }, function(res) { if(res.success) { alert("✅ " + res.msg); pmCarregarLotes(); } else { alert("❌ Erro: " + res.msg); } }, 'json');
+        $.post(ajax_url, { acao: 'forcar_processamento_lote' }, function(res) { if(res.success) { crmToast("✅ " + res.msg, "success"); pmCarregarLotes(); } else { crmToast("❌ " + res.msg, "error", 6000); } }, 'json');
     }
 
     window.pmPausarRetomarLote = function(idLote, acaoLote) {
-        $.post(ajax_url, { acao: 'pausar_retomar_lote', id_lote: idLote, acao_lote: acaoLote }, function(res) { if(res.success) { pmCarregarLotes(); } else { alert("❌ Erro: " + res.msg); } }, 'json');
+        $.post(ajax_url, { acao: 'pausar_retomar_lote', id_lote: idLote, acao_lote: acaoLote }, function(res) { if(res.success) { pmCarregarLotes(); } else { crmToast("❌ " + res.msg, "error", 6000); } }, 'json');
     }
 
     function carregarTokens() { 
@@ -341,11 +341,11 @@ $(document).ready(function() {
         let pwd = $('#tk_senha').val();
         let cache = $('#tk_cache').val();
         $.post(ajax_url, { acao: 'salvar_credenciais', usuario: usr, senha: pwd, tempo_cache: cache }, function(res) { 
-            alert(res.msg); 
+            crmToast(res.msg, res.success === false ? "error" : "info"); 
         }, 'json'); 
     });
 
-    function carregarConfigRobo() { $.post(ajax_url, { acao: 'carregar_config_robo' }, function(res) { if(res.success && res.data) { $('#cmd_menu').val(res.data.CMD_MENU); $('#cmd_consulta').val(res.data.CMD_CONSULTA); $('#cmd_completo').val(res.data.CMD_COMPLETO); $('#cmd_saldo').val(res.data.CMD_SALDO); $('#cmd_extrato').val(res.data.CMD_EXTRATO); $('#cmd_lista').val(res.data.CMD_LISTA); $('#cmd_suporte').val(res.data.CMD_SUPORTE); $('#wapi_instance').val(res.data.WAPI_INSTANCE); $('#wapi_token').val(res.data.WAPI_TOKEN); $('#token_robo').val(res.data.TOKEN_ROBO); } }, 'json'); } carregarConfigRobo(); $('#form_robo').submit(function(e) { e.preventDefault(); let dados = { acao: 'salvar_config_robo', menu: $('#cmd_menu').val(), consulta: $('#cmd_consulta').val(), completo: $('#cmd_completo').val(), saldo: $('#cmd_saldo').val(), extrato: $('#cmd_extrato').val(), lista: $('#cmd_lista').val(), suporte: $('#cmd_suporte').val(), wapi_instance: $('#wapi_instance').val(), wapi_token: $('#wapi_token').val(), token_robo: $('#token_robo').val() }; $.post(ajax_url, dados, function(res) { alert(res.msg); }, 'json'); });
+    function carregarConfigRobo() { $.post(ajax_url, { acao: 'carregar_config_robo' }, function(res) { if(res.success && res.data) { $('#cmd_menu').val(res.data.CMD_MENU); $('#cmd_consulta').val(res.data.CMD_CONSULTA); $('#cmd_completo').val(res.data.CMD_COMPLETO); $('#cmd_saldo').val(res.data.CMD_SALDO); $('#cmd_extrato').val(res.data.CMD_EXTRATO); $('#cmd_lista').val(res.data.CMD_LISTA); $('#cmd_suporte').val(res.data.CMD_SUPORTE); $('#wapi_instance').val(res.data.WAPI_INSTANCE); $('#wapi_token').val(res.data.WAPI_TOKEN); $('#token_robo').val(res.data.TOKEN_ROBO); } }, 'json'); } carregarConfigRobo(); $('#form_robo').submit(function(e) { e.preventDefault(); let dados = { acao: 'salvar_config_robo', menu: $('#cmd_menu').val(), consulta: $('#cmd_consulta').val(), completo: $('#cmd_completo').val(), saldo: $('#cmd_saldo').val(), extrato: $('#cmd_extrato').val(), lista: $('#cmd_lista').val(), suporte: $('#cmd_suporte').val(), wapi_instance: $('#wapi_instance').val(), wapi_token: $('#wapi_token').val(), token_robo: $('#token_robo').val() }; $.post(ajax_url, dados, function(res) { crmToast(res.msg, res.success === false ? "error" : "info"); }, 'json'); });
 });
 </script>
 

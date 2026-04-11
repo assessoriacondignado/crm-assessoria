@@ -50,8 +50,6 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
   .v8m-btn-vermelho:hover { background: rgba(220,53,69,.1); }
 </style>
 
-<div id="v8-toast-container"></div>
-
 <div id="v8-loader" class="v8-loader-overlay"><div class="v8-loader-content"><div class="spinner-border text-danger" style="width: 3rem; height: 3rem;" role="status"></div><h5 id="v8-loader-msg" class="mt-3 text-dark fw-bold">Aguarde...</h5></div></div>
 
 <div class="container-fluid py-4">
@@ -295,20 +293,6 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
     const perm_digitar = <?= $perm_digitar ?>;
     const perm_fator = <?= $perm_fator ?>;
 
-    function v8Toast(msg, tipo = 'success', duracao = 4000) {
-        const c = document.getElementById('v8-toast-container');
-        if (!c) return;
-        const t = document.createElement('div');
-        t.className = `v8-toast v8-t-${tipo}`;
-        t.innerHTML = msg;
-        c.appendChild(t);
-        requestAnimationFrame(() => { requestAnimationFrame(() => { t.classList.add('show'); }); });
-        setTimeout(() => {
-            t.classList.remove('show');
-            setTimeout(() => { if (t.parentNode) t.parentNode.removeChild(t); }, 350);
-        }, duracao);
-    }
-
     let v8Modais = {}; let windowListaChavesCache = []; let windowPollingData = {};
     let windowDadosFilaAtual = null; let windowDadosExtratoAtual = []; 
     let v8TimerBusca; let listaEnderecosFC = [];
@@ -359,13 +343,13 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
     async function v8CarregarDadosIniciais() { const r = await v8Req('v8_api.ajax.php', 'listar_chaves_acesso', {}, false); if(r.success) { windowListaChavesCache = r.data; let o = '<option value="">-- Selecione a Chave/Cliente --</option>'; r.data.forEach(c => { o += `<option value="${c.ID}">${c.CLIENTE_NOME} (Saldo: R$ ${c.SALDO})</option>`; }); document.querySelectorAll('.v8-dropdown-clientes').forEach(s => s.innerHTML = o); } }
     function v8PopularSelectExtrato() { const sel = document.getElementById("sel_extrato_chave"); if(sel.options.length > 1) return; let o = '<option value="">-- Selecione a Chave --</option>'; windowListaChavesCache.forEach(c => { o += `<option value="${c.ID}">${c.CLIENTE_NOME} (Saldo: R$ ${c.SALDO})</option>`; }); sel.innerHTML = o; }
     async function v8CarregarExtrato() { const chaveId = document.getElementById("sel_extrato_chave").value; const tb = document.getElementById("v8_tbody_extrato"); const infoBar = document.getElementById('info_extrato_selecionado'); const boxAcoes = document.getElementById('boxAcoesExtrato'); if (!chaveId) { tb.innerHTML = '<tr><td colspan="6" class="text-center py-4 text-muted">Selecione uma chave acima.</td></tr>'; windowDadosExtratoAtual = []; infoBar.classList.add('d-none'); boxAcoes.classList.add('d-none'); return; } boxAcoes.classList.remove('d-none'); const chaveObj = windowListaChavesCache.find(c => c.ID == chaveId); if(chaveObj) { document.getElementById('lbl_extrato_usuario').innerText = chaveObj.NOME_USUARIO || 'N/A'; document.getElementById('lbl_extrato_cliente').innerText = chaveObj.CLIENTE_NOME || 'N/A'; document.getElementById('lbl_extrato_cpf').innerText = chaveObj.CPF_USUARIO || 'N/A'; infoBar.classList.remove('d-none'); } tb.innerHTML = '<tr><td colspan="6" class="text-center py-4 text-muted"><i class="fas fa-spinner fa-spin"></i></td></tr>'; const res = await v8Req('v8_api.ajax.php', 'listar_extrato_cliente', { chave_id: chaveId }, false); if(res.success) { windowDadosExtratoAtual = res.data; tb.innerHTML = ""; if(res.data.length === 0) { tb.innerHTML = '<tr><td colspan="6" class="text-center py-4 fw-bold">Nenhuma movimentação registrada.</td></tr>'; return; } res.data.forEach(r => { let corValor = (parseFloat(r.VALOR) < 0 || r.TIPO_MOVIMENTO === 'RETIRADA' || r.TIPO_MOVIMENTO === 'DEBITO') ? 'text-danger' : 'text-success'; let sinalValor = (parseFloat(r.VALOR) < 0 || r.TIPO_MOVIMENTO === 'RETIRADA' || r.TIPO_MOVIMENTO === 'DEBITO') ? '-' : '+'; tb.innerHTML += `<tr><td class="text-center small">${r.DATA_BR}</td><td class="small fw-bold">${r.TIPO_CUSTO}</td><td class="text-center"><span class="badge ${corValor === 'text-danger' ? 'bg-danger' : 'bg-success'}">${r.TIPO_MOVIMENTO}</span></td><td class="text-end fw-bold ${corValor}">${sinalValor} R$ ${Math.abs(parseFloat(r.VALOR)).toFixed(2).replace('.', ',')}</td><td class="text-end text-muted small">R$ ${parseFloat(r.SALDO_ANTERIOR).toFixed(2).replace('.', ',')}</td><td class="text-end fw-bold text-dark">R$ ${parseFloat(r.SALDO_ATUAL).toFixed(2).replace('.', ',')}</td></tr>`; }); } }
-    function v8ExportarExcelCliente() { const selectBox = document.getElementById("sel_extrato_chave"); const chaveNome = selectBox.options[selectBox.selectedIndex]?.text.replace(/[^a-zA-Z0-9 ]/g, '').trim() || 'Extrato'; if (windowDadosExtratoAtual.length === 0) return alert("Carregue um extrato primeiro!"); let trs = ''; windowDadosExtratoAtual.forEach(r => { trs += `<tr><td>${r.DATA_BR}</td><td>${r.TIPO_CUSTO}</td><td>${r.TIPO_MOVIMENTO}</td><td>R$ ${parseFloat(r.VALOR).toFixed(2).replace('.', ',')}</td><td>R$ ${parseFloat(r.SALDO_ANTERIOR).toFixed(2).replace('.', ',')}</td><td>R$ ${parseFloat(r.SALDO_ATUAL).toFixed(2).replace('.', ',')}</td></tr>`; }); let htmlBase = `<html xmlns:x="urn:schemas-microsoft-com:office:excel"><head><meta charset="utf-8"></head><body><table border="1"><thead><tr><th>Data/Hora</th><th>Motivo</th><th>Tipo</th><th>Valor Cobrado</th><th>Saldo Anterior</th><th>Saldo Atual</th></tr></thead><tbody>${trs}</tbody></table></body></html>`; let blob = new Blob([htmlBase], { type: 'application/vnd.ms-excel' }); let link = document.createElement("a"); link.href = URL.createObjectURL(blob); link.download = `Extrato_Cliente_${chaveNome}.xls`; link.click(); }
-    function v8ExportarExcelV8() { const selectBox = document.getElementById("sel_extrato_chave"); const chaveNome = selectBox.options[selectBox.selectedIndex]?.text.replace(/[^a-zA-Z0-9 ]/g, '').trim() || 'Extrato'; if (windowDadosExtratoAtual.length === 0) return alert("Carregue um extrato primeiro!"); let trs = ''; windowDadosExtratoAtual.forEach(r => { trs += `<tr><td>${r.DATA_BR}</td><td>${r.TIPO_CUSTO}</td><td>${r.TIPO_MOVIMENTO}</td><td>R$ ${parseFloat(r.CUSTO_V8).toFixed(2).replace('.', ',')}</td></tr>`; }); let htmlBase = `<html xmlns:x="urn:schemas-microsoft-com:office:excel"><head><meta charset="utf-8"></head><body><table border="1"><thead><tr><th>Data/Hora</th><th>Motivo</th><th>Movimento</th><th>Custo API (R$)</th></tr></thead><tbody>${trs}</tbody></table></body></html>`; let blob = new Blob([htmlBase], { type: 'application/vnd.ms-excel' }); let link = document.createElement("a"); link.href = URL.createObjectURL(blob); link.download = `CustoAPI_V8_${chaveNome}.xls`; link.click(); }
-    function v8AbrirModalAjusteSaldo() { const chaveId = document.getElementById("sel_extrato_chave").value; if(!chaveId) return alert("Selecione a Chave primeiro."); document.getElementById('ajuste_chave_id').value = chaveId; document.getElementById('ajuste_valor').value = ''; document.getElementById('ajuste_obs').value = ''; v8Modais.ajusteSaldo.show(); }
-    async function v8SalvarAjusteSaldo() { const chaveId = document.getElementById('ajuste_chave_id').value; const tipo = document.getElementById('ajuste_tipo').value; const valor = document.getElementById('ajuste_valor').value; const obs = document.getElementById('ajuste_obs').value; if(!valor || valor <= 0) return alert("Digite um valor válido."); if(!obs) return alert("Digite o motivo."); const res = await v8Req('v8_api.ajax.php', 'ajustar_saldo_manual', { chave_id: chaveId, tipo: tipo, valor: valor, obs: obs }, true, "Ajustando..."); if(res.success) { alert("✅ " + res.msg); v8Modais.ajusteSaldo.hide(); await v8CarregarDadosIniciais(); v8CarregarExtrato(); v8AtualizarSaldosTopo(); } else { alert("❌ Erro: " + res.msg); } }
+    function v8ExportarExcelCliente() { const selectBox = document.getElementById("sel_extrato_chave"); const chaveNome = selectBox.options[selectBox.selectedIndex]?.text.replace(/[^a-zA-Z0-9 ]/g, '').trim() || 'Extrato'; if (windowDadosExtratoAtual.length === 0) return crmToast("Carregue um extrato primeiro!", "warning"); let trs = ''; windowDadosExtratoAtual.forEach(r => { trs += `<tr><td>${r.DATA_BR}</td><td>${r.TIPO_CUSTO}</td><td>${r.TIPO_MOVIMENTO}</td><td>R$ ${parseFloat(r.VALOR).toFixed(2).replace('.', ',')}</td><td>R$ ${parseFloat(r.SALDO_ANTERIOR).toFixed(2).replace('.', ',')}</td><td>R$ ${parseFloat(r.SALDO_ATUAL).toFixed(2).replace('.', ',')}</td></tr>`; }); let htmlBase = `<html xmlns:x="urn:schemas-microsoft-com:office:excel"><head><meta charset="utf-8"></head><body><table border="1"><thead><tr><th>Data/Hora</th><th>Motivo</th><th>Tipo</th><th>Valor Cobrado</th><th>Saldo Anterior</th><th>Saldo Atual</th></tr></thead><tbody>${trs}</tbody></table></body></html>`; let blob = new Blob([htmlBase], { type: 'application/vnd.ms-excel' }); let link = document.createElement("a"); link.href = URL.createObjectURL(blob); link.download = `Extrato_Cliente_${chaveNome}.xls`; link.click(); }
+    function v8ExportarExcelV8() { const selectBox = document.getElementById("sel_extrato_chave"); const chaveNome = selectBox.options[selectBox.selectedIndex]?.text.replace(/[^a-zA-Z0-9 ]/g, '').trim() || 'Extrato'; if (windowDadosExtratoAtual.length === 0) return crmToast("Carregue um extrato primeiro!", "warning"); let trs = ''; windowDadosExtratoAtual.forEach(r => { trs += `<tr><td>${r.DATA_BR}</td><td>${r.TIPO_CUSTO}</td><td>${r.TIPO_MOVIMENTO}</td><td>R$ ${parseFloat(r.CUSTO_V8).toFixed(2).replace('.', ',')}</td></tr>`; }); let htmlBase = `<html xmlns:x="urn:schemas-microsoft-com:office:excel"><head><meta charset="utf-8"></head><body><table border="1"><thead><tr><th>Data/Hora</th><th>Motivo</th><th>Movimento</th><th>Custo API (R$)</th></tr></thead><tbody>${trs}</tbody></table></body></html>`; let blob = new Blob([htmlBase], { type: 'application/vnd.ms-excel' }); let link = document.createElement("a"); link.href = URL.createObjectURL(blob); link.download = `CustoAPI_V8_${chaveNome}.xls`; link.click(); }
+    function v8AbrirModalAjusteSaldo() { const chaveId = document.getElementById("sel_extrato_chave").value; if(!chaveId) return crmToast("Selecione a Chave primeiro.", "warning"); document.getElementById('ajuste_chave_id').value = chaveId; document.getElementById('ajuste_valor').value = ''; document.getElementById('ajuste_obs').value = ''; v8Modais.ajusteSaldo.show(); }
+    async function v8SalvarAjusteSaldo() { const chaveId = document.getElementById('ajuste_chave_id').value; const tipo = document.getElementById('ajuste_tipo').value; const valor = document.getElementById('ajuste_valor').value; const obs = document.getElementById('ajuste_obs').value; if(!valor || valor <= 0) return crmToast("Digite um valor válido.", "warning"); if(!obs) return crmToast("Digite o motivo.", "warning"); const res = await v8Req('v8_api.ajax.php', 'ajustar_saldo_manual', { chave_id: chaveId, tipo: tipo, valor: valor, obs: obs }, true, "Ajustando..."); if(res.success) { crmToast("✅ " + res.msg, "success"); v8Modais.ajusteSaldo.hide(); await v8CarregarDadosIniciais(); v8CarregarExtrato(); v8AtualizarSaldosTopo(); } else { crmToast("❌ Erro: " + res.msg, "error"); } }
     function abrirModalNovaChave() { document.getElementById('formChaveV8').reset(); document.getElementById('chv_id').value = ''; if(restricaoMeuUsuario) { document.getElementById('chv_usuario_id').value = cpfLogado; } v8Modais.chave.show(); }
     function abrirModalEditarChave(id) { const chave = windowListaChavesCache.find(c => c.ID == id); if(!chave) return; document.getElementById('chv_id').value = chave.ID; document.getElementById('chv_usuario_id').value = chave.CPF_USUARIO || chave.USUARIO_ID; document.getElementById('chv_client_id').value = chave.CLIENT_ID; document.getElementById('chv_audience').value = chave.AUDIENCE; document.getElementById('chv_username').value = chave.USERNAME_API; document.getElementById('chv_password').value = chave.PASSWORD_API; document.getElementById('chv_custo_consulta').value = chave.CUSTO_CONSULTA; document.getElementById('chv_custo_v8').value = chave.CUSTO_V8; document.getElementById('chv_tabela_padrao').value = chave.TABELA_PADRAO || 'CLT Acelera'; document.getElementById('chv_prazo_padrao').value = chave.PRAZO_PADRAO || '24'; document.getElementById('chv_intervalo_consentimento').value = chave.INTERVALO_CONSENTIMENTO || '120'; v8Modais.chave.show(); }
-    document.getElementById('formChaveV8').addEventListener('submit', async e => { e.preventDefault(); const payload = { id: document.getElementById('chv_id').value, usuario_id: document.getElementById('chv_usuario_id').value, client_id: document.getElementById('chv_client_id').value, audience: document.getElementById('chv_audience').value, username_api: document.getElementById('chv_username').value, password_api: document.getElementById('chv_password').value, custo_consulta: document.getElementById('chv_custo_consulta').value, custo_v8: document.getElementById('chv_custo_v8').value, tabela_padrao: document.getElementById('chv_tabela_padrao').value, prazo_padrao: document.getElementById('chv_prazo_padrao').value, intervalo_consentimento: document.getElementById('chv_intervalo_consentimento').value }; const res = await v8Req('v8_api.ajax.php', 'salvar_chave_v8', payload); if(res.success) { v8Modais.chave.hide(); v8CarregarClientes(); v8CarregarDadosIniciais(); alert("Chave salva com sucesso!"); } else { alert("Erro: " + res.msg); } });
+    document.getElementById('formChaveV8').addEventListener('submit', async e => { e.preventDefault(); const payload = { id: document.getElementById('chv_id').value, usuario_id: document.getElementById('chv_usuario_id').value, client_id: document.getElementById('chv_client_id').value, audience: document.getElementById('chv_audience').value, username_api: document.getElementById('chv_username').value, password_api: document.getElementById('chv_password').value, custo_consulta: document.getElementById('chv_custo_consulta').value, custo_v8: document.getElementById('chv_custo_v8').value, tabela_padrao: document.getElementById('chv_tabela_padrao').value, prazo_padrao: document.getElementById('chv_prazo_padrao').value, intervalo_consentimento: document.getElementById('chv_intervalo_consentimento').value }; const res = await v8Req('v8_api.ajax.php', 'salvar_chave_v8', payload); if(res.success) { v8Modais.chave.hide(); v8CarregarClientes(); v8CarregarDadosIniciais(); crmToast("Chave salva com sucesso!", "success"); } else { crmToast("❌ Erro: " + res.msg, "error"); } });
     
     function v8PesquisarClienteBanco(termo) { 
         clearTimeout(v8TimerBusca); 
@@ -408,14 +392,14 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
     
     async function v8AtualizarCpfFatorConferi(termoDigitado) { 
         const chaveId = document.getElementById('v8_cobrar_manual').value; 
-        if(!chaveId) return alert("Selecione a Chave no topo da tela para faturar a atualização."); 
+        if(!chaveId) return crmToast("Selecione a Chave no topo da tela para faturar a atualização.", "warning"); 
         
         let chaveObj = windowListaChavesCache.find(c => c.ID == chaveId);
         let cpfDonoFC = chaveObj ? (chaveObj.CPF_USUARIO || chaveObj.USUARIO_ID) : '';
-        if(!cpfDonoFC) return alert("Erro: Chave V8 sem um usuário/CPF dono atrelado para faturar a consulta Fator Conferi.");
+        if(!cpfDonoFC) return crmToast("Erro: Chave V8 sem um usuário/CPF dono atrelado para faturar a consulta Fator Conferi.", "error");
 
         let cpf = termoDigitado.replace(/\D/g, ''); 
-        if (cpf.length !== 11) return alert("Digite o CPF com 11 dígitos na pesquisa."); 
+        if (cpf.length !== 11) return crmToast("Digite o CPF com 11 dígitos na pesquisa.", "warning"); 
         
         v8Loading(true, "Consultando Cadastral..."); 
         try { 
@@ -431,7 +415,7 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
             v8Loading(false); 
             
             if (res.success) { 
-                alert("✅ Dados atualizados!"); 
+                crmToast("✅ Dados atualizados!", "success"); 
                 let cad = res.json_bruto.CADASTRAIS || {}; 
                 let nome = cad.NOME || (res.dados ? res.dados.nome : ''); 
                 let nascimento = cad.NASCTO || ''; 
@@ -451,9 +435,9 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
                 box.innerHTML = `<div class="d-flex justify-content-between align-items-center"><span><i class="fas fa-check-circle text-success me-1"></i> Cliente atualizado via Integração.</span></div>`; 
                 v8AtualizarSaldosTopo();
             } else { 
-                alert("⚠️ Erro na atualização: " + res.msg); 
+                crmToast("⚠️ Erro na atualização: " + res.msg, "error"); 
             } 
-        } catch(e) { v8Loading(false); alert("Erro de comunicação."); } 
+        } catch(e) { v8Loading(false); crmToast("Erro de comunicação.", "error"); } 
     }
 
     function v8LimparFormulario() { document.getElementById('v8_input_cpf').value = ''; document.getElementById('v8_input_nascimento').value = ''; document.getElementById('v8_input_nome').value = ''; document.getElementById('v8_input_telefone').value = ''; document.getElementById('v8_alerta_cadastro').classList.add('d-none'); document.getElementById('v8_busca_cliente').focus(); }
@@ -673,8 +657,8 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
         const genero = document.getElementById('v8_input_genero').value;
         const telefone = document.getElementById('v8_input_telefone').value; 
         
-        if(!cpf || !nome || !nascimento) return alert("Preencha CPF, Nome e Nascimento."); 
-        if(!chaveId) return alert("Selecione a Chave no topo."); 
+        if(!cpf || !nome || !nascimento) return crmToast("Preencha CPF, Nome e Nascimento.", "warning"); 
+        if(!chaveId) return crmToast("Selecione a Chave no topo.", "warning"); 
         
         let btnGerar = document.getElementById('btn_gerar_consent');
         let textoOriginal = btnGerar.innerHTML;
@@ -686,7 +670,7 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
         btnGerar.innerHTML = textoOriginal;
         btnGerar.disabled = false;
 
-        if(!res.success) { v8CarregarFila(0); return alert("Erro: " + res.msg); } 
+        if(!res.success) { v8CarregarFila(0); return crmToast("❌ Erro: " + res.msg, "error"); } 
         
         v8LimparFormulario();
         v8CarregarFila(0); 
@@ -711,7 +695,7 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
     }
 
     async function v8BotaoNovaMargem(idFila, forcar_dataprev = false) { v8IniciarPollingMargem(idFila); }
-    async function v8ReenviarAut(idFila) { const res = await v8Req('v8_api.ajax.php', 'reenviar_autorizacao_automatica', { id_fila: idFila }, true, "Reenviando..."); v8CarregarFila(0); if(res.success) alert("Autorizado!"); else alert("Erro: " + res.msg); }
+    async function v8ReenviarAut(idFila) { const res = await v8Req('v8_api.ajax.php', 'reenviar_autorizacao_automatica', { id_fila: idFila }, true, "Reenviando..."); v8CarregarFila(0); if(res.success) crmToast("Autorizado!", "success"); else crmToast("❌ Erro: " + res.msg, "error"); }
     async function v8PararFluxo(idFila, motivo = 'PARADO PELO USUÁRIO') {
         if (motivo === 'PARADO PELO USUÁRIO') {
             v8ConfirmarManual('⏹️ Parar Processamento', 'Interrompe o acompanhamento desta consulta. Você poderá reprocessar depois.', 'btn-warning', '#ffc107', async () => {
@@ -762,7 +746,7 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
             async () => {
                 const res = await v8Req('v8_api.ajax.php', 'reiniciar_consulta_fila', { id_fila: id }, true, "Reiniciando...");
                 if (res.success) { v8CarregarFila(0); v8IniciarPollingMargem(id); }
-                else alert("❌ Erro: " + res.msg);
+                else crmToast("❌ Erro: " + res.msg, "error");
             });
     }
 
@@ -772,17 +756,17 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
             'btn-danger', '#dc3545',
             async () => {
                 const res = await v8Req('v8_api.ajax.php', 'apagar_consulta_manual', { id_fila: id }, true, "Apagando...");
-                if (res.success) v8CarregarFila(0); else alert("❌ Erro: " + res.msg);
+                if (res.success) v8CarregarFila(0); else crmToast("❌ Erro: " + res.msg, "error");
             });
     }
     
     function v8AbrirAcompanhamento(numProposta) { document.querySelector('[data-bs-target="#tab-acompanhamento"]').click(); document.getElementById('filtro_prop_numero').value = numProposta; document.getElementById('filtro_prop_cpf').value = ''; document.getElementById('filtro_prop_status').value = ''; v8CarregarPropostas(); }
     async function v8CarregarPropostas() { const tb = document.getElementById('v8_tbody_propostas'); tb.innerHTML = '<tr><td colspan="5" class="py-4 text-center"><i class="fas fa-spinner fa-spin"></i></td></tr>'; const payload = { data_ini: document.getElementById('filtro_prop_data_ini') ? document.getElementById('filtro_prop_data_ini').value : '', data_fim: document.getElementById('filtro_prop_data_fim') ? document.getElementById('filtro_prop_data_fim').value : '', cpf: document.getElementById('filtro_prop_cpf').value.replace(/\D/g, ''), numero: document.getElementById('filtro_prop_numero').value, status: document.getElementById('filtro_prop_status').value }; const res = await v8Req('ajax_api_v8_acompanhamento_proposta.php', 'listar_propostas', payload, false); if (res.success) { tb.innerHTML = ''; if(res.data.length === 0) return tb.innerHTML = '<tr><td colspan="5" class="text-muted py-4 text-center fw-bold">Nenhuma proposta.</td></tr>'; res.data.forEach(p => { let statusUpper = p.STATUS_PROPOSTA_V8 ? p.STATUS_PROPOSTA_V8.toUpperCase() : 'AGUARDANDO'; let btnColor = "secondary"; if (statusUpper.includes('PEND')) btnColor = "warning text-dark"; if (statusUpper.includes('CAN') || statusUpper.includes('ERR')) btnColor = "danger"; if (statusUpper.includes('APROV') || statusUpper.includes('PAG')) btnColor = "success"; let linkHtml = p.LINK_PROPOSTA && p.LINK_PROPOSTA !== '' && p.LINK_PROPOSTA !== 'null' ? `<br><button class="btn btn-sm btn-outline-primary mt-2 shadow-sm" onclick="v8VerLinkAssinatura('${p.LINK_PROPOSTA}')"><i class="fas fa-link"></i> Copiar Assinatura</button>` : ''; tb.innerHTML += `<tr class="border-bottom border-dark"><td class="text-center small text-muted">${p.DATA_DIGITACAO_BR || ''}</td><td><span class="fw-bold">${p.CPF_CLIENTE || ''}</span><br><small>${p.NOME_CLIENTE || ''}</small></td><td class="text-center"><b class="text-success">R$ ${p.VALOR_LIBERADO || '0.00'}</b><br><small class="text-muted">${p.PRAZO || '0'}x de R$ ${p.PARCELA || '0.00'}</small></td><td class="text-center bg-light p-2"><span class="fw-bold">${p.NUMERO_PROPOSTA || ''}</span><br><span class="badge bg-${btnColor} mt-1">${statusUpper}</span>${linkHtml}</td><td class="p-2"><button class="btn btn-sm btn-info w-100 mb-1" onclick="v8SincronizarStatus(${p.ID})"><i class="fas fa-sync"></i> Status</button><button class="btn btn-sm btn-warning w-100 mb-1" onclick="v8AbrirModalPendencia(${p.ID}, '${p.NUMERO_PROPOSTA}')"><i class="fas fa-exclamation-circle"></i> Pendência</button><button class="btn btn-sm btn-danger w-100" onclick="v8CancelarProposta(${p.ID}, '${p.NUMERO_PROPOSTA}')"><i class="fas fa-times-circle"></i> Cancelar</button></td></tr>`; }); } }
-    async function v8SincronizarStatus(idDb) { const res = await v8Req('ajax_api_v8_acompanhamento_proposta.php', 'atualizar_status', { id_db: idDb }, true, "Consultando API..."); if(res.success) { alert(res.msg); v8CarregarPropostas(); } else { alert("Erro: " + res.msg); } }
-    async function v8CancelarProposta(idDb, numProposta) { let c1 = confirm(`Deseja CANCELAR a proposta ${numProposta}?`); if(!c1) return; let c2 = prompt(`Digite o MOTIVO DO CANCELAMENTO:`); if(c2 === null || c2.trim() === '') return; const res = await v8Req('ajax_api_v8_acompanhamento_proposta.php', 'cancelar_proposta', { id_db: idDb, motivo: c2 }, true, "Cancelando..."); if(res.success) { alert("✅ " + res.msg); v8CarregarPropostas(); } else { alert("❌ Erro: " + res.msg); } }
+    async function v8SincronizarStatus(idDb) { const res = await v8Req('ajax_api_v8_acompanhamento_proposta.php', 'atualizar_status', { id_db: idDb }, true, "Consultando API..."); if(res.success) { crmToast(res.msg, "success"); v8CarregarPropostas(); } else { crmToast("❌ Erro: " + res.msg, "error"); } }
+    async function v8CancelarProposta(idDb, numProposta) { let c1 = confirm(`Deseja CANCELAR a proposta ${numProposta}?`); if(!c1) return; let c2 = prompt(`Digite o MOTIVO DO CANCELAMENTO:`); if(c2 === null || c2.trim() === '') return; const res = await v8Req('ajax_api_v8_acompanhamento_proposta.php', 'cancelar_proposta', { id_db: idDb, motivo: c2 }, true, "Cancelando..."); if(res.success) { crmToast("✅ " + res.msg, "success"); v8CarregarPropostas(); } else { crmToast("❌ Erro: " + res.msg, "error"); } }
     function v8AbrirModalPendencia(idDb, numProposta) { document.getElementById('v8_pend_id_db').value = idDb; document.getElementById('v8_pend_num_prop').value = numProposta; document.getElementById('v8_pend_pix').value = ''; v8Modais.pendencia.show(); }
-    async function v8ResolverPendenciaPix() { let idDb = document.getElementById('v8_pend_id_db').value; let pix = document.getElementById('v8_pend_pix').value; let tipo = document.getElementById('v8_pend_tipo_pix').value; if(!pix) return alert("Digite a nova chave PIX."); const res = await v8Req('ajax_api_v8_acompanhamento_proposta.php', 'resolver_pendencia_pix', { id_db: idDb, pix: pix, tipo_pix: tipo }, true, "Enviando..."); if(res.success) { alert("✅ " + res.msg); v8Modais.pendencia.hide(); v8CarregarPropostas(); } else { alert("❌ Erro: " + res.msg); } }
-    function v8VerLinkAssinatura(link) { if (!link || link === 'null' || link === '') return alert("Link não disponível."); Swal.fire({ title: '<strong>Link de Assinatura V8</strong>', html: `<input type="text" id="v8_swal_link" class="form-control text-center fw-bold text-primary" value="${link}" readonly>`, showCancelButton: true, confirmButtonText: 'Copiar Link', cancelButtonText: 'Abrir Link' }).then((result) => { if (result.isConfirmed) { document.getElementById("v8_swal_link").select(); document.execCommand("copy"); Swal.fire('Copiado!', '', 'success'); } else if (result.dismiss === Swal.DismissReason.cancel) { window.open(link, '_blank'); } }); }
+    async function v8ResolverPendenciaPix() { let idDb = document.getElementById('v8_pend_id_db').value; let pix = document.getElementById('v8_pend_pix').value; let tipo = document.getElementById('v8_pend_tipo_pix').value; if(!pix) return crmToast("Digite a nova chave PIX.", "warning"); const res = await v8Req('ajax_api_v8_acompanhamento_proposta.php', 'resolver_pendencia_pix', { id_db: idDb, pix: pix, tipo_pix: tipo }, true, "Enviando..."); if(res.success) { crmToast("✅ " + res.msg, "success"); v8Modais.pendencia.hide(); v8CarregarPropostas(); } else { crmToast("❌ Erro: " + res.msg, "error"); } }
+    function v8VerLinkAssinatura(link) { if (!link || link === 'null' || link === '') return crmToast("Link não disponível.", "warning"); Swal.fire({ title: '<strong>Link de Assinatura V8</strong>', html: `<input type="text" id="v8_swal_link" class="form-control text-center fw-bold text-primary" value="${link}" readonly>`, showCancelButton: true, confirmButtonText: 'Copiar Link', cancelButtonText: 'Abrir Link' }).then((result) => { if (result.isConfirmed) { document.getElementById("v8_swal_link").select(); document.execCommand("copy"); Swal.fire('Copiado!', '', 'success'); } else if (result.dismiss === Swal.DismissReason.cancel) { window.open(link, '_blank'); } }); }
     function v8MascaraTelefone(i) { let v = i.value.replace(/\D/g,''); document.getElementById('v8_dig_telefone').value = v; if(v.length > 11) v = v.substring(0,11); if(v.length > 2) v = `(${v.substring(0,2)}) ${v.substring(2)}`; if(v.length > 10) v = `${v.substring(0,10)}-${v.substring(10)}`; i.value = v; }
     function v8LimparTelefoneManual() { document.getElementById('v8_dig_telefone_sel').classList.add('d-none'); document.getElementById('v8_dig_telefone_input').classList.remove('d-none'); document.getElementById('v8_dig_telefone_input').value = ''; document.getElementById('v8_dig_telefone').value = ''; document.getElementById('v8_dig_telefone_input').focus(); document.getElementById('btn_novo_telefone').classList.add('d-none'); }
     function v8LimparEnderecoManual() { document.getElementById('v8_dig_seletor_endereco').value = ''; document.getElementById('v8_dig_cep').value = ''; document.getElementById('v8_dig_logradouro').value = ''; document.getElementById('v8_dig_numero').value = ''; document.getElementById('v8_dig_bairro').value = ''; document.getElementById('v8_dig_cidade').value = ''; document.getElementById('v8_dig_uf').value = ''; document.getElementById('v8_dig_cep').focus(); }
@@ -790,7 +774,7 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
     async function v8AbrirModalDigitar(idFila) { 
         try { 
             const fila = windowDadosFilaAtual.find(f => f.ID == idFila); 
-            if(!fila) return alert("Erro: Dados não encontrados."); 
+            if(!fila) return crmToast("Erro: Dados não encontrados.", "error"); 
             document.getElementById('v8_id_fila_modal').value = idFila; 
             document.getElementById('v8_dig_cpf').value = fila.CPF_CONSULTADO; 
             document.getElementById('v8_dig_nome').value = fila.NOME_COMPLETO || ''; 
@@ -857,17 +841,17 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
             document.getElementById('v8_sim_valor').value = fila.VALOR_MARGEM; 
             await v8CarregarHistoricoSimulacoes(idFila); 
             v8Modais.simulacao.show(); 
-        } catch (e) { alert("Erro: " + e.message); } 
+        } catch (e) { crmToast("Erro: " + e.message, "error"); } 
     }
     
     async function v8AtualizarDadosDigitacaoFC() { 
         let cpf = document.getElementById('v8_dig_cpf').value.replace(/\D/g, ''); 
         const chaveId = document.getElementById('v8_cobrar_manual').value; 
-        if(!chaveId) return alert("Selecione a Chave no topo da tela."); 
+        if(!chaveId) return crmToast("Selecione a Chave no topo da tela.", "warning"); 
 
         let chaveObj = windowListaChavesCache.find(c => c.ID == chaveId);
         let cpfDonoFC = chaveObj ? (chaveObj.CPF_USUARIO || chaveObj.USUARIO_ID) : '';
-        if(!cpfDonoFC) return alert("Erro: Chave V8 sem um usuário atrelado.");
+        if(!cpfDonoFC) return crmToast("Erro: Chave V8 sem um usuário atrelado.", "error");
 
         v8Loading(true, "Consultando API..."); 
         try { 
@@ -882,7 +866,7 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
             v8Loading(false); 
             
             if (res.success) { 
-                alert("✅ Dados atualizados!"); 
+                crmToast("✅ Dados atualizados!", "success"); 
                 let cad = res.json_bruto.CADASTRAIS || {}; 
                 document.getElementById('v8_dig_nome').value = cad.NOME || ''; 
                 let nasc = cad.NASCTO || ''; 
@@ -901,16 +885,16 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
                 } 
                 v8AtualizarSaldosTopo();
             } else { 
-                alert("⚠️ Erro: " + res.msg); 
+                crmToast("⚠️ Erro: " + res.msg, "error"); 
             } 
-        } catch(e) { v8Loading(false); alert("Erro de comunicação."); } 
+        } catch(e) { v8Loading(false); crmToast("Erro de comunicação.", "error"); } 
     }
 
     function v8PreencherEnderecoSelecionado() { let index = document.getElementById('v8_dig_seletor_endereco').value; if(index === "") return; let end = listaEnderecosFC[index]; document.getElementById('v8_dig_cep').value = end.CEP ? end.CEP.replace(/\D/g, '') : ''; document.getElementById('v8_dig_logradouro').value = end.LOGRADOURO || ''; document.getElementById('v8_dig_numero').value = end.NUMERO && end.NUMERO !== 'S/N' ? end.NUMERO : '0'; document.getElementById('v8_dig_bairro').value = end.BAIRRO || ''; document.getElementById('v8_dig_cidade').value = end.CIDADE || ''; document.getElementById('v8_dig_uf').value = end.ESTADO || ''; }
-    async function v8ExecutarSimulacao(tipo, idFila) { v8Loading(true, "Simulando..."); let payload = { id_fila: idFila, tipo: tipo }; if (tipo === 'PERSONALIZADA') { payload.prazo = document.getElementById('v8_sim_prazo').value; payload.valor = document.getElementById('v8_sim_valor').value; payload.tipo_busca = document.getElementById('v8_sim_tipo_busca').value; if (!payload.valor || payload.valor <= 0) { v8Loading(false); return alert("Digite um valor válido."); } } const res = await v8Req('ajax_api_v8_digitacao.php', 'passo4_simular', payload, false); v8Loading(false); if (res.success) { if (tipo === 'PADRÃO') v8CarregarFila(0); else v8CarregarHistoricoSimulacoes(idFila); } else alert("❌ Erro: " + res.msg); }
+    async function v8ExecutarSimulacao(tipo, idFila) { v8Loading(true, "Simulando..."); let payload = { id_fila: idFila, tipo: tipo }; if (tipo === 'PERSONALIZADA') { payload.prazo = document.getElementById('v8_sim_prazo').value; payload.valor = document.getElementById('v8_sim_valor').value; payload.tipo_busca = document.getElementById('v8_sim_tipo_busca').value; if (!payload.valor || payload.valor <= 0) { v8Loading(false); return crmToast("Digite um valor válido.", "warning"); } } const res = await v8Req('ajax_api_v8_digitacao.php', 'passo4_simular', payload, false); v8Loading(false); if (res.success) { if (tipo === 'PADRÃO') v8CarregarFila(0); else v8CarregarHistoricoSimulacoes(idFila); } else crmToast("❌ Erro: " + res.msg, "error"); }
     function v8FazerSimulacaoPersonalizada() { let idFila = document.getElementById('v8_id_fila_modal').value; v8ExecutarSimulacao('PERSONALIZADA', idFila); }
     async function v8CarregarHistoricoSimulacoes(idFila) { const tb = document.getElementById('v8_bloco2_historico'); tb.innerHTML = '<tr><td colspan="6" class="text-center py-3"><i class="fas fa-spinner fa-spin"></i></td></tr>'; const res = await v8Req('ajax_api_v8_digitacao.php', 'listar_simulacoes_banco', { id_fila: idFila }, false); if (res.success) { tb.innerHTML = ''; if (res.data.length === 0) return tb.innerHTML = '<tr><td colspan="6" class="text-center py-3">Nenhuma simulação.</td></tr>'; res.data.forEach(s => { tb.innerHTML += `<tr><td><input type="radio" name="radio_simulacao" value="${s.ID}" class="form-check-input" style="width: 20px; height: 20px; cursor: pointer;"></td><td class="fw-bold">${s.TIPO_SIMULACAO}</td><td>${s.PRAZO_SIMULACAO}x</td><td class="text-danger fw-bold">R$ ${parseFloat(s.VALOR_PARCELA).toFixed(2).replace('.',',')}</td><td class="text-success fw-bold">R$ ${parseFloat(s.VALOR_LIBERADO).toFixed(2).replace('.',',')}</td><td class="small text-muted">${s.DATA_BR}</td></tr>`; }); } }
-    async function v8EnviarProposta() { let idFila = document.getElementById('v8_id_fila_modal').value; let radios = document.getElementsByName('radio_simulacao'); let idSimBanco = null; for (let i = 0; i < radios.length; i++) { if (radios[i].checked) { idSimBanco = radios[i].value; break; } } if (!idSimBanco) return alert("Selecione uma simulação no Bloco 2 clicando na bolinha (ESCOLHER)."); let payload = { id_fila: idFila, id_sim_banco: idSimBanco, nome: document.getElementById('v8_dig_nome').value, email: document.getElementById('v8_dig_email').value, nascimento: document.getElementById('v8_dig_nascimento').value, nome_mae: document.getElementById('v8_dig_mae').value, rg: document.getElementById('v8_dig_rg').value, sexo: document.getElementById('v8_dig_sexo').value, telefone: document.getElementById('v8_dig_telefone').value, cep: document.getElementById('v8_dig_cep').value, logradouro: document.getElementById('v8_dig_logradouro').value, numero: document.getElementById('v8_dig_numero').value, bairro: document.getElementById('v8_dig_bairro').value, cidade: document.getElementById('v8_dig_cidade').value, uf: document.getElementById('v8_dig_uf').value, pix: document.getElementById('v8_dig_pix').value, tipo_pix: document.getElementById('v8_dig_tipo_pix').value, obs: document.getElementById('v8_dig_observacao').value }; if(!payload.pix) return alert("A chave PIX no Bloco 3 é obrigatória."); const res = await v8Req('ajax_api_v8_digitacao.php', 'passo5_enviar_proposta', payload, true, "Enviando..."); if (res.success) { alert("✅ Proposta gerada."); v8VerLinkAssinatura(res.url); v8Modais.simulacao.hide(); v8CarregarFila(0); v8CarregarPropostas(); v8AtualizarSaldosTopo(); } else alert("❌ Erro: " + res.msg); }
+    async function v8EnviarProposta() { let idFila = document.getElementById('v8_id_fila_modal').value; let radios = document.getElementsByName('radio_simulacao'); let idSimBanco = null; for (let i = 0; i < radios.length; i++) { if (radios[i].checked) { idSimBanco = radios[i].value; break; } } if (!idSimBanco) return crmToast("Selecione uma simulação no Bloco 2 clicando na bolinha (ESCOLHER).", "warning"); let payload = { id_fila: idFila, id_sim_banco: idSimBanco, nome: document.getElementById('v8_dig_nome').value, email: document.getElementById('v8_dig_email').value, nascimento: document.getElementById('v8_dig_nascimento').value, nome_mae: document.getElementById('v8_dig_mae').value, rg: document.getElementById('v8_dig_rg').value, sexo: document.getElementById('v8_dig_sexo').value, telefone: document.getElementById('v8_dig_telefone').value, cep: document.getElementById('v8_dig_cep').value, logradouro: document.getElementById('v8_dig_logradouro').value, numero: document.getElementById('v8_dig_numero').value, bairro: document.getElementById('v8_dig_bairro').value, cidade: document.getElementById('v8_dig_cidade').value, uf: document.getElementById('v8_dig_uf').value, pix: document.getElementById('v8_dig_pix').value, tipo_pix: document.getElementById('v8_dig_tipo_pix').value, obs: document.getElementById('v8_dig_observacao').value }; if(!payload.pix) return crmToast("A chave PIX no Bloco 3 é obrigatória.", "warning"); const res = await v8Req('ajax_api_v8_digitacao.php', 'passo5_enviar_proposta', payload, true, "Enviando..."); if (res.success) { crmToast("✅ Proposta gerada.", "success"); v8VerLinkAssinatura(res.url); v8Modais.simulacao.hide(); v8CarregarFila(0); v8CarregarPropostas(); v8AtualizarSaldosTopo(); } else crmToast("❌ Erro: " + res.msg, "error"); }
 
 </script>
 

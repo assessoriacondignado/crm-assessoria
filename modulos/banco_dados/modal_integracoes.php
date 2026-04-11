@@ -189,8 +189,8 @@ if (empty($cpf_para_integracao) && isset($termo_busca)) {
             if (inputFormCPF && inputFormCPF.value) cpfAlvo = inputFormCPF.value.replace(/\D/g, '');
         }
 
-        if (!chaveId) return alert("Selecione a chave/usuário que será cobrado no campo acima.");
-        if (cpfAlvo.length !== 11) return alert("Erro: CPF inválido. Digite um CPF com 11 números na busca.");
+        if (!chaveId) return crmToast("Selecione a chave/usuário que será cobrado no campo acima.", "info", 5000);
+        if (cpfAlvo.length !== 11) return crmToast("Erro: CPF inválido. Digite um CPF com 11 números na busca.", "error", 6000);
 
         const nome = document.getElementById('integ_nome_alvo').value;
         const nasc = document.getElementById('integ_nasc_alvo').value;

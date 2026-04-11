@@ -130,7 +130,7 @@ if (!$logado || !$is_admin) {
         const valor_liquido = document.getElementById('valor_liquido').value.trim();
 
         if (!token || !cpf) {
-            alert('Token e CPF são obrigatórios!'); return;
+            crmToast('Token e CPF são obrigatórios!', 'warning'); return;
         }
 
         const payload = { acao: acao, cpf: cpf };

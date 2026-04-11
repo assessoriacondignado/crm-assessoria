@@ -147,7 +147,7 @@
             document.getElementById('cad_tipo_pix').value = d.tipo_pix;
             document.getElementById('cad_chave_pix').value = d.chave_pix;
             modalCadastro.show();
-        } else { alert(res.msg); }
+        } else { crmToast(res.msg, res.success === false ? "error" : "info"); }
     }
 
     async function salvarCliente() {
@@ -163,17 +163,17 @@
             data_exp_rg: document.getElementById('cad_exp_rg').value, tipo_pix: document.getElementById('cad_tipo_pix').value,
             chave_pix: document.getElementById('cad_chave_pix').value
         };
-        if(!payload.cpf || !payload.nome_completo) return alert("CPF e Nome Completo são obrigatórios.");
+        if(!payload.cpf || !payload.nome_completo) return crmToast("CPF e Nome Completo são obrigatórios.", "info", 5000);
 
         const res = await reqApi('salvar_cliente', payload);
-        if(res.success) { alert("Sucesso!"); modalCadastro.hide(); carregarTabelaClientes(); } 
-        else { alert("Erro: " + res.msg); }
+        if(res.success) { crmToast("Sucesso!", "success"); modalCadastro.hide(); carregarTabelaClientes(); } 
+        else { crmToast("❌ " + res.msg, "error", 6000); }
     }
 
     async function excluirCliente(cpf) {
         if(!confirm("Deseja realmente excluir este cliente? Isso apagará os dados dele.")) return;
         const res = await reqApi('excluir_cliente', { cpf: cpf });
-        if(res.success) carregarTabelaClientes(); else alert("Erro: " + res.msg);
+        if(res.success) carregarTabelaClientes(); else crmToast("❌ " + res.msg, "error", 6000);
     }
 </script>
 

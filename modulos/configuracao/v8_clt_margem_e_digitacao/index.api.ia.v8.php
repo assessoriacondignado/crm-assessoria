@@ -270,10 +270,10 @@ else:
             const nome_robo = document.getElementById('ia_nome_robo').value;
             const chave_v8_id = document.getElementById('ia_chave_v8').value;
 
-            if(!nome_robo || !chave_v8_id) return alert("Preencha todos os campos corretamente.");
+            if(!nome_robo || !chave_v8_id) return crmToast("Preencha todos os campos corretamente.", "warning");
 
             const res = await v8Req(ARQUIVO_AJAX_IA, 'salvar_token', { nome_robo: nome_robo, chave_v8_id: chave_v8_id }, true, "Gerando Token Seguro...");
-            if (res.success) { alert("✅ " + res.msg); modalTokenIAObj.hide(); carregarTokensIA(); } else { alert("❌ Erro: " + res.msg); }
+            if (res.success) { crmToast("✅ " + res.msg, "success"); modalTokenIAObj.hide(); carregarTokensIA(); } else { crmToast("❌ " + res.msg, "error", 6000); }
         }
 
         async function salvarEdicaoTokenIA() {
@@ -282,10 +282,10 @@ else:
                 nome_robo: document.getElementById('edit_ia_nome_robo').value,
                 chave_v8_id: document.getElementById('edit_ia_chave_v8').value
             };
-            if(!payload.nome_robo || !payload.chave_v8_id) return alert("Preencha os campos obrigatórios.");
+            if(!payload.nome_robo || !payload.chave_v8_id) return crmToast("Preencha os campos obrigatórios.", "warning");
             
             const res = await v8Req(ARQUIVO_AJAX_IA, 'editar_token', payload, true, "Salvando...");
-            if(res.success) { alert("✅ " + res.msg); modalEditarTokenIAObj.hide(); carregarTokensIA(); } else { alert("❌ Erro: " + res.msg); }
+            if(res.success) { crmToast("✅ " + res.msg, "success"); modalEditarTokenIAObj.hide(); carregarTokensIA(); } else { crmToast("❌ " + res.msg, "error", 6000); }
         }
 
         async function carregarTokensIA() {
@@ -409,32 +409,32 @@ else:
         async function revogarTokenIA(id) {
             if(!confirm("Tem certeza que deseja REVOGAR este Token? O robô perderá acesso!")) return;
             const res = await v8Req(ARQUIVO_AJAX_IA, 'revogar_token', { id: id }, true, "Revogando...");
-            if(res.success) carregarTokensIA(); else alert("Erro: " + res.msg);
+            if(res.success) carregarTokensIA(); else crmToast("❌ " + res.msg, "error", 6000);
         }
 
         async function reativarTokenIA(id) {
             if(!confirm("Deseja REATIVAR este robô? O token voltará a dar acesso.")) return;
             const res = await v8Req(ARQUIVO_AJAX_IA, 'reativar_token', { id: id }, true, "Reativando...");
-            if(res.success) carregarTokensIA(); else alert("Erro: " + res.msg);
+            if(res.success) carregarTokensIA(); else crmToast("❌ " + res.msg, "error", 6000);
         }
 
         async function excluirTokenIA(id) {
             if(!confirm("⚠️ CUIDADO: Tem certeza que deseja EXCLUIR DEFINITIVAMENTE este Token?\n\nEsta ação não pode ser desfeita e o robô perderá o acesso instantaneamente!")) return;
             const res = await v8Req(ARQUIVO_AJAX_IA, 'excluir_token', { id: id }, true, "Excluindo...");
-            if(res.success) carregarTokensIA(); else alert("Erro: " + res.msg);
+            if(res.success) carregarTokensIA(); else crmToast("❌ " + res.msg, "error", 6000);
         }
 
         async function gerarNovoTokenIAExistente(id) {
             if(!confirm("⚠️ ATENÇÃO EXTREMA: Deseja gerar um NOVO BEARER para este robô?\n\nO token atual vai parar de funcionar imediatamente e você terá que colar o novo na sua automação.")) return;
             const res = await v8Req(ARQUIVO_AJAX_IA, 'gerar_novo_token_existente', { id: id }, true, "Gerando novo Bearer...");
-            if(res.success) { alert("✅ " + res.msg); carregarTokensIA(); } else { alert("Erro: " + res.msg); }
+            if(res.success) { crmToast("✅ " + res.msg, "success"); carregarTokensIA(); } else { crmToast("❌ " + res.msg, "error", 6000); }
         }
 
         function copiarTokenIA(idInput) {
             var copyText = document.getElementById(idInput);
             copyText.select(); copyText.setSelectionRange(0, 99999); 
             navigator.clipboard.writeText(copyText.value);
-            alert("Token copiado para a área de transferência!");
+            crmToast("Token copiado para a área de transferência!", "success");
         }
 
         // ==========================================
@@ -556,7 +556,7 @@ else:
                 if(!confirm(`ALERTA: Você está prestes a ENVIAR O CANCELAMENTO da proposta ${id_proposta} para a V8. Deseja continuar?`)) return;
             }
             const res = await v8Req(ARQUIVO_AJAX_IA, acaoBackend, payload, true, "Processando com a V8...");
-            if(res.success) { alert("✅ Sucesso!"); carregarSessoesIA(); } else { alert("❌ Erro: " + (res.msg || res.error || "Falha na comunicação")); }
+            if(res.success) { crmToast("✅ Sucesso!", "success"); carregarSessoesIA(); } else { crmToast("❌ " + (res.msg || res.error || "Falha na comunicação", "error", 6000)); }
         }
     </script>
 <?php endif; ?>

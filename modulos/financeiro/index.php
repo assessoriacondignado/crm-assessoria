@@ -372,7 +372,7 @@
       if(!input.files[0]) return;
       const fd = new FormData(); fd.append('acao', 'importar_extrato_pagbank'); fd.append('arquivo_csv', input.files[0]);
       const res = await fetch('conciliacao.ajax.php', { method: 'POST', body: fd });
-      const j = await res.json(); alert(j.msg); input.value = ""; carregarDespesas();
+      const j = await res.json(); crmToast(j.msg, "info"); input.value = ""; carregarDespesas();
   }
 
   async function carregarDespesas() {
@@ -451,7 +451,7 @@
       e.preventDefault();
       const selectsCascata = document.querySelectorAll('.select-conta-cascata_conciliacao'); let caminhoSelecionado = '';
       for (let i = selectsCascata.length - 1; i >= 0; i--) { if (selectsCascata[i].value !== "") { caminhoSelecionado = selectsCascata[i].options[selectsCascata[i].selectedIndex].getAttribute('data-caminho'); break; } }
-      if(caminhoSelecionado === '') { alert("Classifique este item em alguma categoria do Plano de Contas!"); return; }
+      if(caminhoSelecionado === '') { crmToast("Classifique este item em alguma categoria do Plano de Contas!", "info", 5000); return; }
 
       const f = {
           tipo_fluxo: document.getElementById('cTipoFluxo').value, 
@@ -465,7 +465,7 @@
       };
 
       const r = await callConciliacao('conciliar_registro', f);
-      if(r.success) { modais.conciliar.hide(); if (f.tipo_fluxo === 'DESPESA') carregarDespesas(); else carregarReceitas(); carregarCaixa(); } else { alert(r.msg); }
+      if(r.success) { modais.conciliar.hide(); if (f.tipo_fluxo === 'DESPESA') carregarDespesas(); else carregarReceitas(); carregarCaixa(); } else { crmToast(r.msg, r.success === false ? "error" : "info"); }
   });
 
   // ===============================================
@@ -571,7 +571,7 @@
      });
   }
 
-  async function mudarStatusLancamento(id, novoStatus, tipoMovimento) { const r = await callFinanceiro('mudar_status_lancamento', { id: id, categoria: novoStatus, tipo_movimento: tipoMovimento }); if(r.success) carregarCaixa(); else alert(r.msg); }
+  async function mudarStatusLancamento(id, novoStatus, tipoMovimento) { const r = await callFinanceiro('mudar_status_lancamento', { id: id, categoria: novoStatus, tipo_movimento: tipoMovimento }); if(r.success) carregarCaixa(); else crmToast(r.msg, r.success === false ? "error" : "info"); }
   
   function abrirVisLancamento(id, tipoMovimento) {
       const item = window.caixaList.find(i => i.ID == id && i.TIPO_MOVIMENTO == tipoMovimento); if(!item) return;
@@ -624,14 +624,14 @@
       e.preventDefault(); const idLancamento = document.getElementById('lLancamentoId').value; const tipoMov = document.getElementById('lTipo').value;
       const selectsOrigem = document.querySelectorAll('.select-conta-cascata_origem'); let contaSelecionadaOrigem = '';
       if (selectsOrigem.length > 0) { for (let i = selectsOrigem.length - 1; i >= 0; i--) { if (selectsOrigem[i].value !== "") { contaSelecionadaOrigem = selectsOrigem[i].options[selectsOrigem[i].selectedIndex].getAttribute('data-caminho'); break; } } } else { const inputDescOrig = document.getElementById('lDescricaoOriginal'); if (inputDescOrig) contaSelecionadaOrigem = inputDescOrig.value; }
-      if(contaSelecionadaOrigem === '') { alert("Selecione a Hierarquia da Origem!"); return; }
+      if(contaSelecionadaOrigem === '') { crmToast("Selecione a Hierarquia da Origem!", "info", 5000); return; }
 
       let contaSelecionadaDestino = '';
       if (tipoMov === 'TRANSFERENCIA' && !idLancamento) {
           const selectsDestino = document.querySelectorAll('.select-conta-cascata_destino');
           for (let i = selectsDestino.length - 1; i >= 0; i--) { if (selectsDestino[i].value !== "") { contaSelecionadaDestino = selectsDestino[i].options[selectsDestino[i].selectedIndex].getAttribute('data-caminho'); break; } }
-          if(contaSelecionadaDestino === '') { alert("Selecione a Hierarquia do Destino!"); return; }
-          if(document.getElementById('lContaBanco').value === document.getElementById('lContaDestino').value) { alert("Contas iguais!"); return; }
+          if(contaSelecionadaDestino === '') { crmToast("Selecione a Hierarquia do Destino!", "info", 5000); return; }
+          if(document.getElementById('lContaBanco').value === document.getElementById('lContaDestino').value) { crmToast("Contas iguais!", "info", 5000); return; }
       }
 
       const f = { 
@@ -650,7 +650,7 @@
           codigo_banco: document.getElementById('lCodBanco').value,
           data_conciliacao: document.getElementById('lDataConciliacao').value
       }; 
-      const r = await callFinanceiro('salvar_lancamento', f); if(r.success){ modais.lancamento.hide(); carregarCaixa(); } else { alert(r.msg); }
+      const r = await callFinanceiro('salvar_lancamento', f); if(r.success){ modais.lancamento.hide(); carregarCaixa(); } else { crmToast(r.msg, r.success === false ? "error" : "info"); }
   });
 
   // ===============================================
@@ -674,8 +674,8 @@
       const dataInicio = document.getElementById('sincDataInicio').value;
       const dataFim    = document.getElementById('sincDataFim').value;
 
-      if (!dataInicio || !dataFim) { alert('Selecione o período de início e fim antes de sincronizar.'); return; }
-      if (dataInicio > dataFim) { alert('A data de início não pode ser maior que a data fim.'); return; }
+      if (!dataInicio || !dataFim) { crmToast("Selecione o período de início e fim antes de sincronizar.", "warning", 5000); return; }
+      if (dataInicio > dataFim) { crmToast("A data de início não pode ser maior que a data fim.", "warning", 5000); return; }
 
       const originalHtml = btn.innerHTML;
       btn.innerHTML = '<i class="fas fa-spinner fa-spin me-1"></i> Conectando ao Banco...';
@@ -690,13 +690,13 @@
           const res = await fetch('api_pagbank.php', { method: 'POST', body: fd });
           const j = await res.json();
 
-          alert(j.msg);
+          crmToast(j.msg, "info");
 
           if (j.success) {
               carregarDespesas();
           }
       } catch (e) {
-          alert("Ocorreu um erro de conexão com o seu arquivo api_pagbank.php");
+          crmToast("Ocorreu um erro de conexão com o seu arquivo api_pagbank.php", "info", 5000);
       } finally {
           btn.innerHTML = originalHtml;
           btn.disabled = false;
@@ -777,7 +777,7 @@
     }
   }
   function abrirModalContaBancaria() { document.getElementById('fContaBancaria').reset(); document.getElementById('cbId').value = ""; modais.banco.show(); }
-  document.getElementById('fContaBancaria').addEventListener('submit', async e => { e.preventDefault(); const f = { id: document.getElementById('cbId').value, nome: document.getElementById('cbNome').value, dados: document.getElementById('cbDados').value }; const r = await callFinanceiro('salvar_conta_bancaria', f); if(r.success) { modais.banco.hide(); carregarContasBancarias(); } else { alert(r.msg); } });
+  document.getElementById('fContaBancaria').addEventListener('submit', async e => { e.preventDefault(); const f = { id: document.getElementById('cbId').value, nome: document.getElementById('cbNome').value, dados: document.getElementById('cbDados').value }; const r = await callFinanceiro('salvar_conta_bancaria', f); if(r.success) { modais.banco.hide(); carregarContasBancarias(); } else { crmToast(r.msg, r.success === false ? "error" : "info"); } });
 
   async function salvarTokenPagBank() {
     const token = document.getElementById('inputPagbankToken').value.trim();
@@ -795,15 +795,15 @@
   async function carregarListaPlanoContas() { const tb = document.getElementById('tbody-plano-contas'); tb.innerHTML = '<tr><td colspan="4" class="text-center py-3"><i class="fas fa-spinner fa-spin"></i> Lendo plano de contas...</td></tr>'; const r = await callFinanceiro('listar_plano_contas'); if(r.success) { window.listaContasCache = r.data; tb.innerHTML = ''; if(r.data.length === 0) { tb.innerHTML = '<tr><td colspan="4" class="text-center py-4 text-muted fw-bold">A árvore está vazia. Crie as contas!</td></tr>'; return; } r.data.forEach(x => { let cls = x.TIPO === 'ENTRADA' ? 'text-success' : 'text-danger'; let statusBadge = x.STATUS === 'ATIVO' ? '<span class="badge bg-success">ATIVO</span>' : '<span class="badge bg-secondary">INATIVO</span>'; tb.innerHTML += `<tr class="border-bottom border-dark"><td class="fw-bold ${cls}">${x.TIPO}</td><td class="fw-bold text-dark"><i class="fas fa-level-up-alt text-muted me-2" style="transform: rotate(90deg);"></i> ${x.CAMINHO_HIERARQUIA}</td><td>${statusBadge}</td><td class="text-center"><button class="btn btn-sm btn-primary border-dark shadow-sm fw-bold" onclick="abrirVisPlanoConta(${x.ID})"><i class="fas fa-eye me-1"></i> Visualizar</button></td></tr>`; }); } }
   function abrirVisPlanoConta(id) { const pc = window.listaContasCache.find(x => x.ID == id); if(!pc) return; document.getElementById('visPcTipo').innerText = pc.TIPO; document.getElementById('visPcCaminho').innerText = pc.CAMINHO_HIERARQUIA; document.getElementById('visPcStatus').innerHTML = pc.STATUS === 'ATIVO' ? '<span class="badge bg-success fs-6">ATIVO</span>' : '<span class="badge bg-secondary fs-6">INATIVO</span>'; let btnStatus = pc.STATUS === 'ATIVO' ? `<button class="btn btn-secondary border-dark fw-bold me-2 shadow-sm" onclick="mudarStatusPlanoConta(${pc.ID}, 'INATIVO')"><i class="fas fa-ban me-1"></i> Inativar</button>` : `<button class="btn btn-success border-dark fw-bold me-2 shadow-sm" onclick="mudarStatusPlanoConta(${pc.ID}, 'ATIVO')"><i class="fas fa-check me-1"></i> Ativar</button>`; document.getElementById('visPcFooter').innerHTML = `${btnStatus} <button class="btn btn-warning border-dark fw-bold text-dark me-2 shadow-sm" onclick="editarPlanoConta(${pc.ID})"><i class="fas fa-edit me-1"></i> Editar</button> <button class="btn btn-danger border-dark fw-bold shadow-sm" onclick="excluirPlanoConta(${pc.ID})"><i class="fas fa-trash me-1"></i> Excluir</button>`; modais.visPlano.show(); }
   async function mudarStatusPlanoConta(id, novoStatus) { if(!confirm(`Alterar status para ${novoStatus}?`)) return; const r = await callFinanceiro('mudar_status_plano_conta', { id: id, status: novoStatus }); if(r.success) { await carregarListaPlanoContas(); abrirVisPlanoConta(id); } }
-  async function excluirPlanoConta(id) { if(!confirm('Excluir?')) return; const r = await callFinanceiro('excluir_plano_conta', { id: id }); if(r.success) { modais.visPlano.hide(); carregarListaPlanoContas(); } else { alert(r.msg); } }
+  async function excluirPlanoConta(id) { if(!confirm('Excluir?')) return; const r = await callFinanceiro('excluir_plano_conta', { id: id }); if(r.success) { modais.visPlano.hide(); carregarListaPlanoContas(); } else { crmToast(r.msg, r.success === false ? "error" : "info"); } }
   function editarPlanoConta(id) { const pc = window.listaContasCache.find(x => x.ID == id); modais.visPlano.hide(); document.getElementById('fPlanoConta').reset(); document.getElementById('pcId').value = pc.ID; document.getElementById('pcTipo').value = pc.TIPO; carregarPaisSelect(); document.getElementById('pcParent').value = pc.PARENT_ID || ''; document.getElementById('pcNome').value = pc.NOME_CONTA; modais.plano.show(); }
   function abrirModalPlanoConta() { document.getElementById('fPlanoConta').reset(); document.getElementById('pcId').value = ""; carregarPaisSelect(); modais.plano.show(); }
   function carregarPaisSelect() { const tipoSel = document.getElementById('pcTipo').value; const sel = document.getElementById('pcParent'); sel.innerHTML = '<option value="">-- É UMA CONTA PRINCIPAL RAIZ --</option>'; if(tipoSel !== "" && window.listaContasCache.length > 0) { window.listaContasCache.forEach(x => { if(x.TIPO === tipoSel) { sel.innerHTML += `<option value="${x.ID}">${x.CAMINHO_HIERARQUIA}</option>`; } }); } }
-  document.getElementById('fPlanoConta').addEventListener('submit', async e => { e.preventDefault(); const f = { id: document.getElementById('pcId').value, tipo: document.getElementById('pcTipo').value, parent_id: document.getElementById('pcParent').value, nome: document.getElementById('pcNome').value }; const r = await callFinanceiro('salvar_plano_conta', f); if(r.success) { modais.plano.hide(); carregarListaPlanoContas(); } else { alert(r.msg); } });
+  document.getElementById('fPlanoConta').addEventListener('submit', async e => { e.preventDefault(); const f = { id: document.getElementById('pcId').value, tipo: document.getElementById('pcTipo').value, parent_id: document.getElementById('pcParent').value, nome: document.getElementById('pcNome').value }; const r = await callFinanceiro('salvar_plano_conta', f); if(r.success) { modais.plano.hide(); carregarListaPlanoContas(); } else { crmToast(r.msg, r.success === false ? "error" : "info"); } });
   async function buscarBase(termo) { clearTimeout(delayTimer); let ul = document.getElementById('listaBase'); if(termo.length < 3) { ul.style.display = 'none'; return; } delayTimer = setTimeout(async () => { const r = await callFinanceiro('buscar_cadastro_base', { termo: termo }); if(r.success && r.data.length > 0) { ul.innerHTML = ''; r.data.forEach(c => { let li = document.createElement('li'); li.innerHTML = `<strong>${c.NOME}</strong> <br><small class="text-muted">${c.TIPO} | Doc: ${c.DOC}</small>`; li.onclick = () => { document.getElementById('vBusca').value = c.NOME; document.getElementById('vNome').value = c.NOME; document.getElementById('vDoc').value = c.DOC; document.getElementById('vTipo').value = c.TIPO; ul.style.display = 'none'; }; ul.appendChild(li); }); ul.style.display = 'block'; } else { ul.style.display = 'none'; } }, 400); }
   document.addEventListener('click', e => { if(e.target.id !== 'vBusca' && document.getElementById('listaBase')) document.getElementById('listaBase').style.display = 'none'; });
   function abrirModalVinculo(tipo, id=0, nome='', doc='', tipoBase='') { document.getElementById('fVinculo').reset(); document.getElementById('vDestino').value = tipo; document.getElementById('vId').value = id; document.getElementById('titVinculo').innerText = id > 0 ? `Editar Vínculo (${tipo})` : `Vincular Novo ${tipo}`; if(id > 0) { document.getElementById('vBusca').value = nome; document.getElementById('vNome').value = nome; document.getElementById('vDoc').value = doc; document.getElementById('vTipo').value = tipoBase; } modais.vinculo.show(); }
-  document.getElementById('fVinculo').addEventListener('submit', async e => { e.preventDefault(); const dest = document.getElementById('vDestino').value; const f = { id: document.getElementById('vId').value, nome: document.getElementById('vNome').value, documento: document.getElementById('vDoc').value, tipo: document.getElementById('vTipo').value }; const r = await callFinanceiro(dest === 'ENTIDADE' ? 'salvar_entidade' : 'salvar_vendedor', f); if(r.success) { modais.vinculo.hide(); dest === 'ENTIDADE' ? carregarEntidades() : carregarVendedores(); } else alert(r.msg); });
+  document.getElementById('fVinculo').addEventListener('submit', async e => { e.preventDefault(); const dest = document.getElementById('vDestino').value; const f = { id: document.getElementById('vId').value, nome: document.getElementById('vNome').value, documento: document.getElementById('vDoc').value, tipo: document.getElementById('vTipo').value }; const r = await callFinanceiro(dest === 'ENTIDADE' ? 'salvar_entidade' : 'salvar_vendedor', f); if(r.success) { modais.vinculo.hide(); dest === 'ENTIDADE' ? carregarEntidades() : carregarVendedores(); } else crmToast(r.msg, r.success === false ? "error" : "info"); });
   async function carregarEntidades() { const r = await callFinanceiro('listar_entidades'); const tb = document.getElementById('tbody-entidades'); tb.innerHTML = ''; if(r.success) r.data.forEach(x => { tb.innerHTML += `<tr class="border-bottom border-dark"><td class="fw-bold text-primary">${x.NOME}</td><td>${x.DOCUMENTO}</td><td><span class="badge bg-secondary">${x.TIPO_VINCULO}</span></td><td><span class="badge bg-success">Ativo</span></td><td class="text-center"><button class="btn btn-sm btn-dark fw-bold shadow-sm me-1" onclick="abrirModalVinculo('ENTIDADE', ${x.ID}, '${x.NOME}', '${x.DOCUMENTO}', '${x.TIPO_VINCULO}')"><i class="fas fa-edit"></i></button><button class="btn btn-sm btn-danger fw-bold shadow-sm" onclick="if(confirm('Desvincular?')) callFinanceiro('excluir_entidade',{id:${x.ID}}).then(carregarEntidades)"><i class="fas fa-unlink"></i></button></td></tr>`; }); }
   async function carregarVendedores() {
     const r = await callFinanceiro('listar_vendedores');
@@ -830,7 +830,7 @@
   async function gerarLinkVendedor(id) {
     if(!confirm('Gerar link único de indicação para este vendedor?')) return;
     const r = await callFinanceiro('gerar_link_vendedor', { id: id });
-    if(r.success) { carregarVendedores(); } else { alert(r.msg); }
+    if(r.success) { carregarVendedores(); } else { crmToast(r.msg, r.success === false ? "error" : "info"); }
   }
   async function verIndicados(vendedorId, nomeVendedor) {
     document.getElementById('nomeVendedorIndicados').innerText = nomeVendedor;
@@ -892,9 +892,9 @@
   }
   async function toggleOpcaoComissao(vinculoId, novaOpcao) {
     const r = await callFinanceiro('atualizar_opcao_comissao', { id: vinculoId, opcao: novaOpcao });
-    if(r.success) carregarTabelasLiberadas(); else alert(r.msg);
+    if(r.success) carregarTabelasLiberadas(); else crmToast(r.msg, r.success === false ? "error" : "info");
   }
-  document.getElementById('fComissaoVend').addEventListener('submit', async e => { e.preventDefault(); const f = { vendedor_id: document.getElementById('cVendId').value, variacao_id: document.getElementById('cVariacaoId').value }; const r = await callFinanceiro('salvar_comissao_vendedor', f); if(r.success) { carregarTabelasLiberadas(); } else { alert(r.msg); } });
+  document.getElementById('fComissaoVend').addEventListener('submit', async e => { e.preventDefault(); const f = { vendedor_id: document.getElementById('cVendId').value, variacao_id: document.getElementById('cVariacaoId').value }; const r = await callFinanceiro('salvar_comissao_vendedor', f); if(r.success) { carregarTabelasLiberadas(); } else { crmToast(r.msg, r.success === false ? "error" : "info"); } });
 </script>
 
 <?php 
