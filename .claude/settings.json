@@ -5,7 +5,13 @@
       "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e ':*)",
       "Bash(git commit -m ':*)",
       "Bash(mysql -u root -e \"SHOW TABLES FROM crm LIKE '%WHATS%';\")",
-      "Bash(mysql -e \"SHOW TABLES LIKE '%WHATS%';\")"
+      "Bash(mysql -e \"SHOW TABLES LIKE '%WHATS%';\")",
+      "Bash(git push:*)",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"SELECT ID, CPF_CLIENTE, FONTE_CONSULT_ID, STATUS_CONSULTA, DATA_CONSULTA, ID_SIMULACAO, VALOR_LIQUIDO FROM INTEGRACAO_V8_CONSULTAS WHERE CPF_CLIENTE='06504802440' ORDER BY ID DESC LIMIT 10;\")",
+      "Bash(php -r ':*)",
+      "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/api_ia_v8.php)",
+      "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/index.api.ia.v8.php)",
+      "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/ajax_api_ia_v8.php)"
     ]
   }
 }

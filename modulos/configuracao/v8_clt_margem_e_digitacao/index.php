@@ -533,8 +533,12 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
             // Paginação
             if (r.has_more) { pagDiv.classList.remove('d-none'); contador.textContent = `Exibindo ${v8FilaOffsetAtual} de ${r.total} registros`; } else { pagDiv.classList.add('d-none'); if (r.total > 100) contador.textContent = `Total: ${r.total} registros`; }
 
-            r.data.forEach(x => { 
-                let colAuth = `<span class="badge bg-light text-muted border">Vazio</span>`; let colConf = `<span class="badge bg-light text-muted border">Vazio</span>`; let colSim  = `<span class="badge bg-light text-muted border">Vazio</span>`; let colProp = `<span class="badge bg-light text-muted border">Vazio</span>`; let btnAcoes = ''; let msgErroLimpa = "Erro na V8"; 
+            r.data.forEach(x => {
+                const isIaBot = (x.FONTE_CONSULT_ID || '').toUpperCase() === 'IA BOT';
+                const badgeOrigem = isIaBot
+                    ? `<span class="badge mt-1 d-inline-block" style="background:#8e44ad;font-size:9px;"><i class="fas fa-robot me-1"></i>API / IA</span>`
+                    : `<span class="badge bg-secondary mt-1 d-inline-block" style="font-size:9px;"><i class="fas fa-hand-paper me-1"></i>FILA / MANUAL</span>`;
+                let colAuth = `<span class="badge bg-light text-muted border">Vazio</span>`; let colConf = `<span class="badge bg-light text-muted border">Vazio</span>`; let colSim  = `<span class="badge bg-light text-muted border">Vazio</span>`; let colProp = `<span class="badge bg-light text-muted border">Vazio</span>`; let btnAcoes = ''; let msgErroLimpa = "Erro na V8";
                 if(x.MENSAGEM_ERRO) { try { let jsonErro = JSON.parse(x.MENSAGEM_ERRO); msgErroLimpa = jsonErro.detail || jsonErro.message || jsonErro.title || "Erro API"; } catch(e) { msgErroLimpa = String(x.MENSAGEM_ERRO).replace(/"/g, "'"); } } 
                 let fontAuth = x.FONTE_CONSULT_ID ? x.FONTE_CONSULT_ID : "NOVO CONSENTIMENTO"; let badgeFonteAuth = `<span class="badge bg-dark rounded-pill mb-1" style="font-size:8.5px;">FONTE: ${fontAuth}</span><br>`; 
                 let consultIdVisual = x.CONSULT_ID ? String(x.CONSULT_ID).substring(0,8) : 'N/A';
@@ -616,11 +620,6 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
                 let usernameApi = x.USERNAME_API || '—';
                 let tabelaPadrao = x.TABELA_PADRAO || '—';
                 let prazoPadrao = x.PRAZO_PADRAO ? x.PRAZO_PADRAO + 'x' : '—';
-
-                const isIaBot = (x.FONTE_CONSULT_ID || '').toUpperCase() === 'IA BOT';
-                const badgeOrigem = isIaBot
-                    ? `<span class="badge mt-1 d-inline-block" style="background:#8e44ad;font-size:9px;"><i class="fas fa-robot me-1"></i>API / IA</span>`
-                    : `<span class="badge bg-secondary mt-1 d-inline-block" style="font-size:9px;"><i class="fas fa-hand-paper me-1"></i>FILA / MANUAL</span>`;
 
                 tb.innerHTML += `<tr class="border-bottom border-dark">
                 <td class="text-center align-middle" style="min-width:70px;">
