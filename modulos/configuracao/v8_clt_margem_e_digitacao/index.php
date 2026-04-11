@@ -27,6 +27,14 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
 <style>
   .v8-loader-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.8); z-index: 9999; backdrop-filter: blur(2px); }
   .v8-loader-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
+  /* === Toast V8 === */
+  #v8-toast-container { position: fixed; top: 18px; right: 18px; z-index: 99999; display: flex; flex-direction: column; gap: 8px; pointer-events: none; }
+  .v8-toast { padding: 10px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; color: #fff; box-shadow: 0 4px 14px rgba(0,0,0,.3); opacity: 0; transform: translateX(60px); transition: opacity .3s, transform .3s; max-width: 360px; pointer-events: auto; }
+  .v8-toast.show { opacity: 1; transform: translateX(0); }
+  .v8-toast.v8-t-success { background: #198754; }
+  .v8-toast.v8-t-error   { background: #dc3545; }
+  .v8-toast.v8-t-warning { background: #e67e22; }
+  .v8-toast.v8-t-info    { background: #0d6efd; }
   .caixa-cobranca { border: 1px dashed #198754; background: #f8fff9; padding: 12px; border-radius: 6px; margin-bottom: 15px; }
   .table-fila th { background-color: #343a40; color: white; font-size: 0.75rem; text-transform: uppercase; text-align: center; vertical-align: middle; }
   .table-fila td { text-align: center; vertical-align: middle; }
@@ -41,6 +49,8 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
   .v8m-btn-vermelho { border-color: #dc3545; color: #dc3545; }
   .v8m-btn-vermelho:hover { background: rgba(220,53,69,.1); }
 </style>
+
+<div id="v8-toast-container"></div>
 
 <div id="v8-loader" class="v8-loader-overlay"><div class="v8-loader-content"><div class="spinner-border text-danger" style="width: 3rem; height: 3rem;" role="status"></div><h5 id="v8-loader-msg" class="mt-3 text-dark fw-bold">Aguarde...</h5></div></div>
 
@@ -285,7 +295,21 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
     const perm_digitar = <?= $perm_digitar ?>;
     const perm_fator = <?= $perm_fator ?>;
 
-    let v8Modais = {}; let windowListaChavesCache = []; let windowPollingData = {}; 
+    function v8Toast(msg, tipo = 'success', duracao = 4000) {
+        const c = document.getElementById('v8-toast-container');
+        if (!c) return;
+        const t = document.createElement('div');
+        t.className = `v8-toast v8-t-${tipo}`;
+        t.innerHTML = msg;
+        c.appendChild(t);
+        requestAnimationFrame(() => { requestAnimationFrame(() => { t.classList.add('show'); }); });
+        setTimeout(() => {
+            t.classList.remove('show');
+            setTimeout(() => { if (t.parentNode) t.parentNode.removeChild(t); }, 350);
+        }, duracao);
+    }
+
+    let v8Modais = {}; let windowListaChavesCache = []; let windowPollingData = {};
     let windowDadosFilaAtual = null; let windowDadosExtratoAtual = []; 
     let v8TimerBusca; let listaEnderecosFC = [];
 
@@ -677,10 +701,10 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
         v8CarregarFila(0); 
         const tick = async () => { 
             windowPollingData[idFila].attempts++; 
-            if(windowPollingData[idFila].attempts > 11) { v8PararFluxo(idFila, 'TEMPO ESGOTADO'); return alert("A Dataprev demorou muito na fila " + idFila + ". O sistema parou de escutar. Tente reprocessar depois."); }
-            const resPolling = await v8Req('v8_api.ajax.php', 'checar_margem_e_simular', { id_fila: idFila }, false); 
-            if(resPolling.status === 'concluido') { clearTimeout(windowPollingData[idFila].timer); delete windowPollingData[idFila]; v8CarregarFila(0); return; } 
-            else if(resPolling.status === 'erro') { clearTimeout(windowPollingData[idFila].timer); delete windowPollingData[idFila]; v8CarregarFila(0); return alert("❌ Erro Dataprev: " + resPolling.msg); } 
+            if(windowPollingData[idFila].attempts > 11) { v8PararFluxo(idFila, 'TEMPO ESGOTADO'); return v8Toast('⏱ Fila #' + idFila + ': Dataprev não respondeu a tempo. Reprocesse depois.', 'warning', 7000); }
+            const resPolling = await v8Req('v8_api.ajax.php', 'checar_margem_e_simular', { id_fila: idFila }, false);
+            if(resPolling.status === 'concluido') { clearTimeout(windowPollingData[idFila].timer); delete windowPollingData[idFila]; v8CarregarFila(0); return; }
+            else if(resPolling.status === 'erro') { clearTimeout(windowPollingData[idFila].timer); delete windowPollingData[idFila]; v8CarregarFila(0); return v8Toast('❌ Erro Dataprev fila #' + idFila + ': ' + resPolling.msg, 'error', 6000); }
             else if (resPolling.status === 'pendente') { if (windowPollingData[idFila]) { windowPollingData[idFila].timer = setTimeout(tick, 30000); } }
         };
         windowPollingData[idFila].timer = setTimeout(tick, 10000);

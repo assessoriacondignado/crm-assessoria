@@ -1001,13 +1001,13 @@
         const borda = novoStatus === 'INATIVO' ? '#ffc107' : '#198754';
         v8Confirmar(`🔌 Tornar ${novoStatus}`, desc, cor, borda, async () => {
             const res = await v8Req('ajax_api_v8_lote_csv.php', 'alternar_status_lote', { id_lote: idLote, novo_status: novoStatus }, true, "Alterando Status...");
-            if(res.success) { v8CarregarLotesCSV(); } else { alert("❌ Erro: " + res.msg); }
+            if(res.success) { v8CarregarLotesCSV(); } else { v8Toast("❌ " + (res.msg||"Erro"), "error", 6000); }
         });
     }
 
     function v8AbrirModalEditarLote(id) {
         let lote = windowDadosLoteAtual.find(l => l.ID == id || l.id == id);
-        if (!lote) return alert("Erro: Lote não encontrado na tela.");
+        if (!lote) return v8Toast("Erro: Lote não encontrado na tela.", "error", 5000);
 
         document.getElementById('edit_lote_id').value = id;
         document.getElementById('edit_lote_agrupamento').value = lote.NOME_IMPORTACAO || lote.nome_importacao;
@@ -1034,7 +1034,7 @@
     async function v8SalvarEdicaoLote() {
         let agTipoEdit = document.getElementById('edit_agendamento_tipo').value;
         if (agTipoEdit === 'DIARIO' && !document.getElementById('edit_hora_inicio_diario').value) {
-            return alert("Informe o horário de início para o agendamento Diário.");
+            return v8Toast("Informe o horário de início para o agendamento Diário.", "warning", 5000);
         }
         let payload = {
             id_lote: document.getElementById('edit_lote_id').value,
@@ -1052,8 +1052,8 @@
         };
 
         const res = await v8Req('ajax_api_v8_lote_csv.php', 'salvar_edicao_lote', payload, true, "Salvando Edição...");
-        if(res.success) { alert("✅ " + res.msg); modalEditarLoteObj.hide(); v8CarregarLotesCSV(); } 
-        else { alert("❌ Erro: " + res.msg); }
+        if(res.success) { v8Toast("✅ " + res.msg, "success"); modalEditarLoteObj.hide(); v8CarregarLotesCSV(); }
+        else { v8Toast("❌ " + (res.msg||"Erro ao salvar"), "error", 6000); }
     }
 
     async function v8EnviarRelatorioLoteWhats(id) {
@@ -1062,7 +1062,7 @@
             'btn-success', '#198754',
             async () => {
                 const res = await v8Req('ajax_api_v8_lote_csv.php', 'enviar_relatorio_whatsapp', { id_lote: id }, true, "Gerando e Enviando...");
-                if(res.success) { alert("✅ " + res.msg); } else { alert("❌ Erro: " + res.msg); }
+                if(res.success) { v8Toast("✅ " + res.msg, "success"); } else { v8Toast("❌ " + (res.msg||"Erro"), "error", 6000); }
             });
     }
 
@@ -1077,8 +1077,8 @@
             'btn-primary', '#1a73e8',
             async () => {
                 const res = await v8Req('ajax_api_v8_lote_csv.php', 'reprocessar_consentimento', { id_lote: id }, true, "Reprocessando...");
-                if(res.success) { alert("✅ " + res.msg); if(res.cpf_dono) v8AcordarRobo(res.cpf_dono); v8CarregarLotesCSV(); }
-                else { alert("❌ Erro: " + res.msg); }
+                if(res.success) { v8Toast("✅ " + res.msg, "success"); if(res.cpf_dono) v8AcordarRobo(res.cpf_dono); v8CarregarLotesCSV(); }
+                else { v8Toast("❌ " + (res.msg||"Erro"), "error", 6000); }
             });
     }
 
@@ -1098,8 +1098,8 @@
             'btn-warning', '#ffc107',
             async () => {
                 const res = await v8Req('ajax_api_v8_lote_csv.php', 'reprocessar_erros', { id_lote: id }, true, "Reprocessando...");
-                if(res.success) { alert("✅ " + res.msg); if(res.cpf_dono) v8AcordarRobo(res.cpf_dono); v8CarregarLotesCSV(); }
-                else { alert("❌ Erro: " + res.msg); }
+                if(res.success) { v8Toast("✅ " + res.msg, "success"); if(res.cpf_dono) v8AcordarRobo(res.cpf_dono); v8CarregarLotesCSV(); }
+                else { v8Toast("❌ " + (res.msg||"Erro"), "error", 6000); }
             });
     }
 
@@ -1120,8 +1120,8 @@
             'btn-danger', '#dc3545',
             async () => {
                 const res = await v8Req('ajax_api_v8_lote_csv.php', 'reprocessar_todos', { id_lote: id }, true, "Reprocessando...");
-                if(res.success) { alert("✅ " + res.msg); if(res.cpf_dono) v8AcordarRobo(res.cpf_dono); v8CarregarLotesCSV(); }
-                else { alert("❌ Erro: " + res.msg); }
+                if(res.success) { v8Toast("✅ " + res.msg, "success"); if(res.cpf_dono) v8AcordarRobo(res.cpf_dono); v8CarregarLotesCSV(); }
+                else { v8Toast("❌ " + (res.msg||"Erro"), "error", 6000); }
             });
     }
 
@@ -1145,7 +1145,7 @@
         v8Confirmar(cfg.t, cfg.d, cfg.cor, cfg.b, async () => {
             const res = await v8Req('ajax_api_v8_lote_csv.php', 'pausar_retomar_lote', { id_lote: id, acao_lote: acao }, true, "Aguarde...");
             if(res.success) { if(res.cpf_dono && acao !== 'PAUSAR') v8AcordarRobo(res.cpf_dono); v8CarregarLotesCSV(); }
-            else { alert("❌ Erro: " + res.msg); }
+            else { v8Toast("❌ " + (res.msg||"Erro"), "error", 6000); }
         });
     }
 
@@ -1155,7 +1155,7 @@
             'btn-danger', '#dc3545',
             async () => {
                 const res = await v8Req('ajax_api_v8_lote_csv.php', 'excluir_lote', { id_lote: id }, true, "Apagando...");
-                if(res.success) v8CarregarLotesCSV(); else alert("Erro: " + res.msg);
+                if(res.success) v8CarregarLotesCSV(); else v8Toast("❌ " + (res.msg||"Erro ao excluir"), "error", 6000);
             });
     }
     
@@ -1168,7 +1168,7 @@
 
     async function v8ForcarProcessamentoLote() {
         const res = await v8Req('ajax_api_v8_lote_csv.php', 'forcar_processamento_lote', {}, true, "Destravando...");
-        if(res.success) { alert("✅ " + res.msg); v8CarregarLotesCSV(); } 
+        if(res.success) { v8Toast("✅ " + res.msg, "success"); v8CarregarLotesCSV(); }
     }
 
     document.getElementById('form_upload_lote_v8').addEventListener('submit', async function(e) {
@@ -1187,7 +1187,7 @@
             let res = await req.json();
             btn.innerHTML = txtOriginal; btn.disabled = false;
             if(res.success) { 
-                alert("✅ " + res.msg); 
+                v8Toast("✅ " + res.msg, "success");
                 this.reset(); 
                 document.getElementById('chk_is_append').checked = false; // reseta toggle
                 v8ToggleAppendMode(); 
@@ -1195,8 +1195,8 @@
                 if(typeof v8AtualizarSaldosTopo === "function") v8AtualizarSaldosTopo(); 
                 if(res.cpf_dono) v8AcordarRobo(res.cpf_dono);
             } 
-            else { alert("❌ Erro: " + res.msg); }
-        } catch(err) { btn.innerHTML = txtOriginal; btn.disabled = false; alert("❌ Falha de comunicação."); }
+            else { v8Toast("❌ " + (res.msg||"Erro no upload"), "error", 6000); }
+        } catch(err) { btn.innerHTML = txtOriginal; btn.disabled = false; v8Toast("❌ Falha de comunicação.", "error", 6000); }
     });
 
     // --- ANOTAÇÕES ---
@@ -1207,20 +1207,20 @@
         
         const res = await v8Req('ajax_api_v8_lote_csv.php', 'buscar_anotacao_lote', { id_lote: idLote }, false);
         if (res.success) { document.getElementById('anotacao_lote_texto').value = res.anotacoes || ''; } 
-        else { document.getElementById('anotacao_lote_texto').value = ''; alert("Erro: " + res.msg); }
+        else { document.getElementById('anotacao_lote_texto').value = ''; v8Toast("❌ " + (res.msg||"Erro"), "error", 5000); }
     }
 
     async function v8SalvarAnotacao() {
         let idLote = document.getElementById('anotacao_lote_id').value;
         let texto = document.getElementById('anotacao_lote_texto').value;
         const res = await v8Req('ajax_api_v8_lote_csv.php', 'salvar_anotacao_lote', { id_lote: idLote, anotacao: texto }, true, "Salvando...");
-        if (res.success) { alert("✅ " + res.msg); modalAnotacoesLoteObj.hide(); } else { alert("❌ Erro: " + res.msg); }
+        if (res.success) { v8Toast("✅ " + res.msg, "success"); modalAnotacoesLoteObj.hide(); } else { v8Toast("❌ " + (res.msg||"Erro"), "error", 5000); }
     }
 
     async function v8ExcluirAnotacao() {
         if (!confirm("Tem certeza que deseja apagar a anotação?")) return;
         let idLote = document.getElementById('anotacao_lote_id').value;
         const res = await v8Req('ajax_api_v8_lote_csv.php', 'salvar_anotacao_lote', { id_lote: idLote, anotacao: '' }, true, "Apagando...");
-        if (res.success) { alert("✅ Anotação apagada."); modalAnotacoesLoteObj.hide(); } else { alert("❌ Erro: " + res.msg); }
+        if (res.success) { v8Toast("✅ Anotação apagada.", "success"); modalAnotacoesLoteObj.hide(); } else { v8Toast("❌ " + (res.msg||"Erro"), "error", 5000); }
     }
 </script>
