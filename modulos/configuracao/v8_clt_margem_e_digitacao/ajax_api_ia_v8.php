@@ -14,7 +14,7 @@ try {
     try { $pdo->exec("ALTER TABLE INTEGRACAO_V8_IA_CREDENCIAIS ADD COLUMN NOTIF_SIMULACAO TINYINT(1) NOT NULL DEFAULT 1"); } catch(Exception $e){}
     try { $pdo->exec("ALTER TABLE INTEGRACAO_V8_IA_CREDENCIAIS ADD COLUMN NOTIF_PROPOSTA  TINYINT(1) NOT NULL DEFAULT 1"); } catch(Exception $e){}
 
-    $acao = $_POST['acao'] ?? '';
+    $acao = $_POST['acao'] ?? $_GET['acao'] ?? '';
     $usuario_logado_cpf = preg_replace('/\D/', '', $_SESSION['usuario_cpf'] ?? '');
     
     // Trava de segurança básica do CRM
@@ -190,6 +190,62 @@ try {
             $stmt->execute($params);
             $dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
             ob_end_clean(); echo json_encode(['success' => true, 'data' => $dados]); exit;
+
+        // -------------------------------------------------------
+        // DOWNLOAD DO LOG JSON DA SESSÃO
+        // -------------------------------------------------------
+        case 'download_log_json':
+            $cpf_log   = preg_replace('/\D/', '', $_GET['cpf'] ?? '');
+            $sessao_id_log = (int)($_GET['sessao_id'] ?? 0);
+
+            if (empty($cpf_log) || $sessao_id_log <= 0) {
+                ob_end_clean(); echo json_encode(['success' => false, 'msg' => 'Parâmetros inválidos.']); exit;
+            }
+
+            // Busca dados completos da sessão
+            $stmtLog = $pdo->prepare("
+                SELECT s.*, c.CPF_CONSULTADO, c.NOME_COMPLETO, c.STATUS_V8, c.MENSAGEM_ERRO, c.CONSULT_ID, c.FONTE_CONSULT_ID,
+                    sim.MARGEM_DISPONIVEL, sim.VALOR_LIBERADO, sim.VALOR_PARCELA, sim.PRAZO_SIMULACAO, sim.SIMULATION_ID, sim.NOME_TABELA,
+                    p.NUMERO_PROPOSTA, p.STATUS_PROPOSTA_V8, p.LINK_PROPOSTA,
+                    cred.NOME_ROBO, cred.CPF_DONO, v8k.CLIENTE_NOME as NOME_CHAVE_V8
+                FROM INTEGRACAO_V8_IA_SESSAO s
+                LEFT JOIN INTEGRACAO_V8_IA_CREDENCIAIS cred ON s.TOKEN_IA_USADO = cred.TOKEN_IA
+                LEFT JOIN INTEGRACAO_V8_CHAVE_ACESSO v8k ON cred.CHAVE_V8_ID = v8k.ID
+                LEFT JOIN INTEGRACAO_V8_REGISTROCONSULTA c ON s.CONSULT_ID = c.CONSULT_ID
+                LEFT JOIN INTEGRACAO_V8_REGISTRO_SIMULACAO sim ON sim.ID = (SELECT ID FROM INTEGRACAO_V8_REGISTRO_SIMULACAO s2 WHERE s2.ID_FILA = c.ID ORDER BY s2.ID DESC LIMIT 1)
+                LEFT JOIN INTEGRACAO_V8_REGISTRO_PROPOSTA p ON c.STATUS_V8 LIKE CONCAT('%', p.NUMERO_PROPOSTA, '%')
+                WHERE s.ID = ? AND (s.CPF_CLIENTE = ? OR c.CPF_CONSULTADO = ?)
+                LIMIT 1
+            ");
+            $stmtLog->execute([$sessao_id_log, $cpf_log, $cpf_log]);
+            $dadosLog = $stmtLog->fetch(PDO::FETCH_ASSOC);
+
+            if (!$dadosLog) {
+                ob_end_clean(); echo json_encode(['success' => false, 'msg' => 'Sessão não encontrada.']); exit;
+            }
+
+            // Também busca o log em arquivo se existir
+            $dirLogs = __DIR__ . '/../../../logs_v8/logs_automacao/';
+            $logArquivo = null;
+            $padroes = glob($dirLogs . "log_cpf_{$cpf_log}_*.txt");
+            if (!empty($padroes)) {
+                usort($padroes, fn($a,$b) => filemtime($b) - filemtime($a));
+                $logArquivo = file_get_contents($padroes[0]);
+            }
+
+            $payload = [
+                'sessao_id'    => $sessao_id_log,
+                'gerado_em'    => date('d/m/Y H:i:s'),
+                'dados_sessao' => $dadosLog,
+                'log_arquivo'  => $logArquivo ? explode("\n", $logArquivo) : null
+            ];
+
+            $nomeArq = "log_ia_cpf{$cpf_log}_sessao{$sessao_id_log}.json";
+            ob_end_clean();
+            header('Content-Type: application/json; charset=utf-8');
+            header('Content-Disposition: attachment; filename="' . $nomeArq . '"');
+            echo json_encode($payload, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+            exit;
 
         default: throw new Exception("Ação não reconhecida pelo painel da IA.");
     }

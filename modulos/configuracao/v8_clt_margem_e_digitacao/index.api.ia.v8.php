@@ -40,31 +40,37 @@ else:
     </div>
 
     <div class="row">
+        <!-- TOKENS DE ACESSO — RETRÁTIL, RECOLHIDO POR PADRÃO -->
         <div class="col-md-12 mb-4">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-                <h6 class="text-dark fw-bold mb-0"><i class="fas fa-key text-warning me-2"></i> Tokens de Acesso (Credenciais IA)</h6>
-                <button class="btn btn-dark btn-sm fw-bold shadow-sm" onclick="abrirModalNovoTokenIA()">
-                    <i class="fas fa-plus me-1"></i> Gerar Novo Token
-                </button>
+            <div class="d-flex justify-content-between align-items-center p-2 rounded border border-dark bg-dark text-white" style="cursor:pointer;" onclick="toggleTokensIA()">
+                <h6 class="text-white fw-bold mb-0"><i class="fas fa-key text-warning me-2"></i> Tokens de Acesso (Credenciais IA)</h6>
+                <div class="d-flex align-items-center gap-2">
+                    <button class="btn btn-warning btn-sm fw-bold shadow-sm text-dark" onclick="event.stopPropagation(); abrirModalNovoTokenIA()">
+                        <i class="fas fa-plus me-1"></i> Gerar Novo Token
+                    </button>
+                    <i class="fas fa-chevron-down text-white" id="icon_tokens_ia"></i>
+                </div>
             </div>
-            
-            <div class="table-responsive border border-dark rounded shadow-sm bg-white" style="min-height: 250px; padding-bottom: 20px;">
-                <table class="table table-hover align-middle mb-0 text-center text-nowrap" style="font-size: 13px;">
-                    <thead class="table-dark">
-                        <tr>
-                            <th>Nome do Robô / Automação</th>
-                            <th class="text-danger">PARÂMETROS</th>
-                            <th>Chave V8 Associada</th>
-                            <th>Dono do Saldo (CPF)</th>
-                            <th>Token de Autenticação (Bearer)</th>
-                            <th>Status</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tbody_tokens_ia">
-                        <tr><td colspan="7" class="py-4 text-muted"><i class="fas fa-spinner fa-spin"></i> Carregando tokens...</td></tr>
-                    </tbody>
-                </table>
+
+            <div id="painel_tokens_ia" style="display:none;">
+                <div class="table-responsive border border-dark rounded shadow-sm bg-white" style="min-height: 80px; padding-bottom: 20px;">
+                    <table class="table table-hover align-middle mb-0 text-center text-nowrap" style="font-size: 13px;">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Nome do Robô / Automação</th>
+                                <th class="text-danger">PARÂMETROS</th>
+                                <th>Chave V8 Associada</th>
+                                <th>Dono do Saldo (CPF)</th>
+                                <th>Token de Autenticação (Bearer)</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody_tokens_ia">
+                            <tr><td colspan="7" class="py-4 text-muted"><i class="fas fa-spinner fa-spin"></i> Carregando tokens...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
@@ -98,33 +104,37 @@ else:
             </div>
         </div>
 
+        <!-- RESULTADOS DE SOLICITAÇÕES IA — com permissão SUBMENU_OP_INTEGRACAO_V8_IA_JSOM -->
+        <?php
+        $acessoMonitorIA = verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA_JSOM', 'FUNCAO');
+        if ($acessoMonitorIA):
+        ?>
         <div class="col-md-12">
             <div class="d-flex justify-content-between align-items-center mb-2">
-                <h6 class="text-dark fw-bold mb-0"><i class="fas fa-history text-primary me-2"></i> Monitor de Atendimentos da IA (Ao Vivo)</h6>
+                <h6 class="text-dark fw-bold mb-0"><i class="fas fa-clipboard-list text-primary me-2"></i> Resultados de Solicitações IA</h6>
                 <button class="btn btn-outline-dark bg-white btn-sm fw-bold shadow-sm" onclick="carregarSessoesIA()">
                     <i class="fas fa-sync-alt me-1"></i> Atualizar Painel
                 </button>
             </div>
-            
-            <div class="table-responsive border border-dark rounded shadow-sm bg-white" style="max-height: 500px; overflow-y: auto; padding-bottom: 80px;">
+
+            <div class="table-responsive border border-dark rounded shadow-sm bg-white" style="max-height: 520px; overflow-y: auto; padding-bottom: 20px;">
                 <table class="table table-hover align-middle mb-0 text-center text-nowrap table-sm" style="font-size: 12px;">
-                    <thead class="table-secondary border-dark sticky-top">
+                    <thead class="table-dark border-dark sticky-top">
                         <tr>
-                            <th>Data / Status IA</th>
-                            <th class="text-start">Robô / Chave</th>
-                            <th class="text-start">Cliente / Telefone</th>
-                            <th class="border-start border-end border-danger">Autorização ID Consulta</th>
-                            <th class="border-end border-danger">ID Config (Margem)</th>
-                            <th class="border-end border-danger">ID Simulação</th>
-                            <th class="border-end border-danger">ID Proposta</th>
+                            <th>Data / Status</th>
+                            <th class="text-start">Robô</th>
+                            <th class="text-start">Cliente / CPF / Tel</th>
+                            <th>Resultado</th>
+                            <th>JSON</th>
                         </tr>
                     </thead>
                     <tbody id="tbody_sessoes_ia">
-                        <tr><td colspan="7" class="py-4 text-muted">Aguardando atendimentos...</td></tr>
+                        <tr><td colspan="5" class="py-4 text-muted">Aguardando resultados...</td></tr>
                     </tbody>
                 </table>
             </div>
         </div>
+        <?php endif; ?>
     </div>
 
     <div class="modal fade" id="modalTokenIA" tabindex="-1" aria-hidden="true">
@@ -190,26 +200,35 @@ else:
         const ARQUIVO_AJAX_IA = 'ajax_api_ia_v8.php';
         let intervalMonitorIA = null;
 
+        function toggleTokensIA() {
+            const painel = document.getElementById('painel_tokens_ia');
+            const icon   = document.getElementById('icon_tokens_ia');
+            if (!painel) return;
+            const aberto = painel.style.display !== 'none';
+            painel.style.display = aberto ? 'none' : '';
+            icon.className = aberto ? 'fas fa-chevron-down text-white' : 'fas fa-chevron-up text-white';
+            if (!aberto) carregarTokensIA(); // carrega ao abrir
+        }
+
         document.addEventListener("DOMContentLoaded", () => {
             if(document.getElementById('modalTokenIA')) modalTokenIAObj = new bootstrap.Modal(document.getElementById('modalTokenIA'));
             if(document.getElementById('modalEditarTokenIA')) modalEditarTokenIAObj = new bootstrap.Modal(document.getElementById('modalEditarTokenIA'));
-            
+
             const tabIA = document.querySelector('[data-bs-target="#tab-atendimento-ia"]');
             if(tabIA) {
                 tabIA.addEventListener('shown.bs.tab', function (e) {
-                    carregarTokensIA();
+                    // Tokens recolhidos — carrega só o monitor
                     carregarSessoesIA();
                     carregarNotificacoesIA();
-                    if(!intervalMonitorIA) intervalMonitorIA = setInterval(() => { carregarSessoesIA(); carregarNotificacoesIA(); }, 10000);
+                    if(!intervalMonitorIA) intervalMonitorIA = setInterval(() => { carregarSessoesIA(); carregarNotificacoesIA(); }, 15000);
                 });
                 tabIA.addEventListener('hidden.bs.tab', function (e) {
                     if(intervalMonitorIA) { clearInterval(intervalMonitorIA); intervalMonitorIA = null; }
                 });
             } else {
-                carregarTokensIA();
                 carregarSessoesIA();
                 carregarNotificacoesIA();
-                setInterval(() => { carregarSessoesIA(); carregarNotificacoesIA(); }, 10000);
+                setInterval(() => { carregarSessoesIA(); carregarNotificacoesIA(); }, 15000);
             }
         });
 
@@ -399,121 +418,81 @@ else:
         }
 
         // ==========================================
-        // SESSÃO DO MONITOR
+        // RESULTADOS DE SOLICITAÇÕES IA
         // ==========================================
         async function carregarSessoesIA() {
             const tb = document.getElementById('tbody_sessoes_ia');
-            if(!tb) return;
-            
-            if(tb.innerHTML.indexOf('Aguardando') !== -1) tb.innerHTML = '<tr><td colspan="7" class="py-4 text-muted"><i class="fas fa-spinner fa-spin"></i> Carregando...</td></tr>';
-            
+            if (!tb) return;
+
+            tb.innerHTML = '<tr><td colspan="5" class="py-3 text-muted text-center"><i class="fas fa-spinner fa-spin me-1"></i> Carregando...</td></tr>';
+
             const res = await v8Req(ARQUIVO_AJAX_IA, 'listar_sessoes', {}, false);
-            if (res.success) {
-                tb.innerHTML = '';
-                if (res.data.length === 0) {
-                    tb.innerHTML = '<tr><td colspan="7" class="py-4 text-muted fw-bold">Nenhum atendimento registrado hoje.</td></tr>';
-                    return;
-                }
-                res.data.forEach(x => {
-                    let statusSessaoFmt = `<span class="badge bg-dark text-white shadow-sm border border-secondary" style="font-size:9px;">${x.STATUS_SESSAO}</span>`;
-                    let colData = `<span class="small fw-bold text-muted">${x.DATA_INICIO_BR}</span><br>${statusSessaoFmt}<br><small class="text-muted" style="font-size:10px;"><i class="fas fa-history text-secondary"></i> Modificado: ${x.ULTIMA_ACAO_BR}</small>`;
-                    
-                    let colRobo = `<span class="fw-bold text-dark"><i class="fas fa-robot text-warning"></i> ${x.NOME_ROBO || 'IA Base'}</span><br><small class="text-muted" style="font-size:10px;">Chave: ${x.NOME_CHAVE_V8 || '--'}<br>Dono CPF: ${x.CPF_DONO || '--'}</small>`;
-                    
-                    let cpfCliente = x.CPF_CONSULTADO || x.CPF_SESSAO || '--';
-                    let nomeCliente = x.NOME_COMPLETO || 'NÃO INFORMADO';
-                    let telCliente = x.TELEFONE_CLIENTE || '--';
-                    let colCliente = `<span class="fw-bold fs-6 text-dark">${cpfCliente}</span><br><span class="text-muted small" style="font-size:10px;">${nomeCliente}</span><br><span class="text-primary small fw-bold" style="font-size:10px;"><i class="fas fa-phone-alt"></i> ${telCliente}</span>`;
+            if (!res.success) return;
 
-                    let colAuth = `<span class="badge bg-light text-muted border">Vazio</span>`; 
-                    let colConf = `<span class="badge bg-light text-muted border">Vazio</span>`; 
-                    let colSim  = `<span class="badge bg-light text-muted border">Vazio</span>`; 
-                    let colProp = `<span class="badge bg-light text-muted border">Vazio</span>`;
-                    
-                    let msgErroLimpa = "Erro na V8"; 
-                    if(x.MENSAGEM_ERRO) { 
-                        try { let jsonErro = JSON.parse(x.MENSAGEM_ERRO); msgErroLimpa = jsonErro.detail || jsonErro.message || jsonErro.title || "Erro API"; } 
-                        catch(e) { msgErroLimpa = String(x.MENSAGEM_ERRO).replace(/"/g, "'"); } 
-                    } 
-
-                    let fontAuth = x.FONTE_CONSULT_ID ? x.FONTE_CONSULT_ID : "IA BOT"; 
-                    let badgeFonteAuth = `<span class="badge bg-dark rounded-pill mb-1" style="font-size:8px;">FONTE: ${fontAuth}</span><br>`; 
-                    let consultIdVisual = x.CONSULT_ID ? String(x.CONSULT_ID).substring(0,8) : 'N/A';
-                    
-                    if (x.STATUS_V8 === 'ERRO-AUT') { 
-                        colAuth = `${badgeFonteAuth}<span class="badge bg-danger mb-1" title="${msgErroLimpa}">ERRO-AUT</span><br><small class="text-muted" style="font-size:10px;">ID: ${consultIdVisual}<br>${x.DATA_RETORNO_BR || ''}</small>`; 
-                    } else if (x.STATUS_V8 === 'ERRO ID CONSENTIMENTO') { 
-                        colAuth = `<span class="badge bg-danger mb-1" title="${msgErroLimpa}">ERRO API</span><br><small class="text-muted" style="font-size:10px;">${x.DATA_RETORNO_BR || ''}</small>`; 
-                    } else if (x.CONSULT_ID) { 
-                        colAuth = `${badgeFonteAuth}<span class="badge bg-success mb-1">OK-CONSENTIMENTO</span><br><small class="text-muted" style="font-size:10px;">ID: ${consultIdVisual}<br>${x.DATA_RETORNO_BR || ''}</small>`; 
-                    } else if (x.STATUS_V8) { 
-                        colAuth = `<span class="badge bg-info text-dark mb-1">Aguardando...</span><br><small class="text-muted" style="font-size:10px;">${x.DATA_RETORNO_BR || ''}</small>`; 
-                    }
-                    
-                    let fontMargem = x.FONTE_CONSIG_ID ? x.FONTE_CONSIG_ID : "V8"; 
-                    let badgeFonteMargem = `<span class="badge bg-secondary rounded-pill mb-1" style="font-size:8px;">FONTE: ${fontMargem}</span><br>`; 
-                    
-                    if (x.STATUS_V8 === 'ERRO-MARGEM' || x.STATUS_V8 === 'ERRO LEITURA MARGEM' || x.STATUS_CONFIG_ID === 'ERRO CONSIG_ID' || x.STATUS_CONFIG_ID === 'ERRO CACHE V8') { 
-                        let detalheErroConf = x.OBS_CONFIG_ID || msgErroLimpa; 
-                        colConf = `${badgeFonteMargem}<span class="badge bg-danger mb-1">REJEITADO</span><br><small class="text-danger fw-bold d-block" style="font-size:9px;">${detalheErroConf}</small>`; 
-                    } else if (x.STATUS_V8 === 'AGUARDANDO MARGEM' || x.STATUS_V8 === 'AGUARDANDO V8 MARGEM E PRAZOS') { 
-                        colConf = `${badgeFonteMargem}<span class="badge bg-warning text-dark mb-1"><i class="fas fa-spinner fa-spin"></i> Lendo Margem...</span>`; 
-                    } else if (x.VALOR_MARGEM !== null) { 
-                        let prazosFormatados = "24x"; 
-                        try { if(x.PRAZOS) { let arrPrazos = JSON.parse(x.PRAZOS); prazosFormatados = Array.isArray(arrPrazos) ? arrPrazos.join(', ')+"x" : x.PRAZOS; } } catch(e) {} 
-                        colConf = `${badgeFonteMargem}<span class="badge bg-success mb-1">MARGEM OK</span><br><span class="text-success fw-bold fs-6">R$ ${x.VALOR_MARGEM}</span><br><small class="text-dark d-block" style="font-size:10px;">Prazos: ${prazosFormatados}</small>`; 
-                        
-                        if (x.SIMULATION_ID || x.VALOR_LIBERADO == '0.00') { 
-                            let obsSimText = x.OBS_SIMULATION_ID && x.OBS_SIMULATION_ID !== 'Cálculo concluído' ? `<br><small class="text-danger fw-bold mt-1 d-block" style="font-size:9px; line-height: 1.1; white-space: normal;">${x.OBS_SIMULATION_ID}</small>` : '';
-                            colSim = `<span class="badge bg-success mb-1">SIMULADO</span><br><b class="text-success fs-6">R$ ${x.VALOR_LIBERADO || '0.00'}</b><br><small class="text-dark" style="font-size:10px;">Parcela: R$ ${x.VALOR_PARCELA || '0.00'} <br>Prazo: ${x.PRAZO_SIMULACAO || 24}x</small>${obsSimText}`; 
-                        } 
-                    }
-                    
-                    if (x.STATUS_PROPOSTA_REAL_TIME || (x.STATUS_V8 && x.STATUS_V8.includes('PROPOSTA:')) || x.NUMERO_PROPOSTA) { 
-                        let propId = x.NUMERO_PROPOSTA || (x.STATUS_V8 && x.STATUS_V8.includes('PROPOSTA:') ? x.STATUS_V8.replace('PROPOSTA:', '').trim() : ''); 
-                        let propStatus = x.STATUS_PROPOSTA_V8 || x.STATUS_PROPOSTA_REAL_TIME || 'AGUARDANDO'; 
-                        propStatus = propStatus.toUpperCase();
-
-                        let corBadge = 'warning text-dark'; 
-                        if(propStatus.includes('CAN') || propStatus.includes('ERR') || propStatus.includes('REJEITAD')) corBadge = 'danger'; 
-                        if(propStatus.includes('APROV') || propStatus.includes('PAG') || propStatus.includes('INTEGRAD')) corBadge = 'success'; 
-                        if(propStatus.includes('PIX') || propStatus.includes('PENDEN')) corBadge = 'info text-dark'; 
-                        
-                        let btnFormalizacao = (x.LINK_PROPOSTA && x.LINK_PROPOSTA !== 'null' && x.LINK_PROPOSTA !== '' && !propStatus.includes('CAN')) 
-                            ? `<a href="${x.LINK_PROPOSTA}" target="_blank" class="btn btn-sm btn-outline-primary mt-1 shadow-sm w-100 fw-bold" style="font-size:10px;"><i class="fas fa-link"></i> Assinatura</a>` 
-                            : ''; 
-                        
-                        let btnMais = `
-                        <div class="dropdown mt-1">
-                            <button class="btn btn-sm btn-dark dropdown-toggle w-100 fw-bold shadow-sm" style="font-size:9px;" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-boundary="window">
-                                <i class="fas fa-plus"></i> MAIS
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end shadow-sm border-dark" style="font-size:11px; z-index: 1050;">
-                                <li><a class="dropdown-item fw-bold text-primary" href="#" onclick="acaoPropostaPainel('atualizar_status_proposta', '${propId}', '${cpfCliente}')"><i class="fas fa-sync-alt"></i> Atualizar Status</a></li>
-                                <li><a class="dropdown-item fw-bold text-warning" href="#" onclick="acaoPropostaPainel('resolver_pendencia_pix', '${propId}', '${cpfCliente}')"><i class="fas fa-university"></i> Resolver Pendência</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item fw-bold text-danger" href="#" onclick="acaoPropostaPainel('cancelar_proposta_v8', '${propId}', '${cpfCliente}')"><i class="fas fa-times-circle"></i> Cancelar V8</a></li>
-                            </ul>
-                        </div>`;
-
-                        colProp = `<span class="badge bg-${corBadge} border border-dark mb-1 shadow-sm" style="font-size:10px;">${propStatus}</span><br><span class="text-primary fw-bold" style="font-size:12px;">${propId}</span><br>${btnFormalizacao}${btnMais}`; 
-                    } else if (x.STATUS_V8 === 'ERRO PROPOSTA') { 
-                        colProp = `<span class="badge bg-danger mb-1">ERRO V8</span><br><small class="text-danger fw-bold d-block" style="font-size:9px;">${msgErroLimpa}</small>`; 
-                    }
-
-                    tb.innerHTML += `
-                        <tr class="border-bottom border-dark bg-white">
-                            <td class="text-center align-middle">${colData}</td>
-                            <td class="text-start align-middle">${colRobo}</td>
-                            <td class="text-start align-middle">${colCliente}</td>
-                            <td class="border-start border-end border-danger bg-light p-2 text-center align-middle">${colAuth}</td>
-                            <td class="border-end border-danger bg-light p-2 text-center align-middle">${colConf}</td>
-                            <td class="border-end border-danger bg-light p-2 text-center align-middle">${colSim}</td>
-                            <td class="border-end border-danger bg-light p-2 text-center align-middle" style="min-width: 140px; overflow: visible;">${colProp}</td>
-                        </tr>
-                    `;
-                });
+            if (res.data.length === 0) {
+                tb.innerHTML = '<tr><td colspan="5" class="py-4 text-muted fw-bold text-center">Nenhum resultado registrado.</td></tr>';
+                return;
             }
+
+            tb.innerHTML = '';
+            res.data.forEach(x => {
+                // STATUS badge
+                const st = (x.STATUS_SESSAO || '').toUpperCase();
+                let corSt = 'secondary';
+                if (st === 'SIMULACAO_PRONTA' || st === 'CONCLUIDO') corSt = 'success';
+                else if (st.includes('ERRO') || st.includes('TIMEOUT')) corSt = 'danger';
+                else if (st.includes('AGUARDANDO') || st.includes('BUSCANDO')) corSt = 'warning text-dark';
+
+                const colData = `<span class="small fw-bold text-dark">${x.DATA_INICIO_BR}</span><br>
+                    <span class="badge bg-${corSt} shadow-sm" style="font-size:9px;">${x.STATUS_SESSAO}</span><br>
+                    <small class="text-muted" style="font-size:9px;">Atualizado: ${x.ULTIMA_ACAO_BR}</small>`;
+
+                const colRobo = `<span class="fw-bold text-dark"><i class="fas fa-robot text-warning me-1"></i>${x.NOME_ROBO || 'IA Base'}</span><br>
+                    <small class="text-muted" style="font-size:10px;">Dono: ${x.CPF_DONO || '--'}</small>`;
+
+                const cpf      = x.CPF_CONSULTADO || x.CPF_SESSAO || '--';
+                const nome     = x.NOME_COMPLETO || '—';
+                const tel      = x.TELEFONE_CLIENTE || '--';
+                const colCli   = `<span class="fw-bold text-dark">${cpf}</span><br>
+                    <small class="text-muted" style="font-size:10px;">${nome}</small><br>
+                    <small class="text-primary fw-bold" style="font-size:10px;"><i class="fas fa-phone-alt"></i> ${tel}</small>`;
+
+                // Resultado resumido
+                let resultado = '<span class="badge bg-light text-muted border">Sem resultado</span>';
+                if (x.SIMULATION_ID && parseFloat(x.VALOR_LIBERADO) > 0) {
+                    resultado = `<span class="badge bg-success mb-1">SIMULADO</span><br>
+                        <b class="text-success">R$ ${parseFloat(x.VALOR_LIBERADO).toFixed(2).replace('.',',')}</b><br>
+                        <small class="text-dark" style="font-size:10px;">${x.PRAZO_SIMULACAO || 24}x de R$ ${parseFloat(x.VALOR_PARCELA||0).toFixed(2).replace('.',',')}</small>`;
+                } else if (x.NUMERO_PROPOSTA) {
+                    const pSt = (x.STATUS_PROPOSTA_REAL_TIME || 'PROPOSTA').toUpperCase();
+                    resultado = `<span class="badge bg-primary mb-1">PROPOSTA</span><br>
+                        <small class="fw-bold text-primary" style="font-size:10px;">${x.NUMERO_PROPOSTA}</small><br>
+                        <small class="text-muted" style="font-size:9px;">${pSt}</small>`;
+                } else if (x.STATUS_V8 && x.STATUS_V8.includes('AGUARDANDO')) {
+                    resultado = '<span class="badge bg-warning text-dark"><i class="fas fa-hourglass-half me-1"></i>Aguardando V8</span>';
+                } else if (st.includes('ERRO') || (x.STATUS_V8 && x.STATUS_V8.includes('ERRO'))) {
+                    let erroTxt = x.MENSAGEM_ERRO || x.STATUS_V8 || 'Erro API';
+                    try { const j = JSON.parse(erroTxt); erroTxt = j.detail || j.message || erroTxt; } catch(e){}
+                    resultado = `<span class="badge bg-danger mb-1">ERRO</span><br><small class="text-danger" style="font-size:9px;">${String(erroTxt).substring(0,60)}</small>`;
+                }
+
+                // Link para baixar o log JSON
+                const cpfLimpo = cpf.replace(/\D/g, '');
+                const dataLog  = (x.DATA_INICIO_BR || '').replace(/(\d{2})\/(\d{2})\/(\d{4}) .*/, '$1-$2-$3');
+                const linkJson = `ajax_api_ia_v8.php?acao=download_log_json&cpf=${cpfLimpo}&data=${dataLog}&sessao_id=${x.SESSAO_ID}`;
+                const colJson  = `<a href="${linkJson}" target="_blank" class="btn btn-sm btn-outline-dark fw-bold shadow-sm" title="Baixar log JSON desta sessão" style="font-size:11px;">
+                    <i class="fas fa-download me-1"></i> JSON
+                </a>`;
+
+                tb.innerHTML += `
+                    <tr class="border-bottom border-secondary bg-white">
+                        <td class="align-middle text-center">${colData}</td>
+                        <td class="align-middle text-start px-2">${colRobo}</td>
+                        <td class="align-middle text-start px-2">${colCli}</td>
+                        <td class="align-middle text-center">${resultado}</td>
+                        <td class="align-middle text-center">${colJson}</td>
+                    </tr>`;
+            });
         }
 
         async function acaoPropostaPainel(acaoBackend, id_proposta, cpf) {
