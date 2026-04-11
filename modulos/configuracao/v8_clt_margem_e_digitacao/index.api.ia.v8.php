@@ -137,6 +137,26 @@ else:
         <?php endif; ?>
     </div>
 
+    <!-- MODAL JSON POPUP -->
+    <div class="modal fade" id="modalJsonIA" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content border-dark shadow-lg">
+                <div class="modal-header bg-dark text-white border-bottom border-secondary py-2">
+                    <h6 class="modal-title fw-bold mb-0" id="json_ia_title"><i class="fas fa-code text-warning me-2"></i> JSON</h6>
+                    <div class="d-flex gap-2 align-items-center">
+                        <button id="btn_json_download" class="btn btn-sm btn-warning fw-bold text-dark shadow-sm">
+                            <i class="fas fa-download me-1"></i> Baixar
+                        </button>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                </div>
+                <div class="modal-body bg-dark p-0" style="max-height:75vh; overflow-y:auto;">
+                    <pre id="json_ia_body" style="margin:0; padding:16px; color:#00ff88; font-size:11px; font-family:'Courier New',monospace; white-space:pre-wrap; word-break:break-all;">Carregando...</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="modal fade" id="modalTokenIA" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content border-dark shadow-lg">
@@ -476,13 +496,11 @@ else:
                     resultado = `<span class="badge bg-danger mb-1">ERRO</span><br><small class="text-danger" style="font-size:9px;">${String(erroTxt).substring(0,60)}</small>`;
                 }
 
-                // Link para baixar o log JSON
+                // Botão para abrir o JSON no popup
                 const cpfLimpo = cpf.replace(/\D/g, '');
-                const dataLog  = (x.DATA_INICIO_BR || '').replace(/(\d{2})\/(\d{2})\/(\d{4}) .*/, '$1-$2-$3');
-                const linkJson = `ajax_api_ia_v8.php?acao=download_log_json&cpf=${cpfLimpo}&data=${dataLog}&sessao_id=${x.SESSAO_ID}`;
-                const colJson  = `<a href="${linkJson}" target="_blank" class="btn btn-sm btn-outline-dark fw-bold shadow-sm" title="Baixar log JSON desta sessão" style="font-size:11px;">
-                    <i class="fas fa-download me-1"></i> JSON
-                </a>`;
+                const colJson  = `<button class="btn btn-sm btn-outline-dark fw-bold shadow-sm" onclick="abrirJsonPopup('${cpfLimpo}', ${x.SESSAO_ID})" title="Ver log JSON desta sessão" style="font-size:11px;">
+                    <i class="fas fa-code me-1"></i> JSON
+                </button>`;
 
                 tb.innerHTML += `
                     <tr class="border-bottom border-secondary bg-white">
@@ -493,6 +511,39 @@ else:
                         <td class="align-middle text-center">${colJson}</td>
                     </tr>`;
             });
+        }
+
+        // ==========================================
+        // POPUP JSON
+        // ==========================================
+        let modalJsonIAObj = null;
+
+        async function abrirJsonPopup(cpf, sessao_id) {
+            if (!modalJsonIAObj) {
+                modalJsonIAObj = new bootstrap.Modal(document.getElementById('modalJsonIA'));
+            }
+            document.getElementById('json_ia_body').textContent = 'Carregando...';
+            document.getElementById('json_ia_title').textContent = 'JSON — Sessão #' + sessao_id;
+            document.getElementById('btn_json_download').onclick = function() {
+                window.location.href = `ajax_api_ia_v8.php?acao=download_log_json&cpf=${cpf}&sessao_id=${sessao_id}`;
+            };
+            modalJsonIAObj.show();
+
+            try {
+                const fd = new FormData();
+                fd.append('acao', 'ver_log_json');
+                fd.append('cpf', cpf);
+                fd.append('sessao_id', sessao_id);
+                const r = await fetch(ARQUIVO_AJAX_IA, { method: 'POST', body: fd });
+                const res = await r.json();
+                if (res.success) {
+                    document.getElementById('json_ia_body').textContent = JSON.stringify(res.json_content, null, 2);
+                } else {
+                    document.getElementById('json_ia_body').textContent = 'Erro: ' + (res.msg || 'Falha ao carregar.');
+                }
+            } catch(e) {
+                document.getElementById('json_ia_body').textContent = 'Erro de comunicação: ' + e.message;
+            }
         }
 
         async function acaoPropostaPainel(acaoBackend, id_proposta, cpf) {
