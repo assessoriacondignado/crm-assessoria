@@ -11,7 +11,8 @@
       "Bash(php -r ':*)",
       "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/api_ia_v8.php)",
       "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/index.api.ia.v8.php)",
-      "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/ajax_api_ia_v8.php)"
+      "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/ajax_api_ia_v8.php)",
+      "Bash(perl -i -pe ':*)"
     ]
   }
 }
