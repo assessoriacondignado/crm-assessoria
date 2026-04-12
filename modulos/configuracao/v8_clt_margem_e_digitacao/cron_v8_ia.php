@@ -11,8 +11,8 @@ $pdo->exec("SET NAMES utf8mb4");
 
 // ⚠️ CONFIGURAÇÕES DO GPT MAKER PARA O DISPARO ATIVO
 // Substitua pelos seus dados reais do GPT Maker
-$GPT_API_KEY = "SUA_CHAVE_DE_API_GPTMAKER_AQUI"; 
-$GPT_CHANNEL_ID = "SEU_CHANNEL_ID_DO_WHATSAPP_AQUI"; 
+$GPT_API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJncHRtYWtlciIsImlkIjoiM0YwODNDRTVBRTU5QzE0QUI4MjNBNjY1QTU2QkRERjEiLCJ0ZW5hbnQiOiIzRjA4M0NFNUFFNTlDMTRBQjgyM0E2NjVBNTZCRERGMSIsInV1aWQiOiJlMWRmNmQwNi00ZDcyLTQ3MWQtYTBjYy1mOWEzOGE1ZDZmNzMifQ.tNCfnBORdsP-GXU__dOPLgrQik0-7ZQXUGV48A8IRm4"; 
+$GPT_CHANNEL_ID = "EAANUEeg7qHwBRGqpDWv8DsTUjckqERARcvv0S3wZAtANc0YnWyun956cOV4uiZCZCReMqMNx8FH4r4r8kZCpJjWBeApWLZB2ZBwtskQp5Uh2FHZCs7hsR8KZBytfyx6UAVJW6w7cEYijj0jimuSogMTs68VWZBO2hyyiaxD8rNYKHMfsp2rZCZA7ERGaJUMozZCBBJZAqSxaLU58VQ4eA9CuqkxkkWdps6x5yTpnsqzZA6E3eCaDLodfwnCztZAsAqbGrvHZCxZCNzypOF5Hot8LDH7kkHOpZAl6WEM3J0Ixpj"; 
 $GPT_URL_DISPARO = "https://api.gptmaker.ai/v2/channels/{$GPT_CHANNEL_ID}/messages";
 
 // Funções de apoio (você deve incluir/copiar as funções 'gerarTokenV8_Local' e 'processarSimulacaoPadrao' do seu api_ia_v8.php aqui ou dar require)
