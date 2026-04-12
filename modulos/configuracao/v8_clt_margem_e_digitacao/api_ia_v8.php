@@ -370,9 +370,8 @@ try {
         // ---------------------------------------------------------------------
         // 1 - O GPTMAKER ENVIA REQUISIÇÃO DE CONSENTIMENTO (consulta_completa)
         // Lógica de polling assíncrono com janela de 24h:
-        //   → 1ª chamada: verifica V8 por ~50s, se não vier → devolve AGUARDANDO_DATAPREV
+        //   → 1ª chamada: verifica V8 por ~15s, se não vier → devolve AGUARDANDO_DATAPREV
         //   → Chamadas seguintes: verifica V8 imediatamente, devolve resultado ou próximo retry
-        //   → Intervalos de retry: 5min → 30min → 1h/hora até 24h → TIMEOUT
         // ---------------------------------------------------------------------
         case 'consulta_completa':
             $telefone = preg_replace('/\D/', '', $req['telefone'] ?? '11900000000');
@@ -447,11 +446,11 @@ try {
 
             $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET CONSULT_ID = ?, STATUS_SESSAO = 'AGUARDANDO_DATAPREV' WHERE ID = ?")->execute([$ultimo_consult_id, $sessao_id]);
 
-            // Tenta por 45 segundos (3 tentativas x 15s) para não estourar o timeout de 60s do GPT Maker
+            // Tenta por 15 segundos (3 tentativas x 5s) para não estourar o timeout do GPT Maker
             $conseguiu_margem = false;
             $margem = 0;
             for ($i = 0; $i < 3; $i++) {
-                sleep(15);
+                sleep(5); 
                 $chC = curl_init("https://bff.v8sistema.com/private-consignment/consult/{$ultimo_consult_id}");
                 curl_setopt($chC, CURLOPT_RETURNTRANSFER, true);
                 curl_setopt($chC, CURLOPT_HTTPGET, true);
@@ -480,7 +479,7 @@ try {
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'SIMULACAO_PRONTA' WHERE ID = ?")->execute([$sessao_id]);
                 enviarResposta($cpf, $acao, ['success' => true, 'status' => 'CONCLUIDO', 'margem_disponivel' => (float)$margem, 'simulacao_padrao' => $simDados]);
             } else {
-                // Passou 45s e não liberou. Devolve para a IA avisar o cliente e o Cron Job assume.
+                // Passou 15s e não liberou. Devolve para a IA avisar o cliente e o Cron Job assume.
                 enviarResposta($cpf, $acao, [
                     'success' => false,
                     'status'  => 'AGUARDANDO_DATAPREV',
