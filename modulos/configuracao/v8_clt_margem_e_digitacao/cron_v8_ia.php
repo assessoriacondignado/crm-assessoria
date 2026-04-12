@@ -68,7 +68,7 @@ foreach ($sessoes as $sessao) {
             $mensagem_ia = "Boas notícias! 🎉 Acabou de chegar a sua simulação da Dataprev. \n\nConseguimos liberar o valor de *R$ " . number_format($simDados['valor_liberado'], 2, ',', '.') . "* em *" . $simDados['prazo'] . " parcelas de R$ " . number_format($simDados['valor_parcela'], 2, ',', '.') . "*. \n\nEsse valor fica bom para você?";
             
             $payloadGpt = json_encode([
-                "telefone" => "5582999025155",
+                "telefone" => "55" . $sessao['TELEFONE_CLIENTE'],
                 "mensagem" => $mensagem_ia
             ]);
 
