@@ -31,8 +31,6 @@ function registrarLogIA($cpf, $acao, $dados) {
     file_put_contents($nomeArquivo, $linha, FILE_APPEND);
 }
 
-// ⚠️ MUDANÇA CRÍTICA: Sempre usamos HTTP 200 para evitar LOOP no GPTMaker. 
-// O robô lerá o "success": false e seguirá o fluxo de erro normalmente.
 function enviarResposta($cpf, $acaoLog, $resposta) {
     http_response_code(200); 
     $json = json_encode($resposta, JSON_UNESCAPED_UNICODE);
@@ -48,12 +46,8 @@ function normalizarStringIA($str) {
     return strtr($str, $map);
 }
 
-// =========================================================================
-// ENVIO DE NOTIFICAÇÃO WHATSAPP PARA O GRUPO DA EMPRESA DO CPF_DONO
-// =========================================================================
 function enviarNotificacaoWhatsApp($pdo, $cpf_dono, $mensagem) {
     try {
-        // 1. id_empresa do dono do token
         $stmtEmp = $pdo->prepare("SELECT u.id_empresa, e.GRUPO_WHATS FROM CLIENTE_USUARIO u LEFT JOIN CLIENTE_EMPRESAS e ON e.ID = u.id_empresa WHERE u.CPF = ? LIMIT 1");
         $stmtEmp->execute([$cpf_dono]);
         $rowEmp = $stmtEmp->fetch(PDO::FETCH_ASSOC);
@@ -62,7 +56,6 @@ function enviarNotificacaoWhatsApp($pdo, $cpf_dono, $mensagem) {
 
         if (empty($grupo_whats) || empty($id_empresa)) return;
 
-        // 2. Busca Phone Number ID + Token da empresa
         $stmtNum = $pdo->prepare("
             SELECT n.PHONE_NUMBER_ID, bm.PERMANENT_TOKEN
             FROM WHATSAPP_OFICIAL_NUMEROS n
@@ -79,7 +72,6 @@ function enviarNotificacaoWhatsApp($pdo, $cpf_dono, $mensagem) {
         $phone_id = $rowNum['PHONE_NUMBER_ID'];
         $token    = $rowNum['PERMANENT_TOKEN'];
 
-        // 3. Envia mensagem de texto simples
         $payload = [
             "messaging_product" => "whatsapp",
             "to"                => $grupo_whats,
@@ -94,7 +86,7 @@ function enviarNotificacaoWhatsApp($pdo, $cpf_dono, $mensagem) {
         curl_setopt($ch, CURLOPT_HTTPHEADER, ['Authorization: Bearer ' . $token, 'Content-Type: application/json']);
         curl_exec($ch);
         curl_close($ch);
-    } catch (Exception $e) { /* silencia erros de notificação para não quebrar o fluxo principal */ }
+    } catch (Exception $e) { }
 }
 
 function extrairErroV8($jsonC) {
@@ -110,7 +102,7 @@ function extrairErroV8($jsonC) {
 }
 
 // =========================================================================
-// RECEBE A REQUISIÇÃO E VALIDA O JSON (PREVENÇÃO DE LOOP DE ERRO DE SINTAXE)
+// RECEBE A REQUISIÇÃO E VALIDA O JSON
 // =========================================================================
 $inputRaw = file_get_contents("php://input");
 $req = json_decode($inputRaw, true);
@@ -118,7 +110,7 @@ $req = json_decode($inputRaw, true);
 if ($req === null && json_last_error() !== JSON_ERROR_NONE) {
     enviarResposta('SEM_CPF', 'FALHA_JSON', [
         'success' => false, 
-        'error' => 'JSON_INVALIDO: O formato de envio do Webhook quebrou. Verifique se alguma variável vazia ficou sem aspas no GPTMaker.'
+        'error' => 'JSON_INVALIDO: O formato de envio do Webhook quebrou.'
     ]);
 }
 
@@ -131,9 +123,6 @@ if (empty($acao) || strlen($cpf) !== 11) {
     enviarResposta($cpf, 'FALHA_VALIDACAO', ['success' => false, 'error' => 'CPF FORA DO PADRÃO OU AÇÃO VAZIA (Deve conter 11 dígitos)']);
 }
 
-// =========================================================================
-// CONEXÃO E AUTENTICAÇÃO
-// =========================================================================
 require_once $_SERVER['DOCUMENT_ROOT'] . '/conexao.php';
 if(!isset($pdo) && isset($conn)) { $pdo = $conn; } 
 $pdo->exec("SET NAMES utf8mb4");
@@ -147,10 +136,6 @@ if (empty($authHeader) || !preg_match('/Bearer\s(\S+)/', $authHeader, $matches))
 
 $tokenIA = $matches[1];
 
-// Migrações automáticas — colunas de notificação WhatsApp por token
-try { $pdo->exec("ALTER TABLE INTEGRACAO_V8_IA_CREDENCIAIS ADD COLUMN NOTIF_SIMULACAO TINYINT(1) NOT NULL DEFAULT 1"); } catch(Exception $e){}
-try { $pdo->exec("ALTER TABLE INTEGRACAO_V8_IA_CREDENCIAIS ADD COLUMN NOTIF_PROPOSTA  TINYINT(1) NOT NULL DEFAULT 1"); } catch(Exception $e){}
-
 $stmtCred = $pdo->prepare("SELECT i.*, c.SALDO as SALDO_CLIENTE, c.CUSTO_CONSULTA as CUSTO_CLIENTE, v.CUSTO_V8, v.ID as CHAVE_REAL_V8, v.USERNAME_API, v.PASSWORD_API, v.CLIENT_ID, v.AUDIENCE, v.TABELA_PADRAO, v.PRAZO_PADRAO, u.ID as ID_USUARIO_DONO 
                            FROM INTEGRACAO_V8_IA_CREDENCIAIS i 
                            JOIN CLIENTE_CADASTRO c ON i.CPF_DONO = c.CPF
@@ -162,21 +147,6 @@ $credencialIA = $stmtCred->fetch(PDO::FETCH_ASSOC);
 
 if (!$credencialIA) {
     enviarResposta($cpf, 'FALHA_TOKEN', ['success' => false, 'error' => 'Acesso Negado: Token IA inválido ou inativo.']);
-}
-
-// =========================================================================
-// FUNÇÕES AUXILIARES DE INTEGRAÇÃO E TABELA
-// =========================================================================
-
-/**
- * Calcula o próximo intervalo de retry baseado no tempo decorrido desde a consulta V8.
- * Intervalos: 5min → 30min → 1h → 1h ... até 24h (TIMEOUT)
- */
-function calcularProximoRetryV8($elapsed_seconds) {
-    // Fase 2: até 50min (10 tentativas × 5min) → retry em 5min
-    if ($elapsed_seconds < 3000) return 300;
-    // Fase 3: após 50min até 5h → retry em 1 hora
-    return 3600;
 }
 
 function gerarTokenV8_Local($cred) {
@@ -282,32 +252,17 @@ function identificarTabelaUsuario($consult_id, $credencialIA, $tokenV8) {
     
     if (is_array($lista_configs) && count($lista_configs) > 0) { 
         $busca = normalizarStringIA($tabela_padrao);
-        
-        // Passo 1: Busca exata
         foreach ($lista_configs as $cfg) { 
             $nomeAPI = normalizarStringIA($cfg['name'] ?? $cfg['slug'] ?? '');
-            if ($nomeAPI === $busca) { 
-                $config_id = $cfg['id']; 
-                $nome_tb_final = $cfg['name'] ?? $cfg['slug']; 
-                break; 
-            } 
+            if ($nomeAPI === $busca) { $config_id = $cfg['id']; $nome_tb_final = $cfg['name'] ?? $cfg['slug']; break; } 
         } 
-        // Passo 2: Busca por aproximação
         if(!$config_id) {
             foreach ($lista_configs as $cfg) { 
                 $nomeAPI = normalizarStringIA($cfg['name'] ?? $cfg['slug'] ?? '');
-                if (strpos($nomeAPI, $busca) !== false || strpos($busca, $nomeAPI) !== false) { 
-                    $config_id = $cfg['id']; 
-                    $nome_tb_final = $cfg['name'] ?? $cfg['slug']; 
-                    break; 
-                } 
+                if (strpos($nomeAPI, $busca) !== false || strpos($busca, $nomeAPI) !== false) { $config_id = $cfg['id']; $nome_tb_final = $cfg['name'] ?? $cfg['slug']; break; } 
             } 
         }
-        // Passo 3: Pega a primeira que vier se nada bater
-        if(!$config_id) { 
-            $config_id = $lista_configs[0]['id']; 
-            $nome_tb_final = $lista_configs[0]['name'] ?? $lista_configs[0]['slug'] ?? 'Tabela Padrão';
-        }
+        if(!$config_id) { $config_id = $lista_configs[0]['id']; $nome_tb_final = $lista_configs[0]['name'] ?? $lista_configs[0]['slug'] ?? 'Tabela Padrão'; }
     }
     if(!$config_id) $config_id = $consult_id;
     return ['config_id' => $config_id, 'nome_tb_final' => $nome_tb_final];
@@ -340,55 +295,41 @@ function processarSimulacaoPadrao($consult_id, $cpf, $margem, $pdo, $credencialI
         $pdo->prepare("INSERT INTO INTEGRACAO_V8_REGISTRO_SIMULACAO (ID_FILA, CPF, CONFIG_ID, NOME_TABELA, MARGEM_DISPONIVEL, TIPO_SIMULACAO, SIMULATION_ID, STATUS_SIMULATION_ID, DATA_SIMULATION_ID, STATUS_CONFIG_ID, VALOR_LIBERADO, VALOR_PARCELA, PRAZO_SIMULACAO) VALUES (?, ?, ?, ?, ?, 'PADRÃO IA', ?, 'SIMULACAO OK', NOW(), 'MARGEM OK', ?, ?, ?)")->execute([$id_fila, $cpf, $tab['config_id'], $tab['nome_tb_final'], $margem, $sim_id, (float)$valor_lib, (float)$valor_parc, $prazo_padrao]);
         $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA SET STATUS_V8 = 'OK-SIMULACAO', ULTIMA_ATUALIZACAO = NOW() WHERE ID = ?")->execute([$id_fila]);
     }
-    // Notificação de simulação
+    
     if (!empty($credencialIA['NOTIF_SIMULACAO'])) {
         $stmtNome = $pdo->prepare("SELECT nome FROM dados_cadastrais WHERE cpf = ? LIMIT 1");
         $stmtNome->execute([$cpf]);
         $nomeCliente = $stmtNome->fetchColumn() ?: $cpf;
         $pdo->prepare("INSERT INTO INTEGRACAO_V8_IA_NOTIFICACOES (CREDENCIAL_ID, CPF_DONO, TIPO, NOME_CLIENTE, CPF_CLIENTE, VALOR, PRAZO, PARCELA, NOME_ROBO) VALUES (?, ?, 'SIMULACAO', ?, ?, ?, ?, ?, ?)")
             ->execute([$credencialIA['ID'], $credencialIA['CPF_DONO'], $nomeCliente, $cpf, (float)$valor_lib, (int)$prazo_padrao, (float)$valor_parc, $credencialIA['NOME_ROBO']]);
-        $msgSimulacao = "🤖 *{$credencialIA['NOME_ROBO']}* — Simulação Aprovada\n"
-            . "👤 Cliente: {$nomeCliente} | CPF: " . substr($cpf,0,3) . ".***.***-" . substr($cpf,-2) . "\n"
-            . "💰 Liberado: R$ " . number_format((float)$valor_lib, 2, ',', '.') . "\n"
-            . "📅 Prazo: {$prazo_padrao}x | Parcela: R$ " . number_format((float)$valor_parc, 2, ',', '.') . "\n"
-            . "🕐 " . date('d/m/Y H:i');
+        $msgSimulacao = "🤖 *{$credencialIA['NOME_ROBO']}* — Simulação Aprovada\n👤 Cliente: {$nomeCliente} | CPF: " . substr($cpf,0,3) . ".***.***-" . substr($cpf,-2) . "\n💰 Liberado: R$ " . number_format((float)$valor_lib, 2, ',', '.') . "\n📅 Prazo: {$prazo_padrao}x | Parcela: R$ " . number_format((float)$valor_parc, 2, ',', '.') . "\n🕐 " . date('d/m/Y H:i');
         enviarNotificacaoWhatsApp($pdo, $credencialIA['CPF_DONO'], $msgSimulacao);
     }
 
     return ['simulation_id' => $sim_id, 'tabela' => $tab['nome_tb_final'], 'valor_liberado' => (float)$valor_lib, 'valor_parcela' => (float)$valor_parc, 'prazo' => $prazo_padrao];
 }
-
 // =========================================================================
 // ROTEAMENTO DAS AÇÕES PRINCIPAIS
 // =========================================================================
 $sessao_id = 0;
 $consult_id = '';
+$ultimo_consult_id = ''; // Declarando globalmente para o catch block
 
 try {
     switch ($acao) {
         
-        // ---------------------------------------------------------------------
-        // 1 - O GPTMAKER ENVIA REQUISIÇÃO DE CONSENTIMENTO (consulta_completa)
-        // Lógica de polling assíncrono com janela de 24h:
-        //   → 1ª chamada: verifica V8 por ~15s, se não vier → devolve AGUARDANDO_DATAPREV
-        //   → Chamadas seguintes: verifica V8 imediatamente, devolve resultado ou próximo retry
-        // ---------------------------------------------------------------------
         case 'consulta_completa':
             $telefone = preg_replace('/\D/', '', $req['telefone'] ?? '11900000000');
             $tokenV8  = gerarTokenV8_Local($credencialIA);
 
-            $ST_OK   = ['SUCCESS','COMPLETED','WAITING_CREDIT_ANALYSIS','APPROVED','PRE_APPROVED',
-                        'SIMULATED','READY','AVAILABLE','MARGIN_AVAILABLE','AUTHORIZED','DONE','FINISHED'];
+            $ST_OK   = ['SUCCESS','COMPLETED','WAITING_CREDIT_ANALYSIS','APPROVED','PRE_APPROVED','SIMULATED','READY','AVAILABLE','MARGIN_AVAILABLE','AUTHORIZED','DONE','FINISHED'];
             $ST_ERRO = ['ERROR','REJECTED','DENIED','CANCELED','EXPIRED','FAILED'];
 
-            // ── PASSO 1: Existe sessão AGUARDANDO_DATAPREV ativa (< 4h)? ──
             $stmtAguard = $pdo->prepare("
                 SELECT rc.CONSULT_ID, s.ID as SESSAO_ID, s.DATA_INICIO
                 FROM INTEGRACAO_V8_REGISTROCONSULTA rc
                 JOIN INTEGRACAO_V8_IA_SESSAO s ON s.CONSULT_ID = rc.CONSULT_ID
-                WHERE rc.CPF_CONSULTADO = ?
-                  AND rc.STATUS_V8 = 'AGUARDANDO MARGEM'
-                  AND s.STATUS_SESSAO = 'AGUARDANDO_DATAPREV'
+                WHERE rc.CPF_CONSULTADO = ? AND rc.STATUS_V8 = 'AGUARDANDO MARGEM' AND s.STATUS_SESSAO = 'AGUARDANDO_DATAPREV'
                 ORDER BY s.DATA_INICIO DESC LIMIT 1
             ");
             $stmtAguard->execute([$cpf]);
@@ -399,18 +340,11 @@ try {
                 $sessao_id         = (int)$consultaAguardando['SESSAO_ID'];
                 $elapsed           = time() - strtotime($consultaAguardando['DATA_INICIO']);
 
-                // Janela de 4h (14400s) esgotada → TIMEOUT, cai no Passo 2 (novo consentimento)
                 if ($elapsed >= 14400) {
                     $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'TIMEOUT_DATAPREV' WHERE ID = ?")->execute([$sessao_id]);
                     $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA SET STATUS_V8 = 'TIMEOUT_DATAPREV', ULTIMA_ATUALIZACAO = NOW() WHERE CONSULT_ID = ?")->execute([$ultimo_consult_id]);
                 } else {
-                    // Verifica V8 AGORA (bate e volta rápido)
-                    $chC = curl_init("https://bff.v8sistema.com/private-consignment/consult/{$ultimo_consult_id}");
-                    curl_setopt($chC, CURLOPT_RETURNTRANSFER, true);
-                    curl_setopt($chC, CURLOPT_HTTPGET, true);
-                    curl_setopt($chC, CURLOPT_HTTPHEADER, ["Authorization: Bearer $tokenV8"]);
-                    $resC = curl_exec($chC); curl_close($chC);
-                    $jsonC = json_decode($resC, true);
+                    $chC = curl_init("https://bff.v8sistema.com/private-consignment/consult/{$ultimo_consult_id}"); curl_setopt($chC, CURLOPT_RETURNTRANSFER, true); curl_setopt($chC, CURLOPT_HTTPGET, true); curl_setopt($chC, CURLOPT_HTTPHEADER, ["Authorization: Bearer $tokenV8"]); $resC = curl_exec($chC); curl_close($chC); $jsonC = json_decode($resC, true);
                     $st = strtoupper($jsonC['status'] ?? '');
 
                     if (in_array($st, $ST_OK)) {
@@ -419,25 +353,17 @@ try {
                         $simDados = processarSimulacaoPadrao($ultimo_consult_id, $cpf, (float)$margem, $pdo, $credencialIA, $tokenV8);
                         $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'SIMULACAO_PRONTA' WHERE ID = ?")->execute([$sessao_id]);
                         enviarResposta($cpf, $acao, ['success' => true, 'status' => 'CONCLUIDO', 'margem_disponivel' => (float)$margem, 'simulacao_padrao' => $simDados]);
-
                     } elseif (in_array($st, $ST_ERRO)) {
                         $erroMsg_V8 = extrairErroV8($jsonC);
                         $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'ERRO_MARGEM' WHERE ID = ?")->execute([$sessao_id]);
                         $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA SET STATUS_V8 = 'ERRO-MARGEM', MENSAGEM_ERRO = ?, ULTIMA_ATUALIZACAO = NOW() WHERE CONSULT_ID = ?")->execute([$erroMsg_V8, $ultimo_consult_id]);
                         enviarResposta($cpf, $acao, ['success' => false, 'status' => 'ERRO', 'error' => $erroMsg_V8]);
-
                     } else {
-                        // ⏳ Continua na fila. Devolve o status de aguardando sem travar a IA
-                        enviarResposta($cpf, $acao, [
-                            'success' => false,
-                            'status'  => 'AGUARDANDO_DATAPREV',
-                            'msg'     => "Dataprev ainda processando a sua solicitação. Por favor, aguarde mais um pouco."
-                        ]);
+                        enviarResposta($cpf, $acao, ['success' => false, 'status'  => 'AGUARDANDO_DATAPREV', 'msg' => "Dataprev ainda processando."]);
                     }
                 }
             }
 
-            // ── PASSO 2: Sem sessão ativa → SEMPRE cria novo consentimento ──
             $pdo->prepare("INSERT INTO INTEGRACAO_V8_IA_SESSAO (TOKEN_IA_USADO, TELEFONE_CLIENTE, CPF_CLIENTE, STATUS_SESSAO) VALUES (?, ?, ?, 'BUSCANDO_V8')")->execute([$tokenIA, $telefone, $cpf]);
             $sessao_id = $pdo->lastInsertId();
 
@@ -446,24 +372,12 @@ try {
 
             $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET CONSULT_ID = ?, STATUS_SESSAO = 'AGUARDANDO_DATAPREV' WHERE ID = ?")->execute([$ultimo_consult_id, $sessao_id]);
 
-            // Tenta por 15 segundos (3 tentativas x 5s) para não estourar o timeout do GPT Maker
-            $conseguiu_margem = false;
-            $margem = 0;
+            $conseguiu_margem = false; $margem = 0;
             for ($i = 0; $i < 3; $i++) {
                 sleep(5); 
-                $chC = curl_init("https://bff.v8sistema.com/private-consignment/consult/{$ultimo_consult_id}");
-                curl_setopt($chC, CURLOPT_RETURNTRANSFER, true);
-                curl_setopt($chC, CURLOPT_HTTPGET, true);
-                curl_setopt($chC, CURLOPT_HTTPHEADER, ["Authorization: Bearer $tokenV8"]);
-                $resC = curl_exec($chC); curl_close($chC);
-                $jsonC = json_decode($resC, true);
+                $chC = curl_init("https://bff.v8sistema.com/private-consignment/consult/{$ultimo_consult_id}"); curl_setopt($chC, CURLOPT_RETURNTRANSFER, true); curl_setopt($chC, CURLOPT_HTTPGET, true); curl_setopt($chC, CURLOPT_HTTPHEADER, ["Authorization: Bearer $tokenV8"]); $resC = curl_exec($chC); curl_close($chC); $jsonC = json_decode($resC, true);
                 $st = strtoupper($jsonC['status'] ?? '');
-
-                if (in_array($st, $ST_OK)) {
-                    $margem = $jsonC['availableMargin'] ?? $jsonC['marginBaseValue'] ?? $jsonC['availableMarginValue'] ?? $jsonC['maxAmount'] ?? 0;
-                    $conseguiu_margem = true;
-                    break;
-                }
+                if (in_array($st, $ST_OK)) { $margem = $jsonC['availableMargin'] ?? $jsonC['marginBaseValue'] ?? $jsonC['availableMarginValue'] ?? $jsonC['maxAmount'] ?? 0; $conseguiu_margem = true; break; }
                 if (in_array($st, $ST_ERRO)) {
                     $erroMsg_V8 = extrairErroV8($jsonC);
                     $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'ERRO_MARGEM' WHERE ID = ?")->execute([$sessao_id]);
@@ -473,100 +387,63 @@ try {
             }
 
             if ($conseguiu_margem) {
-                // Liberou rápido! Processa e devolve
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'MARGEM_LIBERADA' WHERE ID = ?")->execute([$sessao_id]);
                 $simDados = processarSimulacaoPadrao($ultimo_consult_id, $cpf, (float)$margem, $pdo, $credencialIA, $tokenV8);
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'SIMULACAO_PRONTA' WHERE ID = ?")->execute([$sessao_id]);
                 enviarResposta($cpf, $acao, ['success' => true, 'status' => 'CONCLUIDO', 'margem_disponivel' => (float)$margem, 'simulacao_padrao' => $simDados]);
             } else {
-                // Passou 15s e não liberou. Devolve para a IA avisar o cliente e o Cron Job assume.
-                enviarResposta($cpf, $acao, [
-                    'success' => false,
-                    'status'  => 'AGUARDANDO_DATAPREV',
-                    'msg'     => 'O sistema do governo está processando a solicitação.'
-                ]);
+                enviarResposta($cpf, $acao, ['success' => false, 'status'  => 'AGUARDANDO_DATAPREV', 'msg' => 'Processando na fila.']);
             }
             break;
-        // ---------------------------------------------------------------------
-        // 2 - SOLICITAÇÃO DE SIMULAÇÃO PERSONALIZADA
-        // ---------------------------------------------------------------------
+
         case 'simular_proposta':
-            // Tratamento robusto das variáveis sujas do Webhook
-            $prazo_str = (string)($req['prazo'] ?? '');
-            if (strpos($prazo_str, '{{') !== false) $prazo_str = '';
-            $prazo = (int)preg_replace('/\D/', '', $prazo_str);
-            if ($prazo <= 0) $prazo = (int)($credencialIA['PRAZO_PADRAO'] ?: 84);
+            $telefone = preg_replace('/\D/', '', $req['telefone'] ?? '11900000000');
+            // ✅ Atrelar a sessão correta no CRM
+            $sessao_id = buscarSessaoIA($cpf, $tokenIA, $pdo, $telefone);
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'RECALCULANDO_PROPOSTA' WHERE ID = ?")->execute([$sessao_id]);
 
-            $v_parc_str = str_replace(',', '.', (string)($req['valor_parcela'] ?? ''));
-            if (strpos($v_parc_str, '{{') !== false) $v_parc_str = '0';
-            $valor_parcela = (float)preg_replace('/[^0-9.]/', '', $v_parc_str);
+            $prazo_str = (string)($req['prazo'] ?? ''); if (strpos($prazo_str, '{{') !== false) $prazo_str = ''; $prazo = (int)preg_replace('/\D/', '', $prazo_str); if ($prazo <= 0) $prazo = (int)($credencialIA['PRAZO_PADRAO'] ?: 84);
+            $v_parc_str = str_replace(',', '.', (string)($req['valor_parcela'] ?? '')); if (strpos($v_parc_str, '{{') !== false) $v_parc_str = '0'; $valor_parcela = (float)preg_replace('/[^0-9.]/', '', $v_parc_str);
+            $v_liq_str = str_replace(',', '.', (string)($req['valor_liquido'] ?? '')); if (strpos($v_liq_str, '{{') !== false) $v_liq_str = '0'; $valor_liquido = (float)preg_replace('/[^0-9.]/', '', $v_liq_str);
 
-            $v_liq_str = str_replace(',', '.', (string)($req['valor_liquido'] ?? ''));
-            if (strpos($v_liq_str, '{{') !== false) $v_liq_str = '0';
-            $valor_liquido = (float)preg_replace('/[^0-9.]/', '', $v_liq_str);
-
-            $stmt = $pdo->prepare("SELECT CONSULT_ID FROM INTEGRACAO_V8_REGISTROCONSULTA WHERE CPF_CONSULTADO = ? ORDER BY ID DESC LIMIT 1");
-            $stmt->execute([$cpf]);
-            $consult_id = $stmt->fetchColumn();
+            $stmt = $pdo->prepare("SELECT CONSULT_ID FROM INTEGRACAO_V8_REGISTROCONSULTA WHERE CPF_CONSULTADO = ? ORDER BY ID DESC LIMIT 1"); $stmt->execute([$cpf]); $consult_id = $stmt->fetchColumn();
             if(!$consult_id) throw new Exception("Nenhuma consulta de consentimento prévia encontrada para este CPF.");
 
             $tokenV8 = gerarTokenV8_Local($credencialIA);
             $tab = identificarTabelaUsuario($consult_id, $credencialIA, $tokenV8);
 
             $payload_sim = [ 'consult_id' => $consult_id, 'config_id' => $tab['config_id'], 'number_of_installments' => $prazo ];
-            if ($valor_parcela > 0) { 
-                $payload_sim['installment_face_value'] = $valor_parcela; 
-            } elseif ($valor_liquido > 0) { 
-                $payload_sim['disbursed_amount'] = $valor_liquido; 
-            } else {
-                $stmtM = $pdo->prepare("SELECT MARGEM_DISPONIVEL FROM INTEGRACAO_V8_REGISTRO_SIMULACAO WHERE ID_FILA = (SELECT ID FROM INTEGRACAO_V8_REGISTROCONSULTA WHERE CONSULT_ID = ? LIMIT 1) ORDER BY ID DESC LIMIT 1");
-                $stmtM->execute([$consult_id]);
-                $margem_total = (float)$stmtM->fetchColumn();
+            if ($valor_parcela > 0) { $payload_sim['installment_face_value'] = $valor_parcela; } elseif ($valor_liquido > 0) { $payload_sim['disbursed_amount'] = $valor_liquido; } else {
+                $stmtM = $pdo->prepare("SELECT MARGEM_DISPONIVEL FROM INTEGRACAO_V8_REGISTRO_SIMULACAO WHERE ID_FILA = (SELECT ID FROM INTEGRACAO_V8_REGISTROCONSULTA WHERE CONSULT_ID = ? LIMIT 1) ORDER BY ID DESC LIMIT 1"); $stmtM->execute([$consult_id]); $margem_total = (float)$stmtM->fetchColumn();
                 if($margem_total > 0) $payload_sim['installment_face_value'] = $margem_total;
             }
 
-            $chS = curl_init("https://bff.v8sistema.com/private-consignment/simulation"); curl_setopt($chS, CURLOPT_RETURNTRANSFER, true); curl_setopt($chS, CURLOPT_POST, true); curl_setopt($chS, CURLOPT_POSTFIELDS, json_encode($payload_sim)); curl_setopt($chS, CURLOPT_HTTPHEADER, ["Authorization: Bearer $tokenV8", "Content-Type: application/json"]);
-            $resS = curl_exec($chS); $httpS = curl_getinfo($chS, CURLINFO_HTTP_CODE); curl_close($chS); $jsonS = json_decode($resS, true);
+            $chS = curl_init("https://bff.v8sistema.com/private-consignment/simulation"); curl_setopt($chS, CURLOPT_RETURNTRANSFER, true); curl_setopt($chS, CURLOPT_POST, true); curl_setopt($chS, CURLOPT_POSTFIELDS, json_encode($payload_sim)); curl_setopt($chS, CURLOPT_HTTPHEADER, ["Authorization: Bearer $tokenV8", "Content-Type: application/json"]); $resS = curl_exec($chS); $httpS = curl_getinfo($chS, CURLINFO_HTTP_CODE); curl_close($chS); $jsonS = json_decode($resS, true);
             
-            if ($httpS >= 400 || empty($jsonS)) {
-                $erroDetalhado = extrairErroV8($jsonS);
-                throw new Exception("Erro Simulação: " . $erroDetalhado);
-            }
+            if ($httpS >= 400 || empty($jsonS)) { $erroDetalhado = extrairErroV8($jsonS); throw new Exception("Erro Simulação: " . $erroDetalhado); }
             $sim_obj = isset($jsonS[0]) ? $jsonS[0] : $jsonS;
 
-            $stmtGetID = $pdo->prepare("SELECT ID FROM INTEGRACAO_V8_REGISTROCONSULTA WHERE CONSULT_ID = ? LIMIT 1"); $stmtGetID->execute([$consult_id]);
-            $id_fila = $stmtGetID->fetchColumn();
+            $stmtGetID = $pdo->prepare("SELECT ID FROM INTEGRACAO_V8_REGISTROCONSULTA WHERE CONSULT_ID = ? LIMIT 1"); $stmtGetID->execute([$consult_id]); $id_fila = $stmtGetID->fetchColumn();
             if ($id_fila) {
                 $pdo->prepare("INSERT INTO INTEGRACAO_V8_REGISTRO_SIMULACAO (ID_FILA, CPF, CONFIG_ID, NOME_TABELA, TIPO_SIMULACAO, SIMULATION_ID, STATUS_SIMULATION_ID, DATA_SIMULATION_ID, STATUS_CONFIG_ID, VALOR_LIBERADO, VALOR_PARCELA, PRAZO_SIMULACAO) VALUES (?, ?, ?, ?, 'PERSONALIZADA IA', ?, 'SIMULACAO OK', NOW(), 'MARGEM OK', ?, ?, ?)")->execute([$id_fila, $cpf, $tab['config_id'], $tab['nome_tb_final'], ($sim_obj['id_simulation']??$sim_obj['id']), (float)($sim_obj['disbursement_amount']??$sim_obj['disbursed_amount']??0), (float)($sim_obj['installment_value']??$sim_obj['installment_face_value']??0), $prazo]);
             }
+            
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'SIMULACAO_PRONTA' WHERE ID = ?")->execute([$sessao_id]);
             enviarResposta($cpf, $acao, ['success' => true, 'valor_liberado' => (float)($sim_obj['disbursement_amount']??$sim_obj['disbursed_amount']??0), 'valor_parcela' => (float)($sim_obj['installment_value']??$sim_obj['installment_face_value']??0), 'prazo' => $prazo ]);
             break;
 
-        // ---------------------------------------------------------------------
-        // 3 - SOLICITAÇÃO DE DIGITAÇÃO (ENVIAR PROPOSTA)
-        // ---------------------------------------------------------------------
         case 'enviar_proposta':
             $telefone = preg_replace('/\D/', '', $req['telefone'] ?? '11900000000');
+            $sessao_id = buscarSessaoIA($cpf, $tokenIA, $pdo, $telefone);
             $chave_pix = trim($req['pix'] ?? '');
             
-            $prazo_str = (string)($req['prazo'] ?? '');
-            if (strpos($prazo_str, '{{') !== false) $prazo_str = '';
-            $prazo = (int)preg_replace('/\D/', '', $prazo_str);
-            if ($prazo <= 0) $prazo = (int)($credencialIA['PRAZO_PADRAO'] ?: 84);
-
-            $v_parc_str = str_replace(',', '.', (string)($req['valor_parcela'] ?? ''));
-            if (strpos($v_parc_str, '{{') !== false) $v_parc_str = '0';
-            $valor_parcela = (float)preg_replace('/[^0-9.]/', '', $v_parc_str);
-
-            $v_liq_str = str_replace(',', '.', (string)($req['valor_liquido'] ?? ''));
-            if (strpos($v_liq_str, '{{') !== false) $v_liq_str = '0';
-            $valor_liquido = (float)preg_replace('/[^0-9.]/', '', $v_liq_str);
+            $prazo_str = (string)($req['prazo'] ?? ''); if (strpos($prazo_str, '{{') !== false) $prazo_str = ''; $prazo = (int)preg_replace('/\D/', '', $prazo_str); if ($prazo <= 0) $prazo = (int)($credencialIA['PRAZO_PADRAO'] ?: 84);
+            $v_parc_str = str_replace(',', '.', (string)($req['valor_parcela'] ?? '')); if (strpos($v_parc_str, '{{') !== false) $v_parc_str = '0'; $valor_parcela = (float)preg_replace('/[^0-9.]/', '', $v_parc_str);
+            $v_liq_str = str_replace(',', '.', (string)($req['valor_liquido'] ?? '')); if (strpos($v_liq_str, '{{') !== false) $v_liq_str = '0'; $valor_liquido = (float)preg_replace('/[^0-9.]/', '', $v_liq_str);
 
             if (empty($chave_pix)) throw new Exception("A chave PIX é obrigatória para emissão.");
             
-            $stmt = $pdo->prepare("SELECT CONSULT_ID FROM INTEGRACAO_V8_REGISTROCONSULTA WHERE CPF_CONSULTADO = ? ORDER BY ID DESC LIMIT 1");
-            $stmt->execute([$cpf]);
-            $consult_id = $stmt->fetchColumn();
+            $stmt = $pdo->prepare("SELECT CONSULT_ID FROM INTEGRACAO_V8_REGISTROCONSULTA WHERE CPF_CONSULTADO = ? ORDER BY ID DESC LIMIT 1"); $stmt->execute([$cpf]); $consult_id = $stmt->fetchColumn();
             if(!$consult_id) throw new Exception("Nenhuma consulta de consentimento prévia encontrada.");
 
             $tokenV8 = gerarTokenV8_Local($credencialIA);
@@ -575,181 +452,87 @@ try {
             $payload_sim = [ 'consult_id' => $consult_id, 'config_id' => $tab['config_id'], 'number_of_installments' => $prazo ];
             if ($valor_parcela > 0) $payload_sim['installment_face_value'] = $valor_parcela; elseif ($valor_liquido > 0) $payload_sim['disbursed_amount'] = $valor_liquido;
 
-            $chS = curl_init("https://bff.v8sistema.com/private-consignment/simulation"); curl_setopt($chS, CURLOPT_RETURNTRANSFER, true); curl_setopt($chS, CURLOPT_POST, true); curl_setopt($chS, CURLOPT_POSTFIELDS, json_encode($payload_sim)); curl_setopt($chS, CURLOPT_HTTPHEADER, ["Authorization: Bearer $tokenV8", "Content-Type: application/json"]);
-            $resS = curl_exec($chS); curl_close($chS); $jsonS = json_decode($resS, true);
+            $chS = curl_init("https://bff.v8sistema.com/private-consignment/simulation"); curl_setopt($chS, CURLOPT_RETURNTRANSFER, true); curl_setopt($chS, CURLOPT_POST, true); curl_setopt($chS, CURLOPT_POSTFIELDS, json_encode($payload_sim)); curl_setopt($chS, CURLOPT_HTTPHEADER, ["Authorization: Bearer $tokenV8", "Content-Type: application/json"]); $resS = curl_exec($chS); curl_close($chS); $jsonS = json_decode($resS, true);
             $sim_obj = isset($jsonS[0]) ? $jsonS[0] : $jsonS;
             $sim_id = $sim_obj['id_simulation'] ?? $sim_obj['id'] ?? null;
             if(!$sim_id) throw new Exception("Falha ao preparar simulação para envio.");
 
             $cliente = buscarOuAtualizarCadastro($cpf, $pdo, $credencialIA);
+            $nasc = !empty($cliente['nascimento']) ? $cliente['nascimento'] : '1980-01-01'; $mae = !empty($cliente['nome_mae']) ? mb_strtoupper($cliente['nome_mae'], 'UTF-8') : 'NAO INFORMADO'; $rg = !empty($cliente['rg']) ? preg_replace('/[^a-zA-Z0-9]/', '', $cliente['rg']) : '000000000'; if (empty($rg)) $rg = '000000000'; $sexo_api = (strtoupper($cliente['sexo']) === 'M') ? 'male' : 'female';
 
-            $nasc = !empty($cliente['nascimento']) ? $cliente['nascimento'] : '1980-01-01';
-            $mae = !empty($cliente['nome_mae']) ? mb_strtoupper($cliente['nome_mae'], 'UTF-8') : 'NAO INFORMADO';
-            $rg = !empty($cliente['rg']) ? preg_replace('/[^a-zA-Z0-9]/', '', $cliente['rg']) : '000000000'; if (empty($rg)) $rg = '000000000'; 
-            $sexo_api = (strtoupper($cliente['sexo']) === 'M') ? 'male' : 'female';
-
-            // ENDEREÇO FIXO APLICADO AQUI!
             $payloadProp = [
                 'simulation_id' => $sim_id,
                 'borrower' => [
-                    'name' => $cliente['nome'], 'email' => 'cliente@gmail.com', 
-                    'phone' => [ 'country_code' => '55', 'area_code' => substr($telefone, 0, 2), 'number' => substr($telefone, 2) ], 
-                    'political_exposition' => false, 'birth_date' => $nasc, 'mother_name' => $mae, 'nationality' => 'BR', 'document_issuer' => 'SSP',
-                    'gender' => $sexo_api, 'person_type' => 'natural', 'marital_status' => 'single', 'individual_document_number' => $cpf,
-                    'document_identification_date' => '2015-01-01', 'document_identification_type' => 'rg', 'document_identification_number' => $rg,
-                    'address' => [ 
-                        'city' => 'Florianópolis', 
-                        'state' => 'SC', 
-                        'number' => '900', 
-                        'street' => 'Servidão Unidos', 
-                        'complement' => 'casa', 
-                        'postal_code' => '88049335', 
-                        'neighborhood' => 'Tapera' 
-                    ],
+                    'name' => $cliente['nome'], 'email' => 'cliente@gmail.com', 'phone' => [ 'country_code' => '55', 'area_code' => substr($telefone, 0, 2), 'number' => substr($telefone, 2) ], 
+                    'political_exposition' => false, 'birth_date' => $nasc, 'mother_name' => $mae, 'nationality' => 'BR', 'document_issuer' => 'SSP', 'gender' => $sexo_api, 'person_type' => 'natural', 'marital_status' => 'single', 'individual_document_number' => $cpf, 'document_identification_date' => '2015-01-01', 'document_identification_type' => 'rg', 'document_identification_number' => $rg,
+                    'address' => [ 'city' => 'Florianópolis', 'state' => 'SC', 'number' => '900', 'street' => 'Servidão Unidos', 'complement' => 'casa', 'postal_code' => '88049335', 'neighborhood' => 'Tapera' ],
                     'bank' => [ 'transfer_method' => 'pix', 'pix_key' => $chave_pix, 'pix_key_type' => 'cpf' ]
                 ]
             ];
 
-            $chP = curl_init("https://bff.v8sistema.com/private-consignment/operation"); curl_setopt($chP, CURLOPT_RETURNTRANSFER, true); curl_setopt($chP, CURLOPT_POST, true); curl_setopt($chP, CURLOPT_POSTFIELDS, json_encode($payloadProp)); curl_setopt($chP, CURLOPT_HTTPHEADER, ["Authorization: Bearer $tokenV8", "Content-Type: application/json"]);
-            $resP = curl_exec($chP); $httpP = curl_getinfo($chP, CURLINFO_HTTP_CODE); curl_close($chP); $jsonP = json_decode($resP, true);
+            $chP = curl_init("https://bff.v8sistema.com/private-consignment/operation"); curl_setopt($chP, CURLOPT_RETURNTRANSFER, true); curl_setopt($chP, CURLOPT_POST, true); curl_setopt($chP, CURLOPT_POSTFIELDS, json_encode($payloadProp)); curl_setopt($chP, CURLOPT_HTTPHEADER, ["Authorization: Bearer $tokenV8", "Content-Type: application/json"]); $resP = curl_exec($chP); $httpP = curl_getinfo($chP, CURLINFO_HTTP_CODE); curl_close($chP); $jsonP = json_decode($resP, true);
 
-            if ($httpP >= 400 || empty($jsonP)) {
-                $erroDetalhado = extrairErroV8($jsonP);
-                throw new Exception("Erro V8 (Proposta): " . $erroDetalhado);
-            }
-            $proposal_id = $jsonP['id'] ?? $jsonP['proposal_id'] ?? 'PROPOSTA_IA';
-            $url_formalizacao = $jsonP['formalization_url'] ?? '';
+            if ($httpP >= 400 || empty($jsonP)) { $erroDetalhado = extrairErroV8($jsonP); throw new Exception("Erro V8 (Proposta): " . $erroDetalhado); }
+            $proposal_id = $jsonP['id'] ?? $jsonP['proposal_id'] ?? 'PROPOSTA_IA'; $url_formalizacao = $jsonP['formalization_url'] ?? '';
 
             $stmtGetID = $pdo->prepare("SELECT ID FROM INTEGRACAO_V8_REGISTROCONSULTA WHERE CONSULT_ID = ? LIMIT 1"); $stmtGetID->execute([$consult_id]); $id_fila = $stmtGetID->fetchColumn();
             if($id_fila) {
                 $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA SET STATUS_V8 = ?, ULTIMA_ATUALIZACAO = NOW() WHERE ID = ?")->execute(['PROPOSTA: ' . $proposal_id, $id_fila]);
                 $pdo->prepare("INSERT INTO INTEGRACAO_V8_REGISTRO_PROPOSTA (CPF_USUARIO, CPF_CLIENTE, NOME_CLIENTE, NUMERO_PROPOSTA, PRAZO, PARCELA, VALOR_LIBERADO, STATUS_PROPOSTA_V8, LINK_PROPOSTA, DATA_STATUS, DATA_DIGITACAO) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), NOW())")->execute([$credencialIA['CPF_DONO'], $cpf, $cliente['nome'], $proposal_id, $prazo, (float)($sim_obj['installment_value']??0), (float)($sim_obj['disbursement_amount']??0), 'AGUARDANDO', $url_formalizacao]);
             }
-            // Notificação de proposta
             if (!empty($credencialIA['NOTIF_PROPOSTA'])) {
                 $pdo->prepare("INSERT INTO INTEGRACAO_V8_IA_NOTIFICACOES (CREDENCIAL_ID, CPF_DONO, TIPO, NOME_CLIENTE, CPF_CLIENTE, VALOR, PRAZO, PARCELA, NUMERO_PROPOSTA, NOME_ROBO) VALUES (?, ?, 'PROPOSTA', ?, ?, ?, ?, ?, ?, ?)")
                     ->execute([$credencialIA['ID'], $credencialIA['CPF_DONO'], $cliente['nome'], $cpf, (float)($sim_obj['disbursement_amount']??0), $prazo, (float)($sim_obj['installment_value']??0), $proposal_id, $credencialIA['NOME_ROBO']]);
-                $nomeClienteProp = $cliente['nome'] ?? $cpf;
-                $valorLibProp    = (float)($sim_obj['disbursement_amount'] ?? 0);
-                $valorParcProp   = (float)($sim_obj['installment_value'] ?? 0);
-                $msgProposta = "🤖 *{$credencialIA['NOME_ROBO']}* — Proposta Digitada\n"
-                    . "👤 Cliente: {$nomeClienteProp} | CPF: " . substr($cpf,0,3) . ".***.***-" . substr($cpf,-2) . "\n"
-                    . "📋 Proposta: {$proposal_id}\n"
-                    . "💰 Liberado: R$ " . number_format($valorLibProp, 2, ',', '.') . "\n"
-                    . "📅 Prazo: {$prazo}x | Parcela: R$ " . number_format($valorParcProp, 2, ',', '.') . "\n"
-                    . "🕐 " . date('d/m/Y H:i');
+                $msgProposta = "🤖 *{$credencialIA['NOME_ROBO']}* — Proposta Digitada\n👤 Cliente: ".($cliente['nome'] ?? $cpf)." | CPF: " . substr($cpf,0,3) . ".***.***-" . substr($cpf,-2) . "\n📋 Proposta: {$proposal_id}\n💰 Liberado: R$ " . number_format((float)($sim_obj['disbursement_amount']??0), 2, ',', '.') . "\n📅 Prazo: {$prazo}x | Parcela: R$ " . number_format((float)($sim_obj['installment_value']??0), 2, ',', '.') . "\n🕐 " . date('d/m/Y H:i');
                 enviarNotificacaoWhatsApp($pdo, $credencialIA['CPF_DONO'], $msgProposta);
             }
+            
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'CONCLUIDO' WHERE ID = ?")->execute([$sessao_id]);
             enviarResposta($cpf, $acao, ['success' => true, 'proposal_id' => $proposal_id, 'link_assinatura' => $url_formalizacao, 'msg' => 'Proposta gerada!' ]);
             break;
 
-        // ---------------------------------------------------------------------
-        // 4 - VERIFICAR STATUS DA PROPOSTA
-        // ---------------------------------------------------------------------
         case 'ver_status_proposta':
-            $stmt = $pdo->prepare("SELECT NUMERO_PROPOSTA, ID FROM INTEGRACAO_V8_REGISTRO_PROPOSTA WHERE CPF_CLIENTE = ? ORDER BY ID DESC LIMIT 1");
-            $stmt->execute([$cpf]);
-            $proposta = $stmt->fetch(PDO::FETCH_ASSOC);
+            $stmt = $pdo->prepare("SELECT NUMERO_PROPOSTA, ID FROM INTEGRACAO_V8_REGISTRO_PROPOSTA WHERE CPF_CLIENTE = ? ORDER BY ID DESC LIMIT 1"); $stmt->execute([$cpf]); $proposta = $stmt->fetch(PDO::FETCH_ASSOC);
+            if (!$proposta || empty($proposta['NUMERO_PROPOSTA'])) { enviarResposta($cpf, $acao, ['success' => false, 'status' => 'ERRO', 'error' => 'Nenhuma proposta encontrada.']); }
             
-            if (!$proposta || empty($proposta['NUMERO_PROPOSTA'])) {
-                enviarResposta($cpf, $acao, ['success' => false, 'status' => 'ERRO', 'error' => 'Nenhuma proposta encontrada para este CPF.']);
-            }
-            
-            $proposal_id = $proposta['NUMERO_PROPOSTA'];
-            $tokenV8 = gerarTokenV8_Local($credencialIA);
+            $proposal_id = $proposta['NUMERO_PROPOSTA']; $tokenV8 = gerarTokenV8_Local($credencialIA);
+            $chP = curl_init("https://bff.v8sistema.com/private-consignment/operation/{$proposal_id}"); curl_setopt($chP, CURLOPT_RETURNTRANSFER, true); curl_setopt($chP, CURLOPT_HTTPGET, true); curl_setopt($chP, CURLOPT_HTTPHEADER, ["Authorization: Bearer $tokenV8"]); $resP = curl_exec($chP); $httpP = curl_getinfo($chP, CURLINFO_HTTP_CODE); curl_close($chP); $jsonP = json_decode($resP, true);
+            if ($httpP >= 400 || empty($jsonP)) { enviarResposta($cpf, $acao, ['success' => false, 'status' => 'ERRO', 'error' => 'Falha V8: ' . extrairErroV8($jsonP)]); }
 
-            $chP = curl_init("https://bff.v8sistema.com/private-consignment/operation/{$proposal_id}");
-            curl_setopt($chP, CURLOPT_RETURNTRANSFER, true); 
-            curl_setopt($chP, CURLOPT_HTTPGET, true); 
-            curl_setopt($chP, CURLOPT_HTTPHEADER, ["Authorization: Bearer $tokenV8"]);
-            $resP = curl_exec($chP); $httpP = curl_getinfo($chP, CURLINFO_HTTP_CODE); curl_close($chP); 
-            $jsonP = json_decode($resP, true);
-
-            if ($httpP >= 400 || empty($jsonP)) {
-                enviarResposta($cpf, $acao, ['success' => false, 'status' => 'ERRO', 'error' => 'Falha ao consultar V8: ' . extrairErroV8($jsonP)]);
-            }
-
-            $status_proposta = strtoupper($jsonP['status'] ?? 'DESCONHECIDO');
-            $motivo_pendencia = $jsonP['pendency_reason'] ?? $jsonP['status_description'] ?? '';
-
+            $status_proposta = strtoupper($jsonP['status'] ?? 'DESCONHECIDO'); $motivo_pendencia = $jsonP['pendency_reason'] ?? $jsonP['status_description'] ?? '';
             $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTRO_PROPOSTA SET STATUS_PROPOSTA_V8 = ?, DATA_STATUS = NOW() WHERE ID = ?")->execute([$status_proposta, $proposta['ID']]);
-
-            enviarResposta($cpf, $acao, [
-                'success' => true,
-                'status_proposta' => $status_proposta,
-                'motivo_pendencia' => $motivo_pendencia
-            ]);
+            enviarResposta($cpf, $acao, ['success' => true, 'status_proposta' => $status_proposta, 'motivo_pendencia' => $motivo_pendencia]);
             break;
 
-        // ---------------------------------------------------------------------
-        // 5 - RESOLVER PENDÊNCIA DE PIX
-        // ---------------------------------------------------------------------
         case 'resolver_pendencia_pix':
+            $telefone = preg_replace('/\D/', '', $req['telefone'] ?? '11900000000');
+            $sessao_id = buscarSessaoIA($cpf, $tokenIA, $pdo, $telefone);
             $novo_pix = trim($req['pix'] ?? '');
-            
-            if (empty($novo_pix)) {
-                enviarResposta($cpf, $acao, ['success' => false, 'error' => 'A nova chave PIX é obrigatória.']);
-            }
+            if (empty($novo_pix)) { enviarResposta($cpf, $acao, ['success' => false, 'error' => 'Chave PIX obrigatória.']); }
 
-            $stmt = $pdo->prepare("SELECT NUMERO_PROPOSTA, ID FROM INTEGRACAO_V8_REGISTRO_PROPOSTA WHERE CPF_CLIENTE = ? ORDER BY ID DESC LIMIT 1");
-            $stmt->execute([$cpf]);
-            $proposta = $stmt->fetch(PDO::FETCH_ASSOC);
+            $stmt = $pdo->prepare("SELECT NUMERO_PROPOSTA, ID FROM INTEGRACAO_V8_REGISTRO_PROPOSTA WHERE CPF_CLIENTE = ? ORDER BY ID DESC LIMIT 1"); $stmt->execute([$cpf]); $proposta = $stmt->fetch(PDO::FETCH_ASSOC);
+            if (!$proposta || empty($proposta['NUMERO_PROPOSTA'])) { enviarResposta($cpf, $acao, ['success' => false, 'status' => 'ERRO', 'error' => 'Nenhuma proposta.']); }
             
-            if (!$proposta || empty($proposta['NUMERO_PROPOSTA'])) {
-                enviarResposta($cpf, $acao, ['success' => false, 'status' => 'ERRO', 'error' => 'Nenhuma proposta encontrada.']);
-            }
-            
-            $proposal_id = $proposta['NUMERO_PROPOSTA'];
-            $tokenV8 = gerarTokenV8_Local($credencialIA);
-
+            $proposal_id = $proposta['NUMERO_PROPOSTA']; $tokenV8 = gerarTokenV8_Local($credencialIA);
             $payloadBank = [ 'bank' => [ 'transfer_method' => 'pix', 'pix_key' => $novo_pix, 'pix_key_type' => 'cpf' ] ];
-
-            $chB = curl_init("https://bff.v8sistema.com/private-consignment/operation/{$proposal_id}");
-            curl_setopt($chB, CURLOPT_RETURNTRANSFER, true); 
-            curl_setopt($chB, CURLOPT_CUSTOMREQUEST, 'PATCH'); 
-            curl_setopt($chB, CURLOPT_POSTFIELDS, json_encode($payloadBank)); 
-            curl_setopt($chB, CURLOPT_HTTPHEADER, ["Authorization: Bearer $tokenV8", "Content-Type: application/json"]);
-            $resB = curl_exec($chB); $httpB = curl_getinfo($chB, CURLINFO_HTTP_CODE); curl_close($chB);
-            $jsonB = json_decode($resB, true);
-
-            if ($httpB >= 400) {
-                enviarResposta($cpf, $acao, ['success' => false, 'status' => 'ERRO', 'error' => 'Erro ao atualizar PIX na V8: ' . extrairErroV8($jsonB)]);
-            }
+            $chB = curl_init("https://bff.v8sistema.com/private-consignment/operation/{$proposal_id}"); curl_setopt($chB, CURLOPT_RETURNTRANSFER, true); curl_setopt($chB, CURLOPT_CUSTOMREQUEST, 'PATCH'); curl_setopt($chB, CURLOPT_POSTFIELDS, json_encode($payloadBank)); curl_setopt($chB, CURLOPT_HTTPHEADER, ["Authorization: Bearer $tokenV8", "Content-Type: application/json"]); $resB = curl_exec($chB); $httpB = curl_getinfo($chB, CURLINFO_HTTP_CODE); curl_close($chB); $jsonB = json_decode($resB, true);
+            if ($httpB >= 400) { enviarResposta($cpf, $acao, ['success' => false, 'status' => 'ERRO', 'error' => 'Erro PIX V8: ' . extrairErroV8($jsonB)]); }
 
             $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTRO_PROPOSTA SET STATUS_PROPOSTA_V8 = 'PIX ATUALIZADO', DATA_STATUS = NOW() WHERE ID = ?")->execute([$proposta['ID']]);
-            enviarResposta($cpf, $acao, ['success' => true, 'status' => 'CONCLUIDO', 'msg' => 'PIX atualizado com sucesso!']);
+            enviarResposta($cpf, $acao, ['success' => true, 'status' => 'CONCLUIDO', 'msg' => 'PIX atualizado!']);
             break;
 
-        // ---------------------------------------------------------------------
-        // 6 - CANCELAR PROPOSTA (Alerta para a Equipe)
-        // ---------------------------------------------------------------------
         case 'cancelar_proposta':
-            $stmt = $pdo->prepare("SELECT p.NUMERO_PROPOSTA, p.ID, c.nome 
-                                   FROM INTEGRACAO_V8_REGISTRO_PROPOSTA p 
-                                   LEFT JOIN dados_cadastrais c ON p.CPF_CLIENTE = c.cpf 
-                                   WHERE p.CPF_CLIENTE = ? ORDER BY p.ID DESC LIMIT 1");
-            $stmt->execute([$cpf]);
-            $proposta = $stmt->fetch(PDO::FETCH_ASSOC);
-            
-            if (!$proposta) {
-                enviarResposta($cpf, $acao, ['success' => false, 'status' => 'ERRO', 'error' => 'Nenhuma proposta encontrada para cancelar.']);
-            }
-
-            $nomeCliente = $proposta['nome'] ?? 'Cliente';
-            $idProposta = $proposta['NUMERO_PROPOSTA'];
+            $telefone = preg_replace('/\D/', '', $req['telefone'] ?? '11900000000');
+            $sessao_id = buscarSessaoIA($cpf, $tokenIA, $pdo, $telefone);
+            $stmt = $pdo->prepare("SELECT p.NUMERO_PROPOSTA, p.ID, c.nome FROM INTEGRACAO_V8_REGISTRO_PROPOSTA p LEFT JOIN dados_cadastrais c ON p.CPF_CLIENTE = c.cpf WHERE p.CPF_CLIENTE = ? ORDER BY p.ID DESC LIMIT 1"); $stmt->execute([$cpf]); $proposta = $stmt->fetch(PDO::FETCH_ASSOC);
+            if (!$proposta) { enviarResposta($cpf, $acao, ['success' => false, 'status' => 'ERRO', 'error' => 'Nenhuma proposta para cancelar.']); }
 
             $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTRO_PROPOSTA SET STATUS_PROPOSTA_V8 = 'CANCELAMENTO SOLICITADO (IA)', DATA_STATUS = NOW() WHERE ID = ?")->execute([$proposta['ID']]);
-
-            enviarResposta($cpf, $acao, [
-                'success' => true, 
-                'status' => 'CONCLUIDO', 
-                'msg' => 'Solicitação de cancelamento registrada. A equipe foi notificada.'
-            ]);
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'CONCLUIDO' WHERE ID = ?")->execute([$sessao_id]);
+            enviarResposta($cpf, $acao, ['success' => true, 'status' => 'CONCLUIDO', 'msg' => 'Cancelamento registrado.']);
             break;
 
-        // ---------------------------------------------------------------------
-        // AÇÕES EXTRAS 
-        // ---------------------------------------------------------------------
         case 'consultar_cadastro':
             $cliente = buscarOuAtualizarCadastro($cpf, $pdo, $credencialIA);
             enviarResposta($cpf, $acao, ['success' => true, 'dados' => ['nome' => $cliente['nome'], 'nascimento' => $cliente['nascimento'], 'sexo' => $cliente['sexo']] ]);
@@ -793,12 +576,17 @@ try {
     }
 } catch (Exception $e) {
     $msgErro = $e->getMessage();
+    
+    // ✅ TRAVA DE SEGURANÇA: Garante que a sessão e a consulta recebam o status correto no CRM
     if (isset($sessao_id) && $sessao_id > 0) {
         $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'ERRO_API', ULTIMA_ACAO = NOW() WHERE ID = ?")->execute([$sessao_id]);
     }
-    if (isset($consult_id) && !empty($consult_id)) {
-        $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA SET STATUS_V8 = 'ERRO_API', MENSAGEM_ERRO = ? WHERE CONSULT_ID = ?")->execute([$msgErro, $consult_id]);
+    
+    $cid = !empty($consult_id) ? $consult_id : (!empty($ultimo_consult_id) ? $ultimo_consult_id : null);
+    if (!empty($cid)) {
+        $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA SET STATUS_V8 = 'ERRO_API', MENSAGEM_ERRO = ?, ULTIMA_ATUALIZACAO = NOW() WHERE CONSULT_ID = ?")->execute([$msgErro, $cid]);
     }
+    
     enviarResposta($cpf, 'ERRO_CRITICO', ['success' => false, 'status' => 'ERRO', 'error' => $msgErro]);
 }
 ?>
