@@ -460,13 +460,42 @@ try {
             $cliente = buscarOuAtualizarCadastro($cpf, $pdo, $credencialIA);
             $nasc = !empty($cliente['nascimento']) ? $cliente['nascimento'] : '1980-01-01'; $mae = !empty($cliente['nome_mae']) ? mb_strtoupper($cliente['nome_mae'], 'UTF-8') : 'NAO INFORMADO'; $rg = !empty($cliente['rg']) ? preg_replace('/[^a-zA-Z0-9]/', '', $cliente['rg']) : '000000000'; if (empty($rg)) $rg = '000000000'; $sexo_api = (strtoupper($cliente['sexo']) === 'M') ? 'male' : 'female';
 
+            // DETECTOR AUTOMÁTICO DE TIPO DE CHAVE PIX
+            $tipo_pix = 'random_key'; // Padrão
+            if (filter_var($chave_pix, FILTER_VALIDATE_EMAIL)) { 
+                $tipo_pix = 'email'; 
+            } elseif (preg_match('/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i', $chave_pix)) { 
+                $tipo_pix = 'random_key'; 
+            } else {
+                $num_pix = preg_replace('/\D/', '', $chave_pix);
+                if ($num_pix === $cpf) { 
+                    $tipo_pix = 'cpf'; 
+                    $chave_pix = $num_pix;
+                } elseif (strlen($num_pix) === 10 || strlen($num_pix) === 11) { 
+                    $tipo_pix = 'phone'; 
+                    $chave_pix = $num_pix; // Limpa os parênteses e traços para o banco
+                }
+            }
+
+            // ENDEREÇO FIXO E CHAVE PIX DINÂMICA
             $payloadProp = [
                 'simulation_id' => $sim_id,
                 'borrower' => [
-                    'name' => $cliente['nome'], 'email' => 'cliente@gmail.com', 'phone' => [ 'country_code' => '55', 'area_code' => substr($telefone, 0, 2), 'number' => substr($telefone, 2) ], 
-                    'political_exposition' => false, 'birth_date' => $nasc, 'mother_name' => $mae, 'nationality' => 'BR', 'document_issuer' => 'SSP', 'gender' => $sexo_api, 'person_type' => 'natural', 'marital_status' => 'single', 'individual_document_number' => $cpf, 'document_identification_date' => '2015-01-01', 'document_identification_type' => 'rg', 'document_identification_number' => $rg,
-                    'address' => [ 'city' => 'Florianópolis', 'state' => 'SC', 'number' => '900', 'street' => 'Servidão Unidos', 'complement' => 'casa', 'postal_code' => '88049335', 'neighborhood' => 'Tapera' ],
-                    'bank' => [ 'transfer_method' => 'pix', 'pix_key' => $chave_pix, 'pix_key_type' => 'cpf' ]
+                    'name' => $cliente['nome'], 'email' => 'cliente@gmail.com', 
+                    'phone' => [ 'country_code' => '55', 'area_code' => substr($telefone, 0, 2), 'number' => substr($telefone, 2) ], 
+                    'political_exposition' => false, 'birth_date' => $nasc, 'mother_name' => $mae, 'nationality' => 'BR', 'document_issuer' => 'SSP',
+                    'gender' => $sexo_api, 'person_type' => 'natural', 'marital_status' => 'single', 'individual_document_number' => $cpf,
+                    'document_identification_date' => '2015-01-01', 'document_identification_type' => 'rg', 'document_identification_number' => $rg,
+                    'address' => [ 
+                        'city' => 'Florianópolis', 
+                        'state' => 'SC', 
+                        'number' => '900', 
+                        'street' => 'Servidão Unidos', 
+                        'complement' => 'casa', 
+                        'postal_code' => '88049335', 
+                        'neighborhood' => 'Tapera' 
+                    ],
+                    'bank' => [ 'transfer_method' => 'pix', 'pix_key' => $chave_pix, 'pix_key_type' => $tipo_pix ]
                 ]
             ];
 
