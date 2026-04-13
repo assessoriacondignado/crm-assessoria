@@ -19,10 +19,10 @@ $pdo->exec("SET NAMES utf8mb4");
 // =========================================================================
 // SISTEMA DE LOGS E LIMPEZA (7 DIAS)
 // =========================================================================
-function limparLogsAntigos($diretorio, $dias = 7) {
+function limparLogsAntigos($diretorio, $segundos = 7200) {
     if (!is_dir($diretorio)) { @mkdir($diretorio, 0777, true); return; }
     $arquivos = glob($diretorio . '/*.txt');
-    $tempo_limite = time() - ($dias * 24 * 60 * 60);
+    $tempo_limite = time() - $segundos;
     foreach ($arquivos as $arquivo) {
         if (is_file($arquivo) && filemtime($arquivo) < $tempo_limite) {
             @unlink($arquivo);
@@ -49,8 +49,8 @@ function gravarLogIntegracao($pasta_destino, $cpf, $fase, $url, $req, $res, $htt
     @file_put_contents($file, $log, FILE_APPEND);
 }
 
-limparLogsAntigos($_SERVER['DOCUMENT_ROOT'] . '/logs_v8/logs_consulta_lote', 7);
-limparLogsAntigos($_SERVER['DOCUMENT_ROOT'] . '/logs_v8/logs_automacao', 7);
+limparLogsAntigos($_SERVER['DOCUMENT_ROOT'] . '/logs_v8/logs_consulta_lote', 7200); // 2 horas
+limparLogsAntigos($_SERVER['DOCUMENT_ROOT'] . '/logs_v8/logs_automacao', 7200); // 2 horas
 // =========================================================================
 
 // Garante colunas novas sem quebrar instalações existentes
