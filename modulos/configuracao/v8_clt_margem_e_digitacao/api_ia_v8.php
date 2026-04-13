@@ -248,7 +248,8 @@ function identificarTabelaUsuario($consult_id, $credencialIA, $tokenV8) {
     curl_setopt($chCfg, CURLOPT_RETURNTRANSFER, true); curl_setopt($chCfg, CURLOPT_HTTPGET, true); curl_setopt($chCfg, CURLOPT_HTTPHEADER, ["Authorization: Bearer $tokenV8"]);
     $resCfg = curl_exec($chCfg); curl_close($chCfg); $jsonCfg = json_decode($resCfg, true);
     
-    $config_id = null; $lista_configs = $jsonCfg['configs'] ?? []; $nome_tb_final = $tabela_padrao;
+    // CORREÇÃO 1: Trata o array de configs da mesma forma que o script manual
+    $config_id = null; $lista_configs = $jsonCfg['configs'] ?? (isset($jsonCfg[0]['id']) ? $jsonCfg : []); $nome_tb_final = $tabela_padrao;
     
     if (is_array($lista_configs) && count($lista_configs) > 0) { 
         $busca = normalizarStringIA($tabela_padrao);
@@ -278,24 +279,33 @@ function processarSimulacaoPadrao($consult_id, $cpf, $margem, $pdo, $credencialI
     $chS = curl_init("https://bff.v8sistema.com/private-consignment/simulation"); curl_setopt($chS, CURLOPT_RETURNTRANSFER, true); curl_setopt($chS, CURLOPT_POST, true); curl_setopt($chS, CURLOPT_POSTFIELDS, json_encode($payload_sim)); curl_setopt($chS, CURLOPT_HTTPHEADER, ["Authorization: Bearer $tokenV8", "Content-Type: application/json"]);
     $resS = curl_exec($chS); $httpS = curl_getinfo($chS, CURLINFO_HTTP_CODE); curl_close($chS); $jsonS = json_decode($resS, true);
 
-    if ($httpS >= 400 || empty($jsonS)) {
-        $erroDetalhado = extrairErroV8($jsonS);
-        throw new Exception("Erro Simulação: " . $erroDetalhado);
-    }
-
+    // CORREÇÃO 2: Identifica os valores retornados ou define valores zerados em caso de erro, SALVANDO A MARGEM de qualquer forma.
     $sim_obj = isset($jsonS[0]) ? $jsonS[0] : $jsonS;
     $sim_id = $sim_obj['id_simulation'] ?? $sim_obj['id'] ?? null;
     $valor_lib = $sim_obj['disbursement_amount'] ?? $sim_obj['disbursed_amount'] ?? 0;
     $valor_parc = $sim_obj['installment_value'] ?? $sim_obj['installment_face_value'] ?? $margem;
+    $status_simulacao = 'SIMULACAO OK';
+
+    if ($httpS >= 400 || empty($jsonS)) {
+        $sim_id = 'ERRO-TABELA';
+        $status_simulacao = 'ERRO V8';
+        $valor_lib = 0;
+    }
 
     $stmtGetID = $pdo->prepare("SELECT ID FROM INTEGRACAO_V8_REGISTROCONSULTA WHERE CONSULT_ID = ? LIMIT 1"); $stmtGetID->execute([$consult_id]);
     $id_fila = $stmtGetID->fetchColumn();
 
     if ($id_fila) {
-        $pdo->prepare("INSERT INTO INTEGRACAO_V8_REGISTRO_SIMULACAO (ID_FILA, CPF, CONFIG_ID, NOME_TABELA, MARGEM_DISPONIVEL, TIPO_SIMULACAO, SIMULATION_ID, STATUS_SIMULATION_ID, DATA_SIMULATION_ID, STATUS_CONFIG_ID, VALOR_LIBERADO, VALOR_PARCELA, PRAZO_SIMULACAO) VALUES (?, ?, ?, ?, ?, 'PADRÃO IA', ?, 'SIMULACAO OK', NOW(), 'MARGEM OK', ?, ?, ?)")->execute([$id_fila, $cpf, $tab['config_id'], $tab['nome_tb_final'], $margem, $sim_id, (float)$valor_lib, (float)$valor_parc, $prazo_padrao]);
+        $pdo->prepare("INSERT INTO INTEGRACAO_V8_REGISTRO_SIMULACAO (ID_FILA, CPF, CONFIG_ID, NOME_TABELA, MARGEM_DISPONIVEL, TIPO_SIMULACAO, SIMULATION_ID, STATUS_SIMULATION_ID, DATA_SIMULATION_ID, STATUS_CONFIG_ID, VALOR_LIBERADO, VALOR_PARCELA, PRAZO_SIMULACAO) VALUES (?, ?, ?, ?, ?, 'PADRÃO IA', ?, ?, NOW(), 'MARGEM OK', ?, ?, ?)")->execute([$id_fila, $cpf, $tab['config_id'], $tab['nome_tb_final'], $margem, $sim_id, $status_simulacao, (float)$valor_lib, (float)$valor_parc, $prazo_padrao]);
         $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA SET STATUS_V8 = 'OK-SIMULACAO', ULTIMA_ATUALIZACAO = NOW() WHERE ID = ?")->execute([$id_fila]);
     }
     
+    // AGORA SIM, se teve erro na V8, avisamos a IA interrompendo
+    if ($httpS >= 400 || empty($jsonS)) {
+        $erroDetalhado = extrairErroV8($jsonS);
+        throw new Exception("Erro Simulação: " . $erroDetalhado);
+    }
+
     if (!empty($credencialIA['NOTIF_SIMULACAO'])) {
         $stmtNome = $pdo->prepare("SELECT nome FROM dados_cadastrais WHERE cpf = ? LIMIT 1");
         $stmtNome->execute([$cpf]);
@@ -418,6 +428,11 @@ try {
                 if($margem_total > 0) $payload_sim['installment_face_value'] = $margem_total;
             }
 
+            // CORREÇÃO 3: Trava de segurança para impedir simulação sem valor e erro feio da Dataprev
+            if (empty($payload_sim['installment_face_value']) && empty($payload_sim['disbursed_amount'])) {
+                throw new Exception("Nenhum valor de parcela (margem) ou valor líquido foi informado ou localizado no banco para realizar a simulação.");
+            }
+
             $chS = curl_init("https://bff.v8sistema.com/private-consignment/simulation"); curl_setopt($chS, CURLOPT_RETURNTRANSFER, true); curl_setopt($chS, CURLOPT_POST, true); curl_setopt($chS, CURLOPT_POSTFIELDS, json_encode($payload_sim)); curl_setopt($chS, CURLOPT_HTTPHEADER, ["Authorization: Bearer $tokenV8", "Content-Type: application/json"]); $resS = curl_exec($chS); $httpS = curl_getinfo($chS, CURLINFO_HTTP_CODE); curl_close($chS); $jsonS = json_decode($resS, true);
             
             if ($httpS >= 400 || empty($jsonS)) { $erroDetalhado = extrairErroV8($jsonS); throw new Exception("Erro Simulação: " . $erroDetalhado); }
@@ -451,6 +466,15 @@ try {
 
             $payload_sim = [ 'consult_id' => $consult_id, 'config_id' => $tab['config_id'], 'number_of_installments' => $prazo ];
             if ($valor_parcela > 0) $payload_sim['installment_face_value'] = $valor_parcela; elseif ($valor_liquido > 0) $payload_sim['disbursed_amount'] = $valor_liquido;
+            else {
+                $stmtM = $pdo->prepare("SELECT MARGEM_DISPONIVEL FROM INTEGRACAO_V8_REGISTRO_SIMULACAO WHERE ID_FILA = (SELECT ID FROM INTEGRACAO_V8_REGISTROCONSULTA WHERE CONSULT_ID = ? LIMIT 1) ORDER BY ID DESC LIMIT 1"); $stmtM->execute([$consult_id]); $margem_total = (float)$stmtM->fetchColumn();
+                if($margem_total > 0) $payload_sim['installment_face_value'] = $margem_total;
+            }
+
+            // CORREÇÃO 3: Trava de segurança no envio da proposta também
+            if (empty($payload_sim['installment_face_value']) && empty($payload_sim['disbursed_amount'])) {
+                throw new Exception("Nenhum valor de parcela (margem) ou valor líquido foi informado ou localizado no banco para formalizar a proposta.");
+            }
 
             $chS = curl_init("https://bff.v8sistema.com/private-consignment/simulation"); curl_setopt($chS, CURLOPT_RETURNTRANSFER, true); curl_setopt($chS, CURLOPT_POST, true); curl_setopt($chS, CURLOPT_POSTFIELDS, json_encode($payload_sim)); curl_setopt($chS, CURLOPT_HTTPHEADER, ["Authorization: Bearer $tokenV8", "Content-Type: application/json"]); $resS = curl_exec($chS); curl_close($chS); $jsonS = json_decode($resS, true);
             $sim_obj = isset($jsonS[0]) ? $jsonS[0] : $jsonS;
