@@ -168,6 +168,15 @@
                         <label class="fw-bold small text-dark mb-1">Limite Diário:</label>
                         <input type="number" name="limite_diario" class="form-control form-control-sm border-primary" value="0" title="0 = Sem Limite" placeholder="0 = Sem Limite">
                     </div>
+                    <div class="col-md-3">
+                        <label class="fw-bold small text-danger mb-1"><i class="fas fa-moon"></i> Horário Inativação:</label>
+                        <div class="d-flex align-items-center gap-1">
+                            <input type="time" name="hora_inativacao_inicio" class="form-control form-control-sm border-danger" title="Início do período de pausa obrigatória">
+                            <span class="fw-bold text-muted small">até</span>
+                            <input type="time" name="hora_inativacao_fim" class="form-control form-control-sm border-danger" title="Fim do período de pausa obrigatória">
+                        </div>
+                        <small class="text-muted" style="font-size:10px;">Lote pausa automaticamente neste intervalo</small>
+                    </div>
                     <div class="col-md-3 pb-0">
                         <div class="form-check w-100 border p-1 rounded bg-white border-dark shadow-sm mb-0">
                             <input class="form-check-input ms-1" type="checkbox" id="v8_somente_simular" name="somente_simular" value="1">
@@ -334,6 +343,16 @@
                     <div class="col-md-4">
                         <label class="fw-bold small text-dark mb-1">Limite Diário (0 = Sem Limite):</label>
                         <input type="number" id="edit_limite_diario" class="form-control border-primary">
+                    </div>
+                    <div class="col-md-8">
+                        <label class="fw-bold small text-danger mb-1"><i class="fas fa-moon"></i> Horário Inativação (pausa obrigatória):</label>
+                        <div class="d-flex align-items-center gap-2">
+                            <input type="time" id="edit_hora_inativacao_inicio" class="form-control border-danger" title="Início">
+                            <span class="fw-bold text-muted">até</span>
+                            <input type="time" id="edit_hora_inativacao_fim" class="form-control border-danger" title="Fim">
+                            <button type="button" class="btn btn-sm btn-outline-secondary border-dark" onclick="document.getElementById('edit_hora_inativacao_inicio').value=''; document.getElementById('edit_hora_inativacao_fim').value='';" title="Remover inativação"><i class="fas fa-times"></i></button>
+                        </div>
+                        <small class="text-muted" style="font-size:10px;">Deixe em branco para desativar. Suporta intervalo que cruza meia-noite.</small>
                     </div>
                     <div class="col-md-4">
                         <label class="fw-bold small text-dark mb-1">Processamento:</label>
@@ -738,6 +757,15 @@
                     agendamentoInfo = `<span class="badge bg-warning text-dark ms-1">🔁 ${l.HORA_INICIO_DIARIO || '--:--'} (${diasLabel})</span>`;
                 }
                 if(l.LIMITE_DIARIO > 0) agendamentoInfo += `<span class="badge bg-info text-dark ms-1">Lmt: ${l.LIMITE_DIARIO} (Hj: ${l.PROCESSADOS_HOJE})</span>`;
+                let hiIni = (l.HORA_INATIVACAO_INICIO || '').substring(0,5);
+                let hiFim = (l.HORA_INATIVACAO_FIM    || '').substring(0,5);
+                let emInativacao = false;
+                if (hiIni && hiFim) {
+                    let now = new Date(); let hNow = now.getHours()*100 + now.getMinutes();
+                    let hIni = parseInt(hiIni.replace(':','')); let hFim = parseInt(hiFim.replace(':',''));
+                    emInativacao = (hIni < hFim) ? (hNow >= hIni && hNow < hFim) : (hNow >= hIni || hNow < hFim);
+                    agendamentoInfo += `<span class="badge ms-1 ${emInativacao ? 'bg-danger' : 'bg-secondary'}" title="Pausa obrigatória: ${hiIni} até ${hiFim}"><i class="fas fa-moon"></i> ${hiIni}–${hiFim}${emInativacao ? ' ⛔' : ''}</span>`;
+                }
 
                 let statusAtual = l.STATUS_FILA || l.status_fila || l.Status_Fila;
                 if (!statusAtual) statusAtual = 'PENDENTE';
@@ -852,6 +880,9 @@
                 let btnPausarBtn = btnPausarBtnRaw;
                 if (isDiario && (statusAtual === 'PAUSADO' || statusAtual === 'AGENDADO')) {
                     btnPausarBtn = `<button class="dropdown-item fw-bold text-muted" disabled title="Lote Diário: o robô inicia automaticamente no horário configurado"><i class="fas fa-play me-2"></i> Ligar Robô (Automático)</button>`;
+                }
+                if (emInativacao && (statusAtual === 'PAUSADO' || statusAtual === 'AGUARDANDO_DIARIO')) {
+                    btnPausarBtn = `<button class="dropdown-item fw-bold text-danger" disabled title="Horário de inativação ativo (${hiIni} até ${hiFim}). Não é possível ligar o lote neste intervalo."><i class="fas fa-moon me-2"></i> Inativação Ativa (${hiIni}–${hiFim})</button>`;
                 }
 
                 let btnTopEditar = '';
@@ -1024,6 +1055,8 @@
         document.getElementById('edit_limite_diario').value = lote.LIMITE_DIARIO || lote.limite_diario || 0;
 
         document.getElementById('edit_somente_simular').checked = (lote.SOMENTE_SIMULAR == 1 || lote.somente_simular == 1);
+        document.getElementById('edit_hora_inativacao_inicio').value = (lote.HORA_INATIVACAO_INICIO || lote.hora_inativacao_inicio || '').substring(0,5);
+        document.getElementById('edit_hora_inativacao_fim').value    = (lote.HORA_INATIVACAO_FIM    || lote.hora_inativacao_fim    || '').substring(0,5);
         document.getElementById('edit_atualizar_telefone').checked = (lote.ATUALIZAR_TELEFONE == 1 || lote.atualizar_telefone == 1);
         document.getElementById('edit_enviar_whats').checked = (lote.ENVIAR_WHATSAPP == 1 || lote.enviar_whatsapp == 1);
         document.getElementById('edit_enviar_arquivo_whatsapp').checked = (lote.ENVIAR_ARQUIVO_WHATSAPP == 1 || lote.enviar_arquivo_whatsapp == 1);
@@ -1046,6 +1079,8 @@
             dias_mes_diario: document.getElementById('edit_dias_mes_diario').value,
             limite_diario: document.getElementById('edit_limite_diario').value,
             somente_simular: document.getElementById('edit_somente_simular').checked ? 1 : 0,
+            hora_inativacao_inicio: document.getElementById('edit_hora_inativacao_inicio').value || '',
+            hora_inativacao_fim:    document.getElementById('edit_hora_inativacao_fim').value    || '',
             atualizar_telefone: document.getElementById('edit_atualizar_telefone').checked ? 1 : 0,
             enviar_whats: document.getElementById('edit_enviar_whats').checked ? 1 : 0,
             enviar_arquivo_whatsapp: document.getElementById('edit_enviar_arquivo_whatsapp').checked ? 1 : 0

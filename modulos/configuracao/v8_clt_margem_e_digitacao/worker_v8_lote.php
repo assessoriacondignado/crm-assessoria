@@ -56,6 +56,8 @@ limparLogsAntigos($_SERVER['DOCUMENT_ROOT'] . '/logs_v8/logs_automacao', 7200); 
 // Garante colunas novas sem quebrar instalações existentes
 try { $pdo->exec("ALTER TABLE INTEGRACAO_V8_REGISTROCONSULTA_LOTE ADD COLUMN DATA_CONSENTIMENTO DATETIME NULL"); } catch(Exception $e){}
 try { $pdo->exec("ALTER TABLE INTEGRACAO_V8_IMPORTACAO_LOTE ADD COLUMN AUTO_REPROCESS_CHECKPOINT INT NOT NULL DEFAULT 0"); } catch(Exception $e){}
+try { $pdo->exec("ALTER TABLE INTEGRACAO_V8_IMPORTACAO_LOTE ADD COLUMN HORA_INATIVACAO_INICIO TIME NULL"); } catch(Exception $e){}
+try { $pdo->exec("ALTER TABLE INTEGRACAO_V8_IMPORTACAO_LOTE ADD COLUMN HORA_INATIVACAO_FIM TIME NULL"); } catch(Exception $e){}
 
 $user_cpf = preg_replace('/\D/', '', $_GET['user_cpf'] ?? '');
 if (empty($user_cpf)) { exit; }
@@ -87,7 +89,20 @@ function gerarTokenV8Lote($chave_id, $pdo) {
     return $json['access_token'] ?? null;
 }
 
-function extrairValorSeguro($arr, $keys) { 
+// Retorna true se o horário atual está dentro da janela de inativação do lote.
+// Suporta janelas que cruzam meia-noite (ex: 22:00 a 06:00).
+function v8EmHorarioInativacao($lote) {
+    $inicio = $lote['HORA_INATIVACAO_INICIO'] ?? '';
+    $fim    = $lote['HORA_INATIVACAO_FIM']    ?? '';
+    if (empty($inicio) || empty($fim)) return false;
+    $agora = (int)date('Hi'); // ex: 2230
+    $i     = (int)str_replace(':', '', substr($inicio, 0, 5));
+    $f     = (int)str_replace(':', '', substr($fim,    0, 5));
+    if ($i < $f) { return ($agora >= $i && $agora < $f); }   // ex: 08:00–18:00
+    else         { return ($agora >= $i || $agora < $f); }   // cruza meia-noite
+}
+
+function extrairValorSeguro($arr, $keys) {
     if(!is_array($arr)) return null; 
     foreach($keys as $k) { if(isset($arr[$k]) && is_numeric($arr[$k])) return (float)$arr[$k]; } 
     foreach($arr as $v) { if(is_array($v)) { $res = extrairValorSeguro($v, $keys); if($res !== null) return $res; } } 
@@ -113,6 +128,19 @@ while(true) {
 
     $id_lote = $lote['ID'];
     $chave_id = $lote['CHAVE_ID'];
+
+    // =========================================================================
+    // TRAVA DE HORÁRIO DE INATIVAÇÃO
+    // =========================================================================
+    if (v8EmHorarioInativacao($lote)) {
+        $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PAUSADO' WHERE ID = ?")->execute([$id_lote]);
+        gravarLogIntegracao('logs_consulta_lote', 'sistema', 'INATIVACAO HORARIO', 'n/a',
+            "inicio={$lote['HORA_INATIVACAO_INICIO']} fim={$lote['HORA_INATIVACAO_FIM']}",
+            'Lote pausado automaticamente pelo horário de inativação.', 0);
+        flock($fp, LOCK_UN); fclose($fp); exit;
+    }
+    // =========================================================================
+
     $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PROCESSANDO' WHERE ID = ?")->execute([$id_lote]);
 
     // =========================================================================
