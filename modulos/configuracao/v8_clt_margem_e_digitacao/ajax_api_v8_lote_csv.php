@@ -497,7 +497,7 @@ try {
             ob_end_clean(); 
             header('Content-Type: text/csv; charset=utf-8'); 
             $somente_simulados = isset($_GET['somente_simulados']) && $_GET['somente_simulados'] == '1';
-            $sufixo_arquivo = $somente_simulados ? 'ComValorLiquido' : 'Tudo';
+            $sufixo_arquivo = $somente_simulados ? 'ComMargem' : 'Tudo';
             header('Content-Disposition: attachment; filename="Exportacao_V8_' . $sufixo_arquivo . '_' . date('dmY_Hi') . '.csv"');
 
             $output = fopen('php://output', 'w');
@@ -513,7 +513,7 @@ try {
             fputcsv($output, $cabecalho, ";");
 
             $inQuery = implode(',', array_fill(0, count($lote_ids), '?'));
-            $filtro_simulados = $somente_simulados ? " AND c.VALOR_LIQUIDO IS NOT NULL AND c.VALOR_LIQUIDO > 0 " : "";
+            $filtro_simulados = $somente_simulados ? " AND c.VALOR_MARGEM IS NOT NULL AND c.VALOR_MARGEM > 1 " : "";
             $sqlCpfs = "
                 SELECT c.*, l.NOME_IMPORTACAO, ca.TABELA_PADRAO
                 FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE c
@@ -602,7 +602,7 @@ try {
             for ($i = 1; $i <= 10; $i++) { $cabecalho[] = "CELULAR $i"; }
             fputcsv($output, $cabecalho, ";");
 
-            $sqlCpfs = "SELECT c.*, ? as NOME_IMPORTACAO, ? as TABELA_PADRAO_LOTE FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE c WHERE c.LOTE_ID = ? AND c.VALOR_LIQUIDO IS NOT NULL AND c.VALOR_LIQUIDO > 0";
+            $sqlCpfs = "SELECT c.*, ? as NOME_IMPORTACAO, ? as TABELA_PADRAO_LOTE FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE c WHERE c.LOTE_ID = ? AND c.VALOR_MARGEM IS NOT NULL AND c.VALOR_MARGEM > 1";
             $stmtCpfs = $pdo->prepare($sqlCpfs);
             $stmtCpfs->execute([$lote['NOME_IMPORTACAO'], $lote['TABELA_PADRAO'] ?? '', $id_lote]);
 

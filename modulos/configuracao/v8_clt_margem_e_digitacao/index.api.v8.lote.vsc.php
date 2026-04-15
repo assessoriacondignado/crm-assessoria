@@ -234,8 +234,8 @@
                 </a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item fw-bold" href="#" onclick="v8ExportarTudoLotes(true)">
-                    <i class="fas fa-check-circle me-2 text-success"></i> Exportar com Valor Líquido
-                    <div class="small text-muted fw-normal">Somente CPFs com simulação aprovada</div>
+                    <i class="fas fa-check-circle me-2 text-success"></i> Exportar com Margem
+                    <div class="small text-muted fw-normal">Somente CPFs com margem acima de R$ 1,00</div>
                 </a></li>
             </ul>
         </div>
@@ -640,7 +640,7 @@
     // --- FUNÇÃO EXPORTAR TUDO (MÁSTER) ---
     function v8ExportarTudoLotes(somente_simulados = false) {
         const msg = somente_simulados
-            ? "Deseja exportar somente os CPFs com VALOR LÍQUIDO (simulação aprovada) dos lotes filtrados?"
+            ? "Deseja exportar somente os CPFs com MARGEM acima de R$ 1,00 dos lotes filtrados?"
             : "Deseja exportar todos os CPFs dos lotes que estão filtrados na tabela atualmente?";
         if(!confirm(msg + "\n\nDependendo da quantidade de CPFs, o download pode levar alguns segundos para começar.")) return;
 
