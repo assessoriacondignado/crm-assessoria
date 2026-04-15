@@ -467,6 +467,13 @@ function v8SimularLote($cpfRow, $config_id_sim, $consult_id_sim, $margem_sim, $i
             unset($payload_sim_array['installment_face_value']); $payload_sim_array['disbursed_amount'] = 50000; $tentativas++; continue;
         } elseif (strpos($erroMsg, 'desembolso') !== false) {
             $erro_fatal = 'A simulação não passou nos critérios de elegibilidade por valor mínimo de desembolso.'; break;
+        } elseif (strpos($erroMsg, 'parcelas') !== false && (strpos($erroMsg, 'maior que 12') !== false || strpos($erroMsg, 'número de parcelas') !== false || strpos($erroMsg, 'numero de parcelas') !== false)) {
+            if (($payload_sim_array['number_of_installments'] ?? 0) > 12) {
+                $payload_sim_array['number_of_installments'] = 12;
+                $observacao_final = 'Prazo ajustado para 12 meses (máximo permitido pela API).';
+                $tentativas++; continue;
+            }
+            $erro_fatal = $jsonS['detail'] ?? $jsonS['message'] ?? mb_substr($resS, 0, 200); break;
         } elseif (strpos($erroMsg, 'margem dispon') !== false || strpos($erroMsg, 'maior que a margem') !== false) {
             $observacao_final = 'O valor da parcela não pode ser maior que a margem disponível do funcionário (parcela enquadrada em lup 10%)';
             if (isset($payload_sim_array['installment_face_value'])) { $payload_sim_array['installment_face_value'] = round($payload_sim_array['installment_face_value'] * 0.90, 2); }

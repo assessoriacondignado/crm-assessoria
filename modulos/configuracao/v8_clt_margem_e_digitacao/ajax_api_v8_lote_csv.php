@@ -910,9 +910,13 @@ try {
             ob_end_clean(); echo json_encode(['success' => true, 'msg' => 'CPFs aguardando Dataprev enviados para reverificação.', 'cpf_dono' => $cpf_dono]); exit;
 
         case 'reprocessar_erros':
-            // Reprocessa apenas CPFs com status de ERRO (não inclui AGUARDANDO DATAPREV)
+            // Reprocessa apenas CPFs com ERRO gerado nas últimas 24h
             $id_lote = (int)$_POST['id_lote'];
-            $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'RECUPERAR V8', OBSERVACAO = 'Reprocessando erro: recuperando margem/simulação...' WHERE LOTE_ID = ? AND STATUS_V8 IN ('ERRO CONSULTA', 'ERRO MARGEM', 'ERRO SIMULACAO')")->execute([$id_lote]);
+            $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE
+                SET STATUS_V8 = 'RECUPERAR V8', OBSERVACAO = 'Reprocessando erro (últimas 24h): recuperando margem/simulação...'
+                WHERE LOTE_ID = ?
+                  AND STATUS_V8 IN ('ERRO CONSULTA', 'ERRO MARGEM', 'ERRO SIMULACAO')
+                  AND COALESCE(DATA_SIMULACAO, DATA_CONSENTIMENTO) >= NOW() - INTERVAL 24 HOUR")->execute([$id_lote]);
             $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PENDENTE' WHERE ID = ?")->execute([$id_lote]);
             $stmtDono = $pdo->prepare("SELECT CPF_USUARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?");
             $stmtDono->execute([$id_lote]); $cpf_dono = $stmtDono->fetchColumn();
