@@ -110,8 +110,60 @@ function extrairValorSeguro($arr, $keys) {
     return null; 
 }
 
+/**
+ * Busca um consentimento existente na V8 percorrendo TODAS as páginas da listagem.
+ * Retorna o consult_id encontrado ou null.
+ *
+ * @param string $cpf_busca       CPF (11 dígitos, sem formatação)
+ * @param array  $headers         Headers de autenticação (Bearer token)
+ * @param bool   $ignorar_rejeito Se true, pula itens com status REJECTED/DENIED/CANCELED/ERROR
+ * @param string $cpf_log         CPF para identificação nos logs
+ */
+function buscarConsentimentoV8ComPaginacao($cpf_busca, $headers, $ignorar_rejeito = true, $cpf_log = 'sistema') {
+    $pagina_atual = 1;
+    $max_paginas  = 20; // Segurança: limita a 2.000 registros (20 × 100)
+
+    while ($pagina_atual <= $max_paginas) {
+        $url = "https://bff.v8sistema.com/private-consignment/consult?limit=100&page={$pagina_atual}";
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        $res  = curl_exec($ch);
+        $http = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+
+        $json = json_decode($res, true);
+        gravarLogIntegracao('logs_consulta_lote', $cpf_log,
+            "BUSCA PAGINADA V8 (pag {$pagina_atual})",
+            $url, "GET", $json, $http);
+
+        if ($http !== 200 || empty($json)) break;
+
+        $lista = $json['data'] ?? $json['items'] ?? [];
+
+        foreach ($lista as $item) {
+            $doc_api     = preg_replace('/\D/', '', $item['documentNumber'] ?? $item['borrowerDocumentNumber'] ?? $item['cpf'] ?? '');
+            $status_item = strtoupper($item['status'] ?? '');
+
+            if ($doc_api !== $cpf_busca) continue;
+
+            if ($ignorar_rejeito && in_array($status_item, ['REJECTED', 'DENIED', 'CANCELED', 'ERROR'])) continue;
+
+            return $item['id'] ?? null;
+        }
+
+        // Verifica se há próxima página
+        $has_next = $json['pages']['hasNext'] ?? false;
+        if (!$has_next) break;
+
+        $pagina_atual++;
+    }
+
+    return null;
+}
+
 $start_time = time();
-$target_runtime = 280; 
+$target_runtime = 280;
 $tokens_cache = [];
 
 while(true) {
@@ -263,27 +315,8 @@ while(true) {
     if ($cpfFase15 = $stmtF15->fetch(PDO::FETCH_ASSOC)) {
         $work_found = true;
 
-        $chL = curl_init("https://bff.v8sistema.com/private-consignment/consult?limit=100&page=1");
-        curl_setopt($chL, CURLOPT_RETURNTRANSFER, true); curl_setopt($chL, CURLOPT_HTTPHEADER, $headers);
-        $resL = curl_exec($chL); $httpL = curl_getinfo($chL, CURLINFO_HTTP_CODE); curl_close($chL);
-        $jsonL = json_decode($resL, true);
-
-        gravarLogIntegracao('logs_consulta_lote', $cpfFase15['CPF'], 'FASE 1.5: RECUPERAR V8 (SOMENTE SIMULAR)', "GET /consult", "Busca de CPF", $jsonL, $httpL);
-
-        $lista = $jsonL['data'] ?? $jsonL['items'] ?? [];
-        $consult_id = null;
-
-        if(count($lista) > 0) {
-            foreach ($lista as $item) {
-                $doc_api = preg_replace('/\D/', '', $item['documentNumber'] ?? $item['borrowerDocumentNumber'] ?? $item['cpf'] ?? '');
-                $status_item = strtoupper($item['status'] ?? '');
-
-                if ($doc_api === $cpfFase15['CPF'] && !in_array($status_item, ['REJECTED', 'DENIED', 'CANCELED', 'ERROR'])) {
-                    $consult_id = $item['id'] ?? null;
-                    break;
-                }
-            }
-        }
+        // Busca paginada — percorre TODAS as páginas até encontrar o CPF ou esgotar a listagem
+        $consult_id = buscarConsentimentoV8ComPaginacao($cpfFase15['CPF'], $headers, true, $cpfFase15['CPF']);
 
         if ($consult_id) {
             $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'AGUARDANDO MARGEM', CONSULT_ID = ?, OBSERVACAO = 'Consentimento recuperado na V8. Lendo margem...' WHERE ID = ?")->execute([$consult_id, $cpfFase15['ID']]);
@@ -328,18 +361,8 @@ while(true) {
 
             if ($consult_id || ($http >= 400 && strpos($res, 'consult_already_exists') !== false)) {
                 if (!$consult_id) {
-                    $chL = curl_init("https://bff.v8sistema.com/private-consignment/consult?limit=100&page=1");
-                    curl_setopt($chL, CURLOPT_RETURNTRANSFER, true); curl_setopt($chL, CURLOPT_HTTPHEADER, $headers);
-                    $resL = curl_exec($chL); curl_close($chL); $jsonL = json_decode($resL, true);
-
-                    $lista = $jsonL['data'] ?? $jsonL['items'] ?? [];
-                    foreach ($lista as $item) {
-                        $doc_api = preg_replace('/\D/', '', $item['documentNumber'] ?? $item['borrowerDocumentNumber'] ?? $item['cpf'] ?? '');
-                        if ($doc_api === $cpfFase1['CPF']) {
-                            $consult_id = $item['id'] ?? null;
-                            break;
-                        }
-                    }
+                    // consult_already_exists: busca paginada para encontrar o ID existente
+                    $consult_id = buscarConsentimentoV8ComPaginacao($cpfFase1['CPF'], $headers, false, $cpfFase1['CPF']);
                 }
                 if ($consult_id) {
                     $chA = curl_init("https://bff.v8sistema.com/private-consignment/consult/{$consult_id}/authorize"); curl_setopt($chA, CURLOPT_RETURNTRANSFER, true); curl_setopt($chA, CURLOPT_POST, true); curl_setopt($chA, CURLOPT_POSTFIELDS, json_encode([])); curl_setopt($chA, CURLOPT_HTTPHEADER, $headers);
