@@ -942,18 +942,31 @@ try {
             if ($_POST['acao_lote'] === 'PAUSAR') {
                 $acaoLote = 'PAUSADO';
             } else {
-                // Lotes DIÁRIO retomam aguardando o horário de início
-                $stmtTipo = $pdo->prepare("SELECT AGENDAMENTO_TIPO, HORA_INICIO_DIARIO, HORA_FIM_DIARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?");
+                // Validação: horários obrigatórios para DIÁRIO
+                $stmtTipo = $pdo->prepare("SELECT AGENDAMENTO_TIPO, HORA_INICIO_DIARIO, HORA_FIM_DIARIO, DIAS_MES_DIARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?");
                 $stmtTipo->execute([$id_lote]);
                 $dadosRetomar = $stmtTipo->fetch(PDO::FETCH_ASSOC);
                 if (!$dadosRetomar) throw new Exception("Lote não encontrado.");
                 if (empty($dadosRetomar['HORA_INICIO_DIARIO']) || empty($dadosRetomar['HORA_FIM_DIARIO'])) {
                     throw new Exception("Configure o horário de início e fim antes de ligar o robô.");
                 }
-                $acaoLote = 'AGUARDANDO_DIARIO';
+
+                // Se o horário atual está dentro da janela permitida, inicia imediatamente
+                // Caso contrário, aguarda o horário de início agendado
+                $horaAtual = date('H:i');
+                $hIni = substr($dadosRetomar['HORA_INICIO_DIARIO'], 0, 5);
+                $hFim = substr($dadosRetomar['HORA_FIM_DIARIO'], 0, 5);
+
+                if ($horaAtual >= $hIni && $horaAtual < $hFim) {
+                    // Dentro da janela: inicia direto
+                    $acaoLote = 'PENDENTE';
+                } else {
+                    // Fora da janela: aguarda o horário de início
+                    $acaoLote = 'AGUARDANDO_DIARIO';
+                }
             }
             $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = ? WHERE ID = ?")->execute([$acaoLote, $id_lote]);
-            
+
             $stmtDono = $pdo->prepare("SELECT CPF_USUARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?");
             $stmtDono->execute([$id_lote]); $cpf_dono = $stmtDono->fetchColumn();
 

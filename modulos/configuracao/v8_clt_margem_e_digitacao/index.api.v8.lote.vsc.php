@@ -636,21 +636,11 @@
                 if (!statusAtual) statusAtual = 'PENDENTE';
                 statusAtual = String(statusAtual).toUpperCase();
 
-                let agendamentoTipoAtual = l.AGENDAMENTO_TIPO || l.agendamento_tipo || '';
-                if (statusAtual === 'PENDENTE' && agendamentoTipoAtual !== 'IMEDIATO') {
-                    statusAtual = 'AGENDADO';
-                }
-                // DIÁRIO aguardando horário aparece como AGUARDANDO_DIARIO
-                if (statusAtual === 'AGUARDANDO_DIARIO') { statusAtual = 'AGUARDANDO_DIARIO'; }
-
                 let idLoteReal = l.ID || l.id;
 
                 if (statusAtual === 'AGUARDANDO_DIARIO') {
                     badge = `<span class="badge bg-info text-dark border border-dark"><i class="fas fa-clock me-1"></i> AGUARDANDO HORÁRIO</span>`;
                     btnPausarLi = `<li><button class="dropdown-item fw-bold text-secondary" onclick="v8PausarRetomarLote(${idLoteReal}, 'PAUSAR')"><i class="fas fa-pause me-2"></i> Pausar Diário</button></li>`;
-                } else if (statusAtual === 'AGENDADO') {
-                    badge = `<span class="badge bg-secondary border border-dark text-white"><i class="fas fa-calendar-alt"></i> AGENDADO</span>`;
-                    btnPausarLi = `<li><button class="dropdown-item fw-bold text-secondary" onclick="v8PausarRetomarLote(${idLoteReal}, 'PAUSAR')"><i class="fas fa-pause me-2"></i> Pausar (Cancelar Agend.)</button></li>`;
                 } else if (statusAtual === 'PROCESSANDO') { 
                     temRodando = true; 
                     badge = `<span class="badge bg-primary shadow-sm"><i class="fas fa-cogs fa-spin"></i> PROCESSANDO</span>`; 
@@ -750,9 +740,11 @@
                 if (isDiario && statusAtual === 'PAUSADO') {
                     btnPausarBtn = `<button class="dropdown-item fw-bold text-success" onclick="v8PausarRetomarLote(${idLoteReal}, 'RETOMAR')"><i class="fas fa-play me-2"></i> Ligar Robô</button>`;
                 }
-                // DIÁRIO aguardando: só pode pausar
+                // DIÁRIO aguardando horário: operador pode pausar ou ligar manualmente
                 if (isDiario && statusAtual === 'AGUARDANDO_DIARIO') {
-                    btnPausarBtn = `<button class="dropdown-item fw-bold text-secondary" onclick="v8PausarRetomarLote(${idLoteReal}, 'PAUSAR')"><i class="fas fa-pause me-2"></i> Pausar Robô</button>`;
+                    btnPausarBtn = `
+                        <button class="dropdown-item fw-bold text-success" onclick="v8PausarRetomarLote(${idLoteReal}, 'RETOMAR')"><i class="fas fa-play me-2"></i> Ligar Agora</button>
+                        <button class="dropdown-item fw-bold text-secondary" onclick="v8PausarRetomarLote(${idLoteReal}, 'PAUSAR')"><i class="fas fa-pause me-2"></i> Pausar Robô</button>`;
                 }
 
                 let btnTopEditar = '';
