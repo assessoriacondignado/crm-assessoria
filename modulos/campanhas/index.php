@@ -413,9 +413,9 @@ include $caminho_header;
                             <div class="card-header bg-primary text-white py-2 rounded-0">
                                 <h6 class="mb-0 fw-bold text-uppercase" style="font-size: 0.85rem;"><i class="fas fa-users me-2"></i> Operadores Permitidos</h6>
                             </div>
-                            <div class="card-body bg-white p-3">
-                                <label class="fw-bold small mb-1 text-primary">Vincular Operadores (Segure CTRL para vários)</label>
-                                <select name="cpfs_usuarios[]" id="form_cpf_usuario" class="form-select border-primary fw-bold rounded-0" multiple style="height: 140px;"></select>
+                            <div class="card-body bg-white p-2">
+                                <label class="fw-bold small mb-2 text-primary d-block">Vincular Operadores:</label>
+                                <div id="form_cpf_usuario" class="border border-primary rounded-0 overflow-auto" style="max-height:150px;"></div>
                             </div>
                         </div>
 
@@ -441,13 +441,16 @@ include $caminho_header;
                             <div class="card-header bg-warning text-dark py-2 rounded-0">
                                 <h6 class="mb-0 fw-bold text-uppercase" style="font-size: 0.85rem;"><i class="fas fa-tags me-2"></i> Status Permitidos na Campanha</h6>
                             </div>
-                            <div class="card-body bg-white p-3 d-flex flex-column">
-                                <small class="text-muted d-block mb-2 fw-bold"><i class="fas fa-info-circle text-primary me-1"></i> Selecione quais botões de status aparecerão para o operador na hora do atendimento. (Segure CTRL para vários)</small>
-                                <select name="ids_status[]" id="form_ids_status" class="form-select border-warning border-2 flex-grow-1 rounded-0 shadow-sm" multiple style="min-height: 250px;">
+                            <div class="card-body bg-white p-2 d-flex flex-column">
+                                <small class="text-muted d-block mb-2 fw-bold"><i class="fas fa-info-circle text-primary me-1"></i> Selecione quais botões de status aparecerão para o operador na hora do atendimento.</small>
+                                <div id="form_ids_status" class="border border-warning border-2 rounded-0 overflow-auto flex-grow-1" style="min-height:250px;">
                                     <?php foreach($lista_status_opcoes as $st): ?>
-                                        <option value="<?= $st['ID'] ?>" class="py-2 border-bottom border-light fw-bold px-2"><?= htmlspecialchars($st['NOME_STATUS']) ?></option>
+                                    <label class="d-flex align-items-center gap-2 px-3 py-2 border-bottom border-light fw-bold small w-100 mb-0" style="cursor:pointer;" onmouseover="this.style.background='#fffbe6'" onmouseout="this.style.background=''">
+                                        <input type="checkbox" name="ids_status[]" value="<?= $st['ID'] ?>" class="form-check-input mt-0 flex-shrink-0" style="width:18px;height:18px;">
+                                        <?= htmlspecialchars($st['NOME_STATUS']) ?>
+                                    </label>
                                     <?php endforeach; ?>
-                                </select>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -469,17 +472,20 @@ const todosUsuarios = <?= json_encode($lista_usuarios_js) ?>;
 const isMaster = <?= $perm_visao_global ? 'true' : 'false' ?>;
 const minhaEmpresaCnpj = '<?= $cnpj_minha_empresa ?>';
 
-function filtrarUsuariosPorEmpresa(cnpj) {
-    const select = document.getElementById('form_cpf_usuario');
-    select.innerHTML = '';
+function filtrarUsuariosPorEmpresa(cnpj, selecionados = []) {
+    const box = document.getElementById('form_cpf_usuario');
+    box.innerHTML = '';
     todosUsuarios.forEach(u => {
         if (!cnpj || u.CNPJ_VINCULO === cnpj) {
             let nomeEmp = u.NOME_EMP ? ` (${u.NOME_EMP})` : '';
-            let opt = document.createElement('option');
-            opt.value = u.CPF;
-            opt.text = u.NOME + nomeEmp;
-            opt.className = "py-1 fw-bold border-bottom border-light px-1";
-            select.add(opt);
+            let checked = selecionados.includes(u.CPF) ? 'checked' : '';
+            let label = document.createElement('label');
+            label.className = 'd-flex align-items-center gap-2 px-3 py-2 border-bottom border-light fw-bold small w-100 mb-0';
+            label.style.cursor = 'pointer';
+            label.onmouseover = function(){ this.style.background='#e8f0fe'; };
+            label.onmouseout  = function(){ this.style.background=''; };
+            label.innerHTML = `<input type="checkbox" name="cpfs_usuarios[]" value="${u.CPF}" class="form-check-input mt-0 flex-shrink-0" style="width:18px;height:18px;" ${checked}> ${u.NOME}${nomeEmp}`;
+            box.appendChild(label);
         }
     });
 }
@@ -504,13 +510,13 @@ function abrirModalCampanha() {
     document.getElementById('form_fim').value = '';
     document.getElementById('form_aleatorio').value = 'NAO';
     document.getElementById('form_status').value = 'ATIVO';
-    
+
     let elEmpresa = document.getElementById('form_cnpj_empresa');
     if (elEmpresa) elEmpresa.value = '';
-    if(isMaster) { filtrarUsuariosPorEmpresa(''); } else { filtrarUsuariosPorEmpresa(minhaEmpresaCnpj); }
-    
-    let selectStatus = document.getElementById('form_ids_status');
-    for (let i = 0; i < selectStatus.options.length; i++) { selectStatus.options[i].selected = false; }
+    if(isMaster) { filtrarUsuariosPorEmpresa('', []); } else { filtrarUsuariosPorEmpresa(minhaEmpresaCnpj, []); }
+
+    // Desmarca todos os status
+    document.querySelectorAll('#form_ids_status input[type=checkbox]').forEach(cb => cb.checked = false);
     modalCampanha.show();
 }
 
@@ -521,23 +527,20 @@ function editarCampanha(dados) {
     document.getElementById('form_fim').value = dados.DATA_FIM;
     document.getElementById('form_aleatorio').value = dados.PARAMETRO_INICIO_ALEATORIO;
     document.getElementById('form_status').value = dados.STATUS;
-    
+
     let elEmpresa = document.getElementById('form_cnpj_empresa');
     if (elEmpresa) elEmpresa.value = dados.CNPJ_EMPRESA || '';
-    if(isMaster) { filtrarUsuariosPorEmpresa(dados.CNPJ_EMPRESA || ''); } else { filtrarUsuariosPorEmpresa(minhaEmpresaCnpj); }
 
-    let selectUsu = document.getElementById('form_cpf_usuario');
-    if (dados.CPF_USUARIO) {
-        let cpfsArray = dados.CPF_USUARIO.split(',');
-        for (let i = 0; i < selectUsu.options.length; i++) { if (cpfsArray.includes(selectUsu.options[i].value)) { selectUsu.options[i].selected = true; } }
-    }
-    
-    let selectStatus = document.getElementById('form_ids_status');
-    for (let i = 0; i < selectStatus.options.length; i++) { selectStatus.options[i].selected = false; }
-    if (dados.IDS_STATUS_CONTATOS) {
-        let statusArray = dados.IDS_STATUS_CONTATOS.split(',');
-        for (let i = 0; i < selectStatus.options.length; i++) { if (statusArray.includes(selectStatus.options[i].value)) { selectStatus.options[i].selected = true; } }
-    }
+    // Operadores: reconstrói checkboxes já com os selecionados marcados
+    let cpfsArray = dados.CPF_USUARIO ? dados.CPF_USUARIO.split(',').map(s => s.trim()) : [];
+    if(isMaster) { filtrarUsuariosPorEmpresa(dados.CNPJ_EMPRESA || '', cpfsArray); } else { filtrarUsuariosPorEmpresa(minhaEmpresaCnpj, cpfsArray); }
+
+    // Status: marca os que estavam salvos
+    let statusArray = dados.IDS_STATUS_CONTATOS ? dados.IDS_STATUS_CONTATOS.split(',').map(s => s.trim()) : [];
+    document.querySelectorAll('#form_ids_status input[type=checkbox]').forEach(cb => {
+        cb.checked = statusArray.includes(cb.value);
+    });
+
     modalCampanha.show();
 }
 </script>
