@@ -907,10 +907,10 @@
 
                 let btnTopEditar = '';
                 if (!restricaoLoteEditar) {
-                    if (statusAtual === 'PAUSADO') {
+                    if (statusAtual === 'PAUSADO' || statusAtual === 'AGENDADO' || statusAtual === 'AGUARDANDO_DIARIO') {
                         btnTopEditar = `<button class="dropdown-item fw-bold text-primary" onclick="v8AbrirModalEditarLote(${idLoteReal})"><i class="fas fa-edit me-2"></i> Editar Lote</button>`;
                     } else {
-                        btnTopEditar = `<button class="dropdown-item text-muted" disabled title="O Lote precisa estar PAUSADO para edição"><i class="fas fa-edit me-2"></i> Editar Lote (requer pausa)</button>`;
+                        btnTopEditar = `<button class="dropdown-item text-muted" disabled title="O Lote precisa estar PAUSADO ou AGENDADO para edição"><i class="fas fa-edit me-2"></i> Editar Lote (requer pausa)</button>`;
                     }
                 }
 
