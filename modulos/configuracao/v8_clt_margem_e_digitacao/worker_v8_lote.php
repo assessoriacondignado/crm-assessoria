@@ -34,8 +34,8 @@ function gravarLogIntegracao($pasta_destino, $cpf, $fase, $url, $req, $res, $htt
     $dir = $_SERVER['DOCUMENT_ROOT'] . '/logs_v8/' . $pasta_destino;
     if (!is_dir($dir)) { @mkdir($dir, 0777, true); }
     
-    $data_nome_arquivo = date('d-m-Y_H\h'); 
-    $file = $dir . '/log_cpf_' . $cpf . '_' . $data_nome_arquivo . '.txt';
+    $data_nome_arquivo = date('d-m-Y_H\h');
+    $file = $dir . '/' . $cpf . '_' . $data_nome_arquivo . '.txt';
     
     $req_print = (is_array($req) || is_object($req)) ? json_encode($req, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE) : $req;
     $res_print = (is_array($res) || is_object($res)) ? json_encode($res, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE) : $res;
