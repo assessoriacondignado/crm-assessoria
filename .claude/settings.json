@@ -16,7 +16,8 @@
       "Bash(git commit -m ' *)",
       "Bash(mysql -u root -e ' *)",
       "Bash(mysql -e ' *)",
-      "Bash(php -r ' *)"
+      "Bash(php -r ' *)",
+      "Bash(php)"
     ]
   }
 }
