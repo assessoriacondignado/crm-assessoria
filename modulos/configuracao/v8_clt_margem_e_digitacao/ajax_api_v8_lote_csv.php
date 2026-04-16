@@ -513,7 +513,7 @@ try {
                 $linha = [ 
                     $row['NOME_IMPORTACAO'], 
                     $row['DATA_SIMULACAO'] ? date('d/m/Y H:i', strtotime($row['DATA_SIMULACAO'])) : '-', 
-                    $row['CPF'] . " ", 
+                    preg_replace('/(\d{3})(\d{3})(\d{3})(\d{2})/', '$1.$2.$3-$4', str_pad($row['CPF'], 11, '0', STR_PAD_LEFT)),
                     $row['NOME'], 
                     $row['NASCIMENTO'] ? date('d/m/Y', strtotime($row['NASCIMENTO'])) : '', 
                     $row['SEXO'] == 'male' ? 'MASCULINO' : 'FEMININO', 
@@ -595,7 +595,7 @@ try {
                 $linha = [
                     $row['LOTE_ID'],
                     $row['DATA_SIMULACAO'] ? date('d/m/Y H:i', strtotime($row['DATA_SIMULACAO'])) : '-',
-                    $row['CPF'] . " ",
+                    preg_replace('/(\d{3})(\d{3})(\d{3})(\d{2})/', '$1.$2.$3-$4', str_pad($row['CPF'], 11, '0', STR_PAD_LEFT)),
                     $row['NOME'],
                     $row['NASCIMENTO'] ? date('d/m/Y', strtotime($row['NASCIMENTO'])) : '',
                     ($row['SEXO'] ?? '') == 'male' ? 'MASCULINO' : (($row['SEXO'] ?? '') == 'female' ? 'FEMININO' : ''),
