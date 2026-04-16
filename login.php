@@ -188,21 +188,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ajax_action'])) {
             echo json_encode(['success' => false, 'message' => 'Este CPF já possui cadastro! Faça login ou recupere sua senha.']); exit;
         }
 
-        // Monta nome de usuário: EMPRESA.CLIENTE quando tem empresa, CPF quando não tem
-        $usuario_login = $cpf_padrao;
-        if ($tem_empresa) {
-            $primeiroNomeEmpresa = preg_replace('/[^A-Z0-9]/', '', strtoupper(strtok($nome_empresa, ' ')));
-            $primeiroNomeCliente = preg_replace('/[^A-Z0-9]/', '', strtoupper(strtok($nome, ' ')));
-            $usuario_login = $primeiroNomeEmpresa . '.' . $primeiroNomeCliente;
-            // Garante unicidade adicionando sufixo numérico se necessário
-            $baseUsuario = $usuario_login; $sufixo = 1;
-            while (true) {
-                $stmtU = $pdo->prepare("SELECT COUNT(*) FROM CLIENTE_USUARIO WHERE USUARIO = ?");
-                $stmtU->execute([$usuario_login]);
-                if ($stmtU->fetchColumn() == 0) break;
-                $usuario_login = $baseUsuario . $sufixo++;
-            }
+        // Empresa é obrigatória para criar usuário
+        if (!$tem_empresa) {
+            echo json_encode(['success' => false, 'message' => 'Para criar seu usuário de acesso, é obrigatório informar os dados da empresa (CNPJ).']); exit;
         }
+
+        // Monta nome de usuário: PRIMEIRANOMEEMPRESA.PRIMEIRONOME (ex: ASSESSORIA.JOAO)
+        $primeiroNomeEmpresa = preg_replace('/[^A-Z0-9]/', '', strtoupper(strtok($nome_empresa, ' ')));
+        $primeiroNomeCliente = preg_replace('/[^A-Z0-9]/', '', strtoupper(strtok($nome, ' ')));
+        $usuario_login = $primeiroNomeEmpresa . '.' . $primeiroNomeCliente;
+        // Garante unicidade adicionando sufixo numérico se necessário (ex: ASSESSORIA.JOAO2)
+        $baseUsuario = $usuario_login; $sufixo = 2;
+        while (true) {
+            $stmtU = $pdo->prepare("SELECT COUNT(*) FROM CLIENTE_USUARIO WHERE USUARIO = ?");
+            $stmtU->execute([$usuario_login]);
+            if ($stmtU->fetchColumn() == 0) break;
+            $usuario_login = $baseUsuario . $sufixo++;
+        }
+
+        // Monta nome com privacidade: ALEX*******LEAL
+        $partesNome = preg_split('/\s+/', $nome);
+        if (count($partesNome) >= 2) {
+            $nomePrivado = $partesNome[0] . '*******' . end($partesNome);
+        } else {
+            $nomePrivado = substr($nome, 0, 1) . str_repeat('*', max(3, mb_strlen($nome, 'UTF-8') - 2)) . substr($nome, -1);
+        }
+
+        // Monta CPF com privacidade: 065.***.***-90
+        $cpfPrivado = substr($cpf_padrao, 0, 3) . '.***.***-' . substr($cpf_padrao, -2);
 
         try {
             $pdo->beginTransaction();
@@ -211,24 +224,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ajax_action'])) {
             $stmt1 = $pdo->prepare("INSERT INTO CLIENTE_CADASTRO (CPF, NOME, CELULAR, SITUACAO, SALDO, CUSTO_CONSULTA) VALUES (?, ?, ?, 'ATIVO', 0.00, 0.50)");
             $stmt1->execute([$cpf_padrao, $nome, $celular_puro]);
 
-            // Insere Credencial de Usuário
+            // Insere Credencial de Usuário como CONSULTOR
             $senha_hash = password_hash($cpf_padrao, PASSWORD_DEFAULT);
             $stmt2 = $pdo->prepare("INSERT INTO CLIENTE_USUARIO (CPF, NOME, USUARIO, SENHA, CELULAR, EMAIL, GRUPO_USUARIOS, Situação, Tentativas) VALUES (?, ?, ?, ?, ?, ?, 'CONSULTOR', 'ativo', 0)");
             $stmt2->execute([$cpf_padrao, $nome, $usuario_login, $senha_hash, $celular_puro, $email]);
 
-            // Insere empresa e vincula o CPF caso informado
-            if ($tem_empresa) {
-                $pdo->prepare("INSERT INTO CLIENTE_EMPRESAS (CNPJ, NOME_CADASTRO, CELULAR) VALUES (?, ?, ?)")
-                    ->execute([$cnpj_puro, $nome_empresa, $celular_puro]);
-                $pdo->prepare("UPDATE CLIENTE_CADASTRO SET CNPJ = ? WHERE CPF = ?")
-                    ->execute([$cnpj_puro, $cpf_padrao]);
-            }
+            // Insere empresa e vincula ao usuário e cadastro do cliente
+            $pdo->prepare("INSERT INTO CLIENTE_EMPRESAS (CNPJ, NOME_CADASTRO, CELULAR) VALUES (?, ?, ?)")
+                ->execute([$cnpj_puro, $nome_empresa, $celular_puro]);
+            $pdo->prepare("UPDATE CLIENTE_CADASTRO SET CNPJ = ? WHERE CPF = ?")
+                ->execute([$cnpj_puro, $cpf_padrao]);
 
             $pdo->commit();
             $_SESSION['last_cadastro'] = time();
 
-            // Disparo W-API ao próprio usuário
-            $msgWhats = "🎉 *Cadastro Realizado com Sucesso!*\n\nOlá, *$nome*!\nSeja bem-vindo(a) ao portal Assessoria Consignado.\n\nSeu acesso foi liberado com o perfil de *Consultor*.\n\n👤 *Usuário:* $usuario_login\n\n🔒 *Atenção:* Por questões de segurança, não enviamos senhas.\nAcesse o site abaixo, clique em \"Esqueceu a senha?\" e faça o reset para criar a sua senha de acesso.\n\n🌐 Acesse: https://".$_SERVER['HTTP_HOST'];
+            // Disparo W-API ao próprio usuário com dados mascarados por privacidade
+            $msgWhats = "🎉 *Cadastro Realizado com Sucesso!*\n\n"
+                . "Olá!\n"
+                . "Seu acesso ao portal *Assessoria Consignado* foi criado com sucesso.\n\n"
+                . "👤 *Nome:* {$nomePrivado}\n"
+                . "🔢 *CPF:* {$cpfPrivado}\n"
+                . "🏢 *Empresa:* {$nome_empresa}\n\n"
+                . "👤 *Usuário de Acesso:* {$usuario_login}\n\n"
+                . "🔒 *Atenção:* Por questões de segurança, não enviamos senhas.\n"
+                . "Acesse o site, clique em \"Esqueceu a senha?\" e crie sua senha de acesso.\n\n"
+                . "🌐 Acesse: https://" . $_SERVER['HTTP_HOST'];
             dispararWhatsLogin($pdo, $celular_puro, $msgWhats);
 
             echo json_encode(['success' => true, 'message' => 'Cadastro realizado com sucesso! As instruções de acesso foram enviadas no seu WhatsApp.']);
@@ -495,7 +515,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login_submit']) && !$r
 
                         <label class="small fw-bold mb-1">E-mail de Contato:</label>
                         <input type="email" id="cadEmail" class="form-control border-dark" oninput="validarEmailCampo()" onblur="validarEmailCampo()" placeholder="seu@email.com" required>
-                        <div id="cadEmailFeedback" class="small mb-3 mt-1" style="min-height:18px;"></div>
+                        <div id="cadEmailFeedback" class="small mb-2 mt-1" style="min-height:18px;"></div>
+
+                        <!-- Aviso empresa obrigatória -->
+                        <div id="cadAvisoEmpresa" class="border border-danger rounded text-danger fw-bold text-center py-2 mb-3 small">
+                            <i class="fas fa-exclamation-triangle me-1"></i> PARA GERAR USUÁRIO NECESSÁRIO
+                        </div>
 
                         <!-- Toggle empresa -->
                         <div class="form-check form-switch border border-secondary rounded p-2 mb-3 bg-white d-flex align-items-center gap-2">
@@ -701,15 +726,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login_submit']) && !$r
             const box = document.getElementById('boxCadEmpresa');
             const nomeEmp = document.getElementById('cadNomeEmpresa');
             const cnpj = document.getElementById('cadCnpj');
+            const aviso = document.getElementById('cadAvisoEmpresa');
             if(chk.checked) {
                 box.classList.remove('d-none');
                 nomeEmp.required = true; cnpj.required = true;
+                if(aviso) aviso.style.display = 'none';
             } else {
                 box.classList.add('d-none');
                 nomeEmp.required = false; cnpj.required = false;
                 nomeEmp.value = ''; cnpj.value = '';
                 document.getElementById('cadCnpjFeedback').textContent = '';
                 _cadDupl.cnpj = false; _atualizarBotaoCadastro();
+                if(aviso) aviso.style.display = 'block';
             }
         }
 
@@ -735,13 +763,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login_submit']) && !$r
             if(!validarCpfCampo())     { alert('CPF inválido. Verifique o número digitado.'); return; }
             if(!validarCelularCampo()) { alert('Celular inválido. Informe o DDD + número.'); return; }
             if(!validarEmailCampo())   { alert('Formato de e-mail inválido.'); return; }
-            if(temEmpresa) {
-                if(!document.getElementById('cadNomeEmpresa').value.trim()) {
-                    alert('Informe o nome da empresa.'); return;
-                }
-                if(!validarCnpjFrontend(document.getElementById('cadCnpj').value)) {
-                    alert('CNPJ inválido. Verifique o número digitado.'); return;
-                }
+            if(!temEmpresa) {
+                alert('Para criar seu usuário de acesso, é obrigatório informar os dados da empresa (CNPJ).');
+                return;
+            }
+            if(!document.getElementById('cadNomeEmpresa').value.trim()) {
+                alert('Informe o nome da empresa.'); return;
+            }
+            if(!validarCnpjFrontend(document.getElementById('cadCnpj').value)) {
+                alert('CNPJ inválido. Verifique o número digitado.'); return;
             }
 
             btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Aguarde...'; btn.disabled = true;
