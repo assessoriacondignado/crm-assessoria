@@ -295,7 +295,7 @@ while(true) {
             v8AtualizarFatorConferi($cpfFase2, $lote, $pdo);
             v8SimularLote($cpfFase2, $config_id, $consult_id, (float)$margem, $id_lote, $prazo_padrao, $headers, $lote, $pdo);
 
-        } elseif (in_array($status_api, ['PROCESSING', 'PENDING', 'WAITING', 'WAITING_CONSULT', 'ANALYZING', 'IN_PROGRESS', 'PENDING_CONSULTATION', 'CONSENT_APPROVED'])) {
+        } elseif (in_array($status_api, ['PROCESSING', 'PENDING', 'WAITING', 'WAITING_CONSULT', 'ANALYZING', 'IN_PROGRESS', 'PENDING_CONSULTATION', 'CONSENT_APPROVED', 'WAITING_CREDIT_ANALYSIS'])) {
             $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'AGUARDANDO DATAPREV', OBSERVACAO = 'Dataprev demorando. Retido para reprocessamento manual.' WHERE ID = ?")->execute([$cpfFase2['ID']]);
         } elseif (!in_array($status_api, [''])) {
             $msgErro = $jsonC['detail'] ?? $jsonC['status_description'] ?? 'Rejeitado pela Dataprev';
@@ -432,7 +432,7 @@ while(true) {
                             $polling_resolvido = true;
                             break;
 
-                        } elseif (!empty($status_poll) && !in_array($status_poll, ['PROCESSING', 'PENDING', 'WAITING', 'WAITING_CONSULT', 'ANALYZING', 'IN_PROGRESS', 'PENDING_CONSULTATION', 'CONSENT_APPROVED'])) {
+                        } elseif (!empty($status_poll) && !in_array($status_poll, ['PROCESSING', 'PENDING', 'WAITING', 'WAITING_CONSULT', 'ANALYZING', 'IN_PROGRESS', 'PENDING_CONSULTATION', 'CONSENT_APPROVED', 'WAITING_CREDIT_ANALYSIS'])) {
                             $msgErroPoll = $jsonPoll['detail'] ?? $jsonPoll['status_description'] ?? "Rejeitado pela Dataprev (status: {$status_poll})";
                             $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'ERRO MARGEM', OBSERVACAO = ? WHERE ID = ?")->execute([$msgErroPoll, $cpfFase1['ID']]);
                             $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_PROCESSADA = QTD_PROCESSADA + 1, QTD_ERRO = QTD_ERRO + 1 WHERE ID = ?")->execute([$id_lote]);
