@@ -1016,7 +1016,45 @@ try {
                 $disparados++;
             }
 
-            // 3. Reprocessamento automático: a cada 250 consentimentos enviados no dia, re-verifica DATAPREV
+            // 3. KEEPALIVE: Re-acorda lotes que pararam no meio do dia mas ainda estão dentro da janela de horário
+            //    (ex: worker sofreu timeout, atingiu limite momentaneamente, ou travou por outra razão)
+            //    NÃO zera contadores — apenas coloca em PENDENTE e acorda o worker.
+            $stmtKA = $pdo->query("SELECT ID, CPF_USUARIO, HORA_INICIO_DIARIO, HORA_FIM_DIARIO, DIAS_MES_DIARIO
+                FROM INTEGRACAO_V8_IMPORTACAO_LOTE
+                WHERE AGENDAMENTO_TIPO = 'DIARIO'
+                  AND STATUS_FILA = 'AGUARDANDO_DIARIO'
+                  AND (STATUS_LOTE = 'ATIVO' OR STATUS_LOTE IS NULL)
+                  AND HORA_INICIO_DIARIO IS NOT NULL
+                  AND ULTIMO_PROCESSAMENTO = '{$data_hoje}'
+                  AND EXISTS (
+                      SELECT 1 FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE r
+                      WHERE r.LOTE_ID = INTEGRACAO_V8_IMPORTACAO_LOTE.ID
+                        AND r.STATUS_V8 = 'NA FILA'
+                      LIMIT 1
+                  )");
+
+            while ($loteKA = $stmtKA->fetch(PDO::FETCH_ASSOC)) {
+                $hIni = substr($loteKA['HORA_INICIO_DIARIO'], 0, 5);
+                $hFim = !empty($loteKA['HORA_FIM_DIARIO']) ? substr($loteKA['HORA_FIM_DIARIO'], 0, 5) : '23:59';
+
+                // Só reacorda se o horário atual está dentro da janela operacional
+                if ($hora_atual < $hIni || $hora_atual >= $hFim) continue;
+
+                // Verifica se o dia bate
+                $dias_ka = trim($loteKA['DIAS_MES_DIARIO'] ?? 'TODOS');
+                if (!empty($dias_ka) && $dias_ka !== 'TODOS') {
+                    $dias_arr_ka = array_map('intval', explode(',', $dias_ka));
+                    if (!in_array($dia_atual, $dias_arr_ka)) continue;
+                }
+
+                // Reacorda sem zerar contadores
+                $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PENDENTE' WHERE ID = ?")->execute([$loteKA['ID']]);
+                $url_worker = $protocol . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']) . '/worker_v8_lote.php?user_cpf=' . $loteKA['CPF_USUARIO'];
+                $ch = curl_init(); curl_setopt($ch, CURLOPT_URL, $url_worker); curl_setopt($ch, CURLOPT_TIMEOUT, 1); curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); curl_exec($ch); curl_close($ch);
+                $disparados++;
+            }
+
+            // 4. Reprocessamento automático: a cada 250 consentimentos enviados no dia, re-verifica DATAPREV
             $stmtAR = $pdo->query("SELECT l.ID, l.CPF_USUARIO, l.PROCESSADOS_HOJE, l.AUTO_REPROCESS_CHECKPOINT
                 FROM INTEGRACAO_V8_IMPORTACAO_LOTE l
                 WHERE l.AGENDAMENTO_TIPO = 'DIARIO'
