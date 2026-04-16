@@ -119,105 +119,7 @@
                     <input type="file" name="arquivo_csv" id="lote_v8_arquivo" class="form-control form-control-sm border-success" accept=".csv" required>
                 </div>
                 <div class="col-md-2">
-                    <button type="submit" class="btn btn-success btn-sm w-100 fw-bold shadow-sm" id="btn_enviar_lote_v8"><i class="fas fa-play me-1"></i> Iniciar Lote</button>
-                </div>
-            </div>
-            
-            <div id="box_opcoes_novolote">
-                <div class="col-12 mt-3 mb-1"><hr class="m-0"><small class="text-muted fw-bold mt-1 d-block"><i class="fas fa-cogs"></i> Opções de Agendamento e Limites</small></div>
-                <div class="row g-2 align-items-end text-start">
-                    <div class="col-md-3">
-                        <label class="fw-bold small text-dark mb-1">Agendamento:</label>
-                        <select name="agendamento_tipo" id="sel_agendamento_tipo" class="form-select form-select-sm border-primary" onchange="v8MudarTipoAgendamento(this.value)">
-                            <option value="IMEDIATO">Imediato (Agora)</option>
-                            <option value="PROGRAMADO">Data/Hora Específica</option>
-                            <option value="DIA_MES">Todo dia X do mês</option>
-                            <option value="DIARIO">🔁 Início Diário (Horário Fixo)</option>
-                        </select>
-                    </div>
-                    <div class="col-md-2 d-none" id="div_data_hora_agendada">
-                        <label class="fw-bold small text-dark mb-1">Início:</label>
-                        <input type="datetime-local" name="data_hora_agendada" class="form-control form-control-sm border-primary">
-                    </div>
-                    <div class="col-md-2 d-none" id="div_dia_mes_agendado">
-                        <label class="fw-bold small text-dark mb-1">Dia do Mês (1 a 31):</label>
-                        <input type="number" min="1" max="31" name="dia_mes_agendado" class="form-control form-control-sm border-primary" placeholder="Ex: 5">
-                    </div>
-                    <div class="col-md-2 d-none" id="div_hora_inicio_diario">
-                        <label class="fw-bold small text-dark mb-1">Horário de Início:</label>
-                        <input type="time" name="hora_inicio_diario" id="hora_inicio_diario" class="form-control form-control-sm border-warning fw-bold">
-                    </div>
-                    <div class="col-md-2 d-none" id="div_hora_fim_diario">
-                        <label class="fw-bold small text-dark mb-1">Horário de Fim:</label>
-                        <input type="time" name="hora_fim_diario" id="hora_fim_diario" class="form-control form-control-sm border-danger fw-bold" title="Hora em que o robô para automaticamente">
-                        <small class="text-muted" style="font-size:10px;">Robô para neste horário</small>
-                    </div>
-                    <div class="col-12 d-none" id="div_dias_mes_diario">
-                        <label class="fw-bold small text-dark mb-1">Dias do Mês: <span class="text-muted fw-normal">(deixe vazio = todos os dias)</span></label>
-                        <div class="border border-warning rounded p-2 bg-white shadow-sm">
-                            <div class="d-flex flex-wrap gap-1 mb-2" id="v8_dias_picker">
-                                <?php for($d=1; $d<=31; $d++): ?>
-                                <button type="button" class="btn btn-outline-secondary btn-sm v8-dia-btn fw-bold"
-                                    style="width:34px; height:30px; font-size:11px; padding:0;"
-                                    data-dia="<?= $d ?>" onclick="v8ToggleDia(this)"><?= $d ?></button>
-                                <?php endfor; ?>
-                            </div>
-                            <div class="d-flex gap-2">
-                                <button type="button" class="btn btn-sm btn-warning border-dark fw-bold" onclick="v8SelecionarTodosDias()">Todos os dias</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary border-dark fw-bold" onclick="v8LimparDias()">Limpar</button>
-                            </div>
-                            <input type="hidden" name="dias_mes_diario" id="dias_mes_diario_val" value="TODOS">
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <label class="fw-bold small text-dark mb-1">Limite Diário:</label>
-                        <input type="number" name="limite_diario" class="form-control form-control-sm border-primary" value="0" title="0 = Sem Limite" placeholder="0 = Sem Limite">
-                    </div>
-                    <div class="col-md-3">
-                        <label class="fw-bold small text-danger mb-1"><i class="fas fa-moon"></i> Horário Inativação:</label>
-                        <div class="d-flex align-items-center gap-1">
-                            <input type="time" name="hora_inativacao_inicio" class="form-control form-control-sm border-danger" title="Início do período de pausa obrigatória">
-                            <span class="fw-bold text-muted small">até</span>
-                            <input type="time" name="hora_inativacao_fim" class="form-control form-control-sm border-danger" title="Fim do período de pausa obrigatória">
-                        </div>
-                        <small class="text-muted" style="font-size:10px;">Lote pausa automaticamente neste intervalo</small>
-                    </div>
-                    <div class="col-md-3 pb-0">
-                        <div class="form-check w-100 border p-1 rounded bg-white border-dark shadow-sm mb-0">
-                            <input class="form-check-input ms-1" type="checkbox" id="v8_somente_simular" name="somente_simular" value="1">
-                            <label class="form-check-label fw-bold text-dark ms-1" style="font-size: 12px; cursor:pointer;" for="v8_somente_simular" data-bs-toggle="tooltip" title="Não gera novos consentimentos. Recupera margem e simula.">
-                                <i class="fas fa-bolt text-warning"></i> Somente Simular
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 mt-3 mb-1"><hr class="m-0"><small class="text-primary fw-bold mt-1 d-block"><i class="fas fa-robot"></i> Automação Pós-Aprovação (Opcional)</small></div>
-                <div class="row g-2 text-start">
-                    <div class="col-md-4">
-                        <div class="form-check border p-1 rounded bg-white border-info shadow-sm mb-0">
-                            <input class="form-check-input ms-1" type="checkbox" id="v8_atualizar_telefone" name="atualizar_telefone" value="1">
-                            <label class="form-check-label fw-bold text-dark ms-1" style="font-size: 12px; cursor:pointer;" for="v8_atualizar_telefone">
-                                <i class="fas fa-phone-alt text-success"></i> Telefones via FC (Desconta Saldo)
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-check border p-1 rounded bg-white border-info shadow-sm mb-0">
-                            <input class="form-check-input ms-1" type="checkbox" id="v8_enviar_whats" name="enviar_whats" value="1">
-                            <label class="form-check-label fw-bold text-dark ms-1" style="font-size: 12px; cursor:pointer;" for="v8_enviar_whats">
-                                <i class="fab fa-whatsapp text-success"></i> Enviar Aprovação no Grupo (W-API)
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-check border p-1 rounded bg-white border-info shadow-sm mb-0">
-                            <input class="form-check-input ms-1" type="checkbox" id="v8_enviar_arquivo_whatsapp" name="enviar_arquivo_whatsapp" value="1">
-                            <label class="form-check-label fw-bold text-dark ms-1" style="font-size: 12px; cursor:pointer;" for="v8_enviar_arquivo_whatsapp">
-                                <i class="fas fa-file-csv text-success"></i> Enviar CSV no Fim (W-API)
-                            </label>
-                        </div>
-                    </div>
+                    <button type="submit" class="btn btn-success btn-sm w-100 fw-bold shadow-sm" id="btn_enviar_lote_v8"><i class="fas fa-cloud-upload-alt me-1"></i> Importar Lista</button>
                 </div>
             </div>
         </form>
@@ -306,34 +208,22 @@
                         <label class="fw-bold small text-dark mb-1">Nome do Agrupamento:</label>
                         <input type="text" id="edit_lote_agrupamento" class="form-control border-secondary fw-bold" required>
                     </div>
-                    <div class="col-12 mt-3 mb-1"><hr class="m-0"><small class="text-muted fw-bold mt-1 d-block"><i class="fas fa-cogs"></i> Opções de Agendamento e Limites</small></div>
+                    <div class="col-12 mt-2 mb-1"><hr class="m-0"><small class="text-muted fw-bold mt-1 d-block"><i class="fas fa-clock"></i> Horário de Funcionamento Diário <span class="text-danger">*obrigatório</span></small></div>
                     <div class="col-md-4">
-                        <label class="fw-bold small text-dark mb-1">Agendamento:</label>
-                        <select id="edit_agendamento_tipo" class="form-select border-primary" onchange="v8MudarTipoAgendamentoEdit(this.value)">
-                            <option value="IMEDIATO">Imediato (Agora)</option>
-                            <option value="PROGRAMADO">Data/Hora Específica</option>
-                            <option value="DIA_MES">Todo dia X do mês</option>
-                            <option value="DIARIO">🔁 Início Diário (Horário Fixo)</option>
-                        </select>
+                        <label class="fw-bold small text-dark mb-1">Horário de Início: <span class="text-danger">*</span></label>
+                        <input type="time" id="edit_hora_inicio_diario" class="form-control border-warning fw-bold" required>
+                        <small class="text-muted" style="font-size:10px;">Robô liga automaticamente neste horário</small>
                     </div>
-                    <div class="col-md-4 d-none" id="div_edit_data_hora_agendada">
-                        <label class="fw-bold small text-dark mb-1">Início:</label>
-                        <input type="datetime-local" id="edit_data_hora_agendada" class="form-control border-primary">
+                    <div class="col-md-4">
+                        <label class="fw-bold small text-danger mb-1">Horário de Fim: <span class="text-danger">*</span></label>
+                        <input type="time" id="edit_hora_fim_diario" class="form-control border-danger fw-bold" required>
+                        <small class="text-muted" style="font-size:10px;">Robô para automaticamente neste horário</small>
                     </div>
-                    <div class="col-md-4 d-none" id="div_edit_dia_mes_agendado">
-                        <label class="fw-bold small text-dark mb-1">Dia do Mês (1 a 31):</label>
-                        <input type="number" min="1" max="31" id="edit_dia_mes_agendado" class="form-control border-primary" placeholder="Ex: 5">
+                    <div class="col-md-4">
+                        <label class="fw-bold small text-dark mb-1">Limite Diário (0 = Sem Limite):</label>
+                        <input type="number" id="edit_limite_diario" class="form-control border-primary">
                     </div>
-                    <div class="col-md-4 d-none" id="div_edit_hora_inicio_diario">
-                        <label class="fw-bold small text-dark mb-1">Horário de Início:</label>
-                        <input type="time" id="edit_hora_inicio_diario" class="form-control border-warning fw-bold">
-                    </div>
-                    <div class="col-md-4 d-none" id="div_edit_hora_fim_diario">
-                        <label class="fw-bold small text-danger mb-1">Horário de Fim:</label>
-                        <input type="time" id="edit_hora_fim_diario" class="form-control border-danger fw-bold" title="Robô para automaticamente neste horário">
-                        <small class="text-muted" style="font-size:10px;">Robô para neste horário (opcional)</small>
-                    </div>
-                    <div class="col-12 d-none" id="div_edit_dias_mes_diario">
+                    <div class="col-12">
                         <label class="fw-bold small text-dark mb-1">Dias do Mês: <span class="text-muted fw-normal">(deixe vazio = todos os dias)</span></label>
                         <div class="border border-warning rounded p-2 bg-white shadow-sm">
                             <div class="d-flex flex-wrap gap-1 mb-2" id="v8_dias_picker_edit">
@@ -349,20 +239,6 @@
                             </div>
                             <input type="hidden" id="edit_dias_mes_diario" value="TODOS">
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <label class="fw-bold small text-dark mb-1">Limite Diário (0 = Sem Limite):</label>
-                        <input type="number" id="edit_limite_diario" class="form-control border-primary">
-                    </div>
-                    <div class="col-md-8">
-                        <label class="fw-bold small text-danger mb-1"><i class="fas fa-moon"></i> Horário Inativação (pausa obrigatória):</label>
-                        <div class="d-flex align-items-center gap-2">
-                            <input type="time" id="edit_hora_inativacao_inicio" class="form-control border-danger" title="Início">
-                            <span class="fw-bold text-muted">até</span>
-                            <input type="time" id="edit_hora_inativacao_fim" class="form-control border-danger" title="Fim">
-                            <button type="button" class="btn btn-sm btn-outline-secondary border-dark" onclick="document.getElementById('edit_hora_inativacao_inicio').value=''; document.getElementById('edit_hora_inativacao_fim').value='';" title="Remover inativação"><i class="fas fa-times"></i></button>
-                        </div>
-                        <small class="text-muted" style="font-size:10px;">Deixe em branco para desativar. Suporta intervalo que cruza meia-noite.</small>
                     </div>
                     <div class="col-md-4">
                         <label class="fw-bold small text-dark mb-1">Processamento:</label>
@@ -562,35 +438,7 @@
         }
     }
 
-    function v8MudarTipoAgendamento(val) {
-        document.getElementById('div_data_hora_agendada').classList.add('d-none');
-        document.getElementById('div_dia_mes_agendado').classList.add('d-none');
-        document.getElementById('div_hora_inicio_diario').classList.add('d-none');
-        document.getElementById('div_hora_fim_diario').classList.add('d-none');
-        document.getElementById('div_dias_mes_diario').classList.add('d-none');
-        if (val === 'PROGRAMADO') document.getElementById('div_data_hora_agendada').classList.remove('d-none');
-        if (val === 'DIA_MES') document.getElementById('div_dia_mes_agendado').classList.remove('d-none');
-        if (val === 'DIARIO') {
-            document.getElementById('div_hora_inicio_diario').classList.remove('d-none');
-            document.getElementById('div_hora_fim_diario').classList.remove('d-none');
-            document.getElementById('div_dias_mes_diario').classList.remove('d-none');
-        }
-    }
-
-    function v8MudarTipoAgendamentoEdit(val) {
-        document.getElementById('div_edit_data_hora_agendada').classList.add('d-none');
-        document.getElementById('div_edit_dia_mes_agendado').classList.add('d-none');
-        document.getElementById('div_edit_hora_inicio_diario').classList.add('d-none');
-        document.getElementById('div_edit_hora_fim_diario').classList.add('d-none');
-        document.getElementById('div_edit_dias_mes_diario').classList.add('d-none');
-        if (val === 'PROGRAMADO') document.getElementById('div_edit_data_hora_agendada').classList.remove('d-none');
-        if (val === 'DIA_MES') document.getElementById('div_edit_dia_mes_agendado').classList.remove('d-none');
-        if (val === 'DIARIO') {
-            document.getElementById('div_edit_hora_inicio_diario').classList.remove('d-none');
-            document.getElementById('div_edit_hora_fim_diario').classList.remove('d-none');
-            document.getElementById('div_edit_dias_mes_diario').classList.remove('d-none');
-        }
-    }
+    // Agendamento sempre DIARIO — funções de toggle removidas
 
     // --- SELETOR DE DIAS (NOVO / FORMULÁRIO) ---
     function v8ToggleDia(btn) {
@@ -898,19 +746,21 @@
                 // Para DIÁRIO: bloqueia Retomar manual (só pode pausar)
                 let btnPausarBtnRaw = btnPausarLi ? btnPausarLi.replace(/^<li>/, '').replace(/<\/li>$/, '').trim() : '';
                 let btnPausarBtn = btnPausarBtnRaw;
-                if (isDiario && (statusAtual === 'PAUSADO' || statusAtual === 'AGENDADO')) {
-                    btnPausarBtn = `<button class="dropdown-item fw-bold text-muted" disabled title="Lote Diário: o robô inicia automaticamente no horário configurado"><i class="fas fa-play me-2"></i> Ligar Robô (Automático)</button>`;
+                // DIÁRIO pausado: exibe botão ativo para ligar (vai para AGUARDANDO_DIARIO)
+                if (isDiario && statusAtual === 'PAUSADO') {
+                    btnPausarBtn = `<button class="dropdown-item fw-bold text-success" onclick="v8PausarRetomarLote(${idLoteReal}, 'RETOMAR')"><i class="fas fa-play me-2"></i> Ligar Robô</button>`;
                 }
-                if (emInativacao && (statusAtual === 'PAUSADO' || statusAtual === 'AGUARDANDO_DIARIO')) {
-                    btnPausarBtn = `<button class="dropdown-item fw-bold text-danger" disabled title="Horário de inativação ativo (${hiIni} até ${hiFim}). Não é possível ligar o lote neste intervalo."><i class="fas fa-moon me-2"></i> Inativação Ativa (${hiIni}–${hiFim})</button>`;
+                // DIÁRIO aguardando: só pode pausar
+                if (isDiario && statusAtual === 'AGUARDANDO_DIARIO') {
+                    btnPausarBtn = `<button class="dropdown-item fw-bold text-secondary" onclick="v8PausarRetomarLote(${idLoteReal}, 'PAUSAR')"><i class="fas fa-pause me-2"></i> Pausar Robô</button>`;
                 }
 
                 let btnTopEditar = '';
                 if (!restricaoLoteEditar) {
-                    if (statusAtual === 'PAUSADO' || statusAtual === 'AGENDADO' || statusAtual === 'AGUARDANDO_DIARIO') {
+                    if (statusAtual === 'PAUSADO') {
                         btnTopEditar = `<button class="dropdown-item fw-bold text-primary" onclick="v8AbrirModalEditarLote(${idLoteReal})"><i class="fas fa-edit me-2"></i> Editar Lote</button>`;
                     } else {
-                        btnTopEditar = `<button class="dropdown-item text-muted" disabled title="O Lote precisa estar PAUSADO ou AGENDADO para edição"><i class="fas fa-edit me-2"></i> Editar Lote (requer pausa)</button>`;
+                        btnTopEditar = `<button class="dropdown-item text-muted" disabled title="O Lote precisa estar PAUSADO para edição"><i class="fas fa-edit me-2"></i> Editar Lote (requer pausa)</button>`;
                     }
                 }
 
@@ -1063,21 +913,12 @@
         document.getElementById('edit_lote_id').value = id;
         document.getElementById('edit_lote_agrupamento').value = lote.NOME_IMPORTACAO || lote.nome_importacao;
 
-        let agTipo = lote.AGENDAMENTO_TIPO || lote.agendamento_tipo || 'IMEDIATO';
-        document.getElementById('edit_agendamento_tipo').value = agTipo;
-        v8MudarTipoAgendamentoEdit(agTipo);
-
-        let dh = lote.DATA_HORA_AGENDADA || lote.data_hora_agendada;
-        document.getElementById('edit_data_hora_agendada').value = dh ? dh.substring(0, 16) : '';
-        document.getElementById('edit_dia_mes_agendado').value = lote.DIA_MES_AGENDADO || lote.dia_mes_agendado || '';
-        document.getElementById('edit_hora_inicio_diario').value = lote.HORA_INICIO_DIARIO || lote.hora_inicio_diario || '';
+        document.getElementById('edit_hora_inicio_diario').value = (lote.HORA_INICIO_DIARIO || lote.hora_inicio_diario || '').substring(0, 5);
         document.getElementById('edit_hora_fim_diario').value = (lote.HORA_FIM_DIARIO || lote.hora_fim_diario || '').substring(0, 5);
         v8CarregarDiasEdit(lote.DIAS_MES_DIARIO || lote.dias_mes_diario || 'TODOS');
         document.getElementById('edit_limite_diario').value = lote.LIMITE_DIARIO || lote.limite_diario || 0;
 
         document.getElementById('edit_somente_simular').checked = (lote.SOMENTE_SIMULAR == 1 || lote.somente_simular == 1);
-        document.getElementById('edit_hora_inativacao_inicio').value = (lote.HORA_INATIVACAO_INICIO || lote.hora_inativacao_inicio || '').substring(0,5);
-        document.getElementById('edit_hora_inativacao_fim').value    = (lote.HORA_INATIVACAO_FIM    || lote.hora_inativacao_fim    || '').substring(0,5);
         document.getElementById('edit_atualizar_telefone').checked = (lote.ATUALIZAR_TELEFONE == 1 || lote.atualizar_telefone == 1);
         document.getElementById('edit_enviar_whats').checked = (lote.ENVIAR_WHATSAPP == 1 || lote.enviar_whatsapp == 1);
         document.getElementById('edit_enviar_arquivo_whatsapp').checked = (lote.ENVIAR_ARQUIVO_WHATSAPP == 1 || lote.enviar_arquivo_whatsapp == 1);
@@ -1086,23 +927,21 @@
     }
 
     async function v8SalvarEdicaoLote() {
-        let agTipoEdit = document.getElementById('edit_agendamento_tipo').value;
-        if (agTipoEdit === 'DIARIO' && !document.getElementById('edit_hora_inicio_diario').value) {
-            return v8Toast("Informe o horário de início para o agendamento Diário.", "warning", 5000);
+        if (!document.getElementById('edit_hora_inicio_diario').value) {
+            return v8Toast("Informe o horário de início.", "warning", 5000);
+        }
+        if (!document.getElementById('edit_hora_fim_diario').value) {
+            return v8Toast("Informe o horário de fim.", "warning", 5000);
         }
         let payload = {
             id_lote: document.getElementById('edit_lote_id').value,
             agrupamento: document.getElementById('edit_lote_agrupamento').value,
-            agendamento_tipo: agTipoEdit,
-            data_hora_agendada: document.getElementById('edit_data_hora_agendada').value,
-            dia_mes_agendado: document.getElementById('edit_dia_mes_agendado').value,
+            agendamento_tipo: 'DIARIO',
             hora_inicio_diario: document.getElementById('edit_hora_inicio_diario').value,
-            hora_fim_diario: document.getElementById('edit_hora_fim_diario').value || '',
+            hora_fim_diario: document.getElementById('edit_hora_fim_diario').value,
             dias_mes_diario: document.getElementById('edit_dias_mes_diario').value,
             limite_diario: document.getElementById('edit_limite_diario').value,
             somente_simular: document.getElementById('edit_somente_simular').checked ? 1 : 0,
-            hora_inativacao_inicio: document.getElementById('edit_hora_inativacao_inicio').value || '',
-            hora_inativacao_fim:    document.getElementById('edit_hora_inativacao_fim').value    || '',
             atualizar_telefone: document.getElementById('edit_atualizar_telefone').checked ? 1 : 0,
             enviar_whats: document.getElementById('edit_enviar_whats').checked ? 1 : 0,
             enviar_arquivo_whatsapp: document.getElementById('edit_enviar_arquivo_whatsapp').checked ? 1 : 0
@@ -1194,8 +1033,8 @@
 
     async function v8PausarRetomarLote(id, acao) {
         const cfgs = {
-            'PAUSAR':        { t: '⏸️ Pausar Lote',      d: 'O processamento será interrompido. Os CPFs já processados são mantidos.',           cor: 'btn-warning', b: '#ffc107' },
-            'RETOMAR':       { t: '▶️ Retomar Lote',      d: 'O processamento será reiniciado do ponto onde parou.',                              cor: 'btn-primary', b: '#0d6efd' },
+            'PAUSAR':        { t: '⏸️ Pausar Robô',       d: 'O robô será pausado. Os CPFs já processados são mantidos.',                        cor: 'btn-warning', b: '#ffc107' },
+            'RETOMAR':       { t: '▶️ Ligar Robô',        d: 'O robô ficará aguardando o horário de início configurado para processar.',           cor: 'btn-primary', b: '#0d6efd' },
             'RETOMAR_LIMITE':{ t: '⏩ Continuar Hoje',    d: 'Ignora o limite diário e continua processando o lote hoje.',                         cor: 'btn-primary', b: '#0d6efd' }
         };
         const cfg = cfgs[acao] || cfgs['PAUSAR'];
@@ -1243,14 +1082,13 @@
             let req = await fetch('ajax_api_v8_lote_csv.php', { method: 'POST', body: fd });
             let res = await req.json();
             btn.innerHTML = txtOriginal; btn.disabled = false;
-            if(res.success) { 
+            if(res.success) {
                 v8Toast("✅ " + res.msg, "success");
-                this.reset(); 
-                document.getElementById('chk_is_append').checked = false; // reseta toggle
-                v8ToggleAppendMode(); 
-                v8CarregarLotesCSV(); 
-                if(typeof v8AtualizarSaldosTopo === "function") v8AtualizarSaldosTopo(); 
-                if(res.cpf_dono) v8AcordarRobo(res.cpf_dono);
+                this.reset();
+                document.getElementById('chk_is_append').checked = false;
+                v8ToggleAppendMode();
+                v8CarregarLotesCSV();
+                if(typeof v8AtualizarSaldosTopo === "function") v8AtualizarSaldosTopo();
             } 
             else { v8Toast("❌ " + (res.msg||"Erro no upload"), "error", 6000); }
         } catch(err) { btn.innerHTML = txtOriginal; btn.disabled = false; v8Toast("❌ Falha de comunicação.", "error", 6000); }

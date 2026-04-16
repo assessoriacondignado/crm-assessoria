@@ -26,20 +26,12 @@ try {
         case 'upload_csv_lote':
             $agrupamento = strtoupper(trim(preg_replace('/[^a-zA-Z0-9_ \-]/', '_', $_POST['agrupamento'] ?? 'LOTE_V8')));
             $chave_id = (int)($_POST['chave_id'] ?? 0);
-            
-            $agendamento_tipo = $_POST['agendamento_tipo'] ?? 'IMEDIATO';
-            $data_hora_agendada = !empty($_POST['data_hora_agendada']) ? $_POST['data_hora_agendada'] : null;
-            $dia_mes_agendado = !empty($_POST['dia_mes_agendado']) ? (int)$_POST['dia_mes_agendado'] : null;
-            $hora_inicio_diario = ($agendamento_tipo === 'DIARIO' && !empty($_POST['hora_inicio_diario'])) ? trim($_POST['hora_inicio_diario']) : null;
-            $dias_mes_diario = ($agendamento_tipo === 'DIARIO' && !empty($_POST['dias_mes_diario'])) ? trim($_POST['dias_mes_diario']) : null;
-            $limite_diario = (int)($_POST['limite_diario'] ?? 0);
-            $atualizar_telefone = (isset($_POST['atualizar_telefone']) && $_POST['atualizar_telefone'] == '1') ? 1 : 0;
-            $enviar_whats = (isset($_POST['enviar_whats']) && $_POST['enviar_whats'] == '1') ? 1 : 0;
-            $somente_simular = (isset($_POST['somente_simular']) && $_POST['somente_simular'] == '1') ? 1 : 0;
-            $enviar_arquivo_whatsapp = (isset($_POST['enviar_arquivo_whatsapp']) && $_POST['enviar_arquivo_whatsapp'] == '1') ? 1 : 0;
-            $hora_inativacao_inicio = !empty(trim($_POST['hora_inativacao_inicio'] ?? '')) ? trim($_POST['hora_inativacao_inicio']) : null;
-            $hora_inativacao_fim    = !empty(trim($_POST['hora_inativacao_fim']    ?? '')) ? trim($_POST['hora_inativacao_fim'])    : null;
-            $hora_fim_diario        = ($agendamento_tipo === 'DIARIO' && !empty(trim($_POST['hora_fim_diario'] ?? ''))) ? trim($_POST['hora_fim_diario']) : null;
+            // Lote sempre criado como DIÁRIO PAUSADO — configuração feita depois na edição
+            $agendamento_tipo    = 'DIARIO';
+            $somente_simular     = 0;
+            $atualizar_telefone  = 0;
+            $enviar_whats        = 0;
+            $enviar_arquivo_whatsapp = 0;
 
             if ($chave_id <= 0) throw new Exception("Selecione uma Credencial/Chave para cobrar o lote.");
             if (!isset($_FILES['arquivo_csv']) || $_FILES['arquivo_csv']['error'] != UPLOAD_ERR_OK) throw new Exception("Nenhum arquivo CSV recebido.");
@@ -98,18 +90,12 @@ try {
             if ((float)$chave['SALDO'] < $custo_lote && $custo_lote > 0) { throw new Exception("Saldo Insuficiente! Lote custará R$ " . number_format($custo_lote, 2, ',', '.') . ". Saldo atual: R$ " . number_format((float)$chave['SALDO'], 2, ',', '.')); }
 
             $pdo->beginTransaction();
-            
-            // DIARIO: validar que tem hora configurada
-            if ($agendamento_tipo === 'DIARIO' && empty($hora_inicio_diario)) {
-                throw new Exception("Para agendamento Diário, informe o horário de início.");
-            }
-            // DIARIO: status inicial = aguardando, não dispara worker imediatamente
-            $status_fila_inicial = ($agendamento_tipo === 'DIARIO') ? 'AGUARDANDO_DIARIO' : 'PENDENTE';
 
+            // Lote sempre criado PAUSADO; configurações de horário feitas na edição
             $stmtLote = $pdo->prepare("INSERT INTO INTEGRACAO_V8_IMPORTACAO_LOTE
-                (NOME_IMPORTACAO, USUARIO_ID, CPF_USUARIO, CHAVE_ID, ARQUIVO_CAMINHO, QTD_TOTAL, AGENDAMENTO_TIPO, DATA_HORA_AGENDADA, DIA_MES_AGENDADO, HORA_INICIO_DIARIO, DIAS_MES_DIARIO, LIMITE_DIARIO, ATUALIZAR_TELEFONE, ENVIAR_WHATSAPP, SOMENTE_SIMULAR, ENVIAR_ARQUIVO_WHATSAPP, HORA_INATIVACAO_INICIO, HORA_INATIVACAO_FIM, HORA_FIM_DIARIO, STATUS_FILA)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-            $stmtLote->execute([$agrupamento, $dono_lote_id, $dono_lote_cpf, $chave_id, $_FILES['arquivo_csv']['name'], $total, $agendamento_tipo, $data_hora_agendada, $dia_mes_agendado, $hora_inicio_diario, $dias_mes_diario, $limite_diario, $atualizar_telefone, $enviar_whats, $somente_simular, $enviar_arquivo_whatsapp, $hora_inativacao_inicio, $hora_inativacao_fim, $hora_fim_diario, $status_fila_inicial]);
+                (NOME_IMPORTACAO, USUARIO_ID, CPF_USUARIO, CHAVE_ID, ARQUIVO_CAMINHO, QTD_TOTAL, AGENDAMENTO_TIPO, ATUALIZAR_TELEFONE, ENVIAR_WHATSAPP, SOMENTE_SIMULAR, ENVIAR_ARQUIVO_WHATSAPP, STATUS_FILA)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            $stmtLote->execute([$agrupamento, $dono_lote_id, $dono_lote_cpf, $chave_id, $_FILES['arquivo_csv']['name'], $total, $agendamento_tipo, $atualizar_telefone, $enviar_whats, $somente_simular, $enviar_arquivo_whatsapp, 'PAUSADO']);
             $id_lote = $pdo->lastInsertId();
 
             $stmtCpf = $pdo->prepare("INSERT INTO INTEGRACAO_V8_REGISTROCONSULTA_LOTE (LOTE_ID, CPF, NOME, NASCIMENTO, SEXO, STATUS_V8, VALOR_MARGEM, CONSULT_ID, CONFIG_ID, OBSERVACAO) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
@@ -152,16 +138,8 @@ try {
                 ? " ({$linhas_descartadas} linhas com erro de formato descartadas.)"
                 : '';
 
-            if ($agendamento_tipo !== 'DIARIO') {
-                $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
-                $url_worker = $protocol . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']) . '/worker_v8_lote.php?user_cpf=' . $dono_lote_cpf;
-                $ch = curl_init(); curl_setopt($ch, CURLOPT_URL, $url_worker); curl_setopt($ch, CURLOPT_TIMEOUT, 1); curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); curl_exec($ch); curl_close($ch);
-                $msg_retorno = "Lote de $total CPFs enviado com sucesso! Processamento iniciado.{$aviso_descarte}";
-            } else {
-                $msg_retorno = "Lote de $total CPFs criado! Será iniciado automaticamente às {$hora_inicio_diario} nos dias configurados.";
-            }
-
-            ob_end_clean(); echo json_encode(['success' => true, 'msg' => $msg_retorno, 'cpf_dono' => $dono_lote_cpf]); exit;
+            $msg_retorno = "Lote de $total CPFs importado! Configure o horário de funcionamento no botão Editar e depois clique em Ligar Robô.{$aviso_descarte}";
+            ob_end_clean(); echo json_encode(['success' => true, 'msg' => $msg_retorno]); exit;
 
         // ==================================================================================================
         // NOVA AÇÃO DE APPEND: INCLUIR MAIS CLIENTE
@@ -707,30 +685,26 @@ try {
         case 'salvar_edicao_lote':
             $id_lote = (int)$_POST['id_lote'];
             $agrupamento = strtoupper(trim($_POST['agrupamento']));
-            $agendamento_tipo = $_POST['agendamento_tipo'];
-            $data_hora_agendada = !empty($_POST['data_hora_agendada']) ? $_POST['data_hora_agendada'] : null;
-            $dia_mes_agendado = !empty($_POST['dia_mes_agendado']) ? (int)$_POST['dia_mes_agendado'] : null;
-            $hora_inicio_diario = ($agendamento_tipo === 'DIARIO' && !empty($_POST['hora_inicio_diario'])) ? trim($_POST['hora_inicio_diario']) : null;
-            $dias_mes_diario = ($agendamento_tipo === 'DIARIO' && !empty($_POST['dias_mes_diario'])) ? trim($_POST['dias_mes_diario']) : null;
-            $limite_diario = (int)$_POST['limite_diario'];
-            $somente_simular = (int)$_POST['somente_simular'];
-            $atualizar_telefone = (int)$_POST['atualizar_telefone'];
-            $enviar_whats = (int)$_POST['enviar_whats'];
-            $enviar_arquivo_whatsapp = (int)$_POST['enviar_arquivo_whatsapp'];
-            $hora_inativacao_inicio = !empty(trim($_POST['hora_inativacao_inicio'] ?? '')) ? trim($_POST['hora_inativacao_inicio']) : null;
-            $hora_inativacao_fim    = !empty(trim($_POST['hora_inativacao_fim']    ?? '')) ? trim($_POST['hora_inativacao_fim'])    : null;
-            $hora_fim_diario        = ($agendamento_tipo === 'DIARIO' && !empty(trim($_POST['hora_fim_diario'] ?? ''))) ? trim($_POST['hora_fim_diario']) : null;
+            $hora_inicio_diario = !empty(trim($_POST['hora_inicio_diario'] ?? '')) ? trim($_POST['hora_inicio_diario']) : null;
+            $hora_fim_diario    = !empty(trim($_POST['hora_fim_diario']    ?? '')) ? trim($_POST['hora_fim_diario'])    : null;
+            if (empty($hora_inicio_diario)) throw new Exception("Informe o horário de início.");
+            if (empty($hora_fim_diario))    throw new Exception("Informe o horário de fim.");
+            $dias_mes_diario = !empty(trim($_POST['dias_mes_diario'] ?? '')) ? trim($_POST['dias_mes_diario']) : 'TODOS';
+            $limite_diario = (int)($_POST['limite_diario'] ?? 0);
+            $somente_simular = (int)($_POST['somente_simular'] ?? 0);
+            $atualizar_telefone = (int)($_POST['atualizar_telefone'] ?? 0);
+            $enviar_whats = (int)($_POST['enviar_whats'] ?? 0);
+            $enviar_arquivo_whatsapp = (int)($_POST['enviar_arquivo_whatsapp'] ?? 0);
 
             $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET
-                NOME_IMPORTACAO = ?, AGENDAMENTO_TIPO = ?, DATA_HORA_AGENDADA = ?, DIA_MES_AGENDADO = ?,
-                HORA_INICIO_DIARIO = ?, DIAS_MES_DIARIO = ?,
-                LIMITE_DIARIO = ?, SOMENTE_SIMULAR = ?, ATUALIZAR_TELEFONE = ?, ENVIAR_WHATSAPP = ?, ENVIAR_ARQUIVO_WHATSAPP = ?,
-                HORA_INATIVACAO_INICIO = ?, HORA_INATIVACAO_FIM = ?, HORA_FIM_DIARIO = ?
+                NOME_IMPORTACAO = ?, AGENDAMENTO_TIPO = 'DIARIO',
+                HORA_INICIO_DIARIO = ?, HORA_FIM_DIARIO = ?, DIAS_MES_DIARIO = ?,
+                LIMITE_DIARIO = ?, SOMENTE_SIMULAR = ?, ATUALIZAR_TELEFONE = ?, ENVIAR_WHATSAPP = ?, ENVIAR_ARQUIVO_WHATSAPP = ?
                 WHERE ID = ?")->execute([
-                $agrupamento, $agendamento_tipo, $data_hora_agendada, $dia_mes_agendado,
-                $hora_inicio_diario, $dias_mes_diario,
+                $agrupamento,
+                $hora_inicio_diario, $hora_fim_diario, $dias_mes_diario,
                 $limite_diario, $somente_simular, $atualizar_telefone, $enviar_whats, $enviar_arquivo_whatsapp,
-                $hora_inativacao_inicio, $hora_inativacao_fim, $hora_fim_diario, $id_lote
+                $id_lote
             ]);
 
             ob_end_clean(); echo json_encode(['success' => true, 'msg' => 'Configurações do Lote atualizadas com sucesso!']); exit;
@@ -965,7 +939,19 @@ try {
 
         case 'pausar_retomar_lote':
             $id_lote = (int)$_POST['id_lote'];
-            $acaoLote = $_POST['acao_lote'] === 'PAUSAR' ? 'PAUSADO' : 'PENDENTE';
+            if ($_POST['acao_lote'] === 'PAUSAR') {
+                $acaoLote = 'PAUSADO';
+            } else {
+                // Lotes DIÁRIO retomam aguardando o horário de início
+                $stmtTipo = $pdo->prepare("SELECT AGENDAMENTO_TIPO, HORA_INICIO_DIARIO, HORA_FIM_DIARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?");
+                $stmtTipo->execute([$id_lote]);
+                $dadosRetomar = $stmtTipo->fetch(PDO::FETCH_ASSOC);
+                if (!$dadosRetomar) throw new Exception("Lote não encontrado.");
+                if (empty($dadosRetomar['HORA_INICIO_DIARIO']) || empty($dadosRetomar['HORA_FIM_DIARIO'])) {
+                    throw new Exception("Configure o horário de início e fim antes de ligar o robô.");
+                }
+                $acaoLote = 'AGUARDANDO_DIARIO';
+            }
             $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = ? WHERE ID = ?")->execute([$acaoLote, $id_lote]);
             
             $stmtDono = $pdo->prepare("SELECT CPF_USUARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?");
