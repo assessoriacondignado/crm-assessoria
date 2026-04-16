@@ -31,9 +31,9 @@ $offset = ($pagina_atual - 1) * $limites_por_pagina;
 
 $resultados_busca = [];
 $empresa_ficha = null;
-$cpfs_vinculados_ficha = []; 
-$erro_banco = null; 
-$mensagem_alerta = ''; 
+$usuarios_vinculados_ficha = [];
+$erro_banco = null;
+$mensagem_alerta = '';
 
 function mascaraCNPJ($cnpj) {
     $cnpj = str_pad(preg_replace('/[^0-9]/', '', $cnpj), 14, '0', STR_PAD_LEFT);
@@ -57,33 +57,20 @@ function mapearColunaEmpresa($campo) {
 }
 
 try {
-    $stmtCli = $pdo->query("SELECT CPF, NOME FROM CLIENTE_CADASTRO ORDER BY NOME ASC");
-    $lista_clientes = $stmtCli->fetchAll(PDO::FETCH_ASSOC);
-
     // INSERIR NOVA EMPRESA NO BANCO
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['acao_crud']) && $_POST['acao_crud'] == 'novo') {
         $cnpj_novo = preg_replace('/[^0-9]/', '', $_POST['cnpj']);
         $nome_cadastro = $_POST['nome_cadastro'];
         $celular = preg_replace('/[^0-9]/', '', $_POST['celular']);
-        $cpfs_selecionados = isset($_POST['cpfs_vinculados']) ? $_POST['cpfs_vinculados'] : [];
-        
+
         $stmtCheck = $pdo->prepare("SELECT COUNT(*) FROM CLIENTE_EMPRESAS WHERE CNPJ = :cnpj");
         $stmtCheck->execute(['cnpj' => $cnpj_novo]);
         if ($stmtCheck->fetchColumn() > 0) {
             $mensagem_alerta = "<div class='alert alert-danger fw-bold'>ERRO: Este CNPJ já está cadastrado no sistema!</div>";
         } else {
-            $pdo->beginTransaction();
             $stmtInsert = $pdo->prepare("INSERT INTO CLIENTE_EMPRESAS (CNPJ, NOME_CADASTRO, CPF_CLIENTE_CADASTRO, CELULAR) VALUES (:cnpj, :nome, NULL, :celular)");
             $stmtInsert->execute(['cnpj' => $cnpj_novo, 'nome' => $nome_cadastro, 'celular' => $celular]);
-            
-            if (!empty($cpfs_selecionados)) {
-                $stmtSet = $pdo->prepare("UPDATE CLIENTE_CADASTRO SET CNPJ = :cnpj WHERE CPF = :cpf");
-                foreach($cpfs_selecionados as $cpf_v) {
-                    $stmtSet->execute(['cnpj' => $cnpj_novo, 'cpf' => $cpf_v]);
-                }
-            }
-            $pdo->commit();
-            $mensagem_alerta = "<div class='alert alert-success fw-bold'>Empresa cadastrada e vinculada aos clientes com sucesso!</div>";
+            $mensagem_alerta = "<div class='alert alert-success fw-bold'>Empresa cadastrada com sucesso!</div>";
         }
     }
 
@@ -152,9 +139,9 @@ try {
         $empresa_ficha = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($empresa_ficha) {
-            $stmtVinc = $pdo->prepare("SELECT CPF FROM CLIENTE_CADASTRO WHERE CNPJ = :cnpj");
-            $stmtVinc->execute(['cnpj' => $cnpj_limpo]);
-            $cpfs_vinculados_ficha = $stmtVinc->fetchAll(PDO::FETCH_COLUMN);
+            $stmtVinc = $pdo->prepare("SELECT CPF, NOME, GRUPO_USUARIOS FROM CLIENTE_USUARIO WHERE id_empresa = :id ORDER BY NOME ASC");
+            $stmtVinc->execute(['id' => $empresa_ficha['ID']]);
+            $usuarios_vinculados_ficha = $stmtVinc->fetchAll(PDO::FETCH_ASSOC);
         }
     }
 } catch (PDOException $e) {
@@ -287,18 +274,9 @@ include $caminho_header;
                 </div>
                 
                 <div class="col-md-12 mt-3 mb-2">
-                    <div class="p-3 border border-dark rounded bg-white shadow-sm border-start border-4 border-success">
-                        <h6 class="fw-bold text-success mb-1"><i class="fas fa-users"></i> Vincular Pessoas Físicas (Opcional)</h6>
-                        <small class="text-muted d-block mb-2 fw-bold">Segure a tecla CTRL para selecionar ou desmarcar clientes nesta lista.</small>
-                        <select name="cpfs_vinculados[]" class="form-select border-dark border-2" multiple size="4">
-                            <?php if(isset($lista_clientes)): ?>
-                                <?php foreach($lista_clientes as $cli): ?>
-                                    <option value="<?= $cli['CPF'] ?>">
-                                        <?= htmlspecialchars($cli['NOME']) ?> (CPF: <?= mascaraCPF($cli['CPF']) ?>)
-                                    </option>
-                                <?php endforeach; ?>
-                            <?php endif; ?>
-                        </select>
+                    <div class="p-3 border border-dark rounded bg-white shadow-sm border-start border-4 border-info">
+                        <h6 class="fw-bold text-info mb-1"><i class="fas fa-users"></i> Usuários Vinculados</h6>
+                        <small class="text-muted d-block fw-bold"><i class="fas fa-info-circle me-1"></i> O vínculo de usuários é feito no menu <b>Cadastro de Usuário</b>, campo "Empresa". Após gravar a empresa, acesse o cadastro do usuário e selecione esta empresa.</small>
                     </div>
                 </div>
 
@@ -406,17 +384,27 @@ include $caminho_header;
                             
                             <div class="col-md-12 mt-4 mb-2">
                                 <div class="p-3 border border-dark rounded bg-white shadow-sm border-start border-4 border-success">
-                                    <h6 class="fw-bold text-success mb-1"><i class="fas fa-users"></i> Pessoas Físicas Vinculadas</h6>
-                                    <small class="text-muted d-block mb-2 fw-bold">Segure CTRL para selecionar ou desmarcar clientes nesta lista.</small>
-                                    <select name="cpfs_vinculados[]" class="form-select border-dark border-2" multiple size="5">
-                                        <?php if(isset($lista_clientes)): ?>
-                                            <?php foreach($lista_clientes as $cli): ?>
-                                                <option value="<?= $cli['CPF'] ?>" <?= in_array($cli['CPF'], $cpfs_vinculados_ficha) ? 'selected' : '' ?>>
-                                                    <?= htmlspecialchars($cli['NOME']) ?> (CPF: <?= mascaraCPF($cli['CPF']) ?>)
-                                                </option>
+                                    <h6 class="fw-bold text-success mb-1"><i class="fas fa-users"></i> Usuários Vinculados</h6>
+                                    <small class="text-muted d-block mb-2 fw-bold">
+                                        <i class="fas fa-info-circle me-1"></i> Vínculo gerenciado pelo menu <b>Cadastro de Usuário</b>.
+                                    </small>
+                                    <?php if (!empty($usuarios_vinculados_ficha)): ?>
+                                        <div class="list-group list-group-flush border border-dark rounded" style="max-height:180px;overflow-y:auto;">
+                                            <?php foreach ($usuarios_vinculados_ficha as $usr): ?>
+                                                <div class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-2 px-3">
+                                                    <div>
+                                                        <span class="fw-bold text-dark"><?= htmlspecialchars($usr['NOME']) ?></span>
+                                                        <small class="text-muted ms-2">CPF: <?= mascaraCPF($usr['CPF']) ?></small>
+                                                    </div>
+                                                    <span class="badge bg-secondary border border-dark"><?= htmlspecialchars($usr['GRUPO_USUARIOS'] ?? '—') ?></span>
+                                                </div>
                                             <?php endforeach; ?>
-                                        <?php endif; ?>
-                                    </select>
+                                        </div>
+                                    <?php else: ?>
+                                        <div class="text-muted fst-italic small mt-1">
+                                            <i class="fas fa-user-slash me-1"></i> Nenhum usuário vinculado a esta empresa ainda.
+                                        </div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
 
