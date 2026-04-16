@@ -321,8 +321,8 @@ while(true) {
         if ($consult_id) {
             $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'AGUARDANDO MARGEM', CONSULT_ID = ?, OBSERVACAO = 'Consentimento recuperado na V8. Lendo margem...' WHERE ID = ?")->execute([$consult_id, $cpfFase15['ID']]);
         } else {
-            $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'ERRO MARGEM', OBSERVACAO = 'Nenhum consentimento prévio e válido localizado na V8 para este CPF.' WHERE ID = ?")->execute([$cpfFase15['ID']]);
-            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_PROCESSADA = QTD_PROCESSADA + 1, QTD_ERRO = QTD_ERRO + 1 WHERE ID = ?")->execute([$id_lote]);
+            // Consentimento não encontrado na V8 (expirado ou rejeitado) — cria novo consentimento
+            $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'NA FILA', CONSULT_ID = NULL, OBSERVACAO = 'Sem consentimento válido na V8 — novo consentimento será criado.' WHERE ID = ?")->execute([$cpfFase15['ID']]);
         }
         sleep(2);
         continue;
