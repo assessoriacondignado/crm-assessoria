@@ -231,7 +231,15 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
         <div class="row g-3 mb-3">
             <div class="col-md-12 <?php if($restricao_meu_usuario) echo 'd-none'; ?>">
                 <label class="small fw-bold text-dark">Usuário do Sistema (Dono da Chave):</label>
-                <select id="chv_usuario_id" class="form-select border-dark" required></select>
+                <input type="hidden" id="chv_usuario_id">
+                <div class="position-relative">
+                    <input type="text" id="chv_usuario_busca" class="form-control border-dark" placeholder="🔍 Digite o nome do usuário ou empresa..." autocomplete="off" oninput="v8FiltrarUsuarios(this.value)">
+                    <div id="chv_usuario_dropdown" style="display:none; position:absolute; z-index:9999; width:100%; max-height:200px; overflow-y:auto;" class="list-group shadow border border-dark mt-1"></div>
+                </div>
+                <div id="chv_usuario_selecionado" class="mt-2 d-none d-flex align-items-center gap-2">
+                    <span class="badge bg-dark border border-success fs-6 px-3 py-2 fw-normal" id="chv_usuario_badge"></span>
+                    <button type="button" class="btn btn-sm btn-outline-danger" onclick="v8LimparUsuarioSelecionado()" title="Trocar usuário"><i class="fas fa-times"></i> Trocar</button>
+                </div>
                 <small class="text-muted"><i class="fas fa-info-circle"></i> O sistema vinculará o Cliente (Nome e ID) automaticamente com base neste usuário.</small>
             </div>
         </div>
@@ -338,7 +346,51 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
         }
     }
 
-    async function v8CarregarCadastros() { const res = await v8Req('v8_api.ajax.php', 'listar_cadastros_base', {}, false); const selU = document.getElementById('chv_usuario_id'); if(res.success) { if(res.data.usuarios.length > 0) { let optU = '<option value="">-- Selecione o Usuário --</option>'; res.data.usuarios.forEach(u => { optU += `<option value="${u.id}">${u.nome}</option>`; }); selU.innerHTML = optU; } else { selU.innerHTML = '<option value="1">Usuário Padrão</option>'; } } }
+    let v8ListaUsuarios = [];
+    async function v8CarregarCadastros() {
+        const res = await v8Req('v8_api.ajax.php', 'listar_cadastros_base', {}, false);
+        if(res.success) { v8ListaUsuarios = res.data.usuarios || []; }
+    }
+    function v8FiltrarUsuarios(termo) {
+        const drop = document.getElementById('chv_usuario_dropdown');
+        const sel = document.getElementById('chv_usuario_selecionado');
+        if(document.getElementById('chv_usuario_id').value) return; // já selecionado
+        const t = termo.trim().toLowerCase();
+        if(t.length < 2) { drop.style.display = 'none'; return; }
+        const filtrados = v8ListaUsuarios.filter(u =>
+            u.nome.toLowerCase().includes(t) || (u.empresa && u.empresa.toLowerCase().includes(t))
+        ).slice(0, 20);
+        if(filtrados.length === 0) { drop.style.display = 'none'; return; }
+        drop.innerHTML = filtrados.map(u => {
+            const emp = u.empresa ? `<small class="text-muted ms-1">(${u.empresa})</small>` : '';
+            return `<button type="button" class="list-group-item list-group-item-action py-2 px-3" onclick="v8SelecionarUsuario('${u.id}','${u.nome.replace(/'/g,"\\'")}','${(u.empresa||'').replace(/'/g,"\\'")}')">
+                <strong>${u.nome}</strong>${emp}
+            </button>`;
+        }).join('');
+        drop.style.display = 'block';
+    }
+    function v8SelecionarUsuario(id, nome, empresa) {
+        document.getElementById('chv_usuario_id').value = id;
+        document.getElementById('chv_usuario_busca').value = '';
+        document.getElementById('chv_usuario_dropdown').style.display = 'none';
+        const label = empresa ? `${nome} — ${empresa}` : nome;
+        document.getElementById('chv_usuario_badge').innerHTML = `<i class="fas fa-user me-1"></i>${label}`;
+        document.getElementById('chv_usuario_selecionado').classList.remove('d-none');
+        document.getElementById('chv_usuario_busca').classList.add('d-none');
+    }
+    function v8LimparUsuarioSelecionado() {
+        document.getElementById('chv_usuario_id').value = '';
+        document.getElementById('chv_usuario_busca').value = '';
+        document.getElementById('chv_usuario_busca').classList.remove('d-none');
+        document.getElementById('chv_usuario_selecionado').classList.add('d-none');
+        document.getElementById('chv_usuario_dropdown').style.display = 'none';
+        document.getElementById('chv_usuario_busca').focus();
+    }
+    document.addEventListener('click', e => {
+        if (!e.target.closest('#chv_usuario_busca') && !e.target.closest('#chv_usuario_dropdown')) {
+            document.getElementById('chv_usuario_dropdown').style.display = 'none';
+        }
+    });
     async function v8CarregarClientes() { const tb = document.getElementById("v8_tabela_clientes"); tb.innerHTML = '<tr><td colspan="6" class="text-center py-4"><i class="fas fa-spinner fa-spin"></i></td></tr>'; const thead = document.getElementById("v8_thead_clientes"); let htmlHeader = `<tr><th>Cliente / Credencial</th><th>Usuário ID (Dono)</th>`; if (!restricaoCustoCliente) htmlHeader += `<th>Custo p/ Cliente</th>`; if (!restricaoCustoApi) htmlHeader += `<th>Seu Custo API</th>`; htmlHeader += `<th>Saldo Atual</th><th class="text-center">Ações</th></tr>`; thead.innerHTML = htmlHeader; const r = await v8Req('v8_api.ajax.php', 'listar_chaves_acesso', {}, false); if (r.success) { tb.innerHTML = ''; if (r.data.length === 0) return tb.innerHTML = '<tr><td colspan="6" class="text-center py-4 fw-bold">Nenhuma chave encontrada.</td></tr>'; r.data.forEach(c => { let tr = `<tr class="border-bottom border-dark"><td class="fw-bold text-primary">${c.CLIENTE_NOME}</td><td>${c.NOME_USUARIO}</td>`; if (!restricaoCustoCliente) tr += `<td>R$ ${parseFloat(c.CUSTO_CONSULTA).toFixed(2).replace('.',',')}</td>`; if (!restricaoCustoApi) tr += `<td class="text-warning fw-bold">R$ ${parseFloat(c.CUSTO_V8).toFixed(2).replace('.',',')}</td>`; tr += `<td class="fw-bold text-success fs-6">R$ ${parseFloat(c.SALDO).toFixed(2).replace('.',',')}</td><td class="text-center"><button class="btn btn-sm btn-dark border-dark" onclick="abrirModalEditarChave(${c.ID})"><i class="fas fa-edit"></i> Editar</button></td></tr>`; tb.innerHTML += tr; }); } else { tb.innerHTML = `<tr><td colspan="6" class="text-center py-4 text-danger fw-bold">Erro: ${r.msg}</td></tr>`; } }
     async function v8CarregarDadosIniciais() { const r = await v8Req('v8_api.ajax.php', 'listar_chaves_acesso', {}, false); if(r.success) { windowListaChavesCache = r.data; let o = '<option value="">-- Selecione a Chave/Cliente --</option>'; r.data.forEach(c => { o += `<option value="${c.ID}">${c.CLIENTE_NOME} (Saldo: R$ ${c.SALDO})</option>`; }); document.querySelectorAll('.v8-dropdown-clientes').forEach(s => s.innerHTML = o); } }
     function v8PopularSelectExtrato() { const sel = document.getElementById("sel_extrato_chave"); if(sel.options.length > 1) return; let o = '<option value="">-- Selecione a Chave --</option>'; windowListaChavesCache.forEach(c => { o += `<option value="${c.ID}">${c.CLIENTE_NOME} (Saldo: R$ ${c.SALDO})</option>`; }); sel.innerHTML = o; }
@@ -347,9 +399,9 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
     function v8ExportarExcelV8() { const selectBox = document.getElementById("sel_extrato_chave"); const chaveNome = selectBox.options[selectBox.selectedIndex]?.text.replace(/[^a-zA-Z0-9 ]/g, '').trim() || 'Extrato'; if (windowDadosExtratoAtual.length === 0) return crmToast("Carregue um extrato primeiro!", "warning"); let trs = ''; windowDadosExtratoAtual.forEach(r => { trs += `<tr><td>${r.DATA_BR}</td><td>${r.TIPO_CUSTO}</td><td>${r.TIPO_MOVIMENTO}</td><td>R$ ${parseFloat(r.CUSTO_V8).toFixed(2).replace('.', ',')}</td></tr>`; }); let htmlBase = `<html xmlns:x="urn:schemas-microsoft-com:office:excel"><head><meta charset="utf-8"></head><body><table border="1"><thead><tr><th>Data/Hora</th><th>Motivo</th><th>Movimento</th><th>Custo API (R$)</th></tr></thead><tbody>${trs}</tbody></table></body></html>`; let blob = new Blob([htmlBase], { type: 'application/vnd.ms-excel' }); let link = document.createElement("a"); link.href = URL.createObjectURL(blob); link.download = `CustoAPI_V8_${chaveNome}.xls`; link.click(); }
     function v8AbrirModalAjusteSaldo() { const chaveId = document.getElementById("sel_extrato_chave").value; if(!chaveId) return crmToast("Selecione a Chave primeiro.", "warning"); document.getElementById('ajuste_chave_id').value = chaveId; document.getElementById('ajuste_valor').value = ''; document.getElementById('ajuste_obs').value = ''; v8Modais.ajusteSaldo.show(); }
     async function v8SalvarAjusteSaldo() { const chaveId = document.getElementById('ajuste_chave_id').value; const tipo = document.getElementById('ajuste_tipo').value; const valor = document.getElementById('ajuste_valor').value; const obs = document.getElementById('ajuste_obs').value; if(!valor || valor <= 0) return crmToast("Digite um valor válido.", "warning"); if(!obs) return crmToast("Digite o motivo.", "warning"); const res = await v8Req('v8_api.ajax.php', 'ajustar_saldo_manual', { chave_id: chaveId, tipo: tipo, valor: valor, obs: obs }, true, "Ajustando..."); if(res.success) { crmToast("✅ " + res.msg, "success"); v8Modais.ajusteSaldo.hide(); await v8CarregarDadosIniciais(); v8CarregarExtrato(); v8AtualizarSaldosTopo(); } else { crmToast("❌ Erro: " + res.msg, "error"); } }
-    function abrirModalNovaChave() { document.getElementById('formChaveV8').reset(); document.getElementById('chv_id').value = ''; if(restricaoMeuUsuario) { document.getElementById('chv_usuario_id').value = cpfLogado; } v8Modais.chave.show(); }
-    function abrirModalEditarChave(id) { const chave = windowListaChavesCache.find(c => c.ID == id); if(!chave) return; document.getElementById('chv_id').value = chave.ID; document.getElementById('chv_usuario_id').value = chave.CPF_USUARIO || chave.USUARIO_ID; document.getElementById('chv_client_id').value = chave.CLIENT_ID; document.getElementById('chv_audience').value = chave.AUDIENCE; document.getElementById('chv_username').value = chave.USERNAME_API; document.getElementById('chv_password').value = chave.PASSWORD_API; document.getElementById('chv_custo_consulta').value = chave.CUSTO_CONSULTA; document.getElementById('chv_custo_v8').value = chave.CUSTO_V8; document.getElementById('chv_tabela_padrao').value = chave.TABELA_PADRAO || 'CLT Acelera'; document.getElementById('chv_prazo_padrao').value = chave.PRAZO_PADRAO || '24'; document.getElementById('chv_intervalo_consentimento').value = chave.INTERVALO_CONSENTIMENTO || '120'; v8Modais.chave.show(); }
-    document.getElementById('formChaveV8').addEventListener('submit', async e => { e.preventDefault(); const payload = { id: document.getElementById('chv_id').value, usuario_id: document.getElementById('chv_usuario_id').value, client_id: document.getElementById('chv_client_id').value, audience: document.getElementById('chv_audience').value, username_api: document.getElementById('chv_username').value, password_api: document.getElementById('chv_password').value, custo_consulta: document.getElementById('chv_custo_consulta').value, custo_v8: document.getElementById('chv_custo_v8').value, tabela_padrao: document.getElementById('chv_tabela_padrao').value, prazo_padrao: document.getElementById('chv_prazo_padrao').value, intervalo_consentimento: document.getElementById('chv_intervalo_consentimento').value }; const res = await v8Req('v8_api.ajax.php', 'salvar_chave_v8', payload); if(res.success) { v8Modais.chave.hide(); v8CarregarClientes(); v8CarregarDadosIniciais(); crmToast("Chave salva com sucesso!", "success"); } else { crmToast("❌ Erro: " + res.msg, "error"); } });
+    function abrirModalNovaChave() { document.getElementById('formChaveV8').reset(); document.getElementById('chv_id').value = ''; v8LimparUsuarioSelecionado(); if(restricaoMeuUsuario) { const me = v8ListaUsuarios.find(u => u.id === cpfLogado); v8SelecionarUsuario(cpfLogado, me?.nome || 'Meu Usuário', me?.empresa || ''); } v8Modais.chave.show(); }
+    function abrirModalEditarChave(id) { const chave = windowListaChavesCache.find(c => c.ID == id); if(!chave) return; document.getElementById('chv_id').value = chave.ID; v8SelecionarUsuario(chave.CPF_USUARIO || chave.USUARIO_ID, chave.NOME_USUARIO || '', ''); document.getElementById('chv_client_id').value = chave.CLIENT_ID; document.getElementById('chv_audience').value = chave.AUDIENCE; document.getElementById('chv_username').value = chave.USERNAME_API; document.getElementById('chv_password').value = chave.PASSWORD_API; document.getElementById('chv_custo_consulta').value = chave.CUSTO_CONSULTA; document.getElementById('chv_custo_v8').value = chave.CUSTO_V8; document.getElementById('chv_tabela_padrao').value = chave.TABELA_PADRAO || 'CLT Acelera'; document.getElementById('chv_prazo_padrao').value = chave.PRAZO_PADRAO || '24'; document.getElementById('chv_intervalo_consentimento').value = chave.INTERVALO_CONSENTIMENTO || '120'; v8Modais.chave.show(); }
+    document.getElementById('formChaveV8').addEventListener('submit', async e => { e.preventDefault(); const usuarioId = document.getElementById('chv_usuario_id').value; if(!restricaoMeuUsuario && !usuarioId) { crmToast("Selecione o usuário (Dono da Chave).", "warning"); return; } const payload = { id: document.getElementById('chv_id').value, usuario_id: usuarioId, client_id: document.getElementById('chv_client_id').value, audience: document.getElementById('chv_audience').value, username_api: document.getElementById('chv_username').value, password_api: document.getElementById('chv_password').value, custo_consulta: document.getElementById('chv_custo_consulta').value, custo_v8: document.getElementById('chv_custo_v8').value, tabela_padrao: document.getElementById('chv_tabela_padrao').value, prazo_padrao: document.getElementById('chv_prazo_padrao').value, intervalo_consentimento: document.getElementById('chv_intervalo_consentimento').value }; const res = await v8Req('v8_api.ajax.php', 'salvar_chave_v8', payload); if(res.success) { v8Modais.chave.hide(); v8CarregarClientes(); v8CarregarDadosIniciais(); crmToast("Chave salva com sucesso!", "success"); } else { crmToast("❌ Erro: " + res.msg, "error"); } });
     
     function v8PesquisarClienteBanco(termo) { 
         clearTimeout(v8TimerBusca); 

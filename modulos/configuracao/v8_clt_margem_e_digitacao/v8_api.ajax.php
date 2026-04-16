@@ -150,13 +150,13 @@ try {
 
         case 'listar_cadastros_base':
             $res = ['usuarios' => []];
-            try { 
+            try {
                 if ($restricao_meu_usuario) {
-                    $stmtU = $pdo->prepare("SELECT CPF as id, NOME as nome FROM CLIENTE_USUARIO WHERE CPF = ? ORDER BY NOME ASC"); $stmtU->execute([$usuario_logado_cpf]);
+                    $stmtU = $pdo->prepare("SELECT cu.CPF as id, cu.NOME as nome, COALESCE(ce.NOME_CADASTRO,'') as empresa FROM CLIENTE_USUARIO cu LEFT JOIN CLIENTE_EMPRESAS ce ON ce.ID = cu.id_empresa WHERE cu.CPF = ? ORDER BY cu.NOME ASC"); $stmtU->execute([$usuario_logado_cpf]);
                 } else {
-                    $stmtU = $pdo->query("SELECT CPF as id, NOME as nome FROM CLIENTE_USUARIO ORDER BY NOME ASC"); 
+                    $stmtU = $pdo->query("SELECT cu.CPF as id, cu.NOME as nome, COALESCE(ce.NOME_CADASTRO,'') as empresa FROM CLIENTE_USUARIO cu LEFT JOIN CLIENTE_EMPRESAS ce ON ce.ID = cu.id_empresa ORDER BY cu.NOME ASC");
                 }
-                $res['usuarios'] = $stmtU->fetchAll(PDO::FETCH_ASSOC); 
+                $res['usuarios'] = $stmtU->fetchAll(PDO::FETCH_ASSOC);
             } catch (Exception $e) {}
             echo json_encode(['success' => true, 'data' => $res]); break;
 
