@@ -13,7 +13,10 @@
       "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/index.api.ia.v8.php)",
       "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/ajax_api_ia_v8.php)",
       "Bash(perl -i -pe ':*)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Bash(mysql -u root -e ' *)",
+      "Bash(mysql -e ' *)",
+      "Bash(php -r ' *)"
     ]
   }
 }
