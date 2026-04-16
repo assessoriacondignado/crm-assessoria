@@ -165,12 +165,14 @@ function buscarConsentimentoV8ComPaginacao($cpf_busca, $headers, $ignorar_rejeit
 $start_time = time();
 $target_runtime = 280;
 $tokens_cache = [];
+$ciclo_count = 0;
 
 while(true) {
-    if(time() - $start_time > $target_runtime) { 
+    if(time() - $start_time > $target_runtime) {
         flock($fp, LOCK_UN); fclose($fp); acordarWorkerNovamente(); exit;
     }
 
+    $ciclo_count++;
     $work_found = false;
 
     $stmtLote = $pdo->prepare("SELECT * FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE STATUS_FILA IN ('PENDENTE', 'PROCESSANDO') AND CPF_USUARIO = ? ORDER BY ID ASC LIMIT 1");
@@ -244,6 +246,61 @@ while(true) {
     }
 
     $headers = ["Authorization: Bearer $token", "Content-Type: application/json"];
+
+    // =========================================================================
+    // PRIORIDADE 0 (a cada 100 ciclos): AGUARDANDO DATAPREV — re-consulta Dataprev
+    // =========================================================================
+    if ($ciclo_count % 100 === 0) {
+        $stmtDP = $pdo->prepare("SELECT * FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE WHERE LOTE_ID = ? AND STATUS_V8 = 'AGUARDANDO DATAPREV' ORDER BY ID ASC LIMIT 5");
+        $stmtDP->execute([$id_lote]);
+        $loteDP = $stmtDP->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($loteDP as $cpfDP) {
+            $consult_id_dp = $cpfDP['CONSULT_ID'];
+            if (empty($consult_id_dp)) {
+                // Sem consult_id — manda para NA FILA criar novo consentimento
+                $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'NA FILA', OBSERVACAO = 'Sem CONSULT_ID — novo consentimento será criado.' WHERE ID = ?")->execute([$cpfDP['ID']]);
+                continue;
+            }
+
+            $chDP = curl_init("https://bff.v8sistema.com/private-consignment/consult/{$consult_id_dp}");
+            curl_setopt($chDP, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($chDP, CURLOPT_HTTPHEADER, $headers);
+            $resDP = curl_exec($chDP); $httpDP = curl_getinfo($chDP, CURLINFO_HTTP_CODE); curl_close($chDP);
+            $jsonDP = json_decode($resDP, true);
+
+            gravarLogIntegracao('logs_consulta_lote', $cpfDP['CPF'], 'REPROCESS AGUARDANDO DATAPREV', "GET /consult/{$consult_id_dp}", "GET", $jsonDP, $httpDP);
+
+            $status_dp = strtoupper($jsonDP['status'] ?? '');
+
+            if ($httpDP == 200 && in_array($status_dp, ['SUCCESS', 'COMPLETED', 'PRE_APPROVED', 'APPROVED'])) {
+                $margem_dp = extrairValorSeguro($jsonDP, ['availableMargin', 'margin', 'maxAmount', 'marginBaseValue', 'availableMarginValue']) ?? 0;
+                $chCfgDP = curl_init("https://bff.v8sistema.com/private-consignment/simulation/configs?consult_id={$consult_id_dp}");
+                curl_setopt($chCfgDP, CURLOPT_RETURNTRANSFER, true); curl_setopt($chCfgDP, CURLOPT_HTTPHEADER, $headers);
+                $resCfgDP = curl_exec($chCfgDP); curl_close($chCfgDP); $jsonCfgDP = json_decode($resCfgDP, true);
+                $config_id_dp = null; $lista_cfg_dp = $jsonCfgDP['configs'] ?? [];
+                if (!empty($lista_cfg_dp)) {
+                    $tabela_slug = trim(strtolower($tabela_padrao)); $quer_seg = strpos($tabela_slug, 'seguro') !== false;
+                    foreach ($lista_cfg_dp as $cfg) { $ns = trim(strtolower($cfg['slug'] ?? $cfg['name'] ?? '')); if ($ns === $tabela_slug) { $config_id_dp = $cfg['id']; break; } }
+                    if (!$config_id_dp) foreach ($lista_cfg_dp as $cfg) { $ns = trim(strtolower($cfg['slug'] ?? $cfg['name'] ?? '')); if (strpos($ns, $tabela_slug) !== false) { if (!$quer_seg && strpos($ns,'seguro')!==false) continue; $config_id_dp = $cfg['id']; break; } }
+                    if (!$config_id_dp) $config_id_dp = $lista_cfg_dp[0]['id'];
+                }
+                if (!$config_id_dp) $config_id_dp = $consult_id_dp;
+                $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'AGUARDANDO SIMULACAO', VALOR_MARGEM = ?, CONFIG_ID = ?, OBSERVACAO = 'Margem recuperada no reprocessamento automático.' WHERE ID = ?")->execute([(float)$margem_dp, $config_id_dp, $cpfDP['ID']]);
+                $cpfDP['VALOR_MARGEM'] = $margem_dp; $cpfDP['CONFIG_ID'] = $config_id_dp;
+                v8AtualizarFatorConferi($cpfDP, $lote, $pdo);
+                $work_found = true;
+
+            } elseif (in_array($status_dp, ['REJECTED', 'DENIED', 'CANCELED', 'ERROR'])) {
+                $msgErroDP = $jsonDP['detail'] ?? $jsonDP['status_description'] ?? "Rejeitado pela Dataprev (status: {$status_dp})";
+                $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'ERRO MARGEM', OBSERVACAO = ? WHERE ID = ?")->execute([$msgErroDP, $cpfDP['ID']]);
+                $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_PROCESSADA = QTD_PROCESSADA + 1, QTD_ERRO = QTD_ERRO + 1 WHERE ID = ?")->execute([$id_lote]);
+
+            }
+            // Se ainda pendente (PROCESSING, WAITING, WAITING_CREDIT_ANALYSIS etc.) — mantém AGUARDANDO DATAPREV sem alterar
+        }
+    }
+    // =========================================================================
 
     // =========================================================================
     // PRIORIDADE 1: AGUARDANDO SIMULACAO — já tem margem, só falta simular
