@@ -529,12 +529,26 @@ try {
 
             $sim_obj = isset($json_sim[0]) ? $json_sim[0] : $json_sim;
             $sim_id = $sim_obj['id_simulation'] ?? $sim_obj['id'] ?? null;
-            $valor_liberado = $sim_obj['disbursement_amount'] ?? $sim_obj['disbursed_amount'] ?? $sim_obj['operation_amount'] ?? 0;
+            $valor_liberado = (float)($sim_obj['disbursement_amount'] ?? $sim_obj['disbursed_amount'] ?? $sim_obj['operation_amount'] ?? 0);
             $valor_parcela_real = $sim_obj['installment_value'] ?? $sim_obj['installment_face_value'] ?? $margem_float;
 
-            if (!$sim_id || $http_sim >= 400) { $sim_id = 'ERRO-TABELA'; }
+            // Captura mensagem de erro da API (rejeições como "CNPJ não se enquadra na politica interna")
+            $erroSimMsg = $sim_obj['detail'] ?? $sim_obj['message'] ?? $sim_obj['error'] ?? null;
+            if (is_array($erroSimMsg)) $erroSimMsg = implode('; ', $erroSimMsg);
 
-            $pdo->prepare("INSERT INTO INTEGRACAO_V8_REGISTRO_SIMULACAO (ID_FILA, CPF, CONFIG_ID, NOME_TABELA, MARGEM_DISPONIVEL, PRAZOS_DISPONIVEIS, TIPO_SIMULACAO, SIMULATION_ID, STATUS_SIMULATION_ID, DATA_SIMULATION_ID, STATUS_CONFIG_ID, VALOR_LIBERADO, VALOR_PARCELA, PRAZO_SIMULACAO) VALUES (?, ?, ?, ?, ?, ?, 'PADRÃO', ?, 'SIMULACAO OK', NOW(), 'MARGEM OK', ?, ?, ?)")->execute([$id_fila, $cpf_cliente, $config_id, $nome_tabela_salvar, $margem_float, json_encode($prazos), $sim_id, (float)$valor_liberado, (float)$valor_parcela_real, $prazo_padrao_simulacao]);
+            $simulacaoRejeitada = ($http_sim >= 400) || (!$sim_id) || ($valor_liberado <= 0 && !empty($erroSimMsg));
+
+            if ($simulacaoRejeitada) {
+                // Rejeição: registra erro com a mensagem da API
+                $sim_id = $sim_id ?? 'REJEITADO';
+                $msgErroFinal = $erroSimMsg ?? ($http_sim >= 400 ? "Erro HTTP {$http_sim} na simulação" : "Simulação rejeitada sem valor liberado");
+                $pdo->prepare("INSERT INTO INTEGRACAO_V8_REGISTRO_SIMULACAO (ID_FILA, CPF, CONFIG_ID, NOME_TABELA, MARGEM_DISPONIVEL, PRAZOS_DISPONIVEIS, TIPO_SIMULACAO, SIMULATION_ID, STATUS_SIMULATION_ID, DATA_SIMULATION_ID, STATUS_CONFIG_ID, VALOR_LIBERADO, VALOR_PARCELA, PRAZO_SIMULACAO) VALUES (?, ?, ?, ?, ?, ?, 'PADRÃO', ?, 'SIMULACAO REJEITADA', NOW(), 'MARGEM OK', 0, 0, ?)")->execute([$id_fila, $cpf_cliente, $config_id, $nome_tabela_salvar, $margem_float, json_encode($prazos), $sim_id, $prazo_padrao_simulacao]);
+                $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA SET STATUS_V8 = 'ERRO-SIMULACAO', MENSAGEM_ERRO = ?, ULTIMA_ATUALIZACAO = NOW() WHERE ID = ?")->execute([$msgErroFinal, $id_fila]);
+                echo json_encode(['success' => false, 'status' => 'erro', 'msg' => $msgErroFinal]); break;
+            }
+
+            // Simulação bem-sucedida
+            $pdo->prepare("INSERT INTO INTEGRACAO_V8_REGISTRO_SIMULACAO (ID_FILA, CPF, CONFIG_ID, NOME_TABELA, MARGEM_DISPONIVEL, PRAZOS_DISPONIVEIS, TIPO_SIMULACAO, SIMULATION_ID, STATUS_SIMULATION_ID, DATA_SIMULATION_ID, STATUS_CONFIG_ID, VALOR_LIBERADO, VALOR_PARCELA, PRAZO_SIMULACAO) VALUES (?, ?, ?, ?, ?, ?, 'PADRÃO', ?, 'SIMULACAO OK', NOW(), 'MARGEM OK', ?, ?, ?)")->execute([$id_fila, $cpf_cliente, $config_id, $nome_tabela_salvar, $margem_float, json_encode($prazos), $sim_id, $valor_liberado, (float)$valor_parcela_real, $prazo_padrao_simulacao]);
             $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA SET STATUS_V8 = 'OK-SIMULACAO', ULTIMA_ATUALIZACAO = NOW() WHERE ID = ?")->execute([$id_fila]);
 
             echo json_encode(['success' => true, 'status' => 'concluido', 'margem' => $margem, 'msg' => 'Sucesso!']); break;
