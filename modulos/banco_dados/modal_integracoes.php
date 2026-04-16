@@ -78,8 +78,14 @@ if (empty($cpf_para_integracao) && isset($termo_busca)) {
             titulo.innerHTML = 'INTEGRAÇÃO V8 CONSIGNADO';
             if (chavesV8Cache.length > 0) { popularSelectChaves(selChaves, chavesV8Cache); } else { buscarChavesV8(selChaves); }
         } else if (tipo === 'FATOR_CONFERI') {
+            // Fator Conferi usa sempre o CPF do próprio usuário logado — executa automaticamente sem mostrar seletor
             titulo.innerHTML = 'ATUALIZAÇÃO CADASTRAL';
-            if (chavesFatorCache.length > 0) { popularSelectChaves(selChaves, chavesFatorCache); } else { buscarChavesFator(selChaves); }
+            document.getElementById('box_selecao_chave').style.display = 'none';
+            document.getElementById('btn_fechar_modal_top').style.display = 'none';
+            document.getElementById('box_processamento').style.display = 'block';
+            document.getElementById('texto_status_integracao').innerHTML = 'Atualizando cadastro no Fator Conferi...';
+            document.getElementById('texto_status_integracao').className = 'fw-bold text-dark mb-2';
+            document.getElementById('btn_fechar_erro').style.display = 'none';
         } else if (tipo === 'HIST_INSS') {
             titulo.innerHTML = 'CONSULTA BENEFÍCIO (HIST INSS)';
             if (chavesHistInssCache.length > 0) { popularSelectChaves(selChaves, chavesHistInssCache); } else { buscarChavesHistInss(selChaves); }
@@ -87,6 +93,11 @@ if (empty($cpf_para_integracao) && isset($termo_busca)) {
 
         var myModal = new bootstrap.Modal(document.getElementById('modalIntegracaoGeral'));
         myModal.show();
+
+        // Fator Conferi: dispara automaticamente após abrir o modal
+        if (tipo === 'FATOR_CONFERI') {
+            setTimeout(() => executarFatorConferiAutomatico(), 300);
+        }
     }
 
     function popularSelectChaves(select, dados) {
@@ -150,6 +161,45 @@ if (empty($cpf_para_integracao) && isset($termo_busca)) {
         fetch('/modulos/configuracao/Promosys_inss/promosys_inss.ajax.php', { method: 'POST', body: fd }).then(r => r.json()).then(r => {
             if (r.success && r.data) { chavesHistInssCache = r.data.map(c => ({ id: c.CPF, nome: c.NOME, saldo: c.SALDO })); popularSelectChaves(select, chavesHistInssCache); } else { select.innerHTML = '<option value="">Erro ao carregar clientes</option>'; }
         }).catch(e => { select.innerHTML = '<option value="">Falha de comunicação.</option>'; });
+    }
+
+    function executarFatorConferiAutomatico() {
+        let cpfAlvo = document.getElementById('integ_cpf_alvo').value.replace(/\D/g, '');
+        if (cpfAlvo.length !== 11) {
+            const inputFormCPF = document.querySelector('input[name="cpf"]');
+            if (inputFormCPF) cpfAlvo = inputFormCPF.value.replace(/\D/g, '');
+        }
+        if (cpfAlvo.length !== 11) {
+            return exibirErroIntegracao("CPF inválido. Digite um CPF com 11 dígitos na busca.");
+        }
+
+        const cpfCobrar = document.getElementById('integ_user_cpf_logado').value.replace(/\D/g, '');
+        if (!cpfCobrar) {
+            return exibirErroIntegracao("Sessão inválida. Faça login novamente.");
+        }
+
+        let fd = new FormData();
+        fd.append('acao', 'consulta_cpf_manual');
+        fd.append('cpf', cpfAlvo);
+        fd.append('cpf_cobrar', cpfCobrar);
+        fd.append('fonte', 'PAINEL_WEB');
+
+        fetch('/modulos/configuracao/fator_conferi/fator_conferi.ajax.php', { method: 'POST', body: fd })
+        .then(r => r.json())
+        .then(r => {
+            document.getElementById('loading_spinner').style.display = 'none';
+            document.getElementById('subtexto_status').style.display = 'none';
+            document.getElementById('btn_fechar_modal_top').style.display = 'block';
+            const textoStatus = document.getElementById('texto_status_integracao');
+            if (r.success) {
+                textoStatus.innerHTML = '<i class="fas fa-check-circle text-success mb-2" style="font-size: 2rem;"></i><br>Atualizado com Sucesso!';
+                textoStatus.className = 'fw-bold text-success mb-2';
+                gravarLogRodape(cpfAlvo, "Atualização Cadastral via Fator Conferi.");
+            } else {
+                exibirErroIntegracao(r.msg || "Erro ao executar atualização cadastral.");
+            }
+        })
+        .catch(() => exibirErroIntegracao("Falha de comunicação com o Fator Conferi."));
     }
 
     function exibirErroIntegracao(mensagem) {
