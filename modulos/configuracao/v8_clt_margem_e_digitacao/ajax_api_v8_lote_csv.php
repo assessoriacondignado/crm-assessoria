@@ -989,7 +989,7 @@ try {
             $stmtD = $pdo->query("SELECT * FROM INTEGRACAO_V8_IMPORTACAO_LOTE
                 WHERE AGENDAMENTO_TIPO = 'DIARIO'
                   AND STATUS_FILA = 'AGUARDANDO_DIARIO'
-                  AND STATUS_LOTE = 'ATIVO'
+                  AND (STATUS_LOTE = 'ATIVO' OR STATUS_LOTE IS NULL)
                   AND HORA_INICIO_DIARIO IS NOT NULL
                   AND (ULTIMO_PROCESSAMENTO IS NULL OR ULTIMO_PROCESSAMENTO < '{$data_hoje}')");
 
@@ -1020,7 +1020,7 @@ try {
             $stmtAR = $pdo->query("SELECT l.ID, l.CPF_USUARIO, l.PROCESSADOS_HOJE, l.AUTO_REPROCESS_CHECKPOINT
                 FROM INTEGRACAO_V8_IMPORTACAO_LOTE l
                 WHERE l.AGENDAMENTO_TIPO = 'DIARIO'
-                  AND l.STATUS_LOTE = 'ATIVO'
+                  AND (l.STATUS_LOTE = 'ATIVO' OR l.STATUS_LOTE IS NULL)
                   AND l.STATUS_FILA IN ('PENDENTE','PROCESSANDO','AGUARDANDO_DIARIO')
                   AND l.PROCESSADOS_HOJE >= l.AUTO_REPROCESS_CHECKPOINT + 250
                   AND EXISTS (
