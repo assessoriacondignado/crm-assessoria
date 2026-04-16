@@ -39,7 +39,8 @@ try {
             $enviar_arquivo_whatsapp = (isset($_POST['enviar_arquivo_whatsapp']) && $_POST['enviar_arquivo_whatsapp'] == '1') ? 1 : 0;
             $hora_inativacao_inicio = !empty(trim($_POST['hora_inativacao_inicio'] ?? '')) ? trim($_POST['hora_inativacao_inicio']) : null;
             $hora_inativacao_fim    = !empty(trim($_POST['hora_inativacao_fim']    ?? '')) ? trim($_POST['hora_inativacao_fim'])    : null;
-            
+            $hora_fim_diario        = ($agendamento_tipo === 'DIARIO' && !empty(trim($_POST['hora_fim_diario'] ?? ''))) ? trim($_POST['hora_fim_diario']) : null;
+
             if ($chave_id <= 0) throw new Exception("Selecione uma Credencial/Chave para cobrar o lote.");
             if (!isset($_FILES['arquivo_csv']) || $_FILES['arquivo_csv']['error'] != UPLOAD_ERR_OK) throw new Exception("Nenhum arquivo CSV recebido.");
             if (strtolower(pathinfo($_FILES['arquivo_csv']['name'], PATHINFO_EXTENSION)) !== 'csv') throw new Exception("O arquivo precisa ser obrigatoriamente .csv.");
@@ -106,9 +107,9 @@ try {
             $status_fila_inicial = ($agendamento_tipo === 'DIARIO') ? 'AGUARDANDO_DIARIO' : 'PENDENTE';
 
             $stmtLote = $pdo->prepare("INSERT INTO INTEGRACAO_V8_IMPORTACAO_LOTE
-                (NOME_IMPORTACAO, USUARIO_ID, CPF_USUARIO, CHAVE_ID, ARQUIVO_CAMINHO, QTD_TOTAL, AGENDAMENTO_TIPO, DATA_HORA_AGENDADA, DIA_MES_AGENDADO, HORA_INICIO_DIARIO, DIAS_MES_DIARIO, LIMITE_DIARIO, ATUALIZAR_TELEFONE, ENVIAR_WHATSAPP, SOMENTE_SIMULAR, ENVIAR_ARQUIVO_WHATSAPP, HORA_INATIVACAO_INICIO, HORA_INATIVACAO_FIM, STATUS_FILA)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-            $stmtLote->execute([$agrupamento, $dono_lote_id, $dono_lote_cpf, $chave_id, $_FILES['arquivo_csv']['name'], $total, $agendamento_tipo, $data_hora_agendada, $dia_mes_agendado, $hora_inicio_diario, $dias_mes_diario, $limite_diario, $atualizar_telefone, $enviar_whats, $somente_simular, $enviar_arquivo_whatsapp, $hora_inativacao_inicio, $hora_inativacao_fim, $status_fila_inicial]);
+                (NOME_IMPORTACAO, USUARIO_ID, CPF_USUARIO, CHAVE_ID, ARQUIVO_CAMINHO, QTD_TOTAL, AGENDAMENTO_TIPO, DATA_HORA_AGENDADA, DIA_MES_AGENDADO, HORA_INICIO_DIARIO, DIAS_MES_DIARIO, LIMITE_DIARIO, ATUALIZAR_TELEFONE, ENVIAR_WHATSAPP, SOMENTE_SIMULAR, ENVIAR_ARQUIVO_WHATSAPP, HORA_INATIVACAO_INICIO, HORA_INATIVACAO_FIM, HORA_FIM_DIARIO, STATUS_FILA)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            $stmtLote->execute([$agrupamento, $dono_lote_id, $dono_lote_cpf, $chave_id, $_FILES['arquivo_csv']['name'], $total, $agendamento_tipo, $data_hora_agendada, $dia_mes_agendado, $hora_inicio_diario, $dias_mes_diario, $limite_diario, $atualizar_telefone, $enviar_whats, $somente_simular, $enviar_arquivo_whatsapp, $hora_inativacao_inicio, $hora_inativacao_fim, $hora_fim_diario, $status_fila_inicial]);
             $id_lote = $pdo->lastInsertId();
 
             $stmtCpf = $pdo->prepare("INSERT INTO INTEGRACAO_V8_REGISTROCONSULTA_LOTE (LOTE_ID, CPF, NOME, NASCIMENTO, SEXO, STATUS_V8, VALOR_MARGEM, CONSULT_ID, CONFIG_ID, OBSERVACAO) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
@@ -383,10 +384,12 @@ try {
                     $q = (int)$row['qtd'];
 
                     if(!isset($statsByLote[$lid])) {
-                        $statsByLote[$lid] = ['c_ok'=>0, 'c_err'=>0, 'm_ok'=>0, 'm_err'=>0, 's_ok'=>0, 's_err'=>0, 'dataprev'=>0];
+                        $statsByLote[$lid] = ['c_ok'=>0, 'c_err'=>0, 'm_ok'=>0, 'm_err'=>0, 's_ok'=>0, 's_err'=>0, 'dataprev'=>0, 'na_fila'=>0];
                     }
 
-                    if (strpos($st, 'ERRO CONSULTA') !== false || strpos($st, 'ERRO SALDO') !== false) {
+                    if ($st === 'NA FILA') {
+                        $statsByLote[$lid]['na_fila'] += $q;
+                    } elseif (strpos($st, 'ERRO CONSULTA') !== false || strpos($st, 'ERRO SALDO') !== false) {
                         $statsByLote[$lid]['c_err'] += $q;
                     } elseif (strpos($st, 'AGUARDANDO MARGEM') !== false || strpos($st, 'RECUPERAR V8') !== false) {
                         $statsByLote[$lid]['c_ok'] += $q;
@@ -413,7 +416,7 @@ try {
                 foreach ($lotes as &$l) {
                     $lid = $l['ID'];
                     $hoje = $hojeByLote[$lid] ?? ['c_hoje'=>0, 's_hoje'=>0];
-                    $funil = isset($statsByLote[$lid]) ? $statsByLote[$lid] : ['c_ok'=>0, 'c_err'=>0, 'm_ok'=>0, 'm_err'=>0, 's_ok'=>0, 's_err'=>0, 'dataprev'=>0];
+                    $funil = isset($statsByLote[$lid]) ? $statsByLote[$lid] : ['c_ok'=>0, 'c_err'=>0, 'm_ok'=>0, 'm_err'=>0, 's_ok'=>0, 's_err'=>0, 'dataprev'=>0, 'na_fila'=>0];
                     $funil['c_hoje'] = $hoje['c_hoje'];
                     $funil['s_hoje'] = $hoje['s_hoje'];
                     // m_hoje: aprovações de margem hoje ≈ simulações OK + erros de simulação hoje (mesma rodada)
@@ -716,17 +719,18 @@ try {
             $enviar_arquivo_whatsapp = (int)$_POST['enviar_arquivo_whatsapp'];
             $hora_inativacao_inicio = !empty(trim($_POST['hora_inativacao_inicio'] ?? '')) ? trim($_POST['hora_inativacao_inicio']) : null;
             $hora_inativacao_fim    = !empty(trim($_POST['hora_inativacao_fim']    ?? '')) ? trim($_POST['hora_inativacao_fim'])    : null;
+            $hora_fim_diario        = ($agendamento_tipo === 'DIARIO' && !empty(trim($_POST['hora_fim_diario'] ?? ''))) ? trim($_POST['hora_fim_diario']) : null;
 
             $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET
                 NOME_IMPORTACAO = ?, AGENDAMENTO_TIPO = ?, DATA_HORA_AGENDADA = ?, DIA_MES_AGENDADO = ?,
                 HORA_INICIO_DIARIO = ?, DIAS_MES_DIARIO = ?,
                 LIMITE_DIARIO = ?, SOMENTE_SIMULAR = ?, ATUALIZAR_TELEFONE = ?, ENVIAR_WHATSAPP = ?, ENVIAR_ARQUIVO_WHATSAPP = ?,
-                HORA_INATIVACAO_INICIO = ?, HORA_INATIVACAO_FIM = ?
+                HORA_INATIVACAO_INICIO = ?, HORA_INATIVACAO_FIM = ?, HORA_FIM_DIARIO = ?
                 WHERE ID = ?")->execute([
                 $agrupamento, $agendamento_tipo, $data_hora_agendada, $dia_mes_agendado,
                 $hora_inicio_diario, $dias_mes_diario,
                 $limite_diario, $somente_simular, $atualizar_telefone, $enviar_whats, $enviar_arquivo_whatsapp,
-                $hora_inativacao_inicio, $hora_inativacao_fim, $id_lote
+                $hora_inativacao_inicio, $hora_inativacao_fim, $hora_fim_diario, $id_lote
             ]);
 
             ob_end_clean(); echo json_encode(['success' => true, 'msg' => 'Configurações do Lote atualizadas com sucesso!']); exit;

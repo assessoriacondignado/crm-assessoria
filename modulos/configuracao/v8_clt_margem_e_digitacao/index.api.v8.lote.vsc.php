@@ -147,6 +147,11 @@
                         <label class="fw-bold small text-dark mb-1">Horário de Início:</label>
                         <input type="time" name="hora_inicio_diario" id="hora_inicio_diario" class="form-control form-control-sm border-warning fw-bold">
                     </div>
+                    <div class="col-md-2 d-none" id="div_hora_fim_diario">
+                        <label class="fw-bold small text-dark mb-1">Horário de Fim:</label>
+                        <input type="time" name="hora_fim_diario" id="hora_fim_diario" class="form-control form-control-sm border-danger fw-bold" title="Hora em que o robô para automaticamente">
+                        <small class="text-muted" style="font-size:10px;">Robô para neste horário</small>
+                    </div>
                     <div class="col-12 d-none" id="div_dias_mes_diario">
                         <label class="fw-bold small text-dark mb-1">Dias do Mês: <span class="text-muted fw-normal">(deixe vazio = todos os dias)</span></label>
                         <div class="border border-warning rounded p-2 bg-white shadow-sm">
@@ -322,6 +327,11 @@
                     <div class="col-md-4 d-none" id="div_edit_hora_inicio_diario">
                         <label class="fw-bold small text-dark mb-1">Horário de Início:</label>
                         <input type="time" id="edit_hora_inicio_diario" class="form-control border-warning fw-bold">
+                    </div>
+                    <div class="col-md-4 d-none" id="div_edit_hora_fim_diario">
+                        <label class="fw-bold small text-danger mb-1">Horário de Fim:</label>
+                        <input type="time" id="edit_hora_fim_diario" class="form-control border-danger fw-bold" title="Robô para automaticamente neste horário">
+                        <small class="text-muted" style="font-size:10px;">Robô para neste horário (opcional)</small>
                     </div>
                     <div class="col-12 d-none" id="div_edit_dias_mes_diario">
                         <label class="fw-bold small text-dark mb-1">Dias do Mês: <span class="text-muted fw-normal">(deixe vazio = todos os dias)</span></label>
@@ -556,11 +566,13 @@
         document.getElementById('div_data_hora_agendada').classList.add('d-none');
         document.getElementById('div_dia_mes_agendado').classList.add('d-none');
         document.getElementById('div_hora_inicio_diario').classList.add('d-none');
+        document.getElementById('div_hora_fim_diario').classList.add('d-none');
         document.getElementById('div_dias_mes_diario').classList.add('d-none');
         if (val === 'PROGRAMADO') document.getElementById('div_data_hora_agendada').classList.remove('d-none');
         if (val === 'DIA_MES') document.getElementById('div_dia_mes_agendado').classList.remove('d-none');
         if (val === 'DIARIO') {
             document.getElementById('div_hora_inicio_diario').classList.remove('d-none');
+            document.getElementById('div_hora_fim_diario').classList.remove('d-none');
             document.getElementById('div_dias_mes_diario').classList.remove('d-none');
         }
     }
@@ -569,11 +581,13 @@
         document.getElementById('div_edit_data_hora_agendada').classList.add('d-none');
         document.getElementById('div_edit_dia_mes_agendado').classList.add('d-none');
         document.getElementById('div_edit_hora_inicio_diario').classList.add('d-none');
+        document.getElementById('div_edit_hora_fim_diario').classList.add('d-none');
         document.getElementById('div_edit_dias_mes_diario').classList.add('d-none');
         if (val === 'PROGRAMADO') document.getElementById('div_edit_data_hora_agendada').classList.remove('d-none');
         if (val === 'DIA_MES') document.getElementById('div_edit_dia_mes_agendado').classList.remove('d-none');
         if (val === 'DIARIO') {
             document.getElementById('div_edit_hora_inicio_diario').classList.remove('d-none');
+            document.getElementById('div_edit_hora_fim_diario').classList.remove('d-none');
             document.getElementById('div_edit_dias_mes_diario').classList.remove('d-none');
         }
     }
@@ -754,7 +768,10 @@
                 if(l.AGENDAMENTO_TIPO === 'DIA_MES') agendamentoInfo = `<span class="badge bg-warning text-dark ms-1">⏳ Dia ${l.DIA_MES_AGENDADO || 'Atual'}</span>`;
                 if(l.AGENDAMENTO_TIPO === 'DIARIO') {
                     let diasLabel = (!l.DIAS_MES_DIARIO || l.DIAS_MES_DIARIO === 'TODOS') ? 'todo dia' : 'dias ' + l.DIAS_MES_DIARIO;
-                    agendamentoInfo = `<span class="badge bg-warning text-dark ms-1">🔁 ${l.HORA_INICIO_DIARIO || '--:--'} (${diasLabel})</span>`;
+                    let hIniD = (l.HORA_INICIO_DIARIO || '--:--').substring(0, 5);
+                    let hFimD = (l.HORA_FIM_DIARIO || '').substring(0, 5);
+                    let hFimLabel = hFimD ? ` até ${hFimD}` : '';
+                    agendamentoInfo = `<span class="badge bg-warning text-dark ms-1">🔁 ${hIniD}${hFimLabel} (${diasLabel})</span>`;
                 }
                 if(l.LIMITE_DIARIO > 0) agendamentoInfo += `<span class="badge bg-info text-dark ms-1">Lmt: ${l.LIMITE_DIARIO} (Hj: ${l.PROCESSADOS_HOJE})</span>`;
                 let hiIni = (l.HORA_INATIVACAO_INICIO || '').substring(0,5);
@@ -810,18 +827,21 @@
                 let qtdProcessadaAtual = l.QTD_PROCESSADA || l.qtd_processada || 0;
                 let pNum = qtdTotalAtual > 0 ? Math.round((qtdProcessadaAtual / qtdTotalAtual) * 100) : 0; 
                 
-                let f = l.funil || {c_ok:0, c_err:0, m_ok:0, m_err:0, s_ok:0, s_err:0, dataprev:0, c_hoje:0, m_hoje:0, s_hoje:0};
+                let f = l.funil || {c_ok:0, c_err:0, m_ok:0, m_err:0, s_ok:0, s_err:0, dataprev:0, c_hoje:0, m_hoje:0, s_hoje:0, na_fila:0};
                 let c_ok = f.c_ok || 0; let c_err = f.c_err || 0;
                 let m_ok = f.m_ok || 0; let m_err = f.m_err || 0;
                 let s_ok = f.s_ok || 0; let s_err = f.s_err || 0;
                 let dataprev = f.dataprev || 0;
+                let na_fila = f.na_fila || 0;
                 let c_hoje = f.c_hoje || 0; let m_hoje = f.m_hoje || 0; let s_hoje = f.s_hoje || 0;
 
                 let htmlDataprev = dataprev > 0 ? `<div class="mb-1 text-danger fw-bold" style="font-size:10px;"><i class="fas fa-clock text-secondary" style="width:15px;"></i> Dataprev: ${dataprev}</div>` : '';
+                let htmlNaFila = na_fila > 0 ? `<div class="mb-1 text-warning fw-bold" style="font-size:10px;"><i class="fas fa-hourglass-half text-secondary" style="width:15px;"></i> Na Fila: <b>${na_fila}</b></div>` : '';
 
                 let funilHtml = `
                 <div class="text-start d-inline-block" style="font-size: 11px; min-width: 155px;">
                     ${htmlDataprev}
+                    ${htmlNaFila}
                     <div class="mb-1"><i class="fas fa-id-card text-secondary" style="width:15px;"></i> Consen.: <span class="text-success fw-bold">${c_ok}</span> / <span class="text-danger">${c_err}</span> <span class="badge bg-info text-dark ms-1" title="Hoje (desde 00h)">${c_hoje} hj</span></div>
                     <div class="mb-1"><i class="fas fa-search-dollar text-secondary" style="width:15px;"></i> Margem: <span class="text-success fw-bold">${m_ok}</span> / <span class="text-danger">${m_err}</span> <span class="badge bg-info text-dark ms-1" title="Hoje (desde 00h)">${m_hoje} hj</span></div>
                     <div class="mb-1"><i class="fas fa-calculator text-secondary" style="width:15px;"></i> Simul.: <span class="text-success fw-bold">${s_ok}</span> / <span class="text-danger">${s_err}</span> <span class="badge bg-info text-dark ms-1" title="Hoje (desde 00h)">${s_hoje} hj</span></div>
@@ -1051,6 +1071,7 @@
         document.getElementById('edit_data_hora_agendada').value = dh ? dh.substring(0, 16) : '';
         document.getElementById('edit_dia_mes_agendado').value = lote.DIA_MES_AGENDADO || lote.dia_mes_agendado || '';
         document.getElementById('edit_hora_inicio_diario').value = lote.HORA_INICIO_DIARIO || lote.hora_inicio_diario || '';
+        document.getElementById('edit_hora_fim_diario').value = (lote.HORA_FIM_DIARIO || lote.hora_fim_diario || '').substring(0, 5);
         v8CarregarDiasEdit(lote.DIAS_MES_DIARIO || lote.dias_mes_diario || 'TODOS');
         document.getElementById('edit_limite_diario').value = lote.LIMITE_DIARIO || lote.limite_diario || 0;
 
@@ -1076,6 +1097,7 @@
             data_hora_agendada: document.getElementById('edit_data_hora_agendada').value,
             dia_mes_agendado: document.getElementById('edit_dia_mes_agendado').value,
             hora_inicio_diario: document.getElementById('edit_hora_inicio_diario').value,
+            hora_fim_diario: document.getElementById('edit_hora_fim_diario').value || '',
             dias_mes_diario: document.getElementById('edit_dias_mes_diario').value,
             limite_diario: document.getElementById('edit_limite_diario').value,
             somente_simular: document.getElementById('edit_somente_simular').checked ? 1 : 0,

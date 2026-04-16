@@ -58,6 +58,7 @@ try { $pdo->exec("ALTER TABLE INTEGRACAO_V8_REGISTROCONSULTA_LOTE ADD COLUMN DAT
 try { $pdo->exec("ALTER TABLE INTEGRACAO_V8_IMPORTACAO_LOTE ADD COLUMN AUTO_REPROCESS_CHECKPOINT INT NOT NULL DEFAULT 0"); } catch(Exception $e){}
 try { $pdo->exec("ALTER TABLE INTEGRACAO_V8_IMPORTACAO_LOTE ADD COLUMN HORA_INATIVACAO_INICIO TIME NULL"); } catch(Exception $e){}
 try { $pdo->exec("ALTER TABLE INTEGRACAO_V8_IMPORTACAO_LOTE ADD COLUMN HORA_INATIVACAO_FIM TIME NULL"); } catch(Exception $e){}
+try { $pdo->exec("ALTER TABLE INTEGRACAO_V8_IMPORTACAO_LOTE ADD COLUMN HORA_FIM_DIARIO TIME NULL"); } catch(Exception $e){}
 
 $user_cpf = preg_replace('/\D/', '', $_GET['user_cpf'] ?? '');
 if (empty($user_cpf)) { exit; }
@@ -138,6 +139,22 @@ while(true) {
             "inicio={$lote['HORA_INATIVACAO_INICIO']} fim={$lote['HORA_INATIVACAO_FIM']}",
             'Lote pausado automaticamente pelo horário de inativação.', 0);
         flock($fp, LOCK_UN); fclose($fp); exit;
+    }
+    // =========================================================================
+
+    // =========================================================================
+    // TRAVA DE HORÁRIO FIM DIÁRIO
+    // =========================================================================
+    if (!empty($lote['HORA_FIM_DIARIO']) && $lote['AGENDAMENTO_TIPO'] === 'DIARIO') {
+        $agoraHi = (int)date('Hi');
+        $fimHi   = (int)str_replace(':', '', substr($lote['HORA_FIM_DIARIO'], 0, 5));
+        if ($agoraHi >= $fimHi) {
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'AGUARDANDO_DIARIO' WHERE ID = ?")->execute([$id_lote]);
+            gravarLogIntegracao('logs_consulta_lote', 'sistema', 'FIM HORARIO DIARIO', 'n/a',
+                "fim={$lote['HORA_FIM_DIARIO']}",
+                'Lote pausado automaticamente ao atingir o horário fim do dia.', 0);
+            flock($fp, LOCK_UN); fclose($fp); exit;
+        }
     }
     // =========================================================================
 
