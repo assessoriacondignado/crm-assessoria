@@ -492,7 +492,7 @@ try {
             }
 
             if (!in_array($status_api, ['SUCCESS', 'COMPLETED', 'WAITING_CREDIT_ANALYSIS', 'APPROVED', 'PRE_APPROVED'])) {
-                $erroMsg = $consulta_atual['detail'] ?? $consulta_atual['status_description'] ?? 'Rejeitado pela Dataprev';
+                $erroMsg = $consulta_atual['detail'] ?? $consulta_atual['description'] ?? $consulta_atual['status_description'] ?? 'Rejeitado pela Dataprev';
                 $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA SET STATUS_V8 = 'ERRO-MARGEM', MENSAGEM_ERRO = ?, ULTIMA_ATUALIZACAO = NOW() WHERE ID = ?")->execute([$erroMsg, $id_fila]);
                 echo json_encode(['success' => false, 'status' => 'erro', 'msg' => $erroMsg]); exit;
             }
