@@ -775,6 +775,9 @@
                         <i class="fas fa-power-off me-2"></i>${iconeStatusTroca} Tornar ${novoStatusTroca}
                       </button>
                       ${btnTopEditar}
+                      <button class="dropdown-item fw-bold text-warning" onclick="v8AbrirModalAnotacoes(${idLoteReal})">
+                        <i class="fas fa-sticky-note me-2"></i> Anotações do Lote
+                      </button>
                     </div>
 
                     <div class="v8-secao">
