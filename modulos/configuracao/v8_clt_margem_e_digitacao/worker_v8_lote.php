@@ -184,7 +184,7 @@ while(true) {
     $id_lote = $lote['ID'];
     $chave_id = $lote['CHAVE_ID'];
     // Tabela de CPFs: própria (lotes novos) ou central (lotes antigos)
-    $tbl = !empty($lote['TABELA_DADOS']) ? '`'.$lote['TABELA_DADOS'].'`' : '`{\}`';
+    $tbl = !empty($lote['TABELA_DADOS']) ? $lote['TABELA_DADOS'] : 'INTEGRACAO_V8_REGISTROCONSULTA_LOTE';
 
     // =========================================================================
     // TRAVA DE HORÁRIO DE INATIVAÇÃO
@@ -253,7 +253,7 @@ while(true) {
     // PRIORIDADE 0 (a cada 100 ciclos): AGUARDANDO DATAPREV — re-consulta Dataprev
     // =========================================================================
     if ($ciclo_count % 100 === 0) {
-        $stmtDP = $pdo->prepare("SELECT * FROM {\} WHERE LOTE_ID = ? AND STATUS_V8 = 'AGUARDANDO DATAPREV' ORDER BY ID ASC LIMIT 5");
+        $stmtDP = $pdo->prepare("SELECT * FROM {$tbl} WHERE LOTE_ID = ? AND STATUS_V8 = 'AGUARDANDO DATAPREV' ORDER BY ID ASC LIMIT 5");
         $stmtDP->execute([$id_lote]);
         $loteDP = $stmtDP->fetchAll(PDO::FETCH_ASSOC);
 
@@ -261,7 +261,7 @@ while(true) {
             $consult_id_dp = $cpfDP['CONSULT_ID'];
             if (empty($consult_id_dp)) {
                 // Sem consult_id — manda para NA FILA criar novo consentimento
-                $pdo->prepare("UPDATE {\} SET STATUS_V8 = 'NA FILA', OBSERVACAO = 'Sem CONSULT_ID — novo consentimento será criado.' WHERE ID = ?")->execute([$cpfDP['ID']]);
+                $pdo->prepare("UPDATE {$tbl} SET STATUS_V8 = 'NA FILA', OBSERVACAO = 'Sem CONSULT_ID — novo consentimento será criado.' WHERE ID = ?")->execute([$cpfDP['ID']]);
                 continue;
             }
 
@@ -288,14 +288,14 @@ while(true) {
                     if (!$config_id_dp) $config_id_dp = $lista_cfg_dp[0]['id'];
                 }
                 if (!$config_id_dp) $config_id_dp = $consult_id_dp;
-                $pdo->prepare("UPDATE {\} SET STATUS_V8 = 'AGUARDANDO SIMULACAO', VALOR_MARGEM = ?, CONFIG_ID = ?, OBSERVACAO = 'Margem recuperada no reprocessamento automático.' WHERE ID = ?")->execute([(float)$margem_dp, $config_id_dp, $cpfDP['ID']]);
+                $pdo->prepare("UPDATE {$tbl} SET STATUS_V8 = 'AGUARDANDO SIMULACAO', VALOR_MARGEM = ?, CONFIG_ID = ?, OBSERVACAO = 'Margem recuperada no reprocessamento automático.' WHERE ID = ?")->execute([(float)$margem_dp, $config_id_dp, $cpfDP['ID']]);
                 $cpfDP['VALOR_MARGEM'] = $margem_dp; $cpfDP['CONFIG_ID'] = $config_id_dp;
                 v8AtualizarFatorConferi($cpfDP, $lote, $pdo);
                 $work_found = true;
 
             } elseif (in_array($status_dp, ['REJECTED', 'DENIED', 'CANCELED', 'ERROR'])) {
                 $msgErroDP = $jsonDP['detail'] ?? $jsonDP['description'] ?? $jsonDP['status_description'] ?? "Rejeitado pela Dataprev (status: {$status_dp})";
-                $pdo->prepare("UPDATE {\} SET STATUS_V8 = 'ERRO MARGEM', OBSERVACAO = ? WHERE ID = ?")->execute([$msgErroDP, $cpfDP['ID']]);
+                $pdo->prepare("UPDATE {$tbl} SET STATUS_V8 = 'ERRO MARGEM', OBSERVACAO = ? WHERE ID = ?")->execute([$msgErroDP, $cpfDP['ID']]);
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_PROCESSADA = QTD_PROCESSADA + 1, QTD_ERRO = QTD_ERRO + 1 WHERE ID = ?")->execute([$id_lote]);
 
             }
@@ -307,7 +307,7 @@ while(true) {
     // =========================================================================
     // PRIORIDADE 1: AGUARDANDO SIMULACAO — já tem margem, só falta simular
     // =========================================================================
-    $stmtF3 = $pdo->prepare("SELECT * FROM {\} WHERE LOTE_ID = ? AND STATUS_V8 = 'AGUARDANDO SIMULACAO' ORDER BY ID ASC LIMIT 1");
+    $stmtF3 = $pdo->prepare("SELECT * FROM {$tbl} WHERE LOTE_ID = ? AND STATUS_V8 = 'AGUARDANDO SIMULACAO' ORDER BY ID ASC LIMIT 1");
     $stmtF3->execute([$id_lote]);
     if ($cpfFase3 = $stmtF3->fetch(PDO::FETCH_ASSOC)) {
         $work_found = true;
@@ -318,7 +318,7 @@ while(true) {
     // =========================================================================
     // PRIORIDADE 2: AGUARDANDO MARGEM — consentimento ok, busca retorno Dataprev
     // =========================================================================
-    $stmtF2 = $pdo->prepare("SELECT * FROM {\} WHERE LOTE_ID = ? AND STATUS_V8 = 'AGUARDANDO MARGEM' ORDER BY ID ASC LIMIT 1");
+    $stmtF2 = $pdo->prepare("SELECT * FROM {$tbl} WHERE LOTE_ID = ? AND STATUS_V8 = 'AGUARDANDO MARGEM' ORDER BY ID ASC LIMIT 1");
     $stmtF2->execute([$id_lote]);
     if ($cpfFase2 = $stmtF2->fetch(PDO::FETCH_ASSOC)) {
         $work_found = true;
@@ -349,16 +349,16 @@ while(true) {
 
             if(!$config_id) $config_id = $consult_id;
 
-            $pdo->prepare("UPDATE {\} SET STATUS_V8 = 'AGUARDANDO SIMULACAO', VALOR_MARGEM = ?, CONFIG_ID = ?, OBSERVACAO = 'Margem lida — simulando...' WHERE ID = ?")->execute([(float)$margem, $config_id, $cpfFase2['ID']]);
+            $pdo->prepare("UPDATE {$tbl} SET STATUS_V8 = 'AGUARDANDO SIMULACAO', VALOR_MARGEM = ?, CONFIG_ID = ?, OBSERVACAO = 'Margem lida — simulando...' WHERE ID = ?")->execute([(float)$margem, $config_id, $cpfFase2['ID']]);
             $cpfFase2['VALOR_MARGEM'] = $margem; $cpfFase2['CONFIG_ID'] = $config_id;
             v8AtualizarFatorConferi($cpfFase2, $lote, $pdo);
             v8SimularLote($cpfFase2, $config_id, $consult_id, (float)$margem, $id_lote, $prazo_padrao, $headers, $lote, $pdo);
 
         } elseif (in_array($status_api, ['PROCESSING', 'PENDING', 'WAITING', 'WAITING_CONSULT', 'ANALYZING', 'IN_PROGRESS', 'PENDING_CONSULTATION', 'CONSENT_APPROVED', 'WAITING_CREDIT_ANALYSIS'])) {
-            $pdo->prepare("UPDATE {\} SET STATUS_V8 = 'AGUARDANDO DATAPREV', OBSERVACAO = 'Dataprev demorando. Retido para reprocessamento manual.' WHERE ID = ?")->execute([$cpfFase2['ID']]);
+            $pdo->prepare("UPDATE {$tbl} SET STATUS_V8 = 'AGUARDANDO DATAPREV', OBSERVACAO = 'Dataprev demorando. Retido para reprocessamento manual.' WHERE ID = ?")->execute([$cpfFase2['ID']]);
         } elseif (!in_array($status_api, [''])) {
             $msgErro = $jsonC['detail'] ?? $jsonC['description'] ?? $jsonC['status_description'] ?? 'Rejeitado pela Dataprev';
-            $pdo->prepare("UPDATE {\} SET STATUS_V8 = 'ERRO MARGEM', OBSERVACAO = ? WHERE ID = ?")->execute([$msgErro, $cpfFase2['ID']]);
+            $pdo->prepare("UPDATE {$tbl} SET STATUS_V8 = 'ERRO MARGEM', OBSERVACAO = ? WHERE ID = ?")->execute([$msgErro, $cpfFase2['ID']]);
             $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_PROCESSADA = QTD_PROCESSADA + 1, QTD_ERRO = QTD_ERRO + 1 WHERE ID = ?")->execute([$id_lote]);
         }
 
@@ -369,7 +369,7 @@ while(true) {
     // =========================================================================
     // PRIORIDADE 3: RECUPERAR V8 — busca consentimento existente na V8
     // =========================================================================
-    $stmtF15 = $pdo->prepare("SELECT * FROM {\} WHERE LOTE_ID = ? AND STATUS_V8 = 'RECUPERAR V8' ORDER BY ID ASC LIMIT 1");
+    $stmtF15 = $pdo->prepare("SELECT * FROM {$tbl} WHERE LOTE_ID = ? AND STATUS_V8 = 'RECUPERAR V8' ORDER BY ID ASC LIMIT 1");
     $stmtF15->execute([$id_lote]);
     if ($cpfFase15 = $stmtF15->fetch(PDO::FETCH_ASSOC)) {
         $work_found = true;
@@ -378,10 +378,10 @@ while(true) {
         $consult_id = buscarConsentimentoV8ComPaginacao($cpfFase15['CPF'], $headers, true, $cpfFase15['CPF']);
 
         if ($consult_id) {
-            $pdo->prepare("UPDATE {\} SET STATUS_V8 = 'AGUARDANDO MARGEM', CONSULT_ID = ?, OBSERVACAO = 'Consentimento recuperado na V8. Lendo margem...' WHERE ID = ?")->execute([$consult_id, $cpfFase15['ID']]);
+            $pdo->prepare("UPDATE {$tbl} SET STATUS_V8 = 'AGUARDANDO MARGEM', CONSULT_ID = ?, OBSERVACAO = 'Consentimento recuperado na V8. Lendo margem...' WHERE ID = ?")->execute([$consult_id, $cpfFase15['ID']]);
         } else {
             // Consentimento não encontrado na V8 (expirado ou rejeitado) — cria novo consentimento
-            $pdo->prepare("UPDATE {\} SET STATUS_V8 = 'NA FILA', CONSULT_ID = NULL, OBSERVACAO = 'Sem consentimento válido na V8 — novo consentimento será criado.' WHERE ID = ?")->execute([$cpfFase15['ID']]);
+            $pdo->prepare("UPDATE {$tbl} SET STATUS_V8 = 'NA FILA', CONSULT_ID = NULL, OBSERVACAO = 'Sem consentimento válido na V8 — novo consentimento será criado.' WHERE ID = ?")->execute([$cpfFase15['ID']]);
         }
         sleep(2);
         continue;
@@ -390,7 +390,7 @@ while(true) {
     // =========================================================================
     // PRIORIDADE 4 (ÚLTIMA): NA FILA — cria novo consentimento (gera custo V8)
     // =========================================================================
-    $stmtF1 = $pdo->prepare("SELECT * FROM {\} WHERE LOTE_ID = ? AND STATUS_V8 = 'NA FILA' ORDER BY ID ASC LIMIT 1");
+    $stmtF1 = $pdo->prepare("SELECT * FROM {$tbl} WHERE LOTE_ID = ? AND STATUS_V8 = 'NA FILA' ORDER BY ID ASC LIMIT 1");
     $stmtF1->execute([$id_lote]);
 
     if ($cpfFase1 = $stmtF1->fetch(PDO::FETCH_ASSOC)) {
@@ -403,7 +403,7 @@ while(true) {
             $work_found = true;
             $telefone = '11900000000';
             $stmtT = $pdo->prepare("SELECT telefone_cel FROM telefones WHERE cpf = ? LIMIT 1"); $stmtT->execute([$cpfFase1['CPF']]);
-            if ($t = $stmtT->fetchColumn()) { $telefone = $t; $pdo->prepare("UPDATE {\} SET TELEFONES_LOCAL = ? WHERE ID = ?")->execute([$telefone, $cpfFase1['ID']]); }
+            if ($t = $stmtT->fetchColumn()) { $telefone = $t; $pdo->prepare("UPDATE {$tbl} SET TELEFONES_LOCAL = ? WHERE ID = ?")->execute([$telefone, $cpfFase1['ID']]); }
 
             if ($intervalo_consentimento > 0) { sleep($intervalo_consentimento); }
 
@@ -429,7 +429,7 @@ while(true) {
 
                     gravarLogIntegracao('logs_consulta_lote', $cpfFase1['CPF'], 'FASE 1.1: AUTORIZAR', "https://bff.v8sistema.com/private-consignment/consult/{$consult_id}/authorize", [], json_decode($resA, true), $httpA);
 
-                    $pdo->prepare("UPDATE {\} SET STATUS_V8 = 'AGUARDANDO MARGEM', CONSULT_ID = ?, DATA_CONSENTIMENTO = NOW(), OBSERVACAO = 'Consultado! Verificando retorno da Dataprev (até 1 minuto)...' WHERE ID = ?")->execute([$consult_id, $cpfFase1['ID']]);
+                    $pdo->prepare("UPDATE {$tbl} SET STATUS_V8 = 'AGUARDANDO MARGEM', CONSULT_ID = ?, DATA_CONSENTIMENTO = NOW(), OBSERVACAO = 'Consultado! Verificando retorno da Dataprev (até 1 minuto)...' WHERE ID = ?")->execute([$consult_id, $cpfFase1['ID']]);
                     $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET PROCESSADOS_HOJE = PROCESSADOS_HOJE + 1 WHERE ID = ?")->execute([$id_lote]);
 
                     // =====================================================================
@@ -484,7 +484,7 @@ while(true) {
                             }
                             if (!$config_id_poll) $config_id_poll = $consult_id;
 
-                            $pdo->prepare("UPDATE {\} SET STATUS_V8 = 'AGUARDANDO SIMULACAO', VALOR_MARGEM = ?, CONFIG_ID = ?, OBSERVACAO = 'Margem lida em {$tentativa_poll}x polling — simulando...' WHERE ID = ?")->execute([(float)$margem_poll, $config_id_poll, $cpfFase1['ID']]);
+                            $pdo->prepare("UPDATE {$tbl} SET STATUS_V8 = 'AGUARDANDO SIMULACAO', VALOR_MARGEM = ?, CONFIG_ID = ?, OBSERVACAO = 'Margem lida em {$tentativa_poll}x polling — simulando...' WHERE ID = ?")->execute([(float)$margem_poll, $config_id_poll, $cpfFase1['ID']]);
                             $cpfFase1['VALOR_MARGEM'] = $margem_poll; $cpfFase1['CONFIG_ID'] = $config_id_poll;
                             v8AtualizarFatorConferi($cpfFase1, $lote, $pdo);
                             v8SimularLote($cpfFase1, $config_id_poll, $consult_id, (float)$margem_poll, $id_lote, $prazo_padrao, $headers, $lote, $pdo);
@@ -493,7 +493,7 @@ while(true) {
 
                         } elseif (!empty($status_poll) && !in_array($status_poll, ['PROCESSING', 'PENDING', 'WAITING', 'WAITING_CONSULT', 'ANALYZING', 'IN_PROGRESS', 'PENDING_CONSULTATION', 'CONSENT_APPROVED', 'WAITING_CREDIT_ANALYSIS'])) {
                             $msgErroPoll = $jsonPoll['detail'] ?? $jsonPoll['description'] ?? $jsonPoll['status_description'] ?? "Rejeitado pela Dataprev (status: {$status_poll})";
-                            $pdo->prepare("UPDATE {\} SET STATUS_V8 = 'ERRO MARGEM', OBSERVACAO = ? WHERE ID = ?")->execute([$msgErroPoll, $cpfFase1['ID']]);
+                            $pdo->prepare("UPDATE {$tbl} SET STATUS_V8 = 'ERRO MARGEM', OBSERVACAO = ? WHERE ID = ?")->execute([$msgErroPoll, $cpfFase1['ID']]);
                             $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_PROCESSADA = QTD_PROCESSADA + 1, QTD_ERRO = QTD_ERRO + 1 WHERE ID = ?")->execute([$id_lote]);
                             $polling_resolvido = true;
                             break;
@@ -501,16 +501,16 @@ while(true) {
                     }
 
                     if (!$polling_resolvido) {
-                        $pdo->prepare("UPDATE {\} SET STATUS_V8 = 'AGUARDANDO DATAPREV', OBSERVACAO = 'Dataprev não retornou em 1 minuto. Retido para reprocessamento manual.' WHERE ID = ?")->execute([$cpfFase1['ID']]);
+                        $pdo->prepare("UPDATE {$tbl} SET STATUS_V8 = 'AGUARDANDO DATAPREV', OBSERVACAO = 'Dataprev não retornou em 1 minuto. Retido para reprocessamento manual.' WHERE ID = ?")->execute([$cpfFase1['ID']]);
                     }
                 } else {
-                    $pdo->prepare("UPDATE {\} SET STATUS_V8 = 'ERRO CONSULTA', OBSERVACAO = 'Bloqueado. ID não retornado pela V8.' WHERE ID = ?")->execute([$cpfFase1['ID']]);
+                    $pdo->prepare("UPDATE {$tbl} SET STATUS_V8 = 'ERRO CONSULTA', OBSERVACAO = 'Bloqueado. ID não retornado pela V8.' WHERE ID = ?")->execute([$cpfFase1['ID']]);
                     $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_PROCESSADA = QTD_PROCESSADA + 1, QTD_ERRO = QTD_ERRO + 1 WHERE ID = ?")->execute([$id_lote]);
                     sleep(5);
                 }
             } else {
                 $msgErro = $json['detail'] ?? $json['message'] ?? mb_substr($res, 0, 200);
-                $pdo->prepare("UPDATE {\} SET STATUS_V8 = 'ERRO CONSULTA', OBSERVACAO = ? WHERE ID = ?")->execute([$msgErro, $cpfFase1['ID']]);
+                $pdo->prepare("UPDATE {$tbl} SET STATUS_V8 = 'ERRO CONSULTA', OBSERVACAO = ? WHERE ID = ?")->execute([$msgErro, $cpfFase1['ID']]);
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_PROCESSADA = QTD_PROCESSADA + 1, QTD_ERRO = QTD_ERRO + 1 WHERE ID = ?")->execute([$id_lote]);
                 sleep(5);
             }
@@ -521,7 +521,7 @@ while(true) {
     if (!$work_found) {
         
         // Verifica se ainda tem gente na fila aguardando. Se sim e atingiu o limite, ele só pausa o lote.
-        $stmtRestante = $pdo->prepare("SELECT ID FROM {\} WHERE LOTE_ID = ? AND STATUS_V8 = 'NA FILA' LIMIT 1");
+        $stmtRestante = $pdo->prepare("SELECT ID FROM {$tbl} WHERE LOTE_ID = ? AND STATUS_V8 = 'NA FILA' LIMIT 1");
         $stmtRestante->execute([$id_lote]);
         $tem_na_fila = $stmtRestante->fetchColumn();
 
@@ -545,6 +545,7 @@ while(true) {
 // e também usada pela FASE 3 como fallback.
 // ===============================================
 function v8SimularLote($cpfRow, $config_id_sim, $consult_id_sim, $margem_sim, $id_lote, $prazo_padrao, $headers, $lote, $pdo) {
+    $tbl = !empty($lote['TABELA_DADOS']) ? $lote['TABELA_DADOS'] : 'INTEGRACAO_V8_REGISTROCONSULTA_LOTE';
     $url_sim = "https://bff.v8sistema.com/private-consignment/simulation";
     $payload_sim_array = [ 'consult_id' => $consult_id_sim, 'config_id' => $config_id_sim, 'number_of_installments' => $prazo_padrao, 'installment_face_value' => $margem_sim ];
 
@@ -586,10 +587,10 @@ function v8SimularLote($cpfRow, $config_id_sim, $consult_id_sim, $margem_sim, $i
         $valor_liberado = $sim_obj['disbursement_amount'] ?? $sim_obj['disbursed_amount'] ?? 0;
         $sim_id = $sim_obj['id_simulation'] ?? $sim_obj['id'] ?? null;
 
-        $pdo->prepare("UPDATE {\} SET STATUS_V8 = 'OK', VALOR_LIQUIDO = ?, PRAZO = ?, SIMULATION_ID = ?, OBSERVACAO = ?, DATA_SIMULACAO = NOW() WHERE ID = ?")->execute([(float)$valor_liberado, $prazo_padrao, $sim_id, $observacao_final, $cpfRow['ID']]);
+        $pdo->prepare("UPDATE {$tbl} SET STATUS_V8 = 'OK', VALOR_LIQUIDO = ?, PRAZO = ?, SIMULATION_ID = ?, OBSERVACAO = ?, DATA_SIMULACAO = NOW() WHERE ID = ?")->execute([(float)$valor_liberado, $prazo_padrao, $sim_id, $observacao_final, $cpfRow['ID']]);
         $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_PROCESSADA = QTD_PROCESSADA + 1, QTD_SUCESSO = QTD_SUCESSO + 1 WHERE ID = ?")->execute([$id_lote]);
     } else {
-        $pdo->prepare("UPDATE {\} SET STATUS_V8 = 'ERRO SIMULACAO', OBSERVACAO = ?, DATA_SIMULACAO = NOW() WHERE ID = ?")->execute([$erro_fatal, $cpfRow['ID']]);
+        $pdo->prepare("UPDATE {$tbl} SET STATUS_V8 = 'ERRO SIMULACAO', OBSERVACAO = ?, DATA_SIMULACAO = NOW() WHERE ID = ?")->execute([$erro_fatal, $cpfRow['ID']]);
         $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_PROCESSADA = QTD_PROCESSADA + 1, QTD_ERRO = QTD_ERRO + 1 WHERE ID = ?")->execute([$id_lote]);
     }
 }

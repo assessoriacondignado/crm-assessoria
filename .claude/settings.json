@@ -30,7 +30,14 @@
       "Bash(grep -n '$_SESSION\\\\|case '\\\\''' /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/index.api.v8.lote.vsc.php)",
       "Bash(grep -n \"CREATE TABLE\\\\|DROP TABLE\\\\|TRUNCATE\\\\|schema\" /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/*.php)",
       "Bash(perl -i -pe 'if \\($. > 57\\) { s/INTEGRACAO_V8_REGISTROCONSULTA_LOTE/\\\\{\\\\\\\\$tbl\\\\}/g }' /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/worker_v8_lote.php)",
-      "Bash(grep -n 'REGISTROCONSULTA_LOTE\\\\|{$tbl}' /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/worker_v8_lote.php)"
+      "Bash(grep -n 'REGISTROCONSULTA_LOTE\\\\|{$tbl}' /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/worker_v8_lote.php)",
+      "Bash(mysql -u admin_crm -pJunho@2024 crm_dados -e ' *)",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e ' *)",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados)",
+      "Bash(python3 -c \" import sys, json lines = sys.stdin.read\\(\\).strip\\(\\).split\\('\\\\n'\\) for line in lines[-20:]: try: d = json.loads\\(line\\) if d.get\\('type'\\) == 'summary': print\\(d.get\\('summary', ''\\)\\) except: pass \")",
+      "Bash(python3 -c \" import sys, json lines = sys.stdin.read\\(\\).strip\\(\\).split\\('\\\\n'\\) for line in lines: try: d = json.loads\\(line\\) msg_type = d.get\\('type', ''\\) if msg_type in \\('user', 'assistant'\\): role = d.get\\('role', msg_type\\) content = d.get\\('content', ''\\) if isinstance\\(content, list\\): for c in content: if isinstance\\(c, dict\\) and c.get\\('type'\\) == 'text': text = c.get\\('text', ''\\)[:300] print\\(f'[{role}]: {text}'\\) print\\('---'\\) elif isinstance\\(content, str\\): print\\(f'[{role}]: {content[:300]}'\\) print\\('---'\\) except: pass \")",
+      "Bash(grep -n '{$tbl}' /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/worker_v8_lote.php)",
+      "Bash(python3)"
     ]
   }
 }
