@@ -875,6 +875,63 @@ try {
             $pdo->prepare("DELETE FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?")->execute([$id_lote]);
             ob_end_clean(); echo json_encode(['success' => true, 'msg' => 'Lote e histórico apagados com sucesso.']); exit;
 
+        case 'listar_grupos_reprocessamento':
+            $id_lote = (int)$_POST['id_lote'];
+            $hoje = date('Y-m-d');
+            $stmt = $pdo->prepare("
+                SELECT
+                    STATUS_V8,
+                    COALESCE(NULLIF(TRIM(OBSERVACAO),''), '') AS OBSERVACAO,
+                    COUNT(*) AS total,
+                    SUM(CASE WHEN DATE(COALESCE(DATA_SIMULACAO, DATA_CONSENTIMENTO)) = :hoje THEN 1 ELSE 0 END) AS hoje
+                FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE
+                WHERE LOTE_ID = :lote
+                  AND STATUS_V8 NOT IN ('OK', 'NA FILA', 'AGUARDANDO MARGEM', 'AGUARDANDO SIMULACAO', 'RECUPERAR V8')
+                GROUP BY STATUS_V8, OBSERVACAO
+                ORDER BY total DESC
+            ");
+            $stmt->execute([':lote' => $id_lote, ':hoje' => $hoje]);
+            $grupos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            ob_end_clean(); echo json_encode(['success' => true, 'grupos' => $grupos]); exit;
+
+        case 'reprocessar_grupo':
+            $id_lote   = (int)$_POST['id_lote'];
+            $status_v8 = $_POST['status_v8'] ?? '';
+            $observacao = $_POST['observacao'] ?? null;
+
+            // Define a ação com base no STATUS_V8
+            if ($status_v8 === 'AGUARDANDO DATAPREV') {
+                $novo_status = 'AGUARDANDO MARGEM';
+                $nova_obs    = 'Reverificando: aguardando retorno da Dataprev...';
+            } elseif (in_array($status_v8, ['CANCELADO', 'REJEITADO'])) {
+                $novo_status = 'NA FILA';
+                $nova_obs    = 'Reprocessado manualmente: novo consentimento será criado.';
+            } else {
+                // ERRO MARGEM, ERRO SIMULACAO, ERRO CONSULTA, etc.
+                $novo_status = 'RECUPERAR V8';
+                $nova_obs    = 'Reprocessando erro: recuperando margem/simulação...';
+            }
+
+            if ($observacao !== null && $observacao !== '') {
+                $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE
+                    SET STATUS_V8 = ?, OBSERVACAO = ?
+                    WHERE LOTE_ID = ? AND STATUS_V8 = ? AND TRIM(COALESCE(OBSERVACAO,'')) = ?")
+                    ->execute([$novo_status, $nova_obs, $id_lote, $status_v8, trim($observacao)]);
+            } else {
+                $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE
+                    SET STATUS_V8 = ?, OBSERVACAO = ?
+                    WHERE LOTE_ID = ? AND STATUS_V8 = ? AND TRIM(COALESCE(OBSERVACAO,'')) = ''")
+                    ->execute([$novo_status, $nova_obs, $id_lote, $status_v8]);
+            }
+
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PENDENTE' WHERE ID = ?")->execute([$id_lote]);
+            $stmtDono = $pdo->prepare("SELECT CPF_USUARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?");
+            $stmtDono->execute([$id_lote]); $cpf_dono = $stmtDono->fetchColumn();
+            $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
+            $url_worker = $protocol . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']) . '/worker_v8_lote.php?user_cpf=' . $cpf_dono;
+            $ch = curl_init(); curl_setopt($ch, CURLOPT_URL, $url_worker); curl_setopt($ch, CURLOPT_TIMEOUT, 1); curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); curl_exec($ch); curl_close($ch);
+            ob_end_clean(); echo json_encode(['success' => true, 'msg' => 'Grupo enviado para reprocessamento.', 'cpf_dono' => $cpf_dono]); exit;
+
         case 'reprocessar_consentimento':
             // Re-verifica apenas CPFs com AGUARDANDO DATAPREV → volta para AGUARDANDO MARGEM (FASE 2 relê o status da V8)
             $id_lote = (int)$_POST['id_lote'];

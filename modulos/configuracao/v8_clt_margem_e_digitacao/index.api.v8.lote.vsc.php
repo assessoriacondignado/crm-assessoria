@@ -5,7 +5,7 @@
 ?>
 <style>
 /* === V8 MENU AÇÕES LOTE === */
-.v8-acoes-dropdown { min-width: 270px; border-radius: 12px !important; overflow: hidden; border: 1px solid #dee2e6 !important; }
+.v8-acoes-dropdown { min-width: 400px; border-radius: 12px !important; overflow: hidden; border: 1px solid #dee2e6 !important; }
 .v8-top-actions { padding: 6px 8px; background: #f8f9fa; border-bottom: 1px solid #dee2e6; }
 .v8-top-actions .dropdown-item {
     border-radius: 6px; font-size: 12px; padding: 5px 10px;
@@ -781,27 +781,22 @@
                     </div>
 
                     <div class="v8-secao">
-                      <div class="v8-secao-hdr v8-azul" onclick="v8ToggleSecaoLote(this); event.stopPropagation();">
+                      <div class="v8-secao-hdr v8-azul" onclick="v8ToggleSecaoLote(this); v8CarregarGruposReprocessamento(${idLoteReal}, this); event.stopPropagation();">
                         <span>🔄 REPROCESSAMENTO</span>
                         <i class="fas fa-chevron-down v8-chevron"></i>
                       </div>
-                      <div class="v8-secao-bdy" style="display:none;">
-                        <button class="v8-item v8-item-azul" onclick="v8ReprocessarConsentimento(${idLoteReal})">
-                          <span class="v8-item-icon">📡</span>
-                          <span class="v8-item-txt"><strong>Consentimento</strong><small>Re-verifica CPFs aguardando Dataprev. Sem novo custo.</small></span>
-                        </button>
-                        <button class="v8-item v8-item-azul" onclick="v8ReprocessarErros(${idLoteReal})">
-                          <span class="v8-item-icon">⚠️</span>
-                          <span class="v8-item-txt"><strong>Erros</strong><small>Refaz simulação dos CPFs com erro de margem. Sem novo custo.</small></span>
-                        </button>
+                      <div class="v8-secao-bdy" style="display:none;" id="rep-grupos-${idLoteReal}">
+                        <div class="text-center text-muted py-2" style="font-size:12px;"><i class="fas fa-spinner fa-spin"></i> Carregando...</div>
+                      </div>
+                      <div style="padding:6px 10px; border-top:1px solid #dee2e6;">
                         ${isDiario
-                            ? `<button class="v8-item v8-manut" disabled>
+                            ? `<button class="v8-item v8-manut w-100" style="margin:0;" disabled>
                                 <span class="v8-item-icon">🔁</span>
                                 <span class="v8-item-txt"><strong>Tudo</strong><small>🔒 Bloqueado para lotes Diários.</small></span>
                                </button>`
-                            : `<button class="v8-item v8-item-azul" onclick="v8ReprocessarTodos(${idLoteReal})">
+                            : `<button class="v8-item v8-item-azul w-100" style="margin:0;" onclick="v8ReprocessarTodos(${idLoteReal}); event.stopPropagation();">
                                 <span class="v8-item-icon">🔁</span>
-                                <span class="v8-item-txt"><strong>Tudo</strong><small>Reinicia todos os CPFs do zero. Pode gerar novo custo.</small></span>
+                                <span class="v8-item-txt"><strong>Reprocessar Tudo</strong><small>Reinicia todos os CPFs do zero. Pode gerar novo custo.</small></span>
                                </button>`
                         }
                       </div>
@@ -954,6 +949,90 @@
             async () => {
                 const res = await v8Req('ajax_api_v8_lote_csv.php', 'enviar_relatorio_whatsapp', { id_lote: id }, true, "Gerando e Enviando...");
                 if(res.success) { v8Toast("✅ " + res.msg, "success"); } else { v8Toast("❌ " + (res.msg||"Erro"), "error", 6000); }
+            });
+    }
+
+    // Cache para não recarregar sem necessidade
+    const v8GruposCache = {};
+
+    async function v8CarregarGruposReprocessamento(id, hdrEl) {
+        const bdy = document.getElementById('rep-grupos-' + id);
+        if (!bdy) return;
+
+        // v8ToggleSecaoLote já rodou antes — se display !== 'none' significa que acabou de abrir
+        const abrindo = bdy.style.display !== 'none';
+        if (!abrindo) return; // Está fechando — não recarrega
+
+        // Mostra spinner
+        bdy.innerHTML = '<div class="text-center text-muted py-2" style="font-size:12px;"><i class="fas fa-spinner fa-spin"></i> Carregando...</div>';
+
+        const res = await v8Req('ajax_api_v8_lote_csv.php', 'listar_grupos_reprocessamento', { id_lote: id }, false);
+        if (!res.success) {
+            bdy.innerHTML = '<div class="text-danger text-center py-2" style="font-size:12px;">Erro ao carregar.</div>';
+            return;
+        }
+
+        const grupos = res.grupos;
+        if (!grupos || grupos.length === 0) {
+            bdy.innerHTML = '<div class="text-muted text-center py-2" style="font-size:12px;">Nenhum grupo pendente.</div>';
+            return;
+        }
+
+        // Ícone por status
+        const icones = {
+            'AGUARDANDO DATAPREV': '📡',
+            'CANCELADO':           '🚫',
+            'REJEITADO':           '❌',
+            'ERRO MARGEM':         '⚠️',
+            'ERRO SIMULACAO':      '🔢',
+            'ERRO CONSULTA':       '🔍',
+        };
+
+        let html = '';
+        grupos.forEach(g => {
+            const icone = icones[g.STATUS_V8] || '⚠️';
+            const label = g.OBSERVACAO ? g.STATUS_V8 + ' — ' + g.OBSERVACAO : g.STATUS_V8;
+            const obsEnc = encodeURIComponent(g.OBSERVACAO || '');
+            const statusLabel = g.STATUS_V8;
+            const motivoLabel = g.OBSERVACAO || '';
+            html += `
+              <div style="display:flex; align-items:center; gap:8px; padding:6px 10px; border-bottom:1px solid #eee;">
+                <span style="flex:0 0 20px; font-size:14px; text-align:center;">${icone}</span>
+                <span style="flex:1; min-width:0; line-height:1.35;">
+                  <span style="display:block; font-size:11px; font-weight:700; color:#212529; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+                    <span style="color:#888; font-weight:400;">(${g.total}/${g.hoje})&nbsp;</span>${statusLabel}
+                  </span>
+                  ${motivoLabel ? `<span style="display:block; font-size:10px; color:#555; overflow:hidden; display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical;">${motivoLabel}</span>` : ''}
+                </span>
+                <button class="btn btn-outline-primary fw-bold" style="flex:0 0 auto; font-size:10px; padding:2px 9px; white-space:nowrap; border-radius:4px;"
+                  onclick="v8ReprocessarGrupo(${id}, '${g.STATUS_V8}', decodeURIComponent('${obsEnc}')); event.stopPropagation();">
+                  ▶ Reprocessar
+                </button>
+              </div>`;
+        });
+        bdy.innerHTML = html;
+    }
+
+    async function v8ReprocessarGrupo(id, statusV8, observacao) {
+        const labelStatus = observacao ? statusV8 + ' — ' + observacao : statusV8;
+        v8Confirmar('🔄 Reprocessar Grupo',
+            `Reprocessar todos os CPFs com:<br><br>
+            <strong>${labelStatus}</strong><br><br>
+            <span class="text-success fw-bold">✅ Sem novo custo</span> para AGUARDANDO DATAPREV e ERROS.<br>
+            <span class="text-warning fw-bold">⚠️ Cria novo consentimento</span> para CANCELADO e REJEITADO.`,
+            'btn-primary', '#1a73e8',
+            async () => {
+                const res = await v8Req('ajax_api_v8_lote_csv.php', 'reprocessar_grupo',
+                    { id_lote: id, status_v8: statusV8, observacao: observacao }, true, "Reprocessando...");
+                if (res.success) {
+                    v8Toast("✅ " + res.msg, "success");
+                    if (res.cpf_dono) v8AcordarRobo(res.cpf_dono);
+                    // Recarrega o grupo após reprocessar
+                    delete v8GruposCache[id];
+                    const bdy = document.getElementById('rep-grupos-' + id);
+                    if (bdy) bdy.innerHTML = '<div class="text-center text-muted py-2" style="font-size:12px;"><i class="fas fa-spinner fa-spin"></i> Atualizando...</div>';
+                    setTimeout(() => v8CarregarLotesCSV(), 1500);
+                } else { v8Toast("❌ " + (res.msg||"Erro"), "error", 6000); }
             });
     }
 
