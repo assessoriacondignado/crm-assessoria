@@ -23,7 +23,9 @@
       "Bash(grep -rh '\"status\"' /var/www/html/logs_v8/logs_consulta_lote/*_18h.txt)",
       "Bash(grep -r \"DB_NAME\\\\|dbname\\\\|define.*DB\" /var/www/html/config*.php /var/www/html/includes/*.php)",
       "Bash(wc -l grep -l \"REJECTED\\\\|DENIED\" /var/www/html/logs_v8/logs_consulta_lote/*.txt)",
-      "Bash(head -5 grep -l \"REJECTED\\\\|DENIED\" /var/www/html/logs_v8/log_cpf_*.txt)"
+      "Bash(head -5 grep -l \"REJECTED\\\\|DENIED\" /var/www/html/logs_v8/log_cpf_*.txt)",
+      "Bash(grep -n 'GET\\\\|POST\\\\|REQUEST\\\\|$_GET\\\\|$_POST' /var/www/html/modulos/banco_dados/consulta.php)",
+      "Bash(head -5 grep -n \"INSERT.*campanha\\\\|CAMPANHA.*INSERT\\\\|inserir_cpf\\\\|adicionar_cpf\\\\|cpf_campanha\\\\|CAMPANHA_CPF\\\\|CAMPANHA_LISTA\" /var/www/html/modulos/campanhas/*.php)"
     ]
   }
 }

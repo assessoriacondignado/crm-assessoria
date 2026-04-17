@@ -875,6 +875,24 @@ try {
             $pdo->prepare("DELETE FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?")->execute([$id_lote]);
             ob_end_clean(); echo json_encode(['success' => true, 'msg' => 'Lote e histórico apagados com sucesso.']); exit;
 
+        case 'listar_clientes_lote':
+            $id_lote = (int)$_POST['id_lote'];
+            $stmt = $pdo->prepare("
+                SELECT CPF, NOME, STATUS_V8,
+                       COALESCE(NULLIF(TRIM(OBSERVACAO),''), '') AS OBSERVACAO,
+                       VALOR_MARGEM, VALOR_LIQUIDO
+                FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE
+                WHERE LOTE_ID = ?
+                ORDER BY NOME ASC
+            ");
+            $stmt->execute([$id_lote]);
+            $clientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            // Formata CPF
+            foreach ($clientes as &$c) {
+                $c['CPF_FORMATADO'] = preg_replace('/(\d{3})(\d{3})(\d{3})(\d{2})/', '$1.$2.$3-$4', str_pad($c['CPF'], 11, '0', STR_PAD_LEFT));
+            }
+            ob_end_clean(); echo json_encode(['success' => true, 'clientes' => $clientes]); exit;
+
         case 'listar_grupos_reprocessamento':
             $id_lote = (int)$_POST['id_lote'];
             $hoje = date('Y-m-d');
