@@ -723,6 +723,9 @@
                     btnPausarLi = `<li><button class="dropdown-item fw-bold text-primary" onclick="v8PausarRetomarLote(${idLoteReal}, 'RETOMAR_LIMITE')"><i class="fas fa-forward me-2"></i> Continuar Hoje</button></li>`;
                 } else if (statusAtual === 'CONCLUIDO') {
                     badge = `<span class="badge bg-success shadow-sm"><i class="fas fa-check-circle"></i> CONCLUIDO</span>`;
+                } else if (statusAtual === 'ERRO CREDENCIAL') {
+                    badge = `<span class="badge bg-danger"><i class="fas fa-key me-1"></i> ERRO CREDENCIAL</span>`;
+                    btnPausarLi = `<li><button class="dropdown-item fw-bold text-success" onclick="v8PausarRetomarLote(${idLoteReal}, 'RETOMAR')"><i class="fas fa-redo me-2"></i> Religar após Corrigir</button></li>`;
                 } else {
                     badge = `<span class="badge bg-danger">${statusAtual}</span>`;
                 }
