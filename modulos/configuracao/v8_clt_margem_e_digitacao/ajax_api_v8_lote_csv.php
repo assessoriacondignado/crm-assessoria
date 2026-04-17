@@ -21,6 +21,28 @@ try {
     $usuario_logado_id = (int)($_SESSION['usuario_id'] ?? 1);
     $usuario_logado_cpf = preg_replace('/\D/', '', $_SESSION['usuario_cpf'] ?? '');
 
+    // Retorna o nome da tabela de CPFs do lote (própria ou central para lotes antigos)
+    function v8_tabela_lote(PDO $pdo, int $id_lote): string {
+        $s = $pdo->prepare("SELECT TABELA_DADOS FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?");
+        $s->execute([$id_lote]);
+        $tabela = $s->fetchColumn();
+        return (!empty($tabela)) ? $tabela : 'INTEGRACAO_V8_REGISTROCONSULTA_LOTE';
+    }
+
+    // Verifica se o usuário logado é dono do lote (segurança backend)
+    function v8_verificar_dono_lote(PDO $pdo, int $id_lote, string $usuario_logado_cpf): void {
+        if (function_exists('verificaPermissao') && verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_CONSULTA_LOTE_MEU_REGISTRO', 'FUNCAO')) {
+            return; // tem permissão para ver/editar todos os lotes
+        }
+        $s = $pdo->prepare("SELECT CPF_USUARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?");
+        $s->execute([$id_lote]);
+        $lote = $s->fetch(PDO::FETCH_ASSOC);
+        if (!$lote) throw new Exception("Lote não encontrado.");
+        if (!empty($lote['CPF_USUARIO']) && $lote['CPF_USUARIO'] !== $usuario_logado_cpf) {
+            throw new Exception("Acesso negado: este lote pertence a outro usuário.");
+        }
+    }
+
     switch ($acao) {
         
         case 'upload_csv_lote':
@@ -98,7 +120,12 @@ try {
             $stmtLote->execute([$agrupamento, $dono_lote_id, $dono_lote_cpf, $chave_id, $_FILES['arquivo_csv']['name'], $total, $agendamento_tipo, $atualizar_telefone, $enviar_whats, $somente_simular, $enviar_arquivo_whatsapp, 'PAUSADO']);
             $id_lote = $pdo->lastInsertId();
 
-            $stmtCpf = $pdo->prepare("INSERT INTO INTEGRACAO_V8_REGISTROCONSULTA_LOTE (LOTE_ID, CPF, NOME, NASCIMENTO, SEXO, STATUS_V8, VALOR_MARGEM, CONSULT_ID, CONFIG_ID, OBSERVACAO) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            // Criar tabela própria para este lote e registrar em TABELA_DADOS
+            $tabela_lote = 'V8_LOTE_' . $id_lote;
+            $pdo->exec("CREATE TABLE IF NOT EXISTS `{$tabela_lote}` LIKE INTEGRACAO_V8_REGISTROCONSULTA_LOTE");
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET TABELA_DADOS = ? WHERE ID = ?")->execute([$tabela_lote, $id_lote]);
+
+            $stmtCpf = $pdo->prepare("INSERT INTO `{$tabela_lote}` (LOTE_ID, CPF, NOME, NASCIMENTO, SEXO, STATUS_V8, VALOR_MARGEM, CONSULT_ID, CONFIG_ID, OBSERVACAO) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             
             $stmtBuscaLote = null; $stmtBuscaManual = null;
             if ($somente_simular == 1) {
@@ -151,7 +178,7 @@ try {
             if (!isset($_FILES['arquivo_csv']) || $_FILES['arquivo_csv']['error'] != UPLOAD_ERR_OK) throw new Exception("Nenhum arquivo CSV recebido.");
             if (strtolower(pathinfo($_FILES['arquivo_csv']['name'], PATHINFO_EXTENSION)) !== 'csv') throw new Exception("O arquivo precisa ser obrigatoriamente .csv.");
 
-            $stmtLote = $pdo->prepare("SELECT CHAVE_ID, CPF_USUARIO, SOMENTE_SIMULAR FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?");
+            $stmtLote = $pdo->prepare("SELECT CHAVE_ID, CPF_USUARIO, SOMENTE_SIMULAR, TABELA_DADOS FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?");
             $stmtLote->execute([$id_lote]);
             $loteAtual = $stmtLote->fetch(PDO::FETCH_ASSOC);
             if (!$loteAtual) throw new Exception("Lote não encontrado.");
@@ -159,13 +186,14 @@ try {
             $chave_id = $loteAtual['CHAVE_ID'];
             $somente_simular = $loteAtual['SOMENTE_SIMULAR'];
             $dono_lote_cpf = $loteAtual['CPF_USUARIO'];
+            $tabela_append = !empty($loteAtual['TABELA_DADOS']) ? $loteAtual['TABELA_DADOS'] : 'INTEGRACAO_V8_REGISTROCONSULTA_LOTE';
 
             $stmtCli = $pdo->prepare("SELECT SALDO, CUSTO_CONSULTA FROM INTEGRACAO_V8_CHAVE_ACESSO WHERE ID = ?");
             $stmtCli->execute([$chave_id]);
             $chave = $stmtCli->fetch(PDO::FETCH_ASSOC);
 
             // Carrega CPFs que JÁ ESTÃO no lote
-            $stmtExistentes = $pdo->prepare("SELECT CPF FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE WHERE LOTE_ID = ?");
+            $stmtExistentes = $pdo->prepare("SELECT CPF FROM `{$tabela_append}` WHERE LOTE_ID = ?");
             $stmtExistentes->execute([$id_lote]);
             $cpfsLoteExistentes = $stmtExistentes->fetchAll(PDO::FETCH_COLUMN);
             $hashExistentes = array_flip($cpfsLoteExistentes);
@@ -233,11 +261,11 @@ try {
 
             // Reativa o lote (QTD_TOTAL será ajustado após inserts)
             $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PENDENTE' WHERE ID = ?")->execute([$id_lote]);
-            $stmtCpf = $pdo->prepare("INSERT INTO INTEGRACAO_V8_REGISTROCONSULTA_LOTE (LOTE_ID, CPF, NOME, NASCIMENTO, SEXO, STATUS_V8, VALOR_MARGEM, CONSULT_ID, CONFIG_ID, OBSERVACAO) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-            
+            $stmtCpf = $pdo->prepare("INSERT INTO `{$tabela_append}` (LOTE_ID, CPF, NOME, NASCIMENTO, SEXO, STATUS_V8, VALOR_MARGEM, CONSULT_ID, CONFIG_ID, OBSERVACAO) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+
             $stmtBuscaLote = null; $stmtBuscaManual = null;
             if ($somente_simular == 1) {
-                $stmtBuscaLote = $pdo->prepare("SELECT CONSULT_ID, CONFIG_ID, VALOR_MARGEM FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE WHERE CPF = ? AND VALOR_MARGEM IS NOT NULL AND VALOR_MARGEM > 0 AND CONSULT_ID IS NOT NULL ORDER BY ID DESC LIMIT 1");
+                $stmtBuscaLote = $pdo->prepare("SELECT CONSULT_ID, CONFIG_ID, VALOR_MARGEM FROM `{$tabela_append}` WHERE CPF = ? AND VALOR_MARGEM IS NOT NULL AND VALOR_MARGEM > 0 AND CONSULT_ID IS NOT NULL ORDER BY ID DESC LIMIT 1");
                 $stmtBuscaManual = $pdo->prepare("SELECT r.CONSULT_ID, s.CONFIG_ID, s.MARGEM_DISPONIVEL as VALOR_MARGEM FROM INTEGRACAO_V8_REGISTRO_SIMULACAO s JOIN INTEGRACAO_V8_REGISTROCONSULTA r ON r.ID = s.ID_FILA WHERE s.CPF = ? AND s.MARGEM_DISPONIVEL > 0 AND r.CONSULT_ID IS NOT NULL ORDER BY s.ID DESC LIMIT 1");
             }
 
@@ -268,12 +296,12 @@ try {
             $atualizados = 0;
             $recolocados_fila = 0;
             if (!empty($linhas_para_atualizar)) {
-                $stmtUpd = $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE
+                $stmtUpd = $pdo->prepare("UPDATE `{$tabela_append}`
                     SET NASCIMENTO = COALESCE(?, NASCIMENTO),
                         SEXO       = ?,
                         NOME       = COALESCE(NULLIF(?, ''), NOME)
                     WHERE LOTE_ID = ? AND CPF = ?");
-                $stmtReset = $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE
+                $stmtReset = $pdo->prepare("UPDATE `{$tabela_append}`
                     SET STATUS_V8 = 'NA FILA', OBSERVACAO = 'Dados corrigidos — reprocessando.'
                     WHERE LOTE_ID = ? AND CPF = ?
                       AND STATUS_V8 IN ('ERRO CONSULTA','ERRO MARGEM')");
@@ -377,20 +405,32 @@ try {
             if (!empty($lote_ids)) {
                 $inQuery = implode(',', array_fill(0, count($lote_ids), '?'));
 
-                // Contagens totais por status
-                $stmtStats = $pdo->prepare("SELECT LOTE_ID, STATUS_V8, COUNT(*) as qtd FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE WHERE LOTE_ID IN ($inQuery) GROUP BY LOTE_ID, STATUS_V8");
-                $stmtStats->execute($lote_ids);
-                $rawStats = $stmtStats->fetchAll(PDO::FETCH_ASSOC);
+                // Agrupa lotes por tabela de dados (lotes legados usam tabela central)
+                $stmtTbls = $pdo->prepare("SELECT ID, TABELA_DADOS FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID IN ($inQuery)");
+                $stmtTbls->execute($lote_ids);
+                $tblsUnicas = [];
+                foreach ($stmtTbls->fetchAll(PDO::FETCH_ASSOC) as $r) {
+                    $t = !empty($r['TABELA_DADOS']) ? $r['TABELA_DADOS'] : 'INTEGRACAO_V8_REGISTROCONSULTA_LOTE';
+                    $tblsUnicas[$t][] = $r['ID'];
+                }
 
-                // Contagens do dia (desde 00h) — consentimentos e simulações
-                $stmtHoje = $pdo->prepare("SELECT LOTE_ID,
-                    SUM(CASE WHEN DATA_CONSENTIMENTO >= CURDATE() THEN 1 ELSE 0 END) as c_hoje,
-                    SUM(CASE WHEN DATA_SIMULACAO >= CURDATE() AND STATUS_V8 = 'OK' THEN 1 ELSE 0 END) as s_hoje
-                    FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE WHERE LOTE_ID IN ($inQuery) GROUP BY LOTE_ID");
-                $stmtHoje->execute($lote_ids);
+                // Contagens totais por status (uma query por tabela)
+                $rawStats = [];
                 $hojeByLote = [];
-                foreach ($stmtHoje->fetchAll(PDO::FETCH_ASSOC) as $r) {
-                    $hojeByLote[$r['LOTE_ID']] = ['c_hoje' => (int)$r['c_hoje'], 's_hoje' => (int)$r['s_hoje']];
+                foreach ($tblsUnicas as $tblNome => $ids) {
+                    $inQ2 = implode(',', array_fill(0, count($ids), '?'));
+                    $s1 = $pdo->prepare("SELECT LOTE_ID, STATUS_V8, COUNT(*) as qtd FROM `{$tblNome}` WHERE LOTE_ID IN ($inQ2) GROUP BY LOTE_ID, STATUS_V8");
+                    $s1->execute($ids);
+                    $rawStats = array_merge($rawStats, $s1->fetchAll(PDO::FETCH_ASSOC));
+
+                    $s2 = $pdo->prepare("SELECT LOTE_ID,
+                        SUM(CASE WHEN DATA_CONSENTIMENTO >= CURDATE() THEN 1 ELSE 0 END) as c_hoje,
+                        SUM(CASE WHEN DATA_SIMULACAO >= CURDATE() AND STATUS_V8 = 'OK' THEN 1 ELSE 0 END) as s_hoje
+                        FROM `{$tblNome}` WHERE LOTE_ID IN ($inQ2) GROUP BY LOTE_ID");
+                    $s2->execute($ids);
+                    foreach ($s2->fetchAll(PDO::FETCH_ASSOC) as $r) {
+                        $hojeByLote[$r['LOTE_ID']] = ['c_hoje' => (int)$r['c_hoje'], 's_hoje' => (int)$r['s_hoje']];
+                    }
                 }
 
                 $statsByLote = [];
@@ -533,21 +573,32 @@ try {
 
             $inQuery = implode(',', array_fill(0, count($lote_ids), '?'));
             $filtro_simulados = $somente_simulados ? " AND c.VALOR_MARGEM IS NOT NULL AND c.VALOR_MARGEM > 1 " : "";
-            $sqlCpfs = "
-                SELECT c.*, l.NOME_IMPORTACAO, ca.TABELA_PADRAO
-                FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE c
-                JOIN INTEGRACAO_V8_IMPORTACAO_LOTE l ON c.LOTE_ID = l.ID
-                LEFT JOIN INTEGRACAO_V8_CHAVE_ACESSO ca ON l.CHAVE_ID = ca.ID
-                WHERE c.LOTE_ID IN ($inQuery) $filtro_simulados
-            ";
-            $stmtCpfs = $pdo->prepare($sqlCpfs);
-            $stmtCpfs->execute($lote_ids);
-            
+
+            // Agrupa lotes por tabela (lotes legados usam tabela central)
+            $stmtTbls2 = $pdo->prepare("SELECT ID, TABELA_DADOS FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID IN ($inQuery)");
+            $stmtTbls2->execute($lote_ids);
+            $tblsUnicas2 = [];
+            foreach ($stmtTbls2->fetchAll(PDO::FETCH_ASSOC) as $r) {
+                $t = !empty($r['TABELA_DADOS']) ? $r['TABELA_DADOS'] : 'INTEGRACAO_V8_REGISTROCONSULTA_LOTE';
+                $tblsUnicas2[$t][] = $r['ID'];
+            }
+            $allRows2 = [];
+            foreach ($tblsUnicas2 as $tblNome => $ids) {
+                $inQ2 = implode(',', array_fill(0, count($ids), '?'));
+                $s = $pdo->prepare("SELECT c.*, l.NOME_IMPORTACAO, ca.TABELA_PADRAO
+                    FROM `{$tblNome}` c
+                    JOIN INTEGRACAO_V8_IMPORTACAO_LOTE l ON c.LOTE_ID = l.ID
+                    LEFT JOIN INTEGRACAO_V8_CHAVE_ACESSO ca ON l.CHAVE_ID = ca.ID
+                    WHERE c.LOTE_ID IN ($inQ2) $filtro_simulados");
+                $s->execute($ids);
+                $allRows2 = array_merge($allRows2, $s->fetchAll(PDO::FETCH_ASSOC));
+            }
+
             $stmtEnd = $pdo->prepare("SELECT logradouro, numero, bairro, cidade, uf, cep FROM enderecos WHERE cpf = ? ORDER BY id DESC LIMIT 1");
             $stmtEmail = $pdo->prepare("SELECT email FROM emails WHERE cpf = ? ORDER BY id DESC LIMIT 3");
             $stmtTel = $pdo->prepare("SELECT telefone_cel FROM telefones WHERE cpf = ? ORDER BY id DESC LIMIT 10");
 
-            while ($row = $stmtCpfs->fetch(PDO::FETCH_ASSOC)) { 
+            foreach ($allRows2 as $row) {
                 $linha = [ 
                     $row['NOME_IMPORTACAO'], 
                     $row['DATA_SIMULACAO'] ? date('d/m/Y H:i', strtotime($row['DATA_SIMULACAO'])) : '-', 
@@ -605,6 +656,8 @@ try {
             if (!$lote) die('Lote não encontrado.');
             if (!$perm_meu_registro && $lote['CPF_USUARIO'] !== $usuario_logado_cpf) die('Acesso negado a este lote.');
 
+            $tabela_res = !empty($lote['TABELA_DADOS']) ? $lote['TABELA_DADOS'] : 'INTEGRACAO_V8_REGISTROCONSULTA_LOTE';
+
             ob_end_clean();
             header('Content-Type: text/csv; charset=utf-8');
             header('Content-Disposition: attachment; filename="Lote_' . $id_lote . '_' . date('dmY_Hi') . '.csv"');
@@ -621,7 +674,7 @@ try {
             for ($i = 1; $i <= 10; $i++) { $cabecalho[] = "CELULAR $i"; }
             fputcsv($output, $cabecalho, ";");
 
-            $sqlCpfs = "SELECT c.*, ? as NOME_IMPORTACAO, ? as TABELA_PADRAO_LOTE FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE c WHERE c.LOTE_ID = ? AND c.VALOR_MARGEM IS NOT NULL AND c.VALOR_MARGEM > 1";
+            $sqlCpfs = "SELECT c.*, ? as NOME_IMPORTACAO, ? as TABELA_PADRAO_LOTE FROM `{$tabela_res}` c WHERE c.LOTE_ID = ? AND c.VALOR_MARGEM IS NOT NULL AND c.VALOR_MARGEM > 1";
             $stmtCpfs = $pdo->prepare($sqlCpfs);
             $stmtCpfs->execute([$lote['NOME_IMPORTACAO'], $lote['TABELA_PADRAO'] ?? '', $id_lote]);
 
@@ -686,6 +739,8 @@ try {
             if (!$lote) die('Lote não encontrado.');
             if (!$perm_meu_registro && $lote['CPF_USUARIO'] !== $usuario_logado_cpf) die('Acesso negado a este lote.');
 
+            $tabela_exp = !empty($lote['TABELA_DADOS']) ? $lote['TABELA_DADOS'] : 'INTEGRACAO_V8_REGISTROCONSULTA_LOTE';
+
             ob_end_clean();
             header('Content-Type: text/csv; charset=utf-8');
             header('Content-Disposition: attachment; filename="Planilha_Importada_Lote_' . $id_lote . '_' . date('dmY_Hi') . '.csv"');
@@ -695,7 +750,7 @@ try {
 
             fputcsv($output, ['CPF', 'NOME', 'NASCIMENTO', 'SEXO', 'STATUS_V8', 'OBSERVACAO', 'VALOR_MARGEM', 'PRAZO', 'VALOR_LIQUIDO'], ";");
 
-            $stmtCpfs = $pdo->prepare("SELECT CPF, NOME, NASCIMENTO, SEXO, STATUS_V8, OBSERVACAO, VALOR_MARGEM, PRAZO, VALOR_LIQUIDO FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE WHERE LOTE_ID = ? ORDER BY ID ASC");
+            $stmtCpfs = $pdo->prepare("SELECT CPF, NOME, NASCIMENTO, SEXO, STATUS_V8, OBSERVACAO, VALOR_MARGEM, PRAZO, VALOR_LIQUIDO FROM `{$tabela_exp}` WHERE LOTE_ID = ? ORDER BY ID ASC");
             $stmtCpfs->execute([$id_lote]);
 
             while ($row = $stmtCpfs->fetch(PDO::FETCH_ASSOC)) {
@@ -716,12 +771,14 @@ try {
 
         case 'alternar_status_lote':
             $id_lote = (int)$_POST['id_lote'];
+            v8_verificar_dono_lote($pdo, $id_lote, $usuario_logado_cpf);
             $novo_status = $_POST['novo_status'] === 'ATIVO' ? 'ATIVO' : 'INATIVO';
             $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_LOTE = ? WHERE ID = ?")->execute([$novo_status, $id_lote]);
             ob_end_clean(); echo json_encode(['success' => true, 'msg' => "Status alterado para $novo_status"]); exit;
 
         case 'salvar_edicao_lote':
             $id_lote = (int)$_POST['id_lote'];
+            v8_verificar_dono_lote($pdo, $id_lote, $usuario_logado_cpf);
             $agrupamento = strtoupper(trim($_POST['agrupamento']));
             $hora_inicio_diario = !empty(trim($_POST['hora_inicio_diario'] ?? '')) ? trim($_POST['hora_inicio_diario']) : null;
             $hora_fim_diario    = !empty(trim($_POST['hora_fim_diario']    ?? '')) ? trim($_POST['hora_fim_diario'])    : null;
@@ -750,14 +807,15 @@ try {
         case 'enviar_relatorio_whatsapp':
             $id_lote = (int)$_POST['id_lote'];
             
-            $stmtLote = $pdo->prepare("SELECT NOME_IMPORTACAO, CPF_USUARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?");
-            $stmtLote->execute([$id_lote]); 
+            $stmtLote = $pdo->prepare("SELECT NOME_IMPORTACAO, CPF_USUARIO, TABELA_DADOS FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?");
+            $stmtLote->execute([$id_lote]);
             $dados_lote = $stmtLote->fetch(PDO::FETCH_ASSOC);
-            
+
             if (!$dados_lote) { throw new Exception("Lote não encontrado no banco de dados."); }
-            
+
             $nomeLote = $dados_lote['NOME_IMPORTACAO'] ?: 'LOTE';
             $cpf_dono_lote = $dados_lote['CPF_USUARIO'];
+            $tabela_wapp = !empty($dados_lote['TABELA_DADOS']) ? $dados_lote['TABELA_DADOS'] : 'INTEGRACAO_V8_REGISTROCONSULTA_LOTE';
 
             if (empty($cpf_dono_lote)) { throw new Exception("Lote não possui um usuário dono vinculado."); }
 
@@ -807,7 +865,7 @@ try {
             fputcsv($fp, $cabecalho, ";");
             
             // Somente CPFs com VALOR_LIQUIDO preenchido e maior que zero
-            $stmtCpfs = $pdo->prepare("SELECT c.*, l.NOME_IMPORTACAO, ca.TABELA_PADRAO FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE c JOIN INTEGRACAO_V8_IMPORTACAO_LOTE l ON c.LOTE_ID = l.ID LEFT JOIN INTEGRACAO_V8_CHAVE_ACESSO ca ON l.CHAVE_ID = ca.ID WHERE c.LOTE_ID = ? AND c.VALOR_LIQUIDO IS NOT NULL AND c.VALOR_LIQUIDO > 0");
+            $stmtCpfs = $pdo->prepare("SELECT c.*, l.NOME_IMPORTACAO, ca.TABELA_PADRAO FROM `{$tabela_wapp}` c JOIN INTEGRACAO_V8_IMPORTACAO_LOTE l ON c.LOTE_ID = l.ID LEFT JOIN INTEGRACAO_V8_CHAVE_ACESSO ca ON l.CHAVE_ID = ca.ID WHERE c.LOTE_ID = ? AND c.VALOR_LIQUIDO IS NOT NULL AND c.VALOR_LIQUIDO > 0");
             $stmtCpfs->execute([$id_lote]);
             
             $stmtEnd = $pdo->prepare("SELECT logradouro, numero, bairro, cidade, uf, cep FROM enderecos WHERE cpf = ? ORDER BY id DESC LIMIT 1");
@@ -910,6 +968,7 @@ try {
 
         case 'excluir_lote':
             $id_lote = (int)$_POST['id_lote'];
+            v8_verificar_dono_lote($pdo, $id_lote, $usuario_logado_cpf);
             $pdo->prepare("DELETE FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?")->execute([$id_lote]);
             ob_end_clean(); echo json_encode(['success' => true, 'msg' => 'Lote e histórico apagados com sucesso.']); exit;
 
@@ -935,11 +994,12 @@ try {
 
         case 'listar_clientes_lote':
             $id_lote = (int)$_POST['id_lote'];
+            $tabela_lc = v8_tabela_lote($pdo, $id_lote);
             $stmt = $pdo->prepare("
                 SELECT CPF, NOME, STATUS_V8,
                        COALESCE(NULLIF(TRIM(OBSERVACAO),''), '') AS OBSERVACAO,
                        VALOR_MARGEM, VALOR_LIQUIDO
-                FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE
+                FROM `{$tabela_lc}`
                 WHERE LOTE_ID = ?
                 ORDER BY NOME ASC
             ");
@@ -954,13 +1014,14 @@ try {
         case 'listar_grupos_reprocessamento':
             $id_lote = (int)$_POST['id_lote'];
             $hoje = date('Y-m-d');
+            $tabela_lgr = v8_tabela_lote($pdo, $id_lote);
             $stmt = $pdo->prepare("
                 SELECT
                     STATUS_V8,
                     COALESCE(NULLIF(TRIM(OBSERVACAO),''), '') AS OBSERVACAO,
                     COUNT(*) AS total,
                     SUM(CASE WHEN DATE(COALESCE(DATA_SIMULACAO, DATA_CONSENTIMENTO)) = :hoje THEN 1 ELSE 0 END) AS hoje
-                FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE
+                FROM `{$tabela_lgr}`
                 WHERE LOTE_ID = :lote
                   AND STATUS_V8 NOT IN ('OK', 'NA FILA', 'AGUARDANDO MARGEM', 'AGUARDANDO SIMULACAO', 'RECUPERAR V8')
                 GROUP BY STATUS_V8, OBSERVACAO
@@ -988,13 +1049,14 @@ try {
                 $nova_obs    = 'Reprocessando erro: recuperando margem/simulação...';
             }
 
+            $tabela_rg = v8_tabela_lote($pdo, $id_lote);
             if ($observacao !== null && $observacao !== '') {
-                $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE
+                $pdo->prepare("UPDATE `{$tabela_rg}`
                     SET STATUS_V8 = ?, OBSERVACAO = ?
                     WHERE LOTE_ID = ? AND STATUS_V8 = ? AND TRIM(COALESCE(OBSERVACAO,'')) = ?")
                     ->execute([$novo_status, $nova_obs, $id_lote, $status_v8, trim($observacao)]);
             } else {
-                $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE
+                $pdo->prepare("UPDATE `{$tabela_rg}`
                     SET STATUS_V8 = ?, OBSERVACAO = ?
                     WHERE LOTE_ID = ? AND STATUS_V8 = ? AND TRIM(COALESCE(OBSERVACAO,'')) = ''")
                     ->execute([$novo_status, $nova_obs, $id_lote, $status_v8]);
@@ -1011,7 +1073,8 @@ try {
         case 'reprocessar_consentimento':
             // Re-verifica apenas CPFs com AGUARDANDO DATAPREV → volta para AGUARDANDO MARGEM (FASE 2 relê o status da V8)
             $id_lote = (int)$_POST['id_lote'];
-            $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'AGUARDANDO MARGEM', OBSERVACAO = 'Reverificando: aguardando retorno da Dataprev...' WHERE LOTE_ID = ? AND STATUS_V8 = 'AGUARDANDO DATAPREV'")->execute([$id_lote]);
+            $tabela_rc = v8_tabela_lote($pdo, $id_lote);
+            $pdo->prepare("UPDATE `{$tabela_rc}` SET STATUS_V8 = 'AGUARDANDO MARGEM', OBSERVACAO = 'Reverificando: aguardando retorno da Dataprev...' WHERE LOTE_ID = ? AND STATUS_V8 = 'AGUARDANDO DATAPREV'")->execute([$id_lote]);
             $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PENDENTE' WHERE ID = ?")->execute([$id_lote]);
             $stmtDono = $pdo->prepare("SELECT CPF_USUARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?");
             $stmtDono->execute([$id_lote]); $cpf_dono = $stmtDono->fetchColumn();
@@ -1023,7 +1086,8 @@ try {
         case 'reprocessar_erros':
             // Reprocessa apenas CPFs com ERRO gerado nas últimas 24h
             $id_lote = (int)$_POST['id_lote'];
-            $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE
+            $tabela_re = v8_tabela_lote($pdo, $id_lote);
+            $pdo->prepare("UPDATE `{$tabela_re}`
                 SET STATUS_V8 = 'RECUPERAR V8', OBSERVACAO = 'Reprocessando erro (últimas 24h): recuperando margem/simulação...'
                 WHERE LOTE_ID = ?
                   AND STATUS_V8 IN ('ERRO CONSULTA', 'ERRO MARGEM', 'ERRO SIMULACAO')
@@ -1038,7 +1102,8 @@ try {
 
         case 'reprocessar_simulacao':
             $id_lote = (int)$_POST['id_lote'];
-            $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'RECUPERAR V8', OBSERVACAO = 'Recuperando Margem/Simulação...' WHERE LOTE_ID = ? AND STATUS_V8 NOT IN ('OK', 'AGUARDANDO MARGEM', 'AGUARDANDO SIMULACAO')")->execute([$id_lote]);
+            $tabela_rs = v8_tabela_lote($pdo, $id_lote);
+            $pdo->prepare("UPDATE `{$tabela_rs}` SET STATUS_V8 = 'RECUPERAR V8', OBSERVACAO = 'Recuperando Margem/Simulação...' WHERE LOTE_ID = ? AND STATUS_V8 NOT IN ('OK', 'AGUARDANDO MARGEM', 'AGUARDANDO SIMULACAO')")->execute([$id_lote]);
             $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PENDENTE' WHERE ID = ?")->execute([$id_lote]);
 
             $stmtDono = $pdo->prepare("SELECT CPF_USUARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?");
@@ -1061,7 +1126,8 @@ try {
             
             $novo_status = ($is_simular == 1) ? 'RECUPERAR V8' : 'NA FILA';
 
-            $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = ?, VALOR_MARGEM = NULL, CONSULT_ID = NULL, CONFIG_ID = NULL, VALOR_LIQUIDO = NULL, SIMULATION_ID = NULL, OBSERVACAO = 'Reprocessando do zero...' WHERE LOTE_ID = ?")->execute([$novo_status, $id_lote]);
+            $tabela_rt = v8_tabela_lote($pdo, $id_lote);
+            $pdo->prepare("UPDATE `{$tabela_rt}` SET STATUS_V8 = ?, VALOR_MARGEM = NULL, CONSULT_ID = NULL, CONFIG_ID = NULL, VALOR_LIQUIDO = NULL, SIMULATION_ID = NULL, OBSERVACAO = 'Reprocessando do zero...' WHERE LOTE_ID = ?")->execute([$novo_status, $id_lote]);
             $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PENDENTE', QTD_PROCESSADA = 0, QTD_SUCESSO = 0, QTD_ERRO = 0 WHERE ID = ?")->execute([$id_lote]);
             
             $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
@@ -1072,6 +1138,7 @@ try {
 
         case 'pausar_retomar_lote':
             $id_lote = (int)$_POST['id_lote'];
+            v8_verificar_dono_lote($pdo, $id_lote, $usuario_logado_cpf);
             if ($_POST['acao_lote'] === 'PAUSAR') {
                 $acaoLote = 'PAUSADO';
             } else {
@@ -1216,7 +1283,8 @@ try {
                 // Avança o checkpoint para evitar re-trigger antes de mais 250
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET AUTO_REPROCESS_CHECKPOINT = PROCESSADOS_HOJE WHERE ID = ?")->execute([$lAR['ID']]);
                 // Manda AGUARDANDO_DATAPREV → AGUARDANDO MARGEM (FASE 2 relê o status na V8)
-                $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE SET STATUS_V8 = 'AGUARDANDO MARGEM', OBSERVACAO = 'Reprocessamento automático (a cada 250 consentimentos do dia)' WHERE LOTE_ID = ? AND STATUS_V8 = 'AGUARDANDO DATAPREV'")->execute([$lAR['ID']]);
+                $tabela_ar = v8_tabela_lote($pdo, (int)$lAR['ID']);
+                $pdo->prepare("UPDATE `{$tabela_ar}` SET STATUS_V8 = 'AGUARDANDO MARGEM', OBSERVACAO = 'Reprocessamento automático (a cada 250 consentimentos do dia)' WHERE LOTE_ID = ? AND STATUS_V8 = 'AGUARDANDO DATAPREV'")->execute([$lAR['ID']]);
                 // Se estava aguardando horário, acorda para rodar FASE 2
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PENDENTE' WHERE ID = ? AND STATUS_FILA = 'AGUARDANDO_DIARIO'")->execute([$lAR['ID']]);
                 $url_worker = $protocol . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']) . '/worker_v8_lote.php?user_cpf=' . $lAR['CPF_USUARIO'];
