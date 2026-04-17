@@ -226,15 +226,17 @@ try {
             fclose($handle);
 
             $total_novos = count($linhas_validas_novas);
-            if ($total_novos == 0) throw new Exception("Nenhum CPF novo encontrado. Todos os CPFs da planilha já existem neste lote ou a planilha é inválida.");
+            if ($total_novos == 0 && !($modo_atualizar && !empty($linhas_para_atualizar))) {
+                throw new Exception("Nenhum CPF novo encontrado. Todos os CPFs da planilha já existem neste lote ou a planilha é inválida.");
+            }
 
             $custo_lote = $total_novos * (float)$chave['CUSTO_CONSULTA'];
             if ((float)$chave['SALDO'] < $custo_lote && $custo_lote > 0) { throw new Exception("Saldo Insuficiente para os novos CPFs! Custo: R$ " . number_format($custo_lote, 2, ',', '.') . "."); }
 
             $pdo->beginTransaction();
-            
-            // Atualiza o total e reativa o lote
-            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_TOTAL = QTD_TOTAL + ?, STATUS_FILA = 'PENDENTE' WHERE ID = ?")->execute([$total_novos, $id_lote]);
+
+            // Reativa o lote (QTD_TOTAL será ajustado após inserts)
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PENDENTE' WHERE ID = ?")->execute([$id_lote]);
             $stmtCpf = $pdo->prepare("INSERT INTO INTEGRACAO_V8_REGISTROCONSULTA_LOTE (LOTE_ID, CPF, NOME, NASCIMENTO, SEXO, STATUS_V8, VALOR_MARGEM, CONSULT_ID, CONFIG_ID, OBSERVACAO) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             
             $stmtBuscaLote = null; $stmtBuscaManual = null;
@@ -298,7 +300,8 @@ try {
             $url_worker = $protocol . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']) . '/worker_v8_lote.php?user_cpf=' . $dono_lote_cpf;
             $ch = curl_init(); curl_setopt($ch, CURLOPT_URL, $url_worker); curl_setopt($ch, CURLOPT_TIMEOUT, 1); curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); curl_exec($ch); curl_close($ch);
 
-            ob_end_clean(); echo json_encode(['success' => true, 'msg' => "{$inseridos_novos} CPFs inéditos foram incluídos ao lote com sucesso!{$aviso_append}", 'cpf_dono' => $dono_lote_cpf]); exit;
+            $msg_principal = ($inseridos_novos > 0) ? "{$inseridos_novos} CPFs inéditos incluídos ao lote." : "Nenhum CPF novo adicionado.";
+            ob_end_clean(); echo json_encode(['success' => true, 'msg' => $msg_principal . $aviso_append, 'cpf_dono' => $dono_lote_cpf]); exit;
 
         case 'listar_lotes':
             $perm_meu_registro = function_exists('verificaPermissao') ? verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_CONSULTA_LOTE_MEU_REGISTRO', 'FUNCAO') : true;

@@ -116,6 +116,12 @@
                 <div id="box_append_select" class="col-md-6 d-none">
                     <label class="fw-bold small text-primary mb-1"><i class="fas fa-search me-1"></i> Selecione o Lote Destino (Para adicionar os CPFs):</label>
                     <select id="sel_append_lote" name="append_lote_id" class="form-select form-select-sm border-primary fw-bold text-dark bg-light"></select>
+                    <div class="form-check form-switch mt-1">
+                        <input class="form-check-input" type="checkbox" id="main_atualizar_dados" name="atualizar_dados" value="1">
+                        <label class="form-check-label small text-dark" for="main_atualizar_dados" style="font-size:11px;">
+                            Atualizar Nome/Nascimento/Sexo dos CPFs já existentes
+                        </label>
+                    </div>
                 </div>
 
                 <div class="col-md-2">
@@ -317,7 +323,7 @@
             </div>
             <form id="formAppendLote">
                 <div class="modal-body bg-light p-4">
-                    <input type="hidden" id="append_lote_id" name="id_lote">
+                    <input type="hidden" id="append_lote_id" name="append_lote_id">
                     <div class="mb-3">
                         <label class="fw-bold small text-dark mb-1">Lote Destino:</label>
                         <input type="text" id="append_lote_nome" class="form-control border-dark fw-bold text-muted bg-light" readonly>
@@ -851,6 +857,9 @@
                         <i class="fas fa-power-off me-2"></i>${iconeStatusTroca} Tornar ${novoStatusTroca}
                       </button>
                       ${btnTopEditar}
+                      <button class="dropdown-item fw-bold text-success" onclick="v8AbrirModalAppendLote(${idLoteReal}, '${l.NOME_IMPORTACAO.replace(/'/g,"\\'")}')">
+                        <i class="fas fa-plus-circle me-2"></i> Incluir Mais CPFs
+                      </button>
                       <button class="dropdown-item fw-bold text-warning" onclick="v8AbrirModalAnotacoes(${idLoteReal})">
                         <i class="fas fa-sticky-note me-2"></i> Anotações do Lote
                       </button>
@@ -1482,4 +1491,37 @@
         const res = await v8Req('ajax_api_v8_lote_csv.php', 'salvar_anotacao_lote', { id_lote: idLote, anotacao: '' }, true, "Apagando...");
         if (res.success) { v8Toast("✅ Anotação apagada.", "success"); modalAnotacoesLoteObj.hide(); } else { v8Toast("❌ " + (res.msg||"Erro"), "error", 5000); }
     }
+
+    // --- APPEND LOTE MODAL ---
+    function v8AbrirModalAppendLote(id, nome) {
+        document.getElementById('formAppendLote').reset();
+        document.getElementById('append_lote_id').value = id;
+        document.getElementById('append_lote_nome').value = nome;
+        modalAppendLoteObj.show();
+    }
+
+    document.getElementById('formAppendLote').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        let btn = document.getElementById('btn_enviar_append');
+        let txtOriginal = btn.innerHTML;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin me-1"></i> Enviando...';
+        btn.disabled = true;
+        let fd = new FormData(this);
+        fd.append('acao', 'append_csv_lote');
+        try {
+            let req = await fetch('ajax_api_v8_lote_csv.php', { method: 'POST', body: fd });
+            let res = await req.json();
+            btn.innerHTML = txtOriginal; btn.disabled = false;
+            if (res.success) {
+                v8Toast("✅ " + res.msg, "success");
+                modalAppendLoteObj.hide();
+                v8CarregarLotesCSV();
+            } else {
+                v8Toast("❌ " + (res.msg || "Erro no upload"), "error", 6000);
+            }
+        } catch(err) {
+            btn.innerHTML = txtOriginal; btn.disabled = false;
+            v8Toast("❌ Falha de comunicação.", "error", 6000);
+        }
+    });
 </script>
