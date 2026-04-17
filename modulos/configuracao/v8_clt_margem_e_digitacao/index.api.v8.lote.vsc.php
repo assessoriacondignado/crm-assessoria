@@ -1193,9 +1193,12 @@
         // Fecha dropdown
         const dropdownEl = document.getElementById('v8CampanhaDropdown').querySelector('[data-bs-toggle="dropdown"]');
         bootstrap.Dropdown.getInstance(dropdownEl)?.hide();
+        // Calcula quantos serão incluídos (marcados ou todos filtrados)
+        const marcados = document.querySelectorAll('.v8-check-cliente:checked').length;
+        const qtd = marcados > 0 ? marcados : (v8ClientesFiltrados.length || v8ClientesTodos.length);
         // Mostra barra de confirmação
         document.getElementById('v8CampanhaNomeSel').textContent = nome;
-        document.getElementById('v8CampanhaQtdSel').textContent = v8ClientesFiltrados.length || v8ClientesTodos.length;
+        document.getElementById('v8CampanhaQtdSel').textContent = qtd;
         document.getElementById('v8CampanhaSelecionadaBar').style.display = '';
     }
 
@@ -1205,9 +1208,12 @@
     }
 
     async function v8ExecutarIncluirCampanha() {
-        const lista = v8ClientesFiltrados.length ? v8ClientesFiltrados : v8ClientesTodos;
+        // Prioridade: marcados individualmente → senão, todos filtrados
+        const marcados = [...document.querySelectorAll('.v8-check-cliente:checked')].map(cb => cb.dataset.cpf);
+        const lista = marcados.length > 0 ? marcados
+            : (v8ClientesFiltrados.length ? v8ClientesFiltrados.map(c => c.CPF) : v8ClientesTodos.map(c => c.CPF));
         if (!lista.length) return v8Toast("Nenhum cliente na tela para incluir.", "warning");
-        const cpfs = lista.map(c => c.CPF);
+        const cpfs = lista;
         const res = await v8Req('ajax_api_v8_lote_csv.php', 'incluir_em_campanha',
             { id_campanha: v8CampanhaIdSel, cpfs: JSON.stringify(cpfs) }, true, "Incluindo...");
         if (res.success) {
@@ -1242,7 +1248,11 @@
         const obs       = c.OBSERVACAO || '';
         const obsTitle  = obs ? ` title="${obs.replace(/"/g,'&quot;')}"` : '';
         const obsExibir = obs.length > 50 ? obs.substring(0,50)+'…' : obs;
-        return `<tr>
+        const cpfEsc    = c.CPF.replace(/\D/g,'');
+        return `<tr onclick="v8ToggleCheckCliente(this)" style="cursor:pointer;">
+          <td style="width:32px; text-align:center;" onclick="event.stopPropagation(); v8ToggleCheckCliente(this.closest('tr'))">
+            <input type="checkbox" class="v8-check-cliente form-check-input" data-cpf="${cpfEsc}" style="cursor:pointer;">
+          </td>
           <td class="fw-bold" style="white-space:nowrap;">${c.CPF_FORMATADO}</td>
           <td>${c.NOME || '—'}</td>
           <td style="white-space:nowrap;"><span class="badge bg-${cor}">${c.STATUS_V8}</span></td>
@@ -1250,16 +1260,54 @@
           <td class="text-success fw-bold" style="white-space:nowrap;">${margem}</td>
           <td class="text-primary fw-bold" style="white-space:nowrap;">${simulacao}</td>
           <td style="white-space:nowrap; color:#777;">${c.DATA_SIM_DISPLAY || '—'}</td>
-          <td><a href="/modulos/banco_dados/consulta.php?busca=${c.CPF}&cpf_selecionado=${c.CPF}&acao=visualizar" target="_blank"
+          <td onclick="event.stopPropagation()"><a href="/modulos/banco_dados/consulta.php?busca=${c.CPF}&cpf_selecionado=${c.CPF}&acao=visualizar" target="_blank"
                  class="btn fw-bold" style="font-size:10px; padding:1px 7px; border:1px solid #6f42c1; border-radius:4px; color:#6f42c1;">Ver</a></td>
         </tr>`;
+    }
+
+    function v8ToggleCheckCliente(tr) {
+        const cb = tr.querySelector('.v8-check-cliente');
+        if (!cb) return;
+        cb.checked = !cb.checked;
+        tr.style.background = cb.checked ? '#f0ebff' : '';
+        v8AtualizarSelecaoContador();
+    }
+
+    function v8AtualizarSelecaoContador() {
+        const marcados = document.querySelectorAll('.v8-check-cliente:checked').length;
+        const total    = document.querySelectorAll('.v8-check-cliente').length;
+        // Atualiza checkbox do header
+        const cbAll = document.getElementById('v8CheckTodos');
+        if (cbAll) {
+            cbAll.indeterminate = marcados > 0 && marcados < total;
+            cbAll.checked = total > 0 && marcados === total;
+        }
+        // Atualiza barra de campanha
+        if (v8CampanhaIdSel) {
+            const qtd = marcados > 0 ? marcados : v8ClientesFiltrados.length;
+            document.getElementById('v8CampanhaQtdSel').textContent = qtd;
+        }
+        // Atualiza contador geral
+        const txt = marcados > 0
+            ? `${v8ClientesFiltrados.length} registro(s) — <strong>${marcados} selecionado(s)</strong>`
+            : `${v8ClientesFiltrados.length} registro(s)`;
+        document.getElementById('v8ClientesContador').innerHTML = txt;
+    }
+
+    function v8ToggleTodosClientes(cb) {
+        document.querySelectorAll('.v8-check-cliente').forEach(c => {
+            c.checked = cb.checked;
+            const tr = c.closest('tr');
+            if (tr) tr.style.background = cb.checked ? '#f0ebff' : '';
+        });
+        v8AtualizarSelecaoContador();
     }
 
     function v8RenderizarClientesLote(lista) {
         v8ClientesListaAtual = lista;
         v8ClientesOffset = 0;
         const tb = document.getElementById('v8ClientesTabela');
-        document.getElementById('v8ClientesContador').textContent = lista.length + ' registro(s)';
+        document.getElementById('v8ClientesContador').innerHTML = lista.length + ' registro(s)';
         document.getElementById('v8CampanhaDropdown').style.display = lista.length ? '' : 'none';
 
         if (lista.length === 0) {
@@ -1273,6 +1321,10 @@
         let html = `<table class="table table-sm table-hover mb-0" style="font-size:12px;">
           <thead class="table-dark sticky-top">
             <tr>
+              <th style="width:32px; text-align:center;">
+                <input type="checkbox" id="v8CheckTodos" class="form-check-input" title="Selecionar todos visíveis"
+                       onchange="v8ToggleTodosClientes(this)" style="cursor:pointer;">
+              </th>
               <th style="width:120px;">CPF</th>
               <th>Nome</th>
               <th style="width:150px;">Status</th>
