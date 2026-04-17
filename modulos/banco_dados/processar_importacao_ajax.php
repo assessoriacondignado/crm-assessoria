@@ -162,7 +162,7 @@ if ($acao === 'testar_importacao') {
     if (($handle = fopen($arquivos_csv[0], "r")) !== FALSE) {
         $cabecalhos_lidos = fgetcsv($handle, 10000, ";"); 
         
-        while (($linha = fgetcsv($handle, 10000, ";")) !== FALSE && $linhas_lidas < 5) {
+        while (($linha = fgetcsv($handle, 10000, ";")) !== FALSE && $linhas_lidas < 10) {
             if(count($linha) == 1 && count($cabecalhos_lidos) > 1 && strpos($linha[0], ',') !== false) { $linha = explode(',', $linha[0]); }
             
             $cpf_raw = isset($linha[$idx_cpf]) ? $linha[$idx_cpf] : '';

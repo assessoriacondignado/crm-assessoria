@@ -132,7 +132,7 @@ try {
                         <button type="button" class="btn btn-outline-dark btn-lg shadow-sm fw-bold bg-white" onclick="mudarEtapa('etapa1')"><i class="fas fa-arrow-left me-1"></i> Voltar e Trocar</button>
                         
                         <div>
-                            <button type="button" class="btn btn-warning btn-lg shadow-sm fw-bold border-dark text-dark me-2" onclick="testarImportacao()" id="btn_testar_importacao" disabled><i class="fas fa-vial me-1"></i> Testar 5 Linhas</button>
+                            <button type="button" class="btn btn-warning btn-lg shadow-sm fw-bold border-dark text-dark me-2" onclick="testarImportacao()" id="btn_testar_importacao" disabled><i class="fas fa-vial me-1"></i> Testar 10 Linhas</button>
                             <button type="button" class="btn btn-success btn-lg shadow-sm fw-bold border-dark text-dark" onclick="iniciarImportacaoBackground()" id="btn_iniciar_importacao" disabled>Colocar na Fila <i class="fas fa-rocket ms-1"></i></button>
                         </div>
                     </div>
@@ -175,11 +175,11 @@ try {
     <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content border-dark shadow-lg">
             <div class="modal-header bg-dark text-white">
-                <h5 class="modal-title fw-bold"><i class="fas fa-vial me-2"></i> Resultado do Teste (5 Linhas)</h5>
+                <h5 class="modal-title fw-bold" id="modal_titulo_teste"><i class="fas fa-vial me-2"></i> Resultado do Teste (10 Linhas)</h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body bg-light">
-                <p class="text-muted fw-bold">As 5 primeiras linhas da sua planilha foram importadas. Verifique se os dados caíram corretamente clicando na ficha.</p>
+                <p class="text-muted fw-bold" id="modal_desc_teste">Verifique os 10 primeiros CPFs lidos da planilha clicando em "Ver Ficha".</p>
                 <div class="table-responsive bg-white shadow-sm border border-dark rounded-3">
                     <table class="table table-hover align-middle mb-0 text-center">
                         <thead class="table-dark text-white" style="font-size: 0.85rem;">
@@ -197,6 +197,7 @@ try {
             </div>
             <div class="modal-footer bg-light">
                 <button type="button" class="btn btn-outline-dark fw-bold" data-bs-dismiss="modal">Fechar</button>
+                <button type="button" id="btn_confirmar_importacao" class="btn btn-success fw-bold border-dark shadow-sm" style="display:none;" onclick="confirmarImportacaoBackground()"><i class="fas fa-rocket me-1"></i> Confirmar e Importar</button>
             </div>
         </div>
     </div>
@@ -215,7 +216,8 @@ try {
 <script>
     let cabecalhosCSV = [];
     let amostraCSV = [];
-    let watcherInterval = null; 
+    let watcherInterval = null;
+    let _pendingImportParams = null;
 
     const colunasDoBanco = {
         'IMPORTACAO_COMPLETA_CADASTRO': [
@@ -515,6 +517,26 @@ try {
         }
     }
 
+    function _preencherModalCPFs(resultados) {
+        let tb = document.getElementById('tbody_resultados_teste');
+        tb.innerHTML = '';
+        resultados.forEach((res, index) => {
+            let badge = res.status === 'Sucesso' ? 'bg-success' : 'bg-danger';
+            tb.innerHTML += `
+                <tr>
+                    <td class="fw-bold">${index + 1}</td>
+                    <td class="fw-bold">${res.cpf}</td>
+                    <td><span class="badge ${badge} border border-dark text-white">${res.status}</span></td>
+                    <td>
+                        <button class="btn btn-sm btn-dark fw-bold border-dark shadow-sm" onclick="abrirFichaCliente('${res.cpf}')">
+                            <i class="fas fa-external-link-alt"></i> Ver Ficha
+                        </button>
+                    </td>
+                </tr>
+            `;
+        });
+    }
+
     function testarImportacao() {
         let modelo = document.getElementById('modelo_tabela').value;
         let arquivoCache = document.getElementById('arquivo_cache_nome').value;
@@ -537,8 +559,8 @@ try {
         formData.append('acao', 'testar_importacao');
         formData.append('arquivo_cache', arquivoCache);
         formData.append('modelo_tabela', modelo);
-        formData.append('id_campanha', idCampanhaVinculo); 
-        formData.append('apagar_contratos', apagarContratos); 
+        formData.append('id_campanha', idCampanhaVinculo);
+        formData.append('apagar_contratos', apagarContratos);
         formData.append('mapeamento', JSON.stringify(mapeamento));
 
         fetch('processar_importacao_ajax.php', { method: 'POST', body: formData })
@@ -546,27 +568,13 @@ try {
         .then(data => {
             btn.innerHTML = iconAntigo;
             btn.disabled = false;
-            
+
             if(data.sucesso) {
-                let tb = document.getElementById('tbody_resultados_teste');
-                tb.innerHTML = '';
-                
-                data.resultados.forEach((res, index) => {
-                    let badge = res.status === 'Sucesso' ? 'bg-success' : 'bg-danger';
-                    tb.innerHTML += `
-                        <tr>
-                            <td class="fw-bold">${index + 1}</td>
-                            <td class="fw-bold">${res.cpf}</td>
-                            <td><span class="badge ${badge} border border-dark text-white">${res.status}</span></td>
-                            <td>
-                                <button class="btn btn-sm btn-dark fw-bold border-dark shadow-sm" onclick="abrirFichaCliente('${res.cpf}')">
-                                    <i class="fas fa-external-link-alt"></i> Ver Ficha
-                                </button>
-                            </td>
-                        </tr>
-                    `;
-                });
-                
+                _pendingImportParams = null;
+                document.getElementById('modal_titulo_teste').innerHTML = '<i class="fas fa-vial me-2"></i> Resultado do Teste (10 Linhas)';
+                document.getElementById('modal_desc_teste').textContent = 'Verifique os 10 primeiros CPFs lidos da planilha clicando em "Ver Ficha".';
+                document.getElementById('btn_confirmar_importacao').style.display = 'none';
+                _preencherModalCPFs(data.resultados);
                 let modal = new bootstrap.Modal(document.getElementById('modalTesteImportacao'));
                 modal.show();
             } else {
@@ -597,7 +605,7 @@ try {
         let apagarContratos = document.getElementById('apagar_contratos_alvo') ? document.getElementById('apagar_contratos_alvo').value : 'NAO';
 
         if(!modelo) return crmToast("Selecione o Modelo de Tabela!", "info", 5000);
-        
+
         let mapeamento = {};
         document.querySelectorAll('.sel-mapeamento').forEach(select => {
             if(select.value !== "") mapeamento[select.getAttribute('data-colunabanco')] = parseInt(select.value);
@@ -606,21 +614,70 @@ try {
         if(!mapeamento.hasOwnProperty('cpf')) return crmToast("Aviso: É obrigatório vincular a coluna 'CPF'!", "info", 5000);
         if(modelo.includes('inss') && !mapeamento.hasOwnProperty('matricula_nb')) return crmToast("Aviso: É obrigatório vincular a coluna 'MATRÍCULA' para dados do INSS!", "info", 5000);
 
+        _pendingImportParams = { arquivo_cache: arquivoCache, modelo_tabela: modelo, nome_importacao: nomeImportacao, id_campanha: idCampanhaVinculo, apagar_contratos: apagarContratos, mapeamento: mapeamento };
+
+        let btn = document.getElementById('btn_iniciar_importacao');
+        let iconAntigo = btn.innerHTML;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Carregando prévia...';
+        btn.disabled = true;
+
+        let previewFD = new FormData();
+        previewFD.append('acao', 'testar_importacao');
+        previewFD.append('arquivo_cache', arquivoCache);
+        previewFD.append('modelo_tabela', modelo);
+        previewFD.append('mapeamento', JSON.stringify(mapeamento));
+
+        fetch('processar_importacao_ajax.php', { method: 'POST', body: previewFD })
+        .then(r => r.json())
+        .then(data => {
+            btn.innerHTML = iconAntigo;
+            btn.disabled = false;
+
+            if(data.sucesso) {
+                document.getElementById('modal_titulo_teste').innerHTML = '<i class="fas fa-rocket me-2"></i> Prévia dos 10 primeiros CPFs — Confirma a importação?';
+                document.getElementById('modal_desc_teste').textContent = 'Esses são os primeiros 10 CPFs que serão lidos. Verifique se estão corretos e clique em "Confirmar e Importar".';
+                document.getElementById('btn_confirmar_importacao').style.display = 'inline-block';
+                _preencherModalCPFs(data.resultados);
+                let modal = new bootstrap.Modal(document.getElementById('modalTesteImportacao'));
+                modal.show();
+            } else {
+                _pendingImportParams = null;
+                crmToast("❌ Erro ao carregar prévia: " + data.erro, "error", 6000);
+            }
+        }).catch(e => {
+            btn.innerHTML = iconAntigo;
+            btn.disabled = false;
+            _pendingImportParams = null;
+            crmToast("Erro de conexão ao carregar prévia.", "info", 5000);
+        });
+    }
+
+    function confirmarImportacaoBackground() {
+        if (!_pendingImportParams) return;
+
+        let modalEl = document.getElementById('modalTesteImportacao');
+        let modalInst = bootstrap.Modal.getInstance(modalEl);
+        if (modalInst) modalInst.hide();
+
+        let p = _pendingImportParams;
+        _pendingImportParams = null;
+
         let formData = new FormData();
-        formData.append('arquivo_cache', arquivoCache);
-        formData.append('modelo_tabela', modelo);
-        formData.append('nome_importacao', nomeImportacao);
-        formData.append('id_campanha', idCampanhaVinculo); 
-        formData.append('apagar_contratos', apagarContratos); 
-        formData.append('mapeamento', JSON.stringify(mapeamento));
-        formData.append('acao', 'iniciar_tarefa'); 
+        formData.append('acao', 'iniciar_tarefa');
+        formData.append('arquivo_cache', p.arquivo_cache);
+        formData.append('modelo_tabela', p.modelo_tabela);
+        formData.append('nome_importacao', p.nome_importacao);
+        formData.append('id_campanha', p.id_campanha);
+        formData.append('apagar_contratos', p.apagar_contratos);
+        formData.append('mapeamento', JSON.stringify(p.mapeamento));
 
         fetch('processar_importacao_ajax.php', { method: 'POST', body: formData })
         .then(r => r.json())
         .then(data => {
             if(data.sucesso) {
-                mudarEtapa('etapa3'); 
+                mudarEtapa('etapa3');
                 carregarFilaDashboard();
+                crmToast("Importação colocada na fila com sucesso!", "success", 4000);
             } else {
                 crmToast("❌ Erro ao iniciar: " + data.erro, "error", 6000);
             }

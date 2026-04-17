@@ -37,7 +37,11 @@
       "Bash(python3 -c \" import sys, json lines = sys.stdin.read\\(\\).strip\\(\\).split\\('\\\\n'\\) for line in lines[-20:]: try: d = json.loads\\(line\\) if d.get\\('type'\\) == 'summary': print\\(d.get\\('summary', ''\\)\\) except: pass \")",
       "Bash(python3 -c \" import sys, json lines = sys.stdin.read\\(\\).strip\\(\\).split\\('\\\\n'\\) for line in lines: try: d = json.loads\\(line\\) msg_type = d.get\\('type', ''\\) if msg_type in \\('user', 'assistant'\\): role = d.get\\('role', msg_type\\) content = d.get\\('content', ''\\) if isinstance\\(content, list\\): for c in content: if isinstance\\(c, dict\\) and c.get\\('type'\\) == 'text': text = c.get\\('text', ''\\)[:300] print\\(f'[{role}]: {text}'\\) print\\('---'\\) elif isinstance\\(content, str\\): print\\(f'[{role}]: {content[:300]}'\\) print\\('---'\\) except: pass \")",
       "Bash(grep -n '{$tbl}' /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/worker_v8_lote.php)",
-      "Bash(python3)"
+      "Bash(python3)",
+      "Bash(mysql -u root assessoriaconsignado -e \"SELECT ID, NOME_IMPORTACAO, TABELA_DESTINO, NOME_USUARIO, STATUS, QTD_TOTAL, QTD_PROCESSADA, QTD_NOVOS, QTD_ATUALIZADOS, QTD_ERROS, ARQUIVO_LOG_ERRO, DATA_INICIO, DATA_FIM FROM CONTROLE_IMPORTACAO_ASSINCRONA ORDER BY ID DESC LIMIT 10\\\\G\")",
+      "Bash(mysql -u root -passessoriaconsignado assessoriaconsignado -e \"SELECT ID, NOME_IMPORTACAO, TABELA_DESTINO, STATUS, QTD_TOTAL, QTD_PROCESSADA, QTD_NOVOS, QTD_ERROS, ARQUIVO_LOG_ERRO FROM CONTROLE_IMPORTACAO_ASSINCRONA ORDER BY ID DESC LIMIT 10\")",
+      "Bash(mysql assessoriaconsignado *)",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT ID, NOME_IMPORTACAO, TABELA_DESTINO, STATUS, QTD_TOTAL, QTD_PROCESSADA, QTD_NOVOS, QTD_ERROS, LEFT\\(ARQUIVO_LOG_ERRO,100\\) as LOG FROM CONTROLE_IMPORTACAO_ASSINCRONA ORDER BY ID DESC LIMIT 10\")"
     ]
   }
 }
