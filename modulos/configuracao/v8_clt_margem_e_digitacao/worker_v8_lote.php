@@ -589,6 +589,9 @@ function v8SimularLote($cpfRow, $config_id_sim, $consult_id_sim, $margem_sim, $i
 
         $pdo->prepare("UPDATE {$tbl} SET STATUS_V8 = 'OK', VALOR_LIQUIDO = ?, PRAZO = ?, SIMULATION_ID = ?, OBSERVACAO = ?, DATA_SIMULACAO = NOW() WHERE ID = ?")->execute([(float)$valor_liberado, $prazo_padrao, $sim_id, $observacao_final, $cpfRow['ID']]);
         $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_PROCESSADA = QTD_PROCESSADA + 1, QTD_SUCESSO = QTD_SUCESSO + 1 WHERE ID = ?")->execute([$id_lote]);
+
+        // Última etapa: Aprovação no W-API (se flag ativo)
+        v8EnviarAprovacaoWapi($cpfRow, (float)$valor_liberado, $prazo_padrao, $margem_sim, $lote, $pdo);
     } else {
         $pdo->prepare("UPDATE {$tbl} SET STATUS_V8 = 'ERRO SIMULACAO', OBSERVACAO = ?, DATA_SIMULACAO = NOW() WHERE ID = ?")->execute([$erro_fatal, $cpfRow['ID']]);
         $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_PROCESSADA = QTD_PROCESSADA + 1, QTD_ERRO = QTD_ERRO + 1 WHERE ID = ?")->execute([$id_lote]);
@@ -636,6 +639,89 @@ function v8AtualizarFatorConferi($cpfRow, $lote, $pdo) {
             }
         }
     } catch (Exception $e) { gravarLogIntegracao('logs_consulta_lote', $cpfRow['CPF'], 'FATOR CONFERI - EXCEPTION', 'n/a', '', $e->getMessage(), 0); }
+}
+
+// ===============================================
+// APROVAÇÃO NO W-API — envia dados do cliente ao grupo do lote quando simulação OK
+// Chamada ao final de v8SimularLote() somente quando sucesso_sim = true
+// e o flag ENVIAR_WHATSAPP estiver ativo no lote.
+// ===============================================
+function v8EnviarAprovacaoWapi($cpfRow, $valor_liberado, $prazo_padrao, $margem_sim, $lote, $pdo) {
+    if (($lote['ENVIAR_WHATSAPP'] ?? 0) != 1) return;
+
+    $cpf_dono_lote = $lote['CPF_USUARIO'];
+
+    try {
+        // 1. Busca GRUPO_WHATS do dono do lote (mesmo padrão do envio de relatório)
+        $stmtCli = $pdo->prepare("SELECT GRUPO_WHATS FROM CLIENTE_CADASTRO WHERE CPF = ?");
+        $stmtCli->execute([$cpf_dono_lote]);
+        $grupo_cliente = $stmtCli->fetchColumn();
+
+        if (empty($grupo_cliente)) {
+            gravarLogIntegracao('logs_consulta_lote', $cpfRow['CPF'], 'APROVACAO WAPI - SKIP', 'n/a', '', 'GRUPO_WHATS nao configurado para o dono do lote', 0);
+            return;
+        }
+
+        // 2. Busca instância W-API ativa
+        $stmtWapi = $pdo->query("SELECT i.INSTANCE_ID, i.TOKEN FROM WAPI_CONFIG c JOIN WAPI_INSTANCIAS i ON c.INSTANCE_ID = i.INSTANCE_ID WHERE c.ATIVO_GLOBAL = 1 LIMIT 1");
+        $wapi = $stmtWapi->fetch(PDO::FETCH_ASSOC);
+
+        if (!$wapi || empty($wapi['INSTANCE_ID']) || empty($wapi['TOKEN'])) {
+            gravarLogIntegracao('logs_consulta_lote', $cpfRow['CPF'], 'APROVACAO WAPI - SKIP', 'n/a', '', 'W-API nao esta ativo', 0);
+            return;
+        }
+
+        // 3. Busca telefones do cliente
+        $stmtTel = $pdo->prepare("SELECT telefone_cel FROM telefones WHERE cpf = ? ORDER BY id DESC LIMIT 5");
+        $stmtTel->execute([$cpfRow['CPF']]);
+        $telefones = $stmtTel->fetchAll(PDO::FETCH_COLUMN);
+        $telefones_fmt = !empty($telefones) ? implode(' | ', $telefones) : 'Nao informado';
+
+        // 4. Formata dados e monta mensagem
+        $cpf_raw = $cpfRow['CPF'];
+        $cpf_fmt = strlen($cpf_raw) === 11
+            ? substr($cpf_raw,0,3).'.'.substr($cpf_raw,3,3).'.'.substr($cpf_raw,6,3).'-'.substr($cpf_raw,9,2)
+            : $cpf_raw;
+        $nome       = $cpfRow['NOME'] ?? 'Nao informado';
+        $margem_fmt = 'R$ ' . number_format((float)$margem_sim,  2, ',', '.');
+        $valor_fmt  = 'R$ ' . number_format((float)$valor_liberado, 2, ',', '.');
+        $nomeLote   = $lote['NOME_IMPORTACAO'] ?? '';
+        $dataHora   = date('d/m/Y H:i');
+
+        $texto = "✅ *Aprovação V8 — Cliente Qualificado!*\n\n"
+               . "*Lote:* {$nomeLote}\n"
+               . "*Data/Hora:* {$dataHora}\n\n"
+               . "👤 *NOME:* {$nome}\n"
+               . "📄 *CPF:* {$cpf_fmt}\n"
+               . "💰 *MARGEM:* {$margem_fmt}\n"
+               . "🏦 *SIMULAÇÃO:* {$valor_fmt}\n"
+               . "📅 *PRAZO:* {$prazo_padrao}x\n"
+               . "📱 *TELEFONES:* {$telefones_fmt}";
+
+        // 5. Envia ao grupo
+        $phone = preg_replace('/[^0-9\-@a-zA-Z.]/', '', $grupo_cliente);
+        if (strpos($phone, '@g.us') === false) $phone .= '@g.us';
+
+        $payload = json_encode(['phone' => $phone, 'message' => $texto, 'delayMessage' => 2]);
+        $url_wapi = "https://api.w-api.app/v1/message/send-text?instanceId=" . $wapi['INSTANCE_ID'];
+
+        $chW = curl_init($url_wapi);
+        curl_setopt($chW, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($chW, CURLOPT_POST, true);
+        curl_setopt($chW, CURLOPT_POSTFIELDS, $payload);
+        curl_setopt($chW, CURLOPT_HTTPHEADER, [
+            "Authorization: Bearer " . $wapi['TOKEN'],
+            "Content-Type: application/json"
+        ]);
+        $resW = curl_exec($chW);
+        $httpW = curl_getinfo($chW, CURLINFO_HTTP_CODE);
+        curl_close($chW);
+
+        gravarLogIntegracao('logs_consulta_lote', $cpfRow['CPF'], 'APROVACAO WAPI', $url_wapi, json_decode($payload, true), $resW, $httpW);
+
+    } catch (Exception $e) {
+        gravarLogIntegracao('logs_consulta_lote', $cpfRow['CPF'], 'APROVACAO WAPI - EXCEPTION', 'n/a', '', $e->getMessage(), 0);
+    }
 }
 
 // ===============================================
