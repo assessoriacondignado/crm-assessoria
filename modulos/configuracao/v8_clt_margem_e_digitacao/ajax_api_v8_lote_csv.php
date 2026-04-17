@@ -29,10 +29,56 @@ try {
         return (!empty($tabela)) ? $tabela : 'INTEGRACAO_V8_REGISTROCONSULTA_LOTE';
     }
 
+    /**
+     * Hierarquia do Lote V8:
+     * Chave → CPF_USUARIO (dono da chave) → CLIENTE_USUARIO.id_empresa
+     * Retorna os IDs de CHAVE_ACESSO acessíveis pela empresa do usuário logado.
+     * Retorna null quando não há restrição por empresa (hierarquia não aplicável).
+     */
+    function v8_chaves_da_empresa(PDO $pdo, int $id_empresa): array {
+        $s = $pdo->prepare("
+            SELECT ca.ID
+            FROM INTEGRACAO_V8_CHAVE_ACESSO ca
+            JOIN CLIENTE_USUARIO u
+              ON u.CPF COLLATE utf8mb4_unicode_ci = ca.CPF_USUARIO COLLATE utf8mb4_unicode_ci
+            WHERE u.id_empresa = ?
+        ");
+        $s->execute([$id_empresa]);
+        return $s->fetchAll(PDO::FETCH_COLUMN) ?: [];
+    }
+
+    /**
+     * Verifica se a permissão de hierarquia está ativa para o usuário logado.
+     * Retorna o id_empresa quando a hierarquia deve ser aplicada, 0 caso contrário.
+     */
+    function v8_id_empresa_hierarquia(PDO $pdo): int {
+        if (!function_exists('verificaPermissao')) return 0;
+        // perm_meu_registro false = CONSULTOR (vê só próprio, já filtrado por CPF_USUARIO)
+        $perm_meu = verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_CONSULTA_LOTE_MEU_REGISTRO', 'FUNCAO');
+        if (!$perm_meu) return 0; // CONSULTOR já tem filtro próprio
+        // Verifica hierarquia: false = hierarquia restrita por empresa
+        $perm_hier = verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_CONSULTA_LOTE_HIERARQUIA', 'FUNCAO');
+        if ($perm_hier) return 0; // MASTER/sem restrição — vê tudo
+        return (int)($_SESSION['id_empresa'] ?? 0);
+    }
+
     // Verifica se o usuário logado é dono do lote (segurança backend)
     function v8_verificar_dono_lote(PDO $pdo, int $id_lote, string $usuario_logado_cpf): void {
         if (function_exists('verificaPermissao') && verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_CONSULTA_LOTE_MEU_REGISTRO', 'FUNCAO')) {
-            return; // tem permissão para ver/editar todos os lotes
+            // Tem acesso a todos — verifica hierarquia por empresa
+            $id_empresa = v8_id_empresa_hierarquia($pdo);
+            if ($id_empresa > 0) {
+                $s = $pdo->prepare("
+                    SELECT COUNT(*) FROM INTEGRACAO_V8_IMPORTACAO_LOTE l
+                    JOIN INTEGRACAO_V8_CHAVE_ACESSO ca ON ca.ID = l.CHAVE_ID
+                    JOIN CLIENTE_USUARIO u
+                      ON u.CPF COLLATE utf8mb4_unicode_ci = ca.CPF_USUARIO COLLATE utf8mb4_unicode_ci
+                    WHERE l.ID = ? AND u.id_empresa = ?
+                ");
+                $s->execute([$id_lote, $id_empresa]);
+                if (!(int)$s->fetchColumn()) throw new Exception("Acesso negado: lote de outra empresa.");
+            }
+            return;
         }
         $s = $pdo->prepare("SELECT CPF_USUARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?");
         $s->execute([$id_lote]);
@@ -376,24 +422,35 @@ try {
             }
 
             if (!$perm_meu_registro) {
+                // CONSULTOR: vê apenas os próprios lotes (filtra por CPF)
                 $where .= " AND l.CPF_USUARIO = ? ";
                 $params[] = $usuario_logado_cpf;
-            }
 
-            // Verifica se o usuário tem chaves (apenas se tiver restrição de visualizar tudo)
-            if (!$perm_meu_registro) {
+                // Verifica se o usuário tem chaves
                 $stmtChaves = $pdo->prepare("SELECT ID FROM INTEGRACAO_V8_CHAVE_ACESSO WHERE USUARIO_ID = ? OR CPF_USUARIO = ?");
                 $stmtChaves->execute([$usuario_logado_id, $usuario_logado_cpf]);
                 if (!$stmtChaves->fetchColumn()) {
-                    ob_end_clean(); echo json_encode(['success' => true, 'data' => []]); exit; 
+                    ob_end_clean(); echo json_encode(['success' => true, 'data' => []]); exit;
+                }
+            } else {
+                // SUPERVISORES+: verifica hierarquia por empresa da chave
+                $id_empresa_hier = v8_id_empresa_hierarquia($pdo);
+                if ($id_empresa_hier > 0) {
+                    $chaves_empresa = v8_chaves_da_empresa($pdo, $id_empresa_hier);
+                    if (empty($chaves_empresa)) {
+                        ob_end_clean(); echo json_encode(['success' => true, 'data' => []]); exit;
+                    }
+                    $inChaves = implode(',', array_fill(0, count($chaves_empresa), '?'));
+                    $where .= " AND l.CHAVE_ID IN ($inChaves) ";
+                    $params = array_merge($params, $chaves_empresa);
                 }
             }
 
             // JOIN COM CLIENTE_USUARIO PARA TRAZER O NOME REAL (COM CORREÇÃO DE COLLATION)
             $sql = "SELECT l.*, c.CLIENTE_NOME, c.USERNAME_API, c.TABELA_PADRAO, c.PRAZO_PADRAO, DATE_FORMAT(l.DATA_IMPORTACAO, '%d/%m/%Y %H:%i') as DATA_BR,
-                           u.NOME as NOME_USUARIO 
-                    FROM INTEGRACAO_V8_IMPORTACAO_LOTE l 
-                    LEFT JOIN INTEGRACAO_V8_CHAVE_ACESSO c ON l.CHAVE_ID = c.ID 
+                           u.NOME as NOME_USUARIO
+                    FROM INTEGRACAO_V8_IMPORTACAO_LOTE l
+                    LEFT JOIN INTEGRACAO_V8_CHAVE_ACESSO c ON l.CHAVE_ID = c.ID
                     LEFT JOIN CLIENTE_USUARIO u ON l.CPF_USUARIO COLLATE utf8mb4_unicode_ci = u.CPF COLLATE utf8mb4_unicode_ci
                     $where ORDER BY l.ID DESC LIMIT 50";
             
@@ -542,6 +599,15 @@ try {
             if (!$perm_meu_registro) {
                 $where .= " AND l.CPF_USUARIO = ? ";
                 $params[] = $usuario_logado_cpf;
+            } else {
+                $id_empresa_hier = v8_id_empresa_hierarquia($pdo);
+                if ($id_empresa_hier > 0) {
+                    $chaves_empresa = v8_chaves_da_empresa($pdo, $id_empresa_hier);
+                    if (empty($chaves_empresa)) die("Nenhum lote localizado com os filtros atuais.");
+                    $inChaves = implode(',', array_fill(0, count($chaves_empresa), '?'));
+                    $where .= " AND l.CHAVE_ID IN ($inChaves) ";
+                    $params = array_merge($params, $chaves_empresa);
+                }
             }
 
             $sqlLotes = "SELECT l.ID FROM INTEGRACAO_V8_IMPORTACAO_LOTE l LEFT JOIN INTEGRACAO_V8_CHAVE_ACESSO c ON l.CHAVE_ID = c.ID $where";
@@ -655,6 +721,12 @@ try {
 
             if (!$lote) die('Lote não encontrado.');
             if (!$perm_meu_registro && $lote['CPF_USUARIO'] !== $usuario_logado_cpf) die('Acesso negado a este lote.');
+            // Hierarquia por empresa da chave
+            $id_empresa_hier = v8_id_empresa_hierarquia($pdo);
+            if ($perm_meu_registro && $id_empresa_hier > 0) {
+                $chaves_emp = v8_chaves_da_empresa($pdo, $id_empresa_hier);
+                if (!in_array((int)$lote['CHAVE_ID'], array_map('intval', $chaves_emp))) die('Acesso negado a este lote (hierarquia).');
+            }
 
             $tabela_res = !empty($lote['TABELA_DADOS']) ? $lote['TABELA_DADOS'] : 'INTEGRACAO_V8_REGISTROCONSULTA_LOTE';
 
@@ -738,6 +810,12 @@ try {
 
             if (!$lote) die('Lote não encontrado.');
             if (!$perm_meu_registro && $lote['CPF_USUARIO'] !== $usuario_logado_cpf) die('Acesso negado a este lote.');
+            // Hierarquia por empresa da chave
+            $id_empresa_hier = v8_id_empresa_hierarquia($pdo);
+            if ($perm_meu_registro && $id_empresa_hier > 0) {
+                $chaves_emp = v8_chaves_da_empresa($pdo, $id_empresa_hier);
+                if (!in_array((int)$lote['CHAVE_ID'], array_map('intval', $chaves_emp))) die('Acesso negado a este lote (hierarquia).');
+            }
 
             $tabela_exp = !empty($lote['TABELA_DADOS']) ? $lote['TABELA_DADOS'] : 'INTEGRACAO_V8_REGISTROCONSULTA_LOTE';
 
@@ -994,6 +1072,7 @@ try {
 
         case 'listar_clientes_lote':
             $id_lote = (int)$_POST['id_lote'];
+            v8_verificar_dono_lote($pdo, $id_lote, $usuario_logado_cpf);
             $tabela_lc = v8_tabela_lote($pdo, $id_lote);
             $stmt = $pdo->prepare("
                 SELECT CPF, NOME, STATUS_V8,
@@ -1016,6 +1095,7 @@ try {
 
         case 'listar_grupos_reprocessamento':
             $id_lote = (int)$_POST['id_lote'];
+            v8_verificar_dono_lote($pdo, $id_lote, $usuario_logado_cpf);
             $hoje = date('Y-m-d');
             $tabela_lgr = v8_tabela_lote($pdo, $id_lote);
             $stmt = $pdo->prepare("
