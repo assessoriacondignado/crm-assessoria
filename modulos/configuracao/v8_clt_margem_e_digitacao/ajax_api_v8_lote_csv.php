@@ -875,6 +875,26 @@ try {
             $pdo->prepare("DELETE FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?")->execute([$id_lote]);
             ob_end_clean(); echo json_encode(['success' => true, 'msg' => 'Lote e histórico apagados com sucesso.']); exit;
 
+        case 'listar_campanhas_disponiveis':
+            $id_empresa = (int)($_SESSION['id_empresa'] ?? 0);
+            $stmt = $id_empresa
+                ? $pdo->prepare("SELECT ID, NOME_CAMPANHA FROM BANCO_DE_DADOS_CAMPANHA_CAMPANHAS WHERE STATUS = 'ATIVO' AND id_empresa = ? ORDER BY NOME_CAMPANHA ASC")
+                : $pdo->prepare("SELECT ID, NOME_CAMPANHA FROM BANCO_DE_DADOS_CAMPANHA_CAMPANHAS WHERE STATUS = 'ATIVO' ORDER BY NOME_CAMPANHA ASC");
+            $id_empresa ? $stmt->execute([$id_empresa]) : $stmt->execute([]);
+            ob_end_clean(); echo json_encode(['success' => true, 'campanhas' => $stmt->fetchAll(PDO::FETCH_ASSOC)]); exit;
+
+        case 'incluir_em_campanha':
+            $id_campanha = (int)$_POST['id_campanha'];
+            $cpfs = json_decode($_POST['cpfs'] ?? '[]', true);
+            if (!$id_campanha || empty($cpfs)) throw new Exception("Campanha ou CPFs inválidos.");
+            $stmt = $pdo->prepare("INSERT IGNORE INTO BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA (CPF_CLIENTE, ID_CAMPANHA) VALUES (?, ?)");
+            $inseridos = 0;
+            foreach ($cpfs as $cpf) {
+                $cpf = preg_replace('/\D/', '', $cpf);
+                if (strlen($cpf) >= 11) { $stmt->execute([$cpf, $id_campanha]); $inseridos += $stmt->rowCount(); }
+            }
+            ob_end_clean(); echo json_encode(['success' => true, 'msg' => "$inseridos CPF(s) incluído(s) na campanha.", 'inseridos' => $inseridos]); exit;
+
         case 'listar_clientes_lote':
             $id_lote = (int)$_POST['id_lote'];
             $stmt = $pdo->prepare("

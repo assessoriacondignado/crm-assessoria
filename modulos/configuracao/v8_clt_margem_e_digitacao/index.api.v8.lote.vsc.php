@@ -348,8 +348,8 @@
             </div>
             <div class="modal-body p-0">
                 <div class="p-2 bg-light border-bottom d-flex gap-2 align-items-center flex-wrap" style="font-size:12px;">
-                    <input type="text" id="v8ClientesFiltro" class="form-control form-control-sm" style="max-width:220px;" placeholder="Filtrar por CPF ou nome..." oninput="v8FiltrarClientesLote(this.value)">
-                    <select id="v8ClientesStatus" class="form-select form-select-sm" style="max-width:200px;" onchange="v8FiltrarClientesLote(document.getElementById('v8ClientesFiltro').value)">
+                    <input type="text" id="v8ClientesFiltro" class="form-control form-control-sm" style="max-width:200px;" placeholder="Filtrar por CPF ou nome..." oninput="v8FiltrarClientesLote(this.value)">
+                    <select id="v8ClientesStatus" class="form-select form-select-sm" style="max-width:190px;" onchange="v8FiltrarClientesLote(document.getElementById('v8ClientesFiltro').value)">
                         <option value="">Todos os Status</option>
                         <option value="OK">✅ OK</option>
                         <option value="ERRO MARGEM">⚠️ Erro Margem</option>
@@ -357,7 +357,39 @@
                         <option value="ERRO SIMULACAO">🔢 Erro Simulação</option>
                         <option value="NA FILA">⏳ Na Fila</option>
                     </select>
-                    <span class="text-muted ms-auto" id="v8ClientesContador"></span>
+
+                    <!-- Incluir em Campanha -->
+                    <div class="d-flex gap-1 align-items-center ms-auto">
+                        <span class="text-muted" id="v8ClientesContador" style="white-space:nowrap;"></span>
+                        <div class="dropdown" id="v8CampanhaDropdown" style="display:none;">
+                            <button class="btn btn-sm fw-bold dropdown-toggle" type="button"
+                                    style="background:#6f42c1; color:#fff; border:none; font-size:11px; padding:4px 10px;"
+                                    data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                    onclick="v8CarregarCampanhasDropdown()">
+                                <i class="fas fa-plus-circle me-1"></i> Incluir em Campanha
+                            </button>
+                            <ul class="dropdown-menu shadow" id="v8CampanhaLista" style="min-width:260px; font-size:12px; max-height:260px; overflow-y:auto;">
+                                <li><span class="dropdown-item text-muted"><i class="fas fa-spinner fa-spin"></i> Carregando...</span></li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-sm fw-bold" id="v8BtnIncluirCampanha"
+                                style="background:#6f42c1; color:#fff; border:none; font-size:11px; padding:4px 10px; display:none;"
+                                onclick="v8ConfirmarIncluirCampanha()">
+                            <i class="fas fa-plus-circle me-1"></i> Incluir em Campanha
+                        </button>
+                    </div>
+                </div>
+                <!-- Barra de campanha selecionada -->
+                <div id="v8CampanhaSelecionadaBar" style="display:none; background:#f0ebff; border-bottom:1px solid #d0c0f0; padding:6px 12px; font-size:12px;" class="d-flex align-items-center gap-2">
+                    <i class="fas fa-bullhorn" style="color:#6f42c1;"></i>
+                    <span>Campanha selecionada: <strong id="v8CampanhaNomeSel"></strong></span>
+                    <span class="text-muted">— <span id="v8CampanhaQtdSel"></span> cliente(s) na tela serão incluídos</span>
+                    <button class="btn btn-sm fw-bold ms-auto" style="background:#6f42c1; color:#fff; border:none; font-size:11px; padding:3px 10px;"
+                            onclick="v8ExecutarIncluirCampanha()">
+                        <i class="fas fa-check me-1"></i> Confirmar Inclusão
+                    </button>
+                    <button class="btn btn-sm btn-outline-secondary" style="font-size:11px; padding:3px 8px;"
+                            onclick="v8CancelarCampanha()">Cancelar</button>
                 </div>
                 <div id="v8ClientesTabela" style="max-height:65vh; overflow-y:auto;">
                     <div class="text-center py-4 text-muted"><i class="fas fa-spinner fa-spin"></i> Carregando...</div>
@@ -1073,15 +1105,21 @@
 
     // === LISTAR CLIENTES DO LOTE ===
     let v8ClientesTodos = [];
+    let v8ClientesFiltrados = [];
+    let v8CampanhaIdSel = null;
+    let v8CampanhaNomeSel = '';
+    let v8CampanhasCache = null;
 
     async function v8AbrirClientesLote(id) {
-        const lote = (windowDadosLoteAtual || []).find(l => l.ID == id);
-        const titulo = lote ? `👥 Clientes do Lote #${id}` : `👥 Clientes do Lote #${id}`;
-        document.getElementById('v8ClientesLoteTitulo').textContent = titulo;
+        document.getElementById('v8ClientesLoteTitulo').textContent = `👥 Clientes do Lote #${id}`;
         document.getElementById('v8ClientesFiltro').value = '';
         document.getElementById('v8ClientesStatus').value = '';
         document.getElementById('v8ClientesTabela').innerHTML = '<div class="text-center py-4 text-muted"><i class="fas fa-spinner fa-spin"></i> Carregando...</div>';
         document.getElementById('v8ClientesContador').textContent = '';
+        document.getElementById('v8CampanhaSelecionadaBar').style.display = 'none';
+        document.getElementById('v8BtnIncluirCampanha').style.display = 'none';
+        document.getElementById('v8CampanhaDropdown').style.display = 'none';
+        v8CampanhaIdSel = null; v8ClientesFiltrados = [];
         window.v8ModalClientesLoteObj.show();
 
         const res = await v8Req('ajax_api_v8_lote_csv.php', 'listar_clientes_lote', { id_lote: id }, false);
@@ -1090,64 +1128,167 @@
             return;
         }
         v8ClientesTodos = res.clientes || [];
+        v8ClientesFiltrados = [...v8ClientesTodos];
         v8RenderizarClientesLote(v8ClientesTodos);
     }
 
     function v8FiltrarClientesLote(termo) {
         const status = document.getElementById('v8ClientesStatus').value;
         const t = (termo || '').toLowerCase();
-        const filtrados = v8ClientesTodos.filter(c => {
+        v8ClientesFiltrados = v8ClientesTodos.filter(c => {
             const matchTermo = !t || c.CPF_FORMATADO.includes(t) || (c.NOME || '').toLowerCase().includes(t);
             const matchStatus = !status || c.STATUS_V8 === status;
             return matchTermo && matchStatus;
         });
-        v8RenderizarClientesLote(filtrados);
+        v8RenderizarClientesLote(v8ClientesFiltrados);
+        // Atualiza quantidade na barra de campanha se estiver visível
+        if (v8CampanhaIdSel) {
+            document.getElementById('v8CampanhaQtdSel').textContent = v8ClientesFiltrados.length;
+        }
+    }
+
+    // === CAMPANHA ===
+    async function v8CarregarCampanhasDropdown() {
+        const ul = document.getElementById('v8CampanhaLista');
+        if (v8CampanhasCache) { v8RenderizarCampanhasDropdown(v8CampanhasCache); return; }
+        ul.innerHTML = '<li><span class="dropdown-item text-muted"><i class="fas fa-spinner fa-spin"></i> Carregando...</span></li>';
+        const res = await v8Req('ajax_api_v8_lote_csv.php', 'listar_campanhas_disponiveis', {}, false);
+        if (!res.success || !res.campanhas.length) {
+            ul.innerHTML = '<li><span class="dropdown-item text-muted">Nenhuma campanha disponível.</span></li>';
+            return;
+        }
+        v8CampanhasCache = res.campanhas;
+        v8RenderizarCampanhasDropdown(res.campanhas);
+    }
+
+    function v8RenderizarCampanhasDropdown(campanhas) {
+        const ul = document.getElementById('v8CampanhaLista');
+        ul.innerHTML = '<li><h6 class="dropdown-header">Selecione a campanha:</h6></li>';
+        campanhas.forEach(c => {
+            ul.innerHTML += `<li><button class="dropdown-item" onclick="v8SelecionarCampanha(${c.ID}, '${c.NOME_CAMPANHA.replace(/'/g,"\\'")}')">
+                <i class="fas fa-bullhorn me-2 text-purple" style="color:#6f42c1;"></i>${c.NOME_CAMPANHA}
+            </button></li>`;
+        });
+    }
+
+    function v8SelecionarCampanha(id, nome) {
+        v8CampanhaIdSel = id;
+        v8CampanhaNomeSel = nome;
+        // Fecha dropdown
+        const dropdownEl = document.getElementById('v8CampanhaDropdown').querySelector('[data-bs-toggle="dropdown"]');
+        bootstrap.Dropdown.getInstance(dropdownEl)?.hide();
+        // Mostra barra de confirmação
+        document.getElementById('v8CampanhaNomeSel').textContent = nome;
+        document.getElementById('v8CampanhaQtdSel').textContent = v8ClientesFiltrados.length || v8ClientesTodos.length;
+        document.getElementById('v8CampanhaSelecionadaBar').style.display = '';
+    }
+
+    function v8CancelarCampanha() {
+        v8CampanhaIdSel = null;
+        document.getElementById('v8CampanhaSelecionadaBar').style.display = 'none';
+    }
+
+    async function v8ExecutarIncluirCampanha() {
+        const lista = v8ClientesFiltrados.length ? v8ClientesFiltrados : v8ClientesTodos;
+        if (!lista.length) return v8Toast("Nenhum cliente na tela para incluir.", "warning");
+        const cpfs = lista.map(c => c.CPF);
+        const res = await v8Req('ajax_api_v8_lote_csv.php', 'incluir_em_campanha',
+            { id_campanha: v8CampanhaIdSel, cpfs: JSON.stringify(cpfs) }, true, "Incluindo...");
+        if (res.success) {
+            v8Toast(`✅ ${res.msg}`, "success");
+            document.getElementById('v8CampanhaSelecionadaBar').style.display = 'none';
+            v8CampanhaIdSel = null;
+        } else {
+            v8Toast("❌ " + (res.msg || "Erro"), "error");
+        }
+    }
+
+    const V8_CLIENTES_PAGE = 100;
+    let v8ClientesOffset = 0;
+    let v8ClientesListaAtual = [];
+
+    const badgeStatusClientes = {
+        'OK':                  'success',
+        'ERRO MARGEM':         'danger',
+        'ERRO SIMULACAO':      'danger',
+        'ERRO CONSULTA':       'danger',
+        'AGUARDANDO DATAPREV': 'primary',
+        'AGUARDANDO MARGEM':   'info',
+        'AGUARDANDO SIMULACAO':'info',
+        'NA FILA':             'secondary',
+        'RECUPERAR V8':        'warning',
+    };
+
+    function v8GerarLinhaCliente(c) {
+        const cor = badgeStatusClientes[c.STATUS_V8] || 'secondary';
+        const margem = c.VALOR_MARGEM ? 'R$ ' + parseFloat(c.VALOR_MARGEM).toFixed(2) : '—';
+        const obsAttr = c.OBSERVACAO ? ` title="${c.OBSERVACAO.replace(/"/g,'&quot;')}"` : '';
+        return `<tr>
+          <td class="fw-bold">${c.CPF_FORMATADO}</td>
+          <td>${c.NOME || '—'}</td>
+          <td><span class="badge bg-${cor}"${obsAttr}>${c.STATUS_V8}</span>
+              ${c.OBSERVACAO ? `<br><small class="text-muted" style="font-size:10px;"${obsAttr}>${c.OBSERVACAO.length > 45 ? c.OBSERVACAO.substring(0,45)+'…' : c.OBSERVACAO}</small>` : ''}
+          </td>
+          <td class="text-success fw-bold">${margem}</td>
+          <td><a href="/modulos/banco_dados/consulta.php?busca=${c.CPF}&cpf_selecionado=${c.CPF}&acao=visualizar" target="_blank"
+                 class="btn fw-bold" style="font-size:10px; padding:1px 7px; border:1px solid #6f42c1; border-radius:4px; color:#6f42c1;">Ver</a></td>
+        </tr>`;
     }
 
     function v8RenderizarClientesLote(lista) {
+        v8ClientesListaAtual = lista;
+        v8ClientesOffset = 0;
         const tb = document.getElementById('v8ClientesTabela');
         document.getElementById('v8ClientesContador').textContent = lista.length + ' registro(s)';
+        document.getElementById('v8CampanhaDropdown').style.display = lista.length ? '' : 'none';
+
         if (lista.length === 0) {
             tb.innerHTML = '<div class="text-muted text-center py-4">Nenhum cliente encontrado.</div>';
             return;
         }
-        const badgeStatus = {
-            'OK':                 'success',
-            'ERRO MARGEM':        'danger',
-            'ERRO SIMULACAO':     'danger',
-            'ERRO CONSULTA':      'danger',
-            'AGUARDANDO DATAPREV':'primary',
-            'AGUARDANDO MARGEM':  'info',
-            'AGUARDANDO SIMULACAO':'info',
-            'NA FILA':            'secondary',
-            'RECUPERAR V8':       'warning',
-        };
+
+        const pagina = lista.slice(0, V8_CLIENTES_PAGE);
+        v8ClientesOffset = pagina.length;
+
         let html = `<table class="table table-sm table-hover mb-0" style="font-size:12px;">
           <thead class="table-dark sticky-top">
             <tr>
-              <th style="width:130px;">CPF</th>
-              <th>Nome</th>
-              <th style="width:170px;">Status</th>
+              <th style="width:130px;">CPF</th><th>Nome</th>
+              <th style="width:175px;">Status</th>
               <th style="width:100px;">Margem</th>
-              <th style="width:80px;">Ação</th>
+              <th style="width:60px;">Ação</th>
             </tr>
-          </thead><tbody>`;
-        lista.forEach(c => {
-            const cor = badgeStatus[c.STATUS_V8] || 'secondary';
-            const margem = c.VALOR_MARGEM ? 'R$ ' + parseFloat(c.VALOR_MARGEM).toFixed(2) : '—';
-            const obs = c.OBSERVACAO ? ` title="${c.OBSERVACAO.replace(/"/g,'&quot;')}"` : '';
-            html += `<tr>
-              <td class="fw-bold">${c.CPF_FORMATADO}</td>
-              <td>${c.NOME || '—'}</td>
-              <td><span class="badge bg-${cor}"${obs}>${c.STATUS_V8}</span>
-                  ${c.OBSERVACAO ? `<br><small class="text-muted" style="font-size:10px;" title="${c.OBSERVACAO.replace(/"/g,'&quot;')}">${c.OBSERVACAO.length > 40 ? c.OBSERVACAO.substring(0,40)+'…' : c.OBSERVACAO}</small>` : ''}
-              </td>
-              <td class="text-success fw-bold">${margem}</td>
-              <td><a href="/modulos/banco_dados/consulta.php?busca=${c.CPF}&cpf_selecionado=${c.CPF}&acao=visualizar" target="_blank" class="btn btn-xs btn-outline-purple fw-bold" style="font-size:10px; padding:1px 7px; border-color:#6f42c1; color:#6f42c1;">Ver</a></td>
-            </tr>`;
-        });
-        html += '</tbody></table>';
+          </thead>
+          <tbody id="v8ClientesTbody">${pagina.map(v8GerarLinhaCliente).join('')}</tbody>
+        </table>`;
+
+        if (lista.length > V8_CLIENTES_PAGE) {
+            const restantes = lista.length - V8_CLIENTES_PAGE;
+            html += `<div id="v8ClientesBtnMais" class="text-center py-2 border-top" style="background:#f8f9fa;">
+                <button class="btn btn-sm btn-outline-secondary fw-bold" style="font-size:12px;" onclick="v8CarregarMaisClientes()">
+                  <i class="fas fa-chevron-down me-1"></i> Carregar mais 100
+                  <span class="badge bg-secondary ms-1">${restantes} restantes</span>
+                </button>
+            </div>`;
+        }
+
         tb.innerHTML = html;
+    }
+
+    function v8CarregarMaisClientes() {
+        const prox = v8ClientesListaAtual.slice(v8ClientesOffset, v8ClientesOffset + V8_CLIENTES_PAGE);
+        v8ClientesOffset += prox.length;
+        const tbody = document.getElementById('v8ClientesTbody');
+        if (tbody) tbody.innerHTML += prox.map(v8GerarLinhaCliente).join('');
+        const restantes = v8ClientesListaAtual.length - v8ClientesOffset;
+        const btnDiv = document.getElementById('v8ClientesBtnMais');
+        if (btnDiv) {
+            if (restantes > 0) {
+                btnDiv.querySelector('button').innerHTML = `<i class="fas fa-chevron-down me-1"></i> Carregar mais 100 <span class="badge bg-secondary ms-1">${restantes} restantes</span>`;
+            } else {
+                btnDiv.remove();
+            }
+        }
     }
 
     async function v8ReprocessarGrupo(id, statusV8, observacao) {
