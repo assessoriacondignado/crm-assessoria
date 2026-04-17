@@ -1070,11 +1070,25 @@ try {
             ob_end_clean(); echo json_encode(['success' => true, 'msg' => 'Lote e histórico apagados com sucesso.']); exit;
 
         case 'listar_campanhas_disponiveis':
-            $id_empresa = (int)($_SESSION['id_empresa'] ?? 0);
-            $stmt = $id_empresa
-                ? $pdo->prepare("SELECT ID, NOME_CAMPANHA FROM BANCO_DE_DADOS_CAMPANHA_CAMPANHAS WHERE STATUS = 'ATIVO' AND id_empresa = ? ORDER BY NOME_CAMPANHA ASC")
-                : $pdo->prepare("SELECT ID, NOME_CAMPANHA FROM BANCO_DE_DADOS_CAMPANHA_CAMPANHAS WHERE STATUS = 'ATIVO' ORDER BY NOME_CAMPANHA ASC");
-            $id_empresa ? $stmt->execute([$id_empresa]) : $stmt->execute([]);
+            // MASTER (permissão de hierarquia) vê todas; demais filtram pela empresa do CPF logado
+            $camp_master = function_exists('verificaPermissao')
+                ? verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_CONSULTA_LOTE_HIERARQUIA', 'FUNCAO')
+                : false;
+            if ($camp_master) {
+                $stmt = $pdo->prepare("SELECT ID, NOME_CAMPANHA FROM BANCO_DE_DADOS_CAMPANHA_CAMPANHAS WHERE STATUS = 'ATIVO' ORDER BY NOME_CAMPANHA ASC");
+                $stmt->execute([]);
+            } else {
+                $camp_cpf = preg_replace('/\D/', '', $_SESSION['usuario_cpf'] ?? '');
+                $s_emp = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+                $s_emp->execute([$camp_cpf]);
+                $camp_empresa = (int)($s_emp->fetchColumn() ?: 0);
+                if ($camp_empresa > 0) {
+                    $stmt = $pdo->prepare("SELECT ID, NOME_CAMPANHA FROM BANCO_DE_DADOS_CAMPANHA_CAMPANHAS WHERE STATUS = 'ATIVO' AND id_empresa = ? ORDER BY NOME_CAMPANHA ASC");
+                    $stmt->execute([$camp_empresa]);
+                } else {
+                    ob_end_clean(); echo json_encode(['success' => true, 'campanhas' => []]); exit;
+                }
+            }
             ob_end_clean(); echo json_encode(['success' => true, 'campanhas' => $stmt->fetchAll(PDO::FETCH_ASSOC)]); exit;
 
         case 'incluir_em_campanha':
