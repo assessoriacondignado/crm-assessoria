@@ -49,8 +49,11 @@ try {
 
     /**
      * Verifica se a permissão de hierarquia está ativa para o usuário logado.
-     * Retorna o id_empresa quando a hierarquia deve ser aplicada, 0 caso contrário.
-     * Busca id_empresa diretamente do banco (não depende da sessão).
+     * Retornos:
+     *   0   → sem restrição (MASTER ou hierarquia não aplicável)
+     *   > 0 → id_empresa: filtrar apenas lotes desta empresa
+     *  -1   → hierarquia ativa mas empresa não cadastrada → bloqueia tudo (segurança)
+     * Busca id_empresa diretamente do banco (login não grava id_empresa na sessão).
      */
     function v8_id_empresa_hierarquia(PDO $pdo): int {
         if (!function_exists('verificaPermissao')) return 0;
@@ -60,12 +63,14 @@ try {
         // Verifica hierarquia: false = hierarquia restrita por empresa
         $perm_hier = verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_CONSULTA_LOTE_HIERARQUIA', 'FUNCAO');
         if ($perm_hier) return 0; // MASTER/sem restrição — vê tudo
-        // Busca id_empresa do banco pelo CPF da sessão (login não grava id_empresa na sessão)
+        // Hierarquia ativa: busca id_empresa do banco pelo CPF da sessão
         $cpf = preg_replace('/\D/', '', $_SESSION['usuario_cpf'] ?? '');
-        if (empty($cpf)) return 0;
+        if (empty($cpf)) return -1; // sessão inválida → bloqueia
         $s = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
         $s->execute([$cpf]);
-        return (int)($s->fetchColumn() ?: 0);
+        $id_empresa = (int)($s->fetchColumn() ?: 0);
+        // Se empresa não cadastrada mas hierarquia ativa → -1 (bloqueia tudo por segurança)
+        return ($id_empresa > 0) ? $id_empresa : -1;
     }
 
     // Verifica se o usuário logado é dono do lote (segurança backend)
@@ -73,6 +78,7 @@ try {
         if (function_exists('verificaPermissao') && verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_CONSULTA_LOTE_MEU_REGISTRO', 'FUNCAO')) {
             // Tem acesso a todos — verifica hierarquia por empresa
             $id_empresa = v8_id_empresa_hierarquia($pdo);
+            if ($id_empresa === -1) throw new Exception("Acesso negado: empresa não configurada no seu usuário.");
             if ($id_empresa > 0) {
                 $s = $pdo->prepare("
                     SELECT COUNT(*) FROM INTEGRACAO_V8_IMPORTACAO_LOTE l
@@ -441,6 +447,10 @@ try {
             } else {
                 // SUPERVISORES+: verifica hierarquia por empresa da chave
                 $id_empresa_hier = v8_id_empresa_hierarquia($pdo);
+                if ($id_empresa_hier === -1) {
+                    // Hierarquia ativa mas empresa não cadastrada → bloqueia tudo
+                    ob_end_clean(); echo json_encode(['success' => true, 'data' => []]); exit;
+                }
                 if ($id_empresa_hier > 0) {
                     $chaves_empresa = v8_chaves_da_empresa($pdo, $id_empresa_hier);
                     if (empty($chaves_empresa)) {
@@ -607,6 +617,7 @@ try {
                 $params[] = $usuario_logado_cpf;
             } else {
                 $id_empresa_hier = v8_id_empresa_hierarquia($pdo);
+                if ($id_empresa_hier === -1) die("Nenhum lote localizado com os filtros atuais.");
                 if ($id_empresa_hier > 0) {
                     $chaves_empresa = v8_chaves_da_empresa($pdo, $id_empresa_hier);
                     if (empty($chaves_empresa)) die("Nenhum lote localizado com os filtros atuais.");
@@ -729,7 +740,8 @@ try {
             if (!$perm_meu_registro && $lote['CPF_USUARIO'] !== $usuario_logado_cpf) die('Acesso negado a este lote.');
             // Hierarquia por empresa da chave
             $id_empresa_hier = v8_id_empresa_hierarquia($pdo);
-            if ($perm_meu_registro && $id_empresa_hier > 0) {
+            if ($perm_meu_registro && $id_empresa_hier !== 0) {
+                if ($id_empresa_hier === -1) die('Acesso negado a este lote (empresa não configurada).');
                 $chaves_emp = v8_chaves_da_empresa($pdo, $id_empresa_hier);
                 if (!in_array((int)$lote['CHAVE_ID'], array_map('intval', $chaves_emp))) die('Acesso negado a este lote (hierarquia).');
             }
@@ -818,7 +830,8 @@ try {
             if (!$perm_meu_registro && $lote['CPF_USUARIO'] !== $usuario_logado_cpf) die('Acesso negado a este lote.');
             // Hierarquia por empresa da chave
             $id_empresa_hier = v8_id_empresa_hierarquia($pdo);
-            if ($perm_meu_registro && $id_empresa_hier > 0) {
+            if ($perm_meu_registro && $id_empresa_hier !== 0) {
+                if ($id_empresa_hier === -1) die('Acesso negado a este lote (empresa não configurada).');
                 $chaves_emp = v8_chaves_da_empresa($pdo, $id_empresa_hier);
                 if (!in_array((int)$lote['CHAVE_ID'], array_map('intval', $chaves_emp))) die('Acesso negado a este lote (hierarquia).');
             }
