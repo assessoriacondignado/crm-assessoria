@@ -66,7 +66,7 @@ try {
                 try {
                     if (count($data) == 1 && strpos($data[0], ',') !== false) { $data = explode(',', $data[0]); }
                     $cpf = isset($data[$idx_cpf]) ? str_pad(preg_replace('/\D/', '', $data[$idx_cpf]), 11, '0', STR_PAD_LEFT) : '';
-                    if (strlen($cpf) !== 11) { $linhas_descartadas++; continue; }
+                    if (strlen($cpf) !== 11 || ltrim($cpf, '0') === '') { $linhas_descartadas++; continue; }
                     $nasc = ($idx_nasc !== -1 && isset($data[$idx_nasc])) ? trim($data[$idx_nasc]) : '';
                     if (strpos($nasc, '/') !== false) { $p = explode('/', $nasc); if (count($p) == 3) $nasc = "{$p[2]}-{$p[1]}-{$p[0]}"; }
                     // Valida formato YYYY-MM-DD; descarta datas inválidas sem interromper
@@ -189,8 +189,8 @@ try {
             while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
                 if(count($data) == 1 && strpos($data[0], ',') !== false) { $data = explode(',', $data[0]); }
                 $cpf = isset($data[$idx_cpf]) ? str_pad(preg_replace('/\D/', '', $data[$idx_cpf]), 11, '0', STR_PAD_LEFT) : '';
-                
-                if (strlen($cpf) == 11) {
+
+                if (strlen($cpf) == 11 && ltrim($cpf, '0') !== '') {
                     // SE O CPF JÁ ESTÁ NO LOTE, ELE PULA (Evita duplicar)
                     if (isset($hashExistentes[$cpf])) continue;
 
