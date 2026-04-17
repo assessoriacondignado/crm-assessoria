@@ -998,16 +998,19 @@ try {
             $stmt = $pdo->prepare("
                 SELECT CPF, NOME, STATUS_V8,
                        COALESCE(NULLIF(TRIM(OBSERVACAO),''), '') AS OBSERVACAO,
-                       VALOR_MARGEM, VALOR_LIQUIDO
+                       VALOR_MARGEM, VALOR_LIQUIDO,
+                       DATA_SIMULACAO
                 FROM `{$tabela_lc}`
                 WHERE LOTE_ID = ?
-                ORDER BY NOME ASC
+                ORDER BY DATA_SIMULACAO DESC, ID ASC
             ");
             $stmt->execute([$id_lote]);
             $clientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            // Formata CPF
+            // Formata CPF e data
             foreach ($clientes as &$c) {
                 $c['CPF_FORMATADO'] = preg_replace('/(\d{3})(\d{3})(\d{3})(\d{2})/', '$1.$2.$3-$4', str_pad($c['CPF'], 11, '0', STR_PAD_LEFT));
+                $c['DATA_SIM_DISPLAY'] = $c['DATA_SIMULACAO'] ? date('d/m/Y H\hi', strtotime($c['DATA_SIMULACAO'])) : '';
+                $c['DATA_SIM_DATE']    = $c['DATA_SIMULACAO'] ? date('Y-m-d', strtotime($c['DATA_SIMULACAO'])) : '';
             }
             ob_end_clean(); echo json_encode(['success' => true, 'clientes' => $clientes]); exit;
 

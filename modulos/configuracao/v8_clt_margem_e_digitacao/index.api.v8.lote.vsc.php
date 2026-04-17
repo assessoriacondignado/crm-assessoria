@@ -348,8 +348,8 @@
             </div>
             <div class="modal-body p-0">
                 <div class="p-2 bg-light border-bottom d-flex gap-2 align-items-center flex-wrap" style="font-size:12px;">
-                    <input type="text" id="v8ClientesFiltro" class="form-control form-control-sm" style="max-width:200px;" placeholder="Filtrar por CPF ou nome..." oninput="v8FiltrarClientesLote(this.value)">
-                    <select id="v8ClientesStatus" class="form-select form-select-sm" style="max-width:190px;" onchange="v8FiltrarClientesLote(document.getElementById('v8ClientesFiltro').value)">
+                    <input type="text" id="v8ClientesFiltro" class="form-control form-control-sm" style="max-width:180px;" placeholder="Filtrar por CPF ou nome..." oninput="v8FiltrarClientesLote()">
+                    <select id="v8ClientesStatus" class="form-select form-select-sm" style="max-width:175px;" onchange="v8FiltrarClientesLote()">
                         <option value="">Todos os Status</option>
                         <option value="OK">✅ OK</option>
                         <option value="ERRO MARGEM">⚠️ Erro Margem</option>
@@ -357,6 +357,10 @@
                         <option value="ERRO SIMULACAO">🔢 Erro Simulação</option>
                         <option value="NA FILA">⏳ Na Fila</option>
                     </select>
+                    <span class="text-muted fw-bold" style="font-size:11px; white-space:nowrap;">FILTRAR DATA:</span>
+                    <input type="date" id="v8ClientesDataDe" class="form-control form-control-sm" style="max-width:135px;" title="Data de" onchange="v8FiltrarClientesLote()">
+                    <span class="text-muted" style="font-size:11px;">até</span>
+                    <input type="date" id="v8ClientesDataAte" class="form-control form-control-sm" style="max-width:135px;" title="Data até" onchange="v8FiltrarClientesLote()">
 
                     <!-- Incluir em Campanha -->
                     <div class="d-flex gap-1 align-items-center ms-auto">
@@ -1120,6 +1124,8 @@
         document.getElementById('v8ClientesLoteTitulo').textContent = `👥 Clientes do Lote #${id}`;
         document.getElementById('v8ClientesFiltro').value = '';
         document.getElementById('v8ClientesStatus').value = '';
+        document.getElementById('v8ClientesDataDe').value = '';
+        document.getElementById('v8ClientesDataAte').value = '';
         document.getElementById('v8ClientesTabela').innerHTML = '<div class="text-center py-4 text-muted"><i class="fas fa-spinner fa-spin"></i> Carregando...</div>';
         document.getElementById('v8ClientesContador').textContent = '';
         document.getElementById('v8CampanhaSelecionadaBar').style.display = 'none';
@@ -1138,16 +1144,20 @@
         v8RenderizarClientesLote(v8ClientesTodos);
     }
 
-    function v8FiltrarClientesLote(termo) {
-        const status = document.getElementById('v8ClientesStatus').value;
-        const t = (termo || '').toLowerCase();
+    function v8FiltrarClientesLote() {
+        const status  = document.getElementById('v8ClientesStatus').value;
+        const t       = (document.getElementById('v8ClientesFiltro').value || '').toLowerCase();
+        const dataDe  = document.getElementById('v8ClientesDataDe').value;   // 'YYYY-MM-DD' ou ''
+        const dataAte = document.getElementById('v8ClientesDataAte').value;
         v8ClientesFiltrados = v8ClientesTodos.filter(c => {
-            const matchTermo = !t || c.CPF_FORMATADO.includes(t) || (c.NOME || '').toLowerCase().includes(t);
+            const matchTermo  = !t || c.CPF_FORMATADO.includes(t) || (c.NOME || '').toLowerCase().includes(t);
             const matchStatus = !status || c.STATUS_V8 === status;
-            return matchTermo && matchStatus;
+            const dataCliente = c.DATA_SIM_DATE || '';
+            const matchDe     = !dataDe  || dataCliente >= dataDe;
+            const matchAte    = !dataAte || dataCliente <= dataAte;
+            return matchTermo && matchStatus && matchDe && matchAte;
         });
         v8RenderizarClientesLote(v8ClientesFiltrados);
-        // Atualiza quantidade na barra de campanha se estiver visível
         if (v8CampanhaIdSel) {
             document.getElementById('v8CampanhaQtdSel').textContent = v8ClientesFiltrados.length;
         }
@@ -1226,16 +1236,20 @@
     };
 
     function v8GerarLinhaCliente(c) {
-        const cor = badgeStatusClientes[c.STATUS_V8] || 'secondary';
-        const margem = c.VALOR_MARGEM ? 'R$ ' + parseFloat(c.VALOR_MARGEM).toFixed(2) : '—';
-        const obsAttr = c.OBSERVACAO ? ` title="${c.OBSERVACAO.replace(/"/g,'&quot;')}"` : '';
+        const cor       = badgeStatusClientes[c.STATUS_V8] || 'secondary';
+        const margem    = c.VALOR_MARGEM  ? 'R$ ' + parseFloat(c.VALOR_MARGEM).toFixed(2)  : '—';
+        const simulacao = c.VALOR_LIQUIDO ? 'R$ ' + parseFloat(c.VALOR_LIQUIDO).toFixed(2) : '—';
+        const obs       = c.OBSERVACAO || '';
+        const obsTitle  = obs ? ` title="${obs.replace(/"/g,'&quot;')}"` : '';
+        const obsExibir = obs.length > 50 ? obs.substring(0,50)+'…' : obs;
         return `<tr>
-          <td class="fw-bold">${c.CPF_FORMATADO}</td>
+          <td class="fw-bold" style="white-space:nowrap;">${c.CPF_FORMATADO}</td>
           <td>${c.NOME || '—'}</td>
-          <td><span class="badge bg-${cor}"${obsAttr}>${c.STATUS_V8}</span>
-              ${c.OBSERVACAO ? `<br><small class="text-muted" style="font-size:10px;"${obsAttr}>${c.OBSERVACAO.length > 45 ? c.OBSERVACAO.substring(0,45)+'…' : c.OBSERVACAO}</small>` : ''}
-          </td>
-          <td class="text-success fw-bold">${margem}</td>
+          <td style="white-space:nowrap;"><span class="badge bg-${cor}">${c.STATUS_V8}</span></td>
+          <td style="font-size:10px; color:#555; max-width:180px;"${obsTitle}>${obsExibir || '—'}</td>
+          <td class="text-success fw-bold" style="white-space:nowrap;">${margem}</td>
+          <td class="text-primary fw-bold" style="white-space:nowrap;">${simulacao}</td>
+          <td style="white-space:nowrap; color:#777;">${c.DATA_SIM_DISPLAY || '—'}</td>
           <td><a href="/modulos/banco_dados/consulta.php?busca=${c.CPF}&cpf_selecionado=${c.CPF}&acao=visualizar" target="_blank"
                  class="btn fw-bold" style="font-size:10px; padding:1px 7px; border:1px solid #6f42c1; border-radius:4px; color:#6f42c1;">Ver</a></td>
         </tr>`;
@@ -1259,10 +1273,14 @@
         let html = `<table class="table table-sm table-hover mb-0" style="font-size:12px;">
           <thead class="table-dark sticky-top">
             <tr>
-              <th style="width:130px;">CPF</th><th>Nome</th>
-              <th style="width:175px;">Status</th>
-              <th style="width:100px;">Margem</th>
-              <th style="width:60px;">Ação</th>
+              <th style="width:120px;">CPF</th>
+              <th>Nome</th>
+              <th style="width:150px;">Status</th>
+              <th style="width:190px;">Observação</th>
+              <th style="width:90px;">Margem</th>
+              <th style="width:90px;">Simulação</th>
+              <th style="width:120px;">Data Simulação</th>
+              <th style="width:55px;">Ação</th>
             </tr>
           </thead>
           <tbody id="v8ClientesTbody">${pagina.map(v8GerarLinhaCliente).join('')}</tbody>
