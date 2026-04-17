@@ -180,7 +180,7 @@
     </div>
 </div>
 
-<div class="table-responsive border border-dark rounded shadow-sm" style="min-height: 350px; max-height: 1200px; overflow-y: auto; overflow-x: auto;">
+<div class="table-responsive border border-dark rounded shadow-sm" style="min-height: 1050px; max-height: 1200px; overflow-y: auto; overflow-x: auto;">
     <table class="table table-hover table-bordered align-middle mb-0 text-center" style="font-size: 13px;">
         <thead class="table-dark sticky-top">
             <tr>
