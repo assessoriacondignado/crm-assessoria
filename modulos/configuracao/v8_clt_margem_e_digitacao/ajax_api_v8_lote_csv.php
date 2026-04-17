@@ -50,6 +50,7 @@ try {
     /**
      * Verifica se a permissão de hierarquia está ativa para o usuário logado.
      * Retorna o id_empresa quando a hierarquia deve ser aplicada, 0 caso contrário.
+     * Busca id_empresa diretamente do banco (não depende da sessão).
      */
     function v8_id_empresa_hierarquia(PDO $pdo): int {
         if (!function_exists('verificaPermissao')) return 0;
@@ -59,7 +60,12 @@ try {
         // Verifica hierarquia: false = hierarquia restrita por empresa
         $perm_hier = verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_CONSULTA_LOTE_HIERARQUIA', 'FUNCAO');
         if ($perm_hier) return 0; // MASTER/sem restrição — vê tudo
-        return (int)($_SESSION['id_empresa'] ?? 0);
+        // Busca id_empresa do banco pelo CPF da sessão (login não grava id_empresa na sessão)
+        $cpf = preg_replace('/\D/', '', $_SESSION['usuario_cpf'] ?? '');
+        if (empty($cpf)) return 0;
+        $s = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+        $s->execute([$cpf]);
+        return (int)($s->fetchColumn() ?: 0);
     }
 
     // Verifica se o usuário logado é dono do lote (segurança backend)
