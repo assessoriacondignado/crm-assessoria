@@ -42,7 +42,10 @@
       "Bash(mysql -u root -passessoriaconsignado assessoriaconsignado -e \"SELECT ID, NOME_IMPORTACAO, TABELA_DESTINO, STATUS, QTD_TOTAL, QTD_PROCESSADA, QTD_NOVOS, QTD_ERROS, ARQUIVO_LOG_ERRO FROM CONTROLE_IMPORTACAO_ASSINCRONA ORDER BY ID DESC LIMIT 10\")",
       "Bash(mysql assessoriaconsignado *)",
       "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT ID, NOME_IMPORTACAO, TABELA_DESTINO, STATUS, QTD_TOTAL, QTD_PROCESSADA, QTD_NOVOS, QTD_ERROS, LEFT\\(ARQUIVO_LOG_ERRO,100\\) as LOG FROM CONTROLE_IMPORTACAO_ASSINCRONA ORDER BY ID DESC LIMIT 10\")",
-      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"DESCRIBE INTEGRACAO_V8_IMPORTACAO_LOTE\")"
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"DESCRIBE INTEGRACAO_V8_IMPORTACAO_LOTE\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT ID, CPF_USUARIO, INTERVALO_CONSENTIMENTO FROM INTEGRACAO_V8_CHAVE_ACESSO\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"UPDATE INTEGRACAO_V8_CHAVE_ACESSO SET INTERVALO_CONSENTIMENTO = 60\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT COUNT\\(*\\) as total, MIN\\(INTERVALO_CONSENTIMENTO\\) as min, MAX\\(INTERVALO_CONSENTIMENTO\\) as max FROM INTEGRACAO_V8_CHAVE_ACESSO\")"
     ]
   }
 }
