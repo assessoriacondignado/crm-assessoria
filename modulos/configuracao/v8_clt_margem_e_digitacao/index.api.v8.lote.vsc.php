@@ -116,12 +116,6 @@
                 <div id="box_append_select" class="col-md-6 d-none">
                     <label class="fw-bold small text-primary mb-1"><i class="fas fa-search me-1"></i> Selecione o Lote Destino (Para adicionar os CPFs):</label>
                     <select id="sel_append_lote" name="append_lote_id" class="form-select form-select-sm border-primary fw-bold text-dark bg-light"></select>
-                    <div class="form-check form-switch mt-1">
-                        <input class="form-check-input" type="checkbox" id="main_atualizar_dados" name="atualizar_dados" value="1">
-                        <label class="form-check-label small text-dark" for="main_atualizar_dados" style="font-size:11px;">
-                            Atualizar Nome/Nascimento/Sexo dos CPFs já existentes
-                        </label>
-                    </div>
                 </div>
 
                 <div class="col-md-2">
@@ -332,15 +326,8 @@
                         <label class="fw-bold small text-dark mb-1">Novo Arquivo CSV:</label>
                         <input type="file" name="arquivo_csv" class="form-control border-success" accept=".csv" required>
                     </div>
-                    <div class="form-check form-switch mb-2">
-                        <input class="form-check-input" type="checkbox" id="append_atualizar_dados" name="atualizar_dados" value="1">
-                        <label class="form-check-label fw-bold small text-dark" for="append_atualizar_dados">
-                            Atualizar dados dos CPFs já existentes no lote
-                        </label>
-                        <div class="text-muted" style="font-size:11px;">Atualiza Nome, Nascimento e Sexo. CPFs com erro de data serão recolocados na fila.</div>
-                    </div>
-                    <div id="append_modo_info" class="alert alert-warning small fw-bold border-warning shadow-sm mt-2 mb-0" style="display:none;">
-                        <i class="fas fa-info-circle"></i> Os CPFs que já existem neste lote serão ignorados automaticamente para evitar duplicidade.
+                    <div class="alert alert-info small border-info mt-2 mb-0 py-2">
+                        <i class="fas fa-info-circle me-1"></i> CPFs já existentes no lote terão <strong>Nome, Nascimento e Sexo atualizados</strong> automaticamente com os dados do novo arquivo.
                     </div>
                 </div>
                 <div class="modal-footer bg-light border-top border-secondary">
@@ -1499,6 +1486,7 @@
         document.getElementById('append_lote_nome').value = nome;
         modalAppendLoteObj.show();
     }
+
 
     document.getElementById('formAppendLote').addEventListener('submit', async function(e) {
         e.preventDefault();

@@ -185,7 +185,6 @@ try {
 
             if ($idx_cpf === -1) { throw new Exception("CSV Inválido! Cabeçalho 'CPF' não encontrado."); }
 
-            $modo_atualizar = !empty($_POST['atualizar_dados']) && $_POST['atualizar_dados'] == '1';
             $linhas_validas_novas = [];
             $linhas_para_atualizar = [];
 
@@ -194,20 +193,17 @@ try {
                 $cpf = isset($data[$idx_cpf]) ? str_pad(preg_replace('/\D/', '', $data[$idx_cpf]), 11, '0', STR_PAD_LEFT) : '';
 
                 if (strlen($cpf) == 11 && ltrim($cpf, '0') !== '') {
-                    // CPF já existe no lote
+                    // CPF já existe no lote — sempre atualiza dados cadastrais
                     if (isset($hashExistentes[$cpf])) {
-                        if ($modo_atualizar) {
-                            // Coleta para atualizar os dados cadastrais
-                            try {
-                                $nasc = ($idx_nasc !== -1 && isset($data[$idx_nasc])) ? trim($data[$idx_nasc]) : '';
-                                if (strpos($nasc, '/') !== false) { $p = explode('/', $nasc); if (count($p) == 3) $nasc = "{$p[2]}-{$p[1]}-{$p[0]}"; }
-                                if (!empty($nasc)) { $dt = DateTime::createFromFormat('Y-m-d', $nasc); $nasc = ($dt && $dt->format('Y-m-d') === $nasc) ? $nasc : null; } else { $nasc = null; }
-                                $sexo = ($idx_sexo !== -1 && isset($data[$idx_sexo])) ? strtoupper(trim($data[$idx_sexo])) : '';
-                                $genero = (strpos($sexo, 'M') === 0) ? 'male' : 'female';
-                                $nome = ($idx_nome !== -1 && isset($data[$idx_nome])) ? mb_strtoupper(trim($data[$idx_nome]), 'UTF-8') : null;
-                                $linhas_para_atualizar[] = ['cpf' => $cpf, 'nascimento' => $nasc, 'sexo' => $genero, 'nome' => $nome];
-                            } catch (Exception $e) {}
-                        }
+                        try {
+                            $nasc = ($idx_nasc !== -1 && isset($data[$idx_nasc])) ? trim($data[$idx_nasc]) : '';
+                            if (strpos($nasc, '/') !== false) { $p = explode('/', $nasc); if (count($p) == 3) $nasc = "{$p[2]}-{$p[1]}-{$p[0]}"; }
+                            if (!empty($nasc)) { $dt = DateTime::createFromFormat('Y-m-d', $nasc); $nasc = ($dt && $dt->format('Y-m-d') === $nasc) ? $nasc : null; } else { $nasc = null; }
+                            $sexo = ($idx_sexo !== -1 && isset($data[$idx_sexo])) ? strtoupper(trim($data[$idx_sexo])) : '';
+                            $genero = (strpos($sexo, 'M') === 0) ? 'male' : 'female';
+                            $nome = ($idx_nome !== -1 && isset($data[$idx_nome])) ? mb_strtoupper(trim($data[$idx_nome]), 'UTF-8') : null;
+                            $linhas_para_atualizar[] = ['cpf' => $cpf, 'nascimento' => $nasc, 'sexo' => $genero, 'nome' => $nome];
+                        } catch (Exception $e) {}
                         continue;
                     }
 
@@ -226,8 +222,8 @@ try {
             fclose($handle);
 
             $total_novos = count($linhas_validas_novas);
-            if ($total_novos == 0 && !($modo_atualizar && !empty($linhas_para_atualizar))) {
-                throw new Exception("Nenhum CPF novo encontrado. Todos os CPFs da planilha já existem neste lote ou a planilha é inválida.");
+            if ($total_novos == 0 && empty($linhas_para_atualizar)) {
+                throw new Exception("Nenhum CPF válido encontrado na planilha ou a planilha é inválida.");
             }
 
             $custo_lote = $total_novos * (float)$chave['CUSTO_CONSULTA'];
@@ -268,10 +264,10 @@ try {
             // Ajusta QTD_TOTAL com o que realmente foi inserido
             $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_TOTAL = QTD_TOTAL + ?, STATUS_FILA = 'PENDENTE' WHERE ID = ?")->execute([$inseridos_novos, $id_lote]);
 
-            // Modo atualizar: aplica UPDATE nos CPFs existentes com dados corrigidos
+            // Sempre atualiza dados cadastrais dos CPFs já existentes
             $atualizados = 0;
             $recolocados_fila = 0;
-            if ($modo_atualizar && !empty($linhas_para_atualizar)) {
+            if (!empty($linhas_para_atualizar)) {
                 $stmtUpd = $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE
                     SET NASCIMENTO = COALESCE(?, NASCIMENTO),
                         SEXO       = ?,
@@ -280,8 +276,7 @@ try {
                 $stmtReset = $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA_LOTE
                     SET STATUS_V8 = 'NA FILA', OBSERVACAO = 'Dados corrigidos — reprocessando.'
                     WHERE LOTE_ID = ? AND CPF = ?
-                      AND STATUS_V8 IN ('ERRO CONSULTA','ERRO MARGEM')
-                      AND OBSERVACAO LIKE '%birthDate%'");
+                      AND STATUS_V8 IN ('ERRO CONSULTA','ERRO MARGEM')");
                 foreach ($linhas_para_atualizar as $u) {
                     $stmtUpd->execute([$u['nascimento'], $u['sexo'], $u['nome'], $id_lote, $u['cpf']]);
                     $atualizados++;
