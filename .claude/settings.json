@@ -26,7 +26,9 @@
       "Bash(head -5 grep -l \"REJECTED\\\\|DENIED\" /var/www/html/logs_v8/log_cpf_*.txt)",
       "Bash(grep -n 'GET\\\\|POST\\\\|REQUEST\\\\|$_GET\\\\|$_POST' /var/www/html/modulos/banco_dados/consulta.php)",
       "Bash(head -5 grep -n \"INSERT.*campanha\\\\|CAMPANHA.*INSERT\\\\|inserir_cpf\\\\|adicionar_cpf\\\\|cpf_campanha\\\\|CAMPANHA_CPF\\\\|CAMPANHA_LISTA\" /var/www/html/modulos/campanhas/*.php)",
-      "Bash(grep -rn 'str_pad.*preg_replace.*$data\\\\|preg_replace.*$data.*cpf\\\\|idx_cpf' /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/ajax_api_v8_lote_csv.php)"
+      "Bash(grep -rn 'str_pad.*preg_replace.*$data\\\\|preg_replace.*$data.*cpf\\\\|idx_cpf' /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/ajax_api_v8_lote_csv.php)",
+      "Bash(grep -n '$_SESSION\\\\|case '\\\\''' /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/index.api.v8.lote.vsc.php)",
+      "Bash(grep -n \"CREATE TABLE\\\\|DROP TABLE\\\\|TRUNCATE\\\\|schema\" /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/*.php)"
     ]
   }
 }
