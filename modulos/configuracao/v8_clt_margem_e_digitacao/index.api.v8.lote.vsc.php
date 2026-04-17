@@ -318,9 +318,6 @@
             <form id="formAppendLote">
                 <div class="modal-body bg-light p-4">
                     <input type="hidden" id="append_lote_id" name="id_lote">
-                    <div class="alert alert-warning small fw-bold border-warning shadow-sm mb-3">
-                        <i class="fas fa-info-circle"></i> Os CPFs que já existem neste lote serão ignorados automaticamente para evitar duplicidade.
-                    </div>
                     <div class="mb-3">
                         <label class="fw-bold small text-dark mb-1">Lote Destino:</label>
                         <input type="text" id="append_lote_nome" class="form-control border-dark fw-bold text-muted bg-light" readonly>
@@ -328,6 +325,16 @@
                     <div class="mb-3">
                         <label class="fw-bold small text-dark mb-1">Novo Arquivo CSV:</label>
                         <input type="file" name="arquivo_csv" class="form-control border-success" accept=".csv" required>
+                    </div>
+                    <div class="form-check form-switch mb-2">
+                        <input class="form-check-input" type="checkbox" id="append_atualizar_dados" name="atualizar_dados" value="1">
+                        <label class="form-check-label fw-bold small text-dark" for="append_atualizar_dados">
+                            Atualizar dados dos CPFs já existentes no lote
+                        </label>
+                        <div class="text-muted" style="font-size:11px;">Atualiza Nome, Nascimento e Sexo. CPFs com erro de data serão recolocados na fila.</div>
+                    </div>
+                    <div id="append_modo_info" class="alert alert-warning small fw-bold border-warning shadow-sm mt-2 mb-0" style="display:none;">
+                        <i class="fas fa-info-circle"></i> Os CPFs que já existem neste lote serão ignorados automaticamente para evitar duplicidade.
                     </div>
                 </div>
                 <div class="modal-footer bg-light border-top border-secondary">
