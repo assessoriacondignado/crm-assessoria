@@ -214,40 +214,19 @@ try {
         /* ============================================================
            BASE
         ============================================================ */
-        body { background-color: #f8f9fa; font-family: 'Segoe UI', Roboto, sans-serif; padding-top: 54px; }
+        body { background-color: #f8f9fa; font-family: 'Segoe UI', Roboto, sans-serif; padding-top: 0; }
 
-        /* ============================================================
-           TOPBAR SLIM
-        ============================================================ */
-        .topbar {
-            position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
-            height: 54px;
-            background: #fff;
-            border-bottom: 1px solid #e0e0e0;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-            display: flex; align-items: center;
-            padding: 0 18px; gap: 10px;
+        /* Botão flutuante hamburguer */
+        .sidebar-toggle-btn {
+            position: fixed; top: 12px; left: 14px; z-index: 99996;
+            background: #b02a37; color: #fff;
+            border: none; border-radius: 8px;
+            padding: 7px 13px; cursor: pointer;
+            font-size: 18px; line-height: 1;
+            box-shadow: 0 2px 8px rgba(0,0,0,.25);
+            transition: background .15s;
         }
-        .topbar-toggle {
-            background: none; border: none; cursor: pointer;
-            color: #444; font-size: 20px; padding: 4px 8px;
-            border-radius: 6px; transition: background .15s, color .15s;
-            display: flex; align-items: center;
-        }
-        .topbar-toggle:hover { background: #f0f0f0; color: #b02a37; }
-        .topbar-brand {
-            font-weight: 700; font-size: 15px; letter-spacing: 1px;
-            color: #b02a37; white-space: nowrap;
-        }
-        .topbar-right {
-            margin-left: auto; display: flex; align-items: center; gap: 8px;
-        }
-        .user-profile { display: flex; align-items: center; text-align: right; line-height: 1.2; }
-        .user-name { font-weight: 600; color: #333; font-size: 14px; margin-bottom: 0; }
-        .user-status { font-size: 11px; color: #198754; font-weight: bold; transition: color 0.2s; }
-        .user-status.clickable:hover { color: #0d6efd; cursor: pointer; text-decoration: underline; }
-        .user-avatar { font-size: 26px; color: #666; margin-left: 10px; cursor: pointer; transition: 0.2s; }
-        .user-avatar:hover { color: #0d6efd; }
+        .sidebar-toggle-btn:hover { background: #8f1c26; }
 
         /* ============================================================
            SIDEBAR OVERLAY + PAINEL
@@ -365,7 +344,7 @@ try {
             margin: 20px auto; padding: 30px;
             background: #fff; border-radius: 8px;
             box-shadow: 0 0 15px rgba(0,0,0,0.03);
-            min-height: calc(100vh - 94px);
+            min-height: calc(100vh - 60px);
         }
 
         /* Painel de avisos internos */
@@ -373,116 +352,64 @@ try {
         #avisos-panel-header { animation: slideDownPanel .18s ease; }
         @keyframes slideDownPanel { from { opacity:0; transform:translateY(-6px); } to { opacity:1; transform:translateY(0); } }
 
-        /* Dropdown do topbar */
-        .topbar .dropdown-menu {
+        /* Dropdown sidebar */
+        .sidebar-dropdown-menu {
             border: 1px solid #eaeaea; box-shadow: 0 4px 12px rgba(0,0,0,0.10);
             border-radius: 6px; padding: 8px 0; z-index: 100000;
         }
-        .topbar .dropdown-item { color: #555; font-size: 14px; padding: 8px 20px; }
-        .topbar .dropdown-item i { width: 20px; color: #777; margin-right: 8px; }
-        .topbar .dropdown-item:hover { background: #f4f6f9; color: #0d6efd; }
+        .sidebar-dropdown-menu .dropdown-item { color: #555; font-size: 14px; padding: 8px 20px; }
+        .sidebar-dropdown-menu .dropdown-item i { width: 20px; color: #777; margin-right: 8px; }
+        .sidebar-dropdown-menu .dropdown-item:hover { background: #f4f6f9; color: #0d6efd; }
     </style>
 </head>
 <body>
 
-<!-- ================================================================
-     TOPBAR SLIM
-================================================================ -->
-<div class="topbar">
-    <!-- Botão hamburguer -->
-    <button class="topbar-toggle" onclick="sidebarAbrir()" title="Menu">
-        <i class="fas fa-bars"></i>
-    </button>
+<!-- Botão flutuante hamburguer -->
+<button class="sidebar-toggle-btn" onclick="sidebarAbrir()" title="Menu">
+    <i class="fas fa-bars"></i>
+</button>
 
-    <!-- Brand -->
-    <span class="topbar-brand">CRM</span>
-
-    <!-- Controles à direita -->
-    <div class="topbar-right">
-
-        <!-- Início -->
-        <a href="/index.php" class="btn btn-outline-dark btn-sm fw-bold border-2">
-            <i class="fas fa-home me-1"></i> Início
+<!-- Painel de avisos (fixo, abre à direita da sidebar) -->
+<div id="avisos-panel-header" style="display:none; position:fixed; top:10px; left:300px; width:370px; background:#fff; border:1px solid #dee2e6; border-radius:8px; box-shadow:0 8px 28px rgba(0,0,0,0.22); z-index:99999; overflow:hidden;">
+    <div class="d-flex justify-content-between align-items-center px-3 py-2" style="background:#dc3545; border-radius:8px 8px 0 0;">
+        <span class="fw-bold text-white small"><i class="fas fa-bell me-1"></i> Avisos Internos</span>
+        <button class="btn btn-sm text-white border-0 p-0 lh-1" onclick="toggleAvisosPanel(event)" style="background:none; font-size:1.2rem; opacity:.8;">&times;</button>
+    </div>
+    <div id="lista-avisos-header" style="max-height:420px; overflow-y:auto;">
+        <?php if(empty($avisos_header)): ?>
+        <div class="text-center py-5 text-muted small fw-bold" id="aviso-h-vazio">
+            <i class="fas fa-bell-slash d-block mb-2 opacity-25" style="font-size:2rem;"></i>
+            Nenhum aviso pendente.
+        </div>
+        <?php else: foreach($avisos_header as $avh): ?>
+        <div class="aviso-item-header px-3 py-2 border-bottom" id="aviso-h-<?= $avh['ID'] ?>" style="background:#fff; transition:background .15s;">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+                <div class="flex-grow-1 overflow-hidden">
+                    <div class="d-flex align-items-center gap-2 mb-1">
+                        <span class="badge text-white" style="font-size:0.55rem; background:<?= $avh['TIPO']==='AUTOMATICO'?'#6f42c1':'#0d6efd' ?>; flex-shrink:0;">
+                            <?= $avh['TIPO']==='AUTOMATICO' ? 'AUTO' : 'MASTER' ?>
+                        </span>
+                        <small class="text-muted text-nowrap" style="font-size:0.68rem;"><?= date('d/m/Y H:i', strtotime($avh['DATA_CRIACAO'])) ?></small>
+                    </div>
+                    <div class="fw-bold text-dark text-truncate" style="font-size:0.82rem;"><?= htmlspecialchars($avh['ASSUNTO']) ?></div>
+                    <?php if(!empty($avh['NOME_CRIADOR'])): ?>
+                    <small class="text-muted" style="font-size:0.68rem;">por <?= htmlspecialchars($avh['NOME_CRIADOR']) ?></small>
+                    <?php endif; ?>
+                </div>
+                <div class="d-flex flex-column gap-1 flex-shrink-0">
+                    <button class="btn btn-success btn-sm fw-bold py-0 px-2" style="font-size:0.68rem;" onclick="marcarLidoHeader(<?= $avh['ID'] ?>)" title="Marcar como lido">
+                        <i class="fas fa-check me-1"></i>Lido
+                    </button>
+                    <button class="btn btn-outline-secondary btn-sm fw-bold py-0 px-2 lh-1" style="font-size:0.75rem;" onclick="dispensarAvisoHeader(<?= $avh['ID'] ?>)" title="Fechar">&times;</button>
+                </div>
+            </div>
+        </div>
+        <?php endforeach; endif; ?>
+    </div>
+    <div class="text-center py-2 border-top" style="background:#f8f9fa;">
+        <a href="/modulos/configuracao/anotacoes/index.php#avisos" class="small fw-bold text-primary text-decoration-none">
+            <i class="fas fa-external-link-alt me-1"></i> Ver todos os avisos
         </a>
-
-        <!-- Sino de avisos -->
-        <div class="position-relative" id="li-sino-avisos">
-            <button class="btn btn-outline-dark btn-sm fw-bold border-2 position-relative" onclick="toggleAvisosPanel(event)" id="btnSino" title="Avisos Internos">
-                <i class="fas fa-bell"></i>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger <?= $nao_lidos_h === 0 ? 'd-none' : '' ?>" id="badge-avisos-h" style="font-size:0.55rem; min-width:18px;"><?= $nao_lidos_h ?: '' ?></span>
-            </button>
-            <!-- Painel de avisos -->
-            <div id="avisos-panel-header" style="display:none; position:absolute; top:calc(100% + 8px); right:0; width:370px; background:#fff; border:1px solid #dee2e6; border-radius:8px; box-shadow:0 8px 28px rgba(0,0,0,0.18); z-index:99999; overflow:hidden;">
-                <div class="d-flex justify-content-between align-items-center px-3 py-2" style="background:#dc3545; border-radius:8px 8px 0 0;">
-                    <span class="fw-bold text-white small"><i class="fas fa-bell me-1"></i> Avisos Internos</span>
-                    <button class="btn btn-sm text-white border-0 p-0 lh-1" onclick="toggleAvisosPanel(event)" style="background:none; font-size:1.2rem; opacity:.8;">&times;</button>
-                </div>
-                <div id="lista-avisos-header" style="max-height:420px; overflow-y:auto;">
-                    <?php if(empty($avisos_header)): ?>
-                    <div class="text-center py-5 text-muted small fw-bold" id="aviso-h-vazio">
-                        <i class="fas fa-bell-slash d-block mb-2 opacity-25" style="font-size:2rem;"></i>
-                        Nenhum aviso pendente.
-                    </div>
-                    <?php else: foreach($avisos_header as $avh): ?>
-                    <div class="aviso-item-header px-3 py-2 border-bottom" id="aviso-h-<?= $avh['ID'] ?>" style="background:#fff; transition:background .15s;">
-                        <div class="d-flex justify-content-between align-items-start gap-2">
-                            <div class="flex-grow-1 overflow-hidden">
-                                <div class="d-flex align-items-center gap-2 mb-1">
-                                    <span class="badge text-white" style="font-size:0.55rem; background:<?= $avh['TIPO']==='AUTOMATICO'?'#6f42c1':'#0d6efd' ?>; flex-shrink:0;">
-                                        <?= $avh['TIPO']==='AUTOMATICO' ? 'AUTO' : 'MASTER' ?>
-                                    </span>
-                                    <small class="text-muted text-nowrap" style="font-size:0.68rem;"><?= date('d/m/Y H:i', strtotime($avh['DATA_CRIACAO'])) ?></small>
-                                </div>
-                                <div class="fw-bold text-dark text-truncate" style="font-size:0.82rem;"><?= htmlspecialchars($avh['ASSUNTO']) ?></div>
-                                <?php if(!empty($avh['NOME_CRIADOR'])): ?>
-                                <small class="text-muted" style="font-size:0.68rem;">por <?= htmlspecialchars($avh['NOME_CRIADOR']) ?></small>
-                                <?php endif; ?>
-                            </div>
-                            <div class="d-flex flex-column gap-1 flex-shrink-0">
-                                <button class="btn btn-success btn-sm fw-bold py-0 px-2" style="font-size:0.68rem;" onclick="marcarLidoHeader(<?= $avh['ID'] ?>)" title="Marcar como lido">
-                                    <i class="fas fa-check me-1"></i>Lido
-                                </button>
-                                <button class="btn btn-outline-secondary btn-sm fw-bold py-0 px-2 lh-1" style="font-size:0.75rem;" onclick="dispensarAvisoHeader(<?= $avh['ID'] ?>)" title="Fechar (sem marcar como lido)">&times;</button>
-                            </div>
-                        </div>
-                    </div>
-                    <?php endforeach; endif; ?>
-                </div>
-                <div class="text-center py-2 border-top" style="background:#f8f9fa;">
-                    <a href="/modulos/configuracao/anotacoes/index.php#avisos" class="small fw-bold text-primary text-decoration-none">
-                        <i class="fas fa-external-link-alt me-1"></i> Ver todos os avisos
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Suporte -->
-        <button class="btn btn-success btn-sm fw-bold shadow-sm border-0" style="background-color: #25D366;" onclick="abrirModalSuporteLogado()">
-            <i class="fab fa-whatsapp me-1"></i> <span class="d-none d-md-inline">Falar com Suporte</span>
-        </button>
-
-        <!-- Usuário -->
-        <div class="user-profile border-start ps-3 ms-1">
-            <div>
-                <p class="user-name mb-0">Olá, <?= htmlspecialchars($primeiro_nome) ?></p>
-                <?php if($pode_ver_online): ?>
-                    <span class="user-status clickable" onclick="carregarUsuariosOnline(true)" title="Ver usuários online">
-                        <i class="fas fa-circle text-success" style="font-size:8px;"></i> <span id="topo_contador_online">0</span> Online
-                    </span>
-                <?php else: ?>
-                    <span class="user-status"><i class="fas fa-circle text-success" style="font-size:8px;"></i> Online</span>
-                <?php endif; ?>
-            </div>
-            <div class="dropdown">
-                <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration:none;">
-                    <i class="fas fa-user-circle user-avatar text-dark"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-                    <li><a class="dropdown-item text-danger fw-bold" href="/logout.php"><i class="fas fa-sign-out-alt text-danger"></i> Sair do Sistema</a></li>
-                </ul>
-            </div>
-        </div>
-
     </div>
 </div>
 
@@ -500,7 +427,40 @@ try {
             <button class="sidebar-close" onclick="sidebarFechar()" title="Fechar">&times;</button>
         </div>
 
-        <!-- Itens -->
+        <!-- Tira do usuário -->
+        <div style="background:rgba(0,0,0,.25); padding:10px 16px; display:flex; align-items:center; gap:10px; border-bottom:1px solid rgba(255,255,255,.06); flex-shrink:0;">
+            <i class="fas fa-user-circle" style="font-size:30px; color:rgba(255,255,255,.55);"></i>
+            <div style="flex:1; overflow:hidden;">
+                <div style="font-weight:700; font-size:13px; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"><?= htmlspecialchars($nome_completo) ?></div>
+                <div style="font-size:11px; color:rgba(255,255,255,.45);"><?= htmlspecialchars($grupo_logado_h ?? $_SESSION['usuario_grupo'] ?? '') ?></div>
+            </div>
+            <!-- Botão avisos -->
+            <div class="position-relative" id="li-sino-avisos">
+                <button style="background:rgba(255,255,255,.1); border:none; color:#fff; border-radius:6px; padding:5px 8px; cursor:pointer; position:relative;" onclick="toggleAvisosPanel(event)" id="btnSino" title="Avisos Internos">
+                    <i class="fas fa-bell"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger <?= $nao_lidos_h === 0 ? 'd-none' : '' ?>" id="badge-avisos-h" style="font-size:0.55rem; min-width:18px;"><?= $nao_lidos_h ?: '' ?></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Ações rápidas -->
+        <div style="padding:10px 12px; display:flex; gap:6px; border-bottom:1px solid rgba(255,255,255,.06); flex-shrink:0;">
+            <a href="/index.php" style="flex:1; text-align:center; background:rgba(255,255,255,.08); color:#dde; font-size:12px; font-weight:600; text-decoration:none; border-radius:6px; padding:6px 4px; transition:.15s;" onmouseover="this.style.background='rgba(255,255,255,.16)'" onmouseout="this.style.background='rgba(255,255,255,.08)'">
+                <i class="fas fa-home d-block mb-1" style="font-size:15px;"></i>Início
+            </a>
+            <?php if($pode_ver_online): ?>
+            <button onclick="carregarUsuariosOnline(true)" style="flex:1; text-align:center; background:rgba(255,255,255,.08); color:#dde; font-size:12px; font-weight:600; border:none; border-radius:6px; padding:6px 4px; cursor:pointer; transition:.15s;" onmouseover="this.style.background='rgba(255,255,255,.16)'" onmouseout="this.style.background='rgba(255,255,255,.08)'" title="Ver usuários online">
+                <i class="fas fa-circle text-success d-block mb-1" style="font-size:9px; margin-top:3px;"></i>
+                <span id="topo_contador_online">0</span> Online
+            </button>
+            <?php else: ?>
+            <div style="flex:1; text-align:center; color:rgba(255,255,255,.35); font-size:12px; padding:6px 4px;">
+                <i class="fas fa-circle text-success d-block mb-1" style="font-size:9px; margin-top:3px;"></i>Online
+            </div>
+            <?php endif; ?>
+        </div>
+
+        <!-- Itens de menu -->
         <div class="sidebar-body">
 
             <?php if(podeAcessarMenu($pdo, 'MENU_USUARIO')): ?>
@@ -660,15 +620,20 @@ try {
             </div>
             <?php endif; ?>
 
-            <!-- Sair -->
-            <div class="sidebar-divider"></div>
-            <a class="sidebar-link" href="/logout.php" style="color:#ff8a8a;">
+        </div><!-- /sidebar-body -->
+
+        <!-- Rodapé da sidebar -->
+        <div style="flex-shrink:0; border-top:1px solid rgba(255,255,255,.08);">
+            <button onclick="abrirModalSuporteLogado()" style="display:flex; align-items:center; gap:10px; width:100%; padding:11px 18px; background:none; border:none; color:#4cde6c; font-size:13px; font-weight:600; cursor:pointer; transition:.15s;" onmouseover="this.style.background='rgba(255,255,255,.06)'" onmouseout="this.style.background='none'">
+                <i class="fab fa-whatsapp menu-icon"></i> Falar com Suporte
+            </button>
+            <a href="/logout.php" style="display:flex; align-items:center; gap:10px; padding:11px 18px; color:#ff8a8a; font-size:13px; font-weight:600; text-decoration:none; transition:.15s;" onmouseover="this.style.background='rgba(255,255,255,.06)'" onmouseout="this.style.background='none'">
                 <i class="fas fa-sign-out-alt menu-icon"></i> Sair do Sistema
             </a>
-
         </div>
-    </div>
-</div>
+
+    </div><!-- /sidebar-panel -->
+</div><!-- /sidebar-overlay -->
 
 <script>
 function sidebarAbrir() {
