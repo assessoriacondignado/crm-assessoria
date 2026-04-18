@@ -1120,8 +1120,10 @@
     let v8CampanhaIdSel = null;
     let v8CampanhaNomeSel = '';
     let v8CampanhasCache = null;
+    let v8ClientesLoteAtual = null;
 
     async function v8AbrirClientesLote(id) {
+        v8ClientesLoteAtual = id;
         document.getElementById('v8ClientesLoteTitulo').textContent = `👥 Clientes do Lote #${id}`;
         document.getElementById('v8ClientesFiltro').value = '';
         document.getElementById('v8ClientesStatus').value = '';
@@ -1216,7 +1218,7 @@
         if (!lista.length) return v8Toast("Nenhum cliente na tela para incluir.", "warning");
         const cpfs = lista;
         const res = await v8Req('ajax_api_v8_lote_csv.php', 'incluir_em_campanha',
-            { id_campanha: v8CampanhaIdSel, cpfs: JSON.stringify(cpfs) }, true, "Incluindo...");
+            { id_campanha: v8CampanhaIdSel, cpfs: JSON.stringify(cpfs), id_lote: v8ClientesLoteAtual }, true, "Incluindo...");
         if (res.success) {
             v8Toast(`✅ ${res.msg}`, "success");
             document.getElementById('v8CampanhaSelecionadaBar').style.display = 'none';

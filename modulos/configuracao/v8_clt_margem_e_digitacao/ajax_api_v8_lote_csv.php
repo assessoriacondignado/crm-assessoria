@@ -1094,12 +1094,26 @@ try {
         case 'incluir_em_campanha':
             $id_campanha = (int)$_POST['id_campanha'];
             $cpfs = json_decode($_POST['cpfs'] ?? '[]', true);
+            $id_lote_camp = (int)($_POST['id_lote'] ?? 0);
             if (!$id_campanha || empty($cpfs)) throw new Exception("Campanha ou CPFs inválidos.");
+
+            // Garante que cada CPF existe em dados_cadastrais (exigido pela FK)
+            // Busca nome no lote para preencher caso não exista
+            $tabela_camp = v8_tabela_lote($pdo, $id_lote_camp);
+            $stmtGarantir = $pdo->prepare("INSERT IGNORE INTO dados_cadastrais (cpf, nome) VALUES (?, ?)");
+            $stmtNome = $pdo->prepare("SELECT NOME FROM {$tabela_camp} WHERE CPF = ? LIMIT 1");
+
             $stmt = $pdo->prepare("INSERT IGNORE INTO BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA (CPF_CLIENTE, ID_CAMPANHA) VALUES (?, ?)");
             $inseridos = 0;
             foreach ($cpfs as $cpf) {
                 $cpf = preg_replace('/\D/', '', $cpf);
-                if (strlen($cpf) >= 11) { $stmt->execute([$cpf, $id_campanha]); $inseridos += $stmt->rowCount(); }
+                if (strlen($cpf) < 11) continue;
+                // Garante cadastro mínimo antes de vincular à campanha
+                $stmtNome->execute([$cpf]);
+                $nome_lote = $stmtNome->fetchColumn() ?: 'IMPORTADO VIA LOTE V8';
+                $stmtGarantir->execute([$cpf, $nome_lote]);
+                $stmt->execute([$cpf, $id_campanha]);
+                $inseridos += $stmt->rowCount();
             }
             ob_end_clean(); echo json_encode(['success' => true, 'msg' => "$inseridos CPF(s) incluído(s) na campanha.", 'inseridos' => $inseridos]); exit;
 
