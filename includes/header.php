@@ -163,6 +163,43 @@ if ($userExp && !empty($userExp['DATA_EXPIRAR'])) {
 // Pega o primeiro nome do usuário logado para exibir no menu
 $nome_completo = isset($_SESSION['usuario_nome']) ? $_SESSION['usuario_nome'] : 'Usuário';
 $primeiro_nome = explode(' ', trim($nome_completo))[0];
+
+// ==========================================
+// AVISOS INTERNOS — BADGE E PAINEL DO SINO
+// ==========================================
+$cpf_logado_h   = preg_replace('/\D/', '', $_SESSION['usuario_cpf'] ?? '');
+$grupo_logado_h = strtoupper($_SESSION['usuario_grupo'] ?? '');
+$avisos_header  = [];
+$nao_lidos_h    = 0;
+try {
+    $id_empresa_h = null;
+    $stmtE = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+    $stmtE->execute([$cpf_logado_h]);
+    $id_empresa_h = $stmtE->fetchColumn();
+
+    $stmtH = $pdo->prepare("
+        SELECT a.ID, a.ASSUNTO, a.TIPO, a.NOME_CRIADOR, a.DATA_CRIACAO
+        FROM AVISOS_INTERNOS a
+        WHERE EXISTS (
+            SELECT 1 FROM AVISOS_INTERNOS_DESTINATARIOS d
+            WHERE d.AVISO_ID = a.ID AND (
+                d.TIPO_DEST = 'TODOS'
+                OR (d.TIPO_DEST = 'GRUPO'   AND d.VALOR = ?)
+                OR (d.TIPO_DEST = 'USUARIO' AND d.VALOR = ?)
+                OR (d.TIPO_DEST = 'EMPRESA' AND d.VALOR = ?)
+            )
+        )
+        AND NOT EXISTS (
+            SELECT 1 FROM AVISOS_INTERNOS_LEITURA
+            WHERE AVISO_ID = a.ID AND CPF_USUARIO = ?
+        )
+        ORDER BY a.DATA_CRIACAO DESC
+        LIMIT 30
+    ");
+    $stmtH->execute([$grupo_logado_h, $cpf_logado_h, (string)$id_empresa_h, $cpf_logado_h]);
+    $avisos_header = $stmtH->fetchAll(PDO::FETCH_ASSOC);
+    $nao_lidos_h   = count($avisos_header);
+} catch(Exception $e) {}
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -198,6 +235,11 @@ $primeiro_nome = explode(' ', trim($nome_completo))[0];
         .user-avatar:hover { color: #0d6efd; }
         
         .conteudo-principal { margin: 20px auto; padding: 30px; background: #fff; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.03); min-height: calc(100vh - 110px); }
+
+        /* Painel de avisos internos */
+        .aviso-item-header:hover { background: #f8f9ff !important; }
+        #avisos-panel-header { animation: slideDownPanel .18s ease; }
+        @keyframes slideDownPanel { from { opacity:0; transform:translateY(-6px); } to { opacity:1; transform:translateY(0); } }
     </style>
 </head>
 <body>
@@ -393,7 +435,59 @@ $primeiro_nome = explode(' ', trim($nome_completo))[0];
                 <i class="fas fa-home me-1"></i> Início
             </a>
         </li>
-        
+
+        <!-- SINO DE AVISOS INTERNOS -->
+        <li class="nav-item me-3 position-relative" id="li-sino-avisos">
+            <button class="btn btn-outline-dark btn-sm fw-bold border-2 position-relative" onclick="toggleAvisosPanel(event)" id="btnSino" title="Avisos Internos">
+                <i class="fas fa-bell"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger <?= $nao_lidos_h === 0 ? 'd-none' : '' ?>" id="badge-avisos-h" style="font-size:0.55rem; min-width:18px;"><?= $nao_lidos_h ?: '' ?></span>
+            </button>
+
+            <!-- PAINEL DE AVISOS -->
+            <div id="avisos-panel-header" style="display:none; position:absolute; top:calc(100% + 8px); right:0; width:370px; background:#fff; border:1px solid #dee2e6; border-radius:8px; box-shadow:0 8px 28px rgba(0,0,0,0.18); z-index:99999; overflow:hidden;">
+                <div class="d-flex justify-content-between align-items-center px-3 py-2" style="background:#dc3545; border-radius:8px 8px 0 0;">
+                    <span class="fw-bold text-white small"><i class="fas fa-bell me-1"></i> Avisos Internos</span>
+                    <button class="btn btn-sm text-white border-0 p-0 lh-1" onclick="toggleAvisosPanel(event)" style="background:none; font-size:1.2rem; opacity:.8;">&times;</button>
+                </div>
+                <div id="lista-avisos-header" style="max-height:420px; overflow-y:auto;">
+                    <?php if(empty($avisos_header)): ?>
+                    <div class="text-center py-5 text-muted small fw-bold" id="aviso-h-vazio">
+                        <i class="fas fa-bell-slash d-block mb-2 opacity-25" style="font-size:2rem;"></i>
+                        Nenhum aviso pendente.
+                    </div>
+                    <?php else: foreach($avisos_header as $avh): ?>
+                    <div class="aviso-item-header px-3 py-2 border-bottom" id="aviso-h-<?= $avh['ID'] ?>" style="background:#fff; transition:background .15s;">
+                        <div class="d-flex justify-content-between align-items-start gap-2">
+                            <div class="flex-grow-1 overflow-hidden">
+                                <div class="d-flex align-items-center gap-2 mb-1">
+                                    <span class="badge text-white" style="font-size:0.55rem; background:<?= $avh['TIPO']==='AUTOMATICO'?'#6f42c1':'#0d6efd' ?>; flex-shrink:0;">
+                                        <?= $avh['TIPO']==='AUTOMATICO' ? 'AUTO' : 'MASTER' ?>
+                                    </span>
+                                    <small class="text-muted text-nowrap" style="font-size:0.68rem;"><?= date('d/m/Y H:i', strtotime($avh['DATA_CRIACAO'])) ?></small>
+                                </div>
+                                <div class="fw-bold text-dark text-truncate" style="font-size:0.82rem;"><?= htmlspecialchars($avh['ASSUNTO']) ?></div>
+                                <?php if(!empty($avh['NOME_CRIADOR'])): ?>
+                                <small class="text-muted" style="font-size:0.68rem;">por <?= htmlspecialchars($avh['NOME_CRIADOR']) ?></small>
+                                <?php endif; ?>
+                            </div>
+                            <div class="d-flex flex-column gap-1 flex-shrink-0">
+                                <button class="btn btn-success btn-sm fw-bold py-0 px-2" style="font-size:0.68rem;" onclick="marcarLidoHeader(<?= $avh['ID'] ?>)" title="Marcar como lido">
+                                    <i class="fas fa-check me-1"></i>Lido
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm fw-bold py-0 px-2 lh-1" style="font-size:0.75rem;" onclick="dispensarAvisoHeader(<?= $avh['ID'] ?>)" title="Fechar (sem marcar como lido)">&times;</button>
+                            </div>
+                        </div>
+                    </div>
+                    <?php endforeach; endif; ?>
+                </div>
+                <div class="text-center py-2 border-top" style="background:#f8f9fa;">
+                    <a href="/modulos/configuracao/anotacoes/index.php#avisos" class="small fw-bold text-primary text-decoration-none">
+                        <i class="fas fa-external-link-alt me-1"></i> Ver todos os avisos
+                    </a>
+                </div>
+            </div>
+        </li>
+
         <li class="nav-item me-3">
             <button class="btn btn-success btn-sm fw-bold shadow-sm border-0" style="background-color: #25D366;" onclick="abrirModalSuporteLogado()">
                 <i class="fab fa-whatsapp me-1"></i> Falar com Suporte
@@ -466,6 +560,54 @@ $primeiro_nome = explode(' ', trim($nome_completo))[0];
         }
         mSuporteLogado.show();
     }
+
+    // ========== PAINEL DE AVISOS INTERNOS ==========
+    function toggleAvisosPanel(e) {
+        if (e) e.stopPropagation();
+        const panel = document.getElementById('avisos-panel-header');
+        panel.style.display = panel.style.display === 'none' ? '' : 'none';
+    }
+
+    // Fecha o painel ao clicar fora dele
+    document.addEventListener('click', function(e) {
+        const panel = document.getElementById('avisos-panel-header');
+        const li    = document.getElementById('li-sino-avisos');
+        if (panel && panel.style.display !== 'none' && li && !li.contains(e.target)) {
+            panel.style.display = 'none';
+        }
+    });
+
+    async function marcarLidoHeader(id) {
+        const fd = new FormData();
+        fd.append('acao', 'marcar_lido');
+        fd.append('id', id);
+        try {
+            await fetch('/modulos/configuracao/anotacoes/ajax_anotacao.php', { method: 'POST', body: fd });
+        } catch(err) {}
+        _removerAvisoHeader(id);
+    }
+
+    function dispensarAvisoHeader(id) {
+        _removerAvisoHeader(id);
+    }
+
+    function _removerAvisoHeader(id) {
+        const el = document.getElementById('aviso-h-' + id);
+        if (el) el.remove();
+        const restantes = document.querySelectorAll('.aviso-item-header').length;
+        const badge = document.getElementById('badge-avisos-h');
+        if (badge) {
+            if (restantes > 0) {
+                badge.textContent = restantes;
+                badge.classList.remove('d-none');
+            } else {
+                badge.classList.add('d-none');
+                const lista = document.getElementById('lista-avisos-header');
+                if (lista) lista.innerHTML = '<div class="text-center py-5 text-muted small fw-bold"><i class="fas fa-bell-slash d-block mb-2 opacity-25" style="font-size:2rem;"></i>Nenhum aviso pendente.</div>';
+            }
+        }
+    }
+    // ========== FIM AVISOS INTERNOS ==========
 
     function enviarSuporteLogado() {
         const nome = document.getElementById('supNomeLogado').value; 

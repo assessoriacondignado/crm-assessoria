@@ -209,7 +209,40 @@ try {
     $erro_db = "Erro ao buscar campanhas: " . $e->getMessage();
 }
 
-// 5. Puxa o menu superior de forma segura
+// 5. Avisos Internos para o painel do hub
+$avisos_hub      = [];
+$avisos_hub_nao_lidos = 0;
+try {
+    $cpf_logado_clean = preg_replace('/\D/', '', $cpf_logado);
+    $grupo_hub        = strtoupper($_SESSION['usuario_grupo'] ?? '');
+
+    $id_empresa_hub = null;
+    $stmtEmpHub = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+    $stmtEmpHub->execute([$cpf_logado_clean]);
+    $id_empresa_hub = $stmtEmpHub->fetchColumn() ?: null;
+
+    $stmtAv = $pdo->prepare("
+        SELECT a.ID, a.ASSUNTO, a.CONTEUDO, a.TIPO, a.NOME_CRIADOR, a.DATA_CRIACAO,
+               (SELECT ID FROM AVISOS_INTERNOS_LEITURA WHERE AVISO_ID = a.ID AND CPF_USUARIO = ?) as LIDO_ID
+        FROM AVISOS_INTERNOS a
+        WHERE EXISTS (
+            SELECT 1 FROM AVISOS_INTERNOS_DESTINATARIOS d
+            WHERE d.AVISO_ID = a.ID AND (
+                d.TIPO_DEST = 'TODOS'
+                OR (d.TIPO_DEST = 'GRUPO'   AND d.VALOR = ?)
+                OR (d.TIPO_DEST = 'USUARIO' AND d.VALOR = ?)
+                OR (d.TIPO_DEST = 'EMPRESA' AND d.VALOR = ?)
+            )
+        )
+        ORDER BY a.DATA_CRIACAO DESC
+        LIMIT 50
+    ");
+    $stmtAv->execute([$cpf_logado_clean, $grupo_hub, $cpf_logado_clean, (string)$id_empresa_hub]);
+    $avisos_hub = $stmtAv->fetchAll(PDO::FETCH_ASSOC);
+    $avisos_hub_nao_lidos = count(array_filter($avisos_hub, fn($a) => !$a['LIDO_ID']));
+} catch (Exception $e) {}
+
+// 6. Puxa o menu superior de forma segura
 $caminho_header = $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 if (file_exists($caminho_header)) { 
     include $caminho_header; 
@@ -462,6 +495,16 @@ if (file_exists($caminho_header)) {
         <i class="fas fa-history me-2 text-info"></i> V8 CLT — Histórico Consulta
     </button>
     <?php endif; ?>
+
+    <!-- BOTÃO AVISOS -->
+    <button class="btn btn-outline-dark fw-bold shadow-sm btn-hub-toggle position-relative" onclick="hubToggle('painelAvisos', this)">
+        <i class="fas fa-bell me-2 text-danger"></i> Avisos
+        <?php if ($avisos_hub_nao_lidos > 0): ?>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:0.55rem; min-width:18px;" id="badge-hub-avisos"><?= $avisos_hub_nao_lidos ?></span>
+        <?php else: ?>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none" style="font-size:0.55rem; min-width:18px;" id="badge-hub-avisos"></span>
+        <?php endif; ?>
+    </button>
 </div>
 
 <?php if ($temAcessoCampanhas): ?>
@@ -702,17 +745,180 @@ if (file_exists($caminho_header)) {
     </div>
 </div>
 
+<!-- PAINEL AVISOS INTERNOS -->
+<div id="painelAvisos" class="hub-painel mb-4" style="display:none;">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h6 class="fw-bold text-dark mb-0">
+            <i class="fas fa-bell text-danger me-2"></i> Meus Avisos
+            <?php if ($avisos_hub_nao_lidos > 0): ?>
+            <span class="badge bg-danger ms-1" id="badge-avisos-painel-count"><?= $avisos_hub_nao_lidos ?> não lido<?= $avisos_hub_nao_lidos > 1 ? 's' : '' ?></span>
+            <?php endif; ?>
+        </h6>
+        <?php if ($avisos_hub_nao_lidos > 0): ?>
+        <button class="btn btn-sm btn-outline-success fw-bold border-dark" onclick="hubMarcarTodosLidos()">
+            <i class="fas fa-check-double me-1"></i> Marcar todos como lido
+        </button>
+        <?php endif; ?>
+    </div>
+
+    <?php if (empty($avisos_hub)): ?>
+    <div class="text-center py-5 text-muted">
+        <i class="fas fa-bell-slash fa-2x mb-3 d-block opacity-25"></i>
+        <span class="fw-bold">Nenhum aviso para você no momento.</span>
+    </div>
+    <?php else: ?>
+    <div class="row g-3" id="lista-avisos-hub">
+        <?php foreach ($avisos_hub as $av):
+            $lido = !empty($av['LIDO_ID']);
+        ?>
+        <div class="col-xl-4 col-lg-6 col-12" id="hub-aviso-card-<?= $av['ID'] ?>">
+            <div class="border rounded shadow-sm p-3 h-100 position-relative" style="border-left: 4px solid <?= $lido ? '#198754' : '#dc3545' ?> !important; background: <?= $lido ? '#f8fff9' : '#fff8f8' ?>; opacity: <?= $lido ? '0.75' : '1' ?>;">
+                <div class="d-flex justify-content-between align-items-start mb-1">
+                    <div class="d-flex align-items-center gap-2">
+                        <?php if (!$lido): ?>
+                        <span class="badge bg-danger" style="font-size:0.55rem;">Não lido</span>
+                        <?php endif; ?>
+                        <span class="badge text-white" style="font-size:0.55rem; background: <?= $av['TIPO']==='AUTOMATICO'?'#6f42c1':'#0d6efd' ?>;">
+                            <?= $av['TIPO']==='AUTOMATICO' ? 'AUTO' : 'MASTER' ?>
+                        </span>
+                        <small class="text-muted" style="font-size:0.68rem;"><?= date('d/m/Y H:i', strtotime($av['DATA_CRIACAO'])) ?></small>
+                    </div>
+                </div>
+                <div class="fw-bold text-dark mb-1" style="font-size:0.88rem;"><?= htmlspecialchars($av['ASSUNTO']) ?></div>
+                <?php if (!empty($av['NOME_CRIADOR'])): ?>
+                <small class="text-muted d-block mb-2" style="font-size:0.7rem;">por <?= htmlspecialchars($av['NOME_CRIADOR']) ?></small>
+                <?php endif; ?>
+                <div class="text-muted small mb-3" style="overflow:hidden; max-height:36px; font-size:0.78rem; line-height:1.4;">
+                    <?= strip_tags($av['CONTEUDO']) ?>
+                </div>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-sm btn-outline-dark fw-bold flex-fill" style="font-size:0.72rem;" onclick="hubVerAviso(<?= $av['ID'] ?>, '<?= addslashes(htmlspecialchars($av['ASSUNTO'])) ?>', <?= $lido ? 'true' : 'false' ?>)">
+                        <i class="fas fa-eye me-1"></i> Ler
+                    </button>
+                    <?php if (!$lido): ?>
+                    <button class="btn btn-sm btn-outline-success fw-bold" style="font-size:0.72rem;" onclick="hubMarcarLido(<?= $av['ID'] ?>)">
+                        <i class="fas fa-check me-1"></i> Lido
+                    </button>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+        <?php endforeach; ?>
+    </div>
+    <div class="text-end mt-3">
+        <a href="/modulos/configuracao/anotacoes/index.php#avisos" class="btn btn-sm btn-outline-secondary fw-bold">
+            <i class="fas fa-external-link-alt me-1"></i> Ver módulo completo de Avisos
+        </a>
+    </div>
+    <?php endif; ?>
+</div>
+
+<!-- Modal Ler Aviso (hub) -->
+<div class="modal fade" id="modalHubAviso" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content shadow-lg border-dark">
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title fw-bold"><i class="fas fa-bell text-danger me-2"></i> <span id="hubAvisoAssunto"></span></h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4 bg-white" id="hubAvisoConteudo" style="min-height:180px; font-size:0.95rem; line-height:1.7;"></div>
+            <div class="modal-footer bg-light">
+                <button type="button" id="btnHubMarcarLidoModal" class="btn btn-success fw-bold border-dark d-none" onclick="hubMarcarLidoModal()">
+                    <i class="fas fa-check me-1"></i> Marcar como Lido
+                </button>
+                <button type="button" class="btn btn-secondary fw-bold" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
 function hubToggle(painelId, btn) {
     var painel = document.getElementById(painelId);
     var aberto = painel.style.display !== 'none';
-    // Fecha todos os painéis e remove active de todos os botões
     document.querySelectorAll('.hub-painel').forEach(function(p) { p.style.display = 'none'; });
     document.querySelectorAll('.btn-hub-toggle').forEach(function(b) { b.classList.remove('active'); });
-    // Abre o clicado se estava fechado
     if (!aberto) {
         painel.style.display = '';
         btn.classList.add('active');
+    }
+}
+
+// ===== AVISOS INTERNOS — HUB =====
+let _hubAvisoAtualId = null;
+
+function hubVerAviso(id, assunto, jaLido) {
+    _hubAvisoAtualId = id;
+    document.getElementById('hubAvisoAssunto').textContent = assunto;
+    document.getElementById('hubAvisoConteudo').innerHTML = '<div class="text-center py-3"><i class="fas fa-spinner fa-spin text-muted"></i></div>';
+    const btnLido = document.getElementById('btnHubMarcarLidoModal');
+    btnLido.classList.toggle('d-none', jaLido);
+    new bootstrap.Modal(document.getElementById('modalHubAviso')).show();
+    const fd = new FormData();
+    fd.append('acao', 'get_aviso');
+    fd.append('id', id);
+    fetch('/modulos/configuracao/anotacoes/ajax_anotacao.php', { method: 'POST', body: fd })
+        .then(r => r.json()).then(j => {
+            if (j.success) document.getElementById('hubAvisoConteudo').innerHTML = j.conteudo;
+        });
+}
+
+function hubMarcarLidoModal() {
+    if (_hubAvisoAtualId) {
+        hubMarcarLido(_hubAvisoAtualId);
+        bootstrap.Modal.getInstance(document.getElementById('modalHubAviso'))?.hide();
+    }
+}
+
+async function hubMarcarLido(id) {
+    const fd = new FormData();
+    fd.append('acao', 'marcar_lido');
+    fd.append('id', id);
+    await fetch('/modulos/configuracao/anotacoes/ajax_anotacao.php', { method: 'POST', body: fd });
+    // Atualiza o card visualmente
+    const card = document.getElementById('hub-aviso-card-' + id);
+    if (card) {
+        const inner = card.querySelector('.border');
+        if (inner) {
+            inner.style.borderLeftColor = '#198754';
+            inner.style.background = '#f8fff9';
+            inner.style.opacity = '0.75';
+        }
+        const badgeNaoLido = card.querySelector('.badge.bg-danger');
+        if (badgeNaoLido) badgeNaoLido.remove();
+        const btnLido = card.querySelector('.btn-outline-success');
+        if (btnLido) btnLido.remove();
+    }
+    _hubAtualizarBadges(-1);
+    // Sincroniza sino do header
+    const sinoH = document.getElementById('badge-avisos-h');
+    if (sinoH) {
+        const n = parseInt(sinoH.textContent || '1') - 1;
+        n > 0 ? (sinoH.textContent = n, sinoH.classList.remove('d-none')) : sinoH.classList.add('d-none');
+    }
+}
+
+async function hubMarcarTodosLidos() {
+    const fd = new FormData();
+    fd.append('acao', 'marcar_todos_lidos');
+    await fetch('/modulos/configuracao/anotacoes/ajax_anotacao.php', { method: 'POST', body: fd });
+    location.reload();
+}
+
+function _hubAtualizarBadges(delta) {
+    const badgeHub    = document.getElementById('badge-hub-avisos');
+    const badgeCount  = document.getElementById('badge-avisos-painel-count');
+    if (badgeHub) {
+        let n = (parseInt(badgeHub.textContent) || 0) + delta;
+        n = Math.max(0, n);
+        if (n > 0) { badgeHub.textContent = n; badgeHub.classList.remove('d-none'); }
+        else { badgeHub.classList.add('d-none'); }
+    }
+    if (badgeCount) {
+        let n = (parseInt(badgeCount.textContent) || 0) + delta;
+        n = Math.max(0, n);
+        badgeCount.textContent = n > 0 ? n + (n === 1 ? ' não lido' : ' não lidos') : '';
+        if (n === 0) badgeCount.remove();
     }
 }
 </script>

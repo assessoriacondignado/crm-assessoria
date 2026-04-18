@@ -19,7 +19,9 @@
     const ICONS = { success:'fa-check-circle', error:'fa-times-circle', warning:'fa-exclamation-triangle', info:'fa-info-circle' };
     window.crmToast = function(msg, tipo, duracao) {
         tipo = tipo || 'success';
-        duracao = (duracao !== undefined) ? duracao : (tipo === 'error' ? 6000 : tipo === 'warning' ? 5000 : 4000);
+        // duracao=0 ou não informado = permanente (usuário fecha com X)
+        // duracao>0 = auto-fecha após N ms (legado, uso explícito)
+        duracao = (duracao !== undefined && duracao > 0) ? duracao : 0;
         const wrap = document.getElementById('crm-toast-wrap');
         if (!wrap) return;
         const t = document.createElement('div');
@@ -29,10 +31,12 @@
                     + '<button class="crm-toast-close" onclick="this.parentNode.remove()">&times;</button>';
         wrap.appendChild(t);
         requestAnimationFrame(function(){ requestAnimationFrame(function(){ t.classList.add('in'); }); });
-        setTimeout(function(){
-            t.classList.remove('in');
-            setTimeout(function(){ if(t.parentNode) t.parentNode.removeChild(t); }, 320);
-        }, duracao);
+        if (duracao > 0) {
+            setTimeout(function(){
+                t.classList.remove('in');
+                setTimeout(function(){ if(t.parentNode) t.parentNode.removeChild(t); }, 320);
+            }, duracao);
+        }
     };
     /* Alias para compatibilidade com o módulo V8 */
     window.v8Toast = window.crmToast;
