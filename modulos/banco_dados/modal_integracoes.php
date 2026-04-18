@@ -322,16 +322,18 @@ if (empty($cpf_para_integracao) && isset($termo_busca)) {
         let fd = new FormData();
         fd.append('acao', 'listar_chaves_acesso');
         fetch('/modulos/configuracao/v8_clt_margem_e_digitacao/v8_api.ajax.php', { method: 'POST', body: fd })
-            .then(r => r.json())
+            .then(async r => { const t = await r.text(); try { return JSON.parse(t); } catch(e) { throw new Error(t.substring(0,120)); } })
             .then(r => {
                 if (!r.success || !r.data || r.data.length === 0) {
                     return exibirErroIntegracao("Você não possui uma chave V8 ativa. Solicite ao administrador para cadastrar sua carteira.");
                 }
-                // Usa a primeira chave disponível do usuário
-                document.getElementById('integ_chave_alvo').value = r.data[0].ID;
+                const chave = r.data[0];
+                // Insere a opção no select para que o value seja reconhecido pelo executarIntegracaoUnica
+                const sel = document.getElementById('integ_chave_alvo');
+                sel.innerHTML = `<option value="${chave.ID}" selected>${chave.CLIENTE_NOME || 'Minha chave'}</option>`;
                 executarIntegracaoUnica();
             })
-            .catch(() => exibirErroIntegracao("Falha ao identificar sua chave V8. Verifique a conexão e tente novamente."));
+            .catch(err => exibirErroIntegracao("Falha ao identificar sua chave V8. " + (err.message || "Verifique a conexão.")));
     }
 
     function executarV8ComDadosManuais() {
