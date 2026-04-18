@@ -211,239 +211,207 @@ try {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* VISUAL UNIFORME E MINIMALISTA */
-        body { background-color: #f8f9fa; font-family: 'Segoe UI', Roboto, sans-serif; }
-        
-        .navbar-custom { background-color: #ffffff; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border-bottom: 1px solid #eaeaea; padding: 0.5rem 2rem; position: relative; z-index: 9999; }
-        .navbar-custom .nav-link { color: #444444; font-weight: 500; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; padding: 10px 15px; transition: color 0.2s; }
-        .navbar-custom .nav-link:hover, .navbar-custom .nav-link:focus { color: #0d6efd; }
-        .navbar-custom .nav-link i { margin-right: 6px; font-size: 14px; color: #666; }
-        
-        .dropdown-menu { border: 1px solid #eaeaea; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius: 6px; padding: 8px 0; margin-top: 5px; z-index: 10000; }
-        .dropdown-item { color: #555; font-size: 14px; padding: 8px 20px; transition: all 0.2s; }
-        .dropdown-item i { width: 20px; color: #777; margin-right: 8px; text-align: center; }
-        .dropdown-item:hover { background-color: #f4f6f9; color: #0d6efd; }
-        .dropdown-item:hover i { color: #0d6efd; }
-        
+        /* ============================================================
+           BASE
+        ============================================================ */
+        body { background-color: #f8f9fa; font-family: 'Segoe UI', Roboto, sans-serif; padding-top: 54px; }
+
+        /* ============================================================
+           TOPBAR SLIM
+        ============================================================ */
+        .topbar {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+            height: 54px;
+            background: #fff;
+            border-bottom: 1px solid #e0e0e0;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+            display: flex; align-items: center;
+            padding: 0 18px; gap: 10px;
+        }
+        .topbar-toggle {
+            background: none; border: none; cursor: pointer;
+            color: #444; font-size: 20px; padding: 4px 8px;
+            border-radius: 6px; transition: background .15s, color .15s;
+            display: flex; align-items: center;
+        }
+        .topbar-toggle:hover { background: #f0f0f0; color: #b02a37; }
+        .topbar-brand {
+            font-weight: 700; font-size: 15px; letter-spacing: 1px;
+            color: #b02a37; white-space: nowrap;
+        }
+        .topbar-right {
+            margin-left: auto; display: flex; align-items: center; gap: 8px;
+        }
         .user-profile { display: flex; align-items: center; text-align: right; line-height: 1.2; }
         .user-name { font-weight: 600; color: #333; font-size: 14px; margin-bottom: 0; }
-        
-        .user-status { font-size: 11px; color: #198754; font-weight: bold; transition: color 0.2s;}
+        .user-status { font-size: 11px; color: #198754; font-weight: bold; transition: color 0.2s; }
         .user-status.clickable:hover { color: #0d6efd; cursor: pointer; text-decoration: underline; }
-        
-        .user-avatar { font-size: 26px; color: #666; margin-left: 10px; cursor: pointer; transition: 0.2s;}
+        .user-avatar { font-size: 26px; color: #666; margin-left: 10px; cursor: pointer; transition: 0.2s; }
         .user-avatar:hover { color: #0d6efd; }
-        
-        .conteudo-principal { margin: 20px auto; padding: 30px; background: #fff; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.03); min-height: calc(100vh - 110px); }
+
+        /* ============================================================
+           SIDEBAR OVERLAY + PAINEL
+        ============================================================ */
+        .sidebar-overlay {
+            position: fixed; inset: 0;
+            background: rgba(0,0,0,0.48);
+            z-index: 99997;
+            opacity: 0; pointer-events: none;
+            transition: opacity .25s;
+        }
+        .sidebar-overlay.aberto { opacity: 1; pointer-events: all; }
+
+        .sidebar-panel {
+            position: fixed; top: 0; left: 0; bottom: 0;
+            width: 285px;
+            background: #16213e;
+            z-index: 99998;
+            display: flex; flex-direction: column;
+            transform: translateX(-100%);
+            transition: transform .25s cubic-bezier(.4,0,.2,1);
+            overflow: hidden;
+        }
+        .sidebar-overlay.aberto .sidebar-panel { transform: translateX(0); }
+
+        /* Cabeçalho da sidebar */
+        .sidebar-head {
+            background: #b02a37;
+            padding: 14px 16px 14px 18px;
+            display: flex; align-items: center; justify-content: space-between;
+            flex-shrink: 0;
+        }
+        .sidebar-head-title {
+            color: #fff; font-weight: 700; font-size: 14px; letter-spacing: 1.5px;
+            display: flex; align-items: center; gap: 9px;
+        }
+        .sidebar-close {
+            background: none; border: none; color: rgba(255,255,255,.75);
+            font-size: 22px; line-height: 1; cursor: pointer; padding: 0 4px;
+            transition: color .15s;
+        }
+        .sidebar-close:hover { color: #fff; }
+
+        /* Área de scroll dos itens */
+        .sidebar-body {
+            flex: 1; overflow-y: auto; padding: 6px 0 16px;
+        }
+        .sidebar-body::-webkit-scrollbar { width: 4px; }
+        .sidebar-body::-webkit-scrollbar-thumb { background: rgba(255,255,255,.15); border-radius: 4px; }
+
+        /* Seção com título */
+        .sidebar-section-title {
+            font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
+            color: rgba(255,255,255,.3); text-transform: uppercase;
+            padding: 14px 18px 5px;
+        }
+
+        /* Item com submenu */
+        .sidebar-item {
+            display: flex; align-items: center; gap: 10px;
+            width: 100%; padding: 10px 18px;
+            background: none; border: none;
+            color: #c8d0e0; font-size: 13px; font-weight: 500;
+            text-transform: uppercase; letter-spacing: .5px;
+            cursor: pointer; text-align: left;
+            transition: background .15s, color .15s;
+            position: relative;
+        }
+        .sidebar-item:hover { background: rgba(255,255,255,.07); color: #fff; }
+        .sidebar-item.ativo { background: rgba(176,42,55,.18); color: #ff8a8a; }
+        .sidebar-item i.menu-icon { width: 18px; text-align: center; font-size: 14px; flex-shrink: 0; }
+        .sidebar-chevron {
+            margin-left: auto; font-size: 10px; color: rgba(255,255,255,.35);
+            transition: transform .2s; flex-shrink: 0;
+        }
+        .sidebar-item.aberto .sidebar-chevron { transform: rotate(180deg); }
+        .sidebar-item.campanha { color: #ff8a8a; }
+        .sidebar-item.campanha i { color: #ff8a8a; }
+
+        /* Submenu colapsável */
+        .sidebar-sub {
+            overflow: hidden; max-height: 0;
+            transition: max-height .3s ease;
+        }
+        .sidebar-sub.aberto { max-height: 600px; }
+        .sidebar-subitem {
+            display: flex; align-items: center; gap: 9px;
+            padding: 8px 18px 8px 46px;
+            color: #8da0bb; font-size: 12.5px;
+            text-decoration: none;
+            transition: background .15s, color .15s;
+        }
+        .sidebar-subitem:hover { background: rgba(255,255,255,.05); color: #fff; }
+        .sidebar-subitem i { width: 16px; text-align: center; font-size: 12px; flex-shrink: 0; }
+
+        /* Link simples (sem submenu) */
+        .sidebar-link {
+            display: flex; align-items: center; gap: 10px;
+            padding: 10px 18px;
+            color: #c8d0e0; font-size: 13px; font-weight: 500;
+            text-transform: uppercase; letter-spacing: .5px;
+            text-decoration: none;
+            transition: background .15s, color .15s;
+        }
+        .sidebar-link:hover { background: rgba(255,255,255,.07); color: #fff; }
+        .sidebar-link i { width: 18px; text-align: center; font-size: 14px; flex-shrink: 0; }
+
+        /* Divisor */
+        .sidebar-divider { border-top: 1px solid rgba(255,255,255,.06); margin: 6px 0; }
+
+        /* ============================================================
+           CONTEÚDO PRINCIPAL
+        ============================================================ */
+        .conteudo-principal {
+            margin: 20px auto; padding: 30px;
+            background: #fff; border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.03);
+            min-height: calc(100vh - 94px);
+        }
 
         /* Painel de avisos internos */
         .aviso-item-header:hover { background: #f8f9ff !important; }
         #avisos-panel-header { animation: slideDownPanel .18s ease; }
         @keyframes slideDownPanel { from { opacity:0; transform:translateY(-6px); } to { opacity:1; transform:translateY(0); } }
+
+        /* Dropdown do topbar */
+        .topbar .dropdown-menu {
+            border: 1px solid #eaeaea; box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+            border-radius: 6px; padding: 8px 0; z-index: 100000;
+        }
+        .topbar .dropdown-item { color: #555; font-size: 14px; padding: 8px 20px; }
+        .topbar .dropdown-item i { width: 20px; color: #777; margin-right: 8px; }
+        .topbar .dropdown-item:hover { background: #f4f6f9; color: #0d6efd; }
     </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-custom">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
-      <span class="navbar-toggler-icon"></span>
+<!-- ================================================================
+     TOPBAR SLIM
+================================================================ -->
+<div class="topbar">
+    <!-- Botão hamburguer -->
+    <button class="topbar-toggle" onclick="sidebarAbrir()" title="Menu">
+        <i class="fas fa-bars"></i>
     </button>
-    
-    <div class="collapse navbar-collapse" id="menuPrincipal">
-      
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        
-        <?php if(podeAcessarMenu($pdo, 'MENU_USUARIO')): ?>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-            <i class="fas fa-users-cog"></i> Usuário
-          </a>
-          <ul class="dropdown-menu shadow-sm">
-            <?php if(podeAcessarMenu($pdo, 'SUBMENU_CADASTRO_USUARIO')): ?>
-            <li><a class="dropdown-item" href="/modulos/cliente_e_usuario/cadastro_usuario.php"><i class="fas fa-user-shield"></i> Cadastro Usuário</a></li>
-            <?php endif; ?>
-            <?php if(podeAcessarMenu($pdo, 'USUARIO_FINANCEIRO')): ?>
-            <li><a class="dropdown-item" href="/modulos/cliente_e_usuario/cadastro_cliente_financeiro.php"><i class="fas fa-wallet"></i> Painel Financeiro</a></li>
-            <?php endif; ?>
-            <?php if(podeAcessarMenu($pdo, 'SUBMENU_GESTAO_PERMISSOES')): ?>
-            <li><a class="dropdown-item" href="/modulos/cliente_e_usuario/permissoes.php"><i class="fas fa-key"></i> Gestão de Permissões</a></li>
-            <?php endif; ?>
-            
-            <?php if(podeAcessarMenu($pdo, 'SUBMENU_CADASTRO_CLIENTE')): ?>
-            <li><a class="dropdown-item" href="/modulos/cliente_e_usuario/cadastro_cliente.php"><i class="fas fa-user"></i> Cadastro Cliente</a></li>
-            <?php endif; ?>
-            
-            <?php if(podeAcessarMenu($pdo, 'SUBMENU_CADASTRO_EMPRESA')): ?>
-            <li><a class="dropdown-item" href="/modulos/cliente_e_usuario/cadastro_empresa.php"><i class="fas fa-building"></i> Cadastro Empresa</a></li>
-            <?php endif; ?>
-            
-            <?php if(podeAcessarMenu($pdo, 'SUBMENU_CADASTRO_CONSIGNADO')): ?>
-            <li><a class="dropdown-item" href="/modulos/cadastro_cliente_consignado/index.php"><i class="fas fa-address-card"></i> Cadastro Consignado</a></li>
-            <?php endif; ?>
-          </ul>
-        </li>
-        <?php endif; ?>
 
-        <?php if(podeAcessarMenu($pdo, 'MENU_CAMPANHA')): ?>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-danger" href="#" role="button" data-bs-toggle="dropdown">
-            <i class="fas fa-bullhorn text-danger"></i> Campanhas
-          </a>
-          <ul class="dropdown-menu shadow-sm border-danger border-top-0 border-end-0 border-bottom-0 border-3">
-            <li><a class="dropdown-item" href="/modulos/campanhas/index.php"><i class="fas fa-list text-danger"></i> Relação de Campanhas</a></li>
-            <?php if(podeAcessarMenu($pdo, 'SUBMENU_STATUS')): ?>
-            <li><a class="dropdown-item" href="/modulos/campanhas/status.php"><i class="fas fa-tags text-primary"></i> Status e Qualificações</a></li>
-            <?php endif; ?>
-            <li><a class="dropdown-item" href="/modulos/campanhas/agenda.php"><i class="fas fa-calendar-alt text-success"></i> Minha Agenda</a></li>
-          </ul>
-        </li>
-        <?php endif; ?>
+    <!-- Brand -->
+    <span class="topbar-brand">CRM</span>
 
-        <?php if(podeAcessarMenu($pdo, 'MENU_BANCO_DADOS')): ?>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-            <i class="fas fa-database"></i> Banco de Dados
-          </a>
-          <ul class="dropdown-menu shadow-sm">
-            <?php if(podeAcessarMenu($pdo, 'SUBMENU_BD_CONSULTA')): ?>
-            <li><a class="dropdown-item" href="/modulos/banco_dados/consulta.php"><i class="fas fa-search"></i> Consulta</a></li>
-            <?php endif; ?>
-            
-            <?php if(podeAcessarMenu($pdo, 'SUBMENU_BD_IMPORTACAO')): ?>
-            <li><a class="dropdown-item" href="/modulos/banco_dados/importacao.php"><i class="fas fa-file-import"></i> Importação</a></li>
-            <?php endif; ?>
-            
-            <?php if(podeAcessarMenu($pdo, 'SUBMENU_BD_EXPORTACAO')): ?>
-            <li><a class="dropdown-item" href="/modulos/banco_dados/exportacao.php"><i class="fas fa-file-export"></i> Exportação</a></li>
-            <?php endif; ?>
-          </ul>
-        </li>
-        <?php endif; ?>
+    <!-- Controles à direita -->
+    <div class="topbar-right">
 
-        <?php if(podeAcessarMenu($pdo, 'MENU_BANCO_PLANILHAS')): ?>
-        <li class="nav-item">
-          <a class="nav-link" href="/modulos/banco_planilhas/index.php"><i class="fas fa-server"></i> Banco de Planilhas</a>
-        </li>
-        <?php endif; ?>
+        <!-- Início -->
+        <a href="/index.php" class="btn btn-outline-dark btn-sm fw-bold border-2">
+            <i class="fas fa-home me-1"></i> Início
+        </a>
 
-        <?php if(podeAcessarMenu($pdo, 'MENU_OPERACIONAL')): ?>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-            <i class="fas fa-briefcase"></i> Operacional
-          </a>
-          <ul class="dropdown-menu shadow-sm">
-            <?php if(podeAcessarMenu($pdo, 'SUBMENU_OP_META_ADS')): ?>
-            <li><a class="dropdown-item" href="/modulos/meta_ads/index.php"><i class="fab fa-meta"></i> META ADS</a></li>
-            <?php endif; ?>
-            
-            <?php if(podeAcessarMenu($pdo, 'SUBMENU_OP_HIST_INSS')): ?>
-            <li><a class="dropdown-item" href="/modulos/configuracao/Promosys_inss/index.php"><i class="fas fa-university"></i> HIST INSS</a></li>
-            <?php endif; ?>
-            
-            <?php if(podeAcessarMenu($pdo, 'SUBMENU_OP_TAREFAS')): ?>
-            <li><a class="dropdown-item" href="/modulos/operacional/tarefas/index.php"><i class="fas fa-tasks"></i> Controle de Tarefas</a></li>
-            <?php endif; ?>
-            
-            <?php if(podeAcessarMenu($pdo, 'SUBMENU_OP_FATOR_CONFERI')): ?>
-            <li><a class="dropdown-item" href="/modulos/configuracao/fator_conferi/index.php"><i class="fas fa-search-dollar"></i> Fator Conferi</a></li>
-            <?php endif; ?>
-            
-            <?php if(podeAcessarMenu($pdo, 'SUBMENU_OP_INTEGRACAO_V8')): ?>
-            <li><a class="dropdown-item" href="/modulos/configuracao/v8_clt_margem_e_digitacao/index.php"><i class="fas fa-handshake"></i> Integração V8 Digital</a></li>
-            <?php endif; ?>
-            
-            <?php if(podeAcessarMenu($pdo, 'SUBMENU_OP_WHATS_API')): ?>
-            <li><a class="dropdown-item" href="/modulos/configuracao/whats_api_oficial/index.php"><i class="fab fa-whatsapp"></i> WHATS API OFICIAL</a></li>
-            <?php endif; ?>
-
-            <?php if(podeAcessarMenu($pdo, 'SUBMENU_OP_WAPI')): ?>
-            <li><a class="dropdown-item" href="/modulos/configuracao/w-api/index.php"><i class="fas fa-robot"></i> W-API (Múltiplas Conexões)</a></li>
-            <?php endif; ?>
-            
-          </ul>
-        </li>
-        <?php endif; ?>
-
-        <?php if(podeAcessarMenu($pdo, 'MENU_COMERCIAL')): ?>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-            <i class="fas fa-store"></i> Comercial
-          </a>
-          <ul class="dropdown-menu shadow-sm">
-            <?php if(podeAcessarMenu($pdo, 'SUBMENU_COM_PRODUTOS')): ?>
-            <li><a class="dropdown-item" href="/modulos/comercial/produtos/index.php"><i class="fas fa-box-open"></i> Catálogo de Produtos</a></li>
-            <?php endif; ?>
-            
-            <?php if(podeAcessarMenu($pdo, 'SUBMENU_COM_PEDIDOS')): ?>
-            <li><a class="dropdown-item" href="/modulos/comercial/pedidos/index.php"><i class="fas fa-shopping-cart"></i> Pedidos e Renovações</a></li>
-            <?php endif; ?>
-            
-            <?php if(podeAcessarMenu($pdo, 'SUBMENU_COM_ENTREGAS')): ?>
-            <li><a class="dropdown-item" href="/modulos/comercial/entregas/index.php"><i class="fas fa-truck"></i> Logística e Entregas</a></li>
-            <?php endif; ?>
-            
-            <?php if(podeAcessarMenu($pdo, 'SUBMENU_COM_COMISSOES')): ?>
-            <li><a class="dropdown-item" href="/modulos/comercial/comissao/index.php"><i class="fas fa-hand-holding-usd"></i> Gestão de Comissões</a></li>
-            <?php endif; ?>
-          </ul>
-        </li>
-        <?php endif; ?>
-
-        <?php if(podeAcessarMenu($pdo, 'MENU_FINANCEIRO')): ?>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-            <i class="fas fa-wallet"></i> Financeiro
-          </a>
-          <ul class="dropdown-menu shadow-sm">
-            <?php if(podeAcessarMenu($pdo, 'SUBMENU_FIN_PAINEL')): ?>
-            <li><a class="dropdown-item" href="/modulos/financeiro/index.php"><i class="fas fa-chart-pie"></i> Painel Financeiro</a></li>
-            <?php endif; ?>
-          </ul>
-        </li>
-        <?php endif; ?>
-
-        <?php if(podeAcessarMenu($pdo, 'MENU_CONFIGURACAO')): ?>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-            <i class="fas fa-cog"></i> Configuração
-          </a>
-          <ul class="dropdown-menu shadow-sm">
-            <?php if(podeAcessarMenu($pdo, 'SUBMENU_CONF_GERAL')): ?>
-            <li><a class="dropdown-item" href="/modulos/configuracao/index.php"><i class="fas fa-sliders-h"></i> Configuração Geral</a></li>
-            <?php endif; ?>
-            
-            <?php if(podeAcessarMenu($pdo, 'SUBMENU_CONF_MYSQL')): ?>
-            <li><a class="dropdown-item" href="/modulos/configuracao/resumo_mysql.php"><i class="fas fa-table"></i> Resumo MySQL</a></li>
-            <?php endif; ?>
-
-            <?php if(podeAcessarMenu($pdo, 'SUBMENU_ANOTACOES_GERAIS')): ?>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/modulos/configuracao/anotacoes/index.php"><i class="fas fa-sticky-note"></i> Anotações Gerais</a></li>
-            <?php endif; ?>
-
-          </ul>
-        </li>
-        <?php endif; ?>
-
-      </ul>
-
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center">
-          
-        <li class="nav-item me-2">
-            <a href="/index.php" class="btn btn-outline-dark btn-sm fw-bold border-2">
-                <i class="fas fa-home me-1"></i> Início
-            </a>
-        </li>
-
-        <!-- SINO DE AVISOS INTERNOS -->
-        <li class="nav-item me-3 position-relative" id="li-sino-avisos">
+        <!-- Sino de avisos -->
+        <div class="position-relative" id="li-sino-avisos">
             <button class="btn btn-outline-dark btn-sm fw-bold border-2 position-relative" onclick="toggleAvisosPanel(event)" id="btnSino" title="Avisos Internos">
                 <i class="fas fa-bell"></i>
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger <?= $nao_lidos_h === 0 ? 'd-none' : '' ?>" id="badge-avisos-h" style="font-size:0.55rem; min-width:18px;"><?= $nao_lidos_h ?: '' ?></span>
             </button>
-
-            <!-- PAINEL DE AVISOS -->
+            <!-- Painel de avisos -->
             <div id="avisos-panel-header" style="display:none; position:absolute; top:calc(100% + 8px); right:0; width:370px; background:#fff; border:1px solid #dee2e6; border-radius:8px; box-shadow:0 8px 28px rgba(0,0,0,0.18); z-index:99999; overflow:hidden;">
                 <div class="d-flex justify-content-between align-items-center px-3 py-2" style="background:#dc3545; border-radius:8px 8px 0 0;">
                     <span class="fw-bold text-white small"><i class="fas fa-bell me-1"></i> Avisos Internos</span>
@@ -486,42 +454,246 @@ try {
                     </a>
                 </div>
             </div>
-        </li>
+        </div>
 
-        <li class="nav-item me-3">
-            <button class="btn btn-success btn-sm fw-bold shadow-sm border-0" style="background-color: #25D366;" onclick="abrirModalSuporteLogado()">
-                <i class="fab fa-whatsapp me-1"></i> Falar com Suporte
-            </button>
-        </li>
-        
-      </ul>
-      
-      <div class="user-profile border-start ps-3 ms-1">
-        <div>
-            <p class="user-name">Olá, <?= htmlspecialchars($primeiro_nome) ?></p>
-            
-            <?php if($pode_ver_online): ?>
-                <span class="user-status clickable" onclick="carregarUsuariosOnline(true)" title="Ver usuários online">
-                    <i class="fas fa-circle text-success" style="font-size: 8px;"></i> <span id="topo_contador_online">0</span> Online
-                </span>
-            <?php else: ?>
-                <span class="user-status"><i class="fas fa-circle text-success" style="font-size: 8px;"></i> Online</span>
-            <?php endif; ?>
-            
+        <!-- Suporte -->
+        <button class="btn btn-success btn-sm fw-bold shadow-sm border-0" style="background-color: #25D366;" onclick="abrirModalSuporteLogado()">
+            <i class="fab fa-whatsapp me-1"></i> <span class="d-none d-md-inline">Falar com Suporte</span>
+        </button>
+
+        <!-- Usuário -->
+        <div class="user-profile border-start ps-3 ms-1">
+            <div>
+                <p class="user-name mb-0">Olá, <?= htmlspecialchars($primeiro_nome) ?></p>
+                <?php if($pode_ver_online): ?>
+                    <span class="user-status clickable" onclick="carregarUsuariosOnline(true)" title="Ver usuários online">
+                        <i class="fas fa-circle text-success" style="font-size:8px;"></i> <span id="topo_contador_online">0</span> Online
+                    </span>
+                <?php else: ?>
+                    <span class="user-status"><i class="fas fa-circle text-success" style="font-size:8px;"></i> Online</span>
+                <?php endif; ?>
+            </div>
+            <div class="dropdown">
+                <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration:none;">
+                    <i class="fas fa-user-circle user-avatar text-dark"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                    <li><a class="dropdown-item text-danger fw-bold" href="/logout.php"><i class="fas fa-sign-out-alt text-danger"></i> Sair do Sistema</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="dropdown">
-            <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;">
-                <i class="fas fa-user-circle user-avatar text-dark"></i>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-                <li><a class="dropdown-item text-danger fw-bold" href="/logout.php"><i class="fas fa-sign-out-alt text-danger"></i> Sair do Sistema</a></li>
-            </ul>
-        </div>
-      </div>
 
     </div>
-  </div>
-</nav>
+</div>
+
+<!-- ================================================================
+     SIDEBAR OVERLAY + PAINEL
+================================================================ -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="sidebarFecharOverlay(event)">
+    <div class="sidebar-panel" id="sidebarPanel">
+
+        <!-- Cabeçalho -->
+        <div class="sidebar-head">
+            <div class="sidebar-head-title">
+                <i class="fas fa-th-large"></i> MENU PRINCIPAL
+            </div>
+            <button class="sidebar-close" onclick="sidebarFechar()" title="Fechar">&times;</button>
+        </div>
+
+        <!-- Itens -->
+        <div class="sidebar-body">
+
+            <?php if(podeAcessarMenu($pdo, 'MENU_USUARIO')): ?>
+            <div class="sidebar-section-title">Gestão</div>
+            <button class="sidebar-item" onclick="sidebarToggleSub(this)">
+                <i class="fas fa-users-cog menu-icon"></i> Usuário
+                <i class="fas fa-chevron-down sidebar-chevron"></i>
+            </button>
+            <div class="sidebar-sub">
+                <?php if(podeAcessarMenu($pdo, 'SUBMENU_CADASTRO_USUARIO')): ?>
+                <a class="sidebar-subitem" href="/modulos/cliente_e_usuario/cadastro_usuario.php"><i class="fas fa-user-shield"></i> Cadastro Usuário</a>
+                <?php endif; ?>
+                <?php if(podeAcessarMenu($pdo, 'USUARIO_FINANCEIRO')): ?>
+                <a class="sidebar-subitem" href="/modulos/cliente_e_usuario/cadastro_cliente_financeiro.php"><i class="fas fa-wallet"></i> Painel Financeiro</a>
+                <?php endif; ?>
+                <?php if(podeAcessarMenu($pdo, 'SUBMENU_GESTAO_PERMISSOES')): ?>
+                <a class="sidebar-subitem" href="/modulos/cliente_e_usuario/permissoes.php"><i class="fas fa-key"></i> Gestão de Permissões</a>
+                <?php endif; ?>
+                <?php if(podeAcessarMenu($pdo, 'SUBMENU_CADASTRO_CLIENTE')): ?>
+                <a class="sidebar-subitem" href="/modulos/cliente_e_usuario/cadastro_cliente.php"><i class="fas fa-user"></i> Cadastro Cliente</a>
+                <?php endif; ?>
+                <?php if(podeAcessarMenu($pdo, 'SUBMENU_CADASTRO_EMPRESA')): ?>
+                <a class="sidebar-subitem" href="/modulos/cliente_e_usuario/cadastro_empresa.php"><i class="fas fa-building"></i> Cadastro Empresa</a>
+                <?php endif; ?>
+                <?php if(podeAcessarMenu($pdo, 'SUBMENU_CADASTRO_CONSIGNADO')): ?>
+                <a class="sidebar-subitem" href="/modulos/cadastro_cliente_consignado/index.php"><i class="fas fa-address-card"></i> Cadastro Consignado</a>
+                <?php endif; ?>
+            </div>
+            <?php endif; ?>
+
+            <?php if(podeAcessarMenu($pdo, 'MENU_CAMPANHA')): ?>
+            <div class="sidebar-divider"></div>
+            <button class="sidebar-item campanha" onclick="sidebarToggleSub(this)">
+                <i class="fas fa-bullhorn menu-icon"></i> Campanhas
+                <i class="fas fa-chevron-down sidebar-chevron"></i>
+            </button>
+            <div class="sidebar-sub">
+                <a class="sidebar-subitem" href="/modulos/campanhas/index.php"><i class="fas fa-list"></i> Relação de Campanhas</a>
+                <?php if(podeAcessarMenu($pdo, 'SUBMENU_STATUS')): ?>
+                <a class="sidebar-subitem" href="/modulos/campanhas/status.php"><i class="fas fa-tags"></i> Status e Qualificações</a>
+                <?php endif; ?>
+                <a class="sidebar-subitem" href="/modulos/campanhas/agenda.php"><i class="fas fa-calendar-alt"></i> Minha Agenda</a>
+            </div>
+            <?php endif; ?>
+
+            <?php if(podeAcessarMenu($pdo, 'MENU_BANCO_DADOS')): ?>
+            <div class="sidebar-divider"></div>
+            <button class="sidebar-item" onclick="sidebarToggleSub(this)">
+                <i class="fas fa-database menu-icon"></i> Banco de Dados
+                <i class="fas fa-chevron-down sidebar-chevron"></i>
+            </button>
+            <div class="sidebar-sub">
+                <?php if(podeAcessarMenu($pdo, 'SUBMENU_BD_CONSULTA')): ?>
+                <a class="sidebar-subitem" href="/modulos/banco_dados/consulta.php"><i class="fas fa-search"></i> Consulta</a>
+                <?php endif; ?>
+                <?php if(podeAcessarMenu($pdo, 'SUBMENU_BD_IMPORTACAO')): ?>
+                <a class="sidebar-subitem" href="/modulos/banco_dados/importacao.php"><i class="fas fa-file-import"></i> Importação</a>
+                <?php endif; ?>
+                <?php if(podeAcessarMenu($pdo, 'SUBMENU_BD_EXPORTACAO')): ?>
+                <a class="sidebar-subitem" href="/modulos/banco_dados/exportacao.php"><i class="fas fa-file-export"></i> Exportação</a>
+                <?php endif; ?>
+            </div>
+            <?php endif; ?>
+
+            <?php if(podeAcessarMenu($pdo, 'MENU_BANCO_PLANILHAS')): ?>
+            <div class="sidebar-divider"></div>
+            <a class="sidebar-link" href="/modulos/banco_planilhas/index.php">
+                <i class="fas fa-server menu-icon"></i> Banco de Planilhas
+            </a>
+            <?php endif; ?>
+
+            <?php if(podeAcessarMenu($pdo, 'MENU_OPERACIONAL')): ?>
+            <div class="sidebar-divider"></div>
+            <button class="sidebar-item" onclick="sidebarToggleSub(this)">
+                <i class="fas fa-briefcase menu-icon"></i> Operacional
+                <i class="fas fa-chevron-down sidebar-chevron"></i>
+            </button>
+            <div class="sidebar-sub">
+                <?php if(podeAcessarMenu($pdo, 'SUBMENU_OP_META_ADS')): ?>
+                <a class="sidebar-subitem" href="/modulos/meta_ads/index.php"><i class="fab fa-meta"></i> META ADS</a>
+                <?php endif; ?>
+                <?php if(podeAcessarMenu($pdo, 'SUBMENU_OP_HIST_INSS')): ?>
+                <a class="sidebar-subitem" href="/modulos/configuracao/Promosys_inss/index.php"><i class="fas fa-university"></i> HIST INSS</a>
+                <?php endif; ?>
+                <?php if(podeAcessarMenu($pdo, 'SUBMENU_OP_TAREFAS')): ?>
+                <a class="sidebar-subitem" href="/modulos/operacional/tarefas/index.php"><i class="fas fa-tasks"></i> Controle de Tarefas</a>
+                <?php endif; ?>
+                <?php if(podeAcessarMenu($pdo, 'SUBMENU_OP_FATOR_CONFERI')): ?>
+                <a class="sidebar-subitem" href="/modulos/configuracao/fator_conferi/index.php"><i class="fas fa-search-dollar"></i> Fator Conferi</a>
+                <?php endif; ?>
+                <?php if(podeAcessarMenu($pdo, 'SUBMENU_OP_INTEGRACAO_V8')): ?>
+                <a class="sidebar-subitem" href="/modulos/configuracao/v8_clt_margem_e_digitacao/index.php"><i class="fas fa-handshake"></i> Integração V8 Digital</a>
+                <?php endif; ?>
+                <?php if(podeAcessarMenu($pdo, 'SUBMENU_OP_WHATS_API')): ?>
+                <a class="sidebar-subitem" href="/modulos/configuracao/whats_api_oficial/index.php"><i class="fab fa-whatsapp"></i> WHATS API OFICIAL</a>
+                <?php endif; ?>
+                <?php if(podeAcessarMenu($pdo, 'SUBMENU_OP_WAPI')): ?>
+                <a class="sidebar-subitem" href="/modulos/configuracao/w-api/index.php"><i class="fas fa-robot"></i> W-API (Múltiplas Conexões)</a>
+                <?php endif; ?>
+            </div>
+            <?php endif; ?>
+
+            <?php if(podeAcessarMenu($pdo, 'MENU_COMERCIAL')): ?>
+            <div class="sidebar-divider"></div>
+            <button class="sidebar-item" onclick="sidebarToggleSub(this)">
+                <i class="fas fa-store menu-icon"></i> Comercial
+                <i class="fas fa-chevron-down sidebar-chevron"></i>
+            </button>
+            <div class="sidebar-sub">
+                <?php if(podeAcessarMenu($pdo, 'SUBMENU_COM_PRODUTOS')): ?>
+                <a class="sidebar-subitem" href="/modulos/comercial/produtos/index.php"><i class="fas fa-box-open"></i> Catálogo de Produtos</a>
+                <?php endif; ?>
+                <?php if(podeAcessarMenu($pdo, 'SUBMENU_COM_PEDIDOS')): ?>
+                <a class="sidebar-subitem" href="/modulos/comercial/pedidos/index.php"><i class="fas fa-shopping-cart"></i> Pedidos e Renovações</a>
+                <?php endif; ?>
+                <?php if(podeAcessarMenu($pdo, 'SUBMENU_COM_ENTREGAS')): ?>
+                <a class="sidebar-subitem" href="/modulos/comercial/entregas/index.php"><i class="fas fa-truck"></i> Logística e Entregas</a>
+                <?php endif; ?>
+                <?php if(podeAcessarMenu($pdo, 'SUBMENU_COM_COMISSOES')): ?>
+                <a class="sidebar-subitem" href="/modulos/comercial/comissao/index.php"><i class="fas fa-hand-holding-usd"></i> Gestão de Comissões</a>
+                <?php endif; ?>
+            </div>
+            <?php endif; ?>
+
+            <?php if(podeAcessarMenu($pdo, 'MENU_FINANCEIRO')): ?>
+            <div class="sidebar-divider"></div>
+            <button class="sidebar-item" onclick="sidebarToggleSub(this)">
+                <i class="fas fa-wallet menu-icon"></i> Financeiro
+                <i class="fas fa-chevron-down sidebar-chevron"></i>
+            </button>
+            <div class="sidebar-sub">
+                <?php if(podeAcessarMenu($pdo, 'SUBMENU_FIN_PAINEL')): ?>
+                <a class="sidebar-subitem" href="/modulos/financeiro/index.php"><i class="fas fa-chart-pie"></i> Painel Financeiro</a>
+                <?php endif; ?>
+            </div>
+            <?php endif; ?>
+
+            <?php if(podeAcessarMenu($pdo, 'MENU_CONFIGURACAO')): ?>
+            <div class="sidebar-divider"></div>
+            <button class="sidebar-item" onclick="sidebarToggleSub(this)">
+                <i class="fas fa-cog menu-icon"></i> Configuração
+                <i class="fas fa-chevron-down sidebar-chevron"></i>
+            </button>
+            <div class="sidebar-sub">
+                <?php if(podeAcessarMenu($pdo, 'SUBMENU_CONF_GERAL')): ?>
+                <a class="sidebar-subitem" href="/modulos/configuracao/index.php"><i class="fas fa-sliders-h"></i> Configuração Geral</a>
+                <?php endif; ?>
+                <?php if(podeAcessarMenu($pdo, 'SUBMENU_CONF_MYSQL')): ?>
+                <a class="sidebar-subitem" href="/modulos/configuracao/resumo_mysql.php"><i class="fas fa-table"></i> Resumo MySQL</a>
+                <?php endif; ?>
+                <?php if(podeAcessarMenu($pdo, 'SUBMENU_ANOTACOES_GERAIS')): ?>
+                <a class="sidebar-subitem" href="/modulos/configuracao/anotacoes/index.php"><i class="fas fa-sticky-note"></i> Anotações Gerais</a>
+                <?php endif; ?>
+            </div>
+            <?php endif; ?>
+
+            <!-- Sair -->
+            <div class="sidebar-divider"></div>
+            <a class="sidebar-link" href="/logout.php" style="color:#ff8a8a;">
+                <i class="fas fa-sign-out-alt menu-icon"></i> Sair do Sistema
+            </a>
+
+        </div>
+    </div>
+</div>
+
+<script>
+function sidebarAbrir() {
+    document.getElementById('sidebarOverlay').classList.add('aberto');
+    document.body.style.overflow = 'hidden';
+}
+function sidebarFechar() {
+    document.getElementById('sidebarOverlay').classList.remove('aberto');
+    document.body.style.overflow = '';
+}
+function sidebarFecharOverlay(e) {
+    if (e.target === document.getElementById('sidebarOverlay')) sidebarFechar();
+}
+function sidebarToggleSub(btn) {
+    const sub = btn.nextElementSibling;
+    const aberto = sub.classList.contains('aberto');
+    // fecha todos
+    document.querySelectorAll('.sidebar-sub.aberto').forEach(s => s.classList.remove('aberto'));
+    document.querySelectorAll('.sidebar-item.aberto').forEach(b => b.classList.remove('aberto'));
+    // abre o clicado (se não estava aberto)
+    if (!aberto) {
+        sub.classList.add('aberto');
+        btn.classList.add('aberto');
+    }
+}
+// Fecha sidebar com ESC
+document.addEventListener('keydown', e => { if (e.key === 'Escape') sidebarFechar(); });
+</script>
 
 <div class="modal fade" id="modalSuporteLogado" tabindex="-1">
     <div class="modal-dialog modal-sm modal-dialog-centered">
