@@ -22,6 +22,10 @@ $restricao_lote_excluir = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_CON
 
 // REGRA DE BLOQUEIO DA ABA IA
 $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO');
+
+// PERMISSÕES DE AUDITORIA
+$perm_auditoria_submenu   = verificaPermissao($pdo, 'v8_AUDITORIA_SUBMENU',    'TELA');
+$perm_auditoria_inclusao  = verificaPermissao($pdo, 'v8_AUDITORIA_INCLUSAO_CPF','FUNCAO');
 ?>
 
 <style>
@@ -75,6 +79,10 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
                     <li class="nav-item <?= !$perm_extrato ? 'd-none' : '' ?>"><button class="nav-link text-muted fw-bold" data-bs-toggle="pill" data-bs-target="#tab-extrato" onclick="v8PopularSelectExtrato()"><i class="fas fa-file-invoice-dollar me-1"></i> Extrato</button></li>
                     
                     <li class="nav-item <?= $restricao_ia ? 'd-none' : '' ?>"><button class="nav-link text-danger fw-bold" data-bs-toggle="pill" data-bs-target="#tab-atendimento-ia"><i class="fas fa-robot me-1"></i> ATENDIMENTO IA</button></li>
+
+                    <?php if ($perm_auditoria_submenu): ?>
+                    <li class="nav-item"><button class="nav-link fw-bold" style="color:#b02a37;" data-bs-toggle="pill" data-bs-target="#tab-auditoria-v8"><i class="fas fa-shield-alt me-1"></i> AUDITORIA</button></li>
+                    <?php endif; ?>
 
                     <li class="nav-item ms-auto"><button class="nav-link text-muted fw-bold" data-bs-toggle="pill" data-bs-target="#tab-manual-v8"><i class="fas fa-book-open me-1"></i> Manual do Usuário</button></li>
                 </ul>
@@ -201,6 +209,16 @@ $restricao_ia = !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_IA', 'FUNCAO'
                         }
                         ?>
                     </div>
+
+                    <!-- ABA AUDITORIA V8 -->
+                    <?php if ($perm_auditoria_submenu): ?>
+                    <div class="tab-pane fade" id="tab-auditoria-v8">
+                        <?php
+                            $caminho_auditoria = __DIR__ . '/index.api.v8.auditoria.php';
+                            if (file_exists($caminho_auditoria)) include $caminho_auditoria;
+                        ?>
+                    </div>
+                    <?php endif; ?>
 
                     <!-- ABA MANUAL DO USUÁRIO V8 -->
                     <div class="tab-pane fade" id="tab-manual-v8">

@@ -362,9 +362,15 @@
                     <span class="text-muted" style="font-size:11px;">até</span>
                     <input type="date" id="v8ClientesDataAte" class="form-control form-control-sm" style="max-width:135px;" title="Data até" onchange="v8FiltrarClientesLote()">
 
-                    <!-- Incluir em Campanha -->
+                    <!-- Ações: Campanha + Auditoria -->
                     <div class="d-flex gap-1 align-items-center ms-auto">
                         <span class="text-muted" id="v8ClientesContador" style="white-space:nowrap;"></span>
+                        <?php if (!empty($perm_auditoria_inclusao) && $perm_auditoria_inclusao): ?>
+                        <button class="btn btn-sm fw-bold" id="v8BtnAuditoria" style="background:#b02a37; color:#fff; border:none; font-size:11px; padding:4px 10px; display:none;"
+                                onclick="v8IniciarAuditoria()">
+                            <i class="fas fa-shield-alt me-1"></i> Auditoria
+                        </button>
+                        <?php endif; ?>
                         <div class="dropdown" id="v8CampanhaDropdown" style="display:none;">
                             <button class="btn btn-sm fw-bold dropdown-toggle" type="button"
                                     style="background:#6f42c1; color:#fff; border:none; font-size:11px; padding:4px 10px;"
@@ -383,6 +389,21 @@
                         </button>
                     </div>
                 </div>
+                <?php if (!empty($perm_auditoria_inclusao) && $perm_auditoria_inclusao): ?>
+                <!-- Barra de confirmação de Auditoria -->
+                <div id="v8AuditoriaBar" style="display:none; background:#fff5f5; border-bottom:2px solid #b02a37; padding:6px 12px; font-size:12px;" class="d-flex align-items-center gap-2">
+                    <i class="fas fa-shield-alt" style="color:#b02a37;"></i>
+                    <span class="fw-bold" style="color:#b02a37;">AUDITORIA</span>
+                    <span class="text-muted">— <span id="v8AuditoriaQtd"></span> CPF(s) selecionados serão transferidos e bloqueados no lote atual.</span>
+                    <button class="btn btn-sm fw-bold ms-auto" style="background:#b02a37; color:#fff; border:none; font-size:11px; padding:3px 10px;"
+                            onclick="v8ExecutarAuditoria()">
+                        <i class="fas fa-check me-1"></i> Confirmar Auditoria
+                    </button>
+                    <button class="btn btn-sm btn-outline-secondary" style="font-size:11px; padding:3px 8px;"
+                            onclick="v8CancelarAuditoria()">Cancelar</button>
+                </div>
+                <?php endif; ?>
+
                 <!-- Barra de campanha selecionada -->
                 <div id="v8CampanhaSelecionadaBar" style="display:none; background:#f0ebff; border-bottom:1px solid #d0c0f0; padding:6px 12px; font-size:12px;" class="d-flex align-items-center gap-2">
                     <i class="fas fa-bullhorn" style="color:#6f42c1;"></i>
@@ -1228,6 +1249,48 @@
         }
     }
 
+    // ====================================================================
+    // AUDITORIA V8 — funções do modal de clientes
+    // ====================================================================
+    function v8IniciarAuditoria() {
+        // Segurança extra: barra não existe no DOM para grupos bloqueados
+        if (!document.getElementById('v8AuditoriaBar')) return;
+        const marcados = [...document.querySelectorAll('.v8-check-cliente:checked')].map(cb => cb.dataset.cpf);
+        const lista = marcados.length > 0 ? marcados
+            : (v8ClientesFiltrados.length ? v8ClientesFiltrados.map(c => c.CPF) : v8ClientesTodos.map(c => c.CPF));
+        if (!lista.length) return v8Toast("Nenhum cliente selecionado para auditoria.", "warning");
+        // Oculta barra de campanha se aberta
+        document.getElementById('v8CampanhaSelecionadaBar').style.display = 'none';
+        // Mostra barra de auditoria
+        document.getElementById('v8AuditoriaQtd').textContent = lista.length;
+        document.getElementById('v8AuditoriaBar').style.display = 'flex';
+    }
+
+    function v8CancelarAuditoria() {
+        document.getElementById('v8AuditoriaBar').style.display = 'none';
+    }
+
+    async function v8ExecutarAuditoria() {
+        const marcados = [...document.querySelectorAll('.v8-check-cliente:checked')].map(cb => cb.dataset.cpf);
+        const lista = marcados.length > 0 ? marcados
+            : (v8ClientesFiltrados.length ? v8ClientesFiltrados.map(c => c.CPF) : v8ClientesTodos.map(c => c.CPF));
+        if (!lista.length) return v8Toast("Nenhum cliente para transferir.", "warning");
+
+        document.getElementById('v8AuditoriaBar').style.display = 'none';
+
+        const res = await v8Req('ajax_api_v8_lote_csv.php', 'incluir_em_auditoria',
+            { id_lote: v8ClientesLoteAtual, cpfs: JSON.stringify(lista) }, true, "Transferindo para Auditoria...");
+
+        if (res.success) {
+            v8Toast(`🛡️ ${res.msg} Os registros não aparecem mais neste lote.`, "success");
+            // Recarrega lista removendo os auditados
+            await v8AbrirClientesLote(v8ClientesLoteAtual);
+        } else {
+            v8Toast("❌ " + (res.msg || "Erro ao executar auditoria."), "error");
+        }
+    }
+    // ====================================================================
+
     const V8_CLIENTES_PAGE = 100;
     let v8ClientesOffset = 0;
     let v8ClientesListaAtual = [];
@@ -1312,6 +1375,8 @@
         const tb = document.getElementById('v8ClientesTabela');
         document.getElementById('v8ClientesContador').innerHTML = lista.length + ' registro(s)';
         document.getElementById('v8CampanhaDropdown').style.display = lista.length ? '' : 'none';
+        const btnAud = document.getElementById('v8BtnAuditoria');
+        if (btnAud) btnAud.style.display = lista.length ? '' : 'none';
 
         if (lista.length === 0) {
             tb.innerHTML = '<div class="text-muted text-center py-4">Nenhum cliente encontrado.</div>';

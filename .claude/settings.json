@@ -74,7 +74,14 @@
       "Bash(grep -n '$tel\\\\['\\\\''id'\\\\''\\\\]\\\\|$end\\\\['\\\\''id'\\\\''\\\\]\\\\|$email\\\\['\\\\''id'\\\\''\\\\]\\\\|$conv\\\\['\\\\''ID'\\\\''\\\\]\\\\|$conv\\\\['\\\\''CPF'\\\\''\\\\]\\\\|$tel\\\\['\\\\''cpf'\\\\''\\\\]\\\\|$tel\\\\['\\\\''ID_QUALIFICACAO'\\\\''\\\\]' /var/www/html/modulos/banco_dados/consulta.php)",
       "Bash(php -l /var/www/html/modulos/banco_dados/consulta.php)",
       "Bash(php -l /var/www/html/modulos/banco_dados/modal_integracoes.php)",
-      "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/worker_v8_lote.php)"
+      "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/worker_v8_lote.php)",
+      "Bash(php -r 'require '\\\\''/var/www/html/conexao.php'\\\\''; $s=$pdo->query\\('\\\\''DESCRIBE INTEGRACAO_V8_REGISTROCONSULTA_LOTE'\\\\''\\); print_r\\($s->fetchAll\\(PDO::FETCH_ASSOC\\)\\);')",
+      "Bash(php -r 'require '\\\\''/var/www/html/conexao.php'\\\\''; $s=$pdo->query\\('\\\\''DESCRIBE INTEGRACAO_V8_IMPORTACAO_LOTE'\\\\''\\); print_r\\($s->fetchAll\\(PDO::FETCH_ASSOC\\)\\);')",
+      "Bash(wc -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/*.php)",
+      "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/ajax_api_v8_auditoria.php)",
+      "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/ajax_api_v8_lote_csv.php)",
+      "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/index.php)",
+      "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/index.api.v8.lote.vsc.php)"
     ]
   }
 }

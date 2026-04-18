@@ -1117,6 +1117,146 @@ try {
             }
             ob_end_clean(); echo json_encode(['success' => true, 'msg' => "$inseridos CPF(s) incluído(s) na campanha.", 'inseridos' => $inseridos]); exit;
 
+        // ============================================================
+        // INCLUIR EM AUDITORIA
+        // ============================================================
+        case 'incluir_em_auditoria':
+            // Verificar permissão específica de auditoria
+            $caminho_perm_aud = $_SERVER['DOCUMENT_ROOT'] . '/modulos/cliente_e_usuario/checar_permissoes.php';
+            if (file_exists($caminho_perm_aud)) { include_once $caminho_perm_aud; }
+            if (!verificaPermissao($pdo, 'v8_AUDITORIA_INCLUSAO_CPF', 'FUNCAO')) {
+                throw new Exception("Sem permissão para incluir em auditoria.");
+            }
+
+            $id_lote_aud   = (int)$_POST['id_lote'];
+            $cpfs_aud      = json_decode($_POST['cpfs'] ?? '[]', true);
+            if (!$id_lote_aud || empty($cpfs_aud)) throw new Exception("Lote ou CPFs inválidos.");
+
+            v8_verificar_dono_lote($pdo, $id_lote_aud, $usuario_logado_cpf);
+
+            // Dados do lote original e do auditor
+            $stmtLoteAud = $pdo->prepare("SELECT * FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ? LIMIT 1");
+            $stmtLoteAud->execute([$id_lote_aud]);
+            $loteAud = $stmtLoteAud->fetch(PDO::FETCH_ASSOC);
+            if (!$loteAud) throw new Exception("Lote não encontrado.");
+
+            $tabela_aud = v8_tabela_lote($pdo, $id_lote_aud);
+
+            // Empresa do auditor
+            $stmtEmpAud = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+            $stmtEmpAud->execute([$usuario_logado_cpf]);
+            $id_empresa_aud = $stmtEmpAud->fetchColumn() ?: null;
+
+            // Chave do auditor (a primeira disponível)
+            $chave_aud_id = null;
+            try {
+                $stmtChaveAud = $pdo->prepare("SELECT ID FROM INTEGRACAO_V8_CHAVE_ACESSO WHERE CPF_USUARIO = ? LIMIT 1");
+                $stmtChaveAud->execute([$usuario_logado_cpf]);
+                $chave_aud_id = $stmtChaveAud->fetchColumn() ?: null;
+            } catch (Exception $e) {}
+
+            // Garante que as tabelas de auditoria existem
+            $pdo->exec("CREATE TABLE IF NOT EXISTS `V8_LOTE_AUDITORIA` (
+                `ID` int NOT NULL AUTO_INCREMENT,
+                `NOME_AUDITORIA` varchar(200) NOT NULL,
+                `LOTE_ORIGEM_ID` int DEFAULT NULL,
+                `LOTE_ORIGEM_NOME` varchar(200) DEFAULT NULL,
+                `TABELA_ORIGEM` varchar(100) DEFAULT NULL,
+                `USUARIO_AUDITOR_CPF` varchar(14) DEFAULT NULL,
+                `USUARIO_AUDITOR_NOME` varchar(150) DEFAULT NULL,
+                `CHAVE_AUDITORIA_ID` int DEFAULT NULL,
+                `id_empresa` int DEFAULT NULL,
+                `QTD_CPF` int DEFAULT 0,
+                `STATUS_AUDITORIA` enum('ATIVO','ARQUIVADO') DEFAULT 'ATIVO',
+                `DATA_CRIACAO` datetime DEFAULT CURRENT_TIMESTAMP,
+                PRIMARY KEY (`ID`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4");
+
+            $pdo->exec("CREATE TABLE IF NOT EXISTS `V8_LOTE_AUDITORIA_DADOS` (
+                `ID` int NOT NULL AUTO_INCREMENT,
+                `AUDITORIA_ID` int NOT NULL,
+                `CPF` varchar(14) NOT NULL,
+                `NOME` varchar(150) DEFAULT NULL,
+                `NASCIMENTO` date DEFAULT NULL,
+                `SEXO` varchar(20) DEFAULT NULL,
+                `VALOR_MARGEM` decimal(10,2) DEFAULT NULL,
+                `PRAZO` int DEFAULT NULL,
+                `VALOR_LIQUIDO` decimal(10,2) DEFAULT NULL,
+                `STATUS_V8` varchar(50) DEFAULT NULL,
+                `OBSERVACAO` text DEFAULT NULL,
+                `CONSULT_ID` varchar(150) DEFAULT NULL,
+                `CONFIG_ID` varchar(150) DEFAULT NULL,
+                `SIMULATION_ID` varchar(150) DEFAULT NULL,
+                `DATA_SIMULACAO` datetime DEFAULT NULL,
+                `DATA_TRANSFERENCIA` datetime DEFAULT CURRENT_TIMESTAMP,
+                PRIMARY KEY (`ID`),
+                KEY `idx_auditoria_id` (`AUDITORIA_ID`),
+                KEY `idx_cpf` (`CPF`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4");
+
+            $pdo->beginTransaction();
+
+            // Nome do auditor
+            $stmtNomeAud = $pdo->prepare("SELECT NOME FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+            $stmtNomeAud->execute([$usuario_logado_cpf]);
+            $nome_auditor = $stmtNomeAud->fetchColumn() ?: $usuario_logado_cpf;
+
+            // Cria registro de auditoria
+            $nome_auditoria = 'Auditoria — ' . ($loteAud['NOME_IMPORTACAO'] ?? 'Lote #'.$id_lote_aud) . ' — ' . date('d/m/Y H:i');
+            $stmtInsAud = $pdo->prepare("INSERT INTO V8_LOTE_AUDITORIA (NOME_AUDITORIA, LOTE_ORIGEM_ID, LOTE_ORIGEM_NOME, TABELA_ORIGEM, USUARIO_AUDITOR_CPF, USUARIO_AUDITOR_NOME, CHAVE_AUDITORIA_ID, id_empresa, QTD_CPF) VALUES (?,?,?,?,?,?,?,?,?)");
+            $stmtInsAud->execute([$nome_auditoria, $id_lote_aud, $loteAud['NOME_IMPORTACAO'], $tabela_aud, $usuario_logado_cpf, $nome_auditor, $chave_aud_id, $id_empresa_aud, count($cpfs_aud)]);
+            $id_auditoria_novo = $pdo->lastInsertId();
+
+            // Copia registros para V8_LOTE_AUDITORIA_DADOS e marca como AUDITADO na tabela original
+            $stmtBuscarCpf = $pdo->prepare("SELECT * FROM `{$tabela_aud}` WHERE CPF = ? AND LOTE_ID = ? LIMIT 1");
+            $stmtInsDados  = $pdo->prepare("INSERT INTO V8_LOTE_AUDITORIA_DADOS (AUDITORIA_ID, CPF, NOME, NASCIMENTO, SEXO, VALOR_MARGEM, PRAZO, VALOR_LIQUIDO, STATUS_V8, OBSERVACAO, CONSULT_ID, CONFIG_ID, SIMULATION_ID, DATA_SIMULACAO) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+            $stmtBloquear  = $pdo->prepare("UPDATE `{$tabela_aud}` SET STATUS_V8 = 'AUDITADO', OBSERVACAO = 'Transferido para auditoria #{$id_auditoria_novo}' WHERE CPF = ? AND LOTE_ID = ?");
+
+            $transferidos = 0;
+            foreach ($cpfs_aud as $cpf_raw) {
+                $cpf = preg_replace('/\D/', '', $cpf_raw);
+                if (strlen($cpf) < 11) continue;
+                $stmtBuscarCpf->execute([$cpf, $id_lote_aud]);
+                $row = $stmtBuscarCpf->fetch(PDO::FETCH_ASSOC);
+                if (!$row) continue;
+
+                $stmtInsDados->execute([
+                    $id_auditoria_novo,
+                    $cpf,
+                    $row['NOME']        ?? null,
+                    $row['NASCIMENTO']  ?? null,
+                    $row['SEXO']        ?? null,
+                    $row['VALOR_MARGEM'] ?? null,
+                    $row['PRAZO']       ?? null,
+                    $row['VALOR_LIQUIDO'] ?? null,
+                    $row['STATUS_V8']   ?? null,
+                    $row['OBSERVACAO']  ?? null,
+                    $row['CONSULT_ID']  ?? null,
+                    $row['CONFIG_ID']   ?? null,
+                    $row['SIMULATION_ID'] ?? null,
+                    $row['DATA_SIMULACAO'] ?? null,
+                ]);
+
+                // Bloqueia na tabela original
+                $stmtBloquear->execute([$cpf, $id_lote_aud]);
+
+                // Remove log do rodapé do cliente
+                try {
+                    $cpf_padded = str_pad($cpf, 11, '0', STR_PAD_LEFT);
+                    $pdo->prepare("DELETE FROM dados_cadastrais_log_rodape WHERE CPF_CLIENTE = ? AND TEXTO_REGISTRO LIKE '%V8%'")->execute([$cpf_padded]);
+                } catch (Exception $e) {}
+
+                $transferidos++;
+            }
+
+            $pdo->commit();
+            ob_end_clean(); echo json_encode([
+                'success'      => true,
+                'msg'          => "{$transferidos} CPF(s) transferido(s) para a Auditoria #{$id_auditoria_novo}.",
+                'transferidos' => $transferidos,
+                'id_auditoria' => $id_auditoria_novo
+            ]); exit;
+
         case 'listar_clientes_lote':
             $id_lote = (int)$_POST['id_lote'];
             v8_verificar_dono_lote($pdo, $id_lote, $usuario_logado_cpf);
@@ -1128,6 +1268,7 @@ try {
                        DATA_SIMULACAO
                 FROM `{$tabela_lc}`
                 WHERE LOTE_ID = ?
+                  AND (STATUS_V8 IS NULL OR STATUS_V8 != 'AUDITADO')
                 ORDER BY DATA_SIMULACAO DESC, ID ASC
             ");
             $stmt->execute([$id_lote]);
