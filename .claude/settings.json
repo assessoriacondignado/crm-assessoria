@@ -81,7 +81,10 @@
       "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/ajax_api_v8_auditoria.php)",
       "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/ajax_api_v8_lote_csv.php)",
       "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/index.php)",
-      "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/index.api.v8.lote.vsc.php)"
+      "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/index.api.v8.lote.vsc.php)",
+      "Bash(wc -l /var/www/html/modulos/configuracao/fator_conferi/*.php /var/www/html/modulos/configuracao/index.php)",
+      "Bash(grep -n \"verificaPermissao\\\\|SUBMENU_OP_FATOR\" /var/www/html/modulos/configuracao/fator_conferi/*.php)",
+      "WebFetch(domain:disparopro.com.br)"
     ]
   }
 }

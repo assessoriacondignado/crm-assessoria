@@ -600,6 +600,9 @@ try {
                 <?php if(podeAcessarMenu($pdo, 'SUBMENU_OP_WAPI')): ?>
                 <a class="sidebar-subitem" href="/modulos/configuracao/w-api/index.php"><i class="fas fa-robot"></i> W-API (Múltiplas Conexões)</a>
                 <?php endif; ?>
+                <?php if(podeAcessarMenu($pdo, 'SUBMENU_SMS')): ?>
+                <a class="sidebar-subitem" href="/modulos/configuracao/disparo_sms/index.php"><i class="fas fa-sms"></i> Disparo SMS</a>
+                <?php endif; ?>
             </div>
             <?php endif; ?>
 
