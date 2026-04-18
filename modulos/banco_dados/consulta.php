@@ -845,27 +845,37 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
                 <?php
                     $cpf_limpo_sugerido = is_numeric($termo_busca) ? preg_replace('/[^0-9]/', '', $termo_busca) : '';
                     $nome_sugerido = !$is_busca_avancada && !is_numeric($termo_busca) ? htmlspecialchars($termo_busca ?? '') : '';
-
-                    // Verifica histórico V8 antes de exibir "não encontramos"
-                    $v8_historico_achado = null;
-                    if (strlen($cpf_limpo_sugerido) === 11) {
-                        try {
-                            $stmtV8h = $pdo->prepare("SELECT NOME_COMPLETO, DATA_NASCIMENTO FROM INTEGRACAO_V8_REGISTROCONSULTA WHERE CPF_CONSULTADO = ? AND NOME_COMPLETO IS NOT NULL AND NOME_COMPLETO != '' ORDER BY ID DESC LIMIT 1");
-                            $stmtV8h->execute([$cpf_limpo_sugerido]);
-                            $v8_historico_achado = $stmtV8h->fetch(PDO::FETCH_ASSOC);
-                        } catch (Exception $e) { /* tabela pode não existir */ }
-                    }
-                    $nome_para_form = $v8_historico_achado ? htmlspecialchars($v8_historico_achado['NOME_COMPLETO']) : $nome_sugerido;
+                    $cpf_e_valido_para_inss = (strlen($cpf_limpo_sugerido) === 11);
+                    $cpf_logado_sessao = preg_replace('/\D/', '', $_SESSION['usuario_cpf'] ?? '');
                 ?>
 
-                <?php if ($v8_historico_achado): ?>
-                <div class="alert alert-info text-center p-3 shadow-sm border-dark rounded-0">
-                    <p class="fs-6 fw-bold mb-1 text-dark"><i class="fas fa-database text-info me-2"></i> CPF não cadastrado localmente. Encontramos dados no <strong>Histórico V8</strong> — confira e cadastre.</p>
+                <?php if ($cpf_e_valido_para_inss): ?>
+                <!-- Estado: verificando HIST INSS (exibido enquanto JS processa) -->
+                <div id="bloco-verificando-inss" class="alert alert-secondary text-center p-3 shadow-sm border-dark rounded-0">
+                    <span class="spinner-border spinner-border-sm text-dark me-2" role="status"></span>
+                    <span class="fw-bold text-dark">Verificando no histórico INSS offline... aguarde.</span>
+                </div>
+
+                <!-- Estado: encontrou no INSS (oculto até JS confirmar) -->
+                <div id="bloco-inss-encontrado" class="alert alert-info text-center p-3 shadow-sm border-dark rounded-0" style="display:none;">
+                    <p class="fs-6 fw-bold mb-1 text-dark"><i class="fas fa-database text-info me-2"></i> CPF não cadastrado localmente. Encontramos dados no <strong>Histórico INSS Offline</strong> — confira e cadastre.</p>
                     <?php if ($perm_cadastrar && !(isset($is_modo_campanha) && $is_modo_campanha)): ?>
                         <button class="btn btn-info btn-sm mt-1 shadow-sm fw-bold border-dark rounded-0 text-white" onclick="document.getElementById('formNovoCadastro').style.display='block'; this.style.display='none';"><i class="fas fa-user-plus me-1"></i> Ver e Confirmar Cadastro</button>
                     <?php endif; ?>
                 </div>
+
+                <!-- Estado: não encontrado em nenhuma fonte (oculto até JS confirmar) -->
+                <div id="bloco-nao-encontrado" class="alert alert-warning text-center p-3 shadow-sm border-dark rounded-0" style="display:none;">
+                    <p class="fs-6 fw-bold mb-0 text-dark"><i class="fas fa-exclamation-triangle text-warning me-2"></i> Não encontramos nenhum cliente com esses filtros.</p>
+                    <?php if ($perm_cadastrar && !(isset($is_modo_campanha) && $is_modo_campanha)): ?>
+                        <button class="btn btn-dark btn-sm mt-2 shadow-sm fw-bold border-dark rounded-0" onclick="document.getElementById('formNovoCadastro').style.display='block'; this.style.display='none';"><i class="fas fa-plus text-info me-1"></i> Cadastrar Novo</button>
+                    <?php else: ?>
+                        <p class="text-danger small fw-bold mt-2"><i class="fas fa-ban"></i> Cadastro manual desabilitado ou indisponível no Modo Campanha.</p>
+                    <?php endif; ?>
+                </div>
+
                 <?php else: ?>
+                <!-- CPF inválido ou busca por nome — exibe direto -->
                 <div class="alert alert-warning text-center p-3 shadow-sm border-dark rounded-0">
                     <p class="fs-6 fw-bold mb-0 text-dark"><i class="fas fa-exclamation-triangle text-warning me-2"></i> Não encontramos nenhum cliente com esses filtros.</p>
                     <?php if ($perm_cadastrar && !(isset($is_modo_campanha) && $is_modo_campanha)): ?>
@@ -877,24 +887,22 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
                 <?php endif; ?>
 
                 <?php if ($perm_cadastrar && !(isset($is_modo_campanha) && $is_modo_campanha)): ?>
-                <div id="formNovoCadastro" style="display: <?= $v8_historico_achado ? 'block' : 'none' ?>;" class="mt-4 text-start">
+                <div id="formNovoCadastro" style="display: none;" class="mt-4 text-start">
                     <form action="" method="POST" class="card border-dark shadow-lg rounded-0 overflow-hidden">
                         <input type="hidden" name="acao_rapida" value="cadastrar_novo">
                         <div class="card-header bg-dark text-white border-bottom border-dark py-3 rounded-0">
                             <h5 class="mb-0 fw-bold text-uppercase" style="letter-spacing: 1px;"><i class="fas fa-user-plus text-info me-2"></i> Ficha de Novo Cadastro Rápido</h5>
                         </div>
                         <div class="card-body bg-light">
-                            <?php if ($v8_historico_achado): ?>
-                            <div class="alert alert-info py-2 mb-3 border-dark rounded-0 small fw-bold"><i class="fas fa-info-circle me-1"></i> Dados pré-preenchidos do histórico V8. Confira antes de salvar.</div>
-                            <?php endif; ?>
+                            <div id="aviso-dados-inss" class="alert alert-info py-2 mb-3 border-dark rounded-0 small fw-bold" style="display:none;"><i class="fas fa-info-circle me-1"></i> Dados pré-preenchidos do histórico INSS. Confira antes de salvar.</div>
                             <div class="row g-3">
                                 <div class="col-md-3">
                                     <label class="form-label fw-bold">CPF <span class="text-danger">*</span></label>
-                                    <input type="text" name="cpf_novo" class="form-control border-dark rounded-0" value="<?= $cpf_limpo_sugerido ?>" required maxlength="14">
+                                    <input type="text" name="cpf_novo" id="campo-cpf-novo" class="form-control border-dark rounded-0" value="<?= $cpf_limpo_sugerido ?>" required maxlength="14">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label fw-bold">Nome Completo <span class="text-danger">*</span></label>
-                                    <input type="text" name="nome_novo" class="form-control border-dark rounded-0 text-uppercase" value="<?= $nome_para_form ?>" required>
+                                    <input type="text" name="nome_novo" id="campo-nome-novo" class="form-control border-dark rounded-0 text-uppercase" value="<?= $nome_sugerido ?>" required>
                                 </div>
                                 <div class="col-md-3">
                                     <label class="form-label fw-bold">Telefone Principal</label>
@@ -908,6 +916,49 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
                         </div>
                     </form>
                 </div>
+                <?php endif; ?>
+
+                <?php if ($cpf_e_valido_para_inss): ?>
+                <script>
+                (function() {
+                    const cpfAlvo  = '<?= $cpf_limpo_sugerido ?>';
+                    const cpfCobrar = '<?= $cpf_logado_sessao ?>';
+
+                    if (!cpfAlvo || !cpfCobrar) {
+                        _exibirNaoEncontrado(); return;
+                    }
+
+                    const fd = new FormData();
+                    fd.append('acao', 'consulta_cpf_manual');
+                    fd.append('cpf', cpfAlvo);
+                    fd.append('cpf_cobrar', cpfCobrar);
+                    fd.append('fonte', 'AUTO_BUSCA');
+
+                    fetch('/modulos/configuracao/Promosys_inss/promosys_inss.ajax.php', { method: 'POST', body: fd })
+                        .then(r => r.json())
+                        .then(r => {
+                            document.getElementById('bloco-verificando-inss').style.display = 'none';
+                            if (r.success && r.dados && r.dados.nome && r.dados.nome !== 'Nome Nao Informado') {
+                                // Preenche o campo nome com o dado do INSS
+                                const campoNome = document.getElementById('campo-nome-novo');
+                                if (campoNome) campoNome.value = r.dados.nome.toUpperCase();
+                                const aviso = document.getElementById('aviso-dados-inss');
+                                if (aviso) aviso.style.display = 'block';
+                                document.getElementById('bloco-inss-encontrado').style.display = 'block';
+                            } else {
+                                _exibirNaoEncontrado();
+                            }
+                        })
+                        .catch(() => _exibirNaoEncontrado());
+
+                    function _exibirNaoEncontrado() {
+                        const v = document.getElementById('bloco-verificando-inss');
+                        if (v) v.style.display = 'none';
+                        const n = document.getElementById('bloco-nao-encontrado');
+                        if (n) n.style.display = 'block';
+                    }
+                })();
+                </script>
                 <?php endif; ?>
 
             <?php endif; ?>
