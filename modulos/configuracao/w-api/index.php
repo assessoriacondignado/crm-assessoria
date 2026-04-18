@@ -48,6 +48,7 @@ include $caminho_header;
       <li class="nav-item"><button class="nav-link py-3" id="tab-status-btn" onclick="switchTab('status')"><i class="fas fa-network-wired me-2"></i>Instâncias</button></li>
       <li class="nav-item"><button class="nav-link py-3" id="tab-tpl-btn" onclick="switchTab('tpl')"><i class="fas fa-comment-dots me-2"></i>Modelos</button></li>
       <li class="nav-item"><button class="nav-link py-3" id="tab-logs-btn" onclick="switchTab('logs')"><i class="fas fa-list-ul me-2"></i>Logs & Clientes</button></li>
+      <li class="nav-item"><button class="nav-link py-3" id="tab-validar-btn" onclick="switchTab('validar')"><i class="fab fa-whatsapp me-2 text-success"></i>Validar WhatsApp</button></li>
     </ul>
 
     <div class="tab-content">
@@ -169,6 +170,60 @@ include $caminho_header;
               </div>
           </div>
       </div>
+
+      <!-- ABA: VALIDAR WHATSAPP -->
+      <div id="view-validar" class="content-view hidden">
+          <div class="row justify-content-center">
+              <div class="col-md-7">
+                  <div class="card border-dark shadow-lg rounded-3 mb-4">
+                      <div class="card-header bg-dark text-white fw-bold py-3">
+                          <i class="fab fa-whatsapp me-2 text-success"></i> Validar Números de WhatsApp por CPF
+                      </div>
+                      <div class="card-body bg-light">
+                          <p class="text-muted small mb-3"><i class="fas fa-info-circle me-1 text-primary"></i> Informa o CPF do cliente — o sistema busca todos os telefones cadastrados e verifica silenciosamente quais têm WhatsApp ativo (sem enviar mensagem, sem risco de bloqueio).</p>
+                          <div class="mb-3">
+                              <label class="small fw-bold">Instância de Consulta</label>
+                              <select class="form-select border-dark" id="validarInstance"><option value="">Carregando...</option></select>
+                          </div>
+                          <div class="mb-3">
+                              <label class="small fw-bold">CPF do Cliente</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control border-dark fw-bold" id="validarCpf" placeholder="000.000.000-00 ou 00000000000" maxlength="18" onkeydown="if(event.key==='Enter') validarWhatsapp()">
+                                  <button class="btn btn-success fw-bold border-dark px-4" onclick="validarWhatsapp()" id="btnValidar">
+                                      <i class="fab fa-whatsapp me-2"></i> Verificar
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div id="validarResultado" class="hidden">
+                      <div class="card border-dark shadow-sm rounded-3">
+                          <div class="card-header bg-white border-bottom border-dark d-flex justify-content-between align-items-center py-2">
+                              <div>
+                                  <span class="fw-bold text-dark" id="validarNomeCliente"></span>
+                                  <span class="badge bg-secondary ms-2 font-monospace" id="validarCpfLabel"></span>
+                              </div>
+                              <span id="validarResumo" class="badge bg-success fs-6"></span>
+                          </div>
+                          <div class="table-responsive">
+                              <table class="table table-bordered table-hover mb-0 align-middle text-center" style="font-size:0.9rem;">
+                                  <thead class="table-dark">
+                                      <tr>
+                                          <th>Telefone</th>
+                                          <th>Número Formatado</th>
+                                          <th>WhatsApp?</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody id="validarTabela"></tbody>
+                              </table>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
     </div>
 
     <div class="modal fade" id="modalQueue">
@@ -329,6 +384,59 @@ include $caminho_header;
         document.getElementById('view-'+id).classList.remove('hidden');
         const btn=document.getElementById('tab-'+id+'-btn'); if(btn) btn.classList.add('active');
         if(id==='logs') loadAutoLogs();
+        if(id==='validar') sincronizarInstanciaValidar();
+    }
+
+    function sincronizarInstanciaValidar() {
+        const sel = document.getElementById('validarInstance');
+        sel.innerHTML = '<option value="">-- Selecione a Instância --</option>';
+        instances.forEach(i => {
+            sel.innerHTML += `<option value="${i.instanceId}">${i.nome} (${i.instanceId})</option>`;
+        });
+    }
+
+    async function validarWhatsapp() {
+        const cpf = document.getElementById('validarCpf').value.trim();
+        const instanceId = document.getElementById('validarInstance').value;
+
+        if (!cpf) { crmToast('Informe o CPF.', 'warning'); return; }
+        if (!instanceId) { crmToast('Selecione uma instância.', 'warning'); return; }
+
+        const btn = document.getElementById('btnValidar');
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Verificando...';
+
+        const res = await apiCall('validateWhatsApp', { cpf, instanceId });
+
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fab fa-whatsapp me-2"></i> Verificar';
+
+        if (!res.success) { crmToast('Erro: ' + (res.message || 'Falha na consulta.'), 'danger', 6000); return; }
+
+        const tbody = document.getElementById('validarTabela');
+        tbody.innerHTML = '';
+        let comWhats = 0;
+
+        res.resultados.forEach(r => {
+            const temWhats = r.tem_whatsapp;
+            if (temWhats) comWhats++;
+            tbody.innerHTML += `<tr>
+                <td class="fw-bold font-monospace">${r.telefone}</td>
+                <td class="text-muted font-monospace">+${r.numero_formatado}</td>
+                <td>
+                    ${temWhats
+                        ? '<span class="badge bg-success fs-6 px-3"><i class="fab fa-whatsapp me-1"></i> SIM — Tem WhatsApp</span>'
+                        : '<span class="badge bg-danger fs-6 px-3"><i class="fas fa-times me-1"></i> NÃO cadastrado</span>'
+                    }
+                </td>
+            </tr>`;
+        });
+
+        document.getElementById('validarNomeCliente').textContent = res.nome;
+        document.getElementById('validarCpfLabel').textContent = res.cpf;
+        document.getElementById('validarResumo').textContent = comWhats + ' de ' + res.resultados.length + ' com WhatsApp';
+        document.getElementById('validarResumo').className = 'badge fs-6 ' + (comWhats > 0 ? 'bg-success' : 'bg-danger');
+        document.getElementById('validarResultado').classList.remove('hidden');
     }
 
     function loadInstances() { document.getElementById('loading').classList.remove('hidden'); apiCall('getInstancesList').then(d => { instances = d || []; renderControl(instances); renderSelect(instances); document.getElementById('loading').classList.add('hidden'); }); }

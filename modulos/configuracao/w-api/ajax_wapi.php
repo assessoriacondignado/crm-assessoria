@@ -263,6 +263,59 @@ try {
             }
             break;
 
+        case 'validateWhatsApp':
+            $cpf = preg_replace('/\D/', '', $data['cpf'] ?? '');
+            $instId = $data['instanceId'] ?? '';
+
+            if (empty($cpf) || strlen($cpf) < 11) {
+                echo json_encode(['success' => false, 'message' => 'CPF inválido.']);
+                break;
+            }
+            if (empty($instId)) {
+                echo json_encode(['success' => false, 'message' => 'Selecione uma instância.']);
+                break;
+            }
+
+            // Busca nome do cliente
+            $stmtCli = $pdo->prepare("SELECT nome FROM dados_cadastrais WHERE cpf = ? LIMIT 1");
+            $stmtCli->execute([$cpf]);
+            $nomeCliente = $stmtCli->fetchColumn() ?: 'Não encontrado';
+
+            // Busca todos os telefones do CPF
+            $stmtTel = $pdo->prepare("SELECT telefone_cel FROM telefones WHERE cpf = ? ORDER BY id ASC");
+            $stmtTel->execute([$cpf]);
+            $telefones = $stmtTel->fetchAll(PDO::FETCH_COLUMN);
+
+            if (empty($telefones)) {
+                echo json_encode(['success' => false, 'message' => 'Nenhum telefone encontrado para este CPF.']);
+                break;
+            }
+
+            $resultados = [];
+            foreach ($telefones as $tel) {
+                $numero = preg_replace('/\D/', '', $tel);
+                if (empty($numero)) continue;
+                if (!str_starts_with($numero, '55')) $numero = '55' . $numero;
+
+                $res = chamarWapi("/misc/phone-exists?phone={$numero}&instanceId={$instId}", $instId, 'GET');
+
+                $tem_whats = false;
+                if ($res['success']) {
+                    $d = $res['data'];
+                    $tem_whats = ($d['exists'] ?? $d['exist'] ?? $d['registered'] ?? false) == true;
+                }
+
+                $resultados[] = [
+                    'telefone' => $tel,
+                    'numero_formatado' => $numero,
+                    'tem_whatsapp' => $tem_whats,
+                    'status' => $tem_whats ? 'SIM' : 'NÃO'
+                ];
+            }
+
+            echo json_encode(['success' => true, 'nome' => $nomeCliente, 'cpf' => $cpf, 'resultados' => $resultados]);
+            break;
+
         case 'viewQueue':
             $instId = $data['instanceId'];
             $res = chamarWapi("/quere/quere?instanceId={$instId}&perPage=50&page=1", $instId, 'GET');
