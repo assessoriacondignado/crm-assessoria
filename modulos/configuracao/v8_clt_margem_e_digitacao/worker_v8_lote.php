@@ -401,8 +401,6 @@ while(true) {
                     $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_PROCESSADA = QTD_PROCESSADA + 1, QTD_ERRO = QTD_ERRO + 1 WHERE ID = ?")->execute([$id_lote]);
                 }
             }
-            // Aguarda 30s para a Dataprev processar o lote antes de verificar os retornos
-            sleep(30);
             continue;
         } // FIM TRAVA LIMITE DIÁRIO
     }
