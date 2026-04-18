@@ -73,7 +73,8 @@
       "Bash(grep -n '\\\\$cliente\\\\[' /var/www/html/modulos/banco_dados/consulta.php)",
       "Bash(grep -n '$tel\\\\['\\\\''id'\\\\''\\\\]\\\\|$end\\\\['\\\\''id'\\\\''\\\\]\\\\|$email\\\\['\\\\''id'\\\\''\\\\]\\\\|$conv\\\\['\\\\''ID'\\\\''\\\\]\\\\|$conv\\\\['\\\\''CPF'\\\\''\\\\]\\\\|$tel\\\\['\\\\''cpf'\\\\''\\\\]\\\\|$tel\\\\['\\\\''ID_QUALIFICACAO'\\\\''\\\\]' /var/www/html/modulos/banco_dados/consulta.php)",
       "Bash(php -l /var/www/html/modulos/banco_dados/consulta.php)",
-      "Bash(php -l /var/www/html/modulos/banco_dados/modal_integracoes.php)"
+      "Bash(php -l /var/www/html/modulos/banco_dados/modal_integracoes.php)",
+      "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/worker_v8_lote.php)"
     ]
   }
 }

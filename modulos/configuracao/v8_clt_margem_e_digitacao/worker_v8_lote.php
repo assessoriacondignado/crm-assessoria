@@ -538,6 +538,40 @@ function v8SimularLote($cpfRow, $config_id_sim, $consult_id_sim, $margem_sim, $i
         $pdo->prepare("UPDATE {$tbl} SET STATUS_V8 = 'OK', VALOR_LIQUIDO = ?, PRAZO = ?, SIMULATION_ID = ?, OBSERVACAO = ?, DATA_SIMULACAO = NOW() WHERE ID = ?")->execute([(float)$valor_liberado, $prazo_padrao, $sim_id, $observacao_final, $cpfRow['ID']]);
         $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_PROCESSADA = QTD_PROCESSADA + 1, QTD_SUCESSO = QTD_SUCESSO + 1 WHERE ID = ?")->execute([$id_lote]);
 
+        // ---------------------------------------------------------------
+        // Registra no rodapé da ficha do cliente com dados do usuário dono
+        // do lote, garantindo hierarquia e permissão corretas.
+        // ---------------------------------------------------------------
+        try {
+            $stmtUsrLog = $pdo->prepare("SELECT ID, NOME, id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+            $stmtUsrLog->execute([$lote['CPF_USUARIO']]);
+            $dadosUsrLog = $stmtUsrLog->fetch(PDO::FETCH_ASSOC);
+
+            if ($dadosUsrLog) {
+                $coef_24   = 0.048;
+                $prev_24x  = $margem_sim > 0 ? round($margem_sim / $coef_24, 2) : 0;
+                $texto_log = "Consulta V8 Consignado (Lote)"
+                    . " | Margem: R$ " . number_format((float)$margem_sim, 2, ',', '.')
+                    . " | Valor Liberado: R$ " . number_format((float)$valor_liberado, 2, ',', '.')
+                    . " | Prazo: {$prazo_padrao}x"
+                    . ($prev_24x > 0 ? " | Previsão Liberação (24x): R$ " . number_format($prev_24x, 2, ',', '.') : '');
+
+                $cpf_log = str_pad(preg_replace('/\D/', '', $cpfRow['CPF']), 11, '0', STR_PAD_LEFT);
+
+                try {
+                    $pdo->prepare("INSERT INTO dados_cadastrais_log_rodape (CPF_CLIENTE, NOME_USUARIO, TEXTO_REGISTRO, id_usuario, id_empresa) VALUES (?, ?, ?, ?, ?)")
+                        ->execute([$cpf_log, $dadosUsrLog['NOME'], $texto_log, $dadosUsrLog['ID'], $dadosUsrLog['id_empresa']]);
+                } catch (\Throwable $e2) {
+                    // Fallback sem id_usuario/id_empresa (instalações mais antigas)
+                    $pdo->prepare("INSERT INTO dados_cadastrais_log_rodape (CPF_CLIENTE, NOME_USUARIO, TEXTO_REGISTRO) VALUES (?, ?, ?)")
+                        ->execute([$cpf_log, $dadosUsrLog['NOME'], $texto_log]);
+                }
+            }
+        } catch (\Throwable $eLog) {
+            gravarLogIntegracao('logs_consulta_lote', $cpfRow['CPF'], 'LOG RODAPÉ - ERRO', 'n/a', '', $eLog->getMessage(), 0);
+        }
+        // ---------------------------------------------------------------
+
         // Última etapa: Aprovação no W-API (se flag ativo)
         v8EnviarAprovacaoWapi($cpfRow, (float)$valor_liberado, $prazo_padrao, $margem_sim, $lote, $pdo);
     } else {
