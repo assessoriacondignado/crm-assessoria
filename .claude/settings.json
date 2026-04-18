@@ -65,7 +65,14 @@
       "Bash(php -r 'require '\\\\''conexao.php'\\\\''; *)",
       "Bash(grep -rn \"SELECT \\\\*\" /var/www/html/modulos/banco_dados/*.php)",
       "Bash(grep -rn \"while.*fetch\\\\|for.*fetch\" /var/www/html/modulos/banco_dados/*.php)",
-      "Bash(grep -n '\\\\$telefones\\\\|\\\\$enderecos\\\\|\\\\$emails\\\\|\\\\$convenios' /var/www/html/modulos/banco_dados/consulta.php)"
+      "Bash(grep -n '\\\\$telefones\\\\|\\\\$enderecos\\\\|\\\\$emails\\\\|\\\\$convenios' /var/www/html/modulos/banco_dados/consulta.php)",
+      "Bash(grep -n '\\\\$end\\\\[' /var/www/html/modulos/banco_dados/consulta.php)",
+      "Bash(grep -n '\\\\$end_atual\\\\[' /var/www/html/modulos/banco_dados/consulta.php)",
+      "Bash(grep -n '\\\\$conv\\\\[' /var/www/html/modulos/banco_dados/consulta.php)",
+      "Bash(grep -n '\\\\$tel\\\\[' /var/www/html/modulos/banco_dados/consulta.php)",
+      "Bash(grep -n '\\\\$cliente\\\\[' /var/www/html/modulos/banco_dados/consulta.php)",
+      "Bash(grep -n '$tel\\\\['\\\\''id'\\\\''\\\\]\\\\|$end\\\\['\\\\''id'\\\\''\\\\]\\\\|$email\\\\['\\\\''id'\\\\''\\\\]\\\\|$conv\\\\['\\\\''ID'\\\\''\\\\]\\\\|$conv\\\\['\\\\''CPF'\\\\''\\\\]\\\\|$tel\\\\['\\\\''cpf'\\\\''\\\\]\\\\|$tel\\\\['\\\\''ID_QUALIFICACAO'\\\\''\\\\]' /var/www/html/modulos/banco_dados/consulta.php)",
+      "Bash(php -l /var/www/html/modulos/banco_dados/consulta.php)"
     ]
   }
 }

@@ -517,10 +517,23 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
             } catch (\Throwable $e) {}
 
             $idade_calculada = calcularIdadeExport($cliente['nascimento'] ?? '', 'N/A');
-            $stmtTel = $pdo->prepare("SELECT * FROM telefones WHERE cpf = :cpf"); $stmtTel->execute(['cpf' => $cpf_selecionado]); $telefones = $stmtTel->fetchAll(PDO::FETCH_ASSOC);
-            $stmtEnd = $pdo->prepare("SELECT * FROM enderecos WHERE cpf = :cpf"); $stmtEnd->execute(['cpf' => $cpf_selecionado]); $enderecos = $stmtEnd->fetchAll(PDO::FETCH_ASSOC);
-            $stmtEmail = $pdo->prepare("SELECT * FROM emails WHERE cpf = :cpf"); $stmtEmail->execute(['cpf' => $cpf_selecionado]); $emails = $stmtEmail->fetchAll(PDO::FETCH_ASSOC);
-            $stmtConv = $pdo->prepare("SELECT * FROM BANCO_DADOS_CONVENIO WHERE CPF = :cpf"); $stmtConv->execute(['cpf' => $cpf_selecionado]); $convenios = $stmtConv->fetchAll(PDO::FETCH_ASSOC);
+
+            // Busca dados complementares — colunas específicas para reduzir transferência MySQL→PHP
+            $stmtTel = $pdo->prepare("SELECT telefone_cel FROM telefones WHERE cpf = :cpf ORDER BY id ASC");
+            $stmtTel->execute(['cpf' => $cpf_selecionado]);
+            $telefones = $stmtTel->fetchAll(PDO::FETCH_ASSOC);
+
+            $stmtEnd = $pdo->prepare("SELECT cep, logradouro, numero, bairro, cidade, uf FROM enderecos WHERE cpf = :cpf ORDER BY id ASC");
+            $stmtEnd->execute(['cpf' => $cpf_selecionado]);
+            $enderecos = $stmtEnd->fetchAll(PDO::FETCH_ASSOC);
+
+            $stmtEmail = $pdo->prepare("SELECT email FROM emails WHERE cpf = :cpf ORDER BY id ASC");
+            $stmtEmail->execute(['cpf' => $cpf_selecionado]);
+            $emails = $stmtEmail->fetchAll(PDO::FETCH_ASSOC);
+
+            $stmtConv = $pdo->prepare("SELECT CONVENIO, MATRICULA FROM BANCO_DADOS_CONVENIO WHERE CPF = :cpf ORDER BY ID ASC");
+            $stmtConv->execute(['cpf' => $cpf_selecionado]);
+            $convenios = $stmtConv->fetchAll(PDO::FETCH_ASSOC);
 
             $stmtHist = $pdo->prepare("SELECT nome_importacao FROM BANCO_DE_DADOS_HISTORICO_IMPORTACAO WHERE cpf = :cpf");
             $stmtHist->execute(['cpf' => $cpf_selecionado]);
