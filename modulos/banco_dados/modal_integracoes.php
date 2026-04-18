@@ -166,7 +166,21 @@ if (empty($cpf_para_integracao) && isset($termo_busca)) {
 
         if (tipo === 'V8_CLT') {
             titulo.innerHTML = 'INTEGRAÇÃO V8 CONSIGNADO';
-            if (chavesV8Cache.length > 0) { popularSelectChaves(selChaves, chavesV8Cache); } else { buscarChavesV8(selChaves); }
+            const grupoLogadoV8 = document.getElementById('integ_user_grupo_logado').value.toUpperCase();
+            const isAdminV8 = ['MASTER', 'ADMIN', 'ADMINISTRADOR'].includes(grupoLogadoV8);
+
+            if (isAdminV8) {
+                // MASTER/ADMIN: exibe seleção de chave normalmente
+                if (chavesV8Cache.length > 0) { popularSelectChaves(selChaves, chavesV8Cache); } else { buscarChavesV8(selChaves); }
+            } else {
+                // CONSULTOR/SUPERVISOR: executa direto, sem mostrar seleção
+                document.getElementById('box_selecao_chave').style.display = 'none';
+                document.getElementById('btn_fechar_modal_top').style.display = 'none';
+                document.getElementById('box_processamento').style.display = 'block';
+                document.getElementById('texto_status_integracao').innerHTML = 'Preparando consulta V8...';
+                document.getElementById('subtexto_status').innerHTML = 'Identificando sua chave automaticamente.';
+                _executarV8Automatico();
+            }
         } else if (tipo === 'FATOR_CONFERI') {
             titulo.innerHTML = 'ATUALIZAÇÃO CADASTRAL';
             document.getElementById('box_selecao_chave').style.display = 'none';
@@ -302,6 +316,22 @@ if (empty($cpf_para_integracao) && isset($termo_busca)) {
         textoStatus.className = 'fw-bold text-danger mb-2';
         document.getElementById('btn_fechar_erro').style.display = 'inline-block';
         document.getElementById('btn_fechar_modal_top').style.display = 'block';
+    }
+
+    function _executarV8Automatico() {
+        let fd = new FormData();
+        fd.append('acao', 'listar_chaves_acesso');
+        fetch('/modulos/configuracao/v8_clt_margem_e_digitacao/v8_api.ajax.php', { method: 'POST', body: fd })
+            .then(r => r.json())
+            .then(r => {
+                if (!r.success || !r.data || r.data.length === 0) {
+                    return exibirErroIntegracao("Você não possui uma chave V8 ativa. Solicite ao administrador para cadastrar sua carteira.");
+                }
+                // Usa a primeira chave disponível do usuário
+                document.getElementById('integ_chave_alvo').value = r.data[0].ID;
+                executarIntegracaoUnica();
+            })
+            .catch(() => exibirErroIntegracao("Falha ao identificar sua chave V8. Verifique a conexão e tente novamente."));
     }
 
     function executarV8ComDadosManuais() {
