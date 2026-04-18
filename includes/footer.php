@@ -46,33 +46,36 @@
 <!-- ===== WIDGET GUIA SISTEMA ===== -->
 <style>
 #guia-widget-btn {
-    position: fixed;
-    bottom: 22px;
-    right: 22px;
-    z-index: 99990;
-    width: 52px;
-    height: 52px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
     background: #fff;
     border: 2.5px solid #0d6efd;
     box-shadow: 0 3px 14px rgba(13,110,253,.35);
     cursor: pointer;
-    font-size: 26px;
+    font-size: 28px;
     line-height: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: transform .18s, box-shadow .18s;
-    display: none; /* visível apenas quando há guias */
 }
-#guia-widget-btn:hover { transform: scale(1.12); box-shadow: 0 5px 20px rgba(13,110,253,.45); }
+#guia-widget-btn:hover { transform: scale(1.1); box-shadow: 0 5px 20px rgba(13,110,253,.5); }
+@keyframes guia-pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(13,110,253,.6); }
+    70%  { box-shadow: 0 0 0 12px rgba(13,110,253,0); }
+    100% { box-shadow: 0 0 0 0 rgba(13,110,253,0); }
+}
+#guia-widget-btn.com-guias { animation: guia-pulse 2s ease-out 1.5s 3; }
+/* Badge estilo expoente/superscript */
 #guia-widget-badge {
     position: absolute;
-    top: -4px; right: -4px;
+    top: -6px;
+    right: -6px;
     background: #dc3545;
     color: #fff;
     font-size: 10px;
-    font-weight: 700;
+    font-weight: 900;
     min-width: 18px;
     height: 18px;
     border-radius: 9px;
@@ -82,6 +85,9 @@
     padding: 0 4px;
     border: 2px solid #fff;
     line-height: 1;
+    box-shadow: 0 2px 6px rgba(220,53,69,.55);
+    font-family: Arial, sans-serif;
+    letter-spacing: 0;
 }
 #guia-widget-tooltip {
     position: fixed;
@@ -193,8 +199,10 @@
 
 <div id="guia-panel-overlay" onclick="guiaPanelFechar()"></div>
 
-<div id="guia-widget-btn" title="Guia Sistema">
-    <span>👨‍🏫</span>
+<div id="guia-widget-wrap" style="position:fixed;bottom:22px;right:22px;z-index:99990;display:none;">
+    <div id="guia-widget-btn" title="Abrir Guia Sistema">
+        <span style="position:relative;top:1px;">👨‍🏫</span>
+    </div>
     <span id="guia-widget-badge" style="display:none;"></span>
 </div>
 <div id="guia-widget-tooltip"></div>
@@ -225,6 +233,7 @@
     let _guias = [];
     let _loaded = false;
 
+    const wrap    = document.getElementById('guia-widget-wrap');
     const btn     = document.getElementById('guia-widget-btn');
     const badge   = document.getElementById('guia-widget-badge');
     const tooltip = document.getElementById('guia-widget-tooltip');
@@ -242,11 +251,13 @@
             const j = await r.json();
             if (j.success && j.data && j.data.length) {
                 _guias = j.data;
-                btn.style.display = 'flex';
-                if (_guias.length > 1) {
-                    badge.textContent = _guias.length;
-                    badge.style.display = 'flex';
-                }
+                // Exibe o wrapper
+                wrap.style.display = 'block';
+                // Badge exponencial — sempre visível, mostra a quantidade
+                badge.textContent = _guias.length;
+                badge.style.display = 'flex';
+                // Pulso de atenção
+                btn.classList.add('com-guias');
                 renderLista();
             }
         } catch(e) {}
