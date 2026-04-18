@@ -141,24 +141,25 @@ try {
             $cpfs_list = array_map(fn($r) => str_pad(preg_replace('/\D/','',$r['CPF']),11,'0',STR_PAD_LEFT), $rows);
             $placeholders = implode(',', array_fill(0, count($cpfs_list), '?'));
 
+            // telefones_map e emails_map acumulam TODOS os registros de cada CPF
             $telefones_map = $emails_map = $enderecos_map = [];
 
             if ($cpfs_list) {
-                // Telefones — pega o primeiro de cada CPF
+                // Telefones — todos por CPF
                 $stmtT = $pdo->prepare("SELECT cpf, telefone_cel FROM telefones WHERE cpf IN ($placeholders) ORDER BY id ASC");
                 $stmtT->execute($cpfs_list);
                 foreach ($stmtT->fetchAll(PDO::FETCH_ASSOC) as $row) {
-                    if (!isset($telefones_map[$row['cpf']])) $telefones_map[$row['cpf']] = $row['telefone_cel'];
+                    $telefones_map[$row['cpf']][] = $row['telefone_cel'];
                 }
 
-                // E-mails — pega o primeiro de cada CPF
+                // E-mails — todos por CPF
                 $stmtE = $pdo->prepare("SELECT cpf, email FROM emails WHERE cpf IN ($placeholders) ORDER BY id ASC");
                 $stmtE->execute($cpfs_list);
                 foreach ($stmtE->fetchAll(PDO::FETCH_ASSOC) as $row) {
-                    if (!isset($emails_map[$row['cpf']])) $emails_map[$row['cpf']] = $row['email'];
+                    $emails_map[$row['cpf']][] = $row['email'];
                 }
 
-                // Endereços — pega o primeiro de cada CPF
+                // Endereços — apenas o primeiro por CPF
                 $stmtEnd = $pdo->prepare("SELECT cpf, logradouro, numero, bairro, cidade, uf, cep FROM enderecos WHERE cpf IN ($placeholders) ORDER BY id ASC");
                 $stmtEnd->execute($cpfs_list);
                 foreach ($stmtEnd->fetchAll(PDO::FETCH_ASSOC) as $row) {
@@ -166,30 +167,36 @@ try {
                 }
             }
 
+            // Colunas fixas: sempre 15 telefones e 4 e-mails
+            $max_tel   = 15;
+            $max_email = 4;
+
+            // Helper: formata número de telefone
+            $fmtTel = function(string $n): string {
+                $n = preg_replace('/\D/', '', $n);
+                if (strlen($n) === 11) return '(' . substr($n,0,2) . ') ' . substr($n,2,5) . '-' . substr($n,7);
+                if (strlen($n) === 10) return '(' . substr($n,0,2) . ') ' . substr($n,2,4) . '-' . substr($n,6);
+                return $n;
+            };
+
             header('Content-Type: text/csv; charset=UTF-8');
             header('Content-Disposition: attachment; filename="auditoria_' . $id_auditoria . '_' . date('Ymd_His') . '.csv"');
             $out = fopen('php://output', 'w');
             fputs($out, "\xEF\xBB\xBF");
-            fputcsv($out, [
-                'CPF','NOME','STATUS V8','MARGEM','VALOR LIQUIDO','PRAZO','OBSERVACAO','DATA SIMULACAO',
-                'TELEFONE','EMAIL',
-                'CEP','LOGRADOURO','NUMERO','BAIRRO','CIDADE','UF'
-            ], ';');
+
+            // Cabeçalho fixo
+            $cabecalho = ['CPF','NOME','STATUS V8','MARGEM','VALOR LIQUIDO','PRAZO','OBSERVACAO','DATA SIMULACAO'];
+            for ($i = 1; $i <= $max_tel;   $i++) $cabecalho[] = "TELEFONE $i";
+            for ($i = 1; $i <= $max_email; $i++) $cabecalho[] = "EMAIL $i";
+            array_push($cabecalho, 'CEP','LOGRADOURO','NUMERO','BAIRRO','CIDADE','UF');
+            fputcsv($out, $cabecalho, ';');
+
             foreach ($rows as $r) {
                 $cpf_pad = str_pad(preg_replace('/\D/','',$r['CPF']),11,'0',STR_PAD_LEFT);
                 $cpf_fmt = preg_replace('/(\d{3})(\d{3})(\d{3})(\d{2})/', '$1.$2.$3-$4', $cpf_pad);
                 $end     = $enderecos_map[$cpf_pad] ?? [];
 
-                // Formata telefone (11 dígitos → (DD) 9XXXX-XXXX)
-                $tel_raw = $telefones_map[$cpf_pad] ?? '';
-                if (strlen($tel_raw) === 11)
-                    $tel_fmt = '(' . substr($tel_raw,0,2) . ') ' . substr($tel_raw,2,5) . '-' . substr($tel_raw,7);
-                elseif (strlen($tel_raw) === 10)
-                    $tel_fmt = '(' . substr($tel_raw,0,2) . ') ' . substr($tel_raw,2,4) . '-' . substr($tel_raw,6);
-                else
-                    $tel_fmt = $tel_raw;
-
-                fputcsv($out, [
+                $linha = [
                     $cpf_fmt,
                     $r['NOME'],
                     $r['STATUS_V8'],
@@ -198,15 +205,30 @@ try {
                     $r['PRAZO'] ?? '',
                     $r['OBSERVACAO'] ?? '',
                     $r['DATA_SIMULACAO'] ? date('d/m/Y H:i', strtotime($r['DATA_SIMULACAO'])) : '',
-                    $tel_fmt,
-                    $emails_map[$cpf_pad] ?? '',
+                ];
+
+                // Telefones (preenche até $max_tel colunas)
+                $tels = $telefones_map[$cpf_pad] ?? [];
+                for ($i = 0; $i < $max_tel; $i++) {
+                    $linha[] = isset($tels[$i]) ? $fmtTel($tels[$i]) : '';
+                }
+
+                // E-mails (preenche até $max_email colunas)
+                $emails = $emails_map[$cpf_pad] ?? [];
+                for ($i = 0; $i < $max_email; $i++) {
+                    $linha[] = $emails[$i] ?? '';
+                }
+
+                array_push($linha,
                     $end['cep']        ?? '',
                     $end['logradouro'] ?? '',
                     $end['numero']     ?? '',
                     $end['bairro']     ?? '',
                     $end['cidade']     ?? '',
-                    $end['uf']         ?? '',
-                ], ';');
+                    $end['uf']         ?? ''
+                );
+
+                fputcsv($out, $linha, ';');
             }
             fclose($out); exit;
 
