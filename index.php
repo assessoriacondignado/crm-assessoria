@@ -396,57 +396,58 @@ if (file_exists($caminho_header)) {
     .tbl-v8-hist td { text-align: center; vertical-align: middle; }
 </style>
 
-<div class="d-flex justify-content-between align-items-center border-bottom border-dark pb-2 mb-4">
-    <div>
-        <h2 class="text-dark fw-bold m-0"><i class="fas fa-home text-primary me-2"></i> Hub Principal do CRM</h2>
-        <p class="text-muted m-0">Bem-vindo. Selecione um módulo no menu superior para começar.</p>
-    </div>
-</div>
-
 <?php if (isset($erro_db)): ?>
     <div class="alert alert-danger fw-bold border-dark shadow-sm"><i class="fas fa-exclamation-triangle me-2"></i> <?= $erro_db ?></div>
 <?php endif; ?>
 
+<!-- BARRA DE BOTÕES DO HUB -->
+<div class="d-flex flex-wrap gap-2 mb-4">
+    <?php if ($temAcessoCampanhas): ?>
+    <button class="btn btn-outline-dark fw-bold shadow-sm" onclick="hubToggle('painelCampanhas', this)">
+        <i class="far fa-newspaper me-2 text-warning"></i> Campanhas em Andamento
+    </button>
+    <?php endif; ?>
+    <?php if ($temAcessoV8): ?>
+    <button class="btn btn-outline-dark fw-bold shadow-sm" onclick="hubToggle('painelV8Chaves', this)">
+        <i class="fas fa-robot me-2 text-primary"></i> V8 CLT — Robô de Consulta
+    </button>
+    <button class="btn btn-outline-dark fw-bold shadow-sm" onclick="hubToggle('painelV8Hist', this)">
+        <i class="fas fa-history me-2 text-info"></i> V8 CLT — Histórico Consulta
+    </button>
+    <?php endif; ?>
+</div>
+
 <?php if ($temAcessoCampanhas): ?>
-<div class="mb-5">
-    <div class="barra-titulo-campanha shadow-sm" data-bs-toggle="collapse" data-bs-target="#collapseCampanhas" aria-expanded="true">
-        <span><i class="far fa-newspaper me-2"></i> Campanhas em Andamento</span>
-        <i class="fas fa-bell"></i>
-    </div>
-    
-    <div class="collapse show" id="collapseCampanhas">
-        <div class="box-campanhas shadow-sm">
-            <div class="row g-3">
-                <?php if (empty($campanhas_ativas)): ?>
-                    <div class="col-12 text-center py-3">
-                        <span class="text-muted fw-bold fst-italic">Nenhuma campanha ativa no momento.</span>
-                    </div>
-                <?php else: ?>
-                    <?php foreach ($campanhas_ativas as $camp): ?>
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                            <?php if ($camp['TOTAL_CLIENTES'] > 0 && !empty($camp['PRIMEIRO_CPF'])): ?>
-                                <a href="/modulos/banco_dados/consulta.php?id_campanha=<?= $camp['ID'] ?>&busca=<?= $camp['PRIMEIRO_CPF'] ?>&cpf_selecionado=<?= $camp['PRIMEIRO_CPF'] ?>&acao=visualizar" class="btn-camp-hub">
-                                    <i class="fas fa-headset icon-bg"></i>
-                                    <div class="content">
-                                        <span class="nome"><?= htmlspecialchars($camp['NOME_CAMPANHA']) ?></span>
-                                        <span class="stats">
-                                            Total: <?= number_format($camp['TOTAL_CLIENTES'], 0, ',', '.') ?> | Restante: <?= number_format($camp['RESTANTES'], 0, ',', '.') ?>
-                                        </span>
-                                    </div>
-                                </a>
-                            <?php else: ?>
-                                <div class="btn-camp-hub btn-camp-vazia" title="Nenhum cliente inserido nesta campanha.">
-                                    <i class="fas fa-headset icon-bg"></i>
-                                    <div class="content">
-                                        <span class="nome"><?= htmlspecialchars($camp['NOME_CAMPANHA']) ?></span>
-                                        <span class="stats text-warning">Vazia (Sem Clientes)</span>
-                                    </div>
+<div id="painelCampanhas" class="hub-painel mb-4" style="display:none;">
+    <div class="box-campanhas shadow-sm">
+        <div class="row g-3">
+            <?php if (empty($campanhas_ativas)): ?>
+                <div class="col-12 text-center py-3">
+                    <span class="text-muted fw-bold fst-italic">Nenhuma campanha ativa no momento.</span>
+                </div>
+            <?php else: ?>
+                <?php foreach ($campanhas_ativas as $camp): ?>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <?php if ($camp['TOTAL_CLIENTES'] > 0 && !empty($camp['PRIMEIRO_CPF'])): ?>
+                            <a href="/modulos/banco_dados/consulta.php?id_campanha=<?= $camp['ID'] ?>&busca=<?= $camp['PRIMEIRO_CPF'] ?>&cpf_selecionado=<?= $camp['PRIMEIRO_CPF'] ?>&acao=visualizar" class="btn-camp-hub">
+                                <i class="fas fa-headset icon-bg"></i>
+                                <div class="content">
+                                    <span class="nome"><?= htmlspecialchars($camp['NOME_CAMPANHA']) ?></span>
+                                    <span class="stats">Total: <?= number_format($camp['TOTAL_CLIENTES'], 0, ',', '.') ?> | Restante: <?= number_format($camp['RESTANTES'], 0, ',', '.') ?></span>
                                 </div>
-                            <?php endif; ?>
-                        </div>
-                    <?php endforeach; ?>
-                <?php endif; ?>
-            </div>
+                            </a>
+                        <?php else: ?>
+                            <div class="btn-camp-hub btn-camp-vazia" title="Nenhum cliente inserido nesta campanha.">
+                                <i class="fas fa-headset icon-bg"></i>
+                                <div class="content">
+                                    <span class="nome"><?= htmlspecialchars($camp['NOME_CAMPANHA']) ?></span>
+                                    <span class="stats text-warning">Vazia (Sem Clientes)</span>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </div>
     </div>
 </div>
@@ -455,76 +456,61 @@ if (file_exists($caminho_header)) {
 <?php if ($temAcessoV8): ?>
 
 <!-- ====== WIDGET 1: V8 CLT - ROBÔ DE CONSULTA ====== -->
-<div class="mb-4">
-    <div class="barra-titulo-v8 shadow-sm" data-bs-toggle="collapse" data-bs-target="#collapseV8Chaves" aria-expanded="false">
-        <span><i class="fas fa-robot me-2"></i> V8 CLT - ROBÔ DE CONSULTA</span>
-        <i class="fas fa-chevron-down" id="iconV8Chaves"></i>
-    </div>
-
-    <div class="collapse" id="collapseV8Chaves">
-        <div class="box-v8 shadow-sm">
-            <div class="row g-3">
-                <?php if (empty($v8_chaves)): ?>
-                    <div class="col-12 text-center py-3">
-                        <span class="text-muted fw-bold fst-italic">Nenhuma chave V8 configurada.</span>
-                    </div>
-                <?php else: ?>
-                    <?php foreach ($v8_chaves as $chave): ?>
-                        <?php $ativo = strtoupper($chave['STATUS'] ?? '') === 'ATIVO'; ?>
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                            <div class="card-v8-hub">
-                                <div class="v8h-header"><?= htmlspecialchars($chave['CLIENTE_NOME']) ?></div>
-                                <div class="v8h-body">
-                                    <div class="v8h-status-row">
-                                        <?php if ($ativo): ?>
-                                            <span class="v8h-dot-ativo"><i class="fas fa-circle" style="font-size:0.55rem;"></i> ATIVO</span>
-                                            <a href="/modulos/configuracao/v8_clt_margem_e_digitacao/index.php" class="btn-v8h-acoes"><i class="fas fa-bars me-1"></i>Ações</a>
-                                        <?php else: ?>
-                                            <span class="v8h-dot-inativo"><i class="far fa-circle" style="font-size:0.55rem;"></i> INATIVO</span>
-                                            <span class="btn-v8h-acoes disabled"><i class="fas fa-bars me-1"></i>Ações</span>
-                                        <?php endif; ?>
-                                    </div>
-
-                                    <div class="v8h-metric-row">
-                                        <span class="v8h-icon"><i class="fas fa-credit-card"></i></span>
-                                        <span class="v8h-label">Consen.:</span>
-                                        <span class="v8h-val"><?= (int)$chave['CONSEN_HOJE'] ?></span>
-                                        <span class="badge-hj"><?= (int)$chave['CONSEN_HOJE'] ?> hj</span>
-                                    </div>
-                                    <div class="v8h-metric-row">
-                                        <span class="v8h-icon"><i class="fas fa-search"></i></span>
-                                        <span class="v8h-label">Margem:</span>
-                                        <span class="v8h-val"><?= (int)$chave['MARGEM_HOJE'] ?></span>
-                                        <span class="badge-hj"><?= (int)$chave['MARGEM_HOJE'] ?> hj</span>
-                                    </div>
-                                    <div class="v8h-metric-row">
-                                        <span class="v8h-icon"><i class="fas fa-file-alt"></i></span>
-                                        <span class="v8h-label">Simul.:</span>
-                                        <span class="v8h-val"><?= (int)$chave['SIMUL_HOJE'] ?></span>
-                                        <span class="badge-hj"><?= (int)$chave['SIMUL_HOJE'] ?> hj</span>
-                                    </div>
-
-                                    <div class="v8h-total-row">
-                                        <i class="fas fa-users me-1 text-muted"></i> Total histórico: <?= number_format((int)$chave['CONSEN_TOTAL'], 0, ',', '.') ?>
-                                    </div>
+<div id="painelV8Chaves" class="hub-painel mb-4" style="display:none;">
+    <div class="box-v8 shadow-sm">
+        <div class="row g-3">
+            <?php if (empty($v8_chaves)): ?>
+                <div class="col-12 text-center py-3">
+                    <span class="text-muted fw-bold fst-italic">Nenhuma chave V8 configurada.</span>
+                </div>
+            <?php else: ?>
+                <?php foreach ($v8_chaves as $chave): ?>
+                    <?php $ativo = strtoupper($chave['STATUS'] ?? '') === 'ATIVO'; ?>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <div class="card-v8-hub">
+                            <div class="v8h-header"><?= htmlspecialchars($chave['CLIENTE_NOME']) ?></div>
+                            <div class="v8h-body">
+                                <div class="v8h-status-row">
+                                    <?php if ($ativo): ?>
+                                        <span class="v8h-dot-ativo"><i class="fas fa-circle" style="font-size:0.55rem;"></i> ATIVO</span>
+                                        <a href="/modulos/configuracao/v8_clt_margem_e_digitacao/index.php" class="btn-v8h-acoes"><i class="fas fa-bars me-1"></i>Ações</a>
+                                    <?php else: ?>
+                                        <span class="v8h-dot-inativo"><i class="far fa-circle" style="font-size:0.55rem;"></i> INATIVO</span>
+                                        <span class="btn-v8h-acoes disabled"><i class="fas fa-bars me-1"></i>Ações</span>
+                                    <?php endif; ?>
+                                </div>
+                                <div class="v8h-metric-row">
+                                    <span class="v8h-icon"><i class="fas fa-credit-card"></i></span>
+                                    <span class="v8h-label">Consen.:</span>
+                                    <span class="v8h-val"><?= (int)$chave['CONSEN_HOJE'] ?></span>
+                                    <span class="badge-hj"><?= (int)$chave['CONSEN_HOJE'] ?> hj</span>
+                                </div>
+                                <div class="v8h-metric-row">
+                                    <span class="v8h-icon"><i class="fas fa-search"></i></span>
+                                    <span class="v8h-label">Margem:</span>
+                                    <span class="v8h-val"><?= (int)$chave['MARGEM_HOJE'] ?></span>
+                                    <span class="badge-hj"><?= (int)$chave['MARGEM_HOJE'] ?> hj</span>
+                                </div>
+                                <div class="v8h-metric-row">
+                                    <span class="v8h-icon"><i class="fas fa-file-alt"></i></span>
+                                    <span class="v8h-label">Simul.:</span>
+                                    <span class="v8h-val"><?= (int)$chave['SIMUL_HOJE'] ?></span>
+                                    <span class="badge-hj"><?= (int)$chave['SIMUL_HOJE'] ?> hj</span>
+                                </div>
+                                <div class="v8h-total-row">
+                                    <i class="fas fa-users me-1 text-muted"></i> Total histórico: <?= number_format((int)$chave['CONSEN_TOTAL'], 0, ',', '.') ?>
                                 </div>
                             </div>
                         </div>
-                    <?php endforeach; ?>
-                <?php endif; ?>
-            </div>
+                    </div>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </div>
     </div>
 </div>
 
 <!-- ====== WIDGET 2: V8 CLT - HISTÓRICO CONSULTA ====== -->
-<div class="mb-5">
-    <div class="barra-titulo-v8 shadow-sm" data-bs-toggle="collapse" data-bs-target="#collapseV8Hist" aria-expanded="false">
-        <span><i class="fas fa-history me-2"></i> V8 CLT - HISTÓRICO CONSULTA</span>
-        <i class="fas fa-chevron-down" id="iconV8Hist"></i>
-    </div>
-
-    <div class="collapse" id="collapseV8Hist">
+<div id="painelV8Hist" class="hub-painel mb-5" style="display:none;">
         <div class="box-v8 shadow-sm">
             <?php if (empty($v8_historico)): ?>
                 <div class="text-center py-3">
