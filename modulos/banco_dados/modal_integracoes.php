@@ -52,6 +52,25 @@ if (empty($cpf_para_integracao) && isset($termo_busca)) {
                     <button id="btn_fechar_erro" class="btn btn-dark fw-bold mt-4 px-4 rounded-0 shadow-sm" style="display: none;" data-bs-dismiss="modal">Entendi, Fechar</button>
                 </div>
 
+                <div id="box_dados_faltantes" style="display: none;" class="text-start">
+                    <div class="alert alert-warning py-2 mb-3 border-dark rounded-0 small fw-bold">
+                        <i class="fas fa-exclamation-triangle me-1"></i> Cliente não localizado na base. Informe o nome e nascimento para consultar na V8.
+                    </div>
+                    <input type="hidden" id="dados_faltantes_chave">
+                    <div class="mb-2">
+                        <label class="form-label fw-bold small mb-1">Nome Completo <span class="text-danger">*</span></label>
+                        <input type="text" id="campo_nome_v8" class="form-control border-dark rounded-0 fw-bold text-uppercase" placeholder="Nome completo do cliente">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold small mb-1">Data de Nascimento <span class="text-danger">*</span></label>
+                        <input type="text" id="campo_nasc_v8" class="form-control border-dark rounded-0 fw-bold" placeholder="DD/MM/AAAA">
+                    </div>
+                    <button class="btn btn-success w-100 fw-bold border-dark shadow-sm rounded-0 py-2 fs-6" onclick="executarV8ComDadosManuais()">
+                        <i class="fas fa-play me-2"></i> Consultar na V8 Agora
+                    </button>
+                    <button class="btn btn-outline-secondary w-100 fw-bold rounded-0 mt-2 py-1" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+
             </div>
         </div>
     </div>
@@ -134,11 +153,14 @@ if (empty($cpf_para_integracao) && isset($termo_busca)) {
         // Reseta as telas
         document.getElementById('box_selecao_chave').style.display = 'block';
         document.getElementById('box_processamento').style.display = 'none';
+        document.getElementById('box_dados_faltantes').style.display = 'none';
         document.getElementById('btn_fechar_modal_top').style.display = 'block';
         document.getElementById('btn_fechar_erro').style.display = 'none';
         document.getElementById('loading_spinner').style.display = 'block';
         document.getElementById('subtexto_status').style.display = 'block';
         document.getElementById('texto_status_integracao').className = 'fw-bold text-dark mb-2';
+        document.getElementById('campo_nome_v8').value = '';
+        document.getElementById('campo_nasc_v8').value = '';
 
         selChaves.innerHTML = '<option value="">-- Carregando chaves... --</option>';
 
@@ -282,6 +304,87 @@ if (empty($cpf_para_integracao) && isset($termo_busca)) {
         document.getElementById('btn_fechar_modal_top').style.display = 'block';
     }
 
+    function executarV8ComDadosManuais() {
+        const nomeManual = document.getElementById('campo_nome_v8').value.trim().toUpperCase();
+        const nascManual = document.getElementById('campo_nasc_v8').value.trim();
+        const chaveId    = document.getElementById('dados_faltantes_chave').value;
+
+        if (!nomeManual) return crmToast("Informe o nome completo.", "warning", 4000);
+        if (!nascManual) return crmToast("Informe a data de nascimento.", "warning", 4000);
+
+        // Converte DD/MM/AAAA para AAAA-MM-DD se necessário
+        let nascFormatado = nascManual;
+        const matchBR = nascManual.match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+        if (matchBR) nascFormatado = matchBR[3] + '-' + matchBR[2] + '-' + matchBR[1];
+
+        // Preenche os campos hidden do modal e prossegue
+        document.getElementById('integ_nome_alvo').value = nomeManual;
+        document.getElementById('integ_nasc_alvo').value = nascFormatado;
+
+        // Volta ao box de seleção de chave (já preenchida) e executa
+        document.getElementById('box_dados_faltantes').style.display = 'none';
+        document.getElementById('box_selecao_chave').style.display = 'none';
+        document.getElementById('box_processamento').style.display = 'block';
+        document.getElementById('btn_fechar_modal_top').style.display = 'none';
+        document.getElementById('loading_spinner').style.display = 'block';
+        document.getElementById('subtexto_status').style.display = 'block';
+
+        const cpfAlvo  = document.getElementById('integ_cpf_alvo').value.replace(/\D/g, '');
+        const genero   = 'male';
+        const telefone = document.getElementById('integ_tel_alvo').value.replace(/\D/g, '');
+        const nomeExib = nomeManual || ('CPF ' + cpfAlvo);
+        const textoStatus = document.getElementById('texto_status_integracao');
+
+        textoStatus.innerHTML = 'Enviando dados para a V8...';
+        document.getElementById('subtexto_status').innerHTML = 'Cobrando do seu saldo. Aguarde...';
+
+        let fd = new FormData();
+        fd.append('acao', 'solicitar_consulta_cpf');
+        fd.append('cpf', cpfAlvo);
+        fd.append('nascimento', nascFormatado);
+        fd.append('genero', genero);
+        fd.append('nome', nomeManual);
+        fd.append('telefone', telefone);
+        fd.append('chave_id', chaveId);
+
+        fetch('/modulos/configuracao/v8_clt_margem_e_digitacao/v8_api.ajax.php', { method: 'POST', body: fd })
+            .then(async r => JSON.parse(await r.text()))
+            .then(r => {
+                if (r.success) {
+                    window._v8FilaConsultas.push({ idFila: r.id_fila, cpf: cpfAlvo, nome: nomeExib, status: 'aguardando' });
+                    atualizarBadgeFila();
+
+                    document.getElementById('loading_spinner').style.display = 'none';
+                    textoStatus.innerHTML = '<i class="fas fa-check-circle text-success mb-2" style="font-size:2.5rem;"></i><br>Consulta enviada!';
+                    textoStatus.className = 'fw-bold text-success mb-2';
+                    document.getElementById('subtexto_status').innerHTML =
+                        'A Dataprev está processando em segundo plano.<br>' +
+                        'Você será avisado aqui quando concluir.<br>' +
+                        '<small class="text-muted mt-1 d-block">Ou verifique o rodapé do cliente. Fechando em <strong id="countdown-integ">5</strong>s...</small>';
+                    document.getElementById('subtexto_status').style.display = 'block';
+                    document.getElementById('btn_fechar_modal_top').style.display = 'block';
+
+                    let seg = 5;
+                    const cd = setInterval(() => {
+                        seg--;
+                        const el = document.getElementById('countdown-integ');
+                        if (el) el.textContent = seg;
+                        if (seg <= 0) {
+                            clearInterval(cd);
+                            const m = bootstrap.Modal.getInstance(document.getElementById('modalIntegracaoGeral'));
+                            if (m) m.hide();
+                            crmToast('🔄 Consulta V8 de ' + nomeExib + ' em andamento. Aguarde o aviso de conclusão.', 'info');
+                        }
+                    }, 1000);
+
+                    setTimeout(() => pollarEmBackground(r.id_fila, cpfAlvo, nomeExib, 1), 5000);
+                } else {
+                    exibirErroIntegracao(r.msg);
+                }
+            })
+            .catch(() => exibirErroIntegracao("Erro de comunicação com a V8."));
+    }
+
     function gravarLogRodape(cpf, texto, margem = 0) {
         let fd = new FormData();
         fd.append('acao', 'salvar_log_rodape');
@@ -333,7 +436,12 @@ if (empty($cpf_para_integracao) && isset($termo_busca)) {
 
         if (tipo === 'V8_CLT') {
             if (!nome || !nasc) {
-                return exibirErroIntegracao("O Nome e o Nascimento precisam estar preenchidos no cadastro para a V8.");
+                // Sem dados do cliente — exibe formulário inline para coleta
+                document.getElementById('box_selecao_chave').style.display = 'none';
+                document.getElementById('box_processamento').style.display = 'none';
+                document.getElementById('box_dados_faltantes').style.display = 'block';
+                document.getElementById('dados_faltantes_chave').value = chaveId;
+                return;
             }
 
             textoStatus.innerHTML = 'Enviando dados para a V8...';
