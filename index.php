@@ -382,6 +382,14 @@ if (file_exists($caminho_header)) {
         font-weight: 600;
     }
 
+    /* Botões hub toggle — estado ativo */
+    .btn-hub-toggle.active {
+        background-color: #343a40;
+        color: #fff;
+        border-color: #343a40;
+    }
+    .btn-hub-toggle.active i { color: #fff !important; }
+
     /* Tabela histórico — espelho do módulo */
     .tbl-v8-hist { font-size: 0.73rem; }
     .tbl-v8-hist th {
@@ -403,15 +411,15 @@ if (file_exists($caminho_header)) {
 <!-- BARRA DE BOTÕES DO HUB -->
 <div class="d-flex flex-wrap gap-2 mb-4">
     <?php if ($temAcessoCampanhas): ?>
-    <button class="btn btn-outline-dark fw-bold shadow-sm" onclick="hubToggle('painelCampanhas', this)">
+    <button class="btn btn-outline-dark fw-bold shadow-sm btn-hub-toggle" onclick="hubToggle('painelCampanhas', this)">
         <i class="far fa-newspaper me-2 text-warning"></i> Campanhas em Andamento
     </button>
     <?php endif; ?>
     <?php if ($temAcessoV8): ?>
-    <button class="btn btn-outline-dark fw-bold shadow-sm" onclick="hubToggle('painelV8Chaves', this)">
+    <button class="btn btn-outline-dark fw-bold shadow-sm btn-hub-toggle" onclick="hubToggle('painelV8Chaves', this)">
         <i class="fas fa-robot me-2 text-primary"></i> V8 CLT — Robô de Consulta
     </button>
-    <button class="btn btn-outline-dark fw-bold shadow-sm" onclick="hubToggle('painelV8Hist', this)">
+    <button class="btn btn-outline-dark fw-bold shadow-sm btn-hub-toggle" onclick="hubToggle('painelV8Hist', this)">
         <i class="fas fa-history me-2 text-info"></i> V8 CLT — Histórico Consulta
     </button>
     <?php endif; ?>
@@ -613,17 +621,18 @@ if (file_exists($caminho_header)) {
 </div>
 
 <script>
-// Chevron toggle para as seções V8
-document.querySelectorAll('#collapseV8Chaves, #collapseV8Hist').forEach(function(el) {
-    el.addEventListener('show.bs.collapse', function() {
-        var icon = document.querySelector('[data-bs-target="#' + el.id + '"] i.fas');
-        if (icon) { icon.classList.replace('fa-chevron-down', 'fa-chevron-up'); }
-    });
-    el.addEventListener('hide.bs.collapse', function() {
-        var icon = document.querySelector('[data-bs-target="#' + el.id + '"] i.fas');
-        if (icon) { icon.classList.replace('fa-chevron-up', 'fa-chevron-down'); }
-    });
-});
+function hubToggle(painelId, btn) {
+    var painel = document.getElementById(painelId);
+    var aberto = painel.style.display !== 'none';
+    // Fecha todos os painéis e remove active de todos os botões
+    document.querySelectorAll('.hub-painel').forEach(function(p) { p.style.display = 'none'; });
+    document.querySelectorAll('.btn-hub-toggle').forEach(function(b) { b.classList.remove('active'); });
+    // Abre o clicado se estava fechado
+    if (!aberto) {
+        painel.style.display = '';
+        btn.classList.add('active');
+    }
+}
 </script>
 
 <?php endif; ?>
