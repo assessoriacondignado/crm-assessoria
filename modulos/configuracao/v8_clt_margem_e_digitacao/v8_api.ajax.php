@@ -161,10 +161,31 @@ try {
             echo json_encode(['success' => true, 'data' => $res]); break;
 
         case 'listar_chaves_acesso':
-            if ($restricao_meu_usuario) {
-                $stmt = $pdo->prepare("SELECT * FROM INTEGRACAO_V8_CHAVE_ACESSO WHERE CPF_USUARIO = ? ORDER BY CLIENTE_NOME ASC"); $stmt->execute([$usuario_logado_cpf]);
-            } else {
+            $grupo_logado_v8 = strtoupper($_SESSION['usuario_grupo'] ?? 'SEM_GRUPO');
+            if (in_array($grupo_logado_v8, ['MASTER', 'ADMIN', 'ADMINISTRADOR'])) {
+                // MASTER: vê todas as chaves
                 $stmt = $pdo->query("SELECT * FROM INTEGRACAO_V8_CHAVE_ACESSO ORDER BY CLIENTE_NOME ASC");
+            } elseif (in_array($grupo_logado_v8, ['SUPERVISORES', 'SUPERVISOR'])) {
+                // SUPERVISOR: vê chaves de usuários da própria empresa
+                $stmtEmpSup = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+                $stmtEmpSup->execute([$usuario_logado_cpf]);
+                $empresa_supervisor = $stmtEmpSup->fetchColumn() ?: null;
+                if ($empresa_supervisor) {
+                    $stmt = $pdo->prepare("
+                        SELECT ca.* FROM INTEGRACAO_V8_CHAVE_ACESSO ca
+                        INNER JOIN CLIENTE_USUARIO cu ON cu.CPF = ca.CPF_USUARIO
+                        WHERE cu.id_empresa = ?
+                        ORDER BY ca.CLIENTE_NOME ASC
+                    ");
+                    $stmt->execute([$empresa_supervisor]);
+                } else {
+                    $stmt = $pdo->prepare("SELECT * FROM INTEGRACAO_V8_CHAVE_ACESSO WHERE CPF_USUARIO = ? ORDER BY CLIENTE_NOME ASC");
+                    $stmt->execute([$usuario_logado_cpf]);
+                }
+            } else {
+                // CONSULTOR (ou sem grupo): vê apenas a própria chave
+                $stmt = $pdo->prepare("SELECT * FROM INTEGRACAO_V8_CHAVE_ACESSO WHERE CPF_USUARIO = ? ORDER BY CLIENTE_NOME ASC");
+                $stmt->execute([$usuario_logado_cpf]);
             }
             echo json_encode(['success' => true, 'data' => $stmt->fetchAll(PDO::FETCH_ASSOC)]); break;
 
@@ -195,11 +216,11 @@ try {
             $cpf_dono = preg_replace('/\D/', '', $_POST['usuario_id'] ?? '');
             if ($restricao_meu_usuario) { $cpf_dono = $usuario_logado_cpf; }
 
-            $nome_dono = 'Usuário Padrão'; $cliente_nome = 'CLIENTE NÃO IDENTIFICADO';
+            $nome_dono = 'Usuário Padrão'; $cliente_nome = 'CLIENTE NÃO IDENTIFICADO'; $id_empresa_dono = null;
             if(!empty($cpf_dono)) {
-                $stmtD = $pdo->prepare("SELECT u.NOME as NOME_US, c.NOME as NOME_CLI FROM CLIENTE_USUARIO u LEFT JOIN CLIENTE_CADASTRO c ON u.CPF = c.CPF WHERE u.CPF = ?"); 
+                $stmtD = $pdo->prepare("SELECT u.NOME as NOME_US, u.id_empresa, c.NOME as NOME_CLI FROM CLIENTE_USUARIO u LEFT JOIN CLIENTE_CADASTRO c ON u.CPF = c.CPF WHERE u.CPF = ?");
                 $stmtD->execute([$cpf_dono]); $dadosDono = $stmtD->fetch(PDO::FETCH_ASSOC);
-                if($dadosDono) { $nome_dono = $dadosDono['NOME_US'] ?: 'Usuário Padrão'; $cliente_nome = mb_strtoupper($dadosDono['NOME_CLI'] ?: $nome_dono, 'UTF-8'); }
+                if($dadosDono) { $nome_dono = $dadosDono['NOME_US'] ?: 'Usuário Padrão'; $cliente_nome = mb_strtoupper($dadosDono['NOME_CLI'] ?: $nome_dono, 'UTF-8'); $id_empresa_dono = $dadosDono['id_empresa'] ?: null; }
             }
 
             if ($id > 0) {
@@ -209,12 +230,12 @@ try {
                     if ($restricao_custo_cliente) { $custo_consulta = (float)$chaveExist['CUSTO_CONSULTA']; }
                     if ($restricao_custo_api) { $custo_v8 = (float)$chaveExist['CUSTO_V8']; }
                 }
-                $pdo->prepare("UPDATE INTEGRACAO_V8_CHAVE_ACESSO SET CLIENTE_NOME=?, CLIENT_ID=?, AUDIENCE=?, USERNAME_API=?, PASSWORD_API=?, CUSTO_CONSULTA=?, CUSTO_V8=?, TABELA_PADRAO=?, PRAZO_PADRAO=?, INTERVALO_CONSENTIMENTO=?, CPF_USUARIO=?, NOME_USUARIO=? WHERE ID=?")->execute([$cliente_nome, $client_id, $audience, $username_api, $password_api, $custo_consulta, $custo_v8, $tabela_padrao, $prazo_padrao, $intervalo_consentimento, $cpf_dono, $nome_dono, $id]);
+                $pdo->prepare("UPDATE INTEGRACAO_V8_CHAVE_ACESSO SET CLIENTE_NOME=?, CLIENT_ID=?, AUDIENCE=?, USERNAME_API=?, PASSWORD_API=?, CUSTO_CONSULTA=?, CUSTO_V8=?, TABELA_PADRAO=?, PRAZO_PADRAO=?, INTERVALO_CONSENTIMENTO=?, CPF_USUARIO=?, NOME_USUARIO=?, id_empresa=? WHERE ID=?")->execute([$cliente_nome, $client_id, $audience, $username_api, $password_api, $custo_consulta, $custo_v8, $tabela_padrao, $prazo_padrao, $intervalo_consentimento, $cpf_dono, $nome_dono, $id_empresa_dono, $id]);
             } else {
                 if ($restricao_chave) { $client_id = ''; $audience = ''; $username_api = ''; $password_api = ''; }
                 if ($restricao_custo_cliente) { $custo_consulta = 0; }
                 if ($restricao_custo_api) { $custo_v8 = 0; }
-                $pdo->prepare("INSERT INTO INTEGRACAO_V8_CHAVE_ACESSO (CLIENTE_NOME, CLIENT_ID, AUDIENCE, USERNAME_API, PASSWORD_API, CUSTO_CONSULTA, CUSTO_V8, CPF_USUARIO, NOME_USUARIO, TABELA_PADRAO, PRAZO_PADRAO, INTERVALO_CONSENTIMENTO) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")->execute([$cliente_nome, $client_id, $audience, $username_api, $password_api, $custo_consulta, $custo_v8, $cpf_dono, $nome_dono, $tabela_padrao, $prazo_padrao, $intervalo_consentimento]);
+                $pdo->prepare("INSERT INTO INTEGRACAO_V8_CHAVE_ACESSO (CLIENTE_NOME, CLIENT_ID, AUDIENCE, USERNAME_API, PASSWORD_API, CUSTO_CONSULTA, CUSTO_V8, CPF_USUARIO, NOME_USUARIO, TABELA_PADRAO, PRAZO_PADRAO, INTERVALO_CONSENTIMENTO, id_empresa) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")->execute([$cliente_nome, $client_id, $audience, $username_api, $password_api, $custo_consulta, $custo_v8, $cpf_dono, $nome_dono, $tabela_padrao, $prazo_padrao, $intervalo_consentimento, $id_empresa_dono]);
             }
             echo json_encode(['success' => true, 'msg' => 'Chave salva com sucesso!']); break;
 

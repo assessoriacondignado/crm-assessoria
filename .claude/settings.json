@@ -50,7 +50,15 @@
       "Bash(mysql -u root -e \"UPDATE INTEGRACAO_V8_CHAVE_ACESSO SET INTERVALO_CONSENTIMENTO = 15; SELECT ID, CLIENTE_NOME, INTERVALO_CONSENTIMENTO FROM INTEGRACAO_V8_CHAVE_ACESSO;\")",
       "Bash(mysql -e \"UPDATE INTEGRACAO_V8_CHAVE_ACESSO SET INTERVALO_CONSENTIMENTO = 15; SELECT ID, CLIENTE_NOME, INTERVALO_CONSENTIMENTO FROM INTEGRACAO_V8_CHAVE_ACESSO;\")",
       "Bash(mysql -u root -e \"DESCRIBE INTEGRACAO_V8_CHAVE_ACESSO;\")",
-      "Bash(mysql -e \"DESCRIBE INTEGRACAO_V8_CHAVE_ACESSO;\")"
+      "Bash(mysql -e \"DESCRIBE INTEGRACAO_V8_CHAVE_ACESSO;\")",
+      "Bash(php -r 'require '\\\\''/var/www/html/conexao.php'\\\\''; $s=$pdo->query\\('\\\\''SELECT DISTINCT GRUPO FROM CLIENTE_USUARIO ORDER BY GRUPO'\\\\''\\); foreach\\($s->fetchAll\\(\\) as $r\\) echo $r['\\\\''GRUPO'\\\\''].PHP_EOL;')",
+      "Bash(mysql -u root)",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT DISTINCT GRUPO FROM CLIENTE_USUARIO ORDER BY GRUPO;\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm \"-pAbl@810401\" crm_dados -e \"SELECT DISTINCT GRUPO FROM CLIENTE_USUARIO ORDER BY GRUPO;\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm \"-pAbl@810401\" crm_dados -e \"DESCRIBE CLIENTE_USUARIO;\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm \"-pAbl@810401\" crm_dados -e \"SELECT DISTINCT GRUPO_USUARIOS FROM CLIENTE_USUARIO ORDER BY GRUPO_USUARIOS;\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm \"-pAbl@810401\" crm_dados -e \"SHOW TABLES LIKE '%V8%';\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm \"-pAbl@810401\" crm_dados -e \"DESCRIBE INTEGRACAO_V8_IMPORTACAO_LOTE;\")"
     ]
   }
 }

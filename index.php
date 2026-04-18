@@ -52,64 +52,94 @@ try {
         : $is_master;
 
     if ($temAcessoV8) {
-        // Hierarquia (espelho de v8_api.ajax.php)
-        $v8_restricao_meu_usuario = function_exists('verificaPermissao') ? !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_CHAVE_CUSTO_MEU_USUARIO', 'FUNCAO') : false;
-        $v8_restricao_minha_fila  = function_exists('verificaPermissao') ? !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_NOVA_CONSULTA_FILA_MEU_REGITRO', 'FUNCAO') : false;
-        $v8_restricao_hierarquia  = function_exists('verificaPermissao') ? !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_HIERARQUIA', 'FUNCAO') : true;
+        $grupo_v8      = strtoupper($grupo_usuario);
+        $is_master_v8  = in_array($grupo_v8, ['MASTER', 'ADMIN', 'ADMINISTRADOR']);
+        $is_super_v8   = in_array($grupo_v8, ['SUPERVISORES', 'SUPERVISOR']);
+        $v8_restricao_minha_fila = function_exists('verificaPermissao') ? !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_NOVA_CONSULTA_FILA_MEU_REGITRO', 'FUNCAO') : false;
 
-        // Empresa do usuário para filtros V8
-        // Consulta sempre que há restrição hierárquica, independente de $is_master geral
+        // Empresa do usuário logado (para SUPERVISOR)
         $v8_empresa_logado = $id_empresa_logado;
-        if ($v8_restricao_hierarquia && $v8_empresa_logado === null) {
-            try {
-                $stmtEmpV8 = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
-                $stmtEmpV8->execute([$cpf_logado]);
-                $v8_empresa_logado = $stmtEmpV8->fetchColumn() ?: null;
-            } catch (Exception $e) {}
+        if (!$v8_empresa_logado && $is_super_v8) {
+            $stmtES = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+            $stmtES->execute([$cpf_logado]);
+            $v8_empresa_logado = $stmtES->fetchColumn() ?: null;
         }
 
-        // --- Widget 1: Chaves V8 com contagens (hoje e total) ---
-        $subConsenHoje  = "(SELECT COUNT(*) FROM INTEGRACAO_V8_REGISTROCONSULTA rc WHERE rc.CHAVE_ID = ca.ID AND DATE(rc.DATA_FILA) = CURDATE())";
-        $subConsenTotal = "(SELECT COUNT(*) FROM INTEGRACAO_V8_REGISTROCONSULTA rc WHERE rc.CHAVE_ID = ca.ID)";
-        $subMargemHoje  = "(SELECT COUNT(*) FROM INTEGRACAO_V8_REGISTROCONSULTA rc LEFT JOIN INTEGRACAO_V8_REGISTRO_SIMULACAO rs ON rs.ID_FILA = rc.ID WHERE rc.CHAVE_ID = ca.ID AND rs.MARGEM_DISPONIVEL IS NOT NULL AND DATE(rc.DATA_FILA) = CURDATE())";
-        $subMargemTotal = "(SELECT COUNT(*) FROM INTEGRACAO_V8_REGISTROCONSULTA rc LEFT JOIN INTEGRACAO_V8_REGISTRO_SIMULACAO rs ON rs.ID_FILA = rc.ID WHERE rc.CHAVE_ID = ca.ID AND rs.MARGEM_DISPONIVEL IS NOT NULL)";
-        $subSimulHoje   = "(SELECT COUNT(*) FROM INTEGRACAO_V8_REGISTROCONSULTA rc LEFT JOIN INTEGRACAO_V8_REGISTRO_SIMULACAO rs ON rs.ID_FILA = rc.ID WHERE rc.CHAVE_ID = ca.ID AND rs.SIMULATION_ID IS NOT NULL AND DATE(rc.DATA_FILA) = CURDATE())";
-        $subSimulTotal  = "(SELECT COUNT(*) FROM INTEGRACAO_V8_REGISTROCONSULTA rc LEFT JOIN INTEGRACAO_V8_REGISTRO_SIMULACAO rs ON rs.ID_FILA = rc.ID WHERE rc.CHAVE_ID = ca.ID AND rs.SIMULATION_ID IS NOT NULL)";
-
-        $sqlChavesSel = "SELECT ca.ID, ca.CLIENTE_NOME, ca.STATUS, ca.SALDO,
-                      $subConsenHoje  as CONSEN_HOJE,
-                      $subConsenTotal as CONSEN_TOTAL,
-                      $subMargemHoje  as MARGEM_HOJE,
-                      $subMargemTotal as MARGEM_TOTAL,
-                      $subSimulHoje   as SIMUL_HOJE,
-                      $subSimulTotal  as SIMUL_TOTAL
-               FROM INTEGRACAO_V8_CHAVE_ACESSO ca";
-
-        // Filtro hierárquico nas chaves: meu usuário > minha empresa > todos
-        $paramsChaves = [];
-        if ($v8_restricao_meu_usuario) {
-            $sqlChaves = "$sqlChavesSel WHERE ca.STATUS = 'ATIVO' AND ca.CPF_USUARIO = ? ORDER BY ca.CLIENTE_NOME ASC";
-            $paramsChaves = [$cpf_logado];
-        } elseif ($v8_restricao_hierarquia && $v8_empresa_logado) {
-            $sqlChaves = "$sqlChavesSel WHERE ca.STATUS = 'ATIVO' AND ca.id_empresa = ? ORDER BY ca.CLIENTE_NOME ASC";
-            $paramsChaves = [$v8_empresa_logado];
+        // --- Widget 1: Lotes Ativos ---
+        // Hierarquia baseada no DONO DA CHAVE: Lote → CHAVE_ID → CPF_USUARIO → id_empresa
+        $sqlLotes = "SELECT l.ID, l.NOME_IMPORTACAO, l.STATUS_FILA, l.STATUS_LOTE,
+                            l.QTD_TOTAL, l.QTD_PROCESSADA, l.PROCESSADOS_HOJE, l.LIMITE_DIARIO,
+                            l.HORA_INICIO_DIARIO, l.HORA_FIM_DIARIO,
+                            DATE_FORMAT(l.DATA_IMPORTACAO, '%d/%m/%Y %H:%i') as DATA_IMPORTACAO_BR,
+                            ca.CLIENTE_NOME as CHAVE_NOME, ca.USERNAME_API, ca.TABELA_PADRAO, ca.PRAZO_PADRAO,
+                            ca.CPF_USUARIO as CHAVE_CPF_DONO,
+                            cu_dono.NOME as NOME_USUARIO, cu_dono.id_empresa as EMPRESA_DONO
+                     FROM INTEGRACAO_V8_IMPORTACAO_LOTE l
+                     LEFT JOIN INTEGRACAO_V8_CHAVE_ACESSO ca ON ca.ID = l.CHAVE_ID
+                     LEFT JOIN CLIENTE_USUARIO cu_dono ON cu_dono.CPF = ca.CPF_USUARIO
+                     WHERE l.STATUS_LOTE = 'ATIVO'";
+        $paramsLotes = [];
+        if ($is_master_v8) {
+            // MASTER: todos os lotes ativos, independente do dono da chave
+        } elseif ($is_super_v8 && $v8_empresa_logado) {
+            // SUPERVISOR: lotes cuja chave pertence a usuário da mesma empresa
+            $sqlLotes .= " AND cu_dono.id_empresa = ?";
+            $paramsLotes[] = $v8_empresa_logado;
         } else {
-            $sqlChaves = "$sqlChavesSel WHERE ca.STATUS = 'ATIVO' ORDER BY ca.CLIENTE_NOME ASC";
+            // CONSULTOR: apenas lotes cuja chave pertence ao próprio usuário
+            $sqlLotes .= " AND ca.CPF_USUARIO = ?";
+            $paramsLotes[] = $cpf_logado;
         }
+        $sqlLotes .= " ORDER BY l.ID DESC";
 
-        $stmtChaves = $pdo->prepare($sqlChaves);
-        $stmtChaves->execute($paramsChaves);
-        $v8_chaves = $stmtChaves->fetchAll(PDO::FETCH_ASSOC);
+        $stmtLotes = $pdo->prepare($sqlLotes);
+        $stmtLotes->execute($paramsLotes);
+        $v8_lotes = $stmtLotes->fetchAll(PDO::FETCH_ASSOC);
 
-        // --- Widget 2: Histórico das últimas 10 consultas (mesmos campos da fila do módulo) ---
+        // Calcula funil por lote (a partir da tabela V8_LOTE_{ID})
+        foreach ($v8_lotes as &$lote) {
+            $tbl = 'V8_LOTE_' . $lote['ID'];
+            $funil = ['na_fila'=>0,'c_ok'=>0,'c_err'=>0,'m_ok'=>0,'m_err'=>0,'s_ok'=>0,'s_err'=>0,'dataprev'=>0,'c_hoje'=>0,'s_hoje'=>0];
+            try {
+                $stmtF = $pdo->query("SELECT STATUS_V8, COUNT(*) as qtd FROM `{$tbl}` GROUP BY STATUS_V8");
+                foreach ($stmtF->fetchAll(PDO::FETCH_ASSOC) as $row) {
+                    $st = strtoupper($row['STATUS_V8']); $q = (int)$row['qtd'];
+                    if ($st === 'NA FILA') { $funil['na_fila'] += $q; }
+                    elseif (strpos($st,'ERRO CONSULTA')!==false || strpos($st,'ERRO SALDO')!==false) { $funil['c_err'] += $q; }
+                    elseif (strpos($st,'AGUARDANDO MARGEM')!==false || strpos($st,'RECUPERAR V8')!==false) { $funil['c_ok'] += $q; }
+                    elseif ($st==='AGUARDANDO DATAPREV') { $funil['c_ok'] += $q; $funil['dataprev'] += $q; }
+                    elseif (strpos($st,'ERRO MARGEM')!==false) { $funil['c_ok'] += $q; $funil['m_err'] += $q; }
+                    elseif (strpos($st,'AGUARDANDO SIMULACAO')!==false) { $funil['c_ok'] += $q; $funil['m_ok'] += $q; }
+                    elseif (strpos($st,'ERRO SIMULACAO')!==false) { $funil['c_ok'] += $q; $funil['m_ok'] += $q; $funil['s_err'] += $q; }
+                    elseif ($st==='OK') { $funil['c_ok'] += $q; $funil['m_ok'] += $q; $funil['s_ok'] += $q; }
+                }
+                $stmtH = $pdo->query("SELECT
+                    SUM(CASE WHEN DATA_CONSENTIMENTO >= CURDATE() THEN 1 ELSE 0 END) as c_hoje,
+                    SUM(CASE WHEN DATA_SIMULACAO >= CURDATE() AND STATUS_V8 = 'OK' THEN 1 ELSE 0 END) as s_hoje
+                    FROM `{$tbl}`");
+                $hj = $stmtH->fetch(PDO::FETCH_ASSOC);
+                $funil['c_hoje'] = (int)($hj['c_hoje'] ?? 0);
+                $funil['s_hoje'] = (int)($hj['s_hoje'] ?? 0);
+                $funil['m_hoje'] = $funil['s_hoje'];
+            } catch (Exception $e) {}
+            $lote['funil'] = $funil;
+        }
+        unset($lote);
+
+        // --- Widget 2: Histórico das últimas 10 consultas ---
+        // Hierarquia: via CHAVE → dono da chave → empresa do dono
         $whereHist = " WHERE 1=1 ";
         $paramsHist = [];
-        if ($v8_restricao_minha_fila) {
-            $whereHist .= " AND c.CPF_USUARIO = ? ";
-            $paramsHist[] = $cpf_logado;
-        } elseif ($v8_restricao_hierarquia && $v8_empresa_logado) {
-            $whereHist .= " AND c.EMPRESA_ID = ? ";
+        if ($is_master_v8) {
+            // MASTER: tudo
+        } elseif ($is_super_v8 && $v8_empresa_logado) {
+            // SUPERVISOR: consultas cuja chave pertence a usuário da mesma empresa
+            $whereHist .= " AND cu_chave.id_empresa = ? ";
             $paramsHist[] = $v8_empresa_logado;
+        } else {
+            // CONSULTOR: apenas consultas cuja chave pertence ao próprio usuário
+            $whereHist .= " AND ch.CPF_USUARIO = ? ";
+            $paramsHist[] = $cpf_logado;
         }
 
         $sqlHist = "SELECT c.ID, c.CPF_CONSULTADO, c.NOME_COMPLETO, c.STATUS_V8,
@@ -130,6 +160,7 @@ try {
                     LEFT JOIN INTEGRACAO_V8_REGISTRO_PROPOSTA p
                         ON c.STATUS_V8 LIKE CONCAT('%', p.NUMERO_PROPOSTA, '%')
                     LEFT JOIN INTEGRACAO_V8_CHAVE_ACESSO ch ON c.CHAVE_ID = ch.ID
+                    LEFT JOIN CLIENTE_USUARIO cu_chave ON cu_chave.CPF COLLATE utf8mb4_unicode_ci = ch.CPF_USUARIO COLLATE utf8mb4_unicode_ci
                     LEFT JOIN CLIENTE_USUARIO u ON c.CPF_USUARIO COLLATE utf8mb4_unicode_ci = u.CPF COLLATE utf8mb4_unicode_ci
                     $whereHist
                     ORDER BY c.DATA_FILA DESC LIMIT 10";
@@ -425,7 +456,7 @@ if (file_exists($caminho_header)) {
     <?php endif; ?>
     <?php if ($temAcessoV8): ?>
     <button class="btn btn-outline-dark fw-bold shadow-sm btn-hub-toggle" onclick="hubToggle('painelV8Chaves', this)">
-        <i class="fas fa-robot me-2 text-primary"></i> V8 CLT — Robô de Consulta
+        <i class="fas fa-layer-group me-2 text-primary"></i> V8 CLT — Lotes Ativos
     </button>
     <button class="btn btn-outline-dark fw-bold shadow-sm btn-hub-toggle" onclick="hubToggle('painelV8Hist', this)">
         <i class="fas fa-history me-2 text-info"></i> V8 CLT — Histórico Consulta
@@ -471,44 +502,93 @@ if (file_exists($caminho_header)) {
 
 <?php if ($temAcessoV8): ?>
 
-<!-- ====== WIDGET 1: V8 CLT - ROBÔ DE CONSULTA ====== -->
+<!-- ====== WIDGET 1: V8 CLT - LOTES ATIVOS ====== -->
 <div id="painelV8Chaves" class="hub-painel mb-4" style="display:none;">
     <div class="box-v8 shadow-sm">
         <div class="row g-3">
-            <?php if (empty($v8_chaves)): ?>
+            <?php if (empty($v8_lotes)): ?>
                 <div class="col-12 text-center py-3">
-                    <span class="text-muted fw-bold fst-italic">Nenhuma chave V8 configurada.</span>
+                    <span class="text-muted fw-bold fst-italic">Nenhum lote ativo no momento.</span>
                 </div>
             <?php else: ?>
-                <?php foreach ($v8_chaves as $chave): ?>
+                <?php foreach ($v8_lotes as $lote):
+                    $funil   = $lote['funil'];
+                    $total   = (int)$lote['QTD_TOTAL'];
+                    $proc    = (int)$lote['QTD_PROCESSADA'];
+                    $pct     = $total > 0 ? round($proc / $total * 100) : 0;
+                    $sfila   = strtoupper($lote['STATUS_FILA'] ?? '');
+                    // Badge de status
+                    if ($sfila === 'PROCESSANDO')         { $badgeCls = 'bg-success'; $badgeTxt = 'RODANDO'; }
+                    elseif ($sfila === 'PAUSADO')          { $badgeCls = 'bg-warning text-dark'; $badgeTxt = 'PAUSADO'; }
+                    elseif (str_contains($sfila,'AGUARD')) { $badgeCls = 'bg-info text-dark'; $badgeTxt = 'AGUARDANDO'; }
+                    elseif ($sfila === 'CONCLUIDO')        { $badgeCls = 'bg-secondary'; $badgeTxt = 'CONCLUÍDO'; }
+                    else                                   { $badgeCls = 'bg-dark'; $badgeTxt = $sfila ?: 'PENDENTE'; }
+                    // URL do lote
+                    $urlLote = "/modulos/configuracao/v8_clt_margem_e_digitacao/index.php?tab=lote";
+                ?>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="card-v8-hub">
-                            <div class="v8h-header"><?= htmlspecialchars($chave['CLIENTE_NOME']) ?></div>
-                            <div class="v8h-body">
-                                <div class="v8h-status-row">
-                                    <span class="v8h-dot-ativo"><i class="fas fa-circle" style="font-size:0.55rem;"></i> ATIVO</span>
-                                    <a href="/modulos/configuracao/v8_clt_margem_e_digitacao/index.php?tab=lote&chave_id=<?= (int)$chave['ID'] ?>" class="btn-v8h-acoes"><i class="fas fa-external-link-alt me-1"></i>Acesse Aqui</a>
+                            <div class="v8h-header" style="font-size:0.68rem; line-height:1.3;">
+                                <?= htmlspecialchars($lote['NOME_IMPORTACAO']) ?>
+                                <div style="font-size:0.6rem; opacity:0.75; margin-top:2px;">
+                                    <?= htmlspecialchars($lote['CHAVE_NOME'] ?? '--') ?>
                                 </div>
+                            </div>
+                            <div class="v8h-body">
+                                <!-- Status + botão -->
+                                <div class="v8h-status-row">
+                                    <span class="badge <?= $badgeCls ?>" style="font-size:0.6rem;"><?= $badgeTxt ?> · <?= $pct ?>%</span>
+                                    <a href="<?= $urlLote ?>" class="btn-v8h-acoes"><i class="fas fa-external-link-alt me-1"></i>Acesse Aqui</a>
+                                </div>
+                                <!-- Barra de progresso -->
+                                <div class="progress mb-2" style="height:5px;">
+                                    <div class="progress-bar bg-success" style="width:<?= $pct ?>%"></div>
+                                </div>
+                                <!-- Na fila -->
+                                <div class="v8h-metric-row">
+                                    <span class="v8h-icon" style="color:#dc3545;"><i class="fas fa-list-ol"></i></span>
+                                    <span class="v8h-label">Na Fila:</span>
+                                    <span class="v8h-val text-danger"><?= number_format($funil['na_fila'], 0, ',', '.') ?></span>
+                                </div>
+                                <?php if ($funil['dataprev'] > 0): ?>
+                                <div class="v8h-metric-row">
+                                    <span class="v8h-icon" style="color:#6f42c1;"><i class="fas fa-university"></i></span>
+                                    <span class="v8h-label">Dataprev:</span>
+                                    <span class="v8h-val" style="color:#6f42c1;"><?= $funil['dataprev'] ?></span>
+                                </div>
+                                <?php endif; ?>
+                                <!-- Consen -->
                                 <div class="v8h-metric-row">
                                     <span class="v8h-icon"><i class="fas fa-credit-card"></i></span>
                                     <span class="v8h-label">Consen.:</span>
-                                    <span class="v8h-val"><?= (int)$chave['CONSEN_HOJE'] ?></span>
-                                    <span class="badge-hj"><?= (int)$chave['CONSEN_HOJE'] ?> hj</span>
+                                    <span class="v8h-val"><?= $funil['c_ok'] ?></span>
+                                    <?php if ($funil['c_err']): ?><span class="badge bg-danger" style="font-size:0.55rem;"><?= $funil['c_err'] ?> err</span><?php endif; ?>
+                                    <span class="badge-hj"><?= $funil['c_hoje'] ?> hj</span>
                                 </div>
+                                <!-- Margem -->
                                 <div class="v8h-metric-row">
                                     <span class="v8h-icon"><i class="fas fa-search"></i></span>
                                     <span class="v8h-label">Margem:</span>
-                                    <span class="v8h-val"><?= (int)$chave['MARGEM_HOJE'] ?></span>
-                                    <span class="badge-hj"><?= (int)$chave['MARGEM_HOJE'] ?> hj</span>
+                                    <span class="v8h-val"><?= $funil['m_ok'] ?></span>
+                                    <?php if ($funil['m_err']): ?><span class="badge bg-danger" style="font-size:0.55rem;"><?= $funil['m_err'] ?> err</span><?php endif; ?>
+                                    <span class="badge-hj"><?= $funil['m_hoje'] ?> hj</span>
                                 </div>
+                                <!-- Simul -->
                                 <div class="v8h-metric-row">
                                     <span class="v8h-icon"><i class="fas fa-file-alt"></i></span>
                                     <span class="v8h-label">Simul.:</span>
-                                    <span class="v8h-val"><?= (int)$chave['SIMUL_HOJE'] ?></span>
-                                    <span class="badge-hj"><?= (int)$chave['SIMUL_HOJE'] ?> hj</span>
+                                    <span class="v8h-val"><?= $funil['s_ok'] ?></span>
+                                    <?php if ($funil['s_err']): ?><span class="badge bg-danger" style="font-size:0.55rem;"><?= $funil['s_err'] ?> err</span><?php endif; ?>
+                                    <span class="badge-hj"><?= $funil['s_hoje'] ?> hj</span>
                                 </div>
+                                <!-- Total -->
                                 <div class="v8h-total-row">
-                                    <i class="fas fa-users me-1 text-muted"></i> Total histórico: <?= number_format((int)$chave['CONSEN_TOTAL'], 0, ',', '.') ?>
+                                    <i class="fas fa-users me-1 text-muted"></i>
+                                    Total: <?= number_format($total, 0, ',', '.') ?>
+                                    &nbsp;·&nbsp; Limit./dia: <?= number_format((int)$lote['LIMITE_DIARIO'], 0, ',', '.') ?>
+                                    <?php if ($lote['HORA_INICIO_DIARIO']): ?>
+                                    &nbsp;·&nbsp; <?= $lote['HORA_INICIO_DIARIO'] ?>–<?= substr($lote['HORA_FIM_DIARIO'],0,5) ?>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
