@@ -518,7 +518,20 @@ $readonly_attr = (!$pode_editar_excluir) ? 'disabled readonly' : '';
 
                             <div class="col-md-12 mt-4">
                                 <div class="p-3 border border-dark rounded bg-white shadow-sm" style="border-left: 5px solid #ffc107 !important;">
-                                    <h6 class="fw-bold text-primary mb-3"><i class="fas fa-building me-2"></i> Empresa Vinculada</h6>
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <h6 class="fw-bold text-primary m-0"><i class="fas fa-building me-2"></i> Empresa Vinculada</h6>
+                                        <?php if(!empty($cliente_ficha['CNPJ'])): ?>
+                                            <a href="/modulos/cliente_e_usuario/cadastro_empresa.php?cnpj_selecionado=<?= urlencode($cliente_ficha['CNPJ']) ?>"
+                                               class="btn btn-sm btn-outline-primary fw-bold bg-white" target="_blank" title="Editar dados da empresa vinculada">
+                                                <i class="fas fa-external-link-alt me-1"></i> Editar Empresa
+                                            </a>
+                                        <?php else: ?>
+                                            <a href="/modulos/cliente_e_usuario/cadastro_empresa.php?acao=novo"
+                                               class="btn btn-sm btn-outline-success fw-bold bg-white" target="_blank" title="Cadastrar nova empresa">
+                                                <i class="fas fa-plus me-1"></i> Nova Empresa
+                                            </a>
+                                        <?php endif; ?>
+                                    </div>
                                     <?php if(empty($cliente_ficha['CNPJ'])): ?>
                                         <p class="text-danger small fw-bold mb-2"><i class="fas fa-exclamation-circle"></i> Atenção: Este cliente ainda não possui uma empresa atrelada.</p>
                                     <?php endif; ?>

@@ -90,7 +90,8 @@
       "Bash(chown -R www-data:www-data /var/www/html/modulos/configuracao/anotacoes/guia_sistema_conteudo)",
       "Bash(php -l /var/www/html/modulos/configuracao/anotacoes/guia_ajax.php)",
       "Bash(php -l /var/www/html/modulos/configuracao/anotacoes/index.php)",
-      "Bash(php -l /var/www/html/includes/footer.php)"
+      "Bash(php -l /var/www/html/includes/footer.php)",
+      "Bash(php -l /var/www/html/modulos/cliente_e_usuario/cadastro_cliente.php)"
     ]
   }
 }
