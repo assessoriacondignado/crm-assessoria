@@ -84,7 +84,6 @@ $perm_auditoria_inclusao  = verificaPermissao($pdo, 'v8_AUDITORIA_INCLUSAO_CPF',
                     <li class="nav-item"><button class="nav-link fw-bold" style="color:#b02a37;" data-bs-toggle="pill" data-bs-target="#tab-auditoria-v8"><i class="fas fa-shield-alt me-1"></i> AUDITORIA</button></li>
                     <?php endif; ?>
 
-                    <li class="nav-item ms-auto"><button class="nav-link text-muted fw-bold" data-bs-toggle="pill" data-bs-target="#tab-manual-v8"><i class="fas fa-book-open me-1"></i> Manual do Usuário</button></li>
                 </ul>
                 
                 <div class="tab-content">
@@ -220,21 +219,6 @@ $perm_auditoria_inclusao  = verificaPermissao($pdo, 'v8_AUDITORIA_INCLUSAO_CPF',
                     </div>
                     <?php endif; ?>
 
-                    <!-- ABA MANUAL DO USUÁRIO V8 -->
-                    <div class="tab-pane fade" id="tab-manual-v8">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <h5 class="fw-bold text-dark m-0"><i class="fas fa-book-open text-secondary me-2"></i> Manual do Usuário — V8 CLT Margem e Digitação</h5>
-                            <a href="manual_usuario.html" target="_blank" class="btn btn-outline-dark btn-sm fw-bold shadow-sm">
-                                <i class="fas fa-external-link-alt me-1"></i> Abrir em nova aba
-                            </a>
-                        </div>
-                        <div class="border border-dark rounded shadow-sm overflow-hidden" style="height:620px;">
-                            <iframe src="manual_usuario.html" width="100%" height="100%" frameborder="0" style="display:block;" title="Manual do Usuário V8"></iframe>
-                        </div>
-                        <div class="text-end mt-2">
-                            <span class="text-muted small"><i class="fas fa-print me-1"></i> Para salvar como PDF: abra em nova aba e use Ctrl+P → Salvar como PDF</span>
-                        </div>
-                    </div>
 
                 </div>
             </div></div>
