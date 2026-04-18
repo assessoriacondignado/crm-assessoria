@@ -161,12 +161,20 @@ try {
             echo json_encode(['success' => true, 'data' => $res]); break;
 
         case 'listar_chaves_acesso':
-            if ($restricao_meu_usuario) { 
-                $stmt = $pdo->prepare("SELECT * FROM INTEGRACAO_V8_CHAVE_ACESSO WHERE CPF_USUARIO = ? ORDER BY CLIENTE_NOME ASC"); $stmt->execute([$usuario_logado_cpf]); 
-            } else { 
-                $stmt = $pdo->query("SELECT * FROM INTEGRACAO_V8_CHAVE_ACESSO ORDER BY CLIENTE_NOME ASC"); 
+            if ($restricao_meu_usuario) {
+                $stmt = $pdo->prepare("SELECT * FROM INTEGRACAO_V8_CHAVE_ACESSO WHERE CPF_USUARIO = ? ORDER BY CLIENTE_NOME ASC"); $stmt->execute([$usuario_logado_cpf]);
+            } else {
+                $stmt = $pdo->query("SELECT * FROM INTEGRACAO_V8_CHAVE_ACESSO ORDER BY CLIENTE_NOME ASC");
             }
             echo json_encode(['success' => true, 'data' => $stmt->fetchAll(PDO::FETCH_ASSOC)]); break;
+
+        case 'toggle_status_chave':
+            if ($restricao_chave) { echo json_encode(['success' => false, 'msg' => 'Sem permissão.']); break; }
+            $id_chave = (int)($_POST['id'] ?? 0);
+            $novo_status = in_array($_POST['status'] ?? '', ['ATIVO', 'INATIVO']) ? $_POST['status'] : null;
+            if (!$id_chave || !$novo_status) { echo json_encode(['success' => false, 'msg' => 'Dados inválidos.']); break; }
+            $pdo->prepare("UPDATE INTEGRACAO_V8_CHAVE_ACESSO SET STATUS = ? WHERE ID = ?")->execute([$novo_status, $id_chave]);
+            echo json_encode(['success' => true]); break;
 
         case 'salvar_chave_v8':
             $id = (int)($_POST['id'] ?? 0); $tabela_padrao = trim($_POST['tabela_padrao'] ?? 'CLT Acelera'); $prazo_padrao = (int)($_POST['prazo_padrao'] ?? 24);

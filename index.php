@@ -57,8 +57,16 @@ try {
         $v8_restricao_minha_fila  = function_exists('verificaPermissao') ? !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_NOVA_CONSULTA_FILA_MEU_REGITRO', 'FUNCAO') : false;
         $v8_restricao_hierarquia  = function_exists('verificaPermissao') ? !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_HIERARQUIA', 'FUNCAO') : true;
 
-        // Empresa do usuário para filtros V8 (reutiliza $id_empresa_logado já buscado)
+        // Empresa do usuário para filtros V8
+        // Consulta sempre que há restrição hierárquica, independente de $is_master geral
         $v8_empresa_logado = $id_empresa_logado;
+        if ($v8_restricao_hierarquia && $v8_empresa_logado === null) {
+            try {
+                $stmtEmpV8 = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+                $stmtEmpV8->execute([$cpf_logado]);
+                $v8_empresa_logado = $stmtEmpV8->fetchColumn() ?: null;
+            } catch (Exception $e) {}
+        }
 
         // --- Widget 1: Chaves V8 com contagens (hoje e total) ---
         $subConsenHoje  = "(SELECT COUNT(*) FROM INTEGRACAO_V8_REGISTROCONSULTA rc WHERE rc.CHAVE_ID = ca.ID AND DATE(rc.DATA_FILA) = CURDATE())";
@@ -473,19 +481,13 @@ if (file_exists($caminho_header)) {
                 </div>
             <?php else: ?>
                 <?php foreach ($v8_chaves as $chave): ?>
-                    <?php $ativo = strtoupper($chave['STATUS'] ?? '') === 'ATIVO'; ?>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="card-v8-hub">
                             <div class="v8h-header"><?= htmlspecialchars($chave['CLIENTE_NOME']) ?></div>
                             <div class="v8h-body">
                                 <div class="v8h-status-row">
-                                    <?php if ($ativo): ?>
-                                        <span class="v8h-dot-ativo"><i class="fas fa-circle" style="font-size:0.55rem;"></i> ATIVO</span>
-                                        <a href="/modulos/configuracao/v8_clt_margem_e_digitacao/index.php" class="btn-v8h-acoes"><i class="fas fa-bars me-1"></i>Ações</a>
-                                    <?php else: ?>
-                                        <span class="v8h-dot-inativo"><i class="far fa-circle" style="font-size:0.55rem;"></i> INATIVO</span>
-                                        <span class="btn-v8h-acoes disabled"><i class="fas fa-bars me-1"></i>Ações</span>
-                                    <?php endif; ?>
+                                    <span class="v8h-dot-ativo"><i class="fas fa-circle" style="font-size:0.55rem;"></i> ATIVO</span>
+                                    <a href="/modulos/configuracao/v8_clt_margem_e_digitacao/index.php?tab=lote&chave_id=<?= (int)$chave['ID'] ?>" class="btn-v8h-acoes"><i class="fas fa-external-link-alt me-1"></i>Acesse Aqui</a>
                                 </div>
                                 <div class="v8h-metric-row">
                                     <span class="v8h-icon"><i class="fas fa-credit-card"></i></span>
