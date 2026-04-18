@@ -84,7 +84,13 @@
       "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/index.api.v8.lote.vsc.php)",
       "Bash(wc -l /var/www/html/modulos/configuracao/fator_conferi/*.php /var/www/html/modulos/configuracao/index.php)",
       "Bash(grep -n \"verificaPermissao\\\\|SUBMENU_OP_FATOR\" /var/www/html/modulos/configuracao/fator_conferi/*.php)",
-      "WebFetch(domain:disparopro.com.br)"
+      "WebFetch(domain:disparopro.com.br)",
+      "Bash(wc -l /var/www/html/modulos/configuracao/anotacoes/*.php)",
+      "Bash(chmod 755 /var/www/html/modulos/configuracao/anotacoes/guia_sistema_conteudo)",
+      "Bash(chown -R www-data:www-data /var/www/html/modulos/configuracao/anotacoes/guia_sistema_conteudo)",
+      "Bash(php -l /var/www/html/modulos/configuracao/anotacoes/guia_ajax.php)",
+      "Bash(php -l /var/www/html/modulos/configuracao/anotacoes/index.php)",
+      "Bash(php -l /var/www/html/includes/footer.php)"
     ]
   }
 }

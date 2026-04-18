@@ -125,6 +125,13 @@ if ($is_master) {
                 <?php endif; ?>
             </button>
         </li>
+        <?php if ($is_master): ?>
+        <li class="nav-item">
+            <button class="nav-link fw-bold text-dark" data-bs-toggle="tab" data-bs-target="#guia-sistema" id="tab-guia-btn" onclick="guiaCarregarLista()">
+                <span style="font-size:1.1em;">👨‍🏫</span> Guia Sistema
+            </button>
+        </li>
+        <?php endif; ?>
     </ul>
 
     <div class="tab-content border border-top-0 p-4 bg-white rounded-bottom shadow-sm">
@@ -456,6 +463,44 @@ if ($is_master) {
             </div>
 
         </div><!-- fim aba avisos -->
+
+        <!-- ===== ABA GUIA SISTEMA ===== -->
+        <?php if ($is_master): ?>
+        <div class="tab-pane fade" id="guia-sistema">
+            <div class="row mb-3 align-items-center">
+                <div class="col">
+                    <h6 class="fw-bold text-dark mb-0"><span style="font-size:1.2em;">👨‍🏫</span> Conteúdos de Treinamento</h6>
+                    <small class="text-muted">Crie guias de vídeo, imagem ou texto para auxiliar os usuários do sistema.</small>
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-primary fw-bold border-dark shadow-sm" onclick="guiaAbrirModal(0)">
+                        <i class="fas fa-plus me-1"></i> Novo Conteúdo
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-responsive border border-dark rounded shadow-sm">
+                <table class="table table-hover align-middle mb-0" id="tbl-guia">
+                    <thead class="table-dark">
+                        <tr>
+                            <th class="text-start ps-3">Título</th>
+                            <th class="text-center" style="width:110px;">Tipo</th>
+                            <th class="text-center" style="width:100px;">Status</th>
+                            <th class="text-center" style="width:130px;">Data</th>
+                            <th class="text-center" style="width:180px;">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody-guia" class="bg-white">
+                        <tr id="guia-loading-row">
+                            <td colspan="5" class="text-center py-4 text-muted fw-bold">
+                                <i class="fas fa-spinner fa-spin me-2"></i> Carregando...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <?php endif; ?>
 
     </div><!-- fim tab-content -->
 </div>
@@ -966,7 +1011,296 @@ async function carregarMaisAvisosEnviados() {
 if (window.location.hash === '#avisos') {
     document.getElementById('tab-avisos-btn')?.click();
 }
+
+// =============================================================
+// GUIA SISTEMA
+// =============================================================
+<?php if ($is_master): ?>
+let _guiaListaCarregada = false;
+
+function guiaCarregarLista(forcar) {
+    if (_guiaListaCarregada && !forcar) return;
+    _guiaListaCarregada = true;
+    const fd = new FormData(); fd.append('acao','listar');
+    fetch('guia_ajax.php', {method:'POST', body:fd})
+        .then(r => r.json()).then(j => {
+            const tb = document.getElementById('tbody-guia');
+            if (!j.success || !j.data.length) {
+                tb.innerHTML = '<tr><td colspan="5" class="text-center py-5 text-muted fw-bold"><i class="fas fa-graduation-cap fa-2x d-block mb-2 opacity-25"></i>Nenhum conteúdo cadastrado ainda.</td></tr>';
+                return;
+            }
+            const tipoIco = {VIDEO:'<span class="badge bg-danger">🎬 Vídeo</span>', IMAGEM:'<span class="badge bg-info text-dark">🖼️ Imagem</span>', TEXTO:'<span class="badge bg-secondary">📝 Texto</span>'};
+            tb.innerHTML = j.data.map(g => `
+                <tr id="guia-row-${g.ID}">
+                    <td class="ps-3">
+                        <div class="fw-bold text-dark">${escHtml(g.TITULO)}</div>
+                        ${g.COMENTARIO ? '<div class="text-muted small mt-1">' + escHtml(g.COMENTARIO) + '</div>' : ''}
+                    </td>
+                    <td class="text-center">${tipoIco[g.TIPO_CONTEUDO] || g.TIPO_CONTEUDO}</td>
+                    <td class="text-center">
+                        <button class="btn btn-sm fw-bold border-dark ${g.STATUS==='ATIVO'?'btn-success':'btn-outline-secondary'}"
+                                onclick="guiaToggleStatus(${g.ID}, this)" style="font-size:0.72rem;padding:2px 10px;">
+                            ${g.STATUS==='ATIVO'?'✔ ATIVO':'✖ INATIVO'}
+                        </button>
+                    </td>
+                    <td class="text-center text-muted small">${g.DATA_BR}</td>
+                    <td class="text-center">
+                        <button class="btn btn-sm btn-dark fw-bold border-dark me-1" onclick="guiaVerConteudo(${g.ID})" title="Ver">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="btn btn-sm btn-warning fw-bold border-dark me-1" onclick="guiaAbrirModal(${g.ID})" title="Editar">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn btn-sm btn-danger fw-bold border-dark" onclick="guiaExcluir(${g.ID})" title="Excluir">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>`).join('');
+        }).catch(() => {
+            document.getElementById('tbody-guia').innerHTML = '<tr><td colspan="5" class="text-center py-4 text-danger fw-bold">Erro ao carregar dados.</td></tr>';
+        });
+}
+
+function escHtml(s) {
+    return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+async function guiaToggleStatus(id, btn) {
+    const fd = new FormData(); fd.append('acao','toggle_status'); fd.append('id',id);
+    const r = await fetch('guia_ajax.php', {method:'POST', body:fd});
+    const j = await r.json();
+    if (j.success) {
+        const novo = j.novo_status;
+        btn.textContent = novo === 'ATIVO' ? '✔ ATIVO' : '✖ INATIVO';
+        btn.className = 'btn btn-sm fw-bold border-dark ' + (novo === 'ATIVO' ? 'btn-success' : 'btn-outline-secondary');
+        btn.style.fontSize = '0.72rem'; btn.style.padding = '2px 10px';
+    } else { alert(j.msg); }
+}
+
+async function guiaExcluir(id) {
+    if (!confirm('Tem certeza que deseja excluir este conteúdo?')) return;
+    if (!confirm('Esta ação é irreversível. Confirmar exclusão?')) return;
+    const fd = new FormData(); fd.append('acao','excluir'); fd.append('id',id);
+    const r = await fetch('guia_ajax.php', {method:'POST', body:fd});
+    const j = await r.json();
+    if (j.success) {
+        document.getElementById('guia-row-' + id)?.remove();
+        crmToast('Conteúdo excluído com sucesso.', 'success', 3500);
+    } else { alert(j.msg); }
+}
+
+function guiaVerConteudo(id) {
+    const fd = new FormData(); fd.append('acao','get'); fd.append('id',id);
+    fetch('guia_ajax.php', {method:'POST', body:fd})
+        .then(r => r.json()).then(j => {
+            if (!j.success) { alert(j.msg); return; }
+            const d = j.data;
+            document.getElementById('modalGuiaVerTitulo').textContent = d.TITULO;
+            document.getElementById('modalGuiaVerComentario').textContent = d.COMENTARIO || '';
+            document.getElementById('modalGuiaVerConteudo').innerHTML = d.CONTEUDO_HTML || '<p class="text-muted text-center py-4">Nenhum conteúdo disponível.</p>';
+            new bootstrap.Modal(document.getElementById('modalGuiaVer')).show();
+        });
+}
+
+// ── Modal criar/editar ────────────────────────────────────────
+let _guiaEditId = 0;
+
+function guiaAbrirModal(id) {
+    _guiaEditId = id;
+    const isEdit = id > 0;
+
+    document.getElementById('guiaModalTitulo').textContent = isEdit ? 'Editar Conteúdo' : 'Novo Conteúdo de Treinamento';
+    document.getElementById('guia_titulo').value = '';
+    document.getElementById('guia_comentario').value = '';
+    document.getElementById('guia_local').value = '';
+    document.getElementById('guia_tipo').value = 'TEXTO';
+    document.getElementById('guia_arquivo').value = '';
+    document.getElementById('guia_editor').innerHTML = '';
+    guiaTipoChange();
+
+    if (isEdit) {
+        const fd = new FormData(); fd.append('acao','get'); fd.append('id',id);
+        fetch('guia_ajax.php', {method:'POST', body:fd})
+            .then(r => r.json()).then(j => {
+                if (!j.success) { alert(j.msg); return; }
+                const d = j.data;
+                document.getElementById('guia_titulo').value = d.TITULO || '';
+                document.getElementById('guia_comentario').value = d.COMENTARIO || '';
+                document.getElementById('guia_local').value = d.LOCAL_EXIBICAO || '';
+                document.getElementById('guia_tipo').value = d.TIPO_CONTEUDO || 'TEXTO';
+                guiaTipoChange();
+                if (d.TIPO_CONTEUDO === 'TEXTO') {
+                    document.getElementById('guia_editor').innerHTML = d.CONTEUDO_RAW || '';
+                }
+                const arqInfo = document.getElementById('guia_arquivo_atual');
+                if (arqInfo) arqInfo.textContent = d.NOME_CONTEUDO ? 'Arquivo atual: ' + d.NOME_CONTEUDO + ' (deixe em branco para manter)' : '';
+            });
+    }
+
+    new bootstrap.Modal(document.getElementById('modalGuiaForm')).show();
+}
+
+function guiaTipoChange() {
+    const tipo = document.getElementById('guia_tipo').value;
+    document.getElementById('guia_panel_arquivo').style.display = tipo !== 'TEXTO' ? '' : 'none';
+    document.getElementById('guia_panel_texto').style.display  = tipo === 'TEXTO'  ? '' : 'none';
+    const dica = document.getElementById('guia_arquivo_dica');
+    if (dica) dica.textContent = tipo === 'VIDEO' ? 'Formatos aceitos: mp4' : 'Formatos aceitos: png, jpg, jpeg, bmp';
+}
+
+async function guiaSalvar() {
+    const titulo = document.getElementById('guia_titulo').value.trim();
+    const tipo   = document.getElementById('guia_tipo').value;
+    if (!titulo) { alert('Informe o título.'); document.getElementById('guia_titulo').focus(); return; }
+
+    const fd = new FormData();
+    fd.append('acao','salvar');
+    fd.append('id', _guiaEditId);
+    fd.append('titulo', titulo);
+    fd.append('comentario', document.getElementById('guia_comentario').value.trim());
+    fd.append('tipo_conteudo', tipo);
+    fd.append('local_exibicao', document.getElementById('guia_local').value.trim());
+
+    if (tipo === 'TEXTO') {
+        fd.append('conteudo_texto', document.getElementById('guia_editor').innerHTML);
+    } else {
+        const arq = document.getElementById('guia_arquivo');
+        if (arq.files[0]) fd.append('arquivo', arq.files[0]);
+    }
+
+    const btn = document.getElementById('btnGuiaSalvar');
+    btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin me-1"></i> Salvando...';
+
+    try {
+        const r = await fetch('guia_ajax.php', {method:'POST', body:fd});
+        const j = await r.json();
+        if (j.success) {
+            bootstrap.Modal.getInstance(document.getElementById('modalGuiaForm'))?.hide();
+            _guiaListaCarregada = false;
+            guiaCarregarLista(true);
+            crmToast('Conteúdo salvo com sucesso!', 'success', 3500);
+        } else { alert('Erro: ' + j.msg); }
+    } catch(e) { alert('Falha de comunicação.'); }
+
+    btn.disabled = false; btn.innerHTML = '<i class="fas fa-save me-1"></i> Salvar';
+}
+
+// Formatação do editor de texto
+function guiaFmt(cmd) {
+    document.getElementById('guia_editor').focus();
+    document.execCommand(cmd, false, null);
+}
+function guiaFmtCor(cor) {
+    if (!cor) return;
+    document.getElementById('guia_editor').focus();
+    document.execCommand('foreColor', false, cor);
+}
+<?php endif; ?>
 </script>
+
+<!-- ===== MODAL VER CONTEÚDO GUIA ===== -->
+<div class="modal fade" id="modalGuiaVer" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+        <div class="modal-content shadow-lg border-dark">
+            <div class="modal-header bg-dark text-white">
+                <div>
+                    <h5 class="modal-title fw-bold mb-0"><span style="font-size:1.2em;">👨‍🏫</span> <span id="modalGuiaVerTitulo"></span></h5>
+                    <small id="modalGuiaVerComentario" class="text-white-50"></small>
+                </div>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4" id="modalGuiaVerConteudo" style="min-height:200px;"></div>
+            <div class="modal-footer bg-light">
+                <button type="button" class="btn btn-secondary fw-bold" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== MODAL CRIAR/EDITAR GUIA ===== -->
+<?php if ($is_master): ?>
+<div class="modal fade" id="modalGuiaForm" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content shadow-lg border-dark">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title fw-bold" id="guiaModalTitulo">Novo Conteúdo de Treinamento</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body bg-light p-4">
+                <div class="row g-3">
+                    <div class="col-12">
+                        <label class="fw-bold text-dark mb-1">Título <span class="text-danger">*</span></label>
+                        <input type="text" id="guia_titulo" class="form-control border-dark" placeholder="Ex: Como usar o módulo de relatórios" maxlength="200">
+                    </div>
+                    <div class="col-12">
+                        <label class="fw-bold text-dark mb-1">Comentário / Descrição</label>
+                        <input type="text" id="guia_comentario" class="form-control border-secondary" placeholder="Breve descrição do conteúdo" maxlength="300">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="fw-bold text-dark mb-1">Tipo de Conteúdo</label>
+                        <select id="guia_tipo" class="form-select border-dark fw-bold" onchange="guiaTipoChange()">
+                            <option value="TEXTO">📝 Bloco de Notas (texto)</option>
+                            <option value="VIDEO">🎬 Vídeo Curto (mp4)</option>
+                            <option value="IMAGEM">🖼️ Imagem / Apresentação</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="fw-bold text-dark mb-1">Local de Exibição <span class="text-muted fw-normal">(opcional)</span></label>
+                        <input type="text" id="guia_local" class="form-control border-secondary" placeholder="Ex: dashboard, relatórios, v8...">
+                    </div>
+
+                    <!-- Painel TEXTO -->
+                    <div class="col-12" id="guia_panel_texto">
+                        <label class="fw-bold text-dark mb-1">Conteúdo</label>
+                        <div class="border border-secondary rounded">
+                            <div class="d-flex gap-1 flex-wrap p-2 border-bottom border-secondary" style="background:#f8f9fa;">
+                                <button type="button" class="btn btn-sm btn-outline-secondary fw-bold" onclick="guiaFmt('bold')"><b>B</b></button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary fst-italic" onclick="guiaFmt('italic')"><i>I</i></button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="guiaFmt('underline')"><u>U</u></button>
+                                <span class="border-start border-secondary mx-1"></span>
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="guiaFmt('insertUnorderedList')"><i class="fas fa-list-ul"></i></button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="guiaFmt('insertOrderedList')"><i class="fas fa-list-ol"></i></button>
+                                <span class="border-start border-secondary mx-1"></span>
+                                <select class="form-select form-select-sm border-secondary" style="width:auto;" onchange="guiaFmt('formatBlock'); this.value='';">
+                                    <option value="">Parágrafo</option>
+                                    <option value="h3">Título</option>
+                                    <option value="h5">Subtítulo</option>
+                                    <option value="p">Normal</option>
+                                </select>
+                                <select class="form-select form-select-sm border-secondary" style="width:auto;" onchange="guiaFmtCor(this.value); this.value='';">
+                                    <option value="">Cor</option>
+                                    <option value="#dc3545">Vermelho</option>
+                                    <option value="#198754">Verde</option>
+                                    <option value="#0d6efd">Azul</option>
+                                    <option value="#e67e22">Laranja</option>
+                                    <option value="#333333">Preto</option>
+                                </select>
+                            </div>
+                            <div id="guia_editor" contenteditable="true"
+                                 style="min-height:200px;max-height:400px;overflow-y:auto;padding:12px 14px;outline:none;font-size:0.92rem;"
+                                 placeholder="Digite o conteúdo do guia aqui..."></div>
+                        </div>
+                    </div>
+
+                    <!-- Painel ARQUIVO (VIDEO ou IMAGEM) -->
+                    <div class="col-12" id="guia_panel_arquivo" style="display:none;">
+                        <label class="fw-bold text-dark mb-1">Arquivo</label>
+                        <input type="file" id="guia_arquivo" class="form-control border-dark">
+                        <small id="guia_arquivo_dica" class="text-muted">Formatos aceitos: mp4</small>
+                        <div id="guia_arquivo_atual" class="text-info small mt-1"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer bg-light">
+                <button type="button" class="btn btn-danger fw-bold border-dark" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary fw-bold border-dark" id="btnGuiaSalvar" onclick="guiaSalvar()">
+                    <i class="fas fa-save me-1"></i> Salvar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<?php endif; ?>
 
 <?php
 $caminho_footer = $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php';
