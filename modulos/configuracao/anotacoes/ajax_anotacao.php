@@ -34,6 +34,41 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 break;
 
             // =======================================================
+            // 1b. EDITAR ANOTAÇÃO GERAL
+            // =======================================================
+            case 'editar_anotacao':
+                header('Content-Type: application/json');
+                $id       = intval($_POST['id'] ?? 0);
+                $assunto  = trim($_POST['assunto'] ?? '');
+                $anotacao = trim($_POST['anotacao'] ?? '');
+
+                if ($id <= 0 || empty($assunto) || empty($anotacao)) {
+                    echo json_encode(['success' => false, 'msg' => 'Dados incompletos.']);
+                    exit;
+                }
+                $stmt = $pdo->prepare("UPDATE CONFIG_ANOTACOES_GERAIS SET ASSUNTO = ?, ANOTACAO = ?, DATA_ATUALIZACAO = NOW() WHERE ID = ?");
+                $stmt->execute([$assunto, $anotacao, $id]);
+                echo json_encode([
+                    'success' => true,
+                    'data_br' => date('d/m/Y H:i'),
+                ]);
+                exit;
+
+            // =======================================================
+            // 1c. EXCLUIR ANOTAÇÃO GERAL
+            // =======================================================
+            case 'excluir_anotacao':
+                header('Content-Type: application/json');
+                $id = intval($_POST['id'] ?? 0);
+                if ($id <= 0) {
+                    echo json_encode(['success' => false, 'msg' => 'ID inválido.']);
+                    exit;
+                }
+                $pdo->prepare("DELETE FROM CONFIG_ANOTACOES_GERAIS WHERE ID = ?")->execute([$id]);
+                echo json_encode(['success' => true]);
+                exit;
+
+            // =======================================================
             // 2. SALVAR NOVO ACESSO (SENHAS E SISTEMAS)
             // =======================================================
             case 'salvar_acesso':
@@ -53,6 +88,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     die("Erro: O campo Origem (Nome do Banco/Sistema) é obrigatório.");
                 }
                 break;
+
+            // =======================================================
+            // 2b. EXCLUIR ACESSO
+            // =======================================================
+            case 'excluir_acesso':
+                header('Content-Type: application/json');
+                $id = intval($_POST['id'] ?? 0);
+                if ($id <= 0) {
+                    echo json_encode(['success' => false, 'msg' => 'ID inválido.']);
+                    exit;
+                }
+                $pdo->prepare("DELETE FROM CONFIG_ACESSOS WHERE ID = ?")->execute([$id]);
+                echo json_encode(['success' => true]);
+                exit;
 
             // =======================================================
             // 3. SALVAR NOVO AVISO INTERNO (somente MASTER)

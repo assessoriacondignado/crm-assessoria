@@ -148,13 +148,14 @@ if ($is_master) {
                     </thead>
                     <tbody id="listaAnotacoes" class="bg-white">
                         <?php if(!empty($anotacoes)): foreach($anotacoes as $anot): ?>
-                        <tr class="border-bottom border-dark">
+                        <tr class="border-bottom border-dark" id="row-anot-<?= $anot['ID'] ?>">
                             <td class="fw-bold text-dark text-start"><?= htmlspecialchars($anot['ASSUNTO']) ?></td>
                             <td class="text-muted small"><?= date('d/m/Y H:i', strtotime($anot['DATA_ATUALIZACAO'])) ?></td>
                             <td>
                                 <div id="anot_html_<?= $anot['ID'] ?>" class="d-none"><?= $anot['ANOTACAO'] ?></div>
                                 <button class="btn btn-sm btn-dark fw-bold border-dark shadow-sm btn-view-anot" data-id="<?= $anot['ID'] ?>" data-assunto="<?= htmlspecialchars($anot['ASSUNTO']) ?>"><i class="fas fa-eye"></i> Ler</button>
-                                <a href="?delete_anotacao=<?= $anot['ID'] ?>" class="btn btn-sm btn-danger fw-bold border-dark shadow-sm" onclick="return confirm('Excluir?')"><i class="fas fa-trash"></i></a>
+                                <button class="btn btn-sm btn-warning fw-bold border-dark shadow-sm" onclick="abrirEditarAnotacao(<?= $anot['ID'] ?>, '<?= addslashes(htmlspecialchars($anot['ASSUNTO'])) ?>')"><i class="fas fa-edit"></i> Editar</button>
+                                <button class="btn btn-sm btn-danger fw-bold border-dark shadow-sm" onclick="excluirAnotacao(<?= $anot['ID'] ?>)"><i class="fas fa-trash"></i></button>
                             </td>
                         </tr>
                         <?php endforeach; else: ?>
@@ -184,7 +185,7 @@ if ($is_master) {
                     </thead>
                     <tbody id="listaAcessos" class="bg-white">
                         <?php if(!empty($acessos)): foreach($acessos as $acesso): ?>
-                        <tr class="border-bottom border-dark">
+                        <tr class="border-bottom border-dark" id="row-acesso-<?= $acesso['ID'] ?>">
                             <td><span class="badge bg-<?= $acesso['TIPO'] == 'BANCOS' ? 'success' : 'info text-dark' ?> border border-dark"><?= $acesso['TIPO'] ?></span></td>
                             <td class="fw-bold text-dark text-start"><?= htmlspecialchars($acesso['ORIGEM']) ?></td>
                             <td class="fw-medium text-primary"><?= htmlspecialchars($acesso['USUARIO']) ?></td>
@@ -197,7 +198,7 @@ if ($is_master) {
                                 <div id="acesso_uso_<?= $acesso['ID'] ?>" class="d-none"><?= nl2br(htmlspecialchars($acesso['USO'])) ?></div>
                                 <div id="acesso_obs_<?= $acesso['ID'] ?>" class="d-none"><?= nl2br(htmlspecialchars($acesso['OBSERVACAO'])) ?></div>
                                 <button class="btn btn-sm btn-dark fw-bold border-dark shadow-sm btn-view-acesso" data-id="<?= $acesso['ID'] ?>" data-origem="<?= htmlspecialchars($acesso['ORIGEM']) ?>"><i class="fas fa-info-circle"></i> Info</button>
-                                <a href="?delete_acesso=<?= $acesso['ID'] ?>" class="btn btn-sm btn-danger fw-bold border-dark shadow-sm" onclick="return confirm('Excluir?')"><i class="fas fa-trash"></i></a>
+                                <button class="btn btn-sm btn-danger fw-bold border-dark shadow-sm" onclick="excluirAcesso(<?= $acesso['ID'] ?>)"><i class="fas fa-trash"></i></button>
                             </td>
                         </tr>
                         <?php endforeach; else: ?>
@@ -523,6 +524,35 @@ if ($is_master) {
     </div>
 </div>
 
+<!-- MODAL EDITAR ANOTAÇÃO -->
+<div class="modal fade" id="modalEditarAnotacao" tabindex="-1">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content shadow-lg border-dark">
+            <div class="modal-header bg-warning text-dark">
+                <h5 class="modal-title fw-bold text-uppercase"><i class="fas fa-edit me-2"></i> Editar Anotação</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body bg-light p-4">
+                <input type="hidden" id="edit_anot_id">
+                <div class="mb-3">
+                    <label class="fw-bold text-dark mb-1">Assunto / Título</label>
+                    <input type="text" id="edit_anot_assunto" class="form-control border-dark" required>
+                </div>
+                <div class="mb-3">
+                    <label class="fw-bold text-dark mb-1">Anotação</label>
+                    <textarea id="editor_anotacao_edit" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer bg-light">
+                <button type="button" class="btn btn-danger fw-bold" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-warning fw-bold border-dark" id="btnSalvarEdicao" onclick="salvarEdicaoAnotacao()">
+                    <i class="fas fa-save me-1"></i> Salvar Alterações
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- MODAL NOVO ACESSO -->
 <div class="modal fade" id="modalAcesso" tabindex="-1">
     <div class="modal-dialog modal-lg">
@@ -600,10 +630,104 @@ if ($is_master) {
 
 <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
 <script>
-// CKEditor para anotações
+// CKEditor para nova anotação
+let ckNova, ckEdit;
 ClassicEditor.create(document.querySelector('#editor_anotacao'), {
     toolbar: ['heading','|','bold','italic','link','bulletedList','numberedList','blockQuote','|','undo','redo']
-}).catch(e => console.error(e));
+}).then(editor => { ckNova = editor; }).catch(e => console.error(e));
+
+// CKEditor para edição
+ClassicEditor.create(document.querySelector('#editor_anotacao_edit'), {
+    toolbar: ['heading','|','bold','italic','link','bulletedList','numberedList','blockQuote','|','undo','redo']
+}).then(editor => { ckEdit = editor; }).catch(e => console.error(e));
+
+// Abre modal de edição e carrega o conteúdo atual
+function abrirEditarAnotacao(id, assunto) {
+    document.getElementById('edit_anot_id').value = id;
+    document.getElementById('edit_anot_assunto').value = assunto;
+    // Carrega o conteúdo do HTML já no DOM (sem ajax extra)
+    const htmlDiv = document.getElementById('anot_html_' + id);
+    if (ckEdit) ckEdit.setData(htmlDiv ? htmlDiv.innerHTML : '');
+    new bootstrap.Modal(document.getElementById('modalEditarAnotacao')).show();
+}
+
+async function salvarEdicaoAnotacao() {
+    const id      = document.getElementById('edit_anot_id').value;
+    const assunto = document.getElementById('edit_anot_assunto').value.trim();
+    const conteudo = ckEdit ? ckEdit.getData() : '';
+
+    if (!assunto || !conteudo) { alert('Preencha o assunto e a anotação.'); return; }
+
+    const btn = document.getElementById('btnSalvarEdicao');
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin me-1"></i> Salvando...';
+
+    const fd = new FormData();
+    fd.append('acao', 'editar_anotacao');
+    fd.append('id', id);
+    fd.append('assunto', assunto);
+    fd.append('anotacao', conteudo);
+
+    try {
+        const r = await fetch('ajax_anotacao.php', { method: 'POST', body: fd });
+        const j = await r.json();
+        if (j.success) {
+            // Atualiza o DOM sem recarregar a página
+            const row = document.getElementById('row-anot-' + id);
+            if (row) {
+                row.querySelector('td:first-child').textContent = assunto;
+                row.querySelector('td:nth-child(2)').textContent = j.data_br;
+                document.getElementById('anot_html_' + id).innerHTML = conteudo;
+                const btnView = row.querySelector('.btn-view-anot');
+                if (btnView) btnView.setAttribute('data-assunto', assunto);
+            }
+            bootstrap.Modal.getInstance(document.getElementById('modalEditarAnotacao'))?.hide();
+        } else {
+            alert('Erro: ' + (j.msg || 'Falha ao salvar.'));
+        }
+    } catch(e) { alert('Falha de comunicação.'); }
+
+    btn.disabled = false;
+    btn.innerHTML = '<i class="fas fa-save me-1"></i> Salvar Alterações';
+}
+
+async function excluirAnotacao(id) {
+    if (!confirm('Excluir esta anotação? Esta ação não pode ser desfeita.')) return;
+    const fd = new FormData();
+    fd.append('acao', 'excluir_anotacao');
+    fd.append('id', id);
+    try {
+        const r = await fetch('ajax_anotacao.php', { method: 'POST', body: fd });
+        const j = await r.json();
+        if (j.success) {
+            const row = document.getElementById('row-anot-' + id);
+            if (row) row.remove();
+            const tbody = document.getElementById('listaAnotacoes');
+            if (tbody && !tbody.querySelector('tr[id^="row-anot-"]')) {
+                tbody.innerHTML = '<tr><td colspan="3" class="text-center py-4 text-muted fw-bold">Nenhuma anotação encontrada.</td></tr>';
+            }
+        } else { alert('Erro: ' + (j.msg || 'Falha ao excluir.')); }
+    } catch(e) { alert('Falha de comunicação.'); }
+}
+
+async function excluirAcesso(id) {
+    if (!confirm('Excluir este acesso? Esta ação não pode ser desfeita.')) return;
+    const fd = new FormData();
+    fd.append('acao', 'excluir_acesso');
+    fd.append('id', id);
+    try {
+        const r = await fetch('ajax_anotacao.php', { method: 'POST', body: fd });
+        const j = await r.json();
+        if (j.success) {
+            const row = document.getElementById('row-acesso-' + id);
+            if (row) row.remove();
+            const tbody = document.getElementById('listaAcessos');
+            if (tbody && !tbody.querySelector('tr[id^="row-acesso-"]')) {
+                tbody.innerHTML = '<tr><td colspan="6" class="text-center py-4 text-muted fw-bold">Nenhum acesso cadastrado.</td></tr>';
+            }
+        } else { alert('Erro: ' + (j.msg || 'Falha ao excluir.')); }
+    } catch(e) { alert('Falha de comunicação.'); }
+}
 
 // Filtros
 document.getElementById('filtroAnotacoes').addEventListener('keyup', function() {

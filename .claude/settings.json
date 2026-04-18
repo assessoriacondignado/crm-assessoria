@@ -62,7 +62,10 @@
       "Bash(mysql -u root -e \"SHOW TABLES LIKE 'AVISOS%';\")",
       "Bash(mysql -e \"SHOW TABLES LIKE 'AVISOS%';\")",
       "Bash(php -r 'require '\\\\''/var/www/html/conexao.php'\\\\''; $tbls = $pdo->query\\(\"SHOW TABLES LIKE '\\\\''AVISOS%'\\\\''\"\\)->fetchAll\\(PDO::FETCH_COLUMN\\); echo implode\\(\"\\\\n\", $tbls\\) ?: '\\\\''NENHUMA'\\\\'';')",
-      "Bash(php -r 'require '\\\\''conexao.php'\\\\''; *)"
+      "Bash(php -r 'require '\\\\''conexao.php'\\\\''; *)",
+      "Bash(grep -rn \"SELECT \\\\*\" /var/www/html/modulos/banco_dados/*.php)",
+      "Bash(grep -rn \"while.*fetch\\\\|for.*fetch\" /var/www/html/modulos/banco_dados/*.php)",
+      "Bash(grep -n '\\\\$telefones\\\\|\\\\$enderecos\\\\|\\\\$emails\\\\|\\\\$convenios' /var/www/html/modulos/banco_dados/consulta.php)"
     ]
   }
 }
