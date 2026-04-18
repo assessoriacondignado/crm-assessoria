@@ -14,33 +14,51 @@ $cpf_logado = $_SESSION['usuario_cpf'] ?? '';
 $grupo_usuario = strtoupper($_SESSION['usuario_grupo'] ?? 'ADMIN');
 $is_master = in_array($grupo_usuario, ['MASTER', 'ADMIN', 'ADMINISTRADOR']);
 
+// Carrega permissões base antes de tudo
+$caminho_permissoes_early = $_SERVER['DOCUMENT_ROOT'] . '/modulos/cliente_e_usuario/checar_permissoes.php';
+if (file_exists($caminho_permissoes_early)) { include_once $caminho_permissoes_early; }
+
+// Permissão de acesso ao módulo Campanhas
+$temAcessoCampanhas = function_exists('verificaPermissao')
+    ? verificaPermissao($pdo, 'MENU_CAMPANHAS', 'MENU')
+    : $is_master;
+
+// Hierarquia de campanhas — MASTER vê tudo, demais filtram por empresa
+$is_master_camp = function_exists('verificaPermissao')
+    ? verificaPermissao($pdo, 'SUBMENU_CAMPANHAS_HIERARQUIA', 'FUNCAO')
+    : $is_master;
+
+// Empresa do usuário logado (usada em múltiplos filtros)
+$id_empresa_logado = null;
+if (!$is_master_camp || !$is_master) {
+    try {
+        $stmtEmp = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+        $stmtEmp->execute([$cpf_logado]);
+        $id_empresa_logado = $stmtEmp->fetchColumn() ?: null;
+    } catch (Exception $e) {}
+}
+
 // 3. Carrega permissões e dados V8 para os widgets do Hub
 $temAcessoV8 = false;
 $v8_chaves   = [];
 $v8_historico = [];
 
 try {
-    $caminho_permissoes = $_SERVER['DOCUMENT_ROOT'] . '/modulos/cliente_e_usuario/checar_permissoes.php';
-    if (file_exists($caminho_permissoes)) { include_once $caminho_permissoes; }
+    // verificaPermissao já foi carregado acima
 
     // Verifica se o usuário tem acesso ao módulo V8
-    // verificaPermissao retorna TRUE quando o grupo NÃO está bloqueado (tem acesso livre)
     $temAcessoV8 = function_exists('verificaPermissao')
         ? verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_NOVA_CONSULTA_DIGITAÇÃO', 'FUNCAO')
         : $is_master;
 
     if ($temAcessoV8) {
         // Hierarquia (espelho de v8_api.ajax.php)
-        $v8_restricao_meu_usuario   = function_exists('verificaPermissao') ? !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_CHAVE_CUSTO_MEU_USUARIO', 'FUNCAO') : false;
-        $v8_restricao_minha_fila    = function_exists('verificaPermissao') ? !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_NOVA_CONSULTA_FILA_MEU_REGITRO', 'FUNCAO') : false;
-        $v8_restricao_hierarquia    = function_exists('verificaPermissao') ? !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_HIERARQUIA', 'FUNCAO') : true;
+        $v8_restricao_meu_usuario = function_exists('verificaPermissao') ? !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_CHAVE_CUSTO_MEU_USUARIO', 'FUNCAO') : false;
+        $v8_restricao_minha_fila  = function_exists('verificaPermissao') ? !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_NOVA_CONSULTA_FILA_MEU_REGITRO', 'FUNCAO') : false;
+        $v8_restricao_hierarquia  = function_exists('verificaPermissao') ? !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_HIERARQUIA', 'FUNCAO') : true;
 
-        $v8_empresa_logado = null;
-        if ($v8_restricao_hierarquia && !$v8_restricao_minha_fila) {
-            $stmtEmpV8 = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
-            $stmtEmpV8->execute([$cpf_logado]);
-            $v8_empresa_logado = $stmtEmpV8->fetchColumn() ?: null;
-        }
+        // Empresa do usuário para filtros V8 (reutiliza $id_empresa_logado já buscado)
+        $v8_empresa_logado = $id_empresa_logado;
 
         // --- Widget 1: Chaves V8 com contagens (hoje e total) ---
         $subConsenHoje  = "(SELECT COUNT(*) FROM INTEGRACAO_V8_REGISTROCONSULTA rc WHERE rc.CHAVE_ID = ca.ID AND DATE(rc.DATA_FILA) = CURDATE())";
@@ -59,14 +77,20 @@ try {
                       $subSimulTotal  as SIMUL_TOTAL
                FROM INTEGRACAO_V8_CHAVE_ACESSO ca";
 
-        $sqlChaves = $v8_restricao_meu_usuario
-            ? "$sqlChavesSel WHERE ca.STATUS = 'ATIVO' AND ca.CPF_USUARIO = ? ORDER BY ca.CLIENTE_NOME ASC"
-            : "$sqlChavesSel WHERE ca.STATUS = 'ATIVO' ORDER BY ca.CLIENTE_NOME ASC";
+        // Filtro hierárquico nas chaves: meu usuário > minha empresa > todos
+        $paramsChaves = [];
+        if ($v8_restricao_meu_usuario) {
+            $sqlChaves = "$sqlChavesSel WHERE ca.STATUS = 'ATIVO' AND ca.CPF_USUARIO = ? ORDER BY ca.CLIENTE_NOME ASC";
+            $paramsChaves = [$cpf_logado];
+        } elseif ($v8_restricao_hierarquia && $v8_empresa_logado) {
+            $sqlChaves = "$sqlChavesSel WHERE ca.STATUS = 'ATIVO' AND ca.id_empresa = ? ORDER BY ca.CLIENTE_NOME ASC";
+            $paramsChaves = [$v8_empresa_logado];
+        } else {
+            $sqlChaves = "$sqlChavesSel WHERE ca.STATUS = 'ATIVO' ORDER BY ca.CLIENTE_NOME ASC";
+        }
 
-        $stmtChaves = $v8_restricao_meu_usuario
-            ? $pdo->prepare($sqlChaves)
-            : $pdo->query($sqlChaves);
-        if ($v8_restricao_meu_usuario) { $stmtChaves->execute([$cpf_logado]); }
+        $stmtChaves = $pdo->prepare($sqlChaves);
+        $stmtChaves->execute($paramsChaves);
         $v8_chaves = $stmtChaves->fetchAll(PDO::FETCH_ASSOC);
 
         // --- Widget 2: Histórico das últimas 10 consultas (mesmos campos da fila do módulo) ---
@@ -113,28 +137,35 @@ try {
 // 4. Busca as Campanhas Ativas (Calculando Total e Restantes)
 $campanhas_ativas = [];
 try {
-    $sqlCamp = "
-        SELECT c.ID, c.NOME_CAMPANHA, 
-               (SELECT COUNT(ID) FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA WHERE ID_CAMPANHA = c.ID) as TOTAL_CLIENTES,
-               (SELECT COUNT(cl.ID) FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA cl WHERE cl.ID_CAMPANHA = c.ID AND NOT EXISTS (SELECT 1 FROM BANCO_DE_DADOS_CAMPANHA_REGISTRO_CONTATO r WHERE r.CPF_CLIENTE = cl.CPF_CLIENTE AND r.DATA_REGISTRO >= cl.DATA_INCLUSAO)) as RESTANTES,
-               (SELECT CPF_CLIENTE FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA WHERE ID_CAMPANHA = c.ID ORDER BY ID ASC LIMIT 1) as PRIMEIRO_CPF
-        FROM BANCO_DE_DADOS_CAMPANHA_CAMPANHAS c
-        WHERE c.STATUS = 'ATIVO'
-    ";
-    $paramsCamp = [];
+    if ($temAcessoCampanhas) {
+        $sqlCamp = "
+            SELECT c.ID, c.NOME_CAMPANHA,
+                   (SELECT COUNT(ID) FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA WHERE ID_CAMPANHA = c.ID) as TOTAL_CLIENTES,
+                   (SELECT COUNT(cl.ID) FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA cl WHERE cl.ID_CAMPANHA = c.ID AND NOT EXISTS (SELECT 1 FROM BANCO_DE_DADOS_CAMPANHA_REGISTRO_CONTATO r WHERE r.CPF_CLIENTE = cl.CPF_CLIENTE AND r.DATA_REGISTRO >= cl.DATA_INCLUSAO)) as RESTANTES,
+                   (SELECT CPF_CLIENTE FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA WHERE ID_CAMPANHA = c.ID ORDER BY ID ASC LIMIT 1) as PRIMEIRO_CPF
+            FROM BANCO_DE_DADOS_CAMPANHA_CAMPANHAS c
+            WHERE c.STATUS = 'ATIVO'
+        ";
+        $paramsCamp = [];
 
-    // Se NÃO for Master/Admin, mostra apenas campanhas Globais (NULL) ou as atribuídas diretamente ao CPF dele
-    if (!$is_master) {
-        $sqlCamp .= " AND (c.CPF_USUARIO IS NULL OR c.CPF_USUARIO = ?)";
-        $paramsCamp[] = $cpf_logado;
+        if ($is_master_camp) {
+            // MASTER: vê todas as campanhas ativas
+        } elseif ($id_empresa_logado) {
+            // Hierarquia empresa: vê campanhas da própria empresa ou globais (sem empresa)
+            $sqlCamp .= " AND (c.id_empresa IS NULL OR c.id_empresa = ? OR c.CPF_USUARIO = ?)";
+            $paramsCamp[] = $id_empresa_logado;
+            $paramsCamp[] = $cpf_logado;
+        } else {
+            // Sem empresa definida: só campanhas globais ou atribuídas ao CPF
+            $sqlCamp .= " AND (c.CPF_USUARIO IS NULL OR c.CPF_USUARIO = ?)";
+            $paramsCamp[] = $cpf_logado;
+        }
+
+        $sqlCamp .= " ORDER BY c.NOME_CAMPANHA ASC";
+        $stmtCamp = $pdo->prepare($sqlCamp);
+        $stmtCamp->execute($paramsCamp);
+        $campanhas_ativas = $stmtCamp->fetchAll(PDO::FETCH_ASSOC);
     }
-
-    $sqlCamp .= " ORDER BY c.NOME_CAMPANHA ASC";
-    
-    $stmtCamp = $pdo->prepare($sqlCamp);
-    $stmtCamp->execute($paramsCamp);
-    $campanhas_ativas = $stmtCamp->fetchAll(PDO::FETCH_ASSOC);
-
 } catch (Exception $e) {
     $erro_db = "Erro ao buscar campanhas: " . $e->getMessage();
 }
@@ -376,6 +407,7 @@ if (file_exists($caminho_header)) {
     <div class="alert alert-danger fw-bold border-dark shadow-sm"><i class="fas fa-exclamation-triangle me-2"></i> <?= $erro_db ?></div>
 <?php endif; ?>
 
+<?php if ($temAcessoCampanhas): ?>
 <div class="mb-5">
     <div class="barra-titulo-campanha shadow-sm" data-bs-toggle="collapse" data-bs-target="#collapseCampanhas" aria-expanded="true">
         <span><i class="far fa-newspaper me-2"></i> Campanhas em Andamento</span>
@@ -418,6 +450,7 @@ if (file_exists($caminho_header)) {
         </div>
     </div>
 </div>
+<?php endif; // temAcessoCampanhas ?>
 
 <?php if ($temAcessoV8): ?>
 

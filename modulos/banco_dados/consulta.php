@@ -1507,15 +1507,12 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
                 </div>
 
                 <div class="mb-3">
-                    <label class="small fw-bold text-dark">Telefone Discado (Para Qualificação)</label>
-                    <select name="telefone_discado" class="form-select border-dark rounded-0 fw-bold text-success" required>
-                        <?php if(!empty($telefones)): ?>
-                            <?php foreach($telefones as $tel): ?>
-                                <option value="<?= htmlspecialchars($tel['telefone_cel']) ?>"><?= htmlspecialchars($tel['telefone_cel']) ?></option>
-                            <?php endforeach; ?>
-                        <?php else: ?>
-                            <option value="">Sem telefones na ficha</option>
-                        <?php endif; ?>
+                    <label class="small fw-bold text-dark">Telefone Discado (Para Qualificação) <span class="text-muted fw-normal">(opcional)</span></label>
+                    <select name="telefone_discado" class="form-select border-dark rounded-0 fw-bold text-success">
+                        <option value="">— Sem telefone / Não informar —</option>
+                        <?php foreach($telefones as $tel): ?>
+                            <option value="<?= htmlspecialchars($tel['telefone_cel']) ?>"><?= htmlspecialchars($tel['telefone_cel']) ?></option>
+                        <?php endforeach; ?>
                     </select>
                 </div>
 
@@ -1539,30 +1536,77 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
 </div>
 
 <div class="modal fade" id="modalVerRegistros" tabindex="-1">
-    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content border-dark shadow-lg rounded-0">
             <div class="modal-header bg-dark text-white border-dark rounded-0 py-2">
                 <h6 class="modal-title fw-bold text-uppercase"><i class="fas fa-history text-warning me-2"></i> Registros nesta Campanha</h6>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body bg-light p-3">
-                <?php if(empty($historico_campanha)): ?>
-                    <div class="alert alert-secondary border-dark text-center fw-bold small rounded-0"><i class="fas fa-info-circle"></i> Nenhum registro salvo para este cliente nesta campanha ainda.</div>
-                <?php else: ?>
-                    <?php foreach($historico_campanha as $hc): ?>
-                        <div class="border border-dark p-3 mb-2 bg-white rounded-0 shadow-sm text-start">
-                            <div class="d-flex justify-content-between align-items-center mb-2 border-bottom border-light pb-1">
-                                <span class="fw-bold text-primary text-uppercase" style="font-size: 0.85rem;"><i class="fas fa-tag"></i> <?= htmlspecialchars($hc['NOME_STATUS']) ?></span>
-                                <span class="badge bg-secondary rounded-0 border border-dark"><i class="fas fa-clock"></i> <?= date('d/m/Y H:i', strtotime($hc['DATA_REGISTRO'])) ?></span>
-                            </div>
-                            <div class="small text-muted mb-2 fw-bold"><i class="fas fa-user text-dark"></i> Operador: <?= htmlspecialchars($hc['NOME_USUARIO']) ?></div>
-                            <div class="text-dark bg-light p-2 border border-secondary" style="font-size: 0.80rem;"><?= nl2br(htmlspecialchars($hc['REGISTRO'])) ?></div>
-                            <?php if(!empty($hc['DATA_AGENDAMENTO'])): ?>
-                                <div class="small fw-bold text-danger mt-2 px-2 py-1 bg-white border border-danger d-inline-block rounded-0" style="font-size: 0.70rem;"><i class="fas fa-calendar-alt"></i> Retorno Agendado: <?= date('d/m/Y H:i', strtotime($hc['DATA_AGENDAMENTO'])) ?></div>
+
+                <!-- FILTROS -->
+                <div class="row g-2 mb-3">
+                    <div class="col-md-3">
+                        <label class="small fw-bold text-dark">Data Início</label>
+                        <input type="date" id="filtroRegDataIni" class="form-control form-control-sm border-dark rounded-0" onchange="filtrarRegistrosCampanha()">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="small fw-bold text-dark">Data Fim</label>
+                        <input type="date" id="filtroRegDataFim" class="form-control form-control-sm border-dark rounded-0" onchange="filtrarRegistrosCampanha()">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="small fw-bold text-dark">Status</label>
+                        <select id="filtroRegStatus" class="form-select form-select-sm border-dark rounded-0" onchange="filtrarRegistrosCampanha()">
+                            <option value="">— Todos —</option>
+                            <?php foreach(array_unique(array_column($historico_campanha, 'NOME_STATUS')) as $ns): ?>
+                                <option value="<?= htmlspecialchars($ns) ?>"><?= htmlspecialchars($ns) ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="small fw-bold text-dark">Usuário</label>
+                        <select id="filtroRegUsuario" class="form-select form-select-sm border-dark rounded-0" onchange="filtrarRegistrosCampanha()">
+                            <option value="">— Todos —</option>
+                            <?php foreach(array_unique(array_column($historico_campanha, 'NOME_USUARIO')) as $nu): ?>
+                                <option value="<?= htmlspecialchars($nu) ?>"><?= htmlspecialchars($nu) ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- CONTADOR -->
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="small text-muted fw-bold" id="contadorRegCampanha"></span>
+                    <button class="btn btn-sm btn-outline-secondary rounded-0 fw-bold" onclick="filtrarRegistrosCampanha(true)"><i class="fas fa-times me-1"></i> Limpar Filtros</button>
+                </div>
+
+                <!-- TABELA COM SCROLL -->
+                <div style="max-height: 520px; overflow-y: auto; border: 1px solid #343a40;">
+                    <table class="table table-bordered table-hover table-sm mb-0 align-middle" style="font-size:0.8rem;">
+                        <thead class="table-dark sticky-top" style="top:0; z-index:2;">
+                            <tr>
+                                <th style="width:130px; white-space:nowrap;">Data / Hora</th>
+                                <th style="width:160px;">Status</th>
+                                <th style="width:160px;">Usuário</th>
+                                <th>Observação</th>
+                                <th style="width:130px; white-space:nowrap;">Agendamento</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyRegCampanha">
+                            <?php if(empty($historico_campanha)): ?>
+                                <tr><td colspan="5" class="text-center text-muted fw-bold py-4">Nenhum registro salvo para este cliente nesta campanha ainda.</td></tr>
                             <?php endif; ?>
-                        </div>
-                    <?php endforeach; ?>
-                <?php endif; ?>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- BOTÃO MAIS -->
+                <div class="text-center mt-2" id="divBtnMaisReg" style="display:none;">
+                    <button class="btn btn-sm btn-outline-dark fw-bold rounded-0 px-4" onclick="carregarMaisRegistros()">
+                        <i class="fas fa-chevron-down me-1"></i> Carregar mais 20 <span class="badge bg-secondary ms-1" id="badgeRestantesReg"></span>
+                    </button>
+                </div>
+
             </div>
             <div class="modal-footer bg-white border-top border-dark rounded-0 p-2">
                 <button type="button" class="btn btn-sm btn-dark fw-bold rounded-0" data-bs-dismiss="modal">Fechar Janela</button>
@@ -1570,6 +1614,103 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
         </div>
     </div>
 </div>
+
+<script>
+const _regCampanhaData = <?= json_encode(array_map(function($hc) {
+    return [
+        'data'        => date('Y-m-d', strtotime($hc['DATA_REGISTRO'])),
+        'data_br'     => date('d/m/Y H:i', strtotime($hc['DATA_REGISTRO'])),
+        'status'      => $hc['NOME_STATUS'] ?? '',
+        'usuario'     => $hc['NOME_USUARIO'] ?? '',
+        'registro'    => $hc['REGISTRO'] ?? '',
+        'agendamento' => !empty($hc['DATA_AGENDAMENTO']) ? date('d/m/Y H:i', strtotime($hc['DATA_AGENDAMENTO'])) : ''
+    ];
+}, $historico_campanha), JSON_UNESCAPED_UNICODE) ?>;
+
+let _regFiltrados = [];
+let _regOffset = 0;
+const _REG_PAGE = 20;
+
+function filtrarRegistrosCampanha(limpar) {
+    if (limpar) {
+        document.getElementById('filtroRegDataIni').value = '';
+        document.getElementById('filtroRegDataFim').value = '';
+        document.getElementById('filtroRegStatus').value = '';
+        document.getElementById('filtroRegUsuario').value = '';
+    }
+    const dIni   = document.getElementById('filtroRegDataIni').value;
+    const dFim   = document.getElementById('filtroRegDataFim').value;
+    const status = document.getElementById('filtroRegStatus').value.toLowerCase();
+    const usuario= document.getElementById('filtroRegUsuario').value.toLowerCase();
+
+    _regFiltrados = _regCampanhaData.filter(r => {
+        if (dIni   && r.data < dIni) return false;
+        if (dFim   && r.data > dFim) return false;
+        if (status && r.status.toLowerCase() !== status) return false;
+        if (usuario&& r.usuario.toLowerCase() !== usuario) return false;
+        return true;
+    });
+
+    _regOffset = 0;
+    document.getElementById('tbodyRegCampanha').innerHTML = '';
+    _renderizarRegistros();
+}
+
+function _renderizarRegistros() {
+    const tbody = document.getElementById('tbodyRegCampanha');
+    const lote = _regFiltrados.slice(_regOffset, _regOffset + _REG_PAGE);
+    const restantes = _regFiltrados.length - _regOffset - lote.length;
+
+    if (_regFiltrados.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="5" class="text-center text-muted fw-bold py-4">Nenhum registro encontrado com os filtros aplicados.</td></tr>';
+        document.getElementById('divBtnMaisReg').style.display = 'none';
+        document.getElementById('contadorRegCampanha').textContent = '0 registros';
+        return;
+    }
+
+    lote.forEach(r => {
+        const agend = r.agendamento
+            ? `<span class="badge bg-danger rounded-0"><i class="fas fa-calendar-alt me-1"></i>${r.agendamento}</span>`
+            : '<span class="text-muted">—</span>';
+        tbody.innerHTML += `<tr>
+            <td class="text-nowrap fw-bold text-muted">${r.data_br}</td>
+            <td><span class="badge bg-primary rounded-0 text-uppercase" style="font-size:0.72rem;">${r.status}</span></td>
+            <td class="text-dark" style="font-size:0.75rem;">${r.usuario}</td>
+            <td style="white-space:pre-wrap; word-break:break-word;">${r.registro.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</td>
+            <td class="text-nowrap">${agend}</td>
+        </tr>`;
+    });
+
+    _regOffset += lote.length;
+
+    document.getElementById('contadorRegCampanha').textContent =
+        _regOffset + ' de ' + _regFiltrados.length + ' registro(s)';
+
+    const btnMais = document.getElementById('divBtnMaisReg');
+    if (restantes > 0) {
+        document.getElementById('badgeRestantesReg').textContent = restantes + ' restantes';
+        btnMais.style.display = '';
+    } else {
+        btnMais.style.display = 'none';
+    }
+}
+
+function carregarMaisRegistros() {
+    _renderizarRegistros();
+}
+
+// Inicializa quando o modal abre
+document.getElementById('modalVerRegistros').addEventListener('show.bs.modal', function() {
+    document.getElementById('filtroRegDataIni').value = '';
+    document.getElementById('filtroRegDataFim').value = '';
+    document.getElementById('filtroRegStatus').value = '';
+    document.getElementById('filtroRegUsuario').value = '';
+    _regFiltrados = [..._regCampanhaData];
+    _regOffset = 0;
+    document.getElementById('tbodyRegCampanha').innerHTML = '';
+    _renderizarRegistros();
+});
+</script>
 
 <?php if (!(isset($is_modo_campanha) && $is_modo_campanha) && !empty($cpf_selecionado)): ?>
 <div class="modal fade" id="modalRegistrosGerais" tabindex="-1">
