@@ -674,11 +674,11 @@
 
         const r = await v8Req('ajax_api_v8_lote_csv.php', 'listar_lotes', payload, false); 
         
-        if (r.success) { 
-            windowDadosLoteAtual = r.data; 
-            tb.innerHTML = ''; let temRodando = false; 
-            if (r.data.length === 0) return tb.innerHTML = '<tr><td colspan="6" class="py-4 text-center text-muted fw-bold">Nenhum lote localizado com os filtros atuais.</td></tr>'; 
-            
+        if (r.success) {
+            windowDadosLoteAtual = r.data;
+            let newHtml = ''; let temRodando = false;
+            if (r.data.length === 0) { tb.innerHTML = '<tr><td colspan="6" class="py-4 text-center text-muted fw-bold">Nenhum lote localizado com os filtros atuais.</td></tr>'; return; }
+
             r.data.forEach(l => { 
                 let badge = ''; let agendamentoInfo = ''; let btnPausarLi = '';
                 
@@ -927,16 +927,17 @@
                   </div>
                 </div>`;
 
-                tb.innerHTML += `<tr class="bg-white border-bottom border-secondary">
+                newHtml += `<tr class="bg-white border-bottom border-secondary">
                     <td class="align-middle fw-bold text-muted">${idLoteReal}</td>
                     <td class="align-middle">${infoListaOrigem}</td>
                     <td class="align-middle">${infoLoteGeral}</td>
                     <td class="align-middle fw-bold text-nowrap">${badge} <span class="ms-2 small text-muted">${pNum}%</span></td>
                     <td class="align-middle fs-6 text-nowrap bg-light border-start border-end border-secondary">${funilHtml}</td>
                     <td class="p-2 align-middle text-center" style="vertical-align: middle;">${labelStatusLote}${menuAcoes}</td>
-                </tr>`; 
-            }); 
-            
+                </tr>`;
+            });
+            tb.innerHTML = newHtml;
+
             var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]')); 
             tooltipTriggerList.map(function (tooltipTriggerEl) { return new bootstrap.Tooltip(tooltipTriggerEl); }); 
             
