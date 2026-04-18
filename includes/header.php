@@ -75,7 +75,7 @@ if (!isset($_SESSION['usuario_cpf'])) {
 // ==========================================
 // CHAVE DE PERMISSÃO: VER USUÁRIOS ONLINE
 // ==========================================
-$pode_ver_online = podeAcessarMenu($pdo, 'MENU_INICIO_VER_ONLINE');
+$pode_ver_online = podeAcessarMenu($pdo, 'USUARIO_ONLINE');
 
 // ==========================================
 // NOVO: RASTREIO ONLINE E LOGOUT FORÇADO
