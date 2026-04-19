@@ -20,7 +20,16 @@ if (!function_exists('verificaPermissao')) {
 
             // Usa cache de permissões carregado em header.php (evita 1 SELECT por chamada)
             if (isset($_SESSION['perm_cache'])) {
-                $grupo_usuarios = $_SESSION['perm_cache'][$chave] ?? '';
+                if (array_key_exists($chave, $_SESSION['perm_cache'])) {
+                    $grupo_usuarios = $_SESSION['perm_cache'][$chave];
+                } else {
+                    // Chave adicionada após cache ser carregado: consulta DB e adiciona ao cache
+                    $stmt = $pdo->prepare("SELECT GRUPO_USUARIOS FROM CLIENTE_USUARIO_PERMISSAO WHERE CHAVE = ?");
+                    $stmt->execute([$chave]);
+                    $reg = $stmt->fetch(PDO::FETCH_ASSOC);
+                    $grupo_usuarios = $reg ? ($reg['GRUPO_USUARIOS'] ?? '') : '';
+                    $_SESSION['perm_cache'][$chave] = $grupo_usuarios;
+                }
             } else {
                 $stmt = $pdo->prepare("SELECT GRUPO_USUARIOS FROM CLIENTE_USUARIO_PERMISSAO WHERE CHAVE = ?");
                 $stmt->execute([$chave]);
