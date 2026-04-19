@@ -478,11 +478,9 @@ try {
             if (!empty($lote_ids)) {
                 $inQuery = implode(',', array_fill(0, count($lote_ids), '?'));
 
-                // Agrupa lotes por tabela de dados (lotes legados usam tabela central)
-                $stmtTbls = $pdo->prepare("SELECT ID, TABELA_DADOS FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID IN ($inQuery)");
-                $stmtTbls->execute($lote_ids);
+                // TABELA_DADOS já vem no SELECT l.* da query principal — sem query extra
                 $tblsUnicas = [];
-                foreach ($stmtTbls->fetchAll(PDO::FETCH_ASSOC) as $r) {
+                foreach ($lotes as $r) {
                     $t = !empty($r['TABELA_DADOS']) ? $r['TABELA_DADOS'] : 'INTEGRACAO_V8_REGISTROCONSULTA_LOTE';
                     $tblsUnicas[$t][] = $r['ID'];
                 }

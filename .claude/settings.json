@@ -105,7 +105,9 @@
       "Bash(awk '{print $1, $3, $5}')",
       "Bash(mysql -u root -e \"SHOW VARIABLES WHERE Variable_name IN \\('max_connections','innodb_buffer_pool_size','sort_buffer_size','join_buffer_size','tmp_table_size','max_heap_table_size'\\);\")",
       "Read(//etc/mysql/**)",
-      "Bash(mysql -u root -e \"SELECT @@datadir, @@basedir;\")"
+      "Bash(mysql -u root -e \"SELECT @@datadir, @@basedir;\")",
+      "Bash(mysql -u root crm_dados -e \"SHOW INDEX FROM base_de_dados_registro_importacao;\")",
+      "Bash(php -l /var/www/html/modulos/configuracao/anotacoes/ajax_anotacao.php)"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d"

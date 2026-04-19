@@ -23,8 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ajax_suporte_logado'])
          exit;
     }
     
-    $stmt = $pdo->query("SELECT INSTANCE_ID, TOKEN FROM WAPI_INSTANCIAS ORDER BY ID ASC LIMIT 1");
-    $inst = $stmt->fetch(PDO::FETCH_ASSOC);
+    $inst = $wapi_inst_cached ?: [];
     
     if ($inst) {
         $msg = "🆘 *SOLICITAÇÃO DE SUPORTE (USUÁRIO LOGADO)*\n\n👤 *Nome:* $nome\n📱 *Contato:* $telefone\n⏰ *Data:* " . date('d/m/Y H:i:s');
@@ -76,6 +75,18 @@ if (!isset($_SESSION['usuario_cpf'])) {
 // CHAVE DE PERMISSÃO: VER USUÁRIOS ONLINE
 // ==========================================
 $pode_ver_online = podeAcessarMenu($pdo, 'USUARIO_ONLINE');
+
+// ==========================================
+// #10 — CACHE WAPI_INSTANCIAS (evita query por page load)
+// ==========================================
+if (empty($_SESSION['wapi_inst_cache']) || (time() - ($_SESSION['wapi_inst_ts'] ?? 0)) > 300) {
+    try {
+        $stmtWapi = $pdo->query("SELECT INSTANCE_ID, TOKEN FROM WAPI_INSTANCIAS ORDER BY ID ASC LIMIT 1");
+        $_SESSION['wapi_inst_cache'] = $stmtWapi->fetch(PDO::FETCH_ASSOC) ?: [];
+        $_SESSION['wapi_inst_ts']    = time();
+    } catch(Exception $e) { $_SESSION['wapi_inst_cache'] = []; }
+}
+$wapi_inst_cached = $_SESSION['wapi_inst_cache'];
 
 // ==========================================
 // NOVO: RASTREIO ONLINE E LOGOUT FORÇADO
@@ -137,8 +148,7 @@ if ($userExp && !empty($userExp['DATA_EXPIRAR'])) {
         $pdo->prepare("UPDATE CLIENTE_USUARIO SET Situação = 'vencido' WHERE CPF = ?")->execute([$_SESSION['usuario_cpf']]);
         
         // 3.2. Dispara a mensagem via W-API
-        $stmtInst = $pdo->query("SELECT INSTANCE_ID, TOKEN FROM WAPI_INSTANCIAS ORDER BY ID ASC LIMIT 1");
-        $inst = $stmtInst->fetch(PDO::FETCH_ASSOC);
+        $inst = $wapi_inst_cached ?: [];
         
         if ($inst && !empty($userExp['CELULAR'])) {
             $cel_whats = '55' . preg_replace('/\D/', '', $userExp['CELULAR']);
@@ -177,35 +187,43 @@ $cpf_logado_h   = preg_replace('/\D/', '', $_SESSION['usuario_cpf'] ?? '');
 $grupo_logado_h = strtoupper($_SESSION['usuario_grupo'] ?? '');
 $avisos_header  = [];
 $nao_lidos_h    = 0;
-try {
-    $id_empresa_h = null;
-    $stmtE = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
-    $stmtE->execute([$cpf_logado_h]);
-    $id_empresa_h = $stmtE->fetchColumn();
 
-    $stmtH = $pdo->prepare("
-        SELECT a.ID, a.ASSUNTO, a.TIPO, a.NOME_CRIADOR, a.DATA_CRIACAO
-        FROM AVISOS_INTERNOS a
-        WHERE EXISTS (
-            SELECT 1 FROM AVISOS_INTERNOS_DESTINATARIOS d
-            WHERE d.AVISO_ID = a.ID AND (
-                d.TIPO_DEST = 'TODOS'
-                OR (d.TIPO_DEST = 'GRUPO'   AND d.VALOR = ?)
-                OR (d.TIPO_DEST = 'USUARIO' AND d.VALOR = ?)
-                OR (d.TIPO_DEST = 'EMPRESA' AND d.VALOR = ?)
+// #13 — Cache de 60s para avisos não lidos (evita EXISTS duplo em todo page load)
+$cache_key_av = 'avisos_header_' . $cpf_logado_h;
+$cache_ts_key = $cache_key_av . '_ts';
+if (!isset($_SESSION[$cache_key_av]) || (time() - ($_SESSION[$cache_ts_key] ?? 0)) > 60) {
+    try {
+        $id_empresa_h = null;
+        $stmtE = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+        $stmtE->execute([$cpf_logado_h]);
+        $id_empresa_h = $stmtE->fetchColumn();
+
+        $stmtH = $pdo->prepare("
+            SELECT a.ID, a.ASSUNTO, a.TIPO, a.NOME_CRIADOR, a.DATA_CRIACAO
+            FROM AVISOS_INTERNOS a
+            WHERE EXISTS (
+                SELECT 1 FROM AVISOS_INTERNOS_DESTINATARIOS d
+                WHERE d.AVISO_ID = a.ID AND (
+                    d.TIPO_DEST = 'TODOS'
+                    OR (d.TIPO_DEST = 'GRUPO'   AND d.VALOR = ?)
+                    OR (d.TIPO_DEST = 'USUARIO' AND d.VALOR = ?)
+                    OR (d.TIPO_DEST = 'EMPRESA' AND d.VALOR = ?)
+                )
             )
-        )
-        AND NOT EXISTS (
-            SELECT 1 FROM AVISOS_INTERNOS_LEITURA
-            WHERE AVISO_ID = a.ID AND CPF_USUARIO = ?
-        )
-        ORDER BY a.DATA_CRIACAO DESC
-        LIMIT 30
-    ");
-    $stmtH->execute([$grupo_logado_h, $cpf_logado_h, (string)$id_empresa_h, $cpf_logado_h]);
-    $avisos_header = $stmtH->fetchAll(PDO::FETCH_ASSOC);
-    $nao_lidos_h   = count($avisos_header);
-} catch(Exception $e) {}
+            AND NOT EXISTS (
+                SELECT 1 FROM AVISOS_INTERNOS_LEITURA
+                WHERE AVISO_ID = a.ID AND CPF_USUARIO = ?
+            )
+            ORDER BY a.DATA_CRIACAO DESC
+            LIMIT 30
+        ");
+        $stmtH->execute([$grupo_logado_h, $cpf_logado_h, (string)$id_empresa_h, $cpf_logado_h]);
+        $_SESSION[$cache_key_av] = $stmtH->fetchAll(PDO::FETCH_ASSOC);
+        $_SESSION[$cache_ts_key] = time();
+    } catch(Exception $e) { $_SESSION[$cache_key_av] = []; }
+}
+$avisos_header = $_SESSION[$cache_key_av];
+$nao_lidos_h   = count($avisos_header);
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

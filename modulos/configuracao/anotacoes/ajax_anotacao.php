@@ -210,6 +210,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     VALUES (?, ?, NOW())
                 ")->execute([$id, $cpf_logado]);
 
+                // Invalida cache de avisos do header
+                unset($_SESSION['avisos_header_' . $cpf_logado], $_SESSION['avisos_header_' . $cpf_logado . '_ts']);
+
                 echo json_encode(['success' => true]);
                 exit;
 
@@ -258,6 +261,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         $stmtIns->execute([$aid, $cpf_logado]);
                     }
                 }
+
+                // Invalida cache de avisos do header
+                unset($_SESSION['avisos_header_' . $cpf_logado], $_SESSION['avisos_header_' . $cpf_logado . '_ts']);
 
                 echo json_encode(['success' => true, 'marcados' => count($ids_pendentes)]);
                 exit;
