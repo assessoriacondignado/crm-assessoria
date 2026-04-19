@@ -274,7 +274,7 @@ include $caminho_header;
                     </div>
                 </div>
                 
-                <div class="card-body p-0 table-responsive bg-white">
+                <div class="card-body p-0 table-responsive bg-white" style="overflow: visible; min-height: 320px;">
                     <table class="table table-hover align-middle mb-0 text-center">
                         <thead class="table-light border-dark small text-uppercase">
                             <tr>
