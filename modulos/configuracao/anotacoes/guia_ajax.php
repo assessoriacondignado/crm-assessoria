@@ -16,6 +16,7 @@ if (empty($_SESSION['usuario_cpf'])) {
 try {
     $pdo->exec("CREATE TABLE IF NOT EXISTS GUIA_CRM (
         ID INT AUTO_INCREMENT PRIMARY KEY,
+        INDICE VARCHAR(50) DEFAULT NULL,
         TITULO VARCHAR(200) NOT NULL,
         COMENTARIO TEXT,
         NOME_CONTEUDO VARCHAR(255),
@@ -26,6 +27,22 @@ try {
         DATA_ATUALIZACAO DATETIME DEFAULT NOW() ON UPDATE NOW()
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4");
 } catch (Exception $e) {}
+// Adiciona INDICE em tabelas existentes
+try { $pdo->exec("ALTER TABLE GUIA_CRM ADD COLUMN INDICE VARCHAR(50) DEFAULT NULL AFTER ID"); } catch (Exception $e) {}
+
+// Ordena por INDICE numericamente (ex: 1 < 2 < 2.1 < 2.1.1 < 2.2 < 10)
+function guiaSortPorIndice(&$rows) {
+    usort($rows, function($a, $b) {
+        $pa = array_map('intval', explode('.', trim($a['INDICE'] ?? '')));
+        $pb = array_map('intval', explode('.', trim($b['INDICE'] ?? '')));
+        $n  = max(count($pa), count($pb));
+        for ($i = 0; $i < $n; $i++) {
+            $diff = ($pa[$i] ?? 0) - ($pb[$i] ?? 0);
+            if ($diff !== 0) return $diff;
+        }
+        return strcmp($a['TITULO'], $b['TITULO']);
+    });
+}
 
 $acao      = $_POST['acao'] ?? $_GET['acao'] ?? '';
 $grupo     = strtoupper($_SESSION['usuario_grupo'] ?? '');
@@ -40,17 +57,19 @@ switch ($acao) {
     // ── LISTAR (gerenciamento, somente admin) ─────────────────────────────
     case 'listar':
         if (!$is_admin) { echo json_encode(['success' => false, 'msg' => 'Sem permissão']); exit; }
-        $rows = $pdo->query("SELECT ID, TITULO, COMENTARIO, TIPO_CONTEUDO, NOME_CONTEUDO, STATUS, LOCAL_EXIBICAO,
+        $rows = $pdo->query("SELECT ID, INDICE, TITULO, COMENTARIO, TIPO_CONTEUDO, NOME_CONTEUDO, STATUS, LOCAL_EXIBICAO,
                              DATE_FORMAT(DATA_CRIACAO,'%d/%m/%Y %H:%i') AS DATA_BR
-                             FROM GUIA_CRM ORDER BY DATA_CRIACAO DESC")->fetchAll(PDO::FETCH_ASSOC);
+                             FROM GUIA_CRM")->fetchAll(PDO::FETCH_ASSOC);
+        guiaSortPorIndice($rows);
         echo json_encode(['success' => true, 'data' => $rows]);
         break;
 
     // ── LISTAR WIDGET (ativos, para todos os usuários logados) ────────────
     case 'listar_widget':
-        $rows = $pdo->query("SELECT ID, TITULO, COMENTARIO, TIPO_CONTEUDO, NOME_CONTEUDO, LOCAL_EXIBICAO
-                             FROM GUIA_CRM WHERE STATUS='ATIVO' ORDER BY DATA_CRIACAO DESC")
+        $rows = $pdo->query("SELECT ID, INDICE, TITULO, COMENTARIO, TIPO_CONTEUDO, NOME_CONTEUDO, LOCAL_EXIBICAO
+                             FROM GUIA_CRM WHERE STATUS='ATIVO'")
                     ->fetchAll(PDO::FETCH_ASSOC);
+        guiaSortPorIndice($rows);
         echo json_encode(['success' => true, 'data' => $rows]);
         break;
 
@@ -59,6 +78,7 @@ switch ($acao) {
         if (!$is_admin) { echo json_encode(['success' => false, 'msg' => 'Sem permissão']); exit; }
 
         $id             = (int)($_POST['id'] ?? 0);
+        $indice         = trim($_POST['indice'] ?? '');
         $titulo         = trim($_POST['titulo'] ?? '');
         $comentario     = trim($_POST['comentario'] ?? '');
         $tipo_conteudo  = $_POST['tipo_conteudo'] ?? 'TEXTO';
@@ -119,11 +139,11 @@ switch ($acao) {
         // Se for VIDEO/IMAGEM e não vier arquivo novo, mantém $nome_arquivo = $nome_arquivo_atual
 
         if ($id) {
-            $pdo->prepare("UPDATE GUIA_CRM SET TITULO=?, COMENTARIO=?, TIPO_CONTEUDO=?, NOME_CONTEUDO=?, LOCAL_EXIBICAO=?, DATA_ATUALIZACAO=NOW() WHERE ID=?")
-                ->execute([$titulo, $comentario, $tipo_conteudo, $nome_arquivo, $local_exibicao, $id]);
+            $pdo->prepare("UPDATE GUIA_CRM SET INDICE=?, TITULO=?, COMENTARIO=?, TIPO_CONTEUDO=?, NOME_CONTEUDO=?, LOCAL_EXIBICAO=?, DATA_ATUALIZACAO=NOW() WHERE ID=?")
+                ->execute([$indice ?: null, $titulo, $comentario, $tipo_conteudo, $nome_arquivo, $local_exibicao, $id]);
         } else {
-            $pdo->prepare("INSERT INTO GUIA_CRM (TITULO, COMENTARIO, TIPO_CONTEUDO, NOME_CONTEUDO, LOCAL_EXIBICAO, STATUS) VALUES (?,?,?,?,?,'ATIVO')")
-                ->execute([$titulo, $comentario, $tipo_conteudo, $nome_arquivo, $local_exibicao]);
+            $pdo->prepare("INSERT INTO GUIA_CRM (INDICE, TITULO, COMENTARIO, TIPO_CONTEUDO, NOME_CONTEUDO, LOCAL_EXIBICAO, STATUS) VALUES (?,?,?,?,?,?,'ATIVO')")
+                ->execute([$indice ?: null, $titulo, $comentario, $tipo_conteudo, $nome_arquivo, $local_exibicao]);
             $id = (int)$pdo->lastInsertId();
         }
 

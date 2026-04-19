@@ -82,6 +82,8 @@ if ($is_master) {
 
 <style>
 .ck-editor__editable_inline { min-height: 200px; }
+.guia-idx-item:hover { background: #e8f0fe !important; border-left-color: #6ea8fe !important; }
+.guia-idx-item { user-select: none; }
 .aviso-card { border-left: 4px solid #0d6efd; background: #f8f9ff; border-radius: 6px; padding: 14px 16px; margin-bottom: 10px; position: relative; }
 .aviso-card.nao-lido { border-left-color: #dc3545; background: #fff8f8; }
 .aviso-card.lido { border-left-color: #198754; opacity: 0.75; }
@@ -125,13 +127,11 @@ if ($is_master) {
                 <?php endif; ?>
             </button>
         </li>
-        <?php if ($is_master): ?>
         <li class="nav-item">
-            <button class="nav-link fw-bold text-dark" data-bs-toggle="tab" data-bs-target="#guia-sistema" id="tab-guia-btn" onclick="guiaCarregarLista()">
+            <button class="nav-link fw-bold text-dark" <?php if($is_master): ?>data-bs-toggle="tab" data-bs-target="#guia-sistema" onclick="guiaCarregarLista()"<?php else: ?>onclick="guiaAbrirViewer()"<?php endif; ?>>
                 <span style="font-size:1.1em;">👨‍🏫</span> Guia Sistema
             </button>
         </li>
-        <?php endif; ?>
     </ul>
 
     <div class="tab-content border border-top-0 p-4 bg-white rounded-bottom shadow-sm">
@@ -479,20 +479,25 @@ if ($is_master) {
                 </div>
             </div>
 
+            <!-- Filtro -->
+            <div class="mb-3">
+                <input type="text" id="guia_filtro_admin" class="form-control border-secondary" placeholder="🔍 Filtrar por título ou índice..." oninput="guiaFiltrarTabela(this.value)">
+            </div>
             <div class="table-responsive border border-dark rounded shadow-sm">
                 <table class="table table-hover align-middle mb-0" id="tbl-guia">
                     <thead class="table-dark">
                         <tr>
-                            <th class="text-start ps-3">Título</th>
+                            <th class="text-center ps-3" style="width:90px;">Índice</th>
+                            <th class="text-start">Título</th>
                             <th class="text-center" style="width:110px;">Tipo</th>
                             <th class="text-center" style="width:100px;">Status</th>
                             <th class="text-center" style="width:130px;">Data</th>
-                            <th class="text-center" style="width:180px;">Ações</th>
+                            <th class="text-center" style="width:160px;">Ações</th>
                         </tr>
                     </thead>
                     <tbody id="tbody-guia" class="bg-white">
                         <tr id="guia-loading-row">
-                            <td colspan="5" class="text-center py-4 text-muted fw-bold">
+                            <td colspan="6" class="text-center py-4 text-muted fw-bold">
                                 <i class="fas fa-spinner fa-spin me-2"></i> Carregando...
                             </td>
                         </tr>
@@ -1018,47 +1023,68 @@ if (window.location.hash === '#avisos') {
 <?php if ($is_master): ?>
 let _guiaListaCarregada = false;
 
+let _guiaDados = [];
+
 function guiaCarregarLista(forcar) {
     if (_guiaListaCarregada && !forcar) return;
     _guiaListaCarregada = true;
     const fd = new FormData(); fd.append('acao','listar');
     fetch('guia_ajax.php', {method:'POST', body:fd})
         .then(r => r.json()).then(j => {
-            const tb = document.getElementById('tbody-guia');
-            if (!j.success || !j.data.length) {
-                tb.innerHTML = '<tr><td colspan="5" class="text-center py-5 text-muted fw-bold"><i class="fas fa-graduation-cap fa-2x d-block mb-2 opacity-25"></i>Nenhum conteúdo cadastrado ainda.</td></tr>';
-                return;
-            }
-            const tipoIco = {VIDEO:'<span class="badge bg-danger">🎬 Vídeo</span>', IMAGEM:'<span class="badge bg-info text-dark">🖼️ Imagem</span>', TEXTO:'<span class="badge bg-secondary">📝 Texto</span>'};
-            tb.innerHTML = j.data.map(g => `
-                <tr id="guia-row-${g.ID}">
-                    <td class="ps-3">
-                        <div class="fw-bold text-dark">${escHtml(g.TITULO)}</div>
-                        ${g.COMENTARIO ? '<div class="text-muted small mt-1">' + escHtml(g.COMENTARIO) + '</div>' : ''}
-                    </td>
-                    <td class="text-center">${tipoIco[g.TIPO_CONTEUDO] || g.TIPO_CONTEUDO}</td>
-                    <td class="text-center">
-                        <button class="btn btn-sm fw-bold border-dark ${g.STATUS==='ATIVO'?'btn-success':'btn-outline-secondary'}"
-                                onclick="guiaToggleStatus(${g.ID}, this)" style="font-size:0.72rem;padding:2px 10px;">
-                            ${g.STATUS==='ATIVO'?'✔ ATIVO':'✖ INATIVO'}
-                        </button>
-                    </td>
-                    <td class="text-center text-muted small">${g.DATA_BR}</td>
-                    <td class="text-center">
-                        <button class="btn btn-sm btn-dark fw-bold border-dark me-1" onclick="guiaVerConteudo(${g.ID})" title="Ver">
-                            <i class="fas fa-eye"></i>
-                        </button>
-                        <button class="btn btn-sm btn-warning fw-bold border-dark me-1" onclick="guiaAbrirModal(${g.ID})" title="Editar">
-                            <i class="fas fa-edit"></i>
-                        </button>
-                        <button class="btn btn-sm btn-danger fw-bold border-dark" onclick="guiaExcluir(${g.ID})" title="Excluir">
-                            <i class="fas fa-trash"></i>
-                        </button>
-                    </td>
-                </tr>`).join('');
+            if (!j.success) { document.getElementById('tbody-guia').innerHTML = '<tr><td colspan="6" class="text-center py-4 text-danger fw-bold">Erro ao carregar dados.</td></tr>'; return; }
+            _guiaDados = j.data || [];
+            guiaRenderizarTabela(_guiaDados);
         }).catch(() => {
-            document.getElementById('tbody-guia').innerHTML = '<tr><td colspan="5" class="text-center py-4 text-danger fw-bold">Erro ao carregar dados.</td></tr>';
+            document.getElementById('tbody-guia').innerHTML = '<tr><td colspan="6" class="text-center py-4 text-danger fw-bold">Erro ao carregar dados.</td></tr>';
         });
+}
+
+function guiaRenderizarTabela(dados) {
+    const tb = document.getElementById('tbody-guia');
+    if (!dados.length) {
+        tb.innerHTML = '<tr><td colspan="6" class="text-center py-5 text-muted fw-bold"><i class="fas fa-graduation-cap fa-2x d-block mb-2 opacity-25"></i>Nenhum conteúdo cadastrado ainda.</td></tr>';
+        return;
+    }
+    const tipoIco = {VIDEO:'<span class="badge bg-danger">🎬 Vídeo</span>', IMAGEM:'<span class="badge bg-info text-dark">🖼️ Imagem</span>', TEXTO:'<span class="badge bg-secondary">📝 Texto</span>'};
+    tb.innerHTML = dados.map(g => `
+        <tr id="guia-row-${g.ID}" data-titulo="${escHtml(g.TITULO)}" data-indice="${escHtml(g.INDICE||'')}">
+            <td class="text-center ps-2">
+                <span class="badge bg-dark fw-bold" style="font-size:0.75rem;letter-spacing:0.5px;">${escHtml(g.INDICE||'—')}</span>
+            </td>
+            <td class="ps-2">
+                <div class="fw-bold text-dark">${escHtml(g.TITULO)}</div>
+                ${g.COMENTARIO ? '<div class="text-muted small mt-1">' + escHtml(g.COMENTARIO) + '</div>' : ''}
+            </td>
+            <td class="text-center">${tipoIco[g.TIPO_CONTEUDO] || g.TIPO_CONTEUDO}</td>
+            <td class="text-center">
+                <button class="btn btn-sm fw-bold border-dark ${g.STATUS==='ATIVO'?'btn-success':'btn-outline-secondary'}"
+                        onclick="guiaToggleStatus(${g.ID}, this)" style="font-size:0.72rem;padding:2px 10px;">
+                    ${g.STATUS==='ATIVO'?'✔ ATIVO':'✖ INATIVO'}
+                </button>
+            </td>
+            <td class="text-center text-muted small">${g.DATA_BR}</td>
+            <td class="text-center">
+                <button class="btn btn-sm btn-dark fw-bold border-dark me-1" onclick="guiaAbrirViewer()" title="Ver no índice">
+                    <i class="fas fa-eye"></i>
+                </button>
+                <button class="btn btn-sm btn-warning fw-bold border-dark me-1" onclick="guiaAbrirModal(${g.ID})" title="Editar">
+                    <i class="fas fa-edit"></i>
+                </button>
+                <button class="btn btn-sm btn-danger fw-bold border-dark" onclick="guiaExcluir(${g.ID})" title="Excluir">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </td>
+        </tr>`).join('');
+}
+
+function guiaFiltrarTabela(q) {
+    const termo = q.toLowerCase();
+    const filtrado = _guiaDados.filter(g =>
+        (g.TITULO||'').toLowerCase().includes(termo) ||
+        (g.INDICE||'').toLowerCase().includes(termo) ||
+        (g.COMENTARIO||'').toLowerCase().includes(termo)
+    );
+    guiaRenderizarTabela(filtrado);
 }
 
 function escHtml(s) {
@@ -1089,17 +1115,77 @@ async function guiaExcluir(id) {
     } else { alert(j.msg); }
 }
 
-function guiaVerConteudo(id) {
+// ── Viewer com índice hierárquico ──────────────────────────────
+let _guiaViewerDados = [];
+
+function guiaAbrirViewer(focarId) {
+    const fd = new FormData(); fd.append('acao','listar_widget');
+    fetch('guia_ajax.php', {method:'POST', body:fd})
+        .then(r => r.json()).then(j => {
+            _guiaViewerDados = j.data || [];
+            guiaViewerRenderizar(_guiaViewerDados);
+            new bootstrap.Modal(document.getElementById('modalGuiaVer')).show();
+            if (focarId) setTimeout(() => guiaViewerAbrirItem(focarId), 300);
+        });
+}
+
+function guiaViewerRenderizar(dados) {
+    const cont = document.getElementById('guia-viewer-index');
+    if (!dados.length) {
+        cont.innerHTML = '<div class="text-muted text-center py-4 small">Nenhum conteúdo disponível.</div>';
+        return;
+    }
+    cont.innerHTML = dados.map(g => {
+        const prof = (g.INDICE||'').split('.').length - 1;
+        const pad  = prof * 16;
+        const badge = g.INDICE ? `<span class="badge bg-secondary me-2" style="font-size:0.65rem;min-width:32px;">${escHtml(g.INDICE)}</span>` : '';
+        return `<div class="guia-idx-item" id="guia-idx-${g.ID}" data-id="${g.ID}"
+                     onclick="guiaViewerAbrirItem(${g.ID})"
+                     style="padding:8px 12px 8px ${12+pad}px; cursor:pointer; border-left:3px solid transparent;
+                            border-bottom:1px solid #f0f0f0; transition:all .15s; font-size:0.82rem;">
+                    ${badge}<span class="fw-semibold">${escHtml(g.TITULO)}</span>
+                    ${g.COMENTARIO ? '<div class="text-muted small mt-1" style="padding-left:'+(pad)+'px">' + escHtml(g.COMENTARIO) + '</div>' : ''}
+                </div>`;
+    }).join('');
+    // Abre primeiro item por padrão
+    if (dados.length) guiaViewerAbrirItem(dados[0].ID);
+}
+
+function guiaViewerAbrirItem(id) {
+    // Marca item ativo no índice
+    document.querySelectorAll('.guia-idx-item').forEach(el => {
+        el.style.borderLeftColor = 'transparent';
+        el.style.background = '';
+        el.style.color = '';
+    });
+    const ativo = document.getElementById('guia-idx-' + id);
+    if (ativo) { ativo.style.borderLeftColor = '#0d6efd'; ativo.style.background = '#f0f4ff'; }
+
+    // Carrega conteúdo
+    const painel = document.getElementById('guia-viewer-conteudo');
+    painel.innerHTML = '<div class="text-center py-5 text-muted"><i class="fas fa-spinner fa-spin fa-2x"></i></div>';
     const fd = new FormData(); fd.append('acao','get'); fd.append('id',id);
     fetch('guia_ajax.php', {method:'POST', body:fd})
         .then(r => r.json()).then(j => {
-            if (!j.success) { alert(j.msg); return; }
+            if (!j.success) { painel.innerHTML = '<p class="text-danger p-4">Erro ao carregar conteúdo.</p>'; return; }
             const d = j.data;
-            document.getElementById('modalGuiaVerTitulo').textContent = d.TITULO;
-            document.getElementById('modalGuiaVerComentario').textContent = d.COMENTARIO || '';
-            document.getElementById('modalGuiaVerConteudo').innerHTML = d.CONTEUDO_HTML || '<p class="text-muted text-center py-4">Nenhum conteúdo disponível.</p>';
-            new bootstrap.Modal(document.getElementById('modalGuiaVer')).show();
+            const badge = d.INDICE ? `<span class="badge bg-dark me-2">${escHtml(d.INDICE)}</span>` : '';
+            painel.innerHTML = `
+                <div class="border-bottom pb-3 mb-3">
+                    <h5 class="fw-bold text-dark mb-1">${badge}${escHtml(d.TITULO)}</h5>
+                    ${d.COMENTARIO ? '<div class="text-muted small">' + escHtml(d.COMENTARIO) + '</div>' : ''}
+                </div>
+                <div style="font-size:0.93rem; line-height:1.7;">${d.CONTEUDO_HTML || '<p class="text-muted text-center py-4">Nenhum conteúdo disponível.</p>'}</div>`;
         });
+}
+
+function guiaViewerFiltrar(q) {
+    const termo = q.toLowerCase();
+    const filtrado = _guiaViewerDados.filter(g =>
+        (g.TITULO||'').toLowerCase().includes(termo) ||
+        (g.INDICE||'').toLowerCase().includes(termo)
+    );
+    guiaViewerRenderizar(filtrado);
 }
 
 // ── Modal criar/editar ────────────────────────────────────────
@@ -1110,6 +1196,7 @@ function guiaAbrirModal(id) {
     const isEdit = id > 0;
 
     document.getElementById('guiaModalTitulo').textContent = isEdit ? 'Editar Conteúdo' : 'Novo Conteúdo de Treinamento';
+    document.getElementById('guia_indice').value = '';
     document.getElementById('guia_titulo').value = '';
     document.getElementById('guia_comentario').value = '';
     document.getElementById('guia_local').value = '';
@@ -1124,6 +1211,7 @@ function guiaAbrirModal(id) {
             .then(r => r.json()).then(j => {
                 if (!j.success) { alert(j.msg); return; }
                 const d = j.data;
+                document.getElementById('guia_indice').value = d.INDICE || '';
                 document.getElementById('guia_titulo').value = d.TITULO || '';
                 document.getElementById('guia_comentario').value = d.COMENTARIO || '';
                 document.getElementById('guia_local').value = d.LOCAL_EXIBICAO || '';
@@ -1156,6 +1244,7 @@ async function guiaSalvar() {
     const fd = new FormData();
     fd.append('acao','salvar');
     fd.append('id', _guiaEditId);
+    fd.append('indice', document.getElementById('guia_indice').value.trim());
     fd.append('titulo', titulo);
     fd.append('comentario', document.getElementById('guia_comentario').value.trim());
     fd.append('tipo_conteudo', tipo);
@@ -1198,19 +1287,34 @@ function guiaFmtCor(cor) {
 <?php endif; ?>
 </script>
 
-<!-- ===== MODAL VER CONTEÚDO GUIA ===== -->
+<!-- ===== MODAL GUIA SISTEMA — VIEWER COM ÍNDICE ===== -->
 <div class="modal fade" id="modalGuiaVer" tabindex="-1">
-    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    <div class="modal-dialog modal-fullscreen-lg-down modal-xl modal-dialog-scrollable">
         <div class="modal-content shadow-lg border-dark">
-            <div class="modal-header bg-dark text-white">
-                <div>
-                    <h5 class="modal-title fw-bold mb-0"><span style="font-size:1.2em;">👨‍🏫</span> <span id="modalGuiaVerTitulo"></span></h5>
-                    <small id="modalGuiaVerComentario" class="text-white-50"></small>
-                </div>
+            <div class="modal-header bg-dark text-white py-2">
+                <h5 class="modal-title fw-bold mb-0"><span style="font-size:1.1em;">👨‍🏫</span> Guia Sistema</h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
-            <div class="modal-body p-4" id="modalGuiaVerConteudo" style="min-height:200px;"></div>
-            <div class="modal-footer bg-light">
+            <div class="modal-body p-0 d-flex" style="min-height:500px; overflow:hidden;">
+                <!-- PAINEL ESQUERDO: ÍNDICE -->
+                <div style="width:300px; min-width:260px; border-right:2px solid #dee2e6; display:flex; flex-direction:column; background:#f8f9fa;">
+                    <div class="p-2 border-bottom" style="background:#1a2332;">
+                        <input type="text" class="form-control form-control-sm border-0 text-white"
+                               style="background:rgba(255,255,255,.12); font-size:0.8rem;"
+                               placeholder="🔍 Filtrar por título..."
+                               oninput="guiaViewerFiltrar(this.value)">
+                    </div>
+                    <div id="guia-viewer-index" style="flex:1; overflow-y:auto;"></div>
+                </div>
+                <!-- PAINEL DIREITO: CONTEÚDO -->
+                <div id="guia-viewer-conteudo" style="flex:1; overflow-y:auto; padding:24px 28px;">
+                    <div class="text-center py-5 text-muted">
+                        <i class="fas fa-hand-point-left fa-2x d-block mb-2 opacity-50"></i>
+                        Selecione um item no índice ao lado.
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer bg-light py-2">
                 <button type="button" class="btn btn-secondary fw-bold" data-bs-dismiss="modal">Fechar</button>
             </div>
         </div>
@@ -1228,7 +1332,12 @@ function guiaFmtCor(cor) {
             </div>
             <div class="modal-body bg-light p-4">
                 <div class="row g-3">
-                    <div class="col-12">
+                    <div class="col-md-3">
+                        <label class="fw-bold text-dark mb-1">Número do Índice <span class="text-muted fw-normal">(hierarquia)</span></label>
+                        <input type="text" id="guia_indice" class="form-control border-dark fw-bold text-center" placeholder="Ex: 2.1" maxlength="20" style="letter-spacing:1px;">
+                        <small class="text-muted">1 / 2 / 2.1 / 2.1.1 / 3</small>
+                    </div>
+                    <div class="col-md-9">
                         <label class="fw-bold text-dark mb-1">Título <span class="text-danger">*</span></label>
                         <input type="text" id="guia_titulo" class="form-control border-dark" placeholder="Ex: Como usar o módulo de relatórios" maxlength="200">
                     </div>
