@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acao']) && $_POST['ac
         header("Location: ?cpf=" . $cpf_alvo . "&extrato=CARTEIRA");
         exit;
     } else {
-        die("<script>crmToast("ACESSO NEGADO: Você não tem permissão para realizar lançamentos.", "warning", 5000); history.back();</script>");
+        die("<script>crmToast('ACESSO NEGADO: Você não tem permissão para realizar lançamentos.', 'warning', 5000); history.back();</script>");
     }
 }
 

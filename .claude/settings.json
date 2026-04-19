@@ -117,7 +117,8 @@
       "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e ' *)",
       "Bash(mysql -u admin_crm -pAbl@810401 crm_dados)",
       "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"SHOW COLUMNS FROM INTEGRACAO_V8_IMPORTACAO_LOTE LIKE 'AVISO%';\")",
-      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"SHOW COLUMNS FROM INTEGRACAO_V8_IMPORTACAO_LOTE LIKE 'HORA_ENVIO%';\")"
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"SHOW COLUMNS FROM INTEGRACAO_V8_IMPORTACAO_LOTE LIKE 'HORA_ENVIO%';\")",
+      "Bash(php -l /var/www/html/modulos/cliente_e_usuario/cadastro_cliente_financeiro.php)"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d"
