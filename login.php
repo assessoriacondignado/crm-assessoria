@@ -266,15 +266,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ajax_action'])) {
         $cpf_busca = 'INVALIDO';
         if (strlen($cpf_limpo) > 0 && strlen($cpf_limpo) <= 11) { $cpf_busca = str_pad($cpf_limpo, 11, '0', STR_PAD_LEFT); }
 
-        $stmt = $pdo->prepare("SELECT CPF, CELULAR FROM CLIENTE_USUARIO WHERE USUARIO = :usuario OR CPF = :cpf LIMIT 1");
+        $stmt = $pdo->prepare("SELECT CPF, CELULAR, NOME FROM CLIENTE_USUARIO WHERE USUARIO = :usuario OR CPF = :cpf LIMIT 1");
         $stmt->execute(['usuario' => $identificador, 'cpf' => $cpf_busca]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($user && !empty($user['CELULAR'])) {
             $cel = preg_replace('/\D/', '', $user['CELULAR']);
             $mascara = substr($cel, 0, 3) . str_repeat('*', max(0, strlen($cel) - 5)) . substr($cel, -2);
-            $_SESSION['reset_temp_cpf'] = $user['CPF']; 
-            $_SESSION['reset_temp_cel'] = $cel;         
+            $_SESSION['reset_temp_cpf']  = $user['CPF'];
+            $_SESSION['reset_temp_cel']  = $cel;
+            $_SESSION['reset_temp_nome'] = $user['NOME'] ?? '';         
             echo json_encode(['success' => true, 'mascara' => $mascara]);
         } else {
             echo json_encode(['success' => false, 'message' => 'Usuário não encontrado ou sem celular cadastrado.']);
@@ -289,8 +290,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ajax_action'])) {
             exit;
         }
 
-        $cpf = $_SESSION['reset_temp_cpf'];
+        $cpf     = $_SESSION['reset_temp_cpf'];
         $celular = $_SESSION['reset_temp_cel'];
+        $nome    = $_SESSION['reset_temp_nome'] ?? '';
         $token = bin2hex(random_bytes(32));
 
         $stmt = $pdo->prepare("UPDATE CLIENTE_USUARIO SET RESET_TOKEN = :token, RESET_EXPIRA = DATE_ADD(NOW(), INTERVAL 1 HOUR) WHERE CPF = :cpf");
@@ -299,10 +301,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ajax_action'])) {
         $protocolo = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? "https" : "http";
         $link = $protocolo . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] . "?token=" . $token;
 
-        $msg = "🔒 *Recuperação de Senha*\n\nVocê solicitou a redefinição da sua senha no portal Assessoria Consignado.\n\nClique no link abaixo para criar uma nova senha (válido por 1 hora):\n$link\n\n_Se não foi você, apenas ignore esta mensagem._";
+        $saudacao = $nome ? "Olá, *$nome*! 👋\n\n" : '';
+        $msg = "🔒 *Recuperação de Senha*\n\n{$saudacao}Você solicitou a redefinição da sua senha no portal Assessoria Consignado.\n\nClique no link abaixo para criar uma nova senha (válido por 1 hora):\n$link\n\n_Se não foi você, apenas ignore esta mensagem._";
         dispararWhatsLogin($pdo, $celular, $msg);
 
-        unset($_SESSION['reset_temp_cpf']); unset($_SESSION['reset_temp_cel']);
+        unset($_SESSION['reset_temp_cpf'], $_SESSION['reset_temp_cel'], $_SESSION['reset_temp_nome']);
         echo json_encode(['success' => true, 'message' => 'Link enviado para o WhatsApp!']);
         exit;
     }
