@@ -98,12 +98,8 @@ if (isset($_SESSION['usuario_cpf']) && isset($pdo)) {
     $stmtCheck->execute([$cpf_sessao]);
     $deve_sair = $stmtCheck->fetchColumn();
 
-    // Libera o lock de sessão antes das queries de escrita — evita serialização de 200 page loads
-    session_write_close();
-
     if ($deve_sair == 1) {
         $pdo->prepare("UPDATE CLIENTE_USUARIO SET FORCAR_LOGOUT = 0, ULTIMO_ACESSO = NULL WHERE CPF = ?")->execute([$cpf_sessao]);
-        session_start();
         session_unset();
         session_destroy();
         header("Location: /login.php?aviso=deslogado_pelo_admin");
@@ -224,6 +220,10 @@ if (!isset($_SESSION[$cache_key_av]) || (time() - ($_SESSION[$cache_ts_key] ?? 0
 }
 $avisos_header = $_SESSION[$cache_key_av];
 $nao_lidos_h   = count($avisos_header);
+
+// Libera o lock de sessão agora que todos os writes foram feitos
+// Evita serialização de page loads com 200 usuários simultâneos
+session_write_close();
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
