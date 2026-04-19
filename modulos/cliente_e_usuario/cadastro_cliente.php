@@ -563,7 +563,8 @@ $readonly_attr = (!$pode_editar_excluir) ? 'disabled readonly' : '';
                                         <div class="col-md-4">
                                             <label class="fw-bold small text-dark">Senha atual:</label>
                                             <div class="input-group">
-                                                <input type="text" class="form-control border-primary bg-white text-secondary" value="<?= !empty($dados_acesso['SENHA']) ? htmlspecialchars($dados_acesso['SENHA']) : '***' ?>" readonly>
+                                                <?php $pode_ver_senha = verificaPermissao($pdo, 'CADASTRO_CLEINTE_SENHA_VER'); ?>
+                                                <input type="text" class="form-control border-primary bg-white text-secondary" value="<?= $pode_ver_senha && !empty($dados_acesso['SENHA']) ? htmlspecialchars($dados_acesso['SENHA']) : '***' ?>" readonly>
                                                 <span class="input-group-text bg-primary text-white border-primary"><i class="fas fa-lock"></i></span>
                                             </div>
                                         </div>
