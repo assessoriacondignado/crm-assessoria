@@ -31,6 +31,8 @@ $perm_camp_editar = verificaPermissao($pdo, 'MENU_CAMPANHA_CONFIGURAR_EDITAR', '
 $perm_camp_excluir = verificaPermissao($pdo, 'MENU_CAMPANHA_CONFIGURAR_EXCLUIR', 'FUNCAO');
 
 $cpf_logado = $_SESSION['usuario_cpf'];
+$grupo_camp = strtoupper($_SESSION['usuario_grupo'] ?? '');
+$is_master_camp_gestao = in_array($grupo_camp, ['MASTER', 'ADMIN', 'ADMINISTRADOR']);
 
 // =========================================================================
 // Captura IDs Hierárquicos (Regra de Ouro com Pára-quedas Automático)
@@ -190,8 +192,8 @@ try {
     
     $paramsCampanhas = [];
     
-    // Filtros de Permissão da Hierarquia
-    if (!$perm_camp_hierarquia || !$perm_camp_conf_hierarquia) {
+    // Filtros de Permissão da Hierarquia — apenas MASTER/ADMIN vê todas as empresas
+    if (!$is_master_camp_gestao) {
         $sqlCampanhas .= " AND (
             c.id_empresa = ?
             OR (c.id_empresa IS NULL AND c.CNPJ_EMPRESA IS NULL)
@@ -205,8 +207,9 @@ try {
         $paramsCampanhas[] = $id_empresa_logado_num;
     }
     
-    // Filtros de Visão (Meu Cadastro)
-    if (!$perm_camp_meu_cad) {
+    // Filtros de Visão (Meu Cadastro) — CONSULTOR vê apenas as campanhas vinculadas ao seu usuário
+    $is_consultor_camp = in_array($grupo_camp, ['CONSULTOR', 'CONSULTORES']);
+    if ($is_consultor_camp) {
         $sqlCampanhas .= " AND (c.id_usuario = ? OR FIND_IN_SET(?, c.CPF_USUARIO))";
         $paramsCampanhas[] = $id_usuario_logado_num;
         $paramsCampanhas[] = $cpf_logado;

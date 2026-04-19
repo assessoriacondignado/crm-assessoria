@@ -23,10 +23,8 @@ $temAcessoCampanhas = function_exists('verificaPermissao')
     ? verificaPermissao($pdo, 'MENU_CAMPANHAS', 'MENU')
     : $is_master;
 
-// Hierarquia de campanhas — MASTER vê tudo, demais filtram por empresa
-$is_master_camp = function_exists('verificaPermissao')
-    ? verificaPermissao($pdo, 'SUBMENU_CAMPANHAS_HIERARQUIA', 'FUNCAO')
-    : $is_master;
+// Hierarquia de campanhas — apenas MASTER/ADMIN vê tudo, demais filtram por empresa
+$is_master_camp = $is_master;
 
 // Empresa do usuário logado (usada em múltiplos filtros)
 $id_empresa_logado = null;
