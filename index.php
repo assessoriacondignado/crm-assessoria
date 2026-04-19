@@ -69,7 +69,7 @@ try {
         // Hierarquia baseada no DONO DA CHAVE: Lote → CHAVE_ID → CPF_USUARIO → id_empresa
         $sqlLotes = "SELECT l.ID, l.NOME_IMPORTACAO, l.STATUS_FILA, l.STATUS_LOTE,
                             l.QTD_TOTAL, l.QTD_PROCESSADA, l.PROCESSADOS_HOJE, l.LIMITE_DIARIO,
-                            l.HORA_INICIO_DIARIO, l.HORA_FIM_DIARIO,
+                            l.HORA_INICIO_DIARIO, l.HORA_FIM_DIARIO, l.TABELA_DADOS,
                             l.AGENDAMENTO_TIPO, l.DATA_HORA_AGENDADA, l.DIA_MES_AGENDADO, l.DIAS_MES_DIARIO,
                             l.HORA_INATIVACAO_INICIO, l.HORA_INATIVACAO_FIM,
                             l.ATUALIZAR_TELEFONE, l.ENVIAR_WHATSAPP, l.SOMENTE_SIMULAR, l.ENVIAR_ARQUIVO_WHATSAPP,
@@ -99,32 +99,55 @@ try {
         $stmtLotes->execute($paramsLotes);
         $v8_lotes = $stmtLotes->fetchAll(PDO::FETCH_ASSOC);
 
-        // Calcula funil por lote (a partir da tabela V8_LOTE_{ID})
-        foreach ($v8_lotes as &$lote) {
-            $tbl = 'V8_LOTE_' . $lote['ID'];
-            $funil = ['na_fila'=>0,'c_ok'=>0,'c_err'=>0,'m_ok'=>0,'m_err'=>0,'s_ok'=>0,'s_err'=>0,'dataprev'=>0,'c_hoje'=>0,'s_hoje'=>0];
+        // Calcula funil por lote — mesmo algoritmo do AJAX (usa TABELA_DADOS real)
+        // Agrupa lotes por tabela para minimizar queries
+        $tblsUnicas = [];
+        foreach ($v8_lotes as $lote) {
+            $tbl = !empty($lote['TABELA_DADOS']) ? $lote['TABELA_DADOS'] : 'INTEGRACAO_V8_REGISTROCONSULTA_LOTE';
+            $tblsUnicas[$tbl][] = $lote['ID'];
+        }
+
+        $statsByLote  = [];
+        $hojeByLote   = [];
+        foreach ($tblsUnicas as $tblNome => $ids) {
             try {
-                $stmtF = $pdo->query("SELECT STATUS_V8, COUNT(*) as qtd FROM `{$tbl}` GROUP BY STATUS_V8");
-                foreach ($stmtF->fetchAll(PDO::FETCH_ASSOC) as $row) {
-                    $st = strtoupper($row['STATUS_V8']); $q = (int)$row['qtd'];
-                    if ($st === 'NA FILA') { $funil['na_fila'] += $q; }
-                    elseif (strpos($st,'ERRO CONSULTA')!==false || strpos($st,'ERRO SALDO')!==false) { $funil['c_err'] += $q; }
-                    elseif (strpos($st,'AGUARDANDO MARGEM')!==false || strpos($st,'RECUPERAR V8')!==false) { $funil['c_ok'] += $q; }
-                    elseif ($st==='AGUARDANDO DATAPREV') { $funil['c_ok'] += $q; $funil['dataprev'] += $q; }
-                    elseif (strpos($st,'ERRO MARGEM')!==false) { $funil['c_ok'] += $q; $funil['m_err'] += $q; }
-                    elseif (strpos($st,'AGUARDANDO SIMULACAO')!==false) { $funil['c_ok'] += $q; $funil['m_ok'] += $q; }
-                    elseif (strpos($st,'ERRO SIMULACAO')!==false) { $funil['c_ok'] += $q; $funil['m_ok'] += $q; $funil['s_err'] += $q; }
-                    elseif ($st==='OK') { $funil['c_ok'] += $q; $funil['m_ok'] += $q; $funil['s_ok'] += $q; }
+                $inQ = implode(',', array_fill(0, count($ids), '?'));
+                $sF = $pdo->prepare("SELECT LOTE_ID, STATUS_V8, COUNT(*) as qtd FROM `{$tblNome}` WHERE LOTE_ID IN ($inQ) GROUP BY LOTE_ID, STATUS_V8");
+                $sF->execute($ids);
+                foreach ($sF->fetchAll(PDO::FETCH_ASSOC) as $row) {
+                    $lid = $row['LOTE_ID'];
+                    $st  = strtoupper($row['STATUS_V8']);
+                    $q   = (int)$row['qtd'];
+                    if (!isset($statsByLote[$lid])) {
+                        $statsByLote[$lid] = ['c_ok'=>0,'c_err'=>0,'m_ok'=>0,'m_err'=>0,'s_ok'=>0,'s_err'=>0,'dataprev'=>0,'na_fila'=>0];
+                    }
+                    if ($st === 'NA FILA') { $statsByLote[$lid]['na_fila'] += $q; }
+                    elseif (strpos($st,'ERRO CONSULTA')!==false || strpos($st,'ERRO SALDO')!==false) { $statsByLote[$lid]['c_err'] += $q; }
+                    elseif (strpos($st,'AGUARDANDO MARGEM')!==false || strpos($st,'RECUPERAR V8')!==false) { $statsByLote[$lid]['c_ok'] += $q; }
+                    elseif ($st==='AGUARDANDO DATAPREV') { $statsByLote[$lid]['c_ok'] += $q; $statsByLote[$lid]['dataprev'] += $q; }
+                    elseif (strpos($st,'ERRO MARGEM')!==false) { $statsByLote[$lid]['c_ok'] += $q; $statsByLote[$lid]['m_err'] += $q; }
+                    elseif (strpos($st,'AGUARDANDO SIMULACAO')!==false) { $statsByLote[$lid]['c_ok'] += $q; $statsByLote[$lid]['m_ok'] += $q; }
+                    elseif (strpos($st,'ERRO SIMULACAO')!==false) { $statsByLote[$lid]['c_ok'] += $q; $statsByLote[$lid]['m_ok'] += $q; $statsByLote[$lid]['s_err'] += $q; }
+                    elseif ($st==='OK') { $statsByLote[$lid]['c_ok'] += $q; $statsByLote[$lid]['m_ok'] += $q; $statsByLote[$lid]['s_ok'] += $q; }
                 }
-                $stmtH = $pdo->query("SELECT
+                $sH = $pdo->prepare("SELECT LOTE_ID,
                     SUM(CASE WHEN DATA_CONSENTIMENTO >= CURDATE() THEN 1 ELSE 0 END) as c_hoje,
                     SUM(CASE WHEN DATA_SIMULACAO >= CURDATE() AND STATUS_V8 = 'OK' THEN 1 ELSE 0 END) as s_hoje
-                    FROM `{$tbl}`");
-                $hj = $stmtH->fetch(PDO::FETCH_ASSOC);
-                $funil['c_hoje'] = (int)($hj['c_hoje'] ?? 0);
-                $funil['s_hoje'] = (int)($hj['s_hoje'] ?? 0);
-                $funil['m_hoje'] = $funil['s_hoje'];
+                    FROM `{$tblNome}` WHERE LOTE_ID IN ($inQ) GROUP BY LOTE_ID");
+                $sH->execute($ids);
+                foreach ($sH->fetchAll(PDO::FETCH_ASSOC) as $r) {
+                    $hojeByLote[$r['LOTE_ID']] = ['c_hoje' => (int)$r['c_hoje'], 's_hoje' => (int)$r['s_hoje']];
+                }
             } catch (Exception $e) {}
+        }
+
+        foreach ($v8_lotes as &$lote) {
+            $lid   = $lote['ID'];
+            $funil = $statsByLote[$lid] ?? ['c_ok'=>0,'c_err'=>0,'m_ok'=>0,'m_err'=>0,'s_ok'=>0,'s_err'=>0,'dataprev'=>0,'na_fila'=>0];
+            $hj    = $hojeByLote[$lid]  ?? ['c_hoje'=>0,'s_hoje'=>0];
+            $funil['c_hoje'] = $hj['c_hoje'];
+            $funil['s_hoje'] = $hj['s_hoje'];
+            $funil['m_hoje'] = $hj['s_hoje'];
             $lote['funil'] = $funil;
         }
         unset($lote);
