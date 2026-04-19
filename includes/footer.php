@@ -263,18 +263,72 @@
         } catch(e) {}
     }
 
+    // Normaliza índice removendo ponto final ("1." → "1")
+    function normIdx(idx) { return (idx || '').replace(/\.$/, ''); }
+
+    function buildTree(dados) {
+        const byId = {}, byIdx = {};
+        dados.forEach(g => {
+            byId[g.ID] = {...g, children: []};
+            const idx = normIdx(g.INDICE);
+            if (idx) byIdx[idx] = byId[g.ID];
+        });
+        const roots = [];
+        dados.forEach(g => {
+            const idx = normIdx(g.INDICE);
+            if (!idx || !idx.includes('.')) { roots.push(byId[g.ID]); return; }
+            const parts = idx.split('.'); parts.pop();
+            const parent = byIdx[parts.join('.')];
+            parent ? parent.children.push(byId[g.ID]) : roots.push(byId[g.ID]);
+        });
+        return roots;
+    }
+
+    function renderNode(node, depth) {
+        const hasKids = node.children.length > 0;
+        const pad = 12 + depth * 16;
+        const cid = 'gn-' + node.ID;
+        const idxLabel = normIdx(node.INDICE);
+        const badge = idxLabel
+            ? `<span style="font-size:10px;font-weight:700;padding:1px 5px;border-radius:3px;background:#e9ecef;color:#495057;flex-shrink:0;">${escG(idxLabel)}</span>`
+            : '';
+        let h = `<div>`;
+        h += `<div class="guia-list-item d-flex align-items-center gap-1" style="padding:9px 12px 9px ${pad}px;cursor:default;">`;
+        if (hasKids) {
+            h += `<button onclick="guiaToggleNo(event,'${cid}',this)"
+                           style="width:18px;height:18px;flex-shrink:0;border:1px solid #ccc;border-radius:3px;background:#f8f9fa;font-weight:bold;font-size:11px;cursor:pointer;padding:0;line-height:1;">+</button>`;
+        } else {
+            h += `<span style="width:18px;flex-shrink:0;display:inline-block;"></span>`;
+        }
+        h += `<span class="flex-grow-1 d-flex align-items-center gap-1" onclick="guiaPanelAbrirConteudo(${node.ID})" style="cursor:pointer;">
+                  ${badge}
+                  <span class="gi-titulo" style="font-size:13px;">${escG(node.TITULO)}</span>
+              </span>`;
+        h += `</div>`;
+        if (hasKids) {
+            h += `<div id="${cid}" style="display:none;">`;
+            node.children.forEach(c => { h += renderNode(c, depth + 1); });
+            h += `</div>`;
+        }
+        h += `</div>`;
+        return h;
+    }
+
+    window.guiaToggleNo = function(e, cid, btn) {
+        e.stopPropagation();
+        const el = document.getElementById(cid);
+        if (!el) return;
+        const open = el.style.display !== 'none';
+        el.style.display = open ? 'none' : '';
+        btn.textContent = open ? '+' : '−';
+    };
+
     function renderLista() {
-        const tipoLabel = {VIDEO:'🎬 Vídeo', IMAGEM:'🖼️ Imagem', TEXTO:'📝 Texto'};
-        const tipoColor = {VIDEO:'#dc3545', IMAGEM:'#0dcaf0', TEXTO:'#6c757d'};
-        pList.innerHTML = _guias.length ? _guias.map(g => `
-            <div class="guia-list-item" onclick="guiaPanelAbrirConteudo(${g.ID})">
-                <div class="d-flex align-items-center gap-2 mb-1">
-                    <span class="gi-tipo text-white" style="background:${tipoColor[g.TIPO_CONTEUDO]||'#555'}">${tipoLabel[g.TIPO_CONTEUDO]||g.TIPO_CONTEUDO}</span>
-                </div>
-                <div class="gi-titulo">${escG(g.TITULO)}</div>
-                ${g.COMENTARIO ? '<div class="gi-coment">' + escG(g.COMENTARIO) + '</div>' : ''}
-            </div>`).join('')
-            : '<div class="text-center py-5 text-muted small fw-bold">Nenhum guia disponível.</div>';
+        if (!_guias.length) {
+            pList.innerHTML = '<div class="text-center py-5 text-muted small fw-bold">Nenhum guia disponível.</div>';
+            return;
+        }
+        pList.innerHTML = buildTree(_guias).map(r => renderNode(r, 0)).join('');
     }
 
     function escG(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
