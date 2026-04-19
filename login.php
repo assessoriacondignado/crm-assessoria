@@ -336,7 +336,7 @@ $renderizar_nova_senha = false;
 $token_get = $_GET['token'] ?? null;
 
 if ($token_get) {
-    $stmt = $pdo->prepare("SELECT CPF, NOME, CELULAR FROM CLIENTE_USUARIO WHERE RESET_TOKEN = :token AND RESET_EXPIRA > NOW() LIMIT 1");
+    $stmt = $pdo->prepare("SELECT CPF, NOME, CELULAR, USUARIO FROM CLIENTE_USUARIO WHERE RESET_TOKEN = :token AND RESET_EXPIRA > NOW() LIMIT 1");
     $stmt->execute(['token' => $token_get]);
     $user_reset = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -479,7 +479,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login_submit']) && !$r
         <?php endif; ?>
 
         <?php if ($renderizar_nova_senha): ?>
-            <p class="small text-muted mb-3"><?= !empty($user_reset['NOME']) ? 'Olá, <strong>' . htmlspecialchars($user_reset['NOME']) . '</strong>!<br>' : '' ?> Defina sua nova senha de acesso.</p>
+            <p class="small text-muted mb-3">
+                <?= !empty($user_reset['NOME']) ? 'Olá, <strong>' . htmlspecialchars($user_reset['NOME']) . '</strong>!<br>' : '' ?>
+                Defina sua nova senha de acesso.<br>
+                <?= !empty($user_reset['USUARIO']) ? '<span class="text-primary fw-bold" style="font-size:0.85rem;">LOGIN: ' . htmlspecialchars($user_reset['USUARIO']) . '</span>' : '' ?>
+            </p>
             <form action="" method="POST">
                 <input type="hidden" name="nova_senha_submit" value="1">
                 <input type="password" name="senha1" class="form-control" placeholder="Nova Senha" required autofocus>
