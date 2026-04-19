@@ -336,7 +336,7 @@ $renderizar_nova_senha = false;
 $token_get = $_GET['token'] ?? null;
 
 if ($token_get) {
-    $stmt = $pdo->prepare("SELECT CPF FROM CLIENTE_USUARIO WHERE RESET_TOKEN = :token AND RESET_EXPIRA > NOW() LIMIT 1");
+    $stmt = $pdo->prepare("SELECT CPF, NOME, CELULAR FROM CLIENTE_USUARIO WHERE RESET_TOKEN = :token AND RESET_EXPIRA > NOW() LIMIT 1");
     $stmt->execute(['token' => $token_get]);
     $user_reset = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -344,14 +344,22 @@ if ($token_get) {
         $renderizar_nova_senha = true;
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nova_senha_submit'])) {
             $senha1 = $_POST['senha1']; $senha2 = $_POST['senha2'];
-            if ($senha1 !== $senha2) { $erro = "As senhas não conferem. Tente novamente."; } 
-            elseif (strlen($senha1) < 4) { $erro = "A senha deve ter pelo menos 4 caracteres."; } 
+            if ($senha1 !== $senha2) { $erro = "As senhas não conferem. Tente novamente."; }
+            elseif (strlen($senha1) < 4) { $erro = "A senha deve ter pelo menos 4 caracteres."; }
             else {
                 $novo_hash = password_hash($senha1, PASSWORD_DEFAULT);
                 $stmtUpdate = $pdo->prepare("UPDATE CLIENTE_USUARIO SET SENHA = :hash, RESET_TOKEN = NULL, RESET_EXPIRA = NULL, Tentativas = 0, Ultima_Tentativa = NULL WHERE CPF = :cpf");
                 $stmtUpdate->execute(['hash' => $novo_hash, 'cpf' => $user_reset['CPF']]);
+                // Notifica o usuário via WhatsApp
+                $nome_reset  = $user_reset['NOME'] ?? '';
+                $cel_reset   = preg_replace('/\D/', '', $user_reset['CELULAR'] ?? '');
+                if ($cel_reset) {
+                    $saud = $nome_reset ? "Olá, *$nome_reset*! 👋\n\n" : '';
+                    $msg_conf = "✅ *Senha Atualizada*\n\n{$saud}Sua senha de acesso ao portal Assessoria Consignado foi redefinida com sucesso.\n\nSe não foi você, entre em contato com o suporte imediatamente.";
+                    dispararWhatsLogin($pdo, $cel_reset, $msg_conf);
+                }
                 $sucesso = "Sua senha foi atualizada com sucesso! Você já pode fazer login.";
-                $renderizar_nova_senha = false; 
+                $renderizar_nova_senha = false;
             }
         }
     } else {
@@ -471,7 +479,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login_submit']) && !$r
         <?php endif; ?>
 
         <?php if ($renderizar_nova_senha): ?>
-            <p class="small text-muted mb-3">Defina sua nova senha de acesso.</p>
+            <p class="small text-muted mb-3"><?= !empty($user_reset['NOME']) ? 'Olá, <strong>' . htmlspecialchars($user_reset['NOME']) . '</strong>!<br>' : '' ?> Defina sua nova senha de acesso.</p>
             <form action="" method="POST">
                 <input type="hidden" name="nova_senha_submit" value="1">
                 <input type="password" name="senha1" class="form-control" placeholder="Nova Senha" required autofocus>
