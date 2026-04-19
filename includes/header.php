@@ -81,20 +81,26 @@ $pode_ver_online = podeAcessarMenu($pdo, 'USUARIO_ONLINE');
 // NOVO: RASTREIO ONLINE E LOGOUT FORÇADO
 // ==========================================
 if (isset($_SESSION['usuario_cpf']) && isset($pdo)) {
+    $cpf_sessao = $_SESSION['usuario_cpf'];
+
     $stmtCheck = $pdo->prepare("SELECT FORCAR_LOGOUT FROM CLIENTE_USUARIO WHERE CPF = ?");
-    $stmtCheck->execute([$_SESSION['usuario_cpf']]);
+    $stmtCheck->execute([$cpf_sessao]);
     $deve_sair = $stmtCheck->fetchColumn();
 
+    // Libera o lock de sessão antes das queries de escrita — evita serialização de 200 page loads
+    session_write_close();
+
     if ($deve_sair == 1) {
-        $pdo->prepare("UPDATE CLIENTE_USUARIO SET FORCAR_LOGOUT = 0, ULTIMO_ACESSO = NULL WHERE CPF = ?")->execute([$_SESSION['usuario_cpf']]);
+        $pdo->prepare("UPDATE CLIENTE_USUARIO SET FORCAR_LOGOUT = 0, ULTIMO_ACESSO = NULL WHERE CPF = ?")->execute([$cpf_sessao]);
+        session_start();
         session_unset();
         session_destroy();
         header("Location: /login.php?aviso=deslogado_pelo_admin");
         exit;
     }
-    
+
     // Atualiza o "pulso" de atividade no Banco de Dados
-    $pdo->prepare("UPDATE CLIENTE_USUARIO SET ULTIMO_ACESSO = NOW() WHERE CPF = ?")->execute([$_SESSION['usuario_cpf']]);
+    $pdo->prepare("UPDATE CLIENTE_USUARIO SET ULTIMO_ACESSO = NOW() WHERE CPF = ?")->execute([$cpf_sessao]);
 }
 
 // ==========================================
