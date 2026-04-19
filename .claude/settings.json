@@ -121,7 +121,9 @@
       "Bash(php -l /var/www/html/modulos/cliente_e_usuario/cadastro_cliente_financeiro.php)",
       "Bash(php -l /var/www/html/modulos/banco_dados/pesquisa_avancada.php)",
       "Bash(php -l /var/www/html/index.php)",
-      "Bash(php -l /var/www/html/modulos/campanhas/index.php)"
+      "Bash(php -l /var/www/html/modulos/campanhas/index.php)",
+      "Bash(php -i)",
+      "Read(//etc/php/**)"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d"

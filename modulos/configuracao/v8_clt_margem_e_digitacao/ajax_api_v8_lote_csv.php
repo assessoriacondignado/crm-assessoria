@@ -169,19 +169,20 @@ try {
             $custo_lote = $total * (float)$chave['CUSTO_CONSULTA'];
             if ((float)$chave['SALDO'] < $custo_lote && $custo_lote > 0) { throw new Exception("Saldo Insuficiente! Lote custará R$ " . number_format($custo_lote, 2, ',', '.') . ". Saldo atual: R$ " . number_format((float)$chave['SALDO'], 2, ',', '.')); }
 
-            $pdo->beginTransaction();
-
-            // Lote sempre criado PAUSADO; configurações de horário feitas na edição
+            // PASSO 1: Inserir o cabeçalho do lote (fora de transação — DDL logo em seguida causaria commit implícito)
             $stmtLote = $pdo->prepare("INSERT INTO INTEGRACAO_V8_IMPORTACAO_LOTE
                 (NOME_IMPORTACAO, USUARIO_ID, CPF_USUARIO, CHAVE_ID, ARQUIVO_CAMINHO, QTD_TOTAL, AGENDAMENTO_TIPO, ATUALIZAR_TELEFONE, ENVIAR_WHATSAPP, SOMENTE_SIMULAR, ENVIAR_ARQUIVO_WHATSAPP, STATUS_FILA)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             $stmtLote->execute([$agrupamento, $dono_lote_id, $dono_lote_cpf, $chave_id, $_FILES['arquivo_csv']['name'], $total, $agendamento_tipo, $atualizar_telefone, $enviar_whats, $somente_simular, $enviar_arquivo_whatsapp, 'PAUSADO']);
             $id_lote = $pdo->lastInsertId();
 
-            // Criar tabela própria para este lote e registrar em TABELA_DADOS
+            // PASSO 2: CREATE TABLE provoca commit implícito no MySQL — executar antes de beginTransaction
             $tabela_lote = 'V8_LOTE_' . $id_lote;
             $pdo->exec("CREATE TABLE IF NOT EXISTS `{$tabela_lote}` LIKE INTEGRACAO_V8_REGISTROCONSULTA_LOTE");
             $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET TABELA_DADOS = ? WHERE ID = ?")->execute([$tabela_lote, $id_lote]);
+
+            // PASSO 3: Agora sim, transação só para os INSERTs de CPFs
+            $pdo->beginTransaction();
 
             $stmtCpf = $pdo->prepare("INSERT INTO `{$tabela_lote}` (LOTE_ID, CPF, NOME, NASCIMENTO, SEXO, STATUS_V8, VALOR_MARGEM, CONSULT_ID, CONFIG_ID, OBSERVACAO) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             
