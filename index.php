@@ -70,6 +70,9 @@ try {
         $sqlLotes = "SELECT l.ID, l.NOME_IMPORTACAO, l.STATUS_FILA, l.STATUS_LOTE,
                             l.QTD_TOTAL, l.QTD_PROCESSADA, l.PROCESSADOS_HOJE, l.LIMITE_DIARIO,
                             l.HORA_INICIO_DIARIO, l.HORA_FIM_DIARIO,
+                            l.AGENDAMENTO_TIPO, l.DATA_HORA_AGENDADA, l.DIA_MES_AGENDADO, l.DIAS_MES_DIARIO,
+                            l.HORA_INATIVACAO_INICIO, l.HORA_INATIVACAO_FIM,
+                            l.ATUALIZAR_TELEFONE, l.ENVIAR_WHATSAPP, l.SOMENTE_SIMULAR, l.ENVIAR_ARQUIVO_WHATSAPP,
                             DATE_FORMAT(l.DATA_IMPORTACAO, '%d/%m/%Y %H:%i') as DATA_IMPORTACAO_BR,
                             ca.CLIENTE_NOME as CHAVE_NOME, ca.USERNAME_API, ca.TABELA_PADRAO, ca.PRAZO_PADRAO,
                             ca.CPF_USUARIO as CHAVE_CPF_DONO,
@@ -598,51 +601,68 @@ if (file_exists($caminho_header)) {
                                 <div class="progress mb-2" style="height:5px;">
                                     <div class="progress-bar bg-success" style="width:<?= $pct ?>%"></div>
                                 </div>
-                                <!-- Na fila -->
-                                <div class="v8h-metric-row">
-                                    <span class="v8h-icon" style="color:#dc3545;"><i class="fas fa-list-ol"></i></span>
-                                    <span class="v8h-label">Na Fila:</span>
-                                    <span class="v8h-val text-danger"><?= number_format($funil['na_fila'], 0, ',', '.') ?></span>
-                                </div>
-                                <?php if ($funil['dataprev'] > 0): ?>
-                                <div class="v8h-metric-row">
-                                    <span class="v8h-icon" style="color:#6f42c1;"><i class="fas fa-university"></i></span>
-                                    <span class="v8h-label">Dataprev:</span>
-                                    <span class="v8h-val" style="color:#6f42c1;"><?= $funil['dataprev'] ?></span>
+                                <!-- Na Fila (só mostra se > 0) -->
+                                <?php if ($funil['na_fila'] > 0): ?>
+                                <div class="mb-1 text-warning fw-bold" style="font-size:10px;">
+                                    <i class="fas fa-hourglass-half text-secondary" style="width:15px;"></i>
+                                    Na Fila: <b><?= number_format($funil['na_fila'], 0, ',', '.') ?></b>
                                 </div>
                                 <?php endif; ?>
-                                <!-- Consen -->
-                                <div class="v8h-metric-row">
-                                    <span class="v8h-icon"><i class="fas fa-credit-card"></i></span>
-                                    <span class="v8h-label">Consen.:</span>
-                                    <span class="v8h-val"><?= $funil['c_ok'] ?></span>
-                                    <?php if ($funil['c_err']): ?><span class="badge bg-danger" style="font-size:0.55rem;"><?= $funil['c_err'] ?> err</span><?php endif; ?>
-                                    <span class="badge-hj"><?= $funil['c_hoje'] ?> hj</span>
+                                <!-- Dataprev (só mostra se > 0) -->
+                                <?php if ($funil['dataprev'] > 0): ?>
+                                <div class="mb-1 text-danger fw-bold" style="font-size:10px;">
+                                    <i class="fas fa-clock text-secondary" style="width:15px;"></i>
+                                    Dataprev: <?= $funil['dataprev'] ?>
                                 </div>
-                                <!-- Margem -->
-                                <div class="v8h-metric-row">
-                                    <span class="v8h-icon"><i class="fas fa-search"></i></span>
-                                    <span class="v8h-label">Margem:</span>
-                                    <span class="v8h-val"><?= $funil['m_ok'] ?></span>
-                                    <?php if ($funil['m_err']): ?><span class="badge bg-danger" style="font-size:0.55rem;"><?= $funil['m_err'] ?> err</span><?php endif; ?>
-                                    <span class="badge-hj"><?= $funil['m_hoje'] ?> hj</span>
+                                <?php endif; ?>
+                                <!-- Consen OK / ERR -->
+                                <div class="mb-1" style="font-size:11px;">
+                                    <i class="fas fa-id-card text-secondary" style="width:15px;"></i>
+                                    Consen.: <span class="text-success fw-bold"><?= $funil['c_ok'] ?></span> / <span class="text-danger"><?= $funil['c_err'] ?></span>
+                                    <span class="badge bg-info text-dark ms-1" title="Hoje (desde 00h)"><?= $funil['c_hoje'] ?> hj</span>
                                 </div>
-                                <!-- Simul -->
-                                <div class="v8h-metric-row">
-                                    <span class="v8h-icon"><i class="fas fa-file-alt"></i></span>
-                                    <span class="v8h-label">Simul.:</span>
-                                    <span class="v8h-val"><?= $funil['s_ok'] ?></span>
-                                    <?php if ($funil['s_err']): ?><span class="badge bg-danger" style="font-size:0.55rem;"><?= $funil['s_err'] ?> err</span><?php endif; ?>
-                                    <span class="badge-hj"><?= $funil['s_hoje'] ?> hj</span>
+                                <!-- Margem OK / ERR -->
+                                <div class="mb-1" style="font-size:11px;">
+                                    <i class="fas fa-search-dollar text-secondary" style="width:15px;"></i>
+                                    Margem: <span class="text-success fw-bold"><?= $funil['m_ok'] ?></span> / <span class="text-danger"><?= $funil['m_err'] ?></span>
+                                    <span class="badge bg-info text-dark ms-1" title="Hoje (desde 00h)"><?= $funil['m_hoje'] ?> hj</span>
+                                </div>
+                                <!-- Simul OK / ERR -->
+                                <div class="mb-1" style="font-size:11px;">
+                                    <i class="fas fa-calculator text-secondary" style="width:15px;"></i>
+                                    Simul.: <span class="text-success fw-bold"><?= $funil['s_ok'] ?></span> / <span class="text-danger"><?= $funil['s_err'] ?></span>
+                                    <span class="badge bg-info text-dark ms-1" title="Hoje (desde 00h)"><?= $funil['s_hoje'] ?> hj</span>
                                 </div>
                                 <!-- Total -->
-                                <div class="v8h-total-row">
+                                <div class="v8h-total-row mb-1">
                                     <i class="fas fa-users me-1 text-muted"></i>
                                     Total: <?= number_format($total, 0, ',', '.') ?>
-                                    &nbsp;·&nbsp; Limit./dia: <?= number_format((int)$lote['LIMITE_DIARIO'], 0, ',', '.') ?>
-                                    <?php if ($lote['HORA_INICIO_DIARIO']): ?>
-                                    &nbsp;·&nbsp; <?= $lote['HORA_INICIO_DIARIO'] ?>–<?= substr($lote['HORA_FIM_DIARIO'],0,5) ?>
-                                    <?php endif; ?>
+                                </div>
+                                <!-- Data + Agendamento + Automação (igual ao robô) -->
+                                <div style="font-size:11px; line-height:1.6;">
+                                    <div class="text-muted mb-1"><i class="far fa-calendar-alt"></i> <?= $lote['DATA_IMPORTACAO_BR'] ?></div>
+                                    <?php
+                                    // Agendamento badge
+                                    $agTipo = $lote['AGENDAMENTO_TIPO'] ?? '';
+                                    if ($agTipo === 'PROGRAMADO') {
+                                        echo '<span class="badge bg-warning text-dark ms-1">⏳ ' . htmlspecialchars($lote['DATA_HORA_AGENDADA'] ?: 'Imediato') . '</span>';
+                                    } elseif ($agTipo === 'DIA_MES') {
+                                        echo '<span class="badge bg-warning text-dark ms-1">⏳ Dia ' . htmlspecialchars($lote['DIA_MES_AGENDADO'] ?: 'Atual') . '</span>';
+                                    } elseif ($agTipo === 'DIARIO') {
+                                        $diasLbl = (!$lote['DIAS_MES_DIARIO'] || $lote['DIAS_MES_DIARIO'] === 'TODOS') ? 'todo dia' : 'dias ' . $lote['DIAS_MES_DIARIO'];
+                                        $hIni = substr($lote['HORA_INICIO_DIARIO'] ?? '--:--', 0, 5);
+                                        $hFim = $lote['HORA_FIM_DIARIO'] ? ' até ' . substr($lote['HORA_FIM_DIARIO'], 0, 5) : '';
+                                        echo '<span class="badge bg-warning text-dark ms-1">🔁 ' . $hIni . $hFim . ' (' . $diasLbl . ')</span>';
+                                    }
+                                    if ((int)$lote['LIMITE_DIARIO'] > 0) {
+                                        echo '<span class="badge bg-info text-dark ms-1">Lmt: ' . number_format((int)$lote['LIMITE_DIARIO'], 0, ',', '.') . ' (Hj: ' . (int)$lote['PROCESSADOS_HOJE'] . ')</span>';
+                                    }
+                                    // Automação badges
+                                    if ($lote['ATUALIZAR_TELEFONE'] == 1) echo '<span class="badge bg-success ms-1 mt-1"><i class="fas fa-phone-alt"></i> FC</span>';
+                                    if ($lote['ENVIAR_WHATSAPP']    == 1) echo '<span class="badge bg-success ms-1 mt-1"><i class="fab fa-whatsapp"></i> Aprov. W-API</span>';
+                                    if ($lote['ENVIAR_ARQUIVO_WHATSAPP'] == 1) echo '<span class="badge bg-primary ms-1 mt-1"><i class="fas fa-file-csv"></i> CSV W-API</span>';
+                                    if ($lote['SOMENTE_SIMULAR']   == 1) echo '<span class="badge bg-warning text-dark ms-1 mt-1"><i class="fas fa-bolt"></i> Simulação Direta</span>';
+                                    ?>
                                 </div>
                             </div>
                         </div>
