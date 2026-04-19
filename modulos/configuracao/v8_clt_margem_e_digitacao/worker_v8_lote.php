@@ -242,9 +242,10 @@ while(true) {
         if($token) { $tokens_cache[$chave_id] = ['token'=>$token, 'time'=>time()]; } 
     }
 
-    if (!$token) { 
-        $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'ERRO CREDENCIAL' WHERE ID = ?")->execute([$id_lote]); 
-        continue; 
+    if (!$token) {
+        $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'ERRO CREDENCIAL' WHERE ID = ?")->execute([$id_lote]);
+        v8EnviarAvisoStatusLote($id_lote, 'ERRO CREDENCIAL', $lote, $pdo);
+        continue;
     }
 
     $headers = ["Authorization: Bearer $token", "Content-Type: application/json"];
@@ -482,6 +483,7 @@ while(true) {
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'AGUARDANDO_DIARIO', DATA_FINALIZACAO = NOW() WHERE ID = ?")->execute([$id_lote]);
             } else {
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'CONCLUIDO', DATA_FINALIZACAO = NOW() WHERE ID = ?")->execute([$id_lote]);
+                v8EnviarAvisoStatusLote($id_lote, 'CONCLUIDO', $lote, $pdo);
             }
         }
     } else {
@@ -501,6 +503,7 @@ while(true) {
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'AGUARDANDO_DIARIO', DATA_FINALIZACAO = NOW() WHERE ID = ?")->execute([$id_lote]);
             } else {
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'CONCLUIDO', DATA_FINALIZACAO = NOW() WHERE ID = ?")->execute([$id_lote]);
+                v8EnviarAvisoStatusLote($id_lote, 'CONCLUIDO', $lote, $pdo);
             }
         }
     }
@@ -722,6 +725,64 @@ function v8EnviarAprovacaoWapi($cpfRow, $valor_liberado, $prazo_padrao, $margem_
 
     } catch (Exception $e) {
         gravarLogIntegracao('logs_consulta_lote', $cpfRow['CPF'], 'APROVACAO WAPI - EXCEPTION', 'n/a', '', $e->getMessage(), 0);
+    }
+}
+
+// ===============================================
+// FUNÇÃO: AVISO DE STATUS DO LOTE VIA WAPI
+// Enviada quando o lote muda para CONCLUIDO ou ERRO*.
+// Só dispara se AVISO_STATUS_WAPI = 1 no lote.
+// ===============================================
+function v8EnviarAvisoStatusLote($id_lote, $novo_status, $lote, $pdo) {
+    if (($lote['AVISO_STATUS_WAPI'] ?? 0) != 1) return;
+
+    $cpf_dono_lote = $lote['CPF_USUARIO'];
+    $nomeLote      = $lote['NOME_IMPORTACAO'] ?? "Lote #{$id_lote}";
+
+    try {
+        $stmtCli = $pdo->prepare("SELECT GRUPO_WHATS FROM CLIENTE_CADASTRO WHERE CPF = ?");
+        $stmtCli->execute([$cpf_dono_lote]);
+        $grupo_cliente = $stmtCli->fetchColumn();
+
+        if (empty($grupo_cliente)) return;
+
+        $stmtWapi = $pdo->query("SELECT i.INSTANCE_ID, i.TOKEN FROM WAPI_CONFIG c JOIN WAPI_INSTANCIAS i ON c.INSTANCE_ID = i.INSTANCE_ID WHERE c.ATIVO_GLOBAL = 1 LIMIT 1");
+        $wapi = $stmtWapi->fetch(PDO::FETCH_ASSOC);
+
+        if (!$wapi || empty($wapi['INSTANCE_ID']) || empty($wapi['TOKEN'])) return;
+
+        $icone   = (strpos($novo_status, 'ERRO') !== false || strpos($novo_status, 'CREDENCIAL') !== false) ? '❌' : '✅';
+        $dataHora = date('d/m/Y H:i');
+
+        $texto = "{$icone} *Atualização de Status — Lote V8*\n\n"
+               . "*Status:* {$novo_status}\n"
+               . "*Lote ID:* {$id_lote}\n"
+               . "*Nome do Lote:* {$nomeLote}\n"
+               . "*Data/Hora:* {$dataHora}\n\n"
+               . "_CRM Assessoria Consignado_";
+
+        $phone = preg_replace('/[^0-9\-@a-zA-Z.]/', '', $grupo_cliente);
+        if (strpos($phone, '@g.us') === false) $phone .= '@g.us';
+
+        $payload = json_encode(['phone' => $phone, 'message' => $texto, 'delayMessage' => 2]);
+        $url_wapi = "https://api.w-api.app/v1/message/send-text?instanceId=" . $wapi['INSTANCE_ID'];
+
+        $chW = curl_init($url_wapi);
+        curl_setopt($chW, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($chW, CURLOPT_POST, true);
+        curl_setopt($chW, CURLOPT_POSTFIELDS, $payload);
+        curl_setopt($chW, CURLOPT_HTTPHEADER, [
+            "Authorization: Bearer " . $wapi['TOKEN'],
+            "Content-Type: application/json"
+        ]);
+        $resW = curl_exec($chW);
+        $httpW = curl_getinfo($chW, CURLINFO_HTTP_CODE);
+        curl_close($chW);
+
+        gravarLogIntegracao('logs_consulta_lote', $cpf_dono_lote, "AVISO STATUS WAPI ({$novo_status})", $url_wapi, json_decode($payload, true), $resW, $httpW);
+
+    } catch (Exception $e) {
+        gravarLogIntegracao('logs_consulta_lote', $cpf_dono_lote, 'AVISO STATUS WAPI - EXCEPTION', 'n/a', '', $e->getMessage(), 0);
     }
 }
 

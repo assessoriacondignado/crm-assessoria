@@ -254,27 +254,45 @@
                         </div>
                     </div>
                     <div class="col-12 mt-3 mb-1"><hr class="m-0"><small class="text-primary fw-bold mt-1 d-block"><i class="fas fa-robot"></i> Automação Pós-Aprovação</small></div>
-                    <div class="col-md-4">
-                        <div class="form-check border p-2 rounded bg-white border-info shadow-sm mb-0">
+                    <div class="col-md-3">
+                        <div class="form-check border p-2 rounded bg-white border-info shadow-sm mb-0 h-100">
                             <input class="form-check-input ms-1" type="checkbox" id="edit_atualizar_telefone" value="1">
-                            <label class="form-check-label fw-bold text-dark ms-1" style="font-size: 12px; cursor:pointer;" for="edit_atualizar_telefone">
+                            <label class="form-check-label fw-bold text-dark ms-1" style="font-size: 12px; cursor:pointer;" for="edit_atualizar_telefone"
+                                title="O CPF será atualizado com dados cadastrais (endereço, telefones e e-mail) após localizar a margem" data-bs-toggle="tooltip" data-bs-placement="top">
                                 <i class="fas fa-phone-alt text-success"></i> Telefones via FC
                             </label>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="form-check border p-2 rounded bg-white border-info shadow-sm mb-0">
+                    <div class="col-md-3">
+                        <div class="form-check border p-2 rounded bg-white border-info shadow-sm mb-0 h-100">
                             <input class="form-check-input ms-1" type="checkbox" id="edit_enviar_whats" value="1">
-                            <label class="form-check-label fw-bold text-dark ms-1" style="font-size: 12px; cursor:pointer;" for="edit_enviar_whats">
+                            <label class="form-check-label fw-bold text-dark ms-1" style="font-size: 12px; cursor:pointer;" for="edit_enviar_whats"
+                                title="O CRM Assessoria enviará uma msg com (nome, CPF, margem, simulação e telefones) para o grupo cadastrado no usuário, toda vez que for localizada margem" data-bs-toggle="tooltip" data-bs-placement="top">
                                 <i class="fab fa-whatsapp text-success"></i> Aprovação no W-API
                             </label>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="form-check border p-2 rounded bg-white border-info shadow-sm mb-0">
-                            <input class="form-check-input ms-1" type="checkbox" id="edit_enviar_arquivo_whatsapp" value="1">
-                            <label class="form-check-label fw-bold text-dark ms-1" style="font-size: 12px; cursor:pointer;" for="edit_enviar_arquivo_whatsapp">
-                                <i class="fas fa-file-csv text-success"></i> Enviar CSV Fim (W-API)
+                    <div class="col-md-3">
+                        <div class="border p-2 rounded bg-white border-info shadow-sm mb-0 h-100">
+                            <div class="form-check mb-1">
+                                <input class="form-check-input ms-1" type="checkbox" id="edit_enviar_arquivo_whatsapp" value="1" onchange="v8ToggleCsvHora(this.checked)">
+                                <label class="form-check-label fw-bold text-dark ms-1" style="font-size: 12px; cursor:pointer;" for="edit_enviar_arquivo_whatsapp"
+                                    title="O CRM Assessoria enviará um link para baixar o relatório completo (filtro: margem > R$1,00) no grupo do WhatsApp cadastrado no usuário. Defina o horário de envio." data-bs-toggle="tooltip" data-bs-placement="top">
+                                    <i class="fas fa-file-csv text-success"></i> Enviar CSV Fim (W-API)
+                                </label>
+                            </div>
+                            <div id="wrap_hora_csv" style="display:none;">
+                                <label class="small text-muted mb-0" style="font-size:10px;">Horário de envio:</label>
+                                <input type="time" id="edit_hora_envio_csv" class="form-control form-control-sm border-info" placeholder="HH:MM" style="font-size:12px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-check border p-2 rounded bg-white border-warning shadow-sm mb-0 h-100">
+                            <input class="form-check-input ms-1" type="checkbox" id="edit_aviso_status_wapi" value="1">
+                            <label class="form-check-label fw-bold text-dark ms-1" style="font-size: 12px; cursor:pointer;" for="edit_aviso_status_wapi"
+                                title="O CRM Assessoria avisará no grupo do WhatsApp as alterações de status do lote (erros e conclusão)" data-bs-toggle="tooltip" data-bs-placement="top">
+                                <i class="fas fa-bell text-warning"></i> Status Lote
                             </label>
                         </div>
                     </div>
@@ -973,6 +991,11 @@
         }
     }
 
+    function v8ToggleCsvHora(checked) {
+        const wrap = document.getElementById('wrap_hora_csv');
+        if (wrap) wrap.style.display = checked ? 'block' : 'none';
+    }
+
     // Atualiza apenas Funil e % sem recriar a tabela (evita piscar)
     let _v8PctAnterior = {};
     async function v8AtualizarFunilCSV() {
@@ -1097,7 +1120,11 @@
         document.getElementById('edit_somente_simular').checked = (lote.SOMENTE_SIMULAR == 1 || lote.somente_simular == 1);
         document.getElementById('edit_atualizar_telefone').checked = (lote.ATUALIZAR_TELEFONE == 1 || lote.atualizar_telefone == 1);
         document.getElementById('edit_enviar_whats').checked = (lote.ENVIAR_WHATSAPP == 1 || lote.enviar_whatsapp == 1);
-        document.getElementById('edit_enviar_arquivo_whatsapp').checked = (lote.ENVIAR_ARQUIVO_WHATSAPP == 1 || lote.enviar_arquivo_whatsapp == 1);
+        let csvAtivo = (lote.ENVIAR_ARQUIVO_WHATSAPP == 1 || lote.enviar_arquivo_whatsapp == 1);
+        document.getElementById('edit_enviar_arquivo_whatsapp').checked = csvAtivo;
+        document.getElementById('edit_hora_envio_csv').value = (lote.HORA_ENVIO_CSV || lote.hora_envio_csv || '').substring(0,5);
+        v8ToggleCsvHora(csvAtivo);
+        document.getElementById('edit_aviso_status_wapi').checked = (lote.AVISO_STATUS_WAPI == 1 || lote.aviso_status_wapi == 1);
 
         modalEditarLoteObj.show();
     }
@@ -1120,7 +1147,9 @@
             somente_simular: document.getElementById('edit_somente_simular').checked ? 1 : 0,
             atualizar_telefone: document.getElementById('edit_atualizar_telefone').checked ? 1 : 0,
             enviar_whats: document.getElementById('edit_enviar_whats').checked ? 1 : 0,
-            enviar_arquivo_whatsapp: document.getElementById('edit_enviar_arquivo_whatsapp').checked ? 1 : 0
+            enviar_arquivo_whatsapp: document.getElementById('edit_enviar_arquivo_whatsapp').checked ? 1 : 0,
+            hora_envio_csv: document.getElementById('edit_hora_envio_csv').value || '',
+            aviso_status_wapi: document.getElementById('edit_aviso_status_wapi').checked ? 1 : 0
         };
 
         const res = await v8Req('ajax_api_v8_lote_csv.php', 'salvar_edicao_lote', payload, true, "Salvando Edição...");

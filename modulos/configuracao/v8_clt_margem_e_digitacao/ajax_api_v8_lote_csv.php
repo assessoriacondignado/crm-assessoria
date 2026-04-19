@@ -910,15 +910,20 @@ try {
             $atualizar_telefone = (int)($_POST['atualizar_telefone'] ?? 0);
             $enviar_whats = (int)($_POST['enviar_whats'] ?? 0);
             $enviar_arquivo_whatsapp = (int)($_POST['enviar_arquivo_whatsapp'] ?? 0);
+            $hora_envio_csv_raw = trim($_POST['hora_envio_csv'] ?? '');
+            $hora_envio_csv = preg_match('/^\d{2}:\d{2}$/', $hora_envio_csv_raw) ? $hora_envio_csv_raw : null;
+            $aviso_status_wapi = (int)($_POST['aviso_status_wapi'] ?? 0);
 
             $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET
                 NOME_IMPORTACAO = ?, AGENDAMENTO_TIPO = 'DIARIO',
                 HORA_INICIO_DIARIO = ?, HORA_FIM_DIARIO = ?, DIAS_MES_DIARIO = ?,
-                LIMITE_DIARIO = ?, SOMENTE_SIMULAR = ?, ATUALIZAR_TELEFONE = ?, ENVIAR_WHATSAPP = ?, ENVIAR_ARQUIVO_WHATSAPP = ?
+                LIMITE_DIARIO = ?, SOMENTE_SIMULAR = ?, ATUALIZAR_TELEFONE = ?, ENVIAR_WHATSAPP = ?,
+                ENVIAR_ARQUIVO_WHATSAPP = ?, HORA_ENVIO_CSV = ?, AVISO_STATUS_WAPI = ?
                 WHERE ID = ?")->execute([
                 $agrupamento,
                 $hora_inicio_diario, $hora_fim_diario, $dias_mes_diario,
-                $limite_diario, $somente_simular, $atualizar_telefone, $enviar_whats, $enviar_arquivo_whatsapp,
+                $limite_diario, $somente_simular, $atualizar_telefone, $enviar_whats,
+                $enviar_arquivo_whatsapp, $hora_envio_csv, $aviso_status_wapi,
                 $id_lote
             ]);
 
@@ -1584,6 +1589,67 @@ try {
                 $url_worker = $protocol . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']) . '/worker_v8_lote.php?user_cpf=' . $lAR['CPF_USUARIO'];
                 $ch = curl_init(); curl_setopt($ch, CURLOPT_URL, $url_worker); curl_setopt($ch, CURLOPT_TIMEOUT, 1); curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); curl_exec($ch); curl_close($ch);
                 $disparados++;
+            }
+
+            // 5. Envio automático do CSV no horário configurado (HORA_ENVIO_CSV)
+            $stmtCSV = $pdo->query("
+                SELECT l.ID, l.NOME_IMPORTACAO, l.CPF_USUARIO, l.HORA_ENVIO_CSV, l.TABELA_DADOS
+                FROM INTEGRACAO_V8_IMPORTACAO_LOTE l
+                WHERE l.ENVIAR_ARQUIVO_WHATSAPP = 1
+                  AND l.HORA_ENVIO_CSV IS NOT NULL
+                  AND l.HORA_ENVIO_CSV = '{$hora_atual}'
+                  AND (l.DATA_ULTIMO_ENVIO_CSV IS NULL OR l.DATA_ULTIMO_ENVIO_CSV < CURDATE())
+                  AND (l.STATUS_LOTE = 'ATIVO' OR l.STATUS_LOTE IS NULL)
+            ");
+            while ($lCSV = $stmtCSV->fetch(PDO::FETCH_ASSOC)) {
+                try {
+                    $id_lote_csv = $lCSV['ID'];
+                    $nomeLoteCSV = $lCSV['NOME_IMPORTACAO'] ?: 'LOTE';
+                    $cpf_dono_csv = $lCSV['CPF_USUARIO'];
+                    $tabela_csv   = !empty($lCSV['TABELA_DADOS']) ? $lCSV['TABELA_DADOS'] : 'INTEGRACAO_V8_REGISTROCONSULTA_LOTE';
+
+                    $pasta_csv = $_SERVER['DOCUMENT_ROOT'] . '/logs_v8/relatorio_v8';
+                    if (!is_dir($pasta_csv)) @mkdir($pasta_csv, 0777, true);
+
+                    $nome_arq = "Relatorio_" . preg_replace('/[^a-zA-Z0-9]/', '_', $nomeLoteCSV) . "_" . time() . ".csv";
+                    $caminho_csv = $pasta_csv . '/' . $nome_arq;
+                    $protocol_csv = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
+                    $urlArqCSV = $protocol_csv . "://" . $_SERVER['HTTP_HOST'] . "/logs_v8/relatorio_v8/" . $nome_arq;
+
+                    $fp_csv = @fopen($caminho_csv, 'w');
+                    if (!$fp_csv) { $disparados++; continue; }
+                    fputs($fp_csv, "\xEF\xBB\xBF");
+                    $cab = ['NOME PLANILHA','DATA E HORA SIMULACAO','CPF','NOME','NASCIMENTO','SEXO','STATUS_V8','OBSERVACAO','TABELA SIMULADA','MARGEM','PRAZO','VALOR_LIBERADO'];
+                    fputcsv($fp_csv, $cab, ";");
+                    $stmtR = $pdo->prepare("SELECT c.*, l2.NOME_IMPORTACAO FROM `{$tabela_csv}` c JOIN INTEGRACAO_V8_IMPORTACAO_LOTE l2 ON c.LOTE_ID = l2.ID WHERE c.LOTE_ID = ? AND c.VALOR_LIQUIDO IS NOT NULL AND c.VALOR_LIQUIDO > 0");
+                    $stmtR->execute([$id_lote_csv]);
+                    while ($rr = $stmtR->fetch(PDO::FETCH_ASSOC)) {
+                        fputcsv($fp_csv, [$rr['NOME_IMPORTACAO'], $rr['DATA_SIMULACAO'] ? date('d/m/Y H:i', strtotime($rr['DATA_SIMULACAO'])) : '-', $rr['CPF'].' ', $rr['NOME'], $rr['NASCIMENTO'] ? date('d/m/Y', strtotime($rr['NASCIMENTO'])) : '', ($rr['SEXO']=='male'?'MASCULINO':'FEMININO'), $rr['STATUS_V8'], $rr['OBSERVACAO'], '-', $rr['VALOR_MARGEM']?'R$ '.number_format($rr['VALOR_MARGEM'],2,',','.'):'--', ($rr['PRAZO']?$rr['PRAZO'].'x':'--'), $rr['VALOR_LIQUIDO']?'R$ '.number_format($rr['VALOR_LIQUIDO'],2,',','.'):'--'], ";");
+                    }
+                    fclose($fp_csv);
+
+                    $stmtGrupo = $pdo->prepare("SELECT GRUPO_WHATS FROM CLIENTE_CADASTRO WHERE CPF = ?");
+                    $stmtGrupo->execute([$cpf_dono_csv]);
+                    $grupo_csv = $stmtGrupo->fetchColumn();
+
+                    $stmtWapiCSV = $pdo->query("SELECT i.INSTANCE_ID, i.TOKEN FROM WAPI_CONFIG c JOIN WAPI_INSTANCIAS i ON c.INSTANCE_ID = i.INSTANCE_ID WHERE c.ATIVO_GLOBAL = 1 LIMIT 1");
+                    $wapiCSV = $stmtWapiCSV->fetch(PDO::FETCH_ASSOC);
+
+                    if (!empty($grupo_csv) && !empty($wapiCSV['INSTANCE_ID'])) {
+                        $phone_csv = preg_replace('/[^0-9\-@a-zA-Z.]/', '', $grupo_csv);
+                        if (strpos($phone_csv, '@g.us') === false) $phone_csv .= '@g.us';
+                        $txt_csv = "📊 *Relatório Automático Disponível*\n\n"
+                                 . "*LOTE:* {$nomeLoteCSV}\n"
+                                 . "*DATA/HORA:* " . date('d/m/Y H:i') . "\n\n"
+                                 . "🔗 *Clique para baixar:*\n{$urlArqCSV}\n\n"
+                                 . "_Link válido por 10 dias. Filtro: margem > R\$1,00._\n\nAssessoria Consignado";
+                        $chC = curl_init("https://api.w-api.app/v1/message/send-text?instanceId=" . $wapiCSV['INSTANCE_ID']);
+                        curl_setopt_array($chC, [CURLOPT_RETURNTRANSFER=>true, CURLOPT_POST=>true, CURLOPT_POSTFIELDS=>json_encode(['phone'=>$phone_csv,'message'=>$txt_csv,'delayMessage'=>2]), CURLOPT_HTTPHEADER=>["Authorization: Bearer ".$wapiCSV['TOKEN'],"Content-Type: application/json"]]);
+                        curl_exec($chC); curl_close($chC);
+                    }
+                    $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET DATA_ULTIMO_ENVIO_CSV = CURDATE() WHERE ID = ?")->execute([$id_lote_csv]);
+                    $disparados++;
+                } catch (Exception $e) {}
             }
 
             ob_end_clean(); echo json_encode(['success' => true, 'disparados' => $disparados, 'hora' => $hora_atual]); exit;

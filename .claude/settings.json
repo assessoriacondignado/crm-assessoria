@@ -113,7 +113,11 @@
       "Read(//var/log/**)",
       "Bash(grep -v \"^$\")",
       "Bash(journalctl -u apache2 --since \"1 min ago\" -n 20)",
-      "Bash(php -l /var/www/html/modulos/cliente_e_usuario/checar_permissoes.php)"
+      "Bash(php -l /var/www/html/modulos/cliente_e_usuario/checar_permissoes.php)",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e ' *)",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados)",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"SHOW COLUMNS FROM INTEGRACAO_V8_IMPORTACAO_LOTE LIKE 'AVISO%';\")",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"SHOW COLUMNS FROM INTEGRACAO_V8_IMPORTACAO_LOTE LIKE 'HORA_ENVIO%';\")"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d"
