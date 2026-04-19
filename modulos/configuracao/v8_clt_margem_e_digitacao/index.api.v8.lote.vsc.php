@@ -948,12 +948,12 @@
                   </div>
                 </div>`;
 
-                newHtml += `<tr class="bg-white border-bottom border-secondary">
+                newHtml += `<tr class="bg-white border-bottom border-secondary" data-lote-id="${idLoteReal}">
                     <td class="align-middle fw-bold text-muted">${idLoteReal}</td>
                     <td class="align-middle">${infoListaOrigem}</td>
                     <td class="align-middle">${infoLoteGeral}</td>
-                    <td class="align-middle fw-bold text-nowrap">${badge} <span class="ms-2 small text-muted">${pNum}%</span></td>
-                    <td class="align-middle fs-6 text-nowrap bg-light border-start border-end border-secondary">${funilHtml}</td>
+                    <td class="align-middle fw-bold text-nowrap v8-td-status">${badge} <span class="v8-pct ms-2 small text-muted">${pNum}%</span></td>
+                    <td class="align-middle fs-6 text-nowrap bg-light border-start border-end border-secondary v8-td-funil">${funilHtml}</td>
                     <td class="p-2 align-middle text-center" style="vertical-align: middle;">${labelStatusLote}${menuAcoes}</td>
                 </tr>`;
             });
@@ -962,14 +962,81 @@
             var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]')); 
             tooltipTriggerList.map(function (tooltipTriggerEl) { return new bootstrap.Tooltip(tooltipTriggerEl); }); 
             
-            if(temRodando) { 
-                if(!intervaloLoteV8) intervaloLoteV8 = setInterval(v8CarregarLotesCSV, 20000);
-                if(typeof v8AtualizarSaldosTopo === "function") v8AtualizarSaldosTopo(); 
-            } else { 
-                if(intervaloLoteV8) { clearInterval(intervaloLoteV8); intervaloLoteV8 = null; if(typeof v8AtualizarSaldosTopo === "function") v8AtualizarSaldosTopo(); } 
+            if(temRodando) {
+                if(!intervaloLoteV8) intervaloLoteV8 = setInterval(v8AtualizarFunilCSV, 8000);
+                if(typeof v8AtualizarSaldosTopo === "function") v8AtualizarSaldosTopo();
+            } else {
+                if(intervaloLoteV8) { clearInterval(intervaloLoteV8); intervaloLoteV8 = null; if(typeof v8AtualizarSaldosTopo === "function") v8AtualizarSaldosTopo(); }
             } 
         } else {
             tb.innerHTML = `<tr><td colspan="6" class="py-4 text-center text-danger fw-bold"><i class="fas fa-exclamation-triangle"></i> Erro: ${r.msg}</td></tr>`;
+        }
+    }
+
+    // Atualiza apenas Funil e % sem recriar a tabela (evita piscar)
+    let _v8PctAnterior = {};
+    async function v8AtualizarFunilCSV() {
+        if (isMenuAcoesAberto || document.querySelector('.dropdown-menu.show')) return;
+        const payload = { regras: v8ObterRegrasLote() };
+        const r = await v8Req('ajax_api_v8_lote_csv.php', 'listar_lotes', payload, false);
+        if (!r || !r.success) return;
+
+        let temRodando = false;
+        r.data.forEach(l => {
+            let idLoteReal = l.ID || l.id;
+            const tr = document.querySelector(`tr[data-lote-id="${idLoteReal}"]`);
+            if (!tr) return;
+
+            let statusAtual = String(l.STATUS_FILA || 'PENDENTE').toUpperCase();
+            if (statusAtual === 'PROCESSANDO' || statusAtual === 'PENDENTE') temRodando = true;
+
+            // Recalcula funil
+            let qtdTotal = l.QTD_TOTAL || 0;
+            let qtdProc  = l.QTD_PROCESSADA || 0;
+            let pNum = qtdTotal > 0 ? Math.round((qtdProc / qtdTotal) * 100) : 0;
+
+            let f = l.funil || {};
+            let c_ok=f.c_ok||0, c_err=f.c_err||0, m_ok=f.m_ok||0, m_err=f.m_err||0,
+                s_ok=f.s_ok||0, s_err=f.s_err||0, dataprev=f.dataprev||0, na_fila=f.na_fila||0,
+                c_hoje=f.c_hoje||0, m_hoje=f.m_hoje||0, s_hoje=f.s_hoje||0;
+            let htmlDataprev = dataprev > 0 ? `<div class="mb-1 text-danger fw-bold" style="font-size:10px;"><i class="fas fa-clock text-secondary" style="width:15px;"></i> Dataprev: ${dataprev}</div>` : '';
+            let htmlNaFila   = na_fila   > 0 ? `<div class="mb-1 text-warning fw-bold" style="font-size:10px;"><i class="fas fa-hourglass-half text-secondary" style="width:15px;"></i> Na Fila: <b>${na_fila}</b></div>` : '';
+            let funilHtml = `<div class="text-start d-inline-block" style="font-size:11px;min-width:155px;">
+                ${htmlDataprev}${htmlNaFila}
+                <div class="mb-1"><i class="fas fa-id-card text-secondary" style="width:15px;"></i> Consen.: <span class="text-success fw-bold">${c_ok}</span> / <span class="text-danger">${c_err}</span> <span class="badge bg-info text-dark ms-1">${c_hoje} hj</span></div>
+                <div class="mb-1"><i class="fas fa-search-dollar text-secondary" style="width:15px;"></i> Margem: <span class="text-success fw-bold">${m_ok}</span> / <span class="text-danger">${m_err}</span> <span class="badge bg-info text-dark ms-1">${m_hoje} hj</span></div>
+                <div class="mb-1"><i class="fas fa-calculator text-secondary" style="width:15px;"></i> Simul.: <span class="text-success fw-bold">${s_ok}</span> / <span class="text-danger">${s_err}</span> <span class="badge bg-info text-dark ms-1">${s_hoje} hj</span></div>
+                <div class="border-top pt-1 mt-1 text-primary"><i class="fas fa-users text-secondary" style="width:15px;"></i> Total: <b>${qtdTotal}</b></div>
+            </div>`;
+
+            // Atualiza célula Funil sem piscar
+            const tdFunil = tr.querySelector('.v8-td-funil');
+            if (tdFunil) tdFunil.innerHTML = funilHtml;
+
+            // Atualiza % somente se mudou ≥5 pontos percentuais
+            const tdStatus = tr.querySelector('.v8-td-status');
+            if (tdStatus) {
+                let lastPct = (_v8PctAnterior[idLoteReal] !== undefined) ? _v8PctAnterior[idLoteReal] : -99;
+                if (Math.abs(pNum - lastPct) >= 5 || lastPct === -99) {
+                    _v8PctAnterior[idLoteReal] = pNum;
+                    let badge = '';
+                    if (statusAtual === 'AGUARDANDO_DIARIO') badge = `<span class="badge bg-info text-dark border border-dark"><i class="fas fa-clock me-1"></i> AGUARDANDO HORÁRIO</span>`;
+                    else if (statusAtual === 'PROCESSANDO')  badge = `<span class="badge bg-primary shadow-sm"><i class="fas fa-cogs fa-spin"></i> PROCESSANDO</span>`;
+                    else if (statusAtual === 'PENDENTE')     badge = `<span class="badge bg-info text-dark shadow-sm"><i class="fas fa-hourglass-half"></i> NA FILA</span>`;
+                    else if (statusAtual === 'PAUSADO')      badge = `<span class="badge bg-warning text-dark"><i class="fas fa-pause-circle"></i> PAUSADO</span>`;
+                    else if (statusAtual === 'PROCESSADO PARCIAL') badge = `<span class="badge bg-warning text-dark"><i class="fas fa-hand-paper"></i> PROCESSADO PARCIAL</span>`;
+                    else if (statusAtual === 'CONCLUIDO')    badge = `<span class="badge bg-success shadow-sm"><i class="fas fa-check-circle"></i> CONCLUIDO</span>`;
+                    else if (statusAtual === 'ERRO CREDENCIAL') badge = `<span class="badge bg-danger"><i class="fas fa-key me-1"></i> ERRO CREDENCIAL</span>`;
+                    else badge = `<span class="badge bg-danger">${statusAtual}</span>`;
+                    tdStatus.innerHTML = `${badge} <span class="v8-pct ms-2 small text-muted">${pNum}%</span>`;
+                }
+            }
+        });
+
+        if (!temRodando && intervaloLoteV8) {
+            clearInterval(intervaloLoteV8);
+            intervaloLoteV8 = null;
+            v8CarregarLotesCSV(); // reload completo ao finalizar
         }
     }
 
