@@ -1013,22 +1013,31 @@
             const tdFunil = tr.querySelector('.v8-td-funil');
             if (tdFunil) tdFunil.innerHTML = funilHtml;
 
-            // Atualiza % somente se mudou ≥5 pontos percentuais
+            // Badge sempre atualiza (status muda independente do %)
+            // % só atualiza quando muda ≥5 pontos percentuais
             const tdStatus = tr.querySelector('.v8-td-status');
             if (tdStatus) {
+                let badge = '';
+                if (statusAtual === 'AGUARDANDO_DIARIO') badge = `<span class="badge bg-info text-dark border border-dark"><i class="fas fa-clock me-1"></i> AGUARDANDO HORÁRIO</span>`;
+                else if (statusAtual === 'PROCESSANDO')  badge = `<span class="badge bg-primary shadow-sm"><i class="fas fa-cogs fa-spin"></i> PROCESSANDO</span>`;
+                else if (statusAtual === 'PENDENTE')     badge = `<span class="badge bg-info text-dark shadow-sm"><i class="fas fa-hourglass-half"></i> NA FILA</span>`;
+                else if (statusAtual === 'PAUSADO')      badge = `<span class="badge bg-warning text-dark"><i class="fas fa-pause-circle"></i> PAUSADO</span>`;
+                else if (statusAtual === 'PROCESSADO PARCIAL') badge = `<span class="badge bg-warning text-dark"><i class="fas fa-hand-paper"></i> PROCESSADO PARCIAL</span>`;
+                else if (statusAtual === 'CONCLUIDO')    badge = `<span class="badge bg-success shadow-sm"><i class="fas fa-check-circle"></i> CONCLUIDO</span>`;
+                else if (statusAtual === 'ERRO CREDENCIAL') badge = `<span class="badge bg-danger"><i class="fas fa-key me-1"></i> ERRO CREDENCIAL</span>`;
+                else badge = `<span class="badge bg-danger">${statusAtual}</span>`;
+
+                // Atualiza badge
+                const badgeEl = tdStatus.querySelector('.badge');
+                if (badgeEl) badgeEl.outerHTML = badge;
+                else tdStatus.insertAdjacentHTML('afterbegin', badge + ' ');
+
+                // Atualiza % somente se mudou ≥5 pontos
                 let lastPct = (_v8PctAnterior[idLoteReal] !== undefined) ? _v8PctAnterior[idLoteReal] : -99;
                 if (Math.abs(pNum - lastPct) >= 5 || lastPct === -99) {
                     _v8PctAnterior[idLoteReal] = pNum;
-                    let badge = '';
-                    if (statusAtual === 'AGUARDANDO_DIARIO') badge = `<span class="badge bg-info text-dark border border-dark"><i class="fas fa-clock me-1"></i> AGUARDANDO HORÁRIO</span>`;
-                    else if (statusAtual === 'PROCESSANDO')  badge = `<span class="badge bg-primary shadow-sm"><i class="fas fa-cogs fa-spin"></i> PROCESSANDO</span>`;
-                    else if (statusAtual === 'PENDENTE')     badge = `<span class="badge bg-info text-dark shadow-sm"><i class="fas fa-hourglass-half"></i> NA FILA</span>`;
-                    else if (statusAtual === 'PAUSADO')      badge = `<span class="badge bg-warning text-dark"><i class="fas fa-pause-circle"></i> PAUSADO</span>`;
-                    else if (statusAtual === 'PROCESSADO PARCIAL') badge = `<span class="badge bg-warning text-dark"><i class="fas fa-hand-paper"></i> PROCESSADO PARCIAL</span>`;
-                    else if (statusAtual === 'CONCLUIDO')    badge = `<span class="badge bg-success shadow-sm"><i class="fas fa-check-circle"></i> CONCLUIDO</span>`;
-                    else if (statusAtual === 'ERRO CREDENCIAL') badge = `<span class="badge bg-danger"><i class="fas fa-key me-1"></i> ERRO CREDENCIAL</span>`;
-                    else badge = `<span class="badge bg-danger">${statusAtual}</span>`;
-                    tdStatus.innerHTML = `${badge} <span class="v8-pct ms-2 small text-muted">${pNum}%</span>`;
+                    const pctEl = tdStatus.querySelector('.v8-pct');
+                    if (pctEl) pctEl.textContent = pNum + '%';
                 }
             }
         });

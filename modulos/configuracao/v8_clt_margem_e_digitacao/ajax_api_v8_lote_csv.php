@@ -540,15 +540,40 @@ try {
                     }
                 }
 
+                // IDs de lotes PROCESSANDO que podem estar presos (sem itens pendentes)
+                $ids_processando = [];
+                foreach ($lotes as $l) {
+                    if (($l['STATUS_FILA'] ?? '') === 'PROCESSANDO') $ids_processando[] = $l['ID'];
+                }
+
                 foreach ($lotes as &$l) {
                     $lid = $l['ID'];
                     $hoje = $hojeByLote[$lid] ?? ['c_hoje'=>0, 's_hoje'=>0];
                     $funil = isset($statsByLote[$lid]) ? $statsByLote[$lid] : ['c_ok'=>0, 'c_err'=>0, 'm_ok'=>0, 'm_err'=>0, 's_ok'=>0, 's_err'=>0, 'dataprev'=>0, 'na_fila'=>0];
                     $funil['c_hoje'] = $hoje['c_hoje'];
                     $funil['s_hoje'] = $hoje['s_hoje'];
-                    // m_hoje: aprovações de margem hoje ≈ simulações OK + erros de simulação hoje (mesma rodada)
-                    $funil['m_hoje'] = $hoje['s_hoje']; // aproximação conservadora (simulação implica margem OK)
+                    $funil['m_hoje'] = $hoje['s_hoje'];
                     $l['funil'] = $funil;
+
+                    // Auto-concluir lote PROCESSANDO sem nenhum item pendente (dataprev=0, na_fila=0)
+                    if (($l['STATUS_FILA'] ?? '') === 'PROCESSANDO'
+                        && $funil['dataprev'] === 0
+                        && $funil['na_fila']   === 0
+                    ) {
+                        $tblLote = !empty($l['TABELA_DADOS']) ? $l['TABELA_DADOS'] : 'INTEGRACAO_V8_REGISTROCONSULTA_LOTE';
+                        $stmtChk = $pdo->prepare("
+                            SELECT COUNT(*) FROM `{$tblLote}`
+                            WHERE LOTE_ID = ?
+                              AND STATUS_V8 IN ('NA FILA','AGUARDANDO MARGEM','AGUARDANDO SIMULACAO','AGUARDANDO DATAPREV','RECUPERAR V8')
+                        ");
+                        $stmtChk->execute([$lid]);
+                        if ((int)$stmtChk->fetchColumn() === 0) {
+                            $novoStatus = ($l['AGENDAMENTO_TIPO'] === 'DIARIO') ? 'AGUARDANDO_DIARIO' : 'CONCLUIDO';
+                            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = ?, DATA_FINALIZACAO = NOW() WHERE ID = ? AND STATUS_FILA = 'PROCESSANDO'")
+                                ->execute([$novoStatus, $lid]);
+                            $l['STATUS_FILA'] = $novoStatus;
+                        }
+                    }
                 }
             }
 

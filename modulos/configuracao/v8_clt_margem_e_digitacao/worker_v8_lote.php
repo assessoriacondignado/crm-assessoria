@@ -467,7 +467,7 @@ while(true) {
     }
 
     if (!$work_found) {
-        
+
         // Verifica se ainda tem gente na fila aguardando. Se sim e atingiu o limite, ele só pausa o lote.
         $stmtRestante = $pdo->prepare("SELECT ID FROM {$tbl} WHERE LOTE_ID = ? AND STATUS_V8 = 'NA FILA' LIMIT 1");
         $stmtRestante->execute([$id_lote]);
@@ -478,6 +478,25 @@ while(true) {
             $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PENDENTE' WHERE ID = ?")->execute([$id_lote]);
         } else {
             // Lotes DIÁRIO voltam a aguardar o próximo dia, não ficam CONCLUIDO
+            if ($lote['AGENDAMENTO_TIPO'] === 'DIARIO') {
+                $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'AGUARDANDO_DIARIO', DATA_FINALIZACAO = NOW() WHERE ID = ?")->execute([$id_lote]);
+            } else {
+                $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'CONCLUIDO', DATA_FINALIZACAO = NOW() WHERE ID = ?")->execute([$id_lote]);
+            }
+        }
+    } else {
+        // Mesmo com work_found=true (ex: DATAPREV ainda pendente), verifica se toda a fila
+        // já está concluída (sem itens pendentes de qualquer tipo). Evita lote preso em PROCESSANDO
+        // quando o worker encerra antes de resolver os últimos DATAPREV.
+        $stmtPendentes = $pdo->prepare("
+            SELECT COUNT(*) FROM {$tbl}
+            WHERE LOTE_ID = ?
+              AND STATUS_V8 IN ('NA FILA','AGUARDANDO MARGEM','AGUARDANDO SIMULACAO','AGUARDANDO DATAPREV','RECUPERAR V8')
+        ");
+        $stmtPendentes->execute([$id_lote]);
+        $qtd_pendentes = (int)$stmtPendentes->fetchColumn();
+
+        if ($qtd_pendentes === 0) {
             if ($lote['AGENDAMENTO_TIPO'] === 'DIARIO') {
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'AGUARDANDO_DIARIO', DATA_FINALIZACAO = NOW() WHERE ID = ?")->execute([$id_lote]);
             } else {
