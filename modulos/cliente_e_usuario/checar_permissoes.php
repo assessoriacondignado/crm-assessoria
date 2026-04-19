@@ -18,19 +18,24 @@ if (!function_exists('verificaPermissao')) {
                 return true;
             }
 
-            // Busca a regra pela CHAVE (Única)
-            $stmt = $pdo->prepare("SELECT GRUPO_USUARIOS FROM CLIENTE_USUARIO_PERMISSAO WHERE CHAVE = ?");
-            $stmt->execute([$chave]);
-            $reg = $stmt->fetch(PDO::FETCH_ASSOC);
+            // Usa cache de permissões carregado em header.php (evita 1 SELECT por chamada)
+            if (isset($_SESSION['perm_cache'])) {
+                $grupo_usuarios = $_SESSION['perm_cache'][$chave] ?? '';
+            } else {
+                $stmt = $pdo->prepare("SELECT GRUPO_USUARIOS FROM CLIENTE_USUARIO_PERMISSAO WHERE CHAVE = ?");
+                $stmt->execute([$chave]);
+                $reg = $stmt->fetch(PDO::FETCH_ASSOC);
+                $grupo_usuarios = $reg ? ($reg['GRUPO_USUARIOS'] ?? '') : '';
+            }
 
-            // Se achou a regra e tem grupos bloqueados nela
-            if ($reg && !empty($reg['GRUPO_USUARIOS'])) {
+            // Se tem grupos bloqueados nela
+            if (!empty($grupo_usuarios)) {
                 // Transforma a string "VENDEDORES, SUPERVISORES" em um array
-                $grupos_bloqueados = array_map('trim', explode(',', strtoupper($reg['GRUPO_USUARIOS'])));
-                
+                $grupos_bloqueados = array_map('trim', explode(',', strtoupper($grupo_usuarios)));
+
                 // Se o grupo do usuário estiver na lista de bloqueados, retorna false (Acesso Negado)
                 if (in_array(strtoupper($grupo_usuario), $grupos_bloqueados)) {
-                    return false; 
+                    return false;
                 }
             }
 

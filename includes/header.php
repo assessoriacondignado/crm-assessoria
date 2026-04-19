@@ -89,16 +89,29 @@ if (empty($_SESSION['wapi_inst_cache']) || (time() - ($_SESSION['wapi_inst_ts'] 
 $wapi_inst_cached = $_SESSION['wapi_inst_cache'];
 
 // ==========================================
+// CACHE DE PERMISSÕES — evita 36+ SELECTs por page load
+// ==========================================
+if (empty($_SESSION['perm_cache']) || (time() - ($_SESSION['perm_cache_ts'] ?? 0)) > 300) {
+    try {
+        $stmtPerms = $pdo->query("SELECT CHAVE, GRUPO_USUARIOS FROM CLIENTE_USUARIO_PERMISSAO");
+        $_SESSION['perm_cache']    = $stmtPerms->fetchAll(PDO::FETCH_KEY_PAIR);
+        $_SESSION['perm_cache_ts'] = time();
+    } catch(Exception $e) { $_SESSION['perm_cache'] = []; }
+}
+
+// ==========================================
 // NOVO: RASTREIO ONLINE E LOGOUT FORÇADO
 // ==========================================
+$userExp = null;
 if (isset($_SESSION['usuario_cpf']) && isset($pdo)) {
     $cpf_sessao = $_SESSION['usuario_cpf'];
 
-    $stmtCheck = $pdo->prepare("SELECT FORCAR_LOGOUT FROM CLIENTE_USUARIO WHERE CPF = ?");
-    $stmtCheck->execute([$cpf_sessao]);
-    $deve_sair = $stmtCheck->fetchColumn();
+    // Uma única query busca todos os dados necessários do usuário
+    $stmtUser = $pdo->prepare("SELECT FORCAR_LOGOUT, Situação, CELULAR, DATA_EXPIRAR FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+    $stmtUser->execute([$cpf_sessao]);
+    $userRow = $stmtUser->fetch(PDO::FETCH_ASSOC);
 
-    if ($deve_sair == 1) {
+    if ($userRow && $userRow['FORCAR_LOGOUT'] == 1) {
         $pdo->prepare("UPDATE CLIENTE_USUARIO SET FORCAR_LOGOUT = 0, ULTIMO_ACESSO = NULL WHERE CPF = ?")->execute([$cpf_sessao]);
         session_unset();
         session_destroy();
@@ -106,14 +119,20 @@ if (isset($_SESSION['usuario_cpf']) && isset($pdo)) {
         exit;
     }
 
-    // Atualiza o "pulso" de atividade no Banco de Dados
-    $pdo->prepare("UPDATE CLIENTE_USUARIO SET ULTIMO_ACESSO = NOW() WHERE CPF = ?")->execute([$cpf_sessao]);
+    // Atualiza o "pulso" de atividade no máximo a cada 30 segundos
+    $last_pulse = $_SESSION['last_pulse'] ?? 0;
+    if (time() - $last_pulse > 30) {
+        $pdo->prepare("UPDATE CLIENTE_USUARIO SET ULTIMO_ACESSO = NOW() WHERE CPF = ?")->execute([$cpf_sessao]);
+        $_SESSION['last_pulse'] = time();
+    }
+
+    $userExp = $userRow ?: null;
 }
 
 // ==========================================
 // 2. VERIFICAÇÃO DE INATIVIDADE (2 HORAS)
 // ==========================================
-$limite_inatividade = 7200; 
+$limite_inatividade = 7200;
 
 if (isset($_SESSION['ultimo_acesso'])) {
     $tempo_parado = time() - $_SESSION['ultimo_acesso'];
@@ -127,12 +146,8 @@ if (isset($_SESSION['ultimo_acesso'])) {
 $_SESSION['ultimo_acesso'] = time();
 
 // ==========================================
-// 3. MOTOR DE DATA DE EXPIRAÇÃO 
+// 3. MOTOR DE DATA DE EXPIRAÇÃO
 // ==========================================
-$stmtExp = $pdo->prepare("SELECT Situação, CELULAR, DATA_EXPIRAR FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
-$stmtExp->execute([$_SESSION['usuario_cpf']]);
-$userExp = $stmtExp->fetch(PDO::FETCH_ASSOC);
-
 if ($userExp && !empty($userExp['DATA_EXPIRAR'])) {
     $data_exp = strtotime($userExp['DATA_EXPIRAR']);
     $hoje = strtotime(date('Y-m-d'));
