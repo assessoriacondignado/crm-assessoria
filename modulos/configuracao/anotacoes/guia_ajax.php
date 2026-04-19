@@ -20,7 +20,7 @@ try {
         TITULO VARCHAR(200) NOT NULL,
         COMENTARIO TEXT,
         NOME_CONTEUDO VARCHAR(255),
-        TIPO_CONTEUDO ENUM('VIDEO','IMAGEM','TEXTO') DEFAULT 'TEXTO',
+        TIPO_CONTEUDO ENUM('VIDEO','IMAGEM','TEXTO','HTML') DEFAULT 'TEXTO',
         LOCAL_EXIBICAO VARCHAR(200),
         STATUS ENUM('ATIVO','INATIVO') DEFAULT 'ATIVO',
         DATA_CRIACAO DATETIME DEFAULT NOW(),
@@ -86,7 +86,7 @@ switch ($acao) {
         $conteudo_texto = $_POST['conteudo_texto'] ?? '';
 
         if (!$titulo) { echo json_encode(['success' => false, 'msg' => 'Título obrigatório']); exit; }
-        if (!in_array($tipo_conteudo, ['VIDEO', 'IMAGEM', 'TEXTO'])) $tipo_conteudo = 'TEXTO';
+        if (!in_array($tipo_conteudo, ['VIDEO', 'IMAGEM', 'TEXTO', 'HTML'])) $tipo_conteudo = 'TEXTO';
 
         $nome_arquivo_atual = null;
         if ($id) {
@@ -97,7 +97,7 @@ switch ($acao) {
 
         $nome_arquivo = $nome_arquivo_atual; // mantém o atual por padrão
 
-        if ($tipo_conteudo === 'TEXTO') {
+        if ($tipo_conteudo === 'TEXTO' || $tipo_conteudo === 'HTML') {
             // Salva conteúdo HTML como arquivo
             if ($nome_arquivo_atual && pathinfo($nome_arquivo_atual, PATHINFO_EXTENSION) === 'html') {
                 // Sobrescreve arquivo existente
@@ -188,6 +188,9 @@ switch ($acao) {
             if ($arq && file_exists($upload_dir . $arq)) {
                 $conteudo_html = file_get_contents($upload_dir . $arq);
             }
+        } elseif ($row['TIPO_CONTEUDO'] === 'HTML' && $arq) {
+            $url = $upload_url . rawurlencode($arq);
+            $conteudo_html = '<iframe src="' . htmlspecialchars($url) . '" style="width:100%;height:520px;border:none;border-radius:8px;" allowfullscreen></iframe>';
         } elseif ($row['TIPO_CONTEUDO'] === 'VIDEO' && $arq) {
             $url = $upload_url . rawurlencode($arq);
             $conteudo_html = '<video controls style="width:100%;border-radius:8px;background:#000;" src="' . htmlspecialchars($url) . '"></video>';
@@ -198,7 +201,7 @@ switch ($acao) {
 
         // Para edição, retorna o conteúdo bruto do arquivo TEXTO
         $conteudo_raw = '';
-        if ($row['TIPO_CONTEUDO'] === 'TEXTO' && $arq && file_exists($upload_dir . $arq)) {
+        if (in_array($row['TIPO_CONTEUDO'], ['TEXTO', 'HTML']) && $arq && file_exists($upload_dir . $arq)) {
             $conteudo_raw = file_get_contents($upload_dir . $arq);
         }
 

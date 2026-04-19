@@ -1126,6 +1126,7 @@ function guiaAbrirModal(id) {
     document.getElementById('guia_tipo').value = 'TEXTO';
     document.getElementById('guia_arquivo').value = '';
     document.getElementById('guia_editor').innerHTML = '';
+    document.getElementById('guia_html_code').value = '';
     guiaTipoChange();
 
     if (isEdit) {
@@ -1142,6 +1143,8 @@ function guiaAbrirModal(id) {
                 guiaTipoChange();
                 if (d.TIPO_CONTEUDO === 'TEXTO') {
                     document.getElementById('guia_editor').innerHTML = d.CONTEUDO_RAW || '';
+                } else if (d.TIPO_CONTEUDO === 'HTML') {
+                    document.getElementById('guia_html_code').value = d.CONTEUDO_RAW || '';
                 }
                 const arqInfo = document.getElementById('guia_arquivo_atual');
                 if (arqInfo) arqInfo.textContent = d.NOME_CONTEUDO ? 'Arquivo atual: ' + d.NOME_CONTEUDO + ' (deixe em branco para manter)' : '';
@@ -1153,8 +1156,9 @@ function guiaAbrirModal(id) {
 
 function guiaTipoChange() {
     const tipo = document.getElementById('guia_tipo').value;
-    document.getElementById('guia_panel_arquivo').style.display = tipo !== 'TEXTO' ? '' : 'none';
-    document.getElementById('guia_panel_texto').style.display  = tipo === 'TEXTO'  ? '' : 'none';
+    document.getElementById('guia_panel_texto').style.display   = tipo === 'TEXTO'  ? '' : 'none';
+    document.getElementById('guia_panel_html').style.display    = tipo === 'HTML'   ? '' : 'none';
+    document.getElementById('guia_panel_arquivo').style.display = (tipo === 'VIDEO' || tipo === 'IMAGEM') ? '' : 'none';
     const dica = document.getElementById('guia_arquivo_dica');
     if (dica) dica.textContent = tipo === 'VIDEO' ? 'Formatos aceitos: mp4' : 'Formatos aceitos: png, jpg, jpeg, bmp';
 }
@@ -1175,6 +1179,8 @@ async function guiaSalvar() {
 
     if (tipo === 'TEXTO') {
         fd.append('conteudo_texto', document.getElementById('guia_editor').innerHTML);
+    } else if (tipo === 'HTML') {
+        fd.append('conteudo_texto', document.getElementById('guia_html_code').value);
     } else {
         const arq = document.getElementById('guia_arquivo');
         if (arq.files[0]) fd.append('arquivo', arq.files[0]);
@@ -1408,6 +1414,7 @@ function guiaViewerFiltrar(q) {
                         <label class="fw-bold text-dark mb-1">Tipo de Conteúdo</label>
                         <select id="guia_tipo" class="form-select border-dark fw-bold" onchange="guiaTipoChange()">
                             <option value="TEXTO">📝 Bloco de Notas (texto)</option>
+                            <option value="HTML">🖥️ Código HTML (apresentação)</option>
                             <option value="VIDEO">🎬 Vídeo Curto (mp4)</option>
                             <option value="IMAGEM">🖼️ Imagem / Apresentação</option>
                         </select>
@@ -1448,6 +1455,15 @@ function guiaViewerFiltrar(q) {
                                  style="min-height:200px;max-height:400px;overflow-y:auto;padding:12px 14px;outline:none;font-size:0.92rem;"
                                  placeholder="Digite o conteúdo do guia aqui..."></div>
                         </div>
+                    </div>
+
+                    <!-- Painel HTML -->
+                    <div class="col-12" id="guia_panel_html" style="display:none;">
+                        <label class="fw-bold text-dark mb-1">Código HTML <span class="text-muted fw-normal small">(ex: embed do Canva, Google Slides...)</span></label>
+                        <textarea id="guia_html_code" class="form-control font-monospace border-dark"
+                                  rows="10" placeholder="Cole aqui o código HTML da sua apresentação..."
+                                  style="font-size:0.78rem; resize:vertical;"></textarea>
+                        <small class="text-muted">O conteúdo será exibido em um iframe. Cole o código completo gerado pela ferramenta de design.</small>
                     </div>
 
                     <!-- Painel ARQUIVO (VIDEO ou IMAGEM) -->
