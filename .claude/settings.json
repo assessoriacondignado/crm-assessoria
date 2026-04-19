@@ -100,7 +100,9 @@
       "Bash(mysql -u root crm_dados -e \"ALTER TABLE dados_cadastrais ADD FULLTEXT INDEX ft_nome \\(nome\\);\")",
       "Bash(mysql -u root crm_dados -e \"SHOW INDEX FROM dados_cadastrais WHERE Index_type='FULLTEXT';\")",
       "Bash(mysql -u root crm_dados -e \"SHOW PROCESSLIST;\")",
-      "Bash(mysql -u root crm_dados -e \"SHOW INDEX FROM dados_cadastrais WHERE Key_name='ft_nome';\")"
+      "Bash(mysql -u root crm_dados -e \"SHOW INDEX FROM dados_cadastrais WHERE Key_name='ft_nome';\")",
+      "Bash(mysql -u root crm_dados -e \"SELECT COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='crm_dados' AND TABLE_NAME='enderecos' AND COLUMN_NAME IN \\('cep','logradouro','cpf'\\);\")",
+      "Bash(awk '{print $1, $3, $5}')"
     ]
   }
 }
