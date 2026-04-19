@@ -151,10 +151,29 @@ try {
         case 'listar_cadastros_base':
             $res = ['usuarios' => []];
             try {
+                $grupo_base = strtoupper($_SESSION['usuario_grupo'] ?? '');
+                $sql_base = "SELECT cu.CPF as id, cu.NOME as nome, COALESCE(ce.NOME_CADASTRO,'') as empresa
+                             FROM CLIENTE_USUARIO cu
+                             LEFT JOIN CLIENTE_EMPRESAS ce ON ce.ID = cu.id_empresa";
                 if ($restricao_meu_usuario) {
-                    $stmtU = $pdo->prepare("SELECT cu.CPF as id, cu.NOME as nome, COALESCE(ce.NOME_CADASTRO,'') as empresa FROM CLIENTE_USUARIO cu LEFT JOIN CLIENTE_EMPRESAS ce ON ce.ID = cu.id_empresa WHERE cu.CPF = ? ORDER BY cu.NOME ASC"); $stmtU->execute([$usuario_logado_cpf]);
+                    // Permissão bloqueada: vê apenas o próprio usuário
+                    $stmtU = $pdo->prepare("$sql_base WHERE cu.CPF = ? ORDER BY cu.NOME ASC");
+                    $stmtU->execute([$usuario_logado_cpf]);
+                } elseif (in_array($grupo_base, ['SUPERVISORES', 'SUPERVISOR'])) {
+                    // Supervisor: vê somente usuários da mesma empresa
+                    $stmtEmp = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+                    $stmtEmp->execute([$usuario_logado_cpf]);
+                    $emp_sup = $stmtEmp->fetchColumn() ?: null;
+                    if ($emp_sup) {
+                        $stmtU = $pdo->prepare("$sql_base WHERE cu.id_empresa = ? ORDER BY cu.NOME ASC");
+                        $stmtU->execute([$emp_sup]);
+                    } else {
+                        $stmtU = $pdo->prepare("$sql_base WHERE cu.CPF = ? ORDER BY cu.NOME ASC");
+                        $stmtU->execute([$usuario_logado_cpf]);
+                    }
                 } else {
-                    $stmtU = $pdo->query("SELECT cu.CPF as id, cu.NOME as nome, COALESCE(ce.NOME_CADASTRO,'') as empresa FROM CLIENTE_USUARIO cu LEFT JOIN CLIENTE_EMPRESAS ce ON ce.ID = cu.id_empresa ORDER BY cu.NOME ASC");
+                    // MASTER/ADMIN: vê todos
+                    $stmtU = $pdo->query("$sql_base ORDER BY cu.NOME ASC");
                 }
                 $res['usuarios'] = $stmtU->fetchAll(PDO::FETCH_ASSOC);
             } catch (Exception $e) {}
