@@ -107,7 +107,13 @@
       "Read(//etc/mysql/**)",
       "Bash(mysql -u root -e \"SELECT @@datadir, @@basedir;\")",
       "Bash(mysql -u root crm_dados -e \"SHOW INDEX FROM base_de_dados_registro_importacao;\")",
-      "Bash(php -l /var/www/html/modulos/configuracao/anotacoes/ajax_anotacao.php)"
+      "Bash(php -l /var/www/html/modulos/configuracao/anotacoes/ajax_anotacao.php)",
+      "Read(//var/log/apache2/**)",
+      "Read(//var/log/nginx/**)",
+      "Read(//var/log/**)",
+      "Bash(grep -v \"^$\")",
+      "Bash(journalctl -u apache2 --since \"1 min ago\" -n 20)",
+      "Bash(php -l /var/www/html/modulos/cliente_e_usuario/checar_permissoes.php)"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d"

@@ -6,8 +6,8 @@ if (!function_exists('verificaPermissao')) {
         try {
             if (!$pdo) return true; 
 
-            if (session_status() === PHP_SESSION_NONE) { 
-                session_start(); 
+            if (session_status() === PHP_SESSION_NONE && !headers_sent()) {
+                session_start();
             }
             
             // Pega o grupo salvo na sessão. Se não tiver, assume que é ADMIN temporariamente
