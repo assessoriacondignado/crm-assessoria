@@ -190,13 +190,24 @@ try {
         if ($is_master_camp) {
             // MASTER: vê todas as campanhas ativas
         } elseif ($id_empresa_logado) {
-            // Hierarquia empresa: vê campanhas da própria empresa ou globais (sem empresa)
-            $sqlCamp .= " AND (c.id_empresa IS NULL OR c.id_empresa = ? OR c.CPF_USUARIO = ?)";
+            // Filtra por empresa numérica (novo padrão) OU por CNPJ_EMPRESA (legado, sem id_empresa)
+            // OU campanhas totalmente sem empresa E sem CNPJ (globais reais)
+            $sqlCamp .= " AND (
+                c.id_empresa = ?
+                OR c.CPF_USUARIO = ?
+                OR (c.id_empresa IS NULL AND c.CNPJ_EMPRESA IS NULL)
+                OR (c.id_empresa IS NULL AND EXISTS(
+                    SELECT 1 FROM CLIENTE_EMPRESAS ce
+                    WHERE ce.CNPJ COLLATE utf8mb4_unicode_ci = c.CNPJ_EMPRESA COLLATE utf8mb4_unicode_ci
+                      AND ce.ID = ?
+                ))
+            )";
             $paramsCamp[] = $id_empresa_logado;
             $paramsCamp[] = $cpf_logado;
+            $paramsCamp[] = $id_empresa_logado;
         } else {
-            // Sem empresa definida: só campanhas globais ou atribuídas ao CPF
-            $sqlCamp .= " AND (c.CPF_USUARIO IS NULL OR c.CPF_USUARIO = ?)";
+            // Sem empresa definida: só campanhas sem empresa nenhuma ou atribuídas ao CPF
+            $sqlCamp .= " AND (c.id_empresa IS NULL AND c.CNPJ_EMPRESA IS NULL OR c.CPF_USUARIO = ?)";
             $paramsCamp[] = $cpf_logado;
         }
 

@@ -192,7 +192,16 @@ try {
     
     // Filtros de Permissão da Hierarquia
     if (!$perm_camp_hierarquia || !$perm_camp_conf_hierarquia) {
-        $sqlCampanhas .= " AND (c.id_empresa = ? OR c.id_empresa IS NULL)";
+        $sqlCampanhas .= " AND (
+            c.id_empresa = ?
+            OR (c.id_empresa IS NULL AND c.CNPJ_EMPRESA IS NULL)
+            OR (c.id_empresa IS NULL AND EXISTS(
+                SELECT 1 FROM CLIENTE_EMPRESAS ce
+                WHERE ce.CNPJ COLLATE utf8mb4_unicode_ci = c.CNPJ_EMPRESA COLLATE utf8mb4_unicode_ci
+                  AND ce.ID = ?
+            ))
+        )";
+        $paramsCampanhas[] = $id_empresa_logado_num;
         $paramsCampanhas[] = $id_empresa_logado_num;
     }
     
