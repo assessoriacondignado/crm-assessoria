@@ -192,6 +192,12 @@ $params_export = [];
 
 $resultados_busca = [];
 $cliente = null;
+$historico_campanha = [];
+$historico_geral_cliente = [];
+$is_modo_campanha = false;
+$campanha_atual = null;
+$status_campanha = [];
+$proximo_cpf_campanha = null;
 $telefones = [];
 $enderecos = [];
 $emails = [];
