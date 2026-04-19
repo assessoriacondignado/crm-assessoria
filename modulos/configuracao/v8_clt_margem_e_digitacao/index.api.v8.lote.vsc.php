@@ -373,7 +373,7 @@
                         <option value="ERRO SIMULACAO">🔢 Erro Simulação</option>
                         <option value="NA FILA">⏳ Na Fila</option>
                     </select>
-                    <span class="text-muted fw-bold" style="font-size:11px; white-space:nowrap;">FILTRAR DATA:</span>
+                    <span class="text-muted fw-bold" style="font-size:11px; white-space:nowrap;">Data Filtro Margem:</span>
                     <input type="date" id="v8ClientesDataDe" class="form-control form-control-sm" style="max-width:135px;" title="Data de" onchange="v8FiltrarClientesLote()">
                     <span class="text-muted" style="font-size:11px;">até</span>
                     <input type="date" id="v8ClientesDataAte" class="form-control form-control-sm" style="max-width:135px;" title="Data até" onchange="v8FiltrarClientesLote()">
