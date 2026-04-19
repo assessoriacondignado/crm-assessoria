@@ -779,11 +779,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') sidebarFecha
 </script>
 
 <?php if($pode_ver_online): ?>
-<div style="position: fixed; bottom: 25px; right: 25px; z-index: 9999;">
-    <button class="btn btn-dark fw-bold shadow-lg border-light rounded-pill px-4 py-2" onclick="carregarUsuariosOnline(true)" title="Gerenciar Usuários Online">
-        <i class="fas fa-users text-success me-2"></i> <span id="rodape_contador_online">0</span> Online
-    </button>
-</div>
+<?php /* Botão flutuante de online removido — contador disponível na sidebar */ ?>
 
 <div class="modal fade" id="modalUsuariosOnline" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered">
@@ -823,9 +819,8 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') sidebarFecha
         .then(r => r.json())
         .then(data => {
             if(data.sucesso) {
-                // Atualiza os contadores na barra superior e no botão flutuante
+                // Atualiza o contador na sidebar
                 document.getElementById('topo_contador_online').innerText = data.usuarios.length;
-                document.getElementById('rodape_contador_online').innerText = data.usuarios.length;
                 
                 let tb = document.getElementById('lista_usuarios_online');
                 tb.innerHTML = '';

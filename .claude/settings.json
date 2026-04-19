@@ -91,7 +91,16 @@
       "Bash(php -l /var/www/html/modulos/configuracao/anotacoes/guia_ajax.php)",
       "Bash(php -l /var/www/html/modulos/configuracao/anotacoes/index.php)",
       "Bash(php -l /var/www/html/includes/footer.php)",
-      "Bash(php -l /var/www/html/modulos/cliente_e_usuario/cadastro_cliente.php)"
+      "Bash(php -l /var/www/html/modulos/cliente_e_usuario/cadastro_cliente.php)",
+      "Bash(php -l /var/www/html/includes/header.php)",
+      "Bash(mysql -u root -e \"SHOW INDEX FROM INTEGRACAO_V8_IMPORTACAO_LOTE;\")",
+      "Bash(mysql -u root -e \"SHOW DATABASES;\")",
+      "Bash(mysql -u root crm_dados -e \"SHOW INDEX FROM INTEGRACAO_V8_IMPORTACAO_LOTE;\")",
+      "Bash(mysql -u root crm_dados -e ' *)",
+      "Bash(mysql -u root crm_dados -e \"ALTER TABLE dados_cadastrais ADD FULLTEXT INDEX ft_nome \\(nome\\);\")",
+      "Bash(mysql -u root crm_dados -e \"SHOW INDEX FROM dados_cadastrais WHERE Index_type='FULLTEXT';\")",
+      "Bash(mysql -u root crm_dados -e \"SHOW PROCESSLIST;\")",
+      "Bash(mysql -u root crm_dados -e \"SHOW INDEX FROM dados_cadastrais WHERE Key_name='ft_nome';\")"
     ]
   }
 }

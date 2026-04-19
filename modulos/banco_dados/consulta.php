@@ -372,8 +372,19 @@ if ($is_busca_avancada && empty($cpf_selecionado)) {
                 } else { $val = formatarDataBusca($val); }
             }
 
-            if ($operador == 'contem') { $val_smart = preg_replace('/[\s\-]+/', '%', $val); $condicoes_or[] = "$coluna_db LIKE :$param_nome"; $params[$param_nome] = "%$val_smart%"; } 
-            elseif ($operador == 'nao_contem') { $val_smart = preg_replace('/[\s\-]+/', '%', $val); $condicoes_or[] = "$coluna_db NOT LIKE :$param_nome"; $params[$param_nome] = "%$val_smart%"; } 
+            if ($operador == 'contem') {
+                if ($coluna_db === 'd.nome') {
+                    // FULLTEXT BOOLEAN MODE — evita full table scan de LIKE '%texto%' em 1.3M+ registros
+                    $palavras = array_filter(preg_split('/\s+/', trim($val)));
+                    $ft_term  = count($palavras) ? ('+' . implode('* +', $palavras) . '*') : $val;
+                    $condicoes_or[] = "MATCH(d.nome) AGAINST(:$param_nome IN BOOLEAN MODE)";
+                    $params[$param_nome] = $ft_term;
+                } else {
+                    $val_smart = preg_replace('/[\s\-]+/', '%', $val);
+                    $condicoes_or[] = "$coluna_db LIKE :$param_nome";
+                    $params[$param_nome] = "%$val_smart%";
+                }
+            } elseif ($operador == 'nao_contem') { $val_smart = preg_replace('/[\s\-]+/', '%', $val); $condicoes_or[] = "$coluna_db NOT LIKE :$param_nome"; $params[$param_nome] = "%$val_smart%"; }
             elseif ($operador == 'comeca') { $condicoes_or[] = "$coluna_db LIKE :$param_nome"; $params[$param_nome] = "$val%"; } 
             elseif ($operador == 'igual') { $condicoes_or[] = "TRIM($coluna_db) = :$param_nome"; $params[$param_nome] = $val; } 
             elseif ($operador == 'maior') { $condicoes_or[] = "$coluna_db > :$param_nome"; $params[$param_nome] = $val; } 
@@ -468,7 +479,12 @@ if (isset($_GET['exportar']) && $_GET['exportar'] == '1' && !empty($query_base_e
     header('Content-Type: text/csv; charset=UTF-8'); header('Content-Disposition: attachment; filename="' . $nome_arquivo . '"');
     $output = fopen('php://output', 'w'); fputs($output, $bom =(chr(0xEF) . chr(0xBB) . chr(0xBF)));
 
-    $sql_export = "SELECT d.cpf, d.nome, d.sexo, d.nascimento, d.idade, d.nome_mae, d.nome_pai, d.rg, d.cnh, d.carteira_profissional, d.agrupamento, (SELECT cep FROM enderecos e2 WHERE e2.cpf = d.cpf LIMIT 1) as cep, (SELECT logradouro FROM enderecos e2 WHERE e2.cpf = d.cpf LIMIT 1) as logradouro, (SELECT numero FROM enderecos e2 WHERE e2.cpf = d.cpf LIMIT 1) as numero, (SELECT bairro FROM enderecos e2 WHERE e2.cpf = d.cpf LIMIT 1) as bairro, (SELECT cidade FROM enderecos e2 WHERE e2.cpf = d.cpf LIMIT 1) as cidade, (SELECT uf FROM enderecos e2 WHERE e2.cpf = d.cpf LIMIT 1) as uf, (SELECT GROUP_CONCAT(telefone_cel SEPARATOR ',') FROM telefones t2 WHERE t2.cpf = d.cpf) as telefones_agrupados, (SELECT GROUP_CONCAT(email SEPARATOR ',') FROM emails em2 WHERE em2.cpf = d.cpf) as emails_agrupados " . $query_base_export . " GROUP BY d.cpf";
+    // Injeta LEFT JOIN de enderecos (derived table com alias _end) antes do WHERE,
+    // evitando 6 subqueries correlacionadas e conflito com alias 'e' da busca avançada.
+    $join_end = " LEFT JOIN (SELECT cpf, MIN(cep) cep, MIN(logradouro) logradouro, MIN(numero) numero, MIN(bairro) bairro, MIN(cidade) cidade, MIN(uf) uf FROM enderecos GROUP BY cpf) _end ON _end.cpf = d.cpf ";
+    $query_base_com_end = preg_replace('/\bWHERE\b/i', $join_end . ' WHERE ', $query_base_export, 1);
+
+    $sql_export = "SELECT d.cpf, d.nome, d.sexo, d.nascimento, d.idade, d.nome_mae, d.nome_pai, d.rg, d.cnh, d.carteira_profissional, d.agrupamento, _end.cep, _end.logradouro, _end.numero, _end.bairro, _end.cidade, _end.uf, (SELECT GROUP_CONCAT(telefone_cel SEPARATOR ',') FROM telefones t2 WHERE t2.cpf = d.cpf) as telefones_agrupados, (SELECT GROUP_CONCAT(email SEPARATOR ',') FROM emails em2 WHERE em2.cpf = d.cpf) as emails_agrupados " . $query_base_com_end . " GROUP BY d.cpf";
     $stmt_export = $pdo->prepare($sql_export); $stmt_export->execute($params_export);
 
     if ($modelo_escolhido == 'dados_cadastrais') {
