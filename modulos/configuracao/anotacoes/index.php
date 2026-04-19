@@ -1087,10 +1087,6 @@ function guiaFiltrarTabela(q) {
     guiaRenderizarTabela(filtrado);
 }
 
-function escHtml(s) {
-    return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
-
 async function guiaToggleStatus(id, btn) {
     const fd = new FormData(); fd.append('acao','toggle_status'); fd.append('id',id);
     const r = await fetch('guia_ajax.php', {method:'POST', body:fd});
@@ -1113,79 +1109,6 @@ async function guiaExcluir(id) {
         document.getElementById('guia-row-' + id)?.remove();
         crmToast('Conteúdo excluído com sucesso.', 'success', 3500);
     } else { alert(j.msg); }
-}
-
-// ── Viewer com índice hierárquico ──────────────────────────────
-let _guiaViewerDados = [];
-
-function guiaAbrirViewer(focarId) {
-    const fd = new FormData(); fd.append('acao','listar_widget');
-    fetch('guia_ajax.php', {method:'POST', body:fd})
-        .then(r => r.json()).then(j => {
-            _guiaViewerDados = j.data || [];
-            guiaViewerRenderizar(_guiaViewerDados);
-            new bootstrap.Modal(document.getElementById('modalGuiaVer')).show();
-            if (focarId) setTimeout(() => guiaViewerAbrirItem(focarId), 300);
-        });
-}
-
-function guiaViewerRenderizar(dados) {
-    const cont = document.getElementById('guia-viewer-index');
-    if (!dados.length) {
-        cont.innerHTML = '<div class="text-muted text-center py-4 small">Nenhum conteúdo disponível.</div>';
-        return;
-    }
-    cont.innerHTML = dados.map(g => {
-        const prof = (g.INDICE||'').split('.').length - 1;
-        const pad  = prof * 16;
-        const badge = g.INDICE ? `<span class="badge bg-secondary me-2" style="font-size:0.65rem;min-width:32px;">${escHtml(g.INDICE)}</span>` : '';
-        return `<div class="guia-idx-item" id="guia-idx-${g.ID}" data-id="${g.ID}"
-                     onclick="guiaViewerAbrirItem(${g.ID})"
-                     style="padding:8px 12px 8px ${12+pad}px; cursor:pointer; border-left:3px solid transparent;
-                            border-bottom:1px solid #f0f0f0; transition:all .15s; font-size:0.82rem;">
-                    ${badge}<span class="fw-semibold">${escHtml(g.TITULO)}</span>
-                    ${g.COMENTARIO ? '<div class="text-muted small mt-1" style="padding-left:'+(pad)+'px">' + escHtml(g.COMENTARIO) + '</div>' : ''}
-                </div>`;
-    }).join('');
-    // Abre primeiro item por padrão
-    if (dados.length) guiaViewerAbrirItem(dados[0].ID);
-}
-
-function guiaViewerAbrirItem(id) {
-    // Marca item ativo no índice
-    document.querySelectorAll('.guia-idx-item').forEach(el => {
-        el.style.borderLeftColor = 'transparent';
-        el.style.background = '';
-        el.style.color = '';
-    });
-    const ativo = document.getElementById('guia-idx-' + id);
-    if (ativo) { ativo.style.borderLeftColor = '#0d6efd'; ativo.style.background = '#f0f4ff'; }
-
-    // Carrega conteúdo
-    const painel = document.getElementById('guia-viewer-conteudo');
-    painel.innerHTML = '<div class="text-center py-5 text-muted"><i class="fas fa-spinner fa-spin fa-2x"></i></div>';
-    const fd = new FormData(); fd.append('acao','get'); fd.append('id',id);
-    fetch('guia_ajax.php', {method:'POST', body:fd})
-        .then(r => r.json()).then(j => {
-            if (!j.success) { painel.innerHTML = '<p class="text-danger p-4">Erro ao carregar conteúdo.</p>'; return; }
-            const d = j.data;
-            const badge = d.INDICE ? `<span class="badge bg-dark me-2">${escHtml(d.INDICE)}</span>` : '';
-            painel.innerHTML = `
-                <div class="border-bottom pb-3 mb-3">
-                    <h5 class="fw-bold text-dark mb-1">${badge}${escHtml(d.TITULO)}</h5>
-                    ${d.COMENTARIO ? '<div class="text-muted small">' + escHtml(d.COMENTARIO) + '</div>' : ''}
-                </div>
-                <div style="font-size:0.93rem; line-height:1.7;">${d.CONTEUDO_HTML || '<p class="text-muted text-center py-4">Nenhum conteúdo disponível.</p>'}</div>`;
-        });
-}
-
-function guiaViewerFiltrar(q) {
-    const termo = q.toLowerCase();
-    const filtrado = _guiaViewerDados.filter(g =>
-        (g.TITULO||'').toLowerCase().includes(termo) ||
-        (g.INDICE||'').toLowerCase().includes(termo)
-    );
-    guiaViewerRenderizar(filtrado);
 }
 
 // ── Modal criar/editar ────────────────────────────────────────
@@ -1285,6 +1208,142 @@ function guiaFmtCor(cor) {
     document.execCommand('foreColor', false, cor);
 }
 <?php endif; ?>
+
+// =============================================================
+// GUIA SISTEMA — VIEWER (disponível para todos os usuários)
+// =============================================================
+function escHtml(s) {
+    return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+let _guiaViewerDados = [];
+
+function guiaAbrirViewer(focarId) {
+    const fd = new FormData(); fd.append('acao','listar_widget');
+    fetch('guia_ajax.php', {method:'POST', body:fd})
+        .then(r => r.json()).then(j => {
+            _guiaViewerDados = j.data || [];
+            guiaViewerRenderizar(_guiaViewerDados);
+            new bootstrap.Modal(document.getElementById('modalGuiaVer')).show();
+            if (focarId) setTimeout(() => guiaViewerAbrirItem(focarId), 300);
+        });
+}
+
+// Constrói árvore hierárquica a partir da lista plana ordenada por índice
+function guiaBuildTree(dados) {
+    const byId = {}, byIdx = {};
+    dados.forEach(g => {
+        byId[g.ID] = {...g, children: []};
+        if (g.INDICE) byIdx[g.INDICE] = byId[g.ID];
+    });
+    const roots = [];
+    dados.forEach(g => {
+        const idx = g.INDICE || '';
+        if (!idx || !idx.includes('.')) { roots.push(byId[g.ID]); return; }
+        const parts = idx.split('.'); parts.pop();
+        const parent = byIdx[parts.join('.')];
+        parent ? parent.children.push(byId[g.ID]) : roots.push(byId[g.ID]);
+    });
+    return roots;
+}
+
+// Renderiza um nó e seus filhos recursivamente
+function guiaRenderNode(node, depth) {
+    const hasKids = node.children.length > 0;
+    const pad = 12 + depth * 18;
+    const cid = 'gc-' + node.ID;
+    const badge = node.INDICE
+        ? `<span class="badge bg-secondary me-1" style="font-size:0.6rem;min-width:28px;">${escHtml(node.INDICE)}</span>`
+        : '';
+    let h = `<div>`;
+    h += `<div class="guia-idx-item d-flex align-items-center gap-1" id="guia-idx-${node.ID}"
+               style="padding:7px 10px 7px ${pad}px;border-left:3px solid transparent;border-bottom:1px solid #eee;font-size:0.82rem;">`;
+    if (hasKids) {
+        h += `<button class="btn p-0 text-secondary" onclick="guiaToggleKids(event,'${cid}',this)"
+                       style="width:18px;height:18px;line-height:1;border:1px solid #ccc;border-radius:3px;background:#fff;flex-shrink:0;font-weight:bold;font-size:0.75rem;">+</button>`;
+    } else {
+        h += `<span style="width:18px;flex-shrink:0;display:inline-block;"></span>`;
+    }
+    h += `<span class="fw-semibold flex-grow-1" style="cursor:pointer;" onclick="guiaViewerAbrirItem(${node.ID})">${badge}${escHtml(node.TITULO)}</span>`;
+    h += `</div>`;
+    if (hasKids) {
+        h += `<div id="${cid}" style="display:none;">`;
+        node.children.forEach(c => { h += guiaRenderNode(c, depth + 1); });
+        h += `</div>`;
+    }
+    h += `</div>`;
+    return h;
+}
+
+function guiaToggleKids(e, cid, btn) {
+    e.stopPropagation();
+    const el = document.getElementById(cid);
+    if (!el) return;
+    const open = el.style.display !== 'none';
+    el.style.display = open ? 'none' : '';
+    btn.textContent = open ? '+' : '−';
+}
+
+function guiaViewerRenderizar(dados) {
+    const cont = document.getElementById('guia-viewer-index');
+    if (!dados.length) {
+        cont.innerHTML = '<div class="text-muted text-center py-4 small">Nenhum conteúdo disponível.</div>';
+        return;
+    }
+    cont.innerHTML = guiaBuildTree(dados).map(r => guiaRenderNode(r, 0)).join('');
+    if (dados.length) guiaViewerAbrirItem(dados[0].ID);
+}
+
+function guiaViewerAbrirItem(id) {
+    document.querySelectorAll('.guia-idx-item').forEach(el => {
+        el.style.borderLeftColor = 'transparent';
+        el.style.background = '';
+    });
+    const ativo = document.getElementById('guia-idx-' + id);
+    if (ativo) { ativo.style.borderLeftColor = '#0d6efd'; ativo.style.background = '#f0f4ff'; }
+
+    const painel = document.getElementById('guia-viewer-conteudo');
+    painel.innerHTML = '<div class="text-center py-5 text-muted"><i class="fas fa-spinner fa-spin fa-2x"></i></div>';
+    const fd = new FormData(); fd.append('acao','get'); fd.append('id',id);
+    fetch('guia_ajax.php', {method:'POST', body:fd})
+        .then(r => r.json()).then(j => {
+            if (!j.success) { painel.innerHTML = '<p class="text-danger p-4">Erro ao carregar conteúdo.</p>'; return; }
+            const d = j.data;
+            const badge = d.INDICE ? `<span class="badge bg-dark me-2">${escHtml(d.INDICE)}</span>` : '';
+            painel.innerHTML = `
+                <div class="border-bottom pb-3 mb-3">
+                    <h5 class="fw-bold text-dark mb-1">${badge}${escHtml(d.TITULO)}</h5>
+                    ${d.COMENTARIO ? '<div class="text-muted small">' + escHtml(d.COMENTARIO) + '</div>' : ''}
+                </div>
+                <div style="font-size:0.93rem; line-height:1.7;">${d.CONTEUDO_HTML || '<p class="text-muted text-center py-4">Nenhum conteúdo disponível.</p>'}</div>`;
+        });
+}
+
+// Filtro: mostra lista plana com todos os resultantes; limpar filtro volta à árvore
+function guiaViewerFiltrar(q) {
+    if (!q.trim()) { guiaViewerRenderizar(_guiaViewerDados); return; }
+    const termo = q.toLowerCase();
+    const filtrado = _guiaViewerDados.filter(g =>
+        (g.TITULO||'').toLowerCase().includes(termo) ||
+        (g.INDICE||'').toLowerCase().includes(termo)
+    );
+    const cont = document.getElementById('guia-viewer-index');
+    if (!filtrado.length) {
+        cont.innerHTML = '<div class="text-muted text-center py-4 small">Nenhum resultado encontrado.</div>';
+        return;
+    }
+    cont.innerHTML = filtrado.map(g => {
+        const prof = (g.INDICE||'').split('.').length - 1;
+        const pad = 12 + prof * 18;
+        const badge = g.INDICE ? `<span class="badge bg-secondary me-1" style="font-size:0.6rem;min-width:28px;">${escHtml(g.INDICE)}</span>` : '';
+        return `<div class="guia-idx-item d-flex align-items-center gap-1" id="guia-idx-${g.ID}"
+                     style="padding:7px 10px 7px ${pad}px;border-left:3px solid transparent;border-bottom:1px solid #eee;font-size:0.82rem;cursor:pointer;"
+                     onclick="guiaViewerAbrirItem(${g.ID})">
+                    <span style="width:18px;flex-shrink:0;display:inline-block;"></span>
+                    <span class="fw-semibold">${badge}${escHtml(g.TITULO)}</span>
+                </div>`;
+    }).join('');
+}
 </script>
 
 <!-- ===== MODAL GUIA SISTEMA — VIEWER COM ÍNDICE ===== -->
