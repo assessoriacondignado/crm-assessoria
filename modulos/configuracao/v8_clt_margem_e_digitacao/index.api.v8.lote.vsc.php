@@ -273,17 +273,15 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="border p-2 rounded bg-white border-info shadow-sm mb-0 h-100">
-                            <div class="form-check mb-1">
-                                <input class="form-check-input ms-1" type="checkbox" id="edit_enviar_arquivo_whatsapp" value="1" onchange="v8ToggleCsvHora(this.checked)">
-                                <label class="form-check-label fw-bold text-dark ms-1" style="font-size: 12px; cursor:pointer;" for="edit_enviar_arquivo_whatsapp"
-                                    title="O CRM Assessoria enviará um link para baixar o relatório completo (filtro: margem > R$1,00) no grupo do WhatsApp cadastrado no usuário. Defina o horário de envio." data-bs-toggle="tooltip" data-bs-placement="top">
-                                    <i class="fas fa-file-csv text-success"></i> Enviar CSV Fim (W-API)
-                                </label>
-                            </div>
-                            <div id="wrap_hora_csv" style="display:none;">
-                                <label class="small text-muted mb-0" style="font-size:10px;">Horário de envio:</label>
-                                <input type="time" id="edit_hora_envio_csv" class="form-control form-control-sm border-info" placeholder="HH:MM" style="font-size:12px;">
+                        <div class="form-check border p-2 rounded bg-white border-info shadow-sm mb-0 h-100">
+                            <input class="form-check-input ms-1" type="checkbox" id="edit_enviar_arquivo_whatsapp" value="1" onchange="v8ToggleCsvHora(this.checked)">
+                            <label class="form-check-label fw-bold text-dark ms-1" style="font-size: 12px; cursor:pointer;" for="edit_enviar_arquivo_whatsapp"
+                                title="O CRM Assessoria enviará um link para baixar o relatório completo (filtro: margem > R$1,00) no grupo do WhatsApp cadastrado no usuário. Defina o horário de envio." data-bs-toggle="tooltip" data-bs-placement="top">
+                                <i class="fas fa-file-csv text-success"></i> Enviar CSV Fim (W-API)
+                            </label>
+                            <div id="wrap_hora_csv" style="display:none; margin-top:6px;">
+                                <div class="text-muted mb-1" style="font-size:10px;">Horário de envio:</div>
+                                <input type="time" id="edit_hora_envio_csv" class="form-control form-control-sm border-info" style="font-size:12px;">
                             </div>
                         </div>
                     </div>
