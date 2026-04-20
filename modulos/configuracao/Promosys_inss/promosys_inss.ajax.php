@@ -263,8 +263,13 @@ if ($acao === 'consulta_cpf_manual') {
                 $pdo->prepare("INSERT INTO dados_cadastrais (cpf, nome) VALUES (?, ?) ON DUPLICATE KEY UPDATE nome=VALUES(nome)")->execute([$cpf_alvo, $nome_global]);
                 
                 if (!empty($consulta['ENDERECO']) || !empty($consulta['CEP'])) {
-                    $pdo->prepare("DELETE FROM enderecos WHERE cpf = ?")->execute([$cpf_alvo]); 
-                    $pdo->prepare("INSERT INTO enderecos (cpf, logradouro, bairro, cidade, uf, cep) VALUES (?, ?, ?, ?, ?, ?)")->execute([$cpf_alvo, substr($consulta['ENDERECO'] ?? '', 0, 65000), substr($consulta['BAIRRO'] ?? '', 0, 100), substr($consulta['CIDADE'] ?? '', 0, 100), substr($consulta['UF'] ?? '', 0, 2), substr(preg_replace('/\D/', '', $consulta['CEP'] ?? ''), 0, 8)]);
+                    try {
+                        $ufs_validas = ['AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO'];
+                        $uf_raw = strtoupper(substr($consulta['UF'] ?? '', 0, 2));
+                        $uf_insert = in_array($uf_raw, $ufs_validas) ? $uf_raw : null;
+                        $pdo->prepare("DELETE FROM enderecos WHERE cpf = ?")->execute([$cpf_alvo]);
+                        $pdo->prepare("INSERT INTO enderecos (cpf, logradouro, bairro, cidade, uf, cep) VALUES (?, ?, ?, ?, ?, ?)")->execute([$cpf_alvo, substr($consulta['ENDERECO'] ?? '', 0, 65000), substr($consulta['BAIRRO'] ?? '', 0, 100), substr($consulta['CIDADE'] ?? '', 0, 100), $uf_insert, substr(preg_replace('/\D/', '', $consulta['CEP'] ?? ''), 0, 8)]);
+                    } catch (\Throwable $eEnd) { /* UF inválida ou constraint: ignora endereço */ }
                 }
 
                 $telefones = [];
