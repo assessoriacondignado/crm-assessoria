@@ -163,7 +163,12 @@ if ($userExp && !empty($userExp['DATA_EXPIRAR'])) {
         
         if ($inst && !empty($userExp['CELULAR'])) {
             $cel_whats = '55' . preg_replace('/\D/', '', $userExp['CELULAR']);
-            $msg = "⚠️ *Aviso do Sistema*\n\nSeu acesso ao portal Assessoria Consignado atingiu a data limite de expiração e foi desativado.\n\nContate o administrador para renovar seu acesso.";
+            $partes_nome_exp = explode(' ', trim($userExp['NOME'] ?? ''));
+            $nome_mascarado_exp = count($partes_nome_exp) > 1
+                ? strtolower($partes_nome_exp[0]) . '*****' . strtolower(end($partes_nome_exp))
+                : mb_substr($userExp['NOME'], 0, 2) . str_repeat('*', max(3, mb_strlen($userExp['NOME']) - 4)) . mb_substr($userExp['NOME'], -2);
+            $login_exp = $userExp['USUARIO'] ?? '';
+            $msg = "⚠️ *Aviso do Sistema*\n\n👤 *{$nome_mascarado_exp}* | Login: {$login_exp}\n\nSeu acesso ao portal Assessoria Consignado atingiu a data limite de expiração e foi desativado.\n\nContate o administrador para renovar seu acesso.";
             
             $url = "https://api.w-api.app/v1/message/send-text?instanceId=" . $inst['INSTANCE_ID'];
             $payload = json_encode(['phone' => $cel_whats, 'message' => $msg]);

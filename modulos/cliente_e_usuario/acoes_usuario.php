@@ -23,9 +23,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ajax_action']) && $_PO
         exit;
     }
 
-    $stmt = $pdo->prepare("SELECT CELULAR FROM CLIENTE_USUARIO WHERE CPF = ?");
+    $stmt = $pdo->prepare("SELECT CELULAR, NOME, USUARIO FROM CLIENTE_USUARIO WHERE CPF = ?");
     $stmt->execute([$cpf_alvo]);
-    $cel = $stmt->fetchColumn();
+    $row_alvo = $stmt->fetch(PDO::FETCH_ASSOC);
+    $cel = $row_alvo['CELULAR'] ?? '';
+    $partes_nome_reset = explode(' ', trim($row_alvo['NOME'] ?? ''));
+    $nome_mask_reset = count($partes_nome_reset) > 1
+        ? strtolower($partes_nome_reset[0]) . '*****' . strtolower(end($partes_nome_reset))
+        : mb_substr($row_alvo['NOME'] ?? '', 0, 2) . str_repeat('*', max(3, mb_strlen($row_alvo['NOME'] ?? '') - 4)) . mb_substr($row_alvo['NOME'] ?? '', -2);
+    $login_reset = $row_alvo['USUARIO'] ?? '';
     
     // Gera o token de 32 bytes e salva no banco com expiração de 1h
     $token = bin2hex(random_bytes(32));
@@ -42,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ajax_action']) && $_PO
     // Se a ficha tem celular, tenta disparar o whats
     if (!empty($cel)) {
         $celular = '55' . preg_replace('/\D/', '', $cel);
-        $msg = "🔒 *Portal Assessoria Consignado*\n\nVocê solicitou a alteração da sua senha.\nClique no link abaixo para criar uma nova (Válido por 1 hora):\n\n$link";
+        $msg = "🔒 *Portal Assessoria Consignado*\n\n👤 *{$nome_mask_reset}* | Login: {$login_reset}\n\nVocê solicitou a alteração da sua senha.\nClique no link abaixo para criar uma nova (Válido por 1 hora):\n\n$link";
 
         $stmtInst = $pdo->query("SELECT INSTANCE_ID, TOKEN FROM WAPI_INSTANCIAS ORDER BY ID ASC LIMIT 1");
         $inst = $stmtInst->fetch(PDO::FETCH_ASSOC);
