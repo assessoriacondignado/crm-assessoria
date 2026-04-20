@@ -1823,34 +1823,192 @@ document.getElementById('modalVerRegistros').addEventListener('show.bs.modal', f
 
 <?php if (!(isset($is_modo_campanha) && $is_modo_campanha) && !empty($cpf_selecionado)): ?>
 <div class="modal fade" id="modalRegistrosGerais" tabindex="-1">
-    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content border-dark shadow-lg rounded-0">
             <div class="modal-header bg-dark text-white border-dark rounded-0 py-2">
                 <h6 class="modal-title fw-bold text-uppercase"><i class="fas fa-history text-warning me-2"></i> Histórico Geral de Registros</h6>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body bg-light p-3">
-                <?php if(empty($historico_geral_cliente)): ?>
-                    <div class="alert alert-secondary border-dark text-center fw-bold small rounded-0"><i class="fas fa-info-circle"></i> Nenhum registro de campanha salvo para este cliente ainda.</div>
-                <?php else: ?>
-                    <?php foreach($historico_geral_cliente as $hc): ?>
-                        <div class="border border-dark p-3 mb-2 bg-white rounded-0 shadow-sm text-start">
-                            <div class="d-flex justify-content-between align-items-center mb-2 border-bottom border-light pb-1">
-                                <span class="fw-bold text-primary text-uppercase" style="font-size: 0.85rem;"><i class="fas fa-tag"></i> <?= htmlspecialchars($hc['NOME_STATUS']) ?> <?= !empty($hc['NOME_CAMPANHA']) ? "<small class='text-muted'>({$hc['NOME_CAMPANHA']})</small>" : "" ?></span>
-                                <span class="badge bg-secondary rounded-0 border border-dark"><i class="fas fa-clock"></i> <?= date('d/m/Y H:i', strtotime($hc['DATA_REGISTRO'])) ?></span>
-                            </div>
-                            <div class="small text-muted mb-2 fw-bold"><i class="fas fa-user text-dark"></i> Operador: <?= htmlspecialchars($hc['NOME_USUARIO']) ?></div>
-                            <div class="text-dark bg-light p-2 border border-secondary" style="font-size: 0.80rem;"><?= nl2br(htmlspecialchars($hc['REGISTRO'])) ?></div>
-                            <?php if(!empty($hc['DATA_AGENDAMENTO'])): ?>
-                                <div class="small fw-bold text-danger mt-2 px-2 py-1 bg-white border border-danger d-inline-block rounded-0" style="font-size: 0.70rem;"><i class="fas fa-calendar-alt"></i> Retorno Agendado: <?= date('d/m/Y H:i', strtotime($hc['DATA_AGENDAMENTO'])) ?></div>
-                            <?php endif; ?>
-                        </div>
-                    <?php endforeach; ?>
-                <?php endif; ?>
+
+                <!-- FILTROS -->
+                <div class="row g-2 mb-3">
+                    <div class="col-md-2">
+                        <label class="small fw-bold text-dark">Data Início</label>
+                        <input type="date" id="filtroGeralDataIni" class="form-control form-control-sm border-dark rounded-0" onchange="filtrarRegistrosGerais()">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="small fw-bold text-dark">Data Fim</label>
+                        <input type="date" id="filtroGeralDataFim" class="form-control form-control-sm border-dark rounded-0" onchange="filtrarRegistrosGerais()">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="small fw-bold text-dark">Status</label>
+                        <select id="filtroGeralStatus" class="form-select form-select-sm border-dark rounded-0" onchange="filtrarRegistrosGerais()">
+                            <option value="">— Todos —</option>
+                            <?php foreach(array_unique(array_column($historico_geral_cliente, 'NOME_STATUS')) as $ns): if(!$ns) continue; ?>
+                                <option value="<?= htmlspecialchars($ns) ?>"><?= htmlspecialchars($ns) ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="small fw-bold text-dark">Usuário</label>
+                        <select id="filtroGeralUsuario" class="form-select form-select-sm border-dark rounded-0" onchange="filtrarRegistrosGerais()">
+                            <option value="">— Todos —</option>
+                            <?php foreach(array_unique(array_column($historico_geral_cliente, 'NOME_USUARIO')) as $nu): if(!$nu) continue; ?>
+                                <option value="<?= htmlspecialchars($nu) ?>"><?= htmlspecialchars($nu) ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="small fw-bold text-dark">Campanha</label>
+                        <select id="filtroGeralCampanha" class="form-select form-select-sm border-dark rounded-0" onchange="filtrarRegistrosGerais()">
+                            <option value="">— Todas —</option>
+                            <?php foreach(array_unique(array_column($historico_geral_cliente, 'NOME_CAMPANHA')) as $nc): if(!$nc) continue; ?>
+                                <option value="<?= htmlspecialchars($nc) ?>"><?= htmlspecialchars($nc) ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- CONTADOR -->
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="small text-muted fw-bold" id="contadorRegGeral"></span>
+                    <button class="btn btn-sm btn-outline-secondary rounded-0 fw-bold" onclick="filtrarRegistrosGerais(true)"><i class="fas fa-times me-1"></i> Limpar Filtros</button>
+                </div>
+
+                <!-- TABELA COM SCROLL -->
+                <div style="max-height: 480px; overflow-y: auto; border: 1px solid #343a40;">
+                    <table class="table table-bordered table-hover table-sm mb-0 align-middle" style="font-size:0.8rem;">
+                        <thead class="table-dark sticky-top" style="top:0; z-index:2;">
+                            <tr>
+                                <th style="width:120px; white-space:nowrap;">Data / Hora</th>
+                                <th style="width:140px;">Status</th>
+                                <th style="width:130px;">Campanha</th>
+                                <th style="width:140px;">Usuário</th>
+                                <th>Observação</th>
+                                <th style="width:120px; white-space:nowrap;">Agendamento</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyRegGeral">
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- BOTÃO MAIS -->
+                <div class="text-center mt-2" id="divBtnMaisRegGeral" style="display:none;">
+                    <button class="btn btn-sm btn-outline-dark fw-bold rounded-0 px-4" onclick="carregarMaisRegistrosGerais()">
+                        <i class="fas fa-chevron-down me-1"></i> Carregar mais 20 <span class="badge bg-secondary ms-1" id="badgeRestantesRegGeral"></span>
+                    </button>
+                </div>
+
+            </div>
+            <div class="modal-footer bg-white border-top border-dark rounded-0 p-2">
+                <button type="button" class="btn btn-sm btn-dark fw-bold rounded-0" data-bs-dismiss="modal">Fechar Janela</button>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+const _regGeralData = <?= json_encode(array_map(function($hc) {
+    return [
+        'data'      => date('Y-m-d', strtotime($hc['DATA_REGISTRO'])),
+        'data_br'   => date('d/m/Y H:i', strtotime($hc['DATA_REGISTRO'])),
+        'status'    => $hc['NOME_STATUS'] ?? '',
+        'campanha'  => $hc['NOME_CAMPANHA'] ?? '',
+        'usuario'   => $hc['NOME_USUARIO'] ?? '',
+        'registro'  => $hc['REGISTRO'] ?? '',
+        'agendamento' => !empty($hc['DATA_AGENDAMENTO']) ? date('d/m/Y H:i', strtotime($hc['DATA_AGENDAMENTO'])) : ''
+    ];
+}, $historico_geral_cliente), JSON_UNESCAPED_UNICODE) ?>;
+
+let _regGeralFiltrados = [];
+let _regGeralOffset = 0;
+const _REG_GERAL_PAGE = 20;
+
+function filtrarRegistrosGerais(limpar) {
+    if (limpar) {
+        document.getElementById('filtroGeralDataIni').value = '';
+        document.getElementById('filtroGeralDataFim').value = '';
+        document.getElementById('filtroGeralStatus').value = '';
+        document.getElementById('filtroGeralUsuario').value = '';
+        document.getElementById('filtroGeralCampanha').value = '';
+    }
+    const dIni    = document.getElementById('filtroGeralDataIni').value;
+    const dFim    = document.getElementById('filtroGeralDataFim').value;
+    const status  = document.getElementById('filtroGeralStatus').value.toLowerCase();
+    const usuario = document.getElementById('filtroGeralUsuario').value.toLowerCase();
+    const camp    = document.getElementById('filtroGeralCampanha').value.toLowerCase();
+
+    _regGeralFiltrados = _regGeralData.filter(r => {
+        if (dIni   && r.data < dIni) return false;
+        if (dFim   && r.data > dFim) return false;
+        if (status && r.status.toLowerCase() !== status) return false;
+        if (usuario && r.usuario.toLowerCase() !== usuario) return false;
+        if (camp   && r.campanha.toLowerCase() !== camp) return false;
+        return true;
+    });
+
+    _regGeralOffset = 0;
+    document.getElementById('tbodyRegGeral').innerHTML = '';
+    _renderizarRegistrosGerais();
+}
+
+function _renderizarRegistrosGerais() {
+    const tbody = document.getElementById('tbodyRegGeral');
+    const lote = _regGeralFiltrados.slice(_regGeralOffset, _regGeralOffset + _REG_GERAL_PAGE);
+    const restantes = _regGeralFiltrados.length - _regGeralOffset - lote.length;
+
+    if (_regGeralFiltrados.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="6" class="text-center text-muted fw-bold py-4">Nenhum registro encontrado com os filtros aplicados.</td></tr>';
+        document.getElementById('divBtnMaisRegGeral').style.display = 'none';
+        document.getElementById('contadorRegGeral').textContent = '0 registros';
+        return;
+    }
+
+    lote.forEach(r => {
+        const agend = r.agendamento
+            ? `<span class="badge bg-danger rounded-0"><i class="fas fa-calendar-alt me-1"></i>${r.agendamento}</span>`
+            : '<span class="text-muted">—</span>';
+        const camp = r.campanha
+            ? `<span class="badge bg-secondary rounded-0" style="font-size:0.70rem;">${r.campanha.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</span>`
+            : '<span class="text-muted">—</span>';
+        tbody.innerHTML += `<tr>
+            <td class="text-nowrap fw-bold text-muted">${r.data_br}</td>
+            <td><span class="badge bg-primary rounded-0 text-uppercase" style="font-size:0.72rem;">${r.status.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</span></td>
+            <td>${camp}</td>
+            <td class="text-dark" style="font-size:0.75rem;">${r.usuario.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</td>
+            <td style="white-space:pre-wrap; word-break:break-word;">${r.registro.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</td>
+            <td class="text-nowrap">${agend}</td>
+        </tr>`;
+    });
+
+    _regGeralOffset += lote.length;
+    document.getElementById('contadorRegGeral').textContent = _regGeralOffset + ' de ' + _regGeralFiltrados.length + ' registro(s)';
+
+    const btnMais = document.getElementById('divBtnMaisRegGeral');
+    if (restantes > 0) {
+        document.getElementById('badgeRestantesRegGeral').textContent = restantes + ' restantes';
+        btnMais.style.display = '';
+    } else {
+        btnMais.style.display = 'none';
+    }
+}
+
+function carregarMaisRegistrosGerais() { _renderizarRegistrosGerais(); }
+
+document.getElementById('modalRegistrosGerais').addEventListener('show.bs.modal', function() {
+    document.getElementById('filtroGeralDataIni').value = '';
+    document.getElementById('filtroGeralDataFim').value = '';
+    document.getElementById('filtroGeralStatus').value = '';
+    document.getElementById('filtroGeralUsuario').value = '';
+    document.getElementById('filtroGeralCampanha').value = '';
+    _regGeralFiltrados = [..._regGeralData];
+    _regGeralOffset = 0;
+    document.getElementById('tbodyRegGeral').innerHTML = '';
+    _renderizarRegistrosGerais();
+});
+</script>
 
 <?php if(!empty($campanhas_para_inclusao) && $perm_incluir_camp): ?>
 <div class="modal fade" id="modalIncluirCampanha" tabindex="-1">

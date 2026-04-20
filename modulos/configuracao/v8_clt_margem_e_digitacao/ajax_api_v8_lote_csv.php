@@ -1099,10 +1099,9 @@ try {
             ob_end_clean(); echo json_encode(['success' => true, 'msg' => 'Lote e histórico apagados com sucesso.']); exit;
 
         case 'listar_campanhas_disponiveis':
-            // MASTER (permissão de hierarquia) vê todas; demais filtram pela empresa do CPF logado
-            $camp_master = function_exists('verificaPermissao')
-                ? verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_CONSULTA_LOTE_HIERARQUIA', 'FUNCAO')
-                : false;
+            // MASTER/ADMIN vê todas; demais filtram pela empresa
+            $camp_grupo  = strtoupper($_SESSION['usuario_grupo'] ?? '');
+            $camp_master = in_array($camp_grupo, ['MASTER', 'ADMIN', 'ADMINISTRADOR']);
             if ($camp_master) {
                 $stmt = $pdo->prepare("SELECT ID, NOME_CAMPANHA FROM BANCO_DE_DADOS_CAMPANHA_CAMPANHAS WHERE STATUS = 'ATIVO' ORDER BY NOME_CAMPANHA ASC");
                 $stmt->execute([]);

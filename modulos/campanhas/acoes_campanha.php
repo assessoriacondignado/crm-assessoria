@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['acao']) && $_POST['aca
         $proximo_cpf = null;
         
         // SÓ BUSCA O PRÓXIMO CLIENTE SE ESTIVER DENTRO DE UMA CAMPANHA
-        if ($id_campanha && $status_data['MARCACAO'] === 'FINALIZAR ATENDIMENTO') {
+        if ($id_campanha && in_array($status_data['MARCACAO'], ['FINALIZAR ATENDIMENTO', 'COM RETORNO'])) {
             $stmtCamp = $pdo->prepare("SELECT PARAMETRO_INICIO_ALEATORIO FROM BANCO_DE_DADOS_CAMPANHA_CAMPANHAS WHERE ID = ?");
             $stmtCamp->execute([$id_campanha]);
             $aleatorio = $stmtCamp->fetchColumn();
