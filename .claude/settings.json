@@ -158,7 +158,8 @@
       "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SHOW PROCESSLIST;\")",
       "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"KILL 42924; KILL 42958;\")",
       "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT ID, STATUS, QTD_PROCESSADA, QTD_TOTAL, QTD_ERROS FROM CONTROLE_IMPORTACAO_ASSINCRONA WHERE ID = 32;\")",
-      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT ID, STATUS, QTD_PROCESSADA, QTD_TOTAL FROM CONTROLE_IMPORTACAO_ASSINCRONA WHERE ID = 32;\")"
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT ID, STATUS, QTD_PROCESSADA, QTD_TOTAL FROM CONTROLE_IMPORTACAO_ASSINCRONA WHERE ID = 32;\")",
+      "Read(//tmp/**)"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d"
