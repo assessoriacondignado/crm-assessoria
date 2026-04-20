@@ -375,14 +375,38 @@ if ($is_busca_avancada && empty($cpf_selecionado)) {
 
     for ($i = 0; $i < count($filtros_campo); $i++) {
         $campo_html = $filtros_campo[$i]; $operador = $filtros_operador[$i]; $valor_bruto = trim($filtros_valor[$i]);
-        if ($valor_bruto === '' && $operador != 'vazio') continue; 
-        
+        if ($valor_bruto === '' && $operador != 'vazio') continue;
+
+        // IMPORTACAO: subquery IN — evita JOIN com 3.5M+ linhas; usa FULLTEXT para "contem"
+        if ($campo_html === 'importacao') {
+            $valores_imp = explode(';', $valor_bruto);
+            $sub_conds = [];
+            foreach ($valores_imp as $val_imp) {
+                $val_imp = trim($val_imp); if ($val_imp === '') continue;
+                $pn = 'p' . $contador_params++;
+                if ($operador == 'igual')      { $sub_conds[] = "nome_importacao = :$pn";            $params[$pn] = $val_imp; }
+                elseif ($operador == 'comeca') { $sub_conds[] = "nome_importacao LIKE :$pn";          $params[$pn] = "$val_imp%"; }
+                elseif ($operador == 'nao_contem') { $sub_conds[] = "nome_importacao NOT LIKE :$pn";  $params[$pn] = "%$val_imp%"; }
+                elseif ($operador == 'vazio')  { $sub_conds[] = "(nome_importacao IS NULL OR nome_importacao = '')"; }
+                else { // contem — FULLTEXT BOOLEAN MODE (usa índice, muito mais rápido que LIKE '%x%')
+                    $palavras_ft = array_filter(preg_split('/\s+/', trim($val_imp)));
+                    $ft_term_imp = count($palavras_ft) ? ('+' . implode('* +', $palavras_ft) . '*') : $val_imp;
+                    $sub_conds[] = "MATCH(nome_importacao) AGAINST(:$pn IN BOOLEAN MODE)";
+                    $params[$pn] = $ft_term_imp;
+                }
+            }
+            if (!empty($sub_conds)) {
+                $glue = ($operador == 'nao_contem') ? ' AND ' : ' OR ';
+                $filtro_sql .= " AND d.cpf IN (SELECT cpf FROM BANCO_DE_DADOS_HISTORICO_IMPORTACAO WHERE " . implode($glue, $sub_conds) . ") ";
+            }
+            continue;
+        }
+
         $coluna_db = mapearColunaBanco($campo_html);
-        
+
         if (strpos($coluna_db, 't.') !== false || $coluna_db == 'LEFT(t.telefone_cel, 2)') $precisa_telefone = true;
         if (strpos($coluna_db, 'e.') !== false) $precisa_endereco = true;
         if (strpos($coluna_db, 'em.') !== false) $precisa_email = true;
-        if (strpos($coluna_db, 'hi.') !== false) $precisa_importacao = true;
         if (strpos($coluna_db, 'c.') !== false) $precisa_convenio = true;
         if (strpos($coluna_db, 'inss_ben.') !== false) $precisa_inss_ben = true;
         if (strpos($coluna_db, 'inss_ctr.') !== false) $precisa_inss_ctr = true;

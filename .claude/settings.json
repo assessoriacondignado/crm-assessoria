@@ -138,7 +138,12 @@
       "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT u.NOME, u.CPF, u.GRUPO FROM CLIENTE_USUARIO u WHERE u.CPF IN \\('06504802440','09205986763'\\);\")",
       "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT NOME, CPF, Situação FROM CLIENTE_USUARIO WHERE CPF IN \\('06504802440','09205986763'\\);\")",
       "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT u.NOME, u.CPF, c.TIPO_USUARIO FROM CLIENTE_USUARIO u LEFT JOIN CLIENTE_CADASTRO c ON u.CPF=c.CPF WHERE u.CPF IN \\('06504802440','09205986763'\\);\")",
-      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SHOW COLUMNS FROM CLIENTE_USUARIO;\")"
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SHOW COLUMNS FROM CLIENTE_USUARIO;\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT COUNT\\(*\\) as total FROM BANCO_DE_DADOS_HISTORICO_IMPORTACAO;\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SHOW INDEX FROM BANCO_DE_DADOS_HISTORICO_IMPORTACAO;\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"ALTER TABLE BANCO_DE_DADOS_HISTORICO_IMPORTACAO ADD FULLTEXT INDEX ft_nome_importacao \\(nome_importacao\\);\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SHOW INDEX FROM BANCO_DE_DADOS_HISTORICO_IMPORTACAO WHERE Key_name = 'ft_nome_importacao';\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT ID, NOME_IMPORTACAO, STATUS, QTD_NOVOS, QTD_ATUALIZADOS, QTD_ERROS, OFFSET_ATUAL, QTD_TOTAL, DATA_INICIO, DATA_ATUALIZACAO FROM base_de_dados_registro_importacao WHERE ID = 32;\")"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d"
