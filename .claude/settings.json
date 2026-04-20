@@ -143,7 +143,22 @@
       "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SHOW INDEX FROM BANCO_DE_DADOS_HISTORICO_IMPORTACAO;\")",
       "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"ALTER TABLE BANCO_DE_DADOS_HISTORICO_IMPORTACAO ADD FULLTEXT INDEX ft_nome_importacao \\(nome_importacao\\);\")",
       "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SHOW INDEX FROM BANCO_DE_DADOS_HISTORICO_IMPORTACAO WHERE Key_name = 'ft_nome_importacao';\")",
-      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT ID, NOME_IMPORTACAO, STATUS, QTD_NOVOS, QTD_ATUALIZADOS, QTD_ERROS, OFFSET_ATUAL, QTD_TOTAL, DATA_INICIO, DATA_ATUALIZACAO FROM base_de_dados_registro_importacao WHERE ID = 32;\")"
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT ID, NOME_IMPORTACAO, STATUS, QTD_NOVOS, QTD_ATUALIZADOS, QTD_ERROS, OFFSET_ATUAL, QTD_TOTAL, DATA_INICIO, DATA_ATUALIZACAO FROM base_de_dados_registro_importacao WHERE ID = 32;\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SHOW TABLES LIKE '%import%';\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SHOW COLUMNS FROM base_de_dados_registro_importacao;\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SHOW TABLES LIKE '%fila%';\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SHOW TABLES LIKE '%tarefa%';\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SHOW TABLES LIKE '%worker%';\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SHOW TABLES LIKE '%massiv%';\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SHOW TABLES LIKE '%lote%';\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SHOW TABLES;\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT ID, NOME_IMPORTACAO, STATUS, OFFSET_ATUAL, QTD_TOTAL, QTD_NOVOS, QTD_ERROS, DATA_INICIO, DATA_ATUALIZACAO FROM CONTROLE_IMPORTACAO_ASSINCRONA ORDER BY ID DESC LIMIT 5;\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SHOW COLUMNS FROM CONTROLE_IMPORTACAO_ASSINCRONA;\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT ID, NOME_IMPORTACAO, STATUS, QTD_PROCESSADA, QTD_TOTAL, QTD_ERROS, DATA_INICIO, DATA_FIM FROM CONTROLE_IMPORTACAO_ASSINCRONA ORDER BY ID DESC LIMIT 5;\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SHOW PROCESSLIST;\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"KILL 42924; KILL 42958;\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT ID, STATUS, QTD_PROCESSADA, QTD_TOTAL, QTD_ERROS FROM CONTROLE_IMPORTACAO_ASSINCRONA WHERE ID = 32;\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT ID, STATUS, QTD_PROCESSADA, QTD_TOTAL FROM CONTROLE_IMPORTACAO_ASSINCRONA WHERE ID = 32;\")"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d"
