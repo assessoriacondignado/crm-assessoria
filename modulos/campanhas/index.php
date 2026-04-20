@@ -237,7 +237,8 @@ try {
         $lista_todas_empresas = $stmtTodasEmp->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    $stmtStat = $pdo->query("SELECT ID, NOME_STATUS FROM BANCO_DE_DADOS_CAMPANHA_STATUS_CONTATO ORDER BY NOME_STATUS ASC");
+    // Mostra status CAMPANHA e legados (tipo != FICHA_REGISTRO) para seleção na campanha
+    $stmtStat = $pdo->query("SELECT ID, NOME_STATUS FROM BANCO_DE_DADOS_CAMPANHA_STATUS_CONTATO WHERE COALESCE(TIPO_CONTATO,'') != 'FICHA_REGISTRO' ORDER BY NOME_STATUS ASC");
     $lista_status_opcoes = $stmtStat->fetchAll(PDO::FETCH_ASSOC);
 
 } catch (PDOException $e) {

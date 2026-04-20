@@ -298,6 +298,29 @@ try {
     }
 } catch (Exception $e) {}
 
+// Status para "NOVO REGISTRO" na ficha do cliente (TIPO_CONTATO = 'FICHA_REGISTRO' ou legado)
+$status_gerais_avulsos = [];
+try {
+    $cnpj_emp_logado_fich = null;
+    if ($id_empresa_logado_num) {
+        $s = $pdo->prepare("SELECT CNPJ FROM CLIENTE_EMPRESAS WHERE ID = ? LIMIT 1");
+        $s->execute([$id_empresa_logado_num]);
+        $cnpj_emp_logado_fich = $s->fetchColumn() ?: null;
+    }
+    // Mostra status FICHA_REGISTRO e legados (tipo != CAMPANHA) filtrados por empresa
+    $sqlAv = "SELECT ID, NOME_STATUS, MARCACAO FROM BANCO_DE_DADOS_CAMPANHA_STATUS_CONTATO
+              WHERE COALESCE(TIPO_CONTATO,'') != 'CAMPANHA'";
+    $paramsAv = [];
+    if (!$is_master) {
+        $sqlAv .= " AND (CNPJ_EMPRESA IS NULL OR CNPJ_EMPRESA = '' OR FIND_IN_SET(?, CNPJ_EMPRESA))";
+        $paramsAv[] = $cnpj_emp_logado_fich;
+    }
+    $sqlAv .= " ORDER BY NOME_STATUS ASC";
+    $stmtAv = $pdo->prepare($sqlAv);
+    $stmtAv->execute($paramsAv);
+    $status_gerais_avulsos = $stmtAv->fetchAll(PDO::FETCH_ASSOC);
+} catch (\Throwable $e) { $status_gerais_avulsos = []; }
+
 if (!$is_busca_avancada && !empty($termo_busca) && empty($cpf_selecionado)) {
     $prefixo = substr($termo_busca, 0, 2);
     $is_prefixo = in_array($prefixo, ['n:', 'c:', 'f:']);
