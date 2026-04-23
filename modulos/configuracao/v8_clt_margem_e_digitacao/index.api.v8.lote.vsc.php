@@ -133,24 +133,6 @@
 <div class="d-flex justify-content-between align-items-end mb-3 mt-4">
     <h5 class="fw-bold text-dark mb-0"><i class="fas fa-list me-2"></i> Gerenciador de Lotes Exportação V8</h5>
     <div class="d-flex gap-2">
-        <?php if (function_exists('verificaPermissao') && verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_CONSULTA_LOTE_EXPORTAR_TUDO', 'FUNCAO')): ?>
-        <div class="dropdown">
-            <button class="btn btn-outline-danger btn-sm fw-bold shadow-sm bg-white border-dark dropdown-toggle" data-bs-toggle="dropdown">
-                <i class="fas fa-file-export me-1"></i> Exportar
-            </button>
-            <ul class="dropdown-menu shadow border-dark" style="font-size:13px;">
-                <li><a class="dropdown-item fw-bold" href="#" onclick="v8ExportarTudoLotes(false)">
-                    <i class="fas fa-download me-2 text-dark"></i> Exportar Tudo
-                    <div class="small text-muted fw-normal">Todos os CPFs dos lotes filtrados</div>
-                </a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item fw-bold" href="#" onclick="v8ExportarTudoLotes(true)">
-                    <i class="fas fa-check-circle me-2 text-success"></i> Exportar com Margem
-                    <div class="small text-muted fw-normal">Somente CPFs com margem acima de R$ 1,00</div>
-                </a></li>
-            </ul>
-        </div>
-        <?php endif; ?>
         
         <button class="btn btn-outline-dark btn-sm fw-bold shadow-sm bg-white border-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiltroLote"><i class="fas fa-filter me-1"></i> Filtro Aprimorado</button>
         <button class="btn btn-warning btn-sm text-dark fw-bold shadow-sm border-dark" onclick="v8ForcarProcessamentoLote()"><i class="fas fa-bolt"></i> Destravar Fila</button>
@@ -927,24 +909,6 @@
                       </div>
                     </div>
 
-                    <!-- EXPORTAR STATUS -->
-                    <div class="v8-secao">
-                      <div class="v8-secao-hdr v8-verde" onclick="v8ToggleSecaoLote(this); event.stopPropagation();">
-                        <span>📊 EXPORTAR STATUS</span>
-                        <i class="fas fa-chevron-down v8-chevron"></i>
-                      </div>
-                      <div class="v8-secao-bdy" style="display:none;">
-                        <button class="v8-item v8-item-verde" onclick="v8ExportarResultado(${idLoteReal}); event.stopPropagation();">
-                          <span class="v8-item-icon">📁</span>
-                          <span class="v8-item-txt"><strong>Exportar Resultado</strong><small>CSV com todos os resultados do lote.</small></span>
-                        </button>
-                        <button class="v8-item v8-item-verde" onclick="v8EnviarRelatorioLoteWhats(${idLoteReal}); event.stopPropagation();">
-                          <span class="v8-item-icon">📱</span>
-                          <span class="v8-item-txt"><strong>Enviar via WhatsApp</strong><small>Envia relatório CSV no grupo da equipe.</small></span>
-                        </button>
-                      </div>
-                    </div>
-
                     <!-- LISTAR CLIENTES -->
                     <div class="v8-secao">
                       <div class="v8-secao-hdr v8-roxo" onclick="v8ToggleSecaoLote(this); event.stopPropagation();">
@@ -1246,29 +1210,8 @@
     let v8CampanhasCache = null;
     let v8ClientesLoteAtual = null;
 
-    async function v8AbrirClientesLote(id) {
-        v8ClientesLoteAtual = id;
-        document.getElementById('v8ClientesLoteTitulo').textContent = `👥 Clientes do Lote #${id}`;
-        document.getElementById('v8ClientesFiltro').value = '';
-        document.getElementById('v8ClientesStatus').value = '';
-        document.getElementById('v8ClientesDataDe').value = '';
-        document.getElementById('v8ClientesDataAte').value = '';
-        document.getElementById('v8ClientesTabela').innerHTML = '<div class="text-center py-4 text-muted"><i class="fas fa-spinner fa-spin"></i> Carregando...</div>';
-        document.getElementById('v8ClientesContador').textContent = '';
-        document.getElementById('v8CampanhaSelecionadaBar').style.display = 'none';
-        document.getElementById('v8BtnIncluirCampanha').style.display = 'none';
-        document.getElementById('v8CampanhaDropdown').style.display = 'none';
-        v8CampanhaIdSel = null; v8ClientesFiltrados = [];
-        window.v8ModalClientesLoteObj.show();
-
-        const res = await v8Req('ajax_api_v8_lote_csv.php', 'listar_clientes_lote', { id_lote: id }, false);
-        if (!res.success) {
-            document.getElementById('v8ClientesTabela').innerHTML = '<div class="text-danger text-center py-4">Erro ao carregar clientes.</div>';
-            return;
-        }
-        v8ClientesTodos = res.clientes || [];
-        v8ClientesFiltrados = [...v8ClientesTodos];
-        v8RenderizarClientesLote(v8ClientesTodos);
+    function v8AbrirClientesLote(id) {
+        window.open('clientes_lote.php?id_lote=' + id, '_blank');
     }
 
     function v8FiltrarClientesLote() {
