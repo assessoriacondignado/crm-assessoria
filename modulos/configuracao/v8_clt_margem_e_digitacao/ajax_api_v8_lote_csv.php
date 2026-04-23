@@ -1350,64 +1350,112 @@ try {
             $id_lote   = (int)($_POST['id_lote'] ?? 0);
             $offset    = max(0, (int)($_POST['offset'] ?? 0));
             $limite    = 100;
-            if (!$id_lote) { ob_end_clean(); echo json_encode(['success'=>false,'msg'=>'Lote não informado']); exit; }
-            v8_verificar_dono_lote($pdo, $id_lote, $usuario_logado_cpf);
-            $tbl_av = v8_tabela_lote($pdo, $id_lote);
 
-            // Info do lote
-            $stLote = $pdo->prepare("SELECT l.ID, l.NOME_IMPORTACAO, u.NOME as NOME_USUARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE l LEFT JOIN CLIENTE_USUARIO u ON u.CPF = l.CPF_USUARIO WHERE l.ID = ? LIMIT 1");
-            $stLote->execute([$id_lote]);
-            $infoLote = $stLote->fetch(PDO::FETCH_ASSOC);
-
-            $params_av = [$id_lote];
-            $where_av  = "WHERE t.LOTE_ID = ? AND (t.STATUS_V8 IS NULL OR t.STATUS_V8 != 'AUDITADO')";
-
-            // Filtros
+            // ---- Monta cláusulas de filtro comuns (sem o filtro de lote) ----
+            $params_filtro = [];
+            $where_filtro  = "(t.STATUS_V8 IS NULL OR t.STATUS_V8 != 'AUDITADO')";
             $q = trim($_POST['q'] ?? '');
             if ($q !== '') {
                 $qLimpo = preg_replace('/\D/', '', $q);
-                if ($qLimpo !== '') { $where_av .= " AND t.CPF LIKE ?"; $params_av[] = "%{$qLimpo}%"; }
-                else { $where_av .= " AND t.NOME LIKE ?"; $params_av[] = "%{$q}%"; }
+                if ($qLimpo !== '') { $where_filtro .= " AND t.CPF LIKE ?"; $params_filtro[] = "%{$qLimpo}%"; }
+                else { $where_filtro .= " AND t.NOME LIKE ?"; $params_filtro[] = "%{$q}%"; }
             }
-            $st_margem = $_POST['status_margem'] ?? '';
-            if ($st_margem !== '') { $where_av .= " AND t.STATUS_V8 = ?"; $params_av[] = $st_margem; }
-            $st_cons = $_POST['status_cons'] ?? '';
-            if ($st_cons !== '') { $where_av .= " AND t.STATUS_WHATSAPP = ?"; $params_av[] = $st_cons; }
-            $cons_de = $_POST['cons_de'] ?? '';
-            if ($cons_de !== '') { $where_av .= " AND DATE(t.DATA_CONSENTIMENTO) >= ?"; $params_av[] = $cons_de; }
-            $cons_ate = $_POST['cons_ate'] ?? '';
-            if ($cons_ate !== '') { $where_av .= " AND DATE(t.DATA_CONSENTIMENTO) <= ?"; $params_av[] = $cons_ate; }
-            $sim_de = $_POST['sim_de'] ?? '';
-            if ($sim_de !== '') { $where_av .= " AND DATE(t.DATA_SIMULACAO) >= ?"; $params_av[] = $sim_de; }
-            $sim_ate = $_POST['sim_ate'] ?? '';
-            if ($sim_ate !== '') { $where_av .= " AND DATE(t.DATA_SIMULACAO) <= ?"; $params_av[] = $sim_ate; }
-            $margem_min = $_POST['margem_min'] ?? '';
-            if ($margem_min !== '') { $where_av .= " AND t.VALOR_MARGEM >= ?"; $params_av[] = (float)$margem_min; }
-            $margem_max = $_POST['margem_max'] ?? '';
-            if ($margem_max !== '') { $where_av .= " AND t.VALOR_MARGEM <= ?"; $params_av[] = (float)$margem_max; }
-            $lib_min = $_POST['lib_min'] ?? '';
-            if ($lib_min !== '') { $where_av .= " AND t.VALOR_LIQUIDO >= ?"; $params_av[] = (float)$lib_min; }
-            $lib_max = $_POST['lib_max'] ?? '';
-            if ($lib_max !== '') { $where_av .= " AND t.VALOR_LIQUIDO <= ?"; $params_av[] = (float)$lib_max; }
+            if (!empty($_POST['status_margem'])) { $where_filtro .= " AND t.STATUS_V8 = ?";                  $params_filtro[] = $_POST['status_margem']; }
+            if (!empty($_POST['status_cons']))   { $where_filtro .= " AND t.STATUS_WHATSAPP = ?";             $params_filtro[] = $_POST['status_cons']; }
+            if (!empty($_POST['cons_de']))        { $where_filtro .= " AND DATE(t.DATA_CONSENTIMENTO) >= ?";  $params_filtro[] = $_POST['cons_de']; }
+            if (!empty($_POST['cons_ate']))       { $where_filtro .= " AND DATE(t.DATA_CONSENTIMENTO) <= ?";  $params_filtro[] = $_POST['cons_ate']; }
+            if (!empty($_POST['sim_de']))         { $where_filtro .= " AND DATE(t.DATA_SIMULACAO) >= ?";      $params_filtro[] = $_POST['sim_de']; }
+            if (!empty($_POST['sim_ate']))        { $where_filtro .= " AND DATE(t.DATA_SIMULACAO) <= ?";      $params_filtro[] = $_POST['sim_ate']; }
+            if (isset($_POST['margem_min']) && $_POST['margem_min'] !== '') { $where_filtro .= " AND t.VALOR_MARGEM >= ?";  $params_filtro[] = (float)$_POST['margem_min']; }
+            if (isset($_POST['margem_max']) && $_POST['margem_max'] !== '') { $where_filtro .= " AND t.VALOR_MARGEM <= ?";  $params_filtro[] = (float)$_POST['margem_max']; }
+            if (isset($_POST['lib_min'])    && $_POST['lib_min']    !== '') { $where_filtro .= " AND t.VALOR_LIQUIDO >= ?"; $params_filtro[] = (float)$_POST['lib_min']; }
+            if (isset($_POST['lib_max'])    && $_POST['lib_max']    !== '') { $where_filtro .= " AND t.VALOR_LIQUIDO <= ?"; $params_filtro[] = (float)$_POST['lib_max']; }
 
-            // Total
-            $params_cnt = $params_av;
-            $stCnt = $pdo->prepare("SELECT COUNT(*) FROM `{$tbl_av}` t {$where_av}");
-            $stCnt->execute($params_cnt);
-            $total = (int)$stCnt->fetchColumn();
+            // ---- Decide se é um lote específico ou TODOS ----
+            $infoLote = null;
+            if ($id_lote > 0) {
+                // Lote único
+                v8_verificar_dono_lote($pdo, $id_lote, $usuario_logado_cpf);
+                $tbl_av = v8_tabela_lote($pdo, $id_lote);
 
-            // Lista
-            $stAv = $pdo->prepare("
-                SELECT t.ID, t.CPF, t.NOME, t.STATUS_V8,
-                       COALESCE(NULLIF(TRIM(t.OBSERVACAO),''),'') AS OBSERVACAO,
-                       t.VALOR_MARGEM, t.VALOR_LIQUIDO,
-                       t.DATA_SIMULACAO, t.DATA_CONSENTIMENTO, t.STATUS_WHATSAPP
-                FROM `{$tbl_av}` t
-                {$where_av}
-                ORDER BY t.DATA_SIMULACAO DESC, t.ID ASC
-                LIMIT {$limite} OFFSET {$offset}
-            ");
-            $stAv->execute($params_av);
+                $stLote = $pdo->prepare("SELECT l.ID, l.NOME_IMPORTACAO, u.NOME as NOME_USUARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE l LEFT JOIN CLIENTE_USUARIO u ON u.CPF = l.CPF_USUARIO WHERE l.ID = ? LIMIT 1");
+                $stLote->execute([$id_lote]);
+                $infoLote = $stLote->fetch(PDO::FETCH_ASSOC);
+
+                $params_av = array_merge([$id_lote], $params_filtro);
+                $where_av  = "WHERE t.LOTE_ID = ? AND {$where_filtro}";
+
+                $params_cnt = $params_av;
+                $stCnt = $pdo->prepare("SELECT COUNT(*) FROM `{$tbl_av}` t {$where_av}");
+                $stCnt->execute($params_cnt);
+                $total = (int)$stCnt->fetchColumn();
+
+                $stAv = $pdo->prepare("
+                    SELECT t.ID, t.LOTE_ID, t.CPF, t.NOME, t.STATUS_V8,
+                           COALESCE(NULLIF(TRIM(t.OBSERVACAO),''),'') AS OBSERVACAO,
+                           t.VALOR_MARGEM, t.VALOR_LIQUIDO,
+                           t.DATA_SIMULACAO, t.DATA_CONSENTIMENTO, t.STATUS_WHATSAPP
+                    FROM `{$tbl_av}` t
+                    {$where_av}
+                    ORDER BY t.DATA_SIMULACAO DESC, t.ID ASC
+                    LIMIT {$limite} OFFSET {$offset}
+                ");
+                $stAv->execute($params_av);
+
+            } else {
+                // TODOS os lotes acessíveis — monta UNION ALL
+                $grp_td = strtoupper($_SESSION['usuario_grupo'] ?? '');
+                $is_m_td = in_array($grp_td, ['MASTER','ADMIN','ADMINISTRADOR']);
+                $is_c_td = in_array($grp_td, ['CONSULTOR','CONSULTORES']);
+                $cpf_td  = preg_replace('/\D/', '', $_SESSION['usuario_cpf'] ?? '');
+
+                $id_emp_td = null;
+                if (!$is_m_td) {
+                    $se = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+                    $se->execute([$cpf_td]);
+                    $id_emp_td = (int)($se->fetchColumn() ?: 0);
+                }
+
+                $sqlLotes = "SELECT l.ID, COALESCE(l.TABELA_DADOS,'INTEGRACAO_V8_REGISTROCONSULTA_LOTE') as TABELA
+                             FROM INTEGRACAO_V8_IMPORTACAO_LOTE l WHERE l.STATUS_LOTE = 'ATIVO'";
+                $pLotes = [];
+                if (!$is_m_td && $id_emp_td) { $sqlLotes .= " AND l.id_empresa = ?"; $pLotes[] = $id_emp_td; }
+                if ($is_c_td)                 { $sqlLotes .= " AND l.CPF_USUARIO = ?"; $pLotes[] = $cpf_td; }
+                $stL = $pdo->prepare($sqlLotes); $stL->execute($pLotes);
+                $lotesAcessiveis = $stL->fetchAll(PDO::FETCH_ASSOC);
+
+                if (empty($lotesAcessiveis)) {
+                    ob_end_clean(); echo json_encode(['success'=>true,'clientes'=>[],'total'=>0,'tem_mais'=>false,'info_lote'=>null]); exit;
+                }
+
+                // Deduplica tabelas
+                $tabelasUnicas = [];
+                foreach ($lotesAcessiveis as $lAc) {
+                    $tbl = $lAc['TABELA'];
+                    if (!isset($tabelasUnicas[$tbl])) $tabelasUnicas[$tbl] = [];
+                    $tabelasUnicas[$tbl][] = (int)$lAc['ID'];
+                }
+
+                $unionParts = []; $params_union = [];
+                foreach ($tabelasUnicas as $tbl => $ids) {
+                    $ph = implode(',', array_fill(0, count($ids), '?'));
+                    $unionParts[] = "SELECT t.ID, t.LOTE_ID, t.CPF, t.NOME, t.STATUS_V8,
+                        COALESCE(NULLIF(TRIM(t.OBSERVACAO),''),'') AS OBSERVACAO,
+                        t.VALOR_MARGEM, t.VALOR_LIQUIDO, t.DATA_SIMULACAO, t.DATA_CONSENTIMENTO, t.STATUS_WHATSAPP
+                        FROM `{$tbl}` t WHERE t.LOTE_ID IN ({$ph}) AND {$where_filtro}";
+                    $params_union = array_merge($params_union, $ids, $params_filtro);
+                }
+                $sqlUnion = "SELECT * FROM (" . implode(" UNION ALL ", $unionParts) . ") u";
+
+                $total = (int)$pdo->prepare("SELECT COUNT(*) FROM ({$sqlUnion}) cnt")->execute($params_union) ? 0 : 0;
+                $stCnt2 = $pdo->prepare("SELECT COUNT(*) FROM ({$sqlUnion}) cnt");
+                $stCnt2->execute($params_union);
+                $total = (int)$stCnt2->fetchColumn();
+
+                $stAv = $pdo->prepare("{$sqlUnion} ORDER BY u.DATA_SIMULACAO DESC, u.ID ASC LIMIT {$limite} OFFSET {$offset}");
+                $stAv->execute($params_union);
+            }
+
             $rows = $stAv->fetchAll(PDO::FETCH_ASSOC);
             foreach ($rows as &$r) {
                 $r['CPF_FORMATADO']     = preg_replace('/(\d{3})(\d{3})(\d{3})(\d{2})/', '$1.$2.$3-$4', str_pad($r['CPF'], 11, '0', STR_PAD_LEFT));
