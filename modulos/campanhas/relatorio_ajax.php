@@ -12,8 +12,9 @@ if (!isset($_SESSION['usuario_cpf'])) {
     echo json_encode(['success' => false, 'msg' => 'Sessão inválida.']); exit;
 }
 
-$perm_consulta  = verificaPermissao($pdo, 'CAMPANHA_RELATORIO_CONSULTA', 'FUNCAO');
-$perm_exportar  = verificaPermissao($pdo, 'CAMPANHA_RELATORIO_EXPORTAR', 'FUNCAO');
+$perm_consulta   = verificaPermissao($pdo, 'CAMPANHA_RELATORIO_CONSULTA',       'FUNCAO');
+$perm_exportar   = verificaPermissao($pdo, 'CAMPANHA_RELATORIO_EXPORTAR',        'FUNCAO');
+$perm_meus_reg   = verificaPermissao($pdo, 'CAMPANHA_RELATORIO_MEUS_REGISTROS',  'FUNCAO');
 
 if (!$perm_consulta) {
     echo json_encode(['success' => false, 'msg' => 'Sem permissão para acessar relatórios.']); exit;
@@ -24,6 +25,10 @@ $cpf_logado = $_SESSION['usuario_cpf'] ?? '';
 $grupo      = strtoupper($_SESSION['usuario_grupo'] ?? '');
 $is_master  = in_array($grupo, ['MASTER', 'ADMIN', 'ADMINISTRADOR']);
 $is_consultor = in_array($grupo, ['CONSULTOR', 'CONSULTORES']);
+
+// Se o grupo estiver bloqueado em CAMPANHA_RELATORIO_MEUS_REGISTROS,
+// o usuário só enxerga seus próprios registros (independente do grupo)
+$somente_meus = !$perm_meus_reg && !$is_master;
 
 // Captura IDs hierárquicos
 $id_usuario_num   = null;
@@ -38,12 +43,13 @@ if ($cpf_logado) {
 // =========================================================================
 // HELPER: Monta WHERE hierárquico para REGISTRO_CONTATO
 // =========================================================================
-function filtroHierarquia($is_master, $is_consultor, $id_empresa_num, $id_usuario_num, &$params) {
+function filtroHierarquia($is_master, $is_consultor, $id_empresa_num, $id_usuario_num, &$params, $somente_meus = false) {
     $sql = '';
     if (!$is_master) {
         $sql .= " AND r.id_empresa = ?";
         $params[] = $id_empresa_num;
-        if ($is_consultor) {
+        // Restringe ao próprio usuário se for CONSULTOR ou se CAMPANHA_RELATORIO_MEUS_REGISTROS estiver bloqueado
+        if ($is_consultor || $somente_meus) {
             $sql .= " AND r.id_usuario = ?";
             $params[] = $id_usuario_num;
         }
@@ -194,7 +200,7 @@ if ($acao === 'buscar_dados') {
         $limite = 100;
 
         $params_list   = [];
-        $where_hierarq = filtroHierarquia($is_master, $is_consultor, $id_empresa_num, $id_usuario_num, $params_list);
+        $where_hierarq = filtroHierarquia($is_master, $is_consultor, $id_empresa_num, $id_usuario_num, $params_list, $somente_meus);
         $where_filtros = filtrosUsuario($_POST, $params_list, $is_master, $id_empresa_num);
 
         $where_base = " WHERE 1=1" . $where_hierarq . $where_filtros;
@@ -239,7 +245,7 @@ if ($acao === 'buscar_dados') {
 
         // Gráfico
         $params_graf = [];
-        $where_hierarq_g = filtroHierarquia($is_master, $is_consultor, $id_empresa_num, $id_usuario_num, $params_graf);
+        $where_hierarq_g = filtroHierarquia($is_master, $is_consultor, $id_empresa_num, $id_usuario_num, $params_graf, $somente_meus);
         $where_filtros_g = filtrosUsuario($_POST, $params_graf, $is_master, $id_empresa_num);
         $where_graf = " WHERE 1=1" . $where_hierarq_g . $where_filtros_g;
 
@@ -343,7 +349,7 @@ if ($acao === 'exportar_csv' && !$perm_exportar) {
 if ($acao === 'exportar_csv') {
     $post = $_GET; // export uses GET params
     $params_exp  = [];
-    $where_hierarq_e = filtroHierarquia($is_master, $is_consultor, $id_empresa_num, $id_usuario_num, $params_exp);
+    $where_hierarq_e = filtroHierarquia($is_master, $is_consultor, $id_empresa_num, $id_usuario_num, $params_exp, $somente_meus);
     $where_filtros_e = filtrosUsuario($post, $params_exp, $is_master, $id_empresa_num);
     $where_exp = " WHERE 1=1" . $where_hierarq_e . $where_filtros_e;
 
