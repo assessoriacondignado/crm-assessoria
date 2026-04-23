@@ -1363,8 +1363,6 @@ try {
             $total = (int)$stCnt->fetchColumn();
 
             // Lista
-            $params_av[] = $limite;
-            $params_av[] = $offset;
             $stAv = $pdo->prepare("
                 SELECT t.ID, t.CPF, t.NOME, t.STATUS_V8,
                        COALESCE(NULLIF(TRIM(t.OBSERVACAO),''),'') AS OBSERVACAO,
