@@ -1098,6 +1098,40 @@ try {
             $pdo->prepare("DELETE FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?")->execute([$id_lote]);
             ob_end_clean(); echo json_encode(['success' => true, 'msg' => 'Lote e histórico apagados com sucesso.']); exit;
 
+        // ==================================================================
+        // LISTAR LOTES RESPEITANDO HIERARQUIA (para seletor da nova tela)
+        // ==================================================================
+        case 'listar_lotes_hierarquia':
+            $grp_lh  = strtoupper($_SESSION['usuario_grupo'] ?? '');
+            $is_m_lh = in_array($grp_lh, ['MASTER', 'ADMIN', 'ADMINISTRADOR']);
+            $is_c_lh = in_array($grp_lh, ['CONSULTOR', 'CONSULTORES']);
+            $cpf_lh  = preg_replace('/\D/', '', $_SESSION['usuario_cpf'] ?? '');
+
+            $id_emp_lh = null;
+            if (!$is_m_lh) {
+                $se = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+                $se->execute([$cpf_lh]);
+                $id_emp_lh = (int)($se->fetchColumn() ?: 0);
+            }
+
+            $sqlLH = "SELECT l.ID, l.NOME_IMPORTACAO, l.STATUS_FILA, l.STATUS_LOTE,
+                             u.NOME as NOME_USUARIO, l.DATA_IMPORTACAO
+                      FROM INTEGRACAO_V8_IMPORTACAO_LOTE l
+                      LEFT JOIN CLIENTE_USUARIO u ON u.CPF = l.CPF_USUARIO
+                      WHERE l.STATUS_LOTE = 'ATIVO'";
+            $pLH = [];
+            if (!$is_m_lh && $id_emp_lh) {
+                $sqlLH .= " AND l.id_empresa = ?"; $pLH[] = $id_emp_lh;
+            }
+            if ($is_c_lh) {
+                $sqlLH .= " AND l.CPF_USUARIO = ?"; $pLH[] = $cpf_lh;
+            }
+            $sqlLH .= " ORDER BY l.ID DESC LIMIT 200";
+            $stLH = $pdo->prepare($sqlLH);
+            $stLH->execute($pLH);
+            $lotesLH = $stLH->fetchAll(PDO::FETCH_ASSOC);
+            ob_end_clean(); echo json_encode(['success' => true, 'lotes' => $lotesLH]); exit;
+
         case 'listar_campanhas_disponiveis':
             // MASTER/ADMIN vê todas; demais filtram pela empresa
             $camp_grupo  = strtoupper($_SESSION['usuario_grupo'] ?? '');
