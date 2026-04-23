@@ -243,6 +243,7 @@ if ($acao === 'buscar_dados') {
         $where_filtros_g = filtrosUsuario($_POST, $params_graf, $is_master, $id_empresa_num);
         $where_graf = " WHERE 1=1" . $where_hierarq_g . $where_filtros_g;
 
+        $agrupamento = $_POST['agrupamento'] ?? 'status';
         $grafico = [];
         if ($tipo_rel === 'AGENDAMENTOS_FUTURO') {
             $sqlGraf = "
@@ -255,7 +256,28 @@ if ($acao === 'buscar_dados') {
                 LIMIT 30
             ";
             $tipo_grafico = 'bar';
+        } elseif ($agrupamento === 'campanha') {
+            $sqlGraf = "
+                SELECT COALESCE(ca.NOME_CAMPANHA, 'Sem Campanha') AS LABEL, COUNT(DISTINCT r.ID) AS TOTAL
+                FROM BANCO_DE_DADOS_CAMPANHA_REGISTRO_CONTATO r
+                LEFT JOIN BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA cc ON cc.CPF_CLIENTE = r.CPF_CLIENTE
+                LEFT JOIN BANCO_DE_DADOS_CAMPANHA_CAMPANHAS ca ON ca.ID = cc.ID_CAMPANHA
+                {$where_graf}
+                GROUP BY ca.ID, ca.NOME_CAMPANHA
+                ORDER BY TOTAL DESC
+            ";
+            $tipo_grafico = 'pie';
+        } elseif ($agrupamento === 'usuario') {
+            $sqlGraf = "
+                SELECT COALESCE(r.NOME_USUARIO, 'Sem Usuário') AS LABEL, COUNT(*) AS TOTAL
+                FROM BANCO_DE_DADOS_CAMPANHA_REGISTRO_CONTATO r
+                {$where_graf}
+                GROUP BY r.NOME_USUARIO
+                ORDER BY TOTAL DESC
+            ";
+            $tipo_grafico = 'pie';
         } else {
+            // status (padrão)
             $sqlGraf = "
                 SELECT COALESCE(s.NOME_STATUS, 'Sem Status') AS LABEL, COUNT(*) AS TOTAL
                 FROM BANCO_DE_DADOS_CAMPANHA_REGISTRO_CONTATO r

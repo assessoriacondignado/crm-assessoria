@@ -141,6 +141,15 @@ include $caminho_header;
 
                             <input type="hidden" id="tipo_relatorio_ativo">
 
+                            <div class="mb-2">
+                                <label class="form-label fw-bold small mb-1">Agrupamento</label>
+                                <select id="f_agrupamento" class="form-select form-select-sm border-danger fw-bold">
+                                    <option value="status">📊 Por Status</option>
+                                    <option value="campanha">📣 Por Campanha</option>
+                                    <option value="usuario">👤 Por Usuário</option>
+                                </select>
+                            </div>
+
                             <?php if ($is_master): ?>
                             <div class="mb-2">
                                 <label class="form-label fw-bold small mb-1">Empresa</label>
@@ -522,8 +531,9 @@ function toggleDataPersonalizada() {
 function lerFiltros() {
     const emp = document.getElementById('f_empresa');
     return {
-        tipo     : document.getElementById('tipo_relatorio_ativo').value,
-        empresa  : emp ? emp.value : '',
+        tipo        : document.getElementById('tipo_relatorio_ativo').value,
+        agrupamento : document.getElementById('f_agrupamento').value,
+        empresa     : emp ? emp.value : '',
         campanha : getMsValores('ms_campanha'),
         status   : getMsValores('ms_status'),
         usuario  : getMsValores('ms_usuario'),
