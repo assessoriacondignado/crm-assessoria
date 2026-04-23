@@ -231,10 +231,8 @@ if ($acao === 'buscar_dados') {
             FROM BANCO_DE_DADOS_CAMPANHA_REGISTRO_CONTATO r
             LEFT JOIN dados_cadastrais dc ON dc.cpf = r.CPF_CLIENTE
             LEFT JOIN BANCO_DE_DADOS_CAMPANHA_STATUS_CONTATO s ON s.ID = r.ID_STATUS_CONTATO
-        " . $where_base . $order_by . " LIMIT ? OFFSET ?";
+        " . $where_base . $order_by . " LIMIT {$limite} OFFSET {$offset}";
 
-        $params_list[] = $limite;
-        $params_list[] = $offset;
         $stList = $pdo->prepare($sqlList);
         $stList->execute($params_list);
         $lista = $stList->fetchAll(PDO::FETCH_ASSOC);
