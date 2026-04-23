@@ -547,6 +547,9 @@ session_write_close();
                 <a class="sidebar-subitem" href="/modulos/campanhas/status.php"><i class="fas fa-tags"></i> Status e Qualificações</a>
                 <?php endif; ?>
                 <a class="sidebar-subitem" href="/modulos/campanhas/agenda.php"><i class="fas fa-calendar-alt"></i> Minha Agenda</a>
+                <?php if(podeAcessarMenu($pdo, 'CAMPANHA_RELATORIO_MENU')): ?>
+                <a class="sidebar-subitem" href="/modulos/campanhas/relatorio.php"><i class="fas fa-chart-pie"></i> Relatórios</a>
+                <?php endif; ?>
             </div>
             <?php endif; ?>
 
