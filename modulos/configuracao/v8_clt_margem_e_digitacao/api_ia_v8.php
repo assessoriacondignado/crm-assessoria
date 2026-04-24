@@ -402,7 +402,11 @@ try {
                 sleep(5); 
                 $chC = curl_init("https://bff.v8sistema.com/private-consignment/consult/{$ultimo_consult_id}"); curl_setopt($chC, CURLOPT_RETURNTRANSFER, true); curl_setopt($chC, CURLOPT_HTTPGET, true); curl_setopt($chC, CURLOPT_HTTPHEADER, ["Authorization: Bearer $tokenV8"]); $resC = curl_exec($chC); curl_close($chC); $jsonC = json_decode($resC, true);
                 $st = strtoupper($jsonC['status'] ?? '');
-                if (in_array($st, $ST_OK)) { $margem = $jsonC['availableMargin'] ?? $jsonC['marginBaseValue'] ?? $jsonC['availableMarginValue'] ?? $jsonC['maxAmount'] ?? 0; $conseguiu_margem = true; break; }
+                if (in_array($st, $ST_OK)) {
+                    $margem = $jsonC['availableMargin'] ?? $jsonC['marginBaseValue'] ?? $jsonC['availableMarginValue'] ?? $jsonC['maxAmount'] ?? $jsonC['margin'] ?? $jsonC['available_margin'] ?? 0;
+                    registrarLogIA($cpf, "V8_RETORNO_MARGEM", ['status'=>$st,'availableMargin'=>$jsonC['availableMargin']??null,'marginBaseValue'=>$jsonC['marginBaseValue']??null,'availableMarginValue'=>$jsonC['availableMarginValue']??null,'maxAmount'=>$jsonC['maxAmount']??null,'margem_calculada'=>$margem]);
+                    $conseguiu_margem = true; break;
+                }
                 if (in_array($st, $ST_ERRO)) {
                     $erroMsg_V8 = extrairErroV8($jsonC);
                     $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'ERRO_MARGEM' WHERE ID = ?")->execute([$sessao_id]);
