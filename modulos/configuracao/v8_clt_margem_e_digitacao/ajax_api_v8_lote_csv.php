@@ -1519,71 +1519,74 @@ try {
             ]); exit;
 
         // ==================================================================
-        // NOVA AÇÃO: exportar clientes filtrados com dados cadastrais
+        // NOVA AÇÃO: exportar clientes filtrados (suporta múltiplos lotes)
         // ==================================================================
         case 'exportar_clientes_filtrado':
-            $id_lote = (int)($_GET['id_lote'] ?? 0);
-            if (!$id_lote) { http_response_code(400); echo 'Lote inválido'; exit; }
-            v8_verificar_dono_lote($pdo, $id_lote, $usuario_logado_cpf);
-            $tbl_exp = v8_tabela_lote($pdo, $id_lote);
+            // Aceita ids_lote[] (array) ou id_lote único
+            $ids_lote_raw_g = $_GET['ids_lote'] ?? null;
+            if ($ids_lote_raw_g !== null) {
+                $ids_lote_exp = array_values(array_filter(array_map('intval', is_array($ids_lote_raw_g) ? $ids_lote_raw_g : [$ids_lote_raw_g])));
+            } else {
+                $id_s = (int)($_GET['id_lote'] ?? 0);
+                $ids_lote_exp = $id_s > 0 ? [$id_s] : [];
+            }
+            if (empty($ids_lote_exp)) { http_response_code(400); echo 'Nenhum lote selecionado'; exit; }
+            foreach ($ids_lote_exp as $lid_v) { v8_verificar_dono_lote($pdo, $lid_v, $usuario_logado_cpf); }
 
-            $stLoteExp = $pdo->prepare("SELECT l.NOME_IMPORTACAO, u.NOME as NOME_USUARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE l LEFT JOIN CLIENTE_USUARIO u ON u.CPF = l.CPF_USUARIO WHERE l.ID = ? LIMIT 1");
-            $stLoteExp->execute([$id_lote]);
-            $infoExp = $stLoteExp->fetch(PDO::FETCH_ASSOC);
+            // Mapa de info dos lotes
+            $ph_exp = implode(',', array_fill(0, count($ids_lote_exp), '?'));
+            $stLotesExp = $pdo->prepare("SELECT l.ID, l.NOME_IMPORTACAO, u.NOME as NOME_USUARIO
+                FROM INTEGRACAO_V8_IMPORTACAO_LOTE l
+                LEFT JOIN CLIENTE_USUARIO u ON u.CPF = l.CPF_USUARIO
+                WHERE l.ID IN ({$ph_exp})");
+            $stLotesExp->execute($ids_lote_exp);
+            $lotesExpMap = [];
+            while ($li = $stLotesExp->fetch(PDO::FETCH_ASSOC)) { $lotesExpMap[(int)$li['ID']] = $li; }
 
-            $params_e = [$id_lote];
-            $where_e  = "WHERE t.LOTE_ID = ? AND (t.STATUS_V8 IS NULL OR t.STATUS_V8 != 'AUDITADO')";
+            // Filtros comuns
+            $params_ef = [];
+            $where_ef  = "(t.STATUS_V8 IS NULL OR t.STATUS_V8 != 'AUDITADO')";
             $q = trim($_GET['q'] ?? '');
             if ($q !== '') {
                 $qL = preg_replace('/\D/', '', $q);
-                if ($qL !== '') { $where_e .= " AND t.CPF LIKE ?"; $params_e[] = "%{$qL}%"; }
-                else { $where_e .= " AND t.NOME LIKE ?"; $params_e[] = "%{$q}%"; }
+                if ($qL !== '') { $where_ef .= " AND t.CPF LIKE ?"; $params_ef[] = "%{$qL}%"; }
+                else { $where_ef .= " AND t.NOME LIKE ?"; $params_ef[] = "%{$q}%"; }
             }
-            if (!empty($_GET['status_margem'])) { $where_e .= " AND t.STATUS_V8 = ?"; $params_e[] = $_GET['status_margem']; }
-            if (!empty($_GET['status_cons']))   { $where_e .= " AND t.STATUS_WHATSAPP = ?"; $params_e[] = $_GET['status_cons']; }
-            if (!empty($_GET['cons_de']))        { $where_e .= " AND DATE(t.DATA_CONSENTIMENTO) >= ?"; $params_e[] = $_GET['cons_de']; }
-            if (!empty($_GET['cons_ate']))       { $where_e .= " AND DATE(t.DATA_CONSENTIMENTO) <= ?"; $params_e[] = $_GET['cons_ate']; }
-            if (!empty($_GET['sim_de']))         { $where_e .= " AND DATE(t.DATA_SIMULACAO) >= ?"; $params_e[] = $_GET['sim_de']; }
-            if (!empty($_GET['sim_ate']))        { $where_e .= " AND DATE(t.DATA_SIMULACAO) <= ?"; $params_e[] = $_GET['sim_ate']; }
-            if (isset($_GET['margem_min']) && $_GET['margem_min'] !== '') { $where_e .= " AND t.VALOR_MARGEM >= ?"; $params_e[] = (float)$_GET['margem_min']; }
-            if (isset($_GET['margem_max']) && $_GET['margem_max'] !== '') { $where_e .= " AND t.VALOR_MARGEM <= ?"; $params_e[] = (float)$_GET['margem_max']; }
-            if (isset($_GET['lib_min']) && $_GET['lib_min'] !== '') { $where_e .= " AND t.VALOR_LIQUIDO >= ?"; $params_e[] = (float)$_GET['lib_min']; }
-            if (isset($_GET['lib_max']) && $_GET['lib_max'] !== '') { $where_e .= " AND t.VALOR_LIQUIDO <= ?"; $params_e[] = (float)$_GET['lib_max']; }
+            if (!empty($_GET['status_margem'])) { $where_ef .= " AND t.STATUS_V8 = ?";                 $params_ef[] = $_GET['status_margem']; }
+            if (!empty($_GET['status_cons']))   { $where_ef .= " AND t.STATUS_WHATSAPP = ?";            $params_ef[] = $_GET['status_cons']; }
+            if (!empty($_GET['cons_de']))        { $where_ef .= " AND DATE(t.DATA_CONSENTIMENTO) >= ?"; $params_ef[] = $_GET['cons_de']; }
+            if (!empty($_GET['cons_ate']))       { $where_ef .= " AND DATE(t.DATA_CONSENTIMENTO) <= ?"; $params_ef[] = $_GET['cons_ate']; }
+            if (!empty($_GET['sim_de']))         { $where_ef .= " AND DATE(t.DATA_SIMULACAO) >= ?";     $params_ef[] = $_GET['sim_de']; }
+            if (!empty($_GET['sim_ate']))        { $where_ef .= " AND DATE(t.DATA_SIMULACAO) <= ?";     $params_ef[] = $_GET['sim_ate']; }
+            if (isset($_GET['margem_min']) && $_GET['margem_min'] !== '') { $where_ef .= " AND t.VALOR_MARGEM >= ?";  $params_ef[] = (float)$_GET['margem_min']; }
+            if (isset($_GET['margem_max']) && $_GET['margem_max'] !== '') { $where_ef .= " AND t.VALOR_MARGEM <= ?";  $params_ef[] = (float)$_GET['margem_max']; }
+            if (isset($_GET['lib_min'])    && $_GET['lib_min']    !== '') { $where_ef .= " AND t.VALOR_LIQUIDO >= ?"; $params_ef[] = (float)$_GET['lib_min']; }
+            if (isset($_GET['lib_max'])    && $_GET['lib_max']    !== '') { $where_ef .= " AND t.VALOR_LIQUIDO <= ?"; $params_ef[] = (float)$_GET['lib_max']; }
 
-            $stExp = $pdo->prepare("
-                SELECT t.CPF, t.NOME, t.STATUS_V8, t.OBSERVACAO,
-                       t.VALOR_MARGEM, t.VALOR_LIQUIDO, t.DATA_SIMULACAO, t.DATA_CONSENTIMENTO, t.STATUS_WHATSAPP,
-                       dc.nome as NOME_CADASTRO,
-                       e.logradouro, e.numero, e.bairro, e.cidade, e.uf, e.cep,
-                       (SELECT telefone_cel FROM telefones WHERE cpf = t.CPF ORDER BY id LIMIT 1 OFFSET 0) AS TEL_1,
-                       (SELECT telefone_cel FROM telefones WHERE cpf = t.CPF ORDER BY id LIMIT 1 OFFSET 1) AS TEL_2,
-                       (SELECT telefone_cel FROM telefones WHERE cpf = t.CPF ORDER BY id LIMIT 1 OFFSET 2) AS TEL_3,
-                       (SELECT telefone_cel FROM telefones WHERE cpf = t.CPF ORDER BY id LIMIT 1 OFFSET 3) AS TEL_4,
-                       (SELECT telefone_cel FROM telefones WHERE cpf = t.CPF ORDER BY id LIMIT 1 OFFSET 4) AS TEL_5,
-                       (SELECT telefone_cel FROM telefones WHERE cpf = t.CPF ORDER BY id LIMIT 1 OFFSET 5) AS TEL_6,
-                       (SELECT telefone_cel FROM telefones WHERE cpf = t.CPF ORDER BY id LIMIT 1 OFFSET 6) AS TEL_7,
-                       (SELECT telefone_cel FROM telefones WHERE cpf = t.CPF ORDER BY id LIMIT 1 OFFSET 7) AS TEL_8,
-                       (SELECT telefone_cel FROM telefones WHERE cpf = t.CPF ORDER BY id LIMIT 1 OFFSET 8) AS TEL_9,
-                       (SELECT telefone_cel FROM telefones WHERE cpf = t.CPF ORDER BY id LIMIT 1 OFFSET 9) AS TEL_10,
-                       (SELECT email FROM emails WHERE cpf = t.CPF ORDER BY id LIMIT 1 OFFSET 0) AS EMAIL_1,
-                       (SELECT email FROM emails WHERE cpf = t.CPF ORDER BY id LIMIT 1 OFFSET 1) AS EMAIL_2,
-                       (SELECT email FROM emails WHERE cpf = t.CPF ORDER BY id LIMIT 1 OFFSET 2) AS EMAIL_3
-                FROM `{$tbl_exp}` t
-                LEFT JOIN dados_cadastrais dc ON dc.cpf = t.CPF
-                LEFT JOIN (
-                    SELECT en.cpf, en.logradouro, en.numero, en.bairro, en.cidade, en.uf, en.cep
-                    FROM enderecos en
-                    INNER JOIN (SELECT cpf, MIN(id) AS min_id FROM enderecos GROUP BY cpf) em
-                        ON em.cpf = en.cpf AND em.min_id = en.id
-                ) e ON e.cpf = t.CPF
-                {$where_e}
-                ORDER BY t.DATA_SIMULACAO DESC
-            ");
-            $stExp->execute($params_e);
+            // UNION ALL agrupando lotes pela mesma tabela física
+            $tblsExp = [];
+            foreach ($ids_lote_exp as $lid_e) {
+                $tbl_e = v8_tabela_lote($pdo, $lid_e);
+                if (!isset($tblsExp[$tbl_e])) $tblsExp[$tbl_e] = [];
+                $tblsExp[$tbl_e][] = $lid_e;
+            }
+            $unionExp = []; $params_eu = [];
+            foreach ($tblsExp as $tbl_e => $ids_e) {
+                $ph_e = implode(',', array_fill(0, count($ids_e), '?'));
+                $unionExp[] = "SELECT t.LOTE_ID, t.CPF, t.NOME, t.STATUS_V8, t.OBSERVACAO,
+                               t.VALOR_MARGEM, t.VALOR_LIQUIDO, t.DATA_SIMULACAO, t.DATA_CONSENTIMENTO, t.STATUS_WHATSAPP
+                               FROM `{$tbl_e}` t WHERE t.LOTE_ID IN ({$ph_e}) AND {$where_ef}";
+                $params_eu = array_merge($params_eu, $ids_e, $params_ef);
+            }
+            $sqlExp = "SELECT * FROM (" . implode(" UNION ALL ", $unionExp) . ") u ORDER BY DATA_SIMULACAO DESC";
+            $stExp = $pdo->prepare($sqlExp);
+            $stExp->execute($params_eu);
 
-            $nomeArq = 'clientes_lote_' . $id_lote . '_' . date('Ymd_His') . '.csv';
+            $nArq = count($ids_lote_exp) === 1
+                ? 'clientes_lote_' . $ids_lote_exp[0] . '_' . date('Ymd_His') . '.csv'
+                : 'clientes_lotes_export_' . date('Ymd_His') . '.csv';
             header('Content-Type: text/csv; charset=UTF-8');
-            header('Content-Disposition: attachment; filename="' . $nomeArq . '"');
+            header('Content-Disposition: attachment; filename="' . $nArq . '"');
             $out = fopen('php://output', 'w');
             fputs($out, "\xEF\xBB\xBF");
             fputcsv($out, [
@@ -1595,13 +1598,21 @@ try {
                 'TEL_6', 'TEL_7', 'TEL_8', 'TEL_9', 'TEL_10',
                 'EMAIL_1', 'EMAIL_2', 'EMAIL_3'
             ], ';');
+            $stEEnd   = $pdo->prepare("SELECT logradouro, numero, bairro, cidade, uf, cep FROM enderecos WHERE cpf = ? ORDER BY id ASC LIMIT 1");
+            $stEEmail = $pdo->prepare("SELECT email FROM emails WHERE cpf = ? ORDER BY id ASC LIMIT 3");
+            $stETel   = $pdo->prepare("SELECT telefone_cel FROM telefones WHERE cpf = ? ORDER BY id ASC LIMIT 10");
             while ($row = $stExp->fetch(PDO::FETCH_ASSOC)) {
-                fputcsv($out, [
-                    $id_lote,
-                    $infoExp['NOME_IMPORTACAO'] ?? '',
-                    $infoExp['NOME_USUARIO'] ?? '',
+                $lid_row  = (int)$row['LOTE_ID'];
+                $lInfo    = $lotesExpMap[$lid_row] ?? ['NOME_IMPORTACAO' => "Lote #{$lid_row}", 'NOME_USUARIO' => ''];
+                $stEEnd->execute([$row['CPF']]);   $eEnd   = $stEEnd->fetch(PDO::FETCH_ASSOC) ?: [];
+                $stEEmail->execute([$row['CPF']]); $eEmails= $stEEmail->fetchAll(PDO::FETCH_COLUMN);
+                $stETel->execute([$row['CPF']]);   $eTels  = $stETel->fetchAll(PDO::FETCH_COLUMN);
+                $linha = [
+                    $lid_row,
+                    $lInfo['NOME_IMPORTACAO'] ?? '',
+                    $lInfo['NOME_USUARIO'] ?? '',
                     $row['CPF'],
-                    $row['NOME'] ?: ($row['NOME_CADASTRO'] ?? ''),
+                    $row['NOME'] ?? '',
                     $row['STATUS_WHATSAPP'] ?? '',
                     $row['DATA_CONSENTIMENTO'] ? date('d/m/Y H:i', strtotime($row['DATA_CONSENTIMENTO'])) : '',
                     $row['STATUS_V8'] ?? '',
@@ -1609,26 +1620,12 @@ try {
                     $row['VALOR_LIQUIDO'] ? number_format($row['VALOR_LIQUIDO'], 2, ',', '.') : '',
                     $row['DATA_SIMULACAO'] ? date('d/m/Y H:i', strtotime($row['DATA_SIMULACAO'])) : '',
                     $row['OBSERVACAO'] ?? '',
-                    $row['logradouro'] ?? '',
-                    $row['numero'] ?? '',
-                    $row['bairro'] ?? '',
-                    $row['cidade'] ?? '',
-                    $row['uf'] ?? '',
-                    $row['cep'] ?? '',
-                    $row['TEL_1'] ?? '',
-                    $row['TEL_2'] ?? '',
-                    $row['TEL_3'] ?? '',
-                    $row['TEL_4'] ?? '',
-                    $row['TEL_5'] ?? '',
-                    $row['TEL_6'] ?? '',
-                    $row['TEL_7'] ?? '',
-                    $row['TEL_8'] ?? '',
-                    $row['TEL_9'] ?? '',
-                    $row['TEL_10'] ?? '',
-                    $row['EMAIL_1'] ?? '',
-                    $row['EMAIL_2'] ?? '',
-                    $row['EMAIL_3'] ?? '',
-                ], ';');
+                    $eEnd['logradouro'] ?? '', $eEnd['numero'] ?? '', $eEnd['bairro'] ?? '',
+                    $eEnd['cidade'] ?? '', $eEnd['uf'] ?? '', $eEnd['cep'] ?? '',
+                ];
+                for ($i = 0; $i < 10; $i++) { $linha[] = $eTels[$i] ?? ''; }
+                for ($i = 0; $i < 3;  $i++) { $linha[] = $eEmails[$i] ?? ''; }
+                fputcsv($out, $linha, ';');
             }
             fclose($out); exit;
 

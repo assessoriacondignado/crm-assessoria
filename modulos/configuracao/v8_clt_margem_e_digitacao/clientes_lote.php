@@ -726,9 +726,9 @@ function cancelarCampanha() { document.getElementById('barra_campanha').style.di
 function exportarFiltro() {
     const ids = lerIdsLote();
     if (!ids.length) { crmToast('Selecione ao menos um lote para exportar.', 'warning'); return; }
-    if (ids.length > 1) { crmToast('Para exportar selecione apenas um lote de cada vez.', 'warning'); return; }
     const f = lerFiltros();
-    const p = new URLSearchParams({ acao: 'exportar_clientes_filtrado', id_lote: ids[0] });
+    const p = new URLSearchParams({ acao: 'exportar_clientes_filtrado' });
+    ids.forEach(id => p.append('ids_lote[]', id));
     Object.entries(f).forEach(([k,v]) => { if(v!=='' && v!='0') p.append(k, v); });
     window.open('ajax_api_v8_lote_csv.php?' + p.toString(), '_blank');
 }
