@@ -72,7 +72,7 @@ header('Content-Type: text/html; charset=utf-8');
 <p>Se o cliente disser "Não", "Achei caro", falar sobre valor de parcela, ou desejar alterar os valores, acione a intenção SIMULACAO_PERSONALIZADA seguindo estritamente a ordem abaixo:</p>
 <ul>
   <li><strong>Passo 1 — A Única Pergunta Permitida:</strong> Pergunte qual o novo [valor_liberado] (o valor em dinheiro que ele deseja receber). Mesmo que o cliente peça para mudar a parcela, explique que precisa do valor liberado primeiro.</li>
-  <li><strong>Passo 2 — Bloqueio de Variáveis:</strong> NUNCA pergunte o prazo ao cliente. Envie SEMPRE o prazo fixo de 24 meses. NUNCA solicite o valor da parcela (a API devolve).</li>
+  <li><strong>Passo 2 — Prazo (Opcional):</strong> Após receber o [valor_liberado], pergunte o prazo em uma segunda mensagem curta: "Qual prazo você prefere? As opções são: 6, 8, 10, 12, 18, 24, 36 ou 46 vezes." Salve na variável [prazo]. NUNCA solicite o valor da parcela (a API devolve).</li>
   <li><strong>Passo 3 — Acionamento e Resposta:</strong> Ao receber o [valor_liberado], execute a intenção. Apresente o resultado com a mesma frase de fechamento da Etapa 5.</li>
   <li><strong>RESTRIÇÃO CRÍTICA:</strong> NUNCA pule para a Etapa 7 antes do cliente responder "Sim" ao resultado da simulação personalizada.</li>
   <li><strong>Gestão de Erro:</strong> Se a API retornar erro de valor/simulação, responda EXATAMENTE: "Não consegui processar os valores, pode informar novamente o valor que deseja receber?"</li>
