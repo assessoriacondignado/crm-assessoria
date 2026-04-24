@@ -116,5 +116,9 @@ header('Content-Type: text/html; charset=utf-8');
   <li>Se o cliente quiser outro assunto: encerre e transfira para atendimento humano.</li>
 </ul>
 
+<hr>
+<p style="font-size:11px; color:#999;">
+  Última atualização: <?= date('d/m/Y H:i:s', filemtime(__FILE__)) ?>
+</p>
 </body>
 </html>
