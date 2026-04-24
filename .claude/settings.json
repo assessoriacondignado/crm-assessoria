@@ -166,7 +166,16 @@
       "Bash(sed -i 's/filtroHierarquia\\($is_master, $is_consultor, $id_empresa_num, $id_usuario_num, $params_graf\\)/filtroHierarquia\\($is_master, $is_consultor, $id_empresa_num, $id_usuario_num, $params_graf, $somente_meus\\)/g' /var/www/html/modulos/campanhas/relatorio_ajax.php)",
       "Bash(sed -i 's/filtroHierarquia\\($is_master, $is_consultor, $id_empresa_num, $id_usuario_num, $params_exp\\)/filtroHierarquia\\($is_master, $is_consultor, $id_empresa_num, $id_usuario_num, $params_exp, $somente_meus\\)/g' /var/www/html/modulos/campanhas/relatorio_ajax.php)",
       "Bash(mysql -h localhost -u admin_crm -p'Abl@810401' crm_dados -e \"DESCRIBE INTEGRACAO_V8_REGISTROCONSULTA_LOTE; SHOW TABLES LIKE '%V8%'; SHOW TABLES LIKE '%LOTE%';\")",
-      "Bash(python3 -)"
+      "Bash(python3 -)",
+      "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -e \"DESCRIBE BANCO_DE_DADOS_REGISTRO_CONSULTA;\")",
+      "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -e \"SHOW TABLES LIKE '%WHATSAPP%';\")",
+      "Bash(mysql -u root -e \"SHOW TABLES LIKE '%email%';\")",
+      "Bash(mysql -u root -e \"DESCRIBE emails;\")",
+      "Bash(mysql -u root --password=\"\" -e \"SHOW DATABASES;\")",
+      "Bash(mysql -u root --password=\"\" crm_dados -e \"SHOW TABLES LIKE '%email%';\")",
+      "Bash(mysql -u root --password=\"\" crm_dados -e \"SHOW TABLES LIKE '%telefone%';\")",
+      "Bash(mysql -u root --password=\"\" crm_dados -e \"DESCRIBE emails;\")",
+      "Bash(mysql -u root --password=\"\" crm_dados -e \"DESCRIBE telefones;\")"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",
