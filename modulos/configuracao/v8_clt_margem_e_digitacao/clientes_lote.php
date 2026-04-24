@@ -66,24 +66,29 @@ include $caminho_header;
                 </div>
                 <div class="card-body p-2" style="font-size:.8rem;">
 
-                    <!-- SELETOR DE LOTE CUSTOMIZADO -->
+                    <!-- SELETOR DE LOTE MULTI-SELECT -->
                     <div class="mb-2">
                         <label class="filtro-label">Lote</label>
                         <div style="position:relative;" id="wrap_lote_picker">
-                            <input type="text" id="f_lote_busca" class="form-control form-control-sm border-danger fw-bold"
-                                   placeholder="🔍 Buscar lote ou — Todos —"
-                                   oninput="filtrarLotesPicker(this.value)"
-                                   onfocus="abrirLotePicker()"
-                                   autocomplete="off"
-                                   style="background:#fff;">
-                            <input type="hidden" id="f_lote" value="0">
+                            <!-- Tags dos selecionados + input de busca -->
+                            <div id="lote_display" onclick="abrirLotePicker()"
+                                 style="min-height:32px; background:#fff; border:1px solid #dc3545; border-radius:4px;
+                                        padding:3px 6px; cursor:text; display:flex; flex-wrap:wrap; gap:3px; align-items:center;">
+                                <span id="lote_placeholder" style="color:#aaa; font-size:.78rem;">— Todos os Lotes —</span>
+                                <input type="text" id="f_lote_busca" placeholder="Buscar..."
+                                       oninput="filtrarLotesPicker(this.value)"
+                                       onclick="event.stopPropagation(); abrirLotePicker()"
+                                       autocomplete="off"
+                                       style="border:none; outline:none; font-size:.78rem; flex:1; min-width:60px; background:transparent;">
+                            </div>
                             <!-- Dropdown -->
-                            <div id="lote_picker_dropdown" style="display:none; position:absolute; top:100%; left:0; width:100%;
-                                 background:#fff; border:1px solid #343a40; border-top:none; z-index:9999;
-                                 max-height:220px; overflow-y:auto; border-radius:0 0 4px 4px; box-shadow:0 4px 12px rgba(0,0,0,.2);">
+                            <div id="lote_picker_dropdown"
+                                 style="display:none; position:absolute; top:100%; left:0; width:100%; background:#fff;
+                                        border:1px solid #343a40; border-top:none; z-index:9999;
+                                        max-height:220px; overflow-y:auto; border-radius:0 0 4px 4px;
+                                        box-shadow:0 4px 12px rgba(0,0,0,.2);">
                             </div>
                         </div>
-                        <div class="text-muted mt-1" id="info_responsavel" style="font-size:.68rem;"></div>
                     </div>
 
                     <div class="mb-2 border-top pt-2">
@@ -309,110 +314,181 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('f_q').addEventListener('keydown', e => { if(e.key==='Enter') filtrar(); });
 });
 
+// =========================================================================
+// SELETOR DE LOTE MULTI-SELECT
+// =========================================================================
+let _lotesSelecionados = []; // [{id, nome, status}]
+
 async function carregarLotes() {
     const fd = new FormData(); fd.append('acao', 'listar_lotes_hierarquia');
-    const r = await fetch('ajax_api_v8_lote_csv.php', { method:'POST', body:fd }).then(r => r.json()).catch(()=>null);
+    const r = await fetch('ajax_api_v8_lote_csv.php', {method:'POST', body:fd}).then(r=>r.json()).catch(()=>null);
     if (!r || !r.success) return;
     _lotesCache = r.lotes || [];
-
     renderLotePicker('');
 
     if (ID_LOTE_INICIAL > 0) {
-        const loteEncontrado = _lotesCache.find(l => parseInt(l.ID) === ID_LOTE_INICIAL);
-        if (loteEncontrado) {
-            selecionarLote(loteEncontrado.ID, loteEncontrado.NOME_IMPORTACAO, loteEncontrado.NOME_USUARIO || '');
+        const lote = _lotesCache.find(l => parseInt(l.ID) === ID_LOTE_INICIAL);
+        if (lote) {
+            toggleLote(lote.ID, lote.NOME_IMPORTACAO, lote.STATUS_LOTE, lote.NOME_USUARIO || '', false);
             filtrar();
         }
     }
 }
 
-// ---- Picker de Lote ----
 function abrirLotePicker() {
     renderLotePicker(document.getElementById('f_lote_busca').value);
     document.getElementById('lote_picker_dropdown').style.display = 'block';
 }
 
 function filtrarLotesPicker(texto) {
-    document.getElementById('f_lote').value = '0';
-    _loteAtual = 0; _nomeLote = '';
-    atualizarTituloLote();
     renderLotePicker(texto);
     document.getElementById('lote_picker_dropdown').style.display = 'block';
 }
 
 function renderLotePicker(texto) {
-    const dd = document.getElementById('lote_picker_dropdown');
-    const t  = (texto || '').toLowerCase().trim();
-    const filtrados = t.length >= 2
+    const dd  = document.getElementById('lote_picker_dropdown');
+    const t   = (texto || '').toLowerCase().trim();
+    const sel = new Set(_lotesSelecionados.map(l => l.id));
+
+    const filtrados = t
         ? _lotesCache.filter(l => l.NOME_IMPORTACAO.toLowerCase().includes(t) || String(l.ID).includes(t))
         : _lotesCache;
 
-    let html = `<div style="padding:5px 10px; font-size:.75rem; cursor:pointer; font-weight:700;
-                    background:#f8f9fa; border-bottom:2px solid #dee2e6; color:#343a40;"
-                    onmousedown="selecionarLote(0, '— Todos os Lotes —', '')">
-                    ✅ — Todos os Lotes —
+    const ativo = filtrados.filter(l => l.STATUS_LOTE === 'ATIVO');
+    const inativo = filtrados.filter(l => l.STATUS_LOTE !== 'ATIVO');
+
+    // Item "Todos"
+    const checkTodos = !sel.size;
+    let html = `<div onmousedown="selecionarTodos()"
+                     style="padding:6px 10px; font-weight:700; font-size:.75rem; cursor:pointer;
+                            background:${checkTodos?'#fff0f0':'#f8f9fa'}; border-bottom:2px solid #dee2e6;
+                            display:flex; align-items:center; gap:6px;">
+                    <span style="width:14px; text-align:center; color:#dc3545;">${checkTodos ? '✓' : ''}</span>
+                    — Todos os Lotes —
                 </div>`;
-    filtrados.forEach(l => {
-        const destaque = t.length >= 2
-            ? l.NOME_IMPORTACAO.replace(new RegExp(`(${t})`, 'gi'), '<b style="color:#dc3545;">$1</b>')
-            : escHtml(l.NOME_IMPORTACAO);
-        html += `<div style="padding:5px 10px; font-size:.75rem; cursor:pointer; border-bottom:1px solid #f0f0f0;"
-                     onmousedown="selecionarLote(${l.ID}, '${escAttr(l.NOME_IMPORTACAO)}', '${escAttr(l.NOME_USUARIO||'')}')"
-                     onmouseover="this.style.background='#fff0f0'" onmouseout="this.style.background=''">
-                    <span class="text-muted me-1" style="font-size:.68rem;">#${l.ID}</span>
-                    ${destaque}
-                    ${l.NOME_USUARIO ? `<br><small style="color:#888; font-size:.65rem;">👤 ${escHtml(l.NOME_USUARIO)}</small>` : ''}
-                </div>`;
-    });
-    if (!filtrados.length && t.length >= 2) {
+
+    const renderGrupo = (lista, titulo) => {
+        if (!lista.length) return;
+        html += `<div style="padding:3px 8px; font-size:.65rem; font-weight:700; color:#888; background:#f8f8f8;
+                              text-transform:uppercase; letter-spacing:.5px; border-bottom:1px solid #eee;">
+                    ${titulo}
+                 </div>`;
+        lista.forEach(l => {
+            const isSel = sel.has(String(l.ID));
+            const isAtivo = l.STATUS_LOTE === 'ATIVO';
+            const dot = isAtivo ? '🟢' : '🔴';
+            const dest = t
+                ? escHtml(l.NOME_IMPORTACAO).replace(new RegExp(`(${escHtml(t)})`, 'gi'), '<b style="color:#dc3545;">$1</b>')
+                : escHtml(l.NOME_IMPORTACAO);
+            html += `<div onmousedown="toggleLote('${l.ID}','${escAttr(l.NOME_IMPORTACAO)}','${l.STATUS_LOTE}','${escAttr(l.NOME_USUARIO||'')}',true)"
+                         style="padding:5px 10px; font-size:.75rem; cursor:pointer; border-bottom:1px solid #f5f5f5;
+                                background:${isSel?'#fff0f0':'#fff'}; display:flex; align-items:flex-start; gap:6px;"
+                         onmouseover="this.style.background='#fff5f5'" onmouseout="this.style.background='${isSel?'#fff0f0':'#fff'}'">
+                         <span style="width:14px; text-align:center; flex-shrink:0; color:#dc3545;">${isSel ? '✓' : ''}</span>
+                         <div>
+                             <span style="color:#999; font-size:.65rem;">#${l.ID}</span> ${dot} ${dest}
+                             ${l.NOME_USUARIO ? `<br><span style="color:#aaa; font-size:.65rem;">👤 ${escHtml(l.NOME_USUARIO)}</span>` : ''}
+                         </div>
+                     </div>`;
+        });
+    };
+
+    renderGrupo(ativo, '🟢 Ativos');
+    renderGrupo(inativo, '🔴 Inativos');
+    if (!filtrados.length) {
         html += `<div style="padding:8px 10px; color:#aaa; font-size:.75rem; font-style:italic;">Nenhum lote encontrado.</div>`;
     }
     dd.innerHTML = html;
 }
 
-function selecionarLote(id, nome, usuario) {
-    _loteAtual = parseInt(id) || 0;
-    _nomeLote  = id > 0 ? nome : '';
-    document.getElementById('f_lote').value       = _loteAtual;
-    document.getElementById('f_lote_busca').value = id > 0 ? `#${id} — ${nome}` : '— Todos os Lotes —';
-    document.getElementById('lote_picker_dropdown').style.display = 'none';
-    atualizarTituloLote(usuario);
+function toggleLote(id, nome, status, usuario, fecharApos) {
+    const idStr = String(id);
+    const idx = _lotesSelecionados.findIndex(l => l.id === idStr);
+    if (idx >= 0) {
+        _lotesSelecionados.splice(idx, 1);
+    } else {
+        _lotesSelecionados.push({ id: idStr, nome, status, usuario });
+    }
+    renderTagsLote();
+    renderLotePicker(document.getElementById('f_lote_busca').value);
+    if (fecharApos && _lotesSelecionados.length === 1) {
+        // mantém aberto para facilitar seleção múltipla
+    }
+    atualizarTituloLote();
 }
 
-function atualizarTituloLote(usuario) {
+function selecionarTodos() {
+    _lotesSelecionados = [];
+    renderTagsLote();
+    renderLotePicker('');
+    atualizarTituloLote();
+}
+
+function renderTagsLote() {
+    const display = document.getElementById('lote_display');
+    // Remove tags antigas
+    display.querySelectorAll('.tag-lote').forEach(el => el.remove());
+    const placeholder = document.getElementById('lote_placeholder');
+    if (!_lotesSelecionados.length) {
+        placeholder.style.display = '';
+    } else {
+        placeholder.style.display = 'none';
+        _lotesSelecionados.forEach(l => {
+            const tag = document.createElement('span');
+            tag.className = 'tag-lote';
+            const isAtivo = l.status === 'ATIVO';
+            tag.style.cssText = `display:inline-flex; align-items:center; gap:3px; background:${isAtivo?'#dc3545':'#6c757d'};
+                color:#fff; font-size:.67rem; padding:1px 5px; border-radius:3px; flex-shrink:0;`;
+            tag.innerHTML = `#${l.id} ${escHtml(l.nome.substring(0,20))}${l.nome.length>20?'…':''}
+                <span onmousedown="event.stopPropagation();removerLote('${l.id}')"
+                      style="cursor:pointer; opacity:.8; margin-left:2px; font-size:.85rem;">×</span>`;
+            display.insertBefore(tag, document.getElementById('f_lote_busca'));
+        });
+    }
+}
+
+function removerLote(id) {
+    _lotesSelecionados = _lotesSelecionados.filter(l => l.id !== String(id));
+    renderTagsLote();
+    renderLotePicker(document.getElementById('f_lote_busca').value);
+    atualizarTituloLote();
+}
+
+function atualizarTituloLote() {
     const badge  = document.getElementById('badge_lote_titulo');
     const titulo = document.getElementById('nome_lote_titulo');
-    const info   = document.getElementById('info_responsavel');
-    if (_loteAtual > 0) {
-        badge.textContent = '#' + _loteAtual; badge.style.display = '';
-        titulo.textContent = _nomeLote;
-        info.textContent   = usuario ? '👤 Responsável: ' + usuario : '';
-    } else if (_loteAtual === 0 && document.getElementById('f_lote_busca').value.includes('Todos')) {
+    if (!_lotesSelecionados.length) {
         badge.style.display = 'none';
-        titulo.textContent  = '— Todos os Lotes —';
-        info.textContent    = '';
+        titulo.textContent = '— Todos os Lotes —';
+    } else if (_lotesSelecionados.length === 1) {
+        badge.textContent  = '#' + _lotesSelecionados[0].id;
+        badge.style.display = '';
+        titulo.textContent = _lotesSelecionados[0].nome;
     } else {
         badge.style.display = 'none';
-        titulo.textContent  = ''; info.textContent = '';
+        titulo.textContent = `${_lotesSelecionados.length} lotes selecionados`;
     }
+    // Atualiza _loteAtual para compatibilidade
+    _loteAtual = _lotesSelecionados.length === 1 ? parseInt(_lotesSelecionados[0].id) : 0;
+    _nomeLote  = _lotesSelecionados.length === 1 ? _lotesSelecionados[0].nome : '';
 }
 
 // Fecha dropdown ao clicar fora
 document.addEventListener('click', e => {
     if (!document.getElementById('wrap_lote_picker')?.contains(e.target)) {
-        const dd = document.getElementById('lote_picker_dropdown');
-        if (dd) dd.style.display = 'none';
+        document.getElementById('lote_picker_dropdown').style.display = 'none';
+        document.getElementById('f_lote_busca').value = '';
+        renderLotePicker('');
     }
 });
 
-function onLoteChange() {} // mantido para compatibilidade
+function onLoteChange() {}
 
 // =========================================================================
 // FILTROS
 // =========================================================================
 function lerFiltros() {
     return {
-        id_lote      : _loteAtual,
         q            : document.getElementById('f_q').value.trim(),
         status_margem: document.getElementById('f_status_margem').value,
         status_cons  : document.getElementById('f_status_cons').value,
@@ -428,7 +504,6 @@ function lerFiltros() {
 }
 
 function filtrar() {
-    if (!_loteAtual) { alert('Selecione um lote para filtrar.'); return; }
     _offset = 0;
     document.getElementById('tbody_clientes').innerHTML =
         '<tr><td colspan="12" class="text-center py-4"><div class="spinner-border spinner-border-sm text-danger me-2"></div> Carregando...</td></tr>';
@@ -454,12 +529,18 @@ function limparFiltros() {
 // =========================================================================
 // BUSCAR
 // =========================================================================
+function lerIdsLote() {
+    return _lotesSelecionados.map(l => l.id); // array vazio = Todos
+}
+
 async function buscar(offset, reset) {
     const filtros = lerFiltros();
     const fd = new FormData();
     fd.append('acao', 'listar_clientes_avancado');
     fd.append('offset', offset);
-    Object.entries(filtros).forEach(([k,v]) => fd.append(k, v));
+    // Envia IDs dos lotes selecionados (vazio = todos)
+    lerIdsLote().forEach(id => fd.append('ids_lote[]', id));
+    Object.entries(filtros).forEach(([k,v]) => { if (k !== 'id_lote') fd.append(k, v); });
 
     const r = await fetch('ajax_api_v8_lote_csv.php', {method:'POST', body:fd})
         .then(r => r.json())
@@ -630,10 +711,12 @@ function confirmarCampanha() {}
 // EXPORTAR
 // =========================================================================
 function exportarFiltro() {
-    if (!_loteAtual) { alert('Selecione um lote primeiro.'); return; }
+    const ids = lerIdsLote();
+    if (!ids.length) { alert('Selecione ao menos um lote para exportar.'); return; }
+    if (ids.length > 1) { alert('Para exportar selecione apenas um lote de cada vez.'); return; }
     const f = lerFiltros();
-    const p = new URLSearchParams({ acao: 'exportar_clientes_filtrado' });
-    Object.entries(f).forEach(([k,v]) => { if(v!=='' && v!==0) p.append(k, v); });
+    const p = new URLSearchParams({ acao: 'exportar_clientes_filtrado', id_lote: ids[0] });
+    Object.entries(f).forEach(([k,v]) => { if(v!=='' && v!='0') p.append(k, v); });
     window.open('ajax_api_v8_lote_csv.php?' + p.toString(), '_blank');
 }
 

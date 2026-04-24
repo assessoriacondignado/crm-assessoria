@@ -1118,7 +1118,7 @@ try {
                              u.NOME as NOME_USUARIO, l.DATA_IMPORTACAO
                       FROM INTEGRACAO_V8_IMPORTACAO_LOTE l
                       LEFT JOIN CLIENTE_USUARIO u ON u.CPF = l.CPF_USUARIO
-                      WHERE l.STATUS_LOTE = 'ATIVO'";
+                      WHERE 1=1";
             $pLH = [];
             if (!$is_m_lh && $id_emp_lh) {
                 $sqlLH .= " AND l.id_empresa = ?"; $pLH[] = $id_emp_lh;
@@ -1126,7 +1126,7 @@ try {
             if ($is_c_lh) {
                 $sqlLH .= " AND l.CPF_USUARIO = ?"; $pLH[] = $cpf_lh;
             }
-            $sqlLH .= " ORDER BY l.ID DESC LIMIT 200";
+            $sqlLH .= " ORDER BY l.STATUS_LOTE ASC, l.ID DESC LIMIT 300";
             $stLH = $pdo->prepare($sqlLH);
             $stLH->execute($pLH);
             $lotesLH = $stLH->fetchAll(PDO::FETCH_ASSOC);
@@ -1347,7 +1347,15 @@ try {
         // NOVA AÇÃO: listagem avançada com filtros server-side + paginação
         // ==================================================================
         case 'listar_clientes_avancado':
-            $id_lote   = (int)($_POST['id_lote'] ?? 0);
+            // Aceita array de IDs ou id_lote único (0 = todos)
+            $ids_lote_raw = $_POST['ids_lote'] ?? null;
+            if ($ids_lote_raw !== null) {
+                $ids_lote_sel = array_values(array_filter(array_map('intval', is_array($ids_lote_raw) ? $ids_lote_raw : explode(',', $ids_lote_raw))));
+            } else {
+                $id_lote_single = (int)($_POST['id_lote'] ?? 0);
+                $ids_lote_sel = $id_lote_single > 0 ? [$id_lote_single] : [];
+            }
+            $id_lote   = count($ids_lote_sel) === 1 ? $ids_lote_sel[0] : 0;
             $offset    = max(0, (int)($_POST['offset'] ?? 0));
             $limite    = 100;
 
@@ -1371,36 +1379,40 @@ try {
             if (isset($_POST['lib_min'])    && $_POST['lib_min']    !== '') { $where_filtro .= " AND t.VALOR_LIQUIDO >= ?"; $params_filtro[] = (float)$_POST['lib_min']; }
             if (isset($_POST['lib_max'])    && $_POST['lib_max']    !== '') { $where_filtro .= " AND t.VALOR_LIQUIDO <= ?"; $params_filtro[] = (float)$_POST['lib_max']; }
 
-            // ---- Decide se é um lote específico ou TODOS ----
+            // ---- Decide se é lote(s) específico(s) ou TODOS ----
             $infoLote = null;
-            if ($id_lote > 0) {
-                // Lote único
-                v8_verificar_dono_lote($pdo, $id_lote, $usuario_logado_cpf);
-                $tbl_av = v8_tabela_lote($pdo, $id_lote);
+            if (!empty($ids_lote_sel)) {
+                // Um ou mais lotes selecionados — UNION ALL se mais de um
+                foreach ($ids_lote_sel as $lid) { v8_verificar_dono_lote($pdo, $lid, $usuario_logado_cpf); }
 
-                $stLote = $pdo->prepare("SELECT l.ID, l.NOME_IMPORTACAO, u.NOME as NOME_USUARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE l LEFT JOIN CLIENTE_USUARIO u ON u.CPF = l.CPF_USUARIO WHERE l.ID = ? LIMIT 1");
-                $stLote->execute([$id_lote]);
-                $infoLote = $stLote->fetch(PDO::FETCH_ASSOC);
+                if (count($ids_lote_sel) === 1) {
+                    $id_lote = $ids_lote_sel[0];
+                    $tbl_av  = v8_tabela_lote($pdo, $id_lote);
 
-                $params_av = array_merge([$id_lote], $params_filtro);
-                $where_av  = "WHERE t.LOTE_ID = ? AND {$where_filtro}";
+                    $stLote = $pdo->prepare("SELECT l.ID, l.NOME_IMPORTACAO, u.NOME as NOME_USUARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE l LEFT JOIN CLIENTE_USUARIO u ON u.CPF = l.CPF_USUARIO WHERE l.ID = ? LIMIT 1");
+                    $stLote->execute([$id_lote]);
+                    $infoLote = $stLote->fetch(PDO::FETCH_ASSOC);
 
-                $params_cnt = $params_av;
-                $stCnt = $pdo->prepare("SELECT COUNT(*) FROM `{$tbl_av}` t {$where_av}");
-                $stCnt->execute($params_cnt);
-                $total = (int)$stCnt->fetchColumn();
-
-                $stAv = $pdo->prepare("
-                    SELECT t.ID, t.LOTE_ID, t.CPF, t.NOME, t.STATUS_V8,
+                    $params_av = array_merge([$id_lote], $params_filtro);
+                    $where_av  = "WHERE t.LOTE_ID = ? AND {$where_filtro}";
+                    $stCnt = $pdo->prepare("SELECT COUNT(*) FROM `{$tbl_av}` t {$where_av}");
+                    $stCnt->execute($params_av);
+                    $total = (int)$stCnt->fetchColumn();
+                    $stAv  = $pdo->prepare("SELECT t.ID, t.LOTE_ID, t.CPF, t.NOME, t.STATUS_V8,
                            COALESCE(NULLIF(TRIM(t.OBSERVACAO),''),'') AS OBSERVACAO,
-                           t.VALOR_MARGEM, t.VALOR_LIQUIDO,
-                           t.DATA_SIMULACAO, t.DATA_CONSENTIMENTO, t.STATUS_WHATSAPP
-                    FROM `{$tbl_av}` t
-                    {$where_av}
-                    ORDER BY t.DATA_SIMULACAO DESC, t.ID ASC
-                    LIMIT {$limite} OFFSET {$offset}
-                ");
-                $stAv->execute($params_av);
+                           t.VALOR_MARGEM, t.VALOR_LIQUIDO, t.DATA_SIMULACAO, t.DATA_CONSENTIMENTO, t.STATUS_WHATSAPP
+                        FROM `{$tbl_av}` t {$where_av} ORDER BY t.DATA_SIMULACAO DESC, t.ID ASC LIMIT {$limite} OFFSET {$offset}");
+                    $stAv->execute($params_av);
+
+                } else {
+                    // Múltiplos lotes selecionados — UNION ALL das tabelas
+                    $lotesAcessiveis = [];
+                    foreach ($ids_lote_sel as $lid) {
+                        $tbl = v8_tabela_lote($pdo, $lid);
+                        $lotesAcessiveis[] = ['ID' => $lid, 'TABELA' => $tbl];
+                    }
+                    goto build_union;
+                }
 
             } else {
                 // TODOS os lotes acessíveis — monta UNION ALL
@@ -1417,7 +1429,7 @@ try {
                 }
 
                 $sqlLotes = "SELECT l.ID, COALESCE(l.TABELA_DADOS,'INTEGRACAO_V8_REGISTROCONSULTA_LOTE') as TABELA
-                             FROM INTEGRACAO_V8_IMPORTACAO_LOTE l WHERE l.STATUS_LOTE = 'ATIVO'";
+                             FROM INTEGRACAO_V8_IMPORTACAO_LOTE l WHERE 1=1";
                 $pLotes = [];
                 if (!$is_m_td && $id_emp_td) { $sqlLotes .= " AND l.id_empresa = ?"; $pLotes[] = $id_emp_td; }
                 if ($is_c_td)                 { $sqlLotes .= " AND l.CPF_USUARIO = ?"; $pLotes[] = $cpf_td; }
@@ -1428,10 +1440,11 @@ try {
                     ob_end_clean(); echo json_encode(['success'=>true,'clientes'=>[],'total'=>0,'tem_mais'=>false,'info_lote'=>null]); exit;
                 }
 
-                // Deduplica tabelas
+                build_union:
+                // Deduplica tabelas agrupando lotes que usam a mesma tabela física
                 $tabelasUnicas = [];
                 foreach ($lotesAcessiveis as $lAc) {
-                    $tbl = $lAc['TABELA'];
+                    $tbl = $lAc['TABELA'] ?? v8_tabela_lote($pdo, (int)$lAc['ID']);
                     if (!isset($tabelasUnicas[$tbl])) $tabelasUnicas[$tbl] = [];
                     $tabelasUnicas[$tbl][] = (int)$lAc['ID'];
                 }
@@ -1446,13 +1459,10 @@ try {
                     $params_union = array_merge($params_union, $ids, $params_filtro);
                 }
                 $sqlUnion = "SELECT * FROM (" . implode(" UNION ALL ", $unionParts) . ") u";
-
-                $total = (int)$pdo->prepare("SELECT COUNT(*) FROM ({$sqlUnion}) cnt")->execute($params_union) ? 0 : 0;
                 $stCnt2 = $pdo->prepare("SELECT COUNT(*) FROM ({$sqlUnion}) cnt");
                 $stCnt2->execute($params_union);
                 $total = (int)$stCnt2->fetchColumn();
-
-                $stAv = $pdo->prepare("{$sqlUnion} ORDER BY u.DATA_SIMULACAO DESC, u.ID ASC LIMIT {$limite} OFFSET {$offset}");
+                $stAv  = $pdo->prepare("{$sqlUnion} ORDER BY u.DATA_SIMULACAO DESC, u.ID ASC LIMIT {$limite} OFFSET {$offset}");
                 $stAv->execute($params_union);
             }
 
