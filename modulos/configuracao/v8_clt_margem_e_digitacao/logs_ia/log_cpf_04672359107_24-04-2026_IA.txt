@@ -1,0 +1,7 @@
+[24-04-2026 14:03:58] [REQUISICAO_RECEBIDA - consultar_cadastro] => {"acao":"consultar_cadastro","cpf":"04672359107","telefone":""}
+[24-04-2026 14:04:30] [REQUISICAO_RECEBIDA - consultar_cadastro] => {"acao":"consultar_cadastro","cpf":"04672359107","telefone":""}
+[24-04-2026 14:04:51] [REQUISICAO_RECEBIDA - consultar_cadastro] => {"acao":"consultar_cadastro","cpf":"04672359107","telefone":""}
+[24-04-2026 14:06:32] [REQUISICAO_RECEBIDA - consultar_cadastro] => {"acao":"consultar_cadastro","cpf":"04672359107","telefone":""}
+[24-04-2026 14:06:32] [RESPOSTA_ENVIADA - consultar_cadastro] => {"success":true,"dados":{"nome":"EVERSON SANTANA NASCIMENTO SILVA","nascimento":"2005-03-12","sexo":"Masculino"}}
+[24-04-2026 14:10:24] [REQUISICAO_RECEBIDA - consulta_completa] => {"acao":"consulta_completa","cpf":"04672359107","telefone":""}
+[24-04-2026 14:12:16] [RESPOSTA_ENVIADA - consulta_completa] => {"success":false,"status":"AGUARDANDO_DATAPREV","msg":"Processando na fila."}
