@@ -1,0 +1,178 @@
+========================================================
+GUIA DE INTENÇÕES E INTERAÇÕES — ATENDENTE CLT
+Arquivo: INTERACAO.txt
+Onde aplicar: GPTMake > Dados do Agente > Intenções
+========================================================
+
+VISÃO GERAL DAS INTENÇÕES NECESSÁRIAS
+--------------------------------------
+| Intenção             | Ação API              | Status        |
+|----------------------|-----------------------|---------------|
+| CADASTRO             | consulta_completa     | ⚠️ AJUSTE 1,3 |
+| SIMULACAO_PERSONALIZ | simular_proposta      | ⚠️ AJUSTE 2   |
+| ENVIAR_PROPOSTA      | enviar_proposta       | 🔴 CRIAR       |
+
+========================================================
+INTENÇÃO 1: CADASTRO
+========================================================
+
+ONDE: GPTMake > Intenções > CADASTRO > Editar
+
+--- PASSO 1: Detalhes Gerais ---
+Nome da intenção: CADASTRO
+
+"Quando usar essa intenção":
+  Acionar quando o cliente informar o CPF para consulta de crédito CLT.
+  Executar imediatamente após receber e validar o CPF do cliente.
+
+[AJUSTE 1 — aplicar agora]
+
+--- PASSO 2: Configurar Ação ---
+
+Coletar dados do cliente:
+  Campo: CPF | Tipo: Texto
+
+Ação: Webhook | Método: POST
+URL: https://crm.assessoriaconsignado.com/modulos/configuracao/v8_clt_margem_e_digitacao/api_ia_v8.php
+
+Headers:
+  Authorization: Bearer [SEU_TOKEN_IA_AQUI]
+
+Body (desmarcar "Gerar automaticamente"):
+  {
+    "acao": "consulta_completa",
+    "cpf": "{{CPF}}",
+    "telefone": "{{telefone_do_contato}}"
+  }
+
+[AJUSTE 3 — adicionar telefone no body]
+
+--- PASSO 3: Dados de Saída ---
+
+Persistir variáveis no contato:
+  Nome do Contato  →  {{nome_do_contato}}
+  CPF              →  {{CPF}}
+  valor_parcela    →  {{valor_parcela}}
+  valor_liberado   →  {{valor_liberado}}
+  prazo            →  {{prazo}}
+
+Resposta do agente: Na interpretação da resposta da API
+
+========================================================
+INTENÇÃO 2: SIMULACAO_PERSONALIZADA
+========================================================
+
+ONDE: GPTMake > Intenções > SIMULACAO_PERSONALIZADA > Editar
+
+--- PASSO 1: Detalhes Gerais ---
+Nome da intenção: SIMULACAO_PERSONALIZADA
+
+"Quando usar essa intenção":
+  Acionar quando o cliente não aceitar a simulação padrão e informar
+  um novo valor liberado desejado. Enviar prazo SEMPRE como 24.
+
+--- PASSO 2: Configurar Ação ---
+
+Coletar dados do cliente:
+  Campo: CPF        | Tipo: Texto
+  Campo: valor_liberado | Tipo: Texto
+
+Ação: Webhook | Método: POST
+URL: https://crm.assessoriaconsignado.com/modulos/configuracao/v8_clt_margem_e_digitacao/api_ia_v8.php
+
+Headers:
+  Authorization: Bearer [SEU_TOKEN_IA_AQUI]
+
+Body (desmarcar "Gerar automaticamente"):
+  {
+    "acao": "simular_proposta",
+    "cpf": "{{CPF}}",
+    "prazo": "24",
+    "valor_liquido": "{{valor_liberado}}"
+  }
+
+[AJUSTE 2 — prazo fixo 24, sem valor_parcela]
+
+--- PASSO 3: Dados de Saída ---
+
+Persistir variáveis no contato:
+  CPF            →  {{CPF}}
+  valor_parcela  →  {{valor_parcela}}
+  valor_liberado →  {{valor_liberado}}
+  prazo          →  {{prazo}}
+
+Resposta do agente: Na interpretação da resposta da API
+
+========================================================
+INTENÇÃO 3: ENVIAR_PROPOSTA  [🔴 CRIAR — NOVA]
+========================================================
+
+ONDE: GPTMake > Intenções > + Nova Intenção
+
+--- PASSO 1: Detalhes Gerais ---
+Nome da intenção: ENVIAR_PROPOSTA
+
+"Quando usar essa intenção":
+  Acionar quando o cliente aceitar a simulação e informar a chave PIX.
+  Executar imediatamente após receber a chave PIX válida do cliente.
+
+--- PASSO 2: Configurar Ação ---
+
+Coletar dados do cliente:
+  Campo: chave_pix | Tipo: Texto
+
+Ação: Webhook | Método: POST
+URL: https://crm.assessoriaconsignado.com/modulos/configuracao/v8_clt_margem_e_digitacao/api_ia_v8.php
+
+Headers:
+  Authorization: Bearer [SEU_TOKEN_IA_AQUI]
+
+Body (desmarcar "Gerar automaticamente"):
+  {
+    "acao": "enviar_proposta",
+    "cpf": "{{CPF}}",
+    "telefone": "{{telefone_do_contato}}",
+    "pix": "{{chave_pix}}",
+    "prazo": "24",
+    "valor_liquido": "{{valor_liberado}}"
+  }
+
+[AJUSTE 5 — criar essa intenção]
+
+--- PASSO 3: Dados de Saída ---
+
+Persistir variáveis no contato:
+  link_assinatura  →  {{link_assinatura}}
+  chave_pix        →  {{chave_pix}}
+
+Resposta do agente: Na interpretação da resposta da API
+
+========================================================
+CAMPOS CUSTOMIZADOS NECESSÁRIOS
+(GPTMake > Dados do Agente > Configurações > Campos customizados)
+========================================================
+
+Verificar se todos existem:
+  ✅ CPF
+  ✅ chave_pix
+  ✅ link_assinatura
+  ✅ prazo
+  ✅ valor_parcela
+  ✅ valor_liberado
+
+========================================================
+CHECKLIST DE AJUSTES — PROGRESSO
+========================================================
+
+[ ] AJUSTE 1 — Preencher "Quando usar" da intenção CADASTRO
+[ ] AJUSTE 2 — Fixar prazo=24 e remover valor_parcela do body SIMULACAO_PERSONALIZADA
+[ ] AJUSTE 3 — Adicionar telefone no body do CADASTRO
+[ ] AJUSTE 4 — Instrução retry AGUARDANDO_DATAPREV (no Treinamento)
+[ ] AJUSTE 5 — Criar intenção ENVIAR_PROPOSTA
+[ ] AJUSTE 6 — Completar ETAPA 7 e EXCEÇÃO no Treinamento
+[ ] AJUSTE 7 — Corrigir mensagem erro simulação ✅ (já aplicado no TREINAMENTO.txt)
+[ ] AJUSTE 8 — Criar intenções ver_status / resolver_pix / cancelar (futuro)
+
+========================================================
+STATUS: v1.0 — 24/04/2026
+========================================================
