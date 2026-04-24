@@ -202,7 +202,11 @@
       "WebFetch(domain:api.gptmaker.ai)",
       "WebSearch",
       "Bash(crontab -l)",
-      "Bash(crontab -u www-data -l)"
+      "Bash(crontab -u www-data -l)",
+      "Bash(mysql -u root --password=\"\" crm_dados -e \"SHOW TABLES LIKE '%PERMISS%';\")",
+      "Bash(mysql -u root --password=\"\" crm_dados -e \"DESCRIBE CLIENTE_USUARIO_PERMISSAO;\")",
+      "Bash(mysql -u root --password=\"\" crm_dados -e \"SELECT PERMISSAO_CHAVE FROM CLIENTE_USUARIO_PERMISSAO WHERE PERMISSAO_CHAVE LIKE 'SUBMENU%' LIMIT 5;\")",
+      "Bash(mysql -u root --password=\"\" crm_dados -e \"SELECT CHAVE, GRUPO_USUARIOS FROM CLIENTE_USUARIO_PERMISSAO WHERE CHAVE LIKE 'SUBMENU%' LIMIT 5;\")"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",
