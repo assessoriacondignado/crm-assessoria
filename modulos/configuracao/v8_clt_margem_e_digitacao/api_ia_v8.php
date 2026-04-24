@@ -404,7 +404,11 @@ try {
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'SIMULACAO_PRONTA' WHERE ID = ?")->execute([$sessao_id]);
                 enviarResposta($cpf, $acao, ['success' => true, 'status' => 'CONCLUIDO', 'margem_disponivel' => (float)$margem, 'simulacao_padrao' => $simDados]);
             } else {
-                enviarResposta($cpf, $acao, ['success' => false, 'status'  => 'AGUARDANDO_DATAPREV', 'msg' => 'Processando na fila.']);
+                // Salva na fila de follow-up automático do CRM
+                $pdo->prepare("INSERT INTO INTEGRACAO_V8_IA_FOLLOWUP (CPF_CLIENTE, TELEFONE, CONSULT_ID, TOKEN_IA) VALUES (?,?,?,?)
+                               ON DUPLICATE KEY UPDATE STATUS='PENDENTE', TENTATIVAS=0, DATA_ULTIMA_TENTATIVA=NULL")
+                    ->execute([$cpf, $telefone, $ultimo_consult_id, $tokenIA]);
+                enviarResposta($cpf, $acao, ['success' => false, 'status' => 'AGUARDANDO_DATAPREV', 'msg' => 'Processando na fila. O sistema enviará o resultado automaticamente.']);
             }
             break;
 
