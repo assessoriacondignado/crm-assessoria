@@ -275,8 +275,13 @@ function processarSimulacaoPadrao($consult_id, $cpf, $margem, $pdo, $credencialI
     $prazo_padrao = (int)($credencialIA['PRAZO_PADRAO'] ?: 84);
     $tab = identificarTabelaUsuario($consult_id, $credencialIA, $tokenV8);
 
+    // Sem margem disponível: retorna erro antes de chamar a V8
+    if ($margem <= 0) {
+        throw new Exception("SEM_MARGEM: Não foi identificada margem disponível para este CPF.");
+    }
+
     $payload_sim = [ 'consult_id' => $consult_id, 'config_id' => $tab['config_id'], 'number_of_installments' => $prazo_padrao ];
-    if ($margem > 0) $payload_sim['installment_face_value'] = $margem;
+    $payload_sim['installment_face_value'] = $margem;
 
     $chS = curl_init("https://bff.v8sistema.com/private-consignment/simulation"); curl_setopt($chS, CURLOPT_RETURNTRANSFER, true); curl_setopt($chS, CURLOPT_POST, true); curl_setopt($chS, CURLOPT_POSTFIELDS, json_encode($payload_sim)); curl_setopt($chS, CURLOPT_HTTPHEADER, ["Authorization: Bearer $tokenV8", "Content-Type: application/json"]);
     $resS = curl_exec($chS); $httpS = curl_getinfo($chS, CURLINFO_HTTP_CODE); curl_close($chS); $jsonS = json_decode($resS, true);
@@ -635,7 +640,15 @@ try {
     }
 } catch (Exception $e) {
     $msgErro = $e->getMessage();
-    
+
+    // Sem margem: retorna status dedicado para a IA usar mensagem correta
+    if (strpos($msgErro, 'SEM_MARGEM') === 0) {
+        if (isset($sessao_id) && $sessao_id > 0) {
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'SEM_MARGEM' WHERE ID = ?")->execute([$sessao_id]);
+        }
+        enviarResposta($cpf, 'SEM_MARGEM', ['success' => false, 'status' => 'SEM_MARGEM', 'error' => 'Sem margem, infelizmente não tem valor disponível para este CPF.']);
+    }
+
     // ✅ TRAVA DE SEGURANÇA: Garante que a sessão e a consulta recebam o status correto no CRM
     if (isset($sessao_id) && $sessao_id > 0) {
         $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'ERRO_API', ULTIMA_ACAO = NOW() WHERE ID = ?")->execute([$sessao_id]);
