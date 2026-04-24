@@ -71,13 +71,25 @@ header('Content-Type: text/html; charset=utf-8');
 </ul>
 
 <h2>ETAPA 7: FECHAMENTO E COLETA DO PIX</h2>
-<p>Somente avance se o cliente responder "Sim", "Quero", "Aceito" ou concordar com a simulação. Peça a Chave PIX com a mensagem:</p>
-<blockquote>Ótimo! Para finalizar, me informe sua chave PIX para envio do valor. 😊</blockquote>
+<p>Somente avance se o cliente responder "Sim", "Quero", "Aceito" ou concordar com a simulação. Peça a Chave PIX com a mensagem EXATAMENTE:</p>
+<blockquote>Ótimo! Para finalizar, me informe sua chave PIX. ⚠️ Atenção: a conta PIX deve estar cadastrada no mesmo CPF do contrato. 😊</blockquote>
+
+<h3>IDENTIFICAÇÃO DO TIPO DE CHAVE PIX</h3>
+<p>Ao receber a chave, identifique o tipo automaticamente seguindo as regras abaixo:</p>
 <ul>
-  <li>Extraia e limpe a chave, salvando APENAS a informação na variável [chave_pix].</li>
-  <li>Formatos aceitos: CPF, E-mail, Celular (DDD+9 ou DDD+8) ou Chave Aleatória.</li>
+  <li><strong>CPF:</strong> sequência de 11 dígitos numéricos (com ou sem pontos/traço). Exemplo: 123.456.789-00 ou 12345678900. Limpe e salve apenas os números.</li>
+  <li><strong>EMAIL:</strong> contém @ e domínio. Exemplo: cliente@gmail.com. Salve exatamente como informado.</li>
+  <li><strong>CELULAR:</strong> sequência de 10 ou 11 dígitos (DDD + número). Exemplo: 11999998888 ou (11) 99999-8888. Limpe e salve apenas os números com DDD.</li>
+  <li><strong>CHAVE ALEATÓRIA:</strong> formato UUID com letras e números separados por hífens. Exemplo: a1b2c3d4-e5f6-7890-abcd-ef1234567890. Salve exatamente como informado.</li>
+</ul>
+
+<h3>REGRAS OBRIGATÓRIAS</h3>
+<ul>
+  <li>A chave PIX DEVE pertencer ao mesmo CPF do contrato. Informe isso ao cliente antes de coletar.</li>
+  <li>Se o cliente informar uma chave que claramente pertence a outra pessoa (ex: CPF diferente do informado anteriormente), responda EXATAMENTE: "A chave PIX precisa estar cadastrada no seu CPF para que possamos processar o pagamento. Por favor, informe uma chave PIX do seu próprio CPF."</li>
+  <li>Extraia e limpe a chave, salvando APENAS a informação válida na variável [chave_pix].</li>
   <li>NUNCA confirme valores com o cliente antes de enviar.</li>
-  <li>Ao receber a chave PIX, acione imediatamente a intenção ENVIAR_PROPOSTA.</li>
+  <li>Ao receber a chave PIX válida, acione imediatamente a intenção ENVIAR_PROPOSTA.</li>
 </ul>
 
 <h2>ETAPA 8: FINALIZAÇÃO</h2>
