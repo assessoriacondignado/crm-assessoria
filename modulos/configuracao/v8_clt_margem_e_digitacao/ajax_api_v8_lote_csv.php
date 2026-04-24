@@ -1532,13 +1532,12 @@ try {
                        t.VALOR_MARGEM, t.VALOR_LIQUIDO, t.DATA_SIMULACAO, t.DATA_CONSENTIMENTO, t.STATUS_WHATSAPP,
                        dc.nome as NOME_CADASTRO,
                        e.logradouro, e.bairro, e.cidade, e.uf, e.cep,
-                       GROUP_CONCAT(DISTINCT tel.telefone_cel ORDER BY tel.id SEPARATOR ' | ') as TELEFONES
+                       (SELECT GROUP_CONCAT(DISTINCT tel.telefone_cel ORDER BY tel.id SEPARATOR ' | ')
+                        FROM telefones tel WHERE tel.cpf = t.CPF) AS TELEFONES
                 FROM `{$tbl_exp}` t
                 LEFT JOIN dados_cadastrais dc ON dc.cpf = t.CPF
                 LEFT JOIN enderecos e ON e.cpf = t.CPF
-                LEFT JOIN telefones tel ON tel.cpf = t.CPF
                 {$where_e}
-                GROUP BY t.ID
                 ORDER BY t.DATA_SIMULACAO DESC
             ");
             $stExp->execute($params_e);
