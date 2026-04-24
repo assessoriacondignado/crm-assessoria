@@ -312,9 +312,13 @@ include $caminho_header;
                                         </td>
                                         
                                         <td>
-                                            <span class="badge bg-dark text-white border border-secondary shadow-sm px-2 py-1 fs-6" title="Total de Clientes na Lista"><?= $c['TOTAL_CLIENTES'] ?></span>
+                                            <a href="/modulos/campanhas/clientes_campanha.php?id_campanha=<?= $c['ID'] ?>" target="_blank"
+                                               class="badge bg-dark text-white border border-secondary shadow-sm px-2 py-1 fs-6 text-decoration-none"
+                                               title="Ver todos os clientes desta campanha"><?= $c['TOTAL_CLIENTES'] ?></a>
                                             <span class="mx-1 text-danger fw-bold fs-5">/</span>
-                                            <span class="text-danger fw-bold fs-6" title="Leads Restantes (Ainda não contatados)"><?= $c['RESTANTES'] ?></span>
+                                            <a href="/modulos/campanhas/clientes_campanha.php?id_campanha=<?= $c['ID'] ?>&restantes=1" target="_blank"
+                                               class="text-danger fw-bold fs-6 text-decoration-none"
+                                               title="Ver apenas leads restantes (não contatados)"><?= $c['RESTANTES'] ?></a>
                                             
                                             <?php if ($c['RESTANTES'] > 0 && $perm_camp_editar): ?>
                                             <form method="POST" class="d-inline ms-2" onsubmit="return confirmarLimpeza();">
