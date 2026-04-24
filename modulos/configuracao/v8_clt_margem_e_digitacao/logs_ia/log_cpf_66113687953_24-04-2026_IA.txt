@@ -10,3 +10,15 @@
 [24-04-2026 18:20:26] [REQUISICAO_RECEBIDA - consulta_completa] => {"acao":"consulta_completa","cpf":"66113687953","telefone":""}
 [24-04-2026 18:20:39] [V8_RETORNO_MARGEM] => {"status":"WAITING_CREDIT_ANALYSIS","availableMargin":null,"marginBaseValue":null,"availableMarginValue":null,"maxAmount":null,"margem_calculada":0}
 [24-04-2026 18:20:42] [RESPOSTA_ENVIADA - SEM_MARGEM] => {"success":false,"status":"SEM_MARGEM","error":"Sem margem, infelizmente não tem valor disponível para este CPF."}
+[24-04-2026 18:29:26] [REQUISICAO_RECEBIDA - consulta_completa] => {"acao":"consulta_completa","cpf":"66113687953","telefone":""}
+[24-04-2026 18:29:44] [V8_RETORNO_MARGEM] => {"status":"SUCCESS","availableMargin":null,"marginBaseValue":"35.76","availableMarginValue":null,"maxAmount":null,"margem_calculada":"35.76"}
+[24-04-2026 18:29:49] [RESPOSTA_ENVIADA - consulta_completa] => {"success":true,"status":"CONCLUIDO","margem_disponivel":35.76,"simulacao_padrao":{"simulation_id":"7d9f0c4c-eefc-4f50-b84b-a39dc19e4103","tabela":"CLT  Acelera - Seguro","valor_liberado":365.54,"valor_parcela":35.76,"prazo":24}}
+[24-04-2026 18:38:15] [REQUISICAO_RECEBIDA - consulta_completa] => {"acao":"consulta_completa","cpf":"66113687953","telefone":""}
+[24-04-2026 18:38:33] [V8_RETORNO_MARGEM] => {"status":"SUCCESS","availableMargin":null,"marginBaseValue":"35.76","availableMarginValue":null,"maxAmount":null,"margem_calculada":"35.76"}
+[24-04-2026 18:38:35] [RESPOSTA_ENVIADA - consulta_completa] => {"success":true,"status":"CONCLUIDO","margem_disponivel":35.76,"simulacao_padrao":{"simulation_id":"d74e4083-77b4-419f-8f84-b25f98c8953c","tabela":"CLT  Acelera - Seguro","valor_liberado":365.54,"valor_parcela":35.76,"prazo":24}}
+[24-04-2026 18:40:24] [REQUISICAO_RECEBIDA - simular_proposta] => {"acao":"simular_proposta","cpf":"66113687953","prazo":"","valor_liquido":"350"}
+[24-04-2026 18:40:33] [RESPOSTA_ENVIADA - simular_proposta] => {"success":true,"valor_liberado":350,"valor_parcela":33.42,"prazo":24}
+[24-04-2026 18:47:26] [REQUISICAO_RECEBIDA - consulta_completa] => {"acao":"consulta_completa","cpf":"66113687953","telefone":""}
+[24-04-2026 18:47:44] [V8_RETORNO_MARGEM] => {"status":"SUCCESS","availableMargin":null,"marginBaseValue":"35.76","availableMarginValue":null,"maxAmount":null,"margem_calculada":"35.76"}
+[24-04-2026 18:47:48] [RESPOSTA_ENVIADA - consulta_completa] => {"success":true,"status":"CONCLUIDO","margem_disponivel":35.76,"simulacao_padrao":{"simulation_id":"69057c08-e7ac-442f-87d4-cfed5134049d","tabela":"CLT  Acelera - Seguro","valor_liberado":365.54,"valor_parcela":35.76,"prazo":24}}
+[24-04-2026 18:52:43] [REQUISICAO_RECEBIDA - consulta_completa] => {"acao":"consulta_completa","cpf":"66113687953","telefone":""}

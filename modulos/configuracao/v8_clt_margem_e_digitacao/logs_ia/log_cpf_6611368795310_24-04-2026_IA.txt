@@ -1,0 +1,2 @@
+[24-04-2026 18:46:45] [REQUISICAO_RECEBIDA - enviar_proposta] => {"acao":"enviar_proposta","cpf":"6.6113687953E10","pix":"alexb@gmail.com","prazo":"","valor_parcela":"","valor_liquido":""}
+[24-04-2026 18:46:45] [RESPOSTA_ENVIADA - FALHA_VALIDACAO] => {"success":false,"error":"CPF FORA DO PADRÃO OU AÇÃO VAZIA (Deve conter 11 dígitos)"}

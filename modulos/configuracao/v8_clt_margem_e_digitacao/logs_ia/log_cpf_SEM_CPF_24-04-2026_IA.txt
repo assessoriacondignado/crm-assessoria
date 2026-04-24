@@ -1,0 +1,8 @@
+[24-04-2026 18:30:47] [REQUISICAO_RECEBIDA - enviar_proposta] => {"acao":"enviar_proposta","cpf":"","pix":"66113687953","prazo":"","valor_parcela":"","valor_liquido":""}
+[24-04-2026 18:30:47] [RESPOSTA_ENVIADA - FALHA_VALIDACAO] => {"success":false,"error":"CPF FORA DO PADRÃO OU AÇÃO VAZIA (Deve conter 11 dígitos)"}
+[24-04-2026 18:31:47] [REQUISICAO_RECEBIDA - enviar_proposta] => {"acao":"enviar_proposta","cpf":"","pix":"66113687953","prazo":"","valor_parcela":"","valor_liquido":""}
+[24-04-2026 18:31:47] [RESPOSTA_ENVIADA - FALHA_VALIDACAO] => {"success":false,"error":"CPF FORA DO PADRÃO OU AÇÃO VAZIA (Deve conter 11 dígitos)"}
+[24-04-2026 18:32:02] [REQUISICAO_RECEBIDA - enviar_proposta] => {"acao":"enviar_proposta","cpf":"","pix":"66113687953","prazo":"","valor_parcela":"","valor_liquido":""}
+[24-04-2026 18:32:02] [RESPOSTA_ENVIADA - FALHA_VALIDACAO] => {"success":false,"error":"CPF FORA DO PADRÃO OU AÇÃO VAZIA (Deve conter 11 dígitos)"}
+[24-04-2026 18:32:41] [REQUISICAO_RECEBIDA - enviar_proposta] => {"acao":"enviar_proposta","cpf":"","pix":"ALEX@GMAIL.COM","prazo":"","valor_parcela":"","valor_liquido":""}
+[24-04-2026 18:32:41] [RESPOSTA_ENVIADA - FALHA_VALIDACAO] => {"success":false,"error":"CPF FORA DO PADRÃO OU AÇÃO VAZIA (Deve conter 11 dígitos)"}

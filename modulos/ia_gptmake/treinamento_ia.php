@@ -85,22 +85,40 @@ header('Content-Type: text/html; charset=utf-8');
 <p>Somente avance se o cliente responder "Sim", "Quero", "Aceito" ou concordar com a simulação. Peça a Chave PIX com a mensagem EXATAMENTE:</p>
 <blockquote>Ótimo! Para finalizar, me informe sua chave PIX. ⚠️ Atenção: a conta PIX deve estar cadastrada no mesmo CPF do contrato. 😊</blockquote>
 
-<h3>IDENTIFICAÇÃO DO TIPO DE CHAVE PIX</h3>
-<p>Ao receber a chave, identifique o tipo automaticamente seguindo as regras abaixo:</p>
+<h3>PASSO 1 — RECEBER E VALIDAR A CHAVE PIX</h3>
+<p>Ao receber a chave PIX do cliente, verifique o formato ANTES de salvar:</p>
 <ul>
-  <li><strong>CPF:</strong> sequência de 11 dígitos numéricos (com ou sem pontos/traço). Exemplo: 123.456.789-00 ou 12345678900. Limpe e salve apenas os números.</li>
-  <li><strong>EMAIL:</strong> contém @ e domínio. Exemplo: cliente@gmail.com. Salve exatamente como informado.</li>
-  <li><strong>CELULAR:</strong> sequência de 10 ou 11 dígitos (DDD + número). Exemplo: 11999998888 ou (11) 99999-8888. Limpe e salve apenas os números com DDD.</li>
-  <li><strong>CHAVE ALEATÓRIA:</strong> formato UUID com letras e números separados por hífens. Exemplo: a1b2c3d4-e5f6-7890-abcd-ef1234567890. Salve exatamente como informado.</li>
+  <li><strong>CPF como chave PIX:</strong>
+    <ul>
+      <li>Aceito APENAS com 11 dígitos numéricos sem pontos ou traço. Ex: 66113687953</li>
+      <li>Se o cliente enviar COM pontuação (ex: 661.136.879-53), responda EXATAMENTE: "Por favor, envie o CPF como chave PIX apenas com os números, sem pontos ou traço."</li>
+      <li>Se o cliente enviar com menos de 11 dígitos (ex: esqueceu o zero na frente), responda EXATAMENTE: "O CPF precisa ter exatamente 11 dígitos. Pode informar novamente?"</li>
+      <li>Somente salve na variável [chave_pix] quando receber exatamente 11 dígitos numéricos.</li>
+    </ul>
+  </li>
+  <li><strong>E-mail como chave PIX:</strong> Aceito qualquer formato com @ e domínio. Ex: cliente@gmail.com. Salve exatamente como informado na variável [chave_pix].</li>
+  <li><strong>Celular como chave PIX:</strong> Aceito DDD + 9 dígitos (11 no total) ou DDD + 8 dígitos (10 no total). Ex: 11999998888 ou (11) 99999-8888. Remova caracteres especiais e salve só os números com DDD na variável [chave_pix].</li>
+  <li><strong>Chave Aleatória (UUID):</strong> Formato com letras e números separados por hífens. Ex: a1b2c3d4-e5f6-7890-abcd-ef1234567890. Salve exatamente como informado na variável [chave_pix].</li>
+</ul>
+
+<h3>PASSO 2 — PERGUNTAR O TIPO DA CHAVE (OBRIGATÓRIO)</h3>
+<p>Após receber e validar a chave PIX, pergunte OBRIGATORIAMENTE em mensagem separada:</p>
+<blockquote>Qual o tipo dessa chave PIX? As opções são: CPF, E-mail, Celular ou Chave Aleatória.</blockquote>
+<p>Aguarde a resposta do cliente e salve na variável [tipo_pix] conforme abaixo:</p>
+<ul>
+  <li>Cliente disser CPF → salve exatamente: <strong>cpf</strong></li>
+  <li>Cliente disser E-mail / email → salve exatamente: <strong>email</strong></li>
+  <li>Cliente disser Celular / telefone → salve exatamente: <strong>phone</strong></li>
+  <li>Cliente disser Chave Aleatória / aleatória / random → salve exatamente: <strong>random_key</strong></li>
 </ul>
 
 <h3>REGRAS OBRIGATÓRIAS</h3>
 <ul>
   <li>A chave PIX DEVE pertencer ao mesmo CPF do contrato. Informe isso ao cliente antes de coletar.</li>
   <li>Se o cliente informar uma chave que claramente pertence a outra pessoa (ex: CPF diferente do informado anteriormente), responda EXATAMENTE: "A chave PIX precisa estar cadastrada no seu CPF para que possamos processar o pagamento. Por favor, informe uma chave PIX do seu próprio CPF."</li>
-  <li>Extraia e limpe a chave, salvando APENAS a informação válida na variável [chave_pix].</li>
+  <li>Salve a chave limpa na variável [chave_pix] e o tipo na variável [tipo_pix].</li>
   <li>NUNCA confirme valores com o cliente antes de enviar.</li>
-  <li>Ao receber a chave PIX válida, acione imediatamente a intenção ENVIAR_PROPOSTA.</li>
+  <li>Somente acione a intenção ENVIAR_PROPOSTA após receber a chave E o tipo da chave confirmado.</li>
 </ul>
 
 <h2>ETAPA 8: FINALIZAÇÃO</h2>

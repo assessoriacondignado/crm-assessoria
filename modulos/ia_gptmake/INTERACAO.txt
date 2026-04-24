@@ -120,6 +120,7 @@ Nome da intenção: ENVIAR_PROPOSTA
 
 Coletar dados do cliente:
   Campo: chave_pix | Tipo: Texto
+  Campo: tipo_pix  | Tipo: Texto
 
 Ação: Webhook | Método: POST
 URL: https://crm.assessoriaconsignado.com/modulos/configuracao/v8_clt_margem_e_digitacao/api_ia_v8.php
@@ -133,17 +134,19 @@ Body (desmarcar "Gerar automaticamente"):
     "cpf": "{{CPF}}",
     "telefone": "{{telefone_do_contato}}",
     "pix": "{{chave_pix}}",
+    "tipo_pix": "{{tipo_pix}}",
     "prazo": "24",
     "valor_liquido": "{{valor_liberado}}"
   }
 
-[AJUSTE 5 — criar essa intenção]
+[AJUSTE 5 — criar essa intenção] [AJUSTE 9 — adicionar tipo_pix no body]
 
 --- PASSO 3: Dados de Saída ---
 
 Persistir variáveis no contato:
   link_assinatura  →  {{link_assinatura}}
   chave_pix        →  {{chave_pix}}
+  tipo_pix         →  {{tipo_pix}}
 
 Resposta do agente: Na interpretação da resposta da API
 
@@ -155,6 +158,7 @@ CAMPOS CUSTOMIZADOS NECESSÁRIOS
 Verificar se todos existem:
   ✅ CPF
   ✅ chave_pix
+  ✅ tipo_pix       ← NOVO — criar se não existir
   ✅ link_assinatura
   ✅ prazo
   ✅ valor_parcela
@@ -172,7 +176,8 @@ CHECKLIST DE AJUSTES — PROGRESSO
 [✅] AJUSTE 6 — Completar ETAPA 7 e EXCEÇÃO no Treinamento
 [✅] AJUSTE 7 — Corrigir mensagem erro simulação (aplicado no TREINAMENTO.txt)
 [ ] AJUSTE 8 — Criar intenções ver_status / resolver_pix / cancelar (futuro)
+[⚠️] AJUSTE 9 — PIX: adicionar tipo_pix no body ENVIAR_PROPOSTA + campo customizado tipo_pix
 
 ========================================================
-STATUS: v1.0 — 24/04/2026
+STATUS: v1.1 — 24/04/2026
 ========================================================

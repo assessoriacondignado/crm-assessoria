@@ -509,20 +509,29 @@ try {
             $cliente = buscarOuAtualizarCadastro($cpf, $pdo, $credencialIA);
             $nasc = !empty($cliente['nascimento']) ? $cliente['nascimento'] : '1980-01-01'; $mae = !empty($cliente['nome_mae']) ? mb_strtoupper($cliente['nome_mae'], 'UTF-8') : 'NAO INFORMADO'; $rg = !empty($cliente['rg']) ? preg_replace('/[^a-zA-Z0-9]/', '', $cliente['rg']) : '000000000'; if (empty($rg)) $rg = '000000000'; $sexo_api = (strtoupper($cliente['sexo']) === 'M') ? 'male' : 'female';
 
-            // DETECTOR AUTOMÁTICO DE TIPO DE CHAVE PIX
-            $tipo_pix = 'random_key'; // Padrão
-            if (filter_var($chave_pix, FILTER_VALIDATE_EMAIL)) { 
-                $tipo_pix = 'email'; 
-            } elseif (preg_match('/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i', $chave_pix)) { 
-                $tipo_pix = 'random_key'; 
+            // TIPO DE CHAVE PIX: usa o informado pela IA; fallback para auto-detecção
+            $tipo_pix_req = strtolower(trim($req['tipo_pix'] ?? ''));
+            $mapa_tipo = ['cpf' => 'cpf', 'email' => 'email', 'phone' => 'phone', 'celular' => 'phone', 'telefone' => 'phone', 'random_key' => 'random_key', 'aleatoria' => 'random_key', 'aleatória' => 'random_key', 'random' => 'random_key'];
+            if (!empty($tipo_pix_req) && isset($mapa_tipo[$tipo_pix_req])) {
+                $tipo_pix = $mapa_tipo[$tipo_pix_req];
+                // Limpa chave conforme tipo informado
+                if ($tipo_pix === 'cpf' || $tipo_pix === 'phone') {
+                    $chave_pix = preg_replace('/\D/', '', $chave_pix);
+                }
             } else {
-                $num_pix = preg_replace('/\D/', '', $chave_pix);
-                if ($num_pix === $cpf) { 
-                    $tipo_pix = 'cpf'; 
-                    $chave_pix = $num_pix;
-                } elseif (strlen($num_pix) === 10 || strlen($num_pix) === 11) { 
-                    $tipo_pix = 'phone'; 
-                    $chave_pix = $num_pix; // Limpa os parênteses e traços para o banco
+                // Fallback: auto-detecção pelo formato da chave
+                $tipo_pix = 'random_key';
+                if (filter_var($chave_pix, FILTER_VALIDATE_EMAIL)) {
+                    $tipo_pix = 'email';
+                } elseif (preg_match('/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i', $chave_pix)) {
+                    $tipo_pix = 'random_key';
+                } else {
+                    $num_pix = preg_replace('/\D/', '', $chave_pix);
+                    if (strlen($num_pix) === 11 && $num_pix === $cpf) {
+                        $tipo_pix = 'cpf'; $chave_pix = $num_pix;
+                    } elseif (strlen($num_pix) === 10 || strlen($num_pix) === 11) {
+                        $tipo_pix = 'phone'; $chave_pix = $num_pix;
+                    }
                 }
             }
 
