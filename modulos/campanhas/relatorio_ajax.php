@@ -176,6 +176,10 @@ if ($acao === 'listar_filtros') {
         $stCampDest->execute($paramsCamp);
         $campanhas_destino = $stCampDest->fetchAll(PDO::FETCH_ASSOC);
 
+        // Módulos de consulta (para HISTORICO_CONSULTAS)
+        $stMod = $pdo->query("SELECT DISTINCT MODULO_CONSULTA FROM BANCO_DE_DADOS_REGISTRO_CONSULTA WHERE MODULO_CONSULTA IS NOT NULL ORDER BY MODULO_CONSULTA ASC");
+        $modulos = $stMod->fetchAll(PDO::FETCH_COLUMN);
+
         echo json_encode([
             'success'           => true,
             'empresas'          => $empresas,
@@ -183,11 +187,84 @@ if ($acao === 'listar_filtros') {
             'status'            => $status,
             'usuarios'          => $usuarios,
             'campanhas_destino' => $campanhas_destino,
+            'modulos'           => $modulos,
             'is_master'         => $is_master,
         ]);
     } catch (Exception $e) {
         echo json_encode(['success' => false, 'msg' => $e->getMessage()]);
     }
+    exit;
+}
+
+// =========================================================================
+// AÇÃO: Buscar dados — HISTÓRICO DE CONSULTAS (modelo separado)
+// =========================================================================
+if ($acao === 'buscar_dados' && ($_POST['tipo'] ?? '') === 'HISTORICO_CONSULTAS') {
+    try {
+        $offset = max(0, intval($_POST['offset'] ?? 0));
+        $limite = 100;
+        $agrupamento = $_POST['agrupamento'] ?? 'modulo';
+
+        // Hierarquia
+        $params_hc = []; $where_hc = " WHERE 1=1";
+        if (!$is_master) {
+            if ($is_consultor || $somente_meus) {
+                $where_hc .= " AND h.id_usuario = ?"; $params_hc[] = $id_usuario_num;
+            } else {
+                $where_hc .= " AND h.id_usuario IN (SELECT ID FROM CLIENTE_USUARIO WHERE id_empresa = ?)";
+                $params_hc[] = $id_empresa_num;
+            }
+        }
+
+        // Filtros
+        $periodo  = $_POST['periodo'] ?? 'todos';
+        $data_ini = $_POST['data_ini'] ?? '';
+        $data_fim = $_POST['data_fim'] ?? '';
+        switch ($periodo) {
+            case 'hoje':   $where_hc .= " AND DATE(h.DATA_HORA) = CURDATE()"; break;
+            case 'ontem':  $where_hc .= " AND DATE(h.DATA_HORA) = DATE_SUB(CURDATE(), INTERVAL 1 DAY)"; break;
+            case 'mes':    $where_hc .= " AND YEAR(h.DATA_HORA) = YEAR(CURDATE()) AND MONTH(h.DATA_HORA) = MONTH(CURDATE())"; break;
+            case 'personalizado':
+                if ($data_ini) { $where_hc .= " AND DATE(h.DATA_HORA) >= ?"; $params_hc[] = $data_ini; }
+                if ($data_fim) { $where_hc .= " AND DATE(h.DATA_HORA) <= ?"; $params_hc[] = $data_fim; }
+                break;
+        }
+        $usuario_sel = $_POST['usuario'] ?? []; $usuario_sel = array_filter(array_map('intval', (array)$usuario_sel));
+        if (!empty($usuario_sel)) { $ph = implode(',', array_fill(0, count($usuario_sel), '?')); $where_hc .= " AND h.id_usuario IN ($ph)"; $params_hc = array_merge($params_hc, $usuario_sel); }
+        $modulo_sel = trim($_POST['modulo'] ?? '');
+        if ($modulo_sel !== '') { $where_hc .= " AND h.MODULO_CONSULTA = ?"; $params_hc[] = $modulo_sel; }
+        $q_hc = trim($_POST['q'] ?? '');
+        if ($q_hc !== '') { $qL = preg_replace('/\D/', '', $q_hc); if ($qL) { $where_hc .= " AND h.CPF_CLIENTE LIKE ?"; $params_hc[] = "%{$qL}%"; } else { $where_hc .= " AND (d.nome LIKE ? OR h.NOME_USUARIO LIKE ?)"; $params_hc[] = "%{$q_hc}%"; $params_hc[] = "%{$q_hc}%"; } }
+
+        // Total
+        $stCnt = $pdo->prepare("SELECT COUNT(*) FROM BANCO_DE_DADOS_REGISTRO_CONSULTA h LEFT JOIN dados_cadastrais d ON d.cpf = h.CPF_CLIENTE {$where_hc}");
+        $stCnt->execute($params_hc); $total = (int)$stCnt->fetchColumn();
+
+        // Lista
+        $params_l = $params_hc;
+        $stL = $pdo->prepare("SELECT DATE_FORMAT(h.DATA_HORA,'%d/%m/%Y %H:%i') as DATA_BR, h.MODULO_CONSULTA, h.NOME_USUARIO, h.CPF_CLIENTE, COALESCE(d.nome, h.CPF_CLIENTE) as NOME_CLIENTE FROM BANCO_DE_DADOS_REGISTRO_CONSULTA h LEFT JOIN dados_cadastrais d ON d.cpf = h.CPF_CLIENTE {$where_hc} ORDER BY h.DATA_HORA DESC LIMIT {$limite} OFFSET {$offset}");
+        $stL->execute($params_l); $lista = $stL->fetchAll(PDO::FETCH_ASSOC);
+
+        // Gráfico
+        $params_g = $params_hc;
+        switch ($agrupamento) {
+            case 'usuario':
+                $sqlG = "SELECT COALESCE(h.NOME_USUARIO,'Sem Usuário') AS LABEL, COUNT(*) AS TOTAL FROM BANCO_DE_DADOS_REGISTRO_CONSULTA h LEFT JOIN dados_cadastrais d ON d.cpf = h.CPF_CLIENTE {$where_hc} GROUP BY h.NOME_USUARIO ORDER BY TOTAL DESC";
+                $tipo_g = 'pie';
+                break;
+            case 'campanha': // "por dia" para histórico
+                $sqlG = "SELECT DATE_FORMAT(h.DATA_HORA,'%d/%m') AS LABEL, COUNT(*) AS TOTAL FROM BANCO_DE_DADOS_REGISTRO_CONSULTA h LEFT JOIN dados_cadastrais d ON d.cpf = h.CPF_CLIENTE {$where_hc} GROUP BY DATE(h.DATA_HORA) ORDER BY DATE(h.DATA_HORA) ASC LIMIT 30";
+                $tipo_g = 'bar';
+                break;
+            default: // modulo
+                $sqlG = "SELECT COALESCE(h.MODULO_CONSULTA,'Sem Módulo') AS LABEL, COUNT(*) AS TOTAL FROM BANCO_DE_DADOS_REGISTRO_CONSULTA h LEFT JOIN dados_cadastrais d ON d.cpf = h.CPF_CLIENTE {$where_hc} GROUP BY h.MODULO_CONSULTA ORDER BY TOTAL DESC";
+                $tipo_g = 'pie';
+        }
+        $stG = $pdo->prepare($sqlG); $stG->execute($params_g);
+        $grafico_rows = $stG->fetchAll(PDO::FETCH_ASSOC);
+
+        ob_end_clean(); echo json_encode(['success'=>true,'lista'=>$lista,'total'=>$total,'offset_atual'=>$offset,'tem_mais'=>($offset+$limite)<$total,'grafico'=>$grafico_rows,'tipo_grafico'=>$tipo_g]);
+    } catch (Exception $e) { ob_end_clean(); echo json_encode(['success'=>false,'msg'=>$e->getMessage()]); }
     exit;
 }
 

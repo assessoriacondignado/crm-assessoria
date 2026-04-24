@@ -100,6 +100,14 @@ include $caminho_header;
                     <p class="text-muted small mb-0">Clientes com retorno agendado. Gráfico de barras por data.</p>
                 </div>
             </div>
+
+            <div class="col-md-4">
+                <div class="card card-modelo shadow-sm rounded-3 p-3 text-center" onclick="selecionarModelo('HISTORICO_CONSULTAS')">
+                    <div class="mb-3"><i class="fas fa-history fa-3x text-warning"></i></div>
+                    <h5 class="fw-bold text-dark">HIST&Oacute;RICO DE CONSULTAS</h5>
+                    <p class="text-muted small mb-0">Consultas realizadas no sistema por m&oacute;dulo, usu&aacute;rio e per&iacute;odo.</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -148,6 +156,12 @@ include $caminho_header;
                                     <option value="campanha">📣 Por Campanha</option>
                                     <option value="usuario">👤 Por Usuário</option>
                                 </select>
+                                <!-- Agrupamento alternativo para HISTORICO_CONSULTAS -->
+                                <select id="f_agrupamento_hc" class="form-select form-select-sm border-danger fw-bold" style="display:none;">
+                                    <option value="modulo">📋 Por Módulo</option>
+                                    <option value="usuario">👤 Por Usuário</option>
+                                    <option value="campanha">📅 Por Dia</option>
+                                </select>
                             </div>
 
                             <?php if ($is_master): ?>
@@ -193,6 +207,20 @@ include $caminho_header;
                                         <div class="crm-ms-list" id="ms_status_list"></div>
                                     </div>
                                 </div>
+                            </div>
+
+                            <!-- Filtro Módulo (só HISTORICO_CONSULTAS) -->
+                            <div class="mb-2" id="box_filtro_modulo" style="display:none;">
+                                <label class="form-label fw-bold small mb-1">Módulo de Consulta</label>
+                                <select id="f_modulo" class="form-select form-select-sm border-dark">
+                                    <option value="">— Todos —</option>
+                                </select>
+                            </div>
+
+                            <!-- Filtro CPF/Nome para HISTORICO_CONSULTAS -->
+                            <div class="mb-2" id="box_filtro_q_hc" style="display:none;">
+                                <label class="form-label fw-bold small mb-1">CPF / Nome do Cliente</label>
+                                <input type="text" id="f_q_hc" class="form-control form-control-sm border-dark" placeholder="CPF ou nome...">
                             </div>
 
                             <div class="mb-2">
@@ -279,11 +307,18 @@ include $caminho_header;
                     <div id="tabela_wrap">
                         <table class="table table-hover align-middle mb-0 small">
                             <thead class="table-dark text-uppercase" style="position:sticky;top:0;z-index:1;">
-                                <tr>
+                                <!-- Cabeçalho padrão (campanhas) -->
+                                <tr id="thead_campanha">
                                     <th style="width:30px;"><input type="checkbox" id="check_all" onchange="toggleTodos(this)"></th>
                                     <th>ID</th><th>Nome / CPF</th><th>Data Registro</th>
                                     <th>Data Agendamento</th><th>Campanha</th><th>Usuário</th>
                                     <th>Status</th><th style="max-width:200px;">Anotação</th><th></th>
+                                </tr>
+                                <!-- Cabeçalho para HISTORICO_CONSULTAS -->
+                                <tr id="thead_historico" style="display:none;">
+                                    <th style="width:30px;"><input type="checkbox" onchange="toggleTodos(this)"></th>
+                                    <th>Data / Hora</th><th>Módulo</th><th>Usuário</th>
+                                    <th>Nome do Cliente</th><th>CPF Alvo</th><th></th>
                                 </tr>
                             </thead>
                             <tbody id="tbody_relatorio">
@@ -478,10 +513,18 @@ const CORES_PIE = ['#dc3545','#0d6efd','#198754','#ffc107','#0dcaf0','#6f42c1','
 function selecionarModelo(tipo) {
     _tipoAtivo = tipo;
     document.getElementById('tipo_relatorio_ativo').value = tipo;
-    const titulos = { STATUS_CAMPANHA: '📊 Status de Campanha', AGENDAMENTOS_FUTURO: '📅 Agendamentos Futuros' };
+    const titulos = { STATUS_CAMPANHA: '📊 Status de Campanha', AGENDAMENTOS_FUTURO: '📅 Agendamentos Futuros', HISTORICO_CONSULTAS: '🕐 Histórico de Consultas' };
     document.getElementById('titulo_relatorio').textContent = titulos[tipo] || tipo;
     document.getElementById('box_modelos').style.display   = 'none';
     document.getElementById('box_relatorio').style.display = 'block';
+    // Mostrar/ocultar filtros e colunas por modelo
+    const isHC = tipo === 'HISTORICO_CONSULTAS';
+    document.getElementById('box_filtro_modulo').style.display  = isHC ? 'block' : 'none';
+    document.getElementById('box_filtro_q_hc').style.display    = isHC ? 'block' : 'none';
+    document.getElementById('f_agrupamento').style.display      = isHC ? 'none'  : 'block';
+    document.getElementById('f_agrupamento_hc').style.display   = isHC ? 'block' : 'none';
+    document.getElementById('thead_campanha').style.display     = isHC ? 'none'  : '';
+    document.getElementById('thead_historico').style.display    = isHC ? ''      : 'none';
     carregarFiltros();
 }
 
@@ -504,6 +547,12 @@ function carregarFiltros() {
             initMs('ms_campanha', r.campanhas,  'ID', 'NOME_CAMPANHA');
             initMs('ms_status',   r.status,     'ID', 'NOME_STATUS');
             initMs('ms_usuario',  r.usuarios,   'ID', 'NOME');
+            // Módulos para HISTORICO_CONSULTAS
+            const selMod = document.getElementById('f_modulo');
+            if (selMod && r.modulos) {
+                selMod.innerHTML = '<option value="">— Todos —</option>';
+                (r.modulos || []).forEach(m => selMod.innerHTML += `<option value="${escHtml(m)}">${escHtml(m)}</option>`);
+            }
             if (r.is_master) {
                 const sel = document.getElementById('f_empresa');
                 if (sel) {
@@ -530,9 +579,13 @@ function toggleDataPersonalizada() {
 
 function lerFiltros() {
     const emp = document.getElementById('f_empresa');
+    const tipoAtivo = document.getElementById('tipo_relatorio_ativo').value;
+    const isHC = tipoAtivo === 'HISTORICO_CONSULTAS';
     return {
-        tipo        : document.getElementById('tipo_relatorio_ativo').value,
-        agrupamento : document.getElementById('f_agrupamento').value,
+        tipo        : tipoAtivo,
+        agrupamento : isHC ? document.getElementById('f_agrupamento_hc').value : document.getElementById('f_agrupamento').value,
+        modulo      : isHC ? (document.getElementById('f_modulo')?.value || '') : '',
+        q           : isHC ? (document.getElementById('f_q_hc')?.value || '') : '',
         empresa     : emp ? emp.value : '',
         campanha : getMsValores('ms_campanha'),
         status   : getMsValores('ms_status'),
@@ -622,39 +675,54 @@ function verMais() { buscarDados(_offsetAtual, false); }
 // RENDERIZAR LISTA
 // =========================================================================
 function renderLista(lista, reset) {
-    const tbody = document.getElementById('tbody_relatorio');
+    const tbody  = document.getElementById('tbody_relatorio');
+    const tipoAt = document.getElementById('tipo_relatorio_ativo').value;
+    const isHC   = tipoAt === 'HISTORICO_CONSULTAS';
+    const cols   = isHC ? 7 : 10;
     if (reset) tbody.innerHTML = '';
     if (!lista || lista.length === 0) {
-        if (reset) tbody.innerHTML = '<tr><td colspan="10" class="text-center text-muted py-4 fst-italic">Nenhum registro encontrado.</td></tr>';
+        if (reset) tbody.innerHTML = `<tr><td colspan="${cols}" class="text-center text-muted py-4 fst-italic">Nenhum registro encontrado.</td></tr>`;
         return;
     }
     lista.forEach(r => {
-        const agend = r.DATA_AGENDAMENTO_FMT
-            ? `<span class="badge bg-info text-dark border border-dark">${r.DATA_AGENDAMENTO_FMT}</span>`
-            : '<span class="text-muted">—</span>';
-        const anot = r.ANOTACAO
-            ? `<span title="${escHtml(r.ANOTACAO)}">${escHtml(r.ANOTACAO.substring(0,50))}${r.ANOTACAO.length>50?'…':''}</span>`
-            : '<span class="text-muted">—</span>';
-        const cpfFmt = r.CPF_CLIENTE.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
-        const camps  = r.CAMPANHAS ? `<small class="text-primary fw-bold">${escHtml(r.CAMPANHAS)}</small>` : '<span class="text-muted">—</span>';
         const tr = document.createElement('tr');
         tr.className = 'linha-cliente';
-        tr.innerHTML = `
-            <td><input type="checkbox" class="check-linha" value="${escHtml(r.CPF_CLIENTE)}" onchange="atualizarBotoesSel()"></td>
-            <td class="text-muted">${r.ID}</td>
-            <td><span class="fw-bold text-dark">${escHtml(r.NOME_CLIENTE)}</span><br><small class="text-muted">${cpfFmt}</small></td>
-            <td class="text-nowrap text-muted">${r.DATA_REGISTRO_FMT||'—'}</td>
-            <td class="text-nowrap">${agend}</td>
-            <td>${camps}</td>
-            <td class="text-nowrap"><small>${escHtml(r.NOME_USUARIO)}</small></td>
-            <td><span class="badge badge-status bg-secondary border border-dark">${escHtml(r.NOME_STATUS)}</span></td>
-            <td>${anot}</td>
-            <td>
-                <a href="/modulos/banco_dados/consulta.php?busca=${r.CPF_CLIENTE}&cpf_selecionado=${r.CPF_CLIENTE}&acao=visualizar"
-                   target="_blank" class="btn btn-xs btn-sm btn-outline-primary border-dark py-0 px-1" title="Ver Cliente">
-                    <i class="fas fa-external-link-alt"></i>
-                </a>
-            </td>`;
+        if (isHC) {
+            const cpfFmt = (r.CPF_CLIENTE||'').replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+            tr.innerHTML = `
+                <td><input type="checkbox" class="check-linha" value="${escHtml(r.CPF_CLIENTE||'')}" onchange="atualizarBotoesSel()"></td>
+                <td class="text-nowrap text-muted small">${r.DATA_BR||'—'}</td>
+                <td><span class="badge bg-secondary border border-dark" style="font-size:.7rem;">${escHtml(r.MODULO_CONSULTA||'—')}</span></td>
+                <td class="text-nowrap small">${escHtml(r.NOME_USUARIO||'—')}</td>
+                <td class="fw-bold text-dark small">${escHtml(r.NOME_CLIENTE||'—')}</td>
+                <td class="text-muted small">${cpfFmt||'—'}</td>
+                <td>
+                    ${r.CPF_CLIENTE ? `<a href="/modulos/banco_dados/consulta.php?busca=${r.CPF_CLIENTE}&cpf_selecionado=${r.CPF_CLIENTE}&acao=visualizar"
+                       target="_blank" class="btn btn-xs btn-sm btn-outline-primary border-dark py-0 px-1" title="Ver Cliente">
+                        <i class="fas fa-external-link-alt"></i></a>` : ''}
+                </td>`;
+        } else {
+            const agend = r.DATA_AGENDAMENTO_FMT
+                ? `<span class="badge bg-info text-dark border border-dark">${r.DATA_AGENDAMENTO_FMT}</span>`
+                : '<span class="text-muted">—</span>';
+            const anot = r.ANOTACAO
+                ? `<span title="${escHtml(r.ANOTACAO)}">${escHtml(r.ANOTACAO.substring(0,50))}${r.ANOTACAO.length>50?'…':''}</span>`
+                : '<span class="text-muted">—</span>';
+            const cpfFmt = r.CPF_CLIENTE.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+            const camps  = r.CAMPANHAS ? `<small class="text-primary fw-bold">${escHtml(r.CAMPANHAS)}</small>` : '<span class="text-muted">—</span>';
+            tr.innerHTML = `
+                <td><input type="checkbox" class="check-linha" value="${escHtml(r.CPF_CLIENTE)}" onchange="atualizarBotoesSel()"></td>
+                <td class="text-muted">${r.ID}</td>
+                <td><span class="fw-bold text-dark">${escHtml(r.NOME_CLIENTE)}</span><br><small class="text-muted">${cpfFmt}</small></td>
+                <td class="text-nowrap text-muted">${r.DATA_REGISTRO_FMT||'—'}</td>
+                <td class="text-nowrap">${agend}</td>
+                <td>${camps}</td>
+                <td class="text-nowrap"><small>${escHtml(r.NOME_USUARIO)}</small></td>
+                <td><span class="badge badge-status bg-secondary border border-dark">${escHtml(r.NOME_STATUS)}</span></td>
+                <td>${anot}</td>
+                <td><a href="/modulos/banco_dados/consulta.php?busca=${r.CPF_CLIENTE}&cpf_selecionado=${r.CPF_CLIENTE}&acao=visualizar"
+                       target="_blank" class="btn btn-xs btn-sm btn-outline-primary border-dark py-0 px-1"><i class="fas fa-external-link-alt"></i></a></td>`;
+        }
         tbody.appendChild(tr);
     });
 }
