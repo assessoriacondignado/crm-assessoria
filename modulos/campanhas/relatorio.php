@@ -209,18 +209,25 @@ include $caminho_header;
                                 </div>
                             </div>
 
-                            <!-- Filtro Módulo (só HISTORICO_CONSULTAS) -->
-                            <div class="mb-2" id="box_filtro_modulo" style="display:none;">
-                                <label class="form-label fw-bold small mb-1">Módulo de Consulta</label>
-                                <select id="f_modulo" class="form-select form-select-sm border-dark">
-                                    <option value="">— Todos —</option>
+                            <!-- Período específico para HISTORICO_CONSULTAS -->
+                            <div class="mb-2" id="box_periodo_hc" style="display:none;">
+                                <label class="form-label fw-bold small mb-1">Período</label>
+                                <select id="f_periodo_hc" class="form-select form-select-sm border-dark" onchange="toggleDataHC()">
+                                    <option value="hoje">Hoje</option>
+                                    <option value="ontem">Ontem</option>
+                                    <option value="30dias">Últimos 30 Dias</option>
+                                    <option value="personalizado">Personalizado</option>
                                 </select>
-                            </div>
-
-                            <!-- Filtro CPF/Nome para HISTORICO_CONSULTAS -->
-                            <div class="mb-2" id="box_filtro_q_hc" style="display:none;">
-                                <label class="form-label fw-bold small mb-1">CPF / Nome do Cliente</label>
-                                <input type="text" id="f_q_hc" class="form-control form-control-sm border-dark" placeholder="CPF ou nome...">
+                                <div id="box_data_pers_hc" style="display:none;" class="row g-1 mt-1">
+                                    <div class="col-6">
+                                        <label class="form-label fw-bold small mb-0">De</label>
+                                        <input type="date" id="f_data_ini_hc" class="form-control form-control-sm border-dark">
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="form-label fw-bold small mb-0">Até</label>
+                                        <input type="date" id="f_data_fim_hc" class="form-control form-control-sm border-dark">
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="mb-2">
@@ -517,14 +524,27 @@ function selecionarModelo(tipo) {
     document.getElementById('titulo_relatorio').textContent = titulos[tipo] || tipo;
     document.getElementById('box_modelos').style.display   = 'none';
     document.getElementById('box_relatorio').style.display = 'block';
-    // Mostrar/ocultar filtros e colunas por modelo
+    // Mostrar/ocultar filtros e seções por modelo
     const isHC = tipo === 'HISTORICO_CONSULTAS';
-    document.getElementById('box_filtro_modulo').style.display  = isHC ? 'block' : 'none';
-    document.getElementById('box_filtro_q_hc').style.display    = isHC ? 'block' : 'none';
-    document.getElementById('f_agrupamento').style.display      = isHC ? 'none'  : 'block';
-    document.getElementById('f_agrupamento_hc').style.display   = isHC ? 'block' : 'none';
-    document.getElementById('thead_campanha').style.display     = isHC ? 'none'  : '';
-    document.getElementById('thead_historico').style.display    = isHC ? ''      : 'none';
+
+    // Filtros exclusivos de campanha
+    ['ms_campanha','ms_status'].forEach(id => {
+        const el = document.getElementById(id)?.closest('.mb-2');
+        if (el) el.style.display = isHC ? 'none' : '';
+    });
+    // Filtros exclusivos de HC
+    document.getElementById('box_periodo_hc').style.display     = isHC ? 'block' : 'none';
+    // Período padrão (campanha) visível só para não-HC
+    document.querySelector('[for="f_periodo"]')?.closest('.mb-2')
+        && (document.querySelector('[for="f_periodo"]').closest('.mb-2').style.display = isHC ? 'none' : '');
+    // Agrupamento
+    document.getElementById('f_agrupamento').closest('.mb-2').style.display    = isHC ? 'none' : '';
+    document.getElementById('f_agrupamento_hc').closest('.mb-2').style.display = 'none'; // sempre oculto
+    // Gráfico — ocultar para HC
+    document.getElementById('box_grafico_card').style.display   = isHC ? 'none' : '';
+    // Colunas da tabela
+    document.getElementById('thead_campanha').style.display     = isHC ? 'none' : '';
+    document.getElementById('thead_historico').style.display    = isHC ? ''     : 'none';
     carregarFiltros();
 }
 
@@ -572,6 +592,12 @@ function carregarFiltros() {
 // =========================================================================
 // FILTRAR
 // =========================================================================
+function toggleDataHC() {
+    const v = document.getElementById('f_periodo_hc')?.value;
+    const box = document.getElementById('box_data_pers_hc');
+    if (box) box.style.display = v === 'personalizado' ? 'flex' : 'none';
+}
+
 function toggleDataPersonalizada() {
     document.getElementById('box_data_pers').style.display =
         document.getElementById('f_periodo').value === 'personalizado' ? 'block' : 'none';
@@ -583,9 +609,10 @@ function lerFiltros() {
     const isHC = tipoAtivo === 'HISTORICO_CONSULTAS';
     return {
         tipo        : tipoAtivo,
-        agrupamento : isHC ? document.getElementById('f_agrupamento_hc').value : document.getElementById('f_agrupamento').value,
-        modulo      : isHC ? (document.getElementById('f_modulo')?.value || '') : '',
-        q           : isHC ? (document.getElementById('f_q_hc')?.value || '') : '',
+        agrupamento : isHC ? 'modulo' : document.getElementById('f_agrupamento').value,
+        periodo_hc  : isHC ? (document.getElementById('f_periodo_hc')?.value || 'hoje') : '',
+        data_ini    : isHC ? (document.getElementById('f_data_ini_hc')?.value || '') : (document.getElementById('f_data_ini')?.value || ''),
+        data_fim    : isHC ? (document.getElementById('f_data_fim_hc')?.value || '') : (document.getElementById('f_data_fim')?.value || ''),
         empresa     : emp ? emp.value : '',
         campanha : getMsValores('ms_campanha'),
         status   : getMsValores('ms_status'),
