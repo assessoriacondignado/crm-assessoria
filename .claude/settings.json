@@ -196,7 +196,13 @@
       "Bash(curl -s -w '\\\\nHTTP:%{http_code}' -X POST https://crm.assessoriaconsignado.com/modulos/configuracao/v8_clt_margem_e_digitacao/api_ia_v8.php -H 'Content-Type: application/json' -H 'Authorization: Bearer V8IA_f2b902e7a207a6309b66fc02dc9642f949807801' --data-raw '{\"acao\":\"consultar_cadastro\",\"cpf\":\"04672359107\",\"telefone\":\"\"}')",
       "Bash(curl -s -X POST https://crm.assessoriaconsignado.com/modulos/configuracao/v8_clt_margem_e_digitacao/api_ia_v8.php -H 'Content-Type: application/json' -H 'Authorization: Bearer V8IA_f2b902e7a207a6309b66fc02dc9642f949807801' --data-raw '{\"acao\":\"consultar_cadastro\",\"cpf\":\"04672359107\",\"telefone\":\"\"}')",
       "Bash(mysql -u root --password=\"\" crm_dados -e \" SHOW CREATE TABLE INTEGRACAO_V8_IA_CREDENCIAIS\\\\G \")",
-      "Bash(mysql -u root --password= crm_dados -e ' *)"
+      "Bash(mysql -u root --password= crm_dados -e ' *)",
+      "WebFetch(domain:developer.gptmaker.ai)",
+      "WebFetch(domain:docs.gptmaker.ai)",
+      "WebFetch(domain:api.gptmaker.ai)",
+      "WebSearch",
+      "Bash(crontab -l)",
+      "Bash(crontab -u www-data -l)"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",
