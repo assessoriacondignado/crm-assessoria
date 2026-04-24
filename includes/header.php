@@ -610,6 +610,9 @@ session_write_close();
                 <?php if(podeAcessarMenu($pdo, 'SUBMENU_SMS')): ?>
                 <a class="sidebar-subitem" href="/modulos/configuracao/disparo_sms/index.php"><i class="fas fa-sms"></i> Disparo SMS</a>
                 <?php endif; ?>
+                <?php if(podeAcessarMenu($pdo, 'SUBMENU_GPTMAKE')): ?>
+                <a class="sidebar-subitem" href="/modulos/configuracao/v8_clt_margem_e_digitacao/config_gptmake.php"><i class="fas fa-brain"></i> GPTMAKE API</a>
+                <?php endif; ?>
             </div>
             <?php endif; ?>
 
