@@ -164,13 +164,13 @@ Verificar se todos existem:
 CHECKLIST DE AJUSTES — PROGRESSO
 ========================================================
 
-[ ] AJUSTE 1 — Preencher "Quando usar" da intenção CADASTRO
-[ ] AJUSTE 2 — Fixar prazo=24 e remover valor_parcela do body SIMULACAO_PERSONALIZADA
-[ ] AJUSTE 3 — Adicionar telefone no body do CADASTRO
-[ ] AJUSTE 4 — Instrução retry AGUARDANDO_DATAPREV (no Treinamento)
-[ ] AJUSTE 5 — Criar intenção ENVIAR_PROPOSTA
-[ ] AJUSTE 6 — Completar ETAPA 7 e EXCEÇÃO no Treinamento
-[ ] AJUSTE 7 — Corrigir mensagem erro simulação ✅ (já aplicado no TREINAMENTO.txt)
+[✅] AJUSTE 1 — Preencher "Quando usar" da intenção CADASTRO
+[✅] AJUSTE 2 — Fixar prazo=24 e remover valor_parcela do body SIMULACAO_PERSONALIZADA
+[✅] AJUSTE 3 — Adicionar telefone no body do CADASTRO
+[✅] AJUSTE 4 — Instrução retry AGUARDANDO_DATAPREV (no Treinamento)
+[✅] AJUSTE 5 — Criar intenção ENVIAR_PROPOSTA
+[✅] AJUSTE 6 — Completar ETAPA 7 e EXCEÇÃO no Treinamento
+[✅] AJUSTE 7 — Corrigir mensagem erro simulação (aplicado no TREINAMENTO.txt)
 [ ] AJUSTE 8 — Criar intenções ver_status / resolver_pix / cancelar (futuro)
 
 ========================================================
