@@ -4,6 +4,8 @@
 // Módulos: Consulta Completa, Simulação Personalizada, Digitação, Status, PIX e Cancelamento
 ob_start();
 ini_set('display_errors', 0);
+ini_set('log_errors', 1);
+ini_set('error_log', __DIR__ . '/logs_ia/php_errors.log');
 error_reporting(0);
 set_time_limit(800); 
 ignore_user_abort(true); 
@@ -125,10 +127,10 @@ if (empty($acao) || strlen($cpf) !== 11) {
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/conexao.php';
 if(!isset($pdo) && isset($conn)) { $pdo = $conn; } 
-$pdo->exec("SET NAMES utf8mb4");
+$pdo->exec("SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci");
 
-$headers = apache_request_headers();
-$authHeader = $headers['Authorization'] ?? $headers['authorization'] ?? '';
+$headers = (function_exists('apache_request_headers') ? apache_request_headers() : []) ?: [];
+$authHeader = $headers['Authorization'] ?? $headers['authorization'] ?? $_SERVER['HTTP_AUTHORIZATION'] ?? '';
 
 if (empty($authHeader) || !preg_match('/Bearer\s(\S+)/', $authHeader, $matches)) {
     enviarResposta($cpf, 'FALHA_AUTENTICACAO', ['success' => false, 'error' => 'Acesso Negado: Token Bearer não fornecido no Header.']);
@@ -136,11 +138,11 @@ if (empty($authHeader) || !preg_match('/Bearer\s(\S+)/', $authHeader, $matches))
 
 $tokenIA = $matches[1];
 
-$stmtCred = $pdo->prepare("SELECT i.*, c.SALDO as SALDO_CLIENTE, c.CUSTO_CONSULTA as CUSTO_CLIENTE, v.CUSTO_V8, v.ID as CHAVE_REAL_V8, v.USERNAME_API, v.PASSWORD_API, v.CLIENT_ID, v.AUDIENCE, v.TABELA_PADRAO, v.PRAZO_PADRAO, u.ID as ID_USUARIO_DONO 
-                           FROM INTEGRACAO_V8_IA_CREDENCIAIS i 
-                           JOIN CLIENTE_CADASTRO c ON i.CPF_DONO = c.CPF
+$stmtCred = $pdo->prepare("SELECT i.*, c.SALDO as SALDO_CLIENTE, c.CUSTO_CONSULTA as CUSTO_CLIENTE, v.CUSTO_V8, v.ID as CHAVE_REAL_V8, v.USERNAME_API, v.PASSWORD_API, v.CLIENT_ID, v.AUDIENCE, v.TABELA_PADRAO, v.PRAZO_PADRAO, u.ID as ID_USUARIO_DONO
+                           FROM INTEGRACAO_V8_IA_CREDENCIAIS i
+                           JOIN CLIENTE_CADASTRO c ON i.CPF_DONO = c.CPF COLLATE utf8mb4_unicode_ci
                            JOIN INTEGRACAO_V8_CHAVE_ACESSO v ON i.CHAVE_V8_ID = v.ID
-                           LEFT JOIN CLIENTE_USUARIO u ON c.CPF = u.CPF
+                           LEFT JOIN CLIENTE_USUARIO u ON c.CPF COLLATE utf8mb4_unicode_ci = u.CPF COLLATE utf8mb4_unicode_ci
                            WHERE i.TOKEN_IA = ? AND i.STATUS = 'ATIVO'");
 $stmtCred->execute([$tokenIA]);
 $credencialIA = $stmtCred->fetch(PDO::FETCH_ASSOC);
@@ -329,7 +331,7 @@ try {
     switch ($acao) {
         
         case 'consulta_completa':
-            $telefone = preg_replace('/\D/', '', $req['telefone'] ?? '11900000000');
+            $telefone = preg_replace('/\D/', '', (!empty($req['telefone']) ? $req['telefone'] : '11900000000'));
             $tokenV8  = gerarTokenV8_Local($credencialIA);
 
             $ST_OK   = ['SUCCESS','COMPLETED','WAITING_CREDIT_ANALYSIS','APPROVED','PRE_APPROVED','SIMULATED','READY','AVAILABLE','MARGIN_AVAILABLE','AUTHORIZED','DONE','FINISHED'];
@@ -407,7 +409,7 @@ try {
             break;
 
         case 'simular_proposta':
-            $telefone = preg_replace('/\D/', '', $req['telefone'] ?? '11900000000');
+            $telefone = preg_replace('/\D/', '', (!empty($req['telefone']) ? $req['telefone'] : '11900000000'));
             // ✅ Atrelar a sessão correta no CRM
             $sessao_id = buscarSessaoIA($cpf, $tokenIA, $pdo, $telefone);
             $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'RECALCULANDO_PROPOSTA' WHERE ID = ?")->execute([$sessao_id]);
@@ -448,7 +450,7 @@ try {
             break;
 
         case 'enviar_proposta':
-            $telefone = preg_replace('/\D/', '', $req['telefone'] ?? '11900000000');
+            $telefone = preg_replace('/\D/', '', (!empty($req['telefone']) ? $req['telefone'] : '11900000000'));
             $sessao_id = buscarSessaoIA($cpf, $tokenIA, $pdo, $telefone);
             $chave_pix = trim($req['pix'] ?? '');
             
@@ -558,7 +560,7 @@ try {
             break;
 
         case 'resolver_pendencia_pix':
-            $telefone = preg_replace('/\D/', '', $req['telefone'] ?? '11900000000');
+            $telefone = preg_replace('/\D/', '', (!empty($req['telefone']) ? $req['telefone'] : '11900000000'));
             $sessao_id = buscarSessaoIA($cpf, $tokenIA, $pdo, $telefone);
             $novo_pix = trim($req['pix'] ?? '');
             if (empty($novo_pix)) { enviarResposta($cpf, $acao, ['success' => false, 'error' => 'Chave PIX obrigatória.']); }
@@ -576,7 +578,7 @@ try {
             break;
 
         case 'cancelar_proposta':
-            $telefone = preg_replace('/\D/', '', $req['telefone'] ?? '11900000000');
+            $telefone = preg_replace('/\D/', '', (!empty($req['telefone']) ? $req['telefone'] : '11900000000'));
             $sessao_id = buscarSessaoIA($cpf, $tokenIA, $pdo, $telefone);
             $stmt = $pdo->prepare("SELECT p.NUMERO_PROPOSTA, p.ID, c.nome FROM INTEGRACAO_V8_REGISTRO_PROPOSTA p LEFT JOIN dados_cadastrais c ON p.CPF_CLIENTE = c.cpf WHERE p.CPF_CLIENTE = ? ORDER BY p.ID DESC LIMIT 1"); $stmt->execute([$cpf]); $proposta = $stmt->fetch(PDO::FETCH_ASSOC);
             if (!$proposta) { enviarResposta($cpf, $acao, ['success' => false, 'status' => 'ERRO', 'error' => 'Nenhuma proposta para cancelar.']); }
@@ -592,7 +594,7 @@ try {
             break;
 
         case 'verificar_margem':
-            $telefone = preg_replace('/\D/', '', $req['telefone'] ?? '11900000000');
+            $telefone = preg_replace('/\D/', '', (!empty($req['telefone']) ? $req['telefone'] : '11900000000'));
             $sessao_id = buscarSessaoIA($cpf, $tokenIA, $pdo, $telefone);
             
             $stmt = $pdo->prepare("SELECT CONSULT_ID FROM INTEGRACAO_V8_REGISTROCONSULTA WHERE CPF_CONSULTADO = ? ORDER BY ID DESC LIMIT 1");

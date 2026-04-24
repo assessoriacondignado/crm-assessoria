@@ -177,11 +177,31 @@
       "Bash(mysql -u root --password=\"\" crm_dados -e \"DESCRIBE emails;\")",
       "Bash(mysql -u root --password=\"\" crm_dados -e \"DESCRIBE telefones;\")",
       "Bash(mysql -u root --password=\"\" crm_dados -e \"DESCRIBE BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA; DESCRIBE BANCO_DE_DADOS_CAMPANHA_REGISTRO_CONTATO;\")",
-      "Bash(mysql -u root --password=\"\" crm_dados -e \"DESCRIBE BANCO_DE_DADOS_CAMPANHA_CAMPANHAS;\")"
+      "Bash(mysql -u root --password=\"\" crm_dados -e \"DESCRIBE BANCO_DE_DADOS_CAMPANHA_CAMPANHAS;\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://crm.assessoriaconsignado.com/modulos/ia_gptmake/treinamento_ia.php\")",
+      "Bash(git commit *)",
+      "Bash(curl -s -w '\\\\nHTTP_CODE:%{http_code}' -X POST https://crm.assessoriaconsignado.com/modulos/configuracao/v8_clt_margem_e_digitacao/api_ia_v8.php -H 'Content-Type: application/json' -d '{\"acao\":\"consulta_completa\",\"cpf\":\"04672359107\",\"telefone\":\"5511999999999\"}')",
+      "Bash(mysql -u root --password=\"\" crm_dados -e \"SELECT i.ID, i.TOKEN_IA, i.STATUS, i.CPF_DONO, i.NOME_ROBO, v.USERNAME_API FROM INTEGRACAO_V8_IA_CREDENCIAIS i LEFT JOIN INTEGRACAO_V8_CHAVE_ACESSO v ON i.CHAVE_V8_ID = v.ID WHERE i.STATUS = 'ATIVO' LIMIT 5;\")",
+      "Bash(curl -s -w '\\\\nHTTP_CODE:%{http_code}' -X POST https://crm.assessoriaconsignado.com/modulos/configuracao/v8_clt_margem_e_digitacao/api_ia_v8.php -H 'Content-Type: application/json' -H 'Authorization: Bearer V8IA_f2b902e7a207a6309b66fc02dc9642f949807801' -d '{\"acao\":\"consulta_completa\",\"cpf\":\"04672359107\",\"telefone\":\"5511999999999\"}')",
+      "Bash(php -r *)",
+      "Bash(php -d display_errors=1 -d error_reporting=E_ALL modulos/configuracao/v8_clt_margem_e_digitacao/api_ia_v8.php)",
+      "Bash(curl -s -X POST https://crm.assessoriaconsignado.com/modulos/configuracao/v8_clt_margem_e_digitacao/api_ia_v8.php -H 'Content-Type: application/json' -H 'Authorization: Bearer V8IA_f2b902e7a207a6309b66fc02dc9642f949807801' -H 'X-Test: debug' --data-raw '{\"acao\":\"consulta_completa\",\"cpf\":\"04672359107\",\"telefone\":\"5511999999999\"}' -v)",
+      "Bash(curl -s -X POST https://crm.assessoriaconsignado.com/modulos/configuracao/v8_clt_margem_e_digitacao/api_ia_v8.php -H 'Content-Type: application/json' -H 'Authorization: Bearer V8IA_f2b902e7a207a6309b66fc02dc9642f949807801' --data-raw '{\"acao\":\"consultar_cadastro\",\"cpf\":\"04672359107\"}')",
+      "Bash(php -d display_errors=1 -d error_reporting=32767 -r ' *)",
+      "Bash(php -d display_errors=1 -d auto_prepend_file= /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/api_ia_v8.php)",
+      "Read(//etc/nginx/sites-enabled/**)",
+      "Read(//etc/nginx/**)",
+      "Bash(nginx -t)",
+      "Bash(systemctl reload *)",
+      "Bash(curl -s -w '\\\\nHTTP:%{http_code}' -X POST https://crm.assessoriaconsignado.com/modulos/configuracao/v8_clt_margem_e_digitacao/api_ia_v8.php -H 'Content-Type: application/json' -H 'Authorization: Bearer V8IA_f2b902e7a207a6309b66fc02dc9642f949807801' --data-raw '{\"acao\":\"consultar_cadastro\",\"cpf\":\"04672359107\",\"telefone\":\"\"}')",
+      "Bash(curl -s -X POST https://crm.assessoriaconsignado.com/modulos/configuracao/v8_clt_margem_e_digitacao/api_ia_v8.php -H 'Content-Type: application/json' -H 'Authorization: Bearer V8IA_f2b902e7a207a6309b66fc02dc9642f949807801' --data-raw '{\"acao\":\"consultar_cadastro\",\"cpf\":\"04672359107\",\"telefone\":\"\"}')",
+      "Bash(mysql -u root --password=\"\" crm_dados -e \" SHOW CREATE TABLE INTEGRACAO_V8_IA_CREDENCIAIS\\\\G \")",
+      "Bash(mysql -u root --password= crm_dados -e ' *)"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",
-      "/var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao"
+      "/var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao",
+      "/etc/nginx/sites-enabled"
     ]
   }
 }
