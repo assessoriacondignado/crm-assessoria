@@ -18,14 +18,7 @@ function logFU($msg) {
         '[' . date('H:i:s') . '] ' . $msg . "\n", FILE_APPEND);
 }
 
-// Carrega config GPTMaker
-$stmtGPT = $pdo->query("SELECT * FROM INTEGRACAO_GPTMAKE_CONFIG WHERE STATUS = 'ATIVO' LIMIT 1");
-$gptConfig = $stmtGPT ? $stmtGPT->fetch(PDO::FETCH_ASSOC) : null;
-
-if (!$gptConfig) { logFU("SKIP: Nenhuma config GPTMaker ativa."); exit; }
-
-$gpt_token   = $gptConfig['API_TOKEN'];
-$gpt_agent   = $gptConfig['AGENT_ID'];
+// Config GPTMaker carregada por sessão (por CPF_DONO da credencial IA)
 
 // Busca sessões pendentes com pelo menos 60s de espera, máx 10 tentativas
 $stmtFU = $pdo->prepare("
@@ -116,10 +109,18 @@ foreach ($pendentes as $fu) {
                                         v.TABELA_PADRAO, v.PRAZO_PADRAO, v.ID as CHAVE_REAL_V8
                                  FROM INTEGRACAO_V8_IA_CREDENCIAIS i
                                  JOIN INTEGRACAO_V8_CHAVE_ACESSO v ON i.CHAVE_V8_ID = v.ID
-                                 WHERE i.TOKEN_IA = ? AND i.STATUS = 'ATIVO' LIMIT 1");
+                                 WHERE i.TOKEN_IA = CONVERT(? USING utf8mb4) COLLATE utf8mb4_unicode_ci AND i.STATUS = 'ATIVO' LIMIT 1");
         $stmtC->execute([$token_ia]);
         $cred = $stmtC->fetch(PDO::FETCH_ASSOC);
         if (!$cred) throw new Exception("Credencial não encontrada para token.");
+
+        // Config GPTMaker do dono da credencial
+        $stmtGPT = $pdo->prepare("SELECT API_TOKEN, AGENT_ID FROM INTEGRACAO_GPTMAKE_CONFIG WHERE CPF_USUARIO = ? AND STATUS = 'ATIVO' LIMIT 1");
+        $stmtGPT->execute([$cred['CPF_DONO']]);
+        $gptCfg = $stmtGPT->fetch(PDO::FETCH_ASSOC);
+        if (!$gptCfg) throw new Exception("Config GPTMaker não encontrada para CPF dono {$cred['CPF_DONO']}.");
+        $gpt_token = $gptCfg['API_TOKEN'];
+        $gpt_agent = $gptCfg['AGENT_ID'];
 
         $tokenV8 = gerarTokenV8FU($cred);
 
