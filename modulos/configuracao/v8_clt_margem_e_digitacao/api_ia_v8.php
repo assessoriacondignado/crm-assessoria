@@ -340,15 +340,17 @@ $sessao_id = 0;
 $consult_id = '';
 $ultimo_consult_id = ''; // Declarando globalmente para o catch block
 
+// Status V8: OK = margem liberada; WAIT = ainda processando; ERRO = falha definitiva
+$ST_OK   = ['SUCCESS','COMPLETED','APPROVED','PRE_APPROVED','SIMULATED','READY','AVAILABLE','MARGIN_AVAILABLE','AUTHORIZED','DONE','FINISHED'];
+$ST_WAIT = ['WAITING_CREDIT_ANALYSIS','PROCESSING','PENDING','WAITING','WAITING_CONSULT','ANALYZING','IN_PROGRESS','PENDING_CONSULTATION','CONSENT_APPROVED','CREATED','QUEUED','STARTED'];
+$ST_ERRO = ['ERROR','REJECTED','DENIED','CANCELED','EXPIRED','FAILED'];
+
 try {
     switch ($acao) {
-        
+
         case 'consulta_completa':
             $telefone = resolverTelefone($req, $cpf, $pdo);
             $tokenV8  = gerarTokenV8_Local($credencialIA);
-
-            $ST_OK   = ['SUCCESS','COMPLETED','WAITING_CREDIT_ANALYSIS','APPROVED','PRE_APPROVED','SIMULATED','READY','AVAILABLE','MARGIN_AVAILABLE','AUTHORIZED','DONE','FINISHED'];
-            $ST_ERRO = ['ERROR','REJECTED','DENIED','CANCELED','EXPIRED','FAILED'];
 
             $stmtAguard = $pdo->prepare("
                 SELECT rc.CONSULT_ID, s.ID as SESSAO_ID, s.DATA_INICIO
@@ -629,14 +631,17 @@ try {
             $resC = curl_exec($chC); curl_close($chC); $jsonC = json_decode($resC, true);
             $status_api = strtoupper($jsonC['status'] ?? '');
             
-            if (in_array($status_api, ['PROCESSING', 'PENDING', 'WAITING', 'WAITING_CONSULT', 'ANALYZING', 'IN_PROGRESS', 'PENDING_CONSULTATION', 'CONSENT_APPROVED', 'CREATED', 'QUEUED', 'STARTED'])) {
-                enviarResposta($cpf, $acao, ['success' => true, 'status' => 'pendente', 'msg' => 'Dataprev ainda está processando.']);
+            if (in_array($status_api, $ST_WAIT)) {
+                enviarResposta($cpf, $acao, ['success' => false, 'status' => 'AGUARDANDO_DATAPREV', 'msg' => 'Dataprev ainda está processando.']);
             }
-            if (!in_array($status_api, ['SUCCESS', 'COMPLETED', 'WAITING_CREDIT_ANALYSIS', 'APPROVED', 'PRE_APPROVED', 'SIMULATED', 'READY', 'AVAILABLE', 'MARGIN_AVAILABLE', 'AUTHORIZED', 'DONE', 'FINISHED'])) {
+            if (in_array($status_api, $ST_ERRO)) {
                 $erroMsg = extrairErroV8($jsonC);
                 $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA SET STATUS_V8 = 'ERRO-MARGEM', MENSAGEM_ERRO = ? WHERE CONSULT_ID = ?")->execute([$erroMsg, $consult_id]);
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'ERRO_MARGEM' WHERE ID = ?")->execute([$sessao_id]);
-                enviarResposta($cpf, $acao, ['success' => false, 'status' => 'erro', 'error' => $erroMsg]);
+                enviarResposta($cpf, $acao, ['success' => false, 'status' => 'ERRO', 'error' => $erroMsg]);
+            }
+            if (!in_array($status_api, $ST_OK)) {
+                enviarResposta($cpf, $acao, ['success' => false, 'status' => 'AGUARDANDO_DATAPREV', 'msg' => 'Status V8 desconhecido, aguardando processamento.']);
             }
 
             $margem = $jsonC['availableMargin'] ?? $jsonC['marginBaseValue'] ?? $jsonC['availableMarginValue'] ?? $jsonC['maxAmount'] ?? 0;
@@ -657,6 +662,10 @@ try {
     if (strpos($msgErro, 'SEM_MARGEM') === 0) {
         if (isset($sessao_id) && $sessao_id > 0) {
             $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'SEM_MARGEM' WHERE ID = ?")->execute([$sessao_id]);
+        }
+        $cid = !empty($ultimo_consult_id) ? $ultimo_consult_id : (!empty($consult_id) ? $consult_id : null);
+        if (!empty($cid)) {
+            $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA SET STATUS_V8 = 'SEM_MARGEM', ULTIMA_ATUALIZACAO = NOW() WHERE CONSULT_ID = ?")->execute([$cid]);
         }
         enviarResposta($cpf, 'SEM_MARGEM', ['success' => false, 'status' => 'SEM_MARGEM', 'error' => 'Sem margem, infelizmente não tem valor disponível para este CPF.']);
     }

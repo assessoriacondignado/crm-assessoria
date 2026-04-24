@@ -7,3 +7,6 @@
 [24-04-2026 18:12:03] [REQUISICAO_RECEBIDA - consulta_completa] => {"acao":"consulta_completa","cpf":"66113687953","telefone":""}
 [24-04-2026 18:12:18] [V8_RETORNO_MARGEM] => {"status":"WAITING_CREDIT_ANALYSIS","availableMargin":null,"marginBaseValue":null,"availableMarginValue":null,"maxAmount":null,"margem_calculada":0}
 [24-04-2026 18:12:18] [RESPOSTA_ENVIADA - SEM_MARGEM] => {"success":false,"status":"SEM_MARGEM","error":"Sem margem, infelizmente não tem valor disponível para este CPF."}
+[24-04-2026 18:20:26] [REQUISICAO_RECEBIDA - consulta_completa] => {"acao":"consulta_completa","cpf":"66113687953","telefone":""}
+[24-04-2026 18:20:39] [V8_RETORNO_MARGEM] => {"status":"WAITING_CREDIT_ANALYSIS","availableMargin":null,"marginBaseValue":null,"availableMarginValue":null,"maxAmount":null,"margem_calculada":0}
+[24-04-2026 18:20:42] [RESPOSTA_ENVIADA - SEM_MARGEM] => {"success":false,"status":"SEM_MARGEM","error":"Sem margem, infelizmente não tem valor disponível para este CPF."}
