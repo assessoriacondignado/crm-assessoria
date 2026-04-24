@@ -105,7 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 // ── Carrega configs conforme hierarquia ───────────────────────────────────
 $stConf = $pdo->prepare("SELECT g.*, u.NOME as NOME_USUARIO_ATUAL
     FROM INTEGRACAO_GPTMAKE_CONFIG g
-    LEFT JOIN CLIENTE_USUARIO u ON u.CPF = g.CPF_USUARIO
+    LEFT JOIN CLIENTE_USUARIO u ON u.CPF COLLATE utf8mb4_unicode_ci = g.CPF_USUARIO
     WHERE {$where_hier} ORDER BY g.ID DESC");
 $stConf->execute($params_hier);
 $configs = $stConf->fetchAll(PDO::FETCH_ASSOC);
