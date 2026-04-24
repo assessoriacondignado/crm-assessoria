@@ -159,6 +159,14 @@ function gerarTokenV8_Local($cred) {
     throw new Exception("Falha ao autenticar na API V8 Oficial.");
 }
 
+function resolverTelefone($req, $cpf, $pdo) {
+    $tel = preg_replace('/\D/', '', $req['telefone'] ?? '');
+    if (!empty($tel)) return $tel;
+    $st = $pdo->prepare("SELECT TELEFONE_CLIENTE FROM INTEGRACAO_V8_IA_SESSAO WHERE CPF_CLIENTE = ? ORDER BY ID DESC LIMIT 1");
+    $st->execute([$cpf]);
+    return preg_replace('/\D/', '', $st->fetchColumn() ?: '11900000000');
+}
+
 function buscarSessaoIA($cpf, $tokenIA, $pdo, $telefone = '11900000000') {
     $stmt = $pdo->prepare("SELECT ID FROM INTEGRACAO_V8_IA_SESSAO WHERE CPF_CLIENTE = ? AND DATE(DATA_INICIO) = CURDATE() ORDER BY ID DESC LIMIT 1");
     $stmt->execute([$cpf]);
@@ -336,7 +344,7 @@ try {
     switch ($acao) {
         
         case 'consulta_completa':
-            $telefone = preg_replace('/\D/', '', (!empty($req['telefone']) ? $req['telefone'] : '11900000000'));
+            $telefone = resolverTelefone($req, $cpf, $pdo);
             $tokenV8  = gerarTokenV8_Local($credencialIA);
 
             $ST_OK   = ['SUCCESS','COMPLETED','WAITING_CREDIT_ANALYSIS','APPROVED','PRE_APPROVED','SIMULATED','READY','AVAILABLE','MARGIN_AVAILABLE','AUTHORIZED','DONE','FINISHED'];
@@ -418,7 +426,7 @@ try {
             break;
 
         case 'simular_proposta':
-            $telefone = preg_replace('/\D/', '', (!empty($req['telefone']) ? $req['telefone'] : '11900000000'));
+            $telefone = resolverTelefone($req, $cpf, $pdo);
             // ✅ Atrelar a sessão correta no CRM
             $sessao_id = buscarSessaoIA($cpf, $tokenIA, $pdo, $telefone);
             $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'RECALCULANDO_PROPOSTA' WHERE ID = ?")->execute([$sessao_id]);
@@ -459,7 +467,7 @@ try {
             break;
 
         case 'enviar_proposta':
-            $telefone = preg_replace('/\D/', '', (!empty($req['telefone']) ? $req['telefone'] : '11900000000'));
+            $telefone  = resolverTelefone($req, $cpf, $pdo);
             $sessao_id = buscarSessaoIA($cpf, $tokenIA, $pdo, $telefone);
             $chave_pix = trim($req['pix'] ?? '');
             
@@ -569,7 +577,7 @@ try {
             break;
 
         case 'resolver_pendencia_pix':
-            $telefone = preg_replace('/\D/', '', (!empty($req['telefone']) ? $req['telefone'] : '11900000000'));
+            $telefone = resolverTelefone($req, $cpf, $pdo);
             $sessao_id = buscarSessaoIA($cpf, $tokenIA, $pdo, $telefone);
             $novo_pix = trim($req['pix'] ?? '');
             if (empty($novo_pix)) { enviarResposta($cpf, $acao, ['success' => false, 'error' => 'Chave PIX obrigatória.']); }
@@ -587,7 +595,7 @@ try {
             break;
 
         case 'cancelar_proposta':
-            $telefone = preg_replace('/\D/', '', (!empty($req['telefone']) ? $req['telefone'] : '11900000000'));
+            $telefone = resolverTelefone($req, $cpf, $pdo);
             $sessao_id = buscarSessaoIA($cpf, $tokenIA, $pdo, $telefone);
             $stmt = $pdo->prepare("SELECT p.NUMERO_PROPOSTA, p.ID, c.nome FROM INTEGRACAO_V8_REGISTRO_PROPOSTA p LEFT JOIN dados_cadastrais c ON p.CPF_CLIENTE = c.cpf WHERE p.CPF_CLIENTE = ? ORDER BY p.ID DESC LIMIT 1"); $stmt->execute([$cpf]); $proposta = $stmt->fetch(PDO::FETCH_ASSOC);
             if (!$proposta) { enviarResposta($cpf, $acao, ['success' => false, 'status' => 'ERRO', 'error' => 'Nenhuma proposta para cancelar.']); }
@@ -603,7 +611,7 @@ try {
             break;
 
         case 'verificar_margem':
-            $telefone = preg_replace('/\D/', '', (!empty($req['telefone']) ? $req['telefone'] : '11900000000'));
+            $telefone = resolverTelefone($req, $cpf, $pdo);
             $sessao_id = buscarSessaoIA($cpf, $tokenIA, $pdo, $telefone);
             
             $stmt = $pdo->prepare("SELECT CONSULT_ID FROM INTEGRACAO_V8_REGISTROCONSULTA WHERE CPF_CONSULTADO = ? ORDER BY ID DESC LIMIT 1");
