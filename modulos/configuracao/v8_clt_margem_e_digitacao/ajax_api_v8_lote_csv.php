@@ -955,14 +955,14 @@ try {
 
             $arquivos = glob($pasta_relatorios . '/*.csv');
             if ($arquivos) {
-                $tempo_limite = time() - (10 * 24 * 60 * 60); 
+                $tempo_limite = time() - (10 * 24 * 60 * 60);
                 foreach ($arquivos as $arquivo) {
                     if (is_file($arquivo) && filemtime($arquivo) < $tempo_limite) {
                         @unlink($arquivo);
                     }
                 }
             }
-            
+
             $arquivos_log = glob($pasta_relatorios . '/*.txt');
             if ($arquivos_log) {
                 $tempo_limite = time() - (10 * 24 * 60 * 60);
@@ -975,7 +975,7 @@ try {
 
             $nome_arquivo = "Relatorio_" . preg_replace('/[^a-zA-Z0-9]/', '_', $nomeLote) . "_" . time() . ".csv";
             $caminho_fisico = $pasta_relatorios . '/' . $nome_arquivo;
-            
+
             $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
             $urlArquivo = $protocol . "://" . $_SERVER['HTTP_HOST'] . "/logs_v8/relatorio_v8/" . $nome_arquivo;
 
@@ -984,34 +984,57 @@ try {
                 throw new Exception("FALTA DE PERMISSÃO: A pasta existe, mas o servidor impediu a gravação do arquivo. Aplique permissão CHMOD 777 na pasta: {$pasta_relatorios}");
             }
 
-            fputs($fp, "\xEF\xBB\xBF"); 
-            
-            $cabecalho = ['NOME PLANILHA', 'DATA E HORA SIMULACAO', 'CPF', 'NOME', 'NASCIMENTO', 'SEXO', 'STATUS_V8', 'OBSERVACAO', 'TABELA SIMULADA', 'MARGEM', 'PRAZO', 'VALOR_LIBERADO', 'STATUS_WHATSAPP', 'LOGRADOURO', 'NUMERO', 'BAIRRO', 'CIDADE', 'UF', 'CEP', 'EMAIL 1', 'EMAIL 2', 'EMAIL 3', 'DDD'];
-            for($i = 1; $i <= 10; $i++) { $cabecalho[] = "CELULAR $i"; }
-            fputcsv($fp, $cabecalho, ";");
-            
-            // Somente CPFs com VALOR_LIQUIDO preenchido e maior que zero
-            $stmtCpfs = $pdo->prepare("SELECT c.*, l.NOME_IMPORTACAO, ca.TABELA_PADRAO FROM `{$tabela_wapp}` c JOIN INTEGRACAO_V8_IMPORTACAO_LOTE l ON c.LOTE_ID = l.ID LEFT JOIN INTEGRACAO_V8_CHAVE_ACESSO ca ON l.CHAVE_ID = ca.ID WHERE c.LOTE_ID = ? AND c.VALOR_LIQUIDO IS NOT NULL AND c.VALOR_LIQUIDO > 0");
+            fputs($fp, "\xEF\xBB\xBF");
+
+            // Cabeçalho igual ao modelo exportar_clientes_filtrado
+            $cabecalho_rel = [
+                'LOTE ID', 'NOME LOTE', 'RESPONSÁVEL',
+                'CPF', 'NOME', 'STATUS CONSENTIMENTO', 'DATA CONSENTIMENTO',
+                'STATUS MARGEM', 'MARGEM', 'VALOR LIBERADO', 'DATA CONSULTA', 'OBSERVAÇÃO',
+                'LOGRADOURO', 'NUMERO', 'BAIRRO', 'CIDADE', 'UF', 'CEP',
+                'TEL_1', 'TEL_2', 'TEL_3', 'TEL_4', 'TEL_5',
+                'TEL_6', 'TEL_7', 'TEL_8', 'TEL_9', 'TEL_10',
+                'EMAIL_1', 'EMAIL_2', 'EMAIL_3'
+            ];
+            fputcsv($fp, $cabecalho_rel, ";");
+
+            $stmtNomeResp = $pdo->prepare("SELECT u.NOME FROM INTEGRACAO_V8_IMPORTACAO_LOTE l LEFT JOIN CLIENTE_USUARIO u ON u.CPF = l.CPF_USUARIO WHERE l.ID = ? LIMIT 1");
+            $stmtNomeResp->execute([$id_lote]);
+            $nomeResp = $stmtNomeResp->fetchColumn() ?: '';
+
+            // Filtro: apenas clientes com VALOR_MARGEM > 1.00
+            $stmtCpfs = $pdo->prepare("SELECT c.* FROM `{$tabela_wapp}` c WHERE c.LOTE_ID = ? AND c.VALOR_MARGEM > 1.00 ORDER BY c.DATA_SIMULACAO DESC");
             $stmtCpfs->execute([$id_lote]);
-            
-            $stmtEnd = $pdo->prepare("SELECT logradouro, numero, bairro, cidade, uf, cep FROM enderecos WHERE cpf = ? ORDER BY id DESC LIMIT 1");
-            $stmtEmail = $pdo->prepare("SELECT email FROM emails WHERE cpf = ? ORDER BY id DESC LIMIT 3");
-            $stmtTel = $pdo->prepare("SELECT telefone_cel FROM telefones WHERE cpf = ? ORDER BY id DESC LIMIT 10");
 
-            while ($row = $stmtCpfs->fetch(PDO::FETCH_ASSOC)) { 
-                $linha = [ $row['NOME_IMPORTACAO'], $row['DATA_SIMULACAO'] ? date('d/m/Y H:i', strtotime($row['DATA_SIMULACAO'])) : '-', $row['CPF'] . " ", $row['NOME'], $row['NASCIMENTO'] ? date('d/m/Y', strtotime($row['NASCIMENTO'])) : '', $row['SEXO'] == 'male' ? 'MASCULINO' : 'FEMININO', $row['STATUS_V8'], $row['OBSERVACAO'], $row['TABELA_PADRAO'] ?? '-', $row['VALOR_MARGEM'] ? 'R$ ' . number_format($row['VALOR_MARGEM'], 2, ',', '.') : '-', $row['PRAZO'] ? $row['PRAZO'] . 'x' : '-', $row['VALOR_LIQUIDO'] ? 'R$ ' . number_format($row['VALOR_LIQUIDO'], 2, ',', '.') : '-', $row['STATUS_WHATSAPP'] ?? 'NAO ENVIADO' ];
-                
-                $stmtEnd->execute([$row['CPF']]); $end = $stmtEnd->fetch(PDO::FETCH_ASSOC);
-                if ($end) { $linha[] = $end['logradouro']; $linha[] = $end['numero']; $linha[] = $end['bairro']; $linha[] = $end['cidade']; $linha[] = $end['uf']; $linha[] = $end['cep'] ? $end['cep'] . " " : ''; } else { $linha = array_merge($linha, ['', '', '', '', '', '']); }
+            $stmtEnd   = $pdo->prepare("SELECT logradouro, numero, bairro, cidade, uf, cep FROM enderecos WHERE cpf = ? ORDER BY id ASC LIMIT 1");
+            $stmtEmail = $pdo->prepare("SELECT email FROM emails WHERE cpf = ? ORDER BY id ASC LIMIT 3");
+            $stmtTel   = $pdo->prepare("SELECT telefone_cel FROM telefones WHERE cpf = ? ORDER BY id ASC LIMIT 10");
 
+            while ($row = $stmtCpfs->fetch(PDO::FETCH_ASSOC)) {
+                $stmtEnd->execute([$row['CPF']]); $end = $stmtEnd->fetch(PDO::FETCH_ASSOC) ?: [];
                 $stmtEmail->execute([$row['CPF']]); $emails = $stmtEmail->fetchAll(PDO::FETCH_COLUMN);
-                for($i = 0; $i < 3; $i++) { $linha[] = isset($emails[$i]) ? $emails[$i] : ''; }
-                
-                $stmtTel->execute([$row['CPF']]); $telefones = $stmtTel->fetchAll(PDO::FETCH_COLUMN);
-                $ddd = (isset($telefones[0]) && strlen($telefones[0]) >= 10) ? substr($telefones[0], 0, 2) : ''; $linha[] = $ddd;
-                for($i = 0; $i < 10; $i++) { $tel = isset($telefones[$i]) ? $telefones[$i] : ''; $linha[] = $tel ? $tel . " " : ''; }
+                $stmtTel->execute([$row['CPF']]); $tels = $stmtTel->fetchAll(PDO::FETCH_COLUMN);
 
-                fputcsv($fp, $linha, ";"); 
+                $linha = [
+                    $id_lote,
+                    $nomeLote,
+                    $nomeResp,
+                    $row['CPF'],
+                    $row['NOME'] ?? '',
+                    $row['STATUS_WHATSAPP'] ?? '',
+                    $row['DATA_CONSENTIMENTO'] ? date('d/m/Y H:i', strtotime($row['DATA_CONSENTIMENTO'])) : '',
+                    $row['STATUS_V8'] ?? '',
+                    $row['VALOR_MARGEM'] ? number_format($row['VALOR_MARGEM'], 2, ',', '.') : '',
+                    $row['VALOR_LIQUIDO'] ? number_format($row['VALOR_LIQUIDO'], 2, ',', '.') : '',
+                    $row['DATA_SIMULACAO'] ? date('d/m/Y H:i', strtotime($row['DATA_SIMULACAO'])) : '',
+                    $row['OBSERVACAO'] ?? '',
+                    $end['logradouro'] ?? '', $end['numero'] ?? '', $end['bairro'] ?? '',
+                    $end['cidade'] ?? '', $end['uf'] ?? '', $end['cep'] ?? '',
+                ];
+                for ($i = 0; $i < 10; $i++) { $linha[] = $tels[$i] ?? ''; }
+                for ($i = 0; $i < 3;  $i++) { $linha[] = $emails[$i] ?? ''; }
+
+                fputcsv($fp, $linha, ";");
             }
             fclose($fp);
             
@@ -1919,12 +1942,47 @@ try {
                     $fp_csv = @fopen($caminho_csv, 'w');
                     if (!$fp_csv) { $disparados++; continue; }
                     fputs($fp_csv, "\xEF\xBB\xBF");
-                    $cab = ['NOME PLANILHA','DATA E HORA SIMULACAO','CPF','NOME','NASCIMENTO','SEXO','STATUS_V8','OBSERVACAO','TABELA SIMULADA','MARGEM','PRAZO','VALOR_LIBERADO'];
+
+                    $stmtRespCSV = $pdo->prepare("SELECT u.NOME FROM INTEGRACAO_V8_IMPORTACAO_LOTE l LEFT JOIN CLIENTE_USUARIO u ON u.CPF = l.CPF_USUARIO WHERE l.ID = ? LIMIT 1");
+                    $stmtRespCSV->execute([$id_lote_csv]);
+                    $nomeRespCSV = $stmtRespCSV->fetchColumn() ?: '';
+
+                    $cab = [
+                        'LOTE ID', 'NOME LOTE', 'RESPONSÁVEL',
+                        'CPF', 'NOME', 'STATUS CONSENTIMENTO', 'DATA CONSENTIMENTO',
+                        'STATUS MARGEM', 'MARGEM', 'VALOR LIBERADO', 'DATA CONSULTA', 'OBSERVAÇÃO',
+                        'LOGRADOURO', 'NUMERO', 'BAIRRO', 'CIDADE', 'UF', 'CEP',
+                        'TEL_1', 'TEL_2', 'TEL_3', 'TEL_4', 'TEL_5',
+                        'TEL_6', 'TEL_7', 'TEL_8', 'TEL_9', 'TEL_10',
+                        'EMAIL_1', 'EMAIL_2', 'EMAIL_3'
+                    ];
                     fputcsv($fp_csv, $cab, ";");
-                    $stmtR = $pdo->prepare("SELECT c.*, l2.NOME_IMPORTACAO FROM `{$tabela_csv}` c JOIN INTEGRACAO_V8_IMPORTACAO_LOTE l2 ON c.LOTE_ID = l2.ID WHERE c.LOTE_ID = ? AND c.VALOR_LIQUIDO IS NOT NULL AND c.VALOR_LIQUIDO > 0");
+
+                    $stmtR   = $pdo->prepare("SELECT * FROM `{$tabela_csv}` WHERE LOTE_ID = ? AND VALOR_MARGEM > 1.00 ORDER BY DATA_SIMULACAO DESC");
+                    $stmtREnd  = $pdo->prepare("SELECT logradouro, numero, bairro, cidade, uf, cep FROM enderecos WHERE cpf = ? ORDER BY id ASC LIMIT 1");
+                    $stmtREmail= $pdo->prepare("SELECT email FROM emails WHERE cpf = ? ORDER BY id ASC LIMIT 3");
+                    $stmtRTel  = $pdo->prepare("SELECT telefone_cel FROM telefones WHERE cpf = ? ORDER BY id ASC LIMIT 10");
                     $stmtR->execute([$id_lote_csv]);
                     while ($rr = $stmtR->fetch(PDO::FETCH_ASSOC)) {
-                        fputcsv($fp_csv, [$rr['NOME_IMPORTACAO'], $rr['DATA_SIMULACAO'] ? date('d/m/Y H:i', strtotime($rr['DATA_SIMULACAO'])) : '-', $rr['CPF'].' ', $rr['NOME'], $rr['NASCIMENTO'] ? date('d/m/Y', strtotime($rr['NASCIMENTO'])) : '', ($rr['SEXO']=='male'?'MASCULINO':'FEMININO'), $rr['STATUS_V8'], $rr['OBSERVACAO'], '-', $rr['VALOR_MARGEM']?'R$ '.number_format($rr['VALOR_MARGEM'],2,',','.'):'--', ($rr['PRAZO']?$rr['PRAZO'].'x':'--'), $rr['VALOR_LIQUIDO']?'R$ '.number_format($rr['VALOR_LIQUIDO'],2,',','.'):'--'], ";");
+                        $stmtREnd->execute([$rr['CPF']]); $rEnd = $stmtREnd->fetch(PDO::FETCH_ASSOC) ?: [];
+                        $stmtREmail->execute([$rr['CPF']]); $rEmails = $stmtREmail->fetchAll(PDO::FETCH_COLUMN);
+                        $stmtRTel->execute([$rr['CPF']]); $rTels = $stmtRTel->fetchAll(PDO::FETCH_COLUMN);
+                        $lnCSV = [
+                            $id_lote_csv, $nomeLoteCSV, $nomeRespCSV,
+                            $rr['CPF'], $rr['NOME'] ?? '',
+                            $rr['STATUS_WHATSAPP'] ?? '',
+                            $rr['DATA_CONSENTIMENTO'] ? date('d/m/Y H:i', strtotime($rr['DATA_CONSENTIMENTO'])) : '',
+                            $rr['STATUS_V8'] ?? '',
+                            $rr['VALOR_MARGEM'] ? number_format($rr['VALOR_MARGEM'],2,',','.') : '',
+                            $rr['VALOR_LIQUIDO'] ? number_format($rr['VALOR_LIQUIDO'],2,',','.') : '',
+                            $rr['DATA_SIMULACAO'] ? date('d/m/Y H:i', strtotime($rr['DATA_SIMULACAO'])) : '',
+                            $rr['OBSERVACAO'] ?? '',
+                            $rEnd['logradouro']??'', $rEnd['numero']??'', $rEnd['bairro']??'',
+                            $rEnd['cidade']??'', $rEnd['uf']??'', $rEnd['cep']??'',
+                        ];
+                        for ($ii=0; $ii<10; $ii++) { $lnCSV[] = $rTels[$ii] ?? ''; }
+                        for ($ii=0; $ii<3;  $ii++) { $lnCSV[] = $rEmails[$ii] ?? ''; }
+                        fputcsv($fp_csv, $lnCSV, ";");
                     }
                     fclose($fp_csv);
 

@@ -920,6 +920,10 @@
                           <span class="v8-item-icon">🔍</span>
                           <span class="v8-item-txt"><strong>Ver Clientes do Lote</strong><small>Lista todos os CPFs com status e acesso ao cadastro.</small></span>
                         </button>
+                        <button class="v8-item" style="background:#0d6efd10; border:1px solid #0d6efd44;" onclick="v8EnviarLinkRelatorio(${idLoteReal}); event.stopPropagation();">
+                          <span class="v8-item-icon">📤</span>
+                          <span class="v8-item-txt"><strong style="color:#0d6efd;">ENVIO LINK RELATORIO</strong><small>Gera CSV (margem &gt; R$1,00) e envia link via W-API.</small></span>
+                        </button>
                       </div>
                     </div>
 
@@ -956,6 +960,16 @@
     function v8ToggleCsvHora(checked) {
         const wrap = document.getElementById('wrap_hora_csv');
         if (wrap) wrap.style.display = checked ? 'block' : 'none';
+    }
+
+    async function v8EnviarLinkRelatorio(id) {
+        if (!confirm('Deseja gerar o relatório (margem > R$1,00) e enviar o link via W-API para o grupo do cliente?')) return;
+        const r = await v8Req('ajax_api_v8_lote_csv.php', 'enviar_relatorio_whatsapp', { id_lote: id });
+        if (r && r.success) {
+            alert('✅ ' + (r.msg || 'Link enviado com sucesso!'));
+        } else {
+            alert('❌ Erro: ' + (r?.msg || 'Falha ao enviar o relatório.'));
+        }
     }
 
     // Atualiza apenas Funil e % sem recriar a tabela (evita piscar)
