@@ -1120,11 +1120,13 @@ try {
                       LEFT JOIN CLIENTE_USUARIO u ON u.CPF = l.CPF_USUARIO
                       WHERE 1=1";
             $pLH = [];
-            if (!$is_m_lh && $id_emp_lh) {
-                $sqlLH .= " AND l.id_empresa = ?"; $pLH[] = $id_emp_lh;
-            }
             if ($is_c_lh) {
+                // CONSULTOR: só os próprios lotes
                 $sqlLH .= " AND l.CPF_USUARIO = ?"; $pLH[] = $cpf_lh;
+            } elseif (!$is_m_lh && $id_emp_lh) {
+                // SUPERVISOR: lotes da empresa (por id_empresa OU por CPF_USUARIO de usuários da mesma empresa)
+                $sqlLH .= " AND (l.id_empresa = ? OR l.CPF_USUARIO IN (SELECT CPF FROM CLIENTE_USUARIO WHERE id_empresa = ?))";
+                $pLH[] = $id_emp_lh; $pLH[] = $id_emp_lh;
             }
             $sqlLH .= " ORDER BY l.STATUS_LOTE ASC, l.ID DESC LIMIT 300";
             $stLH = $pdo->prepare($sqlLH);
@@ -1136,6 +1138,7 @@ try {
             // MASTER/ADMIN vê todas; demais filtram pela empresa
             $camp_grupo  = strtoupper($_SESSION['usuario_grupo'] ?? '');
             $camp_master = in_array($camp_grupo, ['MASTER', 'ADMIN', 'ADMINISTRADOR']);
+            $camp_consul = in_array($camp_grupo, ['CONSULTOR', 'CONSULTORES']);
             if ($camp_master) {
                 $stmt = $pdo->prepare("SELECT ID, NOME_CAMPANHA FROM BANCO_DE_DADOS_CAMPANHA_CAMPANHAS WHERE STATUS = 'ATIVO' ORDER BY NOME_CAMPANHA ASC");
                 $stmt->execute([]);
@@ -1145,8 +1148,16 @@ try {
                 $s_emp->execute([$camp_cpf]);
                 $camp_empresa = (int)($s_emp->fetchColumn() ?: 0);
                 if ($camp_empresa > 0) {
-                    $stmt = $pdo->prepare("SELECT ID, NOME_CAMPANHA FROM BANCO_DE_DADOS_CAMPANHA_CAMPANHAS WHERE STATUS = 'ATIVO' AND id_empresa = ? ORDER BY NOME_CAMPANHA ASC");
-                    $stmt->execute([$camp_empresa]);
+                    if ($camp_consul) {
+                        // CONSULTOR: apenas campanhas vinculadas ao seu usuário
+                        $stmt = $pdo->prepare("SELECT ID, NOME_CAMPANHA FROM BANCO_DE_DADOS_CAMPANHA_CAMPANHAS WHERE STATUS = 'ATIVO' AND (id_empresa = ? OR id_empresa IS NULL) AND (id_usuario = ? OR FIND_IN_SET(?, CPF_USUARIO)) ORDER BY NOME_CAMPANHA ASC");
+                        $id_u_camp = $pdo->prepare("SELECT ID FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1"); $id_u_camp->execute([$camp_cpf]); $id_u_camp_num = (int)($id_u_camp->fetchColumn() ?: 0);
+                        $stmt->execute([$camp_empresa, $id_u_camp_num, $camp_cpf]);
+                    } else {
+                        // SUPERVISOR: todas as campanhas da empresa (id_empresa OU criadas por usuários da empresa)
+                        $stmt = $pdo->prepare("SELECT ID, NOME_CAMPANHA FROM BANCO_DE_DADOS_CAMPANHA_CAMPANHAS WHERE STATUS = 'ATIVO' AND (id_empresa = ? OR id_empresa IS NULL OR id_usuario IN (SELECT ID FROM CLIENTE_USUARIO WHERE id_empresa = ?)) ORDER BY NOME_CAMPANHA ASC");
+                        $stmt->execute([$camp_empresa, $camp_empresa]);
+                    }
                 } else {
                     ob_end_clean(); echo json_encode(['success' => true, 'campanhas' => []]); exit;
                 }
@@ -1431,8 +1442,12 @@ try {
                 $sqlLotes = "SELECT l.ID, COALESCE(l.TABELA_DADOS,'INTEGRACAO_V8_REGISTROCONSULTA_LOTE') as TABELA
                              FROM INTEGRACAO_V8_IMPORTACAO_LOTE l WHERE 1=1";
                 $pLotes = [];
-                if (!$is_m_td && $id_emp_td) { $sqlLotes .= " AND l.id_empresa = ?"; $pLotes[] = $id_emp_td; }
-                if ($is_c_td)                 { $sqlLotes .= " AND l.CPF_USUARIO = ?"; $pLotes[] = $cpf_td; }
+                if ($is_c_td) {
+                    $sqlLotes .= " AND l.CPF_USUARIO = ?"; $pLotes[] = $cpf_td;
+                } elseif (!$is_m_td && $id_emp_td) {
+                    $sqlLotes .= " AND (l.id_empresa = ? OR l.CPF_USUARIO IN (SELECT CPF FROM CLIENTE_USUARIO WHERE id_empresa = ?))";
+                    $pLotes[] = $id_emp_td; $pLotes[] = $id_emp_td;
+                }
                 $stL = $pdo->prepare($sqlLotes); $stL->execute($pLotes);
                 $lotesAcessiveis = $stL->fetchAll(PDO::FETCH_ASSOC);
 
