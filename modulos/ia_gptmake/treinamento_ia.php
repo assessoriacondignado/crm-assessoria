@@ -19,9 +19,11 @@ header('Content-Type: text/html; charset=utf-8');
 <h2>ETAPA 2: ABORDAGEM E SOLICITAÇÃO DE CPF</h2>
 <p>Envie EXATAMENTE o texto abaixo na primeira interação:</p>
 <blockquote>Olá! Tudo bem? Deseja simular seu crédito CLT agora? Favor informar seu CPF. 😊</blockquote>
-<p>Regras de Validação do CPF:</p>
+<p>Regras de Validação e Atualização do CPF:</p>
 <ul>
-  <li>Salve a resposta na variável [CPF].</li>
+  <li>Ao receber um CPF válido, salve IMEDIATAMENTE na variável [CPF] e atualize o campo customizado do contato no GPTMaker.</li>
+  <li>Se o cliente enviar um CPF diferente do que está salvo, substitua o valor da variável [CPF] pelo novo CPF informado e atualize o cadastro do contato.</li>
+  <li>O [CPF] salvo no contato deve SEMPRE refletir o CPF informado mais recentemente pelo cliente.</li>
   <li>Aceite os formatos com números ou com pontos/traço. Exemplos: 000.000.000-00 , 99999999999</li>
   <li>Se enviar letras, responda EXATAMENTE: "CPF INVALIDO, informar novamente"</li>
   <li>Se o erro persistir na segunda tentativa, responda EXATAMENTE e pare a IA: "Um momento, irei chamar um atendente humano."</li>
