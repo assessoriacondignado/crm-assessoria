@@ -645,7 +645,7 @@ async function abrirDropdownCampanha() {
 
     document.getElementById('qtd_camp_sel').textContent = cpfs.length;
     document.getElementById('msg_camp_barra').textContent = '';
-    document.getElementById('barra_auditoria').style.display = 'none';
+    document.getElementById('barra_auditoria')?.style && (document.getElementById('barra_auditoria').style.display = 'none');
 
     const sel = document.getElementById('sel_campanha_barra');
     if (!_campanhasCache) {
@@ -697,12 +697,12 @@ function iniciarAuditoria() {
     document.getElementById('barra_campanha').style.display = 'none';
     document.getElementById('barra_auditoria').style.display = 'flex';
 }
-function cancelarAuditoria() { document.getElementById('barra_auditoria').style.display = 'none'; }
+function cancelarAuditoria() { document.getElementById('barra_auditoria')?.style && (document.getElementById('barra_auditoria').style.display = 'none'); }
 
 async function confirmarAuditoria() {
     const cpfs = cpfsSelecionados();
     if (!cpfs.length) return;
-    document.getElementById('barra_auditoria').style.display = 'none';
+    document.getElementById('barra_auditoria')?.style && (document.getElementById('barra_auditoria').style.display = 'none');
 
     const fd = new FormData();
     fd.append('acao', 'incluir_em_auditoria');
