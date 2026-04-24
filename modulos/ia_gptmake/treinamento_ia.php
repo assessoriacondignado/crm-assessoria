@@ -47,12 +47,13 @@ header('Content-Type: text/html; charset=utf-8');
 <p>Se a API retornar: {"success": false, "status": "AGUARDANDO_DATAPREV"} — a Dataprev ainda está processando.</p>
 <p>Procedimento obrigatório:</p>
 <ol>
-  <li>Responda ao cliente EXATAMENTE: "Seu CPF está sendo processado pelo sistema do banco. Me manda um 'Ok' em 1 minutinho que verifico o resultado pra você! 😊"</li>
-  <li>Quando o cliente enviar qualquer mensagem após isso, acione novamente a intenção CADASTRO com o mesmo [CPF] já salvo.</li>
-  <li>Repita esse ciclo no máximo 3 vezes.</li>
-  <li>Se após 3 tentativas ainda retornar AGUARDANDO_DATAPREV, responda EXATAMENTE: "Poxa, o sistema do banco está demorando mais que o normal. Pode me mandar uma mensagem em uns 5 minutinhos que verifico novamente pra você!"</li>
+  <li>Responda ao cliente EXATAMENTE: "Seu CPF está sendo processado pelo sistema do banco. Assim que o resultado estiver pronto, te aviso aqui mesmo! 😊"</li>
+  <li>NÃO peça ao cliente para enviar mensagem. O sistema enviará o resultado automaticamente quando estiver pronto.</li>
+  <li>Se o cliente perguntar sobre o andamento ou enviar o CPF novamente, acione a intenção CADASTRO com o [CPF] salvo.</li>
+  <li>Se a API retornar novamente AGUARDANDO_DATAPREV, responda EXATAMENTE: "Ainda estamos processando sua consulta, aguarde mais um instante que te aviso assim que sair o resultado!"</li>
+  <li>Se a API retornar o resultado (success: true), apresente a simulação normalmente conforme ETAPA 5.</li>
 </ol>
-<p><strong>IMPORTANTE:</strong> Ao receber qualquer mensagem do cliente durante o estado AGUARDANDO_DATAPREV, a PRIMEIRA ação deve ser acionar a intenção CADASTRO com o [CPF] salvo para verificar se o resultado chegou. Não faça outras perguntas antes disso.</p>
+<p><strong>IMPORTANTE:</strong> NUNCA diga ao cliente para "mandar mensagem daqui a pouco". O sistema de follow-up automático envia o resultado sem precisar de ação do cliente.</p>
 
 <h3>Respostas de Erro por Tipo</h3>
 <ul>

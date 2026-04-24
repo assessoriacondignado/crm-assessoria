@@ -283,29 +283,8 @@ function processarSimulacaoPadrao($consult_id, $cpf, $margem, $pdo, $credencialI
     $prazo_padrao = (int)($credencialIA['PRAZO_PADRAO'] ?: 84);
     $tab = identificarTabelaUsuario($consult_id, $credencialIA, $tokenV8);
 
-    // Quando V8 retorna availableMargin=0 mas status OK, verifica se já existe simulação recente no banco
+    // Sem margem disponível na V8: retorna erro — não busca no banco
     if ($margem <= 0) {
-        $stmtSimRecente = $pdo->prepare("
-            SELECT sim.MARGEM_DISPONIVEL, sim.VALOR_LIBERADO, sim.VALOR_PARCELA, sim.PRAZO_SIMULACAO, sim.SIMULATION_ID, sim.NOME_TABELA
-            FROM INTEGRACAO_V8_REGISTRO_SIMULACAO sim
-            JOIN INTEGRACAO_V8_REGISTROCONSULTA rc ON rc.ID = sim.ID_FILA
-            WHERE rc.CPF_CONSULTADO = ? AND sim.VALOR_LIBERADO > 0
-              AND sim.DATA_SIMULATION_ID >= DATE_SUB(NOW(), INTERVAL 24 HOUR)
-            ORDER BY sim.ID DESC LIMIT 1
-        ");
-        $stmtSimRecente->execute([$cpf]);
-        $simRecente = $stmtSimRecente->fetch(PDO::FETCH_ASSOC);
-
-        if ($simRecente && (float)$simRecente['MARGEM_DISPONIVEL'] > 0) {
-            registrarLogIA($cpf, 'MARGEM_FALLBACK_DB', ['margem_v8_zero' => true, 'usando_sim_recente' => $simRecente]);
-            return [
-                'simulation_id' => $simRecente['SIMULATION_ID'],
-                'tabela'        => $simRecente['NOME_TABELA'],
-                'valor_liberado'=> (float)$simRecente['VALOR_LIBERADO'],
-                'valor_parcela' => (float)$simRecente['VALOR_PARCELA'],
-                'prazo'         => (int)$simRecente['PRAZO_SIMULACAO'],
-            ];
-        }
         throw new Exception("SEM_MARGEM: Não foi identificada margem disponível para este CPF.");
     }
 
