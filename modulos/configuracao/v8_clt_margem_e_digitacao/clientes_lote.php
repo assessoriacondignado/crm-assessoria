@@ -641,7 +641,7 @@ function atualizarBarraAcoes() {
 // =========================================================================
 async function abrirDropdownCampanha() {
     const cpfs = cpfsSelecionados();
-    if (!cpfs.length) { alert('Selecione ao menos um cliente.'); return; }
+    if (!cpfs.length) { crmToast('Selecione ao menos um cliente.', 'warning'); return; }
 
     document.getElementById('qtd_camp_sel').textContent = cpfs.length;
     document.getElementById('msg_camp_barra').textContent = '';
@@ -692,7 +692,7 @@ async function executarIncluirCampanha() { await confirmarCampanha(); }
 // =========================================================================
 function iniciarAuditoria() {
     const cpfs = cpfsSelecionados();
-    if (!cpfs.length) { alert('Selecione ao menos um cliente.'); return; }
+    if (!cpfs.length) { crmToast('Selecione ao menos um cliente.', 'warning'); return; }
     document.getElementById('qtd_aud_sel').textContent = cpfs.length;
     document.getElementById('barra_campanha').style.display = 'none';
     document.getElementById('barra_auditoria').style.display = 'flex';
@@ -711,10 +711,10 @@ async function confirmarAuditoria() {
 
     const r = await fetch('ajax_api_v8_lote_csv.php', {method:'POST', body:fd}).then(r=>r.json()).catch(()=>null);
     if (r && r.success) {
-        alert(`✅ ${r.msg||'Auditoria realizada.'} Os registros foram removidos deste lote.`);
-        filtrar(); // recarrega sem os auditados
+        crmToast((r.msg || 'Auditoria realizada.') + ' Os registros foram removidos deste lote.', 'success');
+        filtrar();
     } else {
-        alert('❌ ' + (r?.msg || 'Erro ao executar auditoria.'));
+        crmToast(r?.msg || 'Erro ao executar auditoria.', 'error');
     }
 }
 
@@ -725,8 +725,8 @@ function cancelarCampanha() { document.getElementById('barra_campanha').style.di
 // =========================================================================
 function exportarFiltro() {
     const ids = lerIdsLote();
-    if (!ids.length) { alert('Selecione ao menos um lote para exportar.'); return; }
-    if (ids.length > 1) { alert('Para exportar selecione apenas um lote de cada vez.'); return; }
+    if (!ids.length) { crmToast('Selecione ao menos um lote para exportar.', 'warning'); return; }
+    if (ids.length > 1) { crmToast('Para exportar selecione apenas um lote de cada vez.', 'warning'); return; }
     const f = lerFiltros();
     const p = new URLSearchParams({ acao: 'exportar_clientes_filtrado', id_lote: ids[0] });
     Object.entries(f).forEach(([k,v]) => { if(v!=='' && v!='0') p.append(k, v); });
@@ -742,4 +742,32 @@ function escAttr(s) {
     if (!s) return '';
     return String(s).replace(/'/g,"\\'").replace(/"/g,'&quot;');
 }
+(function(){
+    const ICONS = { success:'fa-check-circle', error:'fa-times-circle', warning:'fa-exclamation-triangle', info:'fa-info-circle' };
+    window.crmToast = function(msg, tipo) {
+        tipo = tipo || 'success';
+        const wrap = document.getElementById('crm-toast-wrap');
+        if (!wrap) return;
+        const t = document.createElement('div');
+        t.className = 'crm-toast crm-t-' + tipo;
+        t.innerHTML = '<i class="fas ' + (ICONS[tipo]||'fa-bell') + ' crm-toast-icon"></i>'
+                    + '<span>' + msg + '</span>'
+                    + '<button class="crm-toast-close" onclick="this.parentNode.remove()">&times;</button>';
+        wrap.appendChild(t);
+        requestAnimationFrame(function(){ requestAnimationFrame(function(){ t.classList.add('in'); }); });
+    };
+})();
 </script>
+<style>
+#crm-toast-wrap { position:fixed; top:16px; right:16px; z-index:999999; display:flex; flex-direction:column; gap:7px; pointer-events:none; }
+.crm-toast { display:flex; align-items:flex-start; gap:10px; padding:11px 15px; border-radius:7px; font-size:13px; font-weight:600; color:#fff; box-shadow:0 4px 18px rgba(0,0,0,.28); max-width:380px; pointer-events:auto; opacity:0; transform:translateX(70px); transition:opacity .28s, transform .28s; line-height:1.4; }
+.crm-toast.in { opacity:1; transform:translateX(0); }
+.crm-toast-icon { font-size:16px; flex-shrink:0; margin-top:1px; }
+.crm-toast-close { margin-left:auto; flex-shrink:0; background:none; border:none; color:rgba(255,255,255,.75); font-size:15px; cursor:pointer; padding:0 0 0 6px; line-height:1; }
+.crm-toast-close:hover { color:#fff; }
+.crm-t-success { background:#198754; }
+.crm-t-error   { background:#dc3545; }
+.crm-t-warning { background:#e67e22; }
+.crm-t-info    { background:#0d6efd; }
+</style>
+<div id="crm-toast-wrap"></div>

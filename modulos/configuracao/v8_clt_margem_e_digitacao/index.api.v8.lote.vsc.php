@@ -966,9 +966,9 @@
         if (!confirm('Deseja gerar o relatório (margem > R$1,00) e enviar o link via W-API para o grupo do cliente?')) return;
         const r = await v8Req('ajax_api_v8_lote_csv.php', 'enviar_relatorio_whatsapp', { id_lote: id });
         if (r && r.success) {
-            alert('✅ ' + (r.msg || 'Link enviado com sucesso!'));
+            crmToast(r.msg || 'Relatório gerado e link enviado com sucesso!', 'success');
         } else {
-            alert('❌ Erro: ' + (r?.msg || 'Falha ao enviar o relatório.'));
+            crmToast('Erro: ' + (r?.msg || 'Falha ao enviar o relatório.'), 'error');
         }
     }
 
