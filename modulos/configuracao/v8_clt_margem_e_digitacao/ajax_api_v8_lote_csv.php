@@ -1531,12 +1531,28 @@ try {
                 SELECT t.CPF, t.NOME, t.STATUS_V8, t.OBSERVACAO,
                        t.VALOR_MARGEM, t.VALOR_LIQUIDO, t.DATA_SIMULACAO, t.DATA_CONSENTIMENTO, t.STATUS_WHATSAPP,
                        dc.nome as NOME_CADASTRO,
-                       e.logradouro, e.bairro, e.cidade, e.uf, e.cep,
-                       (SELECT GROUP_CONCAT(DISTINCT tel.telefone_cel ORDER BY tel.id SEPARATOR ' | ')
-                        FROM telefones tel WHERE tel.cpf = t.CPF) AS TELEFONES
+                       e.logradouro, e.numero, e.bairro, e.cidade, e.uf, e.cep,
+                       (SELECT telefone_cel FROM telefones WHERE cpf = t.CPF ORDER BY id LIMIT 1 OFFSET 0) AS TEL_1,
+                       (SELECT telefone_cel FROM telefones WHERE cpf = t.CPF ORDER BY id LIMIT 1 OFFSET 1) AS TEL_2,
+                       (SELECT telefone_cel FROM telefones WHERE cpf = t.CPF ORDER BY id LIMIT 1 OFFSET 2) AS TEL_3,
+                       (SELECT telefone_cel FROM telefones WHERE cpf = t.CPF ORDER BY id LIMIT 1 OFFSET 3) AS TEL_4,
+                       (SELECT telefone_cel FROM telefones WHERE cpf = t.CPF ORDER BY id LIMIT 1 OFFSET 4) AS TEL_5,
+                       (SELECT telefone_cel FROM telefones WHERE cpf = t.CPF ORDER BY id LIMIT 1 OFFSET 5) AS TEL_6,
+                       (SELECT telefone_cel FROM telefones WHERE cpf = t.CPF ORDER BY id LIMIT 1 OFFSET 6) AS TEL_7,
+                       (SELECT telefone_cel FROM telefones WHERE cpf = t.CPF ORDER BY id LIMIT 1 OFFSET 7) AS TEL_8,
+                       (SELECT telefone_cel FROM telefones WHERE cpf = t.CPF ORDER BY id LIMIT 1 OFFSET 8) AS TEL_9,
+                       (SELECT telefone_cel FROM telefones WHERE cpf = t.CPF ORDER BY id LIMIT 1 OFFSET 9) AS TEL_10,
+                       (SELECT email FROM emails WHERE cpf = t.CPF ORDER BY id LIMIT 1 OFFSET 0) AS EMAIL_1,
+                       (SELECT email FROM emails WHERE cpf = t.CPF ORDER BY id LIMIT 1 OFFSET 1) AS EMAIL_2,
+                       (SELECT email FROM emails WHERE cpf = t.CPF ORDER BY id LIMIT 1 OFFSET 2) AS EMAIL_3
                 FROM `{$tbl_exp}` t
                 LEFT JOIN dados_cadastrais dc ON dc.cpf = t.CPF
-                LEFT JOIN enderecos e ON e.cpf = t.CPF
+                LEFT JOIN (
+                    SELECT en.cpf, en.logradouro, en.numero, en.bairro, en.cidade, en.uf, en.cep
+                    FROM enderecos en
+                    INNER JOIN (SELECT cpf, MIN(id) AS min_id FROM enderecos GROUP BY cpf) em
+                        ON em.cpf = en.cpf AND em.min_id = en.id
+                ) e ON e.cpf = t.CPF
                 {$where_e}
                 ORDER BY t.DATA_SIMULACAO DESC
             ");
@@ -1549,10 +1565,12 @@ try {
             fputs($out, "\xEF\xBB\xBF");
             fputcsv($out, [
                 'LOTE ID', 'NOME LOTE', 'RESPONSÁVEL',
-                'CPF', 'NOME', 'STATUS MARGEM', 'STATUS CONSENTIMENTO',
-                'OBSERVAÇÃO', 'MARGEM', 'VALOR LIBERADO',
-                'DATA CONSENTIMENTO', 'DATA SIMULAÇÃO',
-                'LOGRADOURO', 'BAIRRO', 'CIDADE', 'UF', 'CEP', 'TELEFONES'
+                'CPF', 'NOME', 'STATUS CONSENTIMENTO', 'DATA CONSENTIMENTO',
+                'STATUS MARGEM', 'MARGEM', 'VALOR LIBERADO', 'DATA CONSULTA', 'OBSERVAÇÃO',
+                'LOGRADOURO', 'NUMERO', 'BAIRRO', 'CIDADE', 'UF', 'CEP',
+                'TEL_1', 'TEL_2', 'TEL_3', 'TEL_4', 'TEL_5',
+                'TEL_6', 'TEL_7', 'TEL_8', 'TEL_9', 'TEL_10',
+                'EMAIL_1', 'EMAIL_2', 'EMAIL_3'
             ], ';');
             while ($row = $stExp->fetch(PDO::FETCH_ASSOC)) {
                 fputcsv($out, [
@@ -1561,16 +1579,32 @@ try {
                     $infoExp['NOME_USUARIO'] ?? '',
                     $row['CPF'],
                     $row['NOME'] ?: ($row['NOME_CADASTRO'] ?? ''),
-                    $row['STATUS_V8'],
                     $row['STATUS_WHATSAPP'] ?? '',
-                    $row['OBSERVACAO'],
+                    $row['DATA_CONSENTIMENTO'] ? date('d/m/Y H:i', strtotime($row['DATA_CONSENTIMENTO'])) : '',
+                    $row['STATUS_V8'] ?? '',
                     $row['VALOR_MARGEM'] ? number_format($row['VALOR_MARGEM'], 2, ',', '.') : '',
                     $row['VALOR_LIQUIDO'] ? number_format($row['VALOR_LIQUIDO'], 2, ',', '.') : '',
-                    $row['DATA_CONSENTIMENTO'] ? date('d/m/Y H:i', strtotime($row['DATA_CONSENTIMENTO'])) : '',
-                    $row['DATA_SIMULACAO']    ? date('d/m/Y H:i', strtotime($row['DATA_SIMULACAO']))    : '',
-                    $row['logradouro'] ?? '', $row['bairro'] ?? '',
-                    $row['cidade'] ?? '', $row['uf'] ?? '', $row['cep'] ?? '',
-                    $row['TELEFONES'] ?? '',
+                    $row['DATA_SIMULACAO'] ? date('d/m/Y H:i', strtotime($row['DATA_SIMULACAO'])) : '',
+                    $row['OBSERVACAO'] ?? '',
+                    $row['logradouro'] ?? '',
+                    $row['numero'] ?? '',
+                    $row['bairro'] ?? '',
+                    $row['cidade'] ?? '',
+                    $row['uf'] ?? '',
+                    $row['cep'] ?? '',
+                    $row['TEL_1'] ?? '',
+                    $row['TEL_2'] ?? '',
+                    $row['TEL_3'] ?? '',
+                    $row['TEL_4'] ?? '',
+                    $row['TEL_5'] ?? '',
+                    $row['TEL_6'] ?? '',
+                    $row['TEL_7'] ?? '',
+                    $row['TEL_8'] ?? '',
+                    $row['TEL_9'] ?? '',
+                    $row['TEL_10'] ?? '',
+                    $row['EMAIL_1'] ?? '',
+                    $row['EMAIL_2'] ?? '',
+                    $row['EMAIL_3'] ?? '',
                 ], ';');
             }
             fclose($out); exit;
