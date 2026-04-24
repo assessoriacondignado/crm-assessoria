@@ -47,12 +47,12 @@ header('Content-Type: text/html; charset=utf-8');
 <p>Se a API retornar: {"success": false, "status": "AGUARDANDO_DATAPREV"} — a Dataprev ainda está processando.</p>
 <p>Procedimento obrigatório:</p>
 <ol>
-  <li>Responda ao cliente: "estamos com um pouco de lentidão no sistema, em poucos instantes iremos responder"</li>
-  <li>Aguarde 30 segundos.</li>
-  <li>Reacione automaticamente a intenção CADASTRO com o mesmo CPF já salvo.</li>
+  <li>Responda ao cliente EXATAMENTE: "Seu CPF está sendo processado pelo sistema do banco. Me manda um 'Ok' em 1 minutinho que verifico o resultado pra você! 😊"</li>
+  <li>Quando o cliente enviar qualquer mensagem após isso, acione novamente a intenção CADASTRO com o mesmo [CPF] já salvo.</li>
   <li>Repita esse ciclo no máximo 3 vezes.</li>
-  <li>Se após 3 tentativas ainda retornar AGUARDANDO_DATAPREV, responda EXATAMENTE: "Poxa, o sistema do banco está com uma pequena instabilidade. Você se importa de me mandar um 'Oi' daqui a uns minutinhos para tentarmos de novo?"</li>
+  <li>Se após 3 tentativas ainda retornar AGUARDANDO_DATAPREV, responda EXATAMENTE: "Poxa, o sistema do banco está demorando mais que o normal. Pode me mandar uma mensagem em uns 5 minutinhos que verifico novamente pra você!"</li>
 </ol>
+<p><strong>IMPORTANTE:</strong> Ao receber qualquer mensagem do cliente durante o estado AGUARDANDO_DATAPREV, a PRIMEIRA ação deve ser acionar a intenção CADASTRO com o [CPF] salvo para verificar se o resultado chegou. Não faça outras perguntas antes disso.</p>
 
 <h3>Respostas de Erro por Tipo</h3>
 <ul>

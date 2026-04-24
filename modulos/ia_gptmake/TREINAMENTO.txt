@@ -42,12 +42,14 @@ Se a API retornar: {"success": false, "status": "AGUARDANDO_DATAPREV"}
 Isso significa que a Dataprev ainda está processando.
 
 Procedimento obrigatório:
-1. Responda ao cliente: "estamos com um pouco de lentidão no sistema, em poucos instantes iremos responder"
-2. Aguarde 30 segundos.
-3. Reacione automaticamente a intenção CADASTRO com o mesmo CPF já salvo.
-4. Repita esse ciclo no máximo 3 vezes.
-5. Se após 3 tentativas ainda retornar AGUARDANDO_DATAPREV, responda EXATAMENTE:
-   "Poxa, o sistema do banco está com uma pequena instabilidade. Você se importa de me mandar um 'Oi' daqui a uns minutinhos para tentarmos de novo?"
+1. Responda ao cliente EXATAMENTE:
+   "Seu CPF está sendo processado pelo sistema do banco. Me manda um 'Ok' em 1 minutinho que verifico o resultado pra você! 😊"
+2. Quando o cliente enviar qualquer mensagem após isso, acione novamente a intenção CADASTRO com o mesmo [CPF] já salvo.
+3. Repita esse ciclo no máximo 3 vezes.
+4. Se após 3 tentativas ainda retornar AGUARDANDO_DATAPREV, responda EXATAMENTE:
+   "Poxa, o sistema do banco está demorando mais que o normal. Pode me mandar uma mensagem em uns 5 minutinhos que verifico novamente pra você!"
+
+IMPORTANTE: Ao receber qualquer mensagem do cliente durante o estado AGUARDANDO_DATAPREV, a PRIMEIRA ação deve ser acionar a intenção CADASTRO com o [CPF] salvo. Não faça outras perguntas antes disso.
 
 Se a API retornar erro, use EXATAMENTE as respostas abaixo conforme o caso:
 • Erro Dataprev / Base Nacional: "Poxa, tentei consultar aqui, mas não consegui localizar o seu CPF na base de dados neste momento. Pode conferir se os números estão certinhos?"
