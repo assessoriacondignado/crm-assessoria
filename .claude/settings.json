@@ -175,7 +175,9 @@
       "Bash(mysql -u root --password=\"\" crm_dados -e \"SHOW TABLES LIKE '%email%';\")",
       "Bash(mysql -u root --password=\"\" crm_dados -e \"SHOW TABLES LIKE '%telefone%';\")",
       "Bash(mysql -u root --password=\"\" crm_dados -e \"DESCRIBE emails;\")",
-      "Bash(mysql -u root --password=\"\" crm_dados -e \"DESCRIBE telefones;\")"
+      "Bash(mysql -u root --password=\"\" crm_dados -e \"DESCRIBE telefones;\")",
+      "Bash(mysql -u root --password=\"\" crm_dados -e \"DESCRIBE BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA; DESCRIBE BANCO_DE_DADOS_CAMPANHA_REGISTRO_CONTATO;\")",
+      "Bash(mysql -u root --password=\"\" crm_dados -e \"DESCRIBE BANCO_DE_DADOS_CAMPANHA_CAMPANHAS;\")"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",
