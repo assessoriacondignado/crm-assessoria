@@ -161,10 +161,16 @@
       "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT ID, STATUS, QTD_PROCESSADA, QTD_TOTAL FROM CONTROLE_IMPORTACAO_ASSINCRONA WHERE ID = 32;\")",
       "Read(//tmp/**)",
       "Bash(mysql -u root -e \" DESCRIBE BANCO_DE_DADOS_CAMPANHA_REGISTRO_CONTATO; \" crm_assessoria)",
-      "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -e \"SHOW TABLES LIKE '%PERMISS%';\")"
+      "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -e \"SHOW TABLES LIKE '%PERMISS%';\")",
+      "Bash(sed -i 's/filtroHierarquia\\($is_master, $is_consultor, $id_empresa_num, $id_usuario_num, $params_list\\)/filtroHierarquia\\($is_master, $is_consultor, $id_empresa_num, $id_usuario_num, $params_list, $somente_meus\\)/g' /var/www/html/modulos/campanhas/relatorio_ajax.php)",
+      "Bash(sed -i 's/filtroHierarquia\\($is_master, $is_consultor, $id_empresa_num, $id_usuario_num, $params_graf\\)/filtroHierarquia\\($is_master, $is_consultor, $id_empresa_num, $id_usuario_num, $params_graf, $somente_meus\\)/g' /var/www/html/modulos/campanhas/relatorio_ajax.php)",
+      "Bash(sed -i 's/filtroHierarquia\\($is_master, $is_consultor, $id_empresa_num, $id_usuario_num, $params_exp\\)/filtroHierarquia\\($is_master, $is_consultor, $id_empresa_num, $id_usuario_num, $params_exp, $somente_meus\\)/g' /var/www/html/modulos/campanhas/relatorio_ajax.php)",
+      "Bash(mysql -h localhost -u admin_crm -p'Abl@810401' crm_dados -e \"DESCRIBE INTEGRACAO_V8_REGISTROCONSULTA_LOTE; SHOW TABLES LIKE '%V8%'; SHOW TABLES LIKE '%LOTE%';\")",
+      "Bash(python3 -)"
     ],
     "additionalDirectories": [
-      "/etc/mysql/mysql.conf.d"
+      "/etc/mysql/mysql.conf.d",
+      "/var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao"
     ]
   }
 }
