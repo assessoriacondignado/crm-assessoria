@@ -1,0 +1,14 @@
+[24-04-2026 14:13:46] [REQUISICAO_RECEBIDA - consulta_completa] => {"acao":"consulta_completa","cpf":"04817971908","telefone":""}
+[24-04-2026 14:13:48] [REQUISICAO_RECEBIDA - consulta_completa] => {"acao":"consulta_completa","cpf":"04817971908","telefone":""}
+[24-04-2026 14:13:49] [REQUISICAO_RECEBIDA - consulta_completa] => {"acao":"consulta_completa","cpf":"04817971908","telefone":""}
+[24-04-2026 14:13:49] [REQUISICAO_RECEBIDA - consulta_completa] => {"acao":"consulta_completa","cpf":"04817971908","telefone":""}
+[24-04-2026 14:13:50] [RESPOSTA_ENVIADA - ERRO_CRITICO] => {"success":false,"status":"ERRO","error":"Erro V8 (Consentimento): Já existe uma consulta ativa para este usuário e número de documento"}
+[24-04-2026 14:13:51] [REQUISICAO_RECEBIDA - simular_proposta] => {"acao":"simular_proposta","cpf":"04817971908","prazo":"24","valor_liquido":"1148,58"}
+[24-04-2026 14:13:51] [RESPOSTA_ENVIADA - ERRO_CRITICO] => {"success":false,"status":"ERRO","error":"Nenhuma consulta de consentimento prévia encontrada para este CPF."}
+[24-04-2026 14:13:52] [RESPOSTA_ENVIADA - ERRO_CRITICO] => {"success":false,"status":"ERRO","error":"Erro V8 (Consentimento): Rejeitado pela Dataprev\/V8 (Motivo não especificado pela API)"}
+[24-04-2026 14:13:53] [REQUISICAO_RECEBIDA - simular_proposta] => {"acao":"simular_proposta","cpf":"04817971908","prazo":"24","valor_liquido":"1148,58"}
+[24-04-2026 14:13:53] [RESPOSTA_ENVIADA - ERRO_CRITICO] => {"success":false,"status":"ERRO","error":"Nenhuma consulta de consentimento prévia encontrada para este CPF."}
+[24-04-2026 14:13:55] [RESPOSTA_ENVIADA - ERRO_CRITICO] => {"success":false,"status":"ERRO","error":"Erro V8 (Consentimento): Rejeitado pela Dataprev\/V8 (Motivo não especificado pela API)"}
+[24-04-2026 14:13:56] [REQUISICAO_RECEBIDA - simular_proposta] => {"acao":"simular_proposta","cpf":"04817971908","prazo":"24","valor_liquido":"1148,58"}
+[24-04-2026 14:13:56] [RESPOSTA_ENVIADA - ERRO_CRITICO] => {"success":false,"status":"ERRO","error":"Nenhuma consulta de consentimento prévia encontrada para este CPF."}
+[24-04-2026 14:13:57] [REQUISICAO_RECEBIDA - consulta_completa] => {"acao":"consulta_completa","cpf":"04817971908","telefone":""}
