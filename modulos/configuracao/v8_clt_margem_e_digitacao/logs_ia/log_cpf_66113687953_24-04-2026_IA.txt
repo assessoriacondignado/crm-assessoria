@@ -1,2 +1,4 @@
 [24-04-2026 14:22:32] [REQUISICAO_RECEBIDA - consulta_completa] => {"acao":"consulta_completa","cpf":"66113687953","telefone":""}
 [24-04-2026 14:22:37] [RESPOSTA_ENVIADA - ERRO_CRITICO] => {"success":false,"status":"ERRO","error":"Erro V8 (Consentimento): Rejeitado pela Dataprev\/V8 (Motivo não especificado pela API)"}
+[24-04-2026 17:27:59] [REQUISICAO_RECEBIDA - consulta_completa] => {"acao":"consulta_completa","cpf":"66113687953","telefone":""}
+[24-04-2026 17:28:13] [RESPOSTA_ENVIADA - ERRO_CRITICO] => {"success":false,"status":"ERRO","error":"Erro Simulação: installment_face_value é obrigatório quando disbursed_amount não é enviado"}

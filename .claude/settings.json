@@ -206,7 +206,10 @@
       "Bash(mysql -u root --password=\"\" crm_dados -e \"SHOW TABLES LIKE '%PERMISS%';\")",
       "Bash(mysql -u root --password=\"\" crm_dados -e \"DESCRIBE CLIENTE_USUARIO_PERMISSAO;\")",
       "Bash(mysql -u root --password=\"\" crm_dados -e \"SELECT PERMISSAO_CHAVE FROM CLIENTE_USUARIO_PERMISSAO WHERE PERMISSAO_CHAVE LIKE 'SUBMENU%' LIMIT 5;\")",
-      "Bash(mysql -u root --password=\"\" crm_dados -e \"SELECT CHAVE, GRUPO_USUARIOS FROM CLIENTE_USUARIO_PERMISSAO WHERE CHAVE LIKE 'SUBMENU%' LIMIT 5;\")"
+      "Bash(mysql -u root --password=\"\" crm_dados -e \"SELECT CHAVE, GRUPO_USUARIOS FROM CLIENTE_USUARIO_PERMISSAO WHERE CHAVE LIKE 'SUBMENU%' LIMIT 5;\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://crm.assessoriaconsignado.com/modulos/configuracao/v8_clt_margem_e_digitacao/config_gptmake.php\" -L --max-redirs 0)",
+      "Bash(grep -n '^\\\\s*$telefone = preg_replace' /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/api_ia_v8.php)",
+      "Bash(python3 -c ' *)"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",
