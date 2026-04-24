@@ -194,14 +194,22 @@ include $caminho_header;
             </div>
 
             <!-- Barra confirmação campanha -->
-            <div id="barra_campanha" style="display:none; background:#f0ebff; border:1px solid #c0a8f0; border-radius:4px; padding:6px 12px; margin-bottom:4px; font-size:.8rem;" class="d-flex align-items-center gap-2 flex-wrap">
-                <i class="fas fa-bullhorn" style="color:#6f42c1;"></i>
-                <span>Campanha: <strong id="nome_camp_sel"></strong></span>
-                <span class="text-muted">— <span id="qtd_camp_sel"></span> cliente(s) serão incluídos</span>
-                <button class="btn btn-sm fw-bold ms-auto" style="background:#6f42c1; color:#fff; border:none; font-size:.72rem; padding:2px 10px;" onclick="confirmarCampanha()">
-                    <i class="fas fa-check me-1"></i> Confirmar
-                </button>
-                <button class="btn btn-sm btn-outline-secondary" style="font-size:.72rem; padding:2px 8px;" onclick="cancelarCampanha()">Cancelar</button>
+            <div id="barra_campanha" style="display:none; background:#f0ebff; border:1px solid #c0a8f0; border-radius:4px; padding:7px 12px; margin-bottom:4px; font-size:.8rem;">
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+                    <i class="fas fa-bullhorn" style="color:#6f42c1;"></i>
+                    <strong style="color:#6f42c1;">Incluir em Campanha</strong>
+                    <span class="text-muted">— <span id="qtd_camp_sel"></span> cliente(s) selecionado(s)</span>
+                    <button class="btn btn-sm btn-outline-secondary ms-auto" style="font-size:.72rem; padding:2px 8px;" onclick="cancelarCampanha()">Cancelar</button>
+                </div>
+                <div class="d-flex align-items-center gap-2 mt-2">
+                    <select id="sel_campanha_barra" class="form-select form-select-sm border-dark" style="max-width:320px;">
+                        <option value="">— Selecione a campanha —</option>
+                    </select>
+                    <button class="btn btn-sm fw-bold" style="background:#6f42c1; color:#fff; border:none; font-size:.75rem; padding:3px 14px;" onclick="confirmarCampanha()">
+                        <i class="fas fa-check me-1"></i> Confirmar Inclusão
+                    </button>
+                    <span id="msg_camp_barra" style="font-size:.75rem;"></span>
+                </div>
             </div>
 
             <!-- Barra confirmação auditoria -->
@@ -632,45 +640,52 @@ function atualizarBarraAcoes() {
 // INCLUIR EM CAMPANHA
 // =========================================================================
 async function abrirDropdownCampanha() {
-    const qtd = cpfsSelecionados().length;
-    if (!qtd) { alert('Selecione ao menos um cliente.'); return; }
-    document.getElementById('qtd_modal_camp').textContent = qtd;
-    document.getElementById('msg_camp_modal').innerHTML = '';
+    const cpfs = cpfsSelecionados();
+    if (!cpfs.length) { alert('Selecione ao menos um cliente.'); return; }
 
-    const sel = document.getElementById('sel_campanha');
-    sel.innerHTML = '<option value="">Carregando...</option>';
+    document.getElementById('qtd_camp_sel').textContent = cpfs.length;
+    document.getElementById('msg_camp_barra').textContent = '';
+    document.getElementById('barra_auditoria').style.display = 'none';
 
+    const sel = document.getElementById('sel_campanha_barra');
     if (!_campanhasCache) {
+        sel.innerHTML = '<option value="">Carregando...</option>';
         const fd = new FormData(); fd.append('acao', 'listar_campanhas_disponiveis');
         const r = await fetch('ajax_api_v8_lote_csv.php', {method:'POST', body:fd}).then(r=>r.json()).catch(()=>null);
         _campanhasCache = (r && r.success) ? r.campanhas : [];
     }
-    sel.innerHTML = '<option value="">— Selecione —</option>';
+    sel.innerHTML = '<option value="">— Selecione a campanha —</option>';
     _campanhasCache.forEach(c => sel.innerHTML += `<option value="${c.ID}">${escHtml(c.NOME_CAMPANHA)}</option>`);
 
-    new bootstrap.Modal(document.getElementById('modalCampanha')).show();
+    document.getElementById('barra_campanha').style.display = 'block';
+    sel.focus();
 }
 
-async function executarIncluirCampanha() {
-    const id_camp = document.getElementById('sel_campanha').value;
+async function confirmarCampanha() {
+    const id_camp = document.getElementById('sel_campanha_barra').value;
     const cpfs    = cpfsSelecionados();
-    const msg     = document.getElementById('msg_camp_modal');
-    if (!id_camp) { msg.innerHTML='<div class="alert alert-warning py-1 small">Selecione uma campanha.</div>'; return; }
-    if (!cpfs.length) { msg.innerHTML='<div class="alert alert-warning py-1 small">Nenhum cliente selecionado.</div>'; return; }
+    const msg     = document.getElementById('msg_camp_barra');
+    if (!id_camp) { msg.innerHTML = '<span style="color:#dc3545;">⚠️ Selecione uma campanha.</span>'; return; }
+    if (!cpfs.length) { msg.innerHTML = '<span style="color:#dc3545;">⚠️ Nenhum cliente selecionado.</span>'; return; }
 
+    msg.innerHTML = '<span style="color:#6f42c1;"><i class="fas fa-spinner fa-spin me-1"></i> Incluindo...</span>';
+    const id_lote_env = _lotesSelecionados.length === 1 ? _lotesSelecionados[0].id : (_loteAtual || 0);
     const fd = new FormData();
     fd.append('acao', 'incluir_em_campanha');
     fd.append('id_campanha', id_camp);
     fd.append('cpfs', JSON.stringify(cpfs));
-    fd.append('id_lote', _loteAtual);
+    fd.append('id_lote', id_lote_env);
 
     const r = await fetch('ajax_api_v8_lote_csv.php', {method:'POST', body:fd}).then(r=>r.json()).catch(()=>null);
-    const cls = (r && r.success) ? 'success' : 'danger';
-    msg.innerHTML = `<div class="alert alert-${cls} py-1 small">${r?.msg||'Erro'}</div>`;
     if (r && r.success) {
-        setTimeout(() => bootstrap.Modal.getInstance(document.getElementById('modalCampanha'))?.hide(), 1500);
+        msg.innerHTML = `<span style="color:#198754;">✅ ${r.msg}</span>`;
+        setTimeout(() => { cancelarCampanha(); desmarcarTodos(); }, 1800);
+    } else {
+        msg.innerHTML = `<span style="color:#dc3545;">❌ ${r?.msg||'Erro ao incluir.'}</span>`;
     }
 }
+
+async function executarIncluirCampanha() { await confirmarCampanha(); }
 
 // =========================================================================
 // AUDITORIA
@@ -703,9 +718,7 @@ async function confirmarAuditoria() {
     }
 }
 
-// (funções de campanha via barra — não usadas nesta versão, modal é suficiente)
 function cancelarCampanha() { document.getElementById('barra_campanha').style.display = 'none'; }
-function confirmarCampanha() {}
 
 // =========================================================================
 // EXPORTAR
