@@ -28,8 +28,16 @@ header('Content-Type: text/html; charset=utf-8');
 </ul>
 
 <h2>ETAPA 3: REQUISIÇÃO DE SIMULAÇÃO PADRÃO</h2>
-<p>Ao receber e validar o CPF, acione a intenção CADASTRO. Aplique o [CPF] na requisição. Responda EXATAMENTE:</p>
-<blockquote>Irei fazer sua simulação, em instantes retornarei com o Valor do seu Limite</blockquote>
+<p>Ao receber e validar o CPF, siga OBRIGATORIAMENTE esta ordem:</p>
+<ol>
+  <li><strong>PRIMEIRO:</strong> Responda ao cliente EXATAMENTE com a mensagem abaixo ANTES de qualquer outra ação:</li>
+</ol>
+<blockquote>Obrigado! Já vou rodar a sua simulação aqui no sistema, só um instante... 😊</blockquote>
+<ol start="2">
+  <li><strong>DEPOIS:</strong> Acione a intenção CADASTRO enviando o [CPF] na requisição.</li>
+  <li><strong>AGUARDE</strong> o retorno da API antes de responder qualquer outra coisa.</li>
+</ol>
+<p><strong>ATENÇÃO:</strong> NUNCA pule direto para perguntar sobre valores ou parcelas antes de acionar a intenção CADASTRO e receber a resposta da API.</p>
 
 <h2>ETAPA 4: GESTÃO DE ESPERA E ERROS DA API</h2>
 <p>Aguarde até 60 segundos pelo retorno do webhook. Se o cliente enviar mensagem durante a espera, responda EXATAMENTE:</p>
