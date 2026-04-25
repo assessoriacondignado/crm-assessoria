@@ -127,9 +127,37 @@ $stStats = $pdo->prepare("SELECT f.STATUS, COUNT(*) as total FROM INTEGRACAO_V8_
 $stats = $pdo->query("SELECT STATUS, COUNT(*) as total FROM INTEGRACAO_V8_IA_FOLLOWUP GROUP BY STATUS")->fetchAll(PDO::FETCH_ASSOC);
 $statsMap = array_column($stats, 'total', 'STATUS');
 
+// Filtros sessões
+$filtro_data_ini = $_GET['data_ini'] ?? '';
+$filtro_data_fim = $_GET['data_fim'] ?? '';
+$filtro_usuario  = trim($_GET['usuario'] ?? '');
+$filtro_cpf      = preg_replace('/\D/', '', $_GET['cpf'] ?? '');
+$filtro_telefone = preg_replace('/\D/', '', $_GET['telefone'] ?? '');
+
+$where_sess  = ['1=1'];
+$params_sess = [];
+if ($filtro_data_ini) { $where_sess[] = 'DATE(f.DATA_CRIACAO) >= ?'; $params_sess[] = $filtro_data_ini; }
+if ($filtro_data_fim) { $where_sess[] = 'DATE(f.DATA_CRIACAO) <= ?'; $params_sess[] = $filtro_data_fim; }
+if ($filtro_usuario)  { $where_sess[] = '(COALESCE(u.NOME, g.NOME_USUARIO) LIKE ?)'; $params_sess[] = "%{$filtro_usuario}%"; }
+if ($filtro_cpf)      { $where_sess[] = 'f.CPF_CLIENTE LIKE ?'; $params_sess[] = "%{$filtro_cpf}%"; }
+if ($filtro_telefone) { $where_sess[] = '(f.TELEFONE LIKE ? OR COALESCE(f.TELEFONE_WHATSAPP,\'\') LIKE ?)'; $params_sess[] = "%{$filtro_telefone}%"; $params_sess[] = "%{$filtro_telefone}%"; }
+
+$where_sess_str = implode(' AND ', $where_sess);
+
 // Últimas sessões
-$stSess = $pdo->prepare("SELECT f.* FROM INTEGRACAO_V8_IA_FOLLOWUP f ORDER BY f.DATA_CRIACAO DESC LIMIT 20");
-$stSess->execute();
+$stSess = $pdo->prepare("
+    SELECT f.*,
+           g.ID             AS CONFIG_ID,
+           g.AGENT_ID       AS GPTMAKE_AGENT_ID,
+           COALESCE(u.NOME, g.NOME_USUARIO) AS DONO_NOME
+    FROM INTEGRACAO_V8_IA_FOLLOWUP f
+    LEFT JOIN INTEGRACAO_GPTMAKE_CONFIG g ON g.AGENT_ID COLLATE utf8mb4_unicode_ci = f.AGENT_ID
+    LEFT JOIN CLIENTE_USUARIO u ON u.CPF COLLATE utf8mb4_unicode_ci = g.CPF_USUARIO
+    WHERE {$where_sess_str}
+    ORDER BY f.DATA_CRIACAO DESC
+    LIMIT 100
+");
+$stSess->execute($params_sess);
 $ultimasSessoes = $stSess->fetchAll(PDO::FETCH_ASSOC);
 
 // Lista usuários para select (MASTER)
@@ -329,31 +357,88 @@ include $caminho_header;
     <!-- Últimas sessões -->
     <div class="card border-dark shadow-sm gpt-card">
       <div class="card-header bg-dark text-white fw-bold d-flex justify-content-between align-items-center">
-        <span><i class="fas fa-history me-2"></i>Últimas Sessões de Follow-up</span>
-        <a href="?" class="btn btn-sm btn-outline-light py-0">🔄</a>
+        <span><i class="fas fa-history me-2"></i>Últimas Sessões de Follow-up <span class="badge bg-secondary ms-1"><?= count($ultimasSessoes) ?></span></span>
+        <a href="?<?= http_build_query(array_filter(['data_ini'=>$filtro_data_ini,'data_fim'=>$filtro_data_fim,'usuario'=>$filtro_usuario,'cpf'=>$filtro_cpf,'telefone'=>$filtro_telefone])) ?>" class="btn btn-sm btn-outline-light py-0">🔄</a>
       </div>
+
+      <!-- Filtros -->
+      <div class="p-2 border-bottom bg-light">
+        <form method="GET" class="row g-1 align-items-end" style="font-size:12px;">
+          <?php /* preserva ?editar= etc se houver */ ?>
+          <div class="col-auto">
+            <label class="form-label mb-0 fw-bold" style="font-size:11px;">De</label>
+            <input type="date" name="data_ini" class="form-control form-control-sm border-dark" style="font-size:11px;width:130px;"
+              value="<?= htmlspecialchars($filtro_data_ini) ?>">
+          </div>
+          <div class="col-auto">
+            <label class="form-label mb-0 fw-bold" style="font-size:11px;">Até</label>
+            <input type="date" name="data_fim" class="form-control form-control-sm border-dark" style="font-size:11px;width:130px;"
+              value="<?= htmlspecialchars($filtro_data_fim) ?>">
+          </div>
+          <div class="col-auto">
+            <label class="form-label mb-0 fw-bold" style="font-size:11px;">Usuário</label>
+            <input type="text" name="usuario" class="form-control form-control-sm border-dark" style="font-size:11px;width:140px;"
+              placeholder="Nome..." value="<?= htmlspecialchars($filtro_usuario) ?>">
+          </div>
+          <div class="col-auto">
+            <label class="form-label mb-0 fw-bold" style="font-size:11px;">CPF Cliente</label>
+            <input type="text" name="cpf" class="form-control form-control-sm border-dark" style="font-size:11px;width:120px;"
+              placeholder="Somente dígitos" value="<?= htmlspecialchars($_GET['cpf'] ?? '') ?>">
+          </div>
+          <div class="col-auto">
+            <label class="form-label mb-0 fw-bold" style="font-size:11px;">Telefone</label>
+            <input type="text" name="telefone" class="form-control form-control-sm border-dark" style="font-size:11px;width:120px;"
+              placeholder="Somente dígitos" value="<?= htmlspecialchars($_GET['telefone'] ?? '') ?>">
+          </div>
+          <div class="col-auto d-flex gap-1">
+            <button type="submit" class="btn btn-sm btn-dark py-0 px-2" style="font-size:11px;">
+              <i class="fas fa-search me-1"></i>Filtrar
+            </button>
+            <a href="?" class="btn btn-sm btn-outline-secondary py-0 px-2" style="font-size:11px;">✕</a>
+          </div>
+        </form>
+      </div>
+
       <div class="table-responsive">
         <table class="table table-sm table-hover mb-0" style="font-size:12px;">
           <thead class="table-dark">
-            <tr><th>CPF</th><th>Telefone</th><th>Status</th><th>Tentativas</th><th>Criado</th><th>Observação</th></tr>
+            <tr>
+              <th>Usuário / Agent ID</th>
+              <th>CPF Cliente</th>
+              <th>Telefone</th>
+              <th>Status</th>
+              <th>Tentativas</th>
+              <th>Criado</th>
+              <th>Observação</th>
+            </tr>
           </thead>
           <tbody>
           <?php if (empty($ultimasSessoes)): ?>
-            <tr><td colspan="6" class="text-center text-muted py-3 fst-italic">Nenhuma sessão registrada.</td></tr>
+            <tr><td colspan="7" class="text-center text-muted py-3 fst-italic">Nenhuma sessão encontrada.</td></tr>
           <?php else: ?>
             <?php foreach ($ultimasSessoes as $s):
               $badge = match($s['STATUS']) {
                 'PROCESSADO' => 'bg-success', 'ERRO' => 'bg-danger',
                 'EXPIRADO'   => 'bg-secondary', default => 'bg-warning text-dark'
               };
+              $agentId  = $s['GPTMAKE_AGENT_ID'] ?? $s['AGENT_ID'] ?? '';
+              $donoNome = $s['DONO_NOME'] ?? '—';
             ?>
             <tr>
+              <td>
+                <div class="fw-bold"><?= htmlspecialchars($donoNome) ?></div>
+                <?php if ($agentId): ?>
+                <div class="font-monospace text-muted" style="font-size:10px;" title="<?= htmlspecialchars($agentId) ?>">
+                  <?= substr(htmlspecialchars($agentId), 0, 18) ?>...
+                </div>
+                <?php endif; ?>
+              </td>
               <td class="font-monospace"><?= preg_replace('/(\d{3})(\d{3})(\d{3})(\d{2})/', '$1.***.***-$4', str_pad($s['CPF_CLIENTE'],11,'0',STR_PAD_LEFT)) ?></td>
               <td><?= htmlspecialchars($s['TELEFONE'] ?? '—') ?></td>
               <td><span class="badge <?= $badge ?>"><?= $s['STATUS'] ?></span></td>
               <td class="text-center"><?= $s['TENTATIVAS'] ?>/10</td>
               <td><?= $s['DATA_CRIACAO'] ? date('d/m H:i', strtotime($s['DATA_CRIACAO'])) : '—' ?></td>
-              <td class="text-truncate" style="max-width:200px;" title="<?= htmlspecialchars($s['OBSERVACAO']??'') ?>">
+              <td class="text-truncate" style="max-width:180px;" title="<?= htmlspecialchars($s['OBSERVACAO']??'') ?>">
                 <?= htmlspecialchars($s['OBSERVACAO'] ?? '—') ?>
               </td>
             </tr>

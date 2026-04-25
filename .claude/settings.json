@@ -233,7 +233,8 @@
       "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SHOW TABLES LIKE '%GPTMAKE%';\")",
       "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"DESCRIBE INTEGRACAO_GPTMAKE_CONFIG;\")",
       "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"ALTER TABLE INTEGRACAO_V8_IA_FOLLOWUP ADD COLUMN AGENT_ID VARCHAR\\(100\\) NULL AFTER TOKEN_IA, ADD COLUMN TELEFONE_WHATSAPP VARCHAR\\(20\\) NULL AFTER TELEFONE;\")",
-      "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/worker_gptmake_followup.php)"
+      "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/worker_gptmake_followup.php)",
+      "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/config_gptmake.php)"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",
