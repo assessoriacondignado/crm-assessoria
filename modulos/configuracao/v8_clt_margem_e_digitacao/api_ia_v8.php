@@ -166,9 +166,13 @@ function resolverTelefone($req, $cpf, $pdo) {
         $st->execute([$cpf]);
         $tel = preg_replace('/\D/', '', $st->fetchColumn() ?: '11900000000');
     }
-    // Remove o código do país 55 se o número tiver 12 ou 13 dígitos (55 + DDD + número)
+    // Remove 55 country code (12-13 digits: 55 + DDD + number)
     if (strlen($tel) >= 12 && substr($tel, 0, 2) === '55') {
         $tel = substr($tel, 2);
+    }
+    // Normaliza 10 dígitos (DDD + 8 dígitos) para 11 dígitos (DDD + 9 dígitos com 9 inicial)
+    if (strlen($tel) === 10) {
+        $tel = substr($tel, 0, 2) . '9' . substr($tel, 2);
     }
     return $tel;
 }
@@ -177,7 +181,13 @@ function buscarSessaoIA($cpf, $tokenIA, $pdo, $telefone = '11900000000') {
     $stmt = $pdo->prepare("SELECT ID FROM INTEGRACAO_V8_IA_SESSAO WHERE CPF_CLIENTE = ? AND DATE(DATA_INICIO) = CURDATE() ORDER BY ID DESC LIMIT 1");
     $stmt->execute([$cpf]);
     $id = $stmt->fetchColumn();
-    if ($id) return $id;
+    if ($id) {
+        // Sempre atualiza o telefone quando o CPF chega — garante número correto para proposta
+        if ($telefone && $telefone !== '11900000000') {
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET TELEFONE_CLIENTE = ? WHERE ID = ?")->execute([$telefone, $id]);
+        }
+        return $id;
+    }
     $pdo->prepare("INSERT INTO INTEGRACAO_V8_IA_SESSAO (TOKEN_IA_USADO, TELEFONE_CLIENTE, CPF_CLIENTE, STATUS_SESSAO) VALUES (?, ?, ?, 'RETOMANDO_FUNIL')")->execute([$tokenIA, $telefone, $cpf]);
     return $pdo->lastInsertId();
 }
@@ -377,6 +387,10 @@ try {
                 $ultimo_consult_id = $consultaAguardando['CONSULT_ID'];
                 $sessao_id         = (int)$consultaAguardando['SESSAO_ID'];
                 $elapsed           = time() - strtotime($consultaAguardando['DATA_INICIO']);
+                // Atualiza telefone na sessão com o número resolvido atual
+                if ($telefone && $telefone !== '11900000000') {
+                    $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET TELEFONE_CLIENTE = ? WHERE ID = ?")->execute([$telefone, $sessao_id]);
+                }
                 $cliente           = buscarOuAtualizarCadastro($cpf, $pdo, $credencialIA);
 
                 if ($elapsed >= 14400) {
