@@ -435,10 +435,21 @@ try {
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'SIMULACAO_PRONTA' WHERE ID = ?")->execute([$sessao_id]);
                 enviarResposta($cpf, $acao, ['success' => true, 'status' => 'CONCLUIDO', 'CPF' => $cpf, 'nome_do_contato' => $cliente['nome'] ?? '', 'telefone_do_contato' => $telefone, 'valor_liberado' => $simDados['valor_liberado'], 'valor_parcela' => $simDados['valor_parcela'], 'prazo' => $simDados['prazo'], 'margem_disponivel' => (float)$margem, 'simulacao_padrao' => $simDados]);
             } else {
-                // Salva na fila de follow-up automático do CRM
-                $pdo->prepare("INSERT INTO INTEGRACAO_V8_IA_FOLLOWUP (CPF_CLIENTE, TELEFONE, CONSULT_ID, TOKEN_IA) VALUES (?,?,?,?)
-                               ON DUPLICATE KEY UPDATE STATUS='PENDENTE', TENTATIVAS=0, DATA_ULTIMA_TENTATIVA=NULL")
-                    ->execute([$cpf, $telefone, $ultimo_consult_id, $tokenIA]);
+                // Busca AGENT_ID do GPTMake config do dono da credencial para follow-up direcionado
+                $agentId_fu = null;
+                try {
+                    $stmtGptFU = $pdo->prepare("SELECT AGENT_ID FROM INTEGRACAO_GPTMAKE_CONFIG WHERE CPF_USUARIO = ? AND STATUS = 'ATIVO' ORDER BY ID DESC LIMIT 1");
+                    $stmtGptFU->execute([$credencialIA['CPF_DONO']]);
+                    $agentId_fu = $stmtGptFU->fetchColumn() ?: null;
+                } catch (\Throwable $e) {}
+
+                // Telefone original do WhatsApp (com 55) para o GPTMaker identificar a conversa correta
+                $tel_whatsapp = $req['telefone'] ?? '';
+                $tel_whatsapp = preg_replace('/\D/', '', $tel_whatsapp);
+
+                $pdo->prepare("INSERT INTO INTEGRACAO_V8_IA_FOLLOWUP (CPF_CLIENTE, TELEFONE, TELEFONE_WHATSAPP, CONSULT_ID, TOKEN_IA, AGENT_ID) VALUES (?,?,?,?,?,?)
+                               ON DUPLICATE KEY UPDATE STATUS='PENDENTE', TENTATIVAS=0, DATA_ULTIMA_TENTATIVA=NULL, AGENT_ID=VALUES(AGENT_ID), TELEFONE_WHATSAPP=VALUES(TELEFONE_WHATSAPP)")
+                    ->execute([$cpf, $telefone, $tel_whatsapp, $ultimo_consult_id, $tokenIA, $agentId_fu]);
                 enviarResposta($cpf, $acao, ['success' => false, 'status' => 'AGUARDANDO_DATAPREV', 'msg' => 'Processando na fila. O sistema enviará o resultado automaticamente.']);
             }
             break;

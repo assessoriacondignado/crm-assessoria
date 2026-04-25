@@ -63,6 +63,10 @@ function normalizarFU($str) {
 function enviarGPTMaker($gpt_agent, $gpt_token, $telefone, $mensagem) {
     $phone = preg_replace('/\D/', '', $telefone);
     if (strlen($phone) < 10) return false;
+    // Garante formato WhatsApp internacional (com 55) para GPTMaker identificar a conversa correta
+    if (strlen($phone) <= 11 && substr($phone, 0, 2) !== '55') {
+        $phone = '55' . $phone;
+    }
 
     $payload = json_encode([
         'phone'   => $phone,
@@ -86,18 +90,22 @@ function enviarGPTMaker($gpt_agent, $gpt_token, $telefone, $mensagem) {
     return ['http' => $http, 'body' => $res];
 }
 
-$ST_OK   = ['SUCCESS','COMPLETED','WAITING_CREDIT_ANALYSIS','APPROVED','PRE_APPROVED',
+$ST_OK   = ['SUCCESS','COMPLETED','APPROVED','PRE_APPROVED',
             'SIMULATED','READY','AVAILABLE','MARGIN_AVAILABLE','AUTHORIZED','DONE','FINISHED'];
+$ST_WAIT = ['WAITING_CREDIT_ANALYSIS','PROCESSING','PENDING','WAITING','WAITING_CONSULT',
+            'ANALYZING','IN_PROGRESS','PENDING_CONSULTATION','CONSENT_APPROVED','CREATED','QUEUED','STARTED'];
 $ST_ERRO = ['ERROR','REJECTED','DENIED','CANCELED','EXPIRED','FAILED'];
 
 foreach ($pendentes as $fu) {
     $cpf        = $fu['CPF_CLIENTE'];
-    $telefone   = $fu['TELEFONE'] ?: '11900000000';
+    // Usa telefone WhatsApp (com 55) se disponível, senão telefone limpo
+    $telefone   = !empty($fu['TELEFONE_WHATSAPP']) ? $fu['TELEFONE_WHATSAPP'] : ($fu['TELEFONE'] ?: '11900000000');
     $consult_id = $fu['CONSULT_ID'];
     $token_ia   = $fu['TOKEN_IA'];
+    $agent_id_salvo = $fu['AGENT_ID'] ?? null;
     $tentativas = (int)$fu['TENTATIVAS'] + 1;
 
-    logFU("CPF {$cpf} | Tentativa {$tentativas} | CONSULT {$consult_id}");
+    logFU("CPF {$cpf} | Tentativa {$tentativas} | CONSULT {$consult_id} | Agent: " . ($agent_id_salvo ?: 'lookup'));
 
     // Atualiza tentativa
     $pdo->prepare("UPDATE INTEGRACAO_V8_IA_FOLLOWUP SET TENTATIVAS=?, DATA_ULTIMA_TENTATIVA=NOW() WHERE ID=?")
@@ -114,13 +122,22 @@ foreach ($pendentes as $fu) {
         $cred = $stmtC->fetch(PDO::FETCH_ASSOC);
         if (!$cred) throw new Exception("Credencial não encontrada para token.");
 
-        // Config GPTMaker do dono da credencial
-        $stmtGPT = $pdo->prepare("SELECT API_TOKEN, AGENT_ID FROM INTEGRACAO_GPTMAKE_CONFIG WHERE CPF_USUARIO = ? AND STATUS = 'ATIVO' LIMIT 1");
-        $stmtGPT->execute([$cred['CPF_DONO']]);
-        $gptCfg = $stmtGPT->fetch(PDO::FETCH_ASSOC);
-        if (!$gptCfg) throw new Exception("Config GPTMaker não encontrada para CPF dono {$cred['CPF_DONO']}.");
+        // Config GPTMaker: prioriza AGENT_ID salvo na fila, senão busca por CPF_DONO
+        if ($agent_id_salvo) {
+            $stmtGPT = $pdo->prepare("SELECT API_TOKEN, AGENT_ID FROM INTEGRACAO_GPTMAKE_CONFIG WHERE AGENT_ID = ? AND STATUS = 'ATIVO' LIMIT 1");
+            $stmtGPT->execute([$agent_id_salvo]);
+            $gptCfg = $stmtGPT->fetch(PDO::FETCH_ASSOC);
+        }
+        if (empty($gptCfg)) {
+            $stmtGPT = $pdo->prepare("SELECT API_TOKEN, AGENT_ID FROM INTEGRACAO_GPTMAKE_CONFIG WHERE CPF_USUARIO = ? AND STATUS = 'ATIVO' ORDER BY ID DESC LIMIT 1");
+            $stmtGPT->execute([$cred['CPF_DONO']]);
+            $gptCfg = $stmtGPT->fetch(PDO::FETCH_ASSOC);
+        }
+        if (!$gptCfg) throw new Exception("Config GPTMaker não encontrada para agente/CPF dono {$cred['CPF_DONO']}.");
         $gpt_token = $gptCfg['API_TOKEN'];
         $gpt_agent = $gptCfg['AGENT_ID'];
+
+        logFU("CPF {$cpf} | GPTMaker Agent: {$gpt_agent} | Tel: {$telefone}");
 
         $tokenV8 = gerarTokenV8FU($cred);
 
@@ -207,17 +224,20 @@ foreach ($pendentes as $fu) {
                 ->execute([$motivo, $fu['ID']]);
             logFU("CPF {$cpf} | ERRO V8: {$motivo}");
 
-        } else {
-            // Ainda processando
+        } elseif (in_array($status_v8, $ST_WAIT)) {
+            // V8 ainda processando — aguarda próxima tentativa
             if ($tentativas >= 10) {
                 $msg_exp = "Poxa, o sistema do banco está demorando mais que o normal. Pode me mandar uma mensagem em uns 5 minutinhos que verifico novamente pra você!";
                 enviarGPTMaker($gpt_agent, $gpt_token, $telefone, $msg_exp);
-                $pdo->prepare("UPDATE INTEGRACAO_V8_IA_FOLLOWUP SET STATUS='EXPIRADO', OBSERVACAO='Máximo de tentativas atingido' WHERE ID=?")
+                $pdo->prepare("UPDATE INTEGRACAO_V8_IA_FOLLOWUP SET STATUS='EXPIRADO', OBSERVACAO='Máximo de tentativas atingido (V8: {$status_v8})' WHERE ID=?")
                     ->execute([$fu['ID']]);
-                logFU("CPF {$cpf} | EXPIRADO após 10 tentativas.");
+                logFU("CPF {$cpf} | EXPIRADO após 10 tentativas. Status V8: {$status_v8}");
             } else {
-                logFU("CPF {$cpf} | Ainda processando (status: {$status_v8}). Próxima tentativa em ~90s.");
+                logFU("CPF {$cpf} | V8 ainda processando ({$status_v8}). Próxima tentativa em ~90s.");
             }
+        } else {
+            // Status desconhecido — trata como ainda processando
+            logFU("CPF {$cpf} | Status V8 desconhecido: {$status_v8}. Aguardando.");
         }
 
     } catch (Exception $e) {
