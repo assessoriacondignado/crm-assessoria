@@ -23,3 +23,6 @@
 [24-04-2026 22:30:31] [REQUISICAO_RECEBIDA - consulta_completa] => {"acao":"consulta_completa","cpf":"35989236867","telefone":""}
 [24-04-2026 22:30:50] [V8_RETORNO_MARGEM] => {"status":"SUCCESS","availableMargin":null,"marginBaseValue":"1569.50","availableMarginValue":null,"maxAmount":null,"margem_calculada":"1569.50"}
 [24-04-2026 22:30:52] [RESPOSTA_ENVIADA - consulta_completa] => {"success":true,"status":"CONCLUIDO","margem_disponivel":1569.5,"simulacao_padrao":{"simulation_id":"f4c6eda1-c213-488b-a46d-80f5cb9acb12","tabela":"CLT  Acelera - Seguro","valor_liberado":16043.54,"valor_parcela":1569.5,"prazo":24}}
+[24-04-2026 22:46:07] [REQUISICAO_RECEBIDA - consulta_completa] => {"acao":"consulta_completa","cpf":"35989236867","telefone":""}
+[24-04-2026 22:46:25] [V8_RETORNO_MARGEM] => {"status":"SUCCESS","availableMargin":null,"marginBaseValue":"1569.50","availableMarginValue":null,"maxAmount":null,"margem_calculada":"1569.50"}
+[24-04-2026 22:46:27] [RESPOSTA_ENVIADA - consulta_completa] => {"success":true,"status":"CONCLUIDO","cpf":"35989236867","valor_liberado":16043.54,"valor_parcela":1569.5,"prazo":24,"margem_disponivel":1569.5,"simulacao_padrao":{"simulation_id":"be5d877f-83bc-4f6e-ae17-99fa545f1bfe","tabela":"CLT  Acelera - Seguro","valor_liberado":16043.54,"valor_parcela":1569.5,"prazo":24}}
