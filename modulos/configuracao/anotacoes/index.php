@@ -1145,6 +1145,8 @@ function guiaAbrirModal(id) {
                     document.getElementById('guia_editor').innerHTML = d.CONTEUDO_RAW || '';
                 } else if (d.TIPO_CONTEUDO === 'HTML') {
                     document.getElementById('guia_html_code').value = d.CONTEUDO_RAW || '';
+                } else if (d.TIPO_CONTEUDO === 'IFRAME') {
+                    document.getElementById('guia_iframe_url').value = d.CONTEUDO_RAW || '';
                 }
                 const arqInfo = document.getElementById('guia_arquivo_atual');
                 if (arqInfo) arqInfo.textContent = d.NOME_CONTEUDO ? 'Arquivo atual: ' + d.NOME_CONTEUDO + ' (deixe em branco para manter)' : '';
@@ -1158,9 +1160,17 @@ function guiaTipoChange() {
     const tipo = document.getElementById('guia_tipo').value;
     document.getElementById('guia_panel_texto').style.display   = tipo === 'TEXTO'  ? '' : 'none';
     document.getElementById('guia_panel_html').style.display    = tipo === 'HTML'   ? '' : 'none';
+    document.getElementById('guia_panel_iframe').style.display  = tipo === 'IFRAME' ? '' : 'none';
     document.getElementById('guia_panel_arquivo').style.display = (tipo === 'VIDEO' || tipo === 'IMAGEM') ? '' : 'none';
     const dica = document.getElementById('guia_arquivo_dica');
     if (dica) dica.textContent = tipo === 'VIDEO' ? 'Formatos aceitos: mp4' : 'Formatos aceitos: png, jpg, jpeg, bmp';
+}
+
+function guiaIframePreview() {
+    const url = document.getElementById('guia_iframe_url').value.trim();
+    if (!url) { alert('Cole o link primeiro.'); return; }
+    document.getElementById('guia_iframe_frame').src = url;
+    document.getElementById('guia_iframe_preview').style.display = '';
 }
 
 async function guiaSalvar() {
@@ -1181,6 +1191,8 @@ async function guiaSalvar() {
         fd.append('conteudo_texto', document.getElementById('guia_editor').innerHTML);
     } else if (tipo === 'HTML') {
         fd.append('conteudo_texto', document.getElementById('guia_html_code').value);
+    } else if (tipo === 'IFRAME') {
+        fd.append('conteudo_texto', document.getElementById('guia_iframe_url').value.trim());
     } else {
         const arq = document.getElementById('guia_arquivo');
         if (arq.files[0]) fd.append('arquivo', arq.files[0]);
@@ -1208,10 +1220,159 @@ function guiaFmt(cmd) {
     document.getElementById('guia_editor').focus();
     document.execCommand(cmd, false, null);
 }
+function guiaFmtBloco(val) {
+    if (!val) return;
+    document.getElementById('guia_editor').focus();
+    document.execCommand('formatBlock', false, val);
+}
 function guiaFmtCor(cor) {
     if (!cor) return;
     document.getElementById('guia_editor').focus();
     document.execCommand('foreColor', false, cor);
+}
+function guiaFmtFundo(cor) {
+    if (!cor) return;
+    document.getElementById('guia_editor').focus();
+    document.execCommand('hiliteColor', false, cor);
+}
+function guiaFmtTamanho(pt) {
+    if (!pt) return;
+    document.getElementById('guia_editor').focus();
+    // execCommand fontSize só aceita 1-7; usamos insertHTML com span
+    const sel = window.getSelection();
+    if (!sel || sel.rangeCount === 0 || sel.isCollapsed) {
+        // sem seleção: aplica no próximo texto digitado via span
+        document.execCommand('insertHTML', false, `<span style="font-size:${pt}pt;">&#8203;</span>`);
+        return;
+    }
+    const range = sel.getRangeAt(0);
+    const span = document.createElement('span');
+    span.style.fontSize = pt + 'pt';
+    range.surroundContents(span);
+    sel.removeAllRanges();
+    sel.addRange(range);
+}
+function guiaInsertImagem() {
+    const url = prompt('URL da imagem (ou deixe em branco para upload de arquivo):');
+    if (!url) return;
+    const editor = document.getElementById('guia_editor');
+    editor.focus();
+    const img = document.createElement('img');
+    img.src = url;
+    img.style.cssText = 'max-width:100%;height:auto;display:block;margin:8px 0;border-radius:4px;';
+    const sel = window.getSelection();
+    if (sel && sel.rangeCount) {
+        const range = sel.getRangeAt(0);
+        range.collapse(false);
+        range.insertNode(img);
+        range.setStartAfter(img);
+        sel.removeAllRanges();
+        sel.addRange(range);
+    } else {
+        editor.appendChild(img);
+    }
+}
+function guiaInsertLink() {
+    const url = prompt('URL do link:');
+    if (!url) return;
+    const texto = prompt('Texto do link:', url);
+    if (texto === null) return;
+    document.getElementById('guia_editor').focus();
+    document.execCommand('insertHTML', false, `<a href="${url}" target="_blank" style="color:#0d6efd;">${texto || url}</a>`);
+}
+
+// ── Áudio inline ───────────────────────────────────────────────
+let _guiaAudioRange = null;
+function guiaInsertAudio() {
+    // Salva posição do cursor antes de abrir o file dialog
+    const editor = document.getElementById('guia_editor');
+    editor.focus();
+    const sel = window.getSelection();
+    if (sel && sel.rangeCount) _guiaAudioRange = sel.getRangeAt(0).cloneRange();
+    document.getElementById('guia_audio_input').value = '';
+    document.getElementById('guia_audio_input').click();
+}
+async function guiaAudioUploaded(input) {
+    const file = input.files[0];
+    if (!file) return;
+    const btn = document.getElementById('btnGuiaAudio');
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+    const fd = new FormData();
+    fd.append('acao', 'upload_audio');
+    fd.append('audio', file);
+    try {
+        const r = await fetch('guia_ajax.php', {method:'POST', body:fd});
+        const j = await r.json();
+        if (!j.success) { alert('Erro: ' + j.msg); return; }
+        // Monta botão de áudio inline
+        const span = document.createElement('span');
+        span.className = 'guia-audio';
+        span.setAttribute('data-src', j.url);
+        span.setAttribute('contenteditable', 'false');
+        span.setAttribute('title', 'Escutar: ' + (j.nome || 'áudio'));
+        span.innerHTML = '🔈';
+        const editor = document.getElementById('guia_editor');
+        editor.focus();
+        if (_guiaAudioRange) {
+            _guiaAudioRange.collapse(false);
+            _guiaAudioRange.insertNode(span);
+            _guiaAudioRange.setStartAfter(span);
+            const sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(_guiaAudioRange);
+        } else {
+            editor.appendChild(span);
+        }
+        crmToast('Áudio inserido!', 'success', 2500);
+    } catch(e) { alert('Falha de comunicação ao enviar áudio.'); }
+    btn.disabled = false;
+    btn.innerHTML = '🔈 Áudio';
+}
+
+// ── Resize de imagem ───────────────────────────────────────────
+let _guiaImgAtiva = null;
+function guiaEditorClick(e) {
+    const toolbar = document.getElementById('guia_img_toolbar');
+    if (e.target.tagName === 'IMG') {
+        _guiaImgAtiva = e.target;
+        // posiciona toolbar acima da imagem
+        const rect = e.target.getBoundingClientRect();
+        const edRect = document.getElementById('guia_editor').getBoundingClientRect();
+        toolbar.style.display = 'flex';
+        toolbar.style.top  = (rect.top - edRect.top + document.getElementById('guia_editor').scrollTop - 38) + 'px';
+        toolbar.style.left = (rect.left - edRect.left) + 'px';
+        // posiciona relativo ao painel do editor
+        const panel = document.querySelector('#guia_panel_texto .border');
+        panel.style.position = 'relative';
+        panel.appendChild(toolbar);
+        e.target.style.outline = '2px solid #0d6efd';
+    } else {
+        guiaImgDeselect();
+    }
+}
+function guiaImgDeselect() {
+    if (_guiaImgAtiva) { _guiaImgAtiva.style.outline = ''; _guiaImgAtiva = null; }
+    const toolbar = document.getElementById('guia_img_toolbar');
+    if (toolbar) toolbar.style.display = 'none';
+}
+function guiaImgResize(w) {
+    if (!_guiaImgAtiva) return;
+    _guiaImgAtiva.style.width = w;
+    _guiaImgAtiva.style.height = 'auto';
+    _guiaImgAtiva.removeAttribute('width');
+    _guiaImgAtiva.removeAttribute('height');
+}
+function guiaImgResizeCustom() {
+    if (!_guiaImgAtiva) return;
+    const px = prompt('Largura em pixels (ex: 400):', parseInt(_guiaImgAtiva.style.width) || 400);
+    if (!px || isNaN(parseInt(px))) return;
+    guiaImgResize(parseInt(px) + 'px');
+}
+function guiaImgRemover() {
+    if (!_guiaImgAtiva) return;
+    _guiaImgAtiva.remove();
+    guiaImgDeselect();
 }
 <?php endif; ?>
 
@@ -1415,6 +1576,7 @@ function guiaViewerFiltrar(q) {
                         <select id="guia_tipo" class="form-select border-dark fw-bold" onchange="guiaTipoChange()">
                             <option value="TEXTO">📝 Bloco de Notas (texto)</option>
                             <option value="HTML">🖥️ Código HTML (apresentação)</option>
+                            <option value="IFRAME">🔗 Link Canva / YouTube / Apresentação</option>
                             <option value="VIDEO">🎬 Vídeo Curto (mp4)</option>
                             <option value="IMAGEM">🖼️ Imagem / Apresentação</option>
                         </select>
@@ -1427,33 +1589,90 @@ function guiaViewerFiltrar(q) {
                     <!-- Painel TEXTO -->
                     <div class="col-12" id="guia_panel_texto">
                         <label class="fw-bold text-dark mb-1">Conteúdo</label>
-                        <div class="border border-secondary rounded">
-                            <div class="d-flex gap-1 flex-wrap p-2 border-bottom border-secondary" style="background:#f8f9fa;">
-                                <button type="button" class="btn btn-sm btn-outline-secondary fw-bold" onclick="guiaFmt('bold')"><b>B</b></button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary fst-italic" onclick="guiaFmt('italic')"><i>I</i></button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="guiaFmt('underline')"><u>U</u></button>
+                        <div class="border border-secondary rounded" style="position:relative;">
+                            <!-- Linha 1: formatação básica -->
+                            <div class="d-flex gap-1 flex-wrap px-2 pt-2 pb-1" style="background:#f8f9fa;">
+                                <button type="button" class="btn btn-sm btn-outline-secondary fw-bold" onclick="guiaFmt('bold')" title="Negrito"><b>B</b></button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary fst-italic" onclick="guiaFmt('italic')" title="Itálico"><i>I</i></button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="guiaFmt('underline')" title="Sublinhado"><u>U</u></button>
                                 <span class="border-start border-secondary mx-1"></span>
-                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="guiaFmt('insertUnorderedList')"><i class="fas fa-list-ul"></i></button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="guiaFmt('insertOrderedList')"><i class="fas fa-list-ol"></i></button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="guiaFmt('insertUnorderedList')" title="Lista com marcadores"><i class="fas fa-list-ul"></i></button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="guiaFmt('insertOrderedList')" title="Lista numerada"><i class="fas fa-list-ol"></i></button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="guiaFmt('indent')" title="Aumentar recuo"><i class="fas fa-indent"></i></button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="guiaFmt('outdent')" title="Diminuir recuo"><i class="fas fa-outdent"></i></button>
                                 <span class="border-start border-secondary mx-1"></span>
-                                <select class="form-select form-select-sm border-secondary" style="width:auto;" onchange="guiaFmt('formatBlock'); this.value='';">
-                                    <option value="">Parágrafo</option>
-                                    <option value="h3">Título</option>
+                                <button type="button" class="btn btn-sm btn-outline-primary" onclick="guiaInsertImagem()" title="Inserir imagem"><i class="fas fa-image"></i></button>
+                                <button type="button" class="btn btn-sm btn-outline-primary" onclick="guiaInsertLink()" title="Inserir hiperlink"><i class="fas fa-link"></i> Link</button>
+                                <button type="button" id="btnGuiaAudio" class="btn btn-sm btn-outline-success" onclick="guiaInsertAudio()" title="Inserir botão de áudio">🔈 Áudio</button>
+                                <input type="file" id="guia_audio_input" accept="audio/mp3,audio/wav,audio/ogg,audio/m4a,audio/*" style="display:none;" onchange="guiaAudioUploaded(this)">
+                            </div>
+                            <!-- Linha 2: tamanho, cor texto, cor fundo, bloco -->
+                            <div class="d-flex gap-1 flex-wrap px-2 pb-2" style="background:#f8f9fa; border-bottom:1px solid #dee2e6;">
+                                <select class="form-select form-select-sm border-secondary" style="width:70px;" title="Tamanho da fonte" onchange="guiaFmtTamanho(this.value); this.value='';">
+                                    <option value="">pt</option>
+                                    <option value="6">6</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="14">14</option>
+                                    <option value="16">16</option>
+                                    <option value="18">18</option>
+                                    <option value="20">20</option>
+                                    <option value="24">24</option>
+                                    <option value="28">28</option>
+                                    <option value="32">32</option>
+                                    <option value="36">36</option>
+                                    <option value="42">42</option>
+                                    <option value="48">48</option>
+                                    <option value="55">55</option>
+                                </select>
+                                <select class="form-select form-select-sm border-secondary" style="width:auto;" title="Cor do texto" onchange="guiaFmtCor(this.value); this.value='';">
+                                    <option value="">🎨 Cor texto</option>
+                                    <option value="#000000">⚫ Preto</option>
+                                    <option value="#333333">🔲 Cinza escuro</option>
+                                    <option value="#dc3545">🔴 Vermelho</option>
+                                    <option value="#198754">🟢 Verde</option>
+                                    <option value="#0d6efd">🔵 Azul</option>
+                                    <option value="#e67e22">🟠 Laranja</option>
+                                    <option value="#6f42c1">🟣 Roxo</option>
+                                    <option value="#ffffff">⬜ Branco</option>
+                                </select>
+                                <select class="form-select form-select-sm border-secondary" style="width:auto;" title="Cor de fundo do texto" onchange="guiaFmtFundo(this.value); this.value='';">
+                                    <option value="">🖌 Fundo texto</option>
+                                    <option value="#ffff00">🟡 Amarelo</option>
+                                    <option value="#90ee90">🟢 Verde claro</option>
+                                    <option value="#add8e6">🔵 Azul claro</option>
+                                    <option value="#ffb6c1">🔴 Rosa</option>
+                                    <option value="#ffd700">🟠 Dourado</option>
+                                    <option value="#d3d3d3">⬜ Cinza claro</option>
+                                    <option value="#000000">⬛ Preto</option>
+                                    <option value="transparent">✖ Remover fundo</option>
+                                </select>
+                                <select class="form-select form-select-sm border-secondary" style="width:auto;" onchange="guiaFmtBloco(this.value); this.value='';">
+                                    <option value="">Estilo</option>
+                                    <option value="h2">Título grande</option>
+                                    <option value="h3">Título médio</option>
                                     <option value="h5">Subtítulo</option>
                                     <option value="p">Normal</option>
                                 </select>
-                                <select class="form-select form-select-sm border-secondary" style="width:auto;" onchange="guiaFmtCor(this.value); this.value='';">
-                                    <option value="">Cor</option>
-                                    <option value="#dc3545">Vermelho</option>
-                                    <option value="#198754">Verde</option>
-                                    <option value="#0d6efd">Azul</option>
-                                    <option value="#e67e22">Laranja</option>
-                                    <option value="#333333">Preto</option>
-                                </select>
                             </div>
                             <div id="guia_editor" contenteditable="true"
-                                 style="min-height:200px;max-height:400px;overflow-y:auto;padding:12px 14px;outline:none;font-size:0.92rem;"
-                                 placeholder="Digite o conteúdo do guia aqui..."></div>
+                                 style="min-height:220px;max-height:420px;overflow-y:auto;padding:12px 14px;outline:none;font-size:0.92rem;"
+                                 placeholder="Digite o conteúdo do guia aqui..."
+                                 onclick="guiaEditorClick(event)"></div>
+                            <!-- Toolbar de resize de imagem -->
+                            <div id="guia_img_toolbar" style="display:none;position:absolute;z-index:99;background:#222;border-radius:6px;padding:4px 6px;gap:4px;align-items:center;flex-wrap:wrap;box-shadow:0 3px 10px rgba(0,0,0,.4);">
+                                <span style="color:#aaa;font-size:11px;margin-right:4px;">Imagem:</span>
+                                <button type="button" class="btn btn-xs btn-outline-light py-0 px-1" style="font-size:11px;" onclick="guiaImgResize('25%')">25%</button>
+                                <button type="button" class="btn btn-xs btn-outline-light py-0 px-1" style="font-size:11px;" onclick="guiaImgResize('50%')">50%</button>
+                                <button type="button" class="btn btn-xs btn-outline-light py-0 px-1" style="font-size:11px;" onclick="guiaImgResize('75%')">75%</button>
+                                <button type="button" class="btn btn-xs btn-outline-light py-0 px-1" style="font-size:11px;" onclick="guiaImgResize('100%')">100%</button>
+                                <button type="button" class="btn btn-xs btn-outline-warning py-0 px-1" style="font-size:11px;" onclick="guiaImgResizeCustom()">px</button>
+                                <span style="color:#555;margin:0 2px;">|</span>
+                                <button type="button" class="btn btn-xs btn-outline-danger py-0 px-1" style="font-size:11px;" onclick="guiaImgRemover()">🗑</button>
+                            </div>
                         </div>
                     </div>
 
@@ -1464,6 +1683,21 @@ function guiaViewerFiltrar(q) {
                                   rows="10" placeholder="Cole aqui o código HTML da sua apresentação..."
                                   style="font-size:0.78rem; resize:vertical;"></textarea>
                         <small class="text-muted">O conteúdo será exibido em um iframe. Cole o código completo gerado pela ferramenta de design.</small>
+                    </div>
+
+                    <!-- Painel IFRAME (Canva, YouTube, etc.) -->
+                    <div class="col-12" id="guia_panel_iframe" style="display:none;">
+                        <label class="fw-bold text-dark mb-1">Link da Apresentação / Vídeo</label>
+                        <input type="text" id="guia_iframe_url" class="form-control border-dark font-monospace"
+                               placeholder="Cole aqui o link do Canva, YouTube, Google Slides...">
+                        <small class="text-muted">
+                            <strong>Canva:</strong> Compartilhar → Apresentar e incorporar → copiar o link.<br>
+                            <strong>YouTube:</strong> Compartilhar → Incorporar → copiar só o link (https://www.youtube.com/embed/...)
+                        </small>
+                        <div id="guia_iframe_preview" class="mt-2" style="display:none;">
+                            <iframe id="guia_iframe_frame" src="" width="100%" height="320" frameborder="0" allowfullscreen style="border-radius:6px;border:1px solid #ccc;"></iframe>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-outline-secondary mt-2" onclick="guiaIframePreview()"><i class="fas fa-eye me-1"></i> Pré-visualizar</button>
                     </div>
 
                     <!-- Painel ARQUIVO (VIDEO ou IMAGEM) -->

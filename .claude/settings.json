@@ -211,7 +211,9 @@
       "Bash(grep -n '^\\\\s*$telefone = preg_replace' /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/api_ia_v8.php)",
       "Bash(python3 -c ' *)",
       "Bash(mysql -u root --password=\"\" crm_dados -e \"DESCRIBE INTEGRACAO_V8_REGISTROCONSULTA;\")",
-      "Bash(php -l /var/www/html/modulos/ia_gptmake/treinamento_ia.php)"
+      "Bash(php -l /var/www/html/modulos/ia_gptmake/treinamento_ia.php)",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"ALTER TABLE GUIA_CRM MODIFY TIPO_CONTEUDO ENUM\\('VIDEO','IMAGEM','TEXTO','HTML','IFRAME'\\) DEFAULT 'TEXTO';\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"DESCRIBE BANCO_DE_DADOS_CAMPANHA_QUALIFICACAO_TELEFONE; SELECT * FROM BANCO_DE_DADOS_CAMPANHA_QUALIFICACAO_TELEFONE LIMIT 10;\")"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",

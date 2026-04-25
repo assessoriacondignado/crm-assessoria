@@ -20,7 +20,7 @@ try {
         TITULO VARCHAR(200) NOT NULL,
         COMENTARIO TEXT,
         NOME_CONTEUDO VARCHAR(255),
-        TIPO_CONTEUDO ENUM('VIDEO','IMAGEM','TEXTO','HTML') DEFAULT 'TEXTO',
+        TIPO_CONTEUDO ENUM('VIDEO','IMAGEM','TEXTO','HTML','IFRAME') DEFAULT 'TEXTO',
         LOCAL_EXIBICAO VARCHAR(200),
         STATUS ENUM('ATIVO','INATIVO') DEFAULT 'ATIVO',
         DATA_CRIACAO DATETIME DEFAULT NOW(),
@@ -86,7 +86,7 @@ switch ($acao) {
         $conteudo_texto = $_POST['conteudo_texto'] ?? '';
 
         if (!$titulo) { echo json_encode(['success' => false, 'msg' => 'Título obrigatório']); exit; }
-        if (!in_array($tipo_conteudo, ['VIDEO', 'IMAGEM', 'TEXTO', 'HTML'])) $tipo_conteudo = 'TEXTO';
+        if (!in_array($tipo_conteudo, ['VIDEO', 'IMAGEM', 'TEXTO', 'HTML', 'IFRAME'])) $tipo_conteudo = 'TEXTO';
 
         $nome_arquivo_atual = null;
         if ($id) {
@@ -97,7 +97,10 @@ switch ($acao) {
 
         $nome_arquivo = $nome_arquivo_atual; // mantém o atual por padrão
 
-        if ($tipo_conteudo === 'TEXTO' || $tipo_conteudo === 'HTML') {
+        if ($tipo_conteudo === 'IFRAME') {
+            // Salva o link direto no campo NOME_CONTEUDO
+            $nome_arquivo = $conteudo_texto;
+        } elseif ($tipo_conteudo === 'TEXTO' || $tipo_conteudo === 'HTML') {
             // Salva conteúdo HTML como arquivo
             if ($nome_arquivo_atual && pathinfo($nome_arquivo_atual, PATHINFO_EXTENSION) === 'html') {
                 // Sobrescreve arquivo existente
@@ -162,6 +165,23 @@ switch ($acao) {
         echo json_encode(['success' => true, 'novo_status' => $novo]);
         break;
 
+    // ── UPLOAD ÁUDIO (inline no texto) ────────────────────────────────────
+    case 'upload_audio':
+        if (!$is_admin) { echo json_encode(['success' => false, 'msg' => 'Sem permissão']); exit; }
+        if (!isset($_FILES['audio']) || $_FILES['audio']['error'] !== 0) {
+            echo json_encode(['success' => false, 'msg' => 'Falha no envio do arquivo de áudio.']); exit;
+        }
+        $ext_audio = strtolower(pathinfo($_FILES['audio']['name'], PATHINFO_EXTENSION));
+        if (!in_array($ext_audio, ['mp3','wav','ogg','m4a','aac'])) {
+            echo json_encode(['success' => false, 'msg' => 'Formato não suportado. Use mp3, wav, ogg, m4a ou aac.']); exit;
+        }
+        $nome_audio = uniqid('audio_') . '.' . $ext_audio;
+        if (!move_uploaded_file($_FILES['audio']['tmp_name'], $upload_dir . $nome_audio)) {
+            echo json_encode(['success' => false, 'msg' => 'Falha ao salvar o áudio. Verifique permissões da pasta.']); exit;
+        }
+        echo json_encode(['success' => true, 'url' => $upload_url . $nome_audio, 'nome' => $_FILES['audio']['name']]);
+        break;
+
     // ── EXCLUIR ────────────────────────────────────────────────────────────
     case 'excluir':
         if (!$is_admin) { echo json_encode(['success' => false, 'msg' => 'Sem permissão']); exit; }
@@ -197,12 +217,16 @@ switch ($acao) {
         } elseif ($row['TIPO_CONTEUDO'] === 'IMAGEM' && $arq) {
             $url = $upload_url . rawurlencode($arq);
             $conteudo_html = '<img src="' . htmlspecialchars($url) . '" style="max-width:100%;border-radius:8px;display:block;margin:0 auto;" alt="' . htmlspecialchars($row['TITULO']) . '">';
+        } elseif ($row['TIPO_CONTEUDO'] === 'IFRAME' && $arq) {
+            $conteudo_html = '<iframe src="' . htmlspecialchars($arq) . '" style="width:100%;height:560px;border:none;border-radius:8px;" allowfullscreen allow="autoplay; fullscreen"></iframe>';
         }
 
-        // Para edição, retorna o conteúdo bruto do arquivo TEXTO
+        // Para edição, retorna o conteúdo bruto
         $conteudo_raw = '';
         if (in_array($row['TIPO_CONTEUDO'], ['TEXTO', 'HTML']) && $arq && file_exists($upload_dir . $arq)) {
             $conteudo_raw = file_get_contents($upload_dir . $arq);
+        } elseif ($row['TIPO_CONTEUDO'] === 'IFRAME') {
+            $conteudo_raw = $arq; // o próprio link
         }
 
         $row['CONTEUDO_HTML'] = $conteudo_html;

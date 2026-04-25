@@ -93,7 +93,7 @@
     position: fixed;
     bottom: 82px;
     right: 18px;
-    z-index: 99991;
+    z-index: 1040;
     background: #1e3a5f;
     color: #fff;
     padding: 8px 13px;
@@ -121,7 +121,7 @@
     right: -26%;
     width: 25%;
     height: 100vh;
-    z-index: 99992;
+    z-index: 1040;
     background: #fff;
     box-shadow: -4px 0 24px rgba(0,0,0,.18);
     display: flex;
@@ -184,12 +184,107 @@
 #guia-content-coment { font-size: 11px; color: #888; padding: 0 16px 10px; }
 #guia-content-area { padding: 0 16px 16px; font-size: 13px; line-height: 1.6; }
 #guia-content-area video, #guia-content-area img { max-width: 100%; border-radius: 6px; }
+/* Botão de áudio inline */
+.guia-audio {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.3em;
+    background: #e8f4fd;
+    border: 2px solid #0d6efd;
+    border-radius: 50px;
+    padding: 3px 10px;
+    line-height: 1;
+    transition: all .2s;
+    user-select: none;
+    vertical-align: middle;
+    margin: 0 5px;
+    position: relative;
+    white-space: nowrap;
+    gap: 4px;
+}
+.guia-audio::before {
+    content: 'Escutar';
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1e3a5f;
+    color: #fff;
+    font-size: 0.5em;
+    padding: 3px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    pointer-events: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,.3);
+}
+.guia-audio::after {
+    content: '';
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 1px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #1e3a5f;
+    pointer-events: none;
+}
+.guia-audio:hover::before,
+.guia-audio:hover::after { display: block; }
+.guia-audio:hover { background: #0d6efd; border-color: #0a58ca; transform: scale(1.05); }
+.guia-audio.guia-audio-playing {
+    background: #198754;
+    border-color: #146c43;
+    animation: guiaAudioPulse 1.2s ease-in-out infinite;
+}
+.guia-audio.guia-audio-playing::before { content: 'Tocando... (clique para parar)'; }
+@keyframes guiaAudioPulse {
+    0%,100% { box-shadow: 0 0 0 0 rgba(25,135,84,.5); transform: scale(1); }
+    50%      { box-shadow: 0 0 0 8px rgba(25,135,84,0); transform: scale(1.06); }
+}
+#guia-content-area img, #guia-viewer-conteudo img {
+    cursor: zoom-in;
+    transition: opacity .15s;
+}
+#guia-content-area img:hover, #guia-viewer-conteudo img:hover { opacity: .85; }
+/* Lightbox */
+#guia-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.88);
+    z-index: 99999;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+}
+#guia-lightbox.open { display: flex; }
+#guia-lightbox img {
+    max-width: 92vw;
+    max-height: 90vh;
+    border-radius: 8px;
+    box-shadow: 0 8px 40px rgba(0,0,0,.7);
+    cursor: default;
+    object-fit: contain;
+}
+#guia-lightbox-close {
+    position: absolute;
+    top: 16px; right: 20px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+    opacity: .8;
+}
+#guia-lightbox-close:hover { opacity: 1; }
 #guia-panel-overlay {
     display: none;
     position: fixed;
     inset: 0;
     background: rgba(0,0,0,.15);
-    z-index: 99991;
+    z-index: 1039;
 }
 @media (max-width: 768px) {
     #guia-side-panel { width: 90%; right: -91%; }
@@ -197,9 +292,15 @@
 }
 </style>
 
+<!-- Lightbox global para imagens do Guia -->
+<div id="guia-lightbox" onclick="guiaLightboxFechar()">
+    <span id="guia-lightbox-close" onclick="guiaLightboxFechar()">✕</span>
+    <img id="guia-lightbox-img" src="" alt="" onclick="event.stopPropagation()">
+</div>
+
 <div id="guia-panel-overlay" onclick="guiaPanelFechar()"></div>
 
-<div id="guia-widget-wrap" style="position:fixed;bottom:22px;right:22px;z-index:99990;display:none;">
+<div id="guia-widget-wrap" style="position:fixed;bottom:22px;right:22px;z-index:1038;display:none;">
     <div id="guia-widget-btn" title="Abrir Guia Sistema">
         <span style="position:relative;top:1px;">👨‍🏫</span>
     </div>
@@ -382,7 +483,67 @@
     } else {
         setTimeout(carregarGuias, 800);
     }
+
+    // Delegação de clique para lightbox em imagens do painel lateral
+    document.addEventListener('click', function(e) {
+        if ((e.target.tagName === 'IMG') &&
+            (e.target.closest('#guia-content-area') || e.target.closest('#guia-viewer-conteudo'))) {
+            guiaLightboxAbrir(e.target.src, e.target.alt);
+        }
+    });
 })();
+
+// ── Player de áudio global (botões .guia-audio em qualquer página) ──
+document.addEventListener('click', function(e) {
+    const btn = e.target.closest('.guia-audio');
+    if (!btn) return;
+    const src = btn.getAttribute('data-src');
+    if (!src) return;
+    // Para todos os outros
+    document.querySelectorAll('.guia-audio.guia-audio-playing').forEach(function(other) {
+        if (other === btn) return;
+        if (other._guiaAudio) { other._guiaAudio.pause(); other._guiaAudio.currentTime = 0; }
+        other.innerHTML = '🔈';
+        other.classList.remove('guia-audio-playing');
+    });
+    // Cria instância de áudio se não existir
+    if (!btn._guiaAudio) {
+        btn._guiaAudio = new Audio(src);
+        btn._guiaAudio.addEventListener('ended', function() {
+            btn.innerHTML = '🔈';
+            btn.classList.remove('guia-audio-playing');
+        });
+        btn._guiaAudio.addEventListener('error', function() {
+            btn.innerHTML = '❌';
+            btn.classList.remove('guia-audio-playing');
+            setTimeout(function() { btn.innerHTML = '🔈'; }, 2000);
+        });
+    }
+    if (btn._guiaAudio.paused) {
+        btn._guiaAudio.play();
+        btn.innerHTML = '🔊';
+        btn.classList.add('guia-audio-playing');
+    } else {
+        btn._guiaAudio.pause();
+        btn._guiaAudio.currentTime = 0;
+        btn.innerHTML = '🔈';
+        btn.classList.remove('guia-audio-playing');
+    }
+});
+
+window.guiaLightboxAbrir = function(src, alt) {
+    const lb = document.getElementById('guia-lightbox');
+    document.getElementById('guia-lightbox-img').src = src;
+    document.getElementById('guia-lightbox-img').alt = alt || '';
+    lb.classList.add('open');
+    document.addEventListener('keydown', guiaLightboxEsc);
+};
+window.guiaLightboxFechar = function() {
+    document.getElementById('guia-lightbox').classList.remove('open');
+    document.getElementById('guia-lightbox-img').src = '';
+    document.removeEventListener('keydown', guiaLightboxEsc);
+};
+function guiaLightboxEsc(e) { if (e.key === 'Escape') guiaLightboxFechar(); }
 </script>
 </body>
 </html>
