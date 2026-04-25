@@ -588,9 +588,20 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
             $idade_calculada = calcularIdadeExport($cliente['nascimento'] ?? '', 'N/A');
 
             // Busca dados complementares — colunas específicas para reduzir transferência MySQL→PHP
-            $stmtTel = $pdo->prepare("SELECT telefone_cel FROM telefones WHERE cpf = :cpf ORDER BY id ASC");
+            $stmtTel = $pdo->prepare("
+                SELECT t.telefone_cel, t.ID_QUALIFICACAO,
+                       q.NOME_QUALIFICACAO, q.TIPO AS QUAL_TIPO
+                FROM telefones t
+                LEFT JOIN BANCO_DE_DADOS_CAMPANHA_QUALIFICACAO_TELEFONE q ON t.ID_QUALIFICACAO = q.ID
+                WHERE t.cpf = :cpf
+                ORDER BY (q.TIPO = 'PRINCIPAL') DESC, t.id ASC
+            ");
             $stmtTel->execute(['cpf' => $cpf_selecionado]);
             $telefones = $stmtTel->fetchAll(PDO::FETCH_ASSOC);
+
+            // Qualificações disponíveis para o modal
+            try { $lista_qualificacoes_modal = $pdo->query("SELECT ID, NOME_QUALIFICACAO, TIPO FROM BANCO_DE_DADOS_CAMPANHA_QUALIFICACAO_TELEFONE ORDER BY TIPO ASC, NOME_QUALIFICACAO ASC")->fetchAll(PDO::FETCH_ASSOC); }
+            catch(Exception $e) { $lista_qualificacoes_modal = []; }
 
             $stmtEnd = $pdo->prepare("SELECT cep, logradouro, numero, bairro, cidade, uf FROM enderecos WHERE cpf = :cpf ORDER BY id ASC");
             $stmtEnd->execute(['cpf' => $cpf_selecionado]);
@@ -674,7 +685,7 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
                     if (!empty($campanha_atual['IDS_STATUS_CONTATOS'])) {
                         $ids_in_safe = implode(',', array_map('intval', explode(',', $campanha_atual['IDS_STATUS_CONTATOS'])));
                         if (!empty($ids_in_safe)) {
-                            $stmtStat = $pdo->query("SELECT ID, NOME_STATUS, MARCACAO FROM BANCO_DE_DADOS_CAMPANHA_STATUS_CONTATO WHERE ID IN ($ids_in_safe) ORDER BY NOME_STATUS ASC");
+                            $stmtStat = $pdo->query("SELECT ID, NOME_STATUS, MARCACAO, ID_QUALIFICACAO FROM BANCO_DE_DADOS_CAMPANHA_STATUS_CONTATO WHERE ID IN ($ids_in_safe) ORDER BY NOME_STATUS ASC");
                             $status_campanha = $stmtStat->fetchAll(PDO::FETCH_ASSOC);
                         }
                     }
@@ -1114,7 +1125,20 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
                         <div class="col-6">
                             <div class="card h-100 border-dark rounded-0">
                                 <div class="card-header bg-dark text-white py-1 px-2 border-bottom border-dark rounded-0"><span class="fw-bold text-uppercase" style="font-size: 0.75rem;"><i class="fab fa-whatsapp text-success me-2"></i> Telefones</span></div>
-                                <table class="table table-bordered table-sm mb-0 border-dark" style="font-size: 0.75rem;"><tbody><?php if(empty($telefones)): ?><tr><td class="text-muted px-2 py-1">Nenhum telefone.</td></tr><?php else: ?><?php foreach($telefones as $tel): ?><tr><td class="px-2 py-1 border-dark d-flex align-items-center justify-content-between"><span><i class="fab fa-whatsapp text-success me-2"></i><span class="text-dark fw-bold"><?= htmlspecialchars($tel['telefone_cel'] ?? '') ?></span></span><a href="tel:<?= htmlspecialchars($tel['telefone_cel'] ?? '') ?>" class="btn btn-sm btn-success py-0 px-2 ms-2" title="Ligar para este número" style="font-size:0.7rem;"><i class="fas fa-phone-alt me-1"></i> Ligar</a></td></tr><?php endforeach; ?><?php endif; ?></tbody></table>
+                                <table class="table table-bordered table-sm mb-0 border-dark" style="font-size: 0.75rem;"><tbody><?php if(empty($telefones)): ?><tr><td class="text-muted px-2 py-1">Nenhum telefone.</td></tr><?php else: ?><?php foreach($telefones as $tel):
+                                    $isPrincipal = ($tel['QUAL_TIPO'] ?? '') === 'PRINCIPAL';
+                                    $qualNome    = $tel['NOME_QUALIFICACAO'] ?? '';
+                                    $rowBg       = $isPrincipal ? 'background:#f0fff4;' : '';
+                                ?><tr style="<?= $rowBg ?>"><td class="px-2 py-1 border-dark d-flex align-items-center justify-content-between">
+                                    <span class="d-flex align-items-center gap-1 flex-wrap">
+                                        <i class="fab fa-whatsapp text-success me-1"></i>
+                                        <span class="text-dark fw-bold"><?= htmlspecialchars($tel['telefone_cel'] ?? '') ?></span>
+                                        <?php if ($qualNome): ?>
+                                            <span style="font-size:0.6rem;font-weight:700;padding:1px 5px;border-radius:3px;color:#fff;background:<?= $isPrincipal ? '#198754' : '#6c757d' ?>;"><?= htmlspecialchars($qualNome) ?></span>
+                                        <?php endif; ?>
+                                    </span>
+                                    <a href="tel:<?= htmlspecialchars($tel['telefone_cel'] ?? '') ?>" class="btn btn-sm btn-success py-0 px-2 ms-1" title="Ligar" style="font-size:0.7rem;"><i class="fas fa-phone-alt me-1"></i> Ligar</a>
+                                </td></tr><?php endforeach; ?><?php endif; ?></tbody></table>
                             </div>
                         </div>
                         <div class="col-6">
@@ -1631,7 +1655,7 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
                         <div class="small text-danger fw-bold w-100 text-center py-3">Nenhum status vinculado a esta campanha.</div>
                     <?php else: ?>
                         <?php foreach($status_campanha as $st): ?>
-                            <button class="btn btn-outline-dark fw-bold rounded-0 text-start" onclick="abrirModalRegistroCampanha(<?= $st['ID'] ?>, '<?= addslashes(htmlspecialchars($st['NOME_STATUS'])) ?>', '<?= $st['MARCACAO'] ?>')" data-bs-dismiss="modal">
+                            <button class="btn btn-outline-dark fw-bold rounded-0 text-start" onclick="abrirModalRegistroCampanha(<?= $st['ID'] ?>, '<?= addslashes(htmlspecialchars($st['NOME_STATUS'])) ?>', '<?= $st['MARCACAO'] ?>', <?= (int)($st['ID_QUALIFICACAO'] ?? 0) ?>)" data-bs-dismiss="modal">
                                 <i class="fas <?= $st['MARCACAO'] == 'COM RETORNO' ? 'fa-calendar-plus text-danger' : 'fa-check text-success' ?> me-1"></i> <?= htmlspecialchars($st['NOME_STATUS']) ?>
                             </button>
                         <?php endforeach; ?>
@@ -1643,51 +1667,52 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
 </div>
 <?php endif; ?>
 
+<!-- Dados para JS -->
+<script>
+const _regTelefones = <?= json_encode(array_values($telefones)) ?>;
+const _regQualificacoes = <?= json_encode(array_values($lista_qualificacoes_modal ?? [])) ?>;
+</script>
+
 <div class="modal fade" id="modalRegistroCampanha" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-        <form method="POST" action="/modulos/campanhas/acoes_campanha.php" class="modal-content border-dark shadow-lg rounded-0">
-            <input type="hidden" name="acao" value="salvar_registro_contato">
-            <input type="hidden" name="id_status" id="reg_id_status">
-            <input type="hidden" name="cpf_cliente" value="<?= $cpf_selecionado ?>">
-            <input type="hidden" name="id_campanha" id="reg_id_campanha">
-            
+    <div class="modal-dialog modal-dialog-centered" style="max-width:520px;">
+        <div class="modal-content border-dark shadow-lg rounded-0">
+            <input type="hidden" id="reg_id_status">
+            <input type="hidden" id="reg_id_campanha">
+            <input type="hidden" id="reg_cpf_cliente" value="<?= $cpf_selecionado ?>">
+
             <div class="modal-header bg-dark text-white border-dark rounded-0 py-2">
                 <h6 class="modal-title fw-bold text-uppercase"><i class="fas fa-edit text-info me-2"></i> Gravar Atendimento</h6>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
-            <div class="modal-body bg-light">
-                
+            <div class="modal-body bg-light p-3">
+
                 <div class="mb-3">
                     <label class="small fw-bold text-muted">Status Selecionado:</label>
-                    <div id="lbl_status_nome" class="form-control border-dark fw-bold bg-white text-primary rounded-0" readonly></div>
+                    <div id="lbl_status_nome" class="form-control border-dark fw-bold bg-white text-primary rounded-0 py-2"></div>
+                </div>
+
+                <!-- Lista de Telefones com qualificação por número -->
+                <div class="mb-3" id="div_telefones_qual">
+                    <label class="small fw-bold text-dark"><i class="fas fa-phone-alt text-success me-1"></i> Telefones — escolha a qualificação de cada número:</label>
+                    <div id="lista_telefones_qual" class="border border-secondary rounded-0 bg-white" style="max-height:220px;overflow-y:auto;"></div>
                 </div>
 
                 <div class="mb-3">
-                    <label class="small fw-bold text-dark">Telefone Discado (Para Qualificação) <span class="text-muted fw-normal">(opcional)</span></label>
-                    <select name="telefone_discado" class="form-select border-dark rounded-0 fw-bold text-success">
-                        <option value="">— Sem telefone / Não informar —</option>
-                        <?php foreach($telefones as $tel): ?>
-                            <option value="<?= htmlspecialchars($tel['telefone_cel']) ?>"><?= htmlspecialchars($tel['telefone_cel']) ?></option>
-                        <?php endforeach; ?>
-                    </select>
+                    <label class="small fw-bold text-dark">Observação / Informação</label>
+                    <textarea id="reg_texto_registro" class="form-control border-dark rounded-0" rows="3" placeholder="Digite os detalhes da conversa..." required></textarea>
                 </div>
 
-                <div class="mb-3">
-                    <label class="small fw-bold text-dark">Informação / Observação do Contato</label>
-                    <textarea name="texto_registro" class="form-control border-dark rounded-0" rows="3" placeholder="Digite os detalhes da conversa..." required></textarea>
-                </div>
-
-                <div class="mb-2" id="div_data_agendamento" style="display: none;">
+                <div class="mb-2" id="div_data_agendamento" style="display:none;">
                     <label class="small fw-bold text-danger"><i class="fas fa-calendar-alt"></i> Agendar Retorno (Obrigatório)</label>
-                    <input type="datetime-local" name="data_agendamento" id="input_data_agendamento" class="form-control border-danger fw-bold rounded-0">
+                    <input type="datetime-local" id="input_data_agendamento" class="form-control border-danger fw-bold rounded-0">
                 </div>
 
             </div>
             <div class="modal-footer bg-white border-top border-dark rounded-0 p-2">
                 <button type="button" class="btn btn-sm btn-outline-dark fw-bold rounded-0" data-bs-dismiss="modal"><i class="fas fa-arrow-left"></i> Voltar</button>
-                <button type="submit" class="btn btn-sm btn-success fw-bold text-dark border-dark rounded-0"><i class="fas fa-save me-1"></i> Salvar Registro</button>
+                <button type="button" class="btn btn-sm btn-success fw-bold text-dark border-dark rounded-0" onclick="salvarRegistroCampanha()"><i class="fas fa-save me-1"></i> Salvar Registro</button>
             </div>
-        </form>
+        </div>
     </div>
 </div>
 
@@ -2184,47 +2209,117 @@ function exportarHistorico() {
 
 let modalRegistroCamp;
 // Função usada tanto no Modo Campanha quanto no Registro Avulso (Geral)
-function abrirModalRegistroCampanha(id_status, nome_status, marcacao) {
+function _regMontarTelefones() {
+    const lista = document.getElementById('lista_telefones_qual');
+    if (!_regTelefones.length) {
+        lista.innerHTML = '<div class="text-muted small text-center py-3">Nenhum telefone cadastrado.</div>';
+        return;
+    }
+    const opts_base = _regQualificacoes.map(q =>
+        `<option value="${q.ID}">${q.NOME_QUALIFICACAO}</option>`
+    ).join('');
+    lista.innerHTML = _regTelefones.map((t, i) => {
+        const tel = t.telefone_cel;
+        const qualAtual = t.ID_QUALIFICACAO || '';
+        const opts = _regQualificacoes.map(q =>
+            `<option value="${q.ID}" ${qualAtual == q.ID ? 'selected' : ''}>${q.NOME_QUALIFICACAO}</option>`
+        ).join('');
+        return `<div class="d-flex align-items-center gap-2 px-2 py-2 border-bottom border-light">
+            <i class="fas fa-phone-alt text-success" style="width:14px;"></i>
+            <span class="fw-bold text-dark small" style="min-width:115px;">${tel}</span>
+            <select class="form-select form-select-sm border-secondary rounded-0 tel-qual-select" data-tel="${tel}" style="flex:1;">
+                <option value="">— Não qualificar —</option>
+                ${opts}
+            </select>
+        </div>`;
+    }).join('');
+}
+
+function abrirModalRegistroCampanha(id_status, nome_status, marcacao, id_qualificacao) {
     document.getElementById('reg_id_status').value = id_status;
     document.getElementById('lbl_status_nome').innerText = nome_status;
-    
-    // Verifica se estamos em uma campanha e injeta o ID, senão deixa vazio
     document.getElementById('reg_id_campanha').value = '<?= $id_camp ?? '' ?>';
-    
-    const divAgendamento = document.getElementById('div_data_agendamento');
-    const inputAgendamento = document.getElementById('input_data_agendamento');
-    
-    if(marcacao === 'COM RETORNO') {
-        divAgendamento.style.display = 'block';
-        inputAgendamento.setAttribute('required', 'required');
+    document.getElementById('reg_texto_registro').value = '';
+
+    const divAg = document.getElementById('div_data_agendamento');
+    const inputAg = document.getElementById('input_data_agendamento');
+    if (marcacao === 'COM RETORNO') {
+        divAg.style.display = 'block'; inputAg.setAttribute('required', 'required');
     } else {
-        divAgendamento.style.display = 'none';
-        inputAgendamento.removeAttribute('required');
+        divAg.style.display = 'none'; inputAg.removeAttribute('required'); inputAg.value = '';
     }
-    
-    if(!modalRegistroCamp) modalRegistroCamp = new bootstrap.Modal(document.getElementById('modalRegistroCampanha'));
+
+    _regMontarTelefones();
+    if (!modalRegistroCamp) modalRegistroCamp = new bootstrap.Modal(document.getElementById('modalRegistroCampanha'));
     modalRegistroCamp.show();
+}
+
+async function salvarRegistroCampanha() {
+    const id_status   = document.getElementById('reg_id_status').value;
+    const id_campanha = document.getElementById('reg_id_campanha').value;
+    const cpf_cliente = document.getElementById('reg_cpf_cliente').value;
+    const texto       = document.getElementById('reg_texto_registro').value.trim();
+    const agendamento = document.getElementById('input_data_agendamento').value;
+
+    if (!texto) { alert('Informe a observação do contato.'); return; }
+    if (document.getElementById('div_data_agendamento').style.display !== 'none' && !agendamento) {
+        alert('Informe a data de agendamento.'); return;
+    }
+
+    // Coleta qualificações por telefone (dropdowns)
+    const qualSelects = document.querySelectorAll('.tel-qual-select');
+    const telefonesQual = [];
+    qualSelects.forEach(sel => {
+        telefonesQual.push({ telefone: sel.dataset.tel, id_qualificacao: sel.value });
+    });
+
+    // Coleta telefones selecionados (checkboxes)
+    const checks = document.querySelectorAll('.tel-check:checked');
+    const telefonesSelecionados = Array.from(checks).map(c => c.value);
+
+    const fd = new FormData();
+    fd.append('acao', 'salvar_registro_contato');
+    fd.append('id_status', id_status);
+    fd.append('cpf_cliente', cpf_cliente);
+    fd.append('id_campanha', id_campanha);
+    fd.append('texto_registro', texto);
+    fd.append('data_agendamento', agendamento);
+    fd.append('telefones_qual', JSON.stringify(telefonesQual));
+    fd.append('telefones_selecionados', JSON.stringify(telefonesSelecionados));
+    fd.append('formato', 'json');
+
+    const btn = document.querySelector('#modalRegistroCampanha .btn-success');
+    btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin me-1"></i> Salvando...';
+
+    try {
+        const r = await fetch('/modulos/campanhas/acoes_campanha.php', {method:'POST', body:fd});
+        const j = await r.json();
+        if (j.success) {
+            bootstrap.Modal.getInstance(document.getElementById('modalRegistroCampanha'))?.hide();
+            crmToast('Atendimento gravado!', 'success', 3000);
+            if (j.proximo_cpf) setTimeout(() => window.location.href = '?cpf_selecionado=' + j.proximo_cpf + '&id_campanha=<?= $id_camp ?? '' ?>', 800);
+            else setTimeout(() => location.reload(), 800);
+        } else { alert('Erro: ' + (j.msg || 'Falha ao salvar.')); }
+    } catch(e) { alert('Falha de comunicação.'); }
+    btn.disabled = false; btn.innerHTML = '<i class="fas fa-save me-1"></i> Salvar Registro';
 }
 
 function abrirModalRegistroGeral(id_status, nome_status, marcacao) {
     document.getElementById('reg_id_status').value = id_status;
     document.getElementById('lbl_status_nome').innerText = nome_status;
-    
-    // Como é registro avulso, não tem ID de campanha
     document.getElementById('reg_id_campanha').value = '';
-    
-    const divAgendamento = document.getElementById('div_data_agendamento');
-    const inputAgendamento = document.getElementById('input_data_agendamento');
-    
-    if(marcacao === 'COM RETORNO') {
-        divAgendamento.style.display = 'block';
-        inputAgendamento.setAttribute('required', 'required');
+    document.getElementById('reg_texto_registro').value = '';
+
+    const divAg = document.getElementById('div_data_agendamento');
+    const inputAg = document.getElementById('input_data_agendamento');
+    if (marcacao === 'COM RETORNO') {
+        divAg.style.display = 'block'; inputAg.setAttribute('required', 'required');
     } else {
-        divAgendamento.style.display = 'none';
-        inputAgendamento.removeAttribute('required');
+        divAg.style.display = 'none'; inputAg.removeAttribute('required'); inputAg.value = '';
     }
-    
-    if(!modalRegistroCamp) modalRegistroCamp = new bootstrap.Modal(document.getElementById('modalRegistroCampanha'));
+
+    _regMontarTelefones();
+    if (!modalRegistroCamp) modalRegistroCamp = new bootstrap.Modal(document.getElementById('modalRegistroCampanha'));
     modalRegistroCamp.show();
 }
 

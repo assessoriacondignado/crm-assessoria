@@ -213,7 +213,13 @@
       "Bash(mysql -u root --password=\"\" crm_dados -e \"DESCRIBE INTEGRACAO_V8_REGISTROCONSULTA;\")",
       "Bash(php -l /var/www/html/modulos/ia_gptmake/treinamento_ia.php)",
       "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"ALTER TABLE GUIA_CRM MODIFY TIPO_CONTEUDO ENUM\\('VIDEO','IMAGEM','TEXTO','HTML','IFRAME'\\) DEFAULT 'TEXTO';\")",
-      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"DESCRIBE BANCO_DE_DADOS_CAMPANHA_QUALIFICACAO_TELEFONE; SELECT * FROM BANCO_DE_DADOS_CAMPANHA_QUALIFICACAO_TELEFONE LIMIT 10;\")"
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"DESCRIBE BANCO_DE_DADOS_CAMPANHA_QUALIFICACAO_TELEFONE; SELECT * FROM BANCO_DE_DADOS_CAMPANHA_QUALIFICACAO_TELEFONE LIMIT 10;\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"DESCRIBE CAMPANHAS_STATUS; SELECT ID,NOME_STATUS,MARCACAO,ID_QUALIFICACAO FROM CAMPANHAS_STATUS LIMIT 10;\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SHOW TABLES LIKE '%STATUS%'; SHOW TABLES LIKE '%CAMPANHA%';\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"DESCRIBE BANCO_DE_DADOS_CAMPANHA_STATUS_CONTATO; SELECT ID,NOME_STATUS,MARCACAO,ID_QUALIFICACAO FROM BANCO_DE_DADOS_CAMPANHA_STATUS_CONTATO LIMIT 10;\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"DESCRIBE BANCO_DE_DADOS_CAMPANHA_REGISTRO_CONTATO;\")",
+      "Bash(php -l /var/www/html/modulos/campanhas/acoes_campanha.php)",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"DESCRIBE telefones;\")"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",

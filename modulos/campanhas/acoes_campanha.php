@@ -19,12 +19,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['acao']) && $_POST['aca
     $cpf_usuario = $_SESSION['usuario_cpf'] ?? null;
     $nome_usuario = $_SESSION['usuario_nome'] ?? 'SISTEMA';
     
+    $retornar_json = !empty($_POST['formato']) && $_POST['formato'] === 'json';
+
     $id_status = $_POST['id_status'];
     $cpf_cliente = $_POST['cpf_cliente'];
     $id_campanha = !empty($_POST['id_campanha']) ? $_POST['id_campanha'] : null;
     $texto_registro = trim($_POST['texto_registro']);
     $data_agendamento = !empty($_POST['data_agendamento']) ? $_POST['data_agendamento'] : null;
     $telefone_discado = preg_replace('/[^0-9]/', '', $_POST['telefone_discado'] ?? '');
+
+    // Novo formato: JSON de qualificações por telefone
+    $telefones_qual = json_decode($_POST['telefones_qual'] ?? '[]', true) ?: [];
+    $telefones_selecionados = json_decode($_POST['telefones_selecionados'] ?? '[]', true) ?: [];
+    // Retrocompatibilidade: se enviou o antigo telefone_discado, converte
+    if ($telefone_discado && empty($telefones_qual) && empty($telefones_selecionados)) {
+        $telefones_selecionados = [$telefone_discado];
+    }
 
     try {
         $pdo->beginTransaction();
@@ -62,13 +72,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['acao']) && $_POST['aca
         $stmtStatus = $pdo->prepare("SELECT ID_QUALIFICACAO, NOME_STATUS, MARCACAO FROM BANCO_DE_DADOS_CAMPANHA_STATUS_CONTATO WHERE ID = ?");
         $stmtStatus->execute([$id_status]);
         $status_data = $stmtStatus->fetch(PDO::FETCH_ASSOC);
-        
-        if ($status_data && !empty($status_data['ID_QUALIFICACAO']) && !empty($telefone_discado)) {
-            $stmtQual = $pdo->prepare("UPDATE telefones SET ID_QUALIFICACAO = ? WHERE cpf = ? AND telefone_cel = ?");
-            $stmtQual->execute([$status_data['ID_QUALIFICACAO'], $cpf_cliente, $telefone_discado]);
+
+        $stmtQual = $pdo->prepare("UPDATE telefones SET ID_QUALIFICACAO = ? WHERE cpf = ? AND telefone_cel = ?");
+
+        // Aplica a qualificação escolhida pelo usuário por telefone
+        foreach ($telefones_qual as $tq) {
+            $tel_num = preg_replace('/[^0-9]/', '', $tq['telefone'] ?? '');
+            $id_qual = !empty($tq['id_qualificacao']) ? (int)$tq['id_qualificacao'] : null;
+            if ($tel_num) {
+                $stmtQual->execute([$id_qual, $cpf_cliente, $tel_num]);
+            }
         }
 
-        $texto_log = ($id_campanha ? "Modo Campanha: " : "Registro Avulso: ") . "Status [" . $status_data['NOME_STATUS'] . "] | Tel: " . $telefone_discado . " | Obs: " . $texto_registro;
+        $tels_log = implode(', ', array_filter(array_map(function($tq){ return $tq['telefone'] ?? ''; }, $telefones_qual)));
+        if (empty($tels_log)) $tels_log = implode(', ', $telefones_selecionados) ?: $telefone_discado;
+        $texto_log = ($id_campanha ? "Modo Campanha: " : "Registro Avulso: ") . "Status [" . $status_data['NOME_STATUS'] . "] | Tel: " . $tels_log . " | Obs: " . $texto_registro;
         
         $stmtLog = $pdo->prepare("INSERT INTO dados_cadastrais_log_rodape (CPF_CLIENTE, NOME_USUARIO, TEXTO_REGISTRO, id_usuario, id_empresa) VALUES (?, ?, ?, ?, ?)");
         $stmtLog->execute([$cpf_cliente, $nome_usuario, $texto_log, $id_usuario_num, $id_empresa_num]);
@@ -105,6 +123,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['acao']) && $_POST['aca
 
         $pdo->commit();
 
+        if ($retornar_json) {
+            header('Content-Type: application/json');
+            echo json_encode(['success' => true, 'proximo_cpf' => $proximo_cpf ?: null]);
+            exit;
+        }
+
         if ($proximo_cpf && $id_campanha) {
             header("Location: /modulos/banco_dados/consulta.php?id_campanha={$id_campanha}&busca={$proximo_cpf}&cpf_selecionado={$proximo_cpf}&acao=visualizar");
         } else {
@@ -115,6 +139,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['acao']) && $_POST['aca
 
     } catch (Exception $e) {
         $pdo->rollBack();
+        if ($retornar_json) {
+            header('Content-Type: application/json');
+            echo json_encode(['success' => false, 'msg' => $e->getMessage()]);
+            exit;
+        }
         die("<div style='padding:20px; color:red; font-family:sans-serif;'><b>Erro ao salvar registro:</b> " . $e->getMessage() . "</div>");
     }
 } 
