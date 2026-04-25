@@ -301,7 +301,19 @@ function identificarTabelaUsuario($consult_id, $credencialIA, $tokenV8) {
     return ['config_id' => $config_id, 'nome_tb_final' => $nome_tb_final];
 }
 
-function processarSimulacaoPadrao($consult_id, $cpf, $margem, $pdo, $credencialIA, $tokenV8) {
+function formatarCpfNotif($cpf) {
+    $c = str_pad(preg_replace('/\D/','',$cpf), 11, '0', STR_PAD_LEFT);
+    return substr($c,0,3).'.'.substr($c,3,3).'.'.substr($c,6,3).'-'.substr($c,9,2);
+}
+function formatarTelNotif($tel) {
+    $t = preg_replace('/\D/','',$tel);
+    if (strlen($t) >= 12 && substr($t,0,2)==='55') $t = substr($t,2);
+    if (strlen($t) === 11) return '('.substr($t,0,2).') '.substr($t,2,5).'-'.substr($t,7);
+    if (strlen($t) === 10) return '('.substr($t,0,2).') '.substr($t,2,4).'-'.substr($t,6);
+    return $t;
+}
+
+function processarSimulacaoPadrao($consult_id, $cpf, $margem, $pdo, $credencialIA, $tokenV8, $telefone = '') {
     $prazo_padrao = (int)($credencialIA['PRAZO_PADRAO'] ?: 84);
     $tab = identificarTabelaUsuario($consult_id, $credencialIA, $tokenV8);
 
@@ -349,7 +361,13 @@ function processarSimulacaoPadrao($consult_id, $cpf, $margem, $pdo, $credencialI
         $nomeCliente = $stmtNome->fetchColumn() ?: $cpf;
         $pdo->prepare("INSERT INTO INTEGRACAO_V8_IA_NOTIFICACOES (CREDENCIAL_ID, CPF_DONO, TIPO, NOME_CLIENTE, CPF_CLIENTE, VALOR, PRAZO, PARCELA, NOME_ROBO) VALUES (?, ?, 'SIMULACAO', ?, ?, ?, ?, ?, ?)")
             ->execute([$credencialIA['ID'], $credencialIA['CPF_DONO'], $nomeCliente, $cpf, (float)$valor_lib, (int)$prazo_padrao, (float)$valor_parc, $credencialIA['NOME_ROBO']]);
-        $msgSimulacao = "🤖 *{$credencialIA['NOME_ROBO']}* — Simulação Aprovada\n👤 Cliente: {$nomeCliente} | CPF: " . substr($cpf,0,3) . ".***.***-" . substr($cpf,-2) . "\n💰 Liberado: R$ " . number_format((float)$valor_lib, 2, ',', '.') . "\n📅 Prazo: {$prazo_padrao}x | Parcela: R$ " . number_format((float)$valor_parc, 2, ',', '.') . "\n🕐 " . date('d/m/Y H:i');
+        $msgSimulacao  = "🤖 *{$credencialIA['NOME_ROBO']}* — ✅ SIMULAÇÃO APROVADA\n";
+        $msgSimulacao .= "👤 *{$nomeCliente}*\n";
+        $msgSimulacao .= "📋 CPF: " . formatarCpfNotif($cpf) . "\n";
+        if (!empty($telefone)) $msgSimulacao .= "📱 Telefone: " . formatarTelNotif($telefone) . "\n";
+        $msgSimulacao .= "💰 Liberado: *R$ " . number_format((float)$valor_lib, 2, ',', '.') . "*\n";
+        $msgSimulacao .= "📅 " . $prazo_padrao . "x de R$ " . number_format((float)$valor_parc, 2, ',', '.') . "\n";
+        $msgSimulacao .= "🕐 " . date('d/m/Y H:i');
         enviarNotificacaoWhatsApp($pdo, $credencialIA['CPF_DONO'], $msgSimulacao);
     }
 
@@ -404,7 +422,7 @@ try {
                     if (in_array($st, $ST_OK)) {
                         $margem = $jsonC['availableMargin'] ?? $jsonC['marginBaseValue'] ?? $jsonC['availableMarginValue'] ?? $jsonC['maxAmount'] ?? 0;
                         $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'MARGEM_LIBERADA' WHERE ID = ?")->execute([$sessao_id]);
-                        $simDados = processarSimulacaoPadrao($ultimo_consult_id, $cpf, (float)$margem, $pdo, $credencialIA, $tokenV8);
+                        $simDados = processarSimulacaoPadrao($ultimo_consult_id, $cpf, (float)$margem, $pdo, $credencialIA, $tokenV8, $telefone);
                         $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'SIMULACAO_PRONTA' WHERE ID = ?")->execute([$sessao_id]);
                         enviarResposta($cpf, $acao, ['success' => true, 'status' => 'CONCLUIDO', 'CPF' => $cpf, 'nome_do_contato' => $cliente['nome'] ?? '', 'telefone_do_contato' => $telefone, 'valor_liberado' => $simDados['valor_liberado'], 'valor_parcela' => $simDados['valor_parcela'], 'prazo' => $simDados['prazo'], 'margem_disponivel' => (float)$margem, 'simulacao_padrao' => $simDados]);
                     } elseif (in_array($st, $ST_ERRO)) {
@@ -446,7 +464,7 @@ try {
 
             if ($conseguiu_margem) {
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'MARGEM_LIBERADA' WHERE ID = ?")->execute([$sessao_id]);
-                $simDados = processarSimulacaoPadrao($ultimo_consult_id, $cpf, (float)$margem, $pdo, $credencialIA, $tokenV8);
+                $simDados = processarSimulacaoPadrao($ultimo_consult_id, $cpf, (float)$margem, $pdo, $credencialIA, $tokenV8, $telefone);
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'SIMULACAO_PRONTA' WHERE ID = ?")->execute([$sessao_id]);
                 enviarResposta($cpf, $acao, ['success' => true, 'status' => 'CONCLUIDO', 'CPF' => $cpf, 'nome_do_contato' => $cliente['nome'] ?? '', 'telefone_do_contato' => $telefone, 'valor_liberado' => $simDados['valor_liberado'], 'valor_parcela' => $simDados['valor_parcela'], 'prazo' => $simDados['prazo'], 'margem_disponivel' => (float)$margem, 'simulacao_padrao' => $simDados]);
             } else {
@@ -608,7 +626,14 @@ try {
             if (!empty($credencialIA['NOTIF_PROPOSTA'])) {
                 $pdo->prepare("INSERT INTO INTEGRACAO_V8_IA_NOTIFICACOES (CREDENCIAL_ID, CPF_DONO, TIPO, NOME_CLIENTE, CPF_CLIENTE, VALOR, PRAZO, PARCELA, NUMERO_PROPOSTA, NOME_ROBO) VALUES (?, ?, 'PROPOSTA', ?, ?, ?, ?, ?, ?, ?)")
                     ->execute([$credencialIA['ID'], $credencialIA['CPF_DONO'], $cliente['nome'], $cpf, (float)($sim_obj['disbursement_amount']??0), $prazo, (float)($sim_obj['installment_value']??0), $proposal_id, $credencialIA['NOME_ROBO']]);
-                $msgProposta = "🤖 *{$credencialIA['NOME_ROBO']}* — Proposta Digitada\n👤 Cliente: ".($cliente['nome'] ?? $cpf)." | CPF: " . substr($cpf,0,3) . ".***.***-" . substr($cpf,-2) . "\n📋 Proposta: {$proposal_id}\n💰 Liberado: R$ " . number_format((float)($sim_obj['disbursement_amount']??0), 2, ',', '.') . "\n📅 Prazo: {$prazo}x | Parcela: R$ " . number_format((float)($sim_obj['installment_value']??0), 2, ',', '.') . "\n🕐 " . date('d/m/Y H:i');
+                $msgProposta  = "🤖 *{$credencialIA['NOME_ROBO']}* — 📝 PROPOSTA DIGITADA\n";
+                $msgProposta .= "👤 *" . ($cliente['nome'] ?? $cpf) . "*\n";
+                $msgProposta .= "📋 CPF: " . formatarCpfNotif($cpf) . "\n";
+                $msgProposta .= "📱 Telefone: " . formatarTelNotif($telefone) . "\n";
+                $msgProposta .= "🔢 Proposta: *{$proposal_id}*\n";
+                $msgProposta .= "💰 Liberado: *R$ " . number_format((float)($sim_obj['disbursement_amount']??0), 2, ',', '.') . "*\n";
+                $msgProposta .= "📅 " . $prazo . "x de R$ " . number_format((float)($sim_obj['installment_value']??0), 2, ',', '.') . "\n";
+                $msgProposta .= "🕐 " . date('d/m/Y H:i');
                 enviarNotificacaoWhatsApp($pdo, $credencialIA['CPF_DONO'], $msgProposta);
             }
             
@@ -692,7 +717,7 @@ try {
             }
 
             $margem = $jsonC['availableMargin'] ?? $jsonC['marginBaseValue'] ?? $jsonC['availableMarginValue'] ?? $jsonC['maxAmount'] ?? 0;
-            $simDados = processarSimulacaoPadrao($consult_id, $cpf, (float)$margem, $pdo, $credencialIA, $tokenV8);
+            $simDados = processarSimulacaoPadrao($consult_id, $cpf, (float)$margem, $pdo, $credencialIA, $tokenV8, $telefone);
             $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET CONSULT_ID = ?, STATUS_SESSAO = 'SIMULACAO_PRONTA' WHERE ID = ?")->execute([$consult_id, $sessao_id]);
 
             enviarResposta($cpf, $acao, ['success' => true, 'status' => 'concluido', 'margem_disponivel' => (float)$margem, 'simulacao_padrao' => $simDados]);

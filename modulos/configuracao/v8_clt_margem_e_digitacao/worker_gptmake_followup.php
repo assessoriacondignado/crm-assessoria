@@ -208,6 +208,39 @@ foreach ($pendentes as $fu) {
             $vp_fmt = 'R$ ' . number_format($vp, 2, ',', '.');
             $msg_cliente = "Simulação aprovada! 🎉 Conseguimos liberar o valor de {$vl_fmt} em {$prazo} parcelas de {$vp_fmt}. Esse valor serve para você?";
 
+            // Notificação WhatsApp ao grupo do dono da credencial
+            try {
+                $stNomeCli = $pdo->prepare("SELECT nome FROM dados_cadastrais WHERE cpf = ? LIMIT 1");
+                $stNomeCli->execute([$cpf]); $nomeCli = $stNomeCli->fetchColumn() ?: $cpf;
+                $telFmt = preg_replace('/\D/', '', $telefone);
+                if (strlen($telFmt) >= 12 && substr($telFmt,0,2)==='55') $telFmt = substr($telFmt,2);
+                if (strlen($telFmt)===11) $telFmt = '('.substr($telFmt,0,2).') '.substr($telFmt,2,5).'-'.substr($telFmt,7);
+                elseif (strlen($telFmt)===10) $telFmt = '('.substr($telFmt,0,2).') '.substr($telFmt,2,4).'-'.substr($telFmt,6);
+                $cpfFmt = preg_replace('/\D/','',str_pad($cpf,11,'0',STR_PAD_LEFT));
+                $cpfFmt = substr($cpfFmt,0,3).'.'.substr($cpfFmt,3,3).'.'.substr($cpfFmt,6,3).'-'.substr($cpfFmt,9,2);
+                $stGrp = $pdo->prepare("SELECT u.id_empresa, e.GRUPO_WHATS FROM CLIENTE_USUARIO u LEFT JOIN CLIENTE_EMPRESAS e ON e.ID = u.id_empresa WHERE u.CPF = ? LIMIT 1");
+                $stGrp->execute([$cred['CPF_DONO']]); $rowGrp = $stGrp->fetch(\PDO::FETCH_ASSOC);
+                $grupo_whats = preg_replace('/\D/', '', $rowGrp['GRUPO_WHATS'] ?? '');
+                if (!empty($grupo_whats)) {
+                    $stNum = $pdo->prepare("SELECT n.PHONE_NUMBER_ID, bm.PERMANENT_TOKEN FROM WHATSAPP_OFICIAL_NUMEROS n INNER JOIN WHATSAPP_OFICIAL_CONTAS c ON c.ID = n.CONTA_ID INNER JOIN WHATSAPP_OFICIAL_BM bm ON c.bm_id = bm.ID WHERE bm.id_empresa = ? LIMIT 1");
+                    $stNum->execute([$rowGrp['id_empresa']]); $rowNum = $stNum->fetch(\PDO::FETCH_ASSOC);
+                    if (!empty($rowNum['PHONE_NUMBER_ID'])) {
+                        $msgGrupo  = "🤖 *{$cred['CPF_DONO']}* — ✅ SIMULAÇÃO APROVADA (Follow-up)\n";
+                        $msgGrupo .= "👤 *{$nomeCli}*\n";
+                        $msgGrupo .= "📋 CPF: {$cpfFmt}\n";
+                        $msgGrupo .= "📱 Telefone: {$telFmt}\n";
+                        $msgGrupo .= "💰 Liberado: *{$vl_fmt}*\n";
+                        $msgGrupo .= "📅 {$prazo}x de {$vp_fmt}\n";
+                        $msgGrupo .= "🕐 " . date('d/m/Y H:i');
+                        $chWa = curl_init("https://graph.facebook.com/v19.0/{$rowNum['PHONE_NUMBER_ID']}/messages");
+                        curl_setopt_array($chWa, [CURLOPT_RETURNTRANSFER=>true, CURLOPT_POST=>true,
+                            CURLOPT_POSTFIELDS=>json_encode(["messaging_product"=>"whatsapp","to"=>$grupo_whats,"type"=>"text","text"=>["body"=>$msgGrupo]]),
+                            CURLOPT_HTTPHEADER=>['Authorization: Bearer '.$rowNum['PERMANENT_TOKEN'],'Content-Type: application/json']]);
+                        curl_exec($chWa); curl_close($chWa);
+                    }
+                }
+            } catch (\Throwable $eNotif) { logFU("Notif grupo erro: " . $eNotif->getMessage()); }
+
             $gptRes = enviarGPTMaker($gpt_agent, $gpt_token, $telefone, $msg_cliente);
             logFU("CPF {$cpf} | GPTMaker HTTP: " . ($gptRes['http'] ?? 'ERR') . " | " . substr($gptRes['body'] ?? '', 0, 100));
 
