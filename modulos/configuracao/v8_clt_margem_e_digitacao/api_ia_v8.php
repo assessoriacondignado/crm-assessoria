@@ -161,10 +161,16 @@ function gerarTokenV8_Local($cred) {
 
 function resolverTelefone($req, $cpf, $pdo) {
     $tel = preg_replace('/\D/', '', $req['telefone'] ?? '');
-    if (!empty($tel)) return $tel;
-    $st = $pdo->prepare("SELECT TELEFONE_CLIENTE FROM INTEGRACAO_V8_IA_SESSAO WHERE CPF_CLIENTE = ? ORDER BY ID DESC LIMIT 1");
-    $st->execute([$cpf]);
-    return preg_replace('/\D/', '', $st->fetchColumn() ?: '11900000000');
+    if (empty($tel)) {
+        $st = $pdo->prepare("SELECT TELEFONE_CLIENTE FROM INTEGRACAO_V8_IA_SESSAO WHERE CPF_CLIENTE = ? ORDER BY ID DESC LIMIT 1");
+        $st->execute([$cpf]);
+        $tel = preg_replace('/\D/', '', $st->fetchColumn() ?: '11900000000');
+    }
+    // Remove o código do país 55 se o número tiver 12 ou 13 dígitos (55 + DDD + número)
+    if (strlen($tel) >= 12 && substr($tel, 0, 2) === '55') {
+        $tel = substr($tel, 2);
+    }
+    return $tel;
 }
 
 function buscarSessaoIA($cpf, $tokenIA, $pdo, $telefone = '11900000000') {
