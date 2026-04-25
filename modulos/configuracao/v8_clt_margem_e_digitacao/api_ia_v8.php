@@ -166,13 +166,9 @@ function resolverTelefone($req, $cpf, $pdo) {
         $st->execute([$cpf]);
         $tel = preg_replace('/\D/', '', $st->fetchColumn() ?: '11900000000');
     }
-    // Remove 55 country code (12-13 digits: 55 + DDD + number)
+    // Apenas remove o código do país 55 — mantém o formato original sem alterar o número
     if (strlen($tel) >= 12 && substr($tel, 0, 2) === '55') {
         $tel = substr($tel, 2);
-    }
-    // Normaliza 10 dígitos (DDD + 8 dígitos) para 11 dígitos (DDD + 9 dígitos com 9 inicial)
-    if (strlen($tel) === 10) {
-        $tel = substr($tel, 0, 2) . '9' . substr($tel, 2);
     }
     return $tel;
 }
@@ -596,7 +592,7 @@ try {
                 'simulation_id' => $sim_id,
                 'borrower' => [
                     'name' => $cliente['nome'], 'email' => 'cliente@gmail.com', 
-                    'phone' => [ 'country_code' => '55', 'area_code' => substr($telefone, 0, 2), 'number' => substr($telefone, 2) ], 
+                    'phone' => [ 'country_code' => '55', 'area_code' => substr($telefone, 0, 2), 'number' => (strlen(substr($telefone, 2)) === 8 ? '9' . substr($telefone, 2) : substr($telefone, 2)) ], 
                     'political_exposition' => false, 'birth_date' => $nasc, 'mother_name' => $mae, 'nationality' => 'BR', 'document_issuer' => 'SSP',
                     'gender' => $sexo_api, 'person_type' => 'natural', 'marital_status' => 'single', 'individual_document_number' => $cpf,
                     'document_identification_date' => '2015-01-01', 'document_identification_type' => 'rg', 'document_identification_number' => $rg,

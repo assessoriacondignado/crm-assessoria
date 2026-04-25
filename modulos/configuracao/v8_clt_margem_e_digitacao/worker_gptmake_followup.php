@@ -63,9 +63,19 @@ function normalizarFU($str) {
 function enviarGPTMaker($gpt_agent, $gpt_token, $telefone, $mensagem) {
     $phone = preg_replace('/\D/', '', $telefone);
     if (strlen($phone) < 10) return false;
-    // Garante prefixo 55 (Brasil): se < 12 dígitos, ainda não tem o código do país
+    // Garante prefixo 55 mas NAO adiciona 9 digito — GPTMaker usa o numero original do WhatsApp
     if (strlen($phone) < 12) {
         $phone = '55' . $phone;
+    }
+    // Remove o 9 dígito adicionado caso esteja presente (formato original Meta: 12 dígitos)
+    // Ex: 5582999025155 (13 dig) -> 558299025155 (12 dig)
+    if (strlen($phone) === 13 && substr($phone, 0, 2) === '55') {
+        $ddd   = substr($phone, 2, 2);    // ex: 82
+        $local = substr($phone, 4);       // ex: 999025155 (9 digitos)
+        // Se o local tem 9 dígitos e começa com 9, remove o primeiro 9
+        if (strlen($local) === 9 && $local[0] === '9') {
+            $phone = '55' . $ddd . substr($local, 1); // 55 + 82 + 99025155
+        }
     }
 
     $payload = json_encode([
