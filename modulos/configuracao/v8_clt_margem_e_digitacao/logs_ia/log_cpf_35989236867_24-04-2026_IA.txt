@@ -1,0 +1,10 @@
+[24-04-2026 19:00:04] [REQUISICAO_RECEBIDA - consulta_completa] => {"acao":"consulta_completa","cpf":"35989236867","telefone":""}
+[24-04-2026 19:00:11] [V8_RETORNO_MARGEM] => {"status":"SUCCESS","availableMargin":null,"marginBaseValue":"1569.50","availableMarginValue":null,"maxAmount":null,"margem_calculada":"1569.50"}
+[24-04-2026 19:00:13] [RESPOSTA_ENVIADA - consulta_completa] => {"success":true,"status":"CONCLUIDO","margem_disponivel":1569.5,"simulacao_padrao":{"simulation_id":"0ef8df52-4bb6-4e12-9a1c-d22f54116030","tabela":"CLT  Acelera - Seguro","valor_liberado":16043.54,"valor_parcela":1569.5,"prazo":24}}
+[24-04-2026 19:02:30] [REQUISICAO_RECEBIDA - simular_proposta] => {"acao":"simular_proposta","cpf":"35989236867","prazo":"","valor_liquido":"10000"}
+[24-04-2026 19:02:32] [RESPOSTA_ENVIADA - simular_proposta] => {"success":true,"valor_liberado":10000,"valor_parcela":954.76,"prazo":24}
+[24-04-2026 19:03:18] [REQUISICAO_RECEBIDA - simular_proposta] => {"acao":"simular_proposta","cpf":"35989236867","prazo":"","valor_liquido":"10000"}
+[24-04-2026 19:03:20] [RESPOSTA_ENVIADA - simular_proposta] => {"success":true,"valor_liberado":10000,"valor_parcela":954.76,"prazo":24}
+[24-04-2026 21:48:28] [REQUISICAO_RECEBIDA - consulta_completa] => {"acao":"consulta_completa","cpf":"35989236867","telefone":""}
+[24-04-2026 21:48:48] [V8_RETORNO_MARGEM] => {"status":"SUCCESS","availableMargin":null,"marginBaseValue":"1569.50","availableMarginValue":null,"maxAmount":null,"margem_calculada":"1569.50"}
+[24-04-2026 21:48:51] [RESPOSTA_ENVIADA - consulta_completa] => {"success":true,"status":"CONCLUIDO","margem_disponivel":1569.5,"simulacao_padrao":{"simulation_id":"7c83abe2-22bc-4f93-b123-6083f06b7ee4","tabela":"CLT  Acelera - Seguro","valor_liberado":16043.54,"valor_parcela":1569.5,"prazo":24}}
