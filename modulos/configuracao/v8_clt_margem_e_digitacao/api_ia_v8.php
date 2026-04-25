@@ -366,6 +366,7 @@ try {
                 $ultimo_consult_id = $consultaAguardando['CONSULT_ID'];
                 $sessao_id         = (int)$consultaAguardando['SESSAO_ID'];
                 $elapsed           = time() - strtotime($consultaAguardando['DATA_INICIO']);
+                $cliente           = buscarOuAtualizarCadastro($cpf, $pdo, $credencialIA);
 
                 if ($elapsed >= 14400) {
                     $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'TIMEOUT_DATAPREV' WHERE ID = ?")->execute([$sessao_id]);
@@ -379,7 +380,7 @@ try {
                         $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'MARGEM_LIBERADA' WHERE ID = ?")->execute([$sessao_id]);
                         $simDados = processarSimulacaoPadrao($ultimo_consult_id, $cpf, (float)$margem, $pdo, $credencialIA, $tokenV8);
                         $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'SIMULACAO_PRONTA' WHERE ID = ?")->execute([$sessao_id]);
-                        enviarResposta($cpf, $acao, ['success' => true, 'status' => 'CONCLUIDO', 'cpf' => $cpf, 'valor_liberado' => $simDados['valor_liberado'], 'valor_parcela' => $simDados['valor_parcela'], 'prazo' => $simDados['prazo'], 'margem_disponivel' => (float)$margem, 'simulacao_padrao' => $simDados]);
+                        enviarResposta($cpf, $acao, ['success' => true, 'status' => 'CONCLUIDO', 'CPF' => $cpf, 'nome_do_contato' => $cliente['nome'] ?? '', 'telefone_do_contato' => $telefone, 'valor_liberado' => $simDados['valor_liberado'], 'valor_parcela' => $simDados['valor_parcela'], 'prazo' => $simDados['prazo'], 'margem_disponivel' => (float)$margem, 'simulacao_padrao' => $simDados]);
                     } elseif (in_array($st, $ST_ERRO)) {
                         $erroMsg_V8 = extrairErroV8($jsonC);
                         $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'ERRO_MARGEM' WHERE ID = ?")->execute([$sessao_id]);
@@ -421,7 +422,7 @@ try {
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'MARGEM_LIBERADA' WHERE ID = ?")->execute([$sessao_id]);
                 $simDados = processarSimulacaoPadrao($ultimo_consult_id, $cpf, (float)$margem, $pdo, $credencialIA, $tokenV8);
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO = 'SIMULACAO_PRONTA' WHERE ID = ?")->execute([$sessao_id]);
-                enviarResposta($cpf, $acao, ['success' => true, 'status' => 'CONCLUIDO', 'cpf' => $cpf, 'valor_liberado' => $simDados['valor_liberado'], 'valor_parcela' => $simDados['valor_parcela'], 'prazo' => $simDados['prazo'], 'margem_disponivel' => (float)$margem, 'simulacao_padrao' => $simDados]);
+                enviarResposta($cpf, $acao, ['success' => true, 'status' => 'CONCLUIDO', 'CPF' => $cpf, 'nome_do_contato' => $cliente['nome'] ?? '', 'telefone_do_contato' => $telefone, 'valor_liberado' => $simDados['valor_liberado'], 'valor_parcela' => $simDados['valor_parcela'], 'prazo' => $simDados['prazo'], 'margem_disponivel' => (float)$margem, 'simulacao_padrao' => $simDados]);
             } else {
                 // Salva na fila de follow-up automático do CRM
                 $pdo->prepare("INSERT INTO INTEGRACAO_V8_IA_FOLLOWUP (CPF_CLIENTE, TELEFONE, CONSULT_ID, TOKEN_IA) VALUES (?,?,?,?)
