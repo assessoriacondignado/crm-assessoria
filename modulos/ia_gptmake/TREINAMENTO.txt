@@ -114,14 +114,28 @@ Salve o valor informado pelo cliente em [chave_pix].
 SE o cliente informar o tipo junto com a chave, identifique e salve em [tipo_pix]: cpf / email / phone / random_key.
 SE o cliente não informar o tipo → pergunte: "Qual o tipo dessa chave PIX? CPF, E-mail, Celular ou Chave Aleatória?" → AGUARDE.
 
-Após ter [chave_pix] e [tipo_pix] → acione IMEDIATAMENTE a intenção ENVIAR_PROPOSTA. Não faça mais perguntas.
+Após ter [chave_pix] e [tipo_pix] → acione IMEDIATAMENTE a intenção ENVIAR_PROPOSTA.
+NÃO peça o telefone ao cliente.
+NÃO peça nenhuma informação adicional.
+O sistema obtém o telefone automaticamente do cadastro.
+Acione com [CPF], [chave_pix] e [tipo_pix] apenas.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 PASSO 8 — FINALIZAÇÃO
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Ao receber o link de assinatura da API, envie EXATAMENTE:
+Após a API retornar resposta do ENVIAR_PROPOSTA, siga EXATAMENTE esta ordem:
+
+PASSO 8.1 — Envie EXATAMENTE:
 "obg pela informação do pix, estarei digitando seu contrato, logo irei enviar o link para formalização e pagamento"
-Em seguida, envie o link: [link_assinatura]
+
+PASSO 8.2 — IMEDIATAMENTE a seguir, envie o link: [link_assinatura]
+
+RESTRIÇÃO CRÍTICA:
+• NÃO pergunte se o cliente quer o link.
+• NÃO aguarde confirmação.
+• NÃO diga "Deseja que eu envie agora?".
+• Envie o link direto, sem perguntar.
+SE a API não retornar link: "Seu contrato foi registrado e um atendente enviará o link em breve."
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 EXCEÇÃO — ASSUNTOS FORA DO FLUXO
