@@ -63,8 +63,8 @@ function normalizarFU($str) {
 function enviarGPTMaker($gpt_agent, $gpt_token, $telefone, $mensagem) {
     $phone = preg_replace('/\D/', '', $telefone);
     if (strlen($phone) < 10) return false;
-    // Garante formato WhatsApp internacional (com 55) para GPTMaker identificar a conversa correta
-    if (strlen($phone) <= 11 && substr($phone, 0, 2) !== '55') {
+    // Garante prefixo 55 (Brasil): se < 12 dígitos, ainda não tem o código do país
+    if (strlen($phone) < 12) {
         $phone = '55' . $phone;
     }
 
