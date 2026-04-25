@@ -2,3 +2,6 @@
 [25-04-2026 09:00:29] [RESPOSTA_ENVIADA - ERRO_CRITICO] => {"success":false,"status":"ERRO","error":"Erro V8 (Consentimento): phone deve conter 9 dígitos iniciando com o dígito 9"}
 [25-04-2026 09:25:58] [REQUISICAO_RECEBIDA - consulta_completa] => {"acao":"consulta_completa","cpf":"35989236867","telefone":""}
 [25-04-2026 09:26:18] [RESPOSTA_ENVIADA - consulta_completa] => {"success":false,"status":"AGUARDANDO_DATAPREV","msg":"Processando na fila. O sistema enviará o resultado automaticamente."}
+[25-04-2026 10:02:49] [REQUISICAO_RECEBIDA - consulta_completa] => {"acao":"consulta_completa","cpf":"35989236867","telefone":""}
+[25-04-2026 10:03:06] [V8_RETORNO_MARGEM] => {"status":"SUCCESS","availableMargin":null,"marginBaseValue":"1569.50","availableMarginValue":null,"maxAmount":null,"margem_calculada":"1569.50"}
+[25-04-2026 10:03:08] [RESPOSTA_ENVIADA - consulta_completa] => {"success":true,"status":"CONCLUIDO","CPF":"35989236867","nome_do_contato":"EDSON CARNEIRO DA SILVA","telefone_do_contato":"8299025155","valor_liberado":16070.26,"valor_parcela":1569.5,"prazo":24,"margem_disponivel":1569.5,"simulacao_padrao":{"simulation_id":"1a4a8d16-662c-42a6-9a44-8ad8f86e509e","tabela":"CLT  Acelera - Seguro","valor_liberado":16070.26,"valor_parcela":1569.5,"prazo":24}}

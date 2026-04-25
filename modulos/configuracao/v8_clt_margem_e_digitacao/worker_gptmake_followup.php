@@ -214,14 +214,25 @@ foreach ($pendentes as $fu) {
             $pdo->prepare("UPDATE INTEGRACAO_V8_IA_FOLLOWUP SET STATUS='PROCESSADO', OBSERVACAO=? WHERE ID=?")
                 ->execute(["Simulação enviada: {$vl_fmt} / {$prazo}x {$vp_fmt}", $fu['ID']]);
 
+            // Atualiza status da sessão IA de AGUARDANDO_DATAPREV para SIMULACAO_PRONTA
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO='SIMULACAO_PRONTA', ULTIMA_ACAO=NOW()
+                           WHERE CPF_CLIENTE=? AND CONSULT_ID=? AND STATUS_SESSAO='AGUARDANDO_DATAPREV'")
+                ->execute([$cpf, $consult_id]);
+
+            // Atualiza registro de consulta
+            $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA SET STATUS_V8='SIMULADO', ULTIMA_ATUALIZACAO=NOW()
+                           WHERE CONSULT_ID=? AND STATUS_V8='AGUARDANDO MARGEM'")
+                ->execute([$consult_id]);
+
             logFU("CPF {$cpf} | CONCLUIDO — simulação enviada ao cliente.");
 
         } elseif (in_array($status_v8, $ST_ERRO)) {
             $motivo = $jsonV8['description'] ?? $jsonV8['status_description'] ?? $status_v8;
             $msg_erro = "Infelizmente, o sistema não conseguiu processar sua consulta agora. Motivo: {$motivo}. Gostaria de tentar novamente?";
             enviarGPTMaker($gpt_agent, $gpt_token, $telefone, $msg_erro);
-            $pdo->prepare("UPDATE INTEGRACAO_V8_IA_FOLLOWUP SET STATUS='ERRO', OBSERVACAO=? WHERE ID=?")
-                ->execute([$motivo, $fu['ID']]);
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IA_FOLLOWUP SET STATUS='ERRO', OBSERVACAO=? WHERE ID=?")->execute([$motivo, $fu['ID']]);
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO='ERRO_MARGEM', ULTIMA_ACAO=NOW() WHERE CPF_CLIENTE=? AND CONSULT_ID=?")->execute([$cpf, $consult_id]);
+            $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA SET STATUS_V8='ERRO-MARGEM', MENSAGEM_ERRO=?, ULTIMA_ATUALIZACAO=NOW() WHERE CONSULT_ID=?")->execute([$motivo, $consult_id]);
             logFU("CPF {$cpf} | ERRO V8: {$motivo}");
 
         } elseif (in_array($status_v8, $ST_WAIT)) {
@@ -229,8 +240,9 @@ foreach ($pendentes as $fu) {
             if ($tentativas >= 10) {
                 $msg_exp = "Poxa, o sistema do banco está demorando mais que o normal. Pode me mandar uma mensagem em uns 5 minutinhos que verifico novamente pra você!";
                 enviarGPTMaker($gpt_agent, $gpt_token, $telefone, $msg_exp);
-                $pdo->prepare("UPDATE INTEGRACAO_V8_IA_FOLLOWUP SET STATUS='EXPIRADO', OBSERVACAO='Máximo de tentativas atingido (V8: {$status_v8})' WHERE ID=?")
-                    ->execute([$fu['ID']]);
+                $pdo->prepare("UPDATE INTEGRACAO_V8_IA_FOLLOWUP SET STATUS='EXPIRADO', OBSERVACAO='Máximo de tentativas atingido (V8: {$status_v8})' WHERE ID=?")->execute([$fu['ID']]);
+                $pdo->prepare("UPDATE INTEGRACAO_V8_IA_SESSAO SET STATUS_SESSAO='TIMEOUT_DATAPREV', ULTIMA_ACAO=NOW() WHERE CPF_CLIENTE=? AND CONSULT_ID=?")->execute([$cpf, $consult_id]);
+                $pdo->prepare("UPDATE INTEGRACAO_V8_REGISTROCONSULTA SET STATUS_V8='TIMEOUT_DATAPREV', ULTIMA_ATUALIZACAO=NOW() WHERE CONSULT_ID=?")->execute([$consult_id]);
                 logFU("CPF {$cpf} | EXPIRADO após 10 tentativas. Status V8: {$status_v8}");
             } else {
                 logFU("CPF {$cpf} | V8 ainda processando ({$status_v8}). Próxima tentativa em ~90s.");

@@ -463,9 +463,18 @@ else:
                 else if (st.includes('ERRO') || st.includes('TIMEOUT')) corSt = 'danger';
                 else if (st.includes('AGUARDANDO') || st.includes('BUSCANDO')) corSt = 'warning text-dark';
 
+                const btnForcar = (st === 'AGUARDANDO_DATAPREV')
+                    ? `<br><button class="btn btn-xs btn-warning fw-bold mt-1" style="font-size:9px;padding:1px 7px;"
+                            onclick="forcarSessaoIA(${x.SESSAO_ID}, '${(x.CONSULT_ID||'').replace(/'/g,"\\'")}', this)"
+                            title="Forçar reprocessamento agora">
+                            <i class="fas fa-bolt me-1"></i>Forçar
+                        </button>`
+                    : '';
+
                 const colData = `<span class="small fw-bold text-dark">${x.DATA_INICIO_BR}</span><br>
                     <span class="badge bg-${corSt} shadow-sm" style="font-size:9px;">${x.STATUS_SESSAO}</span><br>
-                    <small class="text-muted" style="font-size:9px;">Atualizado: ${x.ULTIMA_ACAO_BR}</small>`;
+                    <small class="text-muted" style="font-size:9px;">Atualizado: ${x.ULTIMA_ACAO_BR}</small>
+                    ${btnForcar}`;
 
                 const colRobo = `<span class="fw-bold text-dark"><i class="fas fa-robot text-warning me-1"></i>${x.NOME_ROBO || 'IA Base'}</span><br>
                     <small class="text-muted" style="font-size:10px;">Dono: ${x.CPF_DONO || '--'}</small>`;
@@ -511,6 +520,24 @@ else:
                         <td class="align-middle text-center">${colJson}</td>
                     </tr>`;
             });
+        }
+
+        // ==========================================
+        // FORÇAR REPROCESSAMENTO DE SESSÃO
+        // ==========================================
+        async function forcarSessaoIA(sessao_id, consult_id, btn) {
+            if (!confirm('Forçar reprocessamento agora desta sessão?')) return;
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin me-1"></i>...';
+            const res = await v8Req(ARQUIVO_AJAX_IA, 'forcar_sessao', { sessao_id, consult_id }, true);
+            if (res.success) {
+                crmToast('✅ ' + (res.msg || 'Sessão reprocessada!'), 'success', 4000);
+                carregarSessoesIA();
+            } else {
+                crmToast('❌ ' + (res.msg || 'Falha ao reprocessar.'), 'error', 5000);
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fas fa-bolt me-1"></i>Forçar';
+            }
         }
 
         // ==========================================

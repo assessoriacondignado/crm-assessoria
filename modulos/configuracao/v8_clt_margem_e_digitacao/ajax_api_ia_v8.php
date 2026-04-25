@@ -192,6 +192,52 @@ try {
             ob_end_clean(); echo json_encode(['success' => true, 'data' => $dados]); exit;
 
         // -------------------------------------------------------
+        // FORÇAR REPROCESSAMENTO DE SESSÃO AGUARDANDO_DATAPREV
+        // -------------------------------------------------------
+        case 'forcar_sessao':
+            $sessao_id_fc = (int)($_POST['sessao_id'] ?? 0);
+            $consult_id_fc = trim($_POST['consult_id'] ?? '');
+
+            if ($sessao_id_fc <= 0 || empty($consult_id_fc)) {
+                ob_end_clean(); echo json_encode(['success' => false, 'msg' => 'Parâmetros inválidos.']); exit;
+            }
+
+            // Carrega a sessão e credencial
+            $stmtSessao = $pdo->prepare("
+                SELECT s.*, c.STATUS_V8 as STATUS_CONSULT, c.ID as CONSULT_DB_ID,
+                       cred.TOKEN_IA, cred.CPF_DONO, cred.CHAVE_V8_ID,
+                       v8k.USERNAME_API, v8k.PASSWORD_API, v8k.CLIENT_ID, v8k.AUDIENCE, v8k.TABELA_PADRAO, v8k.PRAZO_PADRAO
+                FROM INTEGRACAO_V8_IA_SESSAO s
+                LEFT JOIN INTEGRACAO_V8_IA_CREDENCIAIS cred ON s.TOKEN_IA_USADO = cred.TOKEN_IA
+                LEFT JOIN INTEGRACAO_V8_CHAVE_ACESSO v8k ON cred.CHAVE_V8_ID = v8k.ID
+                LEFT JOIN INTEGRACAO_V8_REGISTROCONSULTA c ON c.CONSULT_ID = ?
+                WHERE s.ID = ? LIMIT 1
+            ");
+            $stmtSessao->execute([$consult_id_fc, $sessao_id_fc]);
+            $sessao_fc = $stmtSessao->fetch(PDO::FETCH_ASSOC);
+
+            if (!$sessao_fc || $sessao_fc['STATUS_SESSAO'] !== 'AGUARDANDO_DATAPREV') {
+                ob_end_clean(); echo json_encode(['success' => false, 'msg' => 'Sessão não está aguardando ou não encontrada.']); exit;
+            }
+
+            // Força o worker para esta sessão inserindo/resetando na fila de follow-up
+            $pdo->prepare("INSERT INTO INTEGRACAO_V8_IA_FOLLOWUP (CPF_CLIENTE, TELEFONE, CONSULT_ID, TOKEN_IA, AGENT_ID)
+                           VALUES (?, ?, ?, ?, (SELECT AGENT_ID FROM INTEGRACAO_GPTMAKE_CONFIG WHERE CPF_USUARIO = ? AND STATUS = 'ATIVO' ORDER BY ID DESC LIMIT 1))
+                           ON DUPLICATE KEY UPDATE STATUS='PENDENTE', TENTATIVAS=0, DATA_ULTIMA_TENTATIVA=NULL")
+                ->execute([$sessao_fc['CPF_CLIENTE'], $sessao_fc['TELEFONE_CLIENTE'], $consult_id_fc, $sessao_fc['TOKEN_IA'], $sessao_fc['CPF_DONO']]);
+
+            // Executa o worker diretamente (síncrono para resposta imediata)
+            $worker_path = __DIR__ . '/worker_gptmake_followup.php';
+            if (file_exists($worker_path)) {
+                // Executa em background para não travar a requisição
+                shell_exec("php " . escapeshellarg($worker_path) . " > /dev/null 2>&1 &");
+            }
+
+            ob_end_clean();
+            echo json_encode(['success' => true, 'msg' => 'Worker acionado! O status será atualizado em instantes. Clique em "Atualizar Painel" após alguns segundos.']);
+            exit;
+
+        // -------------------------------------------------------
         // DOWNLOAD DO LOG JSON DA SESSÃO
         // -------------------------------------------------------
         case 'download_log_json':
