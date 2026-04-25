@@ -1,0 +1,4 @@
+[25-04-2026 09:00:27] [REQUISICAO_RECEBIDA - consulta_completa] => {"acao":"consulta_completa","cpf":"35989236867","telefone":"558299025155"}
+[25-04-2026 09:00:29] [RESPOSTA_ENVIADA - ERRO_CRITICO] => {"success":false,"status":"ERRO","error":"Erro V8 (Consentimento): phone deve conter 9 dígitos iniciando com o dígito 9"}
+[25-04-2026 09:25:58] [REQUISICAO_RECEBIDA - consulta_completa] => {"acao":"consulta_completa","cpf":"35989236867","telefone":""}
+[25-04-2026 09:26:18] [RESPOSTA_ENVIADA - consulta_completa] => {"success":false,"status":"AGUARDANDO_DATAPREV","msg":"Processando na fila. O sistema enviará o resultado automaticamente."}

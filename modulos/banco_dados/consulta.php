@@ -1241,11 +1241,15 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
                                                 $ts = strtotime($dt_consulta_inss);
                                                 $fmt_dt_consulta = date('d/m/y', $ts) . (date('H:i', $ts) !== '00:00' ? ' ' . date('H:i', $ts) : '');
                                             }
-                                            // Data atualização NB (do próprio registro desta matrícula)
+                                            // Data atualização NB — ContratosAtualizadosAte do Promosys (ex: "31/03/2026")
                                             $fmt_dt_nb = '—';
-                                            if (!empty($ben['data_atualizacao'])) {
-                                                $ts2 = strtotime($ben['data_atualizacao']);
-                                                $fmt_dt_nb = date('d/m/y', $ts2) . (date('H:i', $ts2) !== '00:00' ? ' ' . date('H:i', $ts2) : '');
+                                            if (!empty($ben['contratos_atualizados_ate'])) {
+                                                $partes = explode('/', str_replace('\\', '/', $ben['contratos_atualizados_ate']));
+                                                if (count($partes) === 3) {
+                                                    $fmt_dt_nb = $partes[0] . '/' . $partes[1] . '/' . substr($partes[2], 2);
+                                                } else {
+                                                    $fmt_dt_nb = htmlspecialchars($ben['contratos_atualizados_ate']);
+                                                }
                                             }
                                             ?>
                                             <div class="mt-1 pt-1 border-top border-light" style="font-size: 0.60rem; line-height:1.6;">
@@ -1258,7 +1262,14 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
                                             <div class="text-danger fw-bold text-uppercase mb-0" style="font-size: 0.65rem;">DADOS DO BENEFÍCIO</div>
                                             <div class="text-dark text-uppercase" style="font-size: 0.70rem; line-height: 1.3;">
                                                 <div class="mb-1 text-truncate" title="<?= htmlspecialchars($ben['especie_beneficio'] ?? '') ?>"><b>Espécie:</b> <?= htmlspecialchars($ben['especie_beneficio'] ?? '') ?> (Consig: <?= htmlspecialchars($ben['esp_consignavel'] ?? '-') ?>)</div>
-                                                <div><b>Rep. Legal:</b> <?= htmlspecialchars($ben['representante_legal'] ?? '-') ?> <?= !empty($ben['representante_nome']) ? ' - ' . htmlspecialchars($ben['representante_nome']) : '' ?></div>
+                                                <div><b>Rep. Legal:</b> <?= htmlspecialchars($ben['representante_legal'] ?? '-') ?>
+                                                <?php if (!empty($ben['representante_nome'])): ?>
+                                                    — <?= htmlspecialchars($ben['representante_nome']) ?>
+                                                    <?php if (!empty($ben['representante_cpf'])): ?>
+                                                        <span class="text-muted">(<?= htmlspecialchars($ben['representante_cpf']) ?>)</span>
+                                                    <?php endif; ?>
+                                                <?php endif; ?>
+                                                </div>
                                                 <div><b>Pensão Alim.:</b> <?= htmlspecialchars($ben['pensao_alimenticia'] ?? '-') ?></div>
                                                 <?php if(!empty($ben['contribuicao_nome'])): ?>
                                                 <div class="text-danger mt-1 text-truncate" title="<?= htmlspecialchars($ben['contribuicao_nome'] ?? '') ?>"><b>Desconto:</b> <?= htmlspecialchars($ben['contribuicao_nome'] ?? '') ?> (R$ <?= number_format((float)($ben['contribuicao_valor'] ?? 0), 2, ',', '.') ?>)</div>

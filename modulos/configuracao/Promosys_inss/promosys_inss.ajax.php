@@ -175,14 +175,16 @@ if ($acao === 'consulta_cpf_manual') {
                 $forma_pagto = is_array($bancario) ? ($bancario['NOME_TIPO_PAGTO'] ?? '') : '';
                 if (empty($forma_pagto)) { $forma_pagto = is_array($beneficio) ? ($beneficio['FormaPagamento'] ?? '') : ''; }
 
+                $contratos_atualizados_ate = $consulta['ContratosAtualizadosAte'] ?? null;
+
                 $sql = "INSERT INTO banco_de_Dados_inss_dados_cadastrais (
-                    cpf, matricula_nb, especie_beneficio, esp_consignavel, situacao_beneficio, bloqueio_emprestimo, dib, 
-                    representante_legal, pensao_alimenticia, margem_calculada, margem_cartao, margem_cartao_ben, 
-                    valor_rcc, valor_rmc, margem_cartao_loas, valor_base_calculo, valor_consignado, valor_liberado_total, 
-                    contribuicao_nome, contribuicao_valor, representante_cpf, representante_nome, banco_pagamento, 
-                    agencia_pagamento, conta_pagamento, forma_pagamento
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                ON DUPLICATE KEY UPDATE 
+                    cpf, matricula_nb, especie_beneficio, esp_consignavel, situacao_beneficio, bloqueio_emprestimo, dib,
+                    representante_legal, pensao_alimenticia, margem_calculada, margem_cartao, margem_cartao_ben,
+                    valor_rcc, valor_rmc, margem_cartao_loas, valor_base_calculo, valor_consignado, valor_liberado_total,
+                    contribuicao_nome, contribuicao_valor, representante_cpf, representante_nome, banco_pagamento,
+                    agencia_pagamento, conta_pagamento, forma_pagamento, contratos_atualizados_ate
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ON DUPLICATE KEY UPDATE
                     especie_beneficio=VALUES(especie_beneficio), esp_consignavel=VALUES(esp_consignavel),
                     situacao_beneficio=VALUES(situacao_beneficio), bloqueio_emprestimo=VALUES(bloqueio_emprestimo),
                     dib=VALUES(dib), representante_legal=VALUES(representante_legal), pensao_alimenticia=VALUES(pensao_alimenticia),
@@ -192,20 +194,22 @@ if ($acao === 'consulta_cpf_manual') {
                     contribuicao_nome=VALUES(contribuicao_nome), contribuicao_valor=VALUES(contribuicao_valor),
                     representante_cpf=VALUES(representante_cpf), representante_nome=VALUES(representante_nome),
                     banco_pagamento=VALUES(banco_pagamento), agencia_pagamento=VALUES(agencia_pagamento),
-                    conta_pagamento=VALUES(conta_pagamento), forma_pagamento=VALUES(forma_pagamento)";
+                    conta_pagamento=VALUES(conta_pagamento), forma_pagamento=VALUES(forma_pagamento),
+                    contratos_atualizados_ate=VALUES(contratos_atualizados_ate)";
 
                 $pdo->prepare($sql)->execute([
-                    $cpf_alvo, $matricula_nb, 
-                    ($consulta['ESP'] ?? ''), ($consulta['ESP_Consignavel'] ?? ''), ($beneficio['situacao'] ?? ''), 
-                    ($beneficio['bloqemp'] ?? ''), $dib, ($beneficio['possuirepresentantelegal'] ?? ''), 
-                    ($beneficio['pa'] ?? ''), (float)($beneficio['MargemCalculada'] ?? 0), 
-                    (float)($beneficio['margemdispcartao'] ?? 0), (float)($beneficio['margemdispcartaoBen'] ?? 0), 
-                    (float)($beneficio['ValorRCC'] ?? 0), (float)($beneficio['ValorRMC'] ?? 0), (float)($beneficio['MargemCartaoLoas'] ?? 0), 
-                    (float)($beneficio['vlbasecalc'] ?? 0), (float)($beneficio['ValorConsignado'] ?? 0), (float)($beneficio['ValorLiberadoTotal'] ?? 0), 
-                    $desc_contrib, $val_contrib, 
-                    $rep_cpf, $rep_nome, 
-                    $banco_completo, $agencia_completo, 
-                    $conta_pagto, $forma_pagto
+                    $cpf_alvo, $matricula_nb,
+                    ($consulta['ESP'] ?? ''), ($consulta['ESP_Consignavel'] ?? ''), ($beneficio['situacao'] ?? ''),
+                    ($beneficio['bloqemp'] ?? ''), $dib, ($beneficio['possuirepresentantelegal'] ?? ''),
+                    ($beneficio['pa'] ?? ''), (float)($beneficio['MargemCalculada'] ?? 0),
+                    (float)($beneficio['margemdispcartao'] ?? 0), (float)($beneficio['margemdispcartaoBen'] ?? 0),
+                    (float)($beneficio['ValorRCC'] ?? 0), (float)($beneficio['ValorRMC'] ?? 0), (float)($beneficio['MargemCartaoLoas'] ?? 0),
+                    (float)($beneficio['vlbasecalc'] ?? 0), (float)($beneficio['ValorConsignado'] ?? 0), (float)($beneficio['ValorLiberadoTotal'] ?? 0),
+                    $desc_contrib, $val_contrib,
+                    $rep_cpf, $rep_nome,
+                    $banco_completo, $agencia_completo,
+                    $conta_pagto, $forma_pagto,
+                    $contratos_atualizados_ate
                 ]);
 
                 if (is_array($contratos) && count($contratos) > 0) {

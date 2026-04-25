@@ -228,7 +228,12 @@ function processarConsentimentoDireto($cpf, $telefone, $cliente, $pdo, $credenci
 
     $tokenV8 = gerarTokenV8_Local($credencialIA);
     $sexo_api = ($cliente['sexo'] === 'M') ? 'male' : 'female';
-    $payloadV8 = json_encode(['borrowerDocumentNumber' => $cpf, 'gender' => $sexo_api, 'birthDate' => $cliente['nascimento'] ?: '1980-01-01', 'signerName' => $cliente['nome'], 'signerEmail' => 'cliente@gmail.com', 'signerPhone' => ['countryCode' => '55', 'areaCode' => substr($telefone, 0, 2), 'phoneNumber' => substr($telefone, 2)], 'provider' => 'QI']);
+    // Formata telefone para o padrão V8: DDD (2 dígitos) + número (9 dígitos)
+    $tel_ddd    = substr($telefone, 0, 2);
+    $tel_numero = substr($telefone, 2);
+    // Normaliza para 9 dígitos — padrão brasileiro de celular desde 2012
+    if (strlen($tel_numero) === 8) { $tel_numero = '9' . $tel_numero; }
+    $payloadV8 = json_encode(['borrowerDocumentNumber' => $cpf, 'gender' => $sexo_api, 'birthDate' => $cliente['nascimento'] ?: '1980-01-01', 'signerName' => $cliente['nome'], 'signerEmail' => 'cliente@gmail.com', 'signerPhone' => ['countryCode' => '55', 'areaCode' => $tel_ddd, 'phoneNumber' => $tel_numero], 'provider' => 'QI']);
     
     $ch = curl_init("https://bff.v8sistema.com/private-consignment/consult");
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); curl_setopt($ch, CURLOPT_POST, true); curl_setopt($ch, CURLOPT_POSTFIELDS, $payloadV8); curl_setopt($ch, CURLOPT_HTTPHEADER, ["Authorization: Bearer $tokenV8", "Content-Type: application/json"]);
