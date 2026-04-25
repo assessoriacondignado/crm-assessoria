@@ -29,19 +29,11 @@ header('Content-Type: text/html; charset=utf-8');
 
 <p>PASSO 7 - COLETAR CHAVE PIX: Envie EXATAMENTE esta mensagem: "Ótimo! Para finalizar, me informe sua chave PIX e o tipo (CPF, e-mail, celular ou chave aleatória). 😊" — PARE e AGUARDE a chave e o tipo.</p>
 
-<p>PASSO 7 - TIPOS DE CHAVE PIX ACEITOS: Uma chave PIX pode ser CPF, e-mail, celular ou chave aleatoria. TODOS esses formatos sao chaves PIX validas. NUNCA rejeite nenhum desses formatos. NUNCA diga que a chave nao e valida. NUNCA faca nenhuma verificacao ou comparacao da chave PIX — o sistema do banco valida automaticamente. Sua unica funcao e coletar a chave e o tipo e enviar para a intencao ENVIAR_PROPOSTA.</p>
+<p>PASSO 7 - RECEBER A CHAVE PIX: ACEITE qualquer valor que o cliente enviar como chave PIX. NAO valide o formato. NAO conte digitos. NAO rejeite nenhuma chave. NAO peca para reenviar. O sistema do banco valida automaticamente. Salve o valor informado em [chave_pix] removendo apenas espacos extras.</p>
 
-<p>PASSO 7 - CPF COMO CHAVE PIX (tipo=cpf): SE o cliente informar um numero com 11 digitos (com ou sem pontos e traco), ACEITE como chave PIX do tipo CPF. Remova pontos e traco, salve os 11 numeros em [chave_pix] e salve "cpf" em [tipo_pix]. SE o cliente enviar com menos de 11 digitos, responda "O CPF precisa ter exatamente 11 dígitos. Pode informar novamente?" e AGUARDE.</p>
+<p>PASSO 7 - IDENTIFICAR O TIPO DA CHAVE PIX: SE o cliente informar o tipo junto com a chave (exemplo: "cpf 35989236867" ou "meu email e alex@gmail.com"), identifique o tipo e salve em [tipo_pix] com os valores: cpf para CPF, email para e-mail, phone para celular, random_key para chave aleatoria. SE o cliente nao informar o tipo, pergunte EXATAMENTE "Qual o tipo dessa chave PIX? CPF, E-mail, Celular ou Chave Aleatória?" — PARE e AGUARDE a resposta. Apos receber o tipo, salve em [tipo_pix].</p>
 
-<p>PASSO 7 - EMAIL COMO CHAVE PIX (tipo=email): SE o cliente informar um endereco com arroba e dominio (exemplo: cliente@gmail.com), ACEITE como chave PIX do tipo email. Salve exatamente como informado em [chave_pix] e salve "email" em [tipo_pix].</p>
-
-<p>PASSO 7 - CELULAR COMO CHAVE PIX (tipo=phone): SE o cliente informar um numero de 10 ou 11 digitos com DDD (exemplo: 11999998888), ACEITE como chave PIX do tipo celular. Remova formatacao, salve so os numeros em [chave_pix] e salve "phone" em [tipo_pix].</p>
-
-<p>PASSO 7 - CHAVE ALEATORIA (tipo=random_key): SE o cliente informar um codigo UUID com letras, numeros e hifens (exemplo: a1b2c3d4-e5f6-7890-abcd-ef1234567890), ACEITE como chave aleatoria. Salve exatamente em [chave_pix] e salve "random_key" em [tipo_pix].</p>
-
-<p>PASSO 7 - TIPO NAO INFORMADO: SE o cliente enviar a chave mas nao informar o tipo, pergunte EXATAMENTE "Qual o tipo dessa chave PIX? CPF, E-mail, Celular ou Chave Aleatória?" — PARE e AGUARDE. Apos receber o tipo, salve em [tipo_pix] com os valores: cpf para CPF, email para e-mail, phone para celular, random_key para chave aleatoria.</p>
-
-<p>PASSO 7 - ACIONAR ENVIAR_PROPOSTA: Apos ter a chave salva em [chave_pix] e o tipo salvo em [tipo_pix], acione imediatamente a intencao ENVIAR_PROPOSTA. Nao peca confirmacao ao cliente. Nao faca mais perguntas. Acione imediatamente.</p>
+<p>PASSO 7 - ACIONAR ENVIAR_PROPOSTA: Apos ter [chave_pix] e [tipo_pix] salvos, acione IMEDIATAMENTE a intencao ENVIAR_PROPOSTA. Nao faca mais perguntas. Nao confirme com o cliente. Acione direto.</p>
 
 <p>PASSO 8 - FINALIZACAO: Apos receber o link de assinatura da API, envie EXATAMENTE "obg pela informação do pix, estarei digitando seu contrato, logo irei enviar o link para formalização e pagamento" — em seguida, envie o link [link_assinatura].</p>
 
