@@ -229,11 +229,12 @@ while(true) {
     $atingiu_limite_diario = ($limite_diario_sucessos > 0 && $qtd_sucessos_hoje >= $limite_diario_sucessos);
     // =========================================================================
 
-    $stmtKeySet = $pdo->prepare("SELECT TABELA_PADRAO, PRAZO_PADRAO, INTERVALO_CONSENTIMENTO FROM INTEGRACAO_V8_CHAVE_ACESSO WHERE ID = ?");
+    $stmtKeySet = $pdo->prepare("SELECT TABELA_PADRAO, PRAZO_PADRAO, AVERBADORA, INTERVALO_CONSENTIMENTO FROM INTEGRACAO_V8_CHAVE_ACESSO WHERE ID = ?");
     $stmtKeySet->execute([$chave_id]);
     $keySet = $stmtKeySet->fetch(PDO::FETCH_ASSOC);
     $tabela_padrao = !empty($keySet['TABELA_PADRAO']) ? $keySet['TABELA_PADRAO'] : 'CLT Acelera';
     $prazo_padrao = !empty($keySet['PRAZO_PADRAO']) ? (int)$keySet['PRAZO_PADRAO'] : 24;
+    $averbadora_lote = strtoupper(trim($keySet['AVERBADORA'] ?? 'QI')) ?: 'QI';
     $intervalo_consentimento = max(0, (int)($keySet['INTERVALO_CONSENTIMENTO'] ?? 0));
 
     $token = null;
@@ -419,7 +420,7 @@ while(true) {
 
                 if ($intervalo_consentimento > 0) { sleep($intervalo_consentimento); }
 
-                $payload_cons = json_encode([ 'borrowerDocumentNumber' => $cpfFase1['CPF'], 'gender' => $cpfFase1['SEXO'] ?: 'female', 'birthDate' => $cpfFase1['NASCIMENTO'], 'signerName' => $cpfFase1['NOME'], 'signerEmail' => 'cliente@gmail.com', 'signerPhone' => ['countryCode' => '55', 'areaCode' => substr($telefone, 0, 2), 'phoneNumber' => substr($telefone, 2)], 'provider' => 'QI' ]);
+                $payload_cons = json_encode([ 'borrowerDocumentNumber' => $cpfFase1['CPF'], 'gender' => $cpfFase1['SEXO'] ?: 'female', 'birthDate' => $cpfFase1['NASCIMENTO'], 'signerName' => $cpfFase1['NOME'], 'signerEmail' => 'cliente@gmail.com', 'signerPhone' => ['countryCode' => '55', 'areaCode' => substr($telefone, 0, 2), 'phoneNumber' => substr($telefone, 2)], 'provider' => $averbadora_lote ]);
 
                 $ch = curl_init("https://bff.v8sistema.com/private-consignment/consult");
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); curl_setopt($ch, CURLOPT_POST, true); curl_setopt($ch, CURLOPT_POSTFIELDS, $payload_cons); curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);

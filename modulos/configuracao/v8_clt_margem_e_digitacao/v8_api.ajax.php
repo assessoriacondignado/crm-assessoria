@@ -218,9 +218,11 @@ try {
 
         case 'salvar_chave_v8':
             $id = (int)($_POST['id'] ?? 0); $tabela_padrao = trim($_POST['tabela_padrao'] ?? 'CLT Acelera'); $prazo_padrao = (int)($_POST['prazo_padrao'] ?? 24);
+            $averbadora = strtoupper(trim($_POST['averbadora'] ?? 'QI')) ?: 'QI';
             $intervalo_consentimento = max(0, (int)($_POST['intervalo_consentimento'] ?? 0));
             try { $pdo->exec("ALTER TABLE INTEGRACAO_V8_CHAVE_ACESSO ADD COLUMN INTERVALO_CONSENTIMENTO INT NOT NULL DEFAULT 120"); } catch(Exception $e){}
             try { $pdo->exec("ALTER TABLE INTEGRACAO_V8_CHAVE_ACESSO MODIFY COLUMN INTERVALO_CONSENTIMENTO INT NOT NULL DEFAULT 120"); } catch(Exception $e){}
+            try { $pdo->exec("ALTER TABLE INTEGRACAO_V8_CHAVE_ACESSO ADD COLUMN AVERBADORA VARCHAR(50) NOT NULL DEFAULT 'QI'"); } catch(Exception $e){}
             $pdo->exec("UPDATE INTEGRACAO_V8_CHAVE_ACESSO SET INTERVALO_CONSENTIMENTO = 120 WHERE INTERVALO_CONSENTIMENTO = 0");
             $client_id = trim($_POST['client_id'] ?? ''); $audience = trim($_POST['audience'] ?? '');
 
@@ -249,12 +251,12 @@ try {
                     if ($restricao_custo_cliente) { $custo_consulta = (float)$chaveExist['CUSTO_CONSULTA']; }
                     if ($restricao_custo_api) { $custo_v8 = (float)$chaveExist['CUSTO_V8']; }
                 }
-                $pdo->prepare("UPDATE INTEGRACAO_V8_CHAVE_ACESSO SET CLIENTE_NOME=?, CLIENT_ID=?, AUDIENCE=?, USERNAME_API=?, PASSWORD_API=?, CUSTO_CONSULTA=?, CUSTO_V8=?, TABELA_PADRAO=?, PRAZO_PADRAO=?, INTERVALO_CONSENTIMENTO=?, CPF_USUARIO=?, NOME_USUARIO=?, id_empresa=? WHERE ID=?")->execute([$cliente_nome, $client_id, $audience, $username_api, $password_api, $custo_consulta, $custo_v8, $tabela_padrao, $prazo_padrao, $intervalo_consentimento, $cpf_dono, $nome_dono, $id_empresa_dono, $id]);
+                $pdo->prepare("UPDATE INTEGRACAO_V8_CHAVE_ACESSO SET CLIENTE_NOME=?, CLIENT_ID=?, AUDIENCE=?, USERNAME_API=?, PASSWORD_API=?, CUSTO_CONSULTA=?, CUSTO_V8=?, TABELA_PADRAO=?, PRAZO_PADRAO=?, AVERBADORA=?, INTERVALO_CONSENTIMENTO=?, CPF_USUARIO=?, NOME_USUARIO=?, id_empresa=? WHERE ID=?")->execute([$cliente_nome, $client_id, $audience, $username_api, $password_api, $custo_consulta, $custo_v8, $tabela_padrao, $prazo_padrao, $averbadora, $intervalo_consentimento, $cpf_dono, $nome_dono, $id_empresa_dono, $id]);
             } else {
                 if ($restricao_chave) { $client_id = ''; $audience = ''; $username_api = ''; $password_api = ''; }
                 if ($restricao_custo_cliente) { $custo_consulta = 0; }
                 if ($restricao_custo_api) { $custo_v8 = 0; }
-                $pdo->prepare("INSERT INTO INTEGRACAO_V8_CHAVE_ACESSO (CLIENTE_NOME, CLIENT_ID, AUDIENCE, USERNAME_API, PASSWORD_API, CUSTO_CONSULTA, CUSTO_V8, CPF_USUARIO, NOME_USUARIO, TABELA_PADRAO, PRAZO_PADRAO, INTERVALO_CONSENTIMENTO, id_empresa) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")->execute([$cliente_nome, $client_id, $audience, $username_api, $password_api, $custo_consulta, $custo_v8, $cpf_dono, $nome_dono, $tabela_padrao, $prazo_padrao, $intervalo_consentimento, $id_empresa_dono]);
+                $pdo->prepare("INSERT INTO INTEGRACAO_V8_CHAVE_ACESSO (CLIENTE_NOME, CLIENT_ID, AUDIENCE, USERNAME_API, PASSWORD_API, CUSTO_CONSULTA, CUSTO_V8, CPF_USUARIO, NOME_USUARIO, TABELA_PADRAO, PRAZO_PADRAO, AVERBADORA, INTERVALO_CONSENTIMENTO, id_empresa) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")->execute([$cliente_nome, $client_id, $audience, $username_api, $password_api, $custo_consulta, $custo_v8, $cpf_dono, $nome_dono, $tabela_padrao, $prazo_padrao, $averbadora, $intervalo_consentimento, $id_empresa_dono]);
             }
             echo json_encode(['success' => true, 'msg' => 'Chave salva com sucesso!']); break;
 
@@ -442,15 +444,16 @@ try {
             $cpf = preg_replace('/\D/', '', $_POST['cpf'] ?? ''); $nascimento = trim($_POST['nascimento'] ?? ''); $genero = trim($_POST['genero'] ?? 'male'); $nome = mb_strtoupper(trim($_POST['nome'] ?? ''), 'UTF-8'); $email = trim($_POST['email'] ?? ''); $telefone = preg_replace('/\D/', '', $_POST['telefone'] ?? ''); $chave_id = !empty($_POST['chave_id']) ? (int)$_POST['chave_id'] : null;
             if (strlen($cpf) !== 11) { throw new Exception("CPF Inválido."); } if (!$chave_id) { throw new Exception("Selecione uma Chave."); }
 
-            $stmtCli = $pdo->prepare("SELECT SALDO, CUSTO_CONSULTA, CUSTO_V8 FROM INTEGRACAO_V8_CHAVE_ACESSO WHERE ID = ?"); $stmtCli->execute([$chave_id]); $cli = $stmtCli->fetch(PDO::FETCH_ASSOC);
+            $stmtCli = $pdo->prepare("SELECT SALDO, CUSTO_CONSULTA, CUSTO_V8, AVERBADORA FROM INTEGRACAO_V8_CHAVE_ACESSO WHERE ID = ?"); $stmtCli->execute([$chave_id]); $cli = $stmtCli->fetch(PDO::FETCH_ASSOC);
             $custo = floatval($cli['CUSTO_CONSULTA']); $saldo = floatval($cli['SALDO']);
+            $averbadora_cons = strtoupper(trim($cli['AVERBADORA'] ?? 'QI')) ?: 'QI';
             if ($saldo < $custo && $custo > 0) { throw new Exception("Saldo insuficiente."); }
 
             $area_code = substr($telefone, 0, 2) ?: '11'; $number = substr($telefone, 2) ?: '900000000';
             $token = gerarTokenV8($chave_id, $pdo, $URL_AUTENTICACAO);
 
             $ch1 = curl_init($URL_CONSULTA);
-            $payload1 = ['borrowerDocumentNumber' => $cpf, 'gender' => $genero, 'birthDate' => $nascimento, 'signerName' => $nome, 'signerEmail' => empty($email) ? 'cliente@gmail.com' : $email, 'signerPhone' => ['countryCode' => '55', 'areaCode' => $area_code, 'phoneNumber' => $number], 'provider' => 'QI']; 
+            $payload1 = ['borrowerDocumentNumber' => $cpf, 'gender' => $genero, 'birthDate' => $nascimento, 'signerName' => $nome, 'signerEmail' => empty($email) ? 'cliente@gmail.com' : $email, 'signerPhone' => ['countryCode' => '55', 'areaCode' => $area_code, 'phoneNumber' => $number], 'provider' => $averbadora_cons]; 
             curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true); curl_setopt($ch1, CURLOPT_POST, true); curl_setopt($ch1, CURLOPT_POSTFIELDS, json_encode($payload1)); curl_setopt($ch1, CURLOPT_HTTPHEADER, ['Authorization: Bearer ' . $token, 'Content-Type: application/json']);
             $res1 = curl_exec($ch1); $http1 = curl_getinfo($ch1, CURLINFO_HTTP_CODE); curl_close($ch1);
 

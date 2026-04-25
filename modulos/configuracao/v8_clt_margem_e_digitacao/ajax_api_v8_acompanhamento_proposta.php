@@ -123,7 +123,8 @@ try {
             $id_proposta_db = (int)$_POST['id_db']; $motivo = trim($_POST['motivo']); if(empty($motivo)) throw new Exception("Informe um motivo.");
             $stmtP = $pdo->prepare("SELECT * FROM INTEGRACAO_V8_REGISTRO_PROPOSTA WHERE ID = ?"); $stmtP->execute([$id_proposta_db]); $prop = $stmtP->fetch(PDO::FETCH_ASSOC);
             $numero_proposta_v8 = $prop['NUMERO_PROPOSTA']; $chave_id = pegarChaveIdPorCpf($prop['CPF_CLIENTE'], $pdo); $token = gerarTokenV8($chave_id, $pdo);
-            $payload = [ 'cancel_reason' => 'invalid_data:other', 'cancel_description' => mb_substr($motivo, 0, 200, 'UTF-8'), 'provider' => 'QI' ];
+            $stmtAverb = $pdo->prepare("SELECT AVERBADORA FROM INTEGRACAO_V8_CHAVE_ACESSO WHERE ID = ? LIMIT 1"); $stmtAverb->execute([$chave_id]); $averbadora_cancel = strtoupper(trim($stmtAverb->fetchColumn() ?: 'QI')) ?: 'QI';
+            $payload = [ 'cancel_reason' => 'invalid_data:other', 'cancel_description' => mb_substr($motivo, 0, 200, 'UTF-8'), 'provider' => $averbadora_cancel ];
             $url = "https://bff.v8sistema.com/private-consignment/operation/{$numero_proposta_v8}/cancel";
             $headers = ["Authorization: Bearer $token", "Content-Type: application/json"];
             $api_call = v8_api_request_with_lock($url, 'POST', $payload, $headers, $chave_id); $res_raw = $api_call['response']; $http_code = $api_call['http_code']; $res = json_decode($res_raw, true);

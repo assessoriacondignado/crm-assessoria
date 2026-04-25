@@ -234,7 +234,13 @@
       "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"DESCRIBE INTEGRACAO_GPTMAKE_CONFIG;\")",
       "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"ALTER TABLE INTEGRACAO_V8_IA_FOLLOWUP ADD COLUMN AGENT_ID VARCHAR\\(100\\) NULL AFTER TOKEN_IA, ADD COLUMN TELEFONE_WHATSAPP VARCHAR\\(20\\) NULL AFTER TELEFONE;\")",
       "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/worker_gptmake_followup.php)",
-      "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/config_gptmake.php)"
+      "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/config_gptmake.php)",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"DESCRIBE INTEGRACAO_V8_CHAVE_ACESSO;\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"ALTER TABLE INTEGRACAO_V8_CHAVE_ACESSO ADD COLUMN AVERBADORA VARCHAR\\(50\\) NOT NULL DEFAULT 'QI' AFTER PRAZO_PADRAO;\")",
+      "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/v8_api.ajax.php)",
+      "Bash(php -l /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/ajax_api_v8_acompanhamento_proposta.php)",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT ID, CLIENTE_NOME, AVERBADORA FROM INTEGRACAO_V8_CHAVE_ACESSO;\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"UPDATE INTEGRACAO_V8_CHAVE_ACESSO SET AVERBADORA = 'CELCOIN'; SELECT ROW_COUNT\\(\\) as atualizados;\")"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",

@@ -138,7 +138,7 @@ if (empty($authHeader) || !preg_match('/Bearer\s(\S+)/', $authHeader, $matches))
 
 $tokenIA = $matches[1];
 
-$stmtCred = $pdo->prepare("SELECT i.*, c.SALDO as SALDO_CLIENTE, c.CUSTO_CONSULTA as CUSTO_CLIENTE, v.CUSTO_V8, v.ID as CHAVE_REAL_V8, v.USERNAME_API, v.PASSWORD_API, v.CLIENT_ID, v.AUDIENCE, v.TABELA_PADRAO, v.PRAZO_PADRAO, u.ID as ID_USUARIO_DONO
+$stmtCred = $pdo->prepare("SELECT i.*, c.SALDO as SALDO_CLIENTE, c.CUSTO_CONSULTA as CUSTO_CLIENTE, v.CUSTO_V8, v.ID as CHAVE_REAL_V8, v.USERNAME_API, v.PASSWORD_API, v.CLIENT_ID, v.AUDIENCE, v.TABELA_PADRAO, v.PRAZO_PADRAO, v.AVERBADORA, u.ID as ID_USUARIO_DONO
                            FROM INTEGRACAO_V8_IA_CREDENCIAIS i
                            JOIN CLIENTE_CADASTRO c ON i.CPF_DONO = c.CPF COLLATE utf8mb4_unicode_ci
                            JOIN INTEGRACAO_V8_CHAVE_ACESSO v ON i.CHAVE_V8_ID = v.ID
@@ -243,7 +243,8 @@ function processarConsentimentoDireto($cpf, $telefone, $cliente, $pdo, $credenci
     $tel_numero = substr($telefone, 2);
     // Normaliza para 9 dígitos — padrão brasileiro de celular desde 2012
     if (strlen($tel_numero) === 8) { $tel_numero = '9' . $tel_numero; }
-    $payloadV8 = json_encode(['borrowerDocumentNumber' => $cpf, 'gender' => $sexo_api, 'birthDate' => $cliente['nascimento'] ?: '1980-01-01', 'signerName' => $cliente['nome'], 'signerEmail' => 'cliente@gmail.com', 'signerPhone' => ['countryCode' => '55', 'areaCode' => $tel_ddd, 'phoneNumber' => $tel_numero], 'provider' => 'QI']);
+    $averbadora_v8 = strtoupper(trim($credencialIA['AVERBADORA'] ?? 'QI')) ?: 'QI';
+    $payloadV8 = json_encode(['borrowerDocumentNumber' => $cpf, 'gender' => $sexo_api, 'birthDate' => $cliente['nascimento'] ?: '1980-01-01', 'signerName' => $cliente['nome'], 'signerEmail' => 'cliente@gmail.com', 'signerPhone' => ['countryCode' => '55', 'areaCode' => $tel_ddd, 'phoneNumber' => $tel_numero], 'provider' => $averbadora_v8]);
     
     $ch = curl_init("https://bff.v8sistema.com/private-consignment/consult");
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); curl_setopt($ch, CURLOPT_POST, true); curl_setopt($ch, CURLOPT_POSTFIELDS, $payloadV8); curl_setopt($ch, CURLOPT_HTTPHEADER, ["Authorization: Bearer $tokenV8", "Content-Type: application/json"]);
