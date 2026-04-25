@@ -66,8 +66,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['acao']) && $_POST['aca
             $id_usuario_num = $stmtIdUsu->fetchColumn() ?: null;
         }
 
-        $stmtIns = $pdo->prepare("INSERT INTO BANCO_DE_DADOS_CAMPANHA_REGISTRO_CONTATO (CPF_CLIENTE, CNPJ_EMPRESA, CPF_USUARIO, NOME_USUARIO, ID_STATUS_CONTATO, REGISTRO, DATA_AGENDAMENTO, id_empresa, id_usuario) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmtIns->execute([$cpf_cliente, $cnpj_empresa, $cpf_usuario, $nome_usuario, $id_status, $texto_registro, $data_agendamento, $id_empresa_num, $id_usuario_num]);
+        // Monta resumo de qualificações dos telefones para salvar junto ao registro
+        $tel_qual_resumo = [];
+        if (!empty($telefones_qual)) {
+            // Busca nomes das qualificações
+            $stmtQnomes = $pdo->prepare("SELECT ID, NOME_QUALIFICACAO FROM BANCO_DE_DADOS_CAMPANHA_QUALIFICACAO_TELEFONE");
+            $stmtQnomes->execute();
+            $mapQual = [];
+            foreach ($stmtQnomes->fetchAll(PDO::FETCH_ASSOC) as $q) {
+                $mapQual[$q['ID']] = $q['NOME_QUALIFICACAO'];
+            }
+            foreach ($telefones_qual as $tq) {
+                $tel_num = preg_replace('/[^0-9]/', '', $tq['telefone'] ?? '');
+                $id_qual = !empty($tq['id_qualificacao']) ? (int)$tq['id_qualificacao'] : null;
+                if ($tel_num) {
+                    $tel_qual_resumo[] = [
+                        'tel'  => $tel_num,
+                        'qual' => $id_qual ? ($mapQual[$id_qual] ?? '') : ''
+                    ];
+                }
+            }
+        }
+        $tel_qual_json = !empty($tel_qual_resumo) ? json_encode($tel_qual_resumo, JSON_UNESCAPED_UNICODE) : null;
+
+        $stmtIns = $pdo->prepare("INSERT INTO BANCO_DE_DADOS_CAMPANHA_REGISTRO_CONTATO (CPF_CLIENTE, CNPJ_EMPRESA, CPF_USUARIO, NOME_USUARIO, ID_STATUS_CONTATO, REGISTRO, TELEFONES_QUALIFICACAO, DATA_AGENDAMENTO, id_empresa, id_usuario) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmtIns->execute([$cpf_cliente, $cnpj_empresa, $cpf_usuario, $nome_usuario, $id_status, $texto_registro, $tel_qual_json, $data_agendamento, $id_empresa_num, $id_usuario_num]);
 
         $stmtStatus = $pdo->prepare("SELECT ID_QUALIFICACAO, NOME_STATUS, MARCACAO FROM BANCO_DE_DADOS_CAMPANHA_STATUS_CONTATO WHERE ID = ?");
         $stmtStatus->execute([$id_status]);

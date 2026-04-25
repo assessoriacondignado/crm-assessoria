@@ -737,6 +737,22 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
             $stmtInssBen->execute(['cpf' => $cpf_selecionado]);
             $inss_beneficios = $stmtInssBen->fetchAll(PDO::FETCH_ASSOC);
 
+            // Data da última consulta INSS (Promosys)
+            $dt_consulta_inss = null;
+            try {
+                $stmtDtConsulta = $pdo->prepare("SELECT data_consulta FROM promosys_inss_historico_consultas WHERE cpf = ? ORDER BY data_consulta DESC LIMIT 1");
+                $stmtDtConsulta->execute([$cpf_selecionado]);
+                $dt_consulta_inss = $stmtDtConsulta->fetchColumn() ?: null;
+            } catch (\Throwable $e) {}
+
+            // Data de atualização do NB no banco INSS (última atualização do cadastro)
+            $dt_atualizacao_nb = null;
+            try {
+                $stmtDtNb = $pdo->prepare("SELECT MAX(data_atualizacao) FROM banco_de_Dados_inss_dados_cadastrais WHERE cpf = ?");
+                $stmtDtNb->execute([$cpf_selecionado]);
+                $dt_atualizacao_nb = $stmtDtNb->fetchColumn() ?: null;
+            } catch (\Throwable $e) {}
+
             $sqlCtr = "SELECT *, 
                        CASE WHEN tipo_emprestimo IN ('76', '66', 'RCC') THEN 'RCC'
                             WHEN tipo_emprestimo IN ('44', 'RMC') THEN 'RMC'
@@ -1217,6 +1233,24 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
                                             </div>
                                             <div class="mt-1 text-uppercase" style="font-size: 0.65rem;">
                                                 <b>DIB:</b> <?= htmlspecialchars($ben['dib'] ?? '---') ?>
+                                            </div>
+                                            <?php
+                                            // Data última consulta INSS
+                                            $fmt_dt_consulta = '—';
+                                            if (!empty($dt_consulta_inss)) {
+                                                $ts = strtotime($dt_consulta_inss);
+                                                $fmt_dt_consulta = date('d/m/y', $ts) . (date('H:i', $ts) !== '00:00' ? ' ' . date('H:i', $ts) : '');
+                                            }
+                                            // Data atualização NB (do próprio registro desta matrícula)
+                                            $fmt_dt_nb = '—';
+                                            if (!empty($ben['data_atualizacao'])) {
+                                                $ts2 = strtotime($ben['data_atualizacao']);
+                                                $fmt_dt_nb = date('d/m/y', $ts2) . (date('H:i', $ts2) !== '00:00' ? ' ' . date('H:i', $ts2) : '');
+                                            }
+                                            ?>
+                                            <div class="mt-1 pt-1 border-top border-light" style="font-size: 0.60rem; line-height:1.6;">
+                                                <div><span class="text-muted fw-bold">DT CONSULTA:</span> <span class="text-dark fw-bold"><?= $fmt_dt_consulta ?></span></div>
+                                                <div><span class="text-muted fw-bold">DT ATUALIZ. NB:</span> <span class="text-dark fw-bold"><?= $fmt_dt_nb ?></span></div>
                                             </div>
                                         </div>
 
@@ -1956,8 +1990,9 @@ document.getElementById('modalVerRegistros').addEventListener('show.bs.modal', f
                                 <th style="width:120px; white-space:nowrap;">Data / Hora</th>
                                 <th style="width:140px;">Status</th>
                                 <th style="width:130px;">Campanha</th>
-                                <th style="width:140px;">Usuário</th>
+                                <th style="width:130px;">Usuário</th>
                                 <th>Observação</th>
+                                <th style="width:200px;">Telefones / Qualificação</th>
                                 <th style="width:120px; white-space:nowrap;">Agendamento</th>
                             </tr>
                         </thead>
@@ -1983,13 +2018,18 @@ document.getElementById('modalVerRegistros').addEventListener('show.bs.modal', f
 
 <script>
 const _regGeralData = <?= json_encode(array_map(function($hc) {
+    $tq = [];
+    if (!empty($hc['TELEFONES_QUALIFICACAO'])) {
+        $tq = json_decode($hc['TELEFONES_QUALIFICACAO'], true) ?: [];
+    }
     return [
-        'data'      => date('Y-m-d', strtotime($hc['DATA_REGISTRO'])),
-        'data_br'   => date('d/m/Y H:i', strtotime($hc['DATA_REGISTRO'])),
-        'status'    => $hc['NOME_STATUS'] ?? '',
-        'campanha'  => $hc['NOME_CAMPANHA'] ?? '',
-        'usuario'   => $hc['NOME_USUARIO'] ?? '',
-        'registro'  => $hc['REGISTRO'] ?? '',
+        'data'       => date('Y-m-d', strtotime($hc['DATA_REGISTRO'])),
+        'data_br'    => date('d/m/Y H:i', strtotime($hc['DATA_REGISTRO'])),
+        'status'     => $hc['NOME_STATUS'] ?? '',
+        'campanha'   => $hc['NOME_CAMPANHA'] ?? '',
+        'usuario'    => $hc['NOME_USUARIO'] ?? '',
+        'registro'   => $hc['REGISTRO'] ?? '',
+        'tels_qual'  => $tq,
         'agendamento' => !empty($hc['DATA_AGENDAMENTO']) ? date('d/m/Y H:i', strtotime($hc['DATA_AGENDAMENTO'])) : ''
     ];
 }, $historico_geral_cliente), JSON_UNESCAPED_UNICODE) ?>;
@@ -2032,7 +2072,7 @@ function _renderizarRegistrosGerais() {
     const restantes = _regGeralFiltrados.length - _regGeralOffset - lote.length;
 
     if (_regGeralFiltrados.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="6" class="text-center text-muted fw-bold py-4">Nenhum registro encontrado com os filtros aplicados.</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="7" class="text-center text-muted fw-bold py-4">Nenhum registro encontrado com os filtros aplicados.</td></tr>';
         document.getElementById('divBtnMaisRegGeral').style.display = 'none';
         document.getElementById('contadorRegGeral').textContent = '0 registros';
         return;
@@ -2045,12 +2085,30 @@ function _renderizarRegistrosGerais() {
         const camp = r.campanha
             ? `<span class="badge bg-secondary rounded-0" style="font-size:0.70rem;">${r.campanha.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</span>`
             : '<span class="text-muted">—</span>';
+
+        // Monta coluna de telefones + qualificação
+        let telsHtml = '<span class="text-muted small">—</span>';
+        if (r.tels_qual && r.tels_qual.length) {
+            telsHtml = r.tels_qual.map(tq => {
+                const qual = tq.qual || '';
+                const isPrincipal = qual.toUpperCase() === 'PRINCIPAL';
+                const badgeColor = isPrincipal ? '#198754' : (qual ? '#6c757d' : '#dee2e6');
+                const badgeTxt   = isPrincipal ? '#fff'    : (qual ? '#fff'    : '#555');
+                const qualBadge  = `<span style="font-size:0.58rem;padding:1px 5px;border-radius:3px;background:${badgeColor};color:${badgeTxt};font-weight:700;">${qual || 'Não qualif.'}</span>`;
+                return `<div style="font-size:0.73rem;display:flex;align-items:center;gap:4px;margin-bottom:2px;">
+                    <i class="fas fa-phone-alt" style="color:#198754;font-size:0.65rem;"></i>
+                    <span class="fw-bold">${tq.tel}</span>${qualBadge}
+                </div>`;
+            }).join('');
+        }
+
         tbody.innerHTML += `<tr>
             <td class="text-nowrap fw-bold text-muted">${r.data_br}</td>
             <td><span class="badge bg-primary rounded-0 text-uppercase" style="font-size:0.72rem;">${r.status.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</span></td>
             <td>${camp}</td>
             <td class="text-dark" style="font-size:0.75rem;">${r.usuario.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</td>
-            <td style="white-space:pre-wrap; word-break:break-word;">${r.registro.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</td>
+            <td style="white-space:pre-wrap;word-break:break-word;">${r.registro.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</td>
+            <td style="vertical-align:top;">${telsHtml}</td>
             <td class="text-nowrap">${agend}</td>
         </tr>`;
     });
