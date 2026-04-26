@@ -24,27 +24,14 @@ $log[] = "Telefone recebido    : " . $telefone . " (" . strlen($telefone) . " di
 
 $phone = $telefone;
 
-// Passo 1: remove 55 se presente (normaliza para DDD+local)
-if (strlen($phone) >= 12 && substr($phone, 0, 2) === '55') {
+// Unico passo: adiciona 55 se nao tiver (nao altera 9 digito)
+if (strlen($phone) < 12) {
     $antes = $phone;
-    $phone = substr($phone, 2);
-    $log[] = "Passo 1 (strip 55)   : " . $antes . " -> " . $phone . " (" . strlen($phone) . " dig) [APLICADO]";
+    $phone = '55' . $phone;
+    $log[] = "Passo 1 (add 55)     : " . $antes . " -> " . $phone . " (" . strlen($phone) . " dig) [APLICADO]";
 } else {
-    $log[] = "Passo 1 (strip 55)   : nao aplicado - sem prefixo 55 (" . strlen($phone) . " dig)";
+    $log[] = "Passo 1 (add 55)     : nao aplicado - ja tem " . strlen($phone) . " dig com prefixo 55";
 }
-
-// Passo 2: adiciona 9 digito se 10 dig (DDD + 8 local)
-if (strlen($phone) === 10) {
-    $antes = $phone;
-    $phone = substr($phone, 0, 2) . '9' . substr($phone, 2);
-    $log[] = "Passo 2 (add 9dig)   : " . $antes . " -> " . $phone . " [APLICADO]";
-} else {
-    $log[] = "Passo 2 (add 9dig)   : nao aplicado - ja tem " . strlen($phone) . " dig (9 digito presente)";
-}
-
-// Passo 3: readiciona 55
-$phone = '55' . $phone;
-$log[] = "Passo 3 (add 55)     : " . $phone . " (" . strlen($phone) . " dig final)";
 
 $log[] = "Numero FINAL enviado : " . $phone;
 $log[] = "Agent ID             : " . $gpt['AGENT_ID'];

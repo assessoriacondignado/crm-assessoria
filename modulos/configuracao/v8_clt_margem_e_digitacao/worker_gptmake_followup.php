@@ -64,17 +64,10 @@ function enviarGPTMaker($gpt_agent, $gpt_token, $telefone, $mensagem) {
     $phone = preg_replace('/\D/', '', $telefone);
     if (strlen($phone) < 10) return false;
 
-    // Normaliza para formato GPTMaker: 55 + DDD(2) + 9 + local(8) = 13 dígitos
-    // Passo 1: remove código do país 55 se presente
-    if (strlen($phone) >= 12 && substr($phone, 0, 2) === '55') {
-        $phone = substr($phone, 2); // remove 55 → fica DDD+local (10 ou 11 dig)
+    // Apenas garante o prefixo 55 — não altera o 9° dígito
+    if (strlen($phone) < 12) {
+        $phone = '55' . $phone;
     }
-    // Passo 2: se 10 dígitos (DDD+local sem 9°), adiciona o 9° dígito
-    if (strlen($phone) === 10) {
-        $phone = substr($phone, 0, 2) . '9' . substr($phone, 2); // 11 dig
-    }
-    // Passo 3: readiciona 55 → 13 dígitos finais (5582999025155)
-    $phone = '55' . $phone;
 
     $payload = json_encode([
         'phone'   => $phone,
