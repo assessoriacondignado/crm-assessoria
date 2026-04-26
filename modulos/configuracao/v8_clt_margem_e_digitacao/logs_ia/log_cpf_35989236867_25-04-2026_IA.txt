@@ -42,3 +42,5 @@
 [25-04-2026 13:12:40] [RESPOSTA_ENVIADA - enviar_proposta] => {"success":true,"proposal_id":"3a696aa2-07e7-4980-a482-d0dc894ded9a","link_assinatura":"https:\/\/ca-consignado-privado-module.yellowisland-b252a8a0.eastus.azurecontainerapps.io\/operation\/3a696aa2-07e7-4980-a482-d0dc894ded9a\/redirect","msg":"Proposta gerada!"}
 [25-04-2026 16:30:14] [REQUISICAO_RECEBIDA - consulta_completa] => {"acao":"consulta_completa","cpf":"35989236867","telefone":"558299025155"}
 [25-04-2026 16:30:36] [RESPOSTA_ENVIADA - consulta_completa] => {"success":false,"status":"AGUARDANDO_DATAPREV","msg":"Processando na fila. O sistema enviará o resultado automaticamente."}
+[25-04-2026 18:46:44] [REQUISICAO_RECEBIDA - consulta_completa] => {"acao":"consulta_completa","cpf":"35989236867","telefone":"558299025155"}
+[25-04-2026 18:47:03] [RESPOSTA_ENVIADA - consulta_completa] => {"success":false,"status":"AGUARDANDO_DATAPREV","msg":"Processando na fila. O sistema enviará o resultado automaticamente."}
