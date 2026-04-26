@@ -175,6 +175,30 @@ include $caminho_header;
 .badge-ativo   { background:#198754; }
 .badge-inativo { background:#6c757d; }
 </style>
+<script>
+async function testarEnvioGPT() {
+    const tel  = document.getElementById('test_telefone').value.trim();
+    const msg  = document.getElementById('test_mensagem').value.trim();
+    const cfgId = document.getElementById('test_config_id').value;
+    if (!tel) { alert('Informe o telefone.'); return; }
+
+    const log = document.getElementById('test_log');
+    const box = document.getElementById('test_resultado');
+    log.textContent = 'Executando...';
+    box.style.display = 'block';
+
+    const fd = new FormData();
+    fd.append('acao', 'testar_envio_gpt');
+    fd.append('telefone', tel);
+    fd.append('mensagem', msg);
+    fd.append('config_id', cfgId);
+
+    const r = await fetch('ajax_testar_gptmaker.php', { method: 'POST', body: fd });
+    const j = await r.json();
+    log.textContent = j.log;
+    log.style.color  = j.ok ? '#4ec94e' : '#ff6b6b';
+}
+</script>
 
 <div class="container-fluid py-3">
 <?php if ($msg): ?>
@@ -243,6 +267,40 @@ include $caminho_header;
             <?php endif; ?>
           </div>
         </form>
+      </div>
+    </div>
+
+    <!-- Testar Envio GPTMaker -->
+    <div class="card border-dark shadow-sm mt-3 gpt-card">
+      <div class="card-header bg-dark text-white fw-bold small">
+        <i class="fas fa-paper-plane me-2 text-warning"></i>Testar Envio de Mensagem
+      </div>
+      <div class="card-body py-2">
+        <div class="mb-2">
+          <label class="form-label fw-bold small mb-1">Telefone (como está no banco)</label>
+          <input type="text" id="test_telefone" class="form-control form-control-sm border-dark font-monospace"
+            placeholder="Ex: 8299025155 ou 558299025155" style="font-size:11px;">
+          <div class="form-text">O código mostrará como o número é processado antes de enviar.</div>
+        </div>
+        <div class="mb-2">
+          <label class="form-label fw-bold small mb-1">Mensagem de Teste</label>
+          <input type="text" id="test_mensagem" class="form-control form-control-sm border-dark"
+            value="[TESTE] Mensagem de diagnóstico do sistema." style="font-size:11px;">
+        </div>
+        <div class="mb-2">
+          <label class="form-label fw-bold small mb-1">Configuração GPTMaker</label>
+          <select id="test_config_id" class="form-select form-select-sm border-dark" style="font-size:11px;">
+            <?php foreach ($configs as $cfg): ?>
+            <option value="<?= $cfg['ID'] ?>"><?= htmlspecialchars($cfg['NOME_USUARIO_ATUAL'] ?? $cfg['NOME_USUARIO']) ?> — <?= substr($cfg['AGENT_ID'],0,18) ?>...</option>
+            <?php endforeach; ?>
+          </select>
+        </div>
+        <button type="button" class="btn btn-sm btn-warning border-dark fw-bold" onclick="testarEnvioGPT()">
+          <i class="fas fa-vial me-1"></i>Executar Teste
+        </button>
+        <div id="test_resultado" class="mt-2" style="display:none;">
+          <pre id="test_log" style="background:#1e1e1e;color:#d4d4d4;font-size:11px;border-radius:4px;padding:10px;max-height:200px;overflow-y:auto;margin:0;"></pre>
+        </div>
       </div>
     </div>
 

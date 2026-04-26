@@ -63,20 +63,18 @@ function normalizarFU($str) {
 function enviarGPTMaker($gpt_agent, $gpt_token, $telefone, $mensagem) {
     $phone = preg_replace('/\D/', '', $telefone);
     if (strlen($phone) < 10) return false;
-    // Garante prefixo 55 mas NAO adiciona 9 digito — GPTMaker usa o numero original do WhatsApp
-    if (strlen($phone) < 12) {
-        $phone = '55' . $phone;
+
+    // Normaliza para formato GPTMaker: 55 + DDD(2) + 9 + local(8) = 13 dígitos
+    // Passo 1: remove código do país 55 se presente
+    if (strlen($phone) >= 12 && substr($phone, 0, 2) === '55') {
+        $phone = substr($phone, 2); // remove 55 → fica DDD+local (10 ou 11 dig)
     }
-    // Remove o 9 dígito adicionado caso esteja presente (formato original Meta: 12 dígitos)
-    // Ex: 5582999025155 (13 dig) -> 558299025155 (12 dig)
-    if (strlen($phone) === 13 && substr($phone, 0, 2) === '55') {
-        $ddd   = substr($phone, 2, 2);    // ex: 82
-        $local = substr($phone, 4);       // ex: 999025155 (9 digitos)
-        // Se o local tem 9 dígitos e começa com 9, remove o primeiro 9
-        if (strlen($local) === 9 && $local[0] === '9') {
-            $phone = '55' . $ddd . substr($local, 1); // 55 + 82 + 99025155
-        }
+    // Passo 2: se 10 dígitos (DDD+local sem 9°), adiciona o 9° dígito
+    if (strlen($phone) === 10) {
+        $phone = substr($phone, 0, 2) . '9' . substr($phone, 2); // 11 dig
     }
+    // Passo 3: readiciona 55 → 13 dígitos finais (5582999025155)
+    $phone = '55' . $phone;
 
     $payload = json_encode([
         'phone'   => $phone,
