@@ -476,9 +476,12 @@ try {
                 $tel_whatsapp = $req['telefone'] ?? '';
                 $tel_whatsapp = preg_replace('/\D/', '', $tel_whatsapp);
 
-                $pdo->prepare("INSERT INTO INTEGRACAO_V8_IA_FOLLOWUP (CPF_CLIENTE, TELEFONE, TELEFONE_WHATSAPP, CONSULT_ID, TOKEN_IA, AGENT_ID) VALUES (?,?,?,?,?,?)
-                               ON DUPLICATE KEY UPDATE STATUS='PENDENTE', TENTATIVAS=0, DATA_ULTIMA_TENTATIVA=NULL, AGENT_ID=VALUES(AGENT_ID), TELEFONE_WHATSAPP=VALUES(TELEFONE_WHATSAPP)")
-                    ->execute([$cpf, $telefone, $tel_whatsapp, $ultimo_consult_id, $tokenIA, $agentId_fu]);
+                // Chat ID da conversa no GPTMaker (necessário para POST /v2/chat/{chatId}/send-message)
+                $chat_id_gpt = trim($req['chat_id'] ?? '');
+
+                $pdo->prepare("INSERT INTO INTEGRACAO_V8_IA_FOLLOWUP (CPF_CLIENTE, TELEFONE, TELEFONE_WHATSAPP, CONSULT_ID, TOKEN_IA, AGENT_ID, CHAT_ID) VALUES (?,?,?,?,?,?,?)
+                               ON DUPLICATE KEY UPDATE STATUS='PENDENTE', TENTATIVAS=0, DATA_ULTIMA_TENTATIVA=NULL, AGENT_ID=VALUES(AGENT_ID), TELEFONE_WHATSAPP=VALUES(TELEFONE_WHATSAPP), CHAT_ID=VALUES(CHAT_ID)")
+                    ->execute([$cpf, $telefone, $tel_whatsapp, $ultimo_consult_id, $tokenIA, $agentId_fu, $chat_id_gpt ?: null]);
                 enviarResposta($cpf, $acao, ['success' => false, 'status' => 'AGUARDANDO_DATAPREV', 'msg' => 'Processando na fila. O sistema enviará o resultado automaticamente.']);
             }
             break;

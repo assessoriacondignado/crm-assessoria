@@ -91,6 +91,26 @@ function enviarGPTMaker($gpt_agent, $gpt_token, $telefone, $mensagem) {
     return ['http' => $http, 'body' => $res];
 }
 
+// Envia mensagem diretamente na conversa existente via chatId (POST /v2/chat/{chatId}/send-message)
+function enviarGPTMakerChat($chat_id, $gpt_token, $mensagem) {
+    $payload = json_encode(['message' => $mensagem], JSON_UNESCAPED_UNICODE);
+    $ch = curl_init("https://api.gptmaker.ai/v2/chat/{$chat_id}/send-message");
+    curl_setopt_array($ch, [
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_POST           => true,
+        CURLOPT_POSTFIELDS     => $payload,
+        CURLOPT_TIMEOUT        => 15,
+        CURLOPT_HTTPHEADER     => [
+            'Authorization: Bearer ' . $gpt_token,
+            'Content-Type: application/json'
+        ]
+    ]);
+    $res  = curl_exec($ch);
+    $http = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+    return ['http' => $http, 'body' => $res];
+}
+
 $ST_OK   = ['SUCCESS','COMPLETED','APPROVED','PRE_APPROVED',
             'SIMULATED','READY','AVAILABLE','MARGIN_AVAILABLE','AUTHORIZED','DONE','FINISHED'];
 $ST_WAIT = ['WAITING_CREDIT_ANALYSIS','PROCESSING','PENDING','WAITING','WAITING_CONSULT',
@@ -100,10 +120,11 @@ $ST_ERRO = ['ERROR','REJECTED','DENIED','CANCELED','EXPIRED','FAILED'];
 foreach ($pendentes as $fu) {
     $cpf        = $fu['CPF_CLIENTE'];
     // Usa telefone WhatsApp (com 55) se disponível, senão telefone limpo
-    $telefone   = !empty($fu['TELEFONE_WHATSAPP']) ? $fu['TELEFONE_WHATSAPP'] : ($fu['TELEFONE'] ?: '11900000000');
-    $consult_id = $fu['CONSULT_ID'];
-    $token_ia   = $fu['TOKEN_IA'];
+    $telefone       = !empty($fu['TELEFONE_WHATSAPP']) ? $fu['TELEFONE_WHATSAPP'] : ($fu['TELEFONE'] ?: '11900000000');
+    $consult_id     = $fu['CONSULT_ID'];
+    $token_ia       = $fu['TOKEN_IA'];
     $agent_id_salvo = $fu['AGENT_ID'] ?? null;
+    $chat_id_salvo  = $fu['CHAT_ID'] ?? null;
     $tentativas = (int)$fu['TENTATIVAS'] + 1;
 
     logFU("CPF {$cpf} | Tentativa {$tentativas} | CONSULT {$consult_id} | Agent: " . ($agent_id_salvo ?: 'lookup'));
@@ -242,8 +263,15 @@ foreach ($pendentes as $fu) {
                 }
             } catch (\Throwable $eNotif) { logFU("Notif grupo erro: " . $eNotif->getMessage()); }
 
-            $gptRes = enviarGPTMaker($gpt_agent, $gpt_token, $telefone, $msg_cliente);
-            logFU("CPF {$cpf} | GPTMaker HTTP: " . ($gptRes['http'] ?? 'ERR') . " | " . substr($gptRes['body'] ?? '', 0, 100));
+            // Usa endpoint direto por chatId se disponível (entrega na conversa existente)
+            // Senão usa o endpoint por agente+telefone (pode criar nova conversa)
+            if (!empty($chat_id_salvo)) {
+                $gptRes = enviarGPTMakerChat($chat_id_salvo, $gpt_token, $msg_cliente);
+                logFU("CPF {$cpf} | GPTMaker CHAT endpoint | chatId: {$chat_id_salvo} | HTTP: " . ($gptRes['http'] ?? 'ERR'));
+            } else {
+                $gptRes = enviarGPTMaker($gpt_agent, $gpt_token, $telefone, $msg_cliente);
+                logFU("CPF {$cpf} | GPTMaker AGENT endpoint | HTTP: " . ($gptRes['http'] ?? 'ERR'));
+            }
 
             $pdo->prepare("UPDATE INTEGRACAO_V8_IA_FOLLOWUP SET STATUS='PROCESSADO', OBSERVACAO=? WHERE ID=?")
                 ->execute(["Simulação enviada: {$vl_fmt} / {$prazo}x {$vp_fmt}", $fu['ID']]);
