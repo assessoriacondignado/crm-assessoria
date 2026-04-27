@@ -61,17 +61,24 @@ function mascaraCPF($cpf) {
 }
 
 function mapearColunaCliente($campo) {
-    // Adicionado prefixo 'c.' para evitar ambiguidade no JOIN
     $mapa = [
-        'cpf' => 'c.CPF',
-        'nome' => 'c.NOME',
-        'celular' => 'c.CELULAR',
-        'cnpj' => 'c.CNPJ',
-        'banco_nome' => 'c.BANCO_NOME',
-        'chave_pix' => 'c.CHAVE_PIX',
-        'grupo_whats' => 'c.GRUPO_WHATS',
+        // ── Dados do Cliente (CLIENTE_CADASTRO) ──
+        'cpf'            => 'c.CPF',
+        'nome'           => 'c.NOME',
+        'celular'        => 'c.CELULAR',
+        'cnpj'           => 'c.CNPJ',
+        'banco_nome'     => 'c.BANCO_NOME',
+        'chave_pix'      => 'c.CHAVE_PIX',
+        'grupo_whats'    => 'c.GRUPO_WHATS',
         'grupo_assessor' => 'c.GRUPO_ASSESSOR',
-        'situacao' => 'c.SITUACAO'
+        'situacao'       => 'c.SITUACAO',
+        // ── Dados do Usuário (CLIENTE_USUARIO) ──
+        'u_nome'         => 'u.NOME',
+        'u_usuario'      => 'u.USUARIO',
+        'u_email'        => 'u.EMAIL',
+        'u_grupo'        => 'u.GRUPO_USUARIOS',
+        'u_situacao'     => 'u.Situação',
+        'u_ultimo_acesso'=> 'u.ULTIMO_ACESSO',
     ];
     return isset($mapa[$campo]) ? $mapa[$campo] : 'c.NOME';
 }
@@ -111,8 +118,9 @@ try {
 
         if (!$is_busca_avancada && !empty($termo_busca) && empty($cpf_selecionado)) {
             $termo_limpo_num = preg_replace('/[^0-9]/', '', $termo_busca);
-            
-            $filtro_sql .= " AND (c.NOME LIKE :termo OR c.BANCO_NOME LIKE :termo OR c.NOME_EMPRESA LIKE :termo OR e.NOME_CADASTRO LIKE :termo ";
+
+            // Inclui u.NOME (nome do usuário) e u.EMAIL na busca simples
+            $filtro_sql .= " AND (c.NOME LIKE :termo OR c.BANCO_NOME LIKE :termo OR c.NOME_EMPRESA LIKE :termo OR e.NOME_CADASTRO LIKE :termo OR u.NOME LIKE :termo OR u.EMAIL LIKE :termo ";
             $params[':termo'] = "%$termo_busca%";
 
             if (!empty($termo_limpo_num)) {
@@ -158,7 +166,7 @@ try {
 
             $sql_base = " FROM CLIENTE_CADASTRO c LEFT JOIN CLIENTE_USUARIO u ON c.CPF = u.CPF LEFT JOIN CLIENTE_EMPRESAS e ON c.CNPJ = e.CNPJ WHERE 1=1 " . $filtro_sql;
             $limite_busca = $limites_por_pagina + 1;
-            $sql_dados = "SELECT c.*, u.EMAIL, e.NOME_CADASTRO as NOME_EMPRESA_VINCULADA " . $sql_base . " ORDER BY c.NOME ASC LIMIT " . (int)$limite_busca . " OFFSET " . (int)$offset;
+            $sql_dados = "SELECT c.*, u.EMAIL, u.NOME as NOME_USUARIO, u.USUARIO as LOGIN_USUARIO, u.GRUPO_USUARIOS, e.NOME_CADASTRO as NOME_EMPRESA_VINCULADA " . $sql_base . " ORDER BY c.NOME ASC LIMIT " . (int)$limite_busca . " OFFSET " . (int)$offset;
             $stmt = $pdo->prepare($sql_dados);
             $stmt->execute($params);
             $resultados_busca = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -288,15 +296,25 @@ $readonly_attr = (!$pode_editar_excluir) ? 'disabled readonly' : '';
                             <div class="row g-2 mb-2 linha-filtro align-items-center">
                                 <div class="col-md-3">
                                     <select name="campo[]" class="form-select border-dark shadow-sm">
-                                        <option value="nome" <?= $c_sel=='nome'?'selected':'' ?>>Nome</option>
-                                        <option value="cpf" <?= $c_sel=='cpf'?'selected':'' ?>>CPF</option>
-                                        <option value="celular" <?= $c_sel=='celular'?'selected':'' ?>>Celular</option>
-                                        <option value="cnpj" <?= $c_sel=='cnpj'?'selected':'' ?>>CNPJ Vinculado</option>
-                                        <option value="banco_nome" <?= $c_sel=='banco_nome'?'selected':'' ?>>Banco</option>
-                                        <option value="chave_pix" <?= $c_sel=='chave_pix'?'selected':'' ?>>Chave PIX</option>
-                                        <option value="grupo_whats" <?= $c_sel=='grupo_whats'?'selected':'' ?>>Grupo Whats</option>
-                                        <option value="grupo_assessor" <?= $c_sel=='grupo_assessor'?'selected':'' ?>>Grupo Assessor</option>
-                                        <option value="situacao" <?= $c_sel=='situacao'?'selected':'' ?>>Situação</option>
+                                        <optgroup label="── Dados do Cliente ──">
+                                            <option value="nome"           <?= $c_sel=='nome'?'selected':'' ?>>Nome</option>
+                                            <option value="cpf"            <?= $c_sel=='cpf'?'selected':'' ?>>CPF</option>
+                                            <option value="celular"        <?= $c_sel=='celular'?'selected':'' ?>>Celular</option>
+                                            <option value="cnpj"           <?= $c_sel=='cnpj'?'selected':'' ?>>CNPJ Vinculado</option>
+                                            <option value="banco_nome"     <?= $c_sel=='banco_nome'?'selected':'' ?>>Banco</option>
+                                            <option value="chave_pix"      <?= $c_sel=='chave_pix'?'selected':'' ?>>Chave PIX</option>
+                                            <option value="grupo_whats"    <?= $c_sel=='grupo_whats'?'selected':'' ?>>Grupo Whats</option>
+                                            <option value="grupo_assessor" <?= $c_sel=='grupo_assessor'?'selected':'' ?>>Grupo Assessor</option>
+                                            <option value="situacao"       <?= $c_sel=='situacao'?'selected':'' ?>>Situação</option>
+                                        </optgroup>
+                                        <optgroup label="── Dados do Usuário ──">
+                                            <option value="u_nome"          <?= $c_sel=='u_nome'?'selected':'' ?>>Nome do Usuário</option>
+                                            <option value="u_usuario"       <?= $c_sel=='u_usuario'?'selected':'' ?>>Login</option>
+                                            <option value="u_email"         <?= $c_sel=='u_email'?'selected':'' ?>>E-mail</option>
+                                            <option value="u_grupo"         <?= $c_sel=='u_grupo'?'selected':'' ?>>Grupo / Perfil</option>
+                                            <option value="u_situacao"      <?= $c_sel=='u_situacao'?'selected':'' ?>>Status da Conta</option>
+                                            <option value="u_ultimo_acesso" <?= $c_sel=='u_ultimo_acesso'?'selected':'' ?>>Último Acesso</option>
+                                        </optgroup>
                                     </select>
                                 </div>
                                 <div class="col-md-3">
@@ -545,67 +563,130 @@ $readonly_attr = (!$pode_editar_excluir) ? 'disabled readonly' : '';
                                 <input type="email" class="form-control border-dark" name="email" value="<?= htmlspecialchars($cliente_ficha['EMAIL'] ?? '') ?>" <?= $readonly_attr ?>>
                             </div>
 
+                            <?php
+                            // Carrega dados completos do usuário para o bloco unificado
+                            $dados_usuario_completo = [];
+                            if (!empty($cliente_ficha['CPF'])) {
+                                $stmtU = $pdo->prepare("SELECT USUARIO, SENHA, GRUPO_USUARIOS, Situação, DATA_EXPIRAR, ULTIMO_ACESSO, FORCAR_LOGOUT FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+                                $stmtU->execute([$cliente_ficha['CPF']]);
+                                $dados_usuario_completo = $stmtU->fetch(PDO::FETCH_ASSOC) ?: [];
+                            }
+                            $pode_ver_senha = verificaPermissao($pdo, 'CADASTRO_CLEINTE_SENHA_VER');
+                            $senha_val = $dados_usuario_completo['SENHA'] ?? '';
+                            ?>
+
+                            <!-- EMPRESA VINCULADA — retrátil, começa recolhida -->
                             <div class="col-md-12 mt-4">
-                                <div class="p-3 border border-dark rounded bg-white shadow-sm" style="border-left: 5px solid #ffc107 !important;">
-                                    <div class="d-flex justify-content-between align-items-center mb-3">
-                                        <h6 class="fw-bold text-primary m-0"><i class="fas fa-building me-2"></i> Empresa Vinculada</h6>
-                                        <?php if(!empty($cliente_ficha['CNPJ'])): ?>
-                                            <a href="/modulos/cliente_e_usuario/cadastro_empresa.php?cnpj_selecionado=<?= urlencode($cliente_ficha['CNPJ']) ?>"
-                                               class="btn btn-sm btn-outline-primary fw-bold bg-white" target="_blank" title="Editar dados da empresa vinculada">
-                                                <i class="fas fa-external-link-alt me-1"></i> Editar Empresa
-                                            </a>
-                                        <?php else: ?>
-                                            <a href="/modulos/cliente_e_usuario/cadastro_empresa.php?acao=novo"
-                                               class="btn btn-sm btn-outline-success fw-bold bg-white" target="_blank" title="Cadastrar nova empresa">
-                                                <i class="fas fa-plus me-1"></i> Nova Empresa
-                                            </a>
-                                        <?php endif; ?>
+                                <div class="border border-dark rounded bg-white shadow-sm overflow-hidden">
+                                    <button type="button" class="btn btn-light w-100 text-start fw-bold py-2 px-3 border-0 d-flex justify-content-between align-items-center"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseEmpresa" style="border-left:5px solid #ffc107 !important;">
+                                        <span><i class="fas fa-building me-2 text-warning"></i> Empresa Vinculada
+                                            <?php if(empty($cliente_ficha['CNPJ'])): ?>
+                                                <span class="badge bg-danger ms-2 small">Sem vínculo</span>
+                                            <?php else: ?>
+                                                <span class="badge bg-success ms-2 small"><?= htmlspecialchars($lista_empresas[array_search($cliente_ficha['CNPJ'], array_column($lista_empresas,'CNPJ'))] ['NOME_CADASTRO'] ?? $cliente_ficha['CNPJ']) ?></span>
+                                            <?php endif; ?>
+                                        </span>
+                                        <i class="fas fa-chevron-down small"></i>
+                                    </button>
+                                    <div class="collapse" id="collapseEmpresa">
+                                        <div class="p-3 border-top border-dark">
+                                            <?php if(empty($cliente_ficha['CNPJ'])): ?>
+                                                <p class="text-danger small fw-bold mb-2"><i class="fas fa-exclamation-circle"></i> Este cliente ainda não possui empresa atrelada.</p>
+                                            <?php endif; ?>
+                                            <?php
+                                            $emp_atual_nome = '';
+                                            if (!empty($cliente_ficha['CNPJ']) && isset($lista_empresas)) {
+                                                foreach($lista_empresas as $emp) {
+                                                    if ($emp['CNPJ'] === $cliente_ficha['CNPJ']) { $emp_atual_nome = $emp['NOME_CADASTRO'] . ' (CNPJ: ' . $emp['CNPJ'] . ')'; break; }
+                                                }
+                                            }
+                                            ?>
+                                            <!-- Busca de empresa com pesquisa ao digitar -->
+                                            <input type="hidden" name="cnpj_vinculado" id="cnpjVinculadoHidden" value="<?= htmlspecialchars($cliente_ficha['CNPJ'] ?? '') ?>">
+                                            <div class="position-relative" id="empresaBuscaWrapper">
+                                                <input type="text" id="empresaBuscaInput" class="form-control border-dark"
+                                                    placeholder="Digite para pesquisar empresa..."
+                                                    value="<?= htmlspecialchars($emp_atual_nome) ?>"
+                                                    <?= $readonly_attr ?> autocomplete="off"
+                                                    oninput="filtrarEmpresas(this.value)">
+                                                <div id="empresaSugestoes" class="list-group position-absolute w-100 shadow-lg border border-dark" style="z-index:9999;max-height:220px;overflow-y:auto;display:none;top:100%;"></div>
+                                            </div>
+                                            <div class="mt-2 d-flex gap-2">
+                                                <button type="button" class="btn btn-sm btn-outline-danger" onclick="limparEmpresa()"><i class="fas fa-times me-1"></i>Remover vínculo</button>
+                                                <?php if(!empty($cliente_ficha['CNPJ'])): ?>
+                                                <a href="/modulos/cliente_e_usuario/cadastro_empresa.php?cnpj_selecionado=<?= urlencode($cliente_ficha['CNPJ']) ?>" class="btn btn-sm btn-outline-primary" target="_blank"><i class="fas fa-external-link-alt me-1"></i>Editar Empresa</a>
+                                                <?php endif; ?>
+                                                <a href="/modulos/cliente_e_usuario/cadastro_empresa.php?acao=novo" class="btn btn-sm btn-outline-success" target="_blank"><i class="fas fa-plus me-1"></i>Nova Empresa</a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <?php if(empty($cliente_ficha['CNPJ'])): ?>
-                                        <p class="text-danger small fw-bold mb-2"><i class="fas fa-exclamation-circle"></i> Atenção: Este cliente ainda não possui uma empresa atrelada.</p>
-                                    <?php endif; ?>
-                                    <select name="cnpj_vinculado" class="form-select border-dark border-2" <?= $readonly_attr ?>>
-                                        <option value="">-- Sem vínculo empresarial --</option>
-                                        <?php if(isset($lista_empresas)): ?>
-                                            <?php foreach($lista_empresas as $emp): ?>
-                                                <option value="<?= $emp['CNPJ'] ?>" <?= ($cliente_ficha['CNPJ'] ?? '') == $emp['CNPJ'] ? 'selected' : '' ?>>
-                                                    <?= htmlspecialchars($emp['NOME_CADASTRO']) ?> (CNPJ: <?= $emp['CNPJ'] ?>)
-                                                </option>
-                                            <?php endforeach; ?>
-                                        <?php endif; ?>
-                                    </select>
                                 </div>
                             </div>
-                            
+
+                            <!-- CREDENCIAIS DE ACESSO — retrátil, começa recolhida -->
                             <div class="col-md-12 mt-3">
-                                <div class="p-3 border border-dark rounded shadow-sm" style="background-color: #e3f2fd; border-left: 5px solid #0d6efd !important;">
-                                    <div class="d-flex justify-content-between align-items-center mb-3">
-                                        <h6 class="fw-bold text-primary m-0"><i class="fas fa-key me-2"></i> Credenciais de Acesso ao Sistema</h6>
-                                        <a href="/modulos/cliente_e_usuario/cadastro_usuario.php?busca=<?= $cliente_ficha['CPF'] ?>" class="btn btn-sm btn-outline-primary fw-bold bg-white" title="Ir para módulo de Usuários" target="_blank"><i class="fas fa-external-link-alt"></i> Editar Acesso</a>
-                                    </div>
-                                    
-                                    <div class="row g-2">
-                                        <div class="col-md-4">
-                                            <label class="fw-bold small text-dark">Login / Usuário gerado:</label>
-                                            <input type="text" class="form-control border-primary bg-white text-secondary fw-bold" value="<?= !empty($dados_acesso['USUARIO']) ? htmlspecialchars($dados_acesso['USUARIO']) : 'Ainda não criado' ?>" readonly>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label class="fw-bold small text-dark">Senha atual:</label>
-                                            <div class="input-group">
-                                                <?php $pode_ver_senha = verificaPermissao($pdo, 'CADASTRO_CLEINTE_SENHA_VER'); ?>
-                                                <input type="text" class="form-control border-primary bg-white text-secondary" value="<?= $pode_ver_senha && !empty($dados_acesso['SENHA']) ? htmlspecialchars($dados_acesso['SENHA']) : '***' ?>" readonly>
-                                                <span class="input-group-text bg-primary text-white border-primary"><i class="fas fa-lock"></i></span>
+                                <div class="border border-dark rounded overflow-hidden" style="background-color:#e3f2fd;">
+                                    <button type="button" class="btn w-100 text-start fw-bold py-2 px-3 border-0 d-flex justify-content-between align-items-center"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseCredenciais" style="background-color:#e3f2fd; border-left:5px solid #0d6efd !important;">
+                                        <span><i class="fas fa-key me-2 text-primary"></i> Credenciais de Acesso ao Sistema
+                                            <?php $sit_us = $dados_usuario_completo['Situação'] ?? 'NÃO REGISTRADO'; ?>
+                                            <span class="badge <?= $sit_us === 'ativo' ? 'bg-success' : 'bg-secondary' ?> ms-2 small"><?= strtoupper($sit_us) ?></span>
+                                        </span>
+                                        <i class="fas fa-chevron-down small text-primary"></i>
+                                    </button>
+                                    <div class="collapse" id="collapseCredenciais">
+                                        <div class="p-3 border-top border-primary">
+                                            <div class="row g-2">
+                                                <div class="col-md-4">
+                                                    <label class="fw-bold small text-dark">Login / Usuário:</label>
+                                                    <input type="text" class="form-control border-primary bg-white fw-bold" value="<?= !empty($dados_usuario_completo['USUARIO']) ? htmlspecialchars($dados_usuario_completo['USUARIO']) : 'Ainda não criado' ?>" readonly>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="fw-bold small text-dark">Senha atual:</label>
+                                                    <div class="input-group">
+                                                        <input type="password" id="campoSenhaAtual" class="form-control border-primary bg-white"
+                                                            value="<?= htmlspecialchars($senha_val) ?>"
+                                                            <?= $pode_ver_senha ? 'data-permitido="1"' : '' ?> readonly>
+                                                        <?php if ($pode_ver_senha): ?>
+                                                        <button type="button" class="btn btn-outline-primary" onclick="toggleVerSenha()" title="Ver/ocultar senha"><i class="fas fa-eye" id="iconeSenha"></i></button>
+                                                        <?php else: ?>
+                                                        <span class="input-group-text bg-secondary text-white border-secondary" title="Sem permissão para ver a senha"><i class="fas fa-lock"></i></span>
+                                                        <?php endif; ?>
+                                                        <?php if ($pode_editar_excluir): ?>
+                                                        <button type="button" class="btn btn-outline-warning" onclick="gerarNovaSenha('<?= htmlspecialchars($cliente_ficha['CPF']) ?>')" title="Gerar nova senha"><i class="fas fa-sync-alt"></i></button>
+                                                        <?php endif; ?>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="fw-bold small text-dark">Status da Conta:</label>
+                                                    <?php $cor_status = ($sit_us == 'ativo') ? 'success' : (($sit_us == 'NÃO REGISTRADO') ? 'secondary' : 'danger'); ?>
+                                                    <div class="form-control border-primary bg-white text-<?= $cor_status ?> fw-bold text-uppercase">
+                                                        <i class="fas fa-circle me-1 small"></i> <?= $sit_us ?>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="fw-bold small text-dark">Grupo / Perfil:</label>
+                                                    <input type="text" class="form-control border-primary bg-white" value="<?= htmlspecialchars($dados_usuario_completo['GRUPO_USUARIOS'] ?? '--') ?>" readonly>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="fw-bold small text-dark">Expira em:</label>
+                                                    <input type="text" class="form-control border-primary bg-white" value="<?= !empty($dados_usuario_completo['DATA_EXPIRAR']) ? date('d/m/Y', strtotime($dados_usuario_completo['DATA_EXPIRAR'])) : '--' ?>" readonly>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="fw-bold small text-dark">Último acesso:</label>
+                                                    <input type="text" class="form-control border-primary bg-white" value="<?= !empty($dados_usuario_completo['ULTIMO_ACESSO']) ? date('d/m/Y H:i', strtotime($dados_usuario_completo['ULTIMO_ACESSO'])) : '--' ?>" readonly>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label class="fw-bold small text-dark">Status da Conta:</label>
-                                            <?php 
-                                                $status_acesso = $dados_acesso['Situação'] ?? 'NÃO REGISTRADO';
-                                                $cor_status = ($status_acesso == 'ativo') ? 'success' : (($status_acesso == 'NÃO REGISTRADO') ? 'secondary' : 'danger');
-                                            ?>
-                                            <div class="form-control border-primary bg-white text-<?= $cor_status ?> fw-bold text-uppercase">
-                                                <i class="fas fa-circle me-1 small"></i> <?= $status_acesso ?>
+                                            <div class="mt-2 d-flex gap-2 flex-wrap">
+                                                <button type="button" class="btn btn-sm btn-outline-info" onclick="enviarResetSenha('<?= htmlspecialchars($cliente_ficha['CPF']) ?>')">
+                                                    <i class="fas fa-paper-plane me-1"></i>Enviar Link de Reset
+                                                </button>
+                                                <a href="/modulos/cliente_e_usuario/cadastro_usuario.php?busca=<?= $cliente_ficha['CPF'] ?>" class="btn btn-sm btn-outline-primary" target="_blank">
+                                                    <i class="fas fa-external-link-alt me-1"></i>Gerenciar Usuário
+                                                </a>
                                             </div>
+                                            <div id="resetSenhaResultado" class="mt-2"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -887,6 +968,71 @@ async function atualizarStatusTarefa(id, status) {
     const fd = new FormData(); fd.append('acao','atualizar_status'); fd.append('id', id); fd.append('status', status);
     await fetch('cliente_ajax.php', {method:'POST', body:fd});
     await carregarTarefasCliente();
+}
+
+// ── Empresa busca ao digitar ─────────────────────────────────
+const _empresas = <?= json_encode(isset($lista_empresas) ? $lista_empresas : [], JSON_UNESCAPED_UNICODE) ?>;
+function filtrarEmpresas(q) {
+    const box = document.getElementById('empresaSugestoes');
+    if (!box) return;
+    const t = q.toLowerCase().trim();
+    if (!t) { box.style.display='none'; return; }
+    const matches = _empresas.filter(e =>
+        e.NOME_CADASTRO.toLowerCase().includes(t) || e.CNPJ.includes(t)
+    ).slice(0, 20);
+    if (!matches.length) { box.innerHTML='<a class="list-group-item text-muted">Nenhuma empresa encontrada</a>'; box.style.display='block'; return; }
+    box.innerHTML = '<a class="list-group-item list-group-item-action text-muted small" onclick="selecionarEmpresa(\'\',\'-- Sem vínculo --\')">-- Sem vínculo empresarial --</a>'
+        + matches.map(e => `<a class="list-group-item list-group-item-action" onclick="selecionarEmpresa('${e.CNPJ}','${e.NOME_CADASTRO.replace(/'/g,"\\'")} (CNPJ: ${e.CNPJ})')">`
+            + `<strong>${e.NOME_CADASTRO}</strong> <small class="text-muted">${e.CNPJ}</small></a>`).join('');
+    box.style.display = 'block';
+}
+function selecionarEmpresa(cnpj, label) {
+    const inp = document.getElementById('empresaBuscaInput');
+    const hid = document.getElementById('cnpjVinculadoHidden');
+    const box = document.getElementById('empresaSugestoes');
+    if (inp) inp.value = label;
+    if (hid) hid.value = cnpj;
+    if (box) box.style.display = 'none';
+}
+function limparEmpresa() { selecionarEmpresa('', ''); }
+document.addEventListener('click', e => {
+    const w = document.getElementById('empresaBuscaWrapper');
+    if (w && !w.contains(e.target)) { const b = document.getElementById('empresaSugestoes'); if(b) b.style.display='none'; }
+});
+
+// ── Senha: ver/ocultar ────────────────────────────────────────
+function toggleVerSenha() {
+    const inp = document.getElementById('campoSenhaAtual');
+    const ico = document.getElementById('iconeSenha');
+    if (!inp || !inp.dataset.permitido) return;
+    if (inp.type === 'password') { inp.type = 'text'; ico.className = 'fas fa-eye-slash'; }
+    else { inp.type = 'password'; ico.className = 'fas fa-eye'; }
+}
+
+// ── Gerar nova senha ──────────────────────────────────────────
+async function gerarNovaSenha(cpf) {
+    if (!confirm('Gerar uma nova senha aleatória para este usuário?')) return;
+    const fd = new FormData();
+    fd.append('acao', 'gerar_senha'); fd.append('cpf', cpf);
+    const r = await fetch('ajax_cliente_usuario.php', {method:'POST', body:fd});
+    const j = await r.json();
+    if (j.ok) {
+        const inp = document.getElementById('campoSenhaAtual');
+        if (inp) { inp.value = j.senha; inp.type = 'text'; }
+        const ico = document.getElementById('iconeSenha'); if(ico) ico.className='fas fa-eye-slash';
+        alert('Nova senha gerada: ' + j.senha);
+    } else alert('Erro: ' + j.msg);
+}
+
+// ── Enviar reset de senha ─────────────────────────────────────
+async function enviarResetSenha(cpf) {
+    const fd = new FormData();
+    fd.append('ajax_action','gerar_enviar_reset'); fd.append('cpf_alvo', cpf);
+    const r = await fetch('/modulos/cliente_e_usuario/acoes_usuario.php', {method:'POST', body:fd});
+    const j = await r.json();
+    const div = document.getElementById('resetSenhaResultado');
+    if (j.success) { div.innerHTML='<div class="alert alert-success py-1 small mt-1">✅ Link enviado! <a href="'+j.link+'" target="_blank">Abrir link</a></div>'; }
+    else { div.innerHTML='<div class="alert alert-danger py-1 small mt-1">❌ Erro ao gerar link.</div>'; }
 }
 
 // ── Seleção em lote ──────────────────────────────────────────

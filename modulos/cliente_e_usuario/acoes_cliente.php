@@ -72,14 +72,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['acao_crud'])) {
                 'cpf3' => $cpf_com_11_digitos
             ]);
 
-            // Atualiza também o nome e o celular na tabela CLIENTE_USUARIO para manter sincronizado (com blindagem)
-            $stmtSync = $pdo->prepare("UPDATE CLIENTE_USUARIO SET NOME = :nome, CELULAR = :celular WHERE CPF = :cpf1 OR CPF = :cpf2 OR CPF = :cpf3");
+            // Busca o ID da empresa para sincronizar com CLIENTE_USUARIO.id_empresa
+            $id_empresa_sync = null;
+            if ($cnpj_vinculado) {
+                $stmtEmpId = $pdo->prepare("SELECT ID FROM CLIENTE_EMPRESAS WHERE CNPJ = ? LIMIT 1");
+                $stmtEmpId->execute([$cnpj_vinculado]);
+                $id_empresa_sync = $stmtEmpId->fetchColumn() ?: null;
+            }
+
+            // Sincroniza nome, celular E empresa em CLIENTE_USUARIO
+            $stmtSync = $pdo->prepare("UPDATE CLIENTE_USUARIO SET NOME = :nome, CELULAR = :celular, id_empresa = :id_empresa WHERE CPF = :cpf1 OR CPF = :cpf2 OR CPF = :cpf3");
             $stmtSync->execute([
-                'nome' => $nome, 
-                'celular' => $celular, 
-                'cpf1' => $cpf_cru,
-                'cpf2' => $cpf_so_numeros,
-                'cpf3' => $cpf_com_11_digitos
+                'nome'       => $nome,
+                'celular'    => $celular,
+                'id_empresa' => $id_empresa_sync,
+                'cpf1'       => $cpf_cru,
+                'cpf2'       => $cpf_so_numeros,
+                'cpf3'       => $cpf_com_11_digitos
             ]);
 
         } elseif ($acao == 'excluir') {
