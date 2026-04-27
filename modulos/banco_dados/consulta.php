@@ -1525,7 +1525,7 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
                         <button class="btn btn-success w-50 fw-bold border-dark shadow-sm rounded-0" onclick="exportarHistorico()"><i class="fas fa-file-csv me-1"></i> CSV</button>
                     </div>
                 </div>
-                <div class="table-responsive shadow-sm border-dark rounded-0 overflow-hidden" style="max-height: 400px; overflow-y: auto;">
+                <div class="table-responsive shadow-sm border-dark rounded-0" style="max-height: 420px; overflow-y: scroll;">
                     <table class="table table-hover align-middle mb-0 border-dark text-center fs-6">
                         <thead class="table-dark text-white text-uppercase sticky-top" style="font-size: 0.85rem; z-index: 1;">
                             <tr><th>Data / Hora</th><th>Módulo / Pesquisa</th><th class="text-start">Nome do Cliente</th><th>CPF Alvo</th></tr>
@@ -1534,6 +1534,12 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
                             <tr><td colspan="4" class="text-muted py-4 bg-white fst-italic">Clique em Filtrar para carregar seu histórico.</td></tr>
                         </tbody>
                     </table>
+                </div>
+                <div id="historicoPaginacao" class="text-center mt-2" style="display:none;">
+                    <button class="btn btn-outline-dark fw-bold rounded-0 border-dark" onclick="carregarMaisHistorico()">
+                        <i class="fas fa-plus-circle me-1"></i> Mais 100
+                    </button>
+                    <span id="historicoContador" class="text-muted small ms-2"></span>
                 </div>
             </div>
         </div>
@@ -2242,32 +2248,67 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+let _historicoTodos = [];
+let _historicoExibidos = 0;
+const _historicoPorPagina = 100;
+
+function _historicoRenderLinha(h) {
+    let nome_cliente = h.NOME_CLIENTE ? h.NOME_CLIENTE : '<span class="text-muted fst-italic">Cliente não localizado</span>';
+    return `<tr class="border-bottom border-dark bg-white">
+        <td class="fw-bold">${h.DATA_BR}</td>
+        <td><span class="badge bg-dark text-white border border-secondary rounded-0">${h.MODULO_CONSULTA}</span></td>
+        <td class="fw-bold text-dark text-start text-uppercase" style="font-size: 0.85rem;">${nome_cliente}</td>
+        <td><a href="consulta.php?busca=${h.CPF_CLIENTE}&cpf_selecionado=${h.CPF_CLIENTE}&acao=visualizar" class="btn btn-sm btn-outline-primary fw-bold py-0 rounded-0"><i class="fas fa-link"></i> ${h.CPF_CLIENTE}</a></td>
+    </tr>`;
+}
+
+function _historicoAtualizarPaginacao() {
+    const pag = document.getElementById('historicoPaginacao');
+    const contador = document.getElementById('historicoContador');
+    const restantes = _historicoTodos.length - _historicoExibidos;
+    if (restantes > 0) {
+        pag.style.display = '';
+        contador.textContent = `Exibindo ${_historicoExibidos} de ${_historicoTodos.length} registros`;
+    } else {
+        pag.style.display = 'none';
+        if (contador) contador.textContent = `Total: ${_historicoTodos.length} registros`;
+    }
+}
+
 function carregarHistorico() {
     const tb = document.getElementById('tbodyHistorico');
-    if(!tb) return;
+    if (!tb) return;
     tb.innerHTML = '<tr><td colspan="4" class="text-center py-3 text-primary"><i class="fas fa-spinner fa-spin"></i> Buscando histórico no cofre...</td></tr>';
-    
+    document.getElementById('historicoPaginacao').style.display = 'none';
+
     let fd = new FormData();
     fd.append('acao', 'listar_historico');
     fd.append('data_ini', document.getElementById('hist_data_ini').value);
     fd.append('data_fim', document.getElementById('hist_data_fim').value);
-    
+
     fetch('consulta.php', { method: 'POST', body: fd })
     .then(r => r.json())
     .then(r => {
+        _historicoTodos = r.data || [];
+        _historicoExibidos = 0;
         tb.innerHTML = '';
-        if(r.data.length === 0) { tb.innerHTML = '<tr><td colspan="4" class="text-center py-4 text-muted fw-bold">Nenhum registro neste período.</td></tr>'; return; }
-        
-        r.data.forEach(h => {
-            let nome_cliente = h.NOME_CLIENTE ? h.NOME_CLIENTE : '<span class="text-muted fst-italic">Cliente não localizado</span>';
-            tb.innerHTML += `<tr class="border-bottom border-dark bg-white">
-                <td class="fw-bold">${h.DATA_BR}</td>
-                <td><span class="badge bg-dark text-white border border-secondary rounded-0">${h.MODULO_CONSULTA}</span></td>
-                <td class="fw-bold text-dark text-start text-uppercase" style="font-size: 0.85rem;">${nome_cliente}</td>
-                <td><a href="consulta.php?busca=${h.CPF_CLIENTE}&cpf_selecionado=${h.CPF_CLIENTE}&acao=visualizar" class="btn btn-sm btn-outline-primary fw-bold py-0 rounded-0"><i class="fas fa-link"></i> ${h.CPF_CLIENTE}</a></td>
-            </tr>`;
-        });
+        if (_historicoTodos.length === 0) {
+            tb.innerHTML = '<tr><td colspan="4" class="text-center py-4 text-muted fw-bold">Nenhum registro neste período.</td></tr>';
+            return;
+        }
+        const fatia = _historicoTodos.slice(0, _historicoPorPagina);
+        fatia.forEach(h => { tb.innerHTML += _historicoRenderLinha(h); });
+        _historicoExibidos = fatia.length;
+        _historicoAtualizarPaginacao();
     });
+}
+
+function carregarMaisHistorico() {
+    const tb = document.getElementById('tbodyHistorico');
+    const fatia = _historicoTodos.slice(_historicoExibidos, _historicoExibidos + _historicoPorPagina);
+    fatia.forEach(h => { tb.innerHTML += _historicoRenderLinha(h); });
+    _historicoExibidos += fatia.length;
+    _historicoAtualizarPaginacao();
 }
 
 function exportarHistorico() {
