@@ -294,7 +294,8 @@
       "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -e \"ALTER TABLE CLIENTE_USUARIO MODIFY COLUMN GRUPO_USUARIOS VARCHAR\\(100\\);\")",
       "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados --execute=\"ALTER TABLE CLIENTE_USUARIO MODIFY COLUMN GRUPO_USUARIOS VARCHAR\\(100\\);\")",
       "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -e \"SET FOREIGN_KEY_CHECKS=0; ALTER TABLE CLIENTE_USUARIO MODIFY COLUMN GRUPO_USUARIOS VARCHAR\\(100\\); SET FOREIGN_KEY_CHECKS=1;\")",
-      "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -e \"SELECT ID, NOME_STATUS, MARCACAO, TIPO_CONTATO FROM BANCO_DE_DADOS_CAMPANHA_STATUS_CONTATO LIMIT 15;\")"
+      "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -e \"SELECT ID, NOME_STATUS, MARCACAO, TIPO_CONTATO FROM BANCO_DE_DADOS_CAMPANHA_STATUS_CONTATO LIMIT 15;\")",
+      "Bash(php -l /var/www/html/modulos/campanhas/relatorio_ajax.php)"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",

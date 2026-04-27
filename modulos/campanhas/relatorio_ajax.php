@@ -346,12 +346,13 @@ if ($acao === 'buscar_dados') {
         $grafico = [];
         if ($tipo_rel === 'AGENDAMENTOS_FUTURO') {
             $sqlGraf = "
-                SELECT DATE_FORMAT(r.DATA_AGENDAMENTO, '%d/%m') AS LABEL, COUNT(*) AS TOTAL
+                SELECT DATE_FORMAT(r.DATA_AGENDAMENTO, '%d/%m') AS LABEL, COUNT(*) AS TOTAL,
+                       DATE(r.DATA_AGENDAMENTO) AS DT_ORDEM
                 FROM BANCO_DE_DADOS_CAMPANHA_REGISTRO_CONTATO r
                 {$where_graf}
                 AND r.DATA_AGENDAMENTO IS NOT NULL AND r.DATA_AGENDAMENTO >= CURDATE()
-                GROUP BY DATE_FORMAT(r.DATA_AGENDAMENTO, '%Y-%m-%d')
-                ORDER BY r.DATA_AGENDAMENTO ASC
+                GROUP BY DATE(r.DATA_AGENDAMENTO), DATE_FORMAT(r.DATA_AGENDAMENTO, '%d/%m')
+                ORDER BY DT_ORDEM ASC
                 LIMIT 30
             ";
             $tipo_grafico = 'bar';
