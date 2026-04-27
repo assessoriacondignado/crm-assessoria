@@ -33,6 +33,7 @@ $pode_ver_todos = verificaPermissao($pdo, 'FUNCAO_CADASTRO_CLIENTE_MEU_CPF', 'FU
 // ✨ REGRA APLICADA: Se for bloqueado, ele não poderá excluir ou editar a ficha
 $pode_editar_excluir = verificaPermissao($pdo, 'FUNCAO_CADASTRO_CLIENTE_EDITAR_EXCLUIR', 'FUNCAO');
 $bloquear_pedido_tarefas = !verificaPermissao($pdo, 'FUNCAO_CADASTRO_CLIENTE_PEDIDO_PRODUTOS', 'FUNCAO');
+$pode_ver_financeiro = verificaPermissao($pdo, 'SUBMENU_CADASTRO_USUARIO_FINANCEIRO_VER_MEU_CLIENTE', 'FUNCAO');
 
 // Hierarquia por empresa: SUPERVISORES e CONSULTOR só veem clientes da sua empresa
 $grupo_sessao = strtoupper($_SESSION['usuario_grupo'] ?? '');
@@ -546,6 +547,11 @@ $readonly_attr = (!$pode_editar_excluir) ? 'disabled readonly' : '';
                         <button class="btn btn-sm btn-info fw-bold text-dark" onclick="abrirModalTarefas('<?= htmlspecialchars($cliente_ficha['CPF']) ?>','<?= htmlspecialchars($cliente_ficha['NOME']) ?>')">
                             <i class="fas fa-tasks me-1"></i> Tarefas
                         </button>
+                        <?php endif; ?>
+                        <?php if ($pode_ver_financeiro): ?>
+                        <a href="cadastro_cliente_financeiro.php?cpf=<?= urlencode($cliente_ficha['CPF']) ?>" class="btn btn-sm btn-success fw-bold">
+                            <i class="fas fa-wallet me-1"></i> Financeiro
+                        </a>
                         <?php endif; ?>
                         <?php if($pode_ver_todos || $eh_hierarquia): ?>
                             <?php $urlRetorno = $is_busca_avancada ? '?' . preg_replace('/&?cpf_selecionado=[^&]*/', '', preg_replace('/&?acao=[^&]*/', '', $_SERVER['QUERY_STRING'])) : '?busca=' . urlencode($termo_busca); ?>

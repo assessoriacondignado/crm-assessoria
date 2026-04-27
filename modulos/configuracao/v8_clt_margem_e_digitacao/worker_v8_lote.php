@@ -214,6 +214,12 @@ while(true) {
     }
     // =========================================================================
 
+    // Verifica se o lote foi pausado externalmente entre ciclos (ex: usuário clicou Pausar)
+    $stmtCheckPausa = $pdo->prepare("SELECT STATUS_FILA FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?");
+    $stmtCheckPausa->execute([$id_lote]);
+    $status_atual_db = $stmtCheckPausa->fetchColumn();
+    if ($status_atual_db === 'PAUSADO') { flock($fp, LOCK_UN); fclose($fp); exit; }
+
     $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PROCESSANDO' WHERE ID = ?")->execute([$id_lote]);
 
     // =========================================================================
@@ -472,31 +478,34 @@ while(true) {
 
     if (!$work_found) {
 
-        // Verifica se ainda tem gente na fila aguardando. Se sim e atingiu o limite, ele só pausa o lote.
-        $stmtRestante = $pdo->prepare("SELECT ID FROM {$tbl} WHERE LOTE_ID = ? AND STATUS_V8 = 'NA FILA' LIMIT 1");
+        // Verifica se ainda tem clientes ativos na fila (excluindo DATAPREV — não bloqueia conclusão)
+        $stmtRestante = $pdo->prepare("SELECT ID FROM {$tbl} WHERE LOTE_ID = ? AND STATUS_V8 IN ('NA FILA','AGUARDANDO MARGEM','AGUARDANDO SIMULACAO','RECUPERAR V8') LIMIT 1");
         $stmtRestante->execute([$id_lote]);
-        $tem_na_fila = $stmtRestante->fetchColumn();
+        $tem_pendente_ativo = $stmtRestante->fetchColumn();
 
-        if ($tem_na_fila && $atingiu_limite_diario) {
-            // Volta o lote para 'PENDENTE'. O Cron vai verificar de novo quando o limite resetar amanhã.
-            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PENDENTE' WHERE ID = ?")->execute([$id_lote]);
-        } else {
-            // Lotes DIÁRIO voltam a aguardar o próximo dia, não ficam CONCLUIDO
+        if ($tem_pendente_ativo && $atingiu_limite_diario) {
+            // Limite diário atingido — para lote DIÁRIO vai aguardar o próximo ciclo do dia;
+            // para lote único fica PENDENTE. Em ambos os casos o worker encerra para não fazer spinning.
+            $status_limite = ($lote['AGENDAMENTO_TIPO'] === 'DIARIO') ? 'AGUARDANDO_DIARIO' : 'PENDENTE';
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = ? WHERE ID = ?")->execute([$status_limite, $id_lote]);
+            flock($fp, LOCK_UN); fclose($fp); exit;
+        } else if (!$tem_pendente_ativo) {
+            // Lista encerrou (DATAPREV restante não bloqueia a conclusão)
             if ($lote['AGENDAMENTO_TIPO'] === 'DIARIO') {
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'AGUARDANDO_DIARIO', DATA_FINALIZACAO = NOW() WHERE ID = ?")->execute([$id_lote]);
+                v8EnviarAvisoStatusLote($id_lote, 'AGUARDANDO_DIARIO', $lote, $pdo);
             } else {
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'CONCLUIDO', DATA_FINALIZACAO = NOW() WHERE ID = ?")->execute([$id_lote]);
                 v8EnviarAvisoStatusLote($id_lote, 'CONCLUIDO', $lote, $pdo);
             }
         }
     } else {
-        // Mesmo com work_found=true (ex: DATAPREV ainda pendente), verifica se toda a fila
-        // já está concluída (sem itens pendentes de qualquer tipo). Evita lote preso em PROCESSANDO
-        // quando o worker encerra antes de resolver os últimos DATAPREV.
+        // work_found=true mas pode ser só DATAPREV rodando — verifica se toda fila ativa acabou
+        // AGUARDANDO DATAPREV não bloqueia a conclusão do lote
         $stmtPendentes = $pdo->prepare("
             SELECT COUNT(*) FROM {$tbl}
             WHERE LOTE_ID = ?
-              AND STATUS_V8 IN ('NA FILA','AGUARDANDO MARGEM','AGUARDANDO SIMULACAO','AGUARDANDO DATAPREV','RECUPERAR V8')
+              AND STATUS_V8 IN ('NA FILA','AGUARDANDO MARGEM','AGUARDANDO SIMULACAO','RECUPERAR V8')
         ");
         $stmtPendentes->execute([$id_lote]);
         $qtd_pendentes = (int)$stmtPendentes->fetchColumn();
@@ -504,6 +513,7 @@ while(true) {
         if ($qtd_pendentes === 0) {
             if ($lote['AGENDAMENTO_TIPO'] === 'DIARIO') {
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'AGUARDANDO_DIARIO', DATA_FINALIZACAO = NOW() WHERE ID = ?")->execute([$id_lote]);
+                v8EnviarAvisoStatusLote($id_lote, 'AGUARDANDO_DIARIO', $lote, $pdo);
             } else {
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'CONCLUIDO', DATA_FINALIZACAO = NOW() WHERE ID = ?")->execute([$id_lote]);
                 v8EnviarAvisoStatusLote($id_lote, 'CONCLUIDO', $lote, $pdo);
@@ -755,14 +765,40 @@ function v8EnviarAvisoStatusLote($id_lote, $novo_status, $lote, $pdo) {
 
         if (!$wapi || empty($wapi['INSTANCE_ID']) || empty($wapi['TOKEN'])) return;
 
+        // Estatísticas do lote para incluir na mensagem
+        $tbl_stats = !empty($lote['TABELA_DADOS']) ? $lote['TABELA_DADOS'] : 'INTEGRACAO_V8_REGISTROCONSULTA_LOTE';
+        $stmtStats = $pdo->prepare("
+            SELECT
+                COUNT(*) as total,
+                SUM(STATUS_V8 = 'OK') as ok,
+                SUM(STATUS_V8 LIKE 'ERRO%') as erros,
+                SUM(STATUS_V8 = 'AGUARDANDO DATAPREV') as dataprev
+            FROM {$tbl_stats} WHERE LOTE_ID = ?
+        ");
+        $stmtStats->execute([$id_lote]);
+        $stats = $stmtStats->fetch(PDO::FETCH_ASSOC);
+
         $icone   = (strpos($novo_status, 'ERRO') !== false || strpos($novo_status, 'CREDENCIAL') !== false) ? '❌' : '✅';
         $dataHora = date('d/m/Y H:i');
 
+        $linhaStats = '';
+        if ($stats && (int)$stats['total'] > 0) {
+            $linhaStats = "\n"
+                . "📊 *Resumo do Lote:*\n"
+                . "   ✅ OK: " . (int)$stats['ok'] . "\n"
+                . "   ⏳ Aguard. Dataprev: " . (int)$stats['dataprev'] . "\n"
+                . "   ❌ Erros: " . (int)$stats['erros'] . "\n"
+                . "   📋 Total: " . (int)$stats['total'];
+        }
+
+        $statusLabel = $novo_status === 'AGUARDANDO_DIARIO' ? 'LISTA DO DIA CONCLUÍDA' : $novo_status;
+
         $texto = "{$icone} *Atualização de Status — Lote V8*\n\n"
-               . "*Status:* {$novo_status}\n"
+               . "*Status:* {$statusLabel}\n"
                . "*Lote ID:* {$id_lote}\n"
                . "*Nome do Lote:* {$nomeLote}\n"
-               . "*Data/Hora:* {$dataHora}\n\n"
+               . "*Data/Hora:* {$dataHora}"
+               . $linhaStats . "\n\n"
                . "_CRM Assessoria Consignado_";
 
         $phone = preg_replace('/[^0-9\-@a-zA-Z.]/', '', $grupo_cliente);

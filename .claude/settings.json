@@ -262,7 +262,15 @@
       "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"DESCRIBE CLIENTE_USUARIO;\")",
       "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"SELECT * FROM CLIENTE_USUARIO_PERMISSAO ORDER BY TIPO, CHAVE;\")",
       "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"SELECT * FROM SISTEMA_GRUPOS_USUARIO;\")",
-      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"DESCRIBE SISTEMA_GRUPOS_USUARIO;\")"
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"DESCRIBE SISTEMA_GRUPOS_USUARIO;\")",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"SELECT ID, NOME_IMPORTACAO, STATUS_FILA, AGENDAMENTO_TIPO, CPF_USUARIO, DATA_CRIACAO, DATA_FINALIZACAO, LIMITE_DIARIO, TABELA_DADOS FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE NOME_IMPORTACAO LIKE '%ACM%' ORDER BY ID DESC LIMIT 5;\")",
+      "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -e \"SELECT ID, NOME_IMPORTACAO, STATUS_FILA, TABELA_DADOS FROM INTEGRACAO_V8_IMPORTACAO_LOTE ORDER BY ID DESC LIMIT 10;\")",
+      "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -e \"UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PAUSADO' WHERE ID = 112;\")",
+      "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -e \"SELECT ID, STATUS_FILA FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = 112;\")",
+      "Bash(fuser /tmp/v8_lote_csv_22510263803.lock)",
+      "Bash(kill 173266)",
+      "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -e \"SELECT ID, NOME_IMPORTACAO, STATUS_FILA FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = 112;\")",
+      "Bash(kill 2801)"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",
