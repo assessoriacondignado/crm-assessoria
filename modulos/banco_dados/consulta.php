@@ -2418,8 +2418,25 @@ async function salvarRegistroCampanha() {
         if (j.success) {
             bootstrap.Modal.getInstance(document.getElementById('modalRegistroCampanha'))?.hide();
             crmToast('Atendimento gravado!', 'success', 3000);
-            if (j.proximo_cpf) setTimeout(() => window.location.href = '?cpf_selecionado=' + j.proximo_cpf + '&id_campanha=<?= $id_camp ?? '' ?>', 800);
-            else setTimeout(() => location.reload(), 800);
+
+            const campId = '<?= $id_camp ?? '' ?>';
+            const marcacao = j.marcacao ?? '';
+
+            setTimeout(() => {
+                if (j.proximo_cpf && campId) {
+                    // Avança para o próximo cliente na campanha
+                    window.location.href = '?cpf_selecionado=' + j.proximo_cpf + '&id_campanha=' + campId;
+                } else if (marcacao === 'FINALIZAR ATENDIMENTO') {
+                    // Sai do modo campanha — fica na ficha atual sem id_campanha
+                    window.location.href = '?cpf_selecionado=<?= urlencode($cpf_selecionado ?? '') ?>&acao=visualizar';
+                } else if (campId) {
+                    // Sem próximo cliente mas continua na campanha (fila vazia)
+                    crmToast('Todos os clientes desta campanha foram atendidos!', 'info', 4000);
+                    setTimeout(() => window.location.href = '?id_campanha=' + campId, 2000);
+                } else {
+                    location.reload();
+                }
+            }, 800);
         } else { alert('Erro: ' + (j.msg || 'Falha ao salvar.')); }
     } catch(e) { alert('Falha de comunicação.'); }
     btn.disabled = false; btn.innerHTML = '<i class="fas fa-save me-1"></i> Salvar Registro';
