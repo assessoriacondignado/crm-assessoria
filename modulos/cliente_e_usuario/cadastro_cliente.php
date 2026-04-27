@@ -458,6 +458,8 @@ $readonly_attr = (!$pode_editar_excluir) ? 'disabled readonly' : '';
                                     <th>CPF</th>
                                     <th class="text-start">Nome do Cliente</th>
                                     <th>E-mail</th>
+                                    <th>Usuário</th>
+                                    <th>Empresa</th>
                                     <th>Celular</th>
                                     <th>Status</th>
                                     <th>Ações</th>
@@ -474,6 +476,8 @@ $readonly_attr = (!$pode_editar_excluir) ? 'disabled readonly' : '';
                                         <td class="fw-bold text-secondary bg-light"><?= mascaraCPF($res['CPF']) ?></td>
                                         <td class="text-start fw-bold text-dark"><?= htmlspecialchars($res['NOME']) ?></td>
                                         <td><?= htmlspecialchars($res['EMAIL'] ?? '--') ?></td>
+                                        <td class="text-secondary"><?= htmlspecialchars($res['NOME_USUARIO'] ?? '--') ?></td>
+                                        <td class="text-secondary"><?= htmlspecialchars($res['NOME_EMPRESA_VINCULADA'] ?? '--') ?></td>
                                         <td><?= htmlspecialchars($res['CELULAR']) ?></td>
                                         <td><span class="badge <?= $sit_badge ?>"><?= $sit ?></span></td>
                                         <td>
