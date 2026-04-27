@@ -270,7 +270,20 @@
       "Bash(fuser /tmp/v8_lote_csv_22510263803.lock)",
       "Bash(kill 173266)",
       "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -e \"SELECT ID, NOME_IMPORTACAO, STATUS_FILA FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = 112;\")",
-      "Bash(kill 2801)"
+      "Bash(kill 2801)",
+      "Bash(git -C /var/www/html status)",
+      "Bash(git -C /var/www/html diff --name-only HEAD)",
+      "Bash(git -C /var/www/html status --short)",
+      "Bash(git -C /var/www/html log --oneline -5)",
+      "Bash(git -C /var/www/html show --stat HEAD)",
+      "Bash(git -C /var/www/html ls-files modulos/cliente_e_usuario/cadastro_cliente.php modulos/configuracao/v8_clt_margem_e_digitacao/worker_v8_lote.php)",
+      "Bash(git -C /var/www/html diff --name-only)",
+      "Bash(git -C /var/www/html diff HEAD modulos/cliente_e_usuario/cadastro_cliente.php)",
+      "Bash(git -C /var/www/html stash list)",
+      "Bash(git -C /var/www/html diff --cached --name-only)",
+      "Bash(git -C /var/www/html log --oneline --all -- modulos/cliente_e_usuario/cadastro_cliente.php)",
+      "Bash(git -C /var/www/html show 09addc4 --stat)",
+      "Bash(git -C /var/www/html diff HEAD -- modulos/cliente_e_usuario/cadastro_cliente.php)"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",
