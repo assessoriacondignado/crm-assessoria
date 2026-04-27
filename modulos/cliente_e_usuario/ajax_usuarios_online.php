@@ -49,4 +49,13 @@ if ($acao === 'forcar_logout') {
     }
     exit;
 }
+
+if ($acao === 'forcar_logout_todos') {
+    $cpf_logado = $_SESSION['usuario_cpf'] ?? '';
+    // Marca todos como forçar logout, exceto o próprio usuário logado
+    $stmt = $pdo->prepare("UPDATE CLIENTE_USUARIO SET FORCAR_LOGOUT = 1 WHERE Situação = 'online' AND CPF != ?");
+    $stmt->execute([$cpf_logado]);
+    echo json_encode(['sucesso' => true, 'afetados' => $stmt->rowCount()]);
+    exit;
+}
 ?>

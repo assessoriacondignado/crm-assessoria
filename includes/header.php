@@ -836,7 +836,12 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') sidebarFecha
         <div class="modal-content border-dark shadow-lg">
             <div class="modal-header bg-dark text-white border-bottom border-dark">
                 <h5 class="modal-title fw-bold text-uppercase"><i class="fas fa-signal text-success me-2"></i> Monitor de Atividades Online</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                <div class="d-flex align-items-center gap-2">
+                    <button class="btn btn-sm btn-danger fw-bold border-0 shadow-sm" onclick="derrubarTodos()" title="Deslogar todos os usuários online">
+                        <i class="fas fa-sign-out-alt me-1"></i> Deslogar Todos
+                    </button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
             </div>
             <div class="modal-body bg-light p-0">
                 <div class="table-responsive">
@@ -918,6 +923,24 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') sidebarFecha
             if(data.sucesso) {
                 alert(`${nome} será deslogado no próximo clique dele no sistema!`);
                 carregarUsuariosOnline(); 
+            }
+        });
+    }
+
+    function derrubarTodos() {
+        const total = document.querySelectorAll('#lista_usuarios_online tr').length;
+        if (total === 0) { alert('Nenhum usuário online no momento.'); return; }
+        if (!confirm('Atenção: Deseja forçar a desconexão de TODOS os usuários online?\n\nEles serão deslogados no próximo clique no sistema.')) return;
+
+        let fd = new FormData();
+        fd.append('acao', 'forcar_logout_todos');
+
+        fetch('/modulos/cliente_e_usuario/ajax_usuarios_online.php', { method: 'POST', body: fd })
+        .then(r => r.json())
+        .then(data => {
+            if (data.sucesso) {
+                alert(`Pronto! ${data.afetados} usuário(s) serão deslogados no próximo clique.`);
+                carregarUsuariosOnline();
             }
         });
     }
