@@ -571,7 +571,7 @@ $readonly_attr = (!$pode_editar_excluir) ? 'disabled readonly' : '';
                                 $stmtU->execute([$cliente_ficha['CPF']]);
                                 $dados_usuario_completo = $stmtU->fetch(PDO::FETCH_ASSOC) ?: [];
                             }
-                            $pode_ver_senha = verificaPermissao($pdo, 'CADASTRO_CLEINTE_SENHA_VER');
+                            $pode_ver_senha = verificaPermissao($pdo, 'CADASTRO_CLEINTE_SENHA_VER', 'FUNCAO');
                             $senha_val = $dados_usuario_completo['SENHA'] ?? '';
                             ?>
 
@@ -646,7 +646,7 @@ $readonly_attr = (!$pode_editar_excluir) ? 'disabled readonly' : '';
                                                     <label class="fw-bold small text-dark">Senha atual:</label>
                                                     <div class="input-group">
                                                         <input type="password" id="campoSenhaAtual" class="form-control border-primary bg-white"
-                                                            value="<?= htmlspecialchars($senha_val) ?>"
+                                                            value="<?= $pode_ver_senha ? htmlspecialchars($senha_val) : '***' ?>"
                                                             <?= $pode_ver_senha ? 'data-permitido="1"' : '' ?> readonly>
                                                         <?php if ($pode_ver_senha): ?>
                                                         <button type="button" class="btn btn-outline-primary" onclick="toggleVerSenha()" title="Ver/ocultar senha"><i class="fas fa-eye" id="iconeSenha"></i></button>
