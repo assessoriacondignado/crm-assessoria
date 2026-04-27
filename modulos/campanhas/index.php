@@ -277,6 +277,55 @@ include $caminho_header;
                         <button class="btn btn-sm btn-danger text-white fw-bold shadow-sm border-dark" onclick="abrirModalCampanha()"><i class="fas fa-plus text-white"></i> Nova Campanha</button>
                     </div>
                 </div>
+
+                <!-- FILTRO AVANÇADO -->
+                <div class="border-bottom border-dark bg-light px-3 py-3">
+                    <div class="row g-2 align-items-end">
+                        <div class="col-md-3">
+                            <label class="small fw-bold text-dark mb-1"><i class="fas fa-search me-1"></i> Nome da Campanha</label>
+                            <input type="text" id="filtCampNome" class="form-control form-control-sm border-dark rounded-0" placeholder="Buscar por nome...">
+                        </div>
+                        <div class="col-md-2">
+                            <label class="small fw-bold text-dark mb-1"><i class="fas fa-building me-1"></i> Empresa</label>
+                            <input type="text" id="filtCampEmpresa" class="form-control form-control-sm border-dark rounded-0" placeholder="Nome da empresa...">
+                        </div>
+                        <div class="col-md-2">
+                            <label class="small fw-bold text-dark mb-1"><i class="fas fa-user me-1"></i> Usuário</label>
+                            <input type="text" id="filtCampUsuario" class="form-control form-control-sm border-dark rounded-0" placeholder="Nome do usuário...">
+                        </div>
+                        <div class="col-md-1">
+                            <label class="small fw-bold text-dark mb-1"><i class="fas fa-toggle-on me-1"></i> Status</label>
+                            <select id="filtCampStatus" class="form-select form-select-sm border-dark rounded-0">
+                                <option value="">Todos</option>
+                                <option value="ATIVO">Ativo</option>
+                                <option value="INATIVO">Inativo</option>
+                            </select>
+                        </div>
+                        <div class="col-md-1">
+                            <label class="small fw-bold text-dark mb-1"><i class="fas fa-random me-1"></i> Aleatório</label>
+                            <select id="filtCampAleatorio" class="form-select form-select-sm border-dark rounded-0">
+                                <option value="">Todos</option>
+                                <option value="SIM">Sim</option>
+                                <option value="NAO">Não</option>
+                            </select>
+                        </div>
+                        <div class="col-md-1">
+                            <label class="small fw-bold text-dark mb-1"><i class="fas fa-calendar me-1"></i> Início</label>
+                            <input type="date" id="filtCampDataIni" class="form-control form-control-sm border-dark rounded-0">
+                        </div>
+                        <div class="col-md-1">
+                            <label class="small fw-bold text-dark mb-1"><i class="fas fa-calendar me-1"></i> Fim</label>
+                            <input type="date" id="filtCampDataFim" class="form-control form-control-sm border-dark rounded-0">
+                        </div>
+                        <div class="col-md-1 d-flex gap-1">
+                            <button class="btn btn-sm btn-dark fw-bold w-100 rounded-0" onclick="filtrarCampanhas()"><i class="fas fa-filter"></i></button>
+                            <button class="btn btn-sm btn-outline-secondary fw-bold rounded-0" onclick="limparFiltrosCampanha()" title="Limpar filtros"><i class="fas fa-times"></i></button>
+                        </div>
+                        <div class="col-md-12">
+                            <small id="filtCampContador" class="text-muted"></small>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="card-body p-0 table-responsive bg-white" style="overflow: visible; min-height: 320px;">
                     <table class="table table-hover align-middle mb-0 text-center">
@@ -297,7 +346,14 @@ include $caminho_header;
                                 <tr><td colspan="8" class="py-5 text-muted fw-bold fst-italic">Nenhuma campanha registrada ou acessível.</td></tr>
                             <?php else: ?>
                                 <?php foreach ($lista_campanhas as $c): ?>
-                                    <tr class="border-bottom border-dark">
+                                    <tr class="border-bottom border-dark linha-campanha"
+                                        data-nome="<?= strtolower(htmlspecialchars($c['NOME_CAMPANHA'])) ?>"
+                                        data-empresa="<?= strtolower(htmlspecialchars($c['NOME_EMPRESA'] ?? '')) ?>"
+                                        data-usuario="<?= strtolower(htmlspecialchars($c['NOME_USUARIO'] ?? '')) ?>"
+                                        data-status="<?= htmlspecialchars($c['STATUS']) ?>"
+                                        data-aleatorio="<?= htmlspecialchars($c['PARAMETRO_INICIO_ALEATORIO']) ?>"
+                                        data-inicio="<?= htmlspecialchars($c['DATA_INICIO']) ?>"
+                                        data-fim="<?= htmlspecialchars($c['DATA_FIM']) ?>">
                                         <td class="text-start ps-4 fw-bold text-dark fs-6"><?= htmlspecialchars($c['NOME_CAMPANHA']) ?></td>
                                         
                                         <td class="text-start">
@@ -560,6 +616,63 @@ function editarCampanha(dados) {
 
     modalCampanha.show();
 }
+
+// ── FILTRO AVANÇADO DE CAMPANHAS ────────────────────────────────────────────
+function filtrarCampanhas() {
+    const nome      = document.getElementById('filtCampNome').value.trim().toLowerCase();
+    const empresa   = document.getElementById('filtCampEmpresa').value.trim().toLowerCase();
+    const usuario   = document.getElementById('filtCampUsuario').value.trim().toLowerCase();
+    const status    = document.getElementById('filtCampStatus').value;
+    const aleatorio = document.getElementById('filtCampAleatorio').value;
+    const dataIni   = document.getElementById('filtCampDataIni').value;
+    const dataFim   = document.getElementById('filtCampDataFim').value;
+
+    const linhas = document.querySelectorAll('.linha-campanha');
+    let visiveis = 0;
+
+    linhas.forEach(tr => {
+        let ok = true;
+        if (nome    && !tr.dataset.nome.includes(nome))       ok = false;
+        if (empresa && !tr.dataset.empresa.includes(empresa)) ok = false;
+        if (usuario && !tr.dataset.usuario.includes(usuario)) ok = false;
+        if (status    && tr.dataset.status !== status)        ok = false;
+        if (aleatorio && tr.dataset.aleatorio !== aleatorio)  ok = false;
+        if (dataIni && tr.dataset.inicio < dataIni)           ok = false;
+        if (dataFim && tr.dataset.fim > dataFim)              ok = false;
+
+        tr.style.display = ok ? '' : 'none';
+        if (ok) visiveis++;
+    });
+
+    const total = linhas.length;
+    const contador = document.getElementById('filtCampContador');
+    if (contador) {
+        contador.textContent = visiveis < total
+            ? `Exibindo ${visiveis} de ${total} campanhas`
+            : `Total: ${total} campanhas`;
+    }
+}
+
+function limparFiltrosCampanha() {
+    ['filtCampNome','filtCampEmpresa','filtCampUsuario','filtCampDataIni','filtCampDataFim'].forEach(id => {
+        document.getElementById(id).value = '';
+    });
+    ['filtCampStatus','filtCampAleatorio'].forEach(id => {
+        document.getElementById(id).value = '';
+    });
+    filtrarCampanhas();
+}
+
+// Filtra em tempo real ao digitar
+document.addEventListener('DOMContentLoaded', () => {
+    ['filtCampNome','filtCampEmpresa','filtCampUsuario'].forEach(id => {
+        document.getElementById(id)?.addEventListener('input', filtrarCampanhas);
+    });
+    ['filtCampStatus','filtCampAleatorio','filtCampDataIni','filtCampDataFim'].forEach(id => {
+        document.getElementById(id)?.addEventListener('change', filtrarCampanhas);
+    });
+    filtrarCampanhas(); // inicializa o contador
+});
 </script>
 
 <?php 
