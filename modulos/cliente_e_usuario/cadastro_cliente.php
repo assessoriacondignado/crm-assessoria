@@ -107,9 +107,13 @@ try {
             $mensagem_alerta = "<div class='alert alert-danger fw-bold'>ERRO: Este CPF já está cadastrado no sistema!</div>";
         } else {
             $pdo->beginTransaction();
-            $stmt1 = $pdo->prepare("INSERT INTO CLIENTE_CADASTRO (CPF, NOME, CELULAR, SITUACAO) VALUES (:cpf, :nome, :celular, 'ATIVO')");
+            $stmt1 = $pdo->prepare("INSERT INTO CLIENTE_CADASTRO (CPF, NOME, CELULAR, SITUACAO, CUSTO_CONSULTA, SALDO) VALUES (:cpf, :nome, :celular, 'ATIVO', 0.01, 50.00)");
             $stmt1->execute(['cpf' => $cpf_novo, 'nome' => $nome, 'celular' => $celular]);
-            
+
+            // Registra o crédito inicial de R$ 50,00 no extrato financeiro
+            $pdo->prepare("INSERT INTO fatorconferi_CLIENTE_FINANCEIRO_EXTRATO (CPF_CLIENTE, TIPO, MOTIVO, VALOR, SALDO_ANTERIOR, SALDO_ATUAL) VALUES (?, 'CREDITO', 'Saldo inicial do cadastro', 50.00, 0.00, 50.00)")
+                ->execute([$cpf_novo]);
+
             $stmt2 = $pdo->prepare("INSERT INTO CLIENTE_USUARIO (CPF, NOME, CELULAR, EMAIL, Tentativas, Situação) VALUES (:cpf, :nome, :celular, :email, 0, 'ativo')");
             $stmt2->execute(['cpf' => $cpf_novo, 'nome' => $nome, 'celular' => $celular, 'email' => $email]);
             $pdo->commit();
