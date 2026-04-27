@@ -255,7 +255,14 @@
       "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"DESCRIBE CLIENTE_USUARIO;\")",
       "Bash(awk '{print $1, $2}')",
       "Bash(php -l /var/www/html/modulos/cliente_e_usuario/ajax_cliente_usuario.php)",
-      "Bash(php -l /var/www/html/modulos/cliente_e_usuario/acoes_cliente.php)"
+      "Bash(php -l /var/www/html/modulos/cliente_e_usuario/acoes_cliente.php)",
+      "Bash(mysql -u root assessoria_consignado -e \"SHOW TABLES;\")",
+      "Bash(mysql -u root assessoria_consignado -e \"DESCRIBE CLIENTE_USUARIO_PERMISSAO;\")",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"SHOW TABLES;\")",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"DESCRIBE CLIENTE_USUARIO;\")",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"SELECT * FROM CLIENTE_USUARIO_PERMISSAO ORDER BY TIPO, CHAVE;\")",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"SELECT * FROM SISTEMA_GRUPOS_USUARIO;\")",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"DESCRIBE SISTEMA_GRUPOS_USUARIO;\")"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",

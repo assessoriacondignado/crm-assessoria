@@ -27,16 +27,24 @@ $cpf_selecionado = isset($_GET['cpf_selecionado']) ? trim($_GET['cpf_selecionado
 $filtro_situacao = $_GET['situacao'] ?? 'ATIVO';
 $is_busca_avancada = isset($_GET['busca_avancada']) && $_GET['busca_avancada'] == '1';
 
-// ✨ REGRA APLICADA: Se for bloqueado, ele NÃO VÊ A BUSCA, sendo forçado ao próprio CPF.
+// CONSULTOR não pode criar novos clientes
 $pode_ver_todos = verificaPermissao($pdo, 'FUNCAO_CADASTRO_CLIENTE_MEU_CPF', 'FUNCAO');
 
 // ✨ REGRA APLICADA: Se for bloqueado, ele não poderá excluir ou editar a ficha
 $pode_editar_excluir = verificaPermissao($pdo, 'FUNCAO_CADASTRO_CLIENTE_EDITAR_EXCLUIR', 'FUNCAO');
 $bloquear_pedido_tarefas = !verificaPermissao($pdo, 'FUNCAO_CADASTRO_CLIENTE_PEDIDO_PRODUTOS', 'FUNCAO');
 
-if (!$pode_ver_todos) {
-    $cpf_selecionado = $_SESSION['usuario_cpf'];
-    $acao = 'visualizar';
+// Hierarquia por empresa: SUPERVISORES e CONSULTOR só veem clientes da sua empresa
+$grupo_sessao = strtoupper($_SESSION['usuario_grupo'] ?? '');
+$eh_hierarquia = !in_array($grupo_sessao, ['MASTER', 'ADMIN', 'ADMINISTRADOR']);
+$id_empresa_logado = null;
+if ($eh_hierarquia) {
+    try {
+        $cpf_logado_limpo = preg_replace('/\D/', '', $_SESSION['usuario_cpf'] ?? '');
+        $stmtEmpL = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+        $stmtEmpL->execute([$cpf_logado_limpo]);
+        $id_empresa_logado = $stmtEmpL->fetchColumn() ?: null;
+    } catch (\Throwable $e) { $id_empresa_logado = null; }
 }
 
 // Arrays da Busca Avançada
@@ -113,7 +121,7 @@ try {
     // ==========================================
     $tem_proxima_pagina = false;
     
-    if ($pode_ver_todos) {
+    {
         $filtro_sql = ""; $params = []; $contador_params = 1;
 
         if (!$is_busca_avancada && !empty($termo_busca) && empty($cpf_selecionado)) {
@@ -162,6 +170,16 @@ try {
             if ($filtro_situacao && $filtro_situacao !== 'TODOS') {
                 $filtro_sql .= " AND c.SITUACAO = :situacao_filtro ";
                 $params[':situacao_filtro'] = $filtro_situacao;
+            }
+
+            // Hierarquia por empresa: filtra lista para SUPERVISORES e CONSULTOR
+            if ($eh_hierarquia) {
+                if ($id_empresa_logado) {
+                    $filtro_sql .= " AND u.id_empresa = :id_empresa_logado";
+                    $params[':id_empresa_logado'] = $id_empresa_logado;
+                } else {
+                    $filtro_sql .= " AND 1=0";
+                }
             }
 
             $sql_base = " FROM CLIENTE_CADASTRO c LEFT JOIN CLIENTE_USUARIO u ON c.CPF = u.CPF LEFT JOIN CLIENTE_EMPRESAS e ON c.CNPJ = e.CNPJ WHERE 1=1 " . $filtro_sql;
@@ -240,7 +258,7 @@ $readonly_attr = (!$pode_editar_excluir) ? 'disabled readonly' : '';
     </div>
 <?php endif; ?>
 
-<?php if ($pode_ver_todos): ?>
+<?php if ($pode_ver_todos || $eh_hierarquia): ?>
 <div class="row justify-content-center mb-2">
     <div class="col-md-8">
         <form action="" method="GET" class="d-flex shadow-sm mb-2 flex-wrap gap-2" id="formBuscaPrincipal">
@@ -251,8 +269,10 @@ $readonly_attr = (!$pode_editar_excluir) ? 'disabled readonly' : '';
                 <option value="TODOS"   <?= $filtro_situacao === 'TODOS'   ? 'selected' : '' ?>>Todos</option>
             </select>
             <button type="submit" class="btn btn-success btn-lg px-4 fw-bold text-dark border-dark" <?= $is_busca_avancada ? 'disabled' : '' ?>><i class="fas fa-search"></i> Buscar</button>
+            <?php if ($pode_ver_todos): ?>
             <button type="button" class="btn btn-dark btn-lg px-4 fw-bold shadow-sm border-dark" onclick="abrirCadastro()"><i class="fas fa-plus text-info"></i> Novo</button>
             <button type="button" class="btn btn-primary btn-lg px-4 fw-bold shadow-sm border-dark" data-bs-toggle="modal" data-bs-target="#modalImportacao"><i class="fas fa-file-import"></i> Importar</button>
+            <?php endif; ?>
         </form>
 
         <div class="d-flex justify-content-end gap-2">
@@ -420,7 +440,7 @@ $readonly_attr = (!$pode_editar_excluir) ? 'disabled readonly' : '';
 </div>
 <?php endif; ?>
 
-<?php if (empty($cpf_selecionado) && !$erro_banco && $pode_ver_todos): ?>
+<?php if (empty($cpf_selecionado) && !$erro_banco && ($pode_ver_todos || $eh_hierarquia)): ?>
     <div class="row justify-content-center" id="painelResultados">
         <div class="col-md-10">
             <?php if (!empty($resultados_busca)): ?>
@@ -510,7 +530,7 @@ $readonly_attr = (!$pode_editar_excluir) ? 'disabled readonly' : '';
                     <h4 class="fw-bold mb-3"><i class="fas fa-exclamation-triangle"></i> Falha ao Carregar a Ficha</h4>
                     <p class="mb-0">Não foi possível localizar o cliente com o CPF informado no banco de dados.</p>
                     
-                    <?php if($pode_ver_todos): ?>
+                    <?php if($pode_ver_todos || $eh_hierarquia): ?>
                         <a href="cadastro_cliente.php" class="btn btn-dark fw-bold mt-3"><i class="fas fa-arrow-left"></i> Voltar</a>
                     <?php endif; ?>
                 </div>
@@ -527,7 +547,7 @@ $readonly_attr = (!$pode_editar_excluir) ? 'disabled readonly' : '';
                             <i class="fas fa-tasks me-1"></i> Tarefas
                         </button>
                         <?php endif; ?>
-                        <?php if($pode_ver_todos): ?>
+                        <?php if($pode_ver_todos || $eh_hierarquia): ?>
                             <?php $urlRetorno = $is_busca_avancada ? '?' . preg_replace('/&?cpf_selecionado=[^&]*/', '', preg_replace('/&?acao=[^&]*/', '', $_SERVER['QUERY_STRING'])) : '?busca=' . urlencode($termo_busca); ?>
                             <a href="<?= $urlRetorno ?>" class="btn btn-sm btn-outline-light"><i class="fas fa-arrow-left"></i> Voltar</a>
                         <?php endif; ?>
