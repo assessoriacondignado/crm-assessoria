@@ -3,3 +3,5 @@
 [26-04-2026 15:37:49] [RESPOSTA_ENVIADA - consulta_completa] => {"success":true,"status":"CONCLUIDO","CPF":"35989236867","nome_do_contato":"EDSON CARNEIRO DA SILVA","telefone_do_contato":"8299025155","valor_liberado":17568.52,"valor_parcela":1569.5,"prazo":24,"margem_disponivel":1569.5,"simulacao_padrao":{"simulation_id":"0caa50ad-1309-4e56-8c5c-a7e227d78bee","tabela":"CLT  Acelera - Seguro","valor_liberado":17568.52,"valor_parcela":1569.5,"prazo":24}}
 [26-04-2026 15:39:06] [REQUISICAO_RECEBIDA - consulta_completa] => {"acao":"consulta_completa","cpf":"35989236867","telefone":"558299025155"}
 [26-04-2026 15:39:24] [RESPOSTA_ENVIADA - consulta_completa] => {"success":false,"status":"AGUARDANDO_DATAPREV","msg":"Processando na fila. O sistema enviará o resultado automaticamente."}
+[26-04-2026 18:09:06] [REQUISICAO_RECEBIDA - consulta_completa] => {"acao":"consulta_completa","cpf":"35989236867","telefone":"558299025155","chat_id":"3F22CA96EA0A7072DA11D60DD779C10B-558299025155"}
+[26-04-2026 18:09:26] [RESPOSTA_ENVIADA - consulta_completa] => {"success":false,"status":"AGUARDANDO_DATAPREV","msg":"Processando na fila. O sistema enviará o resultado automaticamente."}

@@ -23,6 +23,8 @@ if (file_exists($caminho_permissoes)) {
 $termo_busca = isset($_GET['busca']) ? trim($_GET['busca']) : '';
 $acao = isset($_GET['acao']) ? $_GET['acao'] : '';
 $cpf_selecionado = isset($_GET['cpf_selecionado']) ? trim($_GET['cpf_selecionado']) : '';
+// Filtro de situação: padrão ATIVO ao entrar na página sem busca
+$filtro_situacao = $_GET['situacao'] ?? 'ATIVO';
 $is_busca_avancada = isset($_GET['busca_avancada']) && $_GET['busca_avancada'] == '1';
 
 // ✨ REGRA APLICADA: Se for bloqueado, ele NÃO VÊ A BUSCA, sendo forçado ao próprio CPF.
@@ -145,17 +147,22 @@ try {
             $termo_busca = "Busca Avançada Ativada"; 
         }
 
-        if ((!empty($termo_busca) || $is_busca_avancada) && empty($cpf_selecionado)) {
-            // Modificado para incluir a tabela CLIENTE_USUARIO e pegar o EMAIL
-            $sql_base = " FROM CLIENTE_CADASTRO c LEFT JOIN CLIENTE_USUARIO u ON c.CPF = u.CPF LEFT JOIN CLIENTE_EMPRESAS e ON c.CNPJ = e.CNPJ WHERE 1=1 " . $filtro_sql;
+        // Mostra resultados: ao entrar na página (sem busca) exibe ATIVO por padrão
+        $executar_busca = (!empty($termo_busca) || $is_busca_avancada || empty($cpf_selecionado));
+        if ($executar_busca && empty($cpf_selecionado)) {
+            // Filtro de situação
+            if ($filtro_situacao && $filtro_situacao !== 'TODOS') {
+                $filtro_sql .= " AND c.SITUACAO = :situacao_filtro ";
+                $params[':situacao_filtro'] = $filtro_situacao;
+            }
 
-            // Remoção do COUNT(*) pesado
+            $sql_base = " FROM CLIENTE_CADASTRO c LEFT JOIN CLIENTE_USUARIO u ON c.CPF = u.CPF LEFT JOIN CLIENTE_EMPRESAS e ON c.CNPJ = e.CNPJ WHERE 1=1 " . $filtro_sql;
             $limite_busca = $limites_por_pagina + 1;
-            $sql_dados = "SELECT c.*, u.EMAIL, e.NOME_CADASTRO as NOME_EMPRESA_VINCULADA " . $sql_base . " LIMIT " . (int)$limite_busca . " OFFSET " . (int)$offset;
+            $sql_dados = "SELECT c.*, u.EMAIL, e.NOME_CADASTRO as NOME_EMPRESA_VINCULADA " . $sql_base . " ORDER BY c.NOME ASC LIMIT " . (int)$limite_busca . " OFFSET " . (int)$offset;
             $stmt = $pdo->prepare($sql_dados);
             $stmt->execute($params);
             $resultados_busca = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            
+
             if (count($resultados_busca) > $limites_por_pagina) {
                 $tem_proxima_pagina = true;
                 array_pop($resultados_busca);
@@ -228,14 +235,30 @@ $readonly_attr = (!$pode_editar_excluir) ? 'disabled readonly' : '';
 <?php if ($pode_ver_todos): ?>
 <div class="row justify-content-center mb-2">
     <div class="col-md-8">
-        <form action="" method="GET" class="d-flex shadow-sm mb-2">
-            <input type="text" name="busca" class="form-control form-control-lg border-success" placeholder="Pesquisar por Nome, CPF, Celular, Empresa, CNPJ..." value="<?= $is_busca_avancada ? '' : htmlspecialchars($termo_busca) ?>" <?= $is_busca_avancada ? 'disabled' : 'autofocus' ?>>
-            <button type="submit" class="btn btn-success btn-lg px-4 ms-2 fw-bold text-dark border-dark" <?= $is_busca_avancada ? 'disabled' : '' ?>><i class="fas fa-search"></i> Buscar</button>
-            <button type="button" class="btn btn-dark btn-lg px-4 ms-2 fw-bold shadow-sm border-dark" onclick="abrirCadastro()"><i class="fas fa-plus text-info"></i> Novo</button>
-            <button type="button" class="btn btn-primary btn-lg px-4 ms-2 fw-bold shadow-sm border-dark" data-bs-toggle="modal" data-bs-target="#modalImportacao"><i class="fas fa-file-import"></i> Importar</button>
+        <form action="" method="GET" class="d-flex shadow-sm mb-2 flex-wrap gap-2" id="formBuscaPrincipal">
+            <input type="text" name="busca" class="form-control form-control-lg border-success flex-grow-1" placeholder="Pesquisar por Nome, CPF, Celular, Empresa, CNPJ..." value="<?= $is_busca_avancada ? '' : htmlspecialchars($termo_busca) ?>" <?= $is_busca_avancada ? 'disabled' : 'autofocus' ?> style="min-width:200px;">
+            <select name="situacao" class="form-select form-select-lg border-success fw-bold" style="max-width:150px;">
+                <option value="ATIVO"   <?= $filtro_situacao === 'ATIVO'   ? 'selected' : '' ?>>Ativos</option>
+                <option value="INATIVO" <?= $filtro_situacao === 'INATIVO' ? 'selected' : '' ?>>Inativos</option>
+                <option value="TODOS"   <?= $filtro_situacao === 'TODOS'   ? 'selected' : '' ?>>Todos</option>
+            </select>
+            <button type="submit" class="btn btn-success btn-lg px-4 fw-bold text-dark border-dark" <?= $is_busca_avancada ? 'disabled' : '' ?>><i class="fas fa-search"></i> Buscar</button>
+            <button type="button" class="btn btn-dark btn-lg px-4 fw-bold shadow-sm border-dark" onclick="abrirCadastro()"><i class="fas fa-plus text-info"></i> Novo</button>
+            <button type="button" class="btn btn-primary btn-lg px-4 fw-bold shadow-sm border-dark" data-bs-toggle="modal" data-bs-target="#modalImportacao"><i class="fas fa-file-import"></i> Importar</button>
         </form>
 
         <div class="d-flex justify-content-end gap-2">
+            <div class="dropdown">
+                <button class="btn btn-sm btn-warning fw-bold border-dark dropdown-toggle" type="button" id="btnAcaoLote" data-bs-toggle="dropdown">
+                    <i class="fas fa-tasks me-1"></i> Ação em Lote
+                </button>
+                <ul class="dropdown-menu border-dark shadow">
+                    <li><a class="dropdown-item fw-bold text-success" href="#" onclick="acaoLote('ativar')"><i class="fas fa-check-circle me-2"></i>Ativar Selecionados</a></li>
+                    <li><a class="dropdown-item fw-bold text-danger" href="#" onclick="acaoLote('inativar')"><i class="fas fa-ban me-2"></i>Inativar Selecionados</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item fw-bold text-primary" href="#" onclick="exportarClientes()"><i class="fas fa-file-excel me-2"></i>Exportar Lista (CSV)</a></li>
+                </ul>
+            </div>
             <button class="btn btn-sm btn-outline-secondary fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#painelBuscaAvancada" aria-expanded="<?= $is_busca_avancada ? 'true' : 'false' ?>">
                 <i class="fas fa-sliders-h"></i> Filtro Aprimorado
             </button>
@@ -379,7 +402,7 @@ $readonly_attr = (!$pode_editar_excluir) ? 'disabled readonly' : '';
 </div>
 <?php endif; ?>
 
-<?php if ((!empty($termo_busca) || $is_busca_avancada) && empty($cpf_selecionado) && !$erro_banco && $pode_ver_todos): ?>
+<?php if (empty($cpf_selecionado) && !$erro_banco && $pode_ver_todos): ?>
     <div class="row justify-content-center" id="painelResultados">
         <div class="col-md-10">
             <?php if (!empty($resultados_busca)): ?>
@@ -388,28 +411,34 @@ $readonly_attr = (!$pode_editar_excluir) ? 'disabled readonly' : '';
                         <h5 class="mb-0 fw-bold text-uppercase"><i class="fas fa-list text-info me-2"></i> Resultados da Busca (Pág <?= $pagina_atual ?>)</h5>
                     </div>
                     <div class="table-responsive bg-white">
-                        <table class="table table-hover align-middle mb-0 border-dark text-center fs-6">
+                        <table class="table table-hover align-middle mb-0 border-dark text-center fs-6" id="tabelaClientes">
                             <thead class="table-dark text-white text-uppercase" style="font-size: 0.85rem;">
                                 <tr>
+                                    <th style="width:40px;"><input type="checkbox" id="selectAll" title="Selecionar todos" onclick="toggleSelectAll(this)" class="form-check-input border-light"></th>
                                     <th style="width: 60px;">ID</th>
                                     <th>CPF</th>
                                     <th class="text-start">Nome do Cliente</th>
                                     <th>E-mail</th>
                                     <th>Celular</th>
+                                    <th>Status</th>
                                     <th>Ações</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($resultados_busca as $res): ?>
-                                    <tr class="border-bottom border-dark">
+                                <?php foreach ($resultados_busca as $res):
+                                    $sit = $res['SITUACAO'] ?? 'ATIVO';
+                                    $sit_badge = $sit === 'ATIVO' ? 'bg-success' : 'bg-secondary';
+                                ?>
+                                    <tr class="border-bottom border-dark <?= $sit === 'INATIVO' ? 'table-secondary opacity-75' : '' ?>">
+                                        <td><input type="checkbox" class="form-check-input cb-cliente border-dark" value="<?= htmlspecialchars($res['CPF']) ?>"></td>
                                         <td class="fw-bold text-danger">#<?= htmlspecialchars($res['ID'] ?? '') ?></td>
                                         <td class="fw-bold text-secondary bg-light"><?= mascaraCPF($res['CPF']) ?></td>
                                         <td class="text-start fw-bold text-dark"><?= htmlspecialchars($res['NOME']) ?></td>
                                         <td><?= htmlspecialchars($res['EMAIL'] ?? '--') ?></td>
                                         <td><?= htmlspecialchars($res['CELULAR']) ?></td>
+                                        <td><span class="badge <?= $sit_badge ?>"><?= $sit ?></span></td>
                                         <td>
-                                            <?php 
-                                            // ✨ NOVO MOTOR DE LINK PERFEITO ✨
+                                            <?php
                                             $url_params = $_GET;
                                             $url_params['cpf_selecionado'] = trim($res['CPF']);
                                             $url_params['acao'] = 'visualizar';
@@ -858,6 +887,46 @@ async function atualizarStatusTarefa(id, status) {
     const fd = new FormData(); fd.append('acao','atualizar_status'); fd.append('id', id); fd.append('status', status);
     await fetch('cliente_ajax.php', {method:'POST', body:fd});
     await carregarTarefasCliente();
+}
+
+// ── Seleção em lote ──────────────────────────────────────────
+function toggleSelectAll(cb) {
+    document.querySelectorAll('.cb-cliente').forEach(c => c.checked = cb.checked);
+}
+function getCpfsSelecionados() {
+    return [...document.querySelectorAll('.cb-cliente:checked')].map(c => c.value);
+}
+
+async function acaoLote(tipo) {
+    const cpfs = getCpfsSelecionados();
+    const label = tipo === 'ativar' ? 'ATIVAR' : 'INATIVAR';
+    const msg = cpfs.length > 0
+        ? `${label} ${cpfs.length} cliente(s) selecionado(s)?`
+        : `${label} TODOS os clientes listados na busca atual?`;
+    if (!confirm(msg)) return;
+
+    const fd = new FormData();
+    fd.append('acao_lote', tipo);
+    cpfs.forEach(c => fd.append('cpfs[]', c));
+    // passa filtros atuais para aplicar em todos se nenhum selecionado
+    const params = new URLSearchParams(window.location.search);
+    fd.append('busca', params.get('busca') || '');
+    fd.append('situacao', params.get('situacao') || 'ATIVO');
+
+    const r = await fetch('ajax_clientes_lote.php', {method:'POST', body:fd});
+    const j = await r.json();
+    if (j.ok) { alert(`${j.total} cliente(s) ${tipo === 'ativar' ? 'ativados' : 'inativados'}.`); location.reload(); }
+    else alert('Erro: ' + j.msg);
+}
+
+function exportarClientes() {
+    const cpfs = getCpfsSelecionados();
+    const params = new URLSearchParams(window.location.search);
+    let url = 'ajax_clientes_lote.php?acao_lote=exportar';
+    url += '&busca=' + encodeURIComponent(params.get('busca') || '');
+    url += '&situacao=' + encodeURIComponent(params.get('situacao') || 'ATIVO');
+    if (cpfs.length > 0) url += '&cpfs=' + cpfs.join(',');
+    window.location.href = url;
 }
 </script>
 
