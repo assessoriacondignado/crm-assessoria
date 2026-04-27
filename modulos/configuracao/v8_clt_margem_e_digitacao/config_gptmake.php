@@ -127,6 +127,76 @@ $stStats = $pdo->prepare("SELECT f.STATUS, COUNT(*) as total FROM INTEGRACAO_V8_
 $stats = $pdo->query("SELECT STATUS, COUNT(*) as total FROM INTEGRACAO_V8_IA_FOLLOWUP GROUP BY STATUS")->fetchAll(PDO::FETCH_ASSOC);
 $statsMap = array_column($stats, 'total', 'STATUS');
 
+// ── Tabela de treinamentos ────────────────────────────────────────────────
+try { $pdo->exec("CREATE TABLE IF NOT EXISTS INTEGRACAO_GPTMAKE_TREINAMENTOS (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    AGENT_ID VARCHAR(100) NOT NULL,
+    CPF_USUARIO VARCHAR(11),
+    id_empresa INT,
+    TITULO VARCHAR(150) NOT NULL,
+    CONTEUDO TEXT NOT NULL,
+    GPTMAKE_TRAINING_ID VARCHAR(200),
+    STATUS ENUM('LOCAL','SINCRONIZADO','ERRO') DEFAULT 'LOCAL',
+    MSG_ERRO TEXT,
+    DATA_CRIACAO DATETIME DEFAULT NOW(),
+    DATA_SYNC DATETIME
+)"); } catch(Exception $e){}
+
+// Ação: salvar bloco de treinamento
+if ($acao_post === 'salvar_treino') {
+    header('Content-Type: application/json');
+    $id_treino  = (int)($_POST['id_treino'] ?? 0);
+    $titulo     = trim($_POST['titulo'] ?? '');
+    $conteudo   = trim($_POST['conteudo'] ?? '');
+    $agent_id_t = trim($_POST['agent_id_treino'] ?? '');
+    if (!$titulo || !$conteudo || !$agent_id_t) { echo json_encode(['ok'=>false,'msg'=>'Campos obrigatórios.']); exit; }
+    if ($id_treino) {
+        $pdo->prepare("UPDATE INTEGRACAO_GPTMAKE_TREINAMENTOS SET TITULO=?,CONTEUDO=?,STATUS='LOCAL',GPTMAKE_TRAINING_ID=NULL,DATA_SYNC=NULL WHERE ID=?")->execute([$titulo,$conteudo,$id_treino]);
+    } else {
+        $pdo->prepare("INSERT INTO INTEGRACAO_GPTMAKE_TREINAMENTOS (AGENT_ID,CPF_USUARIO,id_empresa,TITULO,CONTEUDO) VALUES (?,?,?,?,?)")->execute([$agent_id_t,$cpf_logado,$id_empresa_logado,$titulo,$conteudo]);
+    }
+    echo json_encode(['ok'=>true]); exit;
+}
+
+// Ação: excluir bloco de treinamento
+if ($acao_post === 'excluir_treino') {
+    header('Content-Type: application/json');
+    $id_treino = (int)($_POST['id_treino'] ?? 0);
+    $pdo->prepare("DELETE FROM INTEGRACAO_GPTMAKE_TREINAMENTOS WHERE ID=?")->execute([$id_treino]);
+    echo json_encode(['ok'=>true]); exit;
+}
+
+// Ação: sincronizar com GPTMaker
+if ($acao_post === 'sincronizar_treino') {
+    header('Content-Type: application/json');
+    $id_treino = (int)($_POST['id_treino'] ?? 0);
+    $stT = $pdo->prepare("SELECT t.*, c.API_TOKEN FROM INTEGRACAO_GPTMAKE_TREINAMENTOS t JOIN INTEGRACAO_GPTMAKE_CONFIG c ON c.AGENT_ID=t.AGENT_ID WHERE t.ID=? LIMIT 1");
+    $stT->execute([$id_treino]);
+    $treino = $stT->fetch(PDO::FETCH_ASSOC);
+    if (!$treino) { echo json_encode(['ok'=>false,'msg'=>'Bloco não encontrado.']); exit; }
+    $ch = curl_init("https://api.gptmaker.ai/v2/agent/{$treino['AGENT_ID']}/trainings");
+    curl_setopt_array($ch,[CURLOPT_RETURNTRANSFER=>true,CURLOPT_POST=>true,
+        CURLOPT_POSTFIELDS=>json_encode(['type'=>'TEXT','text'=>$treino['CONTEUDO']]),
+        CURLOPT_HTTPHEADER=>["Authorization: Bearer {$treino['API_TOKEN']}","Content-Type: application/json"],
+        CURLOPT_TIMEOUT=>15,CURLOPT_SSL_VERIFYPEER=>false]);
+    $res = curl_exec($ch); $http = curl_getinfo($ch,CURLINFO_HTTP_CODE); curl_close($ch);
+    $json = json_decode($res,true);
+    if ($http === 200 && ($json['success']??false)) {
+        $training_id = $json['id'] ?? $json['trainingId'] ?? null;
+        $pdo->prepare("UPDATE INTEGRACAO_GPTMAKE_TREINAMENTOS SET STATUS='SINCRONIZADO',GPTMAKE_TRAINING_ID=?,DATA_SYNC=NOW(),MSG_ERRO=NULL WHERE ID=?")->execute([$training_id,$id_treino]);
+        echo json_encode(['ok'=>true,'msg'=>'Sincronizado com sucesso!']); exit;
+    } else {
+        $erro = $json['message'] ?? $json['error'] ?? "HTTP {$http}";
+        $pdo->prepare("UPDATE INTEGRACAO_GPTMAKE_TREINAMENTOS SET STATUS='ERRO',MSG_ERRO=? WHERE ID=?")->execute([$erro,$id_treino]);
+        echo json_encode(['ok'=>false,'msg'=>"Erro: {$erro}"]); exit;
+    }
+}
+
+// Carrega treinamentos
+$stTreinos = $pdo->prepare("SELECT * FROM INTEGRACAO_GPTMAKE_TREINAMENTOS WHERE {$where_hier} ORDER BY DATA_CRIACAO DESC");
+try { $stTreinos->execute($params_hier); $lista_treinos = $stTreinos->fetchAll(PDO::FETCH_ASSOC); }
+catch(Exception $e) { $lista_treinos = []; }
+
 // Filtros sessões
 $filtro_data_ini = $_GET['data_ini'] ?? '';
 $filtro_data_fim = $_GET['data_fim'] ?? '';
@@ -208,9 +278,37 @@ async function testarEnvioGPT() {
   <div class="alert alert-success py-2 mb-3">Worker executado manualmente.</div>
 <?php endif; ?>
 
-<div class="row g-3">
+<!-- ══ MENU TABS ══════════════════════════════════════════════════════════ -->
+<ul class="nav nav-tabs border-dark fw-bold mb-3" id="gptTabs" role="tablist">
+  <li class="nav-item">
+    <button class="nav-link active text-dark" data-bs-toggle="tab" data-bs-target="#tabConfig">
+      <i class="fas fa-cog me-1 text-success"></i> Configuração
+    </button>
+  </li>
+  <li class="nav-item">
+    <button class="nav-link text-dark" data-bs-toggle="tab" data-bs-target="#tabTreinamentos">
+      <i class="fas fa-brain me-1 text-primary"></i> Treinamentos
+      <span class="badge bg-primary ms-1"><?= count($lista_treinos) ?></span>
+    </button>
+  </li>
+  <li class="nav-item">
+    <button class="nav-link text-dark" data-bs-toggle="tab" data-bs-target="#tabFollowup">
+      <i class="fas fa-history me-1 text-warning"></i> Follow-up
+      <span class="badge bg-secondary ms-1"><?= count($ultimasSessoes) ?></span>
+    </button>
+  </li>
+  <li class="nav-item">
+    <button class="nav-link text-dark" data-bs-toggle="tab" data-bs-target="#tabWorker">
+      <i class="fas fa-terminal me-1 text-secondary"></i> Worker / Log
+    </button>
+  </li>
+</ul>
 
-  <!-- ── Formulário ─────────────────────────────────────── -->
+<div class="tab-content">
+
+<!-- ══ TAB 1: CONFIGURAÇÃO ═══════════════════════════════════════════════ -->
+<div class="tab-pane fade show active" id="tabConfig">
+<div class="row g-3">
   <div class="col-md-4">
     <div class="card border-dark shadow-sm gpt-card">
       <div class="card-header bg-dark text-white fw-bold">
@@ -304,38 +402,6 @@ async function testarEnvioGPT() {
       </div>
     </div>
 
-    <!-- Worker status -->
-    <div class="card border-dark shadow-sm mt-3 gpt-card">
-      <div class="card-header bg-secondary text-white fw-bold small">
-        <i class="fas fa-clock me-2"></i>Worker Follow-up (Cron: a cada 2 min)
-      </div>
-      <div class="card-body py-2">
-        <div class="d-flex flex-wrap gap-2 mb-2">
-          <span class="badge bg-warning text-dark px-2 py-1">⏳ Pendente: <?= $statsMap['PENDENTE'] ?? 0 ?></span>
-          <span class="badge bg-success px-2 py-1">✅ Processado: <?= $statsMap['PROCESSADO'] ?? 0 ?></span>
-          <span class="badge bg-danger px-2 py-1">❌ Erro: <?= $statsMap['ERRO'] ?? 0 ?></span>
-          <span class="badge bg-secondary px-2 py-1">💤 Expirado: <?= $statsMap['EXPIRADO'] ?? 0 ?></span>
-        </div>
-        <a href="?forcar_worker=1" class="btn btn-sm btn-outline-dark border-dark">
-          <i class="fas fa-play me-1"></i>Executar Agora
-        </a>
-      </div>
-    </div>
-
-    <!-- Log -->
-    <div class="card border-dark shadow-sm mt-3 gpt-card">
-      <div class="card-header bg-dark text-white fw-bold small">
-        <i class="fas fa-terminal me-1"></i>Log do Worker (hoje)
-      </div>
-      <div class="card-body p-0">
-        <pre style="background:#1e1e1e;color:#d4d4d4;font-size:11px;max-height:180px;overflow-y:auto;margin:0;padding:10px;"><?php
-          $logFile = __DIR__ . '/logs_ia/followup_' . date('Y-m-d') . '.log';
-          echo file_exists($logFile)
-            ? htmlspecialchars(implode('', array_slice(file($logFile), -30)))
-            : "Nenhum log ainda hoje.";
-        ?></pre>
-      </div>
-    </div>
   </div>
 
   <!-- ── Tabela de configs + sessões ───────────────────── -->
@@ -412,104 +478,316 @@ async function testarEnvioGPT() {
       </div>
     </div>
 
-    <!-- Últimas sessões -->
-    <div class="card border-dark shadow-sm gpt-card">
-      <div class="card-header bg-dark text-white fw-bold d-flex justify-content-between align-items-center">
-        <span><i class="fas fa-history me-2"></i>Últimas Sessões de Follow-up <span class="badge bg-secondary ms-1"><?= count($ultimasSessoes) ?></span></span>
-        <a href="?<?= http_build_query(array_filter(['data_ini'=>$filtro_data_ini,'data_fim'=>$filtro_data_fim,'usuario'=>$filtro_usuario,'cpf'=>$filtro_cpf,'telefone'=>$filtro_telefone])) ?>" class="btn btn-sm btn-outline-light py-0">🔄</a>
-      </div>
+  </div><!-- /col-md-8 -->
+</div><!-- /tabConfig -->
 
-      <!-- Filtros -->
-      <div class="p-2 border-bottom bg-light">
-        <form method="GET" class="row g-1 align-items-end" style="font-size:12px;">
-          <?php /* preserva ?editar= etc se houver */ ?>
-          <div class="col-auto">
-            <label class="form-label mb-0 fw-bold" style="font-size:11px;">De</label>
-            <input type="date" name="data_ini" class="form-control form-control-sm border-dark" style="font-size:11px;width:130px;"
-              value="<?= htmlspecialchars($filtro_data_ini) ?>">
-          </div>
-          <div class="col-auto">
-            <label class="form-label mb-0 fw-bold" style="font-size:11px;">Até</label>
-            <input type="date" name="data_fim" class="form-control form-control-sm border-dark" style="font-size:11px;width:130px;"
-              value="<?= htmlspecialchars($filtro_data_fim) ?>">
-          </div>
-          <div class="col-auto">
-            <label class="form-label mb-0 fw-bold" style="font-size:11px;">Usuário</label>
-            <input type="text" name="usuario" class="form-control form-control-sm border-dark" style="font-size:11px;width:140px;"
-              placeholder="Nome..." value="<?= htmlspecialchars($filtro_usuario) ?>">
-          </div>
-          <div class="col-auto">
-            <label class="form-label mb-0 fw-bold" style="font-size:11px;">CPF Cliente</label>
-            <input type="text" name="cpf" class="form-control form-control-sm border-dark" style="font-size:11px;width:120px;"
-              placeholder="Somente dígitos" value="<?= htmlspecialchars($_GET['cpf'] ?? '') ?>">
-          </div>
-          <div class="col-auto">
-            <label class="form-label mb-0 fw-bold" style="font-size:11px;">Telefone</label>
-            <input type="text" name="telefone" class="form-control form-control-sm border-dark" style="font-size:11px;width:120px;"
-              placeholder="Somente dígitos" value="<?= htmlspecialchars($_GET['telefone'] ?? '') ?>">
-          </div>
-          <div class="col-auto d-flex gap-1">
-            <button type="submit" class="btn btn-sm btn-dark py-0 px-2" style="font-size:11px;">
-              <i class="fas fa-search me-1"></i>Filtrar
-            </button>
-            <a href="?" class="btn btn-sm btn-outline-secondary py-0 px-2" style="font-size:11px;">✕</a>
-          </div>
-        </form>
-      </div>
+<!-- ══ TAB 2: TREINAMENTOS ════════════════════════════════════════════════ -->
+<div class="tab-pane fade" id="tabTreinamentos">
+  <div class="card border-dark shadow-sm gpt-card">
+    <div class="card-header bg-dark text-white fw-bold d-flex justify-content-between align-items-center">
+      <span><i class="fas fa-brain me-2 text-primary"></i>Blocos de Treinamento GPTMaker</span>
+      <button class="btn btn-sm btn-primary fw-bold border-dark" onclick="abrirModalTreino()">
+        <i class="fas fa-plus me-1"></i>Novo Bloco
+      </button>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm table-hover mb-0" style="font-size:12px;">
+        <thead class="table-dark">
+          <tr>
+            <th style="width:200px;">Título</th>
+            <th>Conteúdo (prévia)</th>
+            <th class="text-center" style="width:60px;">Chars</th>
+            <th class="text-center" style="width:110px;">Status</th>
+            <th>Última Sync</th>
+            <th class="text-center" style="width:130px;">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+        <?php if (empty($lista_treinos)): ?>
+          <tr><td colspan="6" class="text-center text-muted py-4 fst-italic">
+            Nenhum bloco cadastrado. Clique em <b>Novo Bloco</b> para começar.
+          </td></tr>
+        <?php else: ?>
+          <?php foreach ($lista_treinos as $tr):
+            $chars = mb_strlen($tr['CONTEUDO']);
+            $chars_cls = $chars > 1028 ? 'text-danger fw-bold' : ($chars > 900 ? 'text-warning fw-bold' : 'text-success fw-bold');
+            $badge = match($tr['STATUS']) {
+              'SINCRONIZADO' => '<span class="badge bg-success">✅ Sincronizado</span>',
+              'ERRO'         => '<span class="badge bg-danger">❌ Erro</span>',
+              default        => '<span class="badge bg-secondary">⏳ Local</span>'
+            };
+          ?>
+          <tr id="row_treino_<?= $tr['ID'] ?>">
+            <td class="fw-bold text-dark"><?= htmlspecialchars($tr['TITULO']) ?></td>
+            <td class="text-muted text-truncate" style="max-width:300px;" title="<?= htmlspecialchars($tr['CONTEUDO']) ?>">
+              <?= htmlspecialchars(mb_substr($tr['CONTEUDO'], 0, 80)) ?>...
+            </td>
+            <td class="text-center <?= $chars_cls ?>"><?= $chars ?>/1028</td>
+            <td class="text-center"><?= $badge ?>
+              <?php if ($tr['STATUS']==='ERRO' && $tr['MSG_ERRO']): ?>
+              <div class="text-danger" style="font-size:10px;" title="<?= htmlspecialchars($tr['MSG_ERRO']) ?>">
+                <?= htmlspecialchars(mb_substr($tr['MSG_ERRO'],0,30)) ?>
+              </div>
+              <?php endif; ?>
+            </td>
+            <td><?= $tr['DATA_SYNC'] ? date('d/m/Y H:i', strtotime($tr['DATA_SYNC'])) : '—' ?></td>
+            <td class="text-center">
+              <div class="d-flex gap-1 justify-content-center">
+                <button class="btn btn-xs btn-outline-primary py-0 px-2" title="Editar"
+                  onclick='editarTreino(<?= json_encode($tr) ?>)'>
+                  <i class="fas fa-edit"></i>
+                </button>
+                <button class="btn btn-xs btn-outline-success py-0 px-2" title="Enviar ao GPTMaker"
+                  onclick="sincronizarTreino(<?= $tr['ID'] ?>, '<?= addslashes($tr['TITULO']) ?>')">
+                  <i class="fas fa-cloud-upload-alt"></i>
+                </button>
+                <button class="btn btn-xs btn-outline-danger py-0 px-2" title="Excluir"
+                  onclick="excluirTreino(<?= $tr['ID'] ?>, '<?= addslashes($tr['TITULO']) ?>')">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <?php endforeach; ?>
+        <?php endif; ?>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
-      <div class="table-responsive">
-        <table class="table table-sm table-hover mb-0" style="font-size:12px;">
-          <thead class="table-dark">
-            <tr>
-              <th>Usuário / Agent ID</th>
-              <th>CPF Cliente</th>
-              <th>Telefone</th>
-              <th>Status</th>
-              <th>Tentativas</th>
-              <th>Criado</th>
-              <th>Observação</th>
-            </tr>
-          </thead>
-          <tbody>
-          <?php if (empty($ultimasSessoes)): ?>
-            <tr><td colspan="7" class="text-center text-muted py-3 fst-italic">Nenhuma sessão encontrada.</td></tr>
-          <?php else: ?>
-            <?php foreach ($ultimasSessoes as $s):
-              $badge = match($s['STATUS']) {
-                'PROCESSADO' => 'bg-success', 'ERRO' => 'bg-danger',
-                'EXPIRADO'   => 'bg-secondary', default => 'bg-warning text-dark'
-              };
-              $agentId  = $s['GPTMAKE_AGENT_ID'] ?? $s['AGENT_ID'] ?? '';
-              $donoNome = $s['DONO_NOME'] ?? '—';
-            ?>
-            <tr>
-              <td>
-                <div class="fw-bold"><?= htmlspecialchars($donoNome) ?></div>
-                <?php if ($agentId): ?>
-                <div class="font-monospace text-muted" style="font-size:10px;" title="<?= htmlspecialchars($agentId) ?>">
-                  <?= substr(htmlspecialchars($agentId), 0, 18) ?>...
-                </div>
-                <?php endif; ?>
-              </td>
-              <td class="font-monospace"><?= preg_replace('/(\d{3})(\d{3})(\d{3})(\d{2})/', '$1.***.***-$4', str_pad($s['CPF_CLIENTE'],11,'0',STR_PAD_LEFT)) ?></td>
-              <td><?= htmlspecialchars($s['TELEFONE'] ?? '—') ?></td>
-              <td><span class="badge <?= $badge ?>"><?= $s['STATUS'] ?></span></td>
-              <td class="text-center"><?= $s['TENTATIVAS'] ?>/10</td>
-              <td><?= $s['DATA_CRIACAO'] ? date('d/m H:i', strtotime($s['DATA_CRIACAO'])) : '—' ?></td>
-              <td class="text-truncate" style="max-width:180px;" title="<?= htmlspecialchars($s['OBSERVACAO']??'') ?>">
-                <?= htmlspecialchars($s['OBSERVACAO'] ?? '—') ?>
-              </td>
-            </tr>
-            <?php endforeach; ?>
-          <?php endif; ?>
-          </tbody>
-        </table>
+  <!-- Dica -->
+  <div class="alert alert-info border-dark mt-3 py-2 small">
+    <i class="fas fa-lightbulb me-1"></i>
+    <b>Dica GPTMaker:</b> Use blocos separados por assunto. Cada bloco suporta até <b>1.028 caracteres</b>.
+    Blocos com comportamento/fluxo devem ir no campo <b>Comportamento</b> do agente, não aqui.
+  </div>
+</div><!-- /tabTreinamentos -->
+
+<!-- ══ TAB 3: FOLLOW-UP ══════════════════════════════════════════════════ -->
+<div class="tab-pane fade" id="tabFollowup">
+  <div class="card border-dark shadow-sm gpt-card">
+    <div class="card-header bg-dark text-white fw-bold d-flex justify-content-between align-items-center">
+      <span><i class="fas fa-history me-2 text-warning"></i>Sessões de Follow-up <span class="badge bg-secondary ms-1"><?= count($ultimasSessoes) ?></span></span>
+      <a href="?<?= http_build_query(array_filter(['data_ini'=>$filtro_data_ini,'data_fim'=>$filtro_data_fim,'usuario'=>$filtro_usuario,'cpf'=>$filtro_cpf,'telefone'=>$filtro_telefone])) ?>" class="btn btn-sm btn-outline-light py-0">🔄</a>
+    </div>
+    <div class="p-2 border-bottom bg-light">
+      <form method="GET" class="row g-1 align-items-end" style="font-size:12px;">
+        <input type="hidden" name="tab" value="followup">
+        <div class="col-auto">
+          <label class="form-label mb-0 fw-bold" style="font-size:11px;">De</label>
+          <input type="date" name="data_ini" class="form-control form-control-sm border-dark" style="font-size:11px;width:130px;" value="<?= htmlspecialchars($filtro_data_ini) ?>">
+        </div>
+        <div class="col-auto">
+          <label class="form-label mb-0 fw-bold" style="font-size:11px;">Até</label>
+          <input type="date" name="data_fim" class="form-control form-control-sm border-dark" style="font-size:11px;width:130px;" value="<?= htmlspecialchars($filtro_data_fim) ?>">
+        </div>
+        <div class="col-auto">
+          <label class="form-label mb-0 fw-bold" style="font-size:11px;">Usuário</label>
+          <input type="text" name="usuario" class="form-control form-control-sm border-dark" style="font-size:11px;width:140px;" placeholder="Nome..." value="<?= htmlspecialchars($filtro_usuario) ?>">
+        </div>
+        <div class="col-auto">
+          <label class="form-label mb-0 fw-bold" style="font-size:11px;">CPF Cliente</label>
+          <input type="text" name="cpf" class="form-control form-control-sm border-dark" style="font-size:11px;width:120px;" placeholder="Somente dígitos" value="<?= htmlspecialchars($_GET['cpf'] ?? '') ?>">
+        </div>
+        <div class="col-auto">
+          <label class="form-label mb-0 fw-bold" style="font-size:11px;">Telefone</label>
+          <input type="text" name="telefone" class="form-control form-control-sm border-dark" style="font-size:11px;width:120px;" placeholder="Somente dígitos" value="<?= htmlspecialchars($_GET['telefone'] ?? '') ?>">
+        </div>
+        <div class="col-auto d-flex gap-1">
+          <button type="submit" class="btn btn-sm btn-dark py-0 px-2" style="font-size:11px;"><i class="fas fa-search me-1"></i>Filtrar</button>
+          <a href="?tab=followup" class="btn btn-sm btn-outline-secondary py-0 px-2" style="font-size:11px;">✕</a>
+        </div>
+      </form>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm table-hover mb-0" style="font-size:12px;">
+        <thead class="table-dark">
+          <tr><th>Usuário / Agent ID</th><th>CPF Cliente</th><th>Telefone</th><th>Status</th><th>Tentativas</th><th>Criado</th><th>Observação</th></tr>
+        </thead>
+        <tbody>
+        <?php if (empty($ultimasSessoes)): ?>
+          <tr><td colspan="7" class="text-center text-muted py-3 fst-italic">Nenhuma sessão encontrada.</td></tr>
+        <?php else: ?>
+          <?php foreach ($ultimasSessoes as $s):
+            $badge = match($s['STATUS']) { 'PROCESSADO'=>'bg-success','ERRO'=>'bg-danger','EXPIRADO'=>'bg-secondary',default=>'bg-warning text-dark' };
+            $agentId=$s['GPTMAKE_AGENT_ID']??$s['AGENT_ID']??''; $donoNome=$s['DONO_NOME']??'—';
+          ?>
+          <tr>
+            <td><div class="fw-bold"><?= htmlspecialchars($donoNome) ?></div>
+              <?php if($agentId): ?><div class="font-monospace text-muted" style="font-size:10px;"><?= substr(htmlspecialchars($agentId),0,18) ?>...</div><?php endif; ?>
+            </td>
+            <td class="font-monospace"><?= preg_replace('/(\d{3})(\d{3})(\d{3})(\d{2})/', '$1.***.***-$4', str_pad($s['CPF_CLIENTE'],11,'0',STR_PAD_LEFT)) ?></td>
+            <td><?= htmlspecialchars($s['TELEFONE']??'—') ?></td>
+            <td><span class="badge <?= $badge ?>"><?= $s['STATUS'] ?></span></td>
+            <td class="text-center"><?= $s['TENTATIVAS'] ?>/10</td>
+            <td><?= $s['DATA_CRIACAO'] ? date('d/m H:i', strtotime($s['DATA_CRIACAO'])) : '—' ?></td>
+            <td class="text-truncate" style="max-width:200px;" title="<?= htmlspecialchars($s['OBSERVACAO']??'') ?>"><?= htmlspecialchars($s['OBSERVACAO']??'—') ?></td>
+          </tr>
+          <?php endforeach; ?>
+        <?php endif; ?>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div><!-- /tabFollowup -->
+
+<!-- ══ TAB 4: WORKER / LOG ═══════════════════════════════════════════════ -->
+<div class="tab-pane fade" id="tabWorker">
+  <div class="row g-3">
+    <div class="col-md-4">
+      <div class="card border-dark shadow-sm gpt-card">
+        <div class="card-header bg-secondary text-white fw-bold small">
+          <i class="fas fa-clock me-2"></i>Worker Follow-up (Cron: a cada 2 min)
+        </div>
+        <div class="card-body py-3">
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge bg-warning text-dark px-2 py-1">⏳ Pendente: <?= $statsMap['PENDENTE']??0 ?></span>
+            <span class="badge bg-success px-2 py-1">✅ Processado: <?= $statsMap['PROCESSADO']??0 ?></span>
+            <span class="badge bg-danger px-2 py-1">❌ Erro: <?= $statsMap['ERRO']??0 ?></span>
+            <span class="badge bg-secondary px-2 py-1">💤 Expirado: <?= $statsMap['EXPIRADO']??0 ?></span>
+          </div>
+          <a href="?forcar_worker=1" class="btn btn-sm btn-outline-dark border-dark">
+            <i class="fas fa-play me-1"></i>Executar Agora
+          </a>
+        </div>
       </div>
     </div>
+    <div class="col-md-8">
+      <div class="card border-dark shadow-sm gpt-card">
+        <div class="card-header bg-dark text-white fw-bold small">
+          <i class="fas fa-terminal me-1"></i>Log do Worker (hoje)
+        </div>
+        <div class="card-body p-0">
+          <pre style="background:#1e1e1e;color:#d4d4d4;font-size:11px;min-height:200px;max-height:500px;overflow-y:auto;margin:0;padding:10px;"><?php
+            $logFile = __DIR__ . '/logs_ia/followup_' . date('Y-m-d') . '.log';
+            echo file_exists($logFile) ? htmlspecialchars(implode('', array_slice(file($logFile), -50))) : "Nenhum log ainda hoje.";
+          ?></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /tabWorker -->
 
+</div><!-- /tab-content -->
+</div><!-- /container-fluid -->
+
+<!-- ══ MODAL: NOVO / EDITAR BLOCO DE TREINAMENTO ══════════════════════════ -->
+<div class="modal fade" id="modalTreino" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content border-dark shadow-lg">
+      <div class="modal-header bg-dark text-white border-dark">
+        <h5 class="modal-title fw-bold"><i class="fas fa-brain text-primary me-2"></i><span id="modalTreinoTitulo">Novo Bloco de Treinamento</span></h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body bg-light">
+        <input type="hidden" id="treino_id">
+        <div class="mb-3">
+          <label class="fw-bold small">Agente (Agent ID)</label>
+          <select id="treino_agent" class="form-select border-dark" style="font-size:12px;">
+            <?php foreach($configs as $cfg): ?>
+            <option value="<?= htmlspecialchars($cfg['AGENT_ID']) ?>">
+              <?= htmlspecialchars($cfg['NOME_USUARIO_ATUAL']??$cfg['NOME_USUARIO']) ?> — <?= substr($cfg['AGENT_ID'],0,22) ?>...
+            </option>
+            <?php endforeach; ?>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="fw-bold small">Título do Bloco</label>
+          <input type="text" id="treino_titulo" class="form-control border-dark" placeholder="Ex: Passo 1 — Abertura" maxlength="150">
+        </div>
+        <div class="mb-1">
+          <label class="fw-bold small d-flex justify-content-between">
+            Conteúdo do Treinamento
+            <span id="treino_chars" class="text-success fw-bold">0/1028</span>
+          </label>
+          <textarea id="treino_conteudo" class="form-control border-dark font-monospace" rows="10"
+            placeholder="Escreva o conteúdo do treinamento aqui..." style="font-size:12px;"
+            oninput="atualizarCharsCounter()"></textarea>
+          <div class="form-text">Máximo recomendado: 1.028 caracteres por bloco.</div>
+        </div>
+      </div>
+      <div class="modal-footer bg-white border-dark d-flex justify-content-between">
+        <button type="button" class="btn btn-outline-dark fw-bold" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-success fw-bold border-dark px-4" onclick="salvarTreino()">
+          <i class="fas fa-save me-1"></i>Salvar Bloco
+        </button>
+      </div>
+    </div>
   </div>
 </div>
-</div>
+
+<script>
+// ── Tab persistência ──────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+    const tabParam = new URLSearchParams(location.search).get('tab');
+    if (tabParam) {
+        const el = document.querySelector(`[data-bs-target="#tab${tabParam.charAt(0).toUpperCase()+tabParam.slice(1)}"]`);
+        if (el) new bootstrap.Tab(el).show();
+    }
+});
+
+// ── Treinamentos ──────────────────────────────────────────────────────────
+function abrirModalTreino() {
+    document.getElementById('treino_id').value = '';
+    document.getElementById('treino_titulo').value = '';
+    document.getElementById('treino_conteudo').value = '';
+    document.getElementById('modalTreinoTitulo').textContent = 'Novo Bloco de Treinamento';
+    atualizarCharsCounter();
+    new bootstrap.Modal(document.getElementById('modalTreino')).show();
+}
+
+function editarTreino(t) {
+    document.getElementById('treino_id').value = t.ID;
+    document.getElementById('treino_titulo').value = t.TITULO;
+    document.getElementById('treino_conteudo').value = t.CONTEUDO;
+    document.getElementById('treino_agent').value = t.AGENT_ID;
+    document.getElementById('modalTreinoTitulo').textContent = 'Editar Bloco';
+    atualizarCharsCounter();
+    new bootstrap.Modal(document.getElementById('modalTreino')).show();
+}
+
+function atualizarCharsCounter() {
+    const len = document.getElementById('treino_conteudo').value.length;
+    const el  = document.getElementById('treino_chars');
+    el.textContent = len + '/1028';
+    el.className   = len > 1028 ? 'text-danger fw-bold' : len > 900 ? 'text-warning fw-bold' : 'text-success fw-bold';
+}
+
+function salvarTreino() {
+    const titulo   = document.getElementById('treino_titulo').value.trim();
+    const conteudo = document.getElementById('treino_conteudo').value.trim();
+    const agent    = document.getElementById('treino_agent').value;
+    const id       = document.getElementById('treino_id').value;
+    if (!titulo || !conteudo) { alert('Preencha título e conteúdo.'); return; }
+    const fd = new FormData();
+    fd.append('acao','salvar_treino'); fd.append('titulo',titulo);
+    fd.append('conteudo',conteudo); fd.append('agent_id_treino',agent); fd.append('id_treino',id);
+    fetch('config_gptmake.php',{method:'POST',body:fd}).then(r=>r.json()).then(j=>{
+        if(j.ok){ bootstrap.Modal.getInstance(document.getElementById('modalTreino')).hide(); location.reload(); }
+        else alert(j.msg);
+    });
+}
+
+function sincronizarTreino(id, titulo) {
+    if (!confirm(`Enviar "${titulo}" ao GPTMaker agora?`)) return;
+    const btn = event.target.closest('button');
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+    btn.disabled = true;
+    const fd = new FormData();
+    fd.append('acao','sincronizar_treino'); fd.append('id_treino',id);
+    fetch('config_gptmake.php',{method:'POST',body:fd}).then(r=>r.json()).then(j=>{
+        alert(j.msg || (j.ok ? 'Sincronizado!' : 'Erro.'));
+        location.reload();
+    });
+}
+
+function excluirTreino(id, titulo) {
+    if (!confirm(`Excluir o bloco "${titulo}"?`)) return;
+    const fd = new FormData();
+    fd.append('acao','excluir_treino'); fd.append('id_treino',id);
+    fetch('config_gptmake.php',{method:'POST',body:fd}).then(()=>location.reload());
+}
+</script>
 
 <?php if (isset($_GET['forcar_worker'])):
     $ch = curl_init('https://crm.assessoriaconsignado.com/modulos/configuracao/v8_clt_margem_e_digitacao/worker_gptmake_followup.php');

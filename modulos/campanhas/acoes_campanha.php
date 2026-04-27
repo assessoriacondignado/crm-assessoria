@@ -162,7 +162,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['acao']) && $_POST['aca
         $stmtLog = $pdo->prepare("INSERT INTO dados_cadastrais_log_rodape (CPF_CLIENTE, NOME_USUARIO, TEXTO_REGISTRO, id_usuario, id_empresa) VALUES (?, ?, ?, ?, ?)");
         $stmtLog->execute([$cpf_cliente, $nome_usuario, $texto_log, $id_usuario_num, $id_empresa_num]);
 
-        // Libera a reserva do cliente atual ao tabular
+        $marcacao = $status_data['MARCACAO'] ?? '';
+
+        // ── Libera reserva do cliente atual ───────────────────────────────────
         if ($id_campanha && $id_usuario_num) {
             try {
                 $pdo->prepare("UPDATE BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA SET ID_RESERVA_USUARIO = NULL, DATA_RESERVA = NULL WHERE CPF_CLIENTE = ? AND ID_CAMPANHA = ? AND ID_RESERVA_USUARIO = ?")
@@ -170,15 +172,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['acao']) && $_POST['aca
             } catch(Exception $e){}
         }
 
+        // ── Regras por marcação ───────────────────────────────────────────────
+        // SEM RETORNO     → remove cliente da campanha + avança para próximo
+        // FINALIZAR ATENDIMENTO → remove cliente da campanha + sai do modo campanha
+        // COM RETORNO     → mantém cliente na campanha + avança para próximo
+
+        if ($id_campanha && in_array($marcacao, ['SEM RETORNO', 'FINALIZAR ATENDIMENTO'])) {
+            try {
+                $pdo->prepare("DELETE FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA WHERE CPF_CLIENTE = ? AND ID_CAMPANHA = ?")
+                    ->execute([$cpf_cliente, $id_campanha]);
+            } catch(Exception $e){}
+        }
+
         $proximo_cpf = null;
 
-        // SÓ BUSCA O PRÓXIMO CLIENTE SE ESTIVER DENTRO DE UMA CAMPANHA
-        if ($id_campanha && in_array($status_data['MARCACAO'], ['FINALIZAR ATENDIMENTO', 'COM RETORNO'])) {
+        // Busca próximo apenas para SEM RETORNO e COM RETORNO
+        if ($id_campanha && in_array($marcacao, ['SEM RETORNO', 'COM RETORNO'])) {
             $stmtCamp = $pdo->prepare("SELECT PARAMETRO_INICIO_ALEATORIO FROM BANCO_DE_DADOS_CAMPANHA_CAMPANHAS WHERE ID = ?");
             $stmtCamp->execute([$id_campanha]);
             $aleatorio = $stmtCamp->fetchColumn();
 
-            // Exclui clientes reservados por OUTROS usuários (reserva expira em 5 min)
             $cond_reserva = " AND (c.ID_RESERVA_USUARIO IS NULL OR c.DATA_RESERVA < NOW() - INTERVAL 5 MINUTE OR c.ID_RESERVA_USUARIO = ?)";
             $sqlProx = "SELECT c.CPF_CLIENTE FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA c WHERE c.ID_CAMPANHA = ? AND c.CPF_CLIENTE != ?{$cond_reserva}";
             $paramsProx = [$id_campanha, $cpf_cliente, $id_usuario_num];
@@ -206,15 +219,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['acao']) && $_POST['aca
 
         if ($retornar_json) {
             header('Content-Type: application/json');
-            echo json_encode(['success' => true, 'proximo_cpf' => $proximo_cpf ?: null]);
+            echo json_encode(['success' => true, 'proximo_cpf' => $proximo_cpf ?: null, 'marcacao' => $marcacao]);
             exit;
         }
 
-        if ($proximo_cpf && $id_campanha) {
+        // ── Redirecionamento por marcação ─────────────────────────────────────
+        if ($marcacao === 'FINALIZAR ATENDIMENTO') {
+            // Sai do modo campanha — redireciona sem id_campanha
+            header("Location: /modulos/banco_dados/consulta.php?busca={$cpf_cliente}&cpf_selecionado={$cpf_cliente}&acao=visualizar");
+        } elseif ($proximo_cpf && $id_campanha) {
+            // Avança para o próximo cliente na campanha
             header("Location: /modulos/banco_dados/consulta.php?id_campanha={$id_campanha}&busca={$proximo_cpf}&cpf_selecionado={$proximo_cpf}&acao=visualizar");
         } else {
-            $url_camp = $id_campanha ? "&id_campanha={$id_campanha}" : "";
-            header("Location: /modulos/banco_dados/consulta.php?busca={$cpf_cliente}&cpf_selecionado={$cpf_cliente}&acao=visualizar" . $url_camp);
+            // Sem próximo: volta para a busca da campanha
+            header("Location: /modulos/banco_dados/consulta.php?id_campanha={$id_campanha}");
         }
         exit;
 

@@ -285,7 +285,15 @@
       "Bash(git -C /var/www/html show 09addc4 --stat)",
       "Bash(git -C /var/www/html diff HEAD -- modulos/cliente_e_usuario/cadastro_cliente.php)",
       "Bash(php -l /var/www/html/modulos/cliente_e_usuario/ajax_usuarios_online.php)",
-      "Bash(php -l /var/www/html/modulos/cliente_e_usuario/permissoes.php)"
+      "Bash(php -l /var/www/html/modulos/cliente_e_usuario/permissoes.php)",
+      "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -e \"SHOW COLUMNS FROM CLIENTE_USUARIO_PERMISSAO LIKE 'GRUPO_USUARIOS';\")",
+      "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -e \"ALTER TABLE CLIENTE_USUARIO_PERMISSAO MODIFY COLUMN GRUPO_USUARIOS TEXT;\")",
+      "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados)",
+      "Bash(echo \"Exit: $?\")",
+      "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -e \"SHOW COLUMNS FROM CLIENTE_USUARIO LIKE 'GRUPO_USUARIOS';\")",
+      "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -e \"ALTER TABLE CLIENTE_USUARIO MODIFY COLUMN GRUPO_USUARIOS VARCHAR\\(100\\);\")",
+      "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados --execute=\"ALTER TABLE CLIENTE_USUARIO MODIFY COLUMN GRUPO_USUARIOS VARCHAR\\(100\\);\")",
+      "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -e \"SET FOREIGN_KEY_CHECKS=0; ALTER TABLE CLIENTE_USUARIO MODIFY COLUMN GRUPO_USUARIOS VARCHAR\\(100\\); SET FOREIGN_KEY_CHECKS=1;\")"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",
