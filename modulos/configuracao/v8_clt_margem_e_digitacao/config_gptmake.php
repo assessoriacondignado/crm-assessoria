@@ -794,4 +794,8 @@ function excluirTreino(id, titulo) {
     curl_setopt_array($ch, [CURLOPT_RETURNTRANSFER=>true, CURLOPT_TIMEOUT=>30, CURLOPT_SSL_VERIFYPEER=>false]);
     curl_exec($ch); curl_close($ch);
     header("Location: config_gptmake.php?executado=1"); exit;
-endif; ?>
+endif;
+
+$caminho_footer = $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php';
+if (file_exists($caminho_footer)) include $caminho_footer;
+?>
