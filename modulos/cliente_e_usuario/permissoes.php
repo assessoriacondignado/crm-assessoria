@@ -9,6 +9,44 @@ error_reporting(E_ALL);
 include $_SERVER['DOCUMENT_ROOT'] . '/conexao.php';
 
 // ==========================================
+// AJAX: GET permissões de um grupo
+// ==========================================
+if (isset($_GET['acao_ajax']) && $_GET['acao_ajax'] === 'get_permissoes_grupo') {
+    header('Content-Type: application/json');
+    $nome_grupo = strtoupper(trim($_GET['nome_grupo'] ?? ''));
+    $stmtAll = $pdo->query("SELECT ID, NOME_PERMISSAO, CHAVE, TIPO, GRUPO_USUARIOS FROM CLIENTE_USUARIO_PERMISSAO ORDER BY TIPO ASC, NOME_PERMISSAO ASC");
+    $result = [];
+    foreach ($stmtAll->fetchAll(PDO::FETCH_ASSOC) as $p) {
+        $bloqueados = !empty($p['GRUPO_USUARIOS']) ? array_map('trim', explode(',', strtoupper($p['GRUPO_USUARIOS']))) : [];
+        $result[] = ['ID' => $p['ID'], 'NOME_PERMISSAO' => $p['NOME_PERMISSAO'], 'CHAVE' => $p['CHAVE'], 'TIPO' => $p['TIPO'], 'BLOQUEADO' => in_array($nome_grupo, $bloqueados)];
+    }
+    echo json_encode(['ok' => true, 'permissoes' => $result]); exit;
+}
+
+// ==========================================
+// AJAX: Salvar permissões de um grupo
+// ==========================================
+if (isset($_POST['acao_grupo']) && $_POST['acao_grupo'] === 'salvar_permissoes_grupo') {
+    header('Content-Type: application/json');
+    $nome_grupo = strtoupper(trim($_POST['nome_grupo'] ?? ''));
+    $ids_bloquear = array_map('intval', (array)($_POST['ids_bloqueados'] ?? []));
+    $stmtAll = $pdo->query("SELECT ID, GRUPO_USUARIOS FROM CLIENTE_USUARIO_PERMISSAO");
+    foreach ($stmtAll->fetchAll(PDO::FETCH_ASSOC) as $p) {
+        $grupos = !empty($p['GRUPO_USUARIOS']) ? array_map('trim', explode(',', $p['GRUPO_USUARIOS'])) : [];
+        $tinha = in_array($nome_grupo, array_map('strtoupper', $grupos));
+        $deve  = in_array((int)$p['ID'], $ids_bloquear);
+        if ($tinha && !$deve) {
+            $grupos = array_values(array_filter($grupos, fn($g) => strtoupper(trim($g)) !== $nome_grupo));
+            $pdo->prepare("UPDATE CLIENTE_USUARIO_PERMISSAO SET GRUPO_USUARIOS = ? WHERE ID = ?")->execute([implode(',', $grupos), $p['ID']]);
+        } elseif (!$tinha && $deve) {
+            $grupos[] = $nome_grupo;
+            $pdo->prepare("UPDATE CLIENTE_USUARIO_PERMISSAO SET GRUPO_USUARIOS = ? WHERE ID = ?")->execute([implode(',', $grupos), $p['ID']]);
+        }
+    }
+    echo json_encode(['ok' => true]); exit;
+}
+
+// ==========================================
 // AÇÕES DE GRUPO
 // ==========================================
 if (isset($_POST['acao_grupo'])) {
@@ -16,7 +54,28 @@ if (isset($_POST['acao_grupo'])) {
     $id_grupo = $_POST['id_grupo'] ?? '';
 
     try {
-        if ($_POST['acao_grupo'] == 'salvar') {
+        if ($_POST['acao_grupo'] == 'duplicar') {
+            $id_orig = intval($_POST['id_grupo'] ?? 0);
+            $stmtN = $pdo->prepare("SELECT NOME_GRUPO FROM SISTEMA_GRUPOS_USUARIO WHERE ID = ?");
+            $stmtN->execute([$id_orig]);
+            $nome_orig = $stmtN->fetchColumn();
+            if ($nome_orig) {
+                $nome_novo = $nome_orig . ' - COPIA';
+                $pdo->prepare("INSERT INTO SISTEMA_GRUPOS_USUARIO (NOME_GRUPO) VALUES (?)")->execute([$nome_novo]);
+                // Copia as permissões: onde o grupo original está bloqueado, bloqueia o novo também
+                $stmtP = $pdo->query("SELECT ID, GRUPO_USUARIOS FROM CLIENTE_USUARIO_PERMISSAO");
+                foreach ($stmtP->fetchAll(PDO::FETCH_ASSOC) as $p) {
+                    if (!empty($p['GRUPO_USUARIOS'])) {
+                        $gs = array_map('trim', explode(',', $p['GRUPO_USUARIOS']));
+                        if (in_array($nome_orig, array_map('strtoupper', $gs)) && !in_array($nome_novo, array_map('strtoupper', $gs))) {
+                            $gs[] = $nome_novo;
+                            $pdo->prepare("UPDATE CLIENTE_USUARIO_PERMISSAO SET GRUPO_USUARIOS = ? WHERE ID = ?")->execute([implode(',', $gs), $p['ID']]);
+                        }
+                    }
+                }
+                $msg_sucesso = "Grupo '{$nome_novo}' criado com as mesmas permissões!";
+            }
+        } elseif ($_POST['acao_grupo'] == 'salvar') {
             if(empty($id_grupo)) {
                 $pdo->prepare("INSERT INTO SISTEMA_GRUPOS_USUARIO (NOME_GRUPO) VALUES (?)")->execute([$nome_grupo]);
             } else {
@@ -168,8 +227,18 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-end border-dark shadow">
                                         <li>
-                                            <a class="dropdown-item fw-bold" href="#" onclick="abrirModalEdicaoGrupo(<?= $g['ID'] ?>, '<?= htmlspecialchars($g['NOME_GRUPO']) ?>')">
+                                            <a class="dropdown-item fw-bold" href="#" onclick="abrirGerenciarGrupo(<?= $g['ID'] ?>, '<?= htmlspecialchars($g['NOME_GRUPO']) ?>')">
                                                 <i class="fas fa-edit text-primary" style="width: 20px;"></i> Editar
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item fw-bold" href="#" onclick="abrirModalEdicaoGrupo(<?= $g['ID'] ?>, '<?= htmlspecialchars($g['NOME_GRUPO']) ?>')">
+                                                <i class="fas fa-pen text-secondary" style="width: 20px;"></i> Renomear
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item fw-bold text-info" href="#" onclick="duplicarGrupo(<?= $g['ID'] ?>, '<?= htmlspecialchars($g['NOME_GRUPO']) ?>')">
+                                                <i class="fas fa-copy" style="width: 20px;"></i> Duplicar
                                             </a>
                                         </li>
                                         <li>
@@ -292,6 +361,53 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
                             <?php endif; ?>
                         </tbody>
                     </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL: GERENCIAR GRUPO (PERMISSÕES) -->
+<div class="modal fade" id="modalGerenciarGrupo" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+        <div class="modal-content border-dark shadow-lg">
+            <div class="modal-header bg-dark text-white border-dark">
+                <h5 class="modal-title fw-bold"><i class="fas fa-shield-alt text-info me-2"></i> Permissões do Grupo: <span id="ggNomeLabel" class="text-info"></span></h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body bg-light p-0">
+                <div class="p-3 border-bottom border-dark bg-white d-flex gap-2 align-items-center">
+                    <input type="text" id="ggFiltro" class="form-control border-dark rounded-0" placeholder="Filtrar permissões..." oninput="ggFiltrar()">
+                    <select id="ggFiltroTipo" class="form-select border-dark rounded-0" style="max-width:160px;" onchange="ggFiltrar()">
+                        <option value="">Todos os tipos</option>
+                        <option value="TELA">Tela / Menu</option>
+                        <option value="FUNCAO">Função / Botão</option>
+                    </select>
+                    <div class="form-check form-switch ms-2 mb-0 text-nowrap">
+                        <input class="form-check-input" type="checkbox" id="ggApenasAtivos" onchange="ggFiltrar()">
+                        <label class="form-check-label fw-bold small" for="ggApenasAtivos">Só bloqueados</label>
+                    </div>
+                </div>
+                <div id="ggLoading" class="text-center py-5 text-primary"><i class="fas fa-spinner fa-spin fa-2x"></i></div>
+                <div id="ggLista" style="display:none;">
+                    <table class="table table-hover table-sm mb-0 border-dark text-start" style="font-size:0.85rem;">
+                        <thead class="table-dark text-white text-uppercase sticky-top" style="z-index:1;">
+                            <tr>
+                                <th class="ps-3">Permissão</th>
+                                <th>Chave</th>
+                                <th class="text-center" style="width:80px;">Tipo</th>
+                                <th class="text-center" style="width:120px;">Bloqueado?</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ggTbody"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer border-dark bg-white d-flex justify-content-between">
+                <small id="ggContador" class="text-muted"></small>
+                <div class="d-flex gap-2">
+                    <button type="button" class="btn btn-outline-dark fw-bold" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-success fw-bold border-dark" onclick="ggSalvar()"><i class="fas fa-save me-1"></i> Salvar Alterações</button>
                 </div>
             </div>
         </div>
@@ -482,6 +598,112 @@ document.getElementById('modalGrupo').addEventListener('hidden.bs.modal', functi
     document.getElementById('id_grupo_form').value = '';
     document.getElementById('nome_grupo_form').value = '';
 });
+
+// ──────────────────────────────────────────────────────────────────────────
+// GERENCIAR GRUPO (PERMISSÕES)
+// ──────────────────────────────────────────────────────────────────────────
+let _ggNomeGrupo = '';
+let _ggPerms     = [];
+
+function abrirGerenciarGrupo(id, nome) {
+    _ggNomeGrupo = nome;
+    document.getElementById('ggNomeLabel').textContent = nome;
+    document.getElementById('ggFiltro').value = '';
+    document.getElementById('ggFiltroTipo').value = '';
+    document.getElementById('ggApenasAtivos').checked = false;
+    document.getElementById('ggLoading').style.display = '';
+    document.getElementById('ggLista').style.display = 'none';
+    new bootstrap.Modal(document.getElementById('modalGerenciarGrupo')).show();
+
+    fetch(`permissoes.php?acao_ajax=get_permissoes_grupo&nome_grupo=${encodeURIComponent(nome)}`)
+    .then(r => r.json())
+    .then(data => {
+        _ggPerms = data.permissoes || [];
+        ggRenderizar(_ggPerms);
+        document.getElementById('ggLoading').style.display = 'none';
+        document.getElementById('ggLista').style.display = '';
+        ggAtualizarContador();
+    });
+}
+
+function ggRenderizar(perms) {
+    const tb = document.getElementById('ggTbody');
+    tb.innerHTML = '';
+    perms.forEach(p => {
+        const tipoBadge = p.TIPO === 'TELA'
+            ? '<span class="badge bg-primary rounded-0">Tela</span>'
+            : '<span class="badge bg-warning text-dark rounded-0">Função</span>';
+        const checked = p.BLOQUEADO ? 'checked' : '';
+        const rowCls  = p.BLOQUEADO ? 'table-danger' : '';
+        tb.innerHTML += `<tr class="${rowCls}" id="gg_row_${p.ID}" data-tipo="${p.TIPO}" data-bloqueado="${p.BLOQUEADO ? '1' : '0'}">
+            <td class="ps-3 fw-bold text-dark">${p.NOME_PERMISSAO}</td>
+            <td class="text-muted font-monospace small">${p.CHAVE}</td>
+            <td class="text-center">${tipoBadge}</td>
+            <td class="text-center">
+                <div class="form-check form-switch d-flex justify-content-center mb-0">
+                    <input class="form-check-input border-danger gg-toggle" type="checkbox" id="gg_chk_${p.ID}" data-id="${p.ID}" ${checked} onchange="ggToggle(this)">
+                </div>
+            </td>
+        </tr>`;
+    });
+}
+
+function ggToggle(chk) {
+    const id  = parseInt(chk.dataset.id);
+    const row = document.getElementById(`gg_row_${id}`);
+    const perm = _ggPerms.find(p => p.ID == id);
+    if (perm) perm.BLOQUEADO = chk.checked;
+    row.className = chk.checked ? 'table-danger' : '';
+    row.dataset.bloqueado = chk.checked ? '1' : '0';
+    ggAtualizarContador();
+}
+
+function ggFiltrar() {
+    const texto   = document.getElementById('ggFiltro').value.toLowerCase();
+    const tipo    = document.getElementById('ggFiltroTipo').value;
+    const soBloc  = document.getElementById('ggApenasAtivos').checked;
+    document.querySelectorAll('#ggTbody tr').forEach(tr => {
+        const matchTxt  = tr.textContent.toLowerCase().includes(texto);
+        const matchTipo = !tipo || tr.dataset.tipo === tipo;
+        const matchBloc = !soBloc || tr.dataset.bloqueado === '1';
+        tr.style.display = (matchTxt && matchTipo && matchBloc) ? '' : 'none';
+    });
+}
+
+function ggAtualizarContador() {
+    const total   = _ggPerms.length;
+    const bloqued = _ggPerms.filter(p => p.BLOQUEADO).length;
+    document.getElementById('ggContador').textContent = `${bloqued} bloqueadas de ${total} permissões`;
+}
+
+function ggSalvar() {
+    const ids = _ggPerms.filter(p => p.BLOQUEADO).map(p => p.ID);
+    const fd  = new FormData();
+    fd.append('acao_grupo', 'salvar_permissoes_grupo');
+    fd.append('nome_grupo', _ggNomeGrupo);
+    ids.forEach(id => fd.append('ids_bloqueados[]', id));
+
+    fetch('permissoes.php', { method: 'POST', body: fd })
+    .then(r => r.json())
+    .then(data => {
+        if (data.ok) {
+            bootstrap.Modal.getInstance(document.getElementById('modalGerenciarGrupo')).hide();
+            location.reload();
+        }
+    });
+}
+
+// ──────────────────────────────────────────────────────────────────────────
+// DUPLICAR GRUPO
+// ──────────────────────────────────────────────────────────────────────────
+function duplicarGrupo(id, nome) {
+    if (!confirm(`Duplicar o grupo "${nome}"?\n\nSera criado "${nome} - COPIA" com as mesmas permissões.`)) return;
+    const fd = new FormData();
+    fd.append('acao_grupo', 'duplicar');
+    fd.append('id_grupo', id);
+    fetch('permissoes.php', { method: 'POST', body: fd })
+    .then(() => location.reload());
+}
 </script>
 
 <?php 

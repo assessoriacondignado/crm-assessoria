@@ -284,7 +284,8 @@
       "Bash(git -C /var/www/html log --oneline --all -- modulos/cliente_e_usuario/cadastro_cliente.php)",
       "Bash(git -C /var/www/html show 09addc4 --stat)",
       "Bash(git -C /var/www/html diff HEAD -- modulos/cliente_e_usuario/cadastro_cliente.php)",
-      "Bash(php -l /var/www/html/modulos/cliente_e_usuario/ajax_usuarios_online.php)"
+      "Bash(php -l /var/www/html/modulos/cliente_e_usuario/ajax_usuarios_online.php)",
+      "Bash(php -l /var/www/html/modulos/cliente_e_usuario/permissoes.php)"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",
