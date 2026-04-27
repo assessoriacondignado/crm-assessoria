@@ -168,7 +168,9 @@ if ($acao_post === 'excluir_treino') {
 
 // Ação: sincronizar com GPTMaker
 if ($acao_post === 'sincronizar_treino') {
-    session_write_close(); // libera o lock de sessão antes do curl (evita spinner eterno)
+    ignore_user_abort(true);
+    set_time_limit(120);
+    session_write_close(); // libera o lock de sessão antes do curl
     header('Content-Type: application/json');
     $id_treino = (int)($_POST['id_treino'] ?? 0);
     try {
@@ -178,14 +180,23 @@ if ($acao_post === 'sincronizar_treino') {
         if (!$treino) { echo json_encode(['ok'=>false,'msg'=>'Bloco não encontrado.']); exit; }
         if (empty($treino['API_TOKEN'])) { echo json_encode(['ok'=>false,'msg'=>'Token não configurado para este agente.']); exit; }
 
+        $body = json_encode(['type'=>'TEXT','text'=>$treino['CONTEUDO']], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+
         $ch = curl_init("https://api.gptmaker.ai/v2/agent/{$treino['AGENT_ID']}/trainings");
         curl_setopt_array($ch, [
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_POST           => true,
-            CURLOPT_POSTFIELDS     => json_encode(['type'=>'TEXT','text'=>$treino['CONTEUDO']]),
-            CURLOPT_HTTPHEADER     => ["Authorization: Bearer {$treino['API_TOKEN']}", "Content-Type: application/json"],
-            CURLOPT_TIMEOUT        => 20,
-            CURLOPT_SSL_VERIFYPEER => false
+            CURLOPT_POSTFIELDS     => $body,
+            CURLOPT_HTTPHEADER     => [
+                "Authorization: Bearer {$treino['API_TOKEN']}",
+                "Content-Type: application/json; charset=utf-8",
+                "Content-Length: " . strlen($body)
+            ],
+            CURLOPT_CONNECTTIMEOUT => 15,
+            CURLOPT_TIMEOUT        => 90,
+            CURLOPT_SSL_VERIFYPEER => false,
+            CURLOPT_SSL_VERIFYHOST => false,
+            CURLOPT_IPRESOLVE      => CURL_IPRESOLVE_V4, // evita IPv6 sem rota
         ]);
         $res  = curl_exec($ch);
         $http = curl_getinfo($ch, CURLINFO_HTTP_CODE);
@@ -195,8 +206,9 @@ if ($acao_post === 'sincronizar_treino') {
         if ($curl_err) { echo json_encode(['ok'=>false,'msg'=>"Erro cURL: {$curl_err}"]); exit; }
 
         $json = json_decode($res, true);
-        if ($http === 200 && ($json['success'] ?? false)) {
-            $training_id = $json['id'] ?? $json['trainingId'] ?? null;
+        // GPTMaker retorna {"id":"...","tenant":"..."} em sucesso (sem campo "success")
+        $training_id = $json['id'] ?? $json['trainingId'] ?? null;
+        if ($http === 200 && !empty($training_id)) {
             $pdo->prepare("UPDATE INTEGRACAO_GPTMAKE_TREINAMENTOS SET STATUS='SINCRONIZADO',GPTMAKE_TRAINING_ID=?,DATA_SYNC=NOW(),MSG_ERRO=NULL WHERE ID=?")->execute([$training_id, $id_treino]);
             echo json_encode(['ok'=>true, 'msg'=>'Sincronizado com sucesso!']); exit;
         } else {
