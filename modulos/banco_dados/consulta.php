@@ -2420,19 +2420,15 @@ async function salvarRegistroCampanha() {
             crmToast('Atendimento gravado!', 'success', 3000);
 
             const campId = '<?= $id_camp ?? '' ?>';
-            const marcacao = j.marcacao ?? '';
 
             setTimeout(() => {
                 if (j.proximo_cpf && campId) {
-                    // Avança para o próximo cliente na campanha
-                    window.location.href = '?cpf_selecionado=' + j.proximo_cpf + '&id_campanha=' + campId;
-                } else if (marcacao === 'FINALIZAR ATENDIMENTO') {
-                    // Sai do modo campanha — fica na ficha atual sem id_campanha
-                    window.location.href = '?cpf_selecionado=<?= urlencode($cpf_selecionado ?? '') ?>&acao=visualizar';
+                    // Avança para o próximo cliente — sempre permanece no modo campanha
+                    window.location.href = '?cpf_selecionado=' + j.proximo_cpf + '&id_campanha=' + campId + '&acao=visualizar';
                 } else if (campId) {
-                    // Sem próximo cliente mas continua na campanha (fila vazia)
+                    // Campanha sem mais clientes disponíveis
                     crmToast('Todos os clientes desta campanha foram atendidos!', 'info', 4000);
-                    setTimeout(() => window.location.href = '?id_campanha=' + campId, 2000);
+                    setTimeout(() => window.location.href = '?id_campanha=' + campId, 2500);
                 } else {
                     location.reload();
                 }

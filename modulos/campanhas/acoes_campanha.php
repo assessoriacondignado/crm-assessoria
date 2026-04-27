@@ -173,25 +173,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['acao']) && $_POST['aca
         }
 
         // ── Regras por marcação ───────────────────────────────────────────────
-        // SEM RETORNO     → remove cliente da campanha + avança para próximo
-        // FINALIZAR ATENDIMENTO → remove cliente da campanha + sai do modo campanha
-        // COM RETORNO     → mantém cliente na campanha + avança para próximo
+        // SEM RETORNO       → remove cliente da campanha + avança para próximo
+        // FINALIZAR ATENDIMENTO → remove cliente da campanha + avança para próximo
+        // COM RETORNO       → mantém cliente na campanha + avança para próximo
+        // Em todos os casos dentro de uma campanha: sempre avança para o próximo cliente
 
-        if ($id_campanha && in_array($marcacao, ['SEM RETORNO', 'FINALIZAR ATENDIMENTO'])) {
-            try {
-                $pdo->prepare("DELETE FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA WHERE CPF_CLIENTE = ? AND ID_CAMPANHA = ?")
-                    ->execute([$cpf_cliente, $id_campanha]);
-            } catch(Exception $e){}
-        }
+        $proximo_cpf  = null;
+        $id_pos_atual = null;
 
-        $proximo_cpf = null;
+        if ($id_campanha) {
+            // Salva posição atual ANTES de deletar (necessário para query sequencial)
+            $stmtPos = $pdo->prepare("SELECT ID FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA WHERE CPF_CLIENTE = ? AND ID_CAMPANHA = ? LIMIT 1");
+            $stmtPos->execute([$cpf_cliente, $id_campanha]);
+            $id_pos_atual = (int)($stmtPos->fetchColumn() ?: 0);
 
-        // Busca próximo apenas para SEM RETORNO e COM RETORNO
-        if ($id_campanha && in_array($marcacao, ['SEM RETORNO', 'COM RETORNO'])) {
+            // Busca configuração da campanha
             $stmtCamp = $pdo->prepare("SELECT PARAMETRO_INICIO_ALEATORIO FROM BANCO_DE_DADOS_CAMPANHA_CAMPANHAS WHERE ID = ?");
             $stmtCamp->execute([$id_campanha]);
             $aleatorio = $stmtCamp->fetchColumn();
 
+            // SEM RETORNO e FINALIZAR ATENDIMENTO: remove o cliente da campanha
+            if (in_array($marcacao, ['SEM RETORNO', 'FINALIZAR ATENDIMENTO'])) {
+                try {
+                    $pdo->prepare("DELETE FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA WHERE CPF_CLIENTE = ? AND ID_CAMPANHA = ?")
+                        ->execute([$cpf_cliente, $id_campanha]);
+                } catch(Exception $e){}
+            }
+
+            // Busca o próximo cliente para TODOS os tipos de marcação em campanha
             $cond_reserva = " AND (c.ID_RESERVA_USUARIO IS NULL OR c.DATA_RESERVA < NOW() - INTERVAL 5 MINUTE OR c.ID_RESERVA_USUARIO = ?)";
             $sqlProx = "SELECT c.CPF_CLIENTE FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA c WHERE c.ID_CAMPANHA = ? AND c.CPF_CLIENTE != ?{$cond_reserva}";
             $paramsProx = [$id_campanha, $cpf_cliente, $id_usuario_num];
@@ -199,19 +208,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['acao']) && $_POST['aca
             if ($aleatorio == 'SIM') {
                 $sqlProx .= " ORDER BY RAND() LIMIT 1";
             } else {
-                $sqlProx .= " AND c.ID > (SELECT ID FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA WHERE CPF_CLIENTE = ? AND ID_CAMPANHA = ? LIMIT 1) ORDER BY c.ID ASC LIMIT 1";
-                $paramsProx[] = $cpf_cliente;
-                $paramsProx[] = $id_campanha;
+                // Usa ID salvo antes da deleção (evita subquery em registro já removido)
+                $sqlProx .= " AND c.ID > ? ORDER BY c.ID ASC LIMIT 1";
+                $paramsProx[] = $id_pos_atual;
             }
 
             $stmtProx = $pdo->prepare($sqlProx);
             $stmtProx->execute($paramsProx);
-            $proximo_cpf = $stmtProx->fetchColumn();
+            $proximo_cpf = $stmtProx->fetchColumn() ?: null;
 
+            // Se não encontrou à frente, reinicia do começo (volta para o primeiro)
             if (!$proximo_cpf && $aleatorio == 'NAO') {
-                $stmtProxLoop = $pdo->prepare("SELECT CPF_CLIENTE FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA WHERE ID_CAMPANHA = ? AND CPF_CLIENTE != ? AND (ID_RESERVA_USUARIO IS NULL OR DATA_RESERVA < NOW() - INTERVAL 5 MINUTE OR ID_RESERVA_USUARIO = ?) ORDER BY ID ASC LIMIT 1");
-                $stmtProxLoop->execute([$id_campanha, $cpf_cliente, $id_usuario_num]);
-                $proximo_cpf = $stmtProxLoop->fetchColumn();
+                $stmtLoop = $pdo->prepare("SELECT CPF_CLIENTE FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA WHERE ID_CAMPANHA = ? AND CPF_CLIENTE != ? AND (ID_RESERVA_USUARIO IS NULL OR DATA_RESERVA < NOW() - INTERVAL 5 MINUTE OR ID_RESERVA_USUARIO = ?) ORDER BY ID ASC LIMIT 1");
+                $stmtLoop->execute([$id_campanha, $cpf_cliente, $id_usuario_num]);
+                $proximo_cpf = $stmtLoop->fetchColumn() ?: null;
             }
         }
 
