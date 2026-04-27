@@ -298,7 +298,8 @@
       "Bash(php -l /var/www/html/modulos/campanhas/relatorio_ajax.php)",
       "Bash(awk 'NR>=310 && NR<=485 {printf \"%d\\\\t%s\\\\n\", NR, $0}' /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/config_gptmake.php)",
       "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -e \"SELECT ID, AGENT_ID, CPF_USUARIO FROM INTEGRACAO_GPTMAKE_CONFIG WHERE STATUS='ATIVO' LIMIT 3;\")",
-      "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -e \"SELECT COUNT\\(*\\), MAX\\(LENGTH\\(CONTEUDO\\)\\) as max_chars FROM INTEGRACAO_GPTMAKE_TREINAMENTOS;\")"
+      "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -e \"SELECT COUNT\\(*\\), MAX\\(LENGTH\\(CONTEUDO\\)\\) as max_chars FROM INTEGRACAO_GPTMAKE_TREINAMENTOS;\")",
+      "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -e \"ALTER TABLE INTEGRACAO_GPTMAKE_TREINAMENTOS MODIFY COLUMN AGENT_ID VARCHAR\\(100\\) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL;\")"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",
