@@ -682,6 +682,16 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
                 if ($campanha_atual) {
                     $is_modo_campanha = true;
 
+                    // Reserva o cliente atual para o usuário logado
+                    if (!empty($cpf_selecionado) && $id_usuario_logado_num) {
+                        try { $pdo->exec("ALTER TABLE BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA ADD COLUMN ID_RESERVA_USUARIO INT DEFAULT NULL"); } catch(Exception $e){}
+                        try { $pdo->exec("ALTER TABLE BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA ADD COLUMN DATA_RESERVA DATETIME DEFAULT NULL"); } catch(Exception $e){}
+                        try {
+                            $pdo->prepare("UPDATE BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA SET ID_RESERVA_USUARIO = ?, DATA_RESERVA = NOW() WHERE CPF_CLIENTE = ? AND ID_CAMPANHA = ?")
+                                ->execute([$id_usuario_logado_num, $cpf_selecionado, $id_camp]);
+                        } catch(\Throwable $e){}
+                    }
+
                     if (!empty($campanha_atual['IDS_STATUS_CONTATOS'])) {
                         $ids_in_safe = implode(',', array_map('intval', explode(',', $campanha_atual['IDS_STATUS_CONTATOS'])));
                         if (!empty($ids_in_safe)) {
@@ -714,20 +724,21 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
                         $historico_campanha = $stmtHistCamp->fetchAll(PDO::FETCH_ASSOC);
                     } catch (\Throwable $e) { $historico_campanha = []; }
 
-                    $sqlProx = "SELECT c.CPF_CLIENTE FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA c WHERE c.ID_CAMPANHA = :id_camp AND c.CPF_CLIENTE != :cpf_atual";
+                    // Exclui clientes reservados por OUTROS usuários (reserva expira em 5 min)
+                    $sqlProx = "SELECT c.CPF_CLIENTE FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA c WHERE c.ID_CAMPANHA = :id_camp AND c.CPF_CLIENTE != :cpf_atual AND (c.ID_RESERVA_USUARIO IS NULL OR c.DATA_RESERVA < NOW() - INTERVAL 5 MINUTE OR c.ID_RESERVA_USUARIO = :id_usr)";
                     if ($campanha_atual['PARAMETRO_INICIO_ALEATORIO'] == 'SIM') {
                         $sqlProx .= " ORDER BY RAND() LIMIT 1";
                     } else {
                         $sqlProx .= " AND c.ID > (SELECT ID FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA WHERE CPF_CLIENTE = :cpf_atual AND ID_CAMPANHA = :id_camp LIMIT 1) ORDER BY c.ID ASC LIMIT 1";
                     }
-                    
+
                     $stmtProx = $pdo->prepare($sqlProx);
-                    $stmtProx->execute(['id_camp' => $id_camp, 'cpf_atual' => $cpf_selecionado]);
+                    $stmtProx->execute(['id_camp' => $id_camp, 'cpf_atual' => $cpf_selecionado, 'id_usr' => $id_usuario_logado_num]);
                     $proximo_cpf_campanha = $stmtProx->fetchColumn();
-                    
+
                     if (!$proximo_cpf_campanha && $campanha_atual['PARAMETRO_INICIO_ALEATORIO'] == 'NAO') {
-                        $stmtProxLoop = $pdo->prepare("SELECT CPF_CLIENTE FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA WHERE ID_CAMPANHA = ? AND CPF_CLIENTE != ? ORDER BY ID ASC LIMIT 1");
-                        $stmtProxLoop->execute([$id_camp, $cpf_selecionado]);
+                        $stmtProxLoop = $pdo->prepare("SELECT CPF_CLIENTE FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA WHERE ID_CAMPANHA = ? AND CPF_CLIENTE != ? AND (ID_RESERVA_USUARIO IS NULL OR DATA_RESERVA < NOW() - INTERVAL 5 MINUTE OR ID_RESERVA_USUARIO = ?) ORDER BY ID ASC LIMIT 1");
+                        $stmtProxLoop->execute([$id_camp, $cpf_selecionado, $id_usuario_logado_num]);
                         $proximo_cpf_campanha = $stmtProxLoop->fetchColumn();
                     }
                 }
@@ -2502,9 +2513,33 @@ document.getElementById('areaFiltros')?.addEventListener('click', function(e) {
         } else { crmToast("Você precisa ter pelo menos uma regra de filtro!", "warning", 5000); }
     }
 });
+<?php if (isset($is_modo_campanha) && $is_modo_campanha && !empty($cpf_selecionado)): ?>
+(function() {
+    const _campCpf = '<?= addslashes($cpf_selecionado) ?>';
+    const _campId  = '<?= $id_camp ?? '' ?>';
+    if (!_campCpf || !_campId) return;
+
+    const _campUrl = '/modulos/campanhas/acoes_campanha.php';
+
+    // Renova a reserva a cada 60 segundos (mantém o cliente em atendimento)
+    const _campHB = setInterval(() => {
+        navigator.sendBeacon(_campUrl, new URLSearchParams({
+            acao: 'heartbeat_campanha', cpf_cliente: _campCpf, id_campanha: _campId
+        }));
+    }, 60000);
+
+    // Devolve o cliente à fila ao fechar aba/navegar para fora
+    window.addEventListener('beforeunload', () => {
+        clearInterval(_campHB);
+        navigator.sendBeacon(_campUrl, new URLSearchParams({
+            acao: 'liberar_cliente_campanha', cpf_cliente: _campCpf, id_campanha: _campId
+        }));
+    });
+})();
+<?php endif; ?>
 </script>
 </div>
-<?php 
+<?php
 $caminho_footer = $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php';
 if (file_exists($caminho_footer)) { include $caminho_footer; }
 ?>

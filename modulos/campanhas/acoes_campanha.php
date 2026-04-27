@@ -11,6 +11,54 @@ if (!file_exists($caminho_conexao)) {
 }
 include $caminho_conexao;
 
+// Garante colunas de reserva de fila (criadas uma vez, ignoradas se já existirem)
+try { $pdo->exec("ALTER TABLE BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA ADD COLUMN ID_RESERVA_USUARIO INT DEFAULT NULL"); } catch(Exception $e){}
+try { $pdo->exec("ALTER TABLE BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA ADD COLUMN DATA_RESERVA DATETIME DEFAULT NULL"); } catch(Exception $e){}
+
+// =========================================================================
+// HEARTBEAT — renova a reserva do cliente (chamado pelo JS a cada 60s)
+// =========================================================================
+if (isset($_POST['acao']) && $_POST['acao'] === 'heartbeat_campanha') {
+    header('Content-Type: application/json');
+    $cpf_cli  = preg_replace('/[^0-9]/', '', $_POST['cpf_cliente'] ?? '');
+    $id_camp  = (int)($_POST['id_campanha'] ?? 0);
+    $cpf_usr  = $_SESSION['usuario_cpf'] ?? null;
+    if ($cpf_cli && $id_camp && $cpf_usr) {
+        try {
+            $stmtHBU = $pdo->prepare("SELECT ID FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+            $stmtHBU->execute([$cpf_usr]);
+            $id_hb = $stmtHBU->fetchColumn();
+            if ($id_hb) {
+                $pdo->prepare("UPDATE BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA SET DATA_RESERVA = NOW() WHERE CPF_CLIENTE = ? AND ID_CAMPANHA = ? AND ID_RESERVA_USUARIO = ?")
+                    ->execute([$cpf_cli, $id_camp, $id_hb]);
+            }
+        } catch(Exception $e){}
+    }
+    echo json_encode(['ok' => true]); exit;
+}
+
+// =========================================================================
+// LIBERAR — devolve cliente à fila (chamado via sendBeacon ao sair)
+// =========================================================================
+if (isset($_POST['acao']) && $_POST['acao'] === 'liberar_cliente_campanha') {
+    header('Content-Type: application/json');
+    $cpf_cli  = preg_replace('/[^0-9]/', '', $_POST['cpf_cliente'] ?? '');
+    $id_camp  = (int)($_POST['id_campanha'] ?? 0);
+    $cpf_usr  = $_SESSION['usuario_cpf'] ?? null;
+    if ($cpf_cli && $id_camp && $cpf_usr) {
+        try {
+            $stmtLBU = $pdo->prepare("SELECT ID FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+            $stmtLBU->execute([$cpf_usr]);
+            $id_lb = $stmtLBU->fetchColumn();
+            if ($id_lb) {
+                $pdo->prepare("UPDATE BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA SET ID_RESERVA_USUARIO = NULL, DATA_RESERVA = NULL WHERE CPF_CLIENTE = ? AND ID_CAMPANHA = ? AND ID_RESERVA_USUARIO = ?")
+                    ->execute([$cpf_cli, $id_camp, $id_lb]);
+            }
+        } catch(Exception $e){}
+    }
+    echo json_encode(['ok' => true]); exit;
+}
+
 // =========================================================================
 // 1. AÇÃO: SALVAR REGISTRO DE CONTATO (GERAL OU CAMPANHA)
 // =========================================================================
@@ -114,16 +162,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['acao']) && $_POST['aca
         $stmtLog = $pdo->prepare("INSERT INTO dados_cadastrais_log_rodape (CPF_CLIENTE, NOME_USUARIO, TEXTO_REGISTRO, id_usuario, id_empresa) VALUES (?, ?, ?, ?, ?)");
         $stmtLog->execute([$cpf_cliente, $nome_usuario, $texto_log, $id_usuario_num, $id_empresa_num]);
 
+        // Libera a reserva do cliente atual ao tabular
+        if ($id_campanha && $id_usuario_num) {
+            try {
+                $pdo->prepare("UPDATE BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA SET ID_RESERVA_USUARIO = NULL, DATA_RESERVA = NULL WHERE CPF_CLIENTE = ? AND ID_CAMPANHA = ? AND ID_RESERVA_USUARIO = ?")
+                    ->execute([$cpf_cliente, $id_campanha, $id_usuario_num]);
+            } catch(Exception $e){}
+        }
+
         $proximo_cpf = null;
-        
+
         // SÓ BUSCA O PRÓXIMO CLIENTE SE ESTIVER DENTRO DE UMA CAMPANHA
         if ($id_campanha && in_array($status_data['MARCACAO'], ['FINALIZAR ATENDIMENTO', 'COM RETORNO'])) {
             $stmtCamp = $pdo->prepare("SELECT PARAMETRO_INICIO_ALEATORIO FROM BANCO_DE_DADOS_CAMPANHA_CAMPANHAS WHERE ID = ?");
             $stmtCamp->execute([$id_campanha]);
             $aleatorio = $stmtCamp->fetchColumn();
 
-            $sqlProx = "SELECT c.CPF_CLIENTE FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA c WHERE c.ID_CAMPANHA = ? AND c.CPF_CLIENTE != ?";
-            $paramsProx = [$id_campanha, $cpf_cliente];
+            // Exclui clientes reservados por OUTROS usuários (reserva expira em 5 min)
+            $cond_reserva = " AND (c.ID_RESERVA_USUARIO IS NULL OR c.DATA_RESERVA < NOW() - INTERVAL 5 MINUTE OR c.ID_RESERVA_USUARIO = ?)";
+            $sqlProx = "SELECT c.CPF_CLIENTE FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA c WHERE c.ID_CAMPANHA = ? AND c.CPF_CLIENTE != ?{$cond_reserva}";
+            $paramsProx = [$id_campanha, $cpf_cliente, $id_usuario_num];
 
             if ($aleatorio == 'SIM') {
                 $sqlProx .= " ORDER BY RAND() LIMIT 1";
@@ -132,14 +190,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['acao']) && $_POST['aca
                 $paramsProx[] = $cpf_cliente;
                 $paramsProx[] = $id_campanha;
             }
-            
+
             $stmtProx = $pdo->prepare($sqlProx);
             $stmtProx->execute($paramsProx);
             $proximo_cpf = $stmtProx->fetchColumn();
 
             if (!$proximo_cpf && $aleatorio == 'NAO') {
-                $stmtProxLoop = $pdo->prepare("SELECT CPF_CLIENTE FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA WHERE ID_CAMPANHA = ? AND CPF_CLIENTE != ? ORDER BY ID ASC LIMIT 1");
-                $stmtProxLoop->execute([$id_campanha, $cpf_cliente]);
+                $stmtProxLoop = $pdo->prepare("SELECT CPF_CLIENTE FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA WHERE ID_CAMPANHA = ? AND CPF_CLIENTE != ? AND (ID_RESERVA_USUARIO IS NULL OR DATA_RESERVA < NOW() - INTERVAL 5 MINUTE OR ID_RESERVA_USUARIO = ?) ORDER BY ID ASC LIMIT 1");
+                $stmtProxLoop->execute([$id_campanha, $cpf_cliente, $id_usuario_num]);
                 $proximo_cpf = $stmtProxLoop->fetchColumn();
             }
         }
