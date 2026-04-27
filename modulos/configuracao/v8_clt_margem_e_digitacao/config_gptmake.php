@@ -479,6 +479,7 @@ async function testarEnvioGPT() {
     </div>
 
   </div><!-- /col-md-8 -->
+</div><!-- /row -->
 </div><!-- /tabConfig -->
 
 <!-- ══ TAB 2: TREINAMENTOS ════════════════════════════════════════════════ -->
