@@ -1505,10 +1505,22 @@ try {
             }
 
             $rows = $stAv->fetchAll(PDO::FETCH_ASSOC);
+
+            // Resolve NOME_LOTE para cada linha em uma única query
+            $lote_ids_unicos = array_values(array_unique(array_filter(array_column($rows, 'LOTE_ID'))));
+            $mapa_nomes_lote = [];
+            if (!empty($lote_ids_unicos)) {
+                $ph_ln = implode(',', array_fill(0, count($lote_ids_unicos), '?'));
+                $stNL  = $pdo->prepare("SELECT ID, NOME_IMPORTACAO FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID IN ($ph_ln)");
+                $stNL->execute($lote_ids_unicos);
+                $mapa_nomes_lote = array_column($stNL->fetchAll(PDO::FETCH_ASSOC), 'NOME_IMPORTACAO', 'ID');
+            }
+
             foreach ($rows as &$r) {
                 $r['CPF_FORMATADO']     = preg_replace('/(\d{3})(\d{3})(\d{3})(\d{2})/', '$1.$2.$3-$4', str_pad($r['CPF'], 11, '0', STR_PAD_LEFT));
                 $r['DATA_SIM_DISPLAY']  = $r['DATA_SIMULACAO']    ? date('d/m/Y H\hi', strtotime($r['DATA_SIMULACAO']))    : '';
                 $r['DATA_CONS_DISPLAY'] = $r['DATA_CONSENTIMENTO'] ? date('d/m/Y H\hi', strtotime($r['DATA_CONSENTIMENTO'])) : '';
+                $r['NOME_LOTE']         = $mapa_nomes_lote[$r['LOTE_ID']] ?? '';
             }
             ob_end_clean(); echo json_encode([
                 'success'   => true,

@@ -347,7 +347,8 @@
       "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"UPDATE CLIENTE_USUARIO SET CPF='10712504931' WHERE CPF='06531073900';\")",
       "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"UPDATE CLIENTE_CADASTRO SET CPF='10712504931' WHERE CPF='06531073900';\")",
       "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"UPDATE INTEGRACAO_V8_CHAVE_ACESSO SET CPF_USUARIO='10712504931' WHERE CPF_USUARIO='06531073900';\")",
-      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"SELECT CPF, NOME, USUARIO FROM CLIENTE_USUARIO WHERE CPF IN \\('06531073900','10712504931'\\);\")"
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"SELECT CPF, NOME, USUARIO FROM CLIENTE_USUARIO WHERE CPF IN \\('06531073900','10712504931'\\);\")",
+      "Bash(grep -i \"td\\\\|row\\\\|cell\\\\|render\\\\|innerHTML\\\\|template\\\\|#\\\\${\")"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",

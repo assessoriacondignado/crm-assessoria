@@ -594,7 +594,8 @@ function renderTabela(lista, reset) {
                 <input type="checkbox" class="ck-ln form-check-input" data-cpf="${c.CPF}" onchange="atualizarBarraAcoes()">
             </td>
             <td class="text-muted" style="white-space:nowrap; font-size:.7rem;">
-                <b>#${_loteAtual}</b><br><span style="font-size:.62rem;">${escHtml(_nomeLote.substring(0,18))}${_nomeLote.length>18?'…':''}</span>
+                <b>#${c.LOTE_ID || _loteAtual}</b><br>
+                <span style="font-size:.62rem;" title="${escHtml(c.NOME_LOTE||_nomeLote)}">${escHtml((c.NOME_LOTE||_nomeLote).substring(0,20))}${(c.NOME_LOTE||_nomeLote).length>20?'…':''}</span>
             </td>
             <td class="fw-bold" style="white-space:nowrap;">${c.CPF_FORMATADO}</td>
             <td style="white-space:nowrap;">${escHtml(c.NOME||'—')}</td>
