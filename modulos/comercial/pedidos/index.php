@@ -260,17 +260,100 @@
 
 <div class="modal fade" id="mHist"><div class="modal-dialog"><div class="modal-content border-dark shadow-lg"><div class="modal-header bg-secondary text-white border-bottom border-dark"><h5 class="modal-title fw-bold text-uppercase"><i class="fas fa-history me-2"></i>Histórico</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body bg-light"><div id="timeline" style="max-height:400px; overflow-y:auto; padding: 10px;"></div></div></div></div></div>
 
+<!-- ======= MODAL RENOVAR PEDIDO ======= -->
+<div class="modal fade" id="mRenovar" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content border-dark shadow-lg">
+      <div class="modal-header bg-warning text-dark border-dark">
+        <h5 class="modal-title fw-bold text-uppercase"><i class="fas fa-sync-alt me-2"></i>Renovar Pedido</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body bg-light">
+        <input type="hidden" id="rnPedId">
+
+        <!-- Info do pedido -->
+        <div class="row g-2 mb-3 p-2 border border-dark rounded bg-white shadow-sm" style="font-size:.82rem;">
+          <div class="col-md-3"><span class="text-muted">Pedido:</span><br><strong id="rnCodigo" class="text-primary"></strong></div>
+          <div class="col-md-4"><span class="text-muted">Cliente:</span><br><strong id="rnCliente"></strong></div>
+          <div class="col-md-3"><span class="text-muted">Produto:</span><br><span id="rnProduto" class="text-primary"></span></div>
+          <div class="col-md-2"><span class="text-muted">Total:</span><br><strong class="text-success">R$ <span id="rnTotal"></span></strong></div>
+        </div>
+
+        <div class="row g-2">
+          <!-- Status -->
+          <div class="col-md-6">
+            <label class="fw-bold small">Status da Renovação:</label>
+            <select id="rnStatus" class="form-select border-dark fw-bold" onchange="rnStatusChange()">
+              <option value="A Configurar">⚙️ A Configurar</option>
+              <option value="Aberto">🟢 Aberto</option>
+              <option value="Renovado">✅ Renovado</option>
+              <option value="Pendente">⏳ Pendente</option>
+              <option value="Cancelado">❌ Cancelado</option>
+              <option value="Não Renovado">🚫 Não Renovado</option>
+            </select>
+          </div>
+          <!-- Data prevista -->
+          <div class="col-md-6">
+            <label class="fw-bold small">Data Prevista de Renovação:</label>
+            <input type="date" id="rnDataPrev" class="form-control border-dark" onchange="rnAtualizarPreview()">
+          </div>
+        </div>
+
+        <!-- Observação -->
+        <div class="mt-2">
+          <label class="fw-bold small">Observação: <span id="rnObsRequired" class="text-danger d-none fw-bold">(obrigatória para PENDENTE)</span></label>
+          <textarea id="rnObs" class="form-control border-dark" rows="2" oninput="rnAtualizarPreview()"></textarea>
+        </div>
+
+        <!-- WhatsApp -->
+        <div id="rnBoxWpp" class="mt-3 d-none">
+          <div class="form-check border border-success rounded p-2 bg-white">
+            <input class="form-check-input" type="checkbox" id="rnEnviarWpp" onchange="rnToggleWpp()">
+            <label class="form-check-label fw-bold text-success" for="rnEnviarWpp">
+              <i class="fab fa-whatsapp me-1"></i> Enviar aviso ao cliente via WhatsApp
+            </label>
+          </div>
+          <div id="rnBoxWppDetalhe" class="d-none mt-2">
+            <div class="mb-2">
+              <label class="small fw-bold">Telefone (somente números):</label>
+              <input type="text" id="rnTelefone" class="form-control form-control-sm border-dark" placeholder="Ex: 71987654321">
+            </div>
+            <div class="border border-success rounded p-2 bg-white">
+              <div class="fw-bold text-success mb-1" style="font-size:.75rem;"><i class="fab fa-whatsapp me-1"></i> Pré-visualização da mensagem:</div>
+              <pre id="rnMsgPreview" class="mb-0" style="white-space:pre-wrap;font-size:.73rem;font-family:inherit;max-height:160px;overflow-y:auto;"></pre>
+            </div>
+            <div id="rnBoxLembrete" class="mt-2 d-none">
+              <div class="alert alert-info py-1 mb-0 small">
+                <i class="fas fa-calendar-check me-1"></i>
+                <strong>Lembretes automáticos</strong> serão programados: 5, 4, 3, 2, 1 dia(s) antes e no dia do vencimento.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer border-dark bg-white">
+        <button type="button" class="btn btn-outline-secondary fw-bold" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-warning fw-bold border-dark px-4" id="btnSalvarRenovar" onclick="salvarRenovacao()">
+          <i class="fas fa-save me-1"></i> Salvar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
   let list = [];
   let modais = {};
 
   document.addEventListener("DOMContentLoaded", () => {
-      modais = { 
-          new: new bootstrap.Modal(document.getElementById('mNew')), 
-          viewPed: new bootstrap.Modal(document.getElementById('mViewPedido')), 
-          st: new bootstrap.Modal(document.getElementById('mSt')),
-          ext: new bootstrap.Modal(document.getElementById('mExt')),
-          hist: new bootstrap.Modal(document.getElementById('mHist'))
+      modais = {
+          new:     new bootstrap.Modal(document.getElementById('mNew')),
+          viewPed: new bootstrap.Modal(document.getElementById('mViewPedido')),
+          st:      new bootstrap.Modal(document.getElementById('mSt')),
+          ext:     new bootstrap.Modal(document.getElementById('mExt')),
+          hist:    new bootstrap.Modal(document.getElementById('mHist')),
+          renovar: new bootstrap.Modal(document.getElementById('mRenovar'))
       };
       
       document.querySelectorAll('.calc-new').forEach(el => el.addEventListener('input', () => calcTotal('n')));
@@ -610,12 +693,105 @@
       } else { crmToast(r.msg, r.success === false ? "error" : "info"); }
   }
 
-  async function openRenovacao(id) {
-      await viewPedido(id);
-      setTimeout(() => {
-          document.getElementById('boxRenovacao').scrollIntoView({ behavior: 'smooth' });
-          document.getElementById('vpStatusRen').focus();
-      }, 500);
+  // ─── MODAL RENOVAR PEDIDO ──────────────────────────────────────────────────
+  let _rnPedido = null;
+
+  const RN_OBS_PADRAO = {
+      'A Configurar': '',
+      'Aberto':       'Prazo de uso da renovação iniciado.',
+      'Renovado':     'Prazo de uso da renovação iniciado.',
+      'Pendente':     '',
+      'Cancelado':    'Pedido cancelado.',
+      'Não Renovado': 'Pedido não renovado.'
+  };
+  const RN_ICON = {
+      'A Configurar':'⚙️', 'Aberto':'🟢', 'Renovado':'✅',
+      'Pendente':'⏳', 'Cancelado':'❌', 'Não Renovado':'🚫'
+  };
+
+  function openRenovacao(id) {
+      _rnPedido = list.find(x => x.ID == id);
+      if (!_rnPedido) return;
+      document.getElementById('rnPedId').value        = id;
+      document.getElementById('rnCodigo').textContent  = _rnPedido.CODIGO;
+      document.getElementById('rnCliente').textContent = _rnPedido.CLIENTE_NOME;
+      document.getElementById('rnProduto').textContent = _rnPedido.PRODUTO_NOME;
+      document.getElementById('rnTotal').textContent   = parseFloat(_rnPedido.TOTAL||0).toFixed(2).replace('.',',');
+      document.getElementById('rnStatus').value        = _rnPedido.STATUS_RENOVACAO || 'A Configurar';
+      document.getElementById('rnDataPrev').value      = _rnPedido.DATA_PREVISTA_RENOVACAO || '';
+      document.getElementById('rnTelefone').value      = (_rnPedido.CLIENTE_TELEFONE||'').replace(/\D/g,'');
+      document.getElementById('rnObs').value           = '';
+      document.getElementById('rnEnviarWpp').checked   = false;
+      document.getElementById('rnBoxWppDetalhe').classList.add('d-none');
+      rnStatusChange();
+      modais.renovar.show();
+  }
+
+  function rnStatusChange() {
+      const st = document.getElementById('rnStatus').value;
+      const semAviso = (st === 'A Configurar');
+      document.getElementById('rnBoxWpp').classList.toggle('d-none', semAviso);
+      document.getElementById('rnObsRequired').classList.toggle('d-none', st !== 'Pendente');
+      // Preenche obs padrão se estiver vazio
+      const obsEl = document.getElementById('rnObs');
+      if (!obsEl.value.trim()) obsEl.value = RN_OBS_PADRAO[st] || '';
+      document.getElementById('rnBoxLembrete')?.classList.toggle('d-none', st !== 'Aberto');
+      rnAtualizarPreview();
+  }
+
+  function rnToggleWpp() {
+      const checked = document.getElementById('rnEnviarWpp').checked;
+      document.getElementById('rnBoxWppDetalhe').classList.toggle('d-none', !checked);
+      if (checked) rnAtualizarPreview();
+  }
+
+  function rnAtualizarPreview() {
+      if (!_rnPedido) return;
+      const st      = document.getElementById('rnStatus').value;
+      const obs     = document.getElementById('rnObs').value.trim();
+      const dataPrev= document.getElementById('rnDataPrev').value;
+      const dataBR  = dataPrev ? new Date(dataPrev+'T00:00:00').toLocaleDateString('pt-BR') : '—';
+      const total   = parseFloat(_rnPedido.TOTAL||0).toFixed(2).replace('.',',');
+      const icon    = RN_ICON[st] || '🔄';
+      let msg = `${icon} *${st.toUpperCase()}*\n\n`;
+      msg += `👤 Cliente: *${_rnPedido.CLIENTE_NOME}*\n`;
+      msg += `📋 Pedido: *${_rnPedido.CODIGO}*\n`;
+      msg += `📦 Produto: ${_rnPedido.PRODUTO_NOME}\n`;
+      msg += `💰 Valor: R$ ${total}\n`;
+      if (dataPrev) msg += `📅 Renovação prevista: ${dataBR}\n`;
+      if (obs)      msg += `\n${obs}`;
+      document.getElementById('rnMsgPreview').textContent = msg;
+  }
+
+  async function salvarRenovacao() {
+      const st       = document.getElementById('rnStatus').value;
+      const obs      = document.getElementById('rnObs').value.trim();
+      const dataPrev = document.getElementById('rnDataPrev').value;
+      const wpp      = document.getElementById('rnEnviarWpp').checked;
+      const tel      = document.getElementById('rnTelefone').value.replace(/\D/g,'');
+      const msg      = document.getElementById('rnMsgPreview').textContent;
+
+      if (st === 'Pendente' && !obs) {
+          alert('A observação é obrigatória para o status PENDENTE.'); return;
+      }
+      if (wpp && !tel) {
+          alert('Informe o telefone do cliente.'); return;
+      }
+      const btn = document.getElementById('btnSalvarRenovar');
+      const orig = btn.innerHTML; btn.disabled = true;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+      const r = await callApi('atualizar_renovacao', {
+          id: document.getElementById('rnPedId').value,
+          status_renovacao: st,
+          data_prevista: dataPrev,
+          obs: obs || (RN_OBS_PADRAO[st]||''),
+          enviar_wpp: wpp ? '1' : '0',
+          telefone: tel,
+          msg_wpp: wpp ? msg : ''
+      });
+      btn.disabled = false; btn.innerHTML = orig;
+      if (r.success) { modais.renovar.hide(); load(); crmToast(r.msg, 'info'); }
+      else crmToast(r.msg, 'error');
   }
   
   document.getElementById('fViewPedido').addEventListener('submit', async e => {

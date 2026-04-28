@@ -190,6 +190,71 @@ try {
             $id = (int)$_POST['id']; $pdo->prepare("DELETE FROM COMERCIAL_PEDIDOS WHERE ID = ?")->execute([$id]);
             echo json_encode(['success' => true, 'msg' => 'Pedido excluído com sucesso!']);
             break;
+        case 'atualizar_renovacao':
+            $id         = (int)$_POST['id'];
+            $statusRen  = trim($_POST['status_renovacao'] ?? 'A Configurar');
+            $dataPrev   = !empty($_POST['data_prevista']) ? $_POST['data_prevista'] : null;
+            $obs        = trim($_POST['obs'] ?? '');
+            $enviarWpp  = ($_POST['enviar_wpp'] ?? '0') === '1';
+            $telefone   = preg_replace('/\D/', '', $_POST['telefone'] ?? '');
+            $msgWpp     = trim($_POST['msg_wpp'] ?? '');
+
+            $sql = "UPDATE COMERCIAL_PEDIDOS SET STATUS_RENOVACAO=?, DATA_PREVISTA_RENOVACAO=?";
+            $params = [$statusRen, $dataPrev];
+            if ($statusRen === 'Renovado') { $sql .= ", DATA_EFETIVA_RENOVACAO=NOW()"; }
+            $sql .= " WHERE ID=?"; $params[] = $id;
+            $pdo->prepare($sql)->execute($params);
+            registrarHistorico($pdo, $id, 'RENOVAÇÃO', "[{$statusRen}] {$obs}", $usuarioLogado);
+
+            // Cria tabela de lembretes se necessário
+            try { $pdo->exec("CREATE TABLE IF NOT EXISTS COMERCIAL_RENOVACAO_LEMBRETES (
+                ID INT AUTO_INCREMENT PRIMARY KEY,
+                PEDIDO_ID INT NOT NULL,
+                DIAS_ANTES INT NOT NULL,
+                DATA_ENVIO DATE NOT NULL,
+                TELEFONE VARCHAR(20),
+                STATUS ENUM('PENDENTE','ENVIADO','ERRO') DEFAULT 'PENDENTE',
+                DATA_CRIACAO TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                INDEX idx_data_envio (DATA_ENVIO, STATUS)
+            )"); } catch(Exception $e){}
+
+            // Programa lembretes diários para status ABERTO
+            if ($statusRen === 'Aberto' && $dataPrev) {
+                $pdo->prepare("DELETE FROM COMERCIAL_RENOVACAO_LEMBRETES WHERE PEDIDO_ID=? AND STATUS='PENDENTE'")->execute([$id]);
+                $stmtL = $pdo->prepare("INSERT INTO COMERCIAL_RENOVACAO_LEMBRETES (PEDIDO_ID, DIAS_ANTES, DATA_ENVIO, TELEFONE) VALUES (?,?,?,?)");
+                foreach ([5,4,3,2,1,0] as $d) {
+                    $dataEnvio = date('Y-m-d', strtotime($dataPrev . " -{$d} days"));
+                    if ($dataEnvio >= date('Y-m-d')) { $stmtL->execute([$id, $d, $dataEnvio, $telefone ?: null]); }
+                }
+            } elseif (in_array($statusRen, ['Renovado','Cancelado','Não Renovado'])) {
+                // Cancela lembretes pendentes
+                $pdo->prepare("DELETE FROM COMERCIAL_RENOVACAO_LEMBRETES WHERE PEDIDO_ID=? AND STATUS='PENDENTE'")->execute([$id]);
+            }
+
+            // Enviar WhatsApp manualmente
+            $wapiMsg = '';
+            if ($enviarWpp && $telefone && $msgWpp) {
+                try {
+                    $celular = strlen($telefone) <= 11 ? '55' . $telefone : $telefone;
+                    $inst = $pdo->query("SELECT INSTANCE_ID, TOKEN FROM WAPI_INSTANCIAS ORDER BY ID ASC LIMIT 1")->fetch(PDO::FETCH_ASSOC);
+                    if ($inst) {
+                        $ch = curl_init("https://api.w-api.app/v1/message/send-text?instanceId=" . $inst['INSTANCE_ID']);
+                        curl_setopt_array($ch, [
+                            CURLOPT_POST => true,
+                            CURLOPT_POSTFIELDS => json_encode(['phone' => $celular, 'message' => $msgWpp]),
+                            CURLOPT_RETURNTRANSFER => true,
+                            CURLOPT_HTTPHEADER => ['Content-Type: application/json', 'Authorization: Bearer ' . $inst['TOKEN']],
+                            CURLOPT_TIMEOUT => 6,
+                            CURLOPT_IPRESOLVE => CURL_IPRESOLVE_V4,
+                        ]);
+                        curl_exec($ch); curl_close($ch);
+                        $wapiMsg = ' ✅ WhatsApp enviado!';
+                    } else { $wapiMsg = ' ⚠️ Nenhuma instância W-API ativa.'; }
+                } catch(Exception $e) { $wapiMsg = ' ⚠️ Erro ao enviar WhatsApp.'; }
+            }
+            echo json_encode(['success' => true, 'msg' => "Renovação atualizada para '{$statusRen}'.{$wapiMsg}"]);
+            break;
+
         case 'mudar_status':
             $id = (int)$_POST['id']; $status = $_POST['status']; $obs = $_POST['obs'];
             $sql = "UPDATE COMERCIAL_PEDIDOS SET STATUS_PEDIDO = ?"; $params = [$status];
