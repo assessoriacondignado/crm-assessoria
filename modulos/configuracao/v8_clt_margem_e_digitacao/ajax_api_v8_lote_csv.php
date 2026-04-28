@@ -914,17 +914,28 @@ try {
             $hora_envio_csv_raw = trim($_POST['hora_envio_csv'] ?? '');
             $hora_envio_csv = preg_match('/^\d{2}:\d{2}$/', $hora_envio_csv_raw) ? $hora_envio_csv_raw : null;
             $aviso_status_wapi = (int)($_POST['aviso_status_wapi'] ?? 0);
+            $id_campanha_auto = (int)($_POST['id_campanha_auto'] ?? 0) ?: null;
+            $valor_margem_min = (float)($_POST['valor_margem_min_campanha'] ?? 0);
+
+            // Verifica se a campanha existe e pertence à hierarquia do usuário
+            if ($id_campanha_auto) {
+                $stCampCheck = $pdo->prepare("SELECT ID FROM BANCO_DE_DADOS_CAMPANHA_CAMPANHAS WHERE ID = ? AND STATUS = 'ATIVO'");
+                $stCampCheck->execute([$id_campanha_auto]);
+                if (!$stCampCheck->fetchColumn()) $id_campanha_auto = null;
+            }
 
             $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET
                 NOME_IMPORTACAO = ?, AGENDAMENTO_TIPO = 'DIARIO',
                 HORA_INICIO_DIARIO = ?, HORA_FIM_DIARIO = ?, DIAS_MES_DIARIO = ?,
                 LIMITE_DIARIO = ?, SOMENTE_SIMULAR = ?, ATUALIZAR_TELEFONE = ?, ENVIAR_WHATSAPP = ?,
-                ENVIAR_ARQUIVO_WHATSAPP = ?, HORA_ENVIO_CSV = ?, AVISO_STATUS_WAPI = ?
+                ENVIAR_ARQUIVO_WHATSAPP = ?, HORA_ENVIO_CSV = ?, AVISO_STATUS_WAPI = ?,
+                ID_CAMPANHA_AUTO = ?, VALOR_MARGEM_MIN_CAMPANHA = ?
                 WHERE ID = ?")->execute([
                 $agrupamento,
                 $hora_inicio_diario, $hora_fim_diario, $dias_mes_diario,
                 $limite_diario, $somente_simular, $atualizar_telefone, $enviar_whats,
                 $enviar_arquivo_whatsapp, $hora_envio_csv, $aviso_status_wapi,
+                $id_campanha_auto, $valor_margem_min,
                 $id_lote
             ]);
 

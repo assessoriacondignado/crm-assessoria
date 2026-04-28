@@ -607,8 +607,10 @@ function v8SimularLote($cpfRow, $config_id_sim, $consult_id_sim, $margem_sim, $i
         }
         // ---------------------------------------------------------------
 
-        // Última etapa: Aprovação no W-API (se flag ativo)
+        // Aprovação no W-API (se flag ativo)
         v8EnviarAprovacaoWapi($cpfRow, (float)$valor_liberado, $prazo_padrao, $margem_sim, $lote, $pdo);
+        // Campanha automática (se configurada)
+        v8AdicionarCampanhaAuto($cpfRow, $lote, $pdo);
     } else {
         $pdo->prepare("UPDATE {$tbl} SET STATUS_V8 = 'ERRO SIMULACAO', OBSERVACAO = ?, DATA_SIMULACAO = NOW() WHERE ID = ?")->execute([$erro_fatal, $cpfRow['ID']]);
         $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_PROCESSADA = QTD_PROCESSADA + 1, QTD_ERRO = QTD_ERRO + 1 WHERE ID = ?")->execute([$id_lote]);
@@ -739,6 +741,28 @@ function v8EnviarAprovacaoWapi($cpfRow, $valor_liberado, $prazo_padrao, $margem_
 
     } catch (Exception $e) {
         gravarLogIntegracao('logs_consulta_lote', $cpfRow['CPF'], 'APROVACAO WAPI - EXCEPTION', 'n/a', '', $e->getMessage(), 0);
+    }
+}
+
+// ===============================================
+// ===============================================
+// FUNÇÃO: CAMPANHA AUTOMÁTICA
+// Inclui o cliente na campanha configurada no lote ao atingir STATUS_V8 = 'OK'.
+// Respeita margem mínima configurada.
+// ===============================================
+function v8AdicionarCampanhaAuto($cpfRow, $lote, $pdo) {
+    $id_camp = (int)($lote['ID_CAMPANHA_AUTO'] ?? 0);
+    if ($id_camp <= 0) return;
+
+    $margem_min = (float)($lote['VALOR_MARGEM_MIN_CAMPANHA'] ?? 0);
+    if ($margem_min > 0 && (float)($cpfRow['VALOR_MARGEM'] ?? 0) < $margem_min) return;
+
+    $cpf = str_pad(preg_replace('/\D/', '', $cpfRow['CPF']), 11, '0', STR_PAD_LEFT);
+    try {
+        $pdo->prepare("INSERT IGNORE INTO BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA (CPF_CLIENTE, ID_CAMPANHA) VALUES (?, ?)")
+            ->execute([$cpf, $id_camp]);
+    } catch (\Throwable $e) {
+        gravarLogIntegracao('logs_consulta_lote', $cpfRow['CPF'], 'CAMPANHA AUTO - ERRO', 'n/a', '', $e->getMessage(), 0);
     }
 }
 

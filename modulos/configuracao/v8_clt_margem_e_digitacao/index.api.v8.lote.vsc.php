@@ -276,6 +276,19 @@
                             </label>
                         </div>
                     </div>
+                    <div class="col-12 mt-3 mb-1"><hr class="m-0"><small class="text-success fw-bold mt-1 d-block"><i class="fas fa-bullhorn"></i> Campanha Automática — ao localizar margem (OK)</small></div>
+                    <div class="col-md-7">
+                        <label class="fw-bold small text-dark mb-1">Incluir automaticamente na Campanha:</label>
+                        <select id="edit_id_campanha_auto" class="form-select border-dark shadow-sm rounded-0">
+                            <option value="">— Nenhuma —</option>
+                        </select>
+                        <div class="form-text">Apenas campanhas que você tem acesso são listadas.</div>
+                    </div>
+                    <div class="col-md-5">
+                        <label class="fw-bold small text-dark mb-1">Margem Mínima para incluir (R$):</label>
+                        <input type="number" id="edit_valor_margem_min_campanha" class="form-control border-dark shadow-sm rounded-0" step="0.01" min="0" placeholder="0,00 = qualquer margem">
+                        <div class="form-text">Deixe 0 para incluir com qualquer valor de margem.</div>
+                    </div>
                 </form>
             </div>
             <div class="modal-footer bg-light border-top border-secondary">
@@ -1102,6 +1115,24 @@
         v8ToggleCsvHora(csvAtivo);
         document.getElementById('edit_aviso_status_wapi').checked = (lote.AVISO_STATUS_WAPI == 1 || lote.aviso_status_wapi == 1);
 
+        // Campanha automática
+        const idCampSalvo = parseInt(lote.ID_CAMPANHA_AUTO || lote.id_campanha_auto || 0);
+        document.getElementById('edit_valor_margem_min_campanha').value = lote.VALOR_MARGEM_MIN_CAMPANHA || lote.valor_margem_min_campanha || '';
+
+        // Carrega campanhas disponíveis e seleciona a salva
+        const selCamp = document.getElementById('edit_id_campanha_auto');
+        selCamp.innerHTML = '<option value="">— Carregando... —</option>';
+        const resCamp = await fetch('ajax_api_v8_lote_csv.php', { method:'POST', body: (() => { const f=new FormData(); f.append('acao','listar_campanhas_disponiveis'); return f; })() }).then(r=>r.json()).catch(()=>null);
+        selCamp.innerHTML = '<option value="">— Nenhuma —</option>';
+        if (resCamp && resCamp.success) {
+            resCamp.campanhas.forEach(c => {
+                const opt = document.createElement('option');
+                opt.value = c.ID; opt.textContent = c.NOME_CAMPANHA;
+                if (parseInt(c.ID) === idCampSalvo) opt.selected = true;
+                selCamp.appendChild(opt);
+            });
+        }
+
         modalEditarLoteObj.show();
     }
 
@@ -1125,7 +1156,9 @@
             enviar_whats: document.getElementById('edit_enviar_whats').checked ? 1 : 0,
             enviar_arquivo_whatsapp: document.getElementById('edit_enviar_arquivo_whatsapp').checked ? 1 : 0,
             hora_envio_csv: document.getElementById('edit_hora_envio_csv').value || '',
-            aviso_status_wapi: document.getElementById('edit_aviso_status_wapi').checked ? 1 : 0
+            aviso_status_wapi: document.getElementById('edit_aviso_status_wapi').checked ? 1 : 0,
+            id_campanha_auto: document.getElementById('edit_id_campanha_auto').value || 0,
+            valor_margem_min_campanha: document.getElementById('edit_valor_margem_min_campanha').value || 0
         };
 
         const res = await v8Req('ajax_api_v8_lote_csv.php', 'salvar_edicao_lote', payload, true, "Salvando Edição...");
