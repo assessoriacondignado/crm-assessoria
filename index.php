@@ -244,10 +244,49 @@ try {
     $erro_db = "Erro ao buscar campanhas: " . $e->getMessage();
 }
 
-// 5. Renovações Comerciais — aguardando especificação do usuário
+// 5. Renovações Comerciais — pedidos de venda com data de renovação
 $temAcessoRenovacao = function_exists('verificaPermissao')
     ? verificaPermissao($pdo, 'MENU_INICIO_RENOVACAO', 'MENU')
     : $is_master;
+
+$renovacoes   = [];
+$renov_stats  = ['vencidas' => 0, 'esta_semana' => 0, 'este_mes' => 0, 'renovadas' => 0, 'sem_data' => 0, 'total' => 0];
+
+if ($temAcessoRenovacao) {
+    try {
+        $stmtRenov = $pdo->query("
+            SELECT p.*,
+                   DATEDIFF(p.DATA_PREVISTA_RENOVACAO, CURDATE()) as DIAS_ATE_RENOVACAO
+            FROM COMERCIAL_PEDIDOS p
+            WHERE p.STATUS_PEDIDO != 'Cancelado'
+            ORDER BY
+                CASE WHEN p.STATUS_RENOVACAO = 'Renovado' THEN 2 ELSE 0 END,
+                CASE WHEN p.DATA_PREVISTA_RENOVACAO IS NULL THEN 1 ELSE 0 END,
+                p.DATA_PREVISTA_RENOVACAO ASC
+            LIMIT 200
+        ");
+        $renovacoes = $stmtRenov->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($renovacoes as $r) {
+            $renov_stats['total']++;
+            $st  = $r['STATUS_RENOVACAO'] ?? '';
+            $dt  = $r['DATA_PREVISTA_RENOVACAO'];
+            $dias = $dt ? (int)$r['DIAS_ATE_RENOVACAO'] : null;
+
+            if ($st === 'Renovado') {
+                $renov_stats['renovadas']++;
+            } elseif ($dt === null) {
+                $renov_stats['sem_data']++;
+            } elseif ($dias < 0) {
+                $renov_stats['vencidas']++;
+            } elseif ($dias <= 7) {
+                $renov_stats['esta_semana']++;
+            } else {
+                $renov_stats['este_mes']++;
+            }
+        }
+    } catch (Exception $e) {}
+}
 
 // 6. Avisos Internos para o painel do hub
 $avisos_hub      = [];
@@ -557,6 +596,127 @@ if (file_exists($caminho_header)) {
         <?php endif; ?>
     </button>
 </div>
+
+<?php if ($temAcessoRenovacao): ?>
+<!-- ====== PAINEL RENOVAÇÕES COMERCIAIS ====== -->
+<div id="painelRenovacao" class="hub-painel mb-4" style="display:none;">
+
+    <!-- Cards de resumo -->
+    <div class="row g-2 mb-3">
+        <div class="col-6 col-md">
+            <div class="border rounded p-3 text-center h-100" style="border-color:#dc3545!important;background:#fff5f5;">
+                <div style="font-size:1.8rem;font-weight:900;color:#dc3545;line-height:1;"><?= $renov_stats['vencidas'] ?></div>
+                <small class="fw-bold text-danger text-uppercase d-block mt-1">Vencidas</small>
+            </div>
+        </div>
+        <div class="col-6 col-md">
+            <div class="border rounded p-3 text-center h-100" style="border-color:#fd7e14!important;background:#fff9f0;">
+                <div style="font-size:1.8rem;font-weight:900;color:#fd7e14;line-height:1;"><?= $renov_stats['esta_semana'] ?></div>
+                <small class="fw-bold text-uppercase d-block mt-1" style="color:#fd7e14;">Esta Semana</small>
+            </div>
+        </div>
+        <div class="col-6 col-md">
+            <div class="border rounded p-3 text-center h-100" style="border-color:#ffc107!important;background:#fffbe6;">
+                <div style="font-size:1.8rem;font-weight:900;color:#856404;line-height:1;"><?= $renov_stats['este_mes'] ?></div>
+                <small class="fw-bold text-uppercase d-block mt-1" style="color:#856404;">Futuros</small>
+            </div>
+        </div>
+        <div class="col-6 col-md">
+            <div class="border rounded p-3 text-center h-100" style="border-color:#6c757d!important;background:#f8f9fa;">
+                <div style="font-size:1.8rem;font-weight:900;color:#6c757d;line-height:1;"><?= $renov_stats['sem_data'] ?></div>
+                <small class="fw-bold text-uppercase d-block mt-1 text-muted">Sem Data</small>
+            </div>
+        </div>
+        <div class="col-6 col-md">
+            <div class="border rounded p-3 text-center h-100" style="border-color:#198754!important;background:#f0fff5;">
+                <div style="font-size:1.8rem;font-weight:900;color:#198754;line-height:1;"><?= $renov_stats['renovadas'] ?></div>
+                <small class="fw-bold text-uppercase d-block mt-1 text-success">Renovadas</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filtros rápidos -->
+    <div class="d-flex gap-2 mb-2 flex-wrap align-items-center">
+        <span class="fw-bold small text-muted">Filtrar:</span>
+        <button class="btn btn-sm btn-outline-dark fw-bold active" onclick="filtroRenov('todos',this)">Todos (<?= $renov_stats['total'] ?>)</button>
+        <button class="btn btn-sm fw-bold border" style="border-color:#dc3545;color:#dc3545;" onclick="filtroRenov('vencida',this)">🔴 Vencidas (<?= $renov_stats['vencidas'] ?>)</button>
+        <button class="btn btn-sm btn-warning fw-bold text-dark border-warning" onclick="filtroRenov('semana',this)">🟠 Esta Semana (<?= $renov_stats['esta_semana'] ?>)</button>
+        <button class="btn btn-sm fw-bold border" style="border-color:#ffc107;color:#856404;" onclick="filtroRenov('futuro',this)">🟡 Futuros (<?= $renov_stats['este_mes'] ?>)</button>
+        <button class="btn btn-sm btn-secondary fw-bold" onclick="filtroRenov('sem_data',this)">⚪ Sem Data (<?= $renov_stats['sem_data'] ?>)</button>
+        <button class="btn btn-sm btn-success fw-bold" onclick="filtroRenov('renovado',this)">✅ Renovadas (<?= $renov_stats['renovadas'] ?>)</button>
+    </div>
+
+    <!-- Tabela -->
+    <div class="table-responsive border border-dark rounded shadow-sm" style="max-height:520px;overflow-y:auto;">
+        <table class="table table-hover table-bordered table-sm mb-0" style="font-size:.78rem;">
+            <thead>
+                <tr style="background:#343a40;color:#fff;font-size:.68rem;text-transform:uppercase;">
+                    <th>Cód.</th><th>Cliente / Produto</th>
+                    <th class="text-center">Total</th><th class="text-center">Status Pedido</th>
+                    <th class="text-center">Data Renovação</th><th class="text-center">Prazo</th>
+                    <th class="text-center">Status Renovação</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php if (empty($renovacoes)): ?>
+                <tr><td colspan="7" class="text-center text-muted py-4 fst-italic">Nenhum pedido encontrado.</td></tr>
+            <?php else: foreach ($renovacoes as $r):
+                $st_renov = $r['STATUS_RENOVACAO'] ?? '';
+                $dt_renov = $r['DATA_PREVISTA_RENOVACAO'];
+                $dias     = $dt_renov ? (int)$r['DIAS_ATE_RENOVACAO'] : null;
+                if ($st_renov === 'Renovado')    { $row_bg='background:#f0fff5;'; $grupo='renovado'; }
+                elseif ($dt_renov === null)       { $row_bg=''; $grupo='sem_data'; }
+                elseif ($dias < 0)               { $row_bg='background:#fff0f0;'; $grupo='vencida'; }
+                elseif ($dias <= 7)              { $row_bg='background:#fff9f0;'; $grupo='semana'; }
+                else                             { $row_bg='background:#fffef0;'; $grupo='futuro'; }
+                $badge_renov = match(true) {
+                    $st_renov === 'Renovado' => '<span class="badge bg-success">✅ Renovado</span>',
+                    $st_renov === 'Pendente' => '<span class="badge bg-warning text-dark">⏳ Pendente</span>',
+                    default                  => '<span class="badge bg-secondary">⚙️ A Configurar</span>'
+                };
+                if ($dt_renov === null)      { $badge_prazo = '<span class="text-muted">—</span>'; }
+                elseif ($dias < 0)           { $badge_prazo = '<span class="badge bg-danger">Venceu há '.abs($dias).'d</span>'; }
+                elseif ($dias === 0)         { $badge_prazo = '<span class="badge bg-danger">HOJE</span>'; }
+                elseif ($dias <= 7)          { $badge_prazo = '<span class="badge bg-warning text-dark">Em '.$dias.' dias</span>'; }
+                else                         { $badge_prazo = '<span class="badge bg-light text-dark border">Em '.$dias.' dias</span>'; }
+                $badge_pedido = $r['STATUS_PEDIDO'] === 'Pago'
+                    ? '<span class="badge bg-success">Pago</span>'
+                    : '<span class="badge bg-secondary">'.htmlspecialchars($r['STATUS_PEDIDO']).'</span>';
+            ?>
+                <tr class="linha-renov" data-grupo="<?= $grupo ?>" style="<?= $row_bg ?>vertical-align:middle;">
+                    <td class="text-muted fw-bold"><?= htmlspecialchars($r['CODIGO'] ?? '—') ?></td>
+                    <td style="min-width:180px;">
+                        <span class="fw-bold text-dark"><?= htmlspecialchars($r['CLIENTE_NOME'] ?: '—') ?></span><br>
+                        <small class="text-primary"><?= htmlspecialchars($r['PRODUTO_NOME'] ?: '—') ?></small>
+                        <?php if ($r['CLIENTE_TELEFONE']): ?><br><small class="text-muted"><i class="fas fa-phone fa-xs"></i> <?= htmlspecialchars($r['CLIENTE_TELEFONE']) ?></small><?php endif; ?>
+                    </td>
+                    <td class="text-center fw-bold text-success"><?= $r['TOTAL'] ? 'R$ '.number_format($r['TOTAL'],2,',','.') : '—' ?></td>
+                    <td class="text-center"><?= $badge_pedido ?></td>
+                    <td class="text-center fw-bold"><?= $dt_renov ? date('d/m/Y', strtotime($dt_renov)) : '<span class="text-muted">—</span>' ?></td>
+                    <td class="text-center"><?= $badge_prazo ?></td>
+                    <td class="text-center"><?= $badge_renov ?></td>
+                </tr>
+            <?php endforeach; endif; ?>
+            </tbody>
+        </table>
+    </div>
+    <div class="d-flex justify-content-between align-items-center mt-2">
+        <small class="text-muted">Exibindo <?= count($renovacoes) ?> pedido(s)</small>
+        <a href="/modulos/comercial/pedidos.php" class="btn btn-sm btn-outline-dark fw-bold">
+            <i class="fas fa-external-link-alt me-1"></i> Ver módulo Comercial
+        </a>
+    </div>
+</div><!-- /painelRenovacao -->
+<script>
+function filtroRenov(grupo, btn) {
+    document.querySelectorAll('#painelRenovacao .btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+    document.querySelectorAll('.linha-renov').forEach(tr => {
+        tr.style.display = (grupo === 'todos' || tr.dataset.grupo === grupo) ? '' : 'none';
+    });
+}
+</script>
+<?php endif; // temAcessoRenovacao ?>
 
 <?php if ($temAcessoCampanhas): ?>
 <div id="painelCampanhas" class="hub-painel mb-4" style="display:none;">
@@ -993,14 +1153,6 @@ function _hubAtualizarBadges(delta) {
 
 <?php endif; ?>
 
-<?php if ($temAcessoRenovacao): ?>
-<div id="painelRenovacao" class="hub-painel mb-4" style="display:none;">
-    <div class="text-center py-5 text-muted">
-        <i class="fas fa-sync-alt fa-2x mb-3 d-block opacity-25"></i>
-        <span class="fw-bold">Módulo de Renovações Comerciais em construção.</span>
-    </div>
-</div>
-<?php endif; // temAcessoRenovacao ?>
 
 </div> <?php // Fecha a div container-fluid do header ?>
 <?php
