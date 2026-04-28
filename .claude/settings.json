@@ -338,7 +338,16 @@
       "Bash(mysql -u root -e \"SHOW INDEX FROM dados_cadastrais;\")",
       "Bash(mysql -e \"SHOW INDEX FROM dados_cadastrais;\")",
       "Bash(mysql -u root --password='' -e \"SHOW INDEX FROM dados_cadastrais;\")",
-      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"SHOW INDEX FROM dados_cadastrais;\")"
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"SHOW INDEX FROM dados_cadastrais;\")",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"SELECT ID, nome, cpf, email FROM CLIENTE_CADASTRO WHERE cpf='06531073900' OR cpf LIKE '%065.310.739%';\")",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"SELECT CPF, NOME, USUARIO, EMAIL FROM CLIENTE_USUARIO WHERE CPF='06531073900';\")",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"DESCRIBE CLIENTE_CADASTRO;\")",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"SELECT CPF, NOME FROM CLIENTE_CADASTRO WHERE CPF='06531073900';\")",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"SELECT CPF, NOME FROM CLIENTE_USUARIO WHERE CPF='10712504931'; SELECT CPF, NOME FROM CLIENTE_CADASTRO WHERE CPF='10712504931';\")",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"UPDATE CLIENTE_USUARIO SET CPF='10712504931' WHERE CPF='06531073900';\")",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"UPDATE CLIENTE_CADASTRO SET CPF='10712504931' WHERE CPF='06531073900';\")",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"UPDATE INTEGRACAO_V8_CHAVE_ACESSO SET CPF_USUARIO='10712504931' WHERE CPF_USUARIO='06531073900';\")",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"SELECT CPF, NOME, USUARIO FROM CLIENTE_USUARIO WHERE CPF IN \\('06531073900','10712504931'\\);\")"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",
