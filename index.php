@@ -244,63 +244,10 @@ try {
     $erro_db = "Erro ao buscar campanhas: " . $e->getMessage();
 }
 
-// 5. Renovações — propostas em acompanhamento
+// 5. Renovações Comerciais — aguardando especificação do usuário
 $temAcessoRenovacao = function_exists('verificaPermissao')
     ? verificaPermissao($pdo, 'MENU_INICIO_RENOVACAO', 'MENU')
     : $is_master;
-
-$renovacoes       = [];
-$renov_stats      = ['em_aberto' => 0, 'formalizando' => 0, 'pago' => 0, 'cancelado' => 0, 'total' => 0];
-
-if ($temAcessoRenovacao) {
-    try {
-        $is_super_renov  = in_array($grupo_usuario, ['SUPERVISOR', 'SUPERVISORES']);
-        $is_consul_renov = in_array($grupo_usuario, ['CONSULTOR', 'CONSULTORES']);
-
-        $sqlRenov = "
-            SELECT p.ID, p.CPF_USUARIO, p.CPF_CLIENTE,
-                   COALESCE(d.nome, p.NOME_CLIENTE) as NOME_CLIENTE,
-                   p.NUMERO_PROPOSTA, p.PRAZO, p.PARCELA, p.VALOR_LIBERADO, p.TAXA,
-                   p.STATUS_PROPOSTA_V8, p.LINK_PROPOSTA,
-                   DATE_FORMAT(p.DATA_DIGITACAO, '%d/%m/%Y %H:%i')   as DATA_DIGITACAO_BR,
-                   DATE_FORMAT(p.DATA_APROVACAO, '%d/%m/%Y %H:%i')   as DATA_APROVACAO_BR,
-                   DATE_FORMAT(p.DATA_PAGAMENTO_CLIENTE, '%d/%m/%Y') as DATA_PAGAMENTO_BR,
-                   p.OBSERVACAO_PENDENCIA,
-                   u.NOME as NOME_USUARIO, u.id_empresa
-            FROM INTEGRACAO_V8_REGISTRO_PROPOSTA p
-            LEFT JOIN CLIENTE_USUARIO u ON u.CPF COLLATE utf8mb4_unicode_ci = p.CPF_USUARIO COLLATE utf8mb4_unicode_ci
-            LEFT JOIN dados_cadastrais d ON d.cpf = p.CPF_CLIENTE
-            WHERE 1=1";
-        $paramsRenov = [];
-
-        if (!$is_master) {
-            if ($is_super_renov && $id_empresa_logado) {
-                $sqlRenov .= " AND u.id_empresa = ?";
-                $paramsRenov[] = $id_empresa_logado;
-            } else {
-                $sqlRenov .= " AND p.CPF_USUARIO = ?";
-                $paramsRenov[] = preg_replace('/\D/', '', $cpf_logado);
-            }
-        }
-        $sqlRenov .= " ORDER BY p.DATA_DIGITACAO DESC LIMIT 200";
-        $stmtRenov = $pdo->prepare($sqlRenov);
-        $stmtRenov->execute($paramsRenov);
-        $renovacoes = $stmtRenov->fetchAll(PDO::FETCH_ASSOC);
-
-        foreach ($renovacoes as $r) {
-            $st = strtoupper($r['STATUS_PROPOSTA_V8'] ?? '');
-            $renov_stats['total']++;
-            if (in_array($st, ['PAID','PAGO','LIQUIDADO'])) {
-                $renov_stats['pago']++;
-            } elseif (in_array($st, ['CANCELED','CANCELADA','REPROVADA','RECUSADA'])) {
-                $renov_stats['cancelado']++;
-            } else {
-                $renov_stats['em_aberto']++;
-                if ($st === 'FORMALIZATION') $renov_stats['formalizando']++;
-            }
-        }
-    } catch (Exception $e) {}
-}
 
 // 6. Avisos Internos para o painel do hub
 $avisos_hub      = [];
@@ -1047,153 +994,12 @@ function _hubAtualizarBadges(delta) {
 <?php endif; ?>
 
 <?php if ($temAcessoRenovacao): ?>
-<!-- ====== PAINEL RENOVAÇÕES ====== -->
 <div id="painelRenovacao" class="hub-painel mb-4" style="display:none;">
-<style>
-.renov-stat-card { border-radius:8px; padding:14px 16px; display:flex; flex-direction:column; gap:3px; border:2px solid; }
-.tbl-renov { font-size:.78rem; }
-.tbl-renov th { background:#343a40; color:#fff; font-size:.68rem; text-transform:uppercase; white-space:nowrap; vertical-align:middle; }
-.tbl-renov td { vertical-align:middle; }
-.badge-renov-aberto      { background:#ffc107; color:#000; }
-.badge-renov-formal      { background:#0d6efd; color:#fff; }
-.badge-renov-pago        { background:#198754; color:#fff; }
-.badge-renov-cancelado   { background:#6c757d; color:#fff; }
-</style>
-
-<!-- Cards de resumo -->
-<div class="row g-2 mb-3">
-    <div class="col-6 col-md-3">
-        <div class="renov-stat-card" style="border-color:#ffc107;background:#fffbe6;">
-            <span style="font-size:1.6rem;font-weight:900;color:#856404;"><?= $renov_stats['em_aberto'] ?></span>
-            <span style="font-size:.75rem;font-weight:700;color:#856404;text-transform:uppercase;">Em Aberto</span>
-        </div>
-    </div>
-    <div class="col-6 col-md-3">
-        <div class="renov-stat-card" style="border-color:#0d6efd;background:#f0f4ff;">
-            <span style="font-size:1.6rem;font-weight:900;color:#0d6efd;"><?= $renov_stats['formalizando'] ?></span>
-            <span style="font-size:.75rem;font-weight:700;color:#0d6efd;text-transform:uppercase;">Formalizando</span>
-        </div>
-    </div>
-    <div class="col-6 col-md-3">
-        <div class="renov-stat-card" style="border-color:#198754;background:#f0fff5;">
-            <span style="font-size:1.6rem;font-weight:900;color:#198754;"><?= $renov_stats['pago'] ?></span>
-            <span style="font-size:.75rem;font-weight:700;color:#198754;text-transform:uppercase;">Pago</span>
-        </div>
-    </div>
-    <div class="col-6 col-md-3">
-        <div class="renov-stat-card" style="border-color:#6c757d;background:#f8f9fa;">
-            <span style="font-size:1.6rem;font-weight:900;color:#6c757d;"><?= $renov_stats['cancelado'] ?></span>
-            <span style="font-size:.75rem;font-weight:700;color:#6c757d;text-transform:uppercase;">Cancelado</span>
-        </div>
+    <div class="text-center py-5 text-muted">
+        <i class="fas fa-sync-alt fa-2x mb-3 d-block opacity-25"></i>
+        <span class="fw-bold">Módulo de Renovações Comerciais em construção.</span>
     </div>
 </div>
-
-<!-- Filtro rápido por status -->
-<div class="d-flex gap-2 mb-2 flex-wrap align-items-center">
-    <span class="fw-bold small text-muted">Filtrar:</span>
-    <button class="btn btn-sm btn-outline-dark fw-bold active" id="btnRenovFiltroTodos" onclick="filtroRenov('todos',this)">Todos (<?= $renov_stats['total'] ?>)</button>
-    <button class="btn btn-sm btn-warning fw-bold text-dark border-dark" id="btnRenovFiltroAberto" onclick="filtroRenov('aberto',this)">Em Aberto (<?= $renov_stats['em_aberto'] ?>)</button>
-    <button class="btn btn-sm btn-primary fw-bold border-dark" id="btnRenovFiltroFormal" onclick="filtroRenov('formalization',this)">Formalizando (<?= $renov_stats['formalizando'] ?>)</button>
-    <button class="btn btn-sm btn-success fw-bold border-dark" id="btnRenovFiltroPago" onclick="filtroRenov('pago',this)">Pago (<?= $renov_stats['pago'] ?>)</button>
-    <button class="btn btn-sm btn-secondary fw-bold border-dark" id="btnRenovFiltroCancel" onclick="filtroRenov('cancelado',this)">Cancelado (<?= $renov_stats['cancelado'] ?>)</button>
-</div>
-
-<!-- Tabela -->
-<div class="table-responsive border border-dark rounded shadow-sm" style="max-height:520px;overflow-y:auto;">
-    <table class="table table-hover table-bordered table-sm mb-0 tbl-renov">
-        <thead>
-            <tr>
-                <th>Cliente</th>
-                <th>Proposta / Nº</th>
-                <th class="text-center">Valor</th>
-                <th class="text-center">Parcela</th>
-                <th class="text-center">Prazo</th>
-                <th class="text-center">Status</th>
-                <th>Usuário</th>
-                <th>Digitação</th>
-                <th class="text-center">Ações</th>
-            </tr>
-        </thead>
-        <tbody id="tblRenovBody">
-        <?php if (empty($renovacoes)): ?>
-            <tr><td colspan="9" class="text-center text-muted py-4 fst-italic">Nenhuma proposta encontrada.</td></tr>
-        <?php else: ?>
-            <?php foreach ($renovacoes as $r):
-                $st_raw = strtoupper($r['STATUS_PROPOSTA_V8'] ?? '');
-                $is_pago   = in_array($st_raw, ['PAID','PAGO','LIQUIDADO']);
-                $is_cancel = in_array($st_raw, ['CANCELED','CANCELADA','REPROVADA','RECUSADA']);
-                $is_formal = $st_raw === 'FORMALIZATION';
-                $data_grupo = $is_pago ? 'pago' : ($is_cancel ? 'cancelado' : ($is_formal ? 'formalization' : 'aberto'));
-
-                if ($is_pago)        { $badge_cls='badge-renov-pago';     $badge_txt='PAGO'; }
-                elseif ($is_cancel)  { $badge_cls='badge-renov-cancelado'; $badge_txt=htmlspecialchars($r['STATUS_PROPOSTA_V8']); }
-                elseif ($is_formal)  { $badge_cls='badge-renov-formal';   $badge_txt='FORMALIZAÇÃO'; }
-                else                 { $badge_cls='badge-renov-aberto';   $badge_txt=htmlspecialchars($r['STATUS_PROPOSTA_V8'] ?: 'AGUARDANDO'); }
-
-                $cpf_fmt = preg_replace('/(\d{3})(\d{3})(\d{3})(\d{2})/', '$1.$2.$3-$4', $r['CPF_CLIENTE'] ?? '');
-                $prop_curto = !empty($r['NUMERO_PROPOSTA']) ? substr($r['NUMERO_PROPOSTA'], 0, 8) . '...' : '—';
-            ?>
-            <tr class="linha-renov" data-grupo="<?= $data_grupo ?>">
-                <td style="min-width:160px;">
-                    <span class="fw-bold text-dark"><?= htmlspecialchars($r['NOME_CLIENTE'] ?: '—') ?></span><br>
-                    <small class="text-muted"><?= htmlspecialchars($cpf_fmt) ?></small>
-                </td>
-                <td style="min-width:100px;">
-                    <small class="text-muted font-monospace" title="<?= htmlspecialchars($r['NUMERO_PROPOSTA'] ?? '') ?>"><?= $prop_curto ?></small>
-                </td>
-                <td class="text-center fw-bold text-success">
-                    <?= $r['VALOR_LIBERADO'] ? 'R$ ' . number_format($r['VALOR_LIBERADO'], 2, ',', '.') : '—' ?>
-                </td>
-                <td class="text-center">
-                    <?= $r['PARCELA'] ? 'R$ ' . number_format($r['PARCELA'], 2, ',', '.') : '—' ?>
-                </td>
-                <td class="text-center"><?= $r['PRAZO'] ? (int)$r['PRAZO'] . 'x' : '—' ?></td>
-                <td class="text-center">
-                    <span class="badge <?= $badge_cls ?>" style="font-size:.65rem;"><?= $badge_txt ?></span>
-                    <?php if (!empty($r['OBSERVACAO_PENDENCIA'])): ?>
-                    <div class="text-danger" style="font-size:.62rem;" title="<?= htmlspecialchars($r['OBSERVACAO_PENDENCIA']) ?>">
-                        <?= htmlspecialchars(mb_substr($r['OBSERVACAO_PENDENCIA'], 0, 30)) ?>
-                    </div>
-                    <?php endif; ?>
-                </td>
-                <td><small><?= htmlspecialchars($r['NOME_USUARIO'] ?: '—') ?></small></td>
-                <td class="text-nowrap"><small class="text-muted"><?= $r['DATA_DIGITACAO_BR'] ?: '—' ?></small></td>
-                <td class="text-center">
-                    <div class="d-flex gap-1 justify-content-center">
-                        <?php if (!empty($r['CPF_CLIENTE'])): ?>
-                        <a href="/modulos/banco_dados/consulta.php?busca=<?= $r['CPF_CLIENTE'] ?>&cpf_selecionado=<?= $r['CPF_CLIENTE'] ?>&acao=visualizar"
-                           class="btn btn-xs btn-outline-primary border-dark py-0 px-1" title="Ver Cliente" target="_blank">
-                            <i class="fas fa-user"></i>
-                        </a>
-                        <?php endif; ?>
-                        <?php if (!empty($r['LINK_PROPOSTA'])): ?>
-                        <a href="<?= htmlspecialchars($r['LINK_PROPOSTA']) ?>" target="_blank"
-                           class="btn btn-xs btn-outline-success border-dark py-0 px-1" title="Abrir Link Proposta">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                        <?php endif; ?>
-                    </div>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        <?php endif; ?>
-        </tbody>
-    </table>
-</div>
-<div class="text-end mt-2">
-    <small class="text-muted">Exibindo <?= count($renovacoes) ?> proposta(s) · </small>
-</div>
-</div><!-- /painelRenovacao -->
-
-<script>
-function filtroRenov(grupo, btn) {
-    document.querySelectorAll('#painelRenovacao .btn').forEach(b => b.classList.remove('active'));
-    if (btn) btn.classList.add('active');
-    document.querySelectorAll('.linha-renov').forEach(tr => {
-        tr.style.display = (grupo === 'todos' || tr.dataset.grupo === grupo) ? '' : 'none';
-    });
-}
-</script>
 <?php endif; // temAcessoRenovacao ?>
 
 </div> <?php // Fecha a div container-fluid do header ?>
