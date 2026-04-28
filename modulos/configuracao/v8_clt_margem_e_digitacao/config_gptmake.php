@@ -170,6 +170,36 @@ if ($acao_post === 'excluir_treino') {
     echo json_encode(['ok'=>true]); exit;
 }
 
+// Ação: unificar todos os blocos de COMPORTAMENTO em um único bloco
+if ($acao_post === 'unificar_comportamento') {
+    header('Content-Type: application/json');
+    $agent_id_u = trim($_POST['agent_id'] ?? '');
+    if (!$agent_id_u) { echo json_encode(['ok'=>false,'msg'=>'Agent ID não informado.']); exit; }
+    try {
+        $stU = $pdo->prepare("SELECT ID, CONTEUDO FROM INTEGRACAO_GPTMAKE_TREINAMENTOS WHERE AGENT_ID=? AND TIPO='COMPORTAMENTO' ORDER BY DATA_CRIACAO ASC");
+        $stU->execute([$agent_id_u]);
+        $blocos = $stU->fetchAll(PDO::FETCH_ASSOC);
+        if (empty($blocos)) { echo json_encode(['ok'=>false,'msg'=>'Nenhum bloco de comportamento encontrado.']); exit; }
+        $unificado = implode("\n\n", array_column($blocos, 'CONTEUDO'));
+        $ids       = array_column($blocos, 'ID');
+        $ph        = implode(',', array_fill(0, count($ids), '?'));
+        $pdo->beginTransaction();
+        $pdo->prepare("DELETE FROM INTEGRACAO_GPTMAKE_TREINAMENTOS WHERE ID IN ($ph)")->execute($ids);
+        $pdo->prepare("INSERT INTO INTEGRACAO_GPTMAKE_TREINAMENTOS (AGENT_ID,CPF_USUARIO,id_empresa,TITULO,CONTEUDO,TIPO) VALUES (?,?,?,?,?,?)")
+            ->execute([$agent_id_u, $cpf_logado, $id_empresa_logado, 'Comportamento', $unificado, 'COMPORTAMENTO']);
+        $pdo->commit();
+        $chars = mb_strlen($unificado);
+        echo json_encode(['ok'=>true, 'chars'=>$chars,
+            'msg' => count($blocos).' blocos unificados. Total: '.$chars.' chars.'
+                    .($chars > 3000 ? ' ⚠️ Atenção: excede o limite de 3.000 chars. Edite o bloco antes de sincronizar.' : '')
+        ]);
+    } catch(Exception $e) {
+        if ($pdo->inTransaction()) $pdo->rollBack();
+        echo json_encode(['ok'=>false,'msg'=>$e->getMessage()]);
+    }
+    exit;
+}
+
 // Ação: sincronizar com GPTMaker
 if ($acao_post === 'sincronizar_treino') {
     ignore_user_abort(true);
@@ -603,14 +633,23 @@ async function testarEnvioGPT() {
             };
             // Separador de seção ao mudar de tipo
             if ($tipo_bloco !== $tipo_atual):
-                $tipo_atual = $tipo_bloco;
-                $sep_cor    = $tipo_bloco === 'COMPORTAMENTO' ? '#6f42c1' : '#198754';
-                $sep_icon   = $tipo_bloco === 'COMPORTAMENTO' ? '🎭' : '📚';
-                $sep_label  = $tipo_bloco === 'COMPORTAMENTO' ? 'Comportamento (instruções do agente)' : 'Treinamento (base de conhecimento)';
+                $tipo_atual    = $tipo_bloco;
+                $sep_cor       = $tipo_bloco === 'COMPORTAMENTO' ? '#6f42c1' : '#198754';
+                $sep_icon      = $tipo_bloco === 'COMPORTAMENTO' ? '🎭' : '📚';
+                $sep_label     = $tipo_bloco === 'COMPORTAMENTO' ? 'Comportamento (instruções do agente)' : 'Treinamento (base de conhecimento)';
+                $agent_sep     = htmlspecialchars($tr['AGENT_ID']);
+                $qtd_comp      = count(array_filter($lista_treinos, fn($x) => ($x['TIPO']??'') === 'COMPORTAMENTO'));
         ?>
             <tr>
               <td colspan="7" class="fw-bold text-white py-1 px-2" style="background:<?= $sep_cor ?>;font-size:11px;">
                 <?= $sep_icon ?> <?= $sep_label ?>
+                <?php if ($tipo_bloco === 'COMPORTAMENTO' && $qtd_comp > 1): ?>
+                <button class="btn btn-xs btn-light py-0 px-2 ms-2 float-end fw-bold"
+                        style="font-size:10px;color:#6f42c1;"
+                        onclick="unificarComportamento('<?= $agent_sep ?>', <?= $qtd_comp ?>)">
+                    <i class="fas fa-compress-arrows-alt me-1"></i>Unificar <?= $qtd_comp ?> blocos em 1
+                </button>
+                <?php endif; ?>
               </td>
             </tr>
         <?php endif; ?>
@@ -850,6 +889,26 @@ document.addEventListener('DOMContentLoaded', () => {
         if (el) new bootstrap.Tab(el).show();
     }
 });
+
+// ── Unificar blocos de Comportamento ─────────────────────────────────────
+async function unificarComportamento(agentId, qtd) {
+    if (!confirm(`Unificar os ${qtd} blocos de Comportamento em 1 único bloco?\n\nOs blocos individuais serão substituídos por um bloco unificado. Você poderá editar e cortar o texto para caber em 3.000 chars antes de sincronizar.`)) return;
+    const fd = new FormData();
+    fd.append('acao', 'unificar_comportamento');
+    fd.append('agent_id', agentId);
+    try {
+        const r = await fetch('config_gptmake.php', { method: 'POST', body: fd });
+        const j = await r.json();
+        if (j.ok) {
+            alert('✅ ' + j.msg + (j.chars > 3000 ? '\n\nEdite o bloco e reduza para até 3.000 chars antes de sincronizar.' : ''));
+            location.reload();
+        } else {
+            alert('❌ ' + (j.msg || 'Erro ao unificar.'));
+        }
+    } catch(e) {
+        alert('❌ Falha de comunicação: ' + e.message);
+    }
+}
 
 // ── Treinamentos / Comportamento ──────────────────────────────────────────
 function getLimiteTipo() {
