@@ -1105,7 +1105,7 @@
         });
     }
 
-    function v8AbrirModalEditarLote(id) {
+    async function v8AbrirModalEditarLote(id) {
         let lote = windowDadosLoteAtual.find(l => l.ID == id || l.id == id);
         if (!lote) return v8Toast("Erro: Lote não encontrado na tela.", "error", 5000);
 
