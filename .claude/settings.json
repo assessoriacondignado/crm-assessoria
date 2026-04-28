@@ -334,7 +334,11 @@
       "Bash(chown -R www-data:www-data /var/www/html/modulos/comercial/produtos/arquivos)",
       "Bash(chmod 775 /var/www/html/modulos/comercial/produtos/arquivos)",
       "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SHOW TABLES LIKE '%AGRUP%';\")",
-      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SHOW TABLES LIKE '%grupo%';\")"
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SHOW TABLES LIKE '%grupo%';\")",
+      "Bash(mysql -u root -e \"SHOW INDEX FROM dados_cadastrais;\")",
+      "Bash(mysql -e \"SHOW INDEX FROM dados_cadastrais;\")",
+      "Bash(mysql -u root --password='' -e \"SHOW INDEX FROM dados_cadastrais;\")",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"SHOW INDEX FROM dados_cadastrais;\")"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",

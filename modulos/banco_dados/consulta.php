@@ -329,9 +329,11 @@ if (!$is_busca_avancada && !empty($termo_busca) && empty($cpf_selecionado)) {
     $query_sql = ""; $params = [];
 
     if ($prefixo === 'n:' && !empty($valor_busca)) {
-        $query_sql = "SELECT cpf, nome, 'Busca Rápida' as origem FROM dados_cadastrais WHERE nome LIKE :termo LIMIT :limit OFFSET :offset";
-        $params[':termo'] = $valor_busca . "%"; 
-        $query_base_export = " FROM dados_cadastrais d WHERE d.nome LIKE :termo "; $params_export = ['termo' => $valor_busca . "%"];
+        $palavras_n = array_filter(preg_split('/\s+/', trim($valor_busca)));
+        $ft_term_n  = count($palavras_n) ? ('+' . implode('* +', $palavras_n) . '*') : trim($valor_busca) . '*';
+        $query_sql = "SELECT cpf, nome, 'Busca Rápida' as origem FROM dados_cadastrais WHERE MATCH(nome) AGAINST(:termo IN BOOLEAN MODE) LIMIT :limit OFFSET :offset";
+        $params[':termo'] = $ft_term_n;
+        $query_base_export = " FROM dados_cadastrais d WHERE MATCH(d.nome) AGAINST(:termo IN BOOLEAN MODE) "; $params_export = ['termo' => $ft_term_n];
     } elseif ($prefixo === 'f:' && !empty($valor_busca)) {
         $valor_limpo = preg_replace('/\D/', '', $valor_busca);
         if (!empty($valor_limpo)) {
