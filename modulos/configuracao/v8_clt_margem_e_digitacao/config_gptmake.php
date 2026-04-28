@@ -135,25 +135,29 @@ try { $pdo->exec("CREATE TABLE IF NOT EXISTS INTEGRACAO_GPTMAKE_TREINAMENTOS (
     id_empresa INT,
     TITULO VARCHAR(150) NOT NULL,
     CONTEUDO TEXT NOT NULL,
+    TIPO ENUM('COMPORTAMENTO','TREINAMENTO') NOT NULL DEFAULT 'COMPORTAMENTO',
     GPTMAKE_TRAINING_ID VARCHAR(200),
     STATUS ENUM('LOCAL','SINCRONIZADO','ERRO') DEFAULT 'LOCAL',
     MSG_ERRO TEXT,
     DATA_CRIACAO DATETIME DEFAULT NOW(),
     DATA_SYNC DATETIME
 )"); } catch(Exception $e){}
+// Migração: adiciona coluna TIPO se a tabela já existia (registros antigos eram todos comportamento)
+try { $pdo->exec("ALTER TABLE INTEGRACAO_GPTMAKE_TREINAMENTOS ADD COLUMN TIPO ENUM('COMPORTAMENTO','TREINAMENTO') NOT NULL DEFAULT 'COMPORTAMENTO' AFTER CONTEUDO"); } catch(Exception $e){}
 
-// Ação: salvar bloco de treinamento
+// Ação: salvar bloco de treinamento/comportamento
 if ($acao_post === 'salvar_treino') {
     header('Content-Type: application/json');
     $id_treino  = (int)($_POST['id_treino'] ?? 0);
     $titulo     = trim($_POST['titulo'] ?? '');
     $conteudo   = trim($_POST['conteudo'] ?? '');
     $agent_id_t = trim($_POST['agent_id_treino'] ?? '');
+    $tipo       = in_array($_POST['tipo'] ?? '', ['COMPORTAMENTO','TREINAMENTO']) ? $_POST['tipo'] : 'COMPORTAMENTO';
     if (!$titulo || !$conteudo || !$agent_id_t) { echo json_encode(['ok'=>false,'msg'=>'Campos obrigatórios.']); exit; }
     if ($id_treino) {
-        $pdo->prepare("UPDATE INTEGRACAO_GPTMAKE_TREINAMENTOS SET TITULO=?,CONTEUDO=?,STATUS='LOCAL',GPTMAKE_TRAINING_ID=NULL,DATA_SYNC=NULL WHERE ID=?")->execute([$titulo,$conteudo,$id_treino]);
+        $pdo->prepare("UPDATE INTEGRACAO_GPTMAKE_TREINAMENTOS SET TITULO=?,CONTEUDO=?,TIPO=?,STATUS='LOCAL',GPTMAKE_TRAINING_ID=NULL,DATA_SYNC=NULL WHERE ID=?")->execute([$titulo,$conteudo,$tipo,$id_treino]);
     } else {
-        $pdo->prepare("INSERT INTO INTEGRACAO_GPTMAKE_TREINAMENTOS (AGENT_ID,CPF_USUARIO,id_empresa,TITULO,CONTEUDO) VALUES (?,?,?,?,?)")->execute([$agent_id_t,$cpf_logado,$id_empresa_logado,$titulo,$conteudo]);
+        $pdo->prepare("INSERT INTO INTEGRACAO_GPTMAKE_TREINAMENTOS (AGENT_ID,CPF_USUARIO,id_empresa,TITULO,CONTEUDO,TIPO) VALUES (?,?,?,?,?,?)")->execute([$agent_id_t,$cpf_logado,$id_empresa_logado,$titulo,$conteudo,$tipo]);
     }
     echo json_encode(['ok'=>true]); exit;
 }
@@ -180,41 +184,80 @@ if ($acao_post === 'sincronizar_treino') {
         if (!$treino) { echo json_encode(['ok'=>false,'msg'=>'Bloco não encontrado.']); exit; }
         if (empty($treino['API_TOKEN'])) { echo json_encode(['ok'=>false,'msg'=>'Token não configurado para este agente.']); exit; }
 
-        $body = json_encode(['type'=>'TEXT','text'=>$treino['CONTEUDO']], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+        $tipo_bloco = $treino['TIPO'] ?? 'TREINAMENTO';
 
-        $ch = curl_init("https://api.gptmaker.ai/v2/agent/{$treino['AGENT_ID']}/trainings");
-        curl_setopt_array($ch, [
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_POST           => true,
-            CURLOPT_POSTFIELDS     => $body,
-            CURLOPT_HTTPHEADER     => [
-                "Authorization: Bearer {$treino['API_TOKEN']}",
-                "Content-Type: application/json; charset=utf-8",
-                "Content-Length: " . strlen($body)
-            ],
-            CURLOPT_CONNECTTIMEOUT => 15,
-            CURLOPT_TIMEOUT        => 90,
-            CURLOPT_SSL_VERIFYPEER => false,
-            CURLOPT_SSL_VERIFYHOST => false,
-            CURLOPT_IPRESOLVE      => CURL_IPRESOLVE_V4, // evita IPv6 sem rota
-        ]);
-        $res  = curl_exec($ch);
-        $http = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        $curl_err = curl_error($ch);
-        curl_close($ch);
+        if ($tipo_bloco === 'COMPORTAMENTO') {
+            // ── COMPORTAMENTO: atualiza o campo behavior do agente via PATCH ──────
+            $body = json_encode(['behavior' => $treino['CONTEUDO']], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+            $ch = curl_init("https://api.gptmaker.ai/v2/agent/{$treino['AGENT_ID']}");
+            curl_setopt_array($ch, [
+                CURLOPT_CUSTOMREQUEST  => 'PATCH',
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_POSTFIELDS     => $body,
+                CURLOPT_HTTPHEADER     => [
+                    "Authorization: Bearer {$treino['API_TOKEN']}",
+                    "Content-Type: application/json; charset=utf-8",
+                    "Content-Length: " . strlen($body)
+                ],
+                CURLOPT_CONNECTTIMEOUT => 15,
+                CURLOPT_TIMEOUT        => 90,
+                CURLOPT_SSL_VERIFYPEER => false,
+                CURLOPT_SSL_VERIFYHOST => false,
+                CURLOPT_IPRESOLVE      => CURL_IPRESOLVE_V4,
+            ]);
+            $res  = curl_exec($ch);
+            $http = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            $curl_err = curl_error($ch);
+            curl_close($ch);
 
-        if ($curl_err) { echo json_encode(['ok'=>false,'msg'=>"Erro cURL: {$curl_err}"]); exit; }
+            if ($curl_err) { echo json_encode(['ok'=>false,'msg'=>"Erro cURL: {$curl_err}"]); exit; }
 
-        $json = json_decode($res, true);
-        // GPTMaker retorna {"id":"...","tenant":"..."} em sucesso (sem campo "success")
-        $training_id = $json['id'] ?? $json['trainingId'] ?? null;
-        if ($http === 200 && !empty($training_id)) {
-            $pdo->prepare("UPDATE INTEGRACAO_GPTMAKE_TREINAMENTOS SET STATUS='SINCRONIZADO',GPTMAKE_TRAINING_ID=?,DATA_SYNC=NOW(),MSG_ERRO=NULL WHERE ID=?")->execute([$training_id, $id_treino]);
-            echo json_encode(['ok'=>true, 'msg'=>'Sincronizado com sucesso!']); exit;
+            if ($http >= 200 && $http < 300) {
+                $pdo->prepare("UPDATE INTEGRACAO_GPTMAKE_TREINAMENTOS SET STATUS='SINCRONIZADO',GPTMAKE_TRAINING_ID='comportamento',DATA_SYNC=NOW(),MSG_ERRO=NULL WHERE ID=?")->execute([$id_treino]);
+                echo json_encode(['ok'=>true, 'msg'=>'Comportamento sincronizado com sucesso!']); exit;
+            } else {
+                $json = json_decode($res, true);
+                $erro = $json['message'] ?? $json['error'] ?? "HTTP {$http} — " . substr($res, 0, 200);
+                $pdo->prepare("UPDATE INTEGRACAO_GPTMAKE_TREINAMENTOS SET STATUS='ERRO',MSG_ERRO=? WHERE ID=?")->execute([$erro, $id_treino]);
+                echo json_encode(['ok'=>false, 'msg'=>"Erro ao sincronizar comportamento: {$erro}"]); exit;
+            }
         } else {
-            $erro = $json['message'] ?? $json['error'] ?? "HTTP {$http} — " . substr($res, 0, 200);
-            $pdo->prepare("UPDATE INTEGRACAO_GPTMAKE_TREINAMENTOS SET STATUS='ERRO',MSG_ERRO=? WHERE ID=?")->execute([$erro, $id_treino]);
-            echo json_encode(['ok'=>false, 'msg'=>"Erro: {$erro}"]); exit;
+            // ── TREINAMENTO: envia conteúdo à base de conhecimento via POST ───────
+            $body = json_encode(['type'=>'TEXT','text'=>$treino['CONTEUDO']], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+            $ch = curl_init("https://api.gptmaker.ai/v2/agent/{$treino['AGENT_ID']}/trainings");
+            curl_setopt_array($ch, [
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_POST           => true,
+                CURLOPT_POSTFIELDS     => $body,
+                CURLOPT_HTTPHEADER     => [
+                    "Authorization: Bearer {$treino['API_TOKEN']}",
+                    "Content-Type: application/json; charset=utf-8",
+                    "Content-Length: " . strlen($body)
+                ],
+                CURLOPT_CONNECTTIMEOUT => 15,
+                CURLOPT_TIMEOUT        => 90,
+                CURLOPT_SSL_VERIFYPEER => false,
+                CURLOPT_SSL_VERIFYHOST => false,
+                CURLOPT_IPRESOLVE      => CURL_IPRESOLVE_V4,
+            ]);
+            $res  = curl_exec($ch);
+            $http = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            $curl_err = curl_error($ch);
+            curl_close($ch);
+
+            if ($curl_err) { echo json_encode(['ok'=>false,'msg'=>"Erro cURL: {$curl_err}"]); exit; }
+
+            $json = json_decode($res, true);
+            // GPTMaker retorna {"id":"...","tenant":"..."} em sucesso para trainings
+            $training_id = $json['id'] ?? $json['trainingId'] ?? null;
+            if ($http === 200 && !empty($training_id)) {
+                $pdo->prepare("UPDATE INTEGRACAO_GPTMAKE_TREINAMENTOS SET STATUS='SINCRONIZADO',GPTMAKE_TRAINING_ID=?,DATA_SYNC=NOW(),MSG_ERRO=NULL WHERE ID=?")->execute([$training_id, $id_treino]);
+                echo json_encode(['ok'=>true, 'msg'=>'Treinamento sincronizado com sucesso!']); exit;
+            } else {
+                $erro = $json['message'] ?? $json['error'] ?? "HTTP {$http} — " . substr($res, 0, 200);
+                $pdo->prepare("UPDATE INTEGRACAO_GPTMAKE_TREINAMENTOS SET STATUS='ERRO',MSG_ERRO=? WHERE ID=?")->execute([$erro, $id_treino]);
+                echo json_encode(['ok'=>false, 'msg'=>"Erro ao sincronizar treinamento: {$erro}"]); exit;
+            }
         }
     } catch (Exception $e) {
         echo json_encode(['ok'=>false, 'msg'=>'Exceção: ' . $e->getMessage()]); exit;
@@ -222,7 +265,7 @@ if ($acao_post === 'sincronizar_treino') {
 }
 
 // Carrega treinamentos
-$stTreinos = $pdo->prepare("SELECT * FROM INTEGRACAO_GPTMAKE_TREINAMENTOS WHERE {$where_hier} ORDER BY DATA_CRIACAO DESC");
+$stTreinos = $pdo->prepare("SELECT * FROM INTEGRACAO_GPTMAKE_TREINAMENTOS WHERE {$where_hier} ORDER BY TIPO ASC, DATA_CRIACAO ASC");
 try { $stTreinos->execute($params_hier); $lista_treinos = $stTreinos->fetchAll(PDO::FETCH_ASSOC); }
 catch(Exception $e) { $lista_treinos = []; }
 
@@ -513,20 +556,29 @@ async function testarEnvioGPT() {
 
 <!-- ══ TAB 2: TREINAMENTOS ════════════════════════════════════════════════ -->
 <div class="tab-pane fade" id="tabTreinamentos">
+
+  <!-- Legenda de tipos -->
+  <div class="d-flex gap-3 mb-3 align-items-center">
+    <span class="badge bg-purple text-white border border-dark px-3 py-2" style="background:#6f42c1!important;font-size:.8rem;">
+      🎭 COMPORTAMENTO — tom de voz, regras, fluxo da conversa (limite: 3.000 chars)
+    </span>
+    <span class="badge bg-success border border-dark px-3 py-2" style="font-size:.8rem;">
+      📚 TREINAMENTO — dados e informações do produto
+    </span>
+    <button class="btn btn-sm btn-dark fw-bold border-dark ms-auto" onclick="abrirModalTreino()">
+      <i class="fas fa-plus me-1"></i>Novo Bloco
+    </button>
+  </div>
+
   <div class="card border-dark shadow-sm gpt-card">
-    <div class="card-header bg-dark text-white fw-bold d-flex justify-content-between align-items-center">
-      <span><i class="fas fa-brain me-2 text-primary"></i>Blocos de Treinamento GPTMaker</span>
-      <button class="btn btn-sm btn-primary fw-bold border-dark" onclick="abrirModalTreino()">
-        <i class="fas fa-plus me-1"></i>Novo Bloco
-      </button>
-    </div>
     <div class="table-responsive">
       <table class="table table-sm table-hover mb-0" style="font-size:12px;">
         <thead class="table-dark">
           <tr>
+            <th style="width:110px;">Tipo</th>
             <th style="width:200px;">Título</th>
             <th>Conteúdo (prévia)</th>
-            <th class="text-center" style="width:60px;">Chars</th>
+            <th class="text-center" style="width:70px;">Chars</th>
             <th class="text-center" style="width:110px;">Status</th>
             <th>Última Sync</th>
             <th class="text-center" style="width:130px;">Ações</th>
@@ -534,26 +586,48 @@ async function testarEnvioGPT() {
         </thead>
         <tbody>
         <?php if (empty($lista_treinos)): ?>
-          <tr><td colspan="6" class="text-center text-muted py-4 fst-italic">
+          <tr><td colspan="7" class="text-center text-muted py-4 fst-italic">
             Nenhum bloco cadastrado. Clique em <b>Novo Bloco</b> para começar.
           </td></tr>
-        <?php else: ?>
-          <?php foreach ($lista_treinos as $tr):
-            $chars = mb_strlen($tr['CONTEUDO']);
-            $chars_cls = $chars > 1028 ? 'text-danger fw-bold' : ($chars > 900 ? 'text-warning fw-bold' : 'text-success fw-bold');
-            $badge = match($tr['STATUS']) {
+        <?php else:
+          $tipo_atual = '';
+          foreach ($lista_treinos as $tr):
+            $tipo_bloco = $tr['TIPO'] ?? 'TREINAMENTO';
+            $limite     = $tipo_bloco === 'COMPORTAMENTO' ? 3000 : 1028;
+            $chars      = mb_strlen($tr['CONTEUDO']);
+            $chars_cls  = $chars > $limite ? 'text-danger fw-bold' : ($chars > $limite * 0.87 ? 'text-warning fw-bold' : 'text-success fw-bold');
+            $badge_status = match($tr['STATUS']) {
               'SINCRONIZADO' => '<span class="badge bg-success">✅ Sincronizado</span>',
               'ERRO'         => '<span class="badge bg-danger">❌ Erro</span>',
               default        => '<span class="badge bg-secondary">⏳ Local</span>'
             };
-          ?>
+            // Separador de seção ao mudar de tipo
+            if ($tipo_bloco !== $tipo_atual):
+                $tipo_atual = $tipo_bloco;
+                $sep_cor    = $tipo_bloco === 'COMPORTAMENTO' ? '#6f42c1' : '#198754';
+                $sep_icon   = $tipo_bloco === 'COMPORTAMENTO' ? '🎭' : '📚';
+                $sep_label  = $tipo_bloco === 'COMPORTAMENTO' ? 'Comportamento (instruções do agente)' : 'Treinamento (base de conhecimento)';
+        ?>
+            <tr>
+              <td colspan="7" class="fw-bold text-white py-1 px-2" style="background:<?= $sep_cor ?>;font-size:11px;">
+                <?= $sep_icon ?> <?= $sep_label ?>
+              </td>
+            </tr>
+        <?php endif; ?>
           <tr id="row_treino_<?= $tr['ID'] ?>">
+            <td>
+              <?php if ($tipo_bloco === 'COMPORTAMENTO'): ?>
+                <span class="badge border" style="background:#6f42c1;color:#fff;font-size:.7rem;">🎭 Comport.</span>
+              <?php else: ?>
+                <span class="badge bg-success" style="font-size:.7rem;">📚 Treino</span>
+              <?php endif; ?>
+            </td>
             <td class="fw-bold text-dark"><?= htmlspecialchars($tr['TITULO']) ?></td>
-            <td class="text-muted text-truncate" style="max-width:300px;" title="<?= htmlspecialchars($tr['CONTEUDO']) ?>">
+            <td class="text-muted text-truncate" style="max-width:280px;" title="<?= htmlspecialchars($tr['CONTEUDO']) ?>">
               <?= htmlspecialchars(mb_substr($tr['CONTEUDO'], 0, 80)) ?>...
             </td>
-            <td class="text-center <?= $chars_cls ?>"><?= $chars ?>/1028</td>
-            <td class="text-center"><?= $badge ?>
+            <td class="text-center <?= $chars_cls ?>"><?= $chars ?>/<?= $limite ?></td>
+            <td class="text-center"><?= $badge_status ?>
               <?php if ($tr['STATUS']==='ERRO' && $tr['MSG_ERRO']): ?>
               <div class="text-danger" style="font-size:10px;" title="<?= htmlspecialchars($tr['MSG_ERRO']) ?>">
                 <?= htmlspecialchars(mb_substr($tr['MSG_ERRO'],0,30)) ?>
@@ -567,8 +641,10 @@ async function testarEnvioGPT() {
                   onclick='editarTreino(<?= json_encode($tr) ?>)'>
                   <i class="fas fa-edit"></i>
                 </button>
-                <button class="btn btn-xs btn-outline-success py-0 px-2" title="Enviar ao GPTMaker"
-                  onclick="sincronizarTreino(<?= $tr['ID'] ?>, '<?= addslashes($tr['TITULO']) ?>')">
+                <button class="btn btn-xs py-0 px-2 <?= $tipo_bloco==='COMPORTAMENTO' ? 'btn-outline-purple' : 'btn-outline-success' ?>"
+                  style="<?= $tipo_bloco==='COMPORTAMENTO' ? 'color:#6f42c1;border-color:#6f42c1;' : '' ?>"
+                  title="Sincronizar com GPTMaker"
+                  onclick="sincronizarTreino(<?= $tr['ID'] ?>, '<?= addslashes($tr['TITULO']) ?>', '<?= $tipo_bloco ?>')">
                   <i class="fas fa-cloud-upload-alt"></i>
                 </button>
                 <button class="btn btn-xs btn-outline-danger py-0 px-2" title="Excluir"
@@ -585,11 +661,22 @@ async function testarEnvioGPT() {
     </div>
   </div>
 
-  <!-- Dica -->
-  <div class="alert alert-info border-dark mt-3 py-2 small">
-    <i class="fas fa-lightbulb me-1"></i>
-    <b>Dica GPTMaker:</b> Use blocos separados por assunto. Cada bloco suporta até <b>1.028 caracteres</b>.
-    Blocos com comportamento/fluxo devem ir no campo <b>Comportamento</b> do agente, não aqui.
+  <!-- Diferença Comportamento x Treinamento -->
+  <div class="row g-2 mt-2">
+    <div class="col-md-6">
+      <div class="alert border py-2 small mb-0" style="border-color:#6f42c1!important;background:#f8f4ff;">
+        <b style="color:#6f42c1;">🎭 Comportamento</b> — instruções de <em>como</em> o agente deve agir:<br>
+        tom de voz, regras, fluxo da conversa, o que fazer/não fazer.<br>
+        <small class="text-muted">Limite: 3.000 chars. Sincronizar sobrescreve o comportamento atual do agente.</small>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="alert alert-success border-success py-2 small mb-0">
+        <b>📚 Treinamento</b> — <em>informações</em> sobre o produto para o agente consultar:<br>
+        taxas, prazos, documentos, convênios, perguntas frequentes.<br>
+        <small class="text-muted">Cada bloco é adicionado à base de conhecimento do agente.</small>
+      </div>
+    </div>
   </div>
 </div><!-- /tabTreinamentos -->
 
@@ -705,12 +792,20 @@ async function testarEnvioGPT() {
 <div class="modal fade" id="modalTreino" tabindex="-1">
   <div class="modal-dialog modal-lg">
     <div class="modal-content border-dark shadow-lg">
-      <div class="modal-header bg-dark text-white border-dark">
-        <h5 class="modal-title fw-bold"><i class="fas fa-brain text-primary me-2"></i><span id="modalTreinoTitulo">Novo Bloco de Treinamento</span></h5>
+      <div class="modal-header border-dark text-white" id="modalTreinoHeader" style="background:#343a40;">
+        <h5 class="modal-title fw-bold"><span id="modalTreinoIcon">🎭</span> <span id="modalTreinoTitulo">Novo Bloco</span></h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body bg-light">
         <input type="hidden" id="treino_id">
+        <div class="mb-3">
+          <label class="fw-bold small">Tipo do Bloco</label>
+          <select id="treino_tipo" class="form-select border-dark fw-bold" style="font-size:12px;" onchange="onTipoChange()">
+            <option value="COMPORTAMENTO">🎭 Comportamento — tom de voz, regras, fluxo da conversa</option>
+            <option value="TREINAMENTO">📚 Treinamento — dados e informações do produto</option>
+          </select>
+          <div id="dica_tipo" class="form-text mt-1" style="font-size:11px;"></div>
+        </div>
         <div class="mb-3">
           <label class="fw-bold small">Agente (Agent ID)</label>
           <select id="treino_agent" class="form-select border-dark" style="font-size:12px;">
@@ -723,17 +818,17 @@ async function testarEnvioGPT() {
         </div>
         <div class="mb-3">
           <label class="fw-bold small">Título do Bloco</label>
-          <input type="text" id="treino_titulo" class="form-control border-dark" placeholder="Ex: Passo 1 — Abertura" maxlength="150">
+          <input type="text" id="treino_titulo" class="form-control border-dark" placeholder="Ex: Regras de Atendimento" maxlength="150">
         </div>
         <div class="mb-1">
           <label class="fw-bold small d-flex justify-content-between">
-            Conteúdo do Treinamento
-            <span id="treino_chars" class="text-success fw-bold">0/1028</span>
+            Conteúdo
+            <span id="treino_chars" class="text-success fw-bold">0/3000</span>
           </label>
           <textarea id="treino_conteudo" class="form-control border-dark font-monospace" rows="10"
-            placeholder="Escreva o conteúdo do treinamento aqui..." style="font-size:12px;"
+            placeholder="Escreva o conteúdo aqui..." style="font-size:12px;"
             oninput="atualizarCharsCounter()"></textarea>
-          <div class="form-text">Máximo recomendado: 1.028 caracteres por bloco.</div>
+          <div class="form-text" id="treino_limite_hint">Comportamento: máximo 3.000 caracteres.</div>
         </div>
       </div>
       <div class="modal-footer bg-white border-dark d-flex justify-content-between">
@@ -756,13 +851,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// ── Treinamentos ──────────────────────────────────────────────────────────
-function abrirModalTreino() {
+// ── Treinamentos / Comportamento ──────────────────────────────────────────
+function getLimiteTipo() {
+    const tipo = document.getElementById('treino_tipo')?.value || 'TREINAMENTO';
+    return tipo === 'COMPORTAMENTO' ? 3000 : 1028;
+}
+
+function onTipoChange() {
+    const tipo = document.getElementById('treino_tipo').value;
+    const isCp = tipo === 'COMPORTAMENTO';
+    document.getElementById('modalTreinoIcon').textContent = isCp ? '🎭' : '📚';
+    document.getElementById('modalTreinoHeader').style.background = isCp ? '#4a2d7d' : '#343a40';
+    document.getElementById('dica_tipo').textContent = isCp
+        ? 'Comportamento: instruções de como agir, tom de voz, fluxo. Limite: 3.000 chars. Sincronizar sobrescreve o comportamento atual do agente.'
+        : 'Treinamento: informações/dados sobre o produto (taxas, prazos, documentos). Cada bloco é adicionado à base de conhecimento.';
+    document.getElementById('treino_limite_hint').textContent = isCp
+        ? 'Comportamento: máximo 3.000 caracteres.'
+        : 'Treinamento: máximo 1.028 caracteres por bloco.';
+    atualizarCharsCounter();
+}
+
+function abrirModalTreino(tipoDefault) {
     document.getElementById('treino_id').value = '';
     document.getElementById('treino_titulo').value = '';
     document.getElementById('treino_conteudo').value = '';
-    document.getElementById('modalTreinoTitulo').textContent = 'Novo Bloco de Treinamento';
-    atualizarCharsCounter();
+    document.getElementById('treino_tipo').value = tipoDefault || 'COMPORTAMENTO';
+    document.getElementById('modalTreinoTitulo').textContent = 'Novo Bloco';
+    onTipoChange();
     new bootstrap.Modal(document.getElementById('modalTreino')).show();
 }
 
@@ -771,35 +886,44 @@ function editarTreino(t) {
     document.getElementById('treino_titulo').value = t.TITULO;
     document.getElementById('treino_conteudo').value = t.CONTEUDO;
     document.getElementById('treino_agent').value = t.AGENT_ID;
+    document.getElementById('treino_tipo').value = t.TIPO || 'COMPORTAMENTO';
     document.getElementById('modalTreinoTitulo').textContent = 'Editar Bloco';
-    atualizarCharsCounter();
+    onTipoChange();
     new bootstrap.Modal(document.getElementById('modalTreino')).show();
 }
 
 function atualizarCharsCounter() {
-    const len = document.getElementById('treino_conteudo').value.length;
-    const el  = document.getElementById('treino_chars');
-    el.textContent = len + '/1028';
-    el.className   = len > 1028 ? 'text-danger fw-bold' : len > 900 ? 'text-warning fw-bold' : 'text-success fw-bold';
+    const limite = getLimiteTipo();
+    const len    = document.getElementById('treino_conteudo').value.length;
+    const el     = document.getElementById('treino_chars');
+    el.textContent = len + '/' + limite;
+    el.className   = len > limite ? 'text-danger fw-bold' : len > (limite * 0.87) ? 'text-warning fw-bold' : 'text-success fw-bold';
 }
 
 function salvarTreino() {
     const titulo   = document.getElementById('treino_titulo').value.trim();
     const conteudo = document.getElementById('treino_conteudo').value.trim();
     const agent    = document.getElementById('treino_agent').value;
+    const tipo     = document.getElementById('treino_tipo').value;
     const id       = document.getElementById('treino_id').value;
     if (!titulo || !conteudo) { alert('Preencha título e conteúdo.'); return; }
+    const limite = getLimiteTipo();
+    if (conteudo.length > limite) {
+        if (!confirm(`O conteúdo tem ${conteudo.length} chars (limite ${limite}). Deseja salvar mesmo assim?`)) return;
+    }
     const fd = new FormData();
     fd.append('acao','salvar_treino'); fd.append('titulo',titulo);
-    fd.append('conteudo',conteudo); fd.append('agent_id_treino',agent); fd.append('id_treino',id);
+    fd.append('conteudo',conteudo); fd.append('agent_id_treino',agent);
+    fd.append('id_treino',id); fd.append('tipo',tipo);
     fetch('config_gptmake.php',{method:'POST',body:fd}).then(r=>r.json()).then(j=>{
         if(j.ok){ bootstrap.Modal.getInstance(document.getElementById('modalTreino')).hide(); location.reload(); }
         else alert(j.msg);
     });
 }
 
-async function sincronizarTreino(id, titulo) {
-    if (!confirm(`Enviar "${titulo}" ao GPTMaker agora?`)) return;
+async function sincronizarTreino(id, titulo, tipo) {
+    const tipoLabel = tipo === 'COMPORTAMENTO' ? '🎭 comportamento' : '📚 treinamento';
+    if (!confirm(`Sincronizar ${tipoLabel} "${titulo}" com o GPTMaker?\n\n${tipo==='COMPORTAMENTO'?'⚠️ Isso sobrescreve o comportamento atual do agente.':''}`)) return;
     const btn = event.target.closest('button');
     const btnOriginal = btn.innerHTML;
     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
