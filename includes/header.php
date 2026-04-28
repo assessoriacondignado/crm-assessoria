@@ -524,9 +524,9 @@ session_write_close();
             <!-- Tooltip dica -->
             <div id="menuBuscaDicaBox" style="display:none; position:absolute; left:12px; right:12px; background:#1a1f35; border:1px solid rgba(255,255,255,.2); border-radius:8px; padding:10px 12px; z-index:99999; box-shadow:0 6px 20px rgba(0,0,0,.5); font-size:11px; color:rgba(255,255,255,.85); line-height:1.8;">
                 <div style="font-weight:700; color:#7dd3fc; margin-bottom:4px;"><i class="fas fa-lightbulb me-1" style="color:#fbbf24;"></i> Como buscar:</div>
-                <div>📋 <b style="color:#fff;">CPF</b> — digite só os números: <span style="color:#86efac;">06531073900</span></div>
-                <div>📞 <b style="color:#fff;">Telefone</b> — use parênteses no DDD: <span style="color:#86efac;">(82)999025155</span></div>
-                <div>👤 <b style="color:#fff;">Nome</b> — digite o nome completo ou parte: <span style="color:#86efac;">Alex Barbosa</span></div>
+                <div>📋 <b style="color:#fff;">CPF</b> — digite só os números: <span style="color:#86efac;">00011122233</span></div>
+                <div>📞 <b style="color:#fff;">Telefone</b> — use parênteses no DDD: <span style="color:#86efac;">(99)999999999</span></div>
+                <div>👤 <b style="color:#fff;">Nome</b> — digite o nome completo ou parte: <span style="color:#86efac;">MARIA JOSE SOUZA</span></div>
             </div>
             <div id="menuBuscaResultados" style="display:none; background:#1e2235; border:1px solid rgba(255,255,255,.15); border-radius:6px; margin-top:4px; max-height:220px; overflow-y:auto; z-index:9999; position:relative;"></div>
         </div>
