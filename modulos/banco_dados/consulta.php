@@ -64,6 +64,7 @@ $perm_hist_geral_hierarquia = verificaPermissao($pdo, 'MENU_BANCO_DADOS_HISTORIC
 $perm_incluir_camp = verificaPermissao($pdo, 'MENU_BANCO_DADOS_INCLUIR_CAMPANHA', 'FUNCAO');
 $perm_hist_integ = verificaPermissao($pdo, 'MENU_BANCO_DADOS_HISTORIO_INTEGRACAO_HIERARQUIA', 'FUNCAO');
 $perm_hist_consulta = verificaPermissao($pdo, 'MENU_BANCO_DADOS_HISTORIO_CONSULTA_HIERARQUIA', 'FUNCAO');
+$perm_so_meu_historico = verificaPermissao($pdo, 'MENU_BANCO_DADOS_HISTORICO_CONSULTA_MEU_CADASTRO', 'FUNCAO');
 $perm_reg_campanha = verificaPermissao($pdo, 'MENU_BANCO_DADOS_REGISTRO_CAMPANHA_HIERARQUIA', 'FUNCAO');
 
 $is_master = in_array(strtoupper($_SESSION['usuario_grupo'] ?? ''), ['MASTER', 'ADMIN', 'ADMINISTRADOR']);
@@ -146,6 +147,9 @@ if (isset($_POST['acao']) && $_POST['acao'] == 'listar_historico') {
     if ($perm_hist_consulta) {
         $stmt = $pdo->prepare("SELECT DATE_FORMAT(h.DATA_HORA, '%d/%m/%Y %H:%i') as DATA_BR, h.MODULO_CONSULTA, h.CPF_CLIENTE, d.nome as NOME_CLIENTE FROM BANCO_DE_DADOS_REGISTRO_CONSULTA h LEFT JOIN dados_cadastrais d ON h.CPF_CLIENTE = d.cpf WHERE DATE(h.DATA_HORA) BETWEEN ? AND ? ORDER BY h.ID DESC LIMIT 500");
         $stmt->execute([$dIni, $dFim]);
+    } elseif (!$perm_so_meu_historico) {
+        $stmt = $pdo->prepare("SELECT DATE_FORMAT(h.DATA_HORA, '%d/%m/%Y %H:%i') as DATA_BR, h.MODULO_CONSULTA, h.CPF_CLIENTE, d.nome as NOME_CLIENTE FROM BANCO_DE_DADOS_REGISTRO_CONSULTA h LEFT JOIN dados_cadastrais d ON h.CPF_CLIENTE = d.cpf WHERE h.id_usuario = ? AND DATE(h.DATA_HORA) BETWEEN ? AND ? ORDER BY h.ID DESC LIMIT 500");
+        $stmt->execute([$id_usuario_logado_num, $dIni, $dFim]);
     } else {
         $stmt = $pdo->prepare("SELECT DATE_FORMAT(h.DATA_HORA, '%d/%m/%Y %H:%i') as DATA_BR, h.MODULO_CONSULTA, h.CPF_CLIENTE, d.nome as NOME_CLIENTE FROM BANCO_DE_DADOS_REGISTRO_CONSULTA h LEFT JOIN dados_cadastrais d ON h.CPF_CLIENTE = d.cpf WHERE h.id_usuario IN (SELECT ID FROM CLIENTE_USUARIO WHERE id_empresa = ?) AND DATE(h.DATA_HORA) BETWEEN ? AND ? ORDER BY h.ID DESC LIMIT 500");
         $stmt->execute([$id_empresa_logado_num, $dIni, $dFim]);
@@ -165,6 +169,9 @@ if (isset($_GET['acao']) && $_GET['acao'] == 'exportar_historico') {
     if ($perm_hist_consulta) {
         $stmt = $pdo->prepare("SELECT DATE_FORMAT(h.DATA_HORA, '%d/%m/%Y %H:%i') as DATA_BR, h.MODULO_CONSULTA, h.CPF_CLIENTE, d.nome as NOME_CLIENTE FROM BANCO_DE_DADOS_REGISTRO_CONSULTA h LEFT JOIN dados_cadastrais d ON h.CPF_CLIENTE = d.cpf WHERE DATE(h.DATA_HORA) BETWEEN ? AND ? ORDER BY h.ID DESC");
         $stmt->execute([$dIni, $dFim]);
+    } elseif (!$perm_so_meu_historico) {
+        $stmt = $pdo->prepare("SELECT DATE_FORMAT(h.DATA_HORA, '%d/%m/%Y %H:%i') as DATA_BR, h.MODULO_CONSULTA, h.CPF_CLIENTE, d.nome as NOME_CLIENTE FROM BANCO_DE_DADOS_REGISTRO_CONSULTA h LEFT JOIN dados_cadastrais d ON h.CPF_CLIENTE = d.cpf WHERE h.id_usuario = ? AND DATE(h.DATA_HORA) BETWEEN ? AND ? ORDER BY h.ID DESC");
+        $stmt->execute([$id_usuario_logado_num, $dIni, $dFim]);
     } else {
         $stmt = $pdo->prepare("SELECT DATE_FORMAT(h.DATA_HORA, '%d/%m/%Y %H:%i') as DATA_BR, h.MODULO_CONSULTA, h.CPF_CLIENTE, d.nome as NOME_CLIENTE FROM BANCO_DE_DADOS_REGISTRO_CONSULTA h LEFT JOIN dados_cadastrais d ON h.CPF_CLIENTE = d.cpf WHERE h.id_usuario IN (SELECT ID FROM CLIENTE_USUARIO WHERE id_empresa = ?) AND DATE(h.DATA_HORA) BETWEEN ? AND ? ORDER BY h.ID DESC");
         $stmt->execute([$id_empresa_logado_num, $dIni, $dFim]);
