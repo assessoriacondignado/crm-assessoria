@@ -288,7 +288,7 @@
       // Abrir pedido específico vindo de link externo (?abrir=ID)
       if (urlP.has('abrir')) {
           const abriId = parseInt(urlP.get('abrir'));
-          if (abriId) { await load(); viewPedido(abriId); }
+          if (abriId) { load().then(() => viewPedido(abriId)); }
       }
   });
 
