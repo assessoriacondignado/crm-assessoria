@@ -57,8 +57,8 @@
       <div class="mb-3"><label class="fw-bold small text-dark">Nome do Item:</label><input class="form-control border-dark text-uppercase" id="iNome" required placeholder="Ex: ASSESSORIA COMPLETA"></div>
       <div class="mb-4">
         <label class="fw-bold small text-dark d-block mb-1">Descrição Completa:</label>
-        <div class="border border-dark rounded" style="position:relative;">
-          <!-- Toolbar linha 1 -->
+        <div class="border border-dark rounded" id="prodDescWrap" style="position:relative;">
+          <!-- Linha 1: formatação básica + mídia -->
           <div class="d-flex gap-1 flex-wrap px-2 pt-2 pb-1" style="background:#f8f9fa;">
             <button type="button" class="btn btn-sm btn-outline-secondary fw-bold" onclick="prodFmt('bold')" title="Negrito"><b>B</b></button>
             <button type="button" class="btn btn-sm btn-outline-secondary fst-italic" onclick="prodFmt('italic')" title="Itálico"><i>I</i></button>
@@ -66,18 +66,58 @@
             <span class="border-start border-secondary mx-1"></span>
             <button type="button" class="btn btn-sm btn-outline-secondary" onclick="prodFmt('insertUnorderedList')" title="Lista"><i class="fas fa-list-ul"></i></button>
             <button type="button" class="btn btn-sm btn-outline-secondary" onclick="prodFmt('insertOrderedList')" title="Lista numerada"><i class="fas fa-list-ol"></i></button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="prodFmt('indent')" title="Recuo"><i class="fas fa-indent"></i></button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="prodFmt('outdent')" title="Remover recuo"><i class="fas fa-outdent"></i></button>
             <span class="border-start border-secondary mx-1"></span>
-            <select class="form-select form-select-sm border-secondary" style="width:auto;" title="Cor" onchange="prodFmtCor(this.value);this.value='';">
-              <option value="">🎨 Cor</option>
-              <option value="#000000">⚫ Preto</option><option value="#dc3545">🔴 Vermelho</option>
-              <option value="#198754">🟢 Verde</option><option value="#0d6efd">🔵 Azul</option>
-              <option value="#e67e22">🟠 Laranja</option><option value="#6f42c1">🟣 Roxo</option>
+            <button type="button" class="btn btn-sm btn-outline-primary" onclick="prodInsertImagem()" title="Inserir imagem"><i class="fas fa-image"></i></button>
+            <button type="button" class="btn btn-sm btn-outline-primary" onclick="prodInsertLink()" title="Inserir link"><i class="fas fa-link"></i> Link</button>
+            <button type="button" id="btnProdAudio" class="btn btn-sm btn-outline-success" onclick="prodInsertAudio()" title="Inserir áudio">🔈 Áudio</button>
+            <input type="file" id="prod_img_input"   accept="image/*"  style="display:none;" onchange="prodImagemUploaded(this)">
+            <input type="file" id="prod_audio_input" accept="audio/*"  style="display:none;" onchange="prodAudioUploaded(this)">
+          </div>
+          <!-- Linha 2: tamanho, cor texto, cor fundo, estilo -->
+          <div class="d-flex gap-1 flex-wrap px-2 pb-2" style="background:#f8f9fa;border-bottom:1px solid #dee2e6;">
+            <select class="form-select form-select-sm border-secondary" style="width:70px;" title="Tamanho" onchange="prodFmtTamanho(this.value);this.value='';">
+              <option value="">pt</option>
+              <option value="8">8</option><option value="9">9</option><option value="10">10</option>
+              <option value="11">11</option><option value="12">12</option><option value="14">14</option>
+              <option value="16">16</option><option value="18">18</option><option value="20">20</option>
+              <option value="24">24</option><option value="28">28</option><option value="32">32</option>
+              <option value="36">36</option><option value="42">42</option><option value="48">48</option>
+            </select>
+            <select class="form-select form-select-sm border-secondary" style="width:auto;" title="Cor do texto" onchange="prodFmtCor(this.value);this.value='';">
+              <option value="">🎨 Cor texto</option>
+              <option value="#000000">⚫ Preto</option><option value="#333333">🔲 Cinza</option>
+              <option value="#dc3545">🔴 Vermelho</option><option value="#198754">🟢 Verde</option>
+              <option value="#0d6efd">🔵 Azul</option><option value="#e67e22">🟠 Laranja</option>
+              <option value="#6f42c1">🟣 Roxo</option><option value="#ffffff">⬜ Branco</option>
+            </select>
+            <select class="form-select form-select-sm border-secondary" style="width:auto;" title="Cor de fundo" onchange="prodFmtFundo(this.value);this.value='';">
+              <option value="">🖌 Fundo texto</option>
+              <option value="#ffff00">🟡 Amarelo</option><option value="#90ee90">🟢 Verde claro</option>
+              <option value="#add8e6">🔵 Azul claro</option><option value="#ffb6c1">🔴 Rosa</option>
+              <option value="#ffd700">🟠 Dourado</option><option value="#d3d3d3">⬜ Cinza claro</option>
+              <option value="transparent">✖ Remover fundo</option>
+            </select>
+            <select class="form-select form-select-sm border-secondary" style="width:auto;" onchange="prodFmtBloco(this.value);this.value='';">
+              <option value="">Estilo</option>
+              <option value="h2">Título grande</option><option value="h3">Título médio</option>
+              <option value="h5">Subtítulo</option><option value="p">Normal</option>
             </select>
           </div>
           <!-- Área editável -->
           <div id="iDesc" contenteditable="true"
-               style="min-height:120px;padding:10px;outline:none;font-size:.9rem;line-height:1.6;background:#fff;"
-               oninput="prodDescCheck()"></div>
+               style="min-height:180px;max-height:360px;overflow-y:auto;padding:12px 14px;outline:none;font-size:.9rem;line-height:1.6;background:#fff;"
+               oninput="prodDescCheck()" onclick="prodEditorClick(event)"></div>
+          <!-- Toolbar resize imagem -->
+          <div id="prod_img_toolbar" style="display:none;position:absolute;z-index:99;background:#222;border-radius:6px;padding:4px 6px;gap:4px;align-items:center;">
+            <span style="color:#aaa;font-size:11px;">Img:</span>
+            <button type="button" class="btn btn-xs btn-outline-light py-0 px-1" style="font-size:11px;" onclick="prodImgResize('25%')">25%</button>
+            <button type="button" class="btn btn-xs btn-outline-light py-0 px-1" style="font-size:11px;" onclick="prodImgResize('50%')">50%</button>
+            <button type="button" class="btn btn-xs btn-outline-light py-0 px-1" style="font-size:11px;" onclick="prodImgResize('75%')">75%</button>
+            <button type="button" class="btn btn-xs btn-outline-light py-0 px-1" style="font-size:11px;" onclick="prodImgResize('100%')">100%</button>
+            <button type="button" class="btn btn-xs btn-outline-danger py-0 px-1" style="font-size:11px;" onclick="prodImgRemover()">🗑</button>
+          </div>
         </div>
         <div id="iDescError" class="text-danger small mt-1" style="display:none;">Campo obrigatório.</div>
       </div>
@@ -187,10 +227,108 @@
   function openNew() { document.getElementById('fItem').reset(); document.getElementById('iDesc').innerHTML = ''; document.getElementById('eId').value = ''; document.getElementById('eType').value = currentType; document.getElementById('mTitle').innerHTML = "<i class='fas fa-plus-circle text-primary me-2'></i> Novo Item"; modalForm.show(); }
   function edit(id) { const x = list.find(i => i.ID == id); document.getElementById('eId').value = id; document.getElementById('eType').value = currentType; document.getElementById('iNome').value = x.NOME; document.getElementById('iDesc').innerHTML = x.DESCRICAO || ''; document.getElementById('mTitle').innerHTML = "<i class='fas fa-edit text-primary me-2'></i> Editar Item"; modalForm.show(); }
 
-  // Editor de descrição
-  function prodFmt(cmd) { document.getElementById('iDesc').focus(); document.execCommand(cmd, false, null); }
-  function prodFmtCor(cor) { if (!cor) return; document.getElementById('iDesc').focus(); document.execCommand('foreColor', false, cor); }
-  function prodDescCheck() { const v = document.getElementById('iDesc').innerHTML.replace(/<[^>]*>/g,'').trim(); document.getElementById('iDescError').style.display = v ? 'none' : 'block'; }
+  // ─── Editor rico de descrição (igual à Guia) ─────────────────────────────
+  function prodFmt(cmd)         { document.getElementById('iDesc').focus(); document.execCommand(cmd, false, null); }
+  function prodFmtCor(cor)      { if (!cor) return; document.getElementById('iDesc').focus(); document.execCommand('foreColor', false, cor); }
+  function prodFmtFundo(cor)    { if (!cor) return; document.getElementById('iDesc').focus(); document.execCommand('hiliteColor', false, cor); }
+  function prodFmtBloco(v)      { if (!v) return; document.getElementById('iDesc').focus(); document.execCommand('formatBlock', false, v); }
+  function prodFmtTamanho(pt)   {
+      if (!pt) return;
+      document.getElementById('iDesc').focus();
+      const sel = window.getSelection();
+      if (!sel || !sel.rangeCount) return;
+      const range = sel.getRangeAt(0);
+      if (range.collapsed) return;
+      const span = document.createElement('span');
+      span.style.fontSize = pt + 'pt';
+      range.surroundContents(span);
+  }
+  function prodDescCheck() {
+      const v = document.getElementById('iDesc').innerHTML.replace(/<[^>]*>/g,'').trim();
+      document.getElementById('iDescError').style.display = v ? 'none' : 'block';
+  }
+  function prodInsertLink() {
+      const url = prompt('URL do link:'); if (!url) return;
+      const texto = prompt('Texto do link:', url); if (texto === null) return;
+      document.getElementById('iDesc').focus();
+      document.execCommand('insertHTML', false, `<a href="${url}" target="_blank" style="color:#0d6efd;">${texto||url}</a>`);
+  }
+  // Imagem — upload para pasta do produto
+  let _prodImgRange = null, _prodImgAtiva = null, _prodAudioRange = null;
+  function prodInsertImagem() {
+      document.getElementById('iDesc').focus();
+      const sel = window.getSelection();
+      if (sel && sel.rangeCount) _prodImgRange = sel.getRangeAt(0).cloneRange();
+      document.getElementById('prod_img_input').value = '';
+      document.getElementById('prod_img_input').click();
+  }
+  async function prodImagemUploaded(input) {
+      const file = input.files[0]; if (!file) return;
+      const itemId = document.getElementById('eId').value || '0';
+      const fd = new FormData();
+      fd.append('acao', 'upload_imagem_desc');
+      fd.append('item_id', itemId);
+      fd.append('imagem', file);
+      try {
+          const res = await fetch('produtos.ajax.php', {method:'POST', body:fd});
+          const j   = await res.json();
+          if (!j.success) { crmToast(j.msg, 'error'); return; }
+          const editor = document.getElementById('iDesc');
+          editor.focus();
+          const img = document.createElement('img');
+          img.src = j.url;
+          img.style.cssText = 'max-width:100%;height:auto;display:block;margin:8px 0;border-radius:4px;';
+          if (_prodImgRange) {
+              _prodImgRange.collapse(false); _prodImgRange.insertNode(img);
+              _prodImgRange.setStartAfter(img);
+              const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(_prodImgRange);
+          } else { editor.appendChild(img); }
+      } catch(e) { crmToast('Erro ao enviar imagem', 'error'); }
+  }
+  function prodInsertAudio() {
+      document.getElementById('iDesc').focus();
+      const sel = window.getSelection();
+      if (sel && sel.rangeCount) _prodAudioRange = sel.getRangeAt(0).cloneRange();
+      document.getElementById('prod_audio_input').value = '';
+      document.getElementById('prod_audio_input').click();
+  }
+  async function prodAudioUploaded(input) {
+      const file = input.files[0]; if (!file) return;
+      const btn = document.getElementById('btnProdAudio');
+      btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+      const itemId = document.getElementById('eId').value || '0';
+      const fd = new FormData();
+      fd.append('acao', 'upload_arquivo'); fd.append('item_id', itemId); fd.append('arquivo', file);
+      try {
+          const res = await fetch('produtos.ajax.php', {method:'POST', body:fd});
+          const j   = await res.json();
+          if (!j.success) { crmToast(j.msg, 'error'); return; }
+          const span = document.createElement('span');
+          span.setAttribute('data-src', j.url || ''); span.setAttribute('contenteditable','false');
+          span.innerHTML = '🔈';
+          const editor = document.getElementById('iDesc'); editor.focus();
+          if (_prodAudioRange) {
+              _prodAudioRange.collapse(false); _prodAudioRange.insertNode(span);
+              _prodAudioRange.setStartAfter(span);
+              const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(_prodAudioRange);
+          } else { editor.appendChild(span); }
+      } catch(e) { crmToast('Erro ao enviar áudio', 'error'); }
+      btn.disabled = false; btn.innerHTML = '🔈 Áudio';
+  }
+  function prodEditorClick(e) {
+      const toolbar = document.getElementById('prod_img_toolbar');
+      if (e.target.tagName === 'IMG') {
+          _prodImgAtiva = e.target;
+          const rect = e.target.getBoundingClientRect();
+          const edRect = document.getElementById('iDesc').getBoundingClientRect();
+          toolbar.style.top  = (rect.top - edRect.top + document.getElementById('iDesc').scrollTop - 38) + 'px';
+          toolbar.style.left = (rect.left - edRect.left) + 'px';
+          toolbar.style.display = 'flex';
+          e.target.style.outline = '2px solid #0d6efd';
+      } else { toolbar.style.display = 'none'; if (_prodImgAtiva) { _prodImgAtiva.style.outline = ''; _prodImgAtiva = null; } }
+  }
+  function prodImgResize(w) { if (_prodImgAtiva) { _prodImgAtiva.style.width = w; _prodImgAtiva.style.height = 'auto'; } }
+  function prodImgRemover() { if (_prodImgAtiva) { _prodImgAtiva.remove(); _prodImgAtiva = null; document.getElementById('prod_img_toolbar').style.display = 'none'; } }
 
   document.getElementById('fItem').addEventListener('submit', async e => {
     e.preventDefault();

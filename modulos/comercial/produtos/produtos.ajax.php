@@ -74,6 +74,28 @@ try {
             echo json_encode(['success' => true, 'data' => $stmt->fetchAll(PDO::FETCH_ASSOC)]);
             break;
 
+        case 'upload_imagem_desc':
+            $itemId = (int)($_POST['item_id'] ?? 0);
+            if (!isset($_FILES['imagem']) || $_FILES['imagem']['error'] != 0) {
+                throw new Exception("Selecione uma imagem válida.");
+            }
+            $ext = strtolower(pathinfo($_FILES['imagem']['name'], PATHINFO_EXTENSION));
+            if (!in_array($ext, ['jpg','jpeg','png','gif','webp'])) {
+                throw new Exception("Somente imagens (jpg, png, gif, webp).");
+            }
+            $dir = __DIR__ . '/arquivos/';
+            if (!is_dir($dir)) mkdir($dir, 0777, true);
+            $nomeUnico = md5(time().rand()) . '.' . $ext;
+            if (move_uploaded_file($_FILES['imagem']['tmp_name'], $dir . $nomeUnico)) {
+                if ($itemId > 0) {
+                    $pdo->prepare("INSERT INTO CATALOGO_ARQUIVOS (ITEM_ID, NOME_ARQUIVO, CAMINHO_ARQUIVO) VALUES (?,?,?)")
+                        ->execute([$itemId, $_FILES['imagem']['name'], 'arquivos/' . $nomeUnico]);
+                }
+                $url = '/modulos/comercial/produtos/arquivos/' . $nomeUnico;
+                echo json_encode(['success' => true, 'url' => $url]);
+            } else { throw new Exception("Falha ao salvar imagem."); }
+            break;
+
         case 'upload_arquivo':
             $itemId = $_POST['item_id'];
             if(!isset($_FILES['arquivo']) || $_FILES['arquivo']['error'] != 0) { throw new Exception("Selecione um arquivo válido."); }
