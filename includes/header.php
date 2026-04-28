@@ -667,6 +667,9 @@ session_write_close();
                 <?php if(podeAcessarMenu($pdo, 'SUBMENU_ANOTACOES_GERAIS')): ?>
                 <a class="sidebar-subitem" href="/modulos/configuracao/anotacoes/index.php"><i class="fas fa-sticky-note"></i> Anotações Gerais</a>
                 <?php endif; ?>
+                <?php if(in_array(strtoupper($_SESSION['usuario_grupo'] ?? ''), ['MASTER','ADMIN','ADMINISTRADOR'])): ?>
+                <a class="sidebar-subitem" href="/modulos/configuracao/benchmark.php"><i class="fas fa-tachometer-alt"></i> Benchmark do Servidor</a>
+                <?php endif; ?>
             </div>
             <?php endif; ?>
 
