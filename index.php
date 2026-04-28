@@ -259,6 +259,7 @@ if ($temAcessoRenovacao) {
                    DATEDIFF(p.DATA_PREVISTA_RENOVACAO, CURDATE()) as DIAS_ATE_RENOVACAO
             FROM COMERCIAL_PEDIDOS p
             WHERE p.STATUS_PEDIDO != 'Cancelado'
+              AND p.TIPO_PEDIDO = 'RENOVAÇÃO'
             ORDER BY
                 CASE WHEN p.STATUS_RENOVACAO = 'Renovado' THEN 2 ELSE 0 END,
                 CASE WHEN p.DATA_PREVISTA_RENOVACAO IS NULL THEN 1 ELSE 0 END,
