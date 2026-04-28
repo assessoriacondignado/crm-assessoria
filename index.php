@@ -683,10 +683,17 @@ if (file_exists($caminho_header)) {
                     ? '<span class="badge bg-success">Pago</span>'
                     : '<span class="badge bg-secondary">'.htmlspecialchars($r['STATUS_PEDIDO']).'</span>';
             ?>
+                <?php $url_pedido = '/modulos/comercial/pedidos.php?id=' . $r['ID']; ?>
                 <tr class="linha-renov" data-grupo="<?= $grupo ?>" style="<?= $row_bg ?>vertical-align:middle;">
-                    <td class="text-muted fw-bold"><?= htmlspecialchars($r['CODIGO'] ?? '—') ?></td>
+                    <td class="fw-bold">
+                        <a href="<?= $url_pedido ?>" target="_blank" class="text-dark text-decoration-none">
+                            <?= htmlspecialchars($r['CODIGO'] ?? '—') ?>
+                        </a>
+                    </td>
                     <td style="min-width:180px;">
-                        <span class="fw-bold text-dark"><?= htmlspecialchars($r['CLIENTE_NOME'] ?: '—') ?></span><br>
+                        <a href="<?= $url_pedido ?>" target="_blank" class="fw-bold text-dark text-decoration-none">
+                            <?= htmlspecialchars($r['CLIENTE_NOME'] ?: '—') ?>
+                        </a><br>
                         <small class="text-primary"><?= htmlspecialchars($r['PRODUTO_NOME'] ?: '—') ?></small>
                         <?php if ($r['CLIENTE_TELEFONE']): ?><br><small class="text-muted"><i class="fas fa-phone fa-xs"></i> <?= htmlspecialchars($r['CLIENTE_TELEFONE']) ?></small><?php endif; ?>
                     </td>
