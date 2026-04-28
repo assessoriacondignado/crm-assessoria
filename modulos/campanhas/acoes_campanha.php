@@ -11,9 +11,7 @@ if (!file_exists($caminho_conexao)) {
 }
 include $caminho_conexao;
 
-// Garante colunas de reserva de fila (criadas uma vez, ignoradas se já existirem)
-try { $pdo->exec("ALTER TABLE BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA ADD COLUMN ID_RESERVA_USUARIO INT DEFAULT NULL"); } catch(Exception $e){}
-try { $pdo->exec("ALTER TABLE BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA ADD COLUMN DATA_RESERVA DATETIME DEFAULT NULL"); } catch(Exception $e){}
+// Colunas ID_RESERVA_USUARIO e DATA_RESERVA já existem na tabela.
 
 // =========================================================================
 // HEARTBEAT — renova a reserva do cliente (chamado pelo JS a cada 60s)

@@ -744,8 +744,6 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
 
                     // Reserva o cliente atual para o usuário logado
                     if (!empty($cpf_selecionado) && $id_usuario_logado_num) {
-                        try { $pdo->exec("ALTER TABLE BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA ADD COLUMN ID_RESERVA_USUARIO INT DEFAULT NULL"); } catch(Exception $e){}
-                        try { $pdo->exec("ALTER TABLE BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA ADD COLUMN DATA_RESERVA DATETIME DEFAULT NULL"); } catch(Exception $e){}
                         try {
                             $pdo->prepare("UPDATE BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA SET ID_RESERVA_USUARIO = ?, DATA_RESERVA = NOW() WHERE CPF_CLIENTE = ? AND ID_CAMPANHA = ?")
                                 ->execute([$id_usuario_logado_num, $cpf_selecionado, $id_camp]);
