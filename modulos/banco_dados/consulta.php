@@ -485,6 +485,37 @@ if ($is_busca_avancada && empty($cpf_selecionado)) {
     } catch (Exception $e) { $erro_sql = $e->getMessage(); }
 }
 
+// ── Ação em lote: Agrupamento ─────────────────────────────────────────────
+if (isset($_GET['acao_lote_agrupamento']) && $_GET['acao_lote_agrupamento'] == '1' && !empty($query_base_export)) {
+    ini_set('max_execution_time', 0);
+    $nome_agrup = trim($_GET['nome_agrupamento'] ?? '');
+    $tipo_agrup = $_GET['tipo_acao_agrup'] ?? 'aplicar'; // aplicar | remover
+
+    $afetados = 0;
+    if ($nome_agrup !== '' || $tipo_agrup === 'remover') {
+        $sql_cpfs = "SELECT d.cpf " . $query_base_export . " GROUP BY d.cpf";
+        $stmt_cpfs = $pdo->prepare($sql_cpfs);
+        $stmt_cpfs->execute($params_export);
+        $cpfs = $stmt_cpfs->fetchAll(PDO::FETCH_COLUMN);
+
+        if (!empty($cpfs)) {
+            $chunks = array_chunk($cpfs, 1000);
+            $novo_valor = $tipo_agrup === 'remover' ? null : $nome_agrup;
+            foreach ($chunks as $chunk) {
+                $inQ = implode(',', array_fill(0, count($chunk), '?'));
+                $pdo->prepare("UPDATE dados_cadastrais SET agrupamento = ? WHERE cpf IN ($inQ)")
+                    ->execute(array_merge([$novo_valor], $chunk));
+                $afetados += count($chunk);
+            }
+        }
+    }
+
+    $pr = $_GET;
+    unset($pr['acao_lote_agrupamento'], $pr['nome_agrupamento'], $pr['tipo_acao_agrup']);
+    $pr['msg_lote'] = 'agrupamento'; $pr['qtd_lote'] = $afetados;
+    header("Location: ?" . http_build_query($pr)); exit;
+}
+
 if (isset($_GET['acao_lote_campanha']) && $_GET['acao_lote_campanha'] == '1' && !empty($query_base_export)) {
     ini_set('max_execution_time', 0);
     $id_camp = (int)$_GET['id_campanha_lote'];
@@ -873,6 +904,10 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
                         
                         <div style="position: relative;" class="d-flex gap-2">
                             
+                            <?php if ($perm_agrup): ?>
+                                <button class="btn btn-sm btn-info fw-bold shadow-sm border-dark rounded-0 text-white" type="button" data-bs-toggle="modal" data-bs-target="#modalAgrupamento"><i class="fas fa-layer-group me-1"></i> Agrupamento</button>
+                            <?php endif; ?>
+
                             <?php if(!empty($lista_campanhas_ativas) && $perm_acao_campanha): ?>
                                 <button id="btnAcaoLoteCamp" class="btn btn-sm btn-warning fw-bold shadow-sm border-dark rounded-0 text-dark" type="button" data-bs-toggle="modal" data-bs-target="#modalLoteCampanha"><i class="fas fa-bolt me-1"></i> Ações na Campanha</button>
                             <?php endif; ?>
@@ -1701,6 +1736,107 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
         </form>
     </div>
 </div>
+
+<!-- ======= MODAL AGRUPAMENTO ======= -->
+<?php if ($perm_agrup): ?>
+<div class="modal fade" id="modalAgrupamento" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <form method="GET" action="" class="modal-content border-dark shadow-lg rounded-0">
+
+            <?php foreach($_GET as $k => $v): ?>
+                <?php if(is_array($v)): foreach($v as $val): ?>
+                    <input type="hidden" name="<?= $k ?>[]" value="<?= htmlspecialchars($val) ?>">
+                <?php endforeach; elseif(!in_array($k,['msg_lote','qtd_lote','acao_lote_agrupamento','nome_agrupamento','tipo_acao_agrup'])): ?>
+                    <input type="hidden" name="<?= $k ?>" value="<?= htmlspecialchars($v) ?>">
+                <?php endif; ?>
+            <?php endforeach; ?>
+            <input type="hidden" name="acao_lote_agrupamento" value="1">
+            <input type="hidden" name="tipo_acao_agrup" id="hdnTipoAgrup" value="aplicar">
+
+            <div class="modal-header bg-info text-white border-dark rounded-0">
+                <h5 class="modal-title fw-bold text-uppercase"><i class="fas fa-layer-group me-2"></i> Incluir em Agrupamento</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body bg-light">
+
+                <div class="alert alert-info border-dark small fw-bold shadow-sm rounded-0 mb-3">
+                    <i class="fas fa-info-circle me-1"></i> A ação será aplicada a <b>TODOS os clientes encontrados neste filtro</b> (sem limite de página).
+                </div>
+
+                <div class="row g-3">
+                    <!-- Agrupamentos existentes -->
+                    <div class="col-md-6">
+                        <label class="fw-bold small text-dark mb-1">Agrupamentos existentes — clique para selecionar:</label>
+                        <div class="border border-dark rounded-0 bg-white shadow-sm" style="max-height:260px;overflow-y:auto;">
+                            <table class="table table-hover table-sm align-middle mb-0" style="font-size:.82rem;">
+                                <thead class="table-dark text-white text-uppercase sticky-top" style="font-size:.75rem;">
+                                    <tr><th class="text-start ps-2">Nome</th><th class="text-center">Clientes</th></tr>
+                                </thead>
+                                <tbody>
+                                <?php if(empty($lista_agrupamentos)): ?>
+                                    <tr><td colspan="2" class="text-muted py-3 text-center fst-italic">Nenhum agrupamento cadastrado.</td></tr>
+                                <?php else: ?>
+                                    <?php foreach($lista_agrupamentos as $agr): ?>
+                                    <tr class="border-bottom" style="cursor:pointer;" onclick="selecionarAgrup(this, '<?= htmlspecialchars(addslashes($agr['agrupamento'])) ?>')">
+                                        <td class="text-start ps-2 fw-bold text-primary"><?= htmlspecialchars($agr['agrupamento']) ?></td>
+                                        <td class="text-center"><span class="badge bg-dark px-2"><?= $agr['qtd'] ?></span></td>
+                                    </tr>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Criar novo / digitar -->
+                    <div class="col-md-6 d-flex flex-column gap-2">
+                        <div>
+                            <label class="fw-bold small text-dark mb-1">Ou digite um novo agrupamento:</label>
+                            <input type="text" name="nome_agrupamento" id="inputNomeAgrup"
+                                   class="form-control border-dark rounded-0 fw-bold text-uppercase"
+                                   placeholder="Ex: CLIENTES VIP, LISTA CLT..." maxlength="80"
+                                   oninput="this.value=this.value.toUpperCase()">
+                            <div class="form-text">Nome que será atribuído ao campo <b>Agrupamento</b> dos clientes.</div>
+                        </div>
+                        <div class="mt-auto p-3 bg-white border border-dark rounded-0">
+                            <div class="fw-bold small mb-2 text-dark">Ação:</div>
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-info text-white fw-bold border-dark rounded-0"
+                                        onclick="document.getElementById('hdnTipoAgrup').value='aplicar'; return confirmarAgrup('aplicar')">
+                                    <i class="fas fa-tag me-1"></i> Aplicar Agrupamento
+                                </button>
+                                <button type="submit" class="btn btn-outline-danger fw-bold border-dark rounded-0"
+                                        onclick="document.getElementById('hdnTipoAgrup').value='remover'; return confirmarAgrup('remover')">
+                                    <i class="fas fa-times me-1"></i> Remover Agrupamento (limpar campo)
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer bg-white border-top border-dark rounded-0">
+                <button type="button" class="btn btn-outline-dark fw-bold rounded-0" data-bs-dismiss="modal">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+function selecionarAgrup(tr, nome) {
+    document.getElementById('inputNomeAgrup').value = nome;
+    document.querySelectorAll('#modalAgrupamento tbody tr').forEach(r => r.classList.remove('table-info','fw-bolder'));
+    tr.classList.add('table-info');
+}
+function confirmarAgrup(tipo) {
+    const nome = document.getElementById('inputNomeAgrup').value.trim();
+    if (tipo === 'aplicar' && !nome) { alert('Digite ou selecione um agrupamento.'); return false; }
+    const msg = tipo === 'remover'
+        ? 'ATENÇÃO: Remover o agrupamento de TODOS os clientes encontrados?'
+        : `Aplicar o agrupamento "${nome}" a TODOS os clientes encontrados?`;
+    return confirm(msg);
+}
+</script>
+<?php endif; ?>
 
 <?php if (isset($is_modo_campanha) && $is_modo_campanha): ?>
 <div class="modal fade" id="modalStatusCampanha" tabindex="-1">
