@@ -706,12 +706,18 @@
 
         const r = await v8Req('ajax_api_v8_lote_csv.php', 'listar_lotes', payload, false); 
         
+        if (!r || !r.success) {
+            tb.innerHTML = '<tr><td colspan="6" class="text-center py-4 text-danger fw-bold">Erro ao carregar lotes: ' + (r?.msg || 'sem resposta do servidor') + '</td></tr>';
+            console.error('[v8] listar_lotes falhou:', r);
+            return;
+        }
         if (r.success) {
             windowDadosLoteAtual = r.data;
             let newHtml = ''; let temRodando = false;
             if (r.data.length === 0) { tb.innerHTML = '<tr><td colspan="6" class="py-4 text-center text-muted fw-bold">Nenhum lote localizado com os filtros atuais.</td></tr>'; return; }
 
-            r.data.forEach(l => { 
+            try {
+            r.data.forEach(l => {
                 let badge = ''; let agendamentoInfo = ''; let btnPausarLi = '';
                 
                 if(l.AGENDAMENTO_TIPO === 'PROGRAMADO') agendamentoInfo = `<span class="badge bg-warning text-dark ms-1">⏳ ${l.DATA_HORA_AGENDADA || 'Imediato'}</span>`;
@@ -954,6 +960,11 @@
                     <td class="p-2 align-middle text-center" style="vertical-align: middle;">${labelStatusLote}${menuAcoes}</td>
                 </tr>`;
             });
+            } catch(errRender) {
+                console.error('[v8] Erro ao renderizar lotes:', errRender);
+                tb.innerHTML = '<tr><td colspan="6" class="text-center py-4 text-danger fw-bold">Erro ao exibir lotes. Veja o console (F12).</td></tr>';
+                return;
+            }
             tb.innerHTML = newHtml;
 
             var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]')); 
