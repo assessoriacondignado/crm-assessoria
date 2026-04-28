@@ -215,7 +215,7 @@ if (!isset($_SESSION[$cache_key_av]) || (time() - ($_SESSION[$cache_ts_key] ?? 0
         $id_empresa_h = $stmtE->fetchColumn();
 
         $stmtH = $pdo->prepare("
-            SELECT a.ID, a.ASSUNTO, a.TIPO, a.OBRIGATORIO, a.NOME_CRIADOR, a.DATA_CRIACAO
+            SELECT a.ID, a.ASSUNTO, a.CONTEUDO, a.TIPO, a.OBRIGATORIO, a.NOME_CRIADOR, a.DATA_CRIACAO
             FROM AVISOS_INTERNOS a
             WHERE EXISTS (
                 SELECT 1 FROM AVISOS_INTERNOS_DESTINATARIOS d
@@ -1063,18 +1063,9 @@ function avisoObrigMostrar(idx) {
     const a = _avisosObrig[idx];
     if (!a) return;
     document.getElementById('avisoObrigTitulo').textContent = a.ASSUNTO;
+    document.getElementById('avisoObrigConteudo').innerHTML = a.CONTEUDO || '<i class="text-muted">Sem conteúdo.</i>';
     document.getElementById('avisoObrigInfo').textContent = 'De: ' + (a.NOME_CRIADOR || 'Sistema') + ' — ' + (a.DATA_CRIACAO || '').substring(0, 16).replace('T', ' ');
     document.getElementById('avisoObrigPaginacao').textContent = _avisosObrig.length > 1 ? `Aviso ${idx+1} de ${_avisosObrig.length}` : '';
-
-    // Busca conteúdo completo via ajax
-    const fd = new FormData();
-    fd.append('acao', 'get_aviso');
-    fd.append('id', a.ID);
-    fetch('/modulos/configuracao/anotacoes/ajax_anotacao.php', {method:'POST', body:fd})
-        .then(r => r.json())
-        .then(j => {
-            if (j.success) document.getElementById('avisoObrigConteudo').innerHTML = j.data.CONTEUDO || '';
-        });
 }
 
 async function avisoObrigConfirmar() {
@@ -1092,11 +1083,15 @@ async function avisoObrigConfirmar() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    if (_avisosObrig.length > 0) {
-        avisoObrigMostrar(0);
-        new bootstrap.Modal(document.getElementById('modalAvisoObrigatorio'), {backdrop:'static', keyboard:false}).show();
-    }
+window.addEventListener('load', () => {
+    const el = document.getElementById('modalAvisoObrigatorio');
+    if (!el || !_avisosObrig.length) return;
+    // Move o modal para o body raiz para evitar conflitos de CSS
+    document.body.appendChild(el);
+    avisoObrigMostrar(0);
+    setTimeout(() => {
+        new bootstrap.Modal(el, {backdrop:'static', keyboard:false}).show();
+    }, 300);
 });
 </script>
 <?php endif; ?>
