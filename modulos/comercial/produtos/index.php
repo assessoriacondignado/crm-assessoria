@@ -107,7 +107,7 @@
           </div>
           <!-- Área editável -->
           <div id="iDesc" contenteditable="true"
-               style="min-height:180px;max-height:360px;overflow-y:auto;padding:12px 14px;outline:none;font-size:.9rem;line-height:1.6;background:#fff;"
+               style="min-height:180px;max-height:none;overflow-y:auto;padding:12px 14px;outline:none;font-size:.9rem;line-height:1.6;background:#fff;resize:vertical;overflow:auto;"
                oninput="prodDescCheck()" onclick="prodEditorClick(event)"></div>
           <!-- Toolbar resize imagem -->
           <div id="prod_img_toolbar" style="display:none;position:absolute;z-index:99;background:#222;border-radius:6px;padding:4px 6px;gap:4px;align-items:center;">
