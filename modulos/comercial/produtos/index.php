@@ -55,7 +55,32 @@
       <input type="hidden" id="eId">
       <input type="hidden" id="eType">
       <div class="mb-3"><label class="fw-bold small text-dark">Nome do Item:</label><input class="form-control border-dark text-uppercase" id="iNome" required placeholder="Ex: ASSESSORIA COMPLETA"></div>
-      <div class="mb-4"><label class="fw-bold small text-dark">Descrição Completa:</label><textarea class="form-control border-dark" id="iDesc" rows="6" required></textarea></div>
+      <div class="mb-4">
+        <label class="fw-bold small text-dark d-block mb-1">Descrição Completa:</label>
+        <div class="border border-dark rounded" style="position:relative;">
+          <!-- Toolbar linha 1 -->
+          <div class="d-flex gap-1 flex-wrap px-2 pt-2 pb-1" style="background:#f8f9fa;">
+            <button type="button" class="btn btn-sm btn-outline-secondary fw-bold" onclick="prodFmt('bold')" title="Negrito"><b>B</b></button>
+            <button type="button" class="btn btn-sm btn-outline-secondary fst-italic" onclick="prodFmt('italic')" title="Itálico"><i>I</i></button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="prodFmt('underline')" title="Sublinhado"><u>U</u></button>
+            <span class="border-start border-secondary mx-1"></span>
+            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="prodFmt('insertUnorderedList')" title="Lista"><i class="fas fa-list-ul"></i></button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="prodFmt('insertOrderedList')" title="Lista numerada"><i class="fas fa-list-ol"></i></button>
+            <span class="border-start border-secondary mx-1"></span>
+            <select class="form-select form-select-sm border-secondary" style="width:auto;" title="Cor" onchange="prodFmtCor(this.value);this.value='';">
+              <option value="">🎨 Cor</option>
+              <option value="#000000">⚫ Preto</option><option value="#dc3545">🔴 Vermelho</option>
+              <option value="#198754">🟢 Verde</option><option value="#0d6efd">🔵 Azul</option>
+              <option value="#e67e22">🟠 Laranja</option><option value="#6f42c1">🟣 Roxo</option>
+            </select>
+          </div>
+          <!-- Área editável -->
+          <div id="iDesc" contenteditable="true"
+               style="min-height:120px;padding:10px;outline:none;font-size:.9rem;line-height:1.6;background:#fff;"
+               oninput="prodDescCheck()"></div>
+        </div>
+        <div id="iDescError" class="text-danger small mt-1" style="display:none;">Campo obrigatório.</div>
+      </div>
       <div class="text-end border-top border-dark pt-3"><button type="button" class="btn btn-outline-dark fw-bold me-2" data-bs-dismiss="modal">Cancelar</button><button type="submit" class="btn btn-primary fw-bold border-dark shadow-sm">Salvar Registro</button></div>
    </form>
 </div></div></div></div>
@@ -82,7 +107,7 @@
    </div>
 </div><div class="modal-footer bg-white border-top border-dark"><button type="button" class="btn btn-outline-dark fw-bold" data-bs-dismiss="modal">Fechar Explorador</button></div></div></div></div>
 
-<div class="modal fade" id="mDesc"><div class="modal-dialog"><div class="modal-content border-dark shadow-lg"><div class="modal-header bg-secondary text-white border-bottom border-dark"><h5 class="modal-title text-uppercase fw-bold"><i class="fas fa-align-left me-2"></i>Detalhes do Item</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body bg-light"><div id="descConteudo" class="p-3 bg-white border border-dark rounded shadow-sm text-dark" style="white-space: pre-wrap; font-size: 0.95rem; min-height: 150px;"></div></div><div class="modal-footer bg-white border-top border-dark"><button type="button" class="btn btn-dark fw-bold border-dark shadow-sm" data-bs-dismiss="modal">Fechar</button></div></div></div></div>
+<div class="modal fade" id="mDesc"><div class="modal-dialog"><div class="modal-content border-dark shadow-lg"><div class="modal-header bg-secondary text-white border-bottom border-dark"><h5 class="modal-title text-uppercase fw-bold"><i class="fas fa-align-left me-2"></i>Detalhes do Item</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body bg-light"><div id="descConteudo" class="p-3 bg-white border border-dark rounded shadow-sm text-dark" style="font-size:0.95rem;min-height:150px;line-height:1.6;"></div></div><div class="modal-footer bg-white border-top border-dark"><button type="button" class="btn btn-dark fw-bold border-dark shadow-sm" data-bs-dismiss="modal">Fechar</button></div></div></div></div>
 
 <div class="modal fade" id="mVariacao"><div class="modal-dialog modal-xl"><div class="modal-content border-dark shadow-lg"><div class="modal-header bg-success text-white border-bottom border-dark"><h5 class="modal-title text-uppercase fw-bold"><i class="fas fa-tags me-2"></i>Variações de Preço e Comissão</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body bg-light">
    <h5 class="fw-bold text-dark border-bottom border-dark pb-2 mb-3" id="nomeProdutoVariacao">Produto: </h5>
@@ -159,9 +184,27 @@
 
   function verDescricao(id) { const item = list.find(i => i.ID == id); if(item) { document.getElementById('descConteudo').innerHTML = item.DESCRICAO ? item.DESCRICAO : '<i class="text-muted">Nenhuma descrição.</i>'; modalDescricao.show(); } }
   function openNew() { document.getElementById('fItem').reset(); document.getElementById('eId').value = ""; document.getElementById('eType').value = currentType; document.getElementById('mTitle').innerHTML = "<i class='fas fa-plus-circle text-primary me-2'></i> Novo Item"; modalForm.show(); }
-  function edit(id) { const x = list.find(i => i.ID == id); document.getElementById('eId').value = id; document.getElementById('eType').value = currentType; document.getElementById('iNome').value = x.NOME; document.getElementById('iDesc').value = x.DESCRICAO; document.getElementById('mTitle').innerHTML = "<i class='fas fa-edit text-primary me-2'></i> Editar Item"; modalForm.show(); }
-  
-  document.getElementById('fItem').addEventListener('submit', async e => { e.preventDefault(); const t = document.getElementById('eType').value || currentType; const id = document.getElementById('eId').value; const dados = { tipo: t, nome: document.getElementById('iNome').value, desc: document.getElementById('iDesc').value }; const acao = id ? 'editar' : 'salvar'; if (id) dados.id = id; const btn = e.target.querySelector('button[type="submit"]'); const btnOriginal = btn.innerHTML; btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Salvando...'; const r = await callApi(acao, dados); btn.disabled = false; btn.innerHTML = btnOriginal; if(r.success){ modalForm.hide(); loadType(currentType); } else { crmToast(r.msg, r.success === false ? "error" : "info"); } });
+  function openNew() { document.getElementById('fItem').reset(); document.getElementById('iDesc').innerHTML = ''; document.getElementById('eId').value = ''; document.getElementById('eType').value = currentType; document.getElementById('mTitle').innerHTML = "<i class='fas fa-plus-circle text-primary me-2'></i> Novo Item"; modalForm.show(); }
+  function edit(id) { const x = list.find(i => i.ID == id); document.getElementById('eId').value = id; document.getElementById('eType').value = currentType; document.getElementById('iNome').value = x.NOME; document.getElementById('iDesc').innerHTML = x.DESCRICAO || ''; document.getElementById('mTitle').innerHTML = "<i class='fas fa-edit text-primary me-2'></i> Editar Item"; modalForm.show(); }
+
+  // Editor de descrição
+  function prodFmt(cmd) { document.getElementById('iDesc').focus(); document.execCommand(cmd, false, null); }
+  function prodFmtCor(cor) { if (!cor) return; document.getElementById('iDesc').focus(); document.execCommand('foreColor', false, cor); }
+  function prodDescCheck() { const v = document.getElementById('iDesc').innerHTML.replace(/<[^>]*>/g,'').trim(); document.getElementById('iDescError').style.display = v ? 'none' : 'block'; }
+
+  document.getElementById('fItem').addEventListener('submit', async e => {
+    e.preventDefault();
+    const desc = document.getElementById('iDesc').innerHTML.replace(/<[^>]*>/g,'').trim();
+    if (!desc) { document.getElementById('iDescError').style.display = 'block'; document.getElementById('iDesc').focus(); return; }
+    const t = document.getElementById('eType').value || currentType;
+    const id = document.getElementById('eId').value;
+    const dados = { tipo: t, nome: document.getElementById('iNome').value, desc: document.getElementById('iDesc').innerHTML };
+    const acao = id ? 'editar' : 'salvar'; if (id) dados.id = id;
+    const btn = e.target.querySelector('button[type="submit"]'); const btnOriginal = btn.innerHTML;
+    btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Salvando...';
+    const r = await callApi(acao, dados); btn.disabled = false; btn.innerHTML = btnOriginal;
+    if(r.success){ modalForm.hide(); loadType(currentType); } else { crmToast(r.msg, r.success === false ? "error" : "info"); }
+  });
   
   function st(id, statusAtual) { document.getElementById('sId').value = id; document.getElementById('sVal').value = statusAtual === 'Ativo' ? 'Suspenso' : 'Ativo'; document.getElementById('sObs').value = ''; modalSt.show(); }
   document.getElementById('fSt').addEventListener('submit', async e => { e.preventDefault(); const dados = { id: document.getElementById('sId').value, status: document.getElementById('sVal').value, obs: document.getElementById('sObs').value }; const btn = e.target.querySelector('button[type="submit"]'); const btnOriginal = btn.innerHTML; btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Gravando...'; const r = await callApi('mudar_status', dados); btn.disabled = false; btn.innerHTML = btnOriginal; if(r.success) { modalSt.hide(); loadType(currentType); } else { crmToast(r.msg, r.success === false ? "error" : "info"); } });

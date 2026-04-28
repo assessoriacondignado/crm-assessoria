@@ -166,9 +166,10 @@ try {
             $statusRenovacao = !empty($_POST['status_renovacao']) ? trim($_POST['status_renovacao']) : 'A Configurar';
             $prevRenovacao = !empty($_POST['data_prevista']) ? $_POST['data_prevista'] : null;
             $dataRenovacao = !empty($_POST['data_efetiva']) ? $_POST['data_efetiva'] : null;
-            
-            $sql = "UPDATE COMERCIAL_PEDIDOS SET CLIENTE_NOME=?, PRODUTO_NOME=?, VALOR_UNITARIO=?, QUANTIDADE=?, ACRESCIMO=?, VARIACAO=?, DESCONTO=?, CUPOM=?, VALOR_CUPOM=?, FIDELIDADE=?, IVA=?, TOTAL=?, OBSERVACAO=?, STATUS_RENOVACAO=?, DATA_PREVISTA_RENOVACAO=?, DATA_EFETIVA_RENOVACAO=?, DATA_PEDIDO=?, DATA_PAGAMENTO=?, DATA_CANCELAMENTO=? WHERE ID=?";
-            $pdo->prepare($sql)->execute([$cliente, $produto_final, $unitario, $qtd, $acrescimo, $variacao, $desconto, $cupom_nome, $cupom_val, $fidelidade, $iva, $total, $obs, $statusRenovacao, $prevRenovacao, $dataRenovacao, $data_pedido, $data_pagamento, $data_cancelamento, $id]);
+            $tipoPedido = in_array($_POST['tipo_pedido'] ?? '', ['COMPRA','RENOVAÇÃO']) ? $_POST['tipo_pedido'] : 'COMPRA';
+
+            $sql = "UPDATE COMERCIAL_PEDIDOS SET CLIENTE_NOME=?, PRODUTO_NOME=?, VALOR_UNITARIO=?, QUANTIDADE=?, ACRESCIMO=?, VARIACAO=?, DESCONTO=?, CUPOM=?, VALOR_CUPOM=?, FIDELIDADE=?, IVA=?, TOTAL=?, OBSERVACAO=?, STATUS_RENOVACAO=?, DATA_PREVISTA_RENOVACAO=?, DATA_EFETIVA_RENOVACAO=?, DATA_PEDIDO=?, DATA_PAGAMENTO=?, DATA_CANCELAMENTO=?, TIPO_PEDIDO=? WHERE ID=?";
+            $pdo->prepare($sql)->execute([$cliente, $produto_final, $unitario, $qtd, $acrescimo, $variacao, $desconto, $cupom_nome, $cupom_val, $fidelidade, $iva, $total, $obs, $statusRenovacao, $prevRenovacao, $dataRenovacao, $data_pedido, $data_pagamento, $data_cancelamento, $tipoPedido, $id]);
             
             registrarHistorico($pdo, $id, 'EDIÇÃO', 'Dados completos do pedido atualizados.', $usuarioLogado);
             $pdo->prepare("DELETE FROM COMERCIAL_COMISSOES WHERE PEDIDO_ID = ? AND STATUS_COMISSAO != 'PAGO'")->execute([$id]);

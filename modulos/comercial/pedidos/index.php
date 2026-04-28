@@ -55,6 +55,7 @@
                    <th class="text-start">Código</th>
                    <th class="text-start">Cliente</th>
                    <th class="text-start">Produto & Plano</th>
+                   <th>Tipo</th>
                    <th>Total (R$)</th>
                    <th>Renovação</th>
                    <th>Criado</th>
@@ -158,11 +159,18 @@
           </div>
       </div>
 
-      <div class="row mb-3 position-relative">
-         <div class="col-md-12">
+      <div class="row mb-3 g-2">
+         <div class="col-md-8 position-relative">
              <label class="fw-bold small text-primary"><i class="fas fa-search"></i> Buscar Cliente (Nome ou CPF):</label>
              <input type="text" id="vpCli" class="form-control border-dark fw-bold text-uppercase" placeholder="Digite para buscar..." autocomplete="off" onkeyup="buscarClienteAJAX(this.value, 'vp')" required>
              <ul id="listaClientes_vp" class="list-unstyled bg-white lista-suspensa shadow-lg rounded-bottom"></ul>
+         </div>
+         <div class="col-md-4">
+             <label class="fw-bold small text-dark">Tipo do Pedido:</label>
+             <select id="vpTipoPedido" class="form-select border-dark fw-bold">
+                 <option value="COMPRA">🛒 COMPRA</option>
+                 <option value="RENOVAÇÃO">🔄 RENOVAÇÃO</option>
+             </select>
          </div>
       </div>
       
@@ -485,6 +493,7 @@
            <td class="text-start"><code class="text-dark fw-bold px-2 py-1 bg-light border border-secondary rounded">${x.CODIGO}</code></td>
            <td class="fw-bold text-primary text-start">${x.CLIENTE_NOME || 'N/A'}</td>
            <td class="text-truncate text-start fw-bold" style="max-width: 180px;">${x.PRODUTO_NOME || 'N/A'}</td>
+           <td class="text-center"><span class="badge ${x.TIPO_PEDIDO === 'RENOVAÇÃO' ? 'bg-warning text-dark' : 'bg-primary'}" style="font-size:.7rem;">${x.TIPO_PEDIDO === 'RENOVAÇÃO' ? '🔄 RENOV.' : '🛒 COMPRA'}</span></td>
            <td class="fw-bold text-success">R$ ${x.TOTAL ? parseFloat(x.TOTAL).toFixed(2).replace('.', ',') : '0,00'}</td>
            <td>${renovacaoHtml}</td>
            <td>${dtPedido}</td>
@@ -592,7 +601,8 @@
           document.getElementById('vpIva').value = d.IVA || '0.00'; document.getElementById('vpTotal').value = d.TOTAL || d.VALOR || '0.00';
           
           document.getElementById('vpStatusRen').value = d.STATUS_RENOVACAO || 'A Configurar';
-          document.getElementById('vpDataPrev').value = d.DATA_PREVISTA_RENOVACAO || ''; 
+          document.getElementById('vpDataPrev').value = d.DATA_PREVISTA_RENOVACAO || '';
+          document.getElementById('vpTipoPedido').value = d.TIPO_PEDIDO || 'COMPRA'; 
           document.getElementById('vpDataEfetiva').value = d.DATA_EFETIVA_RENOVACAO ? d.DATA_EFETIVA_RENOVACAO.split(' ')[0] : '';
           
           document.getElementById('vpObs').value = d.OBSERVACAO || '';
@@ -624,8 +634,9 @@
           unitario: document.getElementById('vpUnit').value, qtd: document.getElementById('vpQtd').value, acrescimo: document.getElementById('vpAcres').value, 
           variacao: document.getElementById('vpVar').value, desconto: document.getElementById('vpDesc').value, cupom_nome: document.getElementById('vpCupomNome').value, 
           cupom_val: document.getElementById('vpCupomVal').value, fidelidade: document.getElementById('vpFidel').value, iva: document.getElementById('vpIva').value, 
-          total: document.getElementById('vpTotal').value, status_renovacao: document.getElementById('vpStatusRen').value, data_prevista: document.getElementById('vpDataPrev').value, 
-          data_efetiva: document.getElementById('vpDataEfetiva').value, obs: document.getElementById('vpObs').value 
+          total: document.getElementById('vpTotal').value, status_renovacao: document.getElementById('vpStatusRen').value, data_prevista: document.getElementById('vpDataPrev').value,
+          data_efetiva: document.getElementById('vpDataEfetiva').value, obs: document.getElementById('vpObs').value,
+          tipo_pedido: document.getElementById('vpTipoPedido').value
       };
       const r = await callApi('editar_pedido_completo', f);
       if(r.success) { modais.viewPed.hide(); load(); crmToast(r.msg, r.success === false ? "error" : "info"); } else crmToast(r.msg, r.success === false ? "error" : "info");
