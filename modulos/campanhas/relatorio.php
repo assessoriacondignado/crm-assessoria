@@ -597,9 +597,9 @@ function selecionarModelo(tipo) {
     });
     // Filtros exclusivos de HC
     document.getElementById('box_periodo_hc').style.display     = isHC ? 'block' : 'none';
-    // Período padrão (campanha) visível só para não-HC
-    document.querySelector('[for="f_periodo"]')?.closest('.mb-2')
-        && (document.querySelector('[for="f_periodo"]').closest('.mb-2').style.display = isHC ? 'none' : '');
+    // Período padrão (campanha) — usa o próprio select pelo ID (label não tem atributo for)
+    const boxPeriodoPadrao = document.getElementById('f_periodo')?.closest('.mb-2');
+    if (boxPeriodoPadrao) boxPeriodoPadrao.style.display = isHC ? 'none' : '';
     // Agrupamento
     document.getElementById('f_agrupamento').closest('.mb-2').style.display    = isHC ? 'none' : '';
     document.getElementById('f_agrupamento_hc').closest('.mb-2').style.display = 'none'; // sempre oculto
@@ -608,6 +608,16 @@ function selecionarModelo(tipo) {
     // Colunas da tabela
     document.getElementById('thead_campanha').style.display     = isHC ? 'none' : '';
     document.getElementById('thead_historico').style.display    = isHC ? ''     : 'none';
+    // Limpa tabela ao trocar modelo (evita colunas desalinhadas com dados do modelo anterior)
+    const cols = isHC ? 7 : 10;
+    document.getElementById('tbody_relatorio').innerHTML =
+        `<tr><td colspan="${cols}" class="text-center text-muted py-4 fst-italic"><i class="fas fa-filter me-2"></i>Aplique um filtro para visualizar os registros.</td></tr>`;
+    document.getElementById('badge_total').textContent  = '0';
+    document.getElementById('resumo_lista').textContent = '';
+    document.getElementById('btn_ver_mais').style.display = 'none';
+    _offsetAtual = 0; _filtrosAtivos = null;
+    const btnAcoes = document.getElementById('btnAcoes');
+    if (btnAcoes) btnAcoes.disabled = true;
     carregarFiltros();
 }
 
