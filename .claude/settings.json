@@ -299,7 +299,17 @@
       "Bash(awk 'NR>=310 && NR<=485 {printf \"%d\\\\t%s\\\\n\", NR, $0}' /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/config_gptmake.php)",
       "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -e \"SELECT ID, AGENT_ID, CPF_USUARIO FROM INTEGRACAO_GPTMAKE_CONFIG WHERE STATUS='ATIVO' LIMIT 3;\")",
       "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -e \"SELECT COUNT\\(*\\), MAX\\(LENGTH\\(CONTEUDO\\)\\) as max_chars FROM INTEGRACAO_GPTMAKE_TREINAMENTOS;\")",
-      "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -e \"ALTER TABLE INTEGRACAO_GPTMAKE_TREINAMENTOS MODIFY COLUMN AGENT_ID VARCHAR\\(100\\) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL;\")"
+      "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -e \"ALTER TABLE INTEGRACAO_GPTMAKE_TREINAMENTOS MODIFY COLUMN AGENT_ID VARCHAR\\(100\\) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL;\")",
+      "Bash(curl -s --max-time 10 -o /dev/null -w \"%{http_code} %{time_total}s\" https://api.gptmaker.ai/v2/agent/test)",
+      "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -e \"SELECT AGENT_ID, LEFT\\(API_TOKEN,20\\) as TOKEN_INICIO FROM INTEGRACAO_GPTMAKE_CONFIG WHERE STATUS='ATIVO' LIMIT 1;\")",
+      "Bash(mysql -u admin_crm -p'Abl@810401' crm_dados -sNe \"SELECT API_TOKEN FROM INTEGRACAO_GPTMAKE_CONFIG WHERE STATUS='ATIVO' LIMIT 1;\")",
+      "Bash(curl -s --max-time 10 -w '\\\\n\\\\nHTTP: %{http_code}' -H 'Authorization: Bearer __TRACKED_VAR__' https://api.gptmaker.ai/v2/agent/3F220356401D607F49F2469A2F64F4FB)",
+      "Bash(curl -s --max-time 15 -w '\\\\n\\\\nHTTP: %{http_code}' -X POST -H 'Authorization: Bearer __TRACKED_VAR__' -H 'Content-Type: application/json' -d '{\"type\":\"TEXT\",\"text\":\"Teste de conexao\"}' https://api.gptmaker.ai/v2/agent/3F220356401D607F49F2469A2F64F4FB/trainings)",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT t.ID, t.AGENT_ID, LEFT\\(c.API_TOKEN,25\\) as TOKEN_PREVIEW, LENGTH\\(t.CONTEUDO\\) as TAMANHO FROM INTEGRACAO_GPTMAKE_TREINAMENTOS t JOIN INTEGRACAO_GPTMAKE_CONFIG c ON c.AGENT_ID=t.AGENT_ID LIMIT 5\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT API_TOKEN, AGENT_ID FROM INTEGRACAO_GPTMAKE_CONFIG LIMIT 1\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT CONTEUDO FROM INTEGRACAO_GPTMAKE_TREINAMENTOS WHERE ID=1\")",
+      "Bash(sudo -u www-data php -r ' *)",
+      "Bash(php -v)"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",
