@@ -309,12 +309,15 @@
       "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT API_TOKEN, AGENT_ID FROM INTEGRACAO_GPTMAKE_CONFIG LIMIT 1\")",
       "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT CONTEUDO FROM INTEGRACAO_GPTMAKE_TREINAMENTOS WHERE ID=1\")",
       "Bash(sudo -u www-data php -r ' *)",
-      "Bash(php -v)"
+      "Bash(php -v)",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT ID, TITULO, LENGTH\\(CONTEUDO\\) as chars, CONTEUDO FROM INTEGRACAO_GPTMAKE_TREINAMENTOS WHERE TIPO='COMPORTAMENTO' ORDER BY DATA_CRIACAO DESC LIMIT 1\\\\G\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SELECT ID, CHAR_LENGTH\\(CONTEUDO\\) as chars, LEFT\\(CONTEUDO, 80\\) as preview, STATUS FROM INTEGRACAO_GPTMAKE_TREINAMENTOS WHERE ID=16\")"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",
       "/var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao",
-      "/etc/nginx/sites-enabled"
+      "/etc/nginx/sites-enabled",
+      "/tmp"
     ]
   }
 }
