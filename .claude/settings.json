@@ -387,7 +387,17 @@
       "Bash(awk '{sum+=$1} END {print \"Total PHP-FPM RAM: \" sum/1024 \" MB | Processos: \" NR}')",
       "Bash(awk '{print \"Maior processo: \" $1/1024 \" MB\"}')",
       "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"CHECK TABLE dados_cadastrais FAST;\")",
-      "Bash(grep -n \"tb.innerHTML = newHtml\\\\|temRodando\\\\|intervaloLoteV8\\\\|newHtml += \\\\`\\\\`\\\\|r\\\\.data\\\\.forEach\" /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/index.api.v8.lote.vsc.php)"
+      "Bash(grep -n \"tb.innerHTML = newHtml\\\\|temRodando\\\\|intervaloLoteV8\\\\|newHtml += \\\\`\\\\`\\\\|r\\\\.data\\\\.forEach\" /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/index.api.v8.lote.vsc.php)",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"SELECT ID, NOME_IMPORTACAO, CPF_USUARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = 108;\")",
+      "Bash(php -l /var/www/html/includes/header_busca.php)",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"DESCRIBE CATALOGO_ITENS;\")",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"DESCRIBE COMERCIAL_PEDIDOS;\")",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"SELECT ID, NOME_VARIACAO, STATUS_VARIACAO FROM CATALOGO_VARIACOES LIMIT 10;\")",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"DESCRIBE AVISOS_INTERNOS;\")",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"DESCRIBE AVISOS_INTERNOS_LEITURA;\")",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"DESCRIBE AVISOS_INTERNOS_DESTINATARIOS;\")",
+      "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"SELECT telefone_cel FROM telefones WHERE telefone_cel LIKE '82999%' LIMIT 5;\")",
+      "Bash(chown www-data:www-data /var/www/html/modulos/configuracao/anotacoes/arquivos)"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",

@@ -215,7 +215,7 @@ if (!isset($_SESSION[$cache_key_av]) || (time() - ($_SESSION[$cache_ts_key] ?? 0
         $id_empresa_h = $stmtE->fetchColumn();
 
         $stmtH = $pdo->prepare("
-            SELECT a.ID, a.ASSUNTO, a.TIPO, a.NOME_CRIADOR, a.DATA_CRIACAO
+            SELECT a.ID, a.ASSUNTO, a.TIPO, a.OBRIGATORIO, a.NOME_CRIADOR, a.DATA_CRIACAO
             FROM AVISOS_INTERNOS a
             WHERE EXISTS (
                 SELECT 1 FROM AVISOS_INTERNOS_DESTINATARIOS d
@@ -243,6 +243,8 @@ $nao_lidos_h   = count($avisos_header);
 
 // Libera o lock de sessão agora que todos os writes foram feitos
 // Evita serialização de page loads com 200 usuários simultâneos
+// Avisos obrigatórios não lidos (OBRIGATORIO=1)
+$avisos_obrigatorios_h = array_filter($avisos_header, fn($a) => !empty($a['OBRIGATORIO']));
 session_write_close();
 ?>
 <!DOCTYPE html>
@@ -503,6 +505,79 @@ session_write_close();
             </div>
             <?php endif; ?>
         </div>
+
+        <!-- Busca Rápida de Cliente -->
+        <?php if(podeAcessarMenu($pdo, 'MENU_BANCO_DADOS')): ?>
+        <div style="padding:8px 12px 4px; border-bottom:1px solid rgba(255,255,255,.08);">
+            <div style="position:relative;">
+                <input type="text" id="menuBuscaRapida"
+                    placeholder="CPF, nome ou telefone..."
+                    autocomplete="off"
+                    style="width:100%; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.15); border-radius:6px; padding:7px 32px 7px 10px; color:#fff; font-size:12px; outline:none;"
+                    oninput="menuBuscaInput(this.value)"
+                    onkeydown="if(event.key==='Enter') menuBuscaExecutar()"
+                    onmouseenter="menuBuscaDica(true)"
+                    onmouseleave="menuBuscaDica(false)"
+                    onfocus="menuBuscaDica(false)">
+                <i class="fas fa-search" style="position:absolute; right:10px; top:50%; transform:translateY(-50%); color:rgba(255,255,255,.4); font-size:11px; cursor:pointer;" onclick="menuBuscaExecutar()"></i>
+            </div>
+            <!-- Tooltip dica -->
+            <div id="menuBuscaDicaBox" style="display:none; position:absolute; left:12px; right:12px; background:#1a1f35; border:1px solid rgba(255,255,255,.2); border-radius:8px; padding:10px 12px; z-index:99999; box-shadow:0 6px 20px rgba(0,0,0,.5); font-size:11px; color:rgba(255,255,255,.85); line-height:1.8;">
+                <div style="font-weight:700; color:#7dd3fc; margin-bottom:4px;"><i class="fas fa-lightbulb me-1" style="color:#fbbf24;"></i> Como buscar:</div>
+                <div>📋 <b style="color:#fff;">CPF</b> — digite só os números: <span style="color:#86efac;">06531073900</span></div>
+                <div>📞 <b style="color:#fff;">Telefone</b> — use parênteses no DDD: <span style="color:#86efac;">(82)999025155</span></div>
+                <div>👤 <b style="color:#fff;">Nome</b> — digite o nome completo ou parte: <span style="color:#86efac;">Alex Barbosa</span></div>
+            </div>
+            <div id="menuBuscaResultados" style="display:none; background:#1e2235; border:1px solid rgba(255,255,255,.15); border-radius:6px; margin-top:4px; max-height:220px; overflow-y:auto; z-index:9999; position:relative;"></div>
+        </div>
+        <script>
+        let _mbTimer = null;
+        function menuBuscaDica(show) {
+            const box = document.getElementById('menuBuscaDicaBox');
+            const res = document.getElementById('menuBuscaResultados');
+            if (show && res.style.display === 'none') box.style.display = 'block';
+            else box.style.display = 'none';
+        }
+        function menuBuscaInput(val) {
+            document.getElementById('menuBuscaDicaBox').style.display = 'none';
+            clearTimeout(_mbTimer);
+            const box = document.getElementById('menuBuscaResultados');
+            if (val.trim().length < 3) { box.style.display = 'none'; return; }
+            _mbTimer = setTimeout(() => menuBuscaExecutar(), 400);
+        }
+        async function menuBuscaExecutar() {
+            const val = document.getElementById('menuBuscaRapida').value.trim();
+            if (val.length < 3) return;
+            const box = document.getElementById('menuBuscaResultados');
+            box.style.display = 'block';
+            box.innerHTML = '<div style="padding:8px 10px; color:rgba(255,255,255,.5); font-size:11px;"><i class="fas fa-spinner fa-spin me-1"></i> Buscando...</div>';
+            const fd = new FormData();
+            fd.append('acao', 'busca_rapida_menu');
+            fd.append('termo', val);
+            try {
+                const r = await fetch('/includes/header_busca.php', {method:'POST', body:fd}).then(r=>r.json());
+                if (!r.success || !r.data.length) {
+                    box.innerHTML = '<div style="padding:8px 10px; color:rgba(255,255,255,.4); font-size:11px;">Nenhum resultado encontrado.</div>';
+                    return;
+                }
+                box.innerHTML = r.data.map(c => `
+                    <a href="/modulos/banco_dados/consulta.php?busca=${encodeURIComponent(c.cpf)}&cpf_selecionado=${c.cpf}&acao=visualizar"
+                       style="display:block; padding:7px 10px; color:#dde; font-size:11px; text-decoration:none; border-bottom:1px solid rgba(255,255,255,.06);"
+                       onmouseover="this.style.background='rgba(255,255,255,.08)'" onmouseout="this.style.background=''"
+                       onclick="document.getElementById('menuBuscaResultados').style.display='none'">
+                        <span style="color:#7dd3fc; font-weight:700;">${c.nome}</span><br>
+                        <span style="color:rgba(255,255,255,.45);">${c.cpf_fmt} ${c.tel ? '· '+c.tel : ''}</span>
+                    </a>`).join('');
+            } catch(e) {
+                box.innerHTML = '<div style="padding:8px 10px; color:#f87171; font-size:11px;">Erro na busca.</div>';
+            }
+        }
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('#menuBuscaRapida') && !e.target.closest('#menuBuscaResultados'))
+                document.getElementById('menuBuscaResultados').style.display = 'none';
+        });
+        </script>
+        <?php endif; ?>
 
         <!-- Itens de menu -->
         <div class="sidebar-body">
@@ -954,5 +1029,76 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') sidebarFecha
     });
 </script>
 <?php endif; // Fim Bloco de Visualização Online ?>
+
+<?php if (!empty($avisos_obrigatorios_h)): ?>
+<!-- MODAL AVISO OBRIGATÓRIO -->
+<div class="modal fade" id="modalAvisoObrigatorio" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0 shadow-lg" style="border-radius:12px; overflow:hidden;">
+            <div class="modal-header text-white fw-bold border-0 py-3" style="background:linear-gradient(135deg,#dc3545,#a71d2a);">
+                <div class="d-flex align-items-center gap-2">
+                    <i class="fas fa-exclamation-circle fs-5"></i>
+                    <span id="avisoObrigTitulo" class="fs-6 fw-bold text-uppercase"></span>
+                </div>
+                <span class="badge bg-white text-danger fw-bold ms-auto" style="font-size:.65rem;">LEITURA OBRIGATÓRIA</span>
+            </div>
+            <div class="modal-body p-4" style="max-height:65vh; overflow-y:auto;">
+                <div id="avisoObrigConteudo" style="font-size:.92rem; line-height:1.7;"></div>
+                <div class="mt-3 text-muted" style="font-size:.75rem;" id="avisoObrigInfo"></div>
+            </div>
+            <div class="modal-footer border-0 bg-light px-4 pb-3 pt-2 d-flex justify-content-between align-items-center">
+                <div class="text-muted small" id="avisoObrigPaginacao"></div>
+                <button type="button" class="btn btn-danger fw-bold px-4 shadow-sm" id="btnAvisoObrigConfirmar" onclick="avisoObrigConfirmar()">
+                    <i class="fas fa-check me-2"></i> Li e Entendi
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+const _avisosObrig = <?= json_encode(array_values($avisos_obrigatorios_h), JSON_UNESCAPED_UNICODE) ?>;
+let _avisoObrigIdx = 0;
+
+function avisoObrigMostrar(idx) {
+    const a = _avisosObrig[idx];
+    if (!a) return;
+    document.getElementById('avisoObrigTitulo').textContent = a.ASSUNTO;
+    document.getElementById('avisoObrigInfo').textContent = 'De: ' + (a.NOME_CRIADOR || 'Sistema') + ' — ' + (a.DATA_CRIACAO || '').substring(0, 16).replace('T', ' ');
+    document.getElementById('avisoObrigPaginacao').textContent = _avisosObrig.length > 1 ? `Aviso ${idx+1} de ${_avisosObrig.length}` : '';
+
+    // Busca conteúdo completo via ajax
+    const fd = new FormData();
+    fd.append('acao', 'get_aviso');
+    fd.append('id', a.ID);
+    fetch('/modulos/configuracao/anotacoes/ajax_anotacao.php', {method:'POST', body:fd})
+        .then(r => r.json())
+        .then(j => {
+            if (j.success) document.getElementById('avisoObrigConteudo').innerHTML = j.data.CONTEUDO || '';
+        });
+}
+
+async function avisoObrigConfirmar() {
+    const a = _avisosObrig[_avisoObrigIdx];
+    const fd = new FormData();
+    fd.append('acao', 'marcar_lido');
+    fd.append('aviso_id', a.ID);
+    await fetch('/modulos/configuracao/anotacoes/ajax_anotacao.php', {method:'POST', body:fd});
+
+    _avisoObrigIdx++;
+    if (_avisoObrigIdx < _avisosObrig.length) {
+        avisoObrigMostrar(_avisoObrigIdx);
+    } else {
+        bootstrap.Modal.getInstance(document.getElementById('modalAvisoObrigatorio')).hide();
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (_avisosObrig.length > 0) {
+        avisoObrigMostrar(0);
+        new bootstrap.Modal(document.getElementById('modalAvisoObrigatorio'), {backdrop:'static', keyboard:false}).show();
+    }
+});
+</script>
+<?php endif; ?>
 
 <div class="container-fluid px-4 conteudo-principal">

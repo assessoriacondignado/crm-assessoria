@@ -11,7 +11,7 @@ try {
     switch ($acao) {
         case 'listar':
             $tipo = $_POST['tipo'];
-            $stmt = $pdo->prepare("SELECT * FROM CATALOGO_ITENS WHERE TIPO = ? ORDER BY ID DESC");
+            $stmt = $pdo->prepare("SELECT * FROM CATALOGO_ITENS WHERE TIPO = ? AND STATUS_ITEM = 'Ativo' ORDER BY ID DESC");
             $stmt->execute([$tipo]);
             echo json_encode(['success' => true, 'data' => $stmt->fetchAll(PDO::FETCH_ASSOC)]);
             break;
@@ -20,6 +20,7 @@ try {
             $tipo = $_POST['tipo'];
             $nome = mb_strtoupper(trim($_POST['nome']), 'UTF-8');
             $desc = trim($_POST['desc']);
+            $tipo_venda = in_array($_POST['tipo_venda'] ?? '', ['VENDA','RENOVAÇÃO']) ? $_POST['tipo_venda'] : 'VENDA';
             $prefixo = ($tipo === 'PROD') ? 'PRODUTO-' : 'SERVICO-';
 
             $stmtLast = $pdo->prepare("SELECT COUNT(ID) FROM CATALOGO_ITENS WHERE TIPO = ?");
@@ -30,9 +31,9 @@ try {
             $dataCriacao = date('d/m/Y H:i');
             $historico = "[{$dataCriacao}] Criado.";
 
-            $stmt = $pdo->prepare("INSERT INTO CATALOGO_ITENS (TIPO, CODIGO, NOME, DESCRICAO, STATUS_ITEM, HISTORICO_OBS) VALUES (?, ?, ?, ?, 'Ativo', ?)");
-            $stmt->execute([$tipo, $codigo, $nome, $desc, $historico]);
-            
+            $stmt = $pdo->prepare("INSERT INTO CATALOGO_ITENS (TIPO, CODIGO, NOME, TIPO_VENDA, DESCRICAO, STATUS_ITEM, HISTORICO_OBS) VALUES (?, ?, ?, ?, ?, 'Ativo', ?)");
+            $stmt->execute([$tipo, $codigo, $nome, $tipo_venda, $desc, $historico]);
+
             echo json_encode(['success' => true, 'msg' => "Cadastrado: {$codigo}"]);
             break;
 
@@ -40,9 +41,10 @@ try {
             $id = $_POST['id'];
             $nome = mb_strtoupper(trim($_POST['nome']), 'UTF-8');
             $desc = trim($_POST['desc']);
+            $tipo_venda = in_array($_POST['tipo_venda'] ?? '', ['VENDA','RENOVAÇÃO']) ? $_POST['tipo_venda'] : 'VENDA';
 
-            $stmt = $pdo->prepare("UPDATE CATALOGO_ITENS SET NOME = ?, DESCRICAO = ? WHERE ID = ?");
-            $stmt->execute([$nome, $desc, $id]);
+            $stmt = $pdo->prepare("UPDATE CATALOGO_ITENS SET NOME = ?, DESCRICAO = ?, TIPO_VENDA = ? WHERE ID = ?");
+            $stmt->execute([$nome, $desc, $tipo_venda, $id]);
             
             echo json_encode(['success' => true, 'msg' => 'Atualizado com sucesso!']);
             break;

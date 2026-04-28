@@ -236,37 +236,66 @@ if ($is_master) {
                     </div>
                     <div class="col-12">
                         <label class="fw-bold small text-dark mb-1">Mensagem <span class="text-danger">*</span></label>
-                        <div class="border border-secondary rounded" style="background:#fff;">
-                            <!-- Barra de formatação simples -->
-                            <div class="d-flex gap-1 flex-wrap p-2 border-bottom border-secondary" style="background:#f8f9fa;">
+                        <div class="border border-dark rounded" id="avisoEditorWrap" style="position:relative;">
+                            <!-- Linha 1: formatação básica + mídia -->
+                            <div class="d-flex gap-1 flex-wrap px-2 pt-2 pb-1" style="background:#f8f9fa;">
                                 <button type="button" class="btn btn-sm btn-outline-secondary fw-bold" onclick="avisoFmt('bold')" title="Negrito"><b>B</b></button>
                                 <button type="button" class="btn btn-sm btn-outline-secondary fst-italic" onclick="avisoFmt('italic')" title="Itálico"><i>I</i></button>
                                 <button type="button" class="btn btn-sm btn-outline-secondary" onclick="avisoFmt('underline')" title="Sublinhado"><u>U</u></button>
                                 <span class="border-start border-secondary mx-1"></span>
-                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="avisoFmt('insertUnorderedList')" title="Lista com marcadores"><i class="fas fa-list-ul"></i></button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="avisoFmt('insertUnorderedList')" title="Lista"><i class="fas fa-list-ul"></i></button>
                                 <button type="button" class="btn btn-sm btn-outline-secondary" onclick="avisoFmt('insertOrderedList')" title="Lista numerada"><i class="fas fa-list-ol"></i></button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="avisoFmt('indent')" title="Recuo"><i class="fas fa-indent"></i></button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="avisoFmt('outdent')" title="Remover recuo"><i class="fas fa-outdent"></i></button>
                                 <span class="border-start border-secondary mx-1"></span>
-                                <select class="form-select form-select-sm border-secondary" style="width:auto;" onchange="avisoFmtBlock(this.value); this.value='';">
-                                    <option value="">Parágrafo</option>
+                                <button type="button" class="btn btn-sm btn-outline-primary" onclick="avisoInsertImagem()" title="Inserir imagem"><i class="fas fa-image"></i></button>
+                                <button type="button" class="btn btn-sm btn-outline-primary" onclick="avisoInsertLink()" title="Inserir link"><i class="fas fa-link"></i> Link</button>
+                                <input type="file" id="aviso_img_input" accept="image/*" style="display:none" onchange="avisoImagemUploaded(this)">
+                            </div>
+                            <!-- Linha 2: tamanho, cor, fundo, estilo -->
+                            <div class="d-flex gap-1 flex-wrap px-2 pb-2 pt-1 border-top border-secondary" style="background:#f8f9fa;">
+                                <select class="form-select form-select-sm border-secondary" style="width:60px;" onchange="avisoFmtTamanho(this.value); this.value='';" title="Tamanho">
+                                    <option value="">pt</option>
+                                    <?php foreach([8,9,10,11,12,14,16,18,20,24,28,32,36,48] as $s): ?>
+                                    <option value="<?= $s ?>"><?= $s ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                                <div class="dropdown">
+                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">🎨 Cor texto</button>
+                                    <div class="dropdown-menu p-2" style="min-width:160px;">
+                                        <div class="d-flex flex-wrap gap-1">
+                                            <?php foreach(['#dc3545'=>'Vermelho','#198754'=>'Verde','#0d6efd'=>'Azul','#e67e22'=>'Laranja','#6f42c1'=>'Roxo','#0dcaf0'=>'Ciano','#ffc107'=>'Amarelo','#333333'=>'Preto','#ffffff'=>'Branco'] as $hex=>$nome): ?>
+                                            <div title="<?= $nome ?>" onclick="avisoFmtCor('<?= $hex ?>')" style="width:22px;height:22px;background:<?= $hex ?>;border:1px solid #ccc;border-radius:3px;cursor:pointer;"></div>
+                                            <?php endforeach; ?>
+                                        </div>
+                                        <input type="color" class="form-control form-control-sm mt-2 border-secondary" onchange="avisoFmtCor(this.value)" title="Cor personalizada">
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">✏️ Fundo texto</button>
+                                    <div class="dropdown-menu p-2" style="min-width:160px;">
+                                        <div class="d-flex flex-wrap gap-1">
+                                            <?php foreach(['#fff3cd'=>'Amarelo','#d1e7dd'=>'Verde','#f8d7da'=>'Vermelho','#cfe2ff'=>'Azul','#e2e3e5'=>'Cinza','#ffffff'=>'Branco'] as $hex=>$nome): ?>
+                                            <div title="<?= $nome ?>" onclick="avisoFmtFundo('<?= $hex ?>')" style="width:22px;height:22px;background:<?= $hex ?>;border:1px solid #ccc;border-radius:3px;cursor:pointer;"></div>
+                                            <?php endforeach; ?>
+                                        </div>
+                                        <input type="color" class="form-control form-control-sm mt-2 border-secondary" onchange="avisoFmtFundo(this.value)" title="Fundo personalizado">
+                                    </div>
+                                </div>
+                                <select class="form-select form-select-sm border-secondary" style="width:110px;" onchange="avisoFmtBlock(this.value); this.value='';">
+                                    <option value="">Estilo</option>
+                                    <option value="h2">Título Grande</option>
                                     <option value="h3">Título</option>
                                     <option value="h5">Subtítulo</option>
                                     <option value="p">Normal</option>
                                 </select>
-                                <span class="border-start border-secondary mx-1"></span>
-                                <select class="form-select form-select-sm border-secondary" style="width:auto;" onchange="avisoFmtCor(this.value); this.value='';">
-                                    <option value="">Cor do texto</option>
-                                    <option value="#dc3545">Vermelho</option>
-                                    <option value="#198754">Verde</option>
-                                    <option value="#0d6efd">Azul</option>
-                                    <option value="#e67e22">Laranja</option>
-                                    <option value="#333333">Preto</option>
-                                </select>
                             </div>
-                            <div id="aviso_editor"
-                                 contenteditable="true"
-                                 style="min-height:160px; max-height:400px; overflow-y:auto; padding:12px 14px; outline:none; font-size:0.92rem; resize:vertical;"
+                            <!-- Área editável -->
+                            <div id="aviso_editor" contenteditable="true"
+                                 style="min-height:180px;max-height:none;overflow-y:auto;padding:12px 14px;outline:none;font-size:.92rem;line-height:1.7;background:#fff;resize:vertical;overflow:auto;"
                                  placeholder="Digite o conteúdo do aviso aqui..."></div>
                         </div>
+                        <input type="hidden" id="aviso_img_item_id" value="0">
                     </div>
 
                     <!-- DESTINATÁRIOS -->
@@ -330,6 +359,14 @@ if ($is_master) {
                         </div>
                     </div>
 
+                    <div class="col-12">
+                        <div class="form-check form-switch p-3 border border-danger rounded bg-white shadow-sm d-flex align-items-center gap-3">
+                            <input class="form-check-input border-danger ms-0 mt-0" type="checkbox" id="aviso_obrigatorio" style="width:40px;height:20px;cursor:pointer;">
+                            <label class="form-check-label fw-bold text-danger mb-0" for="aviso_obrigatorio" style="cursor:pointer;">
+                                <i class="fas fa-exclamation-circle me-1"></i> Exibição Obrigatória — abre como popup para o destinatário confirmar leitura
+                            </label>
+                        </div>
+                    </div>
                     <div class="col-12 d-flex gap-2 justify-content-end">
                         <button type="button" class="btn btn-secondary fw-bold border-dark" onclick="avisoToggleForm()">Cancelar</button>
                         <button type="button" class="btn btn-danger fw-bold border-dark shadow-sm" id="btnSalvarAviso" onclick="salvarAviso()">
@@ -837,19 +874,51 @@ function avisoToggleDest() {
     document.getElementById('panel_dest_usuario').classList.toggle('d-none', val !== 'USUARIO');
 }
 
-function avisoFmt(cmd) {
+function avisoFmt(cmd) { document.getElementById('aviso_editor').focus(); document.execCommand(cmd, false, null); }
+function avisoFmtBlock(tag) { if (!tag) return; document.getElementById('aviso_editor').focus(); document.execCommand('formatBlock', false, tag); }
+function avisoFmtCor(cor) { if (!cor) return; document.getElementById('aviso_editor').focus(); document.execCommand('foreColor', false, cor); }
+function avisoFmtFundo(cor) { if (!cor) return; document.getElementById('aviso_editor').focus(); document.execCommand('hiliteColor', false, cor); }
+function avisoFmtTamanho(pt) {
+    if (!pt) return;
     document.getElementById('aviso_editor').focus();
-    document.execCommand(cmd, false, null);
+    const sel = window.getSelection();
+    if (!sel || !sel.rangeCount) return;
+    const range = sel.getRangeAt(0);
+    if (range.collapsed) return;
+    const span = document.createElement('span');
+    span.style.fontSize = pt + 'pt';
+    range.surroundContents(span);
 }
-function avisoFmtBlock(tag) {
-    if (!tag) return;
+function avisoInsertLink() {
+    const url = prompt('URL do link:'); if (!url) return;
+    const texto = prompt('Texto do link:', url); if (texto === null) return;
     document.getElementById('aviso_editor').focus();
-    document.execCommand('formatBlock', false, tag);
+    document.execCommand('insertHTML', false, `<a href="${url}" target="_blank" style="color:#0d6efd;">${texto||url}</a>`);
 }
-function avisoFmtCor(cor) {
-    if (!cor) return;
+let _avisoImgRange = null;
+function avisoInsertImagem() {
     document.getElementById('aviso_editor').focus();
-    document.execCommand('foreColor', false, cor);
+    const sel = window.getSelection();
+    if (sel && sel.rangeCount) _avisoImgRange = sel.getRangeAt(0).cloneRange();
+    document.getElementById('aviso_img_input').value = '';
+    document.getElementById('aviso_img_input').click();
+}
+async function avisoImagemUploaded(input) {
+    if (!input.files.length) return;
+    const fd = new FormData();
+    fd.append('acao', 'upload_imagem_aviso');
+    fd.append('imagem', input.files[0]);
+    const r = await fetch('ajax_anotacao.php', {method:'POST', body:fd}).then(r=>r.json()).catch(()=>null);
+    if (r && r.success && r.url) {
+        const editor = document.getElementById('aviso_editor');
+        editor.focus();
+        if (_avisoImgRange) { const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(_avisoImgRange); }
+        const img = document.createElement('img');
+        img.src = r.url; img.style.cssText = 'max-width:100%;height:auto;display:block;margin:8px 0;border-radius:4px;';
+        const sel2 = window.getSelection();
+        if (sel2 && sel2.rangeCount) { const rng = sel2.getRangeAt(0); rng.deleteContents(); rng.insertNode(img); }
+        else editor.appendChild(img);
+    } else { alert(r?.msg || 'Erro ao fazer upload da imagem.'); }
 }
 
 function filtrarUsuariosAviso() {
@@ -887,6 +956,7 @@ async function salvarAviso() {
     fd.append('conteudo', conteudo);
     fd.append('dest_tipo', destTipo);
     fd.append('dest_valores', JSON.stringify(destValores));
+    fd.append('obrigatorio', document.getElementById('aviso_obrigatorio').checked ? '1' : '0');
 
     try {
         const r = await fetch('ajax_anotacao.php', { method: 'POST', body: fd });

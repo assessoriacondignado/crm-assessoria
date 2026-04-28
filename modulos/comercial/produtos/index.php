@@ -54,7 +54,16 @@
    <form id="fItem">
       <input type="hidden" id="eId">
       <input type="hidden" id="eType">
-      <div class="mb-3"><label class="fw-bold small text-dark">Nome do Item:</label><input class="form-control border-dark text-uppercase" id="iNome" required placeholder="Ex: ASSESSORIA COMPLETA"></div>
+      <div class="row g-2 mb-3">
+        <div class="col-md-8"><label class="fw-bold small text-dark">Nome do Item:</label><input class="form-control border-dark text-uppercase" id="iNome" required placeholder="Ex: ASSESSORIA COMPLETA"></div>
+        <div class="col-md-4">
+          <label class="fw-bold small text-dark">Tipo de Venda:</label>
+          <select id="iTipoVenda" class="form-select border-dark">
+            <option value="VENDA">🛒 Venda</option>
+            <option value="RENOVAÇÃO">🔄 Renovação</option>
+          </select>
+        </div>
+      </div>
       <div class="mb-4">
         <label class="fw-bold small text-dark d-block mb-1">Descrição Completa:</label>
         <div class="border border-dark rounded" id="prodDescWrap" style="position:relative;">
@@ -207,7 +216,7 @@
          tb.innerHTML += `
          <tr class="border-bottom border-dark ${inativo}">
             <td><code class="text-dark fw-bold px-2 py-1 bg-light border border-secondary rounded">${x.CODIGO}</code></td>
-            <td class="fw-bold text-primary">${x.NOME}</td>
+            <td class="fw-bold text-primary">${x.NOME} <span class="badge ${x.TIPO_VENDA === 'RENOVAÇÃO' ? 'bg-warning text-dark' : 'bg-primary'} ms-1" style="font-size:.65rem;">${x.TIPO_VENDA === 'RENOVAÇÃO' ? '🔄 RENOV.' : '🛒 VENDA'}</span></td>
             <td class="text-center"><button class="btn btn-sm btn-outline-secondary border-dark shadow-sm" onclick="verDescricao(${x.ID})" title="Ler Descrição Completa"><i class="fas fa-align-left me-1"></i> Ver Descrição</button></td>
             <td><div class="historico-box">${x.HISTORICO_OBS ? x.HISTORICO_OBS.replace(/\n/g, '<br>') : '-'}</div></td>
             <td><span class="badge-status ${stCls} border border-dark shadow-sm">${x.STATUS_ITEM}</span></td>
@@ -224,8 +233,8 @@
 
   function verDescricao(id) { const item = list.find(i => i.ID == id); if(item) { document.getElementById('descConteudo').innerHTML = item.DESCRICAO ? item.DESCRICAO : '<i class="text-muted">Nenhuma descrição.</i>'; modalDescricao.show(); } }
   function openNew() { document.getElementById('fItem').reset(); document.getElementById('eId').value = ""; document.getElementById('eType').value = currentType; document.getElementById('mTitle').innerHTML = "<i class='fas fa-plus-circle text-primary me-2'></i> Novo Item"; modalForm.show(); }
-  function openNew() { document.getElementById('fItem').reset(); document.getElementById('iDesc').innerHTML = ''; document.getElementById('eId').value = ''; document.getElementById('eType').value = currentType; document.getElementById('mTitle').innerHTML = "<i class='fas fa-plus-circle text-primary me-2'></i> Novo Item"; modalForm.show(); }
-  function edit(id) { const x = list.find(i => i.ID == id); document.getElementById('eId').value = id; document.getElementById('eType').value = currentType; document.getElementById('iNome').value = x.NOME; document.getElementById('iDesc').innerHTML = x.DESCRICAO || ''; document.getElementById('mTitle').innerHTML = "<i class='fas fa-edit text-primary me-2'></i> Editar Item"; modalForm.show(); }
+  function openNew() { document.getElementById('fItem').reset(); document.getElementById('iDesc').innerHTML = ''; document.getElementById('eId').value = ''; document.getElementById('eType').value = currentType; document.getElementById('iTipoVenda').value = 'VENDA'; document.getElementById('mTitle').innerHTML = "<i class='fas fa-plus-circle text-primary me-2'></i> Novo Item"; modalForm.show(); }
+  function edit(id) { const x = list.find(i => i.ID == id); document.getElementById('eId').value = id; document.getElementById('eType').value = currentType; document.getElementById('iNome').value = x.NOME; document.getElementById('iTipoVenda').value = x.TIPO_VENDA || 'VENDA'; document.getElementById('iDesc').innerHTML = x.DESCRICAO || ''; document.getElementById('mTitle').innerHTML = "<i class='fas fa-edit text-primary me-2'></i> Editar Item"; modalForm.show(); }
 
   // ─── Editor rico de descrição (igual à Guia) ─────────────────────────────
   function prodFmt(cmd)         { document.getElementById('iDesc').focus(); document.execCommand(cmd, false, null); }
@@ -336,7 +345,7 @@
     if (!desc) { document.getElementById('iDescError').style.display = 'block'; document.getElementById('iDesc').focus(); return; }
     const t = document.getElementById('eType').value || currentType;
     const id = document.getElementById('eId').value;
-    const dados = { tipo: t, nome: document.getElementById('iNome').value, desc: document.getElementById('iDesc').innerHTML };
+    const dados = { tipo: t, nome: document.getElementById('iNome').value, desc: document.getElementById('iDesc').innerHTML, tipo_venda: document.getElementById('iTipoVenda').value };
     const acao = id ? 'editar' : 'salvar'; if (id) dados.id = id;
     const btn = e.target.querySelector('button[type="submit"]'); const btnOriginal = btn.innerHTML;
     btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Salvando...';
@@ -374,18 +383,21 @@
       if(r.success) {
           if(r.data.length === 0) { tb.innerHTML = '<tr><td colspan="5" class="text-center py-4 text-muted fw-bold">Nenhum preço configurado para este produto.</td></tr>'; return; }
           r.data.forEach(v => {
-              const statusCls = v.STATUS_VARIACAO === 'Ativo' ? 'bg-success' : 'bg-danger';
-              const sBtn = v.STATUS_VARIACAO === 'Ativo' ? `<button class="btn btn-sm btn-outline-danger" title="Inativar Variação" onclick="stVariacao(${v.ID}, 'Inativo')"><i class="fas fa-ban"></i></button>` : `<button class="btn btn-sm btn-outline-success" title="Ativar Variação" onclick="stVariacao(${v.ID}, 'Ativo')"><i class="fas fa-check"></i></button>`;
-              
+              const isAtivo = v.STATUS_VARIACAO === 'Ativo' || v.STATUS_VARIACAO === null;
+              const statusCls = isAtivo ? 'bg-success' : 'bg-secondary';
+              const sBtn = isAtivo
+                  ? `<button class="btn btn-sm btn-danger fw-bold border-dark" onclick="stVariacao(${v.ID}, 'Inativo')"><i class="fas fa-ban me-1"></i>Inativar</button>`
+                  : `<button class="btn btn-sm btn-success fw-bold border-dark" onclick="stVariacao(${v.ID}, 'Ativo')"><i class="fas fa-check me-1"></i>Ativar</button>`;
+
               tb.innerHTML += `
-              <tr class="border-bottom border-dark">
+              <tr class="border-bottom border-dark ${isAtivo ? '' : 'opacity-50'}">
                   <td class="fw-bold text-uppercase">${v.NOME_VARIACAO}</td>
                   <td class="fw-bold text-success">R$ ${parseFloat(v.VALOR_VENDA).toFixed(2).replace('.', ',')}</td>
                   <td class="fw-bold text-danger">${v.TIPO_COMISSAO === 'PERCENTUAL' ? v.VALOR_COMISSAO+' %' : 'R$ '+v.VALOR_COMISSAO}</td>
-                  <td><span class="badge ${statusCls} border border-dark">${v.STATUS_VARIACAO}</span></td>
+                  <td><span class="badge ${statusCls} border border-dark">${isAtivo ? 'Ativo' : 'Inativo'}</span></td>
                   <td class="text-center text-nowrap">
                       ${sBtn}
-                      <button class="btn btn-sm btn-dark ms-1" title="Excluir Permanentemente" onclick="excluirVariacao(${v.ID})"><i class="fas fa-trash"></i></button>
+                      <button class="btn btn-sm btn-dark ms-1 border-dark" title="Excluir Permanentemente" onclick="excluirVariacao(${v.ID})"><i class="fas fa-trash"></i></button>
                   </td>
               </tr>`;
           });

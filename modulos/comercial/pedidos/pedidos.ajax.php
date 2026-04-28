@@ -93,9 +93,14 @@ try {
             break;
         case 'buscar_variacoes':
             $produto_nome = trim($_POST['produto_nome'] ?? '');
-            $stmt = $pdo->prepare("SELECT v.ID, v.NOME_VARIACAO, v.VALOR_VENDA FROM CATALOGO_VARIACOES v INNER JOIN CATALOGO_ITENS i ON v.ITEM_ID = i.ID WHERE TRIM(i.NOME) = ? AND (UPPER(v.STATUS_VARIACAO) = 'ATIVO' OR v.STATUS_VARIACAO IS NULL) ORDER BY v.VALOR_VENDA ASC");
+            $stmt = $pdo->prepare("SELECT v.ID, v.NOME_VARIACAO, v.VALOR_VENDA, i.TIPO_VENDA FROM CATALOGO_VARIACOES v INNER JOIN CATALOGO_ITENS i ON v.ITEM_ID = i.ID WHERE TRIM(i.NOME) = ? AND (UPPER(v.STATUS_VARIACAO) = 'ATIVO' OR v.STATUS_VARIACAO IS NULL) ORDER BY v.VALOR_VENDA ASC");
             $stmt->execute([$produto_nome]);
-            echo json_encode(['success' => true, 'data' => $stmt->fetchAll(PDO::FETCH_ASSOC)]);
+            $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            // Busca TIPO_VENDA mesmo sem variações
+            $stmtTipo = $pdo->prepare("SELECT TIPO_VENDA FROM CATALOGO_ITENS WHERE TRIM(NOME) = ? LIMIT 1");
+            $stmtTipo->execute([$produto_nome]);
+            $tipo_venda_produto = $stmtTipo->fetchColumn() ?: 'VENDA';
+            echo json_encode(['success' => true, 'data' => $rows, 'tipo_venda' => $tipo_venda_produto]);
             break;
         case 'buscar_vendedores':
             $termo = "%" . trim($_POST['termo'] ?? '') . "%";
@@ -132,12 +137,13 @@ try {
             $cupom_val = (float)$_POST['cupom_val']; $fidelidade = (float)$_POST['fidelidade']; $iva = (float)$_POST['iva'];
             $total = (float)$_POST['total']; $obs = trim($_POST['obs']);
             $gerar_entrega = isset($_POST['gerar_entrega']) && $_POST['gerar_entrega'] === '1';
+            $tipo_pedido = in_array($_POST['tipo_pedido'] ?? '', ['COMPRA','RENOVAÇÃO']) ? $_POST['tipo_pedido'] : 'COMPRA';
 
             $stmtCount = $pdo->query("SELECT COUNT(ID) FROM COMERCIAL_PEDIDOS");
             $codigo = 'PED-' . str_pad($stmtCount->fetchColumn() + 1, 3, '0', STR_PAD_LEFT);
 
-            $sql = "INSERT INTO COMERCIAL_PEDIDOS (CODIGO, CLIENTE_NOME, CLIENTE_TELEFONE, PRODUTO_NOME, VALOR_UNITARIO, QUANTIDADE, ACRESCIMO, VARIACAO, DESCONTO, CUPOM, VALOR_CUPOM, FIDELIDADE, IVA, TOTAL, OBSERVACAO, STATUS_PEDIDO, DATA_PEDIDO) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'Aguardando Pagamento', NOW())";
-            $pdo->prepare($sql)->execute([$codigo, $cliente, $telefone, $produto_final, $unitario, $qtd, $acrescimo, $variacao, $desconto, $cupom_nome, $cupom_val, $fidelidade, $iva, $total, $obs]);
+            $sql = "INSERT INTO COMERCIAL_PEDIDOS (CODIGO, CLIENTE_NOME, CLIENTE_TELEFONE, PRODUTO_NOME, VALOR_UNITARIO, QUANTIDADE, ACRESCIMO, VARIACAO, DESCONTO, CUPOM, VALOR_CUPOM, FIDELIDADE, IVA, TOTAL, OBSERVACAO, TIPO_PEDIDO, STATUS_PEDIDO, DATA_PEDIDO) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'Aguardando Pagamento', NOW())";
+            $pdo->prepare($sql)->execute([$codigo, $cliente, $telefone, $produto_final, $unitario, $qtd, $acrescimo, $variacao, $desconto, $cupom_nome, $cupom_val, $fidelidade, $iva, $total, $obs, $tipo_pedido]);
             $itemId = $pdo->lastInsertId();
 
             registrarHistorico($pdo, $itemId, 'CRIACAO', "Pedido gerado no valor de R$ ".number_format($total, 2, ',', '.'), $usuarioLogado);

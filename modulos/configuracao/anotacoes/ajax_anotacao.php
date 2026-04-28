@@ -114,11 +114,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     exit;
                 }
 
-                $assunto     = trim($_POST['assunto'] ?? '');
-                $conteudo    = trim($_POST['conteudo'] ?? '');
-                $dest_tipo   = trim($_POST['dest_tipo'] ?? 'TODOS');
-                $dest_raw    = trim($_POST['dest_valores'] ?? '[]');
+                $assunto      = trim($_POST['assunto'] ?? '');
+                $conteudo     = trim($_POST['conteudo'] ?? '');
+                $dest_tipo    = trim($_POST['dest_tipo'] ?? 'TODOS');
+                $dest_raw     = trim($_POST['dest_valores'] ?? '[]');
                 $dest_valores = json_decode($dest_raw, true) ?: [];
+                $obrigatorio  = ($_POST['obrigatorio'] ?? '0') === '1' ? 1 : 0;
 
                 if (empty($assunto) || empty($conteudo)) {
                     echo json_encode(['success' => false, 'msg' => 'Assunto e conteúdo são obrigatórios.']);
@@ -138,10 +139,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $pdo->beginTransaction();
 
                 $stmtAviso = $pdo->prepare("
-                    INSERT INTO AVISOS_INTERNOS (ASSUNTO, CONTEUDO, TIPO, CPF_CRIADOR, NOME_CRIADOR, DATA_CRIACAO)
-                    VALUES (?, ?, 'MASTER', ?, ?, NOW())
+                    INSERT INTO AVISOS_INTERNOS (ASSUNTO, CONTEUDO, OBRIGATORIO, TIPO, CPF_CRIADOR, NOME_CRIADOR, DATA_CRIACAO)
+                    VALUES (?, ?, ?, 'MASTER', ?, ?, NOW())
                 ");
-                $stmtAviso->execute([$assunto, $conteudo, $cpf_logado, $nome_logado]);
+                $stmtAviso->execute([$assunto, $conteudo, $obrigatorio, $cpf_logado, $nome_logado]);
                 $aviso_id = $pdo->lastInsertId();
 
                 if ($dest_tipo === 'TODOS') {
@@ -271,6 +272,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // =======================================================
             // 7. EXCLUIR AVISO (somente MASTER)
             // =======================================================
+            case 'upload_imagem_aviso':
+                header('Content-Type: application/json');
+                if (!isset($_FILES['imagem']) || $_FILES['imagem']['error'] != 0)
+                    throw new Exception("Selecione uma imagem válida.");
+                $ext = strtolower(pathinfo($_FILES['imagem']['name'], PATHINFO_EXTENSION));
+                if (!in_array($ext, ['jpg','jpeg','png','gif','webp']))
+                    throw new Exception("Somente imagens (jpg, png, gif, webp).");
+                $dir = $_SERVER['DOCUMENT_ROOT'] . '/modulos/configuracao/anotacoes/arquivos/';
+                if (!is_dir($dir)) mkdir($dir, 0777, true);
+                $nomeUnico = md5(time().rand()) . '.' . $ext;
+                if (!move_uploaded_file($_FILES['imagem']['tmp_name'], $dir . $nomeUnico))
+                    throw new Exception("Falha ao salvar imagem.");
+                echo json_encode(['success' => true, 'url' => '/modulos/configuracao/anotacoes/arquivos/' . $nomeUnico]);
+                exit;
+
             case 'excluir_aviso':
                 header('Content-Type: application/json');
 

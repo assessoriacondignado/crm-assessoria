@@ -86,9 +86,16 @@
       </div>
       
       <div class="row mb-3 position-relative bg-white p-2 border border-dark rounded shadow-sm">
-         <div class="col-md-4">
+         <div class="col-md-3">
             <label class="fw-bold small text-primary"><i class="fas fa-box"></i> Produto Base:</label>
             <select id="nProd" class="form-select border-dark fw-bold prod-lista" onchange="buscarVariacoesAjax(this.value, 'n')" required><option value="">Carregando produtos...</option></select>
+         </div>
+         <div class="col-md-1">
+            <label class="fw-bold small text-dark">Tipo:</label>
+            <select id="nTipoPedido" class="form-select border-dark fw-bold">
+                <option value="COMPRA">🛒</option>
+                <option value="RENOVAÇÃO">🔄</option>
+            </select>
          </div>
          <div class="col-md-4">
             <label class="fw-bold small text-info"><i class="fas fa-tags"></i> Plano / Variação:</label>
@@ -404,6 +411,13 @@
       }
 
       const r = await callApi('buscar_variacoes', { produto_nome: produtoNome });
+
+      // Preenche TIPO_PEDIDO automaticamente baseado no produto
+      if (r.tipo_venda) {
+          const elTipo = document.getElementById(prefix + 'TipoPedido');
+          if (elTipo) elTipo.value = r.tipo_venda;
+      }
+
       if (r.success && r.data.length > 0) {
           let ops = '<option value="" data-valor="0">-- Selecione o Plano --</option>';
           r.data.forEach(v => {
@@ -640,7 +654,8 @@
          iva: document.getElementById('nIva').value, 
          total: document.getElementById('nTotal').value, 
          obs: document.getElementById('nObs').value,
-         gerar_entrega: document.getElementById('nGerarEntrega').checked ? '1' : '0'
+         gerar_entrega: document.getElementById('nGerarEntrega').checked ? '1' : '0',
+         tipo_pedido: document.getElementById('nTipoPedido').value
      };
      const r = await callApi('salvar_pedido', f);
      if(r.success){ modais.new.hide(); load(); crmToast(r.msg, r.success === false ? "error" : "info"); } else crmToast(r.msg, r.success === false ? "error" : "info");
