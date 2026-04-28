@@ -15,6 +15,8 @@ if (!isset($_SESSION['usuario_cpf'])) {
 $perm_consulta   = verificaPermissao($pdo, 'CAMPANHA_RELATORIO_CONSULTA',       'FUNCAO');
 $perm_exportar   = verificaPermissao($pdo, 'CAMPANHA_RELATORIO_EXPORTAR',        'FUNCAO');
 $perm_meus_reg   = verificaPermissao($pdo, 'CAMPANHA_RELATORIO_MEUS_REGISTROS',  'FUNCAO');
+$perm_apagar     = verificaPermissao($pdo, 'CAMPANHA_RELATORIO_APAGAR',          'FUNCAO');
+$perm_transferir = verificaPermissao($pdo, 'CAMPANHA_RELATORIO_TRANSFERIR',      'FUNCAO');
 
 if (!$perm_consulta) {
     echo json_encode(['success' => false, 'msg' => 'Sem permissão para acessar relatórios.']); exit;
@@ -497,6 +499,75 @@ if ($acao === 'exportar_csv') {
         ], ';');
     }
     fclose($out);
+    exit;
+}
+
+// =========================================================================
+// HELPER: busca IDs filtrados para apagar/transferir
+// =========================================================================
+function idsParaAcao($pdo, $post, $cpfs_raw, $is_master, $is_consultor, $id_empresa_num, $id_usuario_num, $somente_meus) {
+    $cpfs = array_filter(array_map(fn($c) => preg_replace('/\D/', '', trim($c)), (array)$cpfs_raw));
+    $params = [];
+    $where_h = filtroHierarquia($is_master, $is_consultor, $id_empresa_num, $id_usuario_num, $params, $somente_meus);
+
+    if (!empty($cpfs)) {
+        $ph = implode(',', array_fill(0, count($cpfs), '?'));
+        $params = array_merge($cpfs, $params);
+        $where = "WHERE r.CPF_CLIENTE IN ($ph) AND r.DATA_AGENDAMENTO IS NOT NULL AND r.DATA_AGENDAMENTO >= NOW() {$where_h}";
+    } else {
+        $where_f = filtrosUsuario($post, $params, $is_master, $id_empresa_num);
+        $where = "WHERE 1=1 {$where_h} {$where_f} AND r.DATA_AGENDAMENTO IS NOT NULL AND r.DATA_AGENDAMENTO >= NOW()";
+    }
+
+    $st = $pdo->prepare("SELECT r.ID FROM BANCO_DE_DADOS_CAMPANHA_REGISTRO_CONTATO r {$where}");
+    $st->execute($params);
+    return $st->fetchAll(PDO::FETCH_COLUMN);
+}
+
+// =========================================================================
+// AÇÃO: Apagar agendamento (zera DATA_AGENDAMENTO, mantém histórico)
+// =========================================================================
+if ($acao === 'apagar_agendamento') {
+    if (!$perm_apagar) { echo json_encode(['success'=>false,'msg'=>'Sem permissão para apagar agendamentos.']); exit; }
+    try {
+        $ids = idsParaAcao($pdo, $_POST, $_POST['cpfs'] ?? [], $is_master, $is_consultor, $id_empresa_num, $id_usuario_num, $somente_meus);
+        if (empty($ids)) { echo json_encode(['success'=>true,'msg'=>'Nenhum agendamento encontrado.']); exit; }
+        $ph = implode(',', array_fill(0, count($ids), '?'));
+        $pdo->prepare("UPDATE BANCO_DE_DADOS_CAMPANHA_REGISTRO_CONTATO SET DATA_AGENDAMENTO = NULL WHERE ID IN ($ph)")->execute($ids);
+        echo json_encode(['success'=>true, 'msg'=>count($ids).' agendamento(s) apagado(s).']);
+    } catch (Exception $e) {
+        echo json_encode(['success'=>false,'msg'=>$e->getMessage()]);
+    }
+    exit;
+}
+
+// =========================================================================
+// AÇÃO: Transferir agendamento para outro usuário da mesma empresa
+// =========================================================================
+if ($acao === 'transferir_agendamento') {
+    if (!$perm_transferir) { echo json_encode(['success'=>false,'msg'=>'Sem permissão para transferir agendamentos.']); exit; }
+    $id_usuario_dest = intval($_POST['id_usuario_dest'] ?? 0);
+    if (!$id_usuario_dest) { echo json_encode(['success'=>false,'msg'=>'Selecione um usuário destino.']); exit; }
+
+    // Valida: destino deve ser da mesma empresa
+    $stDest = $pdo->prepare("SELECT NOME, id_empresa FROM CLIENTE_USUARIO WHERE ID = ? AND Situação = 'ativo' LIMIT 1");
+    $stDest->execute([$id_usuario_dest]);
+    $destUser = $stDest->fetch(PDO::FETCH_ASSOC);
+    if (!$destUser) { echo json_encode(['success'=>false,'msg'=>'Usuário não encontrado.']); exit; }
+    if (!$is_master && (int)$destUser['id_empresa'] !== (int)$id_empresa_num) {
+        echo json_encode(['success'=>false,'msg'=>'Só é permitido transferir para usuários da mesma empresa.']); exit;
+    }
+
+    try {
+        $ids = idsParaAcao($pdo, $_POST, $_POST['cpfs'] ?? [], $is_master, $is_consultor, $id_empresa_num, $id_usuario_num, $somente_meus);
+        if (empty($ids)) { echo json_encode(['success'=>true,'msg'=>'Nenhum agendamento encontrado.']); exit; }
+        $ph = implode(',', array_fill(0, count($ids), '?'));
+        $pdo->prepare("UPDATE BANCO_DE_DADOS_CAMPANHA_REGISTRO_CONTATO SET id_usuario=?, NOME_USUARIO=? WHERE ID IN ($ph)")
+            ->execute(array_merge([$id_usuario_dest, $destUser['NOME']], $ids));
+        echo json_encode(['success'=>true, 'msg'=>count($ids).' agendamento(s) transferido(s) para '.$destUser['NOME'].'.']);
+    } catch (Exception $e) {
+        echo json_encode(['success'=>false,'msg'=>$e->getMessage()]);
+    }
     exit;
 }
 

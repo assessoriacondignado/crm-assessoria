@@ -17,9 +17,11 @@ if (!verificaPermissao($pdo, 'CAMPANHA_RELATORIO_MENU', 'TELA')) {
     die("<div class='container mt-5'><div class='alert alert-danger text-center shadow-lg border-dark p-4 rounded-3'><h4 class='fw-bold'><i class='fas fa-ban'></i> Acesso Negado</h4><p class='mb-0'>Sem permissão para acessar Relatórios de Campanhas.</p></div></div>");
 }
 
-$perm_consulta = verificaPermissao($pdo, 'CAMPANHA_RELATORIO_CONSULTA', 'FUNCAO');
-$perm_exportar = verificaPermissao($pdo, 'CAMPANHA_RELATORIO_EXPORTAR', 'FUNCAO');
-$is_master     = in_array(strtoupper($_SESSION['usuario_grupo'] ?? ''), ['MASTER', 'ADMIN', 'ADMINISTRADOR']);
+$perm_consulta   = verificaPermissao($pdo, 'CAMPANHA_RELATORIO_CONSULTA',   'FUNCAO');
+$perm_exportar   = verificaPermissao($pdo, 'CAMPANHA_RELATORIO_EXPORTAR',   'FUNCAO');
+$perm_apagar     = verificaPermissao($pdo, 'CAMPANHA_RELATORIO_APAGAR',     'FUNCAO');
+$perm_transferir = verificaPermissao($pdo, 'CAMPANHA_RELATORIO_TRANSFERIR', 'FUNCAO');
+$is_master       = in_array(strtoupper($_SESSION['usuario_grupo'] ?? ''), ['MASTER', 'ADMIN', 'ADMINISTRADOR']);
 
 include $caminho_header;
 ?>
@@ -122,16 +124,40 @@ include $caminho_header;
                 </button>
                 <h5 class="mb-0 fw-bold text-danger" id="titulo_relatorio"></h5>
             </div>
-            <?php if ($perm_exportar): ?>
-            <div class="d-flex gap-2">
-                <button class="btn btn-sm btn-warning border-dark fw-bold text-dark" onclick="exportar('tudo')" id="btn_exp_tudo" disabled>
-                    <i class="fas fa-file-csv me-1"></i> Exportar Tudo
+            <div class="dropdown">
+                <button class="btn btn-sm btn-danger border-dark fw-bold"
+                        type="button" id="btnAcoes"
+                        data-bs-toggle="dropdown" aria-expanded="false" disabled>
+                    <i class="fas fa-plus me-1"></i>
                 </button>
-                <button class="btn btn-sm btn-outline-warning border-dark fw-bold text-dark" onclick="exportar('selecionados')" id="btn_exp_sel" disabled>
-                    <i class="fas fa-check-square me-1"></i> Exportar Selecionados
-                </button>
+                <ul class="dropdown-menu dropdown-menu-end border-dark shadow-sm" style="min-width:230px;">
+                    <?php if ($perm_exportar): ?>
+                    <li>
+                        <a class="dropdown-item py-2" href="#" onclick="acaoExportar();return false;">
+                            <i class="fas fa-file-csv text-warning me-2"></i><strong>Exportar</strong>
+                            <div class="text-muted" style="font-size:.7rem;padding-left:22px;">Selecionados ou todos os filtrados</div>
+                        </a>
+                    </li>
+                    <?php endif; ?>
+                    <?php if ($perm_apagar): ?>
+                    <li class="acao-agenda d-none"><hr class="dropdown-divider my-1"></li>
+                    <li class="acao-agenda d-none">
+                        <a class="dropdown-item py-2 text-danger" href="#" onclick="acaoApagar();return false;">
+                            <i class="fas fa-calendar-times me-2"></i><strong>Apagar Agendamento</strong>
+                            <div class="text-muted" style="font-size:.7rem;padding-left:22px;">Selecionados ou todos os filtrados</div>
+                        </a>
+                    </li>
+                    <?php endif; ?>
+                    <?php if ($perm_transferir): ?>
+                    <li class="acao-agenda d-none">
+                        <a class="dropdown-item py-2" href="#" onclick="acaoTransferir();return false;">
+                            <i class="fas fa-user-friends text-info me-2"></i><strong>Transferir Agendamento</strong>
+                            <div class="text-muted" style="font-size:.7rem;padding-left:22px;">Selecionados ou todos os filtrados</div>
+                        </a>
+                    </li>
+                    <?php endif; ?>
+                </ul>
             </div>
-            <?php endif; ?>
         </div>
 
         <div class="row g-3">
@@ -375,6 +401,37 @@ include $caminho_header;
     </div>
 </div>
 
+<!-- Modal: Transferir Agendamento -->
+<div class="modal fade" id="modalTransferir" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-dark rounded-2">
+            <div class="modal-header bg-dark text-white border-dark">
+                <h6 class="modal-title fw-bold"><i class="fas fa-user-friends text-info me-2"></i> Transferir Agendamento</h6>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p class="text-muted small mb-2">
+                    <span id="info_qtd_transferir" class="fw-bold text-dark">0</span> agendamento(s) serão transferidos.
+                </p>
+                <label class="fw-bold small mb-1">Transferir para:</label>
+                <select id="select_usuario_transferir" class="form-select border-dark">
+                    <option value="">— Selecione o usuário —</option>
+                </select>
+                <small class="text-muted d-block mt-1">
+                    <i class="fas fa-info-circle me-1"></i>Apenas usuários da mesma empresa.
+                </small>
+                <div id="msg_transferir" class="mt-2"></div>
+            </div>
+            <div class="modal-footer border-dark">
+                <button type="button" class="btn btn-outline-secondary border-dark" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-info text-white border-dark fw-bold" onclick="executarTransferencia()">
+                    <i class="fas fa-check me-1"></i> Transferir
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script>
 // =========================================================================
@@ -511,6 +568,7 @@ let _totalRegistros = 0;
 let _graficoInst    = null;
 let _campDestino    = [];
 let _filtroCacheGET = null;
+let _filtrosAtivos  = null;
 
 const CORES_PIE = ['#dc3545','#0d6efd','#198754','#ffc107','#0dcaf0','#6f42c1','#fd7e14','#20c997','#6c757d','#e83e8c'];
 
@@ -524,6 +582,11 @@ function selecionarModelo(tipo) {
     document.getElementById('titulo_relatorio').textContent = titulos[tipo] || tipo;
     document.getElementById('box_modelos').style.display   = 'none';
     document.getElementById('box_relatorio').style.display = 'block';
+    // Mostra/oculta ações exclusivas de agendamento
+    const isAgenda = tipo === 'AGENDAMENTOS_FUTURO';
+    document.querySelectorAll('.acao-agenda').forEach(el => {
+        el.classList.toggle('d-none', !isAgenda);
+    });
     // Mostrar/ocultar filtros e seções por modelo
     const isHC = tipo === 'HISTORICO_CONSULTAS';
 
@@ -551,7 +614,9 @@ function selecionarModelo(tipo) {
 function voltarModelos() {
     document.getElementById('box_relatorio').style.display = 'none';
     document.getElementById('box_modelos').style.display   = 'block';
-    _tipoAtivo = ''; _offsetAtual = 0;
+    _tipoAtivo = ''; _offsetAtual = 0; _filtrosAtivos = null;
+    const btnAcoes = document.getElementById('btnAcoes');
+    if (btnAcoes) btnAcoes.disabled = true;
 }
 
 // =========================================================================
@@ -586,6 +651,15 @@ function carregarFiltros() {
             const dest = document.getElementById('select_camp_destino');
             dest.innerHTML = '<option value="">— Selecione —</option>';
             _campDestino.forEach(c => dest.innerHTML += `<option value="${c.ID}">${escHtml(c.NOME_CAMPANHA)}</option>`);
+
+            // Popula select de usuários para transferência
+            const selTransf = document.getElementById('select_usuario_transferir');
+            if (selTransf) {
+                selTransf.innerHTML = '<option value="">— Selecione o usuário —</option>';
+                (r.usuarios || []).forEach(u => {
+                    selTransf.innerHTML += `<option value="${u.ID}">${escHtml(u.NOME)}</option>`;
+                });
+            }
         });
 }
 
@@ -649,8 +723,9 @@ function limparFiltro() {
     if (_graficoInst) { _graficoInst.destroy(); _graficoInst = null; }
     atualizarBotoesSel();
     _filtroCacheGET = null;
-    const bt = document.getElementById('btn_exp_tudo'); if (bt) bt.disabled = true;
-    const bs = document.getElementById('btn_exp_sel');  if (bs) bs.disabled = true;
+    _filtrosAtivos  = null;
+    const btnAcoes = document.getElementById('btnAcoes');
+    if (btnAcoes) btnAcoes.disabled = true;
 }
 
 // =========================================================================
@@ -658,6 +733,8 @@ function limparFiltro() {
 // =========================================================================
 function buscarDados(offset, resetLista) {
     const filtros = lerFiltros();
+    _filtrosAtivos = filtros;
+
     const fd = new FormData();
     fd.append('acao', 'buscar_dados');
     fd.append('offset', offset);
@@ -688,7 +765,8 @@ function buscarDados(offset, resetLista) {
             document.getElementById('resumo_lista').textContent = `Exibindo ${_offsetAtual} de ${r.total} registro(s)`;
             document.getElementById('btn_ver_mais').style.display = r.tem_mais ? 'inline-block' : 'none';
             if (resetLista) renderGrafico(r.grafico, r.tipo_grafico);
-            const bt = document.getElementById('btn_exp_tudo'); if (bt) bt.disabled = r.total === 0;
+            const btnAcoes = document.getElementById('btnAcoes');
+            if (btnAcoes) btnAcoes.disabled = r.total === 0;
         })
         .catch(() => {
             document.getElementById('tbody_relatorio').innerHTML =
@@ -809,7 +887,6 @@ function toggleTodos(el) {
 function atualizarBotoesSel() {
     const qtd = document.querySelectorAll('.check-linha:checked').length;
     const bi = document.getElementById('btn_incluir_camp'); if (bi) bi.disabled = qtd===0;
-    const bs = document.getElementById('btn_exp_sel');      if (bs) bs.disabled = qtd===0;
 }
 function cpfsSelecionados() {
     return Array.from(document.querySelectorAll('.check-linha:checked')).map(c => c.value);
@@ -839,17 +916,103 @@ function executarInclusao() {
 }
 
 // =========================================================================
+// HELPERS DE AÇÕES
+// =========================================================================
+
+// Monta FormData: se há CPFs selecionados usa-os, caso contrário usa filtros ativos
+function montarPayload(acao, cpfs) {
+    const fd = new FormData();
+    fd.append('acao', acao);
+    if (cpfs && cpfs.length > 0) {
+        cpfs.forEach(c => fd.append('cpfs[]', c));
+    } else if (_filtrosAtivos) {
+        Object.entries(_filtrosAtivos).forEach(([k, v]) => {
+            if (Array.isArray(v)) v.forEach(i => fd.append(k + '[]', i));
+            else fd.append(k, v);
+        });
+    }
+    return fd;
+}
+
+function descricaoAlvo() {
+    const cpfs = cpfsSelecionados();
+    return cpfs.length > 0 ? `${cpfs.length} selecionado(s)` : 'todos os registros filtrados';
+}
+
+// =========================================================================
 // EXPORTAR
 // =========================================================================
-function exportar(modo) {
-    if (!_filtroCacheGET) return;
+function acaoExportar() {
+    if (!_filtroCacheGET) { alert('Aplique um filtro primeiro.'); return; }
+    const cpfs = cpfsSelecionados();
     const params = new URLSearchParams(_filtroCacheGET.toString());
-    if (modo === 'selecionados') {
-        const cpfs = cpfsSelecionados();
-        if (!cpfs.length) { alert('Selecione ao menos um cliente.'); return; }
+    if (cpfs.length > 0) {
         params.append('cpfs_selecionados', cpfs.join(','));
     }
     window.open('relatorio_ajax.php?' + params.toString(), '_blank');
+}
+
+// =========================================================================
+// APAGAR AGENDAMENTO
+// =========================================================================
+async function acaoApagar() {
+    const cpfs = cpfsSelecionados();
+    if (!_filtrosAtivos && cpfs.length === 0) { alert('Aplique um filtro primeiro.'); return; }
+    if (!confirm(`Apagar agendamento de ${descricaoAlvo()}?\n\nA data de agendamento será removida, o histórico de contato é mantido.`)) return;
+
+    const btn = document.getElementById('btnAcoes');
+    btn.disabled = true;
+    try {
+        const r = await fetch('relatorio_ajax.php', { method: 'POST', body: montarPayload('apagar_agendamento', cpfs) });
+        const j = await r.json();
+        if (j.success) {
+            alert('✅ ' + j.msg);
+            filtrar();
+        } else {
+            alert('❌ ' + (j.msg || 'Erro ao apagar.'));
+            btn.disabled = false;
+        }
+    } catch(e) {
+        alert('❌ Falha de comunicação: ' + e.message);
+        btn.disabled = false;
+    }
+}
+
+// =========================================================================
+// TRANSFERIR AGENDAMENTO
+// =========================================================================
+function acaoTransferir() {
+    if (!_filtrosAtivos && cpfsSelecionados().length === 0) { alert('Aplique um filtro primeiro.'); return; }
+    document.getElementById('info_qtd_transferir').textContent = descricaoAlvo();
+    document.getElementById('msg_transferir').innerHTML = '';
+    document.getElementById('select_usuario_transferir').value = '';
+    new bootstrap.Modal(document.getElementById('modalTransferir')).show();
+}
+
+async function executarTransferencia() {
+    const id_dest = document.getElementById('select_usuario_transferir').value;
+    const msgEl   = document.getElementById('msg_transferir');
+    if (!id_dest) { msgEl.innerHTML = '<div class="alert alert-warning py-1 small">Selecione um usuário.</div>'; return; }
+
+    const cpfs = cpfsSelecionados();
+    const fd   = montarPayload('transferir_agendamento', cpfs);
+    fd.append('id_usuario_dest', id_dest);
+
+    try {
+        const r = await fetch('relatorio_ajax.php', { method: 'POST', body: fd });
+        const j = await r.json();
+        if (j.success) {
+            msgEl.innerHTML = `<div class="alert alert-success py-1 small">✅ ${j.msg}</div>`;
+            setTimeout(() => {
+                bootstrap.Modal.getInstance(document.getElementById('modalTransferir')).hide();
+                filtrar();
+            }, 1500);
+        } else {
+            msgEl.innerHTML = `<div class="alert alert-danger py-1 small">❌ ${j.msg || 'Erro ao transferir.'}</div>`;
+        }
+    } catch(e) {
+        msgEl.innerHTML = `<div class="alert alert-danger py-1 small">❌ Falha de comunicação.</div>`;
+    }
 }
 
 // =========================================================================
