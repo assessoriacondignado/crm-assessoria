@@ -346,7 +346,6 @@ if (!$is_busca_avancada && !empty($termo_busca) && empty($cpf_selecionado)) {
             $query_sql = "SELECT cpf, nome, 'Busca Rápida' as origem FROM dados_cadastrais WHERE cpf = :cpf LIMIT :limit OFFSET :offset";
             $params[':cpf'] = $cpf_formatado;
             $query_base_export = " FROM dados_cadastrais d WHERE d.cpf = :cpf "; $params_export = ['cpf' => $cpf_formatado];
-        }
     }
 
     if (!empty($query_sql)) {
