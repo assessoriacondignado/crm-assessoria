@@ -683,7 +683,7 @@ if (file_exists($caminho_header)) {
                     ? '<span class="badge bg-success">Pago</span>'
                     : '<span class="badge bg-secondary">'.htmlspecialchars($r['STATUS_PEDIDO']).'</span>';
             ?>
-                <?php $url_pedido = '/modulos/comercial/pedidos.php?id=' . $r['ID']; ?>
+                <?php $url_pedido = '/modulos/comercial/pedidos/?abrir=' . $r['ID']; ?>
                 <tr class="linha-renov" data-grupo="<?= $grupo ?>" style="<?= $row_bg ?>vertical-align:middle;">
                     <td class="fw-bold">
                         <a href="<?= $url_pedido ?>" target="_blank" class="text-dark text-decoration-none">
@@ -709,7 +709,7 @@ if (file_exists($caminho_header)) {
     </div>
     <div class="d-flex justify-content-between align-items-center mt-2">
         <small class="text-muted">Exibindo <?= count($renovacoes) ?> pedido(s)</small>
-        <a href="/modulos/comercial/pedidos.php" class="btn btn-sm btn-outline-dark fw-bold">
+        <a href="/modulos/comercial/pedidos/" class="btn btn-sm btn-outline-dark fw-bold">
             <i class="fas fa-external-link-alt me-1"></i> Ver módulo Comercial
         </a>
     </div>

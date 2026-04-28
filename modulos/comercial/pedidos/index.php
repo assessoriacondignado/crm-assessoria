@@ -270,12 +270,17 @@
       
       load(); carregarListaProdutos();
 
-      // Pré-preenchimento via URL (vindo da ficha do cliente)
+      // Pré-preenchimento / abertura via URL
       const urlP = new URLSearchParams(window.location.search);
       if (urlP.has('pre_cliente')) {
           document.getElementById('nCli').value = urlP.get('pre_cliente');
           document.getElementById('nTel').value = urlP.get('pre_tel') || '';
           modais.new.show();
+      }
+      // Abrir pedido específico vindo de link externo (?abrir=ID)
+      if (urlP.has('abrir')) {
+          const abriId = parseInt(urlP.get('abrir'));
+          if (abriId) { await load(); viewPedido(abriId); }
       }
   });
 
