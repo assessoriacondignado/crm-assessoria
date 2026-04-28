@@ -75,6 +75,7 @@
                                 <optgroup label="Sistema">
                                     <option value="agrupamento" <?= $c_sel=='agrupamento'?'selected':'' ?>>Agrupamento</option>
                                     <option value="importacao" <?= $c_sel=='importacao'?'selected':'' ?>>Importação (Nome do Lote)</option>
+                                    <option value="campanha" <?= $c_sel=='campanha'?'selected':'' ?>>Campanha</option>
                                 </optgroup>
                                 <?php endif; ?>
                             </select>

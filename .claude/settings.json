@@ -332,7 +332,9 @@
       "Bash(php -l /var/www/html/modulos/comercial/pedidos/cron_lembretes.php)",
       "Bash(php -l /var/www/html/modulos/comercial/produtos/produtos.ajax.php)",
       "Bash(chown -R www-data:www-data /var/www/html/modulos/comercial/produtos/arquivos)",
-      "Bash(chmod 775 /var/www/html/modulos/comercial/produtos/arquivos)"
+      "Bash(chmod 775 /var/www/html/modulos/comercial/produtos/arquivos)",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SHOW TABLES LIKE '%AGRUP%';\")",
+      "Bash(mysql -h 127.0.0.1 -u admin_crm -pAbl@810401 crm_dados -e \"SHOW TABLES LIKE '%grupo%';\")"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",

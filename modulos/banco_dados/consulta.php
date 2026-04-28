@@ -246,7 +246,7 @@ function mapearColunaBanco($campo) {
         'idade' => 'TIMESTAMPDIFF(YEAR, d.nascimento, CURDATE())', 'nome_mae' => 'd.nome_mae',
         'nome_pai' => 'd.nome_pai', 'rg' => 'd.rg', 'cnh' => 'd.cnh',
         'carteira_profissional' => 'd.carteira_profissional', 'agrupamento' => 'd.agrupamento',
-        'importacao' => 'hi.nome_importacao', 'telefone_cel' => 't.telefone_cel',
+        'importacao' => 'hi.nome_importacao', 'campanha' => 'ca.NOME_CAMPANHA', 'telefone_cel' => 't.telefone_cel',
         'ddd' => 'LEFT(t.telefone_cel, 2)', 'email' => 'em.email', 'cidade' => 'e.cidade',
         'uf' => 'e.uf', 'bairro' => 'e.bairro', 'cep' => 'e.cep', 'matricula' => 'c.MATRICULA', 'convenio' => 'c.CONVENIO',
         'inss_matricula' => 'inss_ctr.matricula_nb', 'inss_contrato' => 'inss_ctr.contrato', 'inss_banco' => 'inss_ctr.banco',
@@ -370,7 +370,7 @@ if ($is_busca_avancada && empty($cpf_selecionado)) {
     $filtro_sql = ""; $params = []; $contador_params = 1;
     
     $precisa_telefone = false; $precisa_endereco = false; $precisa_email = false;
-    $precisa_importacao = false; $precisa_convenio = false; 
+    $precisa_importacao = false; $precisa_convenio = false;
     $precisa_inss_ben = false; $precisa_inss_ctr = false;
 
     for ($i = 0; $i < count($filtros_campo); $i++) {
@@ -398,6 +398,26 @@ if ($is_busca_avancada && empty($cpf_selecionado)) {
             if (!empty($sub_conds)) {
                 $glue = ($operador == 'nao_contem') ? ' AND ' : ' OR ';
                 $filtro_sql .= " AND d.cpf IN (SELECT cpf FROM BANCO_DE_DADOS_HISTORICO_IMPORTACAO WHERE " . implode($glue, $sub_conds) . ") ";
+            }
+            continue;
+        }
+
+        // CAMPANHA: subquery IN — filtra por nome da campanha à qual o cliente pertence
+        if ($campo_html === 'campanha') {
+            $valores_camp = explode(';', $valor_bruto);
+            $sub_conds_camp = [];
+            foreach ($valores_camp as $val_camp) {
+                $val_camp = trim($val_camp); if ($val_camp === '') continue;
+                $pn = 'p' . $contador_params++;
+                if ($operador == 'igual')      { $sub_conds_camp[] = "ca2.NOME_CAMPANHA = :$pn";            $params[$pn] = $val_camp; }
+                elseif ($operador == 'comeca') { $sub_conds_camp[] = "ca2.NOME_CAMPANHA LIKE :$pn";          $params[$pn] = "$val_camp%"; }
+                elseif ($operador == 'nao_contem') { $sub_conds_camp[] = "ca2.NOME_CAMPANHA NOT LIKE :$pn";  $params[$pn] = "%$val_camp%"; }
+                elseif ($operador == 'vazio')  { $filtro_sql .= " AND d.cpf NOT IN (SELECT CPF_CLIENTE FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA) "; continue 2; }
+                else { $sub_conds_camp[] = "ca2.NOME_CAMPANHA LIKE :$pn"; $params[$pn] = "%$val_camp%"; }
+            }
+            if (!empty($sub_conds_camp)) {
+                $glue_camp = ($operador == 'nao_contem') ? ' AND ' : ' OR ';
+                $filtro_sql .= " AND d.cpf IN (SELECT bc2.CPF_CLIENTE FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA bc2 JOIN BANCO_DE_DADOS_CAMPANHA_CAMPANHAS ca2 ON ca2.ID = bc2.ID_CAMPANHA WHERE " . implode($glue_camp, $sub_conds_camp) . ") ";
             }
             continue;
         }
