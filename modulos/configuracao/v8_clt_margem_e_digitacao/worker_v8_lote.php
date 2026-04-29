@@ -175,13 +175,28 @@ while(true) {
     $ciclo_count++;
     $work_found = false;
 
-    $stmtLote = $pdo->prepare("SELECT * FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE STATUS_FILA IN ('PENDENTE', 'PROCESSANDO') AND CPF_USUARIO = ? ORDER BY ID ASC LIMIT 1");
+    // Prioridade: IMEDIATO primeiro, depois por data de criação
+    $stmtLote = $pdo->prepare("
+        SELECT * FROM INTEGRACAO_V8_IMPORTACAO_LOTE
+        WHERE STATUS_FILA IN ('CRIANDO PROCESSAMENTO', 'NA FILA', 'PROCESSANDO')
+          AND CPF_USUARIO = ?
+          AND STATUS_LOTE = 'ATIVO'
+        ORDER BY
+            CASE WHEN AGENDAMENTO_TIPO = 'IMEDIATO' THEN 0 ELSE 1 END ASC,
+            DATA_IMPORTACAO ASC
+        LIMIT 1
+    ");
     $stmtLote->execute([$user_cpf]);
     $lote = $stmtLote->fetch(PDO::FETCH_ASSOC);
 
     if (!$lote) { flock($fp, LOCK_UN); fclose($fp); exit; }
 
     $id_lote = $lote['ID'];
+
+    // Marca os demais lotes pendentes deste usuário como NA FILA (aguardando este terminar)
+    $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'NA FILA'
+        WHERE CPF_USUARIO = ? AND ID != ? AND STATUS_FILA = 'CRIANDO PROCESSAMENTO'")
+        ->execute([$user_cpf, $id_lote]);
     $chave_id = $lote['CHAVE_ID'];
     // Tabela de CPFs: própria (lotes novos) ou central (lotes antigos)
     $tbl = !empty($lote['TABELA_DADOS']) ? $lote['TABELA_DADOS'] : 'INTEGRACAO_V8_REGISTROCONSULTA_LOTE';
@@ -486,7 +501,7 @@ while(true) {
         if ($tem_pendente_ativo && $atingiu_limite_diario) {
             // Limite diário atingido — para lote DIÁRIO vai aguardar o próximo ciclo do dia;
             // para lote único fica PENDENTE. Em ambos os casos o worker encerra para não fazer spinning.
-            $status_limite = ($lote['AGENDAMENTO_TIPO'] === 'DIARIO') ? 'AGUARDANDO_DIARIO' : 'PENDENTE';
+            $status_limite = ($lote['AGENDAMENTO_TIPO'] === 'DIARIO') ? 'AGUARDANDO_DIARIO' : 'CRIANDO PROCESSAMENTO';
             $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = ? WHERE ID = ?")->execute([$status_limite, $id_lote]);
             flock($fp, LOCK_UN); fclose($fp); exit;
         } else if (!$tem_pendente_ativo) {

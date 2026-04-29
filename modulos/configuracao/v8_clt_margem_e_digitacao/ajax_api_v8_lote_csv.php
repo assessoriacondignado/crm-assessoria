@@ -319,7 +319,7 @@ try {
             $pdo->beginTransaction();
 
             // Reativa o lote (QTD_TOTAL será ajustado após inserts)
-            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PENDENTE' WHERE ID = ?")->execute([$id_lote]);
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'CRIANDO PROCESSAMENTO' WHERE ID = ?")->execute([$id_lote]);
             $stmtCpf = $pdo->prepare("INSERT INTO `{$tabela_append}` (LOTE_ID, CPF, NOME, NASCIMENTO, SEXO, STATUS_V8, VALOR_MARGEM, CONSULT_ID, CONFIG_ID, OBSERVACAO) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
             $stmtBuscaLote = null; $stmtBuscaManual = null;
@@ -349,7 +349,7 @@ try {
             }
 
             // Ajusta QTD_TOTAL com o que realmente foi inserido
-            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_TOTAL = QTD_TOTAL + ?, STATUS_FILA = 'PENDENTE' WHERE ID = ?")->execute([$inseridos_novos, $id_lote]);
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET QTD_TOTAL = QTD_TOTAL + ?, STATUS_FILA = 'CRIANDO PROCESSAMENTO' WHERE ID = ?")->execute([$inseridos_novos, $id_lote]);
 
             // Sempre atualiza dados cadastrais dos CPFs já existentes
             $atualizados = 0;
@@ -1705,7 +1705,7 @@ try {
                     ->execute([$novo_status, $nova_obs, $id_lote, $status_v8]);
             }
 
-            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PENDENTE' WHERE ID = ?")->execute([$id_lote]);
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'CRIANDO PROCESSAMENTO' WHERE ID = ?")->execute([$id_lote]);
             $stmtDono = $pdo->prepare("SELECT CPF_USUARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?");
             $stmtDono->execute([$id_lote]); $cpf_dono = $stmtDono->fetchColumn();
             $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
@@ -1718,7 +1718,7 @@ try {
             $id_lote = (int)$_POST['id_lote'];
             $tabela_rc = v8_tabela_lote($pdo, $id_lote);
             $pdo->prepare("UPDATE `{$tabela_rc}` SET STATUS_V8 = 'AGUARDANDO MARGEM', OBSERVACAO = 'Reverificando: aguardando retorno da Dataprev...' WHERE LOTE_ID = ? AND STATUS_V8 = 'AGUARDANDO DATAPREV'")->execute([$id_lote]);
-            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PENDENTE' WHERE ID = ?")->execute([$id_lote]);
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'CRIANDO PROCESSAMENTO' WHERE ID = ?")->execute([$id_lote]);
             $stmtDono = $pdo->prepare("SELECT CPF_USUARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?");
             $stmtDono->execute([$id_lote]); $cpf_dono = $stmtDono->fetchColumn();
             $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
@@ -1735,7 +1735,7 @@ try {
                 WHERE LOTE_ID = ?
                   AND STATUS_V8 IN ('ERRO CONSULTA', 'ERRO MARGEM', 'ERRO SIMULACAO')
                   AND COALESCE(DATA_SIMULACAO, DATA_CONSENTIMENTO) >= NOW() - INTERVAL 24 HOUR")->execute([$id_lote]);
-            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PENDENTE' WHERE ID = ?")->execute([$id_lote]);
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'CRIANDO PROCESSAMENTO' WHERE ID = ?")->execute([$id_lote]);
             $stmtDono = $pdo->prepare("SELECT CPF_USUARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?");
             $stmtDono->execute([$id_lote]); $cpf_dono = $stmtDono->fetchColumn();
             $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
@@ -1747,7 +1747,7 @@ try {
             $id_lote = (int)$_POST['id_lote'];
             $tabela_rs = v8_tabela_lote($pdo, $id_lote);
             $pdo->prepare("UPDATE `{$tabela_rs}` SET STATUS_V8 = 'RECUPERAR V8', OBSERVACAO = 'Recuperando Margem/Simulação...' WHERE LOTE_ID = ? AND STATUS_V8 NOT IN ('OK', 'AGUARDANDO MARGEM', 'AGUARDANDO SIMULACAO')")->execute([$id_lote]);
-            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PENDENTE' WHERE ID = ?")->execute([$id_lote]);
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'CRIANDO PROCESSAMENTO' WHERE ID = ?")->execute([$id_lote]);
 
             $stmtDono = $pdo->prepare("SELECT CPF_USUARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?");
             $stmtDono->execute([$id_lote]); $cpf_dono = $stmtDono->fetchColumn();
@@ -1771,7 +1771,7 @@ try {
 
             $tabela_rt = v8_tabela_lote($pdo, $id_lote);
             $pdo->prepare("UPDATE `{$tabela_rt}` SET STATUS_V8 = ?, VALOR_MARGEM = NULL, CONSULT_ID = NULL, CONFIG_ID = NULL, VALOR_LIQUIDO = NULL, SIMULATION_ID = NULL, OBSERVACAO = 'Reprocessando do zero...' WHERE LOTE_ID = ?")->execute([$novo_status, $id_lote]);
-            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PENDENTE', QTD_PROCESSADA = 0, QTD_SUCESSO = 0, QTD_ERRO = 0 WHERE ID = ?")->execute([$id_lote]);
+            $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'CRIANDO PROCESSAMENTO', QTD_PROCESSADA = 0, QTD_SUCESSO = 0, QTD_ERRO = 0 WHERE ID = ?")->execute([$id_lote]);
             
             $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
             $url_worker = $protocol . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']) . '/worker_v8_lote.php?user_cpf=' . $cpf_dono;
@@ -1802,7 +1802,7 @@ try {
 
                 if ($horaAtual >= $hIni && $horaAtual < $hFim) {
                     // Dentro da janela: inicia direto
-                    $acaoLote = 'PENDENTE';
+                    $acaoLote = 'CRIANDO PROCESSAMENTO';
                 } else {
                     // Fora da janela: aguarda o horário de início
                     $acaoLote = 'AGUARDANDO_DIARIO';
@@ -1813,7 +1813,7 @@ try {
             $stmtDono = $pdo->prepare("SELECT CPF_USUARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = ?");
             $stmtDono->execute([$id_lote]); $cpf_dono = $stmtDono->fetchColumn();
 
-            if ($acaoLote === 'PENDENTE') {
+            if ($acaoLote === 'CRIANDO PROCESSAMENTO') {
                 $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
                 $url_worker = $protocol . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']) . '/worker_v8_lote.php?user_cpf=' . $cpf_dono;
                 $ch = curl_init(); curl_setopt($ch, CURLOPT_URL, $url_worker); curl_setopt($ch, CURLOPT_TIMEOUT, 1); curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); curl_exec($ch); curl_close($ch);
@@ -1836,7 +1836,7 @@ try {
                 SET PROCESSADOS_HOJE = 0, AUTO_REPROCESS_CHECKPOINT = 0, ULTIMO_PROCESSAMENTO = NULL
                 WHERE AGENDAMENTO_TIPO = 'DIARIO'
                   AND (ULTIMO_PROCESSAMENTO IS NULL OR ULTIMO_PROCESSAMENTO < ?)
-                  AND STATUS_FILA NOT IN ('PENDENTE', 'PROCESSANDO')")->execute([$data_hoje]);
+                  AND STATUS_FILA NOT IN ('CRIANDO PROCESSAMENTO', 'NA FILA', 'PROCESSANDO')")->execute([$data_hoje]);
 
             $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
             $disparados = 0;
@@ -1864,7 +1864,7 @@ try {
 
                 // Dispara: muda para PENDENTE, zera contadores e marca o dia
                 $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE
-                    SET STATUS_FILA = 'PENDENTE', PROCESSADOS_HOJE = 0, AUTO_REPROCESS_CHECKPOINT = 0, ULTIMO_PROCESSAMENTO = ?
+                    SET STATUS_FILA = 'CRIANDO PROCESSAMENTO', PROCESSADOS_HOJE = 0, AUTO_REPROCESS_CHECKPOINT = 0, ULTIMO_PROCESSAMENTO = ?
                     WHERE ID = ?")->execute([$data_hoje, $loteDiario['ID']]);
 
                 $url_worker = $protocol . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']) . '/worker_v8_lote.php?user_cpf=' . $loteDiario['CPF_USUARIO'];
@@ -1904,7 +1904,7 @@ try {
                 }
 
                 // Reacorda sem zerar contadores
-                $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PENDENTE' WHERE ID = ?")->execute([$loteKA['ID']]);
+                $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'CRIANDO PROCESSAMENTO' WHERE ID = ?")->execute([$loteKA['ID']]);
                 $url_worker = $protocol . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']) . '/worker_v8_lote.php?user_cpf=' . $loteKA['CPF_USUARIO'];
                 $ch = curl_init(); curl_setopt($ch, CURLOPT_URL, $url_worker); curl_setopt($ch, CURLOPT_TIMEOUT, 1); curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); curl_exec($ch); curl_close($ch);
                 $disparados++;
@@ -1915,7 +1915,7 @@ try {
                 FROM INTEGRACAO_V8_IMPORTACAO_LOTE l
                 WHERE l.AGENDAMENTO_TIPO = 'DIARIO'
                   AND (l.STATUS_LOTE = 'ATIVO' OR l.STATUS_LOTE IS NULL)
-                  AND l.STATUS_FILA IN ('PENDENTE','PROCESSANDO','AGUARDANDO_DIARIO')
+                  AND l.STATUS_FILA IN ('CRIANDO PROCESSAMENTO','NA FILA','PROCESSANDO','AGUARDANDO_DIARIO')
                   AND l.PROCESSADOS_HOJE >= l.AUTO_REPROCESS_CHECKPOINT + 250
                   AND EXISTS (
                       SELECT 1 FROM INTEGRACAO_V8_REGISTROCONSULTA_LOTE r
@@ -1929,7 +1929,7 @@ try {
                 $tabela_ar = v8_tabela_lote($pdo, (int)$lAR['ID']);
                 $pdo->prepare("UPDATE `{$tabela_ar}` SET STATUS_V8 = 'AGUARDANDO MARGEM', OBSERVACAO = 'Reprocessamento automático (a cada 250 consentimentos do dia)' WHERE LOTE_ID = ? AND STATUS_V8 = 'AGUARDANDO DATAPREV'")->execute([$lAR['ID']]);
                 // Se estava aguardando horário, acorda para rodar FASE 2
-                $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PENDENTE' WHERE ID = ? AND STATUS_FILA = 'AGUARDANDO_DIARIO'")->execute([$lAR['ID']]);
+                $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'CRIANDO PROCESSAMENTO' WHERE ID = ? AND STATUS_FILA = 'AGUARDANDO_DIARIO'")->execute([$lAR['ID']]);
                 $url_worker = $protocol . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']) . '/worker_v8_lote.php?user_cpf=' . $lAR['CPF_USUARIO'];
                 $ch = curl_init(); curl_setopt($ch, CURLOPT_URL, $url_worker); curl_setopt($ch, CURLOPT_TIMEOUT, 1); curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); curl_exec($ch); curl_close($ch);
                 $disparados++;
@@ -2035,7 +2035,7 @@ try {
 
         case 'forcar_processamento_lote':
             $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
-            $stmtDonos = $pdo->query("SELECT DISTINCT CPF_USUARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE STATUS_FILA IN ('PENDENTE', 'PROCESSANDO')");
+            $stmtDonos = $pdo->query("SELECT DISTINCT CPF_USUARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE STATUS_FILA IN ('CRIANDO PROCESSAMENTO', 'NA FILA', 'PROCESSANDO')");
             while($cpf_dono = $stmtDonos->fetchColumn()) {
                 $url_worker = $protocol . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']) . '/worker_v8_lote.php?user_cpf=' . $cpf_dono;
                 $ch = curl_init(); curl_setopt($ch, CURLOPT_URL, $url_worker); curl_setopt($ch, CURLOPT_TIMEOUT, 1); curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); curl_exec($ch); curl_close($ch);

@@ -741,7 +741,7 @@
                 }
 
                 let statusAtual = l.STATUS_FILA || l.status_fila || l.Status_Fila;
-                if (!statusAtual) statusAtual = 'PENDENTE';
+                if (!statusAtual) statusAtual = 'CRIANDO PROCESSAMENTO';
                 statusAtual = String(statusAtual).toUpperCase();
 
                 let idLoteReal = l.ID || l.id;
@@ -749,13 +749,17 @@
                 if (statusAtual === 'AGUARDANDO_DIARIO') {
                     badge = `<span class="badge bg-info text-dark border border-dark"><i class="fas fa-clock me-1"></i> AGUARDANDO HORÁRIO</span>`;
                     btnPausarLi = `<li><button class="dropdown-item fw-bold text-secondary" onclick="v8PausarRetomarLote(${idLoteReal}, 'PAUSAR')"><i class="fas fa-pause me-2"></i> Pausar Diário</button></li>`;
-                } else if (statusAtual === 'PROCESSANDO') { 
-                    temRodando = true; 
-                    badge = `<span class="badge bg-primary shadow-sm"><i class="fas fa-cogs fa-spin"></i> PROCESSANDO</span>`; 
+                } else if (statusAtual === 'PROCESSANDO') {
+                    temRodando = true;
+                    badge = `<span class="badge bg-primary shadow-sm"><i class="fas fa-cogs fa-spin"></i> PROCESSANDO</span>`;
                     btnPausarLi = `<li><button class="dropdown-item fw-bold text-secondary" onclick="v8PausarRetomarLote(${idLoteReal}, 'PAUSAR')"><i class="fas fa-pause me-2"></i> Pausar Lote</button></li>`;
-                } else if (statusAtual === 'PENDENTE') { 
-                    temRodando = true; 
-                    badge = `<span class="badge bg-info text-dark shadow-sm"><i class="fas fa-hourglass-half"></i> NA FILA</span>`; 
+                } else if (statusAtual === 'CRIANDO PROCESSAMENTO') {
+                    temRodando = true;
+                    badge = `<span class="badge bg-warning text-dark shadow-sm border border-dark"><i class="fas fa-spinner fa-spin me-1"></i> CRIANDO PROCESSAMENTO</span>`;
+                    btnPausarLi = `<li><button class="dropdown-item fw-bold text-secondary" onclick="v8PausarRetomarLote(${idLoteReal}, 'PAUSAR')"><i class="fas fa-pause me-2"></i> Pausar Lote</button></li>`;
+                } else if (statusAtual === 'NA FILA') {
+                    temRodando = true;
+                    badge = `<span class="badge bg-secondary text-white shadow-sm border border-dark"><i class="fas fa-list-ol me-1"></i> NA FILA</span>`;
                     btnPausarLi = `<li><button class="dropdown-item fw-bold text-secondary" onclick="v8PausarRetomarLote(${idLoteReal}, 'PAUSAR')"><i class="fas fa-pause me-2"></i> Pausar Lote</button></li>`;
                 } else if (statusAtual === 'PAUSADO') {
                     badge = `<span class="badge bg-warning text-dark"><i class="fas fa-pause-circle"></i> PAUSADO</span>`;
@@ -1041,10 +1045,11 @@
             const tdStatus = tr.querySelector('.v8-td-status');
             if (tdStatus) {
                 let badge = '';
-                if (statusAtual === 'AGUARDANDO_DIARIO') badge = `<span class="badge bg-info text-dark border border-dark"><i class="fas fa-clock me-1"></i> AGUARDANDO HORÁRIO</span>`;
-                else if (statusAtual === 'PROCESSANDO')  badge = `<span class="badge bg-primary shadow-sm"><i class="fas fa-cogs fa-spin"></i> PROCESSANDO</span>`;
-                else if (statusAtual === 'PENDENTE')     badge = `<span class="badge bg-info text-dark shadow-sm"><i class="fas fa-hourglass-half"></i> NA FILA</span>`;
-                else if (statusAtual === 'PAUSADO')      badge = `<span class="badge bg-warning text-dark"><i class="fas fa-pause-circle"></i> PAUSADO</span>`;
+                if (statusAtual === 'AGUARDANDO_DIARIO')       badge = `<span class="badge bg-info text-dark border border-dark"><i class="fas fa-clock me-1"></i> AGUARDANDO HORÁRIO</span>`;
+                else if (statusAtual === 'PROCESSANDO')         badge = `<span class="badge bg-primary shadow-sm"><i class="fas fa-cogs fa-spin"></i> PROCESSANDO</span>`;
+                else if (statusAtual === 'CRIANDO PROCESSAMENTO') badge = `<span class="badge bg-warning text-dark shadow-sm border border-dark"><i class="fas fa-spinner fa-spin me-1"></i> CRIANDO PROCESSAMENTO</span>`;
+                else if (statusAtual === 'NA FILA')             badge = `<span class="badge bg-secondary text-white shadow-sm border border-dark"><i class="fas fa-list-ol me-1"></i> NA FILA</span>`;
+                else if (statusAtual === 'PAUSADO')             badge = `<span class="badge bg-warning text-dark"><i class="fas fa-pause-circle"></i> PAUSADO</span>`;
                 else if (statusAtual === 'PROCESSADO PARCIAL') badge = `<span class="badge bg-warning text-dark"><i class="fas fa-hand-paper"></i> PROCESSADO PARCIAL</span>`;
                 else if (statusAtual === 'CONCLUIDO')    badge = `<span class="badge bg-success shadow-sm"><i class="fas fa-check-circle"></i> CONCLUIDO</span>`;
                 else if (statusAtual === 'ERRO CREDENCIAL') badge = `<span class="badge bg-danger"><i class="fas fa-key me-1"></i> ERRO CREDENCIAL</span>`;
