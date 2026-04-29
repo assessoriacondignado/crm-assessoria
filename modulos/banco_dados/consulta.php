@@ -1340,7 +1340,7 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
                     </div>
 
                     <?php if (!empty($inss_beneficios)): ?>
-                        <div class="card h-100 border-danger rounded-0 mb-2">
+                        <div class="card border-danger rounded-0 mb-2">
                             <div class="card-header bg-danger text-white py-1 px-2 border-bottom border-danger rounded-0">
                                 <span class="fw-bold text-uppercase" style="font-size: 0.75rem;"><i class="fas fa-university me-2"></i> INSS: Benefícios e Contratos</span>
                             </div>
