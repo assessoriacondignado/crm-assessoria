@@ -591,10 +591,12 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function abrirModalCampanha() {
+    const _hoje = new Date(); const _fmt = d => d.toISOString().split('T')[0];
+    const _fim1ano = new Date(_hoje); _fim1ano.setFullYear(_fim1ano.getFullYear() + 1);
     document.getElementById('form_id_campanha').value = '';
     document.getElementById('form_nome').value = '';
-    document.getElementById('form_inicio').value = '';
-    document.getElementById('form_fim').value = '';
+    document.getElementById('form_inicio').value = _fmt(_hoje);
+    document.getElementById('form_fim').value = _fmt(_fim1ano);
     document.getElementById('form_aleatorio').value = 'NAO';
     document.getElementById('form_status').value = 'ATIVO';
 
