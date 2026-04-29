@@ -1,9 +1,11 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) session_start();
+ini_set('display_errors', 0);
+session_start();
 header('Content-Type: application/json');
 
-if (!isset($_SESSION['usuario_cpf'])) {
-    echo json_encode(['success' => false]); exit;
+$cpf_logado = preg_replace('/\D/', '', $_SESSION['usuario_cpf'] ?? '');
+if (empty($cpf_logado)) {
+    echo json_encode(['success' => false, 'msg' => 'sem_sessao']); exit;
 }
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/conexao.php';

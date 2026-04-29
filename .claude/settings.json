@@ -397,7 +397,10 @@
       "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"DESCRIBE AVISOS_INTERNOS_LEITURA;\")",
       "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"DESCRIBE AVISOS_INTERNOS_DESTINATARIOS;\")",
       "Bash(mysql -u admin_crm -pAbl@810401 crm_dados -e \"SELECT telefone_cel FROM telefones WHERE telefone_cel LIKE '82999%' LIMIT 5;\")",
-      "Bash(chown www-data:www-data /var/www/html/modulos/configuracao/anotacoes/arquivos)"
+      "Bash(chown www-data:www-data /var/www/html/modulos/configuracao/anotacoes/arquivos)",
+      "Bash(mysql -u admin_crm \"-pAbl@810401\" crm_dados -e \"SELECT d.cpf, d.nome FROM dados_cadastrais d INNER JOIN telefones t ON d.cpf = t.cpf WHERE t.telefone_cel LIKE '82999025155%' GROUP BY d.cpf LIMIT 5;\")",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(grep -rn 'session_start\\\\|$_SESSION\\\\[.usuario' /var/www/html/login.php)"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",

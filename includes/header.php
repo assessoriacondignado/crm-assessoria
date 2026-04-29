@@ -556,8 +556,9 @@ session_write_close();
             fd.append('termo', val);
             try {
                 const r = await fetch('/includes/header_busca.php', {method:'POST', body:fd}).then(r=>r.json());
-                if (!r.success || !r.data.length) {
-                    box.innerHTML = '<div style="padding:8px 10px; color:rgba(255,255,255,.4); font-size:11px;">Nenhum resultado encontrado.</div>';
+                if (!r.success || !r.data || !r.data.length) {
+                    const msg = (!r.success && r.msg) ? r.msg : 'Nenhum resultado encontrado.';
+                    box.innerHTML = `<div style="padding:8px 10px; color:rgba(255,255,255,.4); font-size:11px;">${msg}</div>`;
                     return;
                 }
                 box.innerHTML = r.data.map(c => `
