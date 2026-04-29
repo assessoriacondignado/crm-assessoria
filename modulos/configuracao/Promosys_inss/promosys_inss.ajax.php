@@ -351,6 +351,38 @@ if ($acao === 'upload_csv_lote') {
     exit;
 }
 
+if ($acao === 'lote_por_lista_cpfs') {
+    $agrupamento = trim($_POST['agrupamento'] ?? '');
+    $cpf_cobrar  = preg_replace('/\D/', '', $_POST['cpf_cobrar'] ?? '');
+    $lista_raw   = trim($_POST['lista_cpfs'] ?? '');
+
+    if (empty($agrupamento)) { echo json_encode(['success' => false, 'msg' => 'Informe o agrupamento.']); exit; }
+    if (empty($cpf_cobrar))  { echo json_encode(['success' => false, 'msg' => 'Selecione o cliente para cobrança.']); exit; }
+    if (empty($lista_raw))   { echo json_encode(['success' => false, 'msg' => 'A lista de CPFs está vazia.']); exit; }
+
+    $linhas = explode("\n", str_replace("\r", "", $lista_raw));
+    $cpfs_validos = [];
+    foreach ($linhas as $linha) {
+        $cpf = preg_replace('/\D/', '', trim($linha));
+        if (strlen($cpf) === 11) $cpfs_validos[] = $cpf;
+    }
+    if (empty($cpfs_validos)) { echo json_encode(['success' => false, 'msg' => 'Nenhum CPF válido encontrado na lista.']); exit; }
+    if (count($cpfs_validos) > 2000) { echo json_encode(['success' => false, 'msg' => 'Limite máximo de 2.000 CPFs por lote.']); exit; }
+
+    $custo_unitario = $pdo->query("SELECT CUSTO_CONSULTA FROM CLIENTE_CADASTRO WHERE CPF = '$cpf_cobrar'")->fetchColumn();
+    $pdo->beginTransaction();
+    $stmtLote = $pdo->prepare("INSERT INTO promosys_inss_importacao_lote (nome_processamento, usuario_id, nome_usuario, cpf_cobranca, custo_unitario, status_fila, data_importacao) VALUES (?, ?, ?, ?, ?, 'PENDENTE', NOW())");
+    $stmtLote->execute([$agrupamento, $_SESSION['usuario_id'] ?? 1, $_SESSION['usuario_nome'] ?? 'Sistema', $cpf_cobrar, (float)$custo_unitario]);
+    $lote_id = $pdo->lastInsertId();
+    $stmtItem = $pdo->prepare("INSERT INTO promosys_inss_importacao_itens (lote_id, cpf, status_item) VALUES (?, ?, 'NA FILA')");
+    foreach ($cpfs_validos as $cpf) { $stmtItem->execute([$lote_id, $cpf]); }
+    $pdo->prepare("UPDATE promosys_inss_importacao_lote SET qtd_total = ? WHERE id = ?")->execute([count($cpfs_validos), $lote_id]);
+    $pdo->commit();
+    exec("php worker_promosys_lote.php > /dev/null 2>&1 &");
+    echo json_encode(['success' => true, 'msg' => count($cpfs_validos) . ' CPFs adicionados à fila.']);
+    exit;
+}
+
 if ($acao === 'listar_lotes_csv') { $stmt = $pdo->query("SELECT l.*, c.NOME as NOME_CLIENTE, DATE_FORMAT(l.data_importacao, '%d/%m/%Y %H:%i') as DATA_BR FROM promosys_inss_importacao_lote l LEFT JOIN CLIENTE_CADASTRO c ON l.cpf_cobranca = c.CPF ORDER BY l.id DESC LIMIT 50"); echo json_encode(['success' => true, 'data' => $stmt->fetchAll(PDO::FETCH_ASSOC)]); exit; }
 if ($acao === 'pausar_retomar_lote') { $id = $_POST['id_lote']; $acao_lote = $_POST['acao_lote']; $novo_status = ($acao_lote === 'PAUSAR') ? 'PAUSADO' : 'PENDENTE'; $pdo->prepare("UPDATE promosys_inss_importacao_lote SET status_fila = ? WHERE id = ?")->execute([$novo_status, $id]); if ($novo_status === 'PENDENTE') exec("php worker_promosys_lote.php > /dev/null 2>&1 &"); echo json_encode(['success' => true]); exit; }
 if ($acao === 'excluir_lote_csv') { $pdo->prepare("DELETE FROM promosys_inss_importacao_lote WHERE id = ?")->execute([$_POST['id']]); echo json_encode(['success' => true, 'msg' => 'Lote excluído do histórico com sucesso.']); exit; }

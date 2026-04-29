@@ -46,9 +46,16 @@ if(file_exists($path_header)) { include_once $path_header; }
             <div class="row mb-4">
                 <div class="col-md-12">
                     <div class="caixa-upload shadow-sm border-primary">
-                        <h5 class="fw-bold text-primary mb-3"><i class="fas fa-cloud-upload-alt me-2"></i>Importação de Lote para Consulta INSS (HIST INSS)</h5>
-                        <p class="text-muted small mb-4">Envie um arquivo <b>.csv</b> contendo apenas os CPFs, ou com as colunas: <b>CPF, NASCIMENTO, SEXO e NOME</b>.<br><strong class="text-danger">Atenção: Limite máximo de 2.000 CPFs por lote. As importações entram em fila única de processamento.</strong></p>
-                        
+                        <h5 class="fw-bold text-primary mb-2"><i class="fas fa-cloud-upload-alt me-2"></i>Importação de Lote para Consulta INSS (HIST INSS)</h5>
+                        <p class="text-muted small mb-3">Limite máximo de <strong>2.000 CPFs por lote</strong>. As importações entram em fila única de processamento.</p>
+
+                        <!-- Toggle CSV / Lista -->
+                        <div class="d-flex gap-2 mb-3">
+                            <button type="button" id="btn_modo_csv" class="btn btn-sm btn-primary fw-bold border-dark" onclick="pmModoImport('csv')"><i class="fas fa-file-csv me-1"></i> Arquivo CSV</button>
+                            <button type="button" id="btn_modo_lista" class="btn btn-sm btn-outline-primary fw-bold border-dark" onclick="pmModoImport('lista')"><i class="fas fa-list me-1"></i> Digitar CPFs</button>
+                        </div>
+
+                        <!-- Formulário CSV -->
                         <form id="form_upload_lote" enctype="multipart/form-data" class="row justify-content-center g-3">
                             <div class="col-md-3 text-start">
                                 <label class="fw-bold small text-dark">Identificação / Agrupamento:</label>
@@ -64,6 +71,26 @@ if(file_exists($path_header)) { include_once $path_header; }
                             </div>
                             <div class="col-md-3 d-flex align-items-end">
                                 <button type="submit" class="btn btn-success w-100 fw-bold shadow-sm" id="btn_enviar_lote"><i class="fas fa-play me-1"></i> Iniciar Importação</button>
+                            </div>
+                        </form>
+
+                        <!-- Formulário Lista CPFs -->
+                        <form id="form_lista_cpfs" class="row justify-content-center g-3" style="display:none!important;">
+                            <div class="col-md-4 text-start">
+                                <label class="fw-bold small text-dark">Identificação / Agrupamento:</label>
+                                <input type="text" id="lista_agrupamento" class="form-control border-primary" placeholder="Ex: LOTE_INSS_MAIO" required>
+                            </div>
+                            <div class="col-md-4 text-start">
+                                <label class="fw-bold small text-dark text-danger">Cobrar de qual cliente?</label>
+                                <select id="lista_cliente_cobrar" class="form-select border-danger" required><option value="" disabled selected>-- Carregando... --</option></select>
+                            </div>
+                            <div class="col-md-4 d-flex align-items-end">
+                                <button type="button" class="btn btn-success w-100 fw-bold shadow-sm" id="btn_enviar_lista" onclick="pmEnviarLista()"><i class="fas fa-play me-1"></i> Iniciar Verificação</button>
+                            </div>
+                            <div class="col-md-12 text-start">
+                                <label class="fw-bold small text-dark">Lista de CPFs <span class="text-muted fw-normal">(um por linha, máx. 2.000)</span>:</label>
+                                <textarea id="lista_cpfs_inss" class="form-control border-primary font-monospace" rows="7" placeholder="06504802440&#10;12547457444&#10;065.048.024-40"></textarea>
+                                <div id="lista_cpfs_contador" class="text-muted small mt-1">0 CPFs informados</div>
                             </div>
                         </form>
                     </div>
@@ -311,6 +338,49 @@ $(document).ready(function() {
             error: function(err) { $('#btn_enviar_lote').html('<i class="fas fa-play me-1"></i> Iniciar Importação').prop('disabled', false); crmToast("❌ Erro de comunicação.", "error", 6000); }
         });
     });
+
+    // Toggle CSV / Lista CPFs
+    window.pmModoImport = function(modo) {
+        if (modo === 'csv') {
+            $('#form_upload_lote').css('display', '');
+            $('#form_lista_cpfs').css('display', 'none !important').hide();
+            $('#btn_modo_csv').removeClass('btn-outline-primary').addClass('btn-primary');
+            $('#btn_modo_lista').removeClass('btn-primary').addClass('btn-outline-primary');
+        } else {
+            $('#form_upload_lote').hide();
+            $('#form_lista_cpfs').css('display', '').show();
+            $('#btn_modo_lista').removeClass('btn-outline-primary').addClass('btn-primary');
+            $('#btn_modo_csv').removeClass('btn-primary').addClass('btn-outline-primary');
+            // Copia clientes para o select da lista
+            $('#lista_cliente_cobrar').html($('#lote_cliente_cobrar').html());
+        }
+    };
+
+    // Contador de CPFs digitados
+    $(document).on('input', '#lista_cpfs_inss', function() {
+        const linhas = $(this).val().split('\n').filter(l => preg_replace_js(l.trim()).length === 11);
+        $('#lista_cpfs_contador').text(linhas.length + ' CPFs válidos informados');
+    });
+    function preg_replace_js(s) { return s.replace(/\D/g,''); }
+
+    // Enviar lista de CPFs
+    window.pmEnviarLista = function() {
+        const agrup = $('#lista_agrupamento').val().trim();
+        const cobrar = $('#lista_cliente_cobrar').val();
+        const lista  = $('#lista_cpfs_inss').val().trim();
+        if (!agrup) return crmToast("Informe o Agrupamento.", "info", 4000);
+        if (!cobrar) return crmToast("Selecione o cliente para cobrança.", "info", 4000);
+        if (!lista)  return crmToast("Informe ao menos um CPF.", "info", 4000);
+        $('#btn_enviar_lista').html('<i class="fas fa-spinner fa-spin"></i> Enviando...').prop('disabled', true);
+        $.post(ajax_url, { acao: 'lote_por_lista_cpfs', agrupamento: agrup, cpf_cobrar: cobrar, lista_cpfs: lista }, function(res) {
+            $('#btn_enviar_lista').html('<i class="fas fa-play me-1"></i> Iniciar Verificação').prop('disabled', false);
+            if (res.success) {
+                $('#lista_cpfs_inss').val(''); $('#lista_agrupamento').val(''); $('#lista_cpfs_contador').text('0 CPFs informados');
+                crmToast("✅ Lote enviado! Processamento em fila.", "success");
+                pmCarregarLotes();
+            } else { crmToast("❌ " + res.msg, "error", 6000); }
+        }, 'json').fail(() => { $('#btn_enviar_lista').html('<i class="fas fa-play me-1"></i> Iniciar Verificação').prop('disabled', false); crmToast("❌ Erro de comunicação.", "error", 6000); });
+    };
 
     window.pmExcluirLote = function(id_lote, agrupamento) { 
         if(!confirm(`Atenção: Isso excluirá o registro do lote [${agrupamento}].\nOs clientes validados NÃO serão apagados do sistema principal.\n\nConfirma a exclusão do Histórico?`)) return; 
