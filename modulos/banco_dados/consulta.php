@@ -2454,11 +2454,11 @@ document.getElementById('modalHistoricoConsulta')?.addEventListener('shown.bs.mo
             }
             lista.innerHTML = r.campanhas.map(c => {
                 const badge = c.STATUS === 'ATIVO'
-                    ? '<span class="badge bg-success ms-1" style="font-size:0.60rem;">ATIVO</span>'
-                    : '<span class="badge bg-secondary ms-1" style="font-size:0.60rem;">' + c.STATUS + '</span>';
-                return '<div class="d-flex justify-content-between align-items-center border-bottom py-1" style="font-size:0.70rem;">'
-                    + '<span class="fw-bold text-dark">' + c.NOME_CAMPANHA + badge + '</span>'
-                    + '<span class="text-muted ms-2 text-nowrap">' + (c.DATA_INCLUSAO || '') + '</span>'
+                    ? '<span class="badge bg-success" style="font-size:0.60rem;">ATIVO</span>'
+                    : '<span class="badge bg-secondary" style="font-size:0.60rem;">' + c.STATUS + '</span>';
+                return '<div class="border-bottom py-1" style="font-size:0.72rem;">'
+                    + '<div class="fw-bold text-dark">' + c.NOME_CAMPANHA + '</div>'
+                    + '<div>' + badge + ' <span class="text-muted">' + (c.DATA_INCLUSAO || '') + '</span></div>'
                     + '</div>';
             }).join('');
         })
