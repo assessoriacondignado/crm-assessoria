@@ -262,12 +262,26 @@ if (empty($cpf_para_integracao) && isset($termo_busca)) {
     }
 
     function buscarChavesHistInss(select) {
-        let fd = new FormData(); fd.append('acao', 'listar_clientes');
+        const idLogado    = document.getElementById('integ_user_id_logado').value;
+        const grupoLogado = document.getElementById('integ_user_grupo_logado').value.toUpperCase();
+        const isAdmin     = ['MASTER', 'ADMIN', 'ADMINISTRADOR'].includes(grupoLogado);
+
+        let fd = new FormData();
+        fd.append('acao', 'listar_clientes');
+        // Para não-admins: busca pelo ID do usuário logado para garantir que
+        // sua conta apareça independente da posição alfabética (ignora LIMIT 30)
+        if (!isAdmin && idLogado) fd.append('busca_usuario_id', idLogado);
+
         fetch('/modulos/configuracao/Promosys_inss/promosys_inss.ajax.php', { method: 'POST', body: fd })
             .then(r => r.json())
             .then(r => {
                 if (r.success && r.data) {
-                    chavesHistInssCache = r.data.map(c => ({ id: c.CPF, nome: c.NOME, saldo: c.SALDO }));
+                    chavesHistInssCache = r.data.map(c => ({
+                        id: c.CPF,
+                        nome: c.NOME,
+                        saldo: parseFloat(c.SALDO || 0).toFixed(2),
+                        USUARIO_ID: c.USUARIO_ID
+                    }));
                     popularSelectChaves(select, chavesHistInssCache);
                 } else { select.innerHTML = '<option value="">Erro ao carregar clientes</option>'; }
             }).catch(() => { select.innerHTML = '<option value="">Falha de comunicação.</option>'; });

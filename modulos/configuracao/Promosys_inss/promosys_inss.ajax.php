@@ -77,18 +77,24 @@ function obterTokenPromosys($pdo) {
 
 // ========================================================================
 if ($acao === 'listar_clientes') {
-    $busca = trim($_POST['busca'] ?? '');
+    $busca            = trim($_POST['busca'] ?? '');
+    $busca_usuario_id = (int)($_POST['busca_usuario_id'] ?? 0);
     $sql = "SELECT cc.CPF, cc.NOME, cc.NOME_EMPRESA, cc.CUSTO_CONSULTA, cc.SALDO, cc.GRUPO_WHATS,
-                   COALESCE(cu.NOME, cc.NOME) as NOME_USUARIO
+                   COALESCE(cu.NOME, cc.NOME) as NOME_USUARIO,
+                   cu.ID as USUARIO_ID
             FROM CLIENTE_CADASTRO cc
             LEFT JOIN CLIENTE_USUARIO cu ON cu.CPF = cc.CPF";
     $params = [];
-    if (!empty($busca)) {
+    if ($busca_usuario_id > 0) {
+        // Busca direta pelo ID do usuário — sem LIMIT para garantir encontrar
+        $sql .= " WHERE cu.ID = ?";
+        $params = [$busca_usuario_id];
+    } elseif (!empty($busca)) {
         $sql .= " WHERE cc.NOME LIKE ? OR cc.CPF LIKE ? OR cc.NOME_EMPRESA LIKE ? OR cu.NOME LIKE ?";
         $like = '%' . $busca . '%';
         $params = [$like, $like, $like, $like];
     }
-    $sql .= " ORDER BY cc.NOME ASC LIMIT 30";
+    $sql .= " ORDER BY cc.NOME ASC" . ($busca_usuario_id > 0 ? "" : " LIMIT 30");
     $stmt = $pdo->prepare($sql);
     $stmt->execute($params);
     echo json_encode(['success' => true, 'data' => $stmt->fetchAll(PDO::FETCH_ASSOC)]);
