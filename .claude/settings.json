@@ -404,7 +404,12 @@
       "Bash(php -l /var/www/html/modulos/configuracao/Promosys_inss/index.php)",
       "Bash(mysql -u admin_crm \"-pAbl@810401\" crm_dados -e \"DESCRIBE CLIENTE_CADASTRO;\")",
       "Bash(php -l /var/www/html/modulos/configuracao/fator_conferi/index.php)",
-      "Bash(php -l /var/www/html/modulos/configuracao/fator_conferi/fator_conferi.ajax.php)"
+      "Bash(php -l /var/www/html/modulos/configuracao/fator_conferi/fator_conferi.ajax.php)",
+      "Bash(mysql -u admin_crm \"-pAbl@810401\" crm_dados -e \"DESCRIBE promosys_inss_importacao_lote;\")",
+      "Bash(mysql -u root -e \"DESCRIBE promosys_inss_importacao_lote;\")",
+      "Bash(mysql -u root -e \"DESCRIBE fatorconferi_banco_de_dados_retorno_importacao;\")",
+      "Bash(mysql -u root assessoriaconsignado -e \"DESCRIBE promosys_inss_importacao_lote; DESCRIBE fatorconferi_banco_de_dados_retorno_importacao;\")",
+      "Bash(mysql -u root crm_dados -e \"DESCRIBE promosys_inss_importacao_lote; DESCRIBE fatorconferi_banco_de_dados_retorno_importacao;\")"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",

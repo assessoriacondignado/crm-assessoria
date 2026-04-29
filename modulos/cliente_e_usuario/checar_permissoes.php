@@ -56,4 +56,31 @@ if (!function_exists('verificaPermissao')) {
         }
     }
 }
+
+// Versão estrita: não bypassa MASTER/ADMIN — aplica a todos os grupos igualmente
+if (!function_exists('verificaPermissaoEstrita')) {
+    function verificaPermissaoEstrita($pdo, $chave) {
+        try {
+            if (!$pdo) return false;
+            if (session_status() === PHP_SESSION_NONE && !headers_sent()) session_start();
+            $grupo_usuario = strtoupper($_SESSION['usuario_grupo'] ?? '');
+
+            if (isset($_SESSION['perm_cache']) && array_key_exists($chave, $_SESSION['perm_cache'])) {
+                $grupo_usuarios = $_SESSION['perm_cache'][$chave];
+            } else {
+                $stmt = $pdo->prepare("SELECT GRUPO_USUARIOS FROM CLIENTE_USUARIO_PERMISSAO WHERE CHAVE = ?");
+                $stmt->execute([$chave]);
+                $reg = $stmt->fetch(PDO::FETCH_ASSOC);
+                $grupo_usuarios = $reg ? ($reg['GRUPO_USUARIOS'] ?? '') : '';
+                $_SESSION['perm_cache'][$chave] = $grupo_usuarios;
+            }
+
+            if (!empty($grupo_usuarios)) {
+                $bloqueados = array_map('trim', explode(',', strtoupper($grupo_usuarios)));
+                if (in_array($grupo_usuario, $bloqueados)) return false;
+            }
+            return true;
+        } catch (\Throwable $e) { return true; }
+    }
+}
 ?>
