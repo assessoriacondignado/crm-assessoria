@@ -415,10 +415,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login_submit']) && !$r
                     $stmtReset = $pdo->prepare("UPDATE CLIENTE_USUARIO SET Tentativas = 0, Ultima_Tentativa = NULL WHERE CPF = :cpf");
                     $stmtReset->execute(['cpf' => $cpf]);
 
-                    $_SESSION['usuario_cpf'] = $cpf;
-                    $_SESSION['usuario_nome'] = $user['NOME'];
-                    $_SESSION['usuario_grupo'] = !empty($user['GRUPO_USUARIOS']) ? strtoupper(trim($user['GRUPO_USUARIOS'])) : 'SEM_GRUPO';
-                    $_SESSION['ultimo_acesso'] = time(); 
+                    $_SESSION['usuario_cpf']    = $cpf;
+                    $_SESSION['usuario_id']     = $user['ID'] ?? null;
+                    $_SESSION['usuario_nome']   = $user['NOME'];
+                    $_SESSION['usuario_grupo']  = !empty($user['GRUPO_USUARIOS']) ? strtoupper(trim($user['GRUPO_USUARIOS'])) : 'SEM_GRUPO';
+                    $_SESSION['ultimo_acesso']  = time();
 
                     header("Location: index.php");
                     exit;

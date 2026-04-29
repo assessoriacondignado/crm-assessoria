@@ -263,14 +263,17 @@ if (empty($cpf_para_integracao) && isset($termo_busca)) {
 
     function buscarChavesHistInss(select) {
         const idLogado    = document.getElementById('integ_user_id_logado').value;
+        const cpfLogado   = document.getElementById('integ_user_cpf_logado').value.replace(/\D/g, '');
         const grupoLogado = document.getElementById('integ_user_grupo_logado').value.toUpperCase();
         const isAdmin     = ['MASTER', 'ADMIN', 'ADMINISTRADOR'].includes(grupoLogado);
 
         let fd = new FormData();
         fd.append('acao', 'listar_clientes');
-        // Para não-admins: busca pelo ID do usuário logado para garantir que
-        // sua conta apareça independente da posição alfabética (ignora LIMIT 30)
-        if (!isAdmin && idLogado) fd.append('busca_usuario_id', idLogado);
+        if (!isAdmin) {
+            // Usa ID se disponível (sessão nova), senão CPF como fallback
+            if (idLogado) fd.append('busca_usuario_id', idLogado);
+            else if (cpfLogado) fd.append('busca_usuario_cpf', cpfLogado);
+        }
 
         fetch('/modulos/configuracao/Promosys_inss/promosys_inss.ajax.php', { method: 'POST', body: fd })
             .then(r => r.json())
