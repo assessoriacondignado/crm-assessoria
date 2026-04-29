@@ -36,6 +36,26 @@ try {
 $pdo->exec("INSERT IGNORE INTO promosys_config_api (ID) VALUES (1)");
 
 // ========================================================================
+// Resolução de empresa e permissões de hierarquia (HIST INSS)
+// ========================================================================
+$cpf_logado_pm       = preg_replace('/\D/', '', $_SESSION['usuario_cpf'] ?? '');
+$id_usuario_logado_pm = (int)($_SESSION['usuario_id'] ?? 0);
+$id_empresa_logado_pm = null;
+try {
+    if (!empty($cpf_logado_pm)) {
+        $sepm = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+        $sepm->execute([$cpf_logado_pm]);
+        $rowpm = $sepm->fetch(PDO::FETCH_ASSOC);
+        if ($rowpm) $id_empresa_logado_pm = (int)$rowpm['id_empresa'];
+    }
+} catch (Exception $e) {}
+$_caminho_perm_pm = $_SERVER['DOCUMENT_ROOT'] . '/modulos/cliente_e_usuario/checar_permissoes.php';
+if (file_exists($_caminho_perm_pm)) include_once $_caminho_perm_pm;
+$perm_meu_reg_inss = function_exists('verificaPermissao')       ? verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_HIST_INSS_MEU_REGISTRO', 'FUNCAO') : true;
+$perm_hier_inss    = function_exists('verificaPermissaoEstrita') ? verificaPermissaoEstrita($pdo, 'SUBMENU_OP_INTEGRACAO_HIST_INSS_HIERARQUIA')       : true;
+// ========================================================================
+
+// ========================================================================
 function obterTokenPromosys($pdo) {
     $stmt = $pdo->query("SELECT TOKEN_MANUAL as usuario, TOKEN_LOTE as senha FROM promosys_config_api WHERE ID = 1");
     $credenciais = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -353,8 +373,8 @@ if ($acao === 'upload_csv_lote') {
     if (move_uploaded_file($arquivo['tmp_name'], $destino)) {
         $custo_unitario = $pdo->query("SELECT CUSTO_CONSULTA FROM CLIENTE_CADASTRO WHERE CPF = '$cpf_cobrar'")->fetchColumn();
         $pdo->beginTransaction();
-        $stmtLote = $pdo->prepare("INSERT INTO promosys_inss_importacao_lote (nome_processamento, usuario_id, nome_usuario, cpf_cobranca, custo_unitario, status_fila, data_importacao) VALUES (?, ?, ?, ?, ?, 'PENDENTE', NOW())");
-        $stmtLote->execute([$agrupamento, $_SESSION['usuario_id'] ?? 1, $_SESSION['usuario_nome'] ?? 'Sistema', $cpf_cobrar, (float)$custo_unitario]);
+        $stmtLote = $pdo->prepare("INSERT INTO promosys_inss_importacao_lote (nome_processamento, usuario_id, nome_usuario, cpf_cobranca, custo_unitario, status_fila, data_importacao, id_empresa) VALUES (?, ?, ?, ?, ?, 'PENDENTE', NOW(), ?)");
+        $stmtLote->execute([$agrupamento, $_SESSION['usuario_id'] ?? 1, $_SESSION['usuario_nome'] ?? 'Sistema', $cpf_cobrar, (float)$custo_unitario, $id_empresa_logado_pm]);
         $lote_id = $pdo->lastInsertId();
         $handle = fopen($destino, "r"); fgetcsv($handle, 1000, ";"); $qtd_total = 0;
         $stmtItem = $pdo->prepare("INSERT INTO promosys_inss_importacao_itens (lote_id, cpf, status_item) VALUES (?, ?, 'NA FILA')");
@@ -388,8 +408,8 @@ if ($acao === 'lote_por_lista_cpfs') {
 
     $custo_unitario = $pdo->query("SELECT CUSTO_CONSULTA FROM CLIENTE_CADASTRO WHERE CPF = '$cpf_cobrar'")->fetchColumn();
     $pdo->beginTransaction();
-    $stmtLote = $pdo->prepare("INSERT INTO promosys_inss_importacao_lote (nome_processamento, usuario_id, nome_usuario, cpf_cobranca, custo_unitario, status_fila, data_importacao) VALUES (?, ?, ?, ?, ?, 'PENDENTE', NOW())");
-    $stmtLote->execute([$agrupamento, $_SESSION['usuario_id'] ?? 1, $_SESSION['usuario_nome'] ?? 'Sistema', $cpf_cobrar, (float)$custo_unitario]);
+    $stmtLote = $pdo->prepare("INSERT INTO promosys_inss_importacao_lote (nome_processamento, usuario_id, nome_usuario, cpf_cobranca, custo_unitario, status_fila, data_importacao, id_empresa) VALUES (?, ?, ?, ?, ?, 'PENDENTE', NOW(), ?)");
+    $stmtLote->execute([$agrupamento, $_SESSION['usuario_id'] ?? 1, $_SESSION['usuario_nome'] ?? 'Sistema', $cpf_cobrar, (float)$custo_unitario, $id_empresa_logado_pm]);
     $lote_id = $pdo->lastInsertId();
     $stmtItem = $pdo->prepare("INSERT INTO promosys_inss_importacao_itens (lote_id, cpf, status_item) VALUES (?, ?, 'NA FILA')");
     foreach ($cpfs_validos as $cpf) { $stmtItem->execute([$lote_id, $cpf]); }
@@ -400,13 +420,38 @@ if ($acao === 'lote_por_lista_cpfs') {
     exit;
 }
 
-if ($acao === 'listar_lotes_csv') { $stmt = $pdo->query("SELECT l.*, c.NOME as NOME_CLIENTE, DATE_FORMAT(l.data_importacao, '%d/%m/%Y %H:%i') as DATA_BR FROM promosys_inss_importacao_lote l LEFT JOIN CLIENTE_CADASTRO c ON l.cpf_cobranca = c.CPF ORDER BY l.id DESC LIMIT 50"); echo json_encode(['success' => true, 'data' => $stmt->fetchAll(PDO::FETCH_ASSOC)]); exit; }
+if ($acao === 'listar_lotes_csv') {
+    $sql_pm = "SELECT l.*, c.NOME as NOME_CLIENTE, DATE_FORMAT(l.data_importacao, '%d/%m/%Y %H:%i') as DATA_BR FROM promosys_inss_importacao_lote l LEFT JOIN CLIENTE_CADASTRO c ON l.cpf_cobranca = c.CPF";
+    $params_pm = [];
+    if (!$perm_meu_reg_inss && !empty($cpf_logado_pm)) {
+        $sql_pm .= " WHERE (l.cpf_cobranca = ? OR l.usuario_id = ?)";
+        $params_pm = [$cpf_logado_pm, $id_usuario_logado_pm];
+    } elseif (!$perm_hier_inss && $id_empresa_logado_pm) {
+        $sql_pm .= " WHERE l.id_empresa = ?";
+        $params_pm = [$id_empresa_logado_pm];
+    }
+    $sql_pm .= " ORDER BY l.id DESC LIMIT 50";
+    $stmt = $pdo->prepare($sql_pm);
+    $stmt->execute($params_pm);
+    echo json_encode(['success' => true, 'data' => $stmt->fetchAll(PDO::FETCH_ASSOC)]);
+    exit;
+}
 if ($acao === 'pausar_retomar_lote') { $id = $_POST['id_lote']; $acao_lote = $_POST['acao_lote']; $novo_status = ($acao_lote === 'PAUSAR') ? 'PAUSADO' : 'PENDENTE'; $pdo->prepare("UPDATE promosys_inss_importacao_lote SET status_fila = ? WHERE id = ?")->execute([$novo_status, $id]); if ($novo_status === 'PENDENTE') exec("php worker_promosys_lote.php > /dev/null 2>&1 &"); echo json_encode(['success' => true]); exit; }
 if ($acao === 'excluir_lote_csv') { $pdo->prepare("DELETE FROM promosys_inss_importacao_lote WHERE id = ?")->execute([$_POST['id']]); echo json_encode(['success' => true, 'msg' => 'Lote excluído do histórico com sucesso.']); exit; }
 if ($acao === 'forcar_processamento_lote') { exec("php worker_promosys_lote.php > /dev/null 2>&1 &"); echo json_encode(['success' => true, 'msg' => 'Comando enviado ao servidor.']); exit; }
 
 if ($acao === 'exportar_csv_agrupamento' && isset($_GET['id_lote'])) {
-    $id_lote = $_GET['id_lote'];
+    $id_lote = (int)$_GET['id_lote'];
+    if (!$perm_meu_reg_inss && !empty($cpf_logado_pm)) {
+        $stmtAcl = $pdo->prepare("SELECT cpf_cobranca, usuario_id FROM promosys_inss_importacao_lote WHERE id = ?");
+        $stmtAcl->execute([$id_lote]);
+        $rowAcl = $stmtAcl->fetch(PDO::FETCH_ASSOC);
+        if (!$rowAcl || ($rowAcl['cpf_cobranca'] !== $cpf_logado_pm && (int)$rowAcl['usuario_id'] !== $id_usuario_logado_pm)) { exit('Acesso negado.'); }
+    } elseif (!$perm_hier_inss && $id_empresa_logado_pm) {
+        $stmtAcl = $pdo->prepare("SELECT id_empresa FROM promosys_inss_importacao_lote WHERE id = ?");
+        $stmtAcl->execute([$id_lote]);
+        if ((int)$stmtAcl->fetchColumn() !== $id_empresa_logado_pm) { exit('Acesso negado.'); }
+    }
     $stmtAgrup = $pdo->prepare("SELECT nome_processamento FROM promosys_inss_importacao_lote WHERE id = ?"); $stmtAgrup->execute([$id_lote]); $agrupamento = $stmtAgrup->fetchColumn();
     header('Content-Type: text/csv; charset=UTF-8'); header('Content-Disposition: attachment; filename="Exportacao_HIST_INSS_' . $agrupamento . '.csv"');
     $out = fopen('php://output', 'w'); fputs($out, "\xEF\xBB\xBF");

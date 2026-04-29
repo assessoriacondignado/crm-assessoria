@@ -82,6 +82,22 @@ if (!empty($grupo_usuario) && !in_array($grupo_usuario, ['MASTER', 'ADMIN', 'ADM
 }
 // =========================================================================
 
+// Resolução de empresa e permissões de hierarquia (Fator Conferi)
+$id_empresa_logado_fc = null;
+try {
+    if (!empty($cpf_logado)) {
+        $sefc = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+        $sefc->execute([$cpf_logado]);
+        $rowfc = $sefc->fetch(PDO::FETCH_ASSOC);
+        if ($rowfc) $id_empresa_logado_fc = (int)$rowfc['id_empresa'];
+    }
+} catch (Exception $e) {}
+$_caminho_perm_fc = $_SERVER['DOCUMENT_ROOT'] . '/modulos/cliente_e_usuario/checar_permissoes.php';
+if (file_exists($_caminho_perm_fc)) include_once $_caminho_perm_fc;
+$perm_meu_reg_fc = function_exists('verificaPermissao')       ? verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_Fator_Conferi_MEU_REGISTRO', 'FUNCAO') : true;
+$perm_hier_fc    = function_exists('verificaPermissaoEstrita') ? verificaPermissaoEstrita($pdo, 'SUBMENU_OP_INTEGRACAO_Fator_Conferi_HIERARQUIA')       : true;
+// =========================================================================
+
 $token_fator = '';
 try {
     $stmtCfg = $pdo->query("SELECT * FROM WAPI_CONFIG_BOT_FATOR WHERE ID = 1");
@@ -96,22 +112,34 @@ try {
     switch ($acao) {
         
         case 'listar_lotes_csv':
-            if ($tem_restricao && !empty($cpf_logado)) {
-                $stmt = $pdo->prepare("SELECT *, DATE_FORMAT(DATA_IMPORTACAO, '%d/%m/%y %H:%i') as DATA_BR, NOME_PROCESSAMENTO as AGRUPAMENTO FROM fatorconferi_banco_de_dados_retorno_importacao WHERE CPF_COBRANCA = ? ORDER BY ID DESC LIMIT 100");
-                $stmt->execute([$cpf_logado]);
-            } else {
-                $stmt = $pdo->query("SELECT *, DATE_FORMAT(DATA_IMPORTACAO, '%d/%m/%y %H:%i') as DATA_BR, NOME_PROCESSAMENTO as AGRUPAMENTO FROM fatorconferi_banco_de_dados_retorno_importacao ORDER BY ID DESC LIMIT 100");
+            $sql_fc_l = "SELECT *, DATE_FORMAT(DATA_IMPORTACAO, '%d/%m/%y %H:%i') as DATA_BR, NOME_PROCESSAMENTO as AGRUPAMENTO FROM fatorconferi_banco_de_dados_retorno_importacao";
+            $params_fc_l = [];
+            if (($tem_restricao || !$perm_meu_reg_fc) && !empty($cpf_logado)) {
+                $sql_fc_l .= " WHERE CPF_COBRANCA = ?";
+                $params_fc_l = [$cpf_logado];
+            } elseif (!$perm_hier_fc && $id_empresa_logado_fc) {
+                $sql_fc_l .= " WHERE id_empresa = ?";
+                $params_fc_l = [$id_empresa_logado_fc];
             }
+            $sql_fc_l .= " ORDER BY ID DESC LIMIT 100";
+            $stmt = $pdo->prepare($sql_fc_l);
+            $stmt->execute($params_fc_l);
             $dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
             ob_end_clean(); echo json_encode(['success' => true, 'data' => $dados]); exit;
 
         case 'excluir_lote_csv':
             $id_lote = (int)$_POST['id'];
-            if ($tem_restricao) {
+            if (($tem_restricao || !$perm_meu_reg_fc) && !empty($cpf_logado)) {
                 $stmtVal = $pdo->prepare("SELECT CPF_COBRANCA FROM fatorconferi_banco_de_dados_retorno_importacao WHERE ID = ?");
                 $stmtVal->execute([$id_lote]);
                 if ($stmtVal->fetchColumn() !== $cpf_logado) {
                     ob_end_clean(); echo json_encode(['success' => false, 'msg' => 'Você não tem permissão para excluir lotes de terceiros.']); exit;
+                }
+            } elseif (!$perm_hier_fc && $id_empresa_logado_fc) {
+                $stmtVal = $pdo->prepare("SELECT id_empresa FROM fatorconferi_banco_de_dados_retorno_importacao WHERE ID = ?");
+                $stmtVal->execute([$id_lote]);
+                if ((int)$stmtVal->fetchColumn() !== $id_empresa_logado_fc) {
+                    ob_end_clean(); echo json_encode(['success' => false, 'msg' => 'Você não tem permissão para excluir lotes de outras empresas.']); exit;
                 }
             }
             $pdo->prepare("DELETE FROM fatorconferi_banco_de_dados_retorno_importacao WHERE ID = ?")->execute([$id_lote]);
@@ -119,10 +147,14 @@ try {
 
         case 'exportar_csv_agrupamento':
             $id_lote = (int)($_GET['id_lote'] ?? 0);
-            if ($tem_restricao) {
+            if (($tem_restricao || !$perm_meu_reg_fc) && !empty($cpf_logado)) {
                 $stmtVal = $pdo->prepare("SELECT CPF_COBRANCA FROM fatorconferi_banco_de_dados_retorno_importacao WHERE ID = ?");
                 $stmtVal->execute([$id_lote]);
                 if ($stmtVal->fetchColumn() !== $cpf_logado) { exit('Acesso negado.'); }
+            } elseif (!$perm_hier_fc && $id_empresa_logado_fc) {
+                $stmtVal = $pdo->prepare("SELECT id_empresa FROM fatorconferi_banco_de_dados_retorno_importacao WHERE ID = ?");
+                $stmtVal->execute([$id_lote]);
+                if ((int)$stmtVal->fetchColumn() !== $id_empresa_logado_fc) { exit('Acesso negado.'); }
             }
             $stmtLote = $pdo->prepare("SELECT NOME_PROCESSAMENTO FROM fatorconferi_banco_de_dados_retorno_importacao WHERE ID = ?");
             $stmtLote->execute([$id_lote]);
@@ -184,8 +216,8 @@ try {
             if ($total_linhas > 2000) { throw new Exception("Limite: 2.000 CPFs por lote."); }
 
             $pdo->beginTransaction();
-            $stmtLote = $pdo->prepare("INSERT INTO fatorconferi_banco_de_dados_retorno_importacao (NOME_PROCESSAMENTO, USUARIO_ID, NOME_USUARIO, NOME_CLIENTE, CPF_COBRANCA, CUSTO_UNITARIO, QTD_TOTAL, STATUS_FILA) VALUES (?, ?, ?, ?, ?, ?, ?, 'PENDENTE')");
-            $stmtLote->execute([$agrupamento, $usuario_logado_id, $nome_usuario, $nome_cliente, $cpf_cobrar, $custo_unitario, $total_linhas]);
+            $stmtLote = $pdo->prepare("INSERT INTO fatorconferi_banco_de_dados_retorno_importacao (NOME_PROCESSAMENTO, USUARIO_ID, NOME_USUARIO, NOME_CLIENTE, CPF_COBRANCA, CUSTO_UNITARIO, QTD_TOTAL, STATUS_FILA, id_empresa) VALUES (?, ?, ?, ?, ?, ?, ?, 'PENDENTE', ?)");
+            $stmtLote->execute([$agrupamento, $usuario_logado_id, $nome_usuario, $nome_cliente, $cpf_cobrar, $custo_unitario, $total_linhas, $id_empresa_logado_fc]);
             $id_lote = $pdo->lastInsertId();
 
             $stmtItem = $pdo->prepare("INSERT INTO fatorconferi_banco_de_dados_retorno_importacao_itens (LOTE_ID, CPF, STATUS_ITEM) VALUES (?, ?, 'NA FILA')");
