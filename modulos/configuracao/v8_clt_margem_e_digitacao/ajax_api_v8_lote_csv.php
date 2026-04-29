@@ -1958,7 +1958,7 @@ try {
                 FROM INTEGRACAO_V8_IMPORTACAO_LOTE l
                 WHERE l.ENVIAR_ARQUIVO_WHATSAPP = 1
                   AND l.HORA_ENVIO_CSV IS NOT NULL
-                  AND l.HORA_ENVIO_CSV = '{$hora_atual}'
+                  AND l.HORA_ENVIO_CSV <= '{$hora_atual}'
                   AND (l.DATA_ULTIMO_ENVIO_CSV IS NULL OR l.DATA_ULTIMO_ENVIO_CSV < CURDATE())
                   AND (l.STATUS_LOTE = 'ATIVO' OR l.STATUS_LOTE IS NULL)
             ");
@@ -2039,9 +2039,26 @@ try {
                                  . "*DATA/HORA:* " . date('d/m/Y H:i') . "\n\n"
                                  . "🔗 *Clique para baixar:*\n{$urlArqCSV}\n\n"
                                  . "_Link válido por 10 dias. Filtro: margem > R\$1,00._\n\nAssessoria Consignado";
+                        $payload_csv = json_encode(['phone'=>$phone_csv,'message'=>$txt_csv,'delayMessage'=>2]);
                         $chC = curl_init("https://api.w-api.app/v1/message/send-text?instanceId=" . $wapiCSV['INSTANCE_ID']);
-                        curl_setopt_array($chC, [CURLOPT_RETURNTRANSFER=>true, CURLOPT_POST=>true, CURLOPT_POSTFIELDS=>json_encode(['phone'=>$phone_csv,'message'=>$txt_csv,'delayMessage'=>2]), CURLOPT_HTTPHEADER=>["Authorization: Bearer ".$wapiCSV['TOKEN'],"Content-Type: application/json"]]);
-                        curl_exec($chC); curl_close($chC);
+                        curl_setopt_array($chC, [
+                            CURLOPT_RETURNTRANSFER => true,
+                            CURLOPT_POST => true,
+                            CURLOPT_POSTFIELDS => $payload_csv,
+                            CURLOPT_HTTPHEADER => ["Authorization: Bearer ".$wapiCSV['TOKEN'],"Content-Type: application/json"],
+                            CURLOPT_SSL_VERIFYPEER => false,
+                            CURLOPT_IPRESOLVE => CURL_IPRESOLVE_V4,
+                            CURLOPT_TIMEOUT => 15
+                        ]);
+                        $resC = curl_exec($chC);
+                        $httpC = curl_getinfo($chC, CURLINFO_HTTP_CODE);
+                        $errC = curl_error($chC);
+                        curl_close($chC);
+                        // Log do resultado
+                        $logDir = $_SERVER['DOCUMENT_ROOT'] . '/logs_v8/logs_consulta_lote';
+                        if (!is_dir($logDir)) @mkdir($logDir, 0777, true);
+                        $logLine = "[".date('d/m/Y H:i:s')."] CSV WAPI | Lote:{$id_lote_csv} | HTTP:{$httpC} | Grupo:{$phone_csv} | Resp:".substr($resC,0,200).($errC?" | ERRO_CURL:{$errC}":"")."\n";
+                        @file_put_contents($logDir.'/GERAL_csv_wapi.txt', $logLine, FILE_APPEND);
                     }
                     $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET DATA_ULTIMO_ENVIO_CSV = CURDATE() WHERE ID = ?")->execute([$id_lote_csv]);
                     $disparados++;
