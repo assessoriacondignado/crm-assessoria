@@ -682,7 +682,9 @@ function v8AtualizarFatorConferi($cpfRow, $lote, $pdo) {
 // ===============================================
 function v8EnviarAprovacaoWapi($cpfRow, $valor_liberado, $prazo_padrao, $margem_sim, $lote, $pdo) {
     if (($lote['ENVIAR_WHATSAPP'] ?? 0) != 1) return;
-    if ((float)$margem_sim <= 1.00) return; // Só envia se margem > R$ 1,00
+    $margem_min_wapi = (float)($lote['MARGEM_MIN_WAPI'] ?? 1.00);
+    if ($margem_min_wapi < 1.00) $margem_min_wapi = 1.00;
+    if ((float)$margem_sim < $margem_min_wapi) return;
 
     $cpf_dono_lote = $lote['CPF_USUARIO'];
 

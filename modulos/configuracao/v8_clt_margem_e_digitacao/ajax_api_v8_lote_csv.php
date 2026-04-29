@@ -914,6 +914,7 @@ try {
             $hora_envio_csv_raw = trim($_POST['hora_envio_csv'] ?? '');
             $hora_envio_csv = preg_match('/^\d{2}:\d{2}$/', $hora_envio_csv_raw) ? $hora_envio_csv_raw : null;
             $aviso_status_wapi = (int)($_POST['aviso_status_wapi'] ?? 0);
+            $margem_min_wapi   = max(0, (float)str_replace(',', '.', $_POST['margem_min_wapi'] ?? '0'));
             $id_campanha_auto = (int)($_POST['id_campanha_auto'] ?? 0) ?: null;
             $valor_margem_min = (float)($_POST['valor_margem_min_campanha'] ?? 0);
 
@@ -928,13 +929,13 @@ try {
                 NOME_IMPORTACAO = ?, AGENDAMENTO_TIPO = 'DIARIO',
                 HORA_INICIO_DIARIO = ?, HORA_FIM_DIARIO = ?, DIAS_MES_DIARIO = ?,
                 LIMITE_DIARIO = ?, SOMENTE_SIMULAR = ?, ATUALIZAR_TELEFONE = ?, ENVIAR_WHATSAPP = ?,
-                ENVIAR_ARQUIVO_WHATSAPP = ?, HORA_ENVIO_CSV = ?, AVISO_STATUS_WAPI = ?,
+                ENVIAR_ARQUIVO_WHATSAPP = ?, HORA_ENVIO_CSV = ?, AVISO_STATUS_WAPI = ?, MARGEM_MIN_WAPI = ?,
                 ID_CAMPANHA_AUTO = ?, VALOR_MARGEM_MIN_CAMPANHA = ?
                 WHERE ID = ?")->execute([
                 $agrupamento,
                 $hora_inicio_diario, $hora_fim_diario, $dias_mes_diario,
                 $limite_diario, $somente_simular, $atualizar_telefone, $enviar_whats,
-                $enviar_arquivo_whatsapp, $hora_envio_csv, $aviso_status_wapi,
+                $enviar_arquivo_whatsapp, $hora_envio_csv, $aviso_status_wapi, $margem_min_wapi,
                 $id_campanha_auto, $valor_margem_min,
                 $id_lote
             ]);

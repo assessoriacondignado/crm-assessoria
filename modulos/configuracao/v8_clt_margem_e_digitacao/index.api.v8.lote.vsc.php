@@ -253,12 +253,17 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="form-check border p-2 rounded bg-white border-info shadow-sm mb-0 h-100">
-                            <input class="form-check-input ms-1" type="checkbox" id="edit_enviar_whats" value="1">
+                        <div class="form-check border p-2 rounded bg-white border-info shadow-sm mb-0">
+                            <input class="form-check-input ms-1" type="checkbox" id="edit_enviar_whats" value="1" onchange="v8ToggleMargemMinWapi(this.checked)">
                             <label class="form-check-label fw-bold text-dark ms-1" style="font-size: 12px; cursor:pointer;" for="edit_enviar_whats"
                                 title="O CRM Assessoria enviará uma msg com (nome, CPF, margem, simulação e telefones) para o grupo cadastrado no usuário, toda vez que for localizada margem" data-bs-toggle="tooltip" data-bs-placement="top">
                                 <i class="fab fa-whatsapp text-success"></i> Aprovação no W-API
                             </label>
+                        </div>
+                        <div id="wrap_margem_min_wapi" class="mt-1" style="display:none;">
+                            <label class="fw-bold text-success mb-1" style="font-size:11px;"><i class="fas fa-filter me-1"></i> Margem mínima p/ enviar (R$):</label>
+                            <input type="number" id="edit_margem_min_wapi" class="form-control form-control-sm border-success" step="0.01" min="0" placeholder="0 = qualquer margem" style="font-size:12px;">
+                            <div class="text-muted" style="font-size:10px;">0 = envia qualquer margem acima de R$ 1,00</div>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -993,6 +998,11 @@
         if (wrap) wrap.style.display = checked ? 'block' : 'none';
     }
 
+    function v8ToggleMargemMinWapi(checked) {
+        const wrap = document.getElementById('wrap_margem_min_wapi');
+        if (wrap) wrap.style.display = checked ? 'block' : 'none';
+    }
+
     async function v8EnviarLinkRelatorio(id) {
         if (!confirm('Deseja gerar o relatório (margem > R$1,00) e enviar o link via W-API para o grupo do cliente?')) return;
         const r = await v8Req('ajax_api_v8_lote_csv.php', 'enviar_relatorio_whatsapp', { id_lote: id });
@@ -1143,7 +1153,10 @@
 
         document.getElementById('edit_somente_simular').checked = (lote.SOMENTE_SIMULAR == 1 || lote.somente_simular == 1);
         document.getElementById('edit_atualizar_telefone').checked = (lote.ATUALIZAR_TELEFONE == 1 || lote.atualizar_telefone == 1);
-        document.getElementById('edit_enviar_whats').checked = (lote.ENVIAR_WHATSAPP == 1 || lote.enviar_whatsapp == 1);
+        const envWhats = (lote.ENVIAR_WHATSAPP == 1 || lote.enviar_whatsapp == 1);
+        document.getElementById('edit_enviar_whats').checked = envWhats;
+        document.getElementById('edit_margem_min_wapi').value = lote.MARGEM_MIN_WAPI || lote.margem_min_wapi || '';
+        v8ToggleMargemMinWapi(envWhats);
         let csvAtivo = (lote.ENVIAR_ARQUIVO_WHATSAPP == 1 || lote.enviar_arquivo_whatsapp == 1);
         document.getElementById('edit_enviar_arquivo_whatsapp').checked = csvAtivo;
         document.getElementById('edit_hora_envio_csv').value = (lote.HORA_ENVIO_CSV || lote.hora_envio_csv || '').substring(0,5);
@@ -1211,6 +1224,7 @@
             enviar_arquivo_whatsapp: document.getElementById('edit_enviar_arquivo_whatsapp').checked ? 1 : 0,
             hora_envio_csv: document.getElementById('edit_hora_envio_csv').value || '',
             aviso_status_wapi: document.getElementById('edit_aviso_status_wapi').checked ? 1 : 0,
+            margem_min_wapi: document.getElementById('edit_margem_min_wapi').value || 0,
             id_campanha_auto: document.getElementById('edit_id_campanha_auto').value || 0,
             valor_margem_min_campanha: document.getElementById('edit_valor_margem_min_campanha').value || 0
         };
