@@ -12,6 +12,26 @@ $cpf_logado = $_SESSION['usuario_cpf'] ?? '00000000000';
 $nome_logado = $_SESSION['usuario_nome'] ?? 'SISTEMA';
 
 // ==========================================
+// ⚡ AÇÃO: AUTO-CADASTRO SILENCIOSO (AJAX)
+// ==========================================
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acao_rapida']) && $_POST['acao_rapida'] === 'auto_cadastrar') {
+    header('Content-Type: application/json; charset=utf-8');
+    $cpf_ac  = preg_replace('/\D/', '', $_POST['cpf'] ?? '');
+    $nome_ac = strtoupper(trim($_POST['nome'] ?? ''));
+    if (strlen($cpf_ac) === 11) {
+        try {
+            $pdo->prepare("INSERT IGNORE INTO dados_cadastrais (cpf, nome) VALUES (?, ?)")->execute([$cpf_ac, $nome_ac ?: null]);
+            echo json_encode(['success' => true, 'redirect' => "?busca={$cpf_ac}&cpf_selecionado={$cpf_ac}&acao=visualizar"]);
+        } catch (Exception $e) {
+            echo json_encode(['success' => false, 'msg' => $e->getMessage()]);
+        }
+    } else {
+        echo json_encode(['success' => false, 'msg' => 'CPF inválido.']);
+    }
+    exit;
+}
+
+// ==========================================
 // 🚀 AÇÃO: CADASTRAR NOVO CLIENTE (MANUAL)
 // ==========================================
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acao_rapida']) && $_POST['acao_rapida'] === 'cadastrar_novo') {
@@ -1025,7 +1045,7 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
                 <!-- Estado: verificando HIST INSS (exibido enquanto JS processa) -->
                 <div id="bloco-verificando-inss" class="alert alert-secondary text-center p-3 shadow-sm border-dark rounded-0">
                     <span class="spinner-border spinner-border-sm text-dark me-2" role="status"></span>
-                    <span class="fw-bold text-dark">Verificando no histórico INSS offline... aguarde.</span>
+                    <span class="fw-bold text-dark">Buscando dados e cadastrando automaticamente... aguarde.</span>
                 </div>
 
                 <!-- Estado: encontrou no INSS (oculto até JS confirmar) -->
@@ -1093,11 +1113,23 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
                 <?php if ($cpf_e_valido_para_inss): ?>
                 <script>
                 (function() {
-                    const cpfAlvo  = '<?= $cpf_limpo_sugerido ?>';
+                    const cpfAlvo   = '<?= $cpf_limpo_sugerido ?>';
                     const cpfCobrar = '<?= $cpf_logado_sessao ?>';
 
+                    function _autoCadastrar(nome) {
+                        const fd = new FormData();
+                        fd.append('acao_rapida', 'auto_cadastrar');
+                        fd.append('cpf', cpfAlvo);
+                        fd.append('nome', nome || '');
+                        fetch('', { method: 'POST', body: fd })
+                            .then(r => r.json())
+                            .then(r => { if (r.success && r.redirect) window.location.href = r.redirect; })
+                            .catch(() => window.location.href = '?busca=' + cpfAlvo + '&cpf_selecionado=' + cpfAlvo + '&acao=visualizar');
+                    }
+
                     if (!cpfAlvo || !cpfCobrar) {
-                        _exibirNaoEncontrado(); return;
+                        // Sem conta HIST INSS — cadastra só com CPF
+                        _autoCadastrar(''); return;
                     }
 
                     const fd = new FormData();
@@ -1109,26 +1141,11 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
                     fetch('/modulos/configuracao/Promosys_inss/promosys_inss.ajax.php', { method: 'POST', body: fd })
                         .then(r => r.json())
                         .then(r => {
-                            document.getElementById('bloco-verificando-inss').style.display = 'none';
-                            if (r.success && r.dados && r.dados.nome && r.dados.nome !== 'Nome Nao Informado') {
-                                // Preenche o campo nome com o dado do INSS
-                                const campoNome = document.getElementById('campo-nome-novo');
-                                if (campoNome) campoNome.value = r.dados.nome.toUpperCase();
-                                const aviso = document.getElementById('aviso-dados-inss');
-                                if (aviso) aviso.style.display = 'block';
-                                document.getElementById('bloco-inss-encontrado').style.display = 'block';
-                            } else {
-                                _exibirNaoEncontrado();
-                            }
+                            const nome = (r.success && r.dados && r.dados.nome && r.dados.nome !== 'Nome Nao Informado')
+                                ? r.dados.nome.toUpperCase() : '';
+                            _autoCadastrar(nome);
                         })
-                        .catch(() => _exibirNaoEncontrado());
-
-                    function _exibirNaoEncontrado() {
-                        const v = document.getElementById('bloco-verificando-inss');
-                        if (v) v.style.display = 'none';
-                        const n = document.getElementById('bloco-nao-encontrado');
-                        if (n) n.style.display = 'block';
-                    }
+                        .catch(() => _autoCadastrar(''));
                 })();
                 </script>
                 <?php endif; ?>
