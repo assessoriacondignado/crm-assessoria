@@ -90,14 +90,14 @@
             <label class="fw-bold small text-primary"><i class="fas fa-box"></i> Produto Base:</label>
             <select id="nProd" class="form-select border-dark fw-bold prod-lista" onchange="buscarVariacoesAjax(this.value, 'n')" required><option value="">Carregando produtos...</option></select>
          </div>
-         <div class="col-md-1">
+         <div class="col-md-2">
             <label class="fw-bold small text-dark">Tipo:</label>
             <select id="nTipoPedido" class="form-select border-dark fw-bold">
-                <option value="COMPRA">🛒</option>
-                <option value="RENOVAÇÃO">🔄</option>
+                <option value="COMPRA">🛒 Venda</option>
+                <option value="RENOVAÇÃO">🔄 Renovação</option>
             </select>
          </div>
-         <div class="col-md-4">
+         <div class="col-md-3">
             <label class="fw-bold small text-info"><i class="fas fa-tags"></i> Plano / Variação:</label>
             <select id="nVariacao" class="form-select border-info fw-bold" onchange="setarValorUnitario('n')" required>
                 <option value="">Escolha o Produto antes...</option>
