@@ -40,6 +40,7 @@ $caminho_permissoes = $_SERVER['DOCUMENT_ROOT'] . '/modulos/cliente_e_usuario/ch
 if (file_exists($caminho_permissoes)) { include_once $caminho_permissoes; }
 
 $perm_historico_geral = verificaPermissao($pdo, 'MENU_BANCO_DADOS_HISTORICO_CONSULTA', 'FUNCAO');
+$perm_hierarquia_bd   = verificaPermissao($pdo, 'MENU_BANCO_DADOS_HIERARQUIA', 'FUNCAO');
 $perm_lotes = verificaPermissao($pdo, 'MENU_BANCO_DADOS_LOTES_DE_IMPORTAÇÃO', 'TELA');
 $perm_agrup = verificaPermissao($pdo, 'MENU_BANCO_DADOS_AGRUPAMENTOS', 'TELA');
 $perm_incluir_agrup = verificaPermissao($pdo, 'MENU_BANCO_DADOS_PESQUISA_INCLUIR_AGRUPAMENTO', 'FUNCAO');
@@ -690,13 +691,13 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
             $paramsLogs = [$cpf_selecionado];
             
             try {
-                if (!$perm_hist_integ) {
+                if (!$perm_hist_integ || !$perm_hierarquia_bd) {
                     $sqlLogs .= " AND id_empresa = ?";
                     $paramsLogs[] = $id_empresa_logado_num;
                 }
-                if (!$perm_historico_rodape) { 
-                    $sqlLogs .= " AND NOME_USUARIO = ?"; 
-                    $paramsLogs[] = $nome_logado; 
+                if (!$perm_historico_rodape) {
+                    $sqlLogs .= " AND NOME_USUARIO = ?";
+                    $paramsLogs[] = $nome_logado;
                 }
                 $sqlLogs .= " ORDER BY ID DESC LIMIT 50";
                 $stmtLogs = $pdo->prepare($sqlLogs);
@@ -720,7 +721,7 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
                     WHERE r.CPF_CLIENTE = ?
                 ";
                 $paramsHistGeral = [$cpf_selecionado];
-                if (!$perm_hist_geral_hierarquia) {
+                if (!$perm_hist_geral_hierarquia || !$perm_hierarquia_bd) {
                     $sqlHistGeral .= " AND r.id_empresa = ?";
                     $paramsHistGeral[] = $id_empresa_logado_num;
                 }
