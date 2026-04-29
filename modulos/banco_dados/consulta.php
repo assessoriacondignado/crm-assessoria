@@ -18,37 +18,36 @@ $nome_logado = $_SESSION['usuario_nome'] ?? 'SISTEMA';
 // AÇÃO: CAMPANHAS DO CLIENTE (AJAX)
 // ==========================================
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acao_rapida']) && $_POST['acao_rapida'] === 'campanhas_do_cliente') {
+    ob_clean();
     header('Content-Type: application/json; charset=utf-8');
-    session_start();
-    include $_SERVER['DOCUMENT_ROOT'] . '/conexao.php';
-    $cpf_cc = preg_replace('/\D/', '', $_POST['cpf'] ?? '');
-    if (strlen($cpf_cc) !== 11) { echo json_encode(['success' => false, 'campanhas' => []]); exit; }
+    try {
+        $cpf_cc       = preg_replace('/\D/', '', $_POST['cpf'] ?? '');
+        $grupo_cc     = strtoupper($_SESSION['usuario_grupo'] ?? '');
+        $is_master_cc = in_array($grupo_cc, ['MASTER', 'ADMIN', 'ADMINISTRADOR']);
 
-    $caminho_permissoes = $_SERVER['DOCUMENT_ROOT'] . '/modulos/cliente_e_usuario/checar_permissoes.php';
-    if (file_exists($caminho_permissoes)) include_once $caminho_permissoes;
+        $id_emp_cc = null;
+        if (!$is_master_cc) {
+            $se = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+            $se->execute([$_SESSION['usuario_cpf'] ?? '']);
+            $id_emp_cc = $se->fetchColumn() ?: null;
+        }
 
-    $grupo_cc   = strtoupper($_SESSION['usuario_grupo'] ?? '');
-    $is_master_cc = in_array($grupo_cc, ['MASTER', 'ADMIN', 'ADMINISTRADOR']);
-    $id_emp_cc  = null;
-    if (!$is_master_cc) {
-        $se = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
-        $se->execute([$_SESSION['usuario_cpf'] ?? '']);
-        $id_emp_cc = $se->fetchColumn() ?: null;
+        $sql_cc = "SELECT ca.ID, ca.NOME_CAMPANHA, ca.STATUS, DATE_FORMAT(bdc.DATA_INCLUSAO,'%d/%m/%Y') AS DATA_INCLUSAO
+                   FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA bdc
+                   JOIN BANCO_DE_DADOS_CAMPANHA_CAMPANHAS ca ON ca.ID = bdc.ID_CAMPANHA
+                   WHERE bdc.CPF_CLIENTE = ?";
+        $params_cc = [$cpf_cc];
+        if (!$is_master_cc && $id_emp_cc) {
+            $sql_cc .= " AND ca.id_empresa = ?";
+            $params_cc[] = $id_emp_cc;
+        }
+        $sql_cc .= " ORDER BY bdc.DATA_INCLUSAO DESC";
+        $st_cc = $pdo->prepare($sql_cc);
+        $st_cc->execute($params_cc);
+        echo json_encode(['success' => true, 'campanhas' => $st_cc->fetchAll(PDO::FETCH_ASSOC)]);
+    } catch (Exception $e) {
+        echo json_encode(['success' => false, 'msg' => $e->getMessage(), 'campanhas' => []]);
     }
-
-    $sql_cc = "SELECT ca.ID, ca.NOME_CAMPANHA, ca.STATUS, DATE_FORMAT(bdc.DATA_INCLUSAO,'%d/%m/%Y') AS DATA_INCLUSAO
-               FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA bdc
-               JOIN BANCO_DE_DADOS_CAMPANHA_CAMPANHAS ca ON ca.ID = bdc.ID_CAMPANHA
-               WHERE bdc.CPF_CLIENTE = ?";
-    $params_cc = [$cpf_cc];
-    if (!$is_master_cc && $id_emp_cc) {
-        $sql_cc .= " AND ca.id_empresa = ?";
-        $params_cc[] = $id_emp_cc;
-    }
-    $sql_cc .= " ORDER BY bdc.DATA_INCLUSAO DESC";
-    $st_cc = $pdo->prepare($sql_cc);
-    $st_cc->execute($params_cc);
-    echo json_encode(['success' => true, 'campanhas' => $st_cc->fetchAll(PDO::FETCH_ASSOC)]);
     exit;
 }
 
