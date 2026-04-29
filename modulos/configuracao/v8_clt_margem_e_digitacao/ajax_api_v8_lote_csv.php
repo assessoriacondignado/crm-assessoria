@@ -1841,6 +1841,22 @@ try {
             $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
             $disparados = 0;
 
+            // WATCHDOG: Acorda workers para lotes CRIANDO PROCESSAMENTO sem worker rodando
+            $stmtWD = $pdo->query("
+                SELECT DISTINCT CPF_USUARIO
+                FROM INTEGRACAO_V8_IMPORTACAO_LOTE
+                WHERE STATUS_FILA = 'CRIANDO PROCESSAMENTO'
+                  AND (STATUS_LOTE = 'ATIVO' OR STATUS_LOTE IS NULL)
+                  AND CPF_USUARIO NOT IN (
+                      SELECT CPF_USUARIO FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE STATUS_FILA = 'PROCESSANDO'
+                  )
+            ");
+            while ($cpfWD = $stmtWD->fetchColumn()) {
+                $url_worker = $protocol . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']) . '/worker_v8_lote.php?user_cpf=' . $cpfWD;
+                $ch = curl_init(); curl_setopt($ch, CURLOPT_URL, $url_worker); curl_setopt($ch, CURLOPT_TIMEOUT, 1); curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); curl_exec($ch); curl_close($ch);
+                $disparados++;
+            }
+
             // 2. Disparar lotes AGUARDANDO_DIARIO cujo horário já passou hoje e ainda não rodaram
             $stmtD = $pdo->query("SELECT * FROM INTEGRACAO_V8_IMPORTACAO_LOTE
                 WHERE AGENDAMENTO_TIPO = 'DIARIO'
