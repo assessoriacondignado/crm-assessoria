@@ -434,7 +434,13 @@
       "Bash(mysql -u root crm_dados -e \"SELECT COUNT\\(*\\) FROM BANCO_DE_DADOS_HISTORICO_IMPORTACAO;\")",
       "Bash(php -l /var/www/html/modulos/banco_dados/worker_importacao.php)",
       "Bash(php -l /var/www/html/modulos/banco_dados/importacao.php)",
-      "Bash(php -l /var/www/html/modulos/banco_dados/resultado_importacao.php)"
+      "Bash(php -l /var/www/html/modulos/banco_dados/resultado_importacao.php)",
+      "Bash(mysql -u root crm_dados -e \"DESCRIBE INTEGRACAO_V8_IMPORTACAO_LOTE;\")",
+      "Bash(sed -i 's/STATUS_FILA NOT IN \\('\\\\''PENDENTE'\\\\'', '\\\\''PROCESSANDO'\\\\''\\)/STATUS_FILA NOT IN \\('\\\\''CRIANDO PROCESSAMENTO'\\\\'', '\\\\''NA FILA'\\\\'', '\\\\''PROCESSANDO'\\\\''\\)/g' /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/ajax_api_v8_lote_csv.php)",
+      "Bash(sed -i 's/l.STATUS_FILA IN \\('\\\\''PENDENTE'\\\\'','\\\\''PROCESSANDO'\\\\'','\\\\''AGUARDANDO_DIARIO'\\\\''\\)/l.STATUS_FILA IN \\('\\\\''CRIANDO PROCESSAMENTO'\\\\'','\\\\''NA FILA'\\\\'','\\\\''PROCESSANDO'\\\\'','\\\\''AGUARDANDO_DIARIO'\\\\''\\)/g' /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/ajax_api_v8_lote_csv.php)",
+      "Bash(sed -i 's/STATUS_FILA IN \\('\\\\''PENDENTE'\\\\'', '\\\\''PROCESSANDO'\\\\''\\)/STATUS_FILA IN \\('\\\\''CRIANDO PROCESSAMENTO'\\\\'', '\\\\''NA FILA'\\\\'', '\\\\''PROCESSANDO'\\\\''\\)/g' /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/ajax_api_v8_lote_csv.php)",
+      "Bash(mysql -u root crm_dados -e \"UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'CRIANDO PROCESSAMENTO' WHERE STATUS_FILA = 'PENDENTE';\")",
+      "Bash(mysql -u root crm_dados -e \"SELECT STATUS_FILA, COUNT\\(*\\) FROM INTEGRACAO_V8_IMPORTACAO_LOTE GROUP BY STATUS_FILA;\")"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",
