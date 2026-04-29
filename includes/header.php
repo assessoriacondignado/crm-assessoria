@@ -1073,7 +1073,7 @@ async function avisoObrigConfirmar() {
     const a = _avisosObrig[_avisoObrigIdx];
     const fd = new FormData();
     fd.append('acao', 'marcar_lido');
-    fd.append('aviso_id', a.ID);
+    fd.append('id', a.ID);
     await fetch('/modulos/configuracao/anotacoes/ajax_anotacao.php', {method:'POST', body:fd});
 
     _avisoObrigIdx++;

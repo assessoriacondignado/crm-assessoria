@@ -42,6 +42,7 @@ if (file_exists($caminho_permissoes)) { include_once $caminho_permissoes; }
 $perm_historico_geral = verificaPermissao($pdo, 'MENU_BANCO_DADOS_HISTORICO_CONSULTA', 'FUNCAO');
 $perm_lotes = verificaPermissao($pdo, 'MENU_BANCO_DADOS_LOTES_DE_IMPORTAÇÃO', 'TELA');
 $perm_agrup = verificaPermissao($pdo, 'MENU_BANCO_DADOS_AGRUPAMENTOS', 'TELA');
+$perm_incluir_agrup = verificaPermissao($pdo, 'MENU_BANCO_DADOS_PESQUISA_INCLUIR_AGRUPAMENTO', 'FUNCAO');
 $perm_btn_v8 = verificaPermissao($pdo, 'MENU_BANCO_DADOS_FICHA_BOTÃO_V8_CONSIGNADO', 'FUNCAO');
 $perm_btn_fator = verificaPermissao($pdo, 'MENU_BANCO_DADOS_FICHA_BOTAO_FATOR_CONFERI', 'FUNCAO');
 $perm_btn_hist_inss = verificaPermissao($pdo, 'MENU_BANCO_DADOS_FICHA_BOTAO_HIST_INSS', 'FUNCAO');
@@ -516,6 +517,7 @@ if ($is_busca_avancada && empty($cpf_selecionado)) {
 
 // ── Ação em lote: Agrupamento ─────────────────────────────────────────────
 if (isset($_GET['acao_lote_agrupamento']) && $_GET['acao_lote_agrupamento'] == '1' && !empty($query_base_export)) {
+    if (!$perm_incluir_agrup) { header('Location: consulta.php?msg=sem_permissao'); exit; }
     ini_set('max_execution_time', 0);
     $nome_agrup = trim($_GET['nome_agrupamento'] ?? '');
     $tipo_agrup = $_GET['tipo_acao_agrup'] ?? 'aplicar'; // aplicar | remover
@@ -931,7 +933,7 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
                         
                         <div style="position: relative;" class="d-flex gap-2">
                             
-                            <?php if ($perm_agrup): ?>
+                            <?php if ($perm_agrup && $perm_incluir_agrup): ?>
                                 <button class="btn btn-sm btn-info fw-bold shadow-sm border-dark rounded-0 text-white" type="button" data-bs-toggle="modal" data-bs-target="#modalAgrupamento"><i class="fas fa-layer-group me-1"></i> Agrupamento</button>
                             <?php endif; ?>
 
@@ -1765,7 +1767,7 @@ if (!empty($cpf_selecionado) && in_array($acao, ['visualizar', 'editar'])) {
 </div>
 
 <!-- ======= MODAL AGRUPAMENTO ======= -->
-<?php if ($perm_agrup): ?>
+<?php if ($perm_agrup && $perm_incluir_agrup): ?>
 <div class="modal fade" id="modalAgrupamento" tabindex="-1">
     <div class="modal-dialog modal-lg">
         <form method="GET" action="" class="modal-content border-dark shadow-lg rounded-0">
