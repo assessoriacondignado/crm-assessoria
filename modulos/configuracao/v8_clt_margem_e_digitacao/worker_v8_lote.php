@@ -238,16 +238,12 @@ while(true) {
     $pdo->prepare("UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'PROCESSANDO' WHERE ID = ?")->execute([$id_lote]);
 
     // =========================================================================
-    // IMPLEMENTAÇÃO DO LIMITE DIÁRIO BASEADO NO EXTRATO (SUCESSOS COBRADOS)
+    // LIMITE DIÁRIO — usa PROCESSADOS_HOJE (mesmo valor exibido no badge)
     // =========================================================================
-    // Lê o limite diário configurado no próprio lote (0 = sem limite)
     $limite_diario_sucessos = (int)($lote['LIMITE_DIARIO'] ?? 0);
-
-    $stmtSucessos = $pdo->prepare("SELECT COUNT(ID) FROM INTEGRACAO_V8_EXTRATO_CLIENTE WHERE CHAVE_ID = ? AND DATE(DATA_LANCAMENTO) = CURDATE() AND TIPO_MOVIMENTO = 'DEBITO'");
-    $stmtSucessos->execute([$chave_id]);
-    $qtd_sucessos_hoje = (int) $stmtSucessos->fetchColumn();
-    // Se limite = 0, nunca atinge (sem limite). Caso contrário, compara com o configurado.
-    $atingiu_limite_diario = ($limite_diario_sucessos > 0 && $qtd_sucessos_hoje >= $limite_diario_sucessos);
+    $qtd_sucessos_hoje      = (int)($lote['PROCESSADOS_HOJE'] ?? 0);
+    // Se limite = 0, sem limite. Caso contrário compara PROCESSADOS_HOJE com o limite.
+    $atingiu_limite_diario  = ($limite_diario_sucessos > 0 && $qtd_sucessos_hoje >= $limite_diario_sucessos);
     // =========================================================================
 
     $stmtKeySet = $pdo->prepare("SELECT TABELA_PADRAO, PRAZO_PADRAO, AVERBADORA, INTERVALO_CONSENTIMENTO FROM INTEGRACAO_V8_CHAVE_ACESSO WHERE ID = ?");
