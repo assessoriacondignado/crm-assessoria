@@ -24,7 +24,7 @@ try {
 
     if ($is_telefone && strlen($termo_limpo) >= 8) {
         // Busca direto por telefone — sem tentar CPF
-        $stmt = $pdo->prepare("SELECT d.cpf, d.nome, t.telefone_cel as tel FROM dados_cadastrais d INNER JOIN telefones t ON d.cpf = t.cpf WHERE t.telefone_cel LIKE ? GROUP BY d.cpf LIMIT 8");
+        $stmt = $pdo->prepare("SELECT d.cpf, d.nome, (SELECT telefone_cel FROM telefones WHERE cpf = d.cpf LIMIT 1) as tel FROM dados_cadastrais d WHERE d.cpf IN (SELECT cpf FROM telefones WHERE telefone_cel LIKE ?) LIMIT 8");
         $stmt->execute([$termo_limpo . '%']);
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -37,7 +37,7 @@ try {
 
         // Se não achou CPF, tenta telefone
         if (empty($results)) {
-            $stmt = $pdo->prepare("SELECT d.cpf, d.nome, t.telefone_cel as tel FROM dados_cadastrais d INNER JOIN telefones t ON d.cpf = t.cpf WHERE t.telefone_cel LIKE ? GROUP BY d.cpf LIMIT 8");
+            $stmt = $pdo->prepare("SELECT d.cpf, d.nome, (SELECT telefone_cel FROM telefones WHERE cpf = d.cpf LIMIT 1) as tel FROM dados_cadastrais d WHERE d.cpf IN (SELECT cpf FROM telefones WHERE telefone_cel LIKE ?) LIMIT 8");
             $stmt->execute([$termo_limpo . '%']);
             $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
