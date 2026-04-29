@@ -1173,8 +1173,9 @@ try {
             $camp_grupo  = strtoupper($_SESSION['usuario_grupo'] ?? '');
             $camp_master = in_array($camp_grupo, ['MASTER', 'ADMIN', 'ADMINISTRADOR']);
             $camp_consul = in_array($camp_grupo, ['CONSULTOR', 'CONSULTORES']);
+            $camp_sel = "SELECT c.ID, c.NOME_CAMPANHA, COALESCE(e.NOME_CADASTRO, '') as NOME_EMPRESA FROM BANCO_DE_DADOS_CAMPANHA_CAMPANHAS c LEFT JOIN CLIENTE_EMPRESAS e ON e.ID = c.id_empresa";
             if ($camp_master) {
-                $stmt = $pdo->prepare("SELECT ID, NOME_CAMPANHA FROM BANCO_DE_DADOS_CAMPANHA_CAMPANHAS WHERE STATUS = 'ATIVO' ORDER BY NOME_CAMPANHA ASC");
+                $stmt = $pdo->prepare("$camp_sel WHERE c.STATUS = 'ATIVO' ORDER BY NOME_EMPRESA ASC, c.NOME_CAMPANHA ASC");
                 $stmt->execute([]);
             } else {
                 $camp_cpf = preg_replace('/\D/', '', $_SESSION['usuario_cpf'] ?? '');
@@ -1184,12 +1185,12 @@ try {
                 if ($camp_empresa > 0) {
                     if ($camp_consul) {
                         // CONSULTOR: apenas campanhas vinculadas ao seu usuário
-                        $stmt = $pdo->prepare("SELECT ID, NOME_CAMPANHA FROM BANCO_DE_DADOS_CAMPANHA_CAMPANHAS WHERE STATUS = 'ATIVO' AND (id_empresa = ? OR id_empresa IS NULL) AND (id_usuario = ? OR FIND_IN_SET(?, CPF_USUARIO)) ORDER BY NOME_CAMPANHA ASC");
+                        $stmt = $pdo->prepare("$camp_sel WHERE c.STATUS = 'ATIVO' AND (c.id_empresa = ? OR c.id_empresa IS NULL) AND (c.id_usuario = ? OR FIND_IN_SET(?, c.CPF_USUARIO)) ORDER BY NOME_EMPRESA ASC, c.NOME_CAMPANHA ASC");
                         $id_u_camp = $pdo->prepare("SELECT ID FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1"); $id_u_camp->execute([$camp_cpf]); $id_u_camp_num = (int)($id_u_camp->fetchColumn() ?: 0);
                         $stmt->execute([$camp_empresa, $id_u_camp_num, $camp_cpf]);
                     } else {
                         // SUPERVISOR: todas as campanhas da empresa (id_empresa OU criadas por usuários da empresa)
-                        $stmt = $pdo->prepare("SELECT ID, NOME_CAMPANHA FROM BANCO_DE_DADOS_CAMPANHA_CAMPANHAS WHERE STATUS = 'ATIVO' AND (id_empresa = ? OR id_empresa IS NULL OR id_usuario IN (SELECT ID FROM CLIENTE_USUARIO WHERE id_empresa = ?)) ORDER BY NOME_CAMPANHA ASC");
+                        $stmt = $pdo->prepare("$camp_sel WHERE c.STATUS = 'ATIVO' AND (c.id_empresa = ? OR c.id_empresa IS NULL OR c.id_usuario IN (SELECT ID FROM CLIENTE_USUARIO WHERE id_empresa = ?)) ORDER BY NOME_EMPRESA ASC, c.NOME_CAMPANHA ASC");
                         $stmt->execute([$camp_empresa, $camp_empresa]);
                     }
                 } else {

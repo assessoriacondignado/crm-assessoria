@@ -656,7 +656,10 @@ async function abrirDropdownCampanha() {
         _campanhasCache = (r && r.success) ? r.campanhas : [];
     }
     sel.innerHTML = '<option value="">— Selecione a campanha —</option>';
-    _campanhasCache.forEach(c => sel.innerHTML += `<option value="${c.ID}">${escHtml(c.NOME_CAMPANHA)}</option>`);
+    _campanhasCache.forEach(c => {
+        const empresa = c.NOME_EMPRESA ? ` [${escHtml(c.NOME_EMPRESA)}]` : '';
+        sel.innerHTML += `<option value="${c.ID}">${escHtml(c.NOME_CAMPANHA)}${empresa}</option>`;
+    });
 
     document.getElementById('barra_campanha').style.display = 'block';
     sel.focus();
