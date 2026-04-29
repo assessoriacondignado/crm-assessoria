@@ -402,7 +402,9 @@
       "Bash(echo \"EXIT: $?\")",
       "Bash(grep -rn 'session_start\\\\|$_SESSION\\\\[.usuario' /var/www/html/login.php)",
       "Bash(php -l /var/www/html/modulos/configuracao/Promosys_inss/index.php)",
-      "Bash(mysql -u admin_crm \"-pAbl@810401\" crm_dados -e \"DESCRIBE CLIENTE_CADASTRO;\")"
+      "Bash(mysql -u admin_crm \"-pAbl@810401\" crm_dados -e \"DESCRIBE CLIENTE_CADASTRO;\")",
+      "Bash(php -l /var/www/html/modulos/configuracao/fator_conferi/index.php)",
+      "Bash(php -l /var/www/html/modulos/configuracao/fator_conferi/fator_conferi.ajax.php)"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",

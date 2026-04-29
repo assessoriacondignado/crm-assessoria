@@ -265,12 +265,20 @@ try {
             if($fp) { fclose($fp); } break;
 
         case 'listar_clientes':
+            $busca_fc = trim($_POST['busca'] ?? '');
             if ($tem_restricao && !empty($cpf_logado)) {
-                $stmt = $pdo->prepare("SELECT CPF, NOME, CELULAR, CUSTO_CONSULTA, SALDO, GRUPO_WHATS FROM CLIENTE_CADASTRO WHERE CPF = ? ORDER BY NOME ASC");
+                $stmt = $pdo->prepare("SELECT cc.CPF, cc.NOME, cc.NOME_EMPRESA, cc.CUSTO_CONSULTA, cc.SALDO, cc.GRUPO_WHATS, COALESCE(cu.NOME, cc.NOME) as NOME_USUARIO FROM CLIENTE_CADASTRO cc LEFT JOIN CLIENTE_USUARIO cu ON cu.CPF = cc.CPF WHERE cc.CPF = ? ORDER BY cc.NOME ASC LIMIT 30");
                 $stmt->execute([$cpf_logado]);
                 $clientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
             } else {
-                $stmtTodos = $pdo->query("SELECT CPF, NOME, CELULAR, CUSTO_CONSULTA, SALDO, GRUPO_WHATS FROM CLIENTE_CADASTRO ORDER BY NOME ASC");
+                $where_fc = '1=1'; $params_fc = [];
+                if (!empty($busca_fc)) {
+                    $like_fc = '%' . $busca_fc . '%';
+                    $where_fc = "(cc.NOME LIKE ? OR cc.CPF LIKE ? OR cc.NOME_EMPRESA LIKE ? OR cu.NOME LIKE ?)";
+                    $params_fc = [$like_fc, $like_fc, $like_fc, $like_fc];
+                }
+                $stmtTodos = $pdo->prepare("SELECT cc.CPF, cc.NOME, cc.NOME_EMPRESA, cc.CUSTO_CONSULTA, cc.SALDO, cc.GRUPO_WHATS, COALESCE(cu.NOME, cc.NOME) as NOME_USUARIO FROM CLIENTE_CADASTRO cc LEFT JOIN CLIENTE_USUARIO cu ON cu.CPF = cc.CPF WHERE {$where_fc} ORDER BY cc.NOME ASC LIMIT 30");
+                $stmtTodos->execute($params_fc);
                 $clientes = $stmtTodos->fetchAll(PDO::FETCH_ASSOC);
             }
             ob_end_clean(); echo json_encode(['success' => true, 'data' => $clientes]); break;

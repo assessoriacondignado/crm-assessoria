@@ -142,18 +142,20 @@ if (!empty($grupo_usuario_tela) && !in_array($grupo_usuario_tela, ['MASTER', 'AD
         </div>
 
         <div class="tab-pane fade" id="clientes" role="tabpanel">
-            <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
                 <h4 class="text-dark fw-bold mb-0">Gestão de Clientes Financeiro</h4>
-                <div class="input-group shadow-sm" style="width: 350px;">
+                <div class="input-group shadow-sm" style="width:380px;">
                     <span class="input-group-text bg-dark text-white border-dark"><i class="fas fa-search"></i></span>
-                    <input type="text" id="pesquisa_cliente" class="form-control border-dark" placeholder="Pesquisar por nome do cliente..." onkeyup="fcFiltrarTabelaClientes()">
+                    <input type="text" id="pesquisa_cliente" class="form-control border-dark" placeholder="Pesquisar por nome, CPF ou empresa..." onkeyup="fcBuscarClientes(this.value)">
                 </div>
             </div>
             <div class="table-responsive shadow-sm border rounded" style="max-height: 500px; overflow-y: auto;">
-                <table class="table table-striped table-hover align-middle mb-0 text-center" id="tabela_clientes_completa">
+                <table class="table table-striped table-hover align-middle mb-0" style="font-size:.85rem;" id="tabela_clientes_completa">
                     <thead class="table-dark sticky-top">
                         <tr>
-                            <th class="text-start">Nome</th>
+                            <th>Nome</th>
+                            <th>Empresa</th>
+                            <th>Usuário</th>
                             <th>CPF</th>
                             <th>Custo (R$)</th>
                             <th>Saldo Atual (R$)</th>
@@ -161,10 +163,10 @@ if (!empty($grupo_usuario_tela) && !in_array($grupo_usuario_tela, ['MASTER', 'AD
                             <th>Ações</th>
                         </tr>
                     </thead>
-                    <tbody id="tabela_clientes" class="bg-white text-start">
-                    </tbody>
+                    <tbody id="tabela_clientes" class="bg-white"></tbody>
                 </table>
             </div>
+            <div id="fc_clientes_rodape" class="text-muted small mt-2"></div>
         </div>
         
         <?php if ($perm_token): ?>
@@ -235,8 +237,14 @@ $(document).ready(function() {
     const ajax_url = 'fator_conferi.ajax.php';
     let fcIntervaloLote = null;
 
-    function carregarClientes() {
-        $.post(ajax_url, { acao: 'listar_clientes' }, function(res) {
+    let _fcBuscaTimer = null;
+    window.fcBuscarClientes = function(val) {
+        clearTimeout(_fcBuscaTimer);
+        _fcBuscaTimer = setTimeout(() => carregarClientes(val), 350);
+    };
+
+    function carregarClientes(busca = '') {
+        $.post(ajax_url, { acao: 'listar_clientes', busca: busca }, function(res) {
             if(res.success) {
                 let html = '';
                 let options = '';
@@ -249,11 +257,22 @@ $(document).ready(function() {
                         btnAcoes += `<button class="btn btn-sm btn-primary fw-bold shadow-sm btn-saldo-cli me-1" data-cpf="${c.CPF}"><i class="fas fa-coins"></i> Saldo</button>`;
                     }
                     btnAcoes += `<button class="btn btn-sm btn-warning text-dark fw-bold shadow-sm btn-extrato-cli" data-cpf="${c.CPF}"><i class="fas fa-file-alt"></i> Extrato</button>`;
-                    html += `<tr><td>${c.NOME}</td><td class="text-center">${c.CPF}</td><td class="text-center">R$ ${parseFloat(c.CUSTO_CONSULTA).toFixed(2)}</td><td class="text-center"><b class="${parseFloat(c.SALDO)<0?'text-danger':'text-success'}">R$ ${parseFloat(c.SALDO).toFixed(2)}</b></td><td class="text-center">${c.GRUPO_WHATS || '-'}</td><td class="text-center">${btnAcoes}</td></tr>`;
+                    html += `<tr>
+                        <td class="fw-bold">${c.NOME}</td>
+                        <td class="text-muted small">${c.NOME_EMPRESA || '-'}</td>
+                        <td class="text-muted small">${c.NOME_USUARIO || '-'}</td>
+                        <td><code class="text-dark">${c.CPF}</code></td>
+                        <td>R$ ${parseFloat(c.CUSTO_CONSULTA).toFixed(2)}</td>
+                        <td><b class="${parseFloat(c.SALDO)<0?'text-danger':'text-success'}">R$ ${parseFloat(c.SALDO).toFixed(2)}</b></td>
+                        <td class="small">${c.GRUPO_WHATS || '-'}</td>
+                        <td class="text-nowrap">${btnAcoes}</td>
+                    </tr>`;
                     options += `<option value="${c.CPF}">${c.NOME} (Saldo: R$ ${parseFloat(c.SALDO).toFixed(2)})</option>`;
                     optionsLote += `<option value="${c.CPF}">${c.NOME} (Custo: R$ ${parseFloat(c.CUSTO_CONSULTA).toFixed(2)} | Saldo: R$ ${parseFloat(c.SALDO).toFixed(2)})</option>`;
                 });
-                $('#tabela_clientes').html(html);
+                $('#tabela_clientes').html(html || '<tr><td colspan="8" class="py-4 text-center text-muted">Nenhum cliente encontrado.</td></tr>');
+                const total = res.data.length;
+                $('#fc_clientes_rodape').text(total === 30 ? 'Exibindo os primeiros 30 registros. Use a busca para filtrar.' : `${total} cliente(s) encontrado(s).`);
                 $('#cliente_cobrar').html(options);
                 $('#lote_cliente_cobrar').html(optionsLote);
                 // Auto-seleciona o usuário logado
@@ -406,7 +425,6 @@ $(document).ready(function() {
         }, 'json');
     }
 
-    window.fcFiltrarTabelaClientes = function() { var input = document.getElementById("pesquisa_cliente"); var filter = input.value.toUpperCase(); var tbody = document.getElementById("tabela_clientes"); var tr = tbody.getElementsByTagName("tr"); for (var i = 0; i < tr.length; i++) { var tdNome = tr[i].getElementsByTagName("td")[0]; if (tdNome) { var txtValue = tdNome.textContent || tdNome.innerText; if (txtValue.toUpperCase().indexOf(filter) > -1) { tr[i].style.display = ""; } else { tr[i].style.display = "none"; } } } }
     window.fcFiltrarTabelaLotes = function() { var input = document.getElementById("pesquisa_lote"); var filter = input.value.toUpperCase(); var table = document.getElementById("tabela_gerenciador_lotes"); var tr = table.getElementsByTagName("tr"); for (var i = 1; i < tr.length; i++) { var tdCode = tr[i].getElementsByTagName("td")[1]; if (tdCode) { var txtValue = tdCode.textContent || tdCode.innerText; if (txtValue.toUpperCase().indexOf(filter) > -1) { tr[i].style.display = ""; } else { tr[i].style.display = "none"; } } } }
 
     $('#form_upload_lote').submit(function(e) {
