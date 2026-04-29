@@ -19,10 +19,11 @@ try {
     // ✨ CPF DO USUÁRIO LOGADO PARA TRAVA DE SEGURANÇA ✨
     $usuario_logado_cpf = preg_replace('/\D/', '', $_SESSION['usuario_cpf'] ?? '');
 
-    // Hierarquia por empresa nas propostas
-    $restricao_hierarquia_proposta = function_exists('verificaPermissao') ? !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_HIERARQUIA', 'FUNCAO') : true;
+    // Hierarquia por empresa nas propostas (verificaPermissaoEstrita = bloqueia MASTER também)
+    $restricao_hierarquia_proposta = function_exists('verificaPermissaoEstrita') ? !verificaPermissaoEstrita($pdo, 'SUBMENU_OP_INTEGRACAO_V8_HIERARQUIA') : !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_HIERARQUIA', 'FUNCAO');
+    $restricao_meu_registro_proposta = function_exists('verificaPermissao') ? !verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_PROPOSTA_MEU_REGISTRO', 'FUNCAO') : false;
     $id_empresa_logado_proposta = null;
-    if ($restricao_hierarquia_proposta) {
+    if ($restricao_hierarquia_proposta || $restricao_meu_registro_proposta) {
         $stmtEmpP = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
         $stmtEmpP->execute([$usuario_logado_cpf]);
         $id_empresa_logado_proposta = $stmtEmpP->fetchColumn() ?: null;
@@ -82,25 +83,15 @@ try {
             $data_ini = trim($_POST['data_ini'] ?? '');
             $data_fim = trim($_POST['data_fim'] ?? '');
             
-            // ✨ TRAVA DE SEGURANÇA TOTAL NAS PROPOSTAS ✨
-            $perm_meu_registro = function_exists('verificaPermissao') ? verificaPermissao($pdo, 'SUBMENU_OP_INTEGRACAO_V8_NOVA_CONSULTA_FILA_MEU_REGITRO', 'FUNCAO') : true;
             $where = " WHERE 1=1 ";
             $params = [];
-            
-            if (!$perm_meu_registro) {
-                // Se não for admin, verifica se ele possui alguma credencial V8 cadastrada.
-                $stmtChaves = $pdo->prepare("SELECT ID FROM INTEGRACAO_V8_CHAVE_ACESSO WHERE USUARIO_ID = ? OR CPF_USUARIO = ?");
-                $stmtChaves->execute([$usuario_logado_id, $usuario_logado_cpf]);
-                if (!$stmtChaves->fetchColumn()) {
-                    // Bloqueio Total: Usuário não tem chave. Retorna vazio imediatamente.
-                    echo json_encode(['success' => true, 'data' => []]); exit;
-                }
 
-                // Força mostrar apenas as propostas do CPF do usuário logado
+            if ($restricao_meu_registro_proposta && !empty($usuario_logado_cpf)) {
+                // Somente propostas do próprio usuário
                 $where .= " AND p.CPF_USUARIO = ? ";
                 $params[] = $usuario_logado_cpf;
             } elseif ($restricao_hierarquia_proposta && $id_empresa_logado_proposta) {
-                // Usuário vê somente propostas da sua empresa
+                // Somente propostas da empresa do usuário (bloqueia MASTER também)
                 $where .= " AND p.EMPRESA_ID = ? ";
                 $params[] = $id_empresa_logado_proposta;
             }
