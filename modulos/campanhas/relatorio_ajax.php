@@ -328,7 +328,8 @@ if ($acao === 'buscar_dados') {
                 (SELECT GROUP_CONCAT(DISTINCT ca.NOME_CAMPANHA ORDER BY ca.ID SEPARATOR ', ')
                  FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA cc
                  JOIN BANCO_DE_DADOS_CAMPANHA_CAMPANHAS ca ON ca.ID = cc.ID_CAMPANHA
-                 WHERE cc.CPF_CLIENTE = r.CPF_CLIENTE) AS CAMPANHAS
+                 WHERE cc.CPF_CLIENTE = r.CPF_CLIENTE
+                 AND ca.id_empresa = r.id_empresa) AS CAMPANHAS
             FROM BANCO_DE_DADOS_CAMPANHA_REGISTRO_CONTATO r
             LEFT JOIN dados_cadastrais dc ON dc.cpf = r.CPF_CLIENTE
             LEFT JOIN BANCO_DE_DADOS_CAMPANHA_STATUS_CONTATO s ON s.ID = r.ID_STATUS_CONTATO
@@ -474,7 +475,8 @@ if ($acao === 'exportar_csv') {
             (SELECT GROUP_CONCAT(DISTINCT ca.NOME_CAMPANHA ORDER BY ca.ID SEPARATOR ' | ')
              FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA cc
              JOIN BANCO_DE_DADOS_CAMPANHA_CAMPANHAS ca ON ca.ID = cc.ID_CAMPANHA
-             WHERE cc.CPF_CLIENTE = r.CPF_CLIENTE) AS CAMPANHAS,
+             WHERE cc.CPF_CLIENTE = r.CPF_CLIENTE
+             AND ca.id_empresa = r.id_empresa) AS CAMPANHAS,
             r.REGISTRO AS ANOTACAO
         FROM BANCO_DE_DADOS_CAMPANHA_REGISTRO_CONTATO r
         LEFT JOIN dados_cadastrais dc ON dc.cpf = r.CPF_CLIENTE
