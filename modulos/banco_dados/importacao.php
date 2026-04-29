@@ -718,25 +718,38 @@ try {
                     else if(t.STATUS === 'CANCELADA') { bgStatus = 'bg-danger'; icone = 'fas fa-times-circle'; colorBar = 'bg-danger'; }
                     else if(t.STATUS === 'ERRO_CRITICO') { bgStatus = 'bg-danger'; icone = 'fas fa-exclamation-triangle'; colorBar = 'bg-danger'; }
 
+                    // Botão de pausa/retomada (mantido separado)
                     let acoes = '';
                     if(t.STATUS === 'PROCESSANDO' || t.STATUS === 'PENDENTE') {
                         acoes += `<button class="btn btn-sm btn-warning text-dark border-dark fw-bold me-1" onclick="pausarTarefa(${t.ID})" title="Pausar"><i class="fas fa-pause"></i></button>`;
                     }
                     if(t.STATUS === 'PAUSADA') {
-                        acoes += `<button class="btn btn-sm btn-success border-dark fw-bold me-1" onclick="retomarTarefa(${t.ID})" title="Retomar (Fast Forward)"><i class="fas fa-play"></i></button>`;
+                        acoes += `<button class="btn btn-sm btn-success border-dark fw-bold me-1" onclick="retomarTarefa(${t.ID})" title="Retomar"><i class="fas fa-play"></i></button>`;
                     }
+
+                    // Dropdown de ações
+                    const baseUrl = '/modulos/banco_dados/resultado_importacao.php?task_id=' + t.ID;
+                    let ddItems = '';
+                    ddItems += `<li><a class="dropdown-item fw-bold" href="#" onclick="reutilizarArquivo('${t.ARQUIVO}','${t.NOME_IMPORTACAO.replace(/'/g,"\\'")}');return false;"><i class="fas fa-redo text-info me-2"></i>Reprocessar</a></li>`;
+                    ddItems += `<li><hr class="dropdown-divider"></li>`;
+                    ddItems += `<li><a class="dropdown-item fw-bold" href="${baseUrl}&tipo=NOVO" target="_blank"><i class="fas fa-user-plus text-success me-2"></i>Ver clientes novos <span class="badge bg-success ms-1">${t.QTD_NOVOS||0}</span></a></li>`;
+                    ddItems += `<li><a class="dropdown-item fw-bold" href="${baseUrl}&tipo=ATUALIZADO" target="_blank"><i class="fas fa-sync-alt text-info me-2"></i>Ver clientes atualizados <span class="badge bg-info text-dark ms-1">${t.QTD_ATUALIZADOS||0}</span></a></li>`;
+                    if(t.QTD_ERROS > 0) {
+                        ddItems += `<li><a class="dropdown-item fw-bold" href="${baseUrl}&tipo=ERRO" target="_blank"><i class="fas fa-exclamation-triangle text-danger me-2"></i>Ver erros <span class="badge bg-danger ms-1">${t.QTD_ERROS}</span></a></li>`;
+                    }
+                    ddItems += `<li><hr class="dropdown-divider"></li>`;
                     if(t.STATUS !== 'CONCLUIDA' && t.STATUS !== 'CANCELADA') {
-                        acoes += `<button class="btn btn-sm btn-danger border-dark fw-bold me-1" onclick="excluirTarefa(${t.ID})" title="Cancelar / Excluir"><i class="fas fa-trash"></i></button>`;
+                        ddItems += `<li><a class="dropdown-item fw-bold text-danger" href="#" onclick="excluirTarefa(${t.ID});return false;"><i class="fas fa-trash me-2"></i>Excluir importação</a></li>`;
+                    } else {
+                        ddItems += `<li><a class="dropdown-item fw-bold text-danger" href="#" onclick="excluirTarefa(${t.ID});return false;"><i class="fas fa-trash me-2"></i>Excluir do histórico</a></li>`;
                     }
-                    
-                    // BOTÃO DE REUTILIZAR
-                    if(t.STATUS === 'CONCLUIDA' || t.STATUS === 'CANCELADA' || t.STATUS === 'ERRO_CRITICO') {
-                        acoes += `<button class="btn btn-sm btn-info text-dark border-dark fw-bold me-1" onclick="reutilizarArquivo('${t.ARQUIVO}', '${t.NOME_IMPORTACAO}')" title="Reutilizar Planilha"><i class="fas fa-redo"></i></button>`;
-                    }
-                    
-                    if(t.STATUS === 'CONCLUIDA' && t.ARQUIVO_LOG_ERRO) {
-                        acoes += `<a href="/modulos/banco_dados/Arquivo_erros_importacao/${t.ARQUIVO_LOG_ERRO}" class="btn btn-sm btn-outline-danger fw-bold border-dark" download title="Baixar Log de Erros"><i class="fas fa-file-alt"></i></a>`;
-                    }
+
+                    acoes += `<div class="dropdown d-inline-block">
+                        <button class="btn btn-sm btn-dark fw-bold dropdown-toggle border-dark shadow-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-bars me-1"></i> Ações
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end border-dark shadow">${ddItems}</ul>
+                    </div>`;
 
                     let linhaHtml = `
                     <tr class="border-bottom border-dark bg-white">

@@ -79,8 +79,7 @@ try {
     $pdo->prepare("UPDATE CONTROLE_IMPORTACAO_ASSINCRONA SET QTD_TOTAL = ? WHERE ID = ?")->execute([$total_linhas, $taskId]);
 
     // QUERIES FIXAS
-    $stmtCheckHist = $pdo->prepare("SELECT id FROM BANCO_DE_DADOS_HISTORICO_IMPORTACAO WHERE cpf = ? AND nome_importacao = ?");
-    $stmtInsertHist = $pdo->prepare("INSERT INTO BANCO_DE_DADOS_HISTORICO_IMPORTACAO (cpf, nome_importacao) VALUES (?, ?)");
+    $stmtInsertHist = $pdo->prepare("INSERT INTO BANCO_DE_DADOS_HISTORICO_IMPORTACAO (cpf, nome_importacao, task_id, tipo) VALUES (?, ?, ?, ?)");
     $stmtCheckCPF = $pdo->prepare("SELECT cpf FROM dados_cadastrais WHERE cpf = ?");
     $stmtInsertFakeCPF = $pdo->prepare("INSERT INTO dados_cadastrais (cpf) VALUES (?)");
     $stmtCheckTel = $pdo->prepare("SELECT id FROM telefones WHERE cpf = ? AND telefone_cel = ?");
@@ -131,10 +130,7 @@ try {
             }
 
             try {
-                if (!empty($nome_importacao)) {
-                    $stmtCheckHist->execute([$cpf, $nome_importacao]);
-                    if (!$stmtCheckHist->fetch()) { $stmtInsertHist->execute([$cpf, $nome_importacao]); }
-                }
+                $tipo_hist = 'NOVO';
 
                 if ($tabela == 'banco_de_Dados_inss_dados_cadastrais' || $tabela == 'banco_de_Dados_inss_contratos') {
                     $stmtCheckCPF->execute([$cpf]);
@@ -146,6 +142,7 @@ try {
                     if (empty($matricula)) {
                          $erros++;
                          fwrite($txt_handle, "LINHA $processados | CPF: $cpf | MOTIVO: Matrícula ausente/não mapeada.\n");
+                         if (!empty($nome_importacao)) { $stmtInsertHist->execute([$cpf, $nome_importacao, $taskId, 'ERRO']); }
                          continue;
                     }
                     
@@ -156,6 +153,7 @@ try {
                          if (empty($contrato)) {
                              $erros++;
                              fwrite($txt_handle, "LINHA $processados | CPF: $cpf | MOTIVO: Nº de Contrato ausente/não mapeado.\n");
+                             if (!empty($nome_importacao)) { $stmtInsertHist->execute([$cpf, $nome_importacao, $taskId, 'ERRO']); }
                              continue;
                          }
                          
@@ -189,7 +187,7 @@ try {
                     if(count($campos_banco) > 0) {
                         $sqlINSS = "INSERT INTO `$tabela` (" . implode(",", $campos_banco) . ") VALUES (" . implode(",", array_fill(0, count($valores_banco), "?")) . ") ON DUPLICATE KEY UPDATE " . implode(",", $campos_update);
                         $pdo->prepare($sqlINSS)->execute($valores_banco);
-                        $atualizados++; 
+                        $atualizados++; $tipo_hist = 'ATUALIZADO';
                     }
                 }
 
@@ -272,9 +270,9 @@ try {
                         }
                     }
 
-                    if ($existe) $atualizados++; else $novos++;
+                    $tipo_hist = $existe ? 'ATUALIZADO' : 'NOVO'; if ($existe) $atualizados++; else $novos++;
                 }
-                
+
                 elseif ($tabela == 'dados_cadastrais') {
                     $stmtCheckCPF->execute([$cpf]);
                     $existe = $stmtCheckCPF->fetch();
@@ -309,9 +307,10 @@ try {
                     } else {
                         $stmtInsertFakeCPF->execute([$cpf]);
                     }
-                    if ($existe) $atualizados++; else $novos++;
+                    $tipo_hist = $existe ? 'ATUALIZADO' : 'NOVO'; if ($existe) $atualizados++; else $novos++;
                 }
-                
+
+
                 elseif ($tabela == 'telefones') {
                     $telefone_inserido = false; 
                     $stmtCheckCPF->execute([$cpf]);
@@ -330,7 +329,7 @@ try {
                             }
                         }
                     }
-                    if ($telefone_inserido) { $novos++; } else { $atualizados++; }
+                    $tipo_hist = $telefone_inserido ? 'NOVO' : 'ATUALIZADO'; if ($telefone_inserido) { $novos++; } else { $atualizados++; }
                 }
 
                 elseif ($tabela == 'emails') {
@@ -350,7 +349,7 @@ try {
                             }
                         }
                     }
-                    if ($email_inserido) { $novos++; } else { $atualizados++; }
+                    $tipo_hist = $email_inserido ? 'NOVO' : 'ATUALIZADO'; if ($email_inserido) { $novos++; } else { $atualizados++; }
                 }
 
                 elseif ($tabela == 'enderecos') {
@@ -368,8 +367,8 @@ try {
                         $stmtCheckEnd->execute([$cpf, $logradouro, $numero]);
                         if (!$stmtCheckEnd->fetch()) {
                             $stmtInsertEnd->execute([$cpf, $logradouro, $numero, $bairro, $cidade, $uf, $cep]);
-                            $novos++;
-                        } else { $atualizados++; }
+                            $novos++; $tipo_hist = 'NOVO';
+                        } else { $atualizados++; $tipo_hist = 'ATUALIZADO'; }
                     }
                 }
                 
@@ -393,16 +392,19 @@ try {
                             }
                         }
                     }
-                    if ($conv_inserido) { $novos++; } else { $atualizados++; }
+                    $tipo_hist = $conv_inserido ? 'NOVO' : 'ATUALIZADO'; if ($conv_inserido) { $novos++; } else { $atualizados++; }
                 }
 
                 if (!empty($mapeamento['id_campanha_vinculo'])) {
                     $stmtInsertCampanhaCli->execute([$cpf, $mapeamento['id_campanha_vinculo']]);
                 }
 
+                if (!empty($nome_importacao)) { $stmtInsertHist->execute([$cpf, $nome_importacao, $taskId, $tipo_hist]); }
+
             } catch (Exception $e) {
                 $erros++;
                 fwrite($txt_handle, "FALHA SQL | CPF: $cpf | ERRO: " . $e->getMessage() . "\n");
+                if (!empty($nome_importacao) && !empty($cpf)) { try { $stmtInsertHist->execute([$cpf, $nome_importacao, $taskId, 'ERRO']); } catch (\Throwable $ex) {} }
             }
 
             if ($processados % $update_interval == 0) {
