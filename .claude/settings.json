@@ -440,7 +440,20 @@
       "Bash(sed -i 's/l.STATUS_FILA IN \\('\\\\''PENDENTE'\\\\'','\\\\''PROCESSANDO'\\\\'','\\\\''AGUARDANDO_DIARIO'\\\\''\\)/l.STATUS_FILA IN \\('\\\\''CRIANDO PROCESSAMENTO'\\\\'','\\\\''NA FILA'\\\\'','\\\\''PROCESSANDO'\\\\'','\\\\''AGUARDANDO_DIARIO'\\\\''\\)/g' /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/ajax_api_v8_lote_csv.php)",
       "Bash(sed -i 's/STATUS_FILA IN \\('\\\\''PENDENTE'\\\\'', '\\\\''PROCESSANDO'\\\\''\\)/STATUS_FILA IN \\('\\\\''CRIANDO PROCESSAMENTO'\\\\'', '\\\\''NA FILA'\\\\'', '\\\\''PROCESSANDO'\\\\''\\)/g' /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/ajax_api_v8_lote_csv.php)",
       "Bash(mysql -u root crm_dados -e \"UPDATE INTEGRACAO_V8_IMPORTACAO_LOTE SET STATUS_FILA = 'CRIANDO PROCESSAMENTO' WHERE STATUS_FILA = 'PENDENTE';\")",
-      "Bash(mysql -u root crm_dados -e \"SELECT STATUS_FILA, COUNT\\(*\\) FROM INTEGRACAO_V8_IMPORTACAO_LOTE GROUP BY STATUS_FILA;\")"
+      "Bash(mysql -u root crm_dados -e \"SELECT STATUS_FILA, COUNT\\(*\\) FROM INTEGRACAO_V8_IMPORTACAO_LOTE GROUP BY STATUS_FILA;\")",
+      "Bash(mysql -u root crm_dados -e \"SELECT ID, NOME_IMPORTACAO, STATUS_FILA FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID IN \\(92, 93, 115\\);\")",
+      "Bash(curl -sk --max-time 2 \"https://crm.assessoriaconsignado.com/modulos/configuracao/v8_clt_margem_e_digitacao/worker_v8_lote.php?user_cpf=66584221091\")",
+      "Bash(mysql -u root crm_dados -e \"SELECT ID, STATUS_FILA FROM INTEGRACAO_V8_IMPORTACAO_LOTE WHERE ID = 115;\")",
+      "Bash(mysql -u root crm_dados -e \"SHOW COLUMNS FROM INTEGRACAO_V8_IMPORTACAO_LOTE LIKE '%MARGEM%';\")",
+      "Bash(mysql -u root crm_dados -e \"SHOW COLUMNS FROM INTEGRACAO_V8_IMPORTACAO_LOTE LIKE '%WAPI%';\")",
+      "Bash(mysql -u root crm_dados -e \"ALTER TABLE INTEGRACAO_V8_IMPORTACAO_LOTE ADD COLUMN MARGEM_MIN_WAPI DECIMAL\\(10,2\\) NOT NULL DEFAULT 1.00 AFTER AVISO_STATUS_WAPI;\")",
+      "Bash(mysql -u root crm_dados -e \"SELECT ATIVO_GLOBAL, INSTANCE_ID FROM WAPI_CONFIG LIMIT 3;\")",
+      "Bash(mysql -u root crm_dados -e \"SELECT INSTANCE_ID, TOKEN, LEFT\\(TOKEN,20\\) as TOKEN_PREVIEW FROM WAPI_INSTANCIAS LIMIT 3;\")",
+      "Bash(mysql -u root crm_dados -e \"SHOW COLUMNS FROM CLIENTE_CADASTRO LIKE '%STATUS%';\")",
+      "Bash(mysql -u root crm_dados -e \"SHOW COLUMNS FROM CLIENTE_CADASTRO LIKE '%ATIVO%';\")",
+      "Bash(grep -i 'sessio\\\\|_SESSION\\\\|$_SES')",
+      "Bash(grep -rn '$_SESSION\\\\['\\\\''usuario_id'\\\\''\\\\]\\\\|SESSION\\\\[.usuario_id.\\\\]' /var/www/html/includes/ /var/www/html/modulos/cliente_e_usuario/ '--include=*.php')",
+      "Bash(php -l /var/www/html/login.php)"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",
