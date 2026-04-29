@@ -184,8 +184,15 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content border-dark shadow-lg">
             <div class="modal-header bg-dark text-white border-bottom border-dark">
-                <h5 class="modal-title fw-bold text-uppercase"><i class="fas fa-edit text-warning me-2"></i> Editar Configurações do Lote V8</h5>
+                <h5 class="modal-title fw-bold text-uppercase"><i class="fas fa-sliders-h text-warning me-2"></i> Ver Parâmetros do Lote V8</h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div id="edit_lote_aviso_processando" class="alert alert-warning border-warning border-2 rounded-0 mb-0 py-2 px-3 d-none" style="font-size:0.85rem;">
+                <i class="fas fa-exclamation-triangle me-2"></i>
+                <strong>Lote em processamento.</strong> Para salvar alterações é necessário pausar o lote.
+                <button type="button" class="btn btn-sm btn-warning border-dark fw-bold ms-2" onclick="v8PausarParaSalvar()">
+                    <i class="fas fa-pause me-1"></i> Pausar e Salvar
+                </button>
             </div>
             <div class="modal-body bg-light p-4">
                 <form id="formEditarLoteV8" class="row g-3">
@@ -292,8 +299,8 @@
                 </form>
             </div>
             <div class="modal-footer bg-light border-top border-secondary">
-                <button type="button" class="btn btn-danger fw-bold shadow-sm border-dark" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-success fw-bold px-5 shadow-sm border-dark" onclick="v8SalvarEdicaoLote()"><i class="fas fa-save"></i> Salvar Alterações</button>
+                <button type="button" class="btn btn-secondary fw-bold shadow-sm border-dark" data-bs-dismiss="modal">Fechar</button>
+                <button type="button" id="btn_salvar_edicao_lote" class="btn btn-success fw-bold px-5 shadow-sm border-dark" onclick="v8SalvarEdicaoLote()"><i class="fas fa-save"></i> Salvar Alterações</button>
             </div>
         </div>
     </div>
@@ -864,11 +871,7 @@
 
                 let btnTopEditar = '';
                 if (!restricaoLoteEditar) {
-                    if (statusAtual === 'PAUSADO') {
-                        btnTopEditar = `<button class="dropdown-item fw-bold text-primary" onclick="v8AbrirModalEditarLote(${idLoteReal})"><i class="fas fa-edit me-2"></i> Editar Lote</button>`;
-                    } else {
-                        btnTopEditar = `<button class="dropdown-item text-muted" disabled title="O Lote precisa estar PAUSADO para edição"><i class="fas fa-edit me-2"></i> Editar Lote (requer pausa)</button>`;
-                    }
+                    btnTopEditar = `<button class="dropdown-item fw-bold text-primary" onclick="v8AbrirModalEditarLote(${idLoteReal})"><i class="fas fa-sliders-h me-2"></i> Ver Parâmetros</button>`;
                 }
 
                 let btnRodapeApagar = '';
@@ -1110,9 +1113,25 @@
         });
     }
 
+    let _editLoteStatusAtual = 'PAUSADO';
+
     async function v8AbrirModalEditarLote(id) {
         let lote = windowDadosLoteAtual.find(l => l.ID == id || l.id == id);
         if (!lote) return v8Toast("Erro: Lote não encontrado na tela.", "error", 5000);
+
+        _editLoteStatusAtual = String(lote.STATUS_FILA || 'PAUSADO').toUpperCase();
+        const emProcessamento = !['PAUSADO', 'CONCLUIDO', 'AGUARDANDO_DIARIO', 'AGUARDANDO HORÁRIO'].includes(_editLoteStatusAtual);
+        const aviso = document.getElementById('edit_lote_aviso_processando');
+        const btnSalvar = document.getElementById('btn_salvar_edicao_lote');
+        if (emProcessamento) {
+            aviso.classList.remove('d-none');
+            btnSalvar.disabled = true;
+            btnSalvar.classList.replace('btn-success', 'btn-secondary');
+        } else {
+            aviso.classList.add('d-none');
+            btnSalvar.disabled = false;
+            btnSalvar.classList.replace('btn-secondary', 'btn-success');
+        }
 
         document.getElementById('edit_lote_id').value = id;
         document.getElementById('edit_lote_agrupamento').value = lote.NOME_IMPORTACAO || lote.nome_importacao;
@@ -1150,6 +1169,25 @@
         }
 
         modalEditarLoteObj.show();
+    }
+
+    async function v8PausarParaSalvar() {
+        const id = document.getElementById('edit_lote_id').value;
+        const btn = document.querySelector('#edit_lote_aviso_processando button');
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin me-1"></i> Pausando...';
+        btn.disabled = true;
+        const res = await v8Req('ajax_api_v8_lote_csv.php', 'pausar_retomar_lote', { id_lote: id, acao_lote: 'PAUSAR' }, false);
+        if (res && res.success) {
+            document.getElementById('edit_lote_aviso_processando').classList.add('d-none');
+            const btnSalvar = document.getElementById('btn_salvar_edicao_lote');
+            btnSalvar.disabled = false;
+            btnSalvar.classList.replace('btn-secondary', 'btn-success');
+            v8Toast("Lote pausado. Agora você pode salvar.", "success", 3000);
+        } else {
+            btn.innerHTML = '<i class="fas fa-pause me-1"></i> Pausar e Salvar';
+            btn.disabled = false;
+            v8Toast("Erro ao pausar o lote.", "error", 4000);
+        }
     }
 
     async function v8SalvarEdicaoLote() {
