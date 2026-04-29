@@ -453,7 +453,13 @@
       "Bash(mysql -u root crm_dados -e \"SHOW COLUMNS FROM CLIENTE_CADASTRO LIKE '%ATIVO%';\")",
       "Bash(grep -i 'sessio\\\\|_SESSION\\\\|$_SES')",
       "Bash(grep -rn '$_SESSION\\\\['\\\\''usuario_id'\\\\''\\\\]\\\\|SESSION\\\\[.usuario_id.\\\\]' /var/www/html/includes/ /var/www/html/modulos/cliente_e_usuario/ '--include=*.php')",
-      "Bash(php -l /var/www/html/login.php)"
+      "Bash(php -l /var/www/html/login.php)",
+      "mcp__claude_ai_Canva__generate-design",
+      "mcp__claude_ai_Canva__list-brand-kits",
+      "mcp__claude_ai_Canva__create-design-from-candidate",
+      "mcp__claude_ai_Canva__start-editing-transaction",
+      "mcp__claude_ai_Canva__perform-editing-operations",
+      "mcp__claude_ai_Canva__commit-editing-transaction"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",
