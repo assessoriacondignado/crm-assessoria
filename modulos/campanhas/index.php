@@ -182,6 +182,7 @@ try {
     $sqlCampanhas = "
         SELECT c.*, 
                (SELECT GROUP_CONCAT(u.NOME SEPARATOR ' | ') FROM CLIENTE_USUARIO u WHERE FIND_IN_SET(u.CPF, c.CPF_USUARIO)) as NOME_USUARIO,
+               (SELECT COUNT(*) FROM CLIENTE_USUARIO u WHERE FIND_IN_SET(u.CPF, c.CPF_USUARIO)) as QTD_USUARIO,
                e.NOME_CADASTRO as NOME_EMPRESA,
                (SELECT COUNT(ID) FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA WHERE ID_CAMPANHA = c.ID) as TOTAL_CLIENTES,
                (SELECT COUNT(cl.ID) FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA cl WHERE cl.ID_CAMPANHA = c.ID AND NOT EXISTS (SELECT 1 FROM BANCO_DE_DADOS_CAMPANHA_REGISTRO_CONTATO r WHERE r.CPF_CLIENTE = cl.CPF_CLIENTE AND r.DATA_REGISTRO >= cl.DATA_INCLUSAO)) as RESTANTES
@@ -363,8 +364,19 @@ include $caminho_header;
                                         <td class="text-secondary fw-bold">
                                             <?= date('d/m/Y', strtotime($c['DATA_INICIO'])) ?> a <?= date('d/m/Y', strtotime($c['DATA_FIM'])) ?>
                                         </td>
-                                        <td>
-                                            <?= !empty($c['NOME_USUARIO']) ? '<span class="badge bg-primary text-wrap text-start lh-base py-1" style="max-width: 250px;"><i class="fas fa-users"></i> ' . htmlspecialchars($c['NOME_USUARIO']) . '</span>' : '<span class="badge bg-secondary border border-dark text-light">Ninguém / Global</span>' ?>
+                                        <td class="text-center">
+                                            <?php if (!empty($c['NOME_USUARIO'])):
+                                                $qtd = (int)($c['QTD_USUARIO'] ?? 0);
+                                                $tooltip = htmlspecialchars($c['NOME_USUARIO'], ENT_QUOTES);
+                                            ?>
+                                                <span class="badge bg-primary fs-6 px-3 py-2" style="cursor:default;"
+                                                      data-bs-toggle="tooltip" data-bs-placement="left" data-bs-html="false"
+                                                      title="<?= $tooltip ?>">
+                                                    <i class="fas fa-users me-1"></i><?= $qtd ?>
+                                                </span>
+                                            <?php else: ?>
+                                                <span class="badge bg-secondary border border-dark text-light">Global</span>
+                                            <?php endif; ?>
                                         </td>
                                         
                                         <td>
@@ -574,6 +586,8 @@ document.addEventListener("DOMContentLoaded", function() {
     modalCampanha = new bootstrap.Modal(document.getElementById('modalCampanha'));
     let elEmpresa = document.getElementById('form_cnpj_empresa');
     if (elEmpresa) { elEmpresa.addEventListener('change', function() { filtrarUsuariosPorEmpresa(this.value); }); }
+    // Inicializa tooltips da página
+    document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => new bootstrap.Tooltip(el));
 });
 
 function abrirModalCampanha() {
