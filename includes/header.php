@@ -557,8 +557,21 @@ session_write_close();
             try {
                 const r = await fetch('/includes/header_busca.php', {method:'POST', body:fd}).then(r=>r.json());
                 if (!r.success || !r.data || !r.data.length) {
-                    const msg = (!r.success && r.msg) ? r.msg : 'Nenhum resultado encontrado.';
-                    box.innerHTML = `<div style="padding:8px 10px; color:rgba(255,255,255,.4); font-size:11px;">${msg}</div>`;
+                    const termLimpo = val.replace(/\D/g, '');
+                    const isCpf = termLimpo.length >= 8;
+                    if (isCpf) {
+                        const cpfBusca = termLimpo.padStart(11, '0');
+                        box.innerHTML = `
+                            <div style="padding:8px 10px; color:rgba(255,255,255,.4); font-size:11px;">CPF não cadastrado.</div>
+                            <a href="/modulos/banco_dados/consulta.php?busca=${cpfBusca}"
+                               style="display:block; padding:8px 10px; color:#86efac; font-size:11px; text-decoration:none; border-top:1px solid rgba(255,255,255,.06);"
+                               onmouseover="this.style.background='rgba(255,255,255,.08)'" onmouseout="this.style.background=''">
+                                <i class="fas fa-user-plus me-1"></i> <strong>Cadastrar automaticamente</strong><br>
+                                <span style="color:rgba(255,255,255,.4);">CPF: ${cpfBusca.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4')}</span>
+                            </a>`;
+                    } else {
+                        box.innerHTML = `<div style="padding:8px 10px; color:rgba(255,255,255,.4); font-size:11px;">Nenhum resultado encontrado.</div>`;
+                    }
                     return;
                 }
                 box.innerHTML = r.data.map(c => `
