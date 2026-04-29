@@ -56,7 +56,24 @@ function obterTokenPromosys($pdo) {
 }
 
 // ========================================================================
-if ($acao === 'listar_clientes') { $stmt = $pdo->query("SELECT CPF, NOME, CUSTO_CONSULTA, SALDO, GRUPO_WHATS FROM CLIENTE_CADASTRO ORDER BY NOME ASC"); echo json_encode(['success' => true, 'data' => $stmt->fetchAll(PDO::FETCH_ASSOC)]); exit; }
+if ($acao === 'listar_clientes') {
+    $busca = trim($_POST['busca'] ?? '');
+    $sql = "SELECT cc.CPF, cc.NOME, cc.NOME_EMPRESA, cc.CUSTO_CONSULTA, cc.SALDO, cc.GRUPO_WHATS,
+                   COALESCE(cu.NOME, cc.NOME) as NOME_USUARIO
+            FROM CLIENTE_CADASTRO cc
+            LEFT JOIN CLIENTE_USUARIO cu ON cu.CPF = cc.CPF";
+    $params = [];
+    if (!empty($busca)) {
+        $sql .= " WHERE cc.NOME LIKE ? OR cc.CPF LIKE ? OR cc.NOME_EMPRESA LIKE ? OR cu.NOME LIKE ?";
+        $like = '%' . $busca . '%';
+        $params = [$like, $like, $like, $like];
+    }
+    $sql .= " ORDER BY cc.NOME ASC LIMIT 30";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute($params);
+    echo json_encode(['success' => true, 'data' => $stmt->fetchAll(PDO::FETCH_ASSOC)]);
+    exit;
+}
 if ($acao === 'salvar_dados_cliente') { $cpf = $_POST['cpf']; $custo = str_replace(',', '.', $_POST['custo']); $grupo = trim($_POST['grupo']); $pdo->prepare("UPDATE CLIENTE_CADASTRO SET CUSTO_CONSULTA = ?, GRUPO_WHATS = ? WHERE CPF = ?")->execute([$custo, $grupo, $cpf]); echo json_encode(['success' => true, 'msg' => 'Cliente atualizado com sucesso!']); exit; }
 if ($acao === 'movimentar_saldo') {
     $cpf = $_POST['cpf']; $tipo = $_POST['tipo']; $valor = (float)$_POST['valor']; $motivo = trim($_POST['motivo']);
