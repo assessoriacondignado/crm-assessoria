@@ -250,14 +250,29 @@ if (empty($cpf_para_integracao) && isset($termo_busca)) {
     }
 
     function buscarChavesFator(select) {
-        let fd = new FormData(); fd.append('acao', 'listar_chaves_acesso');
+        const idLogado    = document.getElementById('integ_user_id_logado').value;
+        const cpfLogado   = document.getElementById('integ_user_cpf_logado').value.replace(/\D/g, '');
+        const grupoLogado = document.getElementById('integ_user_grupo_logado').value.toUpperCase();
+        const isAdmin     = ['MASTER', 'ADMIN', 'ADMINISTRADOR'].includes(grupoLogado);
+
+        let fd = new FormData();
+        fd.append('acao', 'listar_clientes');
+        if (!isAdmin) {
+            if (idLogado) fd.append('busca_usuario_id', idLogado);
+            else if (cpfLogado) fd.append('busca_usuario_cpf', cpfLogado);
+        }
         fetch('/modulos/configuracao/fator_conferi/fator_conferi.ajax.php', { method: 'POST', body: fd })
             .then(r => r.json())
             .then(r => {
                 if (r.success && r.data) {
-                    chavesFatorCache = r.data.map(c => ({ id: c.ID, nome: c.CLIENTE_NOME, saldo: c.SALDO, USUARIO_ID: c.USUARIO_ID }));
+                    chavesFatorCache = r.data.map(c => ({
+                        id: c.CPF,
+                        nome: c.NOME,
+                        saldo: parseFloat(c.SALDO || 0).toFixed(2),
+                        USUARIO_ID: c.USUARIO_ID
+                    }));
                     popularSelectChaves(select, chavesFatorCache);
-                } else { select.innerHTML = '<option value="">Erro ao carregar chaves</option>'; }
+                } else { select.innerHTML = '<option value="">Erro ao carregar clientes</option>'; }
             }).catch(() => { select.innerHTML = '<option value="">Falha de comunicação.</option>'; });
     }
 

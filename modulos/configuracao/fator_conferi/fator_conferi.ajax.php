@@ -297,9 +297,21 @@ try {
             if($fp) { fclose($fp); } break;
 
         case 'listar_clientes':
-            $busca_fc = trim($_POST['busca'] ?? '');
-            if ($tem_restricao && !empty($cpf_logado)) {
-                $stmt = $pdo->prepare("SELECT cc.CPF, cc.NOME, cc.NOME_EMPRESA, cc.CUSTO_CONSULTA, cc.SALDO, cc.GRUPO_WHATS, COALESCE(cu.NOME, cc.NOME) as NOME_USUARIO FROM CLIENTE_CADASTRO cc LEFT JOIN CLIENTE_USUARIO cu ON cu.CPF = cc.CPF WHERE cc.CPF = ? ORDER BY cc.NOME ASC LIMIT 30");
+            $busca_fc            = trim($_POST['busca'] ?? '');
+            $busca_fc_usuario_id = (int)($_POST['busca_usuario_id'] ?? 0);
+            $busca_fc_usuario_cpf = preg_replace('/\D/', '', $_POST['busca_usuario_cpf'] ?? '');
+            $sel_fc = "SELECT cc.CPF, cc.NOME, cc.NOME_EMPRESA, cc.CUSTO_CONSULTA, cc.SALDO, cc.GRUPO_WHATS, COALESCE(cu.NOME, cc.NOME) as NOME_USUARIO, cu.ID as USUARIO_ID FROM CLIENTE_CADASTRO cc LEFT JOIN CLIENTE_USUARIO cu ON cu.CPF = cc.CPF";
+
+            if ($busca_fc_usuario_id > 0) {
+                $stmt = $pdo->prepare("$sel_fc WHERE cu.ID = ? ORDER BY cc.NOME ASC");
+                $stmt->execute([$busca_fc_usuario_id]);
+                $clientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            } elseif (!empty($busca_fc_usuario_cpf)) {
+                $stmt = $pdo->prepare("$sel_fc WHERE cc.CPF = ? ORDER BY cc.NOME ASC");
+                $stmt->execute([$busca_fc_usuario_cpf]);
+                $clientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            } elseif ($tem_restricao && !empty($cpf_logado)) {
+                $stmt = $pdo->prepare("$sel_fc WHERE cc.CPF = ? ORDER BY cc.NOME ASC LIMIT 30");
                 $stmt->execute([$cpf_logado]);
                 $clientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
             } else {
@@ -309,7 +321,7 @@ try {
                     $where_fc = "(cc.NOME LIKE ? OR cc.CPF LIKE ? OR cc.NOME_EMPRESA LIKE ? OR cu.NOME LIKE ?)";
                     $params_fc = [$like_fc, $like_fc, $like_fc, $like_fc];
                 }
-                $stmtTodos = $pdo->prepare("SELECT cc.CPF, cc.NOME, cc.NOME_EMPRESA, cc.CUSTO_CONSULTA, cc.SALDO, cc.GRUPO_WHATS, COALESCE(cu.NOME, cc.NOME) as NOME_USUARIO FROM CLIENTE_CADASTRO cc LEFT JOIN CLIENTE_USUARIO cu ON cu.CPF = cc.CPF WHERE {$where_fc} ORDER BY cc.NOME ASC LIMIT 30");
+                $stmtTodos = $pdo->prepare("$sel_fc WHERE {$where_fc} ORDER BY cc.NOME ASC LIMIT 30");
                 $stmtTodos->execute($params_fc);
                 $clientes = $stmtTodos->fetchAll(PDO::FETCH_ASSOC);
             }
