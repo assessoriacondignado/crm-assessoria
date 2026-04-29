@@ -275,7 +275,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
                     </div>
                 </div>
 
-                <div class="card-body p-0 table-responsive">
+                <div class="card-body p-0 table-responsive" style="min-height: 65vh;">
                     <table class="table table-hover align-middle mb-0 text-center bg-white" id="tabelaPermissoes">
                         <thead class="table-light border-dark text-uppercase small">
                             <tr>
