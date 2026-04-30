@@ -1,6 +1,18 @@
 <?php
 if (session_status() === PHP_SESSION_NONE) { session_start(); }
 
+// ── HANDLER: Listar modelos de mensagem ──────────────────────────────────
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['acao_renov'] ?? '') === 'listar_modelos') {
+    ob_clean(); header('Content-Type: application/json; charset=utf-8');
+    try {
+        include_once 'conexao.php';
+        $pdo->exec("SET NAMES utf8mb4");
+        $st = $pdo->query("SELECT ID, NOME, MENSAGEM FROM RENOVACAO_MSG_MODELOS WHERE ATIVO = 1 ORDER BY ID ASC");
+        echo json_encode(['success' => true, 'modelos' => $st->fetchAll(PDO::FETCH_ASSOC)]);
+    } catch (Exception $e) { echo json_encode(['success'=>false,'msg'=>$e->getMessage()]); }
+    exit;
+}
+
 // ── HANDLER: Notificação WhatsApp renovação ──────────────────────────────
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acao_renov']) && $_POST['acao_renov'] === 'notificar_whats') {
     ob_clean();
@@ -15,22 +27,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acao_renov']) && $_PO
 
         if (empty($telefone)) { echo json_encode(['success'=>false,'msg'=>'Telefone não informado.']); exit; }
 
-        $msg  = "🔔 *Aviso de Renovação — Assessoria Consignado*\n\n";
-        $msg .= "Olá, *{$nome}*!\n\n";
-        $msg .= "Seu acesso ao produto *{$produto}* está próximo da data de renovação";
-        $msg .= $data_renov ? " *(vencimento: {$data_renov})*.\n\n" : ".\n\n";
-        $msg .= "💰 *Valor a pagar:* R$ {$valor}\n\n";
-        $msg .= "━━━━━━━━━━━━━━━━━━━━\n";
-        $msg .= "📲 *Dados para pagamento via PIX:*\n\n";
-        $msg .= "🏦 *Banco:* PAGBANK\n";
-        $msg .= "🏢 *Favorecido:* JOMN ASSESSORIA CONSIGNADO LTDA\n";
-        $msg .= "🔑 *Chave PIX:* atendimento\@assessoriaconsignado.com\n";
-        $msg .= "━━━━━━━━━━━━━━━━━━━━\n\n";
-        $msg .= "Após o pagamento, envie o comprovante para confirmarmos a renovação. ✅";
+        // Usa mensagem customizada (editada no modal) ou fallback padrão
+        $msg_custom = trim($_POST['mensagem_custom'] ?? '');
+        if ($msg_custom) {
+            $msg = $msg_custom;
+        } else {
+            $msg  = "Aviso de Renovacao - Assessoria Consignado\n\n";
+            $msg .= "Ola, {$nome}!\n\n";
+            $msg .= "Seu acesso ao produto {$produto} esta proximo da data de renovacao";
+            $msg .= $data_renov ? " (vencimento: {$data_renov}).\n\n" : ".\n\n";
+            $msg .= "Valor a pagar: R$ {$valor}\n\n";
+            $msg .= "Pagamento via PIX:\n";
+            $msg .= "Banco: PAGBANK\n";
+            $msg .= "Favorecido: JOMN ASSESSORIA CONSIGNADO LTDA\n";
+            $msg .= "Chave PIX: atendimento@assessoriaconsignado.com\n\n";
+            $msg .= "Apos o pagamento, envie o comprovante para confirmarmos a renovacao.";
+        }
 
-        $stmtInst = $pdo->query("SELECT INSTANCE_ID, TOKEN FROM WAPI_INSTANCIAS WHERE ATIVO = 1 ORDER BY ID ASC LIMIT 1");
+        $stmtInst = $pdo->query("SELECT INSTANCE_ID, TOKEN FROM WAPI_INSTANCIAS ORDER BY ID ASC LIMIT 1");
         $inst = $stmtInst->fetch(PDO::FETCH_ASSOC);
-        if (!$inst) { echo json_encode(['success'=>false,'msg'=>'Nenhuma instância W-API ativa.']); exit; }
+        if (!$inst) { echo json_encode(['success'=>false,'msg'=>'Nenhuma instância W-API configurada.']); exit; }
 
         $celular = '55' . $telefone;
         $url     = "https://api.w-api.app/v1/message/send-text?instanceId=" . $inst['INSTANCE_ID'];
@@ -768,13 +784,12 @@ if (file_exists($caminho_header)) {
                         <?php if ($r['CLIENTE_TELEFONE']): ?>
                         <button class="btn btn-sm fw-bold rounded-0"
                             style="background:#25d366; color:#fff; border:none; font-size:11px; padding:2px 8px;"
-                            onclick="renovNotificarWhats(
+                            onclick="renovAbrirModal(
                                 '<?= addslashes($r['CLIENTE_NOME'] ?: '') ?>',
                                 '<?= preg_replace('/\D/', '', $r['CLIENTE_TELEFONE']) ?>',
                                 '<?= addslashes($r['PRODUTO_NOME'] ?: '') ?>',
                                 '<?= $r['TOTAL'] ? number_format($r['TOTAL'],2,',','.') : '0,00' ?>',
-                                '<?= $dt_renov ? date('d/m/Y', strtotime($dt_renov)) : '' ?>',
-                                this
+                                '<?= $dt_renov ? date('d/m/Y', strtotime($dt_renov)) : '' ?>'
                             )" title="Enviar aviso de renovação via WhatsApp">
                             <i class="fab fa-whatsapp"></i>
                         </button>
@@ -803,34 +818,126 @@ function filtroRenov(grupo, btn) {
     });
 }
 
-async function renovNotificarWhats(nome, telefone, produto, valor, dataRenov, btn) {
-    const orig = btn.innerHTML;
-    btn.disabled = true;
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+// ── Modal renovação WhatsApp ──────────────────────────────────────────────
+let _renovDados = {};
+let _renovModelos = null;
+
+async function renovAbrirModal(nome, telefone, produto, valor, dataRenov) {
+    _renovDados = { nome, telefone, produto, valor, dataRenov };
+
+    // Carrega modelos se ainda não carregou
+    if (!_renovModelos) {
+        const fd = new FormData(); fd.append('acao_renov', 'listar_modelos');
+        const r = await fetch('', {method:'POST', body:fd}).then(r=>r.json()).catch(()=>null);
+        _renovModelos = r?.modelos || [];
+    }
+
+    // Renderiza lista de modelos
+    const lista = document.getElementById('renovModelosLista');
+    lista.innerHTML = _renovModelos.map((m, i) =>
+        `<div class="border rounded-0 p-2 mb-2 renov-modelo" data-idx="${i}" onclick="renovSelecionarModelo(${i})" style="cursor:pointer; border-color:#dee2e6 !important;">
+            <div class="fw-bold small text-dark mb-1"><i class="fas fa-file-alt me-1 text-success"></i>${m.NOME}</div>
+            <div class="text-muted" style="font-size:11px; white-space:pre-wrap; max-height:60px; overflow:hidden;">${m.MENSAGEM.substring(0,120)}${m.MENSAGEM.length>120?'…':''}</div>
+        </div>`
+    ).join('') || '<div class="text-muted small">Nenhum modelo cadastrado.</div>';
+
+    document.getElementById('renovEditarMsg').value = '';
+    document.getElementById('renovBtnEnviar').disabled = true;
+    document.getElementById('renovDestinatario').textContent = `Para: ${nome} | ${telefone}`;
+
+    // Seleciona primeiro modelo automaticamente
+    if (_renovModelos.length > 0) renovSelecionarModelo(0);
+
+    new bootstrap.Modal(document.getElementById('modalRenovWhats')).show();
+}
+
+function renovSelecionarModelo(idx) {
+    document.querySelectorAll('.renov-modelo').forEach(el => {
+        el.style.borderColor = el.dataset.idx == idx ? '#25d366' : '';
+        el.style.background  = el.dataset.idx == idx ? '#f0fff4' : '';
+    });
+    const m = _renovModelos[idx];
+    if (!m) return;
+    // Substitui variáveis
+    let msg = m.MENSAGEM
+        .replace(/{NOME}/g,      _renovDados.nome)
+        .replace(/{PRODUTO}/g,   _renovDados.produto)
+        .replace(/{VALOR}/g,     _renovDados.valor)
+        .replace(/{DATA_RENOV}/g, _renovDados.dataRenov || 'N/D');
+    document.getElementById('renovEditarMsg').value = msg;
+    document.getElementById('renovBtnEnviar').disabled = false;
+}
+
+async function renovEnviarMsg() {
+    const msg = document.getElementById('renovEditarMsg').value.trim();
+    if (!msg) { alert('Digite a mensagem antes de enviar.'); return; }
+
+    const btn = document.getElementById('renovBtnEnviar');
+    btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin me-1"></i> Enviando...';
 
     const fd = new FormData();
-    fd.append('acao_renov', 'notificar_whats');
-    fd.append('nome',      nome);
-    fd.append('telefone',  telefone);
-    fd.append('produto',   produto);
-    fd.append('valor',     valor);
-    fd.append('data_renov', dataRenov);
+    fd.append('acao_renov',  'notificar_whats');
+    fd.append('nome',        _renovDados.nome);
+    fd.append('telefone',    _renovDados.telefone);
+    fd.append('produto',     _renovDados.produto);
+    fd.append('valor',       _renovDados.valor);
+    fd.append('data_renov',  _renovDados.dataRenov);
+    fd.append('mensagem_custom', msg);
 
     const res = await fetch('', {method:'POST', body:fd}).then(r=>r.json()).catch(()=>null);
-    btn.disabled = false;
-    btn.innerHTML = orig;
+    btn.disabled = false; btn.innerHTML = '<i class="fab fa-whatsapp me-1"></i> Enviar';
 
-    if (res && res.success) {
-        btn.style.background = '#128c7e';
-        btn.title = '✅ Enviado!';
-        if (typeof crmToast === 'function') crmToast('✅ Aviso enviado via WhatsApp!', 'success');
-        else alert('✅ Aviso enviado via WhatsApp!');
+    bootstrap.Modal.getInstance(document.getElementById('modalRenovWhats'))?.hide();
+    if (res?.success) {
+        if (typeof crmToast === 'function') crmToast('Aviso enviado via WhatsApp!', 'success');
+        else alert('Aviso enviado!');
     } else {
-        if (typeof crmToast === 'function') crmToast('❌ ' + (res?.msg || 'Erro ao enviar.'), 'error');
-        else alert('❌ ' + (res?.msg || 'Erro ao enviar.'));
+        if (typeof crmToast === 'function') crmToast('Erro: ' + (res?.msg || 'Falha no envio.'), 'error');
+        else alert('Erro: ' + (res?.msg || 'Falha.'));
     }
 }
 </script>
+
+<!-- Modal: Aviso de Renovação via WhatsApp -->
+<div class="modal fade" id="modalRenovWhats" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-dark shadow-lg rounded-0">
+            <div class="modal-header rounded-0 py-2" style="background:#075e54;">
+                <h6 class="modal-title fw-bold text-uppercase text-white">
+                    <i class="fab fa-whatsapp me-2"></i> Aviso de Renovação via WhatsApp
+                </h6>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body bg-light p-3">
+                <div class="mb-2 small text-muted fw-bold border-start border-success border-3 ps-2" id="renovDestinatario"></div>
+                <div class="row g-3">
+                    <!-- Coluna modelos -->
+                    <div class="col-md-5">
+                        <label class="fw-bold small text-dark mb-1"><i class="fas fa-list me-1"></i> Modelos de Mensagem</label>
+                        <div id="renovModelosLista" style="max-height:320px; overflow-y:auto;"></div>
+                    </div>
+                    <!-- Coluna edição -->
+                    <div class="col-md-7">
+                        <label class="fw-bold small text-dark mb-1"><i class="fas fa-edit me-1"></i> Editar antes de enviar</label>
+                        <textarea id="renovEditarMsg" class="form-control border-dark rounded-0"
+                            rows="14" style="font-size:12px; resize:vertical;"
+                            placeholder="Selecione um modelo ao lado ou escreva sua mensagem..."></textarea>
+                        <small class="text-muted d-block mt-1">
+                            Variáveis disponíveis: <code>{NOME}</code> <code>{PRODUTO}</code> <code>{VALOR}</code> <code>{DATA_RENOV}</code>
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer bg-white border-top border-dark rounded-0 p-2 d-flex justify-content-between align-items-center">
+                <button type="button" class="btn btn-sm btn-secondary rounded-0" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-sm fw-bold rounded-0 text-white" id="renovBtnEnviar"
+                    style="background:#25d366; border:none;" disabled onclick="renovEnviarMsg()">
+                    <i class="fab fa-whatsapp me-1"></i> Enviar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 <?php endif; // temAcessoRenovacao ?>
 
 <?php if ($temAcessoCampanhas): ?>
