@@ -82,6 +82,30 @@ function urlPag($pagina, $extra = []) {
     return '?' . http_build_query($p);
 }
 
+// Busca campanhas disponíveis para inclusão (respeita hierarquia)
+$grupo_sess    = strtoupper($_SESSION['usuario_grupo'] ?? '');
+$is_master_cc  = in_array($grupo_sess, ['MASTER','ADMIN','ADMINISTRADOR']);
+$id_emp_cc     = null;
+if (!$is_master_cc) {
+    $se = $pdo->prepare("SELECT id_empresa FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+    $se->execute([$_SESSION['usuario_cpf']]);
+    $id_emp_cc = $se->fetchColumn() ?: null;
+}
+$sqlCampsInc = "SELECT c.ID, c.NOME_CAMPANHA, c.STATUS, COALESCE(e.NOME_CADASTRO,'') AS NOME_EMPRESA
+    FROM BANCO_DE_DADOS_CAMPANHA_CAMPANHAS c
+    LEFT JOIN CLIENTE_EMPRESAS e ON e.CNPJ COLLATE utf8mb4_unicode_ci = c.CNPJ_EMPRESA COLLATE utf8mb4_unicode_ci
+    WHERE 1=1";
+$paramsCampsInc = [];
+if (!$is_master_cc && $id_emp_cc) {
+    $sqlCampsInc .= " AND (c.id_empresa = ? OR c.id_empresa IS NULL)";
+    $paramsCampsInc[] = $id_emp_cc;
+}
+$sqlCampsInc .= " ORDER BY c.NOME_CAMPANHA ASC";
+$stCampsInc = $pdo->prepare($sqlCampsInc);
+$stCampsInc->execute($paramsCampsInc);
+$campanhas_inclusao = $stCampsInc->fetchAll(PDO::FETCH_ASSOC);
+
+$caminho_footer = $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php';
 include $caminho_header;
 ?>
 <style>
@@ -414,9 +438,7 @@ async function abrirModalIncluirCampanha() {
     document.getElementById('buscaCampModal').value = '';
 
     if (_campsDest.length === 0) {
-        const fd = new FormData(); fd.append('acao', 'listar_filtros');
-        const res = await fetch('/modulos/campanhas/relatorio_ajax.php', {method:'POST', body:fd}).then(r=>r.json());
-        _campsDest = res.campanhas_destino || [];
+        _campsDest = <?= json_encode($campanhas_inclusao) ?>;
     }
     renderCampsModal(_campsDest);
     new bootstrap.Modal(document.getElementById('modalIncluirCamp')).show();
@@ -457,7 +479,10 @@ async function confirmarInclusao() {
 
     const res = await fetch(url, {method:'POST', body:fd}).then(r=>r.json());
     bootstrap.Modal.getInstance(document.getElementById('modalIncluirCamp'))?.hide();
-    crmToast(res.success ? (res.msg || 'Incluídos com sucesso!') : (res.msg || 'Erro ao incluir.'), res.success ? 'success' : 'error');
+    if (typeof crmToast === 'function')
+        crmToast(res.success ? (res.msg || 'Incluídos com sucesso!') : (res.msg || 'Erro ao incluir.'), res.success ? 'success' : 'error');
+    else alert(res.success ? (res.msg || 'Incluídos com sucesso!') : (res.msg || 'Erro ao incluir.'));
     if (res.success) desmarcarTodos();
 }
 </script>
+<?php if (file_exists($caminho_footer)) include $caminho_footer; ?>
