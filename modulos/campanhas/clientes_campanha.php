@@ -104,6 +104,8 @@ include $caminho_header;
 .cc-sem-contato { color:#adb5bd; font-style:italic; font-size:11px; }
 .cc-ver-btn { padding:2px 10px; font-size:12px; }
 .cc-filtro-ativo { font-size:11px; background:#fff3cd; border:1px solid #ffc107; border-radius:6px; padding:4px 10px; color:#856404; }
+.cc-check { width:16px; height:16px; cursor:pointer; }
+#barraAcao { position:sticky; bottom:0; z-index:100; background:#1a1a2e; color:#fff; padding:10px 16px; border-top:2px solid #e8621a; display:none; align-items:center; gap:12px; flex-wrap:wrap; }
 </style>
 
 <div class="container-fluid py-3">
@@ -163,6 +165,7 @@ include $caminho_header;
         <table class="table table-bordered table-hover mb-0 cc-table">
             <thead>
                 <tr>
+                    <th style="width:36px;"><input type="checkbox" class="cc-check" id="chkTodos" title="Selecionar todos"></th>
                     <th>#</th>
                     <th>CPF</th>
                     <th>Nome</th>
@@ -175,7 +178,7 @@ include $caminho_header;
             </thead>
             <tbody>
             <?php if (empty($clientes)): ?>
-                <tr><td colspan="8" class="text-center text-muted py-4 fst-italic">Nenhum cliente encontrado.</td></tr>
+                <tr><td colspan="9" class="text-center text-muted py-4 fst-italic">Nenhum cliente encontrado.</td></tr>
             <?php else: ?>
                 <?php foreach ($clientes as $i => $cli):
                     $num = $offset + $i + 1;
@@ -186,6 +189,7 @@ include $caminho_header;
                     $url_ver = "/modulos/banco_dados/consulta.php?id_campanha={$id_campanha}&cpf_selecionado={$cli['CPF_CLIENTE']}&acao=visualizar";
                 ?>
                 <tr>
+                    <td><input type="checkbox" class="cc-check chk-cli" value="<?= $cli['CPF_CLIENTE'] ?>"></td>
                     <td class="text-muted small"><?= $num ?></td>
                     <td class="cc-cpf"><?= $cpf_fmt ?></td>
                     <td class="cc-nome"><?= htmlspecialchars($cli['NOME'] ?? '—') ?></td>
@@ -217,6 +221,18 @@ include $caminho_header;
         </table>
     </div>
 
+    <!-- Barra de Ação (sticky bottom) -->
+    <div id="barraAcao">
+        <i class="fas fa-check-square text-warning"></i>
+        <span id="barraAcaoTexto" style="font-size:13px; font-weight:700;"></span>
+        <button class="btn btn-sm btn-warning fw-bold border-dark text-dark rounded-0" onclick="abrirModalIncluirCampanha()">
+            <i class="fas fa-bullhorn me-1"></i> Incluir em Campanha
+        </button>
+        <button class="btn btn-sm btn-outline-light rounded-0" onclick="desmarcarTodos()">
+            <i class="fas fa-times me-1"></i> Desmarcar
+        </button>
+    </div>
+
     <!-- Paginação -->
     <?php if ($total_pags > 1): ?>
     <nav class="mt-3 d-flex justify-content-center">
@@ -243,3 +259,93 @@ include $caminho_header;
     <?php endif; ?>
 
 </div>
+
+<!-- Modal Incluir em Campanha -->
+<div class="modal fade" id="modalIncluirCamp" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-dark shadow-lg rounded-0">
+            <div class="modal-header bg-dark text-white border-dark rounded-0 py-2">
+                <h6 class="modal-title fw-bold text-uppercase">
+                    <i class="fas fa-bullhorn me-2"></i> Incluir em Campanha
+                </h6>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body bg-light">
+                <p class="small mb-2" id="modalIncluirTexto"></p>
+                <label class="fw-bold small text-dark mb-1">Campanha de destino:</label>
+                <select id="selectCampDestino" class="form-select border-dark rounded-0 fw-bold">
+                    <option value="">-- Selecione --</option>
+                </select>
+                <small class="text-muted d-block mt-2">Apenas campanhas da sua empresa são exibidas.</small>
+            </div>
+            <div class="modal-footer bg-white border-top border-dark rounded-0 p-2">
+                <button type="button" class="btn btn-sm btn-secondary rounded-0" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-sm btn-success fw-bold rounded-0" onclick="confirmarInclusao()">
+                    <i class="fas fa-plus me-1"></i> Incluir
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+const chkTodos = document.getElementById('chkTodos');
+chkTodos?.addEventListener('change', () => {
+    document.querySelectorAll('.chk-cli').forEach(c => c.checked = chkTodos.checked);
+    atualizarBarra();
+});
+document.querySelectorAll('.chk-cli').forEach(c => c.addEventListener('change', atualizarBarra));
+
+function getSelecionados() {
+    return [...document.querySelectorAll('.chk-cli:checked')].map(c => c.value);
+}
+function desmarcarTodos() {
+    document.querySelectorAll('.chk-cli').forEach(c => c.checked = false);
+    if (chkTodos) chkTodos.checked = false;
+    atualizarBarra();
+}
+function atualizarBarra() {
+    const sel   = getSelecionados();
+    const barra = document.getElementById('barraAcao');
+    const texto = document.getElementById('barraAcaoTexto');
+    barra.style.display = sel.length > 0 ? 'flex' : 'none';
+    if (sel.length > 0) texto.textContent = sel.length + ' cliente(s) selecionado(s)';
+}
+
+let _campsDest = [];
+async function abrirModalIncluirCampanha() {
+    const sel   = getSelecionados();
+    const total = <?= $total ?>;
+    document.getElementById('modalIncluirTexto').innerHTML = sel.length > 0
+        ? `<i class="fas fa-check-circle text-success me-1"></i><strong>${sel.length}</strong> cliente(s) selecionado(s) serão incluídos.`
+        : `<i class="fas fa-info-circle text-warning me-1"></i>Nenhum selecionado — serão incluídos <strong>todos os ${total.toLocaleString('pt-BR')}</strong> da seleção atual.`;
+
+    if (_campsDest.length === 0) {
+        const fd = new FormData(); fd.append('acao', 'listar_filtros');
+        const res = await fetch('/modulos/campanhas/relatorio_ajax.php', {method:'POST', body:fd}).then(r=>r.json());
+        _campsDest = res.campanhas_destino || [];
+        document.getElementById('selectCampDestino').innerHTML =
+            '<option value="">-- Selecione --</option>' +
+            _campsDest.map(c => `<option value="${c.ID}">${c.NOME_CAMPANHA}</option>`).join('');
+    }
+    new bootstrap.Modal(document.getElementById('modalIncluirCamp')).show();
+}
+
+async function confirmarInclusao() {
+    const idDest = document.getElementById('selectCampDestino').value;
+    if (!idDest) { crmToast('Selecione uma campanha de destino.', 'warning'); return; }
+
+    const sel = getSelecionados();
+    const fd  = new FormData();
+    fd.append('acao', 'incluir_em_campanha');
+    fd.append('id_campanha_dest', idDest);
+
+    const cpfs = sel.length > 0 ? sel : [...document.querySelectorAll('.chk-cli')].map(c => c.value);
+    cpfs.forEach(cpf => fd.append('cpfs[]', cpf));
+
+    const res = await fetch('/modulos/campanhas/relatorio_ajax.php', {method:'POST', body:fd}).then(r=>r.json());
+    bootstrap.Modal.getInstance(document.getElementById('modalIncluirCamp'))?.hide();
+    crmToast(res.success ? (res.msg || 'Incluídos com sucesso!') : (res.msg || 'Erro ao incluir.'), res.success ? 'success' : 'error');
+    if (res.success) desmarcarTodos();
+}
+</script>
