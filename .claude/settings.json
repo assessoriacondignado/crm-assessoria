@@ -459,7 +459,8 @@
       "mcp__claude_ai_Canva__create-design-from-candidate",
       "mcp__claude_ai_Canva__start-editing-transaction",
       "mcp__claude_ai_Canva__perform-editing-operations",
-      "mcp__claude_ai_Canva__commit-editing-transaction"
+      "mcp__claude_ai_Canva__commit-editing-transaction",
+      "Bash(grep -n '$tbl\\\\b\\\\|TABELA_DADOS\\\\|tabela_dados\\\\|tbl_nome\\\\|tblNome' /var/www/html/modulos/configuracao/v8_clt_margem_e_digitacao/worker_v8_lote.php)"
     ],
     "additionalDirectories": [
       "/etc/mysql/mysql.conf.d",
