@@ -221,6 +221,15 @@ include $caminho_header;
         </table>
     </div>
 
+    <!-- Banner seleção global -->
+    <div id="avisoGlobal" style="display:none; background:#2d2d4e; color:#fff; padding:8px 16px; font-size:13px; align-items:center; gap:10px; flex-wrap:wrap; border-top:1px solid rgba(255,255,255,.1);">
+        <i class="fas fa-info-circle text-warning me-2"></i>
+        Os <strong>100</strong> clientes desta página foram selecionados.
+        <button class="btn btn-sm btn-warning fw-bold rounded-0 text-dark" onclick="marcarGlobal()">
+            <i class="fas fa-globe me-1"></i> Selecionar todos os <?= number_format($total, 0, ',', '.') ?> do filtro
+        </button>
+    </div>
+
     <!-- Barra de Ação (sticky bottom) -->
     <div id="barraAcao">
         <i class="fas fa-check-square text-warning"></i>
@@ -289,12 +298,37 @@ include $caminho_header;
 </div>
 
 <script>
+const _totalFiltro = <?= $total ?>;
+const _idCampanha  = <?= $id_campanha ?>;
+let _selecaoGlobal = false;
+
 const chkTodos = document.getElementById('chkTodos');
 chkTodos?.addEventListener('change', () => {
     document.querySelectorAll('.chk-cli').forEach(c => c.checked = chkTodos.checked);
+    _selecaoGlobal = false;
     atualizarBarra();
+    // Mostra aviso de seleção global apenas se marcou todos e há mais de 100
+    document.getElementById('avisoGlobal').style.display =
+        (chkTodos.checked && _totalFiltro > 100) ? 'flex' : 'none';
 });
-document.querySelectorAll('.chk-cli').forEach(c => c.addEventListener('change', atualizarBarra));
+document.querySelectorAll('.chk-cli').forEach(c => c.addEventListener('change', () => {
+    _selecaoGlobal = false;
+    document.getElementById('avisoGlobal').style.display = 'none';
+    atualizarBarra();
+}));
+
+function marcarGlobal() {
+    _selecaoGlobal = true;
+    document.getElementById('avisoGlobal').innerHTML =
+        `<i class="fas fa-globe text-warning me-2"></i><strong>Todos os ${_totalFiltro.toLocaleString('pt-BR')} clientes do filtro atual foram selecionados.</strong>
+         <button class="btn btn-sm btn-outline-light rounded-0 ms-3" onclick="cancelarGlobal()"><i class="fas fa-times me-1"></i>Cancelar</button>`;
+    atualizarBarra();
+}
+function cancelarGlobal() {
+    _selecaoGlobal = false;
+    document.getElementById('avisoGlobal').style.display = 'none';
+    atualizarBarra();
+}
 
 function getSelecionados() {
     return [...document.querySelectorAll('.chk-cli:checked')].map(c => c.value);
@@ -302,23 +336,28 @@ function getSelecionados() {
 function desmarcarTodos() {
     document.querySelectorAll('.chk-cli').forEach(c => c.checked = false);
     if (chkTodos) chkTodos.checked = false;
+    _selecaoGlobal = false;
+    document.getElementById('avisoGlobal').style.display = 'none';
     atualizarBarra();
 }
 function atualizarBarra() {
     const sel   = getSelecionados();
     const barra = document.getElementById('barraAcao');
     const texto = document.getElementById('barraAcaoTexto');
-    barra.style.display = sel.length > 0 ? 'flex' : 'none';
-    if (sel.length > 0) texto.textContent = sel.length + ' cliente(s) selecionado(s)';
+    const qtd   = _selecaoGlobal ? _totalFiltro : sel.length;
+    barra.style.display = (qtd > 0) ? 'flex' : 'none';
+    if (qtd > 0) texto.textContent = qtd.toLocaleString('pt-BR') + ' cliente(s) selecionado(s)' + (_selecaoGlobal ? ' — TODOS DO FILTRO' : '');
 }
 
 let _campsDest = [];
 async function abrirModalIncluirCampanha() {
-    const sel   = getSelecionados();
-    const total = <?= $total ?>;
-    document.getElementById('modalIncluirTexto').innerHTML = sel.length > 0
-        ? `<i class="fas fa-check-circle text-success me-1"></i><strong>${sel.length}</strong> cliente(s) selecionado(s) serão incluídos.`
-        : `<i class="fas fa-info-circle text-warning me-1"></i>Nenhum selecionado — serão incluídos <strong>todos os ${total.toLocaleString('pt-BR')}</strong> da seleção atual.`;
+    const sel = getSelecionados();
+    const qtd = _selecaoGlobal ? _totalFiltro : (sel.length > 0 ? sel.length : getSelecionados().length);
+    document.getElementById('modalIncluirTexto').innerHTML = _selecaoGlobal
+        ? `<i class="fas fa-globe text-warning me-1"></i>Seleção global: <strong>todos os ${_totalFiltro.toLocaleString('pt-BR')} clientes</strong> do filtro atual serão incluídos.`
+        : sel.length > 0
+            ? `<i class="fas fa-check-circle text-success me-1"></i><strong>${sel.length}</strong> cliente(s) selecionado(s) serão incluídos.`
+            : `<i class="fas fa-info-circle text-warning me-1"></i>Nenhum selecionado — serão incluídos os <strong>100</strong> da página atual.`;
 
     if (_campsDest.length === 0) {
         const fd = new FormData(); fd.append('acao', 'listar_filtros');
@@ -335,15 +374,26 @@ async function confirmarInclusao() {
     const idDest = document.getElementById('selectCampDestino').value;
     if (!idDest) { crmToast('Selecione uma campanha de destino.', 'warning'); return; }
 
-    const sel = getSelecionados();
-    const fd  = new FormData();
-    fd.append('acao', 'incluir_em_campanha');
+    const fd = new FormData();
     fd.append('id_campanha_dest', idDest);
 
-    const cpfs = sel.length > 0 ? sel : [...document.querySelectorAll('.chk-cli')].map(c => c.value);
-    cpfs.forEach(cpf => fd.append('cpfs[]', cpf));
+    let url = '/modulos/campanhas/relatorio_ajax.php';
 
-    const res = await fetch('/modulos/campanhas/relatorio_ajax.php', {method:'POST', body:fd}).then(r=>r.json());
+    if (_selecaoGlobal) {
+        // Inclusão global: backend busca todos os CPFs do filtro
+        fd.append('acao', 'incluir_global_campanha');
+        fd.append('id_campanha_origem', _idCampanha);
+        fd.append('q', '<?= addslashes($q) ?>');
+        <?php if ($somente_restantes): ?>fd.append('somente_restantes', '1');<?php endif; ?>
+        <?php if ($somente_contatados): ?>fd.append('somente_contatados', '1');<?php endif; ?>
+    } else {
+        fd.append('acao', 'incluir_em_campanha');
+        const sel = getSelecionados();
+        const cpfs = sel.length > 0 ? sel : [...document.querySelectorAll('.chk-cli')].map(c => c.value);
+        cpfs.forEach(cpf => fd.append('cpfs[]', cpf));
+    }
+
+    const res = await fetch(url, {method:'POST', body:fd}).then(r=>r.json());
     bootstrap.Modal.getInstance(document.getElementById('modalIncluirCamp'))?.hide();
     crmToast(res.success ? (res.msg || 'Incluídos com sucesso!') : (res.msg || 'Erro ao incluir.'), res.success ? 'success' : 'error');
     if (res.success) desmarcarTodos();

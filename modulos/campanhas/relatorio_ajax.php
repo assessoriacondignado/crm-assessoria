@@ -438,6 +438,58 @@ if ($acao === 'incluir_em_campanha') {
 }
 
 // =========================================================================
+// AÇÃO: Incluir TODOS do filtro de uma campanha em outra (seleção global)
+// =========================================================================
+if ($acao === 'incluir_global_campanha') {
+    try {
+        $id_origem  = intval($_POST['id_campanha_origem'] ?? 0);
+        $id_destino = intval($_POST['id_campanha_dest'] ?? 0);
+        if (!$id_origem || !$id_destino) {
+            echo json_encode(['success' => false, 'msg' => 'Parâmetros inválidos.']); exit;
+        }
+
+        // Filtros opcionais (mesmos da listagem)
+        $where  = "WHERE c.ID_CAMPANHA = ?";
+        $params = [$id_origem];
+
+        $q = trim($_POST['q'] ?? '');
+        if ($q !== '') {
+            $qL = preg_replace('/\D/', '', $q);
+            if ($qL !== '') {
+                $where .= " AND c.CPF_CLIENTE LIKE ?"; $params[] = "%{$qL}%";
+            } else {
+                $where .= " AND (SELECT nome FROM dados_cadastrais WHERE cpf = c.CPF_CLIENTE LIMIT 1) LIKE ?";
+                $params[] = "%{$q}%";
+            }
+        }
+
+        $existe = "EXISTS (SELECT 1 FROM BANCO_DE_DADOS_CAMPANHA_REGISTRO_CONTATO r WHERE r.CPF_CLIENTE = c.CPF_CLIENTE AND r.DATA_REGISTRO >= c.DATA_INCLUSAO)";
+        if (!empty($_POST['somente_restantes']))  $where .= " AND NOT {$existe}";
+        if (!empty($_POST['somente_contatados'])) $where .= " AND {$existe}";
+
+        // Busca todos os CPFs do filtro sem LIMIT
+        $stCpfs = $pdo->prepare("SELECT c.CPF_CLIENTE FROM BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA c {$where}");
+        $stCpfs->execute($params);
+        $cpfs = $stCpfs->fetchAll(PDO::FETCH_COLUMN);
+
+        if (empty($cpfs)) {
+            echo json_encode(['success' => false, 'msg' => 'Nenhum cliente encontrado no filtro.']); exit;
+        }
+
+        $stmt = $pdo->prepare("INSERT IGNORE INTO BANCO_DE_DADOS_CLIENTES_DA_CAMPANHA (CPF_CLIENTE, ID_CAMPANHA) VALUES (?, ?)");
+        $incluidos = 0;
+        foreach ($cpfs as $cpf) {
+            $stmt->execute([$cpf, $id_destino]);
+            $incluidos += $stmt->rowCount();
+        }
+        echo json_encode(['success' => true, 'msg' => "{$incluidos} de " . count($cpfs) . " cliente(s) incluído(s) na campanha."]);
+    } catch (Exception $e) {
+        echo json_encode(['success' => false, 'msg' => $e->getMessage()]);
+    }
+    exit;
+}
+
+// =========================================================================
 // AÇÃO: Exportar CSV (GET request)
 // =========================================================================
 if ($acao === 'exportar_csv' && !$perm_exportar) {
