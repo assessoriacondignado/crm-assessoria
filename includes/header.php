@@ -632,7 +632,7 @@ session_write_close();
             </button>
             <div class="sidebar-sub">
                 <a class="sidebar-subitem" href="/modulos/campanhas/index.php"><i class="fas fa-list"></i> Relação de Campanhas</a>
-                <?php if(podeAcessarMenu($pdo, 'SUBMENU_STATUS')): ?>
+                <?php if(podeAcessarMenu($pdo, 'SUBMENU_CAMPANHA_STATUS_QUALIFICACAO')): ?>
                 <a class="sidebar-subitem" href="/modulos/campanhas/status.php"><i class="fas fa-tags"></i> Status e Qualificações</a>
                 <?php endif; ?>
                 <a class="sidebar-subitem" href="/modulos/campanhas/agenda.php"><i class="fas fa-calendar-alt"></i> Minha Agenda</a>

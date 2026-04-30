@@ -14,7 +14,7 @@ include $caminho_conexao;
 $caminho_permissoes = $_SERVER['DOCUMENT_ROOT'] . '/modulos/cliente_e_usuario/checar_permissoes.php';
 if (file_exists($caminho_permissoes)) { include_once $caminho_permissoes; }
 
-if (!verificaPermissao($pdo, 'SUBMENU_STATUS', 'TELA')) {
+if (!verificaPermissao($pdo, 'SUBMENU_CAMPANHA_STATUS_QUALIFICACAO', 'TELA')) {
     include $caminho_header;
     die("<div class='container mt-5'><div class='alert alert-danger text-center shadow-lg border-dark p-4 rounded-3'><h4 class='fw-bold mb-3'><i class='fas fa-ban'></i> Acesso Negado</h4></div></div>");
 }
