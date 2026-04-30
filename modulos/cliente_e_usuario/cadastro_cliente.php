@@ -647,11 +647,11 @@ $readonly_attr = (!$pode_editar_excluir) ? 'disabled readonly' : '';
                                                 <div id="empresaSugestoes" class="list-group position-absolute w-100 shadow-lg border border-dark" style="z-index:9999;max-height:220px;overflow-y:auto;display:none;top:100%;"></div>
                                             </div>
                                             <div class="mt-2 d-flex gap-2">
-                                                <button type="button" class="btn btn-sm btn-outline-danger" onclick="limparEmpresa()"><i class="fas fa-times me-1"></i>Remover vínculo</button>
+                                                <button type="button" class="btn btn-sm btn-outline-danger rounded-0" onclick="limparEmpresa()"><i class="fas fa-times me-1"></i>Remover vínculo</button>
                                                 <?php if(!empty($cliente_ficha['CNPJ'])): ?>
-                                                <a href="/modulos/cliente_e_usuario/cadastro_empresa.php?cnpj_selecionado=<?= urlencode($cliente_ficha['CNPJ']) ?>" class="btn btn-sm btn-outline-primary" target="_blank"><i class="fas fa-external-link-alt me-1"></i>Editar Empresa</a>
+                                                <button type="button" class="btn btn-sm btn-outline-primary rounded-0" onclick="abrirModalEmpresa('editar','<?= htmlspecialchars($cliente_ficha['CNPJ']) ?>')"><i class="fas fa-edit me-1"></i>Editar Empresa</button>
                                                 <?php endif; ?>
-                                                <a href="/modulos/cliente_e_usuario/cadastro_empresa.php?acao=novo" class="btn btn-sm btn-outline-success" target="_blank"><i class="fas fa-plus me-1"></i>Nova Empresa</a>
+                                                <button type="button" class="btn btn-sm btn-outline-success rounded-0" onclick="abrirModalEmpresa('nova')"><i class="fas fa-plus me-1"></i>Nova Empresa</button>
                                             </div>
                                         </div>
                                     </div>
@@ -1182,4 +1182,103 @@ function exportarClientes() {
 </div> <?php
 $caminho_footer = $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php';
 if (file_exists($caminho_footer)) { include $caminho_footer; }
+?>
+
+<!-- Modal Empresa (Nova / Editar) -->
+<div class="modal fade" id="modalEmpresa" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-dark shadow-lg rounded-0">
+            <div class="modal-header bg-dark text-white border-dark rounded-0 py-2">
+                <h6 class="modal-title fw-bold text-uppercase" id="modalEmpresaTitulo">
+                    <i class="fas fa-building me-2"></i> Nova Empresa
+                </h6>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body bg-light">
+                <input type="hidden" id="modalEmpresaAcao" value="nova_empresa">
+                <div class="row g-3">
+                    <div class="col-md-5">
+                        <label class="fw-bold small text-dark">CNPJ <span class="text-danger">*</span></label>
+                        <input type="text" id="modalEmpresaCnpj" class="form-control border-dark rounded-0" placeholder="Apenas números" maxlength="18">
+                    </div>
+                    <div class="col-md-7">
+                        <label class="fw-bold small text-dark">Nome / Razão Social <span class="text-danger">*</span></label>
+                        <input type="text" id="modalEmpresaNome" class="form-control border-dark rounded-0 text-uppercase">
+                    </div>
+                    <div class="col-md-12">
+                        <label class="fw-bold small text-dark">Celular</label>
+                        <input type="text" id="modalEmpresaCelular" class="form-control border-dark rounded-0" placeholder="Ex: 11999999999" maxlength="11">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer bg-white border-top border-dark rounded-0 p-2">
+                <button type="button" class="btn btn-sm btn-secondary rounded-0" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-sm btn-success fw-bold rounded-0" onclick="salvarEmpresaModal()">
+                    <i class="fas fa-save me-1"></i> Salvar Empresa
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function abrirModalEmpresa(modo, cnpj) {
+    document.getElementById('modalEmpresaCnpj').value    = '';
+    document.getElementById('modalEmpresaNome').value    = '';
+    document.getElementById('modalEmpresaCelular').value = '';
+
+    if (modo === 'nova') {
+        document.getElementById('modalEmpresaTitulo').innerHTML = '<i class="fas fa-building me-2"></i> Nova Empresa';
+        document.getElementById('modalEmpresaAcao').value = 'nova_empresa';
+        document.getElementById('modalEmpresaCnpj').removeAttribute('readonly');
+        new bootstrap.Modal(document.getElementById('modalEmpresa')).show();
+    } else {
+        document.getElementById('modalEmpresaTitulo').innerHTML = '<i class="fas fa-edit me-2"></i> Editar Empresa';
+        document.getElementById('modalEmpresaAcao').value = 'editar_empresa';
+        document.getElementById('modalEmpresaCnpj').setAttribute('readonly', true);
+        // Carrega dados da empresa
+        const fd = new FormData();
+        fd.append('acao', 'carregar_empresa');
+        fd.append('cnpj', cnpj);
+        fetch('cliente_ajax.php', { method: 'POST', body: fd })
+            .then(r => r.json())
+            .then(res => {
+                if (!res.success) return crmToast(res.msg, 'error');
+                document.getElementById('modalEmpresaCnpj').value    = res.empresa.CNPJ;
+                document.getElementById('modalEmpresaNome').value    = res.empresa.NOME_CADASTRO;
+                document.getElementById('modalEmpresaCelular').value = res.empresa.CELULAR || '';
+                new bootstrap.Modal(document.getElementById('modalEmpresa')).show();
+            });
+    }
+}
+
+function salvarEmpresaModal() {
+    const acao = document.getElementById('modalEmpresaAcao').value;
+    const cnpj = document.getElementById('modalEmpresaCnpj').value.replace(/\D/g,'');
+    const nome = document.getElementById('modalEmpresaNome').value.trim();
+    const cel  = document.getElementById('modalEmpresaCelular').value.trim();
+
+    if (!cnpj || !nome) return crmToast('CNPJ e Nome são obrigatórios.', 'warning');
+
+    const fd = new FormData();
+    fd.append('acao', acao);
+    fd.append('cnpj', cnpj);
+    fd.append('nome_cadastro', nome);
+    fd.append('celular', cel);
+
+    fetch('cliente_ajax.php', { method: 'POST', body: fd })
+        .then(r => r.json())
+        .then(res => {
+            if (!res.success) return crmToast(res.msg, 'error');
+            bootstrap.Modal.getInstance(document.getElementById('modalEmpresa')).hide();
+            crmToast(res.msg, 'success');
+            // Se for nova empresa, já vincula automaticamente ao cliente
+            if (acao === 'nova_empresa') {
+                document.getElementById('cnpjVinculadoHidden').value = res.cnpj;
+                document.getElementById('empresaBuscaInput').value   = res.nome + ' (CNPJ: ' + res.cnpj + ')';
+            }
+        });
+}
+</script>
+<?php
 ?>

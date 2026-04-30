@@ -51,6 +51,39 @@ try {
             echo json_encode(['success' => true]);
             break;
 
+        case 'nova_empresa':
+            $cnpj  = preg_replace('/\D/', '', $_POST['cnpj'] ?? '');
+            $nome  = strtoupper(trim($_POST['nome_cadastro'] ?? ''));
+            $cel   = preg_replace('/\D/', '', $_POST['celular'] ?? '');
+            if (empty($cnpj) || empty($nome)) throw new Exception("CNPJ e Nome são obrigatórios.");
+            $chk = $pdo->prepare("SELECT ID FROM CLIENTE_EMPRESAS WHERE CNPJ = ?");
+            $chk->execute([$cnpj]);
+            if ($chk->fetchColumn()) throw new Exception("Este CNPJ já está cadastrado.");
+            $pdo->prepare("INSERT INTO CLIENTE_EMPRESAS (CNPJ, NOME_CADASTRO, CELULAR) VALUES (?, ?, ?)")
+                ->execute([$cnpj, $nome, $cel ?: null]);
+            echo json_encode(['success' => true, 'cnpj' => $cnpj, 'nome' => $nome, 'msg' => 'Empresa cadastrada com sucesso!']);
+            break;
+
+        case 'carregar_empresa':
+            $cnpj = preg_replace('/\D/', '', $_POST['cnpj'] ?? '');
+            if (empty($cnpj)) throw new Exception("CNPJ inválido.");
+            $st = $pdo->prepare("SELECT CNPJ, NOME_CADASTRO, CELULAR FROM CLIENTE_EMPRESAS WHERE CNPJ = ?");
+            $st->execute([$cnpj]);
+            $emp = $st->fetch(PDO::FETCH_ASSOC);
+            if (!$emp) throw new Exception("Empresa não encontrada.");
+            echo json_encode(['success' => true, 'empresa' => $emp]);
+            break;
+
+        case 'editar_empresa':
+            $cnpj  = preg_replace('/\D/', '', $_POST['cnpj'] ?? '');
+            $nome  = strtoupper(trim($_POST['nome_cadastro'] ?? ''));
+            $cel   = preg_replace('/\D/', '', $_POST['celular'] ?? '');
+            if (empty($cnpj) || empty($nome)) throw new Exception("CNPJ e Nome são obrigatórios.");
+            $pdo->prepare("UPDATE CLIENTE_EMPRESAS SET NOME_CADASTRO = ?, CELULAR = ? WHERE CNPJ = ?")
+                ->execute([$nome, $cel ?: null, $cnpj]);
+            echo json_encode(['success' => true, 'cnpj' => $cnpj, 'nome' => $nome, 'msg' => 'Empresa atualizada com sucesso!']);
+            break;
+
         default:
             throw new Exception("Ação não reconhecida.");
     }
