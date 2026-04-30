@@ -387,20 +387,23 @@ let _campsDest = [];
 let _campIdSelecionada = null;
 
 function filtrarCampsModal(q) {
-    const t = q.toLowerCase();
-    const lista = document.getElementById('listaCampsModal');
-    const items = lista.querySelectorAll('.camp-item');
-    items.forEach(el => {
-        const txt = el.dataset.busca || '';
-        el.style.display = txt.includes(t) ? '' : 'none';
+    const t = q.toLowerCase().trim();
+    document.querySelectorAll('#listaCampsModal .camp-item').forEach(el => {
+        const idx = parseInt(el.dataset.idx);
+        const c   = _campsDest[idx];
+        if (!c) return;
+        const txt = (c.NOME_CAMPANHA + ' ' + (c.NOME_EMPRESA || '')).toLowerCase();
+        el.style.display = (!t || txt.includes(t)) ? 'flex' : 'none';
     });
 }
 
-function selecionarCampModal(id, nome, empresa) {
-    _campIdSelecionada = id;
-    document.querySelectorAll('.camp-item').forEach(el => el.classList.remove('camp-ativa'));
-    document.getElementById('camp-item-' + id)?.classList.add('camp-ativa');
-    document.getElementById('campSelecionadaNome').textContent = nome + (empresa ? ' — ' + empresa : '');
+function selecionarCampModal(idx) {
+    const c = _campsDest[idx];
+    if (!c) return;
+    _campIdSelecionada = c.ID;
+    document.querySelectorAll('#listaCampsModal .camp-item').forEach(el => el.classList.remove('camp-ativa'));
+    document.querySelector(`#listaCampsModal [data-idx="${idx}"]`)?.classList.add('camp-ativa');
+    document.getElementById('campSelecionadaNome').textContent = c.NOME_CAMPANHA + (c.NOME_EMPRESA ? ' — ' + c.NOME_EMPRESA : '');
     document.getElementById('campSelecionadaInfo').classList.remove('d-none');
     document.getElementById('btnConfirmarInclusao').disabled = false;
 }
@@ -408,17 +411,17 @@ function selecionarCampModal(id, nome, empresa) {
 function renderCampsModal(camps) {
     const lista = document.getElementById('listaCampsModal');
     if (!camps.length) { lista.innerHTML = '<div class="text-muted text-center py-3">Nenhuma campanha encontrada.</div>'; return; }
-    lista.innerHTML = camps.map(c => {
+    lista.innerHTML = camps.map((c, idx) => {
         const statusBadge = c.STATUS === 'ATIVO'
             ? '<span class="badge bg-success ms-1" style="font-size:10px;">ATIVO</span>'
-            : '<span class="badge bg-secondary ms-1" style="font-size:10px;">' + (c.STATUS || '') + '</span>';
-        const emp = c.NOME_EMPRESA ? `<small class="text-muted ms-2"><i class="fas fa-building me-1"></i>${c.NOME_EMPRESA}</small>` : '';
+            : `<span class="badge bg-secondary ms-1" style="font-size:10px;">${c.STATUS || ''}</span>`;
+        const empHtml = c.NOME_EMPRESA
+            ? `<small class="text-muted ms-2"><i class="fas fa-building me-1"></i>${c.NOME_EMPRESA}</small>` : '';
         return `<div class="camp-item d-flex align-items-center justify-content-between px-3 py-2 border-bottom"
-                    id="camp-item-${c.ID}"
-                    data-busca="${(c.NOME_CAMPANHA + ' ' + (c.NOME_EMPRESA||'')).toLowerCase()}"
-                    onclick="selecionarCampModal('${c.ID}', '${c.NOME_CAMPANHA.replace(/'/g,"\\'")}', '${(c.NOME_EMPRESA||'').replace(/'/g,"\\'")}')"
-                    style="cursor:pointer; transition:.1s;">
-                    <span><strong>${c.NOME_CAMPANHA}</strong>${emp}</span>
+                    data-idx="${idx}"
+                    onclick="selecionarCampModal(${idx})"
+                    style="cursor:pointer;">
+                    <span><strong>${c.NOME_CAMPANHA}</strong>${empHtml}</span>
                     <span>${statusBadge}</span>
                 </div>`;
     }).join('');
