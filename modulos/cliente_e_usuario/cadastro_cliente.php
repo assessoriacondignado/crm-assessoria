@@ -31,9 +31,16 @@ $is_busca_avancada = isset($_GET['busca_avancada']) && $_GET['busca_avancada'] =
 $pode_ver_todos = verificaPermissao($pdo, 'FUNCAO_CADASTRO_CLIENTE_MEU_CPF', 'FUNCAO');
 
 // ✨ REGRA APLICADA: Se for bloqueado, ele não poderá excluir ou editar a ficha
-$pode_editar_excluir = verificaPermissao($pdo, 'FUNCAO_CADASTRO_CLIENTE_EDITAR_EXCLUIR', 'FUNCAO');
+$pode_editar_excluir    = verificaPermissao($pdo, 'FUNCAO_CADASTRO_CLIENTE_EDITAR_EXCLUIR', 'FUNCAO');
 $bloquear_pedido_tarefas = !verificaPermissao($pdo, 'FUNCAO_CADASTRO_CLIENTE_PEDIDO_PRODUTOS', 'FUNCAO');
-$pode_ver_financeiro = verificaPermissao($pdo, 'SUBMENU_CADASTRO_USUARIO_FINANCEIRO_VER_MEU_CLIENTE', 'FUNCAO');
+$pode_ver_financeiro    = verificaPermissao($pdo, 'SUBMENU_CADASTRO_USUARIO_FINANCEIRO_VER_MEU_CLIENTE', 'FUNCAO');
+
+// Empresa vinculada — botões (Remover vínculo, Editar Empresa, Nova Empresa)
+$perm_empresa_botoes    = verificaPermissao($pdo, 'FUNCAO_CADASTRO_CLIENTE_EMPRESA_VINCULADA_BOTOES', 'FUNCAO');
+// Credenciais — Enviar Link de Reset
+$perm_enviar_link_reset = verificaPermissao($pdo, 'FUNCAO_CADASTRO_CLIENTE_CREDENCIAL_ACESSO_ENVIAR_LINK', 'FUNCAO');
+// Credenciais — Gerenciar Usuário
+$perm_gerenciar_usuario = verificaPermissao($pdo, 'FUNCAO_CADASTRO_CLIENTE_CREDENCIAL_ACESSO_GERENCIA', 'FUNCAO');
 
 // Hierarquia por empresa: SUPERVISORES e CONSULTOR só veem clientes da sua empresa
 $grupo_sessao = strtoupper($_SESSION['usuario_grupo'] ?? '');
@@ -645,11 +652,13 @@ $readonly_attr = (!$pode_editar_excluir) ? 'disabled readonly' : '';
                                                     <?= $readonly_attr ?> autocomplete="off"
                                                     oninput="filtrarEmpresas(this.value)">
                                             </div>
+                                            <?php if($perm_empresa_botoes): ?>
                                             <div class="mt-2 d-flex gap-2">
                                                 <button type="button" class="btn btn-sm btn-outline-danger rounded-0" onclick="limparEmpresa()"><i class="fas fa-times me-1"></i>Remover vínculo</button>
                                                 <button type="button" class="btn btn-sm btn-outline-primary rounded-0" onclick="editarEmpresaAtual()"><i class="fas fa-edit me-1"></i>Editar Empresa</button>
                                                 <button type="button" class="btn btn-sm btn-outline-success rounded-0" onclick="abrirModalEmpresa('nova')"><i class="fas fa-plus me-1"></i>Nova Empresa</button>
                                             </div>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                 </div>
@@ -710,12 +719,16 @@ $readonly_attr = (!$pode_editar_excluir) ? 'disabled readonly' : '';
                                                 </div>
                                             </div>
                                             <div class="mt-2 d-flex gap-2 flex-wrap">
-                                                <button type="button" class="btn btn-sm btn-outline-info" onclick="enviarResetSenha('<?= htmlspecialchars($cliente_ficha['CPF']) ?>')">
+                                                <?php if($perm_enviar_link_reset): ?>
+                                                <button type="button" class="btn btn-sm btn-outline-info rounded-0" onclick="enviarResetSenha('<?= htmlspecialchars($cliente_ficha['CPF']) ?>')">
                                                     <i class="fas fa-paper-plane me-1"></i>Enviar Link de Reset
                                                 </button>
+                                                <?php endif; ?>
+                                                <?php if($perm_gerenciar_usuario): ?>
                                                 <button type="button" class="btn btn-sm btn-outline-primary rounded-0" onclick="abrirModalUsuario('<?= htmlspecialchars($cliente_ficha['CPF']) ?>')">
                                                     <i class="fas fa-user-cog me-1"></i>Gerenciar Usuário
                                                 </button>
+                                                <?php endif; ?>
                                             </div>
                                             <div id="resetSenhaResultado" class="mt-2"></div>
                                         </div>
