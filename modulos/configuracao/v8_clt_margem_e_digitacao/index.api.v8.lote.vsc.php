@@ -394,21 +394,9 @@
                             <i class="fas fa-shield-alt me-1"></i> Auditoria
                         </button>
                         <?php endif; ?>
-                        <div class="dropdown" id="v8CampanhaDropdown" style="display:none;">
-                            <button class="btn btn-sm fw-bold dropdown-toggle" type="button"
-                                    style="background:#6f42c1; color:#fff; border:none; font-size:11px; padding:4px 10px;"
-                                    data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                                    onclick="v8CarregarCampanhasDropdown()">
-                                <i class="fas fa-plus-circle me-1"></i> Incluir em Campanha
-                            </button>
-                            <ul class="dropdown-menu shadow" id="v8CampanhaLista" style="min-width:260px; font-size:12px; max-height:260px; overflow-y:auto;">
-                                <li><span class="dropdown-item text-muted"><i class="fas fa-spinner fa-spin"></i> Carregando...</span></li>
-                            </ul>
-                        </div>
-                        <button class="btn btn-sm fw-bold" id="v8BtnIncluirCampanha"
-                                style="background:#6f42c1; color:#fff; border:none; font-size:11px; padding:4px 10px; display:none;"
-                                onclick="v8ConfirmarIncluirCampanha()">
-                            <i class="fas fa-plus-circle me-1"></i> Incluir em Campanha
+                        <button class="btn btn-sm fw-bold" id="v8CampanhaDropdown" style="display:none; background:#6f42c1; color:#fff; border:none; font-size:11px; padding:4px 10px;"
+                                onclick="v8AbrirModalCampanha()">
+                            <i class="fas fa-bullhorn me-1"></i> Incluir em Campanha
                         </button>
                     </div>
                 </div>
@@ -427,18 +415,7 @@
                 </div>
                 <?php endif; ?>
 
-                <!-- Barra de campanha selecionada -->
-                <div id="v8CampanhaSelecionadaBar" style="display:none; background:#f0ebff; border-bottom:1px solid #d0c0f0; padding:6px 12px; font-size:12px;" class="d-flex align-items-center gap-2">
-                    <i class="fas fa-bullhorn" style="color:#6f42c1;"></i>
-                    <span>Campanha selecionada: <strong id="v8CampanhaNomeSel"></strong></span>
-                    <span class="text-muted">— <span id="v8CampanhaQtdSel"></span> cliente(s) na tela serão incluídos</span>
-                    <button class="btn btn-sm fw-bold ms-auto" style="background:#6f42c1; color:#fff; border:none; font-size:11px; padding:3px 10px;"
-                            onclick="v8ExecutarIncluirCampanha()">
-                        <i class="fas fa-check me-1"></i> Confirmar Inclusão
-                    </button>
-                    <button class="btn btn-sm btn-outline-secondary" style="font-size:11px; padding:3px 8px;"
-                            onclick="v8CancelarCampanha()">Cancelar</button>
-                </div>
+                <!-- Barra campanha removida — agora usa componente modal do sistema -->
                 <div id="v8ClientesTabela" style="max-height:65vh; overflow-y:auto;">
                     <div class="text-center py-4 text-muted"><i class="fas fa-spinner fa-spin"></i> Carregando...</div>
                 </div>
@@ -1349,65 +1326,15 @@
     }
 
     // === CAMPANHA ===
-    async function v8CarregarCampanhasDropdown() {
-        const ul = document.getElementById('v8CampanhaLista');
-        if (v8CampanhasCache) { v8RenderizarCampanhasDropdown(v8CampanhasCache); return; }
-        ul.innerHTML = '<li><span class="dropdown-item text-muted"><i class="fas fa-spinner fa-spin"></i> Carregando...</span></li>';
-        const res = await v8Req('ajax_api_v8_lote_csv.php', 'listar_campanhas_disponiveis', {}, false);
-        if (!res.success || !res.campanhas.length) {
-            ul.innerHTML = '<li><span class="dropdown-item text-muted">Nenhuma campanha disponível.</span></li>';
-            return;
-        }
-        v8CampanhasCache = res.campanhas;
-        v8RenderizarCampanhasDropdown(res.campanhas);
-    }
-
-    function v8RenderizarCampanhasDropdown(campanhas) {
-        const ul = document.getElementById('v8CampanhaLista');
-        ul.innerHTML = '<li><h6 class="dropdown-header">Selecione a campanha:</h6></li>';
-        campanhas.forEach(c => {
-            ul.innerHTML += `<li><button class="dropdown-item" onclick="v8SelecionarCampanha(${c.ID}, '${c.NOME_CAMPANHA.replace(/'/g,"\\'")}')">
-                <i class="fas fa-bullhorn me-2 text-purple" style="color:#6f42c1;"></i>${c.NOME_CAMPANHA}
-            </button></li>`;
-        });
-    }
-
-    function v8SelecionarCampanha(id, nome) {
-        v8CampanhaIdSel = id;
-        v8CampanhaNomeSel = nome;
-        // Fecha dropdown
-        const dropdownEl = document.getElementById('v8CampanhaDropdown').querySelector('[data-bs-toggle="dropdown"]');
-        bootstrap.Dropdown.getInstance(dropdownEl)?.hide();
-        // Calcula quantos serão incluídos (marcados ou todos filtrados)
-        const marcados = document.querySelectorAll('.v8-check-cliente:checked').length;
-        const qtd = marcados > 0 ? marcados : (v8ClientesFiltrados.length || v8ClientesTodos.length);
-        // Mostra barra de confirmação
-        document.getElementById('v8CampanhaNomeSel').textContent = nome;
-        document.getElementById('v8CampanhaQtdSel').textContent = qtd;
-        document.getElementById('v8CampanhaSelecionadaBar').style.display = '';
-    }
-
-    function v8CancelarCampanha() {
-        v8CampanhaIdSel = null;
-        document.getElementById('v8CampanhaSelecionadaBar').style.display = 'none';
-    }
-
-    async function v8ExecutarIncluirCampanha() {
-        // Prioridade: marcados individualmente → senão, todos filtrados
+    // ── Incluir em Campanha — componente padrão do sistema ───────────────
+    function v8AbrirModalCampanha() {
         const marcados = [...document.querySelectorAll('.v8-check-cliente:checked')].map(cb => cb.dataset.cpf);
-        const lista = marcados.length > 0 ? marcados
+        const cpfs     = marcados.length > 0 ? marcados
             : (v8ClientesFiltrados.length ? v8ClientesFiltrados.map(c => c.CPF) : v8ClientesTodos.map(c => c.CPF));
-        if (!lista.length) return v8Toast("Nenhum cliente na tela para incluir.", "warning");
-        const cpfs = lista;
-        const res = await v8Req('ajax_api_v8_lote_csv.php', 'incluir_em_campanha',
-            { id_campanha: v8CampanhaIdSel, cpfs: JSON.stringify(cpfs), id_lote: v8ClientesLoteAtual }, true, "Incluindo...");
-        if (res.success) {
-            v8Toast(`✅ ${res.msg}`, "success");
-            document.getElementById('v8CampanhaSelecionadaBar').style.display = 'none';
-            v8CampanhaIdSel = null;
-        } else {
-            v8Toast("❌ " + (res.msg || "Erro"), "error");
-        }
+        const resumo = marcados.length > 0
+            ? `<i class="fas fa-check-circle text-success me-1"></i><strong>${marcados.length}</strong> cliente(s) selecionado(s) serão incluídos.`
+            : `<i class="fas fa-info-circle text-warning me-1"></i>Serão incluídos <strong>${cpfs.length}</strong> cliente(s) visíveis na fila.`;
+        if (typeof sistemaIncluirCampanha === 'function') sistemaIncluirCampanha(cpfs, resumo);
     }
 
     // ====================================================================
@@ -1812,3 +1739,4 @@
         }
     });
 </script>
+<?php include $_SERVER["DOCUMENT_ROOT"] . "/includes/componente_incluir_campanha.php"; ?>
