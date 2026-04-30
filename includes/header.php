@@ -492,6 +492,22 @@ session_write_close();
                     <?php endif; ?>
                 </div>
                 <?php endif; ?>
+                <!-- Badge LIMITES com tooltip lazy -->
+                <div style="margin-top:4px; position:relative; display:inline-block;" id="limitesBadgeWrap">
+                    <span id="limitesBadge"
+                        style="font-size:10px; color:rgba(255,255,255,.55); cursor:pointer; border:1px solid rgba(255,255,255,.2); border-radius:4px; padding:1px 6px; display:inline-block;"
+                        onmouseenter="carregarLimites()" onmouseleave="ocultarLimites()">
+                        <i class="fas fa-tachometer-alt me-1"></i>LIMITES
+                    </span>
+                    <div id="limitesTooltip" style="display:none; position:fixed; z-index:99999; background:#1a1a2e; border:1px solid rgba(255,255,255,.15); border-radius:6px; padding:10px 14px; min-width:220px; box-shadow:0 4px 20px rgba(0,0,0,.5);">
+                        <div style="font-size:11px; font-weight:700; color:#fff; margin-bottom:8px; border-bottom:1px solid rgba(255,255,255,.1); padding-bottom:5px;">
+                            <i class="fas fa-tachometer-alt me-1 text-warning"></i> LIMITES DISPONÍVEIS
+                        </div>
+                        <div id="limitesConteudo" style="font-size:11px; color:rgba(255,255,255,.7);">
+                            <i class="fas fa-spinner fa-spin"></i> Calculando...
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- Botão avisos -->
             <div class="position-relative" id="li-sino-avisos">
@@ -816,6 +832,47 @@ function sidebarToggleSub(btn) {
 }
 // Fecha sidebar com ESC
 document.addEventListener('keydown', e => { if (e.key === 'Escape') sidebarFechar(); });
+
+// ── LIMITES: carrega sob demanda ao hover ─────────────────────
+let _limitesCache = null;
+let _limitesTimer = null;
+function carregarLimites() {
+    const tooltip = document.getElementById('limitesTooltip');
+    const badge   = document.getElementById('limitesBadge');
+    if (!tooltip || !badge) return;
+    // Posiciona o tooltip abaixo do badge
+    const r = badge.getBoundingClientRect();
+    tooltip.style.top  = (r.bottom + 4) + 'px';
+    tooltip.style.left = r.left + 'px';
+    tooltip.style.display = 'block';
+    if (_limitesCache) return; // já carregou
+    fetch('/includes/api_limites.php')
+        .then(r => r.json())
+        .then(res => {
+            _limitesCache = res;
+            const el = document.getElementById('limitesConteudo');
+            if (!el) return;
+            if (!res.success || !res.limites || res.limites.length === 0) {
+                el.innerHTML = '<span style="color:rgba(255,255,255,.4);">Nenhum limite encontrado.</span>';
+                return;
+            }
+            el.innerHTML = res.limites.map(l => {
+                const cor = l.qtd <= 10 ? '#ff6b6b' : l.qtd <= 50 ? '#ffc107' : '#51cf66';
+                return `<div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;border-bottom:1px solid rgba(255,255,255,.06);">
+                    <span><i class="fas fa-circle" style="font-size:7px;color:${cor};margin-right:6px;"></i>${l.nome}</span>
+                    <span style="font-weight:700;color:${cor};margin-left:12px;">${l.qtd.toLocaleString('pt-BR')} ${l.unidade}</span>
+                </div>`;
+            }).join('');
+        });
+}
+function ocultarLimites() {
+    _limitesTimer = setTimeout(() => {
+        const t = document.getElementById('limitesTooltip');
+        if (t) t.style.display = 'none';
+    }, 200);
+}
+document.getElementById('limitesTooltip')?.addEventListener('mouseenter', () => clearTimeout(_limitesTimer));
+document.getElementById('limitesTooltip')?.addEventListener('mouseleave', ocultarLimites);
 </script>
 
 <div class="modal fade" id="modalSuporteLogado" tabindex="-1">
