@@ -75,8 +75,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['ajax_action']) && $_PO
         $msg_extra = "(O usuário alvo não possui celular cadastrado na ficha)";
     }
     
-    // Devolve o link puro para o painel poder exibir o campo manual se necessário
-    echo json_encode(['success' => true, 'link' => $link, 'wapi' => $wapi_success, 'info' => $msg_extra]);
+    $msg_whats = "🔒 *Portal Assessoria Consignado*\n\n👤 *{$nome_mask_reset}* | Login: {$login_reset}\n\nVocê solicitou a alteração da sua senha.\nClique no link abaixo para criar uma nova (Válido por 1 hora):\n\n{$link}";
+    echo json_encode(['success' => true, 'link' => $link, 'wapi' => $wapi_success, 'info' => $msg_extra, 'msg_whats' => $msg_whats]);
     exit;
 }
 

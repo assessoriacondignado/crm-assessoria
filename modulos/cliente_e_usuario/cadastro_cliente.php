@@ -1118,8 +1118,21 @@ async function enviarResetSenha(cpf) {
     const r = await fetch('/modulos/cliente_e_usuario/acoes_usuario.php', {method:'POST', body:fd});
     const j = await r.json();
     const div = document.getElementById('resetSenhaResultado');
-    if (j.success) { div.innerHTML='<div class="alert alert-success py-1 small mt-1">✅ Link enviado! <a href="'+j.link+'" target="_blank">Abrir link</a></div>'; }
-    else { div.innerHTML='<div class="alert alert-danger py-1 small mt-1">❌ Erro ao gerar link.</div>'; }
+    if (j.success) {
+        div.innerHTML = '<div class="alert alert-success py-1 small mt-1">✅ Link enviado! <a href="'+j.link+'" target="_blank">Abrir link</a></div>';
+        // Exibe modal com a mensagem enviada ao cliente
+        const statusWpp = j.wapi
+            ? '<span class="badge bg-success rounded-0"><i class="fab fa-whatsapp me-1"></i> WhatsApp Enviado</span>'
+            : '<span class="badge bg-warning text-dark rounded-0"><i class="fas fa-exclamation-triangle me-1"></i> WhatsApp não enviado ' + (j.info ? '— ' + j.info : '') + '</span>';
+        const msgFormatada = (j.msg_whats || '').replace(/\n/g, '<br>').replace(/\*(.*?)\*/g, '<strong>$1</strong>');
+        document.getElementById('modalResetMsgStatus').innerHTML = statusWpp;
+        document.getElementById('modalResetMsgTexto').innerHTML  = msgFormatada;
+        document.getElementById('modalResetMsgLink').href        = j.link;
+        new bootstrap.Modal(document.getElementById('modalResetMensagem')).show();
+    } else {
+        div.innerHTML = '<div class="alert alert-danger py-1 small mt-1">❌ Erro ao gerar link.</div>';
+        crmToast('Erro ao gerar link de reset.', 'error');
+    }
 }
 
 // ── Seleção em lote ──────────────────────────────────────────
@@ -1234,6 +1247,30 @@ function exportarClientes() {
 $caminho_footer = $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php';
 if (file_exists($caminho_footer)) { include $caminho_footer; }
 ?>
+
+<!-- Modal Mensagem Reset de Senha -->
+<div class="modal fade" id="modalResetMensagem" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-dark shadow-lg rounded-0">
+            <div class="modal-header bg-dark text-white border-dark rounded-0 py-2">
+                <h6 class="modal-title fw-bold text-uppercase">
+                    <i class="fas fa-paper-plane me-2"></i> Link de Reset Enviado
+                </h6>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body bg-light">
+                <div class="mb-2" id="modalResetMsgStatus"></div>
+                <div class="border border-dark rounded-0 bg-white p-3" style="font-size:0.85rem; line-height:1.7;" id="modalResetMsgTexto"></div>
+            </div>
+            <div class="modal-footer bg-white border-top border-dark rounded-0 p-2 d-flex gap-2">
+                <a id="modalResetMsgLink" href="#" target="_blank" class="btn btn-sm btn-outline-primary rounded-0 fw-bold">
+                    <i class="fas fa-external-link-alt me-1"></i> Abrir Link
+                </a>
+                <button type="button" class="btn btn-sm btn-secondary rounded-0 flex-fill" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Modal Gerenciar Usuário -->
 <div class="modal fade" id="modalGerenciarUsuario" tabindex="-1">
