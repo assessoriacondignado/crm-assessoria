@@ -834,12 +834,20 @@ async function renovAbrirModal(nome, telefone, produto, valor, dataRenov) {
 
     // Renderiza lista de modelos
     const lista = document.getElementById('renovModelosLista');
-    lista.innerHTML = _renovModelos.map((m, i) =>
-        `<div class="border rounded-0 p-2 mb-2 renov-modelo" data-idx="${i}" onclick="renovSelecionarModelo(${i})" style="cursor:pointer; border-color:#dee2e6 !important;">
+    lista.innerHTML = _renovModelos.map((m, i) => {
+        // Prévia: substitui vars e pega primeiras 2 linhas
+        const prev = m.MENSAGEM
+            .replace(/{NOME}/g,      _renovDados.nome)
+            .replace(/{PRODUTO}/g,   _renovDados.produto)
+            .replace(/{VALOR}/g,     _renovDados.valor)
+            .replace(/{DATA_RENOV}/g,_renovDados.dataRenov||'N/D');
+        const linhas = prev.split('\n').filter(l=>l.trim()).slice(0,2).join(' ');
+        const prevTxt = linhas.length > 100 ? linhas.substring(0,100)+'…' : linhas;
+        return `<div class="border rounded-0 p-2 mb-2 renov-modelo" data-idx="${i}" onclick="renovSelecionarModelo(${i})" style="cursor:pointer; border-color:#dee2e6 !important;">
             <div class="fw-bold small text-dark mb-1"><i class="fas fa-file-alt me-1 text-success"></i>${m.NOME}</div>
-            <div class="text-muted" style="font-size:11px; white-space:pre-wrap; max-height:60px; overflow:hidden;">${m.MENSAGEM.substring(0,120)}${m.MENSAGEM.length>120?'…':''}</div>
-        </div>`
-    ).join('') || '<div class="text-muted small">Nenhum modelo cadastrado.</div>';
+            <div class="text-muted" style="font-size:11px;">${prevTxt}</div>
+        </div>`;
+    }).join('') || '<div class="text-muted small">Nenhum modelo cadastrado.</div>';
 
     document.getElementById('renovEditarMsg').value = '';
     document.getElementById('renovBtnEnviar').disabled = true;
