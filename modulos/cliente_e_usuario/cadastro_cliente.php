@@ -1260,7 +1260,7 @@ if (file_exists($caminho_footer)) { include $caminho_footer; }
             </div>
             <div class="modal-body bg-light">
                 <div class="mb-2" id="modalResetMsgStatus"></div>
-                <div class="border border-dark rounded-0 bg-white p-3" style="font-size:0.85rem; line-height:1.7;" id="modalResetMsgTexto"></div>
+                <div class="border border-dark rounded-0 bg-white p-3" style="font-size:0.85rem; line-height:1.7; word-break:break-all; overflow-wrap:break-word;" id="modalResetMsgTexto"></div>
             </div>
             <div class="modal-footer bg-white border-top border-dark rounded-0 p-2 d-flex gap-2">
                 <a id="modalResetMsgLink" href="#" target="_blank" class="btn btn-sm btn-outline-primary rounded-0 fw-bold">
