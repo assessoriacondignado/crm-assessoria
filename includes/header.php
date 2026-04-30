@@ -479,6 +479,19 @@ session_write_close();
             <div style="flex:1; overflow:hidden;">
                 <div style="font-weight:700; font-size:13px; color:#fff; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"><?= htmlspecialchars($nome_completo) ?></div>
                 <div style="font-size:11px; color:rgba(255,255,255,.45);"><?= htmlspecialchars($grupo_logado_h ?? $_SESSION['usuario_grupo'] ?? '') ?></div>
+                <?php if (!empty($userExp['DATA_EXPIRAR'])):
+                    $exp_ts   = strtotime($userExp['DATA_EXPIRAR']);
+                    $exp_br   = date('d/m/Y', $exp_ts);
+                    $dias_rest = (int)ceil(($exp_ts - strtotime(date('Y-m-d'))) / 86400);
+                    $cor_exp  = $dias_rest <= 7 ? '#ff6b6b' : ($dias_rest <= 30 ? '#ffc107' : 'rgba(255,255,255,.40)');
+                ?>
+                <div style="font-size:10px; color:<?= $cor_exp ?>; margin-top:2px;">
+                    <i class="fas fa-calendar-alt me-1"></i>Expira: <?= $exp_br ?>
+                    <?php if ($dias_rest <= 30): ?>
+                        <span style="font-weight:700;">(<?= $dias_rest ?>d)</span>
+                    <?php endif; ?>
+                </div>
+                <?php endif; ?>
             </div>
             <!-- Botão avisos -->
             <div class="position-relative" id="li-sino-avisos">
