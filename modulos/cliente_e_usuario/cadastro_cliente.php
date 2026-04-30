@@ -713,9 +713,9 @@ $readonly_attr = (!$pode_editar_excluir) ? 'disabled readonly' : '';
                                                 <button type="button" class="btn btn-sm btn-outline-info" onclick="enviarResetSenha('<?= htmlspecialchars($cliente_ficha['CPF']) ?>')">
                                                     <i class="fas fa-paper-plane me-1"></i>Enviar Link de Reset
                                                 </button>
-                                                <a href="/modulos/cliente_e_usuario/cadastro_usuario.php?busca=<?= $cliente_ficha['CPF'] ?>" class="btn btn-sm btn-outline-primary" target="_blank">
-                                                    <i class="fas fa-external-link-alt me-1"></i>Gerenciar Usuário
-                                                </a>
+                                                <button type="button" class="btn btn-sm btn-outline-primary rounded-0" onclick="abrirModalUsuario('<?= htmlspecialchars($cliente_ficha['CPF']) ?>')">
+                                                    <i class="fas fa-user-cog me-1"></i>Gerenciar Usuário
+                                                </button>
                                             </div>
                                             <div id="resetSenhaResultado" class="mt-2"></div>
                                         </div>
@@ -1222,6 +1222,29 @@ $caminho_footer = $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php';
 if (file_exists($caminho_footer)) { include $caminho_footer; }
 ?>
 
+<!-- Modal Gerenciar Usuário -->
+<div class="modal fade" id="modalGerenciarUsuario" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-dark shadow-lg rounded-0">
+            <div class="modal-header bg-dark text-white border-dark rounded-0 py-2">
+                <h6 class="modal-title fw-bold text-uppercase" id="modalUsuarioTitulo">
+                    <i class="fas fa-user-cog me-2"></i> Gerenciar Usuário
+                </h6>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body bg-light" id="modalUsuarioBody">
+                <div class="text-center py-4"><i class="fas fa-spinner fa-spin fa-2x text-secondary"></i></div>
+            </div>
+            <div class="modal-footer bg-white border-top border-dark rounded-0 p-2">
+                <button type="button" class="btn btn-sm btn-secondary rounded-0" data-bs-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-sm btn-primary fw-bold rounded-0" onclick="salvarUsuarioModal()">
+                    <i class="fas fa-save me-1"></i> Salvar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Modal de Confirmação Reutilizável -->
 <div class="modal fade" id="modalCrmConfirm" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-sm">
@@ -1285,6 +1308,74 @@ if (file_exists($caminho_footer)) { include $caminho_footer; }
 </div>
 
 <script>
+// ── Modal Gerenciar Usuário ───────────────────────────────────
+let _cpfUsuarioModal = '';
+async function abrirModalUsuario(cpf) {
+    _cpfUsuarioModal = cpf;
+    document.getElementById('modalUsuarioBody').innerHTML = '<div class="text-center py-4"><i class="fas fa-spinner fa-spin fa-2x text-secondary"></i></div>';
+    new bootstrap.Modal(document.getElementById('modalGerenciarUsuario')).show();
+
+    const fd = new FormData();
+    fd.append('acao', 'carregar_usuario');
+    fd.append('cpf', cpf);
+    const res = await fetch('cliente_ajax.php', {method:'POST', body:fd}).then(r => r.json());
+    if (!res.success) { document.getElementById('modalUsuarioBody').innerHTML = '<div class="alert alert-danger m-3">Erro ao carregar dados.</div>'; return; }
+
+    const u = res.usuario;
+    const gruposOpts = res.grupos.map(g => `<option value="${g}" ${u && u.GRUPO_USUARIOS===g?'selected':''}>${g}</option>`).join('');
+    const empOpts = '<option value="">-- Sem empresa --</option>' + res.empresas.map(e => `<option value="${e.ID}" ${u && u.id_empresa==e.ID?'selected':''}>${e.NOME_CADASTRO}</option>`).join('');
+    const situacaoOpts = ['ativo','inativo','vencido','suspenso'].map(s =>
+        `<option value="${s}" ${u && (u.situacao||u.Situação)===s?'selected':''}>${s.charAt(0).toUpperCase()+s.slice(1)}</option>`).join('');
+
+    document.getElementById('modalUsuarioTitulo').innerHTML = u
+        ? '<i class="fas fa-user-edit me-2"></i> Editar Usuário'
+        : '<i class="fas fa-user-plus me-2"></i> Criar Usuário';
+
+    document.getElementById('modalUsuarioBody').innerHTML = `
+        <div class="row g-3 p-1">
+            <div class="col-md-6">
+                <label class="fw-bold small text-dark">Login / Usuário ${!u?'<span class="text-danger">*</span>':''}</label>
+                <input type="text" id="muUsuario" class="form-control border-dark rounded-0 fw-bold text-primary" value="${u ? (u.USUARIO||'') : ''}" placeholder="Ex: joao.silva">
+            </div>
+            <div class="col-md-6">
+                <label class="fw-bold small text-dark">Nova Senha ${!u?'<span class="text-danger">*</span>':''}</label>
+                <input type="password" id="muSenha" class="form-control border-dark rounded-0" placeholder="${u ? 'Deixe em branco para manter' : 'Digite a senha'}">
+            </div>
+            <div class="col-md-4">
+                <label class="fw-bold small text-dark">Grupo / Perfil</label>
+                <select id="muGrupo" class="form-select border-dark rounded-0 fw-bold text-uppercase">${gruposOpts}</select>
+            </div>
+            <div class="col-md-4">
+                <label class="fw-bold small text-dark">Situação</label>
+                <select id="muSituacao" class="form-select border-dark rounded-0">${situacaoOpts}</select>
+            </div>
+            <div class="col-md-4">
+                <label class="fw-bold small text-dark">Data Expiração</label>
+                <input type="date" id="muDataExp" class="form-control border-danger rounded-0 fw-bold" value="${u && u.DATA_EXPIRAR ? u.DATA_EXPIRAR.substring(0,10) : ''}">
+            </div>
+            <div class="col-md-12">
+                <label class="fw-bold small text-dark">Empresa Vinculada</label>
+                <select id="muEmpresa" class="form-select border-dark rounded-0">${empOpts}</select>
+            </div>
+        </div>`;
+}
+async function salvarUsuarioModal() {
+    const fd = new FormData();
+    fd.append('acao',          'salvar_usuario');
+    fd.append('cpf',           _cpfUsuarioModal);
+    fd.append('usuario',       document.getElementById('muUsuario')?.value || '');
+    fd.append('senha',         document.getElementById('muSenha')?.value || '');
+    fd.append('grupo_usuarios',document.getElementById('muGrupo')?.value || '');
+    fd.append('situacao',      document.getElementById('muSituacao')?.value || 'ativo');
+    fd.append('id_empresa',    document.getElementById('muEmpresa')?.value || '');
+    fd.append('data_expirar',  document.getElementById('muDataExp')?.value || '');
+    const res = await fetch('cliente_ajax.php', {method:'POST', body:fd}).then(r => r.json());
+    if (!res.success) return crmToast(res.msg, 'error');
+    bootstrap.Modal.getInstance(document.getElementById('modalGerenciarUsuario'))?.hide();
+    crmToast(res.msg, 'success');
+    setTimeout(() => location.reload(), 1200);
+}
+
 function editarEmpresaAtual() {
     const cnpj = document.getElementById('cnpjVinculadoHidden').value.replace(/\D/g,'');
     if (!cnpj) return crmToast('Nenhuma empresa vinculada. Use "Nova Empresa" para criar.', 'warning');

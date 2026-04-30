@@ -51,6 +51,54 @@ try {
             echo json_encode(['success' => true]);
             break;
 
+        case 'carregar_usuario':
+            $cpf = preg_replace('/\D/', '', $_POST['cpf'] ?? '');
+            if (empty($cpf)) throw new Exception("CPF inválido.");
+            $st = $pdo->prepare("SELECT u.*, u.Situação as situacao FROM CLIENTE_USUARIO u WHERE u.CPF = ? LIMIT 1");
+            $st->execute([$cpf]);
+            $usr = $st->fetch(PDO::FETCH_ASSOC);
+            $grupos = $pdo->query("SELECT NOME_GRUPO FROM SISTEMA_GRUPOS_USUARIO WHERE STATUS = 'ATIVO' ORDER BY NOME_GRUPO ASC")->fetchAll(PDO::FETCH_COLUMN);
+            $empresas = $pdo->query("SELECT ID, NOME_CADASTRO FROM CLIENTE_EMPRESAS ORDER BY NOME_CADASTRO ASC")->fetchAll(PDO::FETCH_ASSOC);
+            echo json_encode(['success' => true, 'usuario' => $usr ?: null, 'grupos' => $grupos, 'empresas' => $empresas]);
+            break;
+
+        case 'salvar_usuario':
+            $cpf        = preg_replace('/\D/', '', $_POST['cpf'] ?? '');
+            $usuario    = trim($_POST['usuario'] ?? '');
+            $senha      = trim($_POST['senha'] ?? '');
+            $grupo      = trim($_POST['grupo_usuarios'] ?? '');
+            $situacao   = trim($_POST['situacao'] ?? 'ativo');
+            $id_empresa = intval($_POST['id_empresa'] ?? 0) ?: null;
+            $data_exp   = trim($_POST['data_expirar'] ?? '') ?: null;
+            if (empty($cpf)) throw new Exception("CPF inválido.");
+
+            // Verifica se já existe
+            $existe = $pdo->prepare("SELECT ID FROM CLIENTE_USUARIO WHERE CPF = ? LIMIT 1");
+            $existe->execute([$cpf]);
+            $id_usr = $existe->fetchColumn();
+
+            if ($id_usr) {
+                // Atualiza
+                $sql_u = "UPDATE CLIENTE_USUARIO SET GRUPO_USUARIOS=?, Situação=?, id_empresa=?, DATA_EXPIRAR=?";
+                $params_u = [$grupo, $situacao, $id_empresa, $data_exp];
+                if (!empty($usuario)) { $sql_u .= ", USUARIO=?"; $params_u[] = $usuario; }
+                if (!empty($senha))   { $sql_u .= ", SENHA=?";   $params_u[] = md5($senha); }
+                $sql_u .= " WHERE CPF=?"; $params_u[] = $cpf;
+                $pdo->prepare($sql_u)->execute($params_u);
+                echo json_encode(['success' => true, 'msg' => 'Usuário atualizado com sucesso!']);
+            } else {
+                // Cria novo
+                if (empty($usuario)) throw new Exception("Login é obrigatório para criar usuário.");
+                if (empty($senha))   throw new Exception("Senha é obrigatória para criar usuário.");
+                $nome = $pdo->prepare("SELECT nome FROM dados_cadastrais WHERE cpf = ? LIMIT 1");
+                $nome->execute([$cpf]);
+                $nome_val = $nome->fetchColumn() ?: $cpf;
+                $pdo->prepare("INSERT INTO CLIENTE_USUARIO (CPF, NOME, USUARIO, SENHA, GRUPO_USUARIOS, Situação, id_empresa, DATA_EXPIRAR) VALUES (?,?,?,?,?,?,?,?)")
+                    ->execute([$cpf, $nome_val, $usuario, md5($senha), $grupo, $situacao, $id_empresa, $data_exp]);
+                echo json_encode(['success' => true, 'msg' => 'Usuário criado com sucesso!', 'criado' => true]);
+            }
+            break;
+
         case 'nova_empresa':
             $cnpj  = preg_replace('/\D/', '', $_POST['cnpj'] ?? '');
             $nome  = strtoupper(trim($_POST['nome_cadastro'] ?? ''));
