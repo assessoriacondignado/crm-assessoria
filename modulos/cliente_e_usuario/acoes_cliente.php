@@ -102,8 +102,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['acao_crud'])) {
             ]);
         }
 
-        // Redireciona de volta
-        header("Location: cadastro_cliente.php");
+        // Redireciona de volta para a ficha do cliente
+        $cpf_redirect = urlencode($cpf_com_11_digitos);
+        if ($acao == 'editar') {
+            header("Location: cadastro_cliente.php?busca={$cpf_redirect}&cpf_selecionado={$cpf_redirect}&acao=visualizar&salvo=1");
+        } else {
+            header("Location: cadastro_cliente.php");
+        }
         exit;
 
     } catch (PDOException $e) {

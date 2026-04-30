@@ -824,6 +824,14 @@ function crmConfirm(mensagem, callback, titulo) {
     new bootstrap.Modal(document.getElementById('modalCrmConfirm')).show();
 }
 document.addEventListener('DOMContentLoaded', () => {
+    // Toast de confirmação ao voltar após salvar
+    if (new URLSearchParams(window.location.search).get('salvo') === '1') {
+        crmToast('Dados atualizados com sucesso!', 'success');
+        // Remove o parâmetro da URL sem recarregar
+        const url = new URL(window.location); url.searchParams.delete('salvo');
+        history.replaceState({}, '', url);
+    }
+
     document.getElementById('btnCrmConfirmOk')?.addEventListener('click', () => {
         bootstrap.Modal.getInstance(document.getElementById('modalCrmConfirm'))?.hide();
         if (typeof _crmConfirmCallback === 'function') _crmConfirmCallback();
