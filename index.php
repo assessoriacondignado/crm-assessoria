@@ -1,6 +1,67 @@
 <?php
 if (session_status() === PHP_SESSION_NONE) { session_start(); }
 
+// ── HANDLER: Notificação WhatsApp renovação ──────────────────────────────
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acao_renov']) && $_POST['acao_renov'] === 'notificar_whats') {
+    ob_clean();
+    header('Content-Type: application/json; charset=utf-8');
+    try {
+        include_once 'conexao.php';
+        $nome      = trim($_POST['nome'] ?? '');
+        $telefone  = preg_replace('/\D/', '', $_POST['telefone'] ?? '');
+        $produto   = trim($_POST['produto'] ?? '');
+        $valor     = trim($_POST['valor'] ?? '');
+        $data_renov = trim($_POST['data_renov'] ?? '');
+
+        if (empty($telefone)) { echo json_encode(['success'=>false,'msg'=>'Telefone não informado.']); exit; }
+
+        $msg  = "🔔 *Aviso de Renovação — Assessoria Consignado*\n\n";
+        $msg .= "Olá, *{$nome}*!\n\n";
+        $msg .= "Seu acesso ao produto *{$produto}* está próximo da data de renovação";
+        $msg .= $data_renov ? " *(vencimento: {$data_renov})*.\n\n" : ".\n\n";
+        $msg .= "💰 *Valor a pagar:* R$ {$valor}\n\n";
+        $msg .= "━━━━━━━━━━━━━━━━━━━━\n";
+        $msg .= "📲 *Dados para pagamento via PIX:*\n\n";
+        $msg .= "🏦 *Banco:* PAGBANK\n";
+        $msg .= "🏢 *Favorecido:* JOMN ASSESSORIA CONSIGNADO LTDA\n";
+        $msg .= "🔑 *Chave PIX:* atendimento\@assessoriaconsignado.com\n";
+        $msg .= "━━━━━━━━━━━━━━━━━━━━\n\n";
+        $msg .= "Após o pagamento, envie o comprovante para confirmarmos a renovação. ✅";
+
+        $stmtInst = $pdo->query("SELECT INSTANCE_ID, TOKEN FROM WAPI_INSTANCIAS WHERE ATIVO = 1 ORDER BY ID ASC LIMIT 1");
+        $inst = $stmtInst->fetch(PDO::FETCH_ASSOC);
+        if (!$inst) { echo json_encode(['success'=>false,'msg'=>'Nenhuma instância W-API ativa.']); exit; }
+
+        $celular = '55' . $telefone;
+        $url     = "https://api.w-api.app/v1/message/send-text?instanceId=" . $inst['INSTANCE_ID'];
+        $payload = json_encode(['phone' => $celular, 'message' => $msg]);
+
+        $ch = curl_init();
+        curl_setopt_array($ch, [
+            CURLOPT_URL            => $url,
+            CURLOPT_POST           => true,
+            CURLOPT_POSTFIELDS     => $payload,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_TIMEOUT        => 8,
+            CURLOPT_HTTPHEADER     => ['Content-Type: application/json', 'Authorization: Bearer ' . $inst['TOKEN']],
+        ]);
+        $resp = curl_exec($ch);
+        $http = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+
+        if ($http >= 200 && $http < 300) {
+            echo json_encode(['success' => true, 'msg' => 'Mensagem enviada!']);
+        } else {
+            $detalhe = json_decode($resp, true)['message'] ?? $resp;
+            echo json_encode(['success' => false, 'msg' => 'W-API retornou HTTP '.$http.': '.$detalhe]);
+        }
+    } catch (Exception $e) {
+        echo json_encode(['success' => false, 'msg' => $e->getMessage()]);
+    }
+    exit;
+}
+// ────────────────────────────────────────────────────────────────────────────
+
 // 1. Puxa a conexão com o banco para buscar as campanhas
 $caminho_conexao = $_SERVER['DOCUMENT_ROOT'] . '/conexao.php';
 if (file_exists($caminho_conexao)) { 
@@ -655,7 +716,7 @@ if (file_exists($caminho_header)) {
                     <th>Cód.</th><th>Cliente / Produto</th>
                     <th class="text-center">Total</th><th class="text-center">Status Pedido</th>
                     <th class="text-center">Data Renovação</th><th class="text-center">Prazo</th>
-                    <th class="text-center">Status Renovação</th>
+                    <th class="text-center">Status Renovação</th><th class="text-center">Avisar</th>
                 </tr>
             </thead>
             <tbody>
@@ -703,6 +764,24 @@ if (file_exists($caminho_header)) {
                     <td class="text-center fw-bold"><?= $dt_renov ? date('d/m/Y', strtotime($dt_renov)) : '<span class="text-muted">—</span>' ?></td>
                     <td class="text-center"><?= $badge_prazo ?></td>
                     <td class="text-center"><?= $badge_renov ?></td>
+                    <td class="text-center">
+                        <?php if ($r['CLIENTE_TELEFONE']): ?>
+                        <button class="btn btn-sm fw-bold rounded-0"
+                            style="background:#25d366; color:#fff; border:none; font-size:11px; padding:2px 8px;"
+                            onclick="renovNotificarWhats(
+                                '<?= addslashes($r['CLIENTE_NOME'] ?: '') ?>',
+                                '<?= preg_replace('/\D/', '', $r['CLIENTE_TELEFONE']) ?>',
+                                '<?= addslashes($r['PRODUTO_NOME'] ?: '') ?>',
+                                '<?= $r['TOTAL'] ? number_format($r['TOTAL'],2,',','.') : '0,00' ?>',
+                                '<?= $dt_renov ? date('d/m/Y', strtotime($dt_renov)) : '' ?>',
+                                this
+                            )" title="Enviar aviso de renovação via WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </button>
+                        <?php else: ?>
+                        <span class="text-muted small">—</span>
+                        <?php endif; ?>
+                    </td>
                 </tr>
             <?php endforeach; endif; ?>
             </tbody>
@@ -722,6 +801,34 @@ function filtroRenov(grupo, btn) {
     document.querySelectorAll('.linha-renov').forEach(tr => {
         tr.style.display = (grupo === 'todos' || tr.dataset.grupo === grupo) ? '' : 'none';
     });
+}
+
+async function renovNotificarWhats(nome, telefone, produto, valor, dataRenov, btn) {
+    const orig = btn.innerHTML;
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+
+    const fd = new FormData();
+    fd.append('acao_renov', 'notificar_whats');
+    fd.append('nome',      nome);
+    fd.append('telefone',  telefone);
+    fd.append('produto',   produto);
+    fd.append('valor',     valor);
+    fd.append('data_renov', dataRenov);
+
+    const res = await fetch('', {method:'POST', body:fd}).then(r=>r.json()).catch(()=>null);
+    btn.disabled = false;
+    btn.innerHTML = orig;
+
+    if (res && res.success) {
+        btn.style.background = '#128c7e';
+        btn.title = '✅ Enviado!';
+        if (typeof crmToast === 'function') crmToast('✅ Aviso enviado via WhatsApp!', 'success');
+        else alert('✅ Aviso enviado via WhatsApp!');
+    } else {
+        if (typeof crmToast === 'function') crmToast('❌ ' + (res?.msg || 'Erro ao enviar.'), 'error');
+        else alert('❌ ' + (res?.msg || 'Erro ao enviar.'));
+    }
 }
 </script>
 <?php endif; // temAcessoRenovacao ?>
