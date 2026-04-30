@@ -648,9 +648,7 @@ $readonly_attr = (!$pode_editar_excluir) ? 'disabled readonly' : '';
                                             </div>
                                             <div class="mt-2 d-flex gap-2">
                                                 <button type="button" class="btn btn-sm btn-outline-danger rounded-0" onclick="limparEmpresa()"><i class="fas fa-times me-1"></i>Remover vínculo</button>
-                                                <?php if(!empty($cliente_ficha['CNPJ'])): ?>
-                                                <button type="button" class="btn btn-sm btn-outline-primary rounded-0" onclick="abrirModalEmpresa('editar','<?= htmlspecialchars($cliente_ficha['CNPJ']) ?>')"><i class="fas fa-edit me-1"></i>Editar Empresa</button>
-                                                <?php endif; ?>
+                                                <button type="button" class="btn btn-sm btn-outline-primary rounded-0" onclick="editarEmpresaAtual()"><i class="fas fa-edit me-1"></i>Editar Empresa</button>
                                                 <button type="button" class="btn btn-sm btn-outline-success rounded-0" onclick="abrirModalEmpresa('nova')"><i class="fas fa-plus me-1"></i>Nova Empresa</button>
                                             </div>
                                         </div>
@@ -1222,6 +1220,12 @@ if (file_exists($caminho_footer)) { include $caminho_footer; }
 </div>
 
 <script>
+function editarEmpresaAtual() {
+    const cnpj = document.getElementById('cnpjVinculadoHidden').value.replace(/\D/g,'');
+    if (!cnpj) return crmToast('Nenhuma empresa vinculada. Use "Nova Empresa" para criar.', 'warning');
+    abrirModalEmpresa('editar', cnpj);
+}
+
 function abrirModalEmpresa(modo, cnpj) {
     document.getElementById('modalEmpresaCnpj').value    = '';
     document.getElementById('modalEmpresaNome').value    = '';
