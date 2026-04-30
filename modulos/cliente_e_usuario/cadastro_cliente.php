@@ -802,11 +802,27 @@ document.getElementById('areaFiltros')?.addEventListener('click', function(e) {
     }
 });
 
+// ── Modal de confirmação reutilizável (substitui confirm() nativo) ────
+let _crmConfirmCallback = null;
+function crmConfirm(mensagem, callback, titulo) {
+    document.getElementById('crmConfirmMensagem').textContent = mensagem;
+    document.getElementById('crmConfirmTitulo').textContent   = titulo || 'Confirmação';
+    _crmConfirmCallback = callback;
+    new bootstrap.Modal(document.getElementById('modalCrmConfirm')).show();
+}
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('btnCrmConfirmOk')?.addEventListener('click', () => {
+        bootstrap.Modal.getInstance(document.getElementById('modalCrmConfirm'))?.hide();
+        if (typeof _crmConfirmCallback === 'function') _crmConfirmCallback();
+        _crmConfirmCallback = null;
+    });
+});
+
 function confirmarAcaoCliente(acao, mensagem) {
-    if (confirm(mensagem)) {
+    crmConfirm(mensagem, () => {
         document.getElementById('acaoCrudCliente').value = acao;
         document.getElementById('formFichaCliente').submit();
-    }
+    });
 }
 
 function abrirCadastro() {
@@ -1068,17 +1084,18 @@ function toggleVerSenha() {
 
 // ── Gerar nova senha ──────────────────────────────────────────
 async function gerarNovaSenha(cpf) {
-    if (!confirm('Gerar uma nova senha aleatória para este usuário?')) return;
-    const fd = new FormData();
-    fd.append('acao', 'gerar_senha'); fd.append('cpf', cpf);
-    const r = await fetch('ajax_cliente_usuario.php', {method:'POST', body:fd});
-    const j = await r.json();
-    if (j.ok) {
-        const inp = document.getElementById('campoSenhaAtual');
-        if (inp) { inp.value = j.senha; inp.type = 'text'; }
-        const ico = document.getElementById('iconeSenha'); if(ico) ico.className='fas fa-eye-slash';
-        alert('Nova senha gerada: ' + j.senha);
-    } else alert('Erro: ' + j.msg);
+    crmConfirm('Gerar uma nova senha aleatória para este usuário?', async () => {
+        const fd = new FormData();
+        fd.append('acao', 'gerar_senha'); fd.append('cpf', cpf);
+        const r = await fetch('ajax_cliente_usuario.php', {method:'POST', body:fd});
+        const j = await r.json();
+        if (j.ok) {
+            const inp = document.getElementById('campoSenhaAtual');
+            if (inp) { inp.value = j.senha; inp.type = 'text'; }
+            const ico = document.getElementById('iconeSenha'); if(ico) ico.className='fas fa-eye-slash';
+            crmToast('Nova senha gerada: ' + j.senha, 'success', 6000);
+        } else crmToast('Erro: ' + j.msg, 'error');
+    });
 }
 
 // ── Enviar reset de senha ─────────────────────────────────────
@@ -1106,20 +1123,18 @@ async function acaoLote(tipo) {
     const msg = cpfs.length > 0
         ? `${label} ${cpfs.length} cliente(s) selecionado(s)?`
         : `${label} TODOS os clientes listados na busca atual?`;
-    if (!confirm(msg)) return;
-
-    const fd = new FormData();
-    fd.append('acao_lote', tipo);
-    cpfs.forEach(c => fd.append('cpfs[]', c));
-    // passa filtros atuais para aplicar em todos se nenhum selecionado
-    const params = new URLSearchParams(window.location.search);
-    fd.append('busca', params.get('busca') || '');
-    fd.append('situacao', params.get('situacao') || 'ATIVO');
-
-    const r = await fetch('ajax_clientes_lote.php', {method:'POST', body:fd});
-    const j = await r.json();
-    if (j.ok) { alert(`${j.total} cliente(s) ${tipo === 'ativar' ? 'ativados' : 'inativados'}.`); location.reload(); }
-    else alert('Erro: ' + j.msg);
+    crmConfirm(msg, async () => {
+        const fd = new FormData();
+        fd.append('acao_lote', tipo);
+        cpfs.forEach(c => fd.append('cpfs[]', c));
+        const params = new URLSearchParams(window.location.search);
+        fd.append('busca', params.get('busca') || '');
+        fd.append('situacao', params.get('situacao') || 'ATIVO');
+        const r = await fetch('ajax_clientes_lote.php', {method:'POST', body:fd});
+        const j = await r.json();
+        if (j.ok) { crmToast(`${j.total} cliente(s) ${tipo === 'ativar' ? 'ativados' : 'inativados'}.`, 'success'); setTimeout(() => location.reload(), 1200); }
+        else crmToast('Erro: ' + j.msg, 'error');
+    }, label + ' Clientes');
 }
 
 function exportarClientes() {
@@ -1206,6 +1221,31 @@ function exportarClientes() {
 $caminho_footer = $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php';
 if (file_exists($caminho_footer)) { include $caminho_footer; }
 ?>
+
+<!-- Modal de Confirmação Reutilizável -->
+<div class="modal fade" id="modalCrmConfirm" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content border-dark shadow-lg rounded-0">
+            <div class="modal-header bg-dark text-white border-dark rounded-0 py-2">
+                <h6 class="modal-title fw-bold text-uppercase" id="crmConfirmTitulo">
+                    <i class="fas fa-question-circle me-2"></i> Confirmação
+                </h6>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body bg-light text-center py-4">
+                <p class="fw-bold text-dark mb-0" id="crmConfirmMensagem"></p>
+            </div>
+            <div class="modal-footer bg-white border-top border-dark rounded-0 p-2 d-flex gap-2">
+                <button type="button" class="btn btn-sm btn-secondary rounded-0 flex-fill" data-bs-dismiss="modal">
+                    <i class="fas fa-times me-1"></i> Cancelar
+                </button>
+                <button type="button" class="btn btn-sm btn-danger fw-bold rounded-0 flex-fill" id="btnCrmConfirmOk">
+                    <i class="fas fa-check me-1"></i> Confirmar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Modal Empresa (Nova / Editar) -->
 <div class="modal fade" id="modalEmpresa" tabindex="-1">
