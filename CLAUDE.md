@@ -335,6 +335,25 @@ $stmt->execute($params);
 
 ---
 
+## CONFIRMAÇÕES E ALERTAS
+
+**NUNCA usar `confirm()`, `alert()` ou `prompt()` nativos do browser** — bloqueiam a tela e fogem do padrão visual.
+
+Usar sempre:
+```javascript
+// Confirmação (substitui confirm())
+crmConfirm('Deseja excluir este registro?', () => {
+    // callback executado ao confirmar
+}, 'Título Opcional');
+
+// Notificação (substitui alert())
+crmToast('Salvo com sucesso!', 'success');
+crmToast('Erro ao salvar.', 'error');
+crmToast('Atenção!', 'warning');
+```
+
+---
+
 ## CONVENÇÕES GERAIS
 
 - **Nunca** concatenar variáveis diretamente no SQL — sempre prepared statements
