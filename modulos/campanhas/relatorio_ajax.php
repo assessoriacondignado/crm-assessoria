@@ -141,7 +141,7 @@ if ($acao === 'listar_filtros') {
         }
 
         // Campanhas com filtro de hierarquia
-        $sqlCamp = "SELECT ID, NOME_CAMPANHA FROM BANCO_DE_DADOS_CAMPANHA_CAMPANHAS WHERE 1=1";
+        $sqlCamp = "SELECT c.ID, c.NOME_CAMPANHA, c.STATUS, COALESCE(e.NOME_CADASTRO,'') AS NOME_EMPRESA FROM BANCO_DE_DADOS_CAMPANHA_CAMPANHAS c LEFT JOIN CLIENTE_EMPRESAS e ON e.CNPJ COLLATE utf8mb4_unicode_ci = c.CNPJ_EMPRESA COLLATE utf8mb4_unicode_ci WHERE 1=1";
         $paramsCamp = [];
         if (!$is_master && $id_empresa_num) {
             $sqlCamp .= " AND (id_empresa = ? OR id_empresa IS NULL)";

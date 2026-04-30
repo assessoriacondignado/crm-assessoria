@@ -106,6 +106,8 @@ include $caminho_header;
 .cc-filtro-ativo { font-size:11px; background:#fff3cd; border:1px solid #ffc107; border-radius:6px; padding:4px 10px; color:#856404; }
 .cc-check { width:16px; height:16px; cursor:pointer; }
 #barraAcao { position:sticky; bottom:0; z-index:100; background:#1a1a2e; color:#fff; padding:10px 16px; border-top:2px solid #e8621a; display:none; align-items:center; gap:12px; flex-wrap:wrap; }
+.camp-ativa { background:#e8f4ff !important; border-left:4px solid #0d6efd !important; }
+.camp-item { border-left:4px solid transparent; }
 </style>
 
 <div class="container-fluid py-3">
@@ -271,7 +273,7 @@ include $caminho_header;
 
 <!-- Modal Incluir em Campanha -->
 <div class="modal fade" id="modalIncluirCamp" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content border-dark shadow-lg rounded-0">
             <div class="modal-header bg-dark text-white border-dark rounded-0 py-2">
                 <h6 class="modal-title fw-bold text-uppercase">
@@ -279,18 +281,26 @@ include $caminho_header;
                 </h6>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
-            <div class="modal-body bg-light">
-                <p class="small mb-2" id="modalIncluirTexto"></p>
-                <label class="fw-bold small text-dark mb-1">Campanha de destino:</label>
-                <select id="selectCampDestino" class="form-select border-dark rounded-0 fw-bold">
-                    <option value="">-- Selecione --</option>
-                </select>
-                <small class="text-muted d-block mt-2">Apenas campanhas da sua empresa são exibidas.</small>
+            <div class="modal-body bg-light p-3">
+                <p class="small mb-3 border-start border-warning border-3 ps-2 bg-white p-2 rounded-0" id="modalIncluirTexto"></p>
+                <!-- Busca -->
+                <input type="text" id="buscaCampModal" class="form-control border-dark rounded-0 mb-2"
+                    placeholder="Filtrar por nome da campanha ou empresa..."
+                    oninput="filtrarCampsModal(this.value)">
+                <!-- Lista de campanhas -->
+                <div id="listaCampsModal" style="max-height:320px; overflow-y:auto; border:1px solid #343a40; border-radius:0; background:#fff;">
+                    <div class="text-center text-muted py-4"><i class="fas fa-spinner fa-spin"></i> Carregando campanhas...</div>
+                </div>
+                <div id="campSelecionadaInfo" class="mt-2 d-none">
+                    <span class="badge bg-success rounded-0 py-2 px-3" style="font-size:12px;">
+                        <i class="fas fa-check me-1"></i> <span id="campSelecionadaNome"></span>
+                    </span>
+                </div>
             </div>
             <div class="modal-footer bg-white border-top border-dark rounded-0 p-2">
                 <button type="button" class="btn btn-sm btn-secondary rounded-0" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-sm btn-success fw-bold rounded-0" onclick="confirmarInclusao()">
-                    <i class="fas fa-plus me-1"></i> Incluir
+                <button type="button" class="btn btn-sm btn-success fw-bold rounded-0" id="btnConfirmarInclusao" disabled onclick="confirmarInclusao()">
+                    <i class="fas fa-plus me-1"></i> Incluir na Campanha Selecionada
                 </button>
             </div>
         </div>
@@ -350,28 +360,80 @@ function atualizarBarra() {
 }
 
 let _campsDest = [];
+let _campIdSelecionada = null;
+
+function filtrarCampsModal(q) {
+    const t = q.toLowerCase();
+    const lista = document.getElementById('listaCampsModal');
+    const items = lista.querySelectorAll('.camp-item');
+    items.forEach(el => {
+        const txt = el.dataset.busca || '';
+        el.style.display = txt.includes(t) ? '' : 'none';
+    });
+}
+
+function selecionarCampModal(id, nome, empresa) {
+    _campIdSelecionada = id;
+    document.querySelectorAll('.camp-item').forEach(el => el.classList.remove('camp-ativa'));
+    document.getElementById('camp-item-' + id)?.classList.add('camp-ativa');
+    document.getElementById('campSelecionadaNome').textContent = nome + (empresa ? ' — ' + empresa : '');
+    document.getElementById('campSelecionadaInfo').classList.remove('d-none');
+    document.getElementById('btnConfirmarInclusao').disabled = false;
+}
+
+function renderCampsModal(camps) {
+    const lista = document.getElementById('listaCampsModal');
+    if (!camps.length) { lista.innerHTML = '<div class="text-muted text-center py-3">Nenhuma campanha encontrada.</div>'; return; }
+    lista.innerHTML = camps.map(c => {
+        const statusBadge = c.STATUS === 'ATIVO'
+            ? '<span class="badge bg-success ms-1" style="font-size:10px;">ATIVO</span>'
+            : '<span class="badge bg-secondary ms-1" style="font-size:10px;">' + (c.STATUS || '') + '</span>';
+        const emp = c.NOME_EMPRESA ? `<small class="text-muted ms-2"><i class="fas fa-building me-1"></i>${c.NOME_EMPRESA}</small>` : '';
+        return `<div class="camp-item d-flex align-items-center justify-content-between px-3 py-2 border-bottom"
+                    id="camp-item-${c.ID}"
+                    data-busca="${(c.NOME_CAMPANHA + ' ' + (c.NOME_EMPRESA||'')).toLowerCase()}"
+                    onclick="selecionarCampModal('${c.ID}', '${c.NOME_CAMPANHA.replace(/'/g,"\\'")}', '${(c.NOME_EMPRESA||'').replace(/'/g,"\\'")}')"
+                    style="cursor:pointer; transition:.1s;">
+                    <span><strong>${c.NOME_CAMPANHA}</strong>${emp}</span>
+                    <span>${statusBadge}</span>
+                </div>`;
+    }).join('');
+}
+
 async function abrirModalIncluirCampanha() {
     const sel = getSelecionados();
-    const qtd = _selecaoGlobal ? _totalFiltro : (sel.length > 0 ? sel.length : getSelecionados().length);
     document.getElementById('modalIncluirTexto').innerHTML = _selecaoGlobal
-        ? `<i class="fas fa-globe text-warning me-1"></i>Seleção global: <strong>todos os ${_totalFiltro.toLocaleString('pt-BR')} clientes</strong> do filtro atual serão incluídos.`
+        ? `<i class="fas fa-globe text-warning me-1"></i>Seleção global: <strong>${_totalFiltro.toLocaleString('pt-BR')} clientes</strong> do filtro atual serão incluídos.`
         : sel.length > 0
             ? `<i class="fas fa-check-circle text-success me-1"></i><strong>${sel.length}</strong> cliente(s) selecionado(s) serão incluídos.`
-            : `<i class="fas fa-info-circle text-warning me-1"></i>Nenhum selecionado — serão incluídos os <strong>100</strong> da página atual.`;
+            : `<i class="fas fa-info-circle text-warning me-1"></i>Serão incluídos os <strong>100</strong> da página atual.`;
+
+    _campIdSelecionada = null;
+    document.getElementById('campSelecionadaInfo').classList.add('d-none');
+    document.getElementById('btnConfirmarInclusao').disabled = true;
+    document.getElementById('buscaCampModal').value = '';
 
     if (_campsDest.length === 0) {
         const fd = new FormData(); fd.append('acao', 'listar_filtros');
         const res = await fetch('/modulos/campanhas/relatorio_ajax.php', {method:'POST', body:fd}).then(r=>r.json());
         _campsDest = res.campanhas_destino || [];
-        document.getElementById('selectCampDestino').innerHTML =
-            '<option value="">-- Selecione --</option>' +
-            _campsDest.map(c => `<option value="${c.ID}">${c.NOME_CAMPANHA}</option>`).join('');
     }
+    renderCampsModal(_campsDest);
     new bootstrap.Modal(document.getElementById('modalIncluirCamp')).show();
 }
 
+// Hover style nas linhas da lista
+document.addEventListener('mouseover', e => {
+    const el = e.target.closest('.camp-item');
+    if (el && !el.classList.contains('camp-ativa')) el.style.background = '#f0f4ff';
+});
+document.addEventListener('mouseout', e => {
+    const el = e.target.closest('.camp-item');
+    if (el && !el.classList.contains('camp-ativa')) el.style.background = '';
+});
+
 async function confirmarInclusao() {
-    const idDest = document.getElementById('selectCampDestino').value;
+    const idDest = _campIdSelecionada;
     if (!idDest) { crmToast('Selecione uma campanha de destino.', 'warning'); return; }
 
     const fd = new FormData();
