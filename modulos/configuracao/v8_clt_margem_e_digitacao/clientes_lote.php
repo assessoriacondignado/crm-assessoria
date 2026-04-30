@@ -193,23 +193,13 @@ include $caminho_header;
                 </button>
             </div>
 
-            <!-- Barra confirmação campanha -->
-            <div id="barra_campanha" style="display:none; background:#f0ebff; border:1px solid #c0a8f0; border-radius:4px; padding:7px 12px; margin-bottom:4px; font-size:.8rem;">
-                <div class="d-flex align-items-center gap-2 flex-wrap">
-                    <i class="fas fa-bullhorn" style="color:#6f42c1;"></i>
-                    <strong style="color:#6f42c1;">Incluir em Campanha</strong>
-                    <span class="text-muted">— <span id="qtd_camp_sel"></span> cliente(s) selecionado(s)</span>
-                    <button class="btn btn-sm btn-outline-secondary ms-auto" style="font-size:.72rem; padding:2px 8px;" onclick="cancelarCampanha()">Cancelar</button>
-                </div>
-                <div class="d-flex align-items-center gap-2 mt-2">
-                    <select id="sel_campanha_barra" class="form-select form-select-sm border-dark" style="max-width:320px;">
-                        <option value="">— Selecione a campanha —</option>
-                    </select>
-                    <button class="btn btn-sm fw-bold" style="background:#6f42c1; color:#fff; border:none; font-size:.75rem; padding:3px 14px;" onclick="confirmarCampanha()">
-                        <i class="fas fa-check me-1"></i> Confirmar Inclusão
-                    </button>
-                    <span id="msg_camp_barra" style="font-size:.75rem;"></span>
-                </div>
+            <!-- Banner seleção global -->
+            <div id="banner_global" style="display:none; background:#2d2d4e; color:#fff; padding:7px 12px; font-size:.8rem; border-radius:4px; margin-bottom:4px;" class="d-flex align-items-center gap-2 flex-wrap">
+                <i class="fas fa-info-circle text-warning"></i>
+                <span id="banner_global_txt"></span>
+                <button class="btn btn-sm btn-warning fw-bold rounded-0 text-dark ms-2" onclick="ativarGlobal()">
+                    <i class="fas fa-globe me-1"></i> Selecionar todos do filtro
+                </button>
             </div>
 
             <!-- Barra confirmação auditoria -->
@@ -269,31 +259,8 @@ include $caminho_header;
     </div>
 </div>
 
-<!-- Modal: Escolher Campanha -->
-<div class="modal fade" id="modalCampanha" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content border-dark">
-            <div class="modal-header bg-dark text-white border-dark py-2">
-                <h6 class="modal-title fw-bold"><i class="fas fa-bullhorn me-2" style="color:#c0a0ff;"></i> Incluir em Campanha</h6>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body">
-                <p class="text-muted small mb-2"><strong id="qtd_modal_camp"></strong> cliente(s) selecionado(s)</p>
-                <label class="fw-bold small mb-1">Selecione a campanha:</label>
-                <select id="sel_campanha" class="form-select border-dark">
-                    <option value="">— Carregando... —</option>
-                </select>
-                <div id="msg_camp_modal" class="mt-2"></div>
-            </div>
-            <div class="modal-footer border-dark">
-                <button class="btn btn-outline-secondary border-dark btn-sm" data-bs-dismiss="modal">Cancelar</button>
-                <button class="btn btn-sm fw-bold" style="background:#6f42c1; color:#fff;" onclick="executarIncluirCampanha()">
-                    <i class="fas fa-check me-1"></i> Incluir
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
+<!-- Componente padrão incluir em campanha -->
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/componente_incluir_campanha.php'; ?>
 
 <script>
 // =========================================================================
@@ -618,78 +585,90 @@ function renderTabela(lista, reset) {
 // =========================================================================
 // SELEÇÃO
 // =========================================================================
+let _globalAtivo = false;
+
 function toggleTodos(el) {
     document.querySelectorAll('.ck-ln').forEach(c => c.checked = el.checked);
+    _globalAtivo = false;
+    atualizarBarraAcoes();
+    // Mostra banner de seleção global se marcou todos e há mais que a página
+    const banner = document.getElementById('banner_global');
+    const todos = document.querySelectorAll('.ck-ln').length;
+    if (el.checked && _total > todos) {
+        document.getElementById('banner_global_txt').textContent =
+            `${todos} clientes desta página selecionados.`;
+        const btn = banner.querySelector('button');
+        if (btn) btn.textContent = '';
+        if (btn) btn.innerHTML = `<i class="fas fa-globe me-1"></i> Selecionar todos os ${_total.toLocaleString('pt-BR')} do filtro`;
+        banner.style.display = 'flex';
+    } else {
+        banner.style.display = 'none';
+    }
+}
+function ativarGlobal() {
+    _globalAtivo = true;
+    const banner = document.getElementById('banner_global');
+    banner.innerHTML = `<i class="fas fa-globe text-warning me-2"></i><strong>Todos os ${_total.toLocaleString('pt-BR')} clientes do filtro foram selecionados.</strong>
+        <button class="btn btn-sm btn-outline-light rounded-0 ms-3" onclick="cancelarGlobalLote()"><i class="fas fa-times me-1"></i>Cancelar</button>`;
+    banner.style.display = 'flex';
+    atualizarBarraAcoes();
+}
+function cancelarGlobalLote() {
+    _globalAtivo = false;
+    document.getElementById('banner_global').style.display = 'none';
     atualizarBarraAcoes();
 }
 function desmarcarTodos() {
     document.getElementById('check_all').checked = false;
     document.querySelectorAll('.ck-ln').forEach(c => c.checked = false);
+    _globalAtivo = false;
+    document.getElementById('banner_global').style.display = 'none';
     atualizarBarraAcoes();
 }
 function cpfsSelecionados() {
     return [...document.querySelectorAll('.ck-ln:checked')].map(c => c.dataset.cpf);
 }
 function atualizarBarraAcoes() {
-    const qtd  = cpfsSelecionados().length;
+    const qtd  = _globalAtivo ? _total : cpfsSelecionados().length;
     const barra = document.getElementById('barra_acoes');
     barra.style.display = qtd > 0 ? 'flex' : 'none';
-    document.getElementById('qtd_sel_txt').textContent = qtd;
+    document.getElementById('qtd_sel_txt').textContent = qtd.toLocaleString('pt-BR') + (_globalAtivo ? ' — TODOS DO FILTRO' : '');
 }
 
 // =========================================================================
-// INCLUIR EM CAMPANHA
+// INCLUIR EM CAMPANHA — componente padrão do sistema
 // =========================================================================
-async function abrirDropdownCampanha() {
-    const cpfs = cpfsSelecionados();
-    if (!cpfs.length) { crmToast('Selecione ao menos um cliente.', 'warning'); return; }
+function abrirDropdownCampanha() {
+    const sel = _globalAtivo
+        ? [] // global: componente sabe que são todos
+        : cpfsSelecionados();
 
-    document.getElementById('qtd_camp_sel').textContent = cpfs.length;
-    document.getElementById('msg_camp_barra').textContent = '';
-    document.getElementById('barra_auditoria')?.style && (document.getElementById('barra_auditoria').style.display = 'none');
-
-    const sel = document.getElementById('sel_campanha_barra');
-    if (!_campanhasCache) {
-        sel.innerHTML = '<option value="">Carregando...</option>';
-        const fd = new FormData(); fd.append('acao', 'listar_campanhas_disponiveis');
-        const r = await fetch('ajax_api_v8_lote_csv.php', {method:'POST', body:fd}).then(r=>r.json()).catch(()=>null);
-        _campanhasCache = (r && r.success) ? r.campanhas : [];
+    // Se global, precisamos buscar todos os CPFs do filtro via AJAX
+    if (_globalAtivo) {
+        _buscarTodosCpfsFiltro().then(cpfs => {
+            const resumo = `<i class="fas fa-globe text-warning me-1"></i>Seleção global: <strong>${_total.toLocaleString('pt-BR')}</strong> cliente(s) do filtro serão incluídos.`;
+            if (typeof sistemaIncluirCampanha === 'function') sistemaIncluirCampanha(cpfs, resumo);
+        });
+        return;
     }
-    sel.innerHTML = '<option value="">— Selecione a campanha —</option>';
-    _campanhasCache.forEach(c => {
-        const empresa = c.NOME_EMPRESA ? ` [${escHtml(c.NOME_EMPRESA)}]` : '';
-        sel.innerHTML += `<option value="${c.ID}">${escHtml(c.NOME_CAMPANHA)}${empresa}</option>`;
-    });
 
-    document.getElementById('barra_campanha').style.display = 'block';
-    sel.focus();
+    const resumo = sel.length > 0
+        ? `<i class="fas fa-check-circle text-success me-1"></i><strong>${sel.length}</strong> cliente(s) selecionado(s) serão incluídos.`
+        : `<i class="fas fa-info-circle text-warning me-1"></i>Nenhum selecionado.`;
+    if (typeof sistemaIncluirCampanha === 'function') sistemaIncluirCampanha(sel, resumo);
 }
 
-async function confirmarCampanha() {
-    const id_camp = document.getElementById('sel_campanha_barra').value;
-    const cpfs    = cpfsSelecionados();
-    const msg     = document.getElementById('msg_camp_barra');
-    if (!id_camp) { msg.innerHTML = '<span style="color:#dc3545;">⚠️ Selecione uma campanha.</span>'; return; }
-    if (!cpfs.length) { msg.innerHTML = '<span style="color:#dc3545;">⚠️ Nenhum cliente selecionado.</span>'; return; }
-
-    msg.innerHTML = '<span style="color:#6f42c1;"><i class="fas fa-spinner fa-spin me-1"></i> Incluindo...</span>';
-    const id_lote_env = _lotesSelecionados.length === 1 ? _lotesSelecionados[0].id : (_loteAtual || 0);
+async function _buscarTodosCpfsFiltro() {
     const fd = new FormData();
-    fd.append('acao', 'incluir_em_campanha');
-    fd.append('id_campanha', id_camp);
-    fd.append('cpfs', JSON.stringify(cpfs));
-    fd.append('id_lote', id_lote_env);
-
+    fd.append('acao', 'listar_clientes');
+    fd.append('so_cpfs', '1');
+    fd.append('sem_limite', '1');
+    _lotesSelecionados.forEach(l => fd.append('lotes[]', l.id));
+    const f = _coletarFiltros();
+    Object.entries(f).forEach(([k,v]) => fd.append(k, v));
     const r = await fetch('ajax_api_v8_lote_csv.php', {method:'POST', body:fd}).then(r=>r.json()).catch(()=>null);
-    if (r && r.success) {
-        msg.innerHTML = `<span style="color:#198754;">✅ ${r.msg}</span>`;
-        setTimeout(() => { cancelarCampanha(); desmarcarTodos(); }, 1800);
-    } else {
-        msg.innerHTML = `<span style="color:#dc3545;">❌ ${r?.msg||'Erro ao incluir.'}</span>`;
-    }
+    return r && r.cpfs ? r.cpfs : cpfsSelecionados();
 }
-
-async function executarIncluirCampanha() { await confirmarCampanha(); }
 
 // =========================================================================
 // AUDITORIA
@@ -722,7 +701,7 @@ async function confirmarAuditoria() {
     }
 }
 
-function cancelarCampanha() { document.getElementById('barra_campanha').style.display = 'none'; }
+function cancelarCampanha() { /* substituído pelo componente sic-modal */ }
 
 // =========================================================================
 // EXPORTAR
