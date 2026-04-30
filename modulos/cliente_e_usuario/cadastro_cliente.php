@@ -638,13 +638,12 @@ $readonly_attr = (!$pode_editar_excluir) ? 'disabled readonly' : '';
                                             ?>
                                             <!-- Busca de empresa com pesquisa ao digitar -->
                                             <input type="hidden" name="cnpj_vinculado" id="cnpjVinculadoHidden" value="<?= htmlspecialchars($cliente_ficha['CNPJ'] ?? '') ?>">
-                                            <div class="position-relative" id="empresaBuscaWrapper">
+                                            <div id="empresaBuscaWrapper">
                                                 <input type="text" id="empresaBuscaInput" class="form-control border-dark"
                                                     placeholder="Digite para pesquisar empresa..."
                                                     value="<?= htmlspecialchars($emp_atual_nome) ?>"
                                                     <?= $readonly_attr ?> autocomplete="off"
                                                     oninput="filtrarEmpresas(this.value)">
-                                                <div id="empresaSugestoes" class="list-group position-absolute w-100 shadow-lg border border-dark" style="z-index:9999;max-height:220px;overflow-y:auto;display:none;top:100%;"></div>
                                             </div>
                                             <div class="mt-2 d-flex gap-2">
                                                 <button type="button" class="btn btn-sm btn-outline-danger rounded-0" onclick="limparEmpresa()"><i class="fas fa-times me-1"></i>Remover vínculo</button>
@@ -1004,33 +1003,59 @@ async function atualizarStatusTarefa(id, status) {
 
 // ── Empresa busca ao digitar ─────────────────────────────────
 const _empresas = <?= json_encode(isset($lista_empresas) ? $lista_empresas : [], JSON_UNESCAPED_UNICODE) ?>;
+// Dropdown de empresa fixo no body para não ser cortado por containers
+function _getEmpresaBox() {
+    let box = document.getElementById('empresaSugestoes');
+    if (!box) {
+        box = document.createElement('div');
+        box.id = 'empresaSugestoes';
+        box.className = 'list-group shadow-lg border border-dark';
+        box.style.cssText = 'position:fixed;z-index:99999;max-height:260px;overflow-y:auto;display:none;min-width:320px;';
+        document.body.appendChild(box);
+    }
+    return box;
+}
+function _posicionarEmpresaBox() {
+    const inp = document.getElementById('empresaBuscaInput');
+    const box = _getEmpresaBox();
+    if (!inp) return;
+    const r = inp.getBoundingClientRect();
+    box.style.left  = r.left + 'px';
+    box.style.top   = (r.bottom + 2) + 'px';
+    box.style.width = r.width + 'px';
+}
 function filtrarEmpresas(q) {
-    const box = document.getElementById('empresaSugestoes');
-    if (!box) return;
+    const box = _getEmpresaBox();
     const t = q.toLowerCase().trim();
     if (!t) { box.style.display='none'; return; }
     const matches = _empresas.filter(e =>
         e.NOME_CADASTRO.toLowerCase().includes(t) || e.CNPJ.includes(t)
     ).slice(0, 20);
-    if (!matches.length) { box.innerHTML='<a class="list-group-item text-muted">Nenhuma empresa encontrada</a>'; box.style.display='block'; return; }
-    box.innerHTML = '<a class="list-group-item list-group-item-action text-muted small" onclick="selecionarEmpresa(\'\',\'-- Sem vínculo --\')">-- Sem vínculo empresarial --</a>'
-        + matches.map(e => `<a class="list-group-item list-group-item-action" onclick="selecionarEmpresa('${e.CNPJ}','${e.NOME_CADASTRO.replace(/'/g,"\\'")} (CNPJ: ${e.CNPJ})')">`
-            + `<strong>${e.NOME_CADASTRO}</strong> <small class="text-muted">${e.CNPJ}</small></a>`).join('');
+    box.innerHTML = '<a class="list-group-item list-group-item-action text-muted small" style="cursor:pointer;" onclick="selecionarEmpresa(\'\',\'\')">-- Sem vínculo empresarial --</a>'
+        + (matches.length ? matches.map(e => `<a class="list-group-item list-group-item-action" style="cursor:pointer;" onclick="selecionarEmpresa('${e.CNPJ}','${e.NOME_CADASTRO.replace(/'/g,"\\'")} (CNPJ: ${e.CNPJ})')">`
+            + `<strong>${e.NOME_CADASTRO}</strong> <small class="text-muted ms-2">${e.CNPJ}</small></a>`).join('')
+          : '<a class="list-group-item text-muted">Nenhuma empresa encontrada</a>');
+    _posicionarEmpresaBox();
     box.style.display = 'block';
 }
 function selecionarEmpresa(cnpj, label) {
     const inp = document.getElementById('empresaBuscaInput');
     const hid = document.getElementById('cnpjVinculadoHidden');
-    const box = document.getElementById('empresaSugestoes');
+    const box = _getEmpresaBox();
     if (inp) inp.value = label;
     if (hid) hid.value = cnpj;
-    if (box) box.style.display = 'none';
+    box.style.display = 'none';
 }
 function limparEmpresa() { selecionarEmpresa('', ''); }
 document.addEventListener('click', e => {
-    const w = document.getElementById('empresaBuscaWrapper');
-    if (w && !w.contains(e.target)) { const b = document.getElementById('empresaSugestoes'); if(b) b.style.display='none'; }
+    const inp = document.getElementById('empresaBuscaInput');
+    const box = document.getElementById('empresaSugestoes');
+    if (box && inp && e.target !== inp && !box.contains(e.target)) box.style.display = 'none';
 });
+window.addEventListener('scroll', () => {
+    const box = document.getElementById('empresaSugestoes');
+    if (box && box.style.display !== 'none') _posicionarEmpresaBox();
+}, true);
 
 // ── Senha: ver/ocultar ────────────────────────────────────────
 function toggleVerSenha() {
